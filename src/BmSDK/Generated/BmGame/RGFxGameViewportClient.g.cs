@@ -36,7 +36,7 @@ public partial class RGFxGameViewportClient : BmSDK.Engine.GameViewportClient, B
     /// <summary>
     /// Function: SetProgressMessage
     /// </summary>
-    public unsafe void SetProgressMessage(BmSDK.Engine.PlayerController.EProgressMessageType MessageType, BmSDK.FString Message, BmSDK.FString Title = default, bool bIgnoreFutureNetworkMessages = default)
+    public unsafe override void SetProgressMessage(BmSDK.Engine.PlayerController.EProgressMessageType MessageType, BmSDK.FString Message, BmSDK.FString Title = default, bool bIgnoreFutureNetworkMessages = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxGameViewportClient.SetProgressMessage", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -51,7 +51,7 @@ public partial class RGFxGameViewportClient : BmSDK.Engine.GameViewportClient, B
     /// <summary>
     /// Function: ClosePopups
     /// </summary>
-    public unsafe void ClosePopups()
+    public unsafe virtual void ClosePopups()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxGameViewportClient.ClosePopups", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -62,7 +62,7 @@ public partial class RGFxGameViewportClient : BmSDK.Engine.GameViewportClient, B
     /// <summary>
     /// Function: RemoveErrorPopup
     /// </summary>
-    public unsafe void RemoveErrorPopup(BmSDK.BmGame.RGFxMoviePopupRequester MovieRef)
+    public unsafe virtual void RemoveErrorPopup(BmSDK.BmGame.RGFxMoviePopupRequester MovieRef)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxGameViewportClient.RemoveErrorPopup", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -74,7 +74,7 @@ public partial class RGFxGameViewportClient : BmSDK.Engine.GameViewportClient, B
     /// <summary>
     /// Function: OpenPopUpError
     /// </summary>
-    public unsafe BmSDK.BmGame.RGFxMoviePopupRequester OpenPopUpError(BmSDK.BmGame.RPlayerController RPC, BmSDK.BmGame.RGFxMoviePopupRequester.GPopup_Type TheType, BmSDK.BmGame.RGFxMovie RespondTo, BmSDK.FString Message, BmSDK.TArray<BmSDK.FString> Prompts, int DefaultSelected = default, bool bAllowBack = default, BmSDK.GFxUI.SwfMovie iMovie = default)
+    public unsafe virtual BmSDK.BmGame.RGFxMoviePopupRequester OpenPopUpError(BmSDK.BmGame.RPlayerController RPC, BmSDK.BmGame.RGFxMoviePopupRequester.GPopup_Type TheType, BmSDK.BmGame.RGFxMovie RespondTo, BmSDK.FString Message, BmSDK.TArray<BmSDK.FString> Prompts, int DefaultSelected = default, bool bAllowBack = default, BmSDK.GFxUI.SwfMovie iMovie = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxGameViewportClient.OpenPopUpError", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -93,7 +93,7 @@ public partial class RGFxGameViewportClient : BmSDK.Engine.GameViewportClient, B
     /// <summary>
     /// Function: DrawTransition
     /// </summary>
-    public unsafe void DrawTransition(BmSDK.Engine.Canvas Canvas)
+    public unsafe override void DrawTransition(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxGameViewportClient.DrawTransition", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -105,7 +105,7 @@ public partial class RGFxGameViewportClient : BmSDK.Engine.GameViewportClient, B
     /// <summary>
     /// Function: ShowSessionInfo
     /// </summary>
-    public unsafe void ShowSessionInfo(BmSDK.Engine.Canvas C)
+    public unsafe virtual void ShowSessionInfo(BmSDK.Engine.Canvas C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxGameViewportClient.ShowSessionInfo", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -117,7 +117,7 @@ public partial class RGFxGameViewportClient : BmSDK.Engine.GameViewportClient, B
     /// <summary>
     /// Function: ToggleSessionInfoDisplay
     /// </summary>
-    public unsafe void ToggleSessionInfoDisplay()
+    public unsafe virtual void ToggleSessionInfoDisplay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxGameViewportClient.ToggleSessionInfoDisplay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RGFxGameViewportClient : BmSDK.Engine.GameViewportClient, B
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(out BmSDK.FString OutError)
+    public unsafe override bool Init(out BmSDK.FString OutError)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxGameViewportClient.Init", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -140,7 +140,7 @@ public partial class RGFxGameViewportClient : BmSDK.Engine.GameViewportClient, B
     /// <summary>
     /// Function: GetSubtitleMinY
     /// </summary>
-    public unsafe float GetSubtitleMinY()
+    public unsafe virtual float GetSubtitleMinY()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxGameViewportClient.GetSubtitleMinY", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -158,7 +158,7 @@ public partial class RGFxGameViewportClient : BmSDK.Engine.GameViewportClient, B
     /// <summary>
     /// Function: GetDisplayGammaReferenceBrightness
     /// </summary>
-    public unsafe float GetDisplayGammaReferenceBrightness()
+    public unsafe virtual float GetDisplayGammaReferenceBrightness()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxGameViewportClient.GetDisplayGammaReferenceBrightness", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -176,7 +176,7 @@ public partial class RGFxGameViewportClient : BmSDK.Engine.GameViewportClient, B
     /// <summary>
     /// Function: InstallOurGFxHandlers
     /// </summary>
-    public unsafe bool InstallOurGFxHandlers()
+    public unsafe virtual bool InstallOurGFxHandlers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxGameViewportClient.InstallOurGFxHandlers", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -194,7 +194,7 @@ public partial class RGFxGameViewportClient : BmSDK.Engine.GameViewportClient, B
     /// <summary>
     /// Function: SetupGameFonts
     /// </summary>
-    public unsafe void SetupGameFonts()
+    public unsafe virtual void SetupGameFonts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxGameViewportClient.SetupGameFonts", true);
         byte* paramsPtr = stackalloc byte[0];

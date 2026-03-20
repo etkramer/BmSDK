@@ -71,7 +71,7 @@ public partial class RBMWeaponKnife : BmSDK.BmScript.RBMWeaponKnifeBase, BmSDK.I
     /// <summary>
     /// Function: GetFearTakedownReactionAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetFearTakedownReactionAnimset()
+    public unsafe override BmSDK.Engine.AnimSet GetFearTakedownReactionAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponKnife.GetFearTakedownReactionAnimset", true);
         byte* paramsPtr = stackalloc byte[8];

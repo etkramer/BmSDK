@@ -36,7 +36,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: NotifyFriendBeatYou
     /// </summary>
-    public unsafe void NotifyFriendBeatYou()
+    public unsafe override void NotifyFriendBeatYou()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.NotifyFriendBeatYou", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -47,7 +47,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_HeavyTankScan_ThreeDeeAnimComplete
     /// </summary>
-    public unsafe void DXI_HeavyTankScan_ThreeDeeAnimComplete()
+    public unsafe virtual void DXI_HeavyTankScan_ThreeDeeAnimComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_HeavyTankScan_ThreeDeeAnimComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_HeavyTankScan_ScanResolved
     /// </summary>
-    public unsafe void DXI_HeavyTankScan_ScanResolved(float proportion_revealed_this_scan, float total_proportion_revealed, float scan_angle)
+    public unsafe virtual void DXI_HeavyTankScan_ScanResolved(float proportion_revealed_this_scan, float total_proportion_revealed, float scan_angle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_HeavyTankScan_ScanResolved", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -72,7 +72,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_SuicideCars_NotifyOutroComplete
     /// </summary>
-    public unsafe void DXI_SuicideCars_NotifyOutroComplete()
+    public unsafe virtual void DXI_SuicideCars_NotifyOutroComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_SuicideCars_NotifyOutroComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -83,7 +83,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: CloseSuicideCarsHud
     /// </summary>
-    public unsafe void CloseSuicideCarsHud()
+    public unsafe virtual void CloseSuicideCarsHud()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.CloseSuicideCarsHud", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: SetSuicideCarsLevel
     /// </summary>
-    public unsafe void SetSuicideCarsLevel(float _CurrentSuicideCarsLevel)
+    public unsafe virtual void SetSuicideCarsLevel(float _CurrentSuicideCarsLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.SetSuicideCarsLevel", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -106,7 +106,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_Beacon_NotifyOutroComplete
     /// </summary>
-    public unsafe void DXI_Beacon_NotifyOutroComplete()
+    public unsafe virtual void DXI_Beacon_NotifyOutroComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_Beacon_NotifyOutroComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_Boss_NotifyOutroComplete
     /// </summary>
-    public unsafe void DXI_Boss_NotifyOutroComplete()
+    public unsafe virtual void DXI_Boss_NotifyOutroComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_Boss_NotifyOutroComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_Extra_NotifyOutroComplete
     /// </summary>
-    public unsafe void DXI_Extra_NotifyOutroComplete()
+    public unsafe virtual void DXI_Extra_NotifyOutroComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_Extra_NotifyOutroComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_LocalRadarOffscreen
     /// </summary>
-    public unsafe void DXI_LocalRadarOffscreen()
+    public unsafe virtual void DXI_LocalRadarOffscreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_LocalRadarOffscreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_ShutdownFilmBombCounter
     /// </summary>
-    public unsafe void DXI_ShutdownFilmBombCounter()
+    public unsafe virtual void DXI_ShutdownFilmBombCounter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_ShutdownFilmBombCounter", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -161,7 +161,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_BespokeHudOffscreen
     /// </summary>
-    public unsafe void DXI_BespokeHudOffscreen()
+    public unsafe virtual void DXI_BespokeHudOffscreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_BespokeHudOffscreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -172,7 +172,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_ApcLocationNoLongerRequired
     /// </summary>
-    public unsafe void DXI_ApcLocationNoLongerRequired()
+    public unsafe virtual void DXI_ApcLocationNoLongerRequired()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_ApcLocationNoLongerRequired", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -183,7 +183,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: ShutDownAlertsHud
     /// </summary>
-    public unsafe void ShutDownAlertsHud()
+    public unsafe virtual void ShutDownAlertsHud()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.ShutDownAlertsHud", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -194,7 +194,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_AlertsAndSurveillanceHudNoLongerRequired
     /// </summary>
-    public unsafe void DXI_AlertsAndSurveillanceHudNoLongerRequired()
+    public unsafe virtual void DXI_AlertsAndSurveillanceHudNoLongerRequired()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_AlertsAndSurveillanceHudNoLongerRequired", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -205,7 +205,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: OpenAlertsAndSurveillanceHud
     /// </summary>
-    public unsafe void OpenAlertsAndSurveillanceHud()
+    public unsafe virtual void OpenAlertsAndSurveillanceHud()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.OpenAlertsAndSurveillanceHud", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -216,7 +216,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_TriggerSpeech
     /// </summary>
-    public unsafe void DXI_TriggerSpeech(BmSDK.FString sName)
+    public unsafe virtual void DXI_TriggerSpeech(BmSDK.FString sName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_TriggerSpeech", true);
         byte* paramsPtr = stackalloc byte[132];
@@ -228,7 +228,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_ChallengeResultsClose
     /// </summary>
-    public unsafe void DXI_ChallengeResultsClose()
+    public unsafe virtual void DXI_ChallengeResultsClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_ChallengeResultsClose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -239,7 +239,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_ChallengeResults
     /// </summary>
-    public unsafe void DXI_ChallengeResults()
+    public unsafe virtual void DXI_ChallengeResults()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_ChallengeResults", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -250,7 +250,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_CountdownComplete
     /// </summary>
-    public unsafe void DXI_CountdownComplete()
+    public unsafe virtual void DXI_CountdownComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_CountdownComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -261,7 +261,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_OnChallengeClose
     /// </summary>
-    public unsafe void DXI_OnChallengeClose()
+    public unsafe virtual void DXI_OnChallengeClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_OnChallengeClose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -272,7 +272,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: CloseChallengeModeMovie
     /// </summary>
-    public unsafe void CloseChallengeModeMovie()
+    public unsafe virtual void CloseChallengeModeMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.CloseChallengeModeMovie", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -283,7 +283,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: OpenChallengeModeModule
     /// </summary>
-    public unsafe void OpenChallengeModeModule(BmSDK.GFxUI.SwfMovie NewMovieInfo = default)
+    public unsafe virtual void OpenChallengeModeModule(BmSDK.GFxUI.SwfMovie NewMovieInfo = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.OpenChallengeModeModule", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -295,7 +295,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_CloseRoomMovie
     /// </summary>
-    public unsafe void DXI_CloseRoomMovie()
+    public unsafe virtual void DXI_CloseRoomMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_CloseRoomMovie", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -306,7 +306,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: OpenRoomNameModule
     /// </summary>
-    public unsafe void OpenRoomNameModule()
+    public unsafe virtual void OpenRoomNameModule()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.OpenRoomNameModule", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -317,7 +317,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_ObjectiveBarFilled
     /// </summary>
-    public unsafe void DXI_ObjectiveBarFilled()
+    public unsafe virtual void DXI_ObjectiveBarFilled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_ObjectiveBarFilled", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -328,7 +328,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_ObjectiveQueueBusy
     /// </summary>
-    public unsafe void DXI_ObjectiveQueueBusy()
+    public unsafe virtual void DXI_ObjectiveQueueBusy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_ObjectiveQueueBusy", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -339,7 +339,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_ObjectiveQueueEmpty
     /// </summary>
-    public unsafe void DXI_ObjectiveQueueEmpty()
+    public unsafe virtual void DXI_ObjectiveQueueEmpty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_ObjectiveQueueEmpty", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -350,7 +350,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_ObjectiveItemShown
     /// </summary>
-    public unsafe void DXI_ObjectiveItemShown(int arrow_type, BmSDK.FString CustomIconString)
+    public unsafe virtual void DXI_ObjectiveItemShown(int arrow_type, BmSDK.FString CustomIconString)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_ObjectiveItemShown", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -363,7 +363,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_ObjectivesCallback_PulseCompassIndicator
     /// </summary>
-    public unsafe void DXI_ObjectivesCallback_PulseCompassIndicator()
+    public unsafe virtual void DXI_ObjectivesCallback_PulseCompassIndicator()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_ObjectivesCallback_PulseCompassIndicator", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -374,7 +374,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_ForceShowMap
     /// </summary>
-    public unsafe void DXI_ForceShowMap(BmSDK.FString ObjectParam)
+    public unsafe virtual void DXI_ForceShowMap(BmSDK.FString ObjectParam)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_ForceShowMap", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -386,7 +386,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_ObjectivesPromptCallback
     /// </summary>
-    public unsafe void DXI_ObjectivesPromptCallback(BmSDK.FString KeyType)
+    public unsafe virtual void DXI_ObjectivesPromptCallback(BmSDK.FString KeyType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_ObjectivesPromptCallback", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -398,7 +398,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: CloseObjectivesModule
     /// </summary>
-    public unsafe void CloseObjectivesModule()
+    public unsafe virtual void CloseObjectivesModule()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.CloseObjectivesModule", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -409,7 +409,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: OpenObjectivesModule
     /// </summary>
-    public unsafe void OpenObjectivesModule()
+    public unsafe virtual void OpenObjectivesModule()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.OpenObjectivesModule", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -420,7 +420,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_DetectiveJammer_NotifyOutroComplete
     /// </summary>
-    public unsafe void DXI_DetectiveJammer_NotifyOutroComplete()
+    public unsafe virtual void DXI_DetectiveJammer_NotifyOutroComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_DetectiveJammer_NotifyOutroComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -431,7 +431,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: SetDetectiveModeJammed
     /// </summary>
-    public unsafe void SetDetectiveModeJammed(bool is_jammed)
+    public unsafe virtual void SetDetectiveModeJammed(bool is_jammed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.SetDetectiveModeJammed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -443,7 +443,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: SetDetectiveModeCompromisedLevel
     /// </summary>
-    public unsafe void SetDetectiveModeCompromisedLevel(float JammingProportion, BmSDK.BmGame.RGFxMovieModularHud.EDetectiveModeDetectorStates StateEnum)
+    public unsafe virtual void SetDetectiveModeCompromisedLevel(float JammingProportion, BmSDK.BmGame.RGFxMovieModularHud.EDetectiveModeDetectorStates StateEnum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.SetDetectiveModeCompromisedLevel", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -456,7 +456,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: CreateJammingModulePrivate
     /// </summary>
-    public unsafe void CreateJammingModulePrivate()
+    public unsafe virtual void CreateJammingModulePrivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.CreateJammingModulePrivate", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -467,7 +467,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_Batmobile_VirusOutroComplete
     /// </summary>
-    public unsafe void DXI_Batmobile_VirusOutroComplete()
+    public unsafe virtual void DXI_Batmobile_VirusOutroComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_Batmobile_VirusOutroComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -478,7 +478,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_Batmobile_NotifyOutroComplete
     /// </summary>
-    public unsafe void DXI_Batmobile_NotifyOutroComplete()
+    public unsafe virtual void DXI_Batmobile_NotifyOutroComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_Batmobile_NotifyOutroComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -489,7 +489,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: ShutDownBatmobileHud
     /// </summary>
-    public unsafe void ShutDownBatmobileHud()
+    public unsafe virtual void ShutDownBatmobileHud()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.ShutDownBatmobileHud", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -500,7 +500,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DeployBatmobileHud
     /// </summary>
-    public unsafe void DeployBatmobileHud(bool DeployInActiveState = default)
+    public unsafe virtual void DeployBatmobileHud(bool DeployInActiveState = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DeployBatmobileHud", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -512,7 +512,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_HealthBar_PostCombatSummaryFinished
     /// </summary>
-    public unsafe void DXI_HealthBar_PostCombatSummaryFinished()
+    public unsafe virtual void DXI_HealthBar_PostCombatSummaryFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_HealthBar_PostCombatSummaryFinished", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -523,7 +523,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_DownloadProgress_NotifyOutroComplete
     /// </summary>
-    public unsafe void DXI_DownloadProgress_NotifyOutroComplete()
+    public unsafe virtual void DXI_DownloadProgress_NotifyOutroComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_DownloadProgress_NotifyOutroComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -534,7 +534,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_DownloadProgress_NotifyIntroComplete
     /// </summary>
-    public unsafe void DXI_DownloadProgress_NotifyIntroComplete()
+    public unsafe virtual void DXI_DownloadProgress_NotifyIntroComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_DownloadProgress_NotifyIntroComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -545,7 +545,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DeployDownloadProgressHud
     /// </summary>
-    public unsafe void DeployDownloadProgressHud(BmSDK.FString InitialiseText, BmSDK.FString DownloadText, BmSDK.FString CompleteText, BmSDK.FString DownloadAnim = default, BmSDK.FString InitialiseAnim = default, BmSDK.FString CompleteAnim = default)
+    public unsafe virtual void DeployDownloadProgressHud(BmSDK.FString InitialiseText, BmSDK.FString DownloadText, BmSDK.FString CompleteText, BmSDK.FString DownloadAnim = default, BmSDK.FString InitialiseAnim = default, BmSDK.FString CompleteAnim = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DeployDownloadProgressHud", true);
         byte* paramsPtr = stackalloc byte[104];
@@ -562,7 +562,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: SetMainPrompt
     /// </summary>
-    public unsafe void SetMainPrompt(int Id, BmSDK.FString Label, float Alpha = default)
+    public unsafe virtual void SetMainPrompt(int Id, BmSDK.FString Label, float Alpha = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.SetMainPrompt", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -576,7 +576,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: SetPrompt
     /// </summary>
-    public unsafe void SetPrompt(int Id, BmSDK.FString Label, float Alpha = default, bool bAsMain = default)
+    public unsafe virtual void SetPrompt(int Id, BmSDK.FString Label, float Alpha = default, bool bAsMain = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.SetPrompt", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -591,7 +591,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: SetPromptWithLocalise
     /// </summary>
-    public unsafe void SetPromptWithLocalise(int Id, BmSDK.FString Label, float Alpha = default, bool bAsMain = default)
+    public unsafe virtual void SetPromptWithLocalise(int Id, BmSDK.FString Label, float Alpha = default, bool bAsMain = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.SetPromptWithLocalise", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -606,7 +606,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: ReLayoutPrompts
     /// </summary>
-    public unsafe void ReLayoutPrompts()
+    public unsafe virtual void ReLayoutPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.ReLayoutPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -617,7 +617,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: ClearPrompts
     /// </summary>
-    public unsafe void ClearPrompts()
+    public unsafe virtual void ClearPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.ClearPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -628,7 +628,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: SetInfoText
     /// </summary>
-    public unsafe void SetInfoText(BmSDK.FString PadText, BmSDK.FString AltPcText, int Justification = default)
+    public unsafe virtual void SetInfoText(BmSDK.FString PadText, BmSDK.FString AltPcText, int Justification = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.SetInfoText", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -642,7 +642,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_Scanner_ScannerAnimComplete
     /// </summary>
-    public unsafe void DXI_Scanner_ScannerAnimComplete()
+    public unsafe virtual void DXI_Scanner_ScannerAnimComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_Scanner_ScannerAnimComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -653,7 +653,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_Scanner_NotifyOutroComplete
     /// </summary>
-    public unsafe void DXI_Scanner_NotifyOutroComplete()
+    public unsafe virtual void DXI_Scanner_NotifyOutroComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_Scanner_NotifyOutroComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -664,7 +664,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_Scanner_NotifyIntroComplete
     /// </summary>
-    public unsafe void DXI_Scanner_NotifyIntroComplete()
+    public unsafe virtual void DXI_Scanner_NotifyIntroComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_Scanner_NotifyIntroComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -675,7 +675,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: ScanningComplete
     /// </summary>
-    public unsafe void ScanningComplete()
+    public unsafe virtual void ScanningComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.ScanningComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -686,7 +686,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: AbortScanning
     /// </summary>
-    public unsafe void AbortScanning()
+    public unsafe virtual void AbortScanning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.AbortScanning", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -697,7 +697,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: StartScanning
     /// </summary>
-    public unsafe void StartScanning()
+    public unsafe virtual void StartScanning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.StartScanning", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -708,7 +708,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: ShutdownScanner
     /// </summary>
-    public unsafe void ShutdownScanner()
+    public unsafe virtual void ShutdownScanner()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.ShutdownScanner", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -719,7 +719,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DeployScanner
     /// </summary>
-    public unsafe void DeployScanner()
+    public unsafe virtual void DeployScanner()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DeployScanner", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -730,7 +730,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_SetContents
     /// </summary>
-    public unsafe void DXI_SetContents(BmSDK.FString contents_string, bool bScanned)
+    public unsafe virtual void DXI_SetContents(BmSDK.FString contents_string, bool bScanned)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_SetContents", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -743,7 +743,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: DXI_Detective_SetScannerAnimation
     /// </summary>
-    public unsafe void DXI_Detective_SetScannerAnimation(BmSDK.FString scanner_anim)
+    public unsafe virtual void DXI_Detective_SetScannerAnimation(BmSDK.FString scanner_anim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.DXI_Detective_SetScannerAnimation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -755,7 +755,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: SetDetectiveModeSelection
     /// </summary>
-    public unsafe bool SetDetectiveModeSelection(float location_x, float location_y, float location_depth, BmSDK.FString Heading, BmSDK.FString Description, bool Warning)
+    public unsafe virtual bool SetDetectiveModeSelection(float location_x, float location_y, float location_depth, BmSDK.FString Heading, BmSDK.FString Description, bool Warning)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.SetDetectiveModeSelection", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -772,7 +772,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: GetNPCCountString_DLCHarleyQuinn
     /// </summary>
-    public unsafe BmSDK.FString GetNPCCountString_DLCHarleyQuinn(int Armed, int UnArmed)
+    public unsafe virtual BmSDK.FString GetNPCCountString_DLCHarleyQuinn(int Armed, int UnArmed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.GetNPCCountString_DLCHarleyQuinn", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -792,7 +792,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: GetNPCCountString
     /// </summary>
-    public unsafe BmSDK.FString GetNPCCountString(int Armed, int UnArmed)
+    public unsafe virtual BmSDK.FString GetNPCCountString(int Armed, int UnArmed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.GetNPCCountString", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -812,7 +812,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: SetBatmobileMode
     /// </summary>
-    public unsafe void SetBatmobileMode(bool is_batmobile)
+    public unsafe virtual void SetBatmobileMode(bool is_batmobile)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.SetBatmobileMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -824,7 +824,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: IndividualDeferredInterfaceCall
     /// </summary>
-    public unsafe void IndividualDeferredInterfaceCall(BmSDK.TArray<BmSDK.FString> param_array)
+    public unsafe virtual void IndividualDeferredInterfaceCall(BmSDK.TArray<BmSDK.FString> param_array)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.IndividualDeferredInterfaceCall", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -836,7 +836,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: ProcessDeferredInterfaceCallsNative
     /// </summary>
-    public unsafe void ProcessDeferredInterfaceCallsNative(BmSDK.FString DeferredExternalInterfaceCalls)
+    public unsafe virtual void ProcessDeferredInterfaceCallsNative(BmSDK.FString DeferredExternalInterfaceCalls)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.ProcessDeferredInterfaceCallsNative", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -855,7 +855,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: ProcessDeferredInterfaceCalls
     /// </summary>
-    public unsafe void ProcessDeferredInterfaceCalls()
+    public unsafe virtual void ProcessDeferredInterfaceCalls()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.ProcessDeferredInterfaceCalls", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -866,7 +866,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: ManualAdvanceTick
     /// </summary>
-    public unsafe void ManualAdvanceTick(float DeltaT)
+    public unsafe override void ManualAdvanceTick(float DeltaT)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.ManualAdvanceTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -878,7 +878,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: CleanUpForCutscene
     /// </summary>
-    public unsafe void CleanUpForCutscene()
+    public unsafe override void CleanUpForCutscene()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.CleanUpForCutscene", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -889,7 +889,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: SetColorTransform
     /// </summary>
-    public unsafe void SetColorTransform(float RedOffset, float GreenOffset, float BlueOffset, float RedScalar, float GreenScalar, float BlueScalar)
+    public unsafe override void SetColorTransform(float RedOffset, float GreenOffset, float BlueOffset, float RedScalar, float GreenScalar, float BlueScalar)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.SetColorTransform", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -906,7 +906,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: SetJokerColorTransform
     /// </summary>
-    public unsafe void SetJokerColorTransform()
+    public unsafe virtual void SetJokerColorTransform()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.SetJokerColorTransform", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -917,7 +917,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: UpdateHudVisibility
     /// </summary>
-    public unsafe void UpdateHudVisibility(bool bVisible)
+    public unsafe override void UpdateHudVisibility(bool bVisible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.UpdateHudVisibility", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -929,7 +929,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: ManuallySetHudVisibility
     /// </summary>
-    public unsafe void ManuallySetHudVisibility(bool bVisible)
+    public unsafe override void ManuallySetHudVisibility(bool bVisible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.ManuallySetHudVisibility", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -941,7 +941,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: SetSelectiveVisibilityModule
     /// </summary>
-    public unsafe void SetSelectiveVisibilityModule(BmSDK.FString module_name)
+    public unsafe override void SetSelectiveVisibilityModule(BmSDK.FString module_name)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.SetSelectiveVisibilityModule", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -953,7 +953,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: ShakeEntireHud
     /// </summary>
-    public unsafe void ShakeEntireHud(bool FlashAndShake = default)
+    public unsafe override void ShakeEntireHud(bool FlashAndShake = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.ShakeEntireHud", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -965,7 +965,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: ToggleBatmobileHud
     /// </summary>
-    public unsafe void ToggleBatmobileHud()
+    public unsafe virtual void ToggleBatmobileHud()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.ToggleBatmobileHud", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -976,7 +976,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: ToggleRadarHud
     /// </summary>
-    public unsafe void ToggleRadarHud()
+    public unsafe virtual void ToggleRadarHud()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.ToggleRadarHud", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -987,7 +987,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: ToggleTargetsHud
     /// </summary>
-    public unsafe void ToggleTargetsHud()
+    public unsafe virtual void ToggleTargetsHud()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.ToggleTargetsHud", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -998,7 +998,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: ToggleMainHud
     /// </summary>
-    public unsafe void ToggleMainHud()
+    public unsafe virtual void ToggleMainHud()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.ToggleMainHud", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1009,7 +1009,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: SetMinimalHudMode
     /// </summary>
-    public unsafe void SetMinimalHudMode(bool _MinimalHudMode)
+    public unsafe virtual void SetMinimalHudMode(bool _MinimalHudMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.SetMinimalHudMode", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1021,7 +1021,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: SetMinimalHudBecausePlayerJustDied
     /// </summary>
-    public unsafe void SetMinimalHudBecausePlayerJustDied()
+    public unsafe virtual void SetMinimalHudBecausePlayerJustDied()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.SetMinimalHudBecausePlayerJustDied", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1032,7 +1032,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: PlayerRestoredToLife
     /// </summary>
-    public unsafe void PlayerRestoredToLife()
+    public unsafe virtual void PlayerRestoredToLife()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.PlayerRestoredToLife", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1043,7 +1043,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: SetInvestigateModeAuto
     /// </summary>
-    public unsafe void SetInvestigateModeAuto()
+    public unsafe virtual void SetInvestigateModeAuto()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.SetInvestigateModeAuto", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1054,7 +1054,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: CheckCleanupForDisposableHud
     /// </summary>
-    public unsafe void CheckCleanupForDisposableHud()
+    public unsafe virtual void CheckCleanupForDisposableHud()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.CheckCleanupForDisposableHud", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1065,7 +1065,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: GetDisposableGfxMovie
     /// </summary>
-    public unsafe BmSDK.BmGame.RGFxMovieModularHud_Disposable GetDisposableGfxMovie()
+    public unsafe virtual BmSDK.BmGame.RGFxMovieModularHud_Disposable GetDisposableGfxMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.GetDisposableGfxMovie", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1076,7 +1076,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: AnyDisposableModulesWaitingToInitialise
     /// </summary>
-    public unsafe bool AnyDisposableModulesWaitingToInitialise()
+    public unsafe virtual bool AnyDisposableModulesWaitingToInitialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.AnyDisposableModulesWaitingToInitialise", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1087,7 +1087,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: OnClose
     /// </summary>
-    public unsafe void OnClose()
+    public unsafe override void OnClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.OnClose", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1098,7 +1098,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud.Init", true);
         byte* paramsPtr = stackalloc byte[8];

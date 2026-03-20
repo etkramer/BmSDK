@@ -36,7 +36,7 @@ public partial class RHudModuleDetectiveModeJamming : BmSDK.BmGame.RHudModule, B
     /// <summary>
     /// Function: XI_DetectiveJammer_NotifyOutroComplete
     /// </summary>
-    public unsafe void XI_DetectiveJammer_NotifyOutroComplete()
+    public unsafe virtual void XI_DetectiveJammer_NotifyOutroComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveModeJamming.XI_DetectiveJammer_NotifyOutroComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RHudModuleDetectiveModeJamming : BmSDK.BmGame.RHudModule, B
     /// <summary>
     /// Function: SetDetectiveModeJammed
     /// </summary>
-    public unsafe void SetDetectiveModeJammed(bool is_jammed)
+    public unsafe virtual void SetDetectiveModeJammed(bool is_jammed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveModeJamming.SetDetectiveModeJammed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RHudModuleDetectiveModeJamming : BmSDK.BmGame.RHudModule, B
     /// <summary>
     /// Function: SetDetectiveModeCompromisedLevel
     /// </summary>
-    public unsafe void SetDetectiveModeCompromisedLevel(float JammingProportion, BmSDK.BmGame.RGFxMovieModularHud.EDetectiveModeDetectorStates StateEnum)
+    public unsafe virtual void SetDetectiveModeCompromisedLevel(float JammingProportion, BmSDK.BmGame.RGFxMovieModularHud.EDetectiveModeDetectorStates StateEnum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveModeJamming.SetDetectiveModeCompromisedLevel", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -72,7 +72,7 @@ public partial class RHudModuleDetectiveModeJamming : BmSDK.BmGame.RHudModule, B
     /// <summary>
     /// Function: InitialiseFlash
     /// </summary>
-    public unsafe void InitialiseFlash()
+    public unsafe override void InitialiseFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveModeJamming.InitialiseFlash", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -83,7 +83,7 @@ public partial class RHudModuleDetectiveModeJamming : BmSDK.BmGame.RHudModule, B
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveModeJamming.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RHudModuleDetectiveModeJamming : BmSDK.BmGame.RHudModule, B
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveModeJamming.Init", true);
         byte* paramsPtr = stackalloc byte[44];

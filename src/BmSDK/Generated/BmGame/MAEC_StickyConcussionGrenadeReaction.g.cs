@@ -71,7 +71,7 @@ public partial class MAEC_StickyConcussionGrenadeReaction : BmSDK.BmGame.RAlertE
     /// <summary>
     /// Function: AddThugCaughtByConcussionGrenadeBlast
     /// </summary>
-    public unsafe void AddThugCaughtByConcussionGrenadeBlast(BmSDK.BmGame.RBMAIController CaughtCon, System.Numerics.Vector3 ExplosionCenter)
+    public unsafe virtual void AddThugCaughtByConcussionGrenadeBlast(BmSDK.BmGame.RBMAIController CaughtCon, System.Numerics.Vector3 ExplosionCenter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_StickyConcussionGrenadeReaction.AddThugCaughtByConcussionGrenadeBlast", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -84,7 +84,7 @@ public partial class MAEC_StickyConcussionGrenadeReaction : BmSDK.BmGame.RAlertE
     /// <summary>
     /// Function: OnRemoveSoloChild
     /// </summary>
-    public unsafe void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
+    public unsafe override void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_StickyConcussionGrenadeReaction.OnRemoveSoloChild", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -96,7 +96,7 @@ public partial class MAEC_StickyConcussionGrenadeReaction : BmSDK.BmGame.RAlertE
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController CaughtCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController CaughtCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_StickyConcussionGrenadeReaction.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_DestroyGrate : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: GetGrateLookRefPoint
     /// </summary>
-    public unsafe bool GetGrateLookRefPoint()
+    public unsafe virtual bool GetGrateLookRefPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_DestroyGrate.GetGrateLookRefPoint", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Sub_DestroyGrate : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: DisableGrateVis
     /// </summary>
-    public unsafe void DisableGrateVis()
+    public unsafe virtual void DisableGrateVis()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_DestroyGrate.DisableGrateVis", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RAEC_Search_Sub_DestroyGrate : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: EnableGrateVis
     /// </summary>
-    public unsafe void EnableGrateVis()
+    public unsafe virtual void EnableGrateVis()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_DestroyGrate.EnableGrateVis", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RAEC_Search_Sub_DestroyGrate : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_DestroyGrate.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RAEC_Search_Sub_DestroyGrate : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_DestroyGrate.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[0];

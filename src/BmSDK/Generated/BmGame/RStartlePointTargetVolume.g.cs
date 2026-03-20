@@ -71,7 +71,7 @@ public partial class RStartlePointTargetVolume : BmSDK.Engine.Volume, BmSDK.IGam
     /// <summary>
     /// Function: GetTargetThugList
     /// </summary>
-    public unsafe void GetTargetThugList(out BmSDK.TArray<BmSDK.BmGame.RPawnVillain> ReturnThugList)
+    public unsafe virtual void GetTargetThugList(out BmSDK.TArray<BmSDK.BmGame.RPawnVillain> ReturnThugList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePointTargetVolume.GetTargetThugList", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RStartlePointTargetVolume : BmSDK.Engine.Volume, BmSDK.IGam
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePointTargetVolume.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RStartlePointTargetVolume : BmSDK.Engine.Volume, BmSDK.IGam
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePointTargetVolume.Tick", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -107,7 +107,7 @@ public partial class RStartlePointTargetVolume : BmSDK.Engine.Volume, BmSDK.IGam
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePointTargetVolume.UnTouch", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -119,7 +119,7 @@ public partial class RStartlePointTargetVolume : BmSDK.Engine.Volume, BmSDK.IGam
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePointTargetVolume.Touch", true);
         byte* paramsPtr = stackalloc byte[48];

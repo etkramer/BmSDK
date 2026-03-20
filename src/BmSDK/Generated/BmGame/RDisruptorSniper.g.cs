@@ -66,7 +66,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: CanPlayerForgetTrackedTarget
     /// </summary>
-    public unsafe bool CanPlayerForgetTrackedTarget(BmSDK.BmGame.RPlayerController RPC)
+    public unsafe virtual bool CanPlayerForgetTrackedTarget(BmSDK.BmGame.RPlayerController RPC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.CanPlayerForgetTrackedTarget", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -78,7 +78,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: CallFiredAtWrongTargetOnRestrictTargetSequenceActions
     /// </summary>
-    public unsafe void CallFiredAtWrongTargetOnRestrictTargetSequenceActions()
+    public unsafe virtual void CallFiredAtWrongTargetOnRestrictTargetSequenceActions()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.CallFiredAtWrongTargetOnRestrictTargetSequenceActions", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -89,7 +89,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: IsTargetAllowedByRestrictTargetSequenceAction
     /// </summary>
-    public unsafe bool IsTargetAllowedByRestrictTargetSequenceAction(BmSDK.Engine.Actor CheckTarget, bool bTrackerTarget)
+    public unsafe virtual bool IsTargetAllowedByRestrictTargetSequenceAction(BmSDK.Engine.Actor CheckTarget, bool bTrackerTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.IsTargetAllowedByRestrictTargetSequenceAction", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -102,7 +102,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: RemoveRestrictTargetSequenceAction
     /// </summary>
-    public unsafe void RemoveRestrictTargetSequenceAction(BmSDK.BmGame.RSeqAct_RestrictDisruptorTargets OldSequenceAction)
+    public unsafe virtual void RemoveRestrictTargetSequenceAction(BmSDK.BmGame.RSeqAct_RestrictDisruptorTargets OldSequenceAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.RemoveRestrictTargetSequenceAction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -114,7 +114,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: AddRestrictTargetSequenceAction
     /// </summary>
-    public unsafe void AddRestrictTargetSequenceAction(BmSDK.BmGame.RSeqAct_RestrictDisruptorTargets NewSequenceAction)
+    public unsafe virtual void AddRestrictTargetSequenceAction(BmSDK.BmGame.RSeqAct_RestrictDisruptorTargets NewSequenceAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.AddRestrictTargetSequenceAction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -126,7 +126,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: ResetForChallenge
     /// </summary>
-    public unsafe void ResetForChallenge(bool bChallengeStarted)
+    public unsafe override void ResetForChallenge(bool bChallengeStarted)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.ResetForChallenge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -138,7 +138,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: KillDisruptorViewMode
     /// </summary>
-    public unsafe void KillDisruptorViewMode()
+    public unsafe virtual void KillDisruptorViewMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.KillDisruptorViewMode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -149,7 +149,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: StartDisruptorViewMode
     /// </summary>
-    public unsafe void StartDisruptorViewMode()
+    public unsafe virtual void StartDisruptorViewMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.StartDisruptorViewMode", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -160,7 +160,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: StartGadgetCamera
     /// </summary>
-    public unsafe void StartGadgetCamera()
+    public unsafe virtual void StartGadgetCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.StartGadgetCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -171,7 +171,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: UpdateMuzzleAim
     /// </summary>
-    public unsafe void UpdateMuzzleAim(float DeltaTime)
+    public unsafe virtual void UpdateMuzzleAim(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.UpdateMuzzleAim", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -183,7 +183,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: StartMuzzleAim
     /// </summary>
-    public unsafe void StartMuzzleAim()
+    public unsafe virtual void StartMuzzleAim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.StartMuzzleAim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -194,7 +194,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: UpdateScreen
     /// </summary>
-    public unsafe void UpdateScreen(float fNewScreenOnPercentage)
+    public unsafe virtual void UpdateScreen(float fNewScreenOnPercentage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.UpdateScreen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -206,7 +206,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: DisruptorFinishedEquipping
     /// </summary>
-    public unsafe void DisruptorFinishedEquipping()
+    public unsafe virtual void DisruptorFinishedEquipping()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.DisruptorFinishedEquipping", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -217,7 +217,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: OnLevelChange
     /// </summary>
-    public unsafe void OnLevelChange()
+    public unsafe override void OnLevelChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.OnLevelChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -228,7 +228,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: OnRoomChange
     /// </summary>
-    public unsafe void OnRoomChange()
+    public unsafe override void OnRoomChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.OnRoomChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -239,7 +239,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: FullyRestoreAmmo
     /// </summary>
-    public unsafe void FullyRestoreAmmo()
+    public unsafe virtual void FullyRestoreAmmo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.FullyRestoreAmmo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -250,7 +250,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: DebugRestoreAmmo
     /// </summary>
-    public unsafe void DebugRestoreAmmo()
+    public unsafe override void DebugRestoreAmmo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.DebugRestoreAmmo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -261,7 +261,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: ReplenishAmmo
     /// </summary>
-    public unsafe void ReplenishAmmo()
+    public unsafe virtual void ReplenishAmmo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.ReplenishAmmo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -272,7 +272,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: ReduceAmmo
     /// </summary>
-    public unsafe void ReduceAmmo()
+    public unsafe virtual void ReduceAmmo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.ReduceAmmo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -283,7 +283,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: IsActorTagged
     /// </summary>
-    public unsafe bool IsActorTagged(BmSDK.Engine.Actor Target)
+    public unsafe virtual bool IsActorTagged(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.IsActorTagged", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -295,7 +295,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: IsVehicleBeingTracked
     /// </summary>
-    public unsafe bool IsVehicleBeingTracked(BmSDK.BmGame.RVehicleNPC CheckVehicle)
+    public unsafe virtual bool IsVehicleBeingTracked(BmSDK.BmGame.RVehicleNPC CheckVehicle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.IsVehicleBeingTracked", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -307,7 +307,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: CheckAutoTarget
     /// </summary>
-    public unsafe bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
+    public unsafe override bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.CheckAutoTarget", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -323,7 +323,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetGadgetCamera
     /// </summary>
-    public unsafe BmSDK.FName GetGadgetCamera(bool InSoftCover = default, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType = default)
+    public unsafe override BmSDK.FName GetGadgetCamera(bool InSoftCover = default, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.GetGadgetCamera", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -336,7 +336,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: StartBulletTrailVFX
     /// </summary>
-    public unsafe void StartBulletTrailVFX(System.Numerics.Vector3 vHitLocation)
+    public unsafe virtual void StartBulletTrailVFX(System.Numerics.Vector3 vHitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.StartBulletTrailVFX", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -348,7 +348,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -361,7 +361,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetGadgetLookSensitivity
     /// </summary>
-    public unsafe float GetGadgetLookSensitivity(float DeltaTime)
+    public unsafe override float GetGadgetLookSensitivity(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.GetGadgetLookSensitivity", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -373,7 +373,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: AimedFireDD
     /// </summary>
-    public unsafe int AimedFireDD(BmSDK.BmGame.RInventoryGadget.FHighlightedMesh SniperTarget, System.Numerics.Vector3 vHitLocation)
+    public unsafe virtual int AimedFireDD(BmSDK.BmGame.RInventoryGadget.FHighlightedMesh SniperTarget, System.Numerics.Vector3 vHitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.AimedFireDD", true);
         byte* paramsPtr = stackalloc byte[184];
@@ -386,7 +386,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: SetSurveillanceSuppressed
     /// </summary>
-    public unsafe void SetSurveillanceSuppressed(bool do_suppress)
+    public unsafe virtual void SetSurveillanceSuppressed(bool do_suppress)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.SetSurveillanceSuppressed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -398,7 +398,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: DrawAimingHUD
     /// </summary>
-    public unsafe void DrawAimingHUD()
+    public unsafe virtual void DrawAimingHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.DrawAimingHUD", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -409,7 +409,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: _GetDetailString
     /// </summary>
-    public unsafe BmSDK.FString _GetDetailString(BmSDK.BmGame.RInventoryGadget.FHighlightedMesh hHighlightTarget)
+    public unsafe virtual BmSDK.FString _GetDetailString(BmSDK.BmGame.RInventoryGadget.FHighlightedMesh hHighlightTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper._GetDetailString", true);
         byte* paramsPtr = stackalloc byte[120];
@@ -421,7 +421,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetFiringAnimationOverlay
     /// </summary>
-    public unsafe BmSDK.FName GetFiringAnimationOverlay()
+    public unsafe virtual BmSDK.FName GetFiringAnimationOverlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.GetFiringAnimationOverlay", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -432,7 +432,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: PlayMagazineRotation
     /// </summary>
-    public unsafe void PlayMagazineRotation(BmSDK.BmGame.RInventoryGadget.EHighlightedTargetType DesiredMagazineType)
+    public unsafe virtual void PlayMagazineRotation(BmSDK.BmGame.RInventoryGadget.EHighlightedTargetType DesiredMagazineType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.PlayMagazineRotation", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -444,7 +444,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: IsAmmoTypeTheSame
     /// </summary>
-    public unsafe bool IsAmmoTypeTheSame(BmSDK.BmGame.RInventoryGadget.EHighlightedTargetType OldTargetType, BmSDK.BmGame.RInventoryGadget.EHighlightedTargetType NewTargetType)
+    public unsafe virtual bool IsAmmoTypeTheSame(BmSDK.BmGame.RInventoryGadget.EHighlightedTargetType OldTargetType, BmSDK.BmGame.RInventoryGadget.EHighlightedTargetType NewTargetType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.IsAmmoTypeTheSame", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -457,7 +457,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: UpdateDisruptorUpgrades
     /// </summary>
-    public unsafe void UpdateDisruptorUpgrades()
+    public unsafe virtual void UpdateDisruptorUpgrades()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.UpdateDisruptorUpgrades", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -468,7 +468,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetPrimedPose
     /// </summary>
-    public unsafe BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
+    public unsafe override BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.GetPrimedPose", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -485,7 +485,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetAutoTargetRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetAutoTargetRotation()
+    public unsafe override BmSDK.Rotator GetAutoTargetRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.GetAutoTargetRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -503,7 +503,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetNearestPointOnGeometryToHitLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetNearestPointOnGeometryToHitLocation(BmSDK.BmGame.RInventoryGadget.FHighlightedMesh Target, System.Numerics.Vector3 vHitLocation)
+    public unsafe virtual System.Numerics.Vector3 GetNearestPointOnGeometryToHitLocation(BmSDK.BmGame.RInventoryGadget.FHighlightedMesh Target, System.Numerics.Vector3 vHitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.GetNearestPointOnGeometryToHitLocation", true);
         byte* paramsPtr = stackalloc byte[112];
@@ -523,7 +523,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetSniperTarget
     /// </summary>
-    public unsafe bool GetSniperTarget(out BmSDK.BmGame.RInventoryGadget.FHighlightedMesh OutTarget, out System.Numerics.Vector3 vHitLocation, out BmSDK.BmGame.RInventoryGadget.FHighlightedMesh NearestTarget, float NearestAngleInDegrees)
+    public unsafe virtual bool GetSniperTarget(out BmSDK.BmGame.RInventoryGadget.FHighlightedMesh OutTarget, out System.Numerics.Vector3 vHitLocation, out BmSDK.BmGame.RInventoryGadget.FHighlightedMesh NearestTarget, float NearestAngleInDegrees)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.GetSniperTarget", true);
         byte* paramsPtr = stackalloc byte[196];
@@ -545,7 +545,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: IsHighlightedMeshCurrentTarget
     /// </summary>
-    public unsafe bool IsHighlightedMeshCurrentTarget(BmSDK.Engine.MeshComponent CheckHighlightedMesh)
+    public unsafe override bool IsHighlightedMeshCurrentTarget(BmSDK.Engine.MeshComponent CheckHighlightedMesh)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.IsHighlightedMeshCurrentTarget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -564,7 +564,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: AllowHighlightToBeHidden
     /// </summary>
-    public unsafe bool AllowHighlightToBeHidden(BmSDK.BmGame.RInventoryGadget.FHighlightedMesh CheckHighlightedMesh)
+    public unsafe override bool AllowHighlightToBeHidden(BmSDK.BmGame.RInventoryGadget.FHighlightedMesh CheckHighlightedMesh)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.AllowHighlightToBeHidden", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -583,7 +583,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: SetViewInDisruptorModeOnPrimitiveComponent
     /// </summary>
-    public unsafe void SetViewInDisruptorModeOnPrimitiveComponent(BmSDK.Engine.PrimitiveComponent TheComponent)
+    public unsafe virtual void SetViewInDisruptorModeOnPrimitiveComponent(BmSDK.Engine.PrimitiveComponent TheComponent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.SetViewInDisruptorModeOnPrimitiveComponent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -602,7 +602,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: IsDisruptorAimingAtValidDisruptableLocationOnTarget
     /// </summary>
-    public unsafe bool IsDisruptorAimingAtValidDisruptableLocationOnTarget(BmSDK.Engine.Actor TargetActor, System.Numerics.Vector3 vTargetLocation, BmSDK.FName nHitBoneName)
+    public unsafe virtual bool IsDisruptorAimingAtValidDisruptableLocationOnTarget(BmSDK.Engine.Actor TargetActor, System.Numerics.Vector3 vTargetLocation, BmSDK.FName nHitBoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.IsDisruptorAimingAtValidDisruptableLocationOnTarget", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -623,7 +623,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: UpdateCornerCoverLean
     /// </summary>
-    public unsafe void UpdateCornerCoverLean()
+    public unsafe virtual void UpdateCornerCoverLean()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.UpdateCornerCoverLean", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -641,7 +641,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: UpdateDisruptorHighlightMaterials
     /// </summary>
-    public unsafe void UpdateDisruptorHighlightMaterials()
+    public unsafe virtual void UpdateDisruptorHighlightMaterials()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.UpdateDisruptorHighlightMaterials", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -659,7 +659,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetCorrectMIC
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface GetCorrectMIC(BmSDK.BmGame.RInventoryGadget.EHighlightedTargetType TargetType, bool bShotByDisruptor, bool bSniperHasAmmoLeft, bool bWeaponReadyToExplode, bool bUpgradeNeeded, bool bNormalViewMode, bool bForCamouflageThug, bool bSpecialTrackerTarget, bool bCurrentTarget)
+    public unsafe override BmSDK.Engine.MaterialInterface GetCorrectMIC(BmSDK.BmGame.RInventoryGadget.EHighlightedTargetType TargetType, bool bShotByDisruptor, bool bSniperHasAmmoLeft, bool bWeaponReadyToExplode, bool bUpgradeNeeded, bool bNormalViewMode, bool bForCamouflageThug, bool bSpecialTrackerTarget, bool bCurrentTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.GetCorrectMIC", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -686,7 +686,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: SetCorrectMICOnMesh
     /// </summary>
-    public unsafe void SetCorrectMICOnMesh(BmSDK.Engine.Actor NewActor, BmSDK.Engine.MeshComponent HighlightMesh, BmSDK.BmGame.RInventoryGadget.EHighlightedTargetType TargetType, bool bShotByDisruptor, bool bSniperHasAmmoLeft, bool bWeaponReadyToExplode, bool bUpgradeNeeded, bool bNormalViewMode, bool bForCamouflageThug, bool bSpecialTrackerTarget, bool bCurrentTarget)
+    public unsafe override void SetCorrectMICOnMesh(BmSDK.Engine.Actor NewActor, BmSDK.Engine.MeshComponent HighlightMesh, BmSDK.BmGame.RInventoryGadget.EHighlightedTargetType TargetType, bool bShotByDisruptor, bool bSniperHasAmmoLeft, bool bWeaponReadyToExplode, bool bUpgradeNeeded, bool bNormalViewMode, bool bForCamouflageThug, bool bSpecialTrackerTarget, bool bCurrentTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.SetCorrectMICOnMesh", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -715,7 +715,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: PrimedUpdateIndividualTargetHighlight
     /// </summary>
-    public unsafe void PrimedUpdateIndividualTargetHighlight(BmSDK.Engine.Actor CheckTarget)
+    public unsafe override void PrimedUpdateIndividualTargetHighlight(BmSDK.Engine.Actor CheckTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.PrimedUpdateIndividualTargetHighlight", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -734,7 +734,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: HolsteredShouldHighlightBeMaintained
     /// </summary>
-    public unsafe bool HolsteredShouldHighlightBeMaintained(BmSDK.BmGame.RInventoryGadget.FHighlightedMesh CheckHighlightedMesh)
+    public unsafe override bool HolsteredShouldHighlightBeMaintained(BmSDK.BmGame.RInventoryGadget.FHighlightedMesh CheckHighlightedMesh)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.HolsteredShouldHighlightBeMaintained", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -753,7 +753,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: PrimedUpdateHighlights
     /// </summary>
-    public unsafe void PrimedUpdateHighlights()
+    public unsafe override void PrimedUpdateHighlights()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptorSniper.PrimedUpdateHighlights", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMiniGameHelpPrompt
     /// </summary>
-    public unsafe void GetMiniGameHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe virtual void GetMiniGameHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlBase.GetMiniGameHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -84,7 +84,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanTargetTroughWalls
     /// </summary>
-    public unsafe bool CanTargetTroughWalls()
+    public unsafe virtual bool CanTargetTroughWalls()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlBase.CanTargetTroughWalls", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetInteractionType
     /// </summary>
-    public unsafe BmSDK.BmGame.RRemoteControlLowSecurityInterface.EOmnitronInteractionType GetInteractionType()
+    public unsafe virtual BmSDK.BmGame.RRemoteControlLowSecurityInterface.EOmnitronInteractionType GetInteractionType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlBase.GetInteractionType", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -106,7 +106,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetInteractionPromptSecondary
     /// </summary>
-    public unsafe BmSDK.FString GetInteractionPromptSecondary()
+    public unsafe virtual BmSDK.FString GetInteractionPromptSecondary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlBase.GetInteractionPromptSecondary", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -117,7 +117,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldInteractionPromptBeDisplayedInCentreOfScreen
     /// </summary>
-    public unsafe bool ShouldInteractionPromptBeDisplayedInCentreOfScreen()
+    public unsafe virtual bool ShouldInteractionPromptBeDisplayedInCentreOfScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlBase.ShouldInteractionPromptBeDisplayedInCentreOfScreen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetInteractionPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetInteractionPrompt()
+    public unsafe virtual BmSDK.FString GetInteractionPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlBase.GetInteractionPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -139,7 +139,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanBeTargettedByRHD
     /// </summary>
-    public unsafe bool CanBeTargettedByRHD(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool CanBeTargettedByRHD(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlBase.CanBeTargettedByRHD", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -151,7 +151,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: NeedDisplayRefresh
     /// </summary>
-    public unsafe bool NeedDisplayRefresh()
+    public unsafe virtual bool NeedDisplayRefresh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlBase.NeedDisplayRefresh", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -162,7 +162,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDisplayIconName
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayIconName()
+    public unsafe virtual BmSDK.FString GetDisplayIconName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlBase.GetDisplayIconName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -173,7 +173,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDisplayDescription
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayDescription()
+    public unsafe virtual BmSDK.FString GetDisplayDescription()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlBase.GetDisplayDescription", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -184,7 +184,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDisplayTitle
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayTitle()
+    public unsafe virtual BmSDK.FString GetDisplayTitle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlBase.GetDisplayTitle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -195,7 +195,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDisplayLockOnState
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayLockOnState()
+    public unsafe virtual BmSDK.FString GetDisplayLockOnState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlBase.GetDisplayLockOnState", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -206,7 +206,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDisplayTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDisplayTargetLocation()
+    public unsafe virtual System.Numerics.Vector3 GetDisplayTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlBase.GetDisplayTargetLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -217,7 +217,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RequiresBlindDroneUpgrade
     /// </summary>
-    public unsafe bool RequiresBlindDroneUpgrade()
+    public unsafe virtual bool RequiresBlindDroneUpgrade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlBase.RequiresBlindDroneUpgrade", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -228,7 +228,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanTrigger
     /// </summary>
-    public unsafe bool CanTrigger(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool CanTrigger(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlBase.CanTrigger", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -240,7 +240,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TriggerRight
     /// </summary>
-    public unsafe void TriggerRight(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void TriggerRight(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlBase.TriggerRight", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -252,7 +252,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TriggerLeft
     /// </summary>
-    public unsafe void TriggerLeft(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void TriggerLeft(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlBase.TriggerLeft", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -264,7 +264,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TriggerSecondary
     /// </summary>
-    public unsafe bool TriggerSecondary(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool TriggerSecondary(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlBase.TriggerSecondary", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -276,7 +276,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Trigger
     /// </summary>
-    public unsafe bool Trigger(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool Trigger(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlBase.Trigger", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -288,7 +288,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CoolDown
     /// </summary>
-    public unsafe void CoolDown()
+    public unsafe virtual void CoolDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlBase.CoolDown", true);
         byte* paramsPtr = stackalloc byte[0];

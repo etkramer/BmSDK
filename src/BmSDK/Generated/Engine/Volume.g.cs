@@ -71,7 +71,7 @@ public partial class Volume : BmSDK.Engine.Brush, BmSDK.IGameObject
     /// <summary>
     /// Function: OverrideDefaultAkAudibleSetup
     /// </summary>
-    public unsafe void OverrideDefaultAkAudibleSetup(BmSDK.Engine.RAkAudible akAud)
+    public unsafe override void OverrideDefaultAkAudibleSetup(BmSDK.Engine.RAkAudible akAud)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Volume.OverrideDefaultAkAudibleSetup", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class Volume : BmSDK.Engine.Brush, BmSDK.IGameObject
     /// <summary>
     /// Function: ProcessActorSetVolume
     /// </summary>
-    public unsafe void ProcessActorSetVolume(BmSDK.Engine.Actor Other)
+    public unsafe virtual void ProcessActorSetVolume(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Volume.ProcessActorSetVolume", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class Volume : BmSDK.Engine.Brush, BmSDK.IGameObject
     /// <summary>
     /// Function: CollisionChanged
     /// </summary>
-    public unsafe void CollisionChanged()
+    public unsafe override void CollisionChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Volume.CollisionChanged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class Volume : BmSDK.Engine.Brush, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Volume.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class Volume : BmSDK.Engine.Brush, BmSDK.IGameObject
     /// <summary>
     /// Function: DisplayDebug
     /// </summary>
-    public unsafe void DisplayDebug(BmSDK.Engine.HUD HUD, out float out_YL, out float out_YPos)
+    public unsafe override void DisplayDebug(BmSDK.Engine.HUD HUD, out float out_YL, out float out_YPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Volume.DisplayDebug", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -132,7 +132,7 @@ public partial class Volume : BmSDK.Engine.Brush, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Volume.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -143,7 +143,7 @@ public partial class Volume : BmSDK.Engine.Brush, BmSDK.IGameObject
     /// <summary>
     /// Function: EncompassesAABB
     /// </summary>
-    public unsafe bool EncompassesAABB(System.Numerics.Vector3 Loc, System.Numerics.Vector3 Extent)
+    public unsafe virtual bool EncompassesAABB(System.Numerics.Vector3 Loc, System.Numerics.Vector3 Extent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Volume.EncompassesAABB", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -163,7 +163,7 @@ public partial class Volume : BmSDK.Engine.Brush, BmSDK.IGameObject
     /// <summary>
     /// Function: EncompassesPoint
     /// </summary>
-    public unsafe bool EncompassesPoint(System.Numerics.Vector3 Loc)
+    public unsafe virtual bool EncompassesPoint(System.Numerics.Vector3 Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Volume.EncompassesPoint", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -182,7 +182,7 @@ public partial class Volume : BmSDK.Engine.Brush, BmSDK.IGameObject
     /// <summary>
     /// Function: Encompasses
     /// </summary>
-    public unsafe bool Encompasses(BmSDK.Engine.Actor Other)
+    public unsafe virtual bool Encompasses(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Volume.Encompasses", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -201,7 +201,7 @@ public partial class Volume : BmSDK.Engine.Brush, BmSDK.IGameObject
     /// <summary>
     /// Function: UnPinGC
     /// </summary>
-    public unsafe void UnPinGC()
+    public unsafe virtual void UnPinGC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Volume.UnPinGC", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -219,7 +219,7 @@ public partial class Volume : BmSDK.Engine.Brush, BmSDK.IGameObject
     /// <summary>
     /// Function: PinGC
     /// </summary>
-    public unsafe void PinGC()
+    public unsafe virtual void PinGC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Volume.PinGC", true);
         byte* paramsPtr = stackalloc byte[0];

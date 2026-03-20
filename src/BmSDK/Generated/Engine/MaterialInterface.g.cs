@@ -31,7 +31,7 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPrestreamMipLevels
     /// </summary>
-    public unsafe void SetPrestreamMipLevels(float ForceDuration, bool FullMips, bool HighPriority, bool GentleLastRenderTimeHint)
+    public unsafe virtual void SetPrestreamMipLevels(float ForceDuration, bool FullMips, bool HighPriority, bool GentleLastRenderTimeHint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInterface.SetPrestreamMipLevels", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -53,7 +53,7 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Function: SetForceMipLevelsToBeResident
     /// </summary>
-    public unsafe void SetForceMipLevelsToBeResident(bool OverrideForceMiplevelsToBeResident, bool bForceMiplevelsToBeResidentValue, float ForceDuration, int CinematicTextureGroups = default)
+    public unsafe virtual void SetForceMipLevelsToBeResident(bool OverrideForceMiplevelsToBeResident, bool bForceMiplevelsToBeResidentValue, float ForceDuration, int CinematicTextureGroups = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInterface.SetForceMipLevelsToBeResident", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -75,7 +75,7 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMobileVectorParameterValue
     /// </summary>
-    public unsafe bool GetMobileVectorParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FLinearColor OutValue)
+    public unsafe virtual bool GetMobileVectorParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FLinearColor OutValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInterface.GetMobileVectorParameterValue", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -95,7 +95,7 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMobileTextureParameterValue
     /// </summary>
-    public unsafe bool GetMobileTextureParameterValue(BmSDK.FName ParameterName, out BmSDK.Engine.Texture OutValue)
+    public unsafe virtual bool GetMobileTextureParameterValue(BmSDK.FName ParameterName, out BmSDK.Engine.Texture OutValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInterface.GetMobileTextureParameterValue", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -115,7 +115,7 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMobileScalarParameterValue
     /// </summary>
-    public unsafe bool GetMobileScalarParameterValue(BmSDK.FName ParameterName, out float OutValue)
+    public unsafe virtual bool GetMobileScalarParameterValue(BmSDK.FName ParameterName, out float OutValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInterface.GetMobileScalarParameterValue", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -135,7 +135,7 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Function: GetGroupName
     /// </summary>
-    public unsafe bool GetGroupName(BmSDK.FName ParameterName, out BmSDK.FName GroupName)
+    public unsafe virtual bool GetGroupName(BmSDK.FName ParameterName, out BmSDK.FName GroupName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInterface.GetGroupName", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -155,7 +155,7 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLinearColorCurveParameterValue
     /// </summary>
-    public unsafe bool GetLinearColorCurveParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FInterpCurveLinearColor OutValue)
+    public unsafe virtual bool GetLinearColorCurveParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FInterpCurveLinearColor OutValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInterface.GetLinearColorCurveParameterValue", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -175,7 +175,7 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLinearColorParameterValue
     /// </summary>
-    public unsafe bool GetLinearColorParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FLinearColor OutValue)
+    public unsafe virtual bool GetLinearColorParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FLinearColor OutValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInterface.GetLinearColorParameterValue", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -195,7 +195,7 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Function: GetVectorCurveParameterValue
     /// </summary>
-    public unsafe bool GetVectorCurveParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FInterpCurveVector OutValue)
+    public unsafe virtual bool GetVectorCurveParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FInterpCurveVector OutValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInterface.GetVectorCurveParameterValue", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -215,7 +215,7 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Function: GetVectorParameterValue
     /// </summary>
-    public unsafe bool GetVectorParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FLinearColor OutValue)
+    public unsafe virtual bool GetVectorParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FLinearColor OutValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInterface.GetVectorParameterValue", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -235,7 +235,7 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTextureParameterValue
     /// </summary>
-    public unsafe bool GetTextureParameterValue(BmSDK.FName ParameterName, out BmSDK.Engine.Texture OutValue)
+    public unsafe virtual bool GetTextureParameterValue(BmSDK.FName ParameterName, out BmSDK.Engine.Texture OutValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInterface.GetTextureParameterValue", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -255,7 +255,7 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Function: GetScalarCurveParameterValue
     /// </summary>
-    public unsafe bool GetScalarCurveParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FInterpCurveFloat OutValue)
+    public unsafe virtual bool GetScalarCurveParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FInterpCurveFloat OutValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInterface.GetScalarCurveParameterValue", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -275,7 +275,7 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Function: GetScalarParameterValue
     /// </summary>
-    public unsafe bool GetScalarParameterValue(BmSDK.FName ParameterName, out float OutValue)
+    public unsafe virtual bool GetScalarParameterValue(BmSDK.FName ParameterName, out float OutValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInterface.GetScalarParameterValue", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -295,7 +295,7 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFontParameterValue
     /// </summary>
-    public unsafe bool GetFontParameterValue(BmSDK.FName ParameterName, out BmSDK.Engine.Font OutFontValue, out int OutFontPage)
+    public unsafe virtual bool GetFontParameterValue(BmSDK.FName ParameterName, out BmSDK.Engine.Font OutFontValue, out int OutFontPage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInterface.GetFontParameterValue", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -316,7 +316,7 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Function: GetParameterDesc
     /// </summary>
-    public unsafe bool GetParameterDesc(BmSDK.FName ParameterName, out BmSDK.FString OutDesc)
+    public unsafe virtual bool GetParameterDesc(BmSDK.FName ParameterName, out BmSDK.FString OutDesc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInterface.GetParameterDesc", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -336,7 +336,7 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPhysicalMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.PhysicalMaterial GetPhysicalMaterial()
+    public unsafe virtual BmSDK.Engine.PhysicalMaterial GetPhysicalMaterial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInterface.GetPhysicalMaterial", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -354,7 +354,7 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.Material GetMaterial()
+    public unsafe virtual BmSDK.Engine.Material GetMaterial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInterface.GetMaterial", true);
         byte* paramsPtr = stackalloc byte[8];

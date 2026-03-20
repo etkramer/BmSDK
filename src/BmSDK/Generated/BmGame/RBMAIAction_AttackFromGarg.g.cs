@@ -71,7 +71,7 @@ public partial class RBMAIAction_AttackFromGarg : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: GetCustomEyeLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCustomEyeLocation()
+    public unsafe override System.Numerics.Vector3 GetCustomEyeLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_AttackFromGarg.GetCustomEyeLocation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_AttackFromGarg : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: CleanUpVantagePoints
     /// </summary>
-    public unsafe void CleanUpVantagePoints()
+    public unsafe virtual void CleanUpVantagePoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_AttackFromGarg.CleanUpVantagePoints", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RBMAIAction_AttackFromGarg : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: Cleanup
     /// </summary>
-    public unsafe void Cleanup()
+    public unsafe override void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_AttackFromGarg.Cleanup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RBMAIAction_AttackFromGarg : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: AddVantagePointList
     /// </summary>
-    public unsafe void AddVantagePointList(BmSDK.TArray<BmSDK.BmGame.RHidePoint> NewArray)
+    public unsafe virtual void AddVantagePointList(BmSDK.TArray<BmSDK.BmGame.RHidePoint> NewArray)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_AttackFromGarg.AddVantagePointList", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -116,7 +116,7 @@ public partial class RBMAIAction_AttackFromGarg : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: AddVantagePointToList
     /// </summary>
-    public unsafe void AddVantagePointToList(BmSDK.BmGame.RHidePoint PointToAdd)
+    public unsafe virtual void AddVantagePointToList(BmSDK.BmGame.RHidePoint PointToAdd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_AttackFromGarg.AddVantagePointToList", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -128,7 +128,7 @@ public partial class RBMAIAction_AttackFromGarg : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_AttackFromGarg.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -139,7 +139,7 @@ public partial class RBMAIAction_AttackFromGarg : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_AttackFromGarg.ActionTick", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -151,7 +151,7 @@ public partial class RBMAIAction_AttackFromGarg : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_AttackFromGarg.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -162,7 +162,7 @@ public partial class RBMAIAction_AttackFromGarg : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_AttackFromGarg.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -173,7 +173,7 @@ public partial class RBMAIAction_AttackFromGarg : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: SetPlayerAlert
     /// </summary>
-    public unsafe void SetPlayerAlert(BmSDK.BmGame.AlertInstance NewAlert)
+    public unsafe virtual void SetPlayerAlert(BmSDK.BmGame.AlertInstance NewAlert)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_AttackFromGarg.SetPlayerAlert", true);
         byte* paramsPtr = stackalloc byte[8];

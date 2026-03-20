@@ -36,7 +36,7 @@ public partial class FacebookIntegration : BmSDK.Engine.PlatformInterfaceBase, B
     /// <summary>
     /// Function: Disconnect
     /// </summary>
-    public unsafe void Disconnect()
+    public unsafe virtual void Disconnect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FacebookIntegration.Disconnect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class FacebookIntegration : BmSDK.Engine.PlatformInterfaceBase, B
     /// <summary>
     /// Function: FacebookDialog
     /// </summary>
-    public unsafe void FacebookDialog(BmSDK.FString Action, BmSDK.TArray<BmSDK.FString> ParamKeysAndValues)
+    public unsafe virtual void FacebookDialog(BmSDK.FString Action, BmSDK.TArray<BmSDK.FString> ParamKeysAndValues)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FacebookIntegration.FacebookDialog", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -74,7 +74,7 @@ public partial class FacebookIntegration : BmSDK.Engine.PlatformInterfaceBase, B
     /// <summary>
     /// Function: FacebookRequest
     /// </summary>
-    public unsafe void FacebookRequest(BmSDK.FString GraphRequest)
+    public unsafe virtual void FacebookRequest(BmSDK.FString GraphRequest)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FacebookIntegration.FacebookRequest", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -93,7 +93,7 @@ public partial class FacebookIntegration : BmSDK.Engine.PlatformInterfaceBase, B
     /// <summary>
     /// Function: IsAuthorized
     /// </summary>
-    public unsafe bool IsAuthorized()
+    public unsafe virtual bool IsAuthorized()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FacebookIntegration.IsAuthorized", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -111,7 +111,7 @@ public partial class FacebookIntegration : BmSDK.Engine.PlatformInterfaceBase, B
     /// <summary>
     /// Function: Authorize
     /// </summary>
-    public unsafe bool Authorize()
+    public unsafe virtual bool Authorize()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FacebookIntegration.Authorize", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -129,7 +129,7 @@ public partial class FacebookIntegration : BmSDK.Engine.PlatformInterfaceBase, B
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init()
+    public unsafe virtual bool Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FacebookIntegration.Init", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RDualplayZone : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMoveLocationInZone
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMoveLocationInZone(System.Numerics.Vector3 TestPos)
+    public unsafe virtual System.Numerics.Vector3 GetMoveLocationInZone(System.Numerics.Vector3 TestPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDualplayZone.GetMoveLocationInZone", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -83,7 +83,7 @@ public partial class RDualplayZone : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDualplayZone.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RDualplayZone : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDualplayZone.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RDualplayZone : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDualplayZone.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

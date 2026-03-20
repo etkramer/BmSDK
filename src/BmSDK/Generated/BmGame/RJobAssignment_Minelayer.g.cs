@@ -36,7 +36,7 @@ public partial class RJobAssignment_Minelayer : BmSDK.BmGame.RJobAssignment, BmS
     /// <summary>
     /// Function: DoAssignment
     /// </summary>
-    public unsafe void DoAssignment(BmSDK.BmGame.RBMRoomAIState RoomState, BmSDK.BmGame.RBMAIController ThugCon, BmSDK.GameObject AssignTarget)
+    public unsafe override void DoAssignment(BmSDK.BmGame.RBMRoomAIState RoomState, BmSDK.BmGame.RBMAIController ThugCon, BmSDK.GameObject AssignTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJobAssignment_Minelayer.DoAssignment", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -50,7 +50,7 @@ public partial class RJobAssignment_Minelayer : BmSDK.BmGame.RJobAssignment, BmS
     /// <summary>
     /// Function: CanBeAssigned
     /// </summary>
-    public unsafe bool CanBeAssigned(BmSDK.BmGame.RBMRoomAIState RoomState, BmSDK.BmGame.RBMAIController ThugCon, BmSDK.GameObject AssignTarget)
+    public unsafe override bool CanBeAssigned(BmSDK.BmGame.RBMRoomAIState RoomState, BmSDK.BmGame.RBMAIController ThugCon, BmSDK.GameObject AssignTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJobAssignment_Minelayer.CanBeAssigned", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -64,7 +64,7 @@ public partial class RJobAssignment_Minelayer : BmSDK.BmGame.RJobAssignment, BmS
     /// <summary>
     /// Function: IsAlreadyDoingJob
     /// </summary>
-    public unsafe bool IsAlreadyDoingJob(BmSDK.BmGame.RBMAIController TestCon)
+    public unsafe override bool IsAlreadyDoingJob(BmSDK.BmGame.RBMAIController TestCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJobAssignment_Minelayer.IsAlreadyDoingJob", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -76,7 +76,7 @@ public partial class RJobAssignment_Minelayer : BmSDK.BmGame.RJobAssignment, BmS
     /// <summary>
     /// Function: IsPointCloseToCas
     /// </summary>
-    public unsafe bool IsPointCloseToCas(BmSDK.BmGame.RBMRoomAIState RoomState, System.Numerics.Vector3 Loc)
+    public unsafe virtual bool IsPointCloseToCas(BmSDK.BmGame.RBMRoomAIState RoomState, System.Numerics.Vector3 Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJobAssignment_Minelayer.IsPointCloseToCas", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -89,7 +89,7 @@ public partial class RJobAssignment_Minelayer : BmSDK.BmGame.RJobAssignment, BmS
     /// <summary>
     /// Function: AddToDestList
     /// </summary>
-    public unsafe void AddToDestList(BmSDK.BmGame.RBMRoomAIState RoomState, out BmSDK.TArray<BmSDK.BmGame.RAEC_LevelScripting.FSearchTarget> OutList)
+    public unsafe override void AddToDestList(BmSDK.BmGame.RBMRoomAIState RoomState, out BmSDK.TArray<BmSDK.BmGame.RAEC_LevelScripting.FSearchTarget> OutList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJobAssignment_Minelayer.AddToDestList", true);
         byte* paramsPtr = stackalloc byte[64];

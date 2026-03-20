@@ -36,7 +36,7 @@ public partial class RSeqAct_StartVehicleNPCWeaponAttack : BmSDK.Engine.SeqAct_L
     /// <summary>
     /// Function: FiredOffScreen
     /// </summary>
-    public unsafe void FiredOffScreen()
+    public unsafe virtual void FiredOffScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StartVehicleNPCWeaponAttack.FiredOffScreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RSeqAct_StartVehicleNPCWeaponAttack : BmSDK.Engine.SeqAct_L
     /// <summary>
     /// Function: LostLineOfSight
     /// </summary>
-    public unsafe void LostLineOfSight()
+    public unsafe virtual void LostLineOfSight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StartVehicleNPCWeaponAttack.LostLineOfSight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_StartVehicleNPCWeaponAttack : BmSDK.Engine.SeqAct_L
     /// <summary>
     /// Function: WeaponHit
     /// </summary>
-    public unsafe void WeaponHit(bool HitTarget)
+    public unsafe virtual void WeaponHit(bool HitTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StartVehicleNPCWeaponAttack.WeaponHit", true);
         byte* paramsPtr = stackalloc byte[4];

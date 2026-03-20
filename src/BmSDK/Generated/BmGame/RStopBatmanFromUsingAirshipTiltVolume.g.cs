@@ -71,7 +71,7 @@ public partial class RStopBatmanFromUsingAirshipTiltVolume : BmSDK.Engine.Volume
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStopBatmanFromUsingAirshipTiltVolume.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RStopBatmanFromUsingAirshipTiltVolume : BmSDK.Engine.Volume
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStopBatmanFromUsingAirshipTiltVolume.Tick", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -95,7 +95,7 @@ public partial class RStopBatmanFromUsingAirshipTiltVolume : BmSDK.Engine.Volume
     /// <summary>
     /// Function: Soften
     /// </summary>
-    public unsafe void Soften()
+    public unsafe virtual void Soften()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStopBatmanFromUsingAirshipTiltVolume.Soften", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RStopBatmanFromUsingAirshipTiltVolume : BmSDK.Engine.Volume
     /// <summary>
     /// Function: Harden
     /// </summary>
-    public unsafe void Harden()
+    public unsafe virtual void Harden()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStopBatmanFromUsingAirshipTiltVolume.Harden", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RStopBatmanFromUsingAirshipTiltVolume : BmSDK.Engine.Volume
     /// <summary>
     /// Function: BatmanTriedToTiltAirship
     /// </summary>
-    public unsafe void BatmanTriedToTiltAirship(BmSDK.Engine.Pawn User)
+    public unsafe virtual void BatmanTriedToTiltAirship(BmSDK.Engine.Pawn User)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStopBatmanFromUsingAirshipTiltVolume.BatmanTriedToTiltAirship", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RStopBatmanFromUsingAirshipTiltVolume : BmSDK.Engine.Volume
     /// <summary>
     /// Function: RemoveAirshipTiltBlockerVolumeFromBatman
     /// </summary>
-    public unsafe void RemoveAirshipTiltBlockerVolumeFromBatman()
+    public unsafe virtual void RemoveAirshipTiltBlockerVolumeFromBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStopBatmanFromUsingAirshipTiltVolume.RemoveAirshipTiltBlockerVolumeFromBatman", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class RStopBatmanFromUsingAirshipTiltVolume : BmSDK.Engine.Volume
     /// <summary>
     /// Function: AddAirshipTiltBlockerVolumeToBatman
     /// </summary>
-    public unsafe void AddAirshipTiltBlockerVolumeToBatman()
+    public unsafe virtual void AddAirshipTiltBlockerVolumeToBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStopBatmanFromUsingAirshipTiltVolume.AddAirshipTiltBlockerVolumeToBatman", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -151,7 +151,7 @@ public partial class RStopBatmanFromUsingAirshipTiltVolume : BmSDK.Engine.Volume
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStopBatmanFromUsingAirshipTiltVolume.UnTouch", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -163,7 +163,7 @@ public partial class RStopBatmanFromUsingAirshipTiltVolume : BmSDK.Engine.Volume
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStopBatmanFromUsingAirshipTiltVolume.Touch", true);
         byte* paramsPtr = stackalloc byte[48];

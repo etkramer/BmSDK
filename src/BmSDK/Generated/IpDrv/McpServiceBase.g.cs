@@ -36,7 +36,7 @@ public partial class McpServiceBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAppAccessURL
     /// </summary>
-    public unsafe BmSDK.FString GetAppAccessURL()
+    public unsafe virtual BmSDK.FString GetAppAccessURL()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.McpServiceBase.GetAppAccessURL", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -47,7 +47,7 @@ public partial class McpServiceBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBaseURL
     /// </summary>
-    public unsafe BmSDK.FString GetBaseURL()
+    public unsafe virtual BmSDK.FString GetBaseURL()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.McpServiceBase.GetBaseURL", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -58,7 +58,7 @@ public partial class McpServiceBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init()
+    public unsafe virtual void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.McpServiceBase.Init", true);
         byte* paramsPtr = stackalloc byte[8];

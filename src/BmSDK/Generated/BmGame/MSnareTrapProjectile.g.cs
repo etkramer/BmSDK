@@ -66,7 +66,7 @@ public partial class MSnareTrapProjectile : BmSDK.BmGame.RGadgetProjectileBase, 
     /// <summary>
     /// Function: Detonate
     /// </summary>
-    public unsafe void Detonate(BmSDK.BmGame.RPawnVillain Victim, bool bTriggeredByTrap)
+    public unsafe virtual void Detonate(BmSDK.BmGame.RPawnVillain Victim, bool bTriggeredByTrap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrapProjectile.Detonate", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -79,7 +79,7 @@ public partial class MSnareTrapProjectile : BmSDK.BmGame.RGadgetProjectileBase, 
     /// <summary>
     /// Function: SpawnExplosionVFX
     /// </summary>
-    public unsafe void SpawnExplosionVFX(BmSDK.BmGame.RPawnVillain Victim, bool bTriggeredByTrap)
+    public unsafe virtual void SpawnExplosionVFX(BmSDK.BmGame.RPawnVillain Victim, bool bTriggeredByTrap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrapProjectile.SpawnExplosionVFX", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -92,7 +92,7 @@ public partial class MSnareTrapProjectile : BmSDK.BmGame.RGadgetProjectileBase, 
     /// <summary>
     /// Function: DoesThugHaveGun
     /// </summary>
-    public unsafe bool DoesThugHaveGun(BmSDK.BmGame.RPawnVillain Victim)
+    public unsafe virtual bool DoesThugHaveGun(BmSDK.BmGame.RPawnVillain Victim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrapProjectile.DoesThugHaveGun", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -104,7 +104,7 @@ public partial class MSnareTrapProjectile : BmSDK.BmGame.RGadgetProjectileBase, 
     /// <summary>
     /// Function: DoesThugHaveShield
     /// </summary>
-    public unsafe bool DoesThugHaveShield(BmSDK.BmGame.RPawnVillain Victim)
+    public unsafe virtual bool DoesThugHaveShield(BmSDK.BmGame.RPawnVillain Victim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrapProjectile.DoesThugHaveShield", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -116,7 +116,7 @@ public partial class MSnareTrapProjectile : BmSDK.BmGame.RGadgetProjectileBase, 
     /// <summary>
     /// Function: Ricochet
     /// </summary>
-    public unsafe void Ricochet(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor HitActor)
+    public unsafe virtual void Ricochet(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor HitActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrapProjectile.Ricochet", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -129,7 +129,7 @@ public partial class MSnareTrapProjectile : BmSDK.BmGame.RGadgetProjectileBase, 
     /// <summary>
     /// Function: HitWall
     /// </summary>
-    public unsafe void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
+    public unsafe override void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrapProjectile.HitWall", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -143,7 +143,7 @@ public partial class MSnareTrapProjectile : BmSDK.BmGame.RGadgetProjectileBase, 
     /// <summary>
     /// Function: DestroyProjectile
     /// </summary>
-    public unsafe void DestroyProjectile()
+    public unsafe virtual void DestroyProjectile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrapProjectile.DestroyProjectile", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -154,7 +154,7 @@ public partial class MSnareTrapProjectile : BmSDK.BmGame.RGadgetProjectileBase, 
     /// <summary>
     /// Function: ProximityTriggered
     /// </summary>
-    public unsafe void ProximityTriggered(BmSDK.BmGame.RPawnVillain HitVillain)
+    public unsafe override void ProximityTriggered(BmSDK.BmGame.RPawnVillain HitVillain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrapProjectile.ProximityTriggered", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -166,7 +166,7 @@ public partial class MSnareTrapProjectile : BmSDK.BmGame.RGadgetProjectileBase, 
     /// <summary>
     /// Function: Deploy
     /// </summary>
-    public unsafe void Deploy(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual void Deploy(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrapProjectile.Deploy", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -181,7 +181,7 @@ public partial class MSnareTrapProjectile : BmSDK.BmGame.RGadgetProjectileBase, 
     /// <summary>
     /// Function: GadgetNoiseEvent
     /// </summary>
-    public unsafe void GadgetNoiseEvent()
+    public unsafe virtual void GadgetNoiseEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrapProjectile.GadgetNoiseEvent", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -192,7 +192,7 @@ public partial class MSnareTrapProjectile : BmSDK.BmGame.RGadgetProjectileBase, 
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrapProjectile.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -203,7 +203,7 @@ public partial class MSnareTrapProjectile : BmSDK.BmGame.RGadgetProjectileBase, 
     /// <summary>
     /// Function: SpawnDelayedTrigger
     /// </summary>
-    public unsafe void SpawnDelayedTrigger()
+    public unsafe virtual void SpawnDelayedTrigger()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrapProjectile.SpawnDelayedTrigger", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -214,7 +214,7 @@ public partial class MSnareTrapProjectile : BmSDK.BmGame.RGadgetProjectileBase, 
     /// <summary>
     /// Function: Fire
     /// </summary>
-    public unsafe void Fire(System.Numerics.Vector3 LaunchLocation, System.Numerics.Vector3 TargetLocation, System.Numerics.Vector3 StartSpeed, bool bSecondary, BmSDK.Engine.Actor Target, System.Numerics.Vector3 ActualTargetLocation)
+    public unsafe override void Fire(System.Numerics.Vector3 LaunchLocation, System.Numerics.Vector3 TargetLocation, System.Numerics.Vector3 StartSpeed, bool bSecondary, BmSDK.Engine.Actor Target, System.Numerics.Vector3 ActualTargetLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrapProjectile.Fire", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -231,7 +231,7 @@ public partial class MSnareTrapProjectile : BmSDK.BmGame.RGadgetProjectileBase, 
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrapProjectile.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -242,7 +242,7 @@ public partial class MSnareTrapProjectile : BmSDK.BmGame.RGadgetProjectileBase, 
     /// <summary>
     /// Function: GetLookAtRotator
     /// </summary>
-    public unsafe BmSDK.Rotator GetLookAtRotator(System.Numerics.Vector3 Direction, System.Numerics.Vector3 Up)
+    public unsafe virtual BmSDK.Rotator GetLookAtRotator(System.Numerics.Vector3 Direction, System.Numerics.Vector3 Up)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrapProjectile.GetLookAtRotator", true);
         byte* paramsPtr = stackalloc byte[36];

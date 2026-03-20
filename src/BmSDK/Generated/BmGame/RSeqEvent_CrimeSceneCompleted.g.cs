@@ -47,7 +47,7 @@ public partial class RSeqEvent_CrimeSceneCompleted : BmSDK.Engine.SequenceEvent,
     /// <summary>
     /// Function: EvidenceTotalChanged
     /// </summary>
-    public unsafe void EvidenceTotalChanged(int TotalCollected, int TotalInCrimeScene)
+    public unsafe virtual void EvidenceTotalChanged(int TotalCollected, int TotalInCrimeScene)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_CrimeSceneCompleted.EvidenceTotalChanged", true);
         byte* paramsPtr = stackalloc byte[48];

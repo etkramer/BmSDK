@@ -71,7 +71,7 @@ public partial class DebugCameraHUD : BmSDK.Engine.HUD, BmSDK.IGameObject
     /// <summary>
     /// Function: PostRender
     /// </summary>
-    public unsafe void PostRender()
+    public unsafe override void PostRender()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DebugCameraHUD.PostRender", true);
         byte* paramsPtr = stackalloc byte[160];
@@ -82,7 +82,7 @@ public partial class DebugCameraHUD : BmSDK.Engine.HUD, BmSDK.IGameObject
     /// <summary>
     /// Function: DisplayMaterials
     /// </summary>
-    public unsafe bool DisplayMaterials(float X, out float Y, float DY, BmSDK.Engine.MeshComponent MeshComp)
+    public unsafe virtual bool DisplayMaterials(float X, out float Y, float DY, BmSDK.Engine.MeshComponent MeshComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DebugCameraHUD.DisplayMaterials", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -97,7 +97,7 @@ public partial class DebugCameraHUD : BmSDK.Engine.HUD, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DebugCameraHUD.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

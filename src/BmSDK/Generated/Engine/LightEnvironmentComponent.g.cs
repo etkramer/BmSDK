@@ -36,7 +36,7 @@ public partial class LightEnvironmentComponent : BmSDK.Engine.ActorComponent, Bm
     /// <summary>
     /// Function: IsEnabled
     /// </summary>
-    public unsafe bool IsEnabled()
+    public unsafe virtual bool IsEnabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LightEnvironmentComponent.IsEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -54,7 +54,7 @@ public partial class LightEnvironmentComponent : BmSDK.Engine.ActorComponent, Bm
     /// <summary>
     /// Function: SetEnabled
     /// </summary>
-    public unsafe void SetEnabled(bool bNewEnabled)
+    public unsafe virtual void SetEnabled(bool bNewEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LightEnvironmentComponent.SetEnabled", true);
         byte* paramsPtr = stackalloc byte[4];

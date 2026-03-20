@@ -71,7 +71,7 @@ public partial class RBMCombatPoint_FloorVent : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: IsValidLoc
     /// </summary>
-    public unsafe bool IsValidLoc(BmSDK.BmGame.RPawnPlayerCombat TestPlayer, BmSDK.BmGame.RPawnVillain TestPawn)
+    public unsafe override bool IsValidLoc(BmSDK.BmGame.RPawnPlayerCombat TestPlayer, BmSDK.BmGame.RPawnVillain TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FloorVent.IsValidLoc", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -84,7 +84,7 @@ public partial class RBMCombatPoint_FloorVent : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: SetControlBoxMaterial
     /// </summary>
-    public unsafe void SetControlBoxMaterial(bool bBoxActive)
+    public unsafe virtual void SetControlBoxMaterial(bool bBoxActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FloorVent.SetControlBoxMaterial", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -96,7 +96,7 @@ public partial class RBMCombatPoint_FloorVent : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FloorVent.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -108,7 +108,7 @@ public partial class RBMCombatPoint_FloorVent : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: PlayDestroyAnim
     /// </summary>
-    public unsafe bool PlayDestroyAnim(BmSDK.FName AnimName)
+    public unsafe override bool PlayDestroyAnim(BmSDK.FName AnimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FloorVent.PlayDestroyAnim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -120,7 +120,7 @@ public partial class RBMCombatPoint_FloorVent : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: GetAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetAnimName(BmSDK.BmGame.RPawnVillain TargetPawn, BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
+    public unsafe override BmSDK.FName GetAnimName(BmSDK.BmGame.RPawnVillain TargetPawn, BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FloorVent.GetAnimName", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -133,7 +133,7 @@ public partial class RBMCombatPoint_FloorVent : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: GetAnimYaw
     /// </summary>
-    public unsafe float GetAnimYaw()
+    public unsafe override float GetAnimYaw()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FloorVent.GetAnimYaw", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -144,7 +144,7 @@ public partial class RBMCombatPoint_FloorVent : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: GetMeshYawOffset
     /// </summary>
-    public unsafe float GetMeshYawOffset()
+    public unsafe override float GetMeshYawOffset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FloorVent.GetMeshYawOffset", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -155,7 +155,7 @@ public partial class RBMCombatPoint_FloorVent : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: SpawnSmallIceSphere
     /// </summary>
-    public unsafe BmSDK.Engine.Actor SpawnSmallIceSphere(System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation)
+    public unsafe virtual BmSDK.Engine.Actor SpawnSmallIceSphere(System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FloorVent.SpawnSmallIceSphere", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -168,7 +168,7 @@ public partial class RBMCombatPoint_FloorVent : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: DeepFreeze
     /// </summary>
-    public unsafe void DeepFreeze()
+    public unsafe virtual void DeepFreeze()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FloorVent.DeepFreeze", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -179,7 +179,7 @@ public partial class RBMCombatPoint_FloorVent : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: OnFxEvent
     /// </summary>
-    public unsafe void OnFxEvent()
+    public unsafe override void OnFxEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FloorVent.OnFxEvent", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -190,7 +190,7 @@ public partial class RBMCombatPoint_FloorVent : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: UsedByPawn
     /// </summary>
-    public unsafe void UsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.Engine.Actor NewTarget = default, bool bUsedDuringTaunt = default)
+    public unsafe override void UsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.Engine.Actor NewTarget = default, bool bUsedDuringTaunt = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FloorVent.UsedByPawn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -204,7 +204,7 @@ public partial class RBMCombatPoint_FloorVent : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: DebugReset
     /// </summary>
-    public unsafe void DebugReset(BmSDK.BmGame.RBMCombatManager CM)
+    public unsafe override void DebugReset(BmSDK.BmGame.RBMCombatManager CM)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FloorVent.DebugReset", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -216,7 +216,7 @@ public partial class RBMCombatPoint_FloorVent : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: OnSwapMesh
     /// </summary>
-    public unsafe void OnSwapMesh()
+    public unsafe override void OnSwapMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FloorVent.OnSwapMesh", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -227,7 +227,7 @@ public partial class RBMCombatPoint_FloorVent : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: SetupHighlightMesh
     /// </summary>
-    public unsafe void SetupHighlightMesh()
+    public unsafe override void SetupHighlightMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FloorVent.SetupHighlightMesh", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -238,7 +238,7 @@ public partial class RBMCombatPoint_FloorVent : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: RegisterStasisCheckMesh
     /// </summary>
-    public unsafe void RegisterStasisCheckMesh()
+    public unsafe override void RegisterStasisCheckMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FloorVent.RegisterStasisCheckMesh", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -249,7 +249,7 @@ public partial class RBMCombatPoint_FloorVent : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FloorVent.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

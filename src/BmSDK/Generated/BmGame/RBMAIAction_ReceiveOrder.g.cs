@@ -71,7 +71,7 @@ public partial class RBMAIAction_ReceiveOrder : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReceiveOrder.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_ReceiveOrder : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: RestoreFinished
     /// </summary>
-    public unsafe void RestoreFinished()
+    public unsafe virtual void RestoreFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReceiveOrder.RestoreFinished", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_ReceiveOrder : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: StartAnim
     /// </summary>
-    public unsafe void StartAnim()
+    public unsafe virtual void StartAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReceiveOrder.StartAnim", true);
         byte* paramsPtr = stackalloc byte[0];

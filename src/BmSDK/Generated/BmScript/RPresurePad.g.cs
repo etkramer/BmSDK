@@ -71,7 +71,7 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
     /// <summary>
     /// Function: OnTogglePressurePad
     /// </summary>
-    public unsafe void OnTogglePressurePad(BmSDK.BmScript.RSeqAct_TogglePressurePad ToggleAction)
+    public unsafe virtual void OnTogglePressurePad(BmSDK.BmScript.RSeqAct_TogglePressurePad ToggleAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPresurePad.OnTogglePressurePad", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
     /// <summary>
     /// Function: OnToggleValidVoiceSynthesiserTarget
     /// </summary>
-    public unsafe void OnToggleValidVoiceSynthesiserTarget(BmSDK.BmGame.RSeqAct_ToggleValidVoiceSynthesiserTarget ToggleAction)
+    public unsafe virtual void OnToggleValidVoiceSynthesiserTarget(BmSDK.BmGame.RSeqAct_ToggleValidVoiceSynthesiserTarget ToggleAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPresurePad.OnToggleValidVoiceSynthesiserTarget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPresurePad.Tick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -107,7 +107,7 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
     /// <summary>
     /// Function: Detach
     /// </summary>
-    public unsafe void Detach(BmSDK.Engine.Actor Other)
+    public unsafe override void Detach(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPresurePad.Detach", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -119,7 +119,7 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
     /// <summary>
     /// Function: Attach
     /// </summary>
-    public unsafe void Attach(BmSDK.Engine.Actor Other)
+    public unsafe override void Attach(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPresurePad.Attach", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -131,7 +131,7 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
     /// <summary>
     /// Function: ResetPressurePadToWaitingForInputState
     /// </summary>
-    public unsafe void ResetPressurePadToWaitingForInputState(bool bSilent = default)
+    public unsafe virtual void ResetPressurePadToWaitingForInputState(bool bSilent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPresurePad.ResetPressurePadToWaitingForInputState", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -143,7 +143,7 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
     /// <summary>
     /// Function: SetActivatedMat
     /// </summary>
-    public unsafe void SetActivatedMat()
+    public unsafe virtual void SetActivatedMat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPresurePad.SetActivatedMat", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -154,7 +154,7 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
     /// <summary>
     /// Function: TriggerPressurePad
     /// </summary>
-    public unsafe void TriggerPressurePad(BmSDK.Engine.Actor Other)
+    public unsafe virtual void TriggerPressurePad(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPresurePad.TriggerPressurePad", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -166,7 +166,7 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPresurePad.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];

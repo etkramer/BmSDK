@@ -71,7 +71,7 @@ public partial class RAEC_Sub_MuseumBooth : BmSDK.BmGame.RAlertEventCoordinatorS
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.BmGame.RPred_MuseumBoothReactionPointBase BoothPoint)
+    public unsafe virtual void Init(BmSDK.BmGame.RPred_MuseumBoothReactionPointBase BoothPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_MuseumBooth.Init", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -83,7 +83,7 @@ public partial class RAEC_Sub_MuseumBooth : BmSDK.BmGame.RAlertEventCoordinatorS
     /// <summary>
     /// Function: NotifyEvent
     /// </summary>
-    public unsafe void NotifyEvent(BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
+    public unsafe override void NotifyEvent(BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_MuseumBooth.NotifyEvent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -96,7 +96,7 @@ public partial class RAEC_Sub_MuseumBooth : BmSDK.BmGame.RAlertEventCoordinatorS
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_MuseumBooth.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -108,7 +108,7 @@ public partial class RAEC_Sub_MuseumBooth : BmSDK.BmGame.RAlertEventCoordinatorS
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_MuseumBooth.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[16];

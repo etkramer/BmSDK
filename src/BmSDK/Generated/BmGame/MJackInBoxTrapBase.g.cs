@@ -71,7 +71,7 @@ public partial class MJackInBoxTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameObj
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MJackInBoxTrapBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class MJackInBoxTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameObj
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MJackInBoxTrapBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class MJackInBoxTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameObj
     /// <summary>
     /// Function: AttractEnemies
     /// </summary>
-    public unsafe void AttractEnemies()
+    public unsafe virtual void AttractEnemies()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MJackInBoxTrapBase.AttractEnemies", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class MJackInBoxTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameObj
     /// <summary>
     /// Function: DoExplodeEvent
     /// </summary>
-    public unsafe void DoExplodeEvent()
+    public unsafe virtual void DoExplodeEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MJackInBoxTrapBase.DoExplodeEvent", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -115,7 +115,7 @@ public partial class MJackInBoxTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameObj
     /// <summary>
     /// Function: DoExplodeStartle
     /// </summary>
-    public unsafe void DoExplodeStartle()
+    public unsafe virtual void DoExplodeStartle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MJackInBoxTrapBase.DoExplodeStartle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -126,7 +126,7 @@ public partial class MJackInBoxTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameObj
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MJackInBoxTrapBase.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -138,7 +138,7 @@ public partial class MJackInBoxTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameObj
     /// <summary>
     /// Function: FireJackBombedInSnareEvent
     /// </summary>
-    public unsafe void FireJackBombedInSnareEvent()
+    public unsafe virtual void FireJackBombedInSnareEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MJackInBoxTrapBase.FireJackBombedInSnareEvent", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -149,7 +149,7 @@ public partial class MJackInBoxTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameObj
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode()
+    public unsafe virtual void Explode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MJackInBoxTrapBase.Explode", true);
         byte* paramsPtr = stackalloc byte[436];
@@ -160,7 +160,7 @@ public partial class MJackInBoxTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameObj
     /// <summary>
     /// Function: JackGoesBoom
     /// </summary>
-    public unsafe void JackGoesBoom()
+    public unsafe virtual void JackGoesBoom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MJackInBoxTrapBase.JackGoesBoom", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -171,7 +171,7 @@ public partial class MJackInBoxTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameObj
     /// <summary>
     /// Function: JackLightsUp
     /// </summary>
-    public unsafe void JackLightsUp()
+    public unsafe virtual void JackLightsUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MJackInBoxTrapBase.JackLightsUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -182,7 +182,7 @@ public partial class MJackInBoxTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameObj
     /// <summary>
     /// Function: SwapObjects
     /// </summary>
-    public unsafe void SwapObjects()
+    public unsafe virtual void SwapObjects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MJackInBoxTrapBase.SwapObjects", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -193,7 +193,7 @@ public partial class MJackInBoxTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameObj
     /// <summary>
     /// Function: Setup
     /// </summary>
-    public unsafe void Setup(bool IsQuickFire, float aExplosionRadius)
+    public unsafe virtual void Setup(bool IsQuickFire, float aExplosionRadius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MJackInBoxTrapBase.Setup", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -206,7 +206,7 @@ public partial class MJackInBoxTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameObj
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MJackInBoxTrapBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -217,7 +217,7 @@ public partial class MJackInBoxTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameObj
     /// <summary>
     /// Function: IsValidTarget
     /// </summary>
-    public unsafe bool IsValidTarget(BmSDK.Engine.Actor TestActor)
+    public unsafe virtual bool IsValidTarget(BmSDK.Engine.Actor TestActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MJackInBoxTrapBase.IsValidTarget", true);
         byte* paramsPtr = stackalloc byte[12];

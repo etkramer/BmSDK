@@ -66,7 +66,7 @@ public partial class RFreezableVentBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DamageTimer
     /// </summary>
-    public unsafe void DamageTimer()
+    public unsafe virtual void DamageTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezableVentBase.DamageTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class RFreezableVentBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanBasePawn
     /// </summary>
-    public unsafe bool CanBasePawn(BmSDK.Engine.Pawn P)
+    public unsafe override bool CanBasePawn(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezableVentBase.CanBasePawn", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -89,7 +89,7 @@ public partial class RFreezableVentBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezableVentBase.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -101,7 +101,7 @@ public partial class RFreezableVentBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TurnOnSteam
     /// </summary>
-    public unsafe void TurnOnSteam()
+    public unsafe virtual void TurnOnSteam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezableVentBase.TurnOnSteam", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -112,7 +112,7 @@ public partial class RFreezableVentBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TurnOffSteam
     /// </summary>
-    public unsafe void TurnOffSteam(bool NoEffects = default)
+    public unsafe virtual void TurnOffSteam(bool NoEffects = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezableVentBase.TurnOffSteam", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -124,7 +124,7 @@ public partial class RFreezableVentBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Bump
     /// </summary>
-    public unsafe void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezableVentBase.Bump", true);
         byte* paramsPtr = stackalloc byte[408];
@@ -138,7 +138,7 @@ public partial class RFreezableVentBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezableVentBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

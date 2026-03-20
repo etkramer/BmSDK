@@ -31,7 +31,7 @@ public partial class ApexFieldSamplerComponent : BmSDK.Engine.PrimitiveComponent
     /// <summary>
     /// Function: SetEnabled
     /// </summary>
-    public unsafe void SetEnabled(bool Enabled)
+    public unsafe virtual void SetEnabled(bool Enabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ApexFieldSamplerComponent.SetEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -50,7 +50,7 @@ public partial class ApexFieldSamplerComponent : BmSDK.Engine.PrimitiveComponent
     /// <summary>
     /// Function: DoInitRBPhys
     /// </summary>
-    public unsafe void DoInitRBPhys()
+    public unsafe virtual void DoInitRBPhys()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ApexFieldSamplerComponent.DoInitRBPhys", true);
         byte* paramsPtr = stackalloc byte[0];

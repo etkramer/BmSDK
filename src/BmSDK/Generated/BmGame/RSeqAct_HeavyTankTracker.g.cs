@@ -47,7 +47,7 @@ public partial class RSeqAct_HeavyTankTracker : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_HeavyTankTracker.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RSeqAct_HeavyTankTracker : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: TickUpdate
     /// </summary>
-    public unsafe void TickUpdate(float DeltaTime)
+    public unsafe virtual void TickUpdate(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_HeavyTankTracker.TickUpdate", true);
         byte* paramsPtr = stackalloc byte[4];

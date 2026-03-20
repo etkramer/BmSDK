@@ -36,7 +36,7 @@ public partial class AkDialogueConversation : BmSDK.Engine.AkDialogueSpeech, BmS
     /// <summary>
     /// Function: GetDialogueLineCountScript
     /// </summary>
-    public unsafe int GetDialogueLineCountScript()
+    public unsafe virtual int GetDialogueLineCountScript()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversation.GetDialogueLineCountScript", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class AkDialogueConversation : BmSDK.Engine.AkDialogueSpeech, BmS
     /// <summary>
     /// Function: GetTotalPlayCount
     /// </summary>
-    public unsafe float GetTotalPlayCount()
+    public unsafe virtual float GetTotalPlayCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversation.GetTotalPlayCount", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -36,7 +36,7 @@ public partial class RSpecialMoveConfig_SlideToCover : BmSDK.BmGame.RSpecialMove
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.RPlayerController Controller, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation, bool ForceReplicateToClient = default)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.RPlayerController Controller, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation, bool ForceReplicateToClient = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveConfig_SlideToCover.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[144];

@@ -42,7 +42,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: CreateRunVariantWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateRunVariantWeaponConfig()
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateRunVariantWeaponConfig()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.CreateRunVariantWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -53,7 +53,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: BeginHammer
     /// </summary>
-    public unsafe void BeginHammer()
+    public unsafe virtual void BeginHammer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.BeginHammer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -64,7 +64,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: EndGrind
     /// </summary>
-    public unsafe void EndGrind()
+    public unsafe virtual void EndGrind()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.EndGrind", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -75,7 +75,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: BeginGrind
     /// </summary>
-    public unsafe void BeginGrind()
+    public unsafe virtual void BeginGrind()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.BeginGrind", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -86,7 +86,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: EndWeld
     /// </summary>
-    public unsafe void EndWeld()
+    public unsafe virtual void EndWeld()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.EndWeld", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -97,7 +97,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: BeginWeld
     /// </summary>
-    public unsafe void BeginWeld()
+    public unsafe virtual void BeginWeld()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.BeginWeld", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -108,7 +108,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: UpdateGraffiti
     /// </summary>
-    public unsafe void UpdateGraffiti(float DeltaTime)
+    public unsafe virtual void UpdateGraffiti(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.UpdateGraffiti", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -120,7 +120,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: GraffitiNotify
     /// </summary>
-    public unsafe void GraffitiNotify(BmSDK.BmGame.RAnimNotify_Graffiti _GraffitiNotify)
+    public unsafe override void GraffitiNotify(BmSDK.BmGame.RAnimNotify_Graffiti _GraffitiNotify)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.GraffitiNotify", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -132,7 +132,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: IgniteFlare
     /// </summary>
-    public unsafe void IgniteFlare()
+    public unsafe virtual void IgniteFlare()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.IgniteFlare", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -143,7 +143,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: ExplodeMolotov
     /// </summary>
-    public unsafe void ExplodeMolotov()
+    public unsafe virtual void ExplodeMolotov()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.ExplodeMolotov", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -154,7 +154,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: IgniteMolotov
     /// </summary>
-    public unsafe void IgniteMolotov()
+    public unsafe virtual void IgniteMolotov()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.IgniteMolotov", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -165,7 +165,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: SmashWindow
     /// </summary>
-    public unsafe void SmashWindow()
+    public unsafe virtual void SmashWindow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.SmashWindow", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -176,7 +176,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: SmashObject
     /// </summary>
-    public unsafe void SmashObject()
+    public unsafe virtual void SmashObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.SmashObject", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -187,7 +187,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: CrackOrSmashWindow
     /// </summary>
-    public unsafe void CrackOrSmashWindow()
+    public unsafe virtual void CrackOrSmashWindow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.CrackOrSmashWindow", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -198,7 +198,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: CrackOrSmashObject
     /// </summary>
-    public unsafe void CrackOrSmashObject()
+    public unsafe virtual void CrackOrSmashObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.CrackOrSmashObject", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -209,7 +209,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: CrackWindow
     /// </summary>
-    public unsafe void CrackWindow()
+    public unsafe virtual void CrackWindow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.CrackWindow", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -220,7 +220,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: CrackObject
     /// </summary>
-    public unsafe void CrackObject()
+    public unsafe virtual void CrackObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.CrackObject", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -231,7 +231,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: GetBreakVars
     /// </summary>
-    public unsafe void GetBreakVars(out System.Numerics.Vector3 HitLoc, out System.Numerics.Vector3 HitNorm, out System.Numerics.Vector3 HitSpeed, out BmSDK.Engine.Actor ThrownActor)
+    public unsafe virtual void GetBreakVars(out System.Numerics.Vector3 HitLoc, out System.Numerics.Vector3 HitNorm, out System.Numerics.Vector3 HitSpeed, out BmSDK.Engine.Actor ThrownActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.GetBreakVars", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -246,7 +246,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: RiotPickupNotify
     /// </summary>
-    public unsafe void RiotPickupNotify(BmSDK.BmGame.RAnimNotify_PickupProp PickupNotify)
+    public unsafe override void RiotPickupNotify(BmSDK.BmGame.RAnimNotify_PickupProp PickupNotify)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.RiotPickupNotify", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -258,7 +258,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: SpawnObject
     /// </summary>
-    public unsafe void SpawnObject(out BmSDK.BmGame.RRiotObjectBase RiotObject)
+    public unsafe virtual void SpawnObject(out BmSDK.BmGame.RRiotObjectBase RiotObject)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.SpawnObject", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -270,7 +270,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: PickupStone
     /// </summary>
-    public unsafe void PickupStone()
+    public unsafe virtual void PickupStone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.PickupStone", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -281,7 +281,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: PickupBrick
     /// </summary>
-    public unsafe void PickupBrick()
+    public unsafe virtual void PickupBrick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.PickupBrick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -292,7 +292,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: PickupSprayCan
     /// </summary>
-    public unsafe void PickupSprayCan()
+    public unsafe virtual void PickupSprayCan()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.PickupSprayCan", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -303,7 +303,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: PickupPipe
     /// </summary>
-    public unsafe void PickupPipe()
+    public unsafe virtual void PickupPipe()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.PickupPipe", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -314,7 +314,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: RiotExitBehaviour
     /// </summary>
-    public unsafe void RiotExitBehaviour()
+    public unsafe virtual void RiotExitBehaviour()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.RiotExitBehaviour", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -325,7 +325,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: DettachFromCar
     /// </summary>
-    public unsafe void DettachFromCar()
+    public unsafe virtual void DettachFromCar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.DettachFromCar", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -336,7 +336,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: AttachToCarSeat3
     /// </summary>
-    public unsafe void AttachToCarSeat3()
+    public unsafe virtual void AttachToCarSeat3()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.AttachToCarSeat3", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -347,7 +347,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: AttachToCarSeat2
     /// </summary>
-    public unsafe void AttachToCarSeat2()
+    public unsafe virtual void AttachToCarSeat2()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.AttachToCarSeat2", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -358,7 +358,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: AttachToCarSeat1
     /// </summary>
-    public unsafe void AttachToCarSeat1()
+    public unsafe virtual void AttachToCarSeat1()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.AttachToCarSeat1", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -369,7 +369,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: GetEvadeVehicleType
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.EEvadeVehicleType GetEvadeVehicleType(BmSDK.Engine.Actor V, float CarSpeed, bool bZap)
+    public unsafe override BmSDK.BmGame.RGameInfo.EEvadeVehicleType GetEvadeVehicleType(BmSDK.Engine.Actor V, float CarSpeed, bool bZap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.GetEvadeVehicleType", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -383,7 +383,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: TriggerOutputEvent
     /// </summary>
-    public unsafe void TriggerOutputEvent()
+    public unsafe virtual void TriggerOutputEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.TriggerOutputEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -394,7 +394,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: InteractOutput
     /// </summary>
-    public unsafe void InteractOutput()
+    public unsafe virtual void InteractOutput()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.InteractOutput", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -405,7 +405,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: CanLookAtPlayer
     /// </summary>
-    public unsafe bool CanLookAtPlayer()
+    public unsafe override bool CanLookAtPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.CanLookAtPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -416,7 +416,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: HandlePathNotFound
     /// </summary>
-    public unsafe void HandlePathNotFound()
+    public unsafe virtual void HandlePathNotFound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.HandlePathNotFound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -427,7 +427,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: SetRunVariants
     /// </summary>
-    public unsafe void SetRunVariants(BmSDK.BmGame.RBMAIAction_RiotRunBase MoveAction)
+    public unsafe virtual void SetRunVariants(BmSDK.BmGame.RBMAIAction_RiotRunBase MoveAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.SetRunVariants", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -439,7 +439,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: CanBeHitInCombat
     /// </summary>
-    public unsafe bool CanBeHitInCombat(BmSDK.BmGame.RDamageType DamageType)
+    public unsafe override bool CanBeHitInCombat(BmSDK.BmGame.RDamageType DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.CanBeHitInCombat", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -451,7 +451,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: CaptainDied
     /// </summary>
-    public unsafe void CaptainDied()
+    public unsafe override void CaptainDied()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.CaptainDied", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -462,7 +462,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: RiotHandleSpookedBy
     /// </summary>
-    public unsafe bool RiotHandleSpookedBy(BmSDK.Engine.Actor Threat, bool bAlertNeighours = default)
+    public unsafe override bool RiotHandleSpookedBy(BmSDK.Engine.Actor Threat, bool bAlertNeighours = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.RiotHandleSpookedBy", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -475,7 +475,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: PlayFleeReaction
     /// </summary>
-    public unsafe void PlayFleeReaction()
+    public unsafe virtual void PlayFleeReaction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.PlayFleeReaction", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -486,7 +486,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: QuickEndTransition
     /// </summary>
-    public unsafe void QuickEndTransition(bool bKeepRiotMovement, bool bGoingToCombat = default)
+    public unsafe virtual void QuickEndTransition(bool bKeepRiotMovement, bool bGoingToCombat = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.QuickEndTransition", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -499,7 +499,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: SetSpecCanTakeOver
     /// </summary>
-    public unsafe void SetSpecCanTakeOver()
+    public unsafe virtual void SetSpecCanTakeOver()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.SetSpecCanTakeOver", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -510,7 +510,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: ClearCantFlee
     /// </summary>
-    public unsafe void ClearCantFlee()
+    public unsafe virtual void ClearCantFlee()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.ClearCantFlee", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -521,7 +521,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: SetCantFlee
     /// </summary>
-    public unsafe void SetCantFlee()
+    public unsafe virtual void SetCantFlee()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.SetCantFlee", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -532,7 +532,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -544,7 +544,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: PlayerBumped
     /// </summary>
-    public unsafe void PlayerBumped(bool bFriendly)
+    public unsafe override void PlayerBumped(bool bFriendly)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.PlayerBumped", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -556,7 +556,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: HandleNoise
     /// </summary>
-    public unsafe void HandleNoise(BmSDK.BmGame.RPawnPlayer PlayerInstigator)
+    public unsafe override void HandleNoise(BmSDK.BmGame.RPawnPlayer PlayerInstigator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.HandleNoise", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -568,7 +568,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: Repath
     /// </summary>
-    public unsafe void Repath()
+    public unsafe virtual void Repath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.Repath", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -579,7 +579,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: StartNavMeshSearch
     /// </summary>
-    public unsafe void StartNavMeshSearch()
+    public unsafe virtual void StartNavMeshSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.StartNavMeshSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -590,7 +590,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: VeryCloseToGoal
     /// </summary>
-    public unsafe bool VeryCloseToGoal(float CheckDist, float CheckDist2D)
+    public unsafe virtual bool VeryCloseToGoal(float CheckDist, float CheckDist2D)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.VeryCloseToGoal", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -603,7 +603,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: PawnIsBeingPooled
     /// </summary>
-    public unsafe void PawnIsBeingPooled(bool bBeingStreamedOut)
+    public unsafe override void PawnIsBeingPooled(bool bBeingStreamedOut)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.PawnIsBeingPooled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -615,7 +615,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: OnEndInterrupt
     /// </summary>
-    public unsafe void OnEndInterrupt()
+    public unsafe override void OnEndInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.OnEndInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -626,7 +626,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -637,7 +637,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -648,7 +648,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: SetInitialState
     /// </summary>
-    public unsafe void SetInitialState()
+    public unsafe override void SetInitialState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.SetInitialState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -659,7 +659,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: LeaveDueToTimeout
     /// </summary>
-    public unsafe void LeaveDueToTimeout()
+    public unsafe override void LeaveDueToTimeout()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.LeaveDueToTimeout", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -670,7 +670,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: GenerateMoveToPoint
     /// </summary>
-    public unsafe void GenerateMoveToPoint()
+    public unsafe virtual void GenerateMoveToPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.GenerateMoveToPoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -681,7 +681,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.OnActivate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -692,7 +692,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: GetMoveLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMoveLocation()
+    public unsafe virtual System.Numerics.Vector3 GetMoveLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.GetMoveLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -703,7 +703,7 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Function: GetDestinationActor
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetDestinationActor()
+    public unsafe override BmSDK.Engine.Actor GetDestinationActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangMovementBase.GetDestinationActor", true);
         byte* paramsPtr = stackalloc byte[8];

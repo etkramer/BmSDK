@@ -71,7 +71,7 @@ public partial class RAEC_ExplodedJammer : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedJammer.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_ExplodedJammer : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: Cleanup
     /// </summary>
-    public unsafe void Cleanup()
+    public unsafe virtual void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedJammer.Cleanup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RAEC_ExplodedJammer : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: AreThugsAtPerimeter
     /// </summary>
-    public unsafe bool AreThugsAtPerimeter()
+    public unsafe virtual bool AreThugsAtPerimeter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedJammer.AreThugsAtPerimeter", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -104,7 +104,7 @@ public partial class RAEC_ExplodedJammer : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: StartPerimeter
     /// </summary>
-    public unsafe void StartPerimeter(System.Numerics.Vector3 NewPerimeterCentre)
+    public unsafe virtual void StartPerimeter(System.Numerics.Vector3 NewPerimeterCentre)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedJammer.StartPerimeter", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -116,7 +116,7 @@ public partial class RAEC_ExplodedJammer : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedJammer.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -128,7 +128,7 @@ public partial class RAEC_ExplodedJammer : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedJammer.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];

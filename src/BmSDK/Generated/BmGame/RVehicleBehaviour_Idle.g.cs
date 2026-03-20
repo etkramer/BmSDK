@@ -36,7 +36,7 @@ public partial class RVehicleBehaviour_Idle : BmSDK.BmGame.RVehicleBehaviour, Bm
     /// <summary>
     /// Function: CanAttack
     /// </summary>
-    public unsafe bool CanAttack(BmSDK.Engine.Actor Target)
+    public unsafe override bool CanAttack(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_Idle.CanAttack", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -48,7 +48,7 @@ public partial class RVehicleBehaviour_Idle : BmSDK.BmGame.RVehicleBehaviour, Bm
     /// <summary>
     /// Function: HandlesTurretAndShooting
     /// </summary>
-    public unsafe bool HandlesTurretAndShooting()
+    public unsafe override bool HandlesTurretAndShooting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_Idle.HandlesTurretAndShooting", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RVehicleBehaviour_Idle : BmSDK.BmGame.RVehicleBehaviour, Bm
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_Idle.Tick", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -71,7 +71,7 @@ public partial class RVehicleBehaviour_Idle : BmSDK.BmGame.RVehicleBehaviour, Bm
     /// <summary>
     /// Function: ExitBehaviour
     /// </summary>
-    public unsafe void ExitBehaviour(BmSDK.BmGame.RVehicleBehaviour NextBehaviour)
+    public unsafe override void ExitBehaviour(BmSDK.BmGame.RVehicleBehaviour NextBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_Idle.ExitBehaviour", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RVehicleBehaviour_Idle : BmSDK.BmGame.RVehicleBehaviour, Bm
     /// <summary>
     /// Function: EnterBehaviour
     /// </summary>
-    public unsafe void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
+    public unsafe override void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_Idle.EnterBehaviour", true);
         byte* paramsPtr = stackalloc byte[28];

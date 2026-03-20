@@ -47,7 +47,7 @@ public partial class RSeqAct_MakeBatmanLookAtItems : BmSDK.Engine.SequenceAction
     /// <summary>
     /// Function: Clear
     /// </summary>
-    public unsafe void Clear()
+    public unsafe virtual void Clear()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MakeBatmanLookAtItems.Clear", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -58,7 +58,7 @@ public partial class RSeqAct_MakeBatmanLookAtItems : BmSDK.Engine.SequenceAction
     /// <summary>
     /// Function: Set
     /// </summary>
-    public unsafe void Set()
+    public unsafe virtual void Set()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MakeBatmanLookAtItems.Set", true);
         byte* paramsPtr = stackalloc byte[12];

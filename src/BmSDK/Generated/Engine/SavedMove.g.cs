@@ -36,7 +36,7 @@ public partial class SavedMove : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDebugString
     /// </summary>
-    public unsafe BmSDK.FString GetDebugString()
+    public unsafe virtual BmSDK.FString GetDebugString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SavedMove.GetDebugString", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -60,7 +60,7 @@ public partial class SavedMove : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CompressedFlags
     /// </summary>
-    public unsafe byte CompressedFlags()
+    public unsafe virtual byte CompressedFlags()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SavedMove.CompressedFlags", true);
         byte* paramsPtr = stackalloc byte[2];
@@ -71,7 +71,7 @@ public partial class SavedMove : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetMoveFor
     /// </summary>
-    public unsafe void ResetMoveFor(BmSDK.Engine.Pawn P)
+    public unsafe virtual void ResetMoveFor(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SavedMove.ResetMoveFor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class SavedMove : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PrepMoveFor
     /// </summary>
-    public unsafe void PrepMoveFor(BmSDK.Engine.Pawn P)
+    public unsafe virtual void PrepMoveFor(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SavedMove.PrepMoveFor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class SavedMove : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetMoveFor
     /// </summary>
-    public unsafe void SetMoveFor(BmSDK.Engine.PlayerController P, float DeltaTime, System.Numerics.Vector3 newAccel, BmSDK.Engine.Actor.EDoubleClickDir InDoubleClick)
+    public unsafe virtual void SetMoveFor(BmSDK.Engine.PlayerController P, float DeltaTime, System.Numerics.Vector3 newAccel, BmSDK.Engine.Actor.EDoubleClickDir InDoubleClick)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SavedMove.SetMoveFor", true);
         byte* paramsPtr = stackalloc byte[25];
@@ -110,7 +110,7 @@ public partial class SavedMove : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CanCombineWith
     /// </summary>
-    public unsafe bool CanCombineWith(BmSDK.Engine.SavedMove NewMove, BmSDK.Engine.Pawn inPawn, float MaxDelta)
+    public unsafe virtual bool CanCombineWith(BmSDK.Engine.SavedMove NewMove, BmSDK.Engine.Pawn inPawn, float MaxDelta)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SavedMove.CanCombineWith", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -124,7 +124,7 @@ public partial class SavedMove : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetInitialPosition
     /// </summary>
-    public unsafe void SetInitialPosition(BmSDK.Engine.Pawn P)
+    public unsafe virtual void SetInitialPosition(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SavedMove.SetInitialPosition", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -136,7 +136,7 @@ public partial class SavedMove : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetStartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetStartLocation()
+    public unsafe virtual System.Numerics.Vector3 GetStartLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SavedMove.GetStartLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -147,7 +147,7 @@ public partial class SavedMove : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsImportantMove
     /// </summary>
-    public unsafe bool IsImportantMove(System.Numerics.Vector3 CompareAccel)
+    public unsafe virtual bool IsImportantMove(System.Numerics.Vector3 CompareAccel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SavedMove.IsImportantMove", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -159,7 +159,7 @@ public partial class SavedMove : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PostUpdate
     /// </summary>
-    public unsafe void PostUpdate(BmSDK.Engine.PlayerController P)
+    public unsafe virtual void PostUpdate(BmSDK.Engine.PlayerController P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SavedMove.PostUpdate", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -171,7 +171,7 @@ public partial class SavedMove : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Clear
     /// </summary>
-    public unsafe void Clear()
+    public unsafe virtual void Clear()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SavedMove.Clear", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: DroneControlDisrupted
     /// </summary>
-    public unsafe void DroneControlDisrupted()
+    public unsafe virtual void DroneControlDisrupted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.DroneControlDisrupted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: GuardPointStolen
     /// </summary>
-    public unsafe void GuardPointStolen()
+    public unsafe virtual void GuardPointStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.GuardPointStolen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -116,7 +116,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -128,7 +128,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: SetGuardPoint
     /// </summary>
-    public unsafe void SetGuardPoint(BmSDK.BmGame.RGuardPoint NewGuardPoint)
+    public unsafe virtual void SetGuardPoint(BmSDK.BmGame.RGuardPoint NewGuardPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.SetGuardPoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -140,7 +140,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -151,7 +151,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.Tick", true);
         byte* paramsPtr = stackalloc byte[4];

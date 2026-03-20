@@ -52,7 +52,7 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
     /// <summary>
     /// Function: SpawnHitEffect
     /// </summary>
-    public unsafe void SpawnHitEffect(BmSDK.Engine.Actor.FImpactInfo Impact, BmSDK.Engine.RPhysicalMaterialProperty.EPhysMaterialImpactTypes ImpactType, BmSDK.Engine.AkEvent ImpactSound, bool bPlaySound = default, float Wetness = default)
+    public unsafe virtual void SpawnHitEffect(BmSDK.Engine.Actor.FImpactInfo Impact, BmSDK.Engine.RPhysicalMaterialProperty.EPhysMaterialImpactTypes ImpactType, BmSDK.Engine.AkEvent ImpactSound, bool bPlaySound = default, float Wetness = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPhysicalMaterialProperty.SpawnHitEffect", true);
         byte* paramsPtr = stackalloc byte[360];
@@ -84,7 +84,7 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
     /// <summary>
     /// Function: HitEffectParticleSystemFinished
     /// </summary>
-    public unsafe void HitEffectParticleSystemFinished(BmSDK.Engine.ParticleSystemComponent PSC)
+    public unsafe virtual void HitEffectParticleSystemFinished(BmSDK.Engine.ParticleSystemComponent PSC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPhysicalMaterialProperty.HitEffectParticleSystemFinished", true);
         byte* paramsPtr = stackalloc byte[24];

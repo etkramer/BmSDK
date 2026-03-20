@@ -71,7 +71,7 @@ public partial class RVehicleBatmobilePredictor : BmSDK.BmGame.RVehicleNPC, BmSD
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBatmobilePredictor.Tick", true);
         byte* paramsPtr = stackalloc byte[120];
@@ -83,7 +83,7 @@ public partial class RVehicleBatmobilePredictor : BmSDK.BmGame.RVehicleNPC, BmSD
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBatmobilePredictor.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RVehicleBatmobilePredictor : BmSDK.BmGame.RVehicleNPC, BmSD
     /// <summary>
     /// Function: SelfDrive
     /// </summary>
-    public unsafe bool SelfDrive(float DeltaTime)
+    public unsafe override bool SelfDrive(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBatmobilePredictor.SelfDrive", true);
         byte* paramsPtr = stackalloc byte[8];

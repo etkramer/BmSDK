@@ -71,7 +71,7 @@ public partial class RAEC_Attack_FilmA1Tut : BmSDK.BmGame.RAEC_Attack_Base, BmSD
     /// <summary>
     /// Function: ThugEscapedTakedown
     /// </summary>
-    public unsafe void ThugEscapedTakedown(BmSDK.BmGame.RBMAIController NewMember)
+    public unsafe override void ThugEscapedTakedown(BmSDK.BmGame.RBMAIController NewMember)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_FilmA1Tut.ThugEscapedTakedown", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RAEC_Attack_FilmA1Tut : BmSDK.BmGame.RAEC_Attack_Base, BmSD
     /// <summary>
     /// Function: HandleGadgetImpactNoise
     /// </summary>
-    public unsafe bool HandleGadgetImpactNoise(System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 ThrownFromPos, float ReactRange)
+    public unsafe override bool HandleGadgetImpactNoise(System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 ThrownFromPos, float ReactRange)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_FilmA1Tut.HandleGadgetImpactNoise", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -97,7 +97,7 @@ public partial class RAEC_Attack_FilmA1Tut : BmSDK.BmGame.RAEC_Attack_Base, BmSD
     /// <summary>
     /// Function: AddAttacker
     /// </summary>
-    public unsafe void AddAttacker(BmSDK.BmGame.RBMAIController NewMember, bool bPlaySpottedLine = default)
+    public unsafe override void AddAttacker(BmSDK.BmGame.RBMAIController NewMember, bool bPlaySpottedLine = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_FilmA1Tut.AddAttacker", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -110,7 +110,7 @@ public partial class RAEC_Attack_FilmA1Tut : BmSDK.BmGame.RAEC_Attack_Base, BmSD
     /// <summary>
     /// Function: AlertAndAddAttacker
     /// </summary>
-    public unsafe void AlertAndAddAttacker(BmSDK.BmGame.RBMAIController NewMember, bool bPlaySpottedLine = default, BmSDK.BmGame.RAEC_Attack_Base.PredAttackEscalationType EscType = default)
+    public unsafe override void AlertAndAddAttacker(BmSDK.BmGame.RBMAIController NewMember, bool bPlaySpottedLine = default, BmSDK.BmGame.RAEC_Attack_Base.PredAttackEscalationType EscType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_FilmA1Tut.AlertAndAddAttacker", true);
         byte* paramsPtr = stackalloc byte[13];
@@ -124,7 +124,7 @@ public partial class RAEC_Attack_FilmA1Tut : BmSDK.BmGame.RAEC_Attack_Base, BmSD
     /// <summary>
     /// Function: ThugSawPlayer
     /// </summary>
-    public unsafe void ThugSawPlayer(BmSDK.BmGame.RBMAIController NewMember)
+    public unsafe override void ThugSawPlayer(BmSDK.BmGame.RBMAIController NewMember)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_FilmA1Tut.ThugSawPlayer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -136,7 +136,7 @@ public partial class RAEC_Attack_FilmA1Tut : BmSDK.BmGame.RAEC_Attack_Base, BmSD
     /// <summary>
     /// Function: InternalStartAttack
     /// </summary>
-    public unsafe void InternalStartAttack(bool bForceRestart = default, BmSDK.BmGame.RAEC_Attack_Base.AttackStartTrigger StartCause = default, BmSDK.BmGame.RPawnVillain TriggeringVillain = default)
+    public unsafe override void InternalStartAttack(bool bForceRestart = default, BmSDK.BmGame.RAEC_Attack_Base.AttackStartTrigger StartCause = default, BmSDK.BmGame.RPawnVillain TriggeringVillain = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_FilmA1Tut.InternalStartAttack", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -150,7 +150,7 @@ public partial class RAEC_Attack_FilmA1Tut : BmSDK.BmGame.RAEC_Attack_Base, BmSD
     /// <summary>
     /// Function: AreAttackersActive
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.EPredAttackState AreAttackersActive()
+    public unsafe override BmSDK.BmGame.RGameRI.EPredAttackState AreAttackersActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_FilmA1Tut.AreAttackersActive", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -161,7 +161,7 @@ public partial class RAEC_Attack_FilmA1Tut : BmSDK.BmGame.RAEC_Attack_Base, BmSD
     /// <summary>
     /// Function: OnRemoveSoloChild
     /// </summary>
-    public unsafe void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
+    public unsafe override void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_FilmA1Tut.OnRemoveSoloChild", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -36,7 +36,7 @@ public partial class RockDecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: GetDecalMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface GetDecalMaterial()
+    public unsafe virtual BmSDK.Engine.MaterialInterface GetDecalMaterial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RockDecalComponent.GetDecalMaterial", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -54,7 +54,7 @@ public partial class RockDecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: SetDecalMaterial
     /// </summary>
-    public unsafe void SetDecalMaterial(BmSDK.Engine.MaterialInterface NewDecalMaterial)
+    public unsafe virtual void SetDecalMaterial(BmSDK.Engine.MaterialInterface NewDecalMaterial)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RockDecalComponent.SetDecalMaterial", true);
         byte* paramsPtr = stackalloc byte[8];

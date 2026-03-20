@@ -36,7 +36,7 @@ public partial class AnimNodePlayCustomAnim : BmSDK.Engine.AnimNodeBlend, BmSDK.
     /// <summary>
     /// Function: SetRootBoneAxisOption
     /// </summary>
-    public unsafe void SetRootBoneAxisOption(BmSDK.Engine.AnimNodeSequence.ERootBoneAxis AxisX = default, BmSDK.Engine.AnimNodeSequence.ERootBoneAxis AxisY = default, BmSDK.Engine.AnimNodeSequence.ERootBoneAxis AxisZ = default)
+    public unsafe virtual void SetRootBoneAxisOption(BmSDK.Engine.AnimNodeSequence.ERootBoneAxis AxisX = default, BmSDK.Engine.AnimNodeSequence.ERootBoneAxis AxisY = default, BmSDK.Engine.AnimNodeSequence.ERootBoneAxis AxisZ = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodePlayCustomAnim.SetRootBoneAxisOption", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -50,7 +50,7 @@ public partial class AnimNodePlayCustomAnim : BmSDK.Engine.AnimNodeBlend, BmSDK.
     /// <summary>
     /// Function: GetCustomAnimNodeSeq
     /// </summary>
-    public unsafe BmSDK.Engine.AnimNodeSequence GetCustomAnimNodeSeq()
+    public unsafe virtual BmSDK.Engine.AnimNodeSequence GetCustomAnimNodeSeq()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodePlayCustomAnim.GetCustomAnimNodeSeq", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -61,7 +61,7 @@ public partial class AnimNodePlayCustomAnim : BmSDK.Engine.AnimNodeBlend, BmSDK.
     /// <summary>
     /// Function: SetActorAnimEndNotification
     /// </summary>
-    public unsafe void SetActorAnimEndNotification(bool bNewStatus)
+    public unsafe virtual void SetActorAnimEndNotification(bool bNewStatus)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodePlayCustomAnim.SetActorAnimEndNotification", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -73,7 +73,7 @@ public partial class AnimNodePlayCustomAnim : BmSDK.Engine.AnimNodeBlend, BmSDK.
     /// <summary>
     /// Function: SetCustomAnim
     /// </summary>
-    public unsafe void SetCustomAnim(BmSDK.FName AnimName)
+    public unsafe virtual void SetCustomAnim(BmSDK.FName AnimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodePlayCustomAnim.SetCustomAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -85,7 +85,7 @@ public partial class AnimNodePlayCustomAnim : BmSDK.Engine.AnimNodeBlend, BmSDK.
     /// <summary>
     /// Function: StopCustomAnim
     /// </summary>
-    public unsafe void StopCustomAnim(float BlendOutTime)
+    public unsafe virtual void StopCustomAnim(float BlendOutTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodePlayCustomAnim.StopCustomAnim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class AnimNodePlayCustomAnim : BmSDK.Engine.AnimNodeBlend, BmSDK.
     /// <summary>
     /// Function: PlayCustomAnimByDuration
     /// </summary>
-    public unsafe void PlayCustomAnimByDuration(BmSDK.FName AnimName, float Duration, float BlendInTime = default, float BlendOutTime = default, bool bLooping = default, bool bOverride = default)
+    public unsafe virtual void PlayCustomAnimByDuration(BmSDK.FName AnimName, float Duration, float BlendInTime = default, float BlendOutTime = default, bool bLooping = default, bool bOverride = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodePlayCustomAnim.PlayCustomAnimByDuration", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -128,7 +128,7 @@ public partial class AnimNodePlayCustomAnim : BmSDK.Engine.AnimNodeBlend, BmSDK.
     /// <summary>
     /// Function: PlayCustomAnim
     /// </summary>
-    public unsafe float PlayCustomAnim(BmSDK.FName AnimName, float Rate, float BlendInTime = default, float BlendOutTime = default, bool bLooping = default, bool bOverride = default)
+    public unsafe virtual float PlayCustomAnim(BmSDK.FName AnimName, float Rate, float BlendInTime = default, float BlendOutTime = default, bool bLooping = default, bool bOverride = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodePlayCustomAnim.PlayCustomAnim", true);
         byte* paramsPtr = stackalloc byte[32];

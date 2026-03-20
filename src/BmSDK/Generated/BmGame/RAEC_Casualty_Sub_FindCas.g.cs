@@ -71,7 +71,7 @@ public partial class RAEC_Casualty_Sub_FindCas : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_FindCas.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RAEC_Casualty_Sub_FindCas : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_FindCas.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RAEC_Casualty_Sub_FindCas : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: AssignCasualty
     /// </summary>
-    public unsafe void AssignCasualty(System.Numerics.Vector3 MovePos, BmSDK.BmGame.RPawnVillain Casualty)
+    public unsafe virtual void AssignCasualty(System.Numerics.Vector3 MovePos, BmSDK.BmGame.RPawnVillain Casualty)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_FindCas.AssignCasualty", true);
         byte* paramsPtr = stackalloc byte[28];

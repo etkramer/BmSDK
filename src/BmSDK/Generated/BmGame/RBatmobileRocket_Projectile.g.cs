@@ -71,7 +71,7 @@ public partial class RBatmobileRocket_Projectile : BmSDK.BmGame.RProjectile, BmS
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, bool bPlayExplosionSound = default)
+    public unsafe override void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, bool bPlayExplosionSound = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileRocket_Projectile.Explode", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -85,7 +85,7 @@ public partial class RBatmobileRocket_Projectile : BmSDK.BmGame.RProjectile, BmS
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(System.Numerics.Vector3 Direction)
+    public unsafe override void Init(System.Numerics.Vector3 Direction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileRocket_Projectile.Init", true);
         byte* paramsPtr = stackalloc byte[12];

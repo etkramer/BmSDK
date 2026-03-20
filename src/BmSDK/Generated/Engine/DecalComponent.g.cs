@@ -36,7 +36,7 @@ public partial class DecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// Function: IsWaitingForResetToDefaultsToComplete
     /// </summary>
-    public unsafe bool IsWaitingForResetToDefaultsToComplete()
+    public unsafe virtual bool IsWaitingForResetToDefaultsToComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DecalComponent.IsWaitingForResetToDefaultsToComplete", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -54,7 +54,7 @@ public partial class DecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// Function: GetDecalMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface GetDecalMaterial()
+    public unsafe virtual BmSDK.Engine.MaterialInterface GetDecalMaterial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DecalComponent.GetDecalMaterial", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -72,7 +72,7 @@ public partial class DecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetDecalMaterial
     /// </summary>
-    public unsafe void SetDecalMaterial(BmSDK.Engine.MaterialInterface NewDecalMaterial)
+    public unsafe virtual void SetDecalMaterial(BmSDK.Engine.MaterialInterface NewDecalMaterial)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DecalComponent.SetDecalMaterial", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -91,7 +91,7 @@ public partial class DecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// Function: ResetToDefaults
     /// </summary>
-    public unsafe void ResetToDefaults()
+    public unsafe virtual void ResetToDefaults()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DecalComponent.ResetToDefaults", true);
         byte* paramsPtr = stackalloc byte[0];

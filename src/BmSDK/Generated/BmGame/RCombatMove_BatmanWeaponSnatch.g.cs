@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanWeaponSnatch : BmSDK.BmGame.RCombatMove_B
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponSnatch.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_BatmanWeaponSnatch : BmSDK.BmGame.RCombatMove_B
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat ExitPawn)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat ExitPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponSnatch.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RCombatMove_BatmanWeaponSnatch : BmSDK.BmGame.RCombatMove_B
     /// <summary>
     /// Function: MoveOverridenForPawn
     /// </summary>
-    public unsafe void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
+    public unsafe override void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponSnatch.MoveOverridenForPawn", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -107,7 +107,7 @@ public partial class RCombatMove_BatmanWeaponSnatch : BmSDK.BmGame.RCombatMove_B
     /// <summary>
     /// Function: CanReceiveAttackFromPawn
     /// </summary>
-    public unsafe bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
+    public unsafe override bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponSnatch.CanReceiveAttackFromPawn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -120,7 +120,7 @@ public partial class RCombatMove_BatmanWeaponSnatch : BmSDK.BmGame.RCombatMove_B
     /// <summary>
     /// Function: WDHit
     /// </summary>
-    public unsafe void WDHit()
+    public unsafe virtual void WDHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponSnatch.WDHit", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -131,7 +131,7 @@ public partial class RCombatMove_BatmanWeaponSnatch : BmSDK.BmGame.RCombatMove_B
     /// <summary>
     /// Function: AllowNextStrike
     /// </summary>
-    public unsafe void AllowNextStrike()
+    public unsafe override void AllowNextStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponSnatch.AllowNextStrike", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -142,7 +142,7 @@ public partial class RCombatMove_BatmanWeaponSnatch : BmSDK.BmGame.RCombatMove_B
     /// <summary>
     /// Function: GrabWeapon
     /// </summary>
-    public unsafe void GrabWeapon(bool bRight, bool bDestroy)
+    public unsafe override void GrabWeapon(bool bRight, bool bDestroy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponSnatch.GrabWeapon", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -155,7 +155,7 @@ public partial class RCombatMove_BatmanWeaponSnatch : BmSDK.BmGame.RCombatMove_B
     /// <summary>
     /// Function: CanNewAttackBeStarted
     /// </summary>
-    public unsafe bool CanNewAttackBeStarted()
+    public unsafe override bool CanNewAttackBeStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponSnatch.CanNewAttackBeStarted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -166,7 +166,7 @@ public partial class RCombatMove_BatmanWeaponSnatch : BmSDK.BmGame.RCombatMove_B
     /// <summary>
     /// Function: SpawnWeaponPickupAndThrow
     /// </summary>
-    public unsafe void SpawnWeaponPickupAndThrow()
+    public unsafe virtual void SpawnWeaponPickupAndThrow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponSnatch.SpawnWeaponPickupAndThrow", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -177,7 +177,7 @@ public partial class RCombatMove_BatmanWeaponSnatch : BmSDK.BmGame.RCombatMove_B
     /// <summary>
     /// Function: SpawnWeaponGrabAndThrow
     /// </summary>
-    public unsafe void SpawnWeaponGrabAndThrow()
+    public unsafe virtual void SpawnWeaponGrabAndThrow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponSnatch.SpawnWeaponGrabAndThrow", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -188,7 +188,7 @@ public partial class RCombatMove_BatmanWeaponSnatch : BmSDK.BmGame.RCombatMove_B
     /// <summary>
     /// Function: SetWeaponSnatchInfo
     /// </summary>
-    public unsafe bool SetWeaponSnatchInfo()
+    public unsafe virtual bool SetWeaponSnatchInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponSnatch.SetWeaponSnatchInfo", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -199,7 +199,7 @@ public partial class RCombatMove_BatmanWeaponSnatch : BmSDK.BmGame.RCombatMove_B
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponSnatch.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

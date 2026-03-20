@@ -47,7 +47,7 @@ public partial class RBMBehaviour_JokerRooftop : BmSDK.BmGame.RBMBehaviour_Joker
     /// <summary>
     /// Function: JokerInShot
     /// </summary>
-    public unsafe bool JokerInShot()
+    public unsafe virtual bool JokerInShot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerRooftop.JokerInShot", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_JokerRooftop : BmSDK.BmGame.RBMBehaviour_Joker
     /// <summary>
     /// Function: BeginOverlay
     /// </summary>
-    public unsafe void BeginOverlay()
+    public unsafe virtual void BeginOverlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerRooftop.BeginOverlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_JokerRooftop : BmSDK.BmGame.RBMBehaviour_Joker
     /// <summary>
     /// Function: DoesJokerTypeTrumpMine
     /// </summary>
-    public unsafe bool DoesJokerTypeTrumpMine(BmSDK.FString NewCaseIdentifier)
+    public unsafe override bool DoesJokerTypeTrumpMine(BmSDK.FString NewCaseIdentifier)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerRooftop.DoesJokerTypeTrumpMine", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_JokerRooftop : BmSDK.BmGame.RBMBehaviour_Joker
     /// <summary>
     /// Function: MeetingPointHit
     /// </summary>
-    public unsafe void MeetingPointHit()
+    public unsafe virtual void MeetingPointHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerRooftop.MeetingPointHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -92,7 +92,7 @@ public partial class RBMBehaviour_JokerRooftop : BmSDK.BmGame.RBMBehaviour_Joker
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerRooftop.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -103,7 +103,7 @@ public partial class RBMBehaviour_JokerRooftop : BmSDK.BmGame.RBMBehaviour_Joker
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerRooftop.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

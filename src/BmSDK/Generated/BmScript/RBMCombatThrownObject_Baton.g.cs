@@ -71,7 +71,7 @@ public partial class RBMCombatThrownObject_Baton : BmSDK.BmGame.RBMCombatThrownO
     /// <summary>
     /// Function: SpawnAttachment
     /// </summary>
-    public unsafe void SpawnAttachment()
+    public unsafe override void SpawnAttachment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_Baton.SpawnAttachment", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -47,7 +47,7 @@ public partial class RSeqAct_FakeVehicle : BmSDK.BmGame.RSeqAct_FakeVehicleStart
     /// <summary>
     /// Function: TickUpdate
     /// </summary>
-    public unsafe void TickUpdate()
+    public unsafe override void TickUpdate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FakeVehicle.TickUpdate", true);
         byte* paramsPtr = stackalloc byte[0];

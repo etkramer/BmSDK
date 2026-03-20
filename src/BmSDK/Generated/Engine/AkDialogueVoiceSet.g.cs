@@ -36,7 +36,7 @@ public partial class AkDialogueVoiceSet : BmSDK.Engine.AkDialogueVoice, BmSDK.IG
     /// <summary>
     /// Function: GetAllVoiceNamesFromSet
     /// </summary>
-    public unsafe void GetAllVoiceNamesFromSet(out BmSDK.TArray<BmSDK.FName> OutList)
+    public unsafe virtual void GetAllVoiceNamesFromSet(out BmSDK.TArray<BmSDK.FName> OutList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueVoiceSet.GetAllVoiceNamesFromSet", true);
         byte* paramsPtr = stackalloc byte[20];

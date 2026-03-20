@@ -71,7 +71,7 @@ public partial class RAEC_Casualty_Sub_Centre : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: NotifyEvent
     /// </summary>
-    public unsafe void NotifyEvent(BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
+    public unsafe override void NotifyEvent(BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Centre.NotifyEvent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -84,7 +84,7 @@ public partial class RAEC_Casualty_Sub_Centre : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: IsReadyToDisperse
     /// </summary>
-    public unsafe bool IsReadyToDisperse()
+    public unsafe virtual bool IsReadyToDisperse()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Centre.IsReadyToDisperse", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RAEC_Casualty_Sub_Centre : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: StartDisperse
     /// </summary>
-    public unsafe void StartDisperse()
+    public unsafe virtual void StartDisperse()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Centre.StartDisperse", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RAEC_Casualty_Sub_Centre : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: HasLongWayLeftToRun
     /// </summary>
-    public unsafe bool HasLongWayLeftToRun()
+    public unsafe virtual bool HasLongWayLeftToRun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Centre.HasLongWayLeftToRun", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -117,7 +117,7 @@ public partial class RAEC_Casualty_Sub_Centre : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: HasDoneConsole
     /// </summary>
-    public unsafe bool HasDoneConsole()
+    public unsafe virtual bool HasDoneConsole()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Centre.HasDoneConsole", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RAEC_Casualty_Sub_Centre : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: IsAtCasualty
     /// </summary>
-    public unsafe bool IsAtCasualty()
+    public unsafe virtual bool IsAtCasualty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Centre.IsAtCasualty", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -139,7 +139,7 @@ public partial class RAEC_Casualty_Sub_Centre : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: HasDoneDiscoverGesture
     /// </summary>
-    public unsafe bool HasDoneDiscoverGesture()
+    public unsafe virtual bool HasDoneDiscoverGesture()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Centre.HasDoneDiscoverGesture", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -150,7 +150,7 @@ public partial class RAEC_Casualty_Sub_Centre : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: AssignCasualty
     /// </summary>
-    public unsafe void AssignCasualty(BmSDK.BmGame.RPawnVillain NewCas)
+    public unsafe virtual void AssignCasualty(BmSDK.BmGame.RPawnVillain NewCas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Centre.AssignCasualty", true);
         byte* paramsPtr = stackalloc byte[8];

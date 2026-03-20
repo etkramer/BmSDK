@@ -66,7 +66,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: ResetBombThug
     /// </summary>
-    public unsafe void ResetBombThug()
+    public unsafe virtual void ResetBombThug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.ResetBombThug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: SetBombThugController
     /// </summary>
-    public unsafe void SetBombThugController(BmSDK.BmGame.RSeqAct_ActivateBombThugRiots ControllerAction)
+    public unsafe virtual void SetBombThugController(BmSDK.BmGame.RSeqAct_ActivateBombThugRiots ControllerAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.SetBombThugController", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -89,7 +89,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: CanDoFlare
     /// </summary>
-    public unsafe bool CanDoFlare()
+    public unsafe virtual bool CanDoFlare()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.CanDoFlare", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -100,7 +100,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: DoFlare
     /// </summary>
-    public unsafe void DoFlare()
+    public unsafe virtual void DoFlare()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.DoFlare", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -111,7 +111,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: SpawnDebugRunAwayThugAtLocation
     /// </summary>
-    public unsafe void SpawnDebugRunAwayThugAtLocation(System.Numerics.Vector3 SpawnPos)
+    public unsafe virtual void SpawnDebugRunAwayThugAtLocation(System.Numerics.Vector3 SpawnPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.SpawnDebugRunAwayThugAtLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -123,7 +123,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: SpawnJokers
     /// </summary>
-    public unsafe bool SpawnJokers(int NumToSpawn)
+    public unsafe virtual bool SpawnJokers(int NumToSpawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.SpawnJokers", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -135,7 +135,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: HasVisiblePawn
     /// </summary>
-    public unsafe bool HasVisiblePawn()
+    public unsafe virtual bool HasVisiblePawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.HasVisiblePawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -153,7 +153,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: IsPopulationActive
     /// </summary>
-    public unsafe bool IsPopulationActive()
+    public unsafe virtual bool IsPopulationActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.IsPopulationActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -171,7 +171,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: RioterWantsToFight
     /// </summary>
-    public unsafe bool RioterWantsToFight(BmSDK.BmGame.RPawnVillain Thug, BmSDK.Engine.Actor Threat)
+    public unsafe virtual bool RioterWantsToFight(BmSDK.BmGame.RPawnVillain Thug, BmSDK.Engine.Actor Threat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.RioterWantsToFight", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -191,7 +191,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: DeactivatePopulation
     /// </summary>
-    public unsafe void DeactivatePopulation(bool bDueToStreamingOut = default)
+    public unsafe virtual void DeactivatePopulation(bool bDueToStreamingOut = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.DeactivatePopulation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -203,7 +203,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: ActivatePopulation
     /// </summary>
-    public unsafe void ActivatePopulation(int MaxPawnsAllowed)
+    public unsafe virtual void ActivatePopulation(int MaxPawnsAllowed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.ActivatePopulation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -215,7 +215,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: KismetRevertToDynamic
     /// </summary>
-    public unsafe void KismetRevertToDynamic()
+    public unsafe virtual void KismetRevertToDynamic()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.KismetRevertToDynamic", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -226,7 +226,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: KismetForceOff
     /// </summary>
-    public unsafe void KismetForceOff()
+    public unsafe virtual void KismetForceOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.KismetForceOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -237,7 +237,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: KismetForceOn
     /// </summary>
-    public unsafe void KismetForceOn(bool bEvenIfAlreadyActive)
+    public unsafe virtual void KismetForceOn(bool bEvenIfAlreadyActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.KismetForceOn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -249,7 +249,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: CanRunAwayIfExhausted
     /// </summary>
-    public unsafe bool CanRunAwayIfExhausted()
+    public unsafe virtual bool CanRunAwayIfExhausted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.CanRunAwayIfExhausted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -260,7 +260,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: SetExhausted
     /// </summary>
-    public unsafe void SetExhausted()
+    public unsafe virtual void SetExhausted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.SetExhausted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -271,7 +271,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: FireLackOfPawnsWarning
     /// </summary>
-    public unsafe bool FireLackOfPawnsWarning()
+    public unsafe virtual bool FireLackOfPawnsWarning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.FireLackOfPawnsWarning", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -289,7 +289,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: CanBeAutoDeactivated
     /// </summary>
-    public unsafe bool CanBeAutoDeactivated()
+    public unsafe virtual bool CanBeAutoDeactivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.CanBeAutoDeactivated", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -307,7 +307,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: CanBeAutoActivated
     /// </summary>
-    public unsafe bool CanBeAutoActivated()
+    public unsafe virtual bool CanBeAutoActivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.CanBeAutoActivated", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -325,7 +325,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.OnToggle", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -337,7 +337,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -348,7 +348,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -359,7 +359,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: ForceRioterToFlee
     /// </summary>
-    public unsafe void ForceRioterToFlee(BmSDK.BmGame.RBMPawnAI CurrPawn)
+    public unsafe virtual void ForceRioterToFlee(BmSDK.BmGame.RBMPawnAI CurrPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.ForceRioterToFlee", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -371,7 +371,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: ForceAllToFlee
     /// </summary>
-    public unsafe void ForceAllToFlee()
+    public unsafe virtual void ForceAllToFlee()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.ForceAllToFlee", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -382,7 +382,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: ThugInRiotDamagedByBatman
     /// </summary>
-    public unsafe void ThugInRiotDamagedByBatman(BmSDK.Engine.Actor Attacker)
+    public unsafe virtual void ThugInRiotDamagedByBatman(BmSDK.Engine.Actor Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.ThugInRiotDamagedByBatman", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -394,7 +394,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: UpdateActivationBasedOnObjective
     /// </summary>
-    public unsafe void UpdateActivationBasedOnObjective()
+    public unsafe virtual void UpdateActivationBasedOnObjective()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.UpdateActivationBasedOnObjective", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -405,7 +405,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: WarnAboutNoPoints
     /// </summary>
-    public unsafe void WarnAboutNoPoints()
+    public unsafe virtual void WarnAboutNoPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.WarnAboutNoPoints", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -416,7 +416,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: ShouldBeForcedOnByObjective
     /// </summary>
-    public unsafe bool ShouldBeForcedOnByObjective()
+    public unsafe virtual bool ShouldBeForcedOnByObjective()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.ShouldBeForcedOnByObjective", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -434,7 +434,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -445,7 +445,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: WarnRiotZoneAboutBreakLevel
     /// </summary>
-    public unsafe void WarnRiotZoneAboutBreakLevel()
+    public unsafe virtual void WarnRiotZoneAboutBreakLevel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.WarnRiotZoneAboutBreakLevel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -456,7 +456,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: RioterFleeing
     /// </summary>
-    public unsafe void RioterFleeing(BmSDK.BmGame.RBMPawnAI FleePawn)
+    public unsafe virtual void RioterFleeing(BmSDK.BmGame.RBMPawnAI FleePawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.RioterFleeing", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -468,7 +468,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: SpawnBehaviour
     /// </summary>
-    public unsafe void SpawnBehaviour(BmSDK.BmGame.RBMAIController AICont, BmSDK.Class behav)
+    public unsafe virtual void SpawnBehaviour(BmSDK.BmGame.RBMAIController AICont, BmSDK.Class behav)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.SpawnBehaviour", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -481,7 +481,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: SpawnLonePawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawn SpawnLonePawn(BmSDK.BmGame.RGangInteractPointBase SuggestedSpawnPoint, bool bWeaponThug)
+    public unsafe virtual BmSDK.BmGame.RPawn SpawnLonePawn(BmSDK.BmGame.RGangInteractPointBase SuggestedSpawnPoint, bool bWeaponThug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.SpawnLonePawn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -501,7 +501,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: GetRiotZoneThreatActor
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetRiotZoneThreatActor()
+    public unsafe virtual BmSDK.Engine.Actor GetRiotZoneThreatActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.GetRiotZoneThreatActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -519,7 +519,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: ForceRiotZoneThreatActor
     /// </summary>
-    public unsafe void ForceRiotZoneThreatActor(BmSDK.Engine.Actor NewThreatActor)
+    public unsafe virtual void ForceRiotZoneThreatActor(BmSDK.Engine.Actor NewThreatActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.ForceRiotZoneThreatActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -538,7 +538,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: UpdateRiotZoneThreatActor
     /// </summary>
-    public unsafe void UpdateRiotZoneThreatActor(BmSDK.Engine.Actor ForcedThreatActor)
+    public unsafe virtual void UpdateRiotZoneThreatActor(BmSDK.Engine.Actor ForcedThreatActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.UpdateRiotZoneThreatActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -557,7 +557,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: PassivePointsNeedPartners
     /// </summary>
-    public unsafe bool PassivePointsNeedPartners(float DeltaTime)
+    public unsafe virtual bool PassivePointsNeedPartners(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.PassivePointsNeedPartners", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -576,7 +576,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: UpdatePawns
     /// </summary>
-    public unsafe bool UpdatePawns(float DeltaTime)
+    public unsafe virtual bool UpdatePawns(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.UpdatePawns", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -595,7 +595,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: ShouldSpawnAnotherPawn
     /// </summary>
-    public unsafe bool ShouldSpawnAnotherPawn(out int bPassivePointsNeedPartners)
+    public unsafe virtual bool ShouldSpawnAnotherPawn(out int bPassivePointsNeedPartners)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.ShouldSpawnAnotherPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -614,7 +614,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: UpdateVolume
     /// </summary>
-    public unsafe bool UpdateVolume(float DeltaTime)
+    public unsafe virtual bool UpdateVolume(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.UpdateVolume", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -633,7 +633,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: GetFleePressPoints
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RGangFleePressPointBase> GetFleePressPoints()
+    public unsafe virtual BmSDK.TArray<BmSDK.BmGame.RGangFleePressPointBase> GetFleePressPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.GetFleePressPoints", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -644,7 +644,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: GenerateFleePressPoints
     /// </summary>
-    public unsafe void GenerateFleePressPoints()
+    public unsafe virtual void GenerateFleePressPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.GenerateFleePressPoints", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -662,7 +662,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: FindObjectEndPoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RGangInteractPointBase FindObjectEndPoint(BmSDK.BmGame.RGangInteractPointBase.ObjectPickupTypes ObjectPickupType)
+    public unsafe virtual BmSDK.BmGame.RGangInteractPointBase FindObjectEndPoint(BmSDK.BmGame.RGangInteractPointBase.ObjectPickupTypes ObjectPickupType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.FindObjectEndPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -681,7 +681,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: TestSpawnPoint
     /// </summary>
-    public unsafe bool TestSpawnPoint(BmSDK.BmGame.RGangInteractPointBase _TestSpawnPoint, out System.Numerics.Vector3 SpawnLoc, System.Numerics.Vector3 CameraLocation, System.Numerics.Vector3 CameraDirection, out int WasExpensiveTest, bool bIgnoreProximityTest, BmSDK.FName WeaponName, bool bSkipInUseCheck = default)
+    public unsafe virtual bool TestSpawnPoint(BmSDK.BmGame.RGangInteractPointBase _TestSpawnPoint, out System.Numerics.Vector3 SpawnLoc, System.Numerics.Vector3 CameraLocation, System.Numerics.Vector3 CameraDirection, out int WasExpensiveTest, bool bIgnoreProximityTest, BmSDK.FName WeaponName, bool bSkipInUseCheck = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.TestSpawnPoint", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -707,7 +707,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: FindSingleSpawnPoint
     /// </summary>
-    public unsafe BmSDK.Engine.Actor FindSingleSpawnPoint(out System.Numerics.Vector3 SpawnLoc, bool bPassiveOnly, BmSDK.FName WeaponName)
+    public unsafe virtual BmSDK.Engine.Actor FindSingleSpawnPoint(out System.Numerics.Vector3 SpawnLoc, bool bPassiveOnly, BmSDK.FName WeaponName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.FindSingleSpawnPoint", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -728,7 +728,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: SpawnLinkBehaviour
     /// </summary>
-    public unsafe void SpawnLinkBehaviour(BmSDK.BmGame.RPawn TestPawn, BmSDK.BmGame.RGangInteractPointBase DestinationActor)
+    public unsafe virtual void SpawnLinkBehaviour(BmSDK.BmGame.RPawn TestPawn, BmSDK.BmGame.RGangInteractPointBase DestinationActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.SpawnLinkBehaviour", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -741,7 +741,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: FindNewPointOfInterest
     /// </summary>
-    public unsafe bool FindNewPointOfInterest(BmSDK.BmGame.RBMPawnAI TestPawn, bool bSkipSpeedTest, bool bSkipAngleCheck, BmSDK.BmGame.RGangInteractPointBase SuggestPoint)
+    public unsafe virtual bool FindNewPointOfInterest(BmSDK.BmGame.RBMPawnAI TestPawn, bool bSkipSpeedTest, bool bSkipAngleCheck, BmSDK.BmGame.RGangInteractPointBase SuggestPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.FindNewPointOfInterest", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -763,7 +763,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: SpawnPawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawn SpawnPawn(BmSDK.Class NewPawnClass, BmSDK.BmGame.RCharacterDefine CharacterDefine, BmSDK.Class CharacterType, BmSDK.Class NewWeaponClass, BmSDK.Engine.Actor SpawnActor, System.Numerics.Vector3 NewSpawnPoint, BmSDK.Rotator NewSpawnRotation = default)
+    public unsafe virtual BmSDK.BmGame.RPawn SpawnPawn(BmSDK.Class NewPawnClass, BmSDK.BmGame.RCharacterDefine CharacterDefine, BmSDK.Class CharacterType, BmSDK.Class NewWeaponClass, BmSDK.Engine.Actor SpawnActor, System.Numerics.Vector3 NewSpawnPoint, BmSDK.Rotator NewSpawnRotation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.SpawnPawn", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -788,7 +788,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: StopWalla
     /// </summary>
-    public unsafe void StopWalla()
+    public unsafe virtual void StopWalla()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.StopWalla", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -806,7 +806,7 @@ public partial class ROverworldPopulationVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Function: StartWalla
     /// </summary>
-    public unsafe void StartWalla()
+    public unsafe virtual void StartWalla()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverworldPopulationVolume.StartWalla", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_GrateToPerchLedge : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GrateToPerchLedge.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RSpecialMoveInstance_GrateToPerchLedge : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GrateToPerchLedge.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[152];

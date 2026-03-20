@@ -71,7 +71,7 @@ public partial class RBreakableTV : BmSDK.BmGame.RTakeoverVideoScreenBase, BmSDK
     /// <summary>
     /// Function: SetStatic
     /// </summary>
-    public unsafe void SetStatic()
+    public unsafe virtual void SetStatic()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakableTV.SetStatic", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RBreakableTV : BmSDK.BmGame.RTakeoverVideoScreenBase, BmSDK
     /// <summary>
     /// Function: SetTexture
     /// </summary>
-    public unsafe void SetTexture(BmSDK.Engine.Texture NewTexture)
+    public unsafe virtual void SetTexture(BmSDK.Engine.Texture NewTexture)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakableTV.SetTexture", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RBreakableTV : BmSDK.BmGame.RTakeoverVideoScreenBase, BmSDK
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakableTV.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -112,7 +112,7 @@ public partial class RBreakableTV : BmSDK.BmGame.RTakeoverVideoScreenBase, BmSDK
     /// <summary>
     /// Function: SetDistortion
     /// </summary>
-    public unsafe void SetDistortion(bool bUseFX)
+    public unsafe virtual void SetDistortion(bool bUseFX)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakableTV.SetDistortion", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -124,7 +124,7 @@ public partial class RBreakableTV : BmSDK.BmGame.RTakeoverVideoScreenBase, BmSDK
     /// <summary>
     /// Function: SetOverrideMaterial
     /// </summary>
-    public unsafe void SetOverrideMaterial()
+    public unsafe virtual void SetOverrideMaterial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakableTV.SetOverrideMaterial", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -135,7 +135,7 @@ public partial class RBreakableTV : BmSDK.BmGame.RTakeoverVideoScreenBase, BmSDK
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakableTV.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -146,7 +146,7 @@ public partial class RBreakableTV : BmSDK.BmGame.RTakeoverVideoScreenBase, BmSDK
     /// <summary>
     /// Function: PlayTurnOnFx
     /// </summary>
-    public unsafe void PlayTurnOnFx(bool bUse, BmSDK.Engine.AkEvent Cue)
+    public unsafe virtual void PlayTurnOnFx(bool bUse, BmSDK.Engine.AkEvent Cue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakableTV.PlayTurnOnFx", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -159,7 +159,7 @@ public partial class RBreakableTV : BmSDK.BmGame.RTakeoverVideoScreenBase, BmSDK
     /// <summary>
     /// Function: SetStaticTransitionParameter
     /// </summary>
-    public unsafe void SetStaticTransitionParameter(float val)
+    public unsafe override void SetStaticTransitionParameter(float val)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakableTV.SetStaticTransitionParameter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -171,7 +171,7 @@ public partial class RBreakableTV : BmSDK.BmGame.RTakeoverVideoScreenBase, BmSDK
     /// <summary>
     /// Function: RevertToStandardTexture
     /// </summary>
-    public unsafe void RevertToStandardTexture()
+    public unsafe override void RevertToStandardTexture()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakableTV.RevertToStandardTexture", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -182,7 +182,7 @@ public partial class RBreakableTV : BmSDK.BmGame.RTakeoverVideoScreenBase, BmSDK
     /// <summary>
     /// Function: SetTakeoverTexture
     /// </summary>
-    public unsafe void SetTakeoverTexture(BmSDK.Engine.TextureRenderTarget2D takeoverTexture)
+    public unsafe override void SetTakeoverTexture(BmSDK.Engine.TextureRenderTarget2D takeoverTexture)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakableTV.SetTakeoverTexture", true);
         byte* paramsPtr = stackalloc byte[8];

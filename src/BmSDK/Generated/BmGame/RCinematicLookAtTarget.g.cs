@@ -71,7 +71,7 @@ public partial class RCinematicLookAtTarget : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: EndMatineeControl
     /// </summary>
-    public unsafe void EndMatineeControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void EndMatineeControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicLookAtTarget.EndMatineeControl", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -84,7 +84,7 @@ public partial class RCinematicLookAtTarget : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: BeginMatineeControl
     /// </summary>
-    public unsafe void BeginMatineeControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void BeginMatineeControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicLookAtTarget.BeginMatineeControl", true);
         byte* paramsPtr = stackalloc byte[16];

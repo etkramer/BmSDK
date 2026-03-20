@@ -71,7 +71,7 @@ public partial class RBmStealthTakedownStage_LRRailingTakedown : BmSDK.BmGame.RS
     /// <summary>
     /// Function: GetFinishState
     /// </summary>
-    public unsafe BmSDK.FName GetFinishState()
+    public unsafe override BmSDK.FName GetFinishState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBmStealthTakedownStage_LRRailingTakedown.GetFinishState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RBmStealthTakedownStage_LRRailingTakedown : BmSDK.BmGame.RS
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBmStealthTakedownStage_LRRailingTakedown.Begin", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RBmStealthTakedownStage_LRRailingTakedown : BmSDK.BmGame.RS
     /// <summary>
     /// Function: Cancel
     /// </summary>
-    public unsafe void Cancel(bool SetState = default, bool bAbandonVictims = default, bool bResetPlayerPose = default)
+    public unsafe override void Cancel(bool SetState = default, bool bAbandonVictims = default, bool bResetPlayerPose = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBmStealthTakedownStage_LRRailingTakedown.Cancel", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -107,7 +107,7 @@ public partial class RBmStealthTakedownStage_LRRailingTakedown : BmSDK.BmGame.RS
     /// <summary>
     /// Function: UnEquipBatclawForTakedown
     /// </summary>
-    public unsafe void UnEquipBatclawForTakedown()
+    public unsafe virtual void UnEquipBatclawForTakedown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBmStealthTakedownStage_LRRailingTakedown.UnEquipBatclawForTakedown", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RBmStealthTakedownStage_LRRailingTakedown : BmSDK.BmGame.RS
     /// <summary>
     /// Function: EquipBatclawForTakedown
     /// </summary>
-    public unsafe void EquipBatclawForTakedown()
+    public unsafe virtual void EquipBatclawForTakedown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBmStealthTakedownStage_LRRailingTakedown.EquipBatclawForTakedown", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RBmStealthTakedownStage_LRRailingTakedown : BmSDK.BmGame.RS
     /// <summary>
     /// Function: ReleaseClaws
     /// </summary>
-    public unsafe void ReleaseClaws()
+    public unsafe virtual void ReleaseClaws()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBmStealthTakedownStage_LRRailingTakedown.ReleaseClaws", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -140,7 +140,7 @@ public partial class RBmStealthTakedownStage_LRRailingTakedown : BmSDK.BmGame.RS
     /// <summary>
     /// Function: AttachBatclaw
     /// </summary>
-    public unsafe void AttachBatclaw()
+    public unsafe virtual void AttachBatclaw()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBmStealthTakedownStage_LRRailingTakedown.AttachBatclaw", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -151,7 +151,7 @@ public partial class RBmStealthTakedownStage_LRRailingTakedown : BmSDK.BmGame.RS
     /// <summary>
     /// Function: FindRopeAttachPoints
     /// </summary>
-    public unsafe void FindRopeAttachPoints()
+    public unsafe virtual void FindRopeAttachPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBmStealthTakedownStage_LRRailingTakedown.FindRopeAttachPoints", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -162,7 +162,7 @@ public partial class RBmStealthTakedownStage_LRRailingTakedown : BmSDK.BmGame.RS
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBmStealthTakedownStage_LRRailingTakedown.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[32];

@@ -36,7 +36,7 @@ public partial class PathGoalEvaluator : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDumpString
     /// </summary>
-    public unsafe BmSDK.FString GetDumpString()
+    public unsafe virtual BmSDK.FString GetDumpString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PathGoalEvaluator.GetDumpString", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -47,7 +47,7 @@ public partial class PathGoalEvaluator : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Recycle
     /// </summary>
-    public unsafe void Recycle()
+    public unsafe virtual void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PathGoalEvaluator.Recycle", true);
         byte* paramsPtr = stackalloc byte[0];

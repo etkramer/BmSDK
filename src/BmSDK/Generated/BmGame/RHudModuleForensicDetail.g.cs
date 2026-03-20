@@ -36,7 +36,7 @@ public partial class RHudModuleForensicDetail : BmSDK.BmGame.RHudModule, BmSDK.I
     /// <summary>
     /// Function: PushStateToFlash
     /// </summary>
-    public unsafe void PushStateToFlash()
+    public unsafe virtual void PushStateToFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleForensicDetail.PushStateToFlash", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RHudModuleForensicDetail : BmSDK.BmGame.RHudModule, BmSDK.I
     /// <summary>
     /// Function: UC_AlreadyScanned
     /// </summary>
-    public unsafe void UC_AlreadyScanned()
+    public unsafe virtual void UC_AlreadyScanned()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleForensicDetail.UC_AlreadyScanned", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RHudModuleForensicDetail : BmSDK.BmGame.RHudModule, BmSDK.I
     /// <summary>
     /// Function: UC_ScanBegins
     /// </summary>
-    public unsafe void UC_ScanBegins()
+    public unsafe virtual void UC_ScanBegins()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleForensicDetail.UC_ScanBegins", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RHudModuleForensicDetail : BmSDK.BmGame.RHudModule, BmSDK.I
     /// <summary>
     /// Function: UC_CancelScan
     /// </summary>
-    public unsafe void UC_CancelScan()
+    public unsafe virtual void UC_CancelScan()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleForensicDetail.UC_CancelScan", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RHudModuleForensicDetail : BmSDK.BmGame.RHudModule, BmSDK.I
     /// <summary>
     /// Function: ScanComplete
     /// </summary>
-    public unsafe void ScanComplete()
+    public unsafe virtual void ScanComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleForensicDetail.ScanComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -91,7 +91,7 @@ public partial class RHudModuleForensicDetail : BmSDK.BmGame.RHudModule, BmSDK.I
     /// <summary>
     /// Function: InitialiseFlash
     /// </summary>
-    public unsafe void InitialiseFlash()
+    public unsafe override void InitialiseFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleForensicDetail.InitialiseFlash", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -102,7 +102,7 @@ public partial class RHudModuleForensicDetail : BmSDK.BmGame.RHudModule, BmSDK.I
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleForensicDetail.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -113,7 +113,7 @@ public partial class RHudModuleForensicDetail : BmSDK.BmGame.RHudModule, BmSDK.I
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleForensicDetail.Init", true);
         byte* paramsPtr = stackalloc byte[44];

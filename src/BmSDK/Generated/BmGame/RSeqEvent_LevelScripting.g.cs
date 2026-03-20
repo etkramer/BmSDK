@@ -36,7 +36,7 @@ public partial class RSeqEvent_LevelScripting : BmSDK.BmGame.RBMSeqEvent_Behavio
     /// <summary>
     /// Function: GetDbgString
     /// </summary>
-    public unsafe BmSDK.FString GetDbgString(out BmSDK.GameObject.FColor Col)
+    public unsafe virtual BmSDK.FString GetDbgString(out BmSDK.GameObject.FColor Col)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_LevelScripting.GetDbgString", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -48,7 +48,7 @@ public partial class RSeqEvent_LevelScripting : BmSDK.BmGame.RBMSeqEvent_Behavio
     /// <summary>
     /// Function: BehaviourIsRunning
     /// </summary>
-    public unsafe bool BehaviourIsRunning()
+    public unsafe virtual bool BehaviourIsRunning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_LevelScripting.BehaviourIsRunning", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -59,7 +59,7 @@ public partial class RSeqEvent_LevelScripting : BmSDK.BmGame.RBMSeqEvent_Behavio
     /// <summary>
     /// Function: GetJoiningLocations
     /// </summary>
-    public unsafe bool GetJoiningLocations(out BmSDK.TArray<System.Numerics.Vector3> outLocations, out BmSDK.TArray<BmSDK.GameObject> outObjects)
+    public unsafe virtual bool GetJoiningLocations(out BmSDK.TArray<System.Numerics.Vector3> outLocations, out BmSDK.TArray<BmSDK.GameObject> outObjects)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_LevelScripting.GetJoiningLocations", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -72,7 +72,7 @@ public partial class RSeqEvent_LevelScripting : BmSDK.BmGame.RBMSeqEvent_Behavio
     /// <summary>
     /// Function: RegisterEvent
     /// </summary>
-    public unsafe void RegisterEvent()
+    public unsafe override void RegisterEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_LevelScripting.RegisterEvent", true);
         byte* paramsPtr = stackalloc byte[28];

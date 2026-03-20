@@ -66,7 +66,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EnterTransition
     /// </summary>
-    public unsafe void EnterTransition()
+    public unsafe virtual void EnterTransition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.EnterTransition", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TriggerEventOutput
     /// </summary>
-    public unsafe bool TriggerEventOutput(BmSDK.Class EventClass, int OutputIndex)
+    public unsafe virtual bool TriggerEventOutput(BmSDK.Class EventClass, int OutputIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.TriggerEventOutput", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -90,7 +90,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FinishPreloadingLevelsForEntering
     /// </summary>
-    public unsafe void FinishPreloadingLevelsForEntering()
+    public unsafe virtual void FinishPreloadingLevelsForEntering()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.FinishPreloadingLevelsForEntering", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -101,7 +101,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PreloadLevelsForEntering
     /// </summary>
-    public unsafe void PreloadLevelsForEntering()
+    public unsafe virtual void PreloadLevelsForEntering()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.PreloadLevelsForEntering", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -112,7 +112,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLevelInFront
     /// </summary>
-    public unsafe BmSDK.FName GetLevelInFront(bool InFront)
+    public unsafe virtual BmSDK.FName GetLevelInFront(bool InFront)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.GetLevelInFront", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -124,7 +124,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StartLevelFromHere
     /// </summary>
-    public unsafe void StartLevelFromHere(bool LevelStart = default)
+    public unsafe virtual void StartLevelFromHere(bool LevelStart = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.StartLevelFromHere", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -136,7 +136,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ExitTransition
     /// </summary>
-    public unsafe void ExitTransition(bool LevelStart = default)
+    public unsafe virtual void ExitTransition(bool LevelStart = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.ExitTransition", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -148,7 +148,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ExitPlayerFromTransition
     /// </summary>
-    public unsafe void ExitPlayerFromTransition()
+    public unsafe virtual void ExitPlayerFromTransition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.ExitPlayerFromTransition", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -159,7 +159,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnBatmobile
     /// </summary>
-    public unsafe void SpawnBatmobile(bool bInFront)
+    public unsafe virtual void SpawnBatmobile(bool bInFront)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.SpawnBatmobile", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -171,7 +171,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: MovePlayerHere
     /// </summary>
-    public unsafe void MovePlayerHere()
+    public unsafe virtual void MovePlayerHere()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.MovePlayerHere", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -182,7 +182,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: MovePlayerInFront
     /// </summary>
-    public unsafe void MovePlayerInFront(BmSDK.BmGame.RPlayerController PC, float DistInFront, bool InFront, bool TellPlayerHesMoved = default, bool bForSaveOnly = default)
+    public unsafe virtual void MovePlayerInFront(BmSDK.BmGame.RPlayerController PC, float DistInFront, bool InFront, bool TellPlayerHesMoved = default, bool bForSaveOnly = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.MovePlayerInFront", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -198,7 +198,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPlayerLocation
     /// </summary>
-    public unsafe void SetPlayerLocation(BmSDK.BmGame.RPlayerController PC, System.Numerics.Vector3 pos, BmSDK.Rotator Rot, bool TellPlayerHesMoved = default, bool bForSavingOnly = default)
+    public unsafe virtual void SetPlayerLocation(BmSDK.BmGame.RPlayerController PC, System.Numerics.Vector3 pos, BmSDK.Rotator Rot, bool TellPlayerHesMoved = default, bool bForSavingOnly = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.SetPlayerLocation", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -214,7 +214,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SaveGame
     /// </summary>
-    public unsafe void SaveGame(BmSDK.BmGame.RPlayerController PC, float DistInFront, bool InFront, BmSDK.BmGame.RGameRI.FDebugSaveDescription DebugSaveGameDescription = default, BmSDK.BmGame.RPlayerStartInLevel SaveHere = default, bool bMemoryOnly = default)
+    public unsafe virtual void SaveGame(BmSDK.BmGame.RPlayerController PC, float DistInFront, bool InFront, BmSDK.BmGame.RGameRI.FDebugSaveDescription DebugSaveGameDescription = default, BmSDK.BmGame.RPlayerStartInLevel SaveHere = default, bool bMemoryOnly = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.SaveGame", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -231,7 +231,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckPlayerStartFromHere
     /// </summary>
-    public unsafe void CheckPlayerStartFromHere()
+    public unsafe virtual void CheckPlayerStartFromHere()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.CheckPlayerStartFromHere", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -242,7 +242,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckPlayerStart
     /// </summary>
-    public unsafe void CheckPlayerStart(BmSDK.Engine.PlayerController PC)
+    public unsafe virtual void CheckPlayerStart(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.CheckPlayerStart", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -254,7 +254,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPlayerCloseEnough
     /// </summary>
-    public unsafe bool IsPlayerCloseEnough(BmSDK.Engine.PlayerController PC)
+    public unsafe virtual bool IsPlayerCloseEnough(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.IsPlayerCloseEnough", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -266,7 +266,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnModifyDoor
     /// </summary>
-    public unsafe void OnModifyDoor(BmSDK.BmGame.RSeqAct_ModifyDoor Action)
+    public unsafe virtual void OnModifyDoor(BmSDK.BmGame.RSeqAct_ModifyDoor Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.OnModifyDoor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -278,7 +278,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HandleKismetAction
     /// </summary>
-    public unsafe void HandleKismetAction(int Index, BmSDK.BmGame.RSeqAct_ModifyDoor Action)
+    public unsafe virtual void HandleKismetAction(int Index, BmSDK.BmGame.RSeqAct_ModifyDoor Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.HandleKismetAction", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -291,7 +291,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -302,7 +302,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -313,7 +313,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnregisterLevelTransition
     /// </summary>
-    public unsafe void UnregisterLevelTransition()
+    public unsafe virtual void UnregisterLevelTransition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.UnregisterLevelTransition", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -324,7 +324,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -335,7 +335,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDisabledBy
     /// </summary>
-    public unsafe void SetDisabledBy(BmSDK.BmGame.RLevelTransition LT)
+    public unsafe virtual void SetDisabledBy(BmSDK.BmGame.RLevelTransition LT)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.SetDisabledBy", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -347,7 +347,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TeleportPlayerToHere
     /// </summary>
-    public unsafe void TeleportPlayerToHere(bool EnterFront)
+    public unsafe virtual void TeleportPlayerToHere(bool EnterFront)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.TeleportPlayerToHere", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -359,7 +359,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsInFront
     /// </summary>
-    public unsafe bool IsInFront(BmSDK.Engine.PlayerController PC)
+    public unsafe virtual bool IsInFront(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.IsInFront", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -371,7 +371,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveLevelVisibleRequest
     /// </summary>
-    public unsafe void RemoveLevelVisibleRequest()
+    public unsafe virtual void RemoveLevelVisibleRequest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.RemoveLevelVisibleRequest", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -382,7 +382,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddLevelVisibleRequest
     /// </summary>
-    public unsafe void AddLevelVisibleRequest()
+    public unsafe virtual void AddLevelVisibleRequest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.AddLevelVisibleRequest", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -393,7 +393,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BothSidesSharePMap
     /// </summary>
-    public unsafe bool BothSidesSharePMap()
+    public unsafe virtual bool BothSidesSharePMap()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.BothSidesSharePMap", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -404,7 +404,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ReadyToSwitchLevels
     /// </summary>
-    public unsafe bool ReadyToSwitchLevels()
+    public unsafe virtual bool ReadyToSwitchLevels()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.ReadyToSwitchLevels", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -415,7 +415,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DetachVisibleComponents
     /// </summary>
-    public unsafe void DetachVisibleComponents()
+    public unsafe virtual void DetachVisibleComponents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.DetachVisibleComponents", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -426,7 +426,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AttachVisibleComponents
     /// </summary>
-    public unsafe void AttachVisibleComponents()
+    public unsafe virtual void AttachVisibleComponents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.AttachVisibleComponents", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -437,7 +437,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FlushTexturesStreaming
     /// </summary>
-    public unsafe void FlushTexturesStreaming()
+    public unsafe virtual void FlushTexturesStreaming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.FlushTexturesStreaming", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -455,7 +455,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayerUpdateTransform
     /// </summary>
-    public unsafe void PlayerUpdateTransform(BmSDK.BmGame.RPawnCharacter Mesh)
+    public unsafe virtual void PlayerUpdateTransform(BmSDK.BmGame.RPawnCharacter Mesh)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.PlayerUpdateTransform", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -474,7 +474,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNonCurrentLevel
     /// </summary>
-    public unsafe BmSDK.FName GetNonCurrentLevel()
+    public unsafe virtual BmSDK.FName GetNonCurrentLevel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.GetNonCurrentLevel", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -492,7 +492,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLevelVolumeInFront
     /// </summary>
-    public unsafe BmSDK.BmGame.RLevelVolume GetLevelVolumeInFront(bool InFront)
+    public unsafe virtual BmSDK.BmGame.RLevelVolume GetLevelVolumeInFront(bool InFront)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.GetLevelVolumeInFront", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -511,7 +511,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsConnectedToCurrentLevels
     /// </summary>
-    public unsafe bool IsConnectedToCurrentLevels()
+    public unsafe virtual bool IsConnectedToCurrentLevels()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.IsConnectedToCurrentLevels", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -529,7 +529,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsConnectedToLevel
     /// </summary>
-    public unsafe bool IsConnectedToLevel(BmSDK.FName Level)
+    public unsafe virtual bool IsConnectedToLevel(BmSDK.FName Level)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.IsConnectedToLevel", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -548,7 +548,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPlayerPassingThrough
     /// </summary>
-    public unsafe bool IsPlayerPassingThrough(System.Numerics.Vector3 PlayerLocation)
+    public unsafe virtual bool IsPlayerPassingThrough(System.Numerics.Vector3 PlayerLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.IsPlayerPassingThrough", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -567,7 +567,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetGRI
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI GetGRI()
+    public unsafe virtual BmSDK.BmGame.RGameRI GetGRI()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransition.GetGRI", true);
         byte* paramsPtr = stackalloc byte[8];

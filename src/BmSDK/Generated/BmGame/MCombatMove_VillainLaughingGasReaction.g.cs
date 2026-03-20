@@ -71,7 +71,7 @@ public partial class MCombatMove_VillainLaughingGasReaction : BmSDK.BmGame.RComb
     /// <summary>
     /// Function: UnAwareOfPlayer
     /// </summary>
-    public unsafe bool UnAwareOfPlayer()
+    public unsafe override bool UnAwareOfPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainLaughingGasReaction.UnAwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class MCombatMove_VillainLaughingGasReaction : BmSDK.BmGame.RComb
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainLaughingGasReaction.Initialise", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RBMWeaponCombatRifleBase : BmSDK.BmGame.RBMWeaponRanged, Bm
     /// <summary>
     /// Function: TurnDownLight
     /// </summary>
-    public unsafe void TurnDownLight()
+    public unsafe virtual void TurnDownLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponCombatRifleBase.TurnDownLight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RBMWeaponCombatRifleBase : BmSDK.BmGame.RBMWeaponRanged, Bm
     /// <summary>
     /// Function: TurnUpLight
     /// </summary>
-    public unsafe void TurnUpLight()
+    public unsafe virtual void TurnUpLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponCombatRifleBase.TurnUpLight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RBMWeaponCombatRifleBase : BmSDK.BmGame.RBMWeaponRanged, Bm
     /// <summary>
     /// Function: TurnOnVisibilityLight
     /// </summary>
-    public unsafe void TurnOnVisibilityLight()
+    public unsafe virtual void TurnOnVisibilityLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponCombatRifleBase.TurnOnVisibilityLight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RBMWeaponCombatRifleBase : BmSDK.BmGame.RBMWeaponRanged, Bm
     /// <summary>
     /// Function: UpdateWeaponSnatchAura
     /// </summary>
-    public unsafe void UpdateWeaponSnatchAura()
+    public unsafe override void UpdateWeaponSnatchAura()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponCombatRifleBase.UpdateWeaponSnatchAura", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RBMWeaponCombatRifleBase : BmSDK.BmGame.RBMWeaponRanged, Bm
     /// <summary>
     /// Function: DetachWeapon
     /// </summary>
-    public unsafe void DetachWeapon()
+    public unsafe override void DetachWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponCombatRifleBase.DetachWeapon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RBMWeaponCombatRifleBase : BmSDK.BmGame.RBMWeaponRanged, Bm
     /// <summary>
     /// Function: GetRECPriority
     /// </summary>
-    public unsafe float GetRECPriority()
+    public unsafe override float GetRECPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponCombatRifleBase.GetRECPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -137,7 +137,7 @@ public partial class RBMWeaponCombatRifleBase : BmSDK.BmGame.RBMWeaponRanged, Bm
     /// <summary>
     /// Function: GetBatClawPriority
     /// </summary>
-    public unsafe float GetBatClawPriority()
+    public unsafe override float GetBatClawPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponCombatRifleBase.GetBatClawPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -148,7 +148,7 @@ public partial class RBMWeaponCombatRifleBase : BmSDK.BmGame.RBMWeaponRanged, Bm
     /// <summary>
     /// Function: StartWeaponFireAudio
     /// </summary>
-    public unsafe void StartWeaponFireAudio(bool Burst)
+    public unsafe override void StartWeaponFireAudio(bool Burst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponCombatRifleBase.StartWeaponFireAudio", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -160,7 +160,7 @@ public partial class RBMWeaponCombatRifleBase : BmSDK.BmGame.RBMWeaponRanged, Bm
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponCombatRifleBase.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -188,7 +188,7 @@ public partial class RBMWeaponCombatRifleBase : BmSDK.BmGame.RBMWeaponRanged, Bm
     /// <summary>
     /// Function: ShowWeapon
     /// </summary>
-    public unsafe void ShowWeapon()
+    public unsafe override void ShowWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponCombatRifleBase.ShowWeapon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -199,7 +199,7 @@ public partial class RBMWeaponCombatRifleBase : BmSDK.BmGame.RBMWeaponRanged, Bm
     /// <summary>
     /// Function: HideWeapon
     /// </summary>
-    public unsafe void HideWeapon()
+    public unsafe override void HideWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponCombatRifleBase.HideWeapon", true);
         byte* paramsPtr = stackalloc byte[0];

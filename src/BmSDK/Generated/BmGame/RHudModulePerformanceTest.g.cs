@@ -36,7 +36,7 @@ public partial class RHudModulePerformanceTest : BmSDK.BmGame.RHudModule, BmSDK.
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModulePerformanceTest.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RHudModulePerformanceTest : BmSDK.BmGame.RHudModule, BmSDK.
     /// <summary>
     /// Function: SetTankDirectly
     /// </summary>
-    public unsafe void SetTankDirectly(int tank_index, bool Visible, float x_pos, float y_pos, float movie_rot, int curr_frame)
+    public unsafe virtual void SetTankDirectly(int tank_index, bool Visible, float x_pos, float y_pos, float movie_rot, int curr_frame)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModulePerformanceTest.SetTankDirectly", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -64,7 +64,7 @@ public partial class RHudModulePerformanceTest : BmSDK.BmGame.RHudModule, BmSDK.
     /// <summary>
     /// Function: CreateTanks
     /// </summary>
-    public unsafe void CreateTanks(int NewMaximum)
+    public unsafe virtual void CreateTanks(int NewMaximum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModulePerformanceTest.CreateTanks", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -76,7 +76,7 @@ public partial class RHudModulePerformanceTest : BmSDK.BmGame.RHudModule, BmSDK.
     /// <summary>
     /// Function: SetTankParamsFromArray
     /// </summary>
-    public unsafe void SetTankParamsFromArray()
+    public unsafe virtual void SetTankParamsFromArray()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModulePerformanceTest.SetTankParamsFromArray", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -87,7 +87,7 @@ public partial class RHudModulePerformanceTest : BmSDK.BmGame.RHudModule, BmSDK.
     /// <summary>
     /// Function: SetTickActive
     /// </summary>
-    public unsafe void SetTickActive(bool is_active)
+    public unsafe virtual void SetTickActive(bool is_active)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModulePerformanceTest.SetTickActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -99,7 +99,7 @@ public partial class RHudModulePerformanceTest : BmSDK.BmGame.RHudModule, BmSDK.
     /// <summary>
     /// Function: SetInformation
     /// </summary>
-    public unsafe void SetInformation(BmSDK.FString the_info)
+    public unsafe virtual void SetInformation(BmSDK.FString the_info)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModulePerformanceTest.SetInformation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -111,7 +111,7 @@ public partial class RHudModulePerformanceTest : BmSDK.BmGame.RHudModule, BmSDK.
     /// <summary>
     /// Function: InitialiseFlash
     /// </summary>
-    public unsafe void InitialiseFlash()
+    public unsafe override void InitialiseFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModulePerformanceTest.InitialiseFlash", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -122,7 +122,7 @@ public partial class RHudModulePerformanceTest : BmSDK.BmGame.RHudModule, BmSDK.
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModulePerformanceTest.Init", true);
         byte* paramsPtr = stackalloc byte[44];

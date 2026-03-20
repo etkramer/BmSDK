@@ -71,7 +71,7 @@ public partial class RLineLauncherProjectile : BmSDK.BmGame.RProjectileWithRope,
     /// <summary>
     /// Function: ReachedDest
     /// </summary>
-    public unsafe void ReachedDest()
+    public unsafe override void ReachedDest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLineLauncherProjectile.ReachedDest", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RLineLauncherProjectile : BmSDK.BmGame.RProjectileWithRope,
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLineLauncherProjectile.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

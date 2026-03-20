@@ -71,7 +71,7 @@ public partial class RBMCombatThrownObject_Brick : BmSDK.BmGame.RBMCombatThrownO
     /// <summary>
     /// Function: HitCombatPawn
     /// </summary>
-    public unsafe void HitCombatPawn(BmSDK.BmGame.RPawnCombat HitPawn, float Speed)
+    public unsafe override void HitCombatPawn(BmSDK.BmGame.RPawnCombat HitPawn, float Speed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_Brick.HitCombatPawn", true);
         byte* paramsPtr = stackalloc byte[12];

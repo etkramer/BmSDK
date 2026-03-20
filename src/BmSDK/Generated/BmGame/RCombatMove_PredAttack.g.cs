@@ -71,7 +71,7 @@ public partial class RCombatMove_PredAttack : BmSDK.BmGame.RCombatMove_VillainCl
     /// <summary>
     /// Function: PlayStrikeAnim
     /// </summary>
-    public unsafe void PlayStrikeAnim()
+    public unsafe override void PlayStrikeAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_PredAttack.PlayStrikeAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_PredAttack : BmSDK.BmGame.RCombatMove_VillainCl
     /// <summary>
     /// Function: PlayAbortAnim
     /// </summary>
-    public unsafe void PlayAbortAnim()
+    public unsafe override void PlayAbortAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_PredAttack.PlayAbortAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RCombatMove_PredAttack : BmSDK.BmGame.RCombatMove_VillainCl
     /// <summary>
     /// Function: ChooseAttack
     /// </summary>
-    public unsafe void ChooseAttack()
+    public unsafe override void ChooseAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_PredAttack.ChooseAttack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RCombatMove_PredAttack : BmSDK.BmGame.RCombatMove_VillainCl
     /// <summary>
     /// Function: GetTransitionDurationScale
     /// </summary>
-    public unsafe float GetTransitionDurationScale()
+    public unsafe override float GetTransitionDurationScale()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_PredAttack.GetTransitionDurationScale", true);
         byte* paramsPtr = stackalloc byte[4];

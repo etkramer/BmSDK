@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_GlassAttack : BmSDK.BmGame.RStealthTa
     /// <summary>
     /// Function: PlaySpecialCameraAnim
     /// </summary>
-    public unsafe bool PlaySpecialCameraAnim(BmSDK.FName AnimName, bool bCamMirrored, bool CameraCollision = default, float FOV = default, BmSDK.Engine.AnimSet CustomAnimSet = default, float BlendTime = default, bool bBlendCameraBackToPlayerCameraWhenFinished = default, bool bUseBatmanAsCameraCollisionTargetInsteadOfVictim = default)
+    public unsafe override bool PlaySpecialCameraAnim(BmSDK.FName AnimName, bool bCamMirrored, bool CameraCollision = default, float FOV = default, BmSDK.Engine.AnimSet CustomAnimSet = default, float BlendTime = default, bool bBlendCameraBackToPlayerCameraWhenFinished = default, bool bUseBatmanAsCameraCollisionTargetInsteadOfVictim = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_GlassAttack.PlaySpecialCameraAnim", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -90,7 +90,7 @@ public partial class RStealthTakeDownStage_GlassAttack : BmSDK.BmGame.RStealthTa
     /// <summary>
     /// Function: BreakGlass
     /// </summary>
-    public unsafe void BreakGlass()
+    public unsafe virtual void BreakGlass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_GlassAttack.BreakGlass", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -101,7 +101,7 @@ public partial class RStealthTakeDownStage_GlassAttack : BmSDK.BmGame.RStealthTa
     /// <summary>
     /// Function: GotoStage
     /// </summary>
-    public unsafe void GotoStage(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages NextStageClass)
+    public unsafe override void GotoStage(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages NextStageClass)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_GlassAttack.GotoStage", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -113,7 +113,7 @@ public partial class RStealthTakeDownStage_GlassAttack : BmSDK.BmGame.RStealthTa
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_GlassAttack.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -125,7 +125,7 @@ public partial class RStealthTakeDownStage_GlassAttack : BmSDK.BmGame.RStealthTa
     /// <summary>
     /// Function: WaitForNextStage
     /// </summary>
-    public unsafe void WaitForNextStage()
+    public unsafe virtual void WaitForNextStage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_GlassAttack.WaitForNextStage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -136,7 +136,7 @@ public partial class RStealthTakeDownStage_GlassAttack : BmSDK.BmGame.RStealthTa
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_GlassAttack.Begin", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -147,7 +147,7 @@ public partial class RStealthTakeDownStage_GlassAttack : BmSDK.BmGame.RStealthTa
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_GlassAttack.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[24];

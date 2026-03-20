@@ -71,7 +71,7 @@ public partial class RWallClimbCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     /// <summary>
     /// Function: DoSmoothCameraCollision
     /// </summary>
-    public unsafe System.Numerics.Vector3 DoSmoothCameraCollision(System.Numerics.Vector3 NewPos, System.Numerics.Vector3 FallBackPosition, bool bDoSmoothing = default)
+    public unsafe virtual System.Numerics.Vector3 DoSmoothCameraCollision(System.Numerics.Vector3 NewPos, System.Numerics.Vector3 FallBackPosition, bool bDoSmoothing = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWallClimbCamera.DoSmoothCameraCollision", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -92,7 +92,7 @@ public partial class RWallClimbCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     /// <summary>
     /// Function: LookAround
     /// </summary>
-    public unsafe void LookAround(float DeltaTime)
+    public unsafe virtual void LookAround(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWallClimbCamera.LookAround", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -104,7 +104,7 @@ public partial class RWallClimbCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     /// <summary>
     /// Function: convergei
     /// </summary>
-    public unsafe void convergei(out int Value, int targetv, int Speed, int Tolerance)
+    public unsafe virtual void convergei(out int Value, int targetv, int Speed, int Tolerance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWallClimbCamera.convergei", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -119,7 +119,7 @@ public partial class RWallClimbCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     /// <summary>
     /// Function: ExitCamera
     /// </summary>
-    public unsafe void ExitCamera()
+    public unsafe virtual void ExitCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWallClimbCamera.ExitCamera", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -130,7 +130,7 @@ public partial class RWallClimbCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWallClimbCamera.Tick", true);
         byte* paramsPtr = stackalloc byte[172];
@@ -142,7 +142,7 @@ public partial class RWallClimbCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     /// <summary>
     /// Function: converger
     /// </summary>
-    public unsafe void converger(float Delta, out BmSDK.Rotator Value, BmSDK.Rotator targetv, float Speed, float Tolerance = default)
+    public unsafe virtual void converger(float Delta, out BmSDK.Rotator Value, BmSDK.Rotator targetv, float Speed, float Tolerance = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWallClimbCamera.converger", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -158,7 +158,7 @@ public partial class RWallClimbCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     /// <summary>
     /// Function: sizer
     /// </summary>
-    public unsafe float sizer(BmSDK.Rotator R)
+    public unsafe virtual float sizer(BmSDK.Rotator R)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWallClimbCamera.sizer", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -170,7 +170,7 @@ public partial class RWallClimbCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     /// <summary>
     /// Function: converge
     /// </summary>
-    public unsafe void converge(float Delta, out System.Numerics.Vector3 Value, System.Numerics.Vector3 targetv, out System.Numerics.Vector3 LastSpeed, float Speed, float Tolerance = default, bool bOvershoot = default)
+    public unsafe virtual void converge(float Delta, out System.Numerics.Vector3 Value, System.Numerics.Vector3 targetv, out System.Numerics.Vector3 LastSpeed, float Speed, float Tolerance = default, bool bOvershoot = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWallClimbCamera.converge", true);
         byte* paramsPtr = stackalloc byte[124];
@@ -188,7 +188,7 @@ public partial class RWallClimbCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     /// <summary>
     /// Function: GetRootLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetRootLocation()
+    public unsafe virtual System.Numerics.Vector3 GetRootLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWallClimbCamera.GetRootLocation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -199,7 +199,7 @@ public partial class RWallClimbCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     /// <summary>
     /// Function: GetWallTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWallTargetLocation(out System.Numerics.Vector3 NextLoc)
+    public unsafe virtual System.Numerics.Vector3 GetWallTargetLocation(out System.Numerics.Vector3 NextLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWallClimbCamera.GetWallTargetLocation", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -211,7 +211,7 @@ public partial class RWallClimbCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     /// <summary>
     /// Function: StartExitCamera
     /// </summary>
-    public unsafe void StartExitCamera()
+    public unsafe virtual void StartExitCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWallClimbCamera.StartExitCamera", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -222,7 +222,7 @@ public partial class RWallClimbCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     /// <summary>
     /// Function: GoToFinalPosition
     /// </summary>
-    public unsafe void GoToFinalPosition(bool bEndsHanging, bool bEndsOnRailing = default)
+    public unsafe virtual void GoToFinalPosition(bool bEndsHanging, bool bEndsOnRailing = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWallClimbCamera.GoToFinalPosition", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -235,7 +235,7 @@ public partial class RWallClimbCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     /// <summary>
     /// Function: UpdatePoints
     /// </summary>
-    public unsafe void UpdatePoints(System.Numerics.Vector3 CurrentLocation, int NewNextClimbIndex = default, int FirstClimbPointIndex = default, bool bInitialUpdate = default)
+    public unsafe virtual void UpdatePoints(System.Numerics.Vector3 CurrentLocation, int NewNextClimbIndex = default, int FirstClimbPointIndex = default, bool bInitialUpdate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWallClimbCamera.UpdatePoints", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -250,7 +250,7 @@ public partial class RWallClimbCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     /// <summary>
     /// Function: SetUpCamera
     /// </summary>
-    public unsafe void SetUpCamera(BmSDK.BmGame.RPlayerController NewPC, System.Numerics.Vector3 CurrentLocation, int FirstClimbPointIndex = default, bool bFromSwing = default)
+    public unsafe virtual void SetUpCamera(BmSDK.BmGame.RPlayerController NewPC, System.Numerics.Vector3 CurrentLocation, int FirstClimbPointIndex = default, bool bFromSwing = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWallClimbCamera.SetUpCamera", true);
         byte* paramsPtr = stackalloc byte[40];

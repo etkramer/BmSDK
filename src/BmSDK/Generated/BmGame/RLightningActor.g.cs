@@ -71,7 +71,7 @@ public partial class RLightningActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLightningActor.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RLightningActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ManualTriggerLightningTargetActor
     /// </summary>
-    public unsafe void ManualTriggerLightningTargetActor(BmSDK.Engine.Actor TargetActor)
+    public unsafe virtual void ManualTriggerLightningTargetActor(BmSDK.Engine.Actor TargetActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLightningActor.ManualTriggerLightningTargetActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RLightningActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ManualTriggerLightning
     /// </summary>
-    public unsafe void ManualTriggerLightning(float LightningIntensity, BmSDK.Rotator LightningDirection)
+    public unsafe virtual void ManualTriggerLightning(float LightningIntensity, BmSDK.Rotator LightningDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLightningActor.ManualTriggerLightning", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -108,7 +108,7 @@ public partial class RLightningActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ManualTriggerLightingInFrontOfCamera
     /// </summary>
-    public unsafe void ManualTriggerLightingInFrontOfCamera(float Dist)
+    public unsafe virtual void ManualTriggerLightingInFrontOfCamera(float Dist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLightningActor.ManualTriggerLightingInFrontOfCamera", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -120,7 +120,7 @@ public partial class RLightningActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterGameAction
     /// </summary>
-    public unsafe void RegisterGameAction(BmSDK.Engine.Controller Player, BmSDK.BmGame.RGameInfo.EGameAction TheGameAction)
+    public unsafe virtual void RegisterGameAction(BmSDK.Engine.Controller Player, BmSDK.BmGame.RGameInfo.EGameAction TheGameAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLightningActor.RegisterGameAction", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -140,7 +140,7 @@ public partial class RLightningActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLightningActor.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

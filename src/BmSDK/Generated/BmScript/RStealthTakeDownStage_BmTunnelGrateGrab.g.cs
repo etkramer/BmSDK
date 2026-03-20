@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_BmTunnelGrateGrab : BmSDK.BmGame.RSte
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakeDownStage_BmTunnelGrateGrab.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[24];

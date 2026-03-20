@@ -36,7 +36,7 @@ public partial class RVehicleBehaviour_FlyingDeathSpiral : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_FlyingDeathSpiral.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RVehicleBehaviour_FlyingDeathSpiral : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: NotifyRigidBodyCollision
     /// </summary>
-    public unsafe void NotifyRigidBodyCollision(BmSDK.Engine.PrimitiveComponent HitComp, float Speed, bool HitGround)
+    public unsafe override void NotifyRigidBodyCollision(BmSDK.Engine.PrimitiveComponent HitComp, float Speed, bool HitGround)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_FlyingDeathSpiral.NotifyRigidBodyCollision", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -62,7 +62,7 @@ public partial class RVehicleBehaviour_FlyingDeathSpiral : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: EnterBehaviour
     /// </summary>
-    public unsafe void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
+    public unsafe override void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_FlyingDeathSpiral.EnterBehaviour", true);
         byte* paramsPtr = stackalloc byte[8];

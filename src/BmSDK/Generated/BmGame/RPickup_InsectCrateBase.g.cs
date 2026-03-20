@@ -71,7 +71,7 @@ public partial class RPickup_InsectCrateBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// Function: GetAudioSpatial
     /// </summary>
-    public unsafe void GetAudioSpatial(out System.Numerics.Vector3 sndPosition, out BmSDK.Rotator sndOrientation, BmSDK.GameObject caller = default)
+    public unsafe override void GetAudioSpatial(out System.Numerics.Vector3 sndPosition, out BmSDK.Rotator sndOrientation, BmSDK.GameObject caller = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_InsectCrateBase.GetAudioSpatial", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -92,7 +92,7 @@ public partial class RPickup_InsectCrateBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// Function: GetOverworldHintRange
     /// </summary>
-    public unsafe int GetOverworldHintRange()
+    public unsafe virtual int GetOverworldHintRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_InsectCrateBase.GetOverworldHintRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -103,7 +103,7 @@ public partial class RPickup_InsectCrateBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// Function: GetSatnavToRoadAtSameHeight
     /// </summary>
-    public unsafe bool GetSatnavToRoadAtSameHeight()
+    public unsafe virtual bool GetSatnavToRoadAtSameHeight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_InsectCrateBase.GetSatnavToRoadAtSameHeight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -114,7 +114,7 @@ public partial class RPickup_InsectCrateBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// Function: GetSatnavToRoadBelow
     /// </summary>
-    public unsafe bool GetSatnavToRoadBelow()
+    public unsafe virtual bool GetSatnavToRoadBelow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_InsectCrateBase.GetSatnavToRoadBelow", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -125,7 +125,7 @@ public partial class RPickup_InsectCrateBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// Function: GetCustomFlag
     /// </summary>
-    public unsafe BmSDK.FString GetCustomFlag()
+    public unsafe virtual BmSDK.FString GetCustomFlag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_InsectCrateBase.GetCustomFlag", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -136,7 +136,7 @@ public partial class RPickup_InsectCrateBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// Function: GetUnlockedChapter
     /// </summary>
-    public unsafe int GetUnlockedChapter()
+    public unsafe virtual int GetUnlockedChapter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_InsectCrateBase.GetUnlockedChapter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -147,7 +147,7 @@ public partial class RPickup_InsectCrateBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// Function: GetMapIconFloatUpAdjustment
     /// </summary>
-    public unsafe int GetMapIconFloatUpAdjustment()
+    public unsafe virtual int GetMapIconFloatUpAdjustment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_InsectCrateBase.GetMapIconFloatUpAdjustment", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -158,7 +158,7 @@ public partial class RPickup_InsectCrateBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// Function: UseSecretLocation
     /// </summary>
-    public unsafe bool UseSecretLocation()
+    public unsafe virtual bool UseSecretLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_InsectCrateBase.UseSecretLocation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -169,7 +169,7 @@ public partial class RPickup_InsectCrateBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// Function: GetSecretLocationZ
     /// </summary>
-    public unsafe int GetSecretLocationZ()
+    public unsafe virtual int GetSecretLocationZ()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_InsectCrateBase.GetSecretLocationZ", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -180,7 +180,7 @@ public partial class RPickup_InsectCrateBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// Function: GetSecretLocationY
     /// </summary>
-    public unsafe int GetSecretLocationY()
+    public unsafe virtual int GetSecretLocationY()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_InsectCrateBase.GetSecretLocationY", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -191,7 +191,7 @@ public partial class RPickup_InsectCrateBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// Function: GetSecretLocationX
     /// </summary>
-    public unsafe int GetSecretLocationX()
+    public unsafe virtual int GetSecretLocationX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_InsectCrateBase.GetSecretLocationX", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -202,7 +202,7 @@ public partial class RPickup_InsectCrateBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// Function: GetSecretZone
     /// </summary>
-    public unsafe byte GetSecretZone()
+    public unsafe virtual byte GetSecretZone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_InsectCrateBase.GetSecretZone", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -213,7 +213,7 @@ public partial class RPickup_InsectCrateBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// Function: GetSecretPickupIndex
     /// </summary>
-    public unsafe int GetSecretPickupIndex()
+    public unsafe virtual int GetSecretPickupIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_InsectCrateBase.GetSecretPickupIndex", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -224,7 +224,7 @@ public partial class RPickup_InsectCrateBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// Function: GetSecretSubType
     /// </summary>
-    public unsafe BmSDK.FString GetSecretSubType()
+    public unsafe virtual BmSDK.FString GetSecretSubType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_InsectCrateBase.GetSecretSubType", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -235,7 +235,7 @@ public partial class RPickup_InsectCrateBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// Function: GetSecretName
     /// </summary>
-    public unsafe BmSDK.FString GetSecretName()
+    public unsafe virtual BmSDK.FString GetSecretName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_InsectCrateBase.GetSecretName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -246,7 +246,7 @@ public partial class RPickup_InsectCrateBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// Function: IsValidSecret
     /// </summary>
-    public unsafe bool IsValidSecret()
+    public unsafe virtual bool IsValidSecret()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_InsectCrateBase.IsValidSecret", true);
         byte* paramsPtr = stackalloc byte[4];

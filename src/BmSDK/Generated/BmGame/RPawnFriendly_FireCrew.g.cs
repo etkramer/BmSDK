@@ -71,7 +71,7 @@ public partial class RPawnFriendly_FireCrew : BmSDK.BmGame.RPawnFriendly, BmSDK.
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnFriendly_FireCrew.Destroyed", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -82,7 +82,7 @@ public partial class RPawnFriendly_FireCrew : BmSDK.BmGame.RPawnFriendly, BmSDK.
     /// <summary>
     /// Function: UpHairSorting
     /// </summary>
-    public unsafe void UpHairSorting()
+    public unsafe virtual void UpHairSorting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnFriendly_FireCrew.UpHairSorting", true);
         byte* paramsPtr = stackalloc byte[0];

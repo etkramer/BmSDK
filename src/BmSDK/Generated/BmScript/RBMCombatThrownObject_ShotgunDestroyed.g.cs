@@ -71,7 +71,7 @@ public partial class RBMCombatThrownObject_ShotgunDestroyed : BmSDK.BmGame.RBMCo
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_ShotgunDestroyed.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

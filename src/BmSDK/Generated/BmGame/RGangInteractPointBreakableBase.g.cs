@@ -71,7 +71,7 @@ public partial class RGangInteractPointBreakableBase : BmSDK.BmGame.RGangInterac
     /// <summary>
     /// Function: GetPOILocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetPOILocation()
+    public unsafe override System.Numerics.Vector3 GetPOILocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBreakableBase.GetPOILocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RGangInteractPointBreakableBase : BmSDK.BmGame.RGangInterac
     /// <summary>
     /// Function: CrackObject
     /// </summary>
-    public unsafe void CrackObject(System.Numerics.Vector3 SmashLocation, System.Numerics.Vector3 SmashNormal, System.Numerics.Vector3 SmashSpeed, bool bCanSmash, bool bForceSmash, BmSDK.Engine.Actor SmashActor = default)
+    public unsafe virtual void CrackObject(System.Numerics.Vector3 SmashLocation, System.Numerics.Vector3 SmashNormal, System.Numerics.Vector3 SmashSpeed, bool bCanSmash, bool bForceSmash, BmSDK.Engine.Actor SmashActor = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBreakableBase.CrackObject", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -99,7 +99,7 @@ public partial class RGangInteractPointBreakableBase : BmSDK.BmGame.RGangInterac
     /// <summary>
     /// Function: CrackOrSmashObject
     /// </summary>
-    public unsafe void CrackOrSmashObject(System.Numerics.Vector3 SmashLocation, System.Numerics.Vector3 SmashNormal, System.Numerics.Vector3 SmashSpeed, BmSDK.Engine.Actor SmashActor)
+    public unsafe virtual void CrackOrSmashObject(System.Numerics.Vector3 SmashLocation, System.Numerics.Vector3 SmashNormal, System.Numerics.Vector3 SmashSpeed, BmSDK.Engine.Actor SmashActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBreakableBase.CrackOrSmashObject", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -114,7 +114,7 @@ public partial class RGangInteractPointBreakableBase : BmSDK.BmGame.RGangInterac
     /// <summary>
     /// Function: SmashObject
     /// </summary>
-    public unsafe void SmashObject(System.Numerics.Vector3 SmashLocation, System.Numerics.Vector3 SmashNormal, System.Numerics.Vector3 SmashSpeed, BmSDK.Engine.Actor SmashActor)
+    public unsafe virtual void SmashObject(System.Numerics.Vector3 SmashLocation, System.Numerics.Vector3 SmashNormal, System.Numerics.Vector3 SmashSpeed, BmSDK.Engine.Actor SmashActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBreakableBase.SmashObject", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -129,7 +129,7 @@ public partial class RGangInteractPointBreakableBase : BmSDK.BmGame.RGangInterac
     /// <summary>
     /// Function: HitByMolotov
     /// </summary>
-    public unsafe void HitByMolotov(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, System.Numerics.Vector3 SmashSpeed, BmSDK.Engine.Actor SmashActor)
+    public unsafe virtual void HitByMolotov(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, System.Numerics.Vector3 SmashSpeed, BmSDK.Engine.Actor SmashActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBreakableBase.HitByMolotov", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -144,7 +144,7 @@ public partial class RGangInteractPointBreakableBase : BmSDK.BmGame.RGangInterac
     /// <summary>
     /// Function: UpdateSmashed
     /// </summary>
-    public unsafe void UpdateSmashed()
+    public unsafe virtual void UpdateSmashed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBreakableBase.UpdateSmashed", true);
         byte* paramsPtr = stackalloc byte[0];

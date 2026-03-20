@@ -47,7 +47,7 @@ public partial class RBMBehaviour_JokerIncedental : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: JokerInShot
     /// </summary>
-    public unsafe bool JokerInShot()
+    public unsafe virtual bool JokerInShot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_JokerIncedental.JokerInShot", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_JokerIncedental : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_JokerIncedental.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

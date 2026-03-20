@@ -71,7 +71,7 @@ public partial class RBatmobileScrewHookBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// Function: WinchReleased
     /// </summary>
-    public unsafe void WinchReleased(BmSDK.BmGame.RBatmobileWinch Winch)
+    public unsafe virtual void WinchReleased(BmSDK.BmGame.RBatmobileWinch Winch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileScrewHookBase.WinchReleased", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RBatmobileScrewHookBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// Function: WinchAttached
     /// </summary>
-    public unsafe void WinchAttached(BmSDK.BmGame.RBatmobileWinch Winch)
+    public unsafe virtual void WinchAttached(BmSDK.BmGame.RBatmobileWinch Winch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileScrewHookBase.WinchAttached", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RBatmobileScrewHookBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileScrewHookBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RBatmobileScrewHookBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileScrewHookBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];

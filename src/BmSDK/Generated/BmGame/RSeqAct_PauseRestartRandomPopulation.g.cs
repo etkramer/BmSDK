@@ -36,7 +36,7 @@ public partial class RSeqAct_PauseRestartRandomPopulation : BmSDK.Engine.Sequenc
     /// <summary>
     /// Function: ShouldPauseThugCars
     /// </summary>
-    public unsafe bool ShouldPauseThugCars()
+    public unsafe virtual bool ShouldPauseThugCars()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PauseRestartRandomPopulation.ShouldPauseThugCars", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RSeqAct_PauseRestartRandomPopulation : BmSDK.Engine.Sequenc
     /// <summary>
     /// Function: ShouldPauseHumvees
     /// </summary>
-    public unsafe bool ShouldPauseHumvees()
+    public unsafe virtual bool ShouldPauseHumvees()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PauseRestartRandomPopulation.ShouldPauseHumvees", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RSeqAct_PauseRestartRandomPopulation : BmSDK.Engine.Sequenc
     /// <summary>
     /// Function: ShouldPauseDrones
     /// </summary>
-    public unsafe bool ShouldPauseDrones()
+    public unsafe virtual bool ShouldPauseDrones()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PauseRestartRandomPopulation.ShouldPauseDrones", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -69,7 +69,7 @@ public partial class RSeqAct_PauseRestartRandomPopulation : BmSDK.Engine.Sequenc
     /// <summary>
     /// Function: ShouldPauseRiots
     /// </summary>
-    public unsafe bool ShouldPauseRiots()
+    public unsafe virtual bool ShouldPauseRiots()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PauseRestartRandomPopulation.ShouldPauseRiots", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -80,7 +80,7 @@ public partial class RSeqAct_PauseRestartRandomPopulation : BmSDK.Engine.Sequenc
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PauseRestartRandomPopulation.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

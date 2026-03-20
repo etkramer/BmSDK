@@ -36,7 +36,7 @@ public partial class RB_Spring : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
     /// <summary>
     /// Function: Clear
     /// </summary>
-    public unsafe void Clear()
+    public unsafe virtual void Clear()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_Spring.Clear", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class RB_Spring : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
     /// <summary>
     /// Function: SetComponents
     /// </summary>
-    public unsafe void SetComponents(BmSDK.Engine.PrimitiveComponent InComponent1, BmSDK.FName InBoneName1, System.Numerics.Vector3 Position1, BmSDK.Engine.PrimitiveComponent InComponent2, BmSDK.FName InBoneName2, System.Numerics.Vector3 Position2)
+    public unsafe virtual void SetComponents(BmSDK.Engine.PrimitiveComponent InComponent1, BmSDK.FName InBoneName1, System.Numerics.Vector3 Position1, BmSDK.Engine.PrimitiveComponent InComponent2, BmSDK.FName InBoneName2, System.Numerics.Vector3 Position2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_Spring.SetComponents", true);
         byte* paramsPtr = stackalloc byte[56];

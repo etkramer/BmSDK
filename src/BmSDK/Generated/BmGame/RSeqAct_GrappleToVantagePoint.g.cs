@@ -36,7 +36,7 @@ public partial class RSeqAct_GrappleToVantagePoint : BmSDK.Engine.SequenceAction
     /// <summary>
     /// Function: Grapple
     /// </summary>
-    public unsafe void Grapple()
+    public unsafe virtual void Grapple()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GrappleToVantagePoint.Grapple", true);
         byte* paramsPtr = stackalloc byte[32];

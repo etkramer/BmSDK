@@ -36,7 +36,7 @@ public partial class Font : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetStringHeightAndWidth
     /// </summary>
-    public unsafe void GetStringHeightAndWidth(out BmSDK.FString InString, out int Height, out int Width)
+    public unsafe virtual void GetStringHeightAndWidth(out BmSDK.FString InString, out int Height, out int Width)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Font.GetStringHeightAndWidth", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -57,7 +57,7 @@ public partial class Font : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: StrWidth
     /// </summary>
-    public unsafe float StrWidth(BmSDK.FString Text)
+    public unsafe virtual float StrWidth(BmSDK.FString Text)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Font.StrWidth", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -76,7 +76,7 @@ public partial class Font : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMaxCharHeight
     /// </summary>
-    public unsafe float GetMaxCharHeight()
+    public unsafe virtual float GetMaxCharHeight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Font.GetMaxCharHeight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class Font : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAuthoredViewportHeight
     /// </summary>
-    public unsafe float GetAuthoredViewportHeight(float ViewportHeight)
+    public unsafe virtual float GetAuthoredViewportHeight(float ViewportHeight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Font.GetAuthoredViewportHeight", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -113,7 +113,7 @@ public partial class Font : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetScalingFactor
     /// </summary>
-    public unsafe float GetScalingFactor(float HeightTest)
+    public unsafe virtual float GetScalingFactor(float HeightTest)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Font.GetScalingFactor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -132,7 +132,7 @@ public partial class Font : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetResolutionPageIndex
     /// </summary>
-    public unsafe int GetResolutionPageIndex(float HeightTest)
+    public unsafe virtual int GetResolutionPageIndex(float HeightTest)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Font.GetResolutionPageIndex", true);
         byte* paramsPtr = stackalloc byte[8];

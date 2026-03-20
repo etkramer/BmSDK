@@ -36,7 +36,7 @@ public partial class OnlineCustomContentRequestManifestCrcHydra : BmSDK.Engine.O
     /// <summary>
     /// Function: CrcDownloadComplete
     /// </summary>
-    public unsafe void CrcDownloadComplete(bool bWasSuccessful, BmSDK.FString sCustomId)
+    public unsafe virtual void CrcDownloadComplete(bool bWasSuccessful, BmSDK.FString sCustomId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequestManifestCrcHydra.CrcDownloadComplete", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -49,7 +49,7 @@ public partial class OnlineCustomContentRequestManifestCrcHydra : BmSDK.Engine.O
     /// <summary>
     /// Function: CrcDownloadStarted
     /// </summary>
-    public unsafe void CrcDownloadStarted()
+    public unsafe virtual void CrcDownloadStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequestManifestCrcHydra.CrcDownloadStarted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -60,7 +60,7 @@ public partial class OnlineCustomContentRequestManifestCrcHydra : BmSDK.Engine.O
     /// <summary>
     /// Function: OnCrcDownloadComplete
     /// </summary>
-    public unsafe void OnCrcDownloadComplete()
+    public unsafe virtual void OnCrcDownloadComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequestManifestCrcHydra.OnCrcDownloadComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -78,7 +78,7 @@ public partial class OnlineCustomContentRequestManifestCrcHydra : BmSDK.Engine.O
     /// <summary>
     /// Function: CancelCustomContentRequest
     /// </summary>
-    public unsafe void CancelCustomContentRequest()
+    public unsafe override void CancelCustomContentRequest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequestManifestCrcHydra.CancelCustomContentRequest", true);
         byte* paramsPtr = stackalloc byte[0];

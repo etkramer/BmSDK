@@ -36,7 +36,7 @@ public partial class RHudObjectivesContainer : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Function: FlushPendingObjectiveMessage
     /// </summary>
-    public unsafe void FlushPendingObjectiveMessage(BmSDK.FString Title)
+    public unsafe virtual void FlushPendingObjectiveMessage(BmSDK.FString Title)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudObjectivesContainer.FlushPendingObjectiveMessage", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -48,7 +48,7 @@ public partial class RHudObjectivesContainer : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Function: QueueObjectiveMessageCustomIcon
     /// </summary>
-    public unsafe void QueueObjectiveMessageCustomIcon(float Time, BmSDK.FString Title, BmSDK.FString Desc, BmSDK.FString OrgDesc, BmSDK.FString CustomIconName, bool bForceShowMap, BmSDK.FString BackPrompt, bool bNoDuplicates, bool bPulseCompassIndicator, BmSDK.FString MostWantedPipeSeparatedArray = default)
+    public unsafe virtual void QueueObjectiveMessageCustomIcon(float Time, BmSDK.FString Title, BmSDK.FString Desc, BmSDK.FString OrgDesc, BmSDK.FString CustomIconName, bool bForceShowMap, BmSDK.FString BackPrompt, bool bNoDuplicates, bool bPulseCompassIndicator, BmSDK.FString MostWantedPipeSeparatedArray = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudObjectivesContainer.QueueObjectiveMessageCustomIcon", true);
         byte* paramsPtr = stackalloc byte[208];
@@ -69,7 +69,7 @@ public partial class RHudObjectivesContainer : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Function: QueueObjectiveMessage
     /// </summary>
-    public unsafe void QueueObjectiveMessage(float Time, BmSDK.FString Title, BmSDK.FString Desc, BmSDK.FString OrgDesc, int ArrowType, bool bForceShowMap, BmSDK.FString BackPrompt, bool bNoDuplicates, bool bPulseCompassIndicator)
+    public unsafe virtual void QueueObjectiveMessage(float Time, BmSDK.FString Title, BmSDK.FString Desc, BmSDK.FString OrgDesc, int ArrowType, bool bForceShowMap, BmSDK.FString BackPrompt, bool bNoDuplicates, bool bPulseCompassIndicator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudObjectivesContainer.QueueObjectiveMessage", true);
         byte* paramsPtr = stackalloc byte[180];

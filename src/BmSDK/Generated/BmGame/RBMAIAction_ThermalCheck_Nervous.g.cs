@@ -71,7 +71,7 @@ public partial class RBMAIAction_ThermalCheck_Nervous : BmSDK.BmGame.RBMAIAction
     /// <summary>
     /// Function: GetInTransName
     /// </summary>
-    public unsafe BmSDK.FName GetInTransName()
+    public unsafe override BmSDK.FName GetInTransName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThermalCheck_Nervous.GetInTransName", true);
         byte* paramsPtr = stackalloc byte[8];

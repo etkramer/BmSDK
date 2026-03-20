@@ -71,7 +71,7 @@ public partial class RStealthTakedownStage_SilentFromAbove : BmSDK.BmGame.RSteal
     /// <summary>
     /// Function: BlockPlayerFromForceCrouching
     /// </summary>
-    public unsafe bool BlockPlayerFromForceCrouching()
+    public unsafe override bool BlockPlayerFromForceCrouching()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_SilentFromAbove.BlockPlayerFromForceCrouching", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RStealthTakedownStage_SilentFromAbove : BmSDK.BmGame.RSteal
     /// <summary>
     /// Function: FireGrapple
     /// </summary>
-    public unsafe void FireGrapple()
+    public unsafe virtual void FireGrapple()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_SilentFromAbove.FireGrapple", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RStealthTakedownStage_SilentFromAbove : BmSDK.BmGame.RSteal
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_SilentFromAbove.Begin", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -104,7 +104,7 @@ public partial class RStealthTakedownStage_SilentFromAbove : BmSDK.BmGame.RSteal
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_SilentFromAbove.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[24];

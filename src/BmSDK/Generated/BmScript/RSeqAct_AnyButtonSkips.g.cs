@@ -47,7 +47,7 @@ public partial class RSeqAct_AnyButtonSkips : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: CheckButtonsOld
     /// </summary>
-    public unsafe bool CheckButtonsOld()
+    public unsafe virtual bool CheckButtonsOld()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_AnyButtonSkips.CheckButtonsOld", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -58,7 +58,7 @@ public partial class RSeqAct_AnyButtonSkips : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: CheckButtonsNew
     /// </summary>
-    public unsafe bool CheckButtonsNew()
+    public unsafe virtual bool CheckButtonsNew()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_AnyButtonSkips.CheckButtonsNew", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -69,7 +69,7 @@ public partial class RSeqAct_AnyButtonSkips : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_AnyButtonSkips.Update", true);
         byte* paramsPtr = stackalloc byte[8];

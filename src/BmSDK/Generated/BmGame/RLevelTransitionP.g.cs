@@ -66,7 +66,7 @@ public partial class RLevelTransitionP : BmSDK.BmGame.RLevelTransition, BmSDK.IG
     /// <summary>
     /// Function: MovePlayerHere
     /// </summary>
-    public unsafe void MovePlayerHere()
+    public unsafe override void MovePlayerHere()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionP.MovePlayerHere", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -77,7 +77,7 @@ public partial class RLevelTransitionP : BmSDK.BmGame.RLevelTransition, BmSDK.IG
     /// <summary>
     /// Function: EnterTransition
     /// </summary>
-    public unsafe void EnterTransition()
+    public unsafe override void EnterTransition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionP.EnterTransition", true);
         byte* paramsPtr = stackalloc byte[0];

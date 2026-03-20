@@ -71,7 +71,7 @@ public partial class RStealthTakedownStage_ChainTakedown_StandStart : BmSDK.BmGa
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ChainTakedown_StandStart.Begin", true);
         byte* paramsPtr = stackalloc byte[0];

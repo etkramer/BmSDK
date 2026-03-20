@@ -71,7 +71,7 @@ public partial class RMissingWallGrateAIMarker : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: GetGlanceScore
     /// </summary>
-    public unsafe int GetGlanceScore()
+    public unsafe virtual int GetGlanceScore()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMissingWallGrateAIMarker.GetGlanceScore", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RMissingWallGrateAIMarker : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMissingWallGrateAIMarker.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RMissingWallGrateAIMarker : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: EventFinished
     /// </summary>
-    public unsafe void EventFinished()
+    public unsafe virtual void EventFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMissingWallGrateAIMarker.EventFinished", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RMissingWallGrateAIMarker : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: MissingGrateNoticedBy
     /// </summary>
-    public unsafe void MissingGrateNoticedBy(BmSDK.BmGame.RBMAIController Spotter)
+    public unsafe virtual void MissingGrateNoticedBy(BmSDK.BmGame.RBMAIController Spotter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMissingWallGrateAIMarker.MissingGrateNoticedBy", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -116,7 +116,7 @@ public partial class RMissingWallGrateAIMarker : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: SetAIRoomState
     /// </summary>
-    public unsafe void SetAIRoomState(BmSDK.BmGame.RBMRoomAIState NewRoomState)
+    public unsafe virtual void SetAIRoomState(BmSDK.BmGame.RBMRoomAIState NewRoomState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMissingWallGrateAIMarker.SetAIRoomState", true);
         byte* paramsPtr = stackalloc byte[8];

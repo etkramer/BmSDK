@@ -36,7 +36,7 @@ public partial class SeqEvent_TakeDamage : BmSDK.Engine.SequenceEvent, BmSDK.IGa
     /// <summary>
     /// Function: Toggled
     /// </summary>
-    public unsafe void Toggled()
+    public unsafe override void Toggled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqEvent_TakeDamage.Toggled", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class SeqEvent_TakeDamage : BmSDK.Engine.SequenceEvent, BmSDK.IGa
     /// <summary>
     /// Function: Reset
     /// </summary>
-    public unsafe void Reset()
+    public unsafe override void Reset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqEvent_TakeDamage.Reset", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class SeqEvent_TakeDamage : BmSDK.Engine.SequenceEvent, BmSDK.IGa
     /// <summary>
     /// Function: HandleDamage
     /// </summary>
-    public unsafe void HandleDamage(BmSDK.Engine.Actor InOriginator, BmSDK.Engine.Actor InInstigator, BmSDK.Class inDamageType, int inAmount, System.Numerics.Vector3 HitLocation)
+    public unsafe virtual void HandleDamage(BmSDK.Engine.Actor InOriginator, BmSDK.Engine.Actor InInstigator, BmSDK.Class inDamageType, int inAmount, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqEvent_TakeDamage.HandleDamage", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -85,7 +85,7 @@ public partial class SeqEvent_TakeDamage : BmSDK.Engine.SequenceEvent, BmSDK.IGa
     /// <summary>
     /// Function: IsValidDamageType
     /// </summary>
-    public unsafe bool IsValidDamageType(BmSDK.Class inDamageType)
+    public unsafe virtual bool IsValidDamageType(BmSDK.Class inDamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqEvent_TakeDamage.IsValidDamageType", true);
         byte* paramsPtr = stackalloc byte[20];

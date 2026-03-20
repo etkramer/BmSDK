@@ -36,7 +36,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FireEMP
     /// </summary>
-    public unsafe void FireEMP()
+    public unsafe virtual void FireEMP()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.FireEMP", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AudioForceResume
     /// </summary>
-    public unsafe void AudioForceResume()
+    public unsafe virtual void AudioForceResume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.AudioForceResume", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -72,7 +72,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AudioForceSuspend
     /// </summary>
-    public unsafe void AudioForceSuspend()
+    public unsafe virtual void AudioForceSuspend()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.AudioForceSuspend", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -90,7 +90,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AudioResume
     /// </summary>
-    public unsafe void AudioResume()
+    public unsafe virtual void AudioResume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.AudioResume", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -108,7 +108,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AudioSuspend
     /// </summary>
-    public unsafe void AudioSuspend()
+    public unsafe virtual void AudioSuspend()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.AudioSuspend", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AudioEjectSkid
     /// </summary>
-    public unsafe void AudioEjectSkid()
+    public unsafe virtual void AudioEjectSkid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.AudioEjectSkid", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -137,7 +137,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AudioRemoteWheelSpinActive
     /// </summary>
-    public unsafe bool AudioRemoteWheelSpinActive()
+    public unsafe virtual bool AudioRemoteWheelSpinActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.AudioRemoteWheelSpinActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -148,7 +148,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AudioBoostDonuts
     /// </summary>
-    public unsafe void AudioBoostDonuts(bool Active)
+    public unsafe virtual void AudioBoostDonuts(bool Active)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.AudioBoostDonuts", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -167,7 +167,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AudioRemoteWheelSpin
     /// </summary>
-    public unsafe void AudioRemoteWheelSpin(bool Active)
+    public unsafe virtual void AudioRemoteWheelSpin(bool Active)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.AudioRemoteWheelSpin", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -186,7 +186,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AudioRemoteCalledIn
     /// </summary>
-    public unsafe void AudioRemoteCalledIn(bool remoting)
+    public unsafe virtual void AudioRemoteCalledIn(bool remoting)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.AudioRemoteCalledIn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -205,7 +205,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AudioSkidToStop
     /// </summary>
-    public unsafe void AudioSkidToStop(float timeBeforeSkidStops)
+    public unsafe virtual void AudioSkidToStop(float timeBeforeSkidStops)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.AudioSkidToStop", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -224,7 +224,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRPM
     /// </summary>
-    public unsafe float GetRPM()
+    public unsafe virtual float GetRPM()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.GetRPM", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -242,7 +242,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetGear
     /// </summary>
-    public unsafe int GetGear()
+    public unsafe virtual int GetGear()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.GetGear", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -260,7 +260,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetClutch
     /// </summary>
-    public unsafe bool GetClutch()
+    public unsafe virtual bool GetClutch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.GetClutch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -278,7 +278,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ImpulseNoise
     /// </summary>
-    public unsafe void ImpulseNoise(float noiseValue)
+    public unsafe virtual void ImpulseNoise(float noiseValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.ImpulseNoise", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -297,7 +297,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetParameter
     /// </summary>
-    public unsafe void SetParameter(BmSDK.Engine.AkParameterName Param, float val, bool setGlobal, bool bInherit)
+    public unsafe virtual void SetParameter(BmSDK.Engine.AkParameterName Param, float val, bool setGlobal, bool bInherit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.SetParameter", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -319,7 +319,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: VehiclePhysicsImpact
     /// </summary>
-    public unsafe bool VehiclePhysicsImpact(BmSDK.Engine.PrimitiveComponent HitComponent, BmSDK.Engine.PrimitiveComponent OtherComponent, out BmSDK.Engine.Actor.FCollisionImpactData RigidCollisionData, int ContactIndex, float Speed, int Index0, int Index1)
+    public unsafe virtual bool VehiclePhysicsImpact(BmSDK.Engine.PrimitiveComponent HitComponent, BmSDK.Engine.PrimitiveComponent OtherComponent, out BmSDK.Engine.Actor.FCollisionImpactData RigidCollisionData, int ContactIndex, float Speed, int Index0, int Index1)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.VehiclePhysicsImpact", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -344,7 +344,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAllowExhaustEffect
     /// </summary>
-    public unsafe bool GetAllowExhaustEffect()
+    public unsafe virtual bool GetAllowExhaustEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.GetAllowExhaustEffect", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -362,7 +362,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe virtual void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -381,7 +381,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Died
     /// </summary>
-    public unsafe void Died()
+    public unsafe virtual void Died()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.Died", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -399,7 +399,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Boost
     /// </summary>
-    public unsafe void Boost(bool Enabled)
+    public unsafe virtual void Boost(bool Enabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.Boost", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -418,7 +418,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: BrakeOff
     /// </summary>
-    public unsafe void BrakeOff()
+    public unsafe virtual void BrakeOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.BrakeOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -436,7 +436,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: BrakeOn
     /// </summary>
-    public unsafe void BrakeOn()
+    public unsafe virtual void BrakeOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.BrakeOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -454,7 +454,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PawnLeft
     /// </summary>
-    public unsafe void PawnLeft(BmSDK.Engine.Pawn P, bool trunk)
+    public unsafe virtual void PawnLeft(BmSDK.Engine.Pawn P, bool trunk)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.PawnLeft", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -474,7 +474,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PawnEntered
     /// </summary>
-    public unsafe void PawnEntered(BmSDK.Engine.Pawn P, bool trunk)
+    public unsafe virtual void PawnEntered(BmSDK.Engine.Pawn P, bool trunk)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.PawnEntered", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -494,7 +494,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayerLeft
     /// </summary>
-    public unsafe void PlayerLeft()
+    public unsafe virtual void PlayerLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.PlayerLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -512,7 +512,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayerEntered
     /// </summary>
-    public unsafe void PlayerEntered()
+    public unsafe virtual void PlayerEntered()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.PlayerEntered", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -530,7 +530,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: NumWheels
     /// </summary>
-    public unsafe int NumWheels()
+    public unsafe virtual int NumWheels()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.NumWheels", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -548,7 +548,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetVehicleJump
     /// </summary>
-    public unsafe void SetVehicleJump(bool Jumping)
+    public unsafe virtual void SetVehicleJump(bool Jumping)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.SetVehicleJump", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -567,7 +567,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDrivingHillFactor
     /// </summary>
-    public unsafe void SetDrivingHillFactor(float factor)
+    public unsafe virtual void SetDrivingHillFactor(float factor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.SetDrivingHillFactor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -586,7 +586,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDrivingMode
     /// </summary>
-    public unsafe void SetDrivingMode(BmSDK.Engine.AkVehicleSoundInfo.EDrivingModes newDrivingMode)
+    public unsafe virtual void SetDrivingMode(BmSDK.Engine.AkVehicleSoundInfo.EDrivingModes newDrivingMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.SetDrivingMode", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -605,7 +605,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: StopEvent
     /// </summary>
-    public unsafe void StopEvent(out BmSDK.Engine.AkWwise.FAkSoundHandle handleToStop)
+    public unsafe virtual void StopEvent(out BmSDK.Engine.AkWwise.FAkSoundHandle handleToStop)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.StopEvent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -624,7 +624,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayEvent
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle PlayEvent(BmSDK.Engine.AkEvent EventToPlay)
+    public unsafe virtual BmSDK.Engine.AkWwise.FAkSoundHandle PlayEvent(BmSDK.Engine.AkEvent EventToPlay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.PlayEvent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -643,7 +643,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: StopNamedLoopingEvent
     /// </summary>
-    public unsafe void StopNamedLoopingEvent(BmSDK.FString nameOfEvent)
+    public unsafe virtual void StopNamedLoopingEvent(BmSDK.FString nameOfEvent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.StopNamedLoopingEvent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -662,7 +662,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayNamedLoopingEvent
     /// </summary>
-    public unsafe bool PlayNamedLoopingEvent(BmSDK.FString nameOfEvent)
+    public unsafe virtual bool PlayNamedLoopingEvent(BmSDK.FString nameOfEvent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.PlayNamedLoopingEvent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -681,7 +681,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayNamedEvent
     /// </summary>
-    public unsafe bool PlayNamedEvent(BmSDK.FString nameOfEvent, BmSDK.FString BoneName = default)
+    public unsafe virtual bool PlayNamedEvent(BmSDK.FString nameOfEvent, BmSDK.FString BoneName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.PlayNamedEvent", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -701,7 +701,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: StopSockets
     /// </summary>
-    public unsafe void StopSockets()
+    public unsafe virtual void StopSockets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.StopSockets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -719,7 +719,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetSwitch
     /// </summary>
-    public unsafe void SetSwitch(BmSDK.Engine.AkSwitchName switchToSet)
+    public unsafe virtual void SetSwitch(BmSDK.Engine.AkSwitchName switchToSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.SetSwitch", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -738,7 +738,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: StopCreationEvents
     /// </summary>
-    public unsafe void StopCreationEvents()
+    public unsafe virtual void StopCreationEvents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.StopCreationEvents", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -756,7 +756,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: StopEngineAtRest
     /// </summary>
-    public unsafe void StopEngineAtRest()
+    public unsafe virtual void StopEngineAtRest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.StopEngineAtRest", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -774,7 +774,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: StopEngine
     /// </summary>
-    public unsafe void StopEngine(bool forceStop = default)
+    public unsafe virtual void StopEngine(bool forceStop = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.StopEngine", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -793,7 +793,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: StartEngine
     /// </summary>
-    public unsafe void StartEngine()
+    public unsafe virtual void StartEngine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.StartEngine", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -811,7 +811,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: EngineStarted
     /// </summary>
-    public unsafe bool EngineStarted()
+    public unsafe virtual bool EngineStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.EngineStarted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -829,7 +829,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Initialize
     /// </summary>
-    public unsafe void Initialize(BmSDK.Engine.AkVehicleSoundInfo soundInfo)
+    public unsafe virtual void Initialize(BmSDK.Engine.AkVehicleSoundInfo soundInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.Initialize", true);
         byte* paramsPtr = stackalloc byte[8];

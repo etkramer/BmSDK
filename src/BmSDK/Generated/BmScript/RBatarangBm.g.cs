@@ -71,7 +71,7 @@ public partial class RBatarangBm : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarangBm.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -84,7 +84,7 @@ public partial class RBatarangBm : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: ToggleMultiBatararang
     /// </summary>
-    public unsafe bool ToggleMultiBatararang()
+    public unsafe virtual bool ToggleMultiBatararang()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarangBm.ToggleMultiBatararang", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -95,7 +95,7 @@ public partial class RBatarangBm : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: NoToggleBatarang
     /// </summary>
-    public unsafe void NoToggleBatarang()
+    public unsafe virtual void NoToggleBatarang()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarangBm.NoToggleBatarang", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RBatarangBm : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: CatchBatarang
     /// </summary>
-    public unsafe void CatchBatarang(BmSDK.BmGame.RBatarangProjectile CatchProjectile)
+    public unsafe override void CatchBatarang(BmSDK.BmGame.RBatarangProjectile CatchProjectile)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarangBm.CatchBatarang", true);
         byte* paramsPtr = stackalloc byte[156];
@@ -118,7 +118,7 @@ public partial class RBatarangBm : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayElectrifiedCatchEffect
     /// </summary>
-    public unsafe void PlayElectrifiedCatchEffect()
+    public unsafe virtual void PlayElectrifiedCatchEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarangBm.PlayElectrifiedCatchEffect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RBatarangBm : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: ProjectileDestroyed
     /// </summary>
-    public unsafe void ProjectileDestroyed()
+    public unsafe override void ProjectileDestroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarangBm.ProjectileDestroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class RBatarangBm : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: GetProjectilePrompt
     /// </summary>
-    public unsafe void GetProjectilePrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override void GetProjectilePrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarangBm.GetProjectilePrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -153,7 +153,7 @@ public partial class RBatarangBm : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: ThrowBatarangHandSecondary
     /// </summary>
-    public unsafe void ThrowBatarangHandSecondary(BmSDK.FName LaunchBone)
+    public unsafe virtual void ThrowBatarangHandSecondary(BmSDK.FName LaunchBone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarangBm.ThrowBatarangHandSecondary", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -165,7 +165,7 @@ public partial class RBatarangBm : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: ThrowBatarangHand
     /// </summary>
-    public unsafe void ThrowBatarangHand(BmSDK.FName LaunchBone)
+    public unsafe override void ThrowBatarangHand(BmSDK.FName LaunchBone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarangBm.ThrowBatarangHand", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -177,7 +177,7 @@ public partial class RBatarangBm : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: quickFire
     /// </summary>
-    public unsafe void quickFire(bool OverridesCombatMove = default)
+    public unsafe override void quickFire(bool OverridesCombatMove = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarangBm.quickFire", true);
         byte* paramsPtr = stackalloc byte[12];

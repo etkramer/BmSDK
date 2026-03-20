@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_FloorGrateFar : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_FloorGrateFar.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[164];

@@ -71,7 +71,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.Tick", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -83,7 +83,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe override BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -95,7 +95,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: OverridesRun
     /// </summary>
-    public unsafe float OverridesRun(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override float OverridesRun(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.OverridesRun", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -107,7 +107,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: CanReachItem
     /// </summary>
-    public unsafe bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
+    public unsafe override bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.CanReachItem", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -119,7 +119,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: GetInteractButton
     /// </summary>
-    public unsafe BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton GetInteractButton(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton GetInteractButton(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.GetInteractButton", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -131,7 +131,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: MustBeCrouched
     /// </summary>
-    public unsafe bool MustBeCrouched(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool MustBeCrouched(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.MustBeCrouched", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -143,7 +143,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.IsActive", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -155,7 +155,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.Interact", true);
         byte* paramsPtr = stackalloc byte[208];
@@ -167,7 +167,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: TriggerFarMove
     /// </summary>
-    public unsafe void TriggerFarMove(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void TriggerFarMove(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.TriggerFarMove", true);
         byte* paramsPtr = stackalloc byte[176];
@@ -179,7 +179,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.Engine.PlayerController PC)
+    public unsafe override void TriggerSpecialMove(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[176];
@@ -191,7 +191,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: GetFOVDegrees
     /// </summary>
-    public unsafe float GetFOVDegrees(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override float GetFOVDegrees(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.GetFOVDegrees", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -203,7 +203,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: GetHeightRange
     /// </summary>
-    public unsafe float GetHeightRange()
+    public unsafe override float GetHeightRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.GetHeightRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -214,7 +214,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: SetInThermalMode
     /// </summary>
-    public unsafe void SetInThermalMode(bool On, bool bForceOff)
+    public unsafe virtual void SetInThermalMode(bool On, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.SetInThermalMode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -227,7 +227,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: PostBeginPlay_Delayed
     /// </summary>
-    public unsafe void PostBeginPlay_Delayed()
+    public unsafe virtual void PostBeginPlay_Delayed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.PostBeginPlay_Delayed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -238,7 +238,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: IsCatwomanFlipGrate
     /// </summary>
-    public unsafe bool IsCatwomanFlipGrate()
+    public unsafe virtual bool IsCatwomanFlipGrate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.IsCatwomanFlipGrate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -249,7 +249,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: DroppedAsVoiceSynthesiserTarget
     /// </summary>
-    public unsafe void DroppedAsVoiceSynthesiserTarget()
+    public unsafe virtual void DroppedAsVoiceSynthesiserTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.DroppedAsVoiceSynthesiserTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -260,7 +260,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: TargetedByVoiceSynthesiser
     /// </summary>
-    public unsafe void TargetedByVoiceSynthesiser()
+    public unsafe virtual void TargetedByVoiceSynthesiser()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.TargetedByVoiceSynthesiser", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -271,7 +271,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: OverridePreviousLines
     /// </summary>
-    public unsafe bool OverridePreviousLines()
+    public unsafe override bool OverridePreviousLines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.OverridePreviousLines", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -282,7 +282,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: GetFinalGrateRotAndTrans
     /// </summary>
-    public unsafe void GetFinalGrateRotAndTrans(out BmSDK.Rotator GrateRot, out System.Numerics.Vector3 GrateTrans)
+    public unsafe virtual void GetFinalGrateRotAndTrans(out BmSDK.Rotator GrateRot, out System.Numerics.Vector3 GrateTrans)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.GetFinalGrateRotAndTrans", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -302,7 +302,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: UpdateCapeCollision
     /// </summary>
-    public unsafe void UpdateCapeCollision()
+    public unsafe virtual void UpdateCapeCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.UpdateCapeCollision", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -320,7 +320,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: CheckNavMeshAtLocation
     /// </summary>
-    public unsafe bool CheckNavMeshAtLocation(System.Numerics.Vector3 TestLoc, bool bDrawFailDebug = default)
+    public unsafe virtual bool CheckNavMeshAtLocation(System.Numerics.Vector3 TestLoc, bool bDrawFailDebug = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.CheckNavMeshAtLocation", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -333,7 +333,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: IsClearOfCollisionFromLocation
     /// </summary>
-    public unsafe bool IsClearOfCollisionFromLocation(BmSDK.Engine.Pawn TestPawn, System.Numerics.Vector3 TestLoc, bool bDrawFailDebug = default)
+    public unsafe virtual bool IsClearOfCollisionFromLocation(BmSDK.Engine.Pawn TestPawn, System.Numerics.Vector3 TestLoc, bool bDrawFailDebug = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.IsClearOfCollisionFromLocation", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -347,7 +347,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: ClearAllowTakedownOnly
     /// </summary>
-    public unsafe void ClearAllowTakedownOnly()
+    public unsafe virtual void ClearAllowTakedownOnly()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.ClearAllowTakedownOnly", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -358,7 +358,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: SetAllowTakedownOnly
     /// </summary>
-    public unsafe void SetAllowTakedownOnly()
+    public unsafe virtual void SetAllowTakedownOnly()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.SetAllowTakedownOnly", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -369,7 +369,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: GetBestGrateRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetBestGrateRotation(System.Numerics.Vector3 PlayerPosition, BmSDK.Rotator PlayerRotation, float YawOffset = default)
+    public unsafe virtual BmSDK.Rotator GetBestGrateRotation(System.Numerics.Vector3 PlayerPosition, BmSDK.Rotator PlayerRotation, float YawOffset = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.GetBestGrateRotation", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -383,7 +383,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: GetCwClimbDownLocator
     /// </summary>
-    public unsafe bool GetCwClimbDownLocator(out BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Locator, BmSDK.BmGame.RPawnPlayer Player, bool bRotateGrate = default, float YawOffset = default)
+    public unsafe virtual bool GetCwClimbDownLocator(out BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Locator, BmSDK.BmGame.RPawnPlayer Player, bool bRotateGrate = default, float YawOffset = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.GetCwClimbDownLocator", true);
         byte* paramsPtr = stackalloc byte[152];
@@ -398,7 +398,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: GetCwClimbUpLocator
     /// </summary>
-    public unsafe bool GetCwClimbUpLocator(out BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Locator, BmSDK.BmGame.RPawnPlayer Player, bool bRotateGrate = default, float YawOffset = default)
+    public unsafe virtual bool GetCwClimbUpLocator(out BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Locator, BmSDK.BmGame.RPawnPlayer Player, bool bRotateGrate = default, float YawOffset = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.GetCwClimbUpLocator", true);
         byte* paramsPtr = stackalloc byte[152];
@@ -413,7 +413,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: GetCwClimbLocator
     /// </summary>
-    public unsafe bool GetCwClimbLocator(out BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Locator, BmSDK.BmGame.RPawnPlayer Player, bool bCheckDown, bool bRotateGrate = default, float YawOffset = default)
+    public unsafe virtual bool GetCwClimbLocator(out BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Locator, BmSDK.BmGame.RPawnPlayer Player, bool bCheckDown, bool bRotateGrate = default, float YawOffset = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.GetCwClimbLocator", true);
         byte* paramsPtr = stackalloc byte[224];
@@ -429,7 +429,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: CheckCwTargetLocation
     /// </summary>
-    public unsafe bool CheckCwTargetLocation(BmSDK.BmGame.RPlayerController PC, System.Numerics.Vector3 Dir, bool bCheckDown, bool bDebugDraw = default)
+    public unsafe virtual bool CheckCwTargetLocation(BmSDK.BmGame.RPlayerController PC, System.Numerics.Vector3 Dir, bool bCheckDown, bool bDebugDraw = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.CheckCwTargetLocation", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -444,7 +444,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: CheckCwStartLocation
     /// </summary>
-    public unsafe bool CheckCwStartLocation(BmSDK.BmGame.RPlayerController PC, System.Numerics.Vector3 Dir, bool bCheckDown, bool bDebugDraw = default)
+    public unsafe virtual bool CheckCwStartLocation(BmSDK.BmGame.RPlayerController PC, System.Numerics.Vector3 Dir, bool bCheckDown, bool bDebugDraw = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.CheckCwStartLocation", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -459,7 +459,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: EndTimedCapeCollisionDisable
     /// </summary>
-    public unsafe void EndTimedCapeCollisionDisable()
+    public unsafe virtual void EndTimedCapeCollisionDisable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.EndTimedCapeCollisionDisable", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -470,7 +470,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: BeginTimedCapeCollisionDisable
     /// </summary>
-    public unsafe void BeginTimedCapeCollisionDisable(float disabledTimer)
+    public unsafe virtual void BeginTimedCapeCollisionDisable(float disabledTimer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.BeginTimedCapeCollisionDisable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -482,7 +482,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: SetDisableCapeCollision
     /// </summary>
-    public unsafe void SetDisableCapeCollision(bool bDisabled)
+    public unsafe virtual void SetDisableCapeCollision(bool bDisabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.SetDisableCapeCollision", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -501,7 +501,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: PlayLastGrateAnim
     /// </summary>
-    public unsafe void PlayLastGrateAnim()
+    public unsafe virtual void PlayLastGrateAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.PlayLastGrateAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -512,7 +512,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: SkipToEndOfCurrentAnim
     /// </summary>
-    public unsafe void SkipToEndOfCurrentAnim()
+    public unsafe virtual void SkipToEndOfCurrentAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.SkipToEndOfCurrentAnim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -523,7 +523,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: PlayGrateAnim
     /// </summary>
-    public unsafe void PlayGrateAnim(BmSDK.FName GrateAnim, BmSDK.Rotator GrateAnimationRotation = default, float Rate = default, bool bLoop = default, bool WaitToPlay = default)
+    public unsafe virtual void PlayGrateAnim(BmSDK.FName GrateAnim, BmSDK.Rotator GrateAnimationRotation = default, float Rate = default, bool bLoop = default, bool WaitToPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.PlayGrateAnim", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -539,7 +539,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -550,7 +550,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -561,7 +561,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: DelayedDisableTick
     /// </summary>
-    public unsafe void DelayedDisableTick()
+    public unsafe virtual void DelayedDisableTick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.DelayedDisableTick", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -572,7 +572,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: TriggerDamagedEvent
     /// </summary>
-    public unsafe void TriggerDamagedEvent()
+    public unsafe virtual void TriggerDamagedEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.TriggerDamagedEvent", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -583,7 +583,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: IsLocked
     /// </summary>
-    public unsafe bool IsLocked()
+    public unsafe virtual bool IsLocked()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.IsLocked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -594,7 +594,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: UnInitialiseNavmesh
     /// </summary>
-    public unsafe void UnInitialiseNavmesh()
+    public unsafe virtual void UnInitialiseNavmesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.UnInitialiseNavmesh", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -605,7 +605,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: InitialiseNavmesh
     /// </summary>
-    public unsafe void InitialiseNavmesh()
+    public unsafe virtual void InitialiseNavmesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.InitialiseNavmesh", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -616,7 +616,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: RegisterWithNavMesh
     /// </summary>
-    public unsafe void RegisterWithNavMesh(bool bRegister)
+    public unsafe virtual void RegisterWithNavMesh(bool bRegister)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.RegisterWithNavMesh", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -635,7 +635,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: GetAIPointOfInterestPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAIPointOfInterestPosition()
+    public unsafe override System.Numerics.Vector3 GetAIPointOfInterestPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.GetAIPointOfInterestPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -653,7 +653,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: ValidateThugAccessibility
     /// </summary>
-    public unsafe void ValidateThugAccessibility(bool bFullDebug)
+    public unsafe virtual void ValidateThugAccessibility(bool bFullDebug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.ValidateThugAccessibility", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -665,7 +665,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -676,7 +676,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: CheckSpaceToClimbOut
     /// </summary>
-    public unsafe bool CheckSpaceToClimbOut(out BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe virtual bool CheckSpaceToClimbOut(out BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.CheckSpaceToClimbOut", true);
         byte* paramsPtr = stackalloc byte[136];
@@ -695,7 +695,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: GetYawFromDirectionIndex
     /// </summary>
-    public unsafe int GetYawFromDirectionIndex(int directionIndex)
+    public unsafe virtual int GetYawFromDirectionIndex(int directionIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.GetYawFromDirectionIndex", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -707,7 +707,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: UpdateHighlightMaterialAlpha
     /// </summary>
-    public unsafe void UpdateHighlightMaterialAlpha(float DeltaTime)
+    public unsafe virtual void UpdateHighlightMaterialAlpha(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.UpdateHighlightMaterialAlpha", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -719,7 +719,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: SetupHighlightMeshes
     /// </summary>
-    public unsafe void SetupHighlightMeshes()
+    public unsafe virtual void SetupHighlightMeshes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.SetupHighlightMeshes", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -730,7 +730,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: SetupHighlightMaterials
     /// </summary>
-    public unsafe void SetupHighlightMaterials()
+    public unsafe virtual void SetupHighlightMaterials()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.SetupHighlightMaterials", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -741,7 +741,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: SwitchToUndamagedMesh
     /// </summary>
-    public unsafe void SwitchToUndamagedMesh()
+    public unsafe virtual void SwitchToUndamagedMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.SwitchToUndamagedMesh", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -752,7 +752,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: SwitchToDamagedMesh
     /// </summary>
-    public unsafe void SwitchToDamagedMesh()
+    public unsafe virtual void SwitchToDamagedMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.SwitchToDamagedMesh", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -763,7 +763,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: SetInvestigateHighlighted
     /// </summary>
-    public unsafe void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
+    public unsafe override void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.SetInvestigateHighlighted", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -776,7 +776,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: SetInXrayMode
     /// </summary>
-    public unsafe void SetInXrayMode(bool On, bool bForceOff)
+    public unsafe virtual void SetInXrayMode(bool On, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.SetInXrayMode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -789,7 +789,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: SetHighlightedByThugVision
     /// </summary>
-    public unsafe void SetHighlightedByThugVision(bool bHighlighted)
+    public unsafe virtual void SetHighlightedByThugVision(bool bHighlighted)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.SetHighlightedByThugVision", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -801,7 +801,7 @@ public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironme
     /// <summary>
     /// Function: SetPawnCausesGrateVis
     /// </summary>
-    public unsafe void SetPawnCausesGrateVis(BmSDK.BmGame.RPawn inPawn, bool bCanSee)
+    public unsafe virtual void SetPawnCausesGrateVis(BmSDK.BmGame.RPawn inPawn, bool bCanSee)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelGrateCWFlipBase.SetPawnCausesGrateVis", true);
         byte* paramsPtr = stackalloc byte[12];

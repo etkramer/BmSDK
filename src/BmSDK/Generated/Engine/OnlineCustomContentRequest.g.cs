@@ -36,7 +36,7 @@ public partial class OnlineCustomContentRequest : BmSDK.GameObject, BmSDK.IGameO
     /// <summary>
     /// Function: CancelCustomContentRequest
     /// </summary>
-    public unsafe void CancelCustomContentRequest()
+    public unsafe virtual void CancelCustomContentRequest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequest.CancelCustomContentRequest", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class OnlineCustomContentRequest : BmSDK.GameObject, BmSDK.IGameO
     /// <summary>
     /// Function: GetCustomContentAsString
     /// </summary>
-    public unsafe void GetCustomContentAsString(out BmSDK.FString ContentData)
+    public unsafe virtual void GetCustomContentAsString(out BmSDK.FString ContentData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequest.GetCustomContentAsString", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -73,7 +73,7 @@ public partial class OnlineCustomContentRequest : BmSDK.GameObject, BmSDK.IGameO
     /// <summary>
     /// Function: GetCustomContent
     /// </summary>
-    public unsafe void GetCustomContent(out BmSDK.TArray<byte> ContentData)
+    public unsafe virtual void GetCustomContent(out BmSDK.TArray<byte> ContentData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequest.GetCustomContent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -92,7 +92,7 @@ public partial class OnlineCustomContentRequest : BmSDK.GameObject, BmSDK.IGameO
     /// <summary>
     /// Function: StartCustomContentRequest
     /// </summary>
-    public unsafe void StartCustomContentRequest(BmSDK.FString sContentName, BmSDK.FString sCustomId, System.IntPtr dRequestCustomContentComplete)
+    public unsafe virtual void StartCustomContentRequest(BmSDK.FString sContentName, BmSDK.FString sCustomId, System.IntPtr dRequestCustomContentComplete)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequest.StartCustomContentRequest", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -113,7 +113,7 @@ public partial class OnlineCustomContentRequest : BmSDK.GameObject, BmSDK.IGameO
     /// <summary>
     /// Function: OnRequestCustomContentComplete
     /// </summary>
-    public unsafe void OnRequestCustomContentComplete(bool bWasSuccessful, BmSDK.FString sCustomId)
+    public unsafe virtual void OnRequestCustomContentComplete(bool bWasSuccessful, BmSDK.FString sCustomId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequest.OnRequestCustomContentComplete", true);
         byte* paramsPtr = stackalloc byte[20];

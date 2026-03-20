@@ -71,7 +71,7 @@ public partial class RVehicleMine : BmSDK.BmGame.RProjectile, BmSDK.IGameObject
     /// <summary>
     /// Function: HitWall
     /// </summary>
-    public unsafe void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
+    public unsafe override void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleMine.HitWall", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -85,7 +85,7 @@ public partial class RVehicleMine : BmSDK.BmGame.RProjectile, BmSDK.IGameObject
     /// <summary>
     /// Function: ProcessTouch
     /// </summary>
-    public unsafe void ProcessTouch(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void ProcessTouch(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleMine.ProcessTouch", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -99,7 +99,7 @@ public partial class RVehicleMine : BmSDK.BmGame.RProjectile, BmSDK.IGameObject
     /// <summary>
     /// Function: HitVehicle
     /// </summary>
-    public unsafe void HitVehicle(BmSDK.BmGame.RVehicle ImpactedVeh)
+    public unsafe virtual void HitVehicle(BmSDK.BmGame.RVehicle ImpactedVeh)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleMine.HitVehicle", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -111,7 +111,7 @@ public partial class RVehicleMine : BmSDK.BmGame.RProjectile, BmSDK.IGameObject
     /// <summary>
     /// Function: ExplodeMine
     /// </summary>
-    public unsafe void ExplodeMine()
+    public unsafe virtual void ExplodeMine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleMine.ExplodeMine", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -122,7 +122,7 @@ public partial class RVehicleMine : BmSDK.BmGame.RProjectile, BmSDK.IGameObject
     /// <summary>
     /// Function: GoPhysics
     /// </summary>
-    public unsafe void GoPhysics()
+    public unsafe virtual void GoPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleMine.GoPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -133,7 +133,7 @@ public partial class RVehicleMine : BmSDK.BmGame.RProjectile, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleMine.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

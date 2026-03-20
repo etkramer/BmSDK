@@ -71,7 +71,7 @@ public partial class RBMPathNode_128Step : BmSDK.BmGame.RBMPathNode_VariablePosi
     /// <summary>
     /// Function: Use128Step
     /// </summary>
-    public unsafe void Use128Step(BmSDK.Engine.Actor User, int EdgeType, System.Numerics.Vector3 JumpDirection, System.Numerics.Vector3 JumpLocation)
+    public unsafe virtual void Use128Step(BmSDK.Engine.Actor User, int EdgeType, System.Numerics.Vector3 JumpDirection, System.Numerics.Vector3 JumpLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_128Step.Use128Step", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -86,7 +86,7 @@ public partial class RBMPathNode_128Step : BmSDK.BmGame.RBMPathNode_VariablePosi
     /// <summary>
     /// Function: GetReferencePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetReferencePoint(BmSDK.BmGame.RBMPawnAI Jumper)
+    public unsafe override System.Numerics.Vector3 GetReferencePoint(BmSDK.BmGame.RBMPawnAI Jumper)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_128Step.GetReferencePoint", true);
         byte* paramsPtr = stackalloc byte[32];

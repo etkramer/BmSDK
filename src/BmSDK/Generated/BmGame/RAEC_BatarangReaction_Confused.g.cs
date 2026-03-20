@@ -71,7 +71,7 @@ public partial class RAEC_BatarangReaction_Confused : BmSDK.BmGame.RAlertEventCo
     /// <summary>
     /// Function: TryDoQuitIntoSearchBark
     /// </summary>
-    public unsafe void TryDoQuitIntoSearchBark(BmSDK.BmGame.RPawnVillain TalkPawn)
+    public unsafe virtual void TryDoQuitIntoSearchBark(BmSDK.BmGame.RPawnVillain TalkPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction_Confused.TryDoQuitIntoSearchBark", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RAEC_BatarangReaction_Confused : BmSDK.BmGame.RAlertEventCo
     /// <summary>
     /// Function: HandleRicochetNoise
     /// </summary>
-    public unsafe void HandleRicochetNoise(System.Numerics.Vector3 HitLoc, float JumpRange, out int bShouldEscalate)
+    public unsafe virtual void HandleRicochetNoise(System.Numerics.Vector3 HitLoc, float JumpRange, out int bShouldEscalate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction_Confused.HandleRicochetNoise", true);
         byte* paramsPtr = stackalloc byte[116];
@@ -97,7 +97,7 @@ public partial class RAEC_BatarangReaction_Confused : BmSDK.BmGame.RAlertEventCo
     /// <summary>
     /// Function: OnRemoveSoloChild
     /// </summary>
-    public unsafe void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
+    public unsafe override void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction_Confused.OnRemoveSoloChild", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RAEC_PlaceSentryGun : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_PlaceSentryGun.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RAEC_PlaceSentryGun : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: NotifyChildStolen
     /// </summary>
-    public unsafe void NotifyChildStolen(BmSDK.BmGame.RAlertEventCoordinatorSolo StoleFromAEC, BmSDK.BmGame.RAlertEventCoordinatorSolo StealingAEC)
+    public unsafe override void NotifyChildStolen(BmSDK.BmGame.RAlertEventCoordinatorSolo StoleFromAEC, BmSDK.BmGame.RAlertEventCoordinatorSolo StealingAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_PlaceSentryGun.NotifyChildStolen", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -96,7 +96,7 @@ public partial class RAEC_PlaceSentryGun : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: GetBarkPriority
     /// </summary>
-    public unsafe int GetBarkPriority()
+    public unsafe override int GetBarkPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_PlaceSentryGun.GetBarkPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -107,7 +107,7 @@ public partial class RAEC_PlaceSentryGun : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: OnAssign
     /// </summary>
-    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe override void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_PlaceSentryGun.OnAssign", true);
         byte* paramsPtr = stackalloc byte[8];

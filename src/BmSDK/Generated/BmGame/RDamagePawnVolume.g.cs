@@ -71,7 +71,7 @@ public partial class RDamagePawnVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: DamagePawn
     /// </summary>
-    public unsafe void DamagePawn(BmSDK.BmGame.RPawnCombat PawnToDamage)
+    public unsafe virtual void DamagePawn(BmSDK.BmGame.RPawnCombat PawnToDamage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDamagePawnVolume.DamagePawn", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RDamagePawnVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldDoDamage
     /// </summary>
-    public unsafe bool ShouldDoDamage()
+    public unsafe virtual bool ShouldDoDamage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDamagePawnVolume.ShouldDoDamage", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RDamagePawnVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: DamageActors
     /// </summary>
-    public unsafe void DamageActors()
+    public unsafe virtual void DamageActors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDamagePawnVolume.DamageActors", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -105,7 +105,7 @@ public partial class RDamagePawnVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldCheckPawn
     /// </summary>
-    public unsafe bool ShouldCheckPawn(BmSDK.BmGame.RPawnCharacter TestPawn)
+    public unsafe virtual bool ShouldCheckPawn(BmSDK.BmGame.RPawnCharacter TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDamagePawnVolume.ShouldCheckPawn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -117,7 +117,7 @@ public partial class RDamagePawnVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPawnRelevantType
     /// </summary>
-    public unsafe bool IsPawnRelevantType(BmSDK.BmGame.RPawnCharacter TestPawn)
+    public unsafe virtual bool IsPawnRelevantType(BmSDK.BmGame.RPawnCharacter TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDamagePawnVolume.IsPawnRelevantType", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -129,7 +129,7 @@ public partial class RDamagePawnVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: StartDamagingActors
     /// </summary>
-    public unsafe void StartDamagingActors()
+    public unsafe virtual void StartDamagingActors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDamagePawnVolume.StartDamagingActors", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class RDamagePawnVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: ToggleOff
     /// </summary>
-    public unsafe void ToggleOff()
+    public unsafe virtual void ToggleOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDamagePawnVolume.ToggleOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -151,7 +151,7 @@ public partial class RDamagePawnVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: ToggleOn
     /// </summary>
-    public unsafe void ToggleOn()
+    public unsafe virtual void ToggleOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDamagePawnVolume.ToggleOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -162,7 +162,7 @@ public partial class RDamagePawnVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDamagePawnVolume.OnToggle", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -174,7 +174,7 @@ public partial class RDamagePawnVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: TurnOff
     /// </summary>
-    public unsafe void TurnOff()
+    public unsafe virtual void TurnOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDamagePawnVolume.TurnOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -185,7 +185,7 @@ public partial class RDamagePawnVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: TurnOn
     /// </summary>
-    public unsafe void TurnOn()
+    public unsafe virtual void TurnOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDamagePawnVolume.TurnOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -196,7 +196,7 @@ public partial class RDamagePawnVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDamagePawnVolume.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

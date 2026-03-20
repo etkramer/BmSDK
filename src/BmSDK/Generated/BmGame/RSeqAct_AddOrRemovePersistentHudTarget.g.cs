@@ -47,7 +47,7 @@ public partial class RSeqAct_AddOrRemovePersistentHudTarget : BmSDK.Engine.Seque
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AddOrRemovePersistentHudTarget.Activated", true);
         byte* paramsPtr = stackalloc byte[36];

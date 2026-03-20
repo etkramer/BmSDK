@@ -71,7 +71,7 @@ public partial class NxForceFieldTornado : BmSDK.Engine.NxForceField, BmSDK.IGam
     /// <summary>
     /// Function: DoInitRBPhys
     /// </summary>
-    public unsafe void DoInitRBPhys()
+    public unsafe override void DoInitRBPhys()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NxForceFieldTornado.DoInitRBPhys", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RSwordProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGameObj
     /// <summary>
     /// Function: GetTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTargetPosition()
+    public unsafe virtual System.Numerics.Vector3 GetTargetPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSwordProjectile.GetTargetPosition", true);
         byte* paramsPtr = stackalloc byte[24];

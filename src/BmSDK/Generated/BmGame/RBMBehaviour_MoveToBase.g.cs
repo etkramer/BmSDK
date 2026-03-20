@@ -42,7 +42,7 @@ public partial class RBMBehaviour_MoveToBase : BmSDK.BmGame.RBMBehaviour_ActionQ
     /// <summary>
     /// Function: CheckForCloseProximity
     /// </summary>
-    public unsafe bool CheckForCloseProximity(float DeltaTime)
+    public unsafe virtual bool CheckForCloseProximity(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToBase.CheckForCloseProximity", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -54,7 +54,7 @@ public partial class RBMBehaviour_MoveToBase : BmSDK.BmGame.RBMBehaviour_ActionQ
     /// <summary>
     /// Function: PlayerBumped
     /// </summary>
-    public unsafe void PlayerBumped(bool bFriendly)
+    public unsafe override void PlayerBumped(bool bFriendly)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToBase.PlayerBumped", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -66,7 +66,7 @@ public partial class RBMBehaviour_MoveToBase : BmSDK.BmGame.RBMBehaviour_ActionQ
     /// <summary>
     /// Function: GadgetNoise
     /// </summary>
-    public unsafe void GadgetNoise(System.Numerics.Vector3 HitLoc)
+    public unsafe override void GadgetNoise(System.Numerics.Vector3 HitLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToBase.GadgetNoise", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -78,7 +78,7 @@ public partial class RBMBehaviour_MoveToBase : BmSDK.BmGame.RBMBehaviour_ActionQ
     /// <summary>
     /// Function: PlayStartedAnimation
     /// </summary>
-    public unsafe void PlayStartedAnimation()
+    public unsafe virtual void PlayStartedAnimation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToBase.PlayStartedAnimation", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class RBMBehaviour_MoveToBase : BmSDK.BmGame.RBMBehaviour_ActionQ
     /// <summary>
     /// Function: IsReadyToPlayStartledAnimation
     /// </summary>
-    public unsafe bool IsReadyToPlayStartledAnimation()
+    public unsafe virtual bool IsReadyToPlayStartledAnimation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToBase.IsReadyToPlayStartledAnimation", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -100,7 +100,7 @@ public partial class RBMBehaviour_MoveToBase : BmSDK.BmGame.RBMBehaviour_ActionQ
     /// <summary>
     /// Function: SetMoveToSpeed
     /// </summary>
-    public unsafe void SetMoveToSpeed()
+    public unsafe virtual void SetMoveToSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToBase.SetMoveToSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -111,7 +111,7 @@ public partial class RBMBehaviour_MoveToBase : BmSDK.BmGame.RBMBehaviour_ActionQ
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToBase.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RStealthTakedownStage_HarleyChokePointDualPlay : BmSDK.BmGa
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_HarleyChokePointDualPlay.Begin", true);
         byte* paramsPtr = stackalloc byte[32];

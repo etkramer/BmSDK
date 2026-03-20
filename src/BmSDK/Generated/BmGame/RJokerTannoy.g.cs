@@ -71,7 +71,7 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlaySpecialHackyVoiceSynthDisableLine
     /// </summary>
-    public unsafe bool PlaySpecialHackyVoiceSynthDisableLine()
+    public unsafe virtual bool PlaySpecialHackyVoiceSynthDisableLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerTannoy.PlaySpecialHackyVoiceSynthDisableLine", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TrySpecialHackyVoiceSynthDisableLine
     /// </summary>
-    public unsafe bool TrySpecialHackyVoiceSynthDisableLine()
+    public unsafe virtual bool TrySpecialHackyVoiceSynthDisableLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerTannoy.TrySpecialHackyVoiceSynthDisableLine", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSpeakerGender
     /// </summary>
-    public unsafe BmSDK.Engine.AkDialogue.AkDialogueVoiceGender GetSpeakerGender()
+    public unsafe virtual BmSDK.Engine.AkDialogue.AkDialogueVoiceGender GetSpeakerGender()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerTannoy.GetSpeakerGender", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -104,7 +104,7 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsTannoyCharSpeaking
     /// </summary>
-    public unsafe bool IsTannoyCharSpeaking()
+    public unsafe virtual bool IsTannoyCharSpeaking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerTannoy.IsTannoyCharSpeaking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -115,7 +115,7 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HasScriptedSpeechToPlay
     /// </summary>
-    public unsafe bool HasScriptedSpeechToPlay()
+    public unsafe virtual bool HasScriptedSpeechToPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerTannoy.HasScriptedSpeechToPlay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -126,7 +126,7 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpecialLastManAnnouncement
     /// </summary>
-    public unsafe void SpecialLastManAnnouncement()
+    public unsafe virtual void SpecialLastManAnnouncement()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerTannoy.SpecialLastManAnnouncement", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -137,7 +137,7 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerTannoy.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -149,7 +149,7 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TryVoiceSynthDisabledKismetEvent
     /// </summary>
-    public unsafe bool TryVoiceSynthDisabledKismetEvent()
+    public unsafe virtual bool TryVoiceSynthDisabledKismetEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerTannoy.TryVoiceSynthDisabledKismetEvent", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -160,7 +160,7 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayTakedownResponse
     /// </summary>
-    public unsafe bool PlayTakedownResponse(BmSDK.Engine.Actor Subject, BmSDK.FName flag, BmSDK.BmGame.RAlertEventCoordinatorBase owningEvent, BmSDK.TArray<BmSDK.Engine.Actor> extraSpeakers = default, BmSDK.FName nInvestigateTargetFlag = default, bool bForceCanPlay = default, System.IntPtr NewBarkFinished = default)
+    public unsafe virtual bool PlayTakedownResponse(BmSDK.Engine.Actor Subject, BmSDK.FName flag, BmSDK.BmGame.RAlertEventCoordinatorBase owningEvent, BmSDK.TArray<BmSDK.Engine.Actor> extraSpeakers = default, BmSDK.FName nInvestigateTargetFlag = default, bool bForceCanPlay = default, System.IntPtr NewBarkFinished = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerTannoy.PlayTakedownResponse", true);
         byte* paramsPtr = stackalloc byte[104];
@@ -178,7 +178,7 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanPlayAnnouncement
     /// </summary>
-    public unsafe bool CanPlayAnnouncement()
+    public unsafe virtual bool CanPlayAnnouncement()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerTannoy.CanPlayAnnouncement", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -189,7 +189,7 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HandleBarkPlayed
     /// </summary>
-    public unsafe void HandleBarkPlayed(BmSDK.BmGame.RBarkFlagBase FlagsOfLinePlayed)
+    public unsafe virtual void HandleBarkPlayed(BmSDK.BmGame.RBarkFlagBase FlagsOfLinePlayed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerTannoy.HandleBarkPlayed", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -201,7 +201,7 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLine
     /// </summary>
-    public unsafe BmSDK.BmGame.RBarkConvo GetLine(out float PlayedScore)
+    public unsafe virtual BmSDK.BmGame.RBarkConvo GetLine(out float PlayedScore)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerTannoy.GetLine", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -213,7 +213,7 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsAbleToPlayChatter
     /// </summary>
-    public unsafe bool IsAbleToPlayChatter()
+    public unsafe virtual bool IsAbleToPlayChatter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerTannoy.IsAbleToPlayChatter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -224,7 +224,7 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsAbleToPlayLines
     /// </summary>
-    public unsafe bool IsAbleToPlayLines()
+    public unsafe virtual bool IsAbleToPlayLines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerTannoy.IsAbleToPlayLines", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -235,7 +235,7 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsTannoyActive
     /// </summary>
-    public unsafe bool IsTannoyActive()
+    public unsafe virtual bool IsTannoyActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerTannoy.IsTannoyActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -246,7 +246,7 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerTannoy.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -257,7 +257,7 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerTannoy.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -268,7 +268,7 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: InitWithRoomState
     /// </summary>
-    public unsafe void InitWithRoomState(BmSDK.BmGame.RBMRoomAIState NewRoomState)
+    public unsafe virtual void InitWithRoomState(BmSDK.BmGame.RBMRoomAIState NewRoomState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerTannoy.InitWithRoomState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -280,7 +280,7 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerTannoy.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];

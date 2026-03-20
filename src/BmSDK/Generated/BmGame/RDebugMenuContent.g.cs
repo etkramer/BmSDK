@@ -71,7 +71,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoBackscreenMenu
     /// </summary>
-    public unsafe void DoBackscreenMenu(BmSDK.BmGame.RPlayerController RPC, out BmSDK.BmGame.RPersistentDebugData.FBackscreenDebugData Debug_BackscreenDebugData)
+    public unsafe virtual void DoBackscreenMenu(BmSDK.BmGame.RPlayerController RPC, out BmSDK.BmGame.RPersistentDebugData.FBackscreenDebugData Debug_BackscreenDebugData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoBackscreenMenu", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -84,7 +84,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: MostWantedReCalc
     /// </summary>
-    public unsafe void MostWantedReCalc(BmSDK.BmGame.RPlayerController RPC, out BmSDK.TArray<BmSDK.BmGame.RPersistentDebugData.FMostWantedDebugMenuData> Debug_MostWantedData, BmSDK.BmGame.RPersistentDebugData.MostWantedDebugMenuE Entry, int Index)
+    public unsafe virtual void MostWantedReCalc(BmSDK.BmGame.RPlayerController RPC, out BmSDK.TArray<BmSDK.BmGame.RPersistentDebugData.FMostWantedDebugMenuData> Debug_MostWantedData, BmSDK.BmGame.RPersistentDebugData.MostWantedDebugMenuE Entry, int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.MostWantedReCalc", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -99,7 +99,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: BespokeProperties
     /// </summary>
-    public unsafe void BespokeProperties(BmSDK.BmGame.RPlayerController RPC, out BmSDK.TArray<BmSDK.BmGame.RPersistentDebugData.FMostWantedDebugMenuData> Debug_MostWantedData, BmSDK.BmGame.RPersistentDebugData.MostWantedDebugMenuE Entry, int Index)
+    public unsafe virtual void BespokeProperties(BmSDK.BmGame.RPlayerController RPC, out BmSDK.TArray<BmSDK.BmGame.RPersistentDebugData.FMostWantedDebugMenuData> Debug_MostWantedData, BmSDK.BmGame.RPersistentDebugData.MostWantedDebugMenuE Entry, int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.BespokeProperties", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -114,7 +114,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: MenuMostWanted
     /// </summary>
-    public unsafe void MenuMostWanted(BmSDK.BmGame.RPlayerController RPC, out BmSDK.TArray<BmSDK.BmGame.RPersistentDebugData.FMostWantedDebugMenuData> Debug_MostWantedData, BmSDK.BmGame.RPersistentDebugData.MostWantedDebugMenuE Entry)
+    public unsafe virtual void MenuMostWanted(BmSDK.BmGame.RPlayerController RPC, out BmSDK.TArray<BmSDK.BmGame.RPersistentDebugData.FMostWantedDebugMenuData> Debug_MostWantedData, BmSDK.BmGame.RPersistentDebugData.MostWantedDebugMenuE Entry)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.MenuMostWanted", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -128,7 +128,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: MenuMostWantedUnlockItem
     /// </summary>
-    public unsafe void MenuMostWantedUnlockItem(BmSDK.BmGame.RPlayerController RPC, out BmSDK.TArray<BmSDK.BmGame.RPersistentDebugData.FMostWantedDebugMenuData> Debug_MostWantedData, BmSDK.BmGame.RPersistentDebugData.MostWantedDebugMenuE Entry)
+    public unsafe virtual void MenuMostWantedUnlockItem(BmSDK.BmGame.RPlayerController RPC, out BmSDK.TArray<BmSDK.BmGame.RPersistentDebugData.FMostWantedDebugMenuData> Debug_MostWantedData, BmSDK.BmGame.RPersistentDebugData.MostWantedDebugMenuE Entry)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.MenuMostWantedUnlockItem", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -142,7 +142,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: MenuMostWantedCollapseAll
     /// </summary>
-    public unsafe void MenuMostWantedCollapseAll(out BmSDK.TArray<BmSDK.BmGame.RPersistentDebugData.FMostWantedDebugMenuData> Debug_MostWantedData)
+    public unsafe virtual void MenuMostWantedCollapseAll(out BmSDK.TArray<BmSDK.BmGame.RPersistentDebugData.FMostWantedDebugMenuData> Debug_MostWantedData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.MenuMostWantedCollapseAll", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -154,7 +154,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoMostWantedMenu
     /// </summary>
-    public unsafe void DoMostWantedMenu(BmSDK.BmGame.RPlayerController RPC, out BmSDK.TArray<BmSDK.BmGame.RPersistentDebugData.FMostWantedDebugMenuData> Debug_MostWantedData)
+    public unsafe virtual void DoMostWantedMenu(BmSDK.BmGame.RPlayerController RPC, out BmSDK.TArray<BmSDK.BmGame.RPersistentDebugData.FMostWantedDebugMenuData> Debug_MostWantedData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoMostWantedMenu", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -167,7 +167,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: ModifyBaseProperties
     /// </summary>
-    public unsafe bool ModifyBaseProperties(int Index)
+    public unsafe virtual bool ModifyBaseProperties(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.ModifyBaseProperties", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -179,7 +179,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: FindOrAddMission
     /// </summary>
-    public unsafe int FindOrAddMission(BmSDK.BmGame.RPlayerController RPC, BmSDK.FString MissionName)
+    public unsafe virtual int FindOrAddMission(BmSDK.BmGame.RPlayerController RPC, BmSDK.FString MissionName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.FindOrAddMission", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -192,7 +192,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: RItemFlag
     /// </summary>
-    public unsafe bool RItemFlag(BmSDK.FString DisplayString, BmSDK.FString FlagName)
+    public unsafe virtual bool RItemFlag(BmSDK.FString DisplayString, BmSDK.FString FlagName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.RItemFlag", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -205,7 +205,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: GivePlayerWeapon
     /// </summary>
-    public unsafe void GivePlayerWeapon()
+    public unsafe virtual void GivePlayerWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.GivePlayerWeapon", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -216,7 +216,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: ResetTakedownObjects
     /// </summary>
-    public unsafe void ResetTakedownObjects()
+    public unsafe virtual void ResetTakedownObjects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.ResetTakedownObjects", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -227,7 +227,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: UpdateDebrisMaxHeightComponent
     /// </summary>
-    public unsafe void UpdateDebrisMaxHeightComponent()
+    public unsafe virtual void UpdateDebrisMaxHeightComponent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.UpdateDebrisMaxHeightComponent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -238,7 +238,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DettachDebrisMaxHeightStaticMeshComponentFromPlayer
     /// </summary>
-    public unsafe void DettachDebrisMaxHeightStaticMeshComponentFromPlayer()
+    public unsafe virtual void DettachDebrisMaxHeightStaticMeshComponentFromPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DettachDebrisMaxHeightStaticMeshComponentFromPlayer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -249,7 +249,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: AttachDebrisMaxHeightStaticMeshComponentToPlayer
     /// </summary>
-    public unsafe void AttachDebrisMaxHeightStaticMeshComponentToPlayer()
+    public unsafe virtual void AttachDebrisMaxHeightStaticMeshComponentToPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.AttachDebrisMaxHeightStaticMeshComponentToPlayer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -260,7 +260,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: OnMenuClosed
     /// </summary>
-    public unsafe void OnMenuClosed()
+    public unsafe override void OnMenuClosed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.OnMenuClosed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -271,7 +271,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: OnMenuOpened
     /// </summary>
-    public unsafe void OnMenuOpened()
+    public unsafe override void OnMenuOpened()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.OnMenuOpened", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -282,7 +282,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: ShowVersionInfo
     /// </summary>
-    public unsafe void ShowVersionInfo()
+    public unsafe override void ShowVersionInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.ShowVersionInfo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -293,7 +293,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: ShowSoloEventInfo
     /// </summary>
-    public unsafe void ShowSoloEventInfo(BmSDK.BmGame.RAlertEventCoordinatorSolo AEC, int IndentDepth = default)
+    public unsafe virtual void ShowSoloEventInfo(BmSDK.BmGame.RAlertEventCoordinatorSolo AEC, int IndentDepth = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.ShowSoloEventInfo", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -306,7 +306,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: ShowEventInfo
     /// </summary>
-    public unsafe void ShowEventInfo(BmSDK.BmGame.RAlertEventCoordinatorBase AEC, int IndentDepth = default)
+    public unsafe virtual void ShowEventInfo(BmSDK.BmGame.RAlertEventCoordinatorBase AEC, int IndentDepth = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.ShowEventInfo", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -319,7 +319,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoDifficultyProgressionMenu
     /// </summary>
-    public unsafe void DoDifficultyProgressionMenu()
+    public unsafe virtual void DoDifficultyProgressionMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoDifficultyProgressionMenu", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -330,7 +330,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoVehiclesMenu
     /// </summary>
-    public unsafe void DoVehiclesMenu()
+    public unsafe virtual void DoVehiclesMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoVehiclesMenu", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -341,7 +341,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoVehiclePhysicsMenu
     /// </summary>
-    public unsafe void DoVehiclePhysicsMenu()
+    public unsafe virtual void DoVehiclePhysicsMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoVehiclePhysicsMenu", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -352,7 +352,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoVehicleDifficultyMenu
     /// </summary>
-    public unsafe void DoVehicleDifficultyMenu()
+    public unsafe virtual void DoVehicleDifficultyMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoVehicleDifficultyMenu", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -363,7 +363,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoBatmobileHandlingSwitch
     /// </summary>
-    public unsafe void DoBatmobileHandlingSwitch()
+    public unsafe virtual void DoBatmobileHandlingSwitch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoBatmobileHandlingSwitch", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -374,7 +374,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoGadgetsMenu
     /// </summary>
-    public unsafe void DoGadgetsMenu()
+    public unsafe virtual void DoGadgetsMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoGadgetsMenu", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -385,7 +385,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoBatgirlDebugMenu
     /// </summary>
-    public unsafe void DoBatgirlDebugMenu()
+    public unsafe virtual void DoBatgirlDebugMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoBatgirlDebugMenu", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -396,7 +396,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoHarleyDebugMenu
     /// </summary>
-    public unsafe void DoHarleyDebugMenu()
+    public unsafe virtual void DoHarleyDebugMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoHarleyDebugMenu", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -407,7 +407,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoBossMenu
     /// </summary>
-    public unsafe void DoBossMenu()
+    public unsafe virtual void DoBossMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoBossMenu", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -418,7 +418,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: ItemGadget
     /// </summary>
-    public unsafe bool ItemGadget(BmSDK.FString GadgetName, BmSDK.BmGame.RInventoryGadget Gadget, BmSDK.Class GadgetClass)
+    public unsafe virtual bool ItemGadget(BmSDK.FString GadgetName, BmSDK.BmGame.RInventoryGadget Gadget, BmSDK.Class GadgetClass)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.ItemGadget", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -432,7 +432,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: AddApexClothMenu
     /// </summary>
-    public unsafe void AddApexClothMenu()
+    public unsafe virtual void AddApexClothMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.AddApexClothMenu", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -443,7 +443,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: AddDestructiblesMenu
     /// </summary>
-    public unsafe void AddDestructiblesMenu()
+    public unsafe virtual void AddDestructiblesMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.AddDestructiblesMenu", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -454,7 +454,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoMenuItems
     /// </summary>
-    public unsafe void DoMenuItems()
+    public unsafe override void DoMenuItems()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoMenuItems", true);
         byte* paramsPtr = stackalloc byte[128];
@@ -465,7 +465,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoTableOfContentMenu
     /// </summary>
-    public unsafe void DoTableOfContentMenu()
+    public unsafe virtual void DoTableOfContentMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoTableOfContentMenu", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -476,7 +476,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: SetLevelVisible
     /// </summary>
-    public unsafe void SetLevelVisible(BmSDK.FString LevelName, BmSDK.FString LevelType, bool bVisible)
+    public unsafe virtual void SetLevelVisible(BmSDK.FString LevelName, BmSDK.FString LevelType, bool bVisible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.SetLevelVisible", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -490,7 +490,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoCapeMenuItems
     /// </summary>
-    public unsafe void DoCapeMenuItems(BmSDK.Engine.Actor BatmanActor, bool bCapeEnableOnly = default)
+    public unsafe virtual void DoCapeMenuItems(BmSDK.Engine.Actor BatmanActor, bool bCapeEnableOnly = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoCapeMenuItems", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -503,7 +503,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoCapeDebugStateChangeMenu
     /// </summary>
-    public unsafe void DoCapeDebugStateChangeMenu(BmSDK.BmGame.RCapeComponent CapeComponent)
+    public unsafe virtual void DoCapeDebugStateChangeMenu(BmSDK.BmGame.RCapeComponent CapeComponent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoCapeDebugStateChangeMenu", true);
         byte* paramsPtr = stackalloc byte[120];
@@ -515,7 +515,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: GetCapeComponentFromActor
     /// </summary>
-    public unsafe BmSDK.BmGame.RCapeComponent GetCapeComponentFromActor(BmSDK.Engine.Actor BatmanActor)
+    public unsafe virtual BmSDK.BmGame.RCapeComponent GetCapeComponentFromActor(BmSDK.Engine.Actor BatmanActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.GetCapeComponentFromActor", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -527,7 +527,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoAiThoughtsMenu
     /// </summary>
-    public unsafe void DoAiThoughtsMenu()
+    public unsafe virtual void DoAiThoughtsMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoAiThoughtsMenu", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -538,7 +538,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoBatmanStrikeListMenu
     /// </summary>
-    public unsafe void DoBatmanStrikeListMenu()
+    public unsafe virtual void DoBatmanStrikeListMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoBatmanStrikeListMenu", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -549,7 +549,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoVehicleEnemyMenu
     /// </summary>
-    public unsafe bool DoVehicleEnemyMenu()
+    public unsafe virtual bool DoVehicleEnemyMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoVehicleEnemyMenu", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -560,7 +560,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoTakedownTestMenu
     /// </summary>
-    public unsafe void DoTakedownTestMenu()
+    public unsafe virtual void DoTakedownTestMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoTakedownTestMenu", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -571,7 +571,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoRandomPopulationMenu
     /// </summary>
-    public unsafe void DoRandomPopulationMenu()
+    public unsafe virtual void DoRandomPopulationMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoRandomPopulationMenu", true);
         byte* paramsPtr = stackalloc byte[152];
@@ -582,7 +582,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoPSCMenu
     /// </summary>
-    public unsafe void DoPSCMenu(bool NoTitle = default)
+    public unsafe virtual void DoPSCMenu(bool NoTitle = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoPSCMenu", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -594,7 +594,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoPerCharacterTypeAudioItems
     /// </summary>
-    public unsafe void DoPerCharacterTypeAudioItems(out BmSDK.BmGame.RPersistentDebugData.FPerCharacterTypeAnimDebug Options, BmSDK.FString CharacterName)
+    public unsafe virtual void DoPerCharacterTypeAudioItems(out BmSDK.BmGame.RPersistentDebugData.FPerCharacterTypeAnimDebug Options, BmSDK.FString CharacterName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoPerCharacterTypeAudioItems", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -607,7 +607,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoCinematicAnimItems
     /// </summary>
-    public unsafe void DoCinematicAnimItems(out BmSDK.BmGame.RPersistentDebugData.FCinematicAnimDebug Options)
+    public unsafe virtual void DoCinematicAnimItems(out BmSDK.BmGame.RPersistentDebugData.FCinematicAnimDebug Options)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoCinematicAnimItems", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -619,7 +619,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoVehicleAnimItems
     /// </summary>
-    public unsafe void DoVehicleAnimItems(out BmSDK.BmGame.RPersistentDebugData.FVehicleAnimDebug Options, BmSDK.FString MenuName)
+    public unsafe virtual void DoVehicleAnimItems(out BmSDK.BmGame.RPersistentDebugData.FVehicleAnimDebug Options, BmSDK.FString MenuName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoVehicleAnimItems", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -632,7 +632,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: DoPerCharacterTypeAnimItems
     /// </summary>
-    public unsafe void DoPerCharacterTypeAnimItems(out BmSDK.BmGame.RPersistentDebugData.FPerCharacterTypeAnimDebug Options, BmSDK.FString CharacterName)
+    public unsafe virtual void DoPerCharacterTypeAnimItems(out BmSDK.BmGame.RPersistentDebugData.FPerCharacterTypeAnimDebug Options, BmSDK.FString CharacterName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.DoPerCharacterTypeAnimItems", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -645,7 +645,7 @@ public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObj
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugMenuContent.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

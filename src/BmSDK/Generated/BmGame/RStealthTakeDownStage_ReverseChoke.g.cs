@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_ReverseChoke : BmSDK.BmGame.RStealthT
     /// <summary>
     /// Function: FinishAttackVictim
     /// </summary>
-    public unsafe bool FinishAttackVictim(int iVictimNumber)
+    public unsafe override bool FinishAttackVictim(int iVictimNumber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ReverseChoke.FinishAttackVictim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RStealthTakeDownStage_ReverseChoke : BmSDK.BmGame.RStealthT
     /// <summary>
     /// Function: GotoStageEx
     /// </summary>
-    public unsafe void GotoStageEx(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages NextStageClass, bool bClientRequest = default, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator EscapeLoc = default, bool bEscapeTakedown = default, bool bNextStageIsFearTakedown = default, bool bNextStageIsKnockoutSmash = default)
+    public unsafe override void GotoStageEx(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages NextStageClass, bool bClientRequest = default, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator EscapeLoc = default, bool bEscapeTakedown = default, bool bNextStageIsFearTakedown = default, bool bNextStageIsKnockoutSmash = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ReverseChoke.GotoStageEx", true);
         byte* paramsPtr = stackalloc byte[156];
@@ -100,7 +100,7 @@ public partial class RStealthTakeDownStage_ReverseChoke : BmSDK.BmGame.RStealthT
     /// <summary>
     /// Function: ResetCamera
     /// </summary>
-    public unsafe void ResetCamera()
+    public unsafe virtual void ResetCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ReverseChoke.ResetCamera", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -111,7 +111,7 @@ public partial class RStealthTakeDownStage_ReverseChoke : BmSDK.BmGame.RStealthT
     /// <summary>
     /// Function: LowerCamera
     /// </summary>
-    public unsafe void LowerCamera()
+    public unsafe virtual void LowerCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ReverseChoke.LowerCamera", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -122,7 +122,7 @@ public partial class RStealthTakeDownStage_ReverseChoke : BmSDK.BmGame.RStealthT
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ReverseChoke.Begin", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -133,7 +133,7 @@ public partial class RStealthTakeDownStage_ReverseChoke : BmSDK.BmGame.RStealthT
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ReverseChoke.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[24];

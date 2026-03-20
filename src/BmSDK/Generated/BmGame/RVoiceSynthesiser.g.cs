@@ -66,7 +66,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: DontDisplayFailIcon
     /// </summary>
-    public unsafe void DontDisplayFailIcon()
+    public unsafe virtual void DontDisplayFailIcon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.DontDisplayFailIcon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: ResetForChallenge
     /// </summary>
-    public unsafe void ResetForChallenge(bool bChallengeStarted)
+    public unsafe override void ResetForChallenge(bool bChallengeStarted)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.ResetForChallenge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -89,7 +89,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: PerformVoiceSynthesiserFloorTrace
     /// </summary>
-    public unsafe BmSDK.Engine.Actor PerformVoiceSynthesiserFloorTrace(out System.Numerics.Vector3 vHitLocation, out System.Numerics.Vector3 vHitNormal, System.Numerics.Vector3 vCheckEnd, System.Numerics.Vector3 vCheckStart, BmSDK.Component.ECollisionFilter TraceCollisionFilter, System.Numerics.Vector3 vCheckExtent, out BmSDK.Engine.Actor.FTraceHitInfo MyHitInfo, int iTraceFlags)
+    public unsafe virtual BmSDK.Engine.Actor PerformVoiceSynthesiserFloorTrace(out System.Numerics.Vector3 vHitLocation, out System.Numerics.Vector3 vHitNormal, System.Numerics.Vector3 vCheckEnd, System.Numerics.Vector3 vCheckStart, BmSDK.Component.ECollisionFilter TraceCollisionFilter, System.Numerics.Vector3 vCheckExtent, out BmSDK.Engine.Actor.FTraceHitInfo MyHitInfo, int iTraceFlags)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.PerformVoiceSynthesiserFloorTrace", true);
         byte* paramsPtr = stackalloc byte[116];
@@ -115,7 +115,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: AllowHighlightToBeHidden
     /// </summary>
-    public unsafe bool AllowHighlightToBeHidden(BmSDK.BmGame.RInventoryGadget.FHighlightedMesh CheckHighlightedMesh)
+    public unsafe override bool AllowHighlightToBeHidden(BmSDK.BmGame.RInventoryGadget.FHighlightedMesh CheckHighlightedMesh)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.AllowHighlightToBeHidden", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -134,7 +134,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: GetCorrectMIC
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface GetCorrectMIC(BmSDK.BmGame.RInventoryGadget.EHighlightedTargetType TargetType, bool bShotByDisruptor, bool bSniperHasAmmoLeft, bool bWeaponReadyToExplode, bool bUpgradeNeeded, bool bNormalViewMode, bool bForCamouflageThug, bool bSpecialTrackerTarget, bool bCurrentTarget)
+    public unsafe override BmSDK.Engine.MaterialInterface GetCorrectMIC(BmSDK.BmGame.RInventoryGadget.EHighlightedTargetType TargetType, bool bShotByDisruptor, bool bSniperHasAmmoLeft, bool bWeaponReadyToExplode, bool bUpgradeNeeded, bool bNormalViewMode, bool bForCamouflageThug, bool bSpecialTrackerTarget, bool bCurrentTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.GetCorrectMIC", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -161,7 +161,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: PrimedUpdateIndividualTargetHighlight
     /// </summary>
-    public unsafe void PrimedUpdateIndividualTargetHighlight(BmSDK.Engine.Actor CheckTarget)
+    public unsafe override void PrimedUpdateIndividualTargetHighlight(BmSDK.Engine.Actor CheckTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.PrimedUpdateIndividualTargetHighlight", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -180,7 +180,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: PrimedUpdateHighlights
     /// </summary>
-    public unsafe void PrimedUpdateHighlights()
+    public unsafe override void PrimedUpdateHighlights()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.PrimedUpdateHighlights", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -198,7 +198,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: GetPotentialTargetPositions
     /// </summary>
-    public unsafe bool GetPotentialTargetPositions(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 InTargetPosition, out BmSDK.TArray<System.Numerics.Vector3> PotentialTargetPositions, out BmSDK.Engine.Actor LineCheckActor)
+    public unsafe override bool GetPotentialTargetPositions(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 InTargetPosition, out BmSDK.TArray<System.Numerics.Vector3> PotentialTargetPositions, out BmSDK.Engine.Actor LineCheckActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.GetPotentialTargetPositions", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -213,7 +213,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -224,7 +224,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: CheckForPylon
     /// </summary>
-    public unsafe BmSDK.Engine.Pylon CheckForPylon(System.Numerics.Vector3 CheckLocation)
+    public unsafe virtual BmSDK.Engine.Pylon CheckForPylon(System.Numerics.Vector3 CheckLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.CheckForPylon", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -243,7 +243,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: SetNormalDisplayState
     /// </summary>
-    public unsafe void SetNormalDisplayState(BmSDK.BmGame.RVoiceSynthesiser.EVoiceSynthesiserScreenState NewScreenState)
+    public unsafe virtual void SetNormalDisplayState(BmSDK.BmGame.RVoiceSynthesiser.EVoiceSynthesiserScreenState NewScreenState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.SetNormalDisplayState", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -255,7 +255,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: ResetNormalDisplay
     /// </summary>
-    public unsafe void ResetNormalDisplay()
+    public unsafe virtual void ResetNormalDisplay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.ResetNormalDisplay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -266,7 +266,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: StartNormalDisplay
     /// </summary>
-    public unsafe void StartNormalDisplay()
+    public unsafe virtual void StartNormalDisplay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.StartNormalDisplay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -277,7 +277,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: ResetCalibrationDisplay
     /// </summary>
-    public unsafe void ResetCalibrationDisplay()
+    public unsafe virtual void ResetCalibrationDisplay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.ResetCalibrationDisplay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -288,7 +288,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: StartCalibrationDisplay
     /// </summary>
-    public unsafe void StartCalibrationDisplay(BmSDK.GFxUI.SwfMovie CalibrationSWF, BmSDK.Engine.TextureRenderTarget2D CalibrationRenderTexture)
+    public unsafe virtual void StartCalibrationDisplay(BmSDK.GFxUI.SwfMovie CalibrationSWF, BmSDK.Engine.TextureRenderTarget2D CalibrationRenderTexture)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.StartCalibrationDisplay", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -301,7 +301,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: ResetRechargeTime
     /// </summary>
-    public unsafe void ResetRechargeTime()
+    public unsafe virtual void ResetRechargeTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.ResetRechargeTime", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -312,7 +312,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: OnRoomChange
     /// </summary>
-    public unsafe void OnRoomChange()
+    public unsafe override void OnRoomChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.OnRoomChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -323,7 +323,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: UnequipSelf
     /// </summary>
-    public unsafe bool UnequipSelf()
+    public unsafe override bool UnequipSelf()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.UnequipSelf", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -334,7 +334,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: KillStartupBeams
     /// </summary>
-    public unsafe void KillStartupBeams()
+    public unsafe virtual void KillStartupBeams()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.KillStartupBeams", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -345,7 +345,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: UpdateStartupBeams
     /// </summary>
-    public unsafe void UpdateStartupBeams()
+    public unsafe virtual void UpdateStartupBeams()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.UpdateStartupBeams", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -356,7 +356,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: CreateStartupBeams
     /// </summary>
-    public unsafe void CreateStartupBeams(BmSDK.TArray<BmSDK.Engine.Actor> Targets)
+    public unsafe virtual void CreateStartupBeams(BmSDK.TArray<BmSDK.Engine.Actor> Targets)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.CreateStartupBeams", true);
         byte* paramsPtr = stackalloc byte[25];
@@ -368,7 +368,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: StartStartupBeams
     /// </summary>
-    public unsafe void StartStartupBeams()
+    public unsafe virtual void StartStartupBeams()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.StartStartupBeams", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -379,7 +379,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: TurnOffThugDestinationBeams
     /// </summary>
-    public unsafe void TurnOffThugDestinationBeams()
+    public unsafe virtual void TurnOffThugDestinationBeams()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.TurnOffThugDestinationBeams", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -390,7 +390,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: TurnOnAndUpdateThugDestinationBeams
     /// </summary>
-    public unsafe void TurnOnAndUpdateThugDestinationBeams()
+    public unsafe virtual void TurnOnAndUpdateThugDestinationBeams()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.TurnOnAndUpdateThugDestinationBeams", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -401,7 +401,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: SelectStartLocationOfThugDestinationBeam
     /// </summary>
-    public unsafe System.Numerics.Vector3 SelectStartLocationOfThugDestinationBeam(BmSDK.BmGame.RPawnVillain Thug, System.Numerics.Vector3 vTargetLocation)
+    public unsafe virtual System.Numerics.Vector3 SelectStartLocationOfThugDestinationBeam(BmSDK.BmGame.RPawnVillain Thug, System.Numerics.Vector3 vTargetLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.SelectStartLocationOfThugDestinationBeam", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -414,7 +414,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: TurnOffThugSelectionBoxes
     /// </summary>
-    public unsafe void TurnOffThugSelectionBoxes()
+    public unsafe virtual void TurnOffThugSelectionBoxes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.TurnOffThugSelectionBoxes", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -425,7 +425,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: TurnOnAndUpdateThugSelectionBoxes
     /// </summary>
-    public unsafe void TurnOnAndUpdateThugSelectionBoxes()
+    public unsafe virtual void TurnOnAndUpdateThugSelectionBoxes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.TurnOnAndUpdateThugSelectionBoxes", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -436,7 +436,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: RemoveLockedVillain
     /// </summary>
-    public unsafe void RemoveLockedVillain(BmSDK.BmGame.RPawnVillain OldThug)
+    public unsafe virtual void RemoveLockedVillain(BmSDK.BmGame.RPawnVillain OldThug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.RemoveLockedVillain", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -448,7 +448,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: AddNewLockedVillain
     /// </summary>
-    public unsafe void AddNewLockedVillain(BmSDK.BmGame.RPawnVillain NewThug)
+    public unsafe virtual void AddNewLockedVillain(BmSDK.BmGame.RPawnVillain NewThug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.AddNewLockedVillain", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -460,7 +460,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: ClearTargetList
     /// </summary>
-    public unsafe void ClearTargetList()
+    public unsafe virtual void ClearTargetList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.ClearTargetList", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -471,7 +471,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: ResetNumberOfStrikes
     /// </summary>
-    public unsafe void ResetNumberOfStrikes()
+    public unsafe virtual void ResetNumberOfStrikes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.ResetNumberOfStrikes", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -482,7 +482,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: CheckForExplosiveGelledWeakWallTakedown
     /// </summary>
-    public unsafe void CheckForExplosiveGelledWeakWallTakedown(BmSDK.BmGame.RPawnVillain GelTargetPawn)
+    public unsafe virtual void CheckForExplosiveGelledWeakWallTakedown(BmSDK.BmGame.RPawnVillain GelTargetPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.CheckForExplosiveGelledWeakWallTakedown", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -494,7 +494,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: NotifyPawnDied
     /// </summary>
-    public unsafe void NotifyPawnDied(BmSDK.BmGame.RPawnVillain DeadPawn)
+    public unsafe virtual void NotifyPawnDied(BmSDK.BmGame.RPawnVillain DeadPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.NotifyPawnDied", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -506,7 +506,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: FindFakeTacticianEvent
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqEvent_FakeTacticianOrder FindFakeTacticianEvent(BmSDK.BmGame.RPawnVillain Villain)
+    public unsafe virtual BmSDK.BmGame.RSeqEvent_FakeTacticianOrder FindFakeTacticianEvent(BmSDK.BmGame.RPawnVillain Villain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.FindFakeTacticianEvent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -518,7 +518,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: GiveFakeTacticianOrders
     /// </summary>
-    public unsafe void GiveFakeTacticianOrders()
+    public unsafe virtual void GiveFakeTacticianOrders()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.GiveFakeTacticianOrders", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -529,7 +529,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: GetInvalidIconString
     /// </summary>
-    public unsafe BmSDK.FString GetInvalidIconString()
+    public unsafe virtual BmSDK.FString GetInvalidIconString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.GetInvalidIconString", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -540,7 +540,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: GetGoodIconString
     /// </summary>
-    public unsafe BmSDK.FString GetGoodIconString()
+    public unsafe virtual BmSDK.FString GetGoodIconString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.GetGoodIconString", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -551,7 +551,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: GoodIntroIconTimer
     /// </summary>
-    public unsafe void GoodIntroIconTimer()
+    public unsafe virtual void GoodIntroIconTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.GoodIntroIconTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -562,7 +562,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: IsGoodIntroIconBeingDisplayed
     /// </summary>
-    public unsafe bool IsGoodIntroIconBeingDisplayed()
+    public unsafe virtual bool IsGoodIntroIconBeingDisplayed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.IsGoodIntroIconBeingDisplayed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -573,7 +573,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: SuccessIconTimer
     /// </summary>
-    public unsafe void SuccessIconTimer()
+    public unsafe virtual void SuccessIconTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.SuccessIconTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -584,7 +584,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: IsSuccessIconBeingDisplayed
     /// </summary>
-    public unsafe bool IsSuccessIconBeingDisplayed()
+    public unsafe virtual bool IsSuccessIconBeingDisplayed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.IsSuccessIconBeingDisplayed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -595,7 +595,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: FailIconTimer
     /// </summary>
-    public unsafe void FailIconTimer()
+    public unsafe virtual void FailIconTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.FailIconTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -606,7 +606,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: IsFailIconBeingDisplayed
     /// </summary>
-    public unsafe bool IsFailIconBeingDisplayed()
+    public unsafe virtual bool IsFailIconBeingDisplayed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.IsFailIconBeingDisplayed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -617,7 +617,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: DrawTargets
     /// </summary>
-    public unsafe void DrawTargets(BmSDK.Engine.HUD H)
+    public unsafe virtual void DrawTargets(BmSDK.Engine.HUD H)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.DrawTargets", true);
         byte* paramsPtr = stackalloc byte[77];
@@ -629,7 +629,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: PlaceFakePredThugTarget
     /// </summary>
-    public unsafe BmSDK.Engine.Actor PlaceFakePredThugTarget()
+    public unsafe virtual BmSDK.Engine.Actor PlaceFakePredThugTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.PlaceFakePredThugTarget", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -640,7 +640,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: GetGadgetCamera
     /// </summary>
-    public unsafe BmSDK.FName GetGadgetCamera(bool InSoftCover = default, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType = default)
+    public unsafe override BmSDK.FName GetGadgetCamera(bool InSoftCover = default, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.GetGadgetCamera", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -653,7 +653,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: GetPrimedPose
     /// </summary>
-    public unsafe BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
+    public unsafe override BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.GetPrimedPose", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -670,7 +670,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -683,7 +683,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: GetLethalTrapType
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMRoomAIState.VoiceSynthesiserLethalTrap GetLethalTrapType(BmSDK.Engine.Actor Target)
+    public unsafe virtual BmSDK.BmGame.RBMRoomAIState.VoiceSynthesiserLethalTrap GetLethalTrapType(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.GetLethalTrapType", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -695,7 +695,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: IsTargetAnObjectThatAThugCanInteractWith
     /// </summary>
-    public unsafe bool IsTargetAnObjectThatAThugCanInteractWith(BmSDK.Engine.Actor Target)
+    public unsafe virtual bool IsTargetAnObjectThatAThugCanInteractWith(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.IsTargetAnObjectThatAThugCanInteractWith", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -707,7 +707,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: CanFakePredatorBroadcast
     /// </summary>
-    public unsafe bool CanFakePredatorBroadcast()
+    public unsafe virtual bool CanFakePredatorBroadcast()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.CanFakePredatorBroadcast", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -718,7 +718,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: GetFiringAnimationOverlay
     /// </summary>
-    public unsafe BmSDK.FName GetFiringAnimationOverlay()
+    public unsafe virtual BmSDK.FName GetFiringAnimationOverlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.GetFiringAnimationOverlay", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -729,7 +729,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: Fire
     /// </summary>
-    public unsafe void Fire(bool bSecondary = default)
+    public unsafe virtual void Fire(bool bSecondary = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.Fire", true);
         byte* paramsPtr = stackalloc byte[65];
@@ -741,7 +741,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: PlayCommanderIsStillTalkingGadgetThought
     /// </summary>
-    public unsafe void PlayCommanderIsStillTalkingGadgetThought(BmSDK.BmGame.RBMRoomAIState RoomState)
+    public unsafe virtual void PlayCommanderIsStillTalkingGadgetThought(BmSDK.BmGame.RBMRoomAIState RoomState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.PlayCommanderIsStillTalkingGadgetThought", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -753,7 +753,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: PlayVoiceSynthesiserHasBeenDisabledGadgetThought
     /// </summary>
-    public unsafe void PlayVoiceSynthesiserHasBeenDisabledGadgetThought(BmSDK.BmGame.RBMRoomAIState RoomState)
+    public unsafe virtual void PlayVoiceSynthesiserHasBeenDisabledGadgetThought(BmSDK.BmGame.RBMRoomAIState RoomState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.PlayVoiceSynthesiserHasBeenDisabledGadgetThought", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -765,7 +765,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: IsRoomCommanderSpeaking
     /// </summary>
-    public unsafe bool IsRoomCommanderSpeaking(BmSDK.BmGame.RJokerTannoy Tannoy)
+    public unsafe virtual bool IsRoomCommanderSpeaking(BmSDK.BmGame.RJokerTannoy Tannoy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.IsRoomCommanderSpeaking", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -777,7 +777,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: FindProhibitedEvent
     /// </summary>
-    public unsafe bool FindProhibitedEvent()
+    public unsafe virtual bool FindProhibitedEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.FindProhibitedEvent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -788,7 +788,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: HasCustomSynthEvent
     /// </summary>
-    public unsafe bool HasCustomSynthEvent(BmSDK.Engine.Actor TestActor)
+    public unsafe virtual bool HasCustomSynthEvent(BmSDK.Engine.Actor TestActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.HasCustomSynthEvent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -800,7 +800,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: GetThugInvestigateLocationForTarget
     /// </summary>
-    public unsafe void GetThugInvestigateLocationForTarget(BmSDK.Engine.Actor Target, out BmSDK.TArray<System.Numerics.Vector3> vInvestigateLocations)
+    public unsafe virtual void GetThugInvestigateLocationForTarget(BmSDK.Engine.Actor Target, out BmSDK.TArray<System.Numerics.Vector3> vInvestigateLocations)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.GetThugInvestigateLocationForTarget", true);
         byte* paramsPtr = stackalloc byte[124];
@@ -813,7 +813,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: GetTargetMarkerLocationForTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTargetMarkerLocationForTarget(BmSDK.Engine.Actor Target)
+    public unsafe virtual System.Numerics.Vector3 GetTargetMarkerLocationForTarget(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.GetTargetMarkerLocationForTarget", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -825,7 +825,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: WhichThugIsPlayerAimingAt
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnVillain WhichThugIsPlayerAimingAt()
+    public unsafe virtual BmSDK.BmGame.RPawnVillain WhichThugIsPlayerAimingAt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.WhichThugIsPlayerAimingAt", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -836,7 +836,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: CheckAutoTarget
     /// </summary>
-    public unsafe bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
+    public unsafe override bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.CheckAutoTarget", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -852,7 +852,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: InitGoalDataInstance
     /// </summary>
-    public unsafe BmSDK.BmGame.RMultiDestGoalData InitGoalDataInstance(BmSDK.TArray<System.Numerics.Vector3> vPotentialDestinations)
+    public unsafe virtual BmSDK.BmGame.RMultiDestGoalData InitGoalDataInstance(BmSDK.TArray<System.Numerics.Vector3> vPotentialDestinations)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.InitGoalDataInstance", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -864,7 +864,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: UpdateTarget
     /// </summary>
-    public unsafe void UpdateTarget()
+    public unsafe virtual void UpdateTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.UpdateTarget", true);
         byte* paramsPtr = stackalloc byte[232];
@@ -875,7 +875,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: CanControlTarget
     /// </summary>
-    public unsafe bool CanControlTarget(BmSDK.BmGame.RPawnVillain TestTarget)
+    public unsafe virtual bool CanControlTarget(BmSDK.BmGame.RPawnVillain TestTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.CanControlTarget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -887,7 +887,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceSynthesiser.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];

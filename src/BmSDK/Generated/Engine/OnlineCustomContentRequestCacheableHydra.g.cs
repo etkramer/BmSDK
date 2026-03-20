@@ -36,7 +36,7 @@ public partial class OnlineCustomContentRequestCacheableHydra : BmSDK.Engine.Onl
     /// <summary>
     /// Function: CacheSaveComplete
     /// </summary>
-    public unsafe void CacheSaveComplete(bool p_bSaveSuccessful, BmSDK.FString CalculatedCRC)
+    public unsafe virtual void CacheSaveComplete(bool p_bSaveSuccessful, BmSDK.FString CalculatedCRC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequestCacheableHydra.CacheSaveComplete", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -56,7 +56,7 @@ public partial class OnlineCustomContentRequestCacheableHydra : BmSDK.Engine.Onl
     /// <summary>
     /// Function: CacheSaveStarted
     /// </summary>
-    public unsafe void CacheSaveStarted()
+    public unsafe virtual void CacheSaveStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequestCacheableHydra.CacheSaveStarted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -74,7 +74,7 @@ public partial class OnlineCustomContentRequestCacheableHydra : BmSDK.Engine.Onl
     /// <summary>
     /// Function: CacheLoadComplete
     /// </summary>
-    public unsafe void CacheLoadComplete(bool p_bLoadComplete, bool p_bLoadSuccessful, BmSDK.FString CalculatedCRC, BmSDK.FString StoredCRC)
+    public unsafe virtual void CacheLoadComplete(bool p_bLoadComplete, bool p_bLoadSuccessful, BmSDK.FString CalculatedCRC, BmSDK.FString StoredCRC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequestCacheableHydra.CacheLoadComplete", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -96,7 +96,7 @@ public partial class OnlineCustomContentRequestCacheableHydra : BmSDK.Engine.Onl
     /// <summary>
     /// Function: CacheLoadStarted
     /// </summary>
-    public unsafe void CacheLoadStarted()
+    public unsafe virtual void CacheLoadStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequestCacheableHydra.CacheLoadStarted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -114,7 +114,7 @@ public partial class OnlineCustomContentRequestCacheableHydra : BmSDK.Engine.Onl
     /// <summary>
     /// Function: CancelCustomContentRequest
     /// </summary>
-    public unsafe void CancelCustomContentRequest()
+    public unsafe override void CancelCustomContentRequest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequestCacheableHydra.CancelCustomContentRequest", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -132,7 +132,7 @@ public partial class OnlineCustomContentRequestCacheableHydra : BmSDK.Engine.Onl
     /// <summary>
     /// Function: GetCustomContentAsString
     /// </summary>
-    public unsafe void GetCustomContentAsString(out BmSDK.FString ContentData)
+    public unsafe override void GetCustomContentAsString(out BmSDK.FString ContentData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequestCacheableHydra.GetCustomContentAsString", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -151,7 +151,7 @@ public partial class OnlineCustomContentRequestCacheableHydra : BmSDK.Engine.Onl
     /// <summary>
     /// Function: GetCustomContent
     /// </summary>
-    public unsafe void GetCustomContent(out BmSDK.TArray<byte> ContentData)
+    public unsafe override void GetCustomContent(out BmSDK.TArray<byte> ContentData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequestCacheableHydra.GetCustomContent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -170,7 +170,7 @@ public partial class OnlineCustomContentRequestCacheableHydra : BmSDK.Engine.Onl
     /// <summary>
     /// Function: StartCustomContentRequest
     /// </summary>
-    public unsafe void StartCustomContentRequest(BmSDK.FString sContentName, BmSDK.FString sCustomId, System.IntPtr dRequestCustomContentComplete)
+    public unsafe override void StartCustomContentRequest(BmSDK.FString sContentName, BmSDK.FString sCustomId, System.IntPtr dRequestCustomContentComplete)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequestCacheableHydra.StartCustomContentRequest", true);
         byte* paramsPtr = stackalloc byte[48];

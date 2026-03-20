@@ -71,7 +71,7 @@ public partial class RAEC_Casualty_Sub_Solo : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: PlayDiscoverBark
     /// </summary>
-    public unsafe void PlayDiscoverBark()
+    public unsafe virtual void PlayDiscoverBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Solo.PlayDiscoverBark", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Casualty_Sub_Solo : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: AssignCasualty
     /// </summary>
-    public unsafe void AssignCasualty(BmSDK.BmGame.RPawnVillain NewCas)
+    public unsafe virtual void AssignCasualty(BmSDK.BmGame.RPawnVillain NewCas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Solo.AssignCasualty", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RAEC_Casualty_Sub_Solo : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Solo.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];

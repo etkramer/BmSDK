@@ -71,7 +71,7 @@ public partial class RBatmobileForensicsBaseActor : BmSDK.Engine.Actor, BmSDK.IG
     /// <summary>
     /// Function: SetRevealed
     /// </summary>
-    public unsafe void SetRevealed(bool is_revealed)
+    public unsafe virtual void SetRevealed(bool is_revealed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileForensicsBaseActor.SetRevealed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RBatmobileForensicsBaseActor : BmSDK.Engine.Actor, BmSDK.IG
     /// <summary>
     /// Function: SetRevealProportion
     /// </summary>
-    public unsafe void SetRevealProportion(float reveal_proportion)
+    public unsafe virtual void SetRevealProportion(float reveal_proportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileForensicsBaseActor.SetRevealProportion", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RBatmobileForensicsBaseActor : BmSDK.Engine.Actor, BmSDK.IG
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileForensicsBaseActor.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

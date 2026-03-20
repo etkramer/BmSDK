@@ -36,7 +36,7 @@ public partial class MHarleyForensicsInvestigator : BmSDK.BmGame.RForensicsInves
     /// <summary>
     /// Function: SetNPCInfoCursor
     /// </summary>
-    public unsafe void SetNPCInfoCursor(BmSDK.BmGame.RPlayerController RPC, int HeartBeatType, int WeaponType)
+    public unsafe override void SetNPCInfoCursor(BmSDK.BmGame.RPlayerController RPC, int HeartBeatType, int WeaponType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHarleyForensicsInvestigator.SetNPCInfoCursor", true);
         byte* paramsPtr = stackalloc byte[64];

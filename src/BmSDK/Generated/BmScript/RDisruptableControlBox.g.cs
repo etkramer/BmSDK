@@ -71,7 +71,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: PostEditChangeScript
     /// </summary>
-    public unsafe void PostEditChangeScript()
+    public unsafe override void PostEditChangeScript()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.PostEditChangeScript", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: GetDifficultyLevel
     /// </summary>
-    public unsafe int GetDifficultyLevel()
+    public unsafe override int GetDifficultyLevel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.GetDifficultyLevel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: EnableDisruptedControlBox
     /// </summary>
-    public unsafe void EnableDisruptedControlBox()
+    public unsafe virtual void EnableDisruptedControlBox()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.EnableDisruptedControlBox", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: EnableControlBox
     /// </summary>
-    public unsafe void EnableControlBox()
+    public unsafe virtual void EnableControlBox()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.EnableControlBox", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: DisableControlBox
     /// </summary>
-    public unsafe void DisableControlBox()
+    public unsafe virtual void DisableControlBox()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.DisableControlBox", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -137,7 +137,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -149,7 +149,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: FailedToDisrupt
     /// </summary>
-    public unsafe void FailedToDisrupt()
+    public unsafe override void FailedToDisrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.FailedToDisrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -160,7 +160,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: TriggerKismetRestoreEvent
     /// </summary>
-    public unsafe void TriggerKismetRestoreEvent()
+    public unsafe virtual void TriggerKismetRestoreEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.TriggerKismetRestoreEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -171,7 +171,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: TriggerKismetEvent
     /// </summary>
-    public unsafe void TriggerKismetEvent()
+    public unsafe virtual void TriggerKismetEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.TriggerKismetEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -182,7 +182,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -194,7 +194,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: ChangeState
     /// </summary>
-    public unsafe void ChangeState()
+    public unsafe virtual void ChangeState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.ChangeState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -205,7 +205,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: ReStartLight2
     /// </summary>
-    public unsafe void ReStartLight2()
+    public unsafe virtual void ReStartLight2()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.ReStartLight2", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -216,7 +216,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: ReStartLight
     /// </summary>
-    public unsafe void ReStartLight()
+    public unsafe virtual void ReStartLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.ReStartLight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -227,7 +227,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: TriggerCombatEvents
     /// </summary>
-    public unsafe void TriggerCombatEvents()
+    public unsafe virtual void TriggerCombatEvents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.TriggerCombatEvents", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -238,7 +238,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: FlashScreen
     /// </summary>
-    public unsafe void FlashScreen()
+    public unsafe virtual void FlashScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.FlashScreen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -249,7 +249,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: ScreenOff
     /// </summary>
-    public unsafe void ScreenOff()
+    public unsafe virtual void ScreenOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.ScreenOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -260,7 +260,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: SuccessfullyDisrupted
     /// </summary>
-    public unsafe void SuccessfullyDisrupted()
+    public unsafe override void SuccessfullyDisrupted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.SuccessfullyDisrupted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -271,7 +271,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: StopAlarmSound
     /// </summary>
-    public unsafe void StopAlarmSound()
+    public unsafe override void StopAlarmSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.StopAlarmSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -282,7 +282,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: PlayAlarmSound
     /// </summary>
-    public unsafe void PlayAlarmSound()
+    public unsafe override void PlayAlarmSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.PlayAlarmSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -293,7 +293,7 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// Function: IsAlarmed
     /// </summary>
-    public unsafe bool IsAlarmed()
+    public unsafe override bool IsAlarmed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox.IsAlarmed", true);
         byte* paramsPtr = stackalloc byte[4];

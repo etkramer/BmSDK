@@ -47,7 +47,7 @@ public partial class RSeqAct_OverrideApexClothSimulationEnabled : BmSDK.Engine.S
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_OverrideApexClothSimulationEnabled.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

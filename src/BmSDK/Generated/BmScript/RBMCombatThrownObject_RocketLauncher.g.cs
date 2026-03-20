@@ -71,7 +71,7 @@ public partial class RBMCombatThrownObject_RocketLauncher : BmSDK.BmGame.RBMComb
     /// <summary>
     /// Function: CreateWeaponFor
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMWeapon CreateWeaponFor(BmSDK.BmGame.RBMPawnAI HostPawn)
+    public unsafe override BmSDK.BmGame.RBMWeapon CreateWeaponFor(BmSDK.BmGame.RBMPawnAI HostPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_RocketLauncher.CreateWeaponFor", true);
         byte* paramsPtr = stackalloc byte[24];

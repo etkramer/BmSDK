@@ -47,7 +47,7 @@ public partial class RBMBehaviour_DebugGrenadeTrial : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: DebugKickPoint
     /// </summary>
-    public unsafe void DebugKickPoint()
+    public unsafe virtual void DebugKickPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DebugGrenadeTrial.DebugKickPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_DebugGrenadeTrial : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: SpawnGrenade
     /// </summary>
-    public unsafe void SpawnGrenade()
+    public unsafe virtual void SpawnGrenade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DebugGrenadeTrial.SpawnGrenade", true);
         byte* paramsPtr = stackalloc byte[12];

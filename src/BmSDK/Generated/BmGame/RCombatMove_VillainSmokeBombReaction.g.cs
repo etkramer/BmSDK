@@ -71,7 +71,7 @@ public partial class RCombatMove_VillainSmokeBombReaction : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainSmokeBombReaction.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_VillainSmokeBombReaction : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: UnAwareOfPlayer
     /// </summary>
-    public unsafe bool UnAwareOfPlayer()
+    public unsafe override bool UnAwareOfPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainSmokeBombReaction.UnAwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RCombatMove_VillainSmokeBombReaction : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: AwareOfPlayer
     /// </summary>
-    public unsafe bool AwareOfPlayer()
+    public unsafe virtual bool AwareOfPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainSmokeBombReaction.AwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RCombatMove_VillainSmokeBombReaction : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: OverrideDamagedBy
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult OverrideDamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult OverrideDamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainSmokeBombReaction.OverrideDamagedBy", true);
         byte* paramsPtr = stackalloc byte[249];
@@ -116,7 +116,7 @@ public partial class RCombatMove_VillainSmokeBombReaction : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: SetCounterInfo
     /// </summary>
-    public unsafe void SetCounterInfo(bool bMirrored)
+    public unsafe virtual void SetCounterInfo(bool bMirrored)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainSmokeBombReaction.SetCounterInfo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RCombatMove_VillainSmokeBombReaction : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: ShouldMirror
     /// </summary>
-    public unsafe bool ShouldMirror()
+    public unsafe virtual bool ShouldMirror()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainSmokeBombReaction.ShouldMirror", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -139,7 +139,7 @@ public partial class RCombatMove_VillainSmokeBombReaction : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: CombatAnimHitStop
     /// </summary>
-    public unsafe void CombatAnimHitStop()
+    public unsafe virtual void CombatAnimHitStop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainSmokeBombReaction.CombatAnimHitStop", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class RCombatMove_VillainSmokeBombReaction : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: CombatAnimHitStart
     /// </summary>
-    public unsafe void CombatAnimHitStart()
+    public unsafe virtual void CombatAnimHitStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainSmokeBombReaction.CombatAnimHitStart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -161,7 +161,7 @@ public partial class RCombatMove_VillainSmokeBombReaction : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: DamageCollisionBetween
     /// </summary>
-    public unsafe void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
+    public unsafe override void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainSmokeBombReaction.DamageCollisionBetween", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -175,7 +175,7 @@ public partial class RCombatMove_VillainSmokeBombReaction : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: DamagePawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagePawn(BmSDK.BmGame.RPawnCombat DamageReceiver)
+    public unsafe virtual BmSDK.BmGame.RPawnCombat.DamageResult DamagePawn(BmSDK.BmGame.RPawnCombat DamageReceiver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainSmokeBombReaction.DamagePawn", true);
         byte* paramsPtr = stackalloc byte[260];
@@ -187,7 +187,7 @@ public partial class RCombatMove_VillainSmokeBombReaction : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainSmokeBombReaction.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -199,7 +199,7 @@ public partial class RCombatMove_VillainSmokeBombReaction : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainSmokeBombReaction.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

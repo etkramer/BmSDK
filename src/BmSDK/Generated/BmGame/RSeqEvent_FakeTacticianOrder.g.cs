@@ -36,7 +36,7 @@ public partial class RSeqEvent_FakeTacticianOrder : BmSDK.Engine.SequenceEvent, 
     /// <summary>
     /// Function: SetVariablesFromSynthesiser
     /// </summary>
-    public unsafe void SetVariablesFromSynthesiser(BmSDK.BmGame.RVoiceSynthesiser Synthesiser)
+    public unsafe virtual void SetVariablesFromSynthesiser(BmSDK.BmGame.RVoiceSynthesiser Synthesiser)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_FakeTacticianOrder.SetVariablesFromSynthesiser", true);
         byte* paramsPtr = stackalloc byte[8];

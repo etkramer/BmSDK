@@ -36,7 +36,7 @@ public partial class RBMBehaviour_BeingTakenDown : BmSDK.BmGame.RBMBehaviour_Con
     /// <summary>
     /// Function: OverrideDamagedBy
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult OverrideDamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult OverrideDamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BeingTakenDown.OverrideDamagedBy", true);
         byte* paramsPtr = stackalloc byte[249];
@@ -48,7 +48,7 @@ public partial class RBMBehaviour_BeingTakenDown : BmSDK.BmGame.RBMBehaviour_Con
     /// <summary>
     /// Function: CanHitLaserGrid
     /// </summary>
-    public unsafe bool CanHitLaserGrid()
+    public unsafe override bool CanHitLaserGrid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BeingTakenDown.CanHitLaserGrid", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_BeingTakenDown : BmSDK.BmGame.RBMBehaviour_Con
     /// <summary>
     /// Function: CanBlock
     /// </summary>
-    public unsafe bool CanBlock()
+    public unsafe override bool CanBlock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BeingTakenDown.CanBlock", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -70,7 +70,7 @@ public partial class RBMBehaviour_BeingTakenDown : BmSDK.BmGame.RBMBehaviour_Con
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BeingTakenDown.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMBehaviour_BeingTakenDown : BmSDK.BmGame.RBMBehaviour_Con
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BeingTakenDown.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RBMBehaviour_BeingTakenDown : BmSDK.BmGame.RBMBehaviour_Con
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BeingTakenDown.OnActivate", true);
         byte* paramsPtr = stackalloc byte[4];

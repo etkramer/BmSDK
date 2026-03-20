@@ -47,7 +47,7 @@ public partial class RVehicleBehaviour_DriveToGoalPoint : BmSDK.BmGame.RVehicleB
     /// <summary>
     /// Function: HostArrivedAtDestination
     /// </summary>
-    public unsafe void HostArrivedAtDestination()
+    public unsafe override void HostArrivedAtDestination()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_DriveToGoalPoint.HostArrivedAtDestination", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -58,7 +58,7 @@ public partial class RVehicleBehaviour_DriveToGoalPoint : BmSDK.BmGame.RVehicleB
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_DriveToGoalPoint.Tick", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -70,7 +70,7 @@ public partial class RVehicleBehaviour_DriveToGoalPoint : BmSDK.BmGame.RVehicleB
     /// <summary>
     /// Function: NotifyBumpedVehicleNPC
     /// </summary>
-    public unsafe void NotifyBumpedVehicleNPC(BmSDK.BmGame.RVehicleNPC Other, System.Numerics.Vector3 ContactPos, float Speed)
+    public unsafe override void NotifyBumpedVehicleNPC(BmSDK.BmGame.RVehicleNPC Other, System.Numerics.Vector3 ContactPos, float Speed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_DriveToGoalPoint.NotifyBumpedVehicleNPC", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -84,7 +84,7 @@ public partial class RVehicleBehaviour_DriveToGoalPoint : BmSDK.BmGame.RVehicleB
     /// <summary>
     /// Function: NotifyBumpedBatmobile
     /// </summary>
-    public unsafe void NotifyBumpedBatmobile(BmSDK.BmGame.RVehicleBatmobileBase Batmobile, System.Numerics.Vector3 ContactPos, float Speed)
+    public unsafe override void NotifyBumpedBatmobile(BmSDK.BmGame.RVehicleBatmobileBase Batmobile, System.Numerics.Vector3 ContactPos, float Speed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_DriveToGoalPoint.NotifyBumpedBatmobile", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -98,7 +98,7 @@ public partial class RVehicleBehaviour_DriveToGoalPoint : BmSDK.BmGame.RVehicleB
     /// <summary>
     /// Function: ExitBehaviour
     /// </summary>
-    public unsafe void ExitBehaviour(BmSDK.BmGame.RVehicleBehaviour NextBehaviour)
+    public unsafe override void ExitBehaviour(BmSDK.BmGame.RVehicleBehaviour NextBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_DriveToGoalPoint.ExitBehaviour", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -110,7 +110,7 @@ public partial class RVehicleBehaviour_DriveToGoalPoint : BmSDK.BmGame.RVehicleB
     /// <summary>
     /// Function: EnterBehaviour
     /// </summary>
-    public unsafe void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
+    public unsafe override void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_DriveToGoalPoint.EnterBehaviour", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RSilentPredatorCamera : BmSDK.BmGame.RCameraActor, BmSDK.IG
     /// <summary>
     /// Function: LookAround
     /// </summary>
-    public unsafe void LookAround(float DeltaTime, BmSDK.Rotator LookInput)
+    public unsafe virtual void LookAround(float DeltaTime, BmSDK.Rotator LookInput)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSilentPredatorCamera.LookAround", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -91,7 +91,7 @@ public partial class RSilentPredatorCamera : BmSDK.BmGame.RCameraActor, BmSDK.IG
     /// <summary>
     /// Function: CancelCamera
     /// </summary>
-    public unsafe void CancelCamera()
+    public unsafe virtual void CancelCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSilentPredatorCamera.CancelCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -102,7 +102,7 @@ public partial class RSilentPredatorCamera : BmSDK.BmGame.RCameraActor, BmSDK.IG
     /// <summary>
     /// Function: OutOfPredatorView
     /// </summary>
-    public unsafe bool OutOfPredatorView()
+    public unsafe virtual bool OutOfPredatorView()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSilentPredatorCamera.OutOfPredatorView", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -120,7 +120,7 @@ public partial class RSilentPredatorCamera : BmSDK.BmGame.RCameraActor, BmSDK.IG
     /// <summary>
     /// Function: UpdateHeartBeat
     /// </summary>
-    public unsafe void UpdateHeartBeat(float DeltaTime, int FearLevel)
+    public unsafe virtual void UpdateHeartBeat(float DeltaTime, int FearLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSilentPredatorCamera.UpdateHeartBeat", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -133,7 +133,7 @@ public partial class RSilentPredatorCamera : BmSDK.BmGame.RCameraActor, BmSDK.IG
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSilentPredatorCamera.Tick", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -145,7 +145,7 @@ public partial class RSilentPredatorCamera : BmSDK.BmGame.RCameraActor, BmSDK.IG
     /// <summary>
     /// Function: Stop
     /// </summary>
-    public unsafe void Stop()
+    public unsafe virtual void Stop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSilentPredatorCamera.Stop", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -156,7 +156,7 @@ public partial class RSilentPredatorCamera : BmSDK.BmGame.RCameraActor, BmSDK.IG
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.Engine.Actor Target)
+    public unsafe virtual void Initialise(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSilentPredatorCamera.Initialise", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -36,7 +36,7 @@ public partial class RInteractionManager : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Function: UnRegisterActor
     /// </summary>
-    public unsafe void UnRegisterActor(BmSDK.Engine.RInteractionComponent ActorToRemove)
+    public unsafe virtual void UnRegisterActor(BmSDK.Engine.RInteractionComponent ActorToRemove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RInteractionManager.UnRegisterActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -55,7 +55,7 @@ public partial class RInteractionManager : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterNewActor
     /// </summary>
-    public unsafe void RegisterNewActor(BmSDK.Engine.RInteractionComponent NewActor)
+    public unsafe virtual void RegisterNewActor(BmSDK.Engine.RInteractionComponent NewActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RInteractionManager.RegisterNewActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -74,7 +74,7 @@ public partial class RInteractionManager : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Function: GetInteractionClass
     /// </summary>
-    public unsafe BmSDK.Engine.RInteractionClass GetInteractionClass(BmSDK.FName ClassName)
+    public unsafe virtual BmSDK.Engine.RInteractionClass GetInteractionClass(BmSDK.FName ClassName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RInteractionManager.GetInteractionClass", true);
         byte* paramsPtr = stackalloc byte[16];

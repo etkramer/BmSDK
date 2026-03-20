@@ -71,7 +71,7 @@ public partial class RCommandBeaconLightsBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: SetComponentState
     /// </summary>
-    public unsafe void SetComponentState(BmSDK.BmGame.RCommandBeaconBase.eCommandBeaconState NewState)
+    public unsafe virtual void SetComponentState(BmSDK.BmGame.RCommandBeaconBase.eCommandBeaconState NewState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconLightsBase.SetComponentState", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -83,7 +83,7 @@ public partial class RCommandBeaconLightsBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.BmGame.RCommandBeaconBase inBeacon)
+    public unsafe virtual void Init(BmSDK.BmGame.RCommandBeaconBase inBeacon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconLightsBase.Init", true);
         byte* paramsPtr = stackalloc byte[8];

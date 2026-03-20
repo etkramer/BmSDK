@@ -42,7 +42,7 @@ public partial class RSeqAct_HeavyTankScanningBase : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: PushScanToFlash
     /// </summary>
-    public unsafe void PushScanToFlash()
+    public unsafe virtual void PushScanToFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_HeavyTankScanningBase.PushScanToFlash", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -53,7 +53,7 @@ public partial class RSeqAct_HeavyTankScanningBase : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: TankScanFailed
     /// </summary>
-    public unsafe void TankScanFailed(bool not_on_screen, bool too_far_away, bool not_well_framed, bool tank_attacking = default)
+    public unsafe virtual void TankScanFailed(bool not_on_screen, bool too_far_away, bool not_well_framed, bool tank_attacking = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_HeavyTankScanningBase.TankScanFailed", true);
         byte* paramsPtr = stackalloc byte[16];

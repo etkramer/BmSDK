@@ -71,7 +71,7 @@ public partial class CameraActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DisplayDebug
     /// </summary>
-    public unsafe void DisplayDebug(BmSDK.Engine.HUD HUD, out float out_YL, out float out_YPos)
+    public unsafe override void DisplayDebug(BmSDK.Engine.HUD HUD, out float out_YL, out float out_YPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraActor.DisplayDebug", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -85,7 +85,7 @@ public partial class CameraActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCameraView
     /// </summary>
-    public unsafe void GetCameraView(float DeltaTime, out BmSDK.GameObject.FTPOV OutPOV)
+    public unsafe virtual void GetCameraView(float DeltaTime, out BmSDK.GameObject.FTPOV OutPOV)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraActor.GetCameraView", true);
         byte* paramsPtr = stackalloc byte[32];

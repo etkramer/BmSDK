@@ -31,7 +31,7 @@ public partial class SeqAct_Latent : BmSDK.Engine.SequenceAction, BmSDK.IGameObj
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe virtual bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_Latent.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -43,7 +43,7 @@ public partial class SeqAct_Latent : BmSDK.Engine.SequenceAction, BmSDK.IGameObj
     /// <summary>
     /// Function: AbortFor
     /// </summary>
-    public unsafe void AbortFor(BmSDK.Engine.Actor latentActor)
+    public unsafe virtual void AbortFor(BmSDK.Engine.Actor latentActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_Latent.AbortFor", true);
         byte* paramsPtr = stackalloc byte[8];

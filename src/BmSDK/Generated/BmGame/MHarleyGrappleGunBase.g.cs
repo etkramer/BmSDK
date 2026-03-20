@@ -66,7 +66,7 @@ public partial class MHarleyGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGa
     /// <summary>
     /// Function: TriggerPounce
     /// </summary>
-    public unsafe bool TriggerPounce(bool bTryQueuedGrapple = default)
+    public unsafe virtual bool TriggerPounce(bool bTryQueuedGrapple = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHarleyGrappleGunBase.TriggerPounce", true);
         byte* paramsPtr = stackalloc byte[248];
@@ -78,7 +78,7 @@ public partial class MHarleyGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGa
     /// <summary>
     /// Function: TriggerGrateThrough
     /// </summary>
-    public unsafe void TriggerGrateThrough()
+    public unsafe virtual void TriggerGrateThrough()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHarleyGrappleGunBase.TriggerGrateThrough", true);
         byte* paramsPtr = stackalloc byte[140];
@@ -89,7 +89,7 @@ public partial class MHarleyGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGa
     /// <summary>
     /// Function: Grapple
     /// </summary>
-    public unsafe bool Grapple(BmSDK.BmGame.RSpecialMoveConfig OverrideGrappleMove = default, bool bForceSucced = default, bool bTryQueuedGrapple = default)
+    public unsafe override bool Grapple(BmSDK.BmGame.RSpecialMoveConfig OverrideGrappleMove = default, bool bForceSucced = default, bool bTryQueuedGrapple = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHarleyGrappleGunBase.Grapple", true);
         byte* paramsPtr = stackalloc byte[20];

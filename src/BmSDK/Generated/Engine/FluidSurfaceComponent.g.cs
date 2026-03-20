@@ -36,7 +36,7 @@ public partial class FluidSurfaceComponent : BmSDK.Engine.PrimitiveComponent, Bm
     /// <summary>
     /// Function: SetSimulationPosition
     /// </summary>
-    public unsafe void SetSimulationPosition(System.Numerics.Vector3 WorldPos)
+    public unsafe virtual void SetSimulationPosition(System.Numerics.Vector3 WorldPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FluidSurfaceComponent.SetSimulationPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -55,7 +55,7 @@ public partial class FluidSurfaceComponent : BmSDK.Engine.PrimitiveComponent, Bm
     /// <summary>
     /// Function: SetDetailPosition
     /// </summary>
-    public unsafe void SetDetailPosition(System.Numerics.Vector3 WorldPos)
+    public unsafe virtual void SetDetailPosition(System.Numerics.Vector3 WorldPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FluidSurfaceComponent.SetDetailPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -74,7 +74,7 @@ public partial class FluidSurfaceComponent : BmSDK.Engine.PrimitiveComponent, Bm
     /// <summary>
     /// Function: ApplyForce
     /// </summary>
-    public unsafe void ApplyForce(System.Numerics.Vector3 WorldPos, float Strength, float Radius, bool bImpulse = default)
+    public unsafe virtual void ApplyForce(System.Numerics.Vector3 WorldPos, float Strength, float Radius, bool bImpulse = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FluidSurfaceComponent.ApplyForce", true);
         byte* paramsPtr = stackalloc byte[24];

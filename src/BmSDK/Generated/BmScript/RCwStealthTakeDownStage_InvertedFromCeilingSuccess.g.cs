@@ -71,7 +71,7 @@ public partial class RCwStealthTakeDownStage_InvertedFromCeilingSuccess : BmSDK.
     /// <summary>
     /// Function: ResetCamera
     /// </summary>
-    public unsafe void ResetCamera()
+    public unsafe virtual void ResetCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwStealthTakeDownStage_InvertedFromCeilingSuccess.ResetCamera", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RCwStealthTakeDownStage_InvertedFromCeilingSuccess : BmSDK.
     /// <summary>
     /// Function: End
     /// </summary>
-    public unsafe void End(bool bLastStage = default)
+    public unsafe override void End(bool bLastStage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwStealthTakeDownStage_InvertedFromCeilingSuccess.End", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RCwStealthTakeDownStage_InvertedFromCeilingSuccess : BmSDK.
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwStealthTakeDownStage_InvertedFromCeilingSuccess.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[24];

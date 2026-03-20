@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_DoubleTeamVantageEscape : BmSDK.BmGame
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_DoubleTeamVantageEscape.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_DoubleTeamVantageEscape : BmSDK.BmGame
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_DoubleTeamVantageEscape.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[132];

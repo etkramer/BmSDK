@@ -66,7 +66,7 @@ public partial class MPawnScarecrowBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: AreTakedownsFatal
     /// </summary>
-    public unsafe bool AreTakedownsFatal()
+    public unsafe override bool AreTakedownsFatal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnScarecrowBase.AreTakedownsFatal", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -77,7 +77,7 @@ public partial class MPawnScarecrowBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: CanRedirect
     /// </summary>
-    public unsafe bool CanRedirect()
+    public unsafe override bool CanRedirect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnScarecrowBase.CanRedirect", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -88,7 +88,7 @@ public partial class MPawnScarecrowBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: IsAwareOfPlayer
     /// </summary>
-    public unsafe bool IsAwareOfPlayer(BmSDK.BmGame.RPawnPlayer PlayerPawn, BmSDK.Class dmgType = default)
+    public unsafe override bool IsAwareOfPlayer(BmSDK.BmGame.RPawnPlayer PlayerPawn, BmSDK.Class dmgType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnScarecrowBase.IsAwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -101,7 +101,7 @@ public partial class MPawnScarecrowBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: ShouldGoRagdoll
     /// </summary>
-    public unsafe bool ShouldGoRagdoll(BmSDK.Class dmgType, float DamageAmount)
+    public unsafe override bool ShouldGoRagdoll(BmSDK.Class dmgType, float DamageAmount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnScarecrowBase.ShouldGoRagdoll", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -114,7 +114,7 @@ public partial class MPawnScarecrowBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: CheckForOverridenTakedown
     /// </summary>
-    public unsafe bool CheckForOverridenTakedown(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages takedown_stage)
+    public unsafe override bool CheckForOverridenTakedown(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages takedown_stage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnScarecrowBase.CheckForOverridenTakedown", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -126,7 +126,7 @@ public partial class MPawnScarecrowBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: IsVulnerableToTakedown
     /// </summary>
-    public unsafe bool IsVulnerableToTakedown(BmSDK.FString takedown)
+    public unsafe override bool IsVulnerableToTakedown(BmSDK.FString takedown)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnScarecrowBase.IsVulnerableToTakedown", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -138,7 +138,7 @@ public partial class MPawnScarecrowBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: IsBoss
     /// </summary>
-    public unsafe bool IsBoss()
+    public unsafe override bool IsBoss()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnScarecrowBase.IsBoss", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -149,7 +149,7 @@ public partial class MPawnScarecrowBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: AnyScarecrowEnemyVehiclesAlive
     /// </summary>
-    public unsafe bool AnyScarecrowEnemyVehiclesAlive()
+    public unsafe virtual bool AnyScarecrowEnemyVehiclesAlive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnScarecrowBase.AnyScarecrowEnemyVehiclesAlive", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -160,7 +160,7 @@ public partial class MPawnScarecrowBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnScarecrowBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -171,7 +171,7 @@ public partial class MPawnScarecrowBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnScarecrowBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

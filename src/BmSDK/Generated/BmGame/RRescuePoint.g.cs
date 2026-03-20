@@ -71,7 +71,7 @@ public partial class RRescuePoint : BmSDK.BmGame.RGrapplePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: StartJokerHallucination
     /// </summary>
-    public unsafe void StartJokerHallucination(System.Numerics.Vector3 BatmanLoc, System.Numerics.Vector3 BatmanRot)
+    public unsafe virtual void StartJokerHallucination(System.Numerics.Vector3 BatmanLoc, System.Numerics.Vector3 BatmanRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRescuePoint.StartJokerHallucination", true);
         byte* paramsPtr = stackalloc byte[120];
@@ -84,7 +84,7 @@ public partial class RRescuePoint : BmSDK.BmGame.RGrapplePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: DoJokerHallucination
     /// </summary>
-    public unsafe bool DoJokerHallucination()
+    public unsafe virtual bool DoJokerHallucination()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRescuePoint.DoJokerHallucination", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RRescuePoint : BmSDK.BmGame.RGrapplePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: DestroyTempRescuePoint
     /// </summary>
-    public unsafe void DestroyTempRescuePoint()
+    public unsafe virtual void DestroyTempRescuePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRescuePoint.DestroyTempRescuePoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RRescuePoint : BmSDK.BmGame.RGrapplePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: StartGrappleUp
     /// </summary>
-    public unsafe void StartGrappleUp()
+    public unsafe virtual void StartGrappleUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRescuePoint.StartGrappleUp", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -117,7 +117,7 @@ public partial class RRescuePoint : BmSDK.BmGame.RGrapplePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: RescueMe
     /// </summary>
-    public unsafe void RescueMe(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void RescueMe(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRescuePoint.RescueMe", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RRescuePoint : BmSDK.BmGame.RGrapplePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRescuePoint.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

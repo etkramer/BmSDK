@@ -71,7 +71,7 @@ public partial class AkAudioSpline : BmSDK.Engine.SplineActor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAudioSpatial
     /// </summary>
-    public unsafe void GetAudioSpatial(out System.Numerics.Vector3 sndPosition, out BmSDK.Rotator sndOrientation, BmSDK.GameObject caller = default)
+    public unsafe override void GetAudioSpatial(out System.Numerics.Vector3 sndPosition, out BmSDK.Rotator sndOrientation, BmSDK.GameObject caller = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkAudioSpline.GetAudioSpatial", true);
         byte* paramsPtr = stackalloc byte[32];

@@ -36,7 +36,7 @@ public partial class RSeqAct_AverageFaceFXValue : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AverageFaceFXValue.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -48,7 +48,7 @@ public partial class RSeqAct_AverageFaceFXValue : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: TickUpdate
     /// </summary>
-    public unsafe void TickUpdate()
+    public unsafe virtual void TickUpdate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AverageFaceFXValue.TickUpdate", true);
         byte* paramsPtr = stackalloc byte[0];

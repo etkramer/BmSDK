@@ -36,7 +36,7 @@ public partial class RWeaponConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Function: ToString
     /// </summary>
-    public unsafe BmSDK.FString ToString()
+    public unsafe virtual BmSDK.FString ToString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeaponConfig.ToString", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -54,7 +54,7 @@ public partial class RWeaponConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Function: Shrink
     /// </summary>
-    public unsafe void Shrink()
+    public unsafe virtual void Shrink()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeaponConfig.Shrink", true);
         byte* paramsPtr = stackalloc byte[0];

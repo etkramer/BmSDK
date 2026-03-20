@@ -47,7 +47,7 @@ public partial class RSeqAct_ActivateBombThugRiots : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActivateBombThugRiots.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RSeqAct_ActivateBombThugRiots : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: SetUpRiotZones
     /// </summary>
-    public unsafe void SetUpRiotZones()
+    public unsafe virtual void SetUpRiotZones()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActivateBombThugRiots.SetUpRiotZones", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -70,7 +70,7 @@ public partial class RSeqAct_ActivateBombThugRiots : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: ResetRiotZones
     /// </summary>
-    public unsafe void ResetRiotZones()
+    public unsafe virtual void ResetRiotZones()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActivateBombThugRiots.ResetRiotZones", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -81,7 +81,7 @@ public partial class RSeqAct_ActivateBombThugRiots : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: RemoveRiotThug
     /// </summary>
-    public unsafe void RemoveRiotThug(BmSDK.BmGame.RPawnVillain OldThug)
+    public unsafe virtual void RemoveRiotThug(BmSDK.BmGame.RPawnVillain OldThug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActivateBombThugRiots.RemoveRiotThug", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RSeqAct_ActivateBombThugRiots : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: BombThugRanAway
     /// </summary>
-    public unsafe void BombThugRanAway()
+    public unsafe virtual void BombThugRanAway()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActivateBombThugRiots.BombThugRanAway", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RSeqAct_ActivateBombThugRiots : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: BombThugKOd
     /// </summary>
-    public unsafe void BombThugKOd()
+    public unsafe virtual void BombThugKOd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActivateBombThugRiots.BombThugKOd", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RSeqAct_ActivateBombThugRiots : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: BombThugDefused
     /// </summary>
-    public unsafe void BombThugDefused()
+    public unsafe virtual void BombThugDefused()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActivateBombThugRiots.BombThugDefused", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RSeqAct_ActivateBombThugRiots : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: BombThugScanned
     /// </summary>
-    public unsafe void BombThugScanned(BmSDK.BmGame.RPawnVillain NewBombThug)
+    public unsafe virtual void BombThugScanned(BmSDK.BmGame.RPawnVillain NewBombThug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActivateBombThugRiots.BombThugScanned", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -138,7 +138,7 @@ public partial class RSeqAct_ActivateBombThugRiots : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: HasBombThugBeenFound
     /// </summary>
-    public unsafe bool HasBombThugBeenFound()
+    public unsafe virtual bool HasBombThugBeenFound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActivateBombThugRiots.HasBombThugBeenFound", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -149,7 +149,7 @@ public partial class RSeqAct_ActivateBombThugRiots : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: BombThugScanningStopped
     /// </summary>
-    public unsafe void BombThugScanningStopped()
+    public unsafe virtual void BombThugScanningStopped()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActivateBombThugRiots.BombThugScanningStopped", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -160,7 +160,7 @@ public partial class RSeqAct_ActivateBombThugRiots : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: BombThugScanningStarted
     /// </summary>
-    public unsafe void BombThugScanningStarted()
+    public unsafe virtual void BombThugScanningStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActivateBombThugRiots.BombThugScanningStarted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -171,7 +171,7 @@ public partial class RSeqAct_ActivateBombThugRiots : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: HaveIBeenScanned
     /// </summary>
-    public unsafe bool HaveIBeenScanned(BmSDK.BmGame.RPawnVillain TestThug)
+    public unsafe virtual bool HaveIBeenScanned(BmSDK.BmGame.RPawnVillain TestThug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActivateBombThugRiots.HaveIBeenScanned", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -183,7 +183,7 @@ public partial class RSeqAct_ActivateBombThugRiots : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: AmIBombThug
     /// </summary>
-    public unsafe bool AmIBombThug(BmSDK.BmGame.RPawnVillain TestThug)
+    public unsafe virtual bool AmIBombThug(BmSDK.BmGame.RPawnVillain TestThug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActivateBombThugRiots.AmIBombThug", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -195,7 +195,7 @@ public partial class RSeqAct_ActivateBombThugRiots : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: PotentialBombThugScanned
     /// </summary>
-    public unsafe bool PotentialBombThugScanned(BmSDK.BmGame.RPawnVillain NewThug)
+    public unsafe virtual bool PotentialBombThugScanned(BmSDK.BmGame.RPawnVillain NewThug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActivateBombThugRiots.PotentialBombThugScanned", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -207,7 +207,7 @@ public partial class RSeqAct_ActivateBombThugRiots : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: AddThug
     /// </summary>
-    public unsafe void AddThug(BmSDK.BmGame.RPawnVillain NewThug)
+    public unsafe virtual void AddThug(BmSDK.BmGame.RPawnVillain NewThug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActivateBombThugRiots.AddThug", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -219,7 +219,7 @@ public partial class RSeqAct_ActivateBombThugRiots : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActivateBombThugRiots.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

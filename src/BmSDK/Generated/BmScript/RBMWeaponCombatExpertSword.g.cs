@@ -71,7 +71,7 @@ public partial class RBMWeaponCombatExpertSword : BmSDK.BmGame.RBMWeaponMelee, B
     /// <summary>
     /// Function: GetCounterAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetCounterAnimSet(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
+    public unsafe override BmSDK.Engine.AnimSet GetCounterAnimSet(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponCombatExpertSword.GetCounterAnimSet", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RBMWeaponCombatExpertSword : BmSDK.BmGame.RBMWeaponMelee, B
     /// <summary>
     /// Function: GetBMCounterAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetBMCounterAnimSet(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
+    public unsafe override BmSDK.Engine.AnimSet GetBMCounterAnimSet(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponCombatExpertSword.GetBMCounterAnimSet", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -95,7 +95,7 @@ public partial class RBMWeaponCombatExpertSword : BmSDK.BmGame.RBMWeaponMelee, B
     /// <summary>
     /// Function: GetRECHitReactionAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetRECHitReactionAnimName()
+    public unsafe override BmSDK.FName GetRECHitReactionAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponCombatExpertSword.GetRECHitReactionAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RBMWeaponCombatExpertSword : BmSDK.BmGame.RBMWeaponMelee, B
     /// <summary>
     /// Function: GetFearTakedownReactionAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetFearTakedownReactionAnimset()
+    public unsafe override BmSDK.Engine.AnimSet GetFearTakedownReactionAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponCombatExpertSword.GetFearTakedownReactionAnimset", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RBMWeaponCombatExpertSword : BmSDK.BmGame.RBMWeaponMelee, B
     /// <summary>
     /// Function: InitialisePlayerSpecificAnimsets
     /// </summary>
-    public unsafe void InitialisePlayerSpecificAnimsets(BmSDK.BmGame.RPawnPlayerCombat NewPlayer, int PlayerIndex)
+    public unsafe override void InitialisePlayerSpecificAnimsets(BmSDK.BmGame.RPawnPlayerCombat NewPlayer, int PlayerIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponCombatExpertSword.InitialisePlayerSpecificAnimsets", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -130,7 +130,7 @@ public partial class RBMWeaponCombatExpertSword : BmSDK.BmGame.RBMWeaponMelee, B
     /// <summary>
     /// Function: GetMultiAttackAnimNames
     /// </summary>
-    public unsafe void GetMultiAttackAnimNames(out BmSDK.FName IntroName, out BmSDK.FName AttackName, out BmSDK.FName FailName, out BmSDK.FName CounterName, BmSDK.BmGame.RPawnPlayerCombat Player)
+    public unsafe override void GetMultiAttackAnimNames(out BmSDK.FName IntroName, out BmSDK.FName AttackName, out BmSDK.FName FailName, out BmSDK.FName CounterName, BmSDK.BmGame.RPawnPlayerCombat Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponCombatExpertSword.GetMultiAttackAnimNames", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -146,7 +146,7 @@ public partial class RBMWeaponCombatExpertSword : BmSDK.BmGame.RBMWeaponMelee, B
     /// <summary>
     /// Function: GetRECPriority
     /// </summary>
-    public unsafe float GetRECPriority()
+    public unsafe override float GetRECPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponCombatExpertSword.GetRECPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -157,7 +157,7 @@ public partial class RBMWeaponCombatExpertSword : BmSDK.BmGame.RBMWeaponMelee, B
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponCombatExpertSword.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -169,7 +169,7 @@ public partial class RBMWeaponCombatExpertSword : BmSDK.BmGame.RBMWeaponMelee, B
     /// <summary>
     /// Function: CreateCombatWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateCombatWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2, BmSDK.Engine.AnimSet AnimSet3, BmSDK.Engine.AnimSet AnimSet4)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateCombatWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2, BmSDK.Engine.AnimSet AnimSet3, BmSDK.Engine.AnimSet AnimSet4)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponCombatExpertSword.CreateCombatWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[6364];
@@ -185,7 +185,7 @@ public partial class RBMWeaponCombatExpertSword : BmSDK.BmGame.RBMWeaponMelee, B
     /// <summary>
     /// Function: HideWeapon
     /// </summary>
-    public unsafe void HideWeapon()
+    public unsafe override void HideWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponCombatExpertSword.HideWeapon", true);
         byte* paramsPtr = stackalloc byte[0];

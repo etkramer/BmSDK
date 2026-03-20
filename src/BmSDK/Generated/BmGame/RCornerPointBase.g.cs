@@ -71,7 +71,7 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsLockedBy
     /// </summary>
-    public unsafe bool IsLockedBy(BmSDK.BmGame.RBMAIController TestLockedBy)
+    public unsafe virtual bool IsLockedBy(BmSDK.BmGame.RBMAIController TestLockedBy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerPointBase.IsLockedBy", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsLocked
     /// </summary>
-    public unsafe bool IsLocked()
+    public unsafe virtual bool IsLocked()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerPointBase.IsLocked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnLock
     /// </summary>
-    public unsafe void UnLock(BmSDK.BmGame.RBMAIController Unlocker)
+    public unsafe virtual void UnLock(BmSDK.BmGame.RBMAIController Unlocker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerPointBase.UnLock", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Lock
     /// </summary>
-    public unsafe void Lock(BmSDK.BmGame.RBMAIController NewLockedBy)
+    public unsafe virtual void Lock(BmSDK.BmGame.RBMAIController NewLockedBy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerPointBase.Lock", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAmbushDir
     /// </summary>
-    public unsafe BmSDK.BmGame.RCornerPointBase.AmbushDir GetAmbushDir(System.Numerics.Vector3 TargetPos, BmSDK.BmGame.RBMPawnAI HostPawn, BmSDK.BmGame.RCornerWallMarker AmbushStart, out BmSDK.BmGame.RCornerWallMarker AmbushEnd)
+    public unsafe virtual BmSDK.BmGame.RCornerPointBase.AmbushDir GetAmbushDir(System.Numerics.Vector3 TargetPos, BmSDK.BmGame.RBMPawnAI HostPawn, BmSDK.BmGame.RCornerWallMarker AmbushStart, out BmSDK.BmGame.RCornerWallMarker AmbushEnd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerPointBase.GetAmbushDir", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -133,7 +133,7 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAmbushOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAmbushOffset(BmSDK.BmGame.RBMPawnAI HostPawn, System.Numerics.Vector3 StartPos, BmSDK.Rotator StartRot, BmSDK.BmGame.RCornerPointBase.AmbushDir Dir)
+    public unsafe virtual System.Numerics.Vector3 GetAmbushOffset(BmSDK.BmGame.RBMPawnAI HostPawn, System.Numerics.Vector3 StartPos, BmSDK.Rotator StartRot, BmSDK.BmGame.RCornerPointBase.AmbushDir Dir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerPointBase.GetAmbushOffset", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -148,7 +148,7 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPrevWall
     /// </summary>
-    public unsafe int GetPrevWall(int ThisIndex)
+    public unsafe virtual int GetPrevWall(int ThisIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerPointBase.GetPrevWall", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -160,7 +160,7 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNextWall
     /// </summary>
-    public unsafe int GetNextWall(int ThisIndex)
+    public unsafe virtual int GetNextWall(int ThisIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerPointBase.GetNextWall", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -172,7 +172,7 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerPointBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -183,7 +183,7 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerPointBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -194,7 +194,7 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerPointBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -205,7 +205,7 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDistFromExposureLine
     /// </summary>
-    public unsafe float GetDistFromExposureLine(System.Numerics.Vector3 TestPos, System.Numerics.Vector3 HideFromPos, BmSDK.BmGame.RCornerWallMarker AmbushStart, BmSDK.BmGame.RCornerWallMarker AmbushEnd)
+    public unsafe virtual float GetDistFromExposureLine(System.Numerics.Vector3 TestPos, System.Numerics.Vector3 HideFromPos, BmSDK.BmGame.RCornerWallMarker AmbushStart, BmSDK.BmGame.RCornerWallMarker AmbushEnd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerPointBase.GetDistFromExposureLine", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -227,7 +227,7 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanBeLockedBy
     /// </summary>
-    public unsafe bool CanBeLockedBy(BmSDK.BmGame.RBMAIController TestLockedBy)
+    public unsafe virtual bool CanBeLockedBy(BmSDK.BmGame.RBMAIController TestLockedBy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerPointBase.CanBeLockedBy", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -246,7 +246,7 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCornerFor
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCornerFor(BmSDK.BmGame.RCornerWallMarker StartWall, BmSDK.BmGame.RCornerWallMarker DestWall)
+    public unsafe virtual System.Numerics.Vector3 GetCornerFor(BmSDK.BmGame.RCornerWallMarker StartWall, BmSDK.BmGame.RCornerWallMarker DestWall)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerPointBase.GetCornerFor", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -266,7 +266,7 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DeregisterCornerPointsWithNavMesh
     /// </summary>
-    public unsafe void DeregisterCornerPointsWithNavMesh()
+    public unsafe virtual void DeregisterCornerPointsWithNavMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerPointBase.DeregisterCornerPointsWithNavMesh", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -284,7 +284,7 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterCornerPointsWithNavMesh
     /// </summary>
-    public unsafe void RegisterCornerPointsWithNavMesh()
+    public unsafe virtual void RegisterCornerPointsWithNavMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerPointBase.RegisterCornerPointsWithNavMesh", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -31,7 +31,7 @@ public partial class HttpResponseInterface : BmSDK.Engine.HttpBaseInterface, BmS
     /// <summary>
     /// Function: GetContentAsString
     /// </summary>
-    public unsafe BmSDK.FString GetContentAsString()
+    public unsafe virtual BmSDK.FString GetContentAsString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HttpResponseInterface.GetContentAsString", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -49,7 +49,7 @@ public partial class HttpResponseInterface : BmSDK.Engine.HttpBaseInterface, BmS
     /// <summary>
     /// Function: GetResponseCode
     /// </summary>
-    public unsafe int GetResponseCode()
+    public unsafe virtual int GetResponseCode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HttpResponseInterface.GetResponseCode", true);
         byte* paramsPtr = stackalloc byte[4];

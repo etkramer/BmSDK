@@ -42,7 +42,7 @@ public partial class RSeqAct_BagCarrierDialogue : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BagCarrierDialogue.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -53,7 +53,7 @@ public partial class RSeqAct_BagCarrierDialogue : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: TryTriggerIncidentalDialogue
     /// </summary>
-    public unsafe void TryTriggerIncidentalDialogue(BmSDK.FName bark, BmSDK.BmGame.RPawnVillain Speaker)
+    public unsafe virtual void TryTriggerIncidentalDialogue(BmSDK.FName bark, BmSDK.BmGame.RPawnVillain Speaker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BagCarrierDialogue.TryTriggerIncidentalDialogue", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -66,7 +66,7 @@ public partial class RSeqAct_BagCarrierDialogue : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: CanTriggerIncidentalDialogue
     /// </summary>
-    public unsafe bool CanTriggerIncidentalDialogue()
+    public unsafe virtual bool CanTriggerIncidentalDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BagCarrierDialogue.CanTriggerIncidentalDialogue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -77,7 +77,7 @@ public partial class RSeqAct_BagCarrierDialogue : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: BagDroppedOff
     /// </summary>
-    public unsafe void BagDroppedOff(BmSDK.BmGame.RPawnVillain bagCarrier, BmSDK.BmGame.RLootDestinationBase dropoffPoint, BmSDK.BmGame.RLootSourceBase nextPickupPoint, bool bagCarryingFinished)
+    public unsafe virtual void BagDroppedOff(BmSDK.BmGame.RPawnVillain bagCarrier, BmSDK.BmGame.RLootDestinationBase dropoffPoint, BmSDK.BmGame.RLootSourceBase nextPickupPoint, bool bagCarryingFinished)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BagCarrierDialogue.BagDroppedOff", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -92,7 +92,7 @@ public partial class RSeqAct_BagCarrierDialogue : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: BagPickedUp
     /// </summary>
-    public unsafe void BagPickedUp(BmSDK.BmGame.RPawnVillain bagCarrier, BmSDK.BmGame.RLootSourceBase PickupPoint)
+    public unsafe virtual void BagPickedUp(BmSDK.BmGame.RPawnVillain bagCarrier, BmSDK.BmGame.RLootSourceBase PickupPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BagCarrierDialogue.BagPickedUp", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -105,7 +105,7 @@ public partial class RSeqAct_BagCarrierDialogue : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: RegisterWithRoomState
     /// </summary>
-    public unsafe void RegisterWithRoomState(bool bWarnIfFailed = default)
+    public unsafe virtual void RegisterWithRoomState(bool bWarnIfFailed = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BagCarrierDialogue.RegisterWithRoomState", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RAEC_Attack_Sub_WatchAndWait : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(System.Numerics.Vector3 AimTarget, System.Numerics.Vector3 NewStandLoc, float NewDestTolerance = default)
+    public unsafe virtual void Init(System.Numerics.Vector3 AimTarget, System.Numerics.Vector3 NewStandLoc, float NewDestTolerance = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_WatchAndWait.Init", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -85,7 +85,7 @@ public partial class RAEC_Attack_Sub_WatchAndWait : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_WatchAndWait.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -97,7 +97,7 @@ public partial class RAEC_Attack_Sub_WatchAndWait : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_WatchAndWait.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];

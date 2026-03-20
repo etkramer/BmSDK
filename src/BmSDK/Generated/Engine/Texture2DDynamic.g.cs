@@ -58,7 +58,7 @@ public partial class Texture2DDynamic : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateMipFromJPEG
     /// </summary>
-    public unsafe void UpdateMipFromJPEG(int MipIdx, out BmSDK.TArray<byte> MipData)
+    public unsafe virtual void UpdateMipFromJPEG(int MipIdx, out BmSDK.TArray<byte> MipData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2DDynamic.UpdateMipFromJPEG", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -78,7 +78,7 @@ public partial class Texture2DDynamic : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateMip
     /// </summary>
-    public unsafe void UpdateMip(int MipIdx, out BmSDK.TArray<byte> MipData)
+    public unsafe virtual void UpdateMip(int MipIdx, out BmSDK.TArray<byte> MipData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2DDynamic.UpdateMip", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -98,7 +98,7 @@ public partial class Texture2DDynamic : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(int InSizeX, int InSizeY, BmSDK.Engine.Texture.EPixelFormat InFormat = default, bool InIsResolveTarget = default)
+    public unsafe virtual void Init(int InSizeX, int InSizeY, BmSDK.Engine.Texture.EPixelFormat InFormat = default, bool InIsResolveTarget = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2DDynamic.Init", true);
         byte* paramsPtr = stackalloc byte[16];

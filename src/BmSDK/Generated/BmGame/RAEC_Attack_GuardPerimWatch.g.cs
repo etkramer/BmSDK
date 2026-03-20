@@ -71,7 +71,7 @@ public partial class RAEC_Attack_GuardPerimWatch : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_GuardPerimWatch.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Attack_GuardPerimWatch : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: NoOtherPerimWatchIsActive
     /// </summary>
-    public unsafe bool NoOtherPerimWatchIsActive()
+    public unsafe virtual bool NoOtherPerimWatchIsActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_GuardPerimWatch.NoOtherPerimWatchIsActive", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -93,7 +93,7 @@ public partial class RAEC_Attack_GuardPerimWatch : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: OwnedPawnHasBeenRenderedRecently
     /// </summary>
-    public unsafe bool OwnedPawnHasBeenRenderedRecently()
+    public unsafe virtual bool OwnedPawnHasBeenRenderedRecently()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_GuardPerimWatch.OwnedPawnHasBeenRenderedRecently", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -104,7 +104,7 @@ public partial class RAEC_Attack_GuardPerimWatch : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: AllAttackersAreInGuardVolumes
     /// </summary>
-    public unsafe bool AllAttackersAreInGuardVolumes()
+    public unsafe virtual bool AllAttackersAreInGuardVolumes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_GuardPerimWatch.AllAttackersAreInGuardVolumes", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -115,7 +115,7 @@ public partial class RAEC_Attack_GuardPerimWatch : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: AttackersActiveOutsideofThisGuardVol
     /// </summary>
-    public unsafe bool AttackersActiveOutsideofThisGuardVol()
+    public unsafe virtual bool AttackersActiveOutsideofThisGuardVol()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_GuardPerimWatch.AttackersActiveOutsideofThisGuardVol", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -126,7 +126,7 @@ public partial class RAEC_Attack_GuardPerimWatch : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: FellowGuardIsShooting
     /// </summary>
-    public unsafe bool FellowGuardIsShooting()
+    public unsafe virtual bool FellowGuardIsShooting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_GuardPerimWatch.FellowGuardIsShooting", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -137,7 +137,7 @@ public partial class RAEC_Attack_GuardPerimWatch : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: PlayStopatPerimBark
     /// </summary>
-    public unsafe void PlayStopatPerimBark(BmSDK.BmGame.RPawnVillain MainSpeaker)
+    public unsafe virtual void PlayStopatPerimBark(BmSDK.BmGame.RPawnVillain MainSpeaker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_GuardPerimWatch.PlayStopatPerimBark", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -149,7 +149,7 @@ public partial class RAEC_Attack_GuardPerimWatch : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: TryJoinBark
     /// </summary>
-    public unsafe void TryJoinBark(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe virtual void TryJoinBark(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_GuardPerimWatch.TryJoinBark", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -161,7 +161,7 @@ public partial class RAEC_Attack_GuardPerimWatch : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: AssignStandAndAimPos
     /// </summary>
-    public unsafe void AssignStandAndAimPos(BmSDK.BmGame.RBMAIController NewCon, System.Numerics.Vector3 StandPos, System.Numerics.Vector3 AimPos)
+    public unsafe virtual void AssignStandAndAimPos(BmSDK.BmGame.RBMAIController NewCon, System.Numerics.Vector3 StandPos, System.Numerics.Vector3 AimPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_GuardPerimWatch.AssignStandAndAimPos", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -175,7 +175,7 @@ public partial class RAEC_Attack_GuardPerimWatch : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: AssignPointToTryApproach
     /// </summary>
-    public unsafe void AssignPointToTryApproach(BmSDK.BmGame.RBMAIController NewCon, System.Numerics.Vector3 ApproachPos)
+    public unsafe virtual void AssignPointToTryApproach(BmSDK.BmGame.RBMAIController NewCon, System.Numerics.Vector3 ApproachPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_GuardPerimWatch.AssignPointToTryApproach", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -188,7 +188,7 @@ public partial class RAEC_Attack_GuardPerimWatch : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_GuardPerimWatch.Tick", true);
         byte* paramsPtr = stackalloc byte[28];

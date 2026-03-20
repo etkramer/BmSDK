@@ -66,7 +66,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObject : BmSDK.BmGame.RBMCo
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObject.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -78,7 +78,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObject : BmSDK.BmGame.RBMCo
     /// <summary>
     /// Function: UpdateVillainInSamePylon
     /// </summary>
-    public unsafe void UpdateVillainInSamePylon()
+    public unsafe virtual void UpdateVillainInSamePylon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObject.UpdateVillainInSamePylon", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -89,7 +89,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObject : BmSDK.BmGame.RBMCo
     /// <summary>
     /// Function: GetVillainInRange
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnVillain GetVillainInRange()
+    public unsafe virtual BmSDK.BmGame.RPawnVillain GetVillainInRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObject.GetVillainInRange", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -100,7 +100,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObject : BmSDK.BmGame.RBMCo
     /// <summary>
     /// Function: UpdateHighlight
     /// </summary>
-    public unsafe void UpdateHighlight()
+    public unsafe override void UpdateHighlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObject.UpdateHighlight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -111,7 +111,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObject : BmSDK.BmGame.RBMCo
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObject.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -123,7 +123,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObject : BmSDK.BmGame.RBMCo
     /// <summary>
     /// Function: FadedStateChanged
     /// </summary>
-    public unsafe void FadedStateChanged()
+    public unsafe virtual void FadedStateChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObject.FadedStateChanged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -134,7 +134,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObject : BmSDK.BmGame.RBMCo
     /// <summary>
     /// Function: DoRangeCheck
     /// </summary>
-    public unsafe void DoRangeCheck()
+    public unsafe override void DoRangeCheck()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObject.DoRangeCheck", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -145,7 +145,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObject : BmSDK.BmGame.RBMCo
     /// <summary>
     /// Function: UsedByPawn
     /// </summary>
-    public unsafe void UsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.Engine.Actor NewTarget = default, bool bUsedDuringTaunt = default)
+    public unsafe override void UsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.Engine.Actor NewTarget = default, bool bUsedDuringTaunt = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObject.UsedByPawn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -159,7 +159,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObject : BmSDK.BmGame.RBMCo
     /// <summary>
     /// Function: SetCurrentVillainHighlight
     /// </summary>
-    public unsafe void SetCurrentVillainHighlight(bool bOn)
+    public unsafe override void SetCurrentVillainHighlight(bool bOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObject.SetCurrentVillainHighlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -171,7 +171,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObject : BmSDK.BmGame.RBMCo
     /// <summary>
     /// Function: CanBeUsedByPlayer
     /// </summary>
-    public unsafe bool CanBeUsedByPlayer()
+    public unsafe override bool CanBeUsedByPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObject.CanBeUsedByPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -182,7 +182,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObject : BmSDK.BmGame.RBMCo
     /// <summary>
     /// Function: CanBeUsedByPawn
     /// </summary>
-    public unsafe bool CanBeUsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.Engine.Actor TargetActor, bool bTaunting)
+    public unsafe override bool CanBeUsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.Engine.Actor TargetActor, bool bTaunting)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObject.CanBeUsedByPawn", true);
         byte* paramsPtr = stackalloc byte[24];

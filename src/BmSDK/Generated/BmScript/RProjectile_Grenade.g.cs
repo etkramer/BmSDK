@@ -71,7 +71,7 @@ public partial class RProjectile_Grenade : BmSDK.BmGame.RProjectile_GrenadeBase,
     /// <summary>
     /// Function: GetBounceLandLoc
     /// </summary>
-    public unsafe bool GetBounceLandLoc(out System.Numerics.Vector3 Result, System.Numerics.Vector3 StartPos, System.Numerics.Vector3 BounceVel)
+    public unsafe virtual bool GetBounceLandLoc(out System.Numerics.Vector3 Result, System.Numerics.Vector3 StartPos, System.Numerics.Vector3 BounceVel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RProjectile_Grenade.GetBounceLandLoc", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -85,7 +85,7 @@ public partial class RProjectile_Grenade : BmSDK.BmGame.RProjectile_GrenadeBase,
     /// <summary>
     /// Function: DamagePlayersInRange
     /// </summary>
-    public unsafe bool DamagePlayersInRange()
+    public unsafe virtual bool DamagePlayersInRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RProjectile_Grenade.DamagePlayersInRange", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -96,7 +96,7 @@ public partial class RProjectile_Grenade : BmSDK.BmGame.RProjectile_GrenadeBase,
     /// <summary>
     /// Function: DoBlast
     /// </summary>
-    public unsafe void DoBlast()
+    public unsafe virtual void DoBlast()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RProjectile_Grenade.DoBlast", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -107,7 +107,7 @@ public partial class RProjectile_Grenade : BmSDK.BmGame.RProjectile_GrenadeBase,
     /// <summary>
     /// Function: HitWall
     /// </summary>
-    public unsafe void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
+    public unsafe override void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RProjectile_Grenade.HitWall", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -121,7 +121,7 @@ public partial class RProjectile_Grenade : BmSDK.BmGame.RProjectile_GrenadeBase,
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RProjectile_Grenade.Tick", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -133,7 +133,7 @@ public partial class RProjectile_Grenade : BmSDK.BmGame.RProjectile_GrenadeBase,
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RProjectile_Grenade.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];

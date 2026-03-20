@@ -47,7 +47,7 @@ public partial class RBMPawnSpawnerController : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: SetMaintainCurrent
     /// </summary>
-    public unsafe void SetMaintainCurrent(bool bNewValue)
+    public unsafe virtual void SetMaintainCurrent(bool bNewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPawnSpawnerController.SetMaintainCurrent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RBMPawnSpawnerController : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: Deactivated
     /// </summary>
-    public unsafe void Deactivated()
+    public unsafe override void Deactivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPawnSpawnerController.Deactivated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RBMPawnSpawnerController : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPawnSpawnerController.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RBMPawnSpawnerController : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: GetPawnSpawner
     /// </summary>
-    public unsafe BmSDK.BmGame.RBmPawnSpawner GetPawnSpawner(int Index)
+    public unsafe virtual BmSDK.BmGame.RBmPawnSpawner GetPawnSpawner(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPawnSpawnerController.GetPawnSpawner", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -100,7 +100,7 @@ public partial class RBMPawnSpawnerController : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: GetNumberActive
     /// </summary>
-    public unsafe int GetNumberActive(int Index)
+    public unsafe virtual int GetNumberActive(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPawnSpawnerController.GetNumberActive", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -119,7 +119,7 @@ public partial class RBMPawnSpawnerController : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: ActiveNumberAltered
     /// </summary>
-    public unsafe void ActiveNumberAltered(int Index, int NewNumber)
+    public unsafe virtual void ActiveNumberAltered(int Index, int NewNumber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPawnSpawnerController.ActiveNumberAltered", true);
         byte* paramsPtr = stackalloc byte[8];

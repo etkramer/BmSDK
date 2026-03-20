@@ -71,7 +71,7 @@ public partial class NxGenericForceFieldBrush : BmSDK.Engine.Volume, BmSDK.IGame
     /// <summary>
     /// Function: StopsProjectile
     /// </summary>
-    public unsafe bool StopsProjectile(BmSDK.Engine.Projectile P, BmSDK.Engine.PrimitiveComponent HitComponent = default)
+    public unsafe override bool StopsProjectile(BmSDK.Engine.Projectile P, BmSDK.Engine.PrimitiveComponent HitComponent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NxGenericForceFieldBrush.StopsProjectile", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -84,7 +84,7 @@ public partial class NxGenericForceFieldBrush : BmSDK.Engine.Volume, BmSDK.IGame
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NxGenericForceFieldBrush.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

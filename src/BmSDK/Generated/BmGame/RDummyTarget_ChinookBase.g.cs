@@ -66,7 +66,7 @@ public partial class RDummyTarget_ChinookBase : BmSDK.BmGame.RDummyTarget, BmSDK
     /// <summary>
     /// Function: GetChinookMesh
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMesh GetChinookMesh()
+    public unsafe virtual BmSDK.Engine.SkeletalMesh GetChinookMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDummyTarget_ChinookBase.GetChinookMesh", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -77,7 +77,7 @@ public partial class RDummyTarget_ChinookBase : BmSDK.BmGame.RDummyTarget, BmSDK
     /// <summary>
     /// Function: SetChinookMeshVisibility
     /// </summary>
-    public unsafe void SetChinookMeshVisibility(bool bVisible)
+    public unsafe virtual void SetChinookMeshVisibility(bool bVisible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDummyTarget_ChinookBase.SetChinookMeshVisibility", true);
         byte* paramsPtr = stackalloc byte[4];

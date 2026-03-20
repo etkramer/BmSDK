@@ -36,7 +36,7 @@ public partial class OnlineAuthInterfaceSteamworks : BmSDK.IpDrv.OnlineAuthInter
     /// <summary>
     /// Function: GetServerAddr
     /// </summary>
-    public unsafe bool GetServerAddr(out int OutServerIP, out int OutServerPort)
+    public unsafe override bool GetServerAddr(out int OutServerIP, out int OutServerPort)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.GetServerAddr", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -56,7 +56,7 @@ public partial class OnlineAuthInterfaceSteamworks : BmSDK.IpDrv.OnlineAuthInter
     /// <summary>
     /// Function: GetServerUniqueId
     /// </summary>
-    public unsafe bool GetServerUniqueId(out BmSDK.Engine.OnlineSubsystem.FUniqueNetId OutServerUID)
+    public unsafe override bool GetServerUniqueId(out BmSDK.Engine.OnlineSubsystem.FUniqueNetId OutServerUID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.GetServerUniqueId", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -75,7 +75,7 @@ public partial class OnlineAuthInterfaceSteamworks : BmSDK.IpDrv.OnlineAuthInter
     /// <summary>
     /// Function: VerifyServerAuthSession
     /// </summary>
-    public unsafe bool VerifyServerAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID, int ServerIP, int AuthTicketUID)
+    public unsafe override bool VerifyServerAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID, int ServerIP, int AuthTicketUID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.VerifyServerAuthSession", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -96,7 +96,7 @@ public partial class OnlineAuthInterfaceSteamworks : BmSDK.IpDrv.OnlineAuthInter
     /// <summary>
     /// Function: CreateServerAuthSession
     /// </summary>
-    public unsafe bool CreateServerAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID, int ClientIP, int ClientPort, out int OutAuthTicketUID)
+    public unsafe override bool CreateServerAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID, int ClientIP, int ClientPort, out int OutAuthTicketUID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.CreateServerAuthSession", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -118,7 +118,7 @@ public partial class OnlineAuthInterfaceSteamworks : BmSDK.IpDrv.OnlineAuthInter
     /// <summary>
     /// Function: VerifyClientAuthSession
     /// </summary>
-    public unsafe bool VerifyClientAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID, int ClientIP, int ClientPort, int AuthTicketUID)
+    public unsafe override bool VerifyClientAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID, int ClientIP, int ClientPort, int AuthTicketUID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.VerifyClientAuthSession", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -140,7 +140,7 @@ public partial class OnlineAuthInterfaceSteamworks : BmSDK.IpDrv.OnlineAuthInter
     /// <summary>
     /// Function: CreateClientAuthSession
     /// </summary>
-    public unsafe bool CreateClientAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID, int ServerIP, int ServerPort, bool bSecure, out int OutAuthTicketUID)
+    public unsafe override bool CreateClientAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID, int ServerIP, int ServerPort, bool bSecure, out int OutAuthTicketUID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.CreateClientAuthSession", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -163,7 +163,7 @@ public partial class OnlineAuthInterfaceSteamworks : BmSDK.IpDrv.OnlineAuthInter
     /// <summary>
     /// Function: SendServerAuthRequest
     /// </summary>
-    public unsafe bool SendServerAuthRequest(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID)
+    public unsafe override bool SendServerAuthRequest(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.SendServerAuthRequest", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -182,7 +182,7 @@ public partial class OnlineAuthInterfaceSteamworks : BmSDK.IpDrv.OnlineAuthInter
     /// <summary>
     /// Function: SendClientAuthRequest
     /// </summary>
-    public unsafe bool SendClientAuthRequest(BmSDK.Engine.Player ClientConnection, BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID)
+    public unsafe override bool SendClientAuthRequest(BmSDK.Engine.Player ClientConnection, BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.SendClientAuthRequest", true);
         byte* paramsPtr = stackalloc byte[20];

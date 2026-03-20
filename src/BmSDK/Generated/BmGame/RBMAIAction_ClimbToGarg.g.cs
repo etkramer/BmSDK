@@ -71,7 +71,7 @@ public partial class RBMAIAction_ClimbToGarg : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ClimbToGarg.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_ClimbToGarg : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ClimbToGarg.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_ClimbToGarg : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// Function: PlayClimbAnim
     /// </summary>
-    public unsafe void PlayClimbAnim()
+    public unsafe virtual void PlayClimbAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ClimbToGarg.PlayClimbAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_ClimbToGarg : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// Function: SetClimbAnimTransitionName
     /// </summary>
-    public unsafe void SetClimbAnimTransitionName()
+    public unsafe virtual void SetClimbAnimTransitionName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ClimbToGarg.SetClimbAnimTransitionName", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -116,7 +116,7 @@ public partial class RBMAIAction_ClimbToGarg : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ClimbToGarg.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RBMAIAction_ClimbToGarg : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// Function: SetVantage
     /// </summary>
-    public unsafe void SetVantage(BmSDK.BmGame.RHidePoint_Mesh NewDestVPoint)
+    public unsafe virtual void SetVantage(BmSDK.BmGame.RHidePoint_Mesh NewDestVPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ClimbToGarg.SetVantage", true);
         byte* paramsPtr = stackalloc byte[8];

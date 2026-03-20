@@ -71,7 +71,7 @@ public partial class RStealthTakedownStage_ChainTakedown_DropToGrab : BmSDK.BmGa
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ChainTakedown_DropToGrab.Tick", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -83,7 +83,7 @@ public partial class RStealthTakedownStage_ChainTakedown_DropToGrab : BmSDK.BmGa
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ChainTakedown_DropToGrab.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -96,7 +96,7 @@ public partial class RStealthTakedownStage_ChainTakedown_DropToGrab : BmSDK.BmGa
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ChainTakedown_DropToGrab.Begin", true);
         byte* paramsPtr = stackalloc byte[0];

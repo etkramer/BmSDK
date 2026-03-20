@@ -66,7 +66,7 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// Function: WalkGestAim_Resume
     /// </summary>
-    public unsafe void WalkGestAim_Resume()
+    public unsafe virtual void WalkGestAim_Resume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousSearchMove.WalkGestAim_Resume", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// Function: WalkGestAim_Cancel
     /// </summary>
-    public unsafe void WalkGestAim_Cancel()
+    public unsafe virtual void WalkGestAim_Cancel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousSearchMove.WalkGestAim_Cancel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -88,7 +88,7 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// Function: IsOnLeft
     /// </summary>
-    public unsafe bool IsOnLeft(System.Numerics.Vector3 TestLoc)
+    public unsafe virtual bool IsOnLeft(System.Numerics.Vector3 TestLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousSearchMove.IsOnLeft", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -100,7 +100,7 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// Function: PlayBuddyPassingAnim
     /// </summary>
-    public unsafe void PlayBuddyPassingAnim(BmSDK.BmGame.RAEC_Search_Sub_FormationLeader OtherGroupLeadAEC)
+    public unsafe virtual void PlayBuddyPassingAnim(BmSDK.BmGame.RAEC_Search_Sub_FormationLeader OtherGroupLeadAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousSearchMove.PlayBuddyPassingAnim", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -112,7 +112,7 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// Function: CanDoPassingGesture
     /// </summary>
-    public unsafe bool CanDoPassingGesture()
+    public unsafe virtual bool CanDoPassingGesture()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousSearchMove.CanDoPassingGesture", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -123,7 +123,7 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// Function: DoMineSafeReactionIfValid
     /// </summary>
-    public unsafe void DoMineSafeReactionIfValid()
+    public unsafe virtual void DoMineSafeReactionIfValid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousSearchMove.DoMineSafeReactionIfValid", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -134,7 +134,7 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// Function: UpdateStance
     /// </summary>
-    public unsafe void UpdateStance()
+    public unsafe virtual void UpdateStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousSearchMove.UpdateStance", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -145,7 +145,7 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// Function: SetWalkSlow
     /// </summary>
-    public unsafe void SetWalkSlow(bool bNewWalkSlow)
+    public unsafe virtual void SetWalkSlow(bool bNewWalkSlow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousSearchMove.SetWalkSlow", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -157,7 +157,7 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousSearchMove.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -168,7 +168,7 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousSearchMove.ActionTick", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -180,7 +180,7 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// Function: ChecksElevation
     /// </summary>
-    public unsafe bool ChecksElevation()
+    public unsafe override bool ChecksElevation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousSearchMove.ChecksElevation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -191,7 +191,7 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// Function: SetHasBackwardsFollower
     /// </summary>
-    public unsafe void SetHasBackwardsFollower(bool bNewVal)
+    public unsafe virtual void SetHasBackwardsFollower(bool bNewVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousSearchMove.SetHasBackwardsFollower", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -203,7 +203,7 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousSearchMove.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -214,7 +214,7 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousSearchMove.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

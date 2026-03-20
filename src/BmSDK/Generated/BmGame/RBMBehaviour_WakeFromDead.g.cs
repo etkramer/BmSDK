@@ -36,7 +36,7 @@ public partial class RBMBehaviour_WakeFromDead : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_WakeFromDead.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_WakeFromDead : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_WakeFromDead.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_WakeFromDead : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: AwareOfPlayer
     /// </summary>
-    public unsafe bool AwareOfPlayer(BmSDK.Engine.Actor Player, BmSDK.Class dmgType = default)
+    public unsafe override bool AwareOfPlayer(BmSDK.Engine.Actor Player, BmSDK.Class dmgType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_WakeFromDead.AwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -71,7 +71,7 @@ public partial class RBMBehaviour_WakeFromDead : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: SetGetupStances
     /// </summary>
-    public unsafe void SetGetupStances()
+    public unsafe virtual void SetGetupStances()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_WakeFromDead.SetGetupStances", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RBMBehaviour_WakeFromDead : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_WakeFromDead.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

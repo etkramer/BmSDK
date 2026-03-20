@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: IsTooFarToStartAnim
     /// </summary>
-    public unsafe bool IsTooFarToStartAnim(BmSDK.BmGame.RPawnPlayerCombat TestPlayerPawn, BmSDK.FName TestAnimName, BmSDK.Engine.AnimSet TestPlayerAnimSet)
+    public unsafe virtual bool IsTooFarToStartAnim(BmSDK.BmGame.RPawnPlayerCombat TestPlayerPawn, BmSDK.FName TestAnimName, BmSDK.Engine.AnimSet TestPlayerAnimSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.IsTooFarToStartAnim", true);
         byte* paramsPtr = stackalloc byte[136];
@@ -96,7 +96,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: TakedownStart
     /// </summary>
-    public unsafe void TakedownStart(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedAnimID, float TimeLeftOver)
+    public unsafe virtual void TakedownStart(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedAnimID, float TimeLeftOver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.TakedownStart", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -109,7 +109,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: StartTakedown
     /// </summary>
-    public unsafe void StartTakedown()
+    public unsafe virtual void StartTakedown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.StartTakedown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -120,7 +120,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: QueueTakedown
     /// </summary>
-    public unsafe void QueueTakedown(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedAnimID, float TimeLeftOver)
+    public unsafe virtual void QueueTakedown(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedAnimID, float TimeLeftOver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.QueueTakedown", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -133,7 +133,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: IsEnoughSpaceForAnim
     /// </summary>
-    public unsafe bool IsEnoughSpaceForAnim(BmSDK.FName TestAnimName, BmSDK.BmGame.RPawnPlayerCombat InitiatorPawn, BmSDK.BmGame.RPawnPlayerCombat BuddyPawn, BmSDK.BmGame.RPawnVillain TargetPawn, BmSDK.Engine.AnimSet IAnimSet, BmSDK.Engine.AnimSet BAnimset, BmSDK.Engine.AnimSet CamAnimset, System.Numerics.Vector3 refLoc, BmSDK.Rotator RefRot, BmSDK.BmGame.RPlayerControllerCombat PC)
+    public unsafe virtual bool IsEnoughSpaceForAnim(BmSDK.FName TestAnimName, BmSDK.BmGame.RPawnPlayerCombat InitiatorPawn, BmSDK.BmGame.RPawnPlayerCombat BuddyPawn, BmSDK.BmGame.RPawnVillain TargetPawn, BmSDK.Engine.AnimSet IAnimSet, BmSDK.Engine.AnimSet BAnimset, BmSDK.Engine.AnimSet CamAnimset, System.Numerics.Vector3 refLoc, BmSDK.Rotator RefRot, BmSDK.BmGame.RPlayerControllerCombat PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.IsEnoughSpaceForAnim", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -154,7 +154,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: SetupAnim
     /// </summary>
-    public unsafe void SetupAnim()
+    public unsafe virtual void SetupAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.SetupAnim", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -165,7 +165,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: ShouldMoveThug
     /// </summary>
-    public unsafe bool ShouldMoveThug()
+    public unsafe virtual bool ShouldMoveThug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.ShouldMoveThug", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -176,7 +176,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat ExitPawn)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat ExitPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -188,7 +188,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: MoveOverridenForPawn
     /// </summary>
-    public unsafe void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
+    public unsafe override void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.MoveOverridenForPawn", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -201,7 +201,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: CanBeTargettedByPlayer
     /// </summary>
-    public unsafe bool CanBeTargettedByPlayer(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType, BmSDK.BmGame.RPawnPlayerCombat NewPlayer)
+    public unsafe override bool CanBeTargettedByPlayer(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType, BmSDK.BmGame.RPawnPlayerCombat NewPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.CanBeTargettedByPlayer", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -215,7 +215,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: CanBeHitByThrownObject
     /// </summary>
-    public unsafe bool CanBeHitByThrownObject()
+    public unsafe override bool CanBeHitByThrownObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.CanBeHitByThrownObject", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -226,7 +226,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: CanReceiveAttackFromPawn
     /// </summary>
-    public unsafe bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
+    public unsafe override bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.CanReceiveAttackFromPawn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -239,7 +239,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: CanPerformNextComboMove
     /// </summary>
-    public unsafe bool CanPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
+    public unsafe override bool CanPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.CanPerformNextComboMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -252,7 +252,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: CanNewAttackBeStarted
     /// </summary>
-    public unsafe bool CanNewAttackBeStarted()
+    public unsafe override bool CanNewAttackBeStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.CanNewAttackBeStarted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -263,7 +263,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -274,7 +274,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: ShootThug
     /// </summary>
-    public unsafe void ShootThug()
+    public unsafe virtual void ShootThug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.ShootThug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -285,7 +285,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: TakedownThug
     /// </summary>
-    public unsafe void TakedownThug()
+    public unsafe virtual void TakedownThug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.TakedownThug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -296,7 +296,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: HitThug
     /// </summary>
-    public unsafe void HitThug()
+    public unsafe virtual void HitThug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.HitThug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -307,7 +307,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: GrabContact
     /// </summary>
-    public unsafe void GrabContact()
+    public unsafe virtual void GrabContact()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.GrabContact", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -318,7 +318,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: AllowMovementExit
     /// </summary>
-    public unsafe void AllowMovementExit()
+    public unsafe virtual void AllowMovementExit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.AllowMovementExit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -329,7 +329,7 @@ public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: AllowNextStrike
     /// </summary>
-    public unsafe void AllowNextStrike()
+    public unsafe virtual void AllowNextStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBatmobileTakedown.AllowNextStrike", true);
         byte* paramsPtr = stackalloc byte[0];

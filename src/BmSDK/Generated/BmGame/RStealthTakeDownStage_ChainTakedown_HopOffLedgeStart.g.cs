@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_ChainTakedown_HopOffLedgeStart : BmSD
     /// <summary>
     /// Function: GotoStage
     /// </summary>
-    public unsafe void GotoStage(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages NextStageClass)
+    public unsafe override void GotoStage(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages NextStageClass)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ChainTakedown_HopOffLedgeStart.GotoStage", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -83,7 +83,7 @@ public partial class RStealthTakeDownStage_ChainTakedown_HopOffLedgeStart : BmSD
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ChainTakedown_HopOffLedgeStart.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RStealthTakeDownStage_ChainTakedown_HopOffLedgeStart : BmSD
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ChainTakedown_HopOffLedgeStart.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -108,7 +108,7 @@ public partial class RStealthTakeDownStage_ChainTakedown_HopOffLedgeStart : BmSD
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ChainTakedown_HopOffLedgeStart.Begin", true);
         byte* paramsPtr = stackalloc byte[16];

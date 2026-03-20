@@ -71,7 +71,7 @@ public partial class RLevelTransitionShutterDoors : BmSDK.BmScript.RLevelTransit
     /// <summary>
     /// Function: IsButtonPrompt
     /// </summary>
-    public unsafe bool IsButtonPrompt()
+    public unsafe override bool IsButtonPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionShutterDoors.IsButtonPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RLevelTransitionShutterDoors : BmSDK.BmScript.RLevelTransit
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionShutterDoors.IsActive", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -94,7 +94,7 @@ public partial class RLevelTransitionShutterDoors : BmSDK.BmScript.RLevelTransit
     /// <summary>
     /// Function: GetInteractButton
     /// </summary>
-    public unsafe BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton GetInteractButton(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton GetInteractButton(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionShutterDoors.GetInteractButton", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -106,7 +106,7 @@ public partial class RLevelTransitionShutterDoors : BmSDK.BmScript.RLevelTransit
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe override BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionShutterDoors.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -118,7 +118,7 @@ public partial class RLevelTransitionShutterDoors : BmSDK.BmScript.RLevelTransit
     /// <summary>
     /// Function: ShouldShowCallBatmobilePrompt
     /// </summary>
-    public unsafe bool ShouldShowCallBatmobilePrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe virtual bool ShouldShowCallBatmobilePrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionShutterDoors.ShouldShowCallBatmobilePrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -130,7 +130,7 @@ public partial class RLevelTransitionShutterDoors : BmSDK.BmScript.RLevelTransit
     /// <summary>
     /// Function: DoorsClosed
     /// </summary>
-    public unsafe void DoorsClosed()
+    public unsafe override void DoorsClosed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionShutterDoors.DoorsClosed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RLevelTransitionShutterDoors : BmSDK.BmScript.RLevelTransit
     /// <summary>
     /// Function: DoorClosing
     /// </summary>
-    public unsafe void DoorClosing()
+    public unsafe override void DoorClosing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionShutterDoors.DoorClosing", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -152,7 +152,7 @@ public partial class RLevelTransitionShutterDoors : BmSDK.BmScript.RLevelTransit
     /// <summary>
     /// Function: DoorOpen
     /// </summary>
-    public unsafe void DoorOpen()
+    public unsafe override void DoorOpen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionShutterDoors.DoorOpen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -163,7 +163,7 @@ public partial class RLevelTransitionShutterDoors : BmSDK.BmScript.RLevelTransit
     /// <summary>
     /// Function: DoorOpening
     /// </summary>
-    public unsafe void DoorOpening()
+    public unsafe override void DoorOpening()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionShutterDoors.DoorOpening", true);
         byte* paramsPtr = stackalloc byte[0];

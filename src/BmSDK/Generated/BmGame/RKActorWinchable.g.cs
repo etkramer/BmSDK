@@ -71,7 +71,7 @@ public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGa
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorWinchable.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGa
     /// <summary>
     /// Function: OnStopDrag
     /// </summary>
-    public unsafe void OnStopDrag()
+    public unsafe virtual void OnStopDrag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorWinchable.OnStopDrag", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGa
     /// <summary>
     /// Function: OnStartDrag
     /// </summary>
-    public unsafe void OnStartDrag()
+    public unsafe virtual void OnStartDrag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorWinchable.OnStartDrag", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGa
     /// <summary>
     /// Function: IncreaseFixedInPlaceDamage
     /// </summary>
-    public unsafe bool IncreaseFixedInPlaceDamage(float Amount)
+    public unsafe virtual bool IncreaseFixedInPlaceDamage(float Amount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorWinchable.IncreaseFixedInPlaceDamage", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGa
     /// <summary>
     /// Function: IsFixedInPlace
     /// </summary>
-    public unsafe bool IsFixedInPlace()
+    public unsafe virtual bool IsFixedInPlace()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorWinchable.IsFixedInPlace", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGa
     /// <summary>
     /// Function: SetThroughWallViewMeshVisible
     /// </summary>
-    public unsafe void SetThroughWallViewMeshVisible(bool bVisible)
+    public unsafe virtual void SetThroughWallViewMeshVisible(bool bVisible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorWinchable.SetThroughWallViewMeshVisible", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -140,7 +140,7 @@ public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGa
     /// <summary>
     /// Function: GetWinchExtraTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWinchExtraTargetLocation(int Index)
+    public unsafe virtual System.Numerics.Vector3 GetWinchExtraTargetLocation(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorWinchable.GetWinchExtraTargetLocation", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -152,7 +152,7 @@ public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGa
     /// <summary>
     /// Function: GetWinchNumExtraTargetLocations
     /// </summary>
-    public unsafe int GetWinchNumExtraTargetLocations()
+    public unsafe virtual int GetWinchNumExtraTargetLocations()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorWinchable.GetWinchNumExtraTargetLocations", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -163,7 +163,7 @@ public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGa
     /// <summary>
     /// Function: GetWinchTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWinchTargetLocation()
+    public unsafe virtual System.Numerics.Vector3 GetWinchTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorWinchable.GetWinchTargetLocation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -174,7 +174,7 @@ public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGa
     /// <summary>
     /// Function: IsBatmobileInAngleLimits
     /// </summary>
-    public unsafe bool IsBatmobileInAngleLimits(BmSDK.Engine.Actor Batmobile, BmSDK.BmGame.RBatmobileWinch Winch, out System.Numerics.Vector3 LimitVec)
+    public unsafe virtual bool IsBatmobileInAngleLimits(BmSDK.Engine.Actor Batmobile, BmSDK.BmGame.RBatmobileWinch Winch, out System.Numerics.Vector3 LimitVec)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorWinchable.IsBatmobileInAngleLimits", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -188,7 +188,7 @@ public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGa
     /// <summary>
     /// Function: WinchReleased
     /// </summary>
-    public unsafe void WinchReleased(BmSDK.BmGame.RBatmobileWinch Winch)
+    public unsafe virtual void WinchReleased(BmSDK.BmGame.RBatmobileWinch Winch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorWinchable.WinchReleased", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -200,7 +200,7 @@ public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGa
     /// <summary>
     /// Function: WinchAttached
     /// </summary>
-    public unsafe void WinchAttached(BmSDK.BmGame.RBatmobileWinch Winch)
+    public unsafe virtual void WinchAttached(BmSDK.BmGame.RBatmobileWinch Winch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorWinchable.WinchAttached", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -212,7 +212,7 @@ public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGa
     /// <summary>
     /// Function: OnSleepRBPhysics
     /// </summary>
-    public unsafe void OnSleepRBPhysics()
+    public unsafe override void OnSleepRBPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorWinchable.OnSleepRBPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -223,7 +223,7 @@ public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGa
     /// <summary>
     /// Function: OnWakeRBPhysics
     /// </summary>
-    public unsafe void OnWakeRBPhysics()
+    public unsafe override void OnWakeRBPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorWinchable.OnWakeRBPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -234,7 +234,7 @@ public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGa
     /// <summary>
     /// Function: SetRigidBodyFixed
     /// </summary>
-    public unsafe void SetRigidBodyFixed(bool Fixed, float Delay = default)
+    public unsafe virtual void SetRigidBodyFixed(bool Fixed, float Delay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorWinchable.SetRigidBodyFixed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -247,7 +247,7 @@ public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGa
     /// <summary>
     /// Function: SetRigidBodyFixedDelayed
     /// </summary>
-    public unsafe void SetRigidBodyFixedDelayed()
+    public unsafe virtual void SetRigidBodyFixedDelayed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorWinchable.SetRigidBodyFixedDelayed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -258,7 +258,7 @@ public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGa
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorWinchable.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -270,7 +270,7 @@ public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGa
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorWinchable.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -281,7 +281,7 @@ public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGa
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorWinchable.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -292,7 +292,7 @@ public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGa
     /// <summary>
     /// Function: IsSideStory
     /// </summary>
-    public unsafe bool IsSideStory()
+    public unsafe virtual bool IsSideStory()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorWinchable.IsSideStory", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RRocketMineTargetBase : BmSDK.Engine.KAsset, BmSDK.IGameObj
     /// <summary>
     /// Function: Bump
     /// </summary>
-    public unsafe void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRocketMineTargetBase.Bump", true);
         byte* paramsPtr = stackalloc byte[276];
@@ -85,7 +85,7 @@ public partial class RRocketMineTargetBase : BmSDK.Engine.KAsset, BmSDK.IGameObj
     /// <summary>
     /// Function: RigidBodyCollision
     /// </summary>
-    public unsafe void RigidBodyCollision(BmSDK.Engine.PrimitiveComponent HitComponent, BmSDK.Engine.PrimitiveComponent OtherComponent, out BmSDK.Engine.Actor.FCollisionImpactData RigidCollisionData, int ContactIndex, float Speed, int Index0, int Index1)
+    public unsafe override void RigidBodyCollision(BmSDK.Engine.PrimitiveComponent HitComponent, BmSDK.Engine.PrimitiveComponent OtherComponent, out BmSDK.Engine.Actor.FCollisionImpactData RigidCollisionData, int ContactIndex, float Speed, int Index0, int Index1)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRocketMineTargetBase.RigidBodyCollision", true);
         byte* paramsPtr = stackalloc byte[320];

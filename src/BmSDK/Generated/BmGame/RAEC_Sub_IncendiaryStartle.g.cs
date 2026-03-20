@@ -71,7 +71,7 @@ public partial class RAEC_Sub_IncendiaryStartle : BmSDK.BmGame.RAlertEventCoordi
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_IncendiaryStartle.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RAEC_Sub_IncendiaryStartle : BmSDK.BmGame.RAlertEventCoordi
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_IncendiaryStartle.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[8];

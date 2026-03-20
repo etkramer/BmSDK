@@ -36,7 +36,7 @@ public partial class RBarkConvoAction_Cond_SpeakerValid : BmSDK.BmGame.RBarkConv
     /// <summary>
     /// Function: GetOutputIndex
     /// </summary>
-    public unsafe int GetOutputIndex()
+    public unsafe override int GetOutputIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_Cond_SpeakerValid.GetOutputIndex", true);
         byte* paramsPtr = stackalloc byte[20];

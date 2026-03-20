@@ -31,7 +31,7 @@ public partial class UIDataStore : BmSDK.Engine.UIDataProvider, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetDataStoreClient
     /// </summary>
-    public unsafe BmSDK.Engine.DataStoreClient GetDataStoreClient()
+    public unsafe virtual BmSDK.Engine.DataStoreClient GetDataStoreClient()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataStore.GetDataStoreClient", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -42,7 +42,7 @@ public partial class UIDataStore : BmSDK.Engine.UIDataProvider, BmSDK.IGameObjec
     /// <summary>
     /// Function: RefreshSubscribers
     /// </summary>
-    public unsafe void RefreshSubscribers(BmSDK.FName PropertyTag = default, bool bInvalidateValues = default, BmSDK.Engine.UIDataProvider SourceProvider = default, int ArrayIndex = default)
+    public unsafe virtual void RefreshSubscribers(BmSDK.FName PropertyTag = default, bool bInvalidateValues = default, BmSDK.Engine.UIDataProvider SourceProvider = default, int ArrayIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataStore.RefreshSubscribers", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -57,7 +57,7 @@ public partial class UIDataStore : BmSDK.Engine.UIDataProvider, BmSDK.IGameObjec
     /// <summary>
     /// Function: NotifyGameSessionEnded
     /// </summary>
-    public unsafe bool NotifyGameSessionEnded()
+    public unsafe virtual bool NotifyGameSessionEnded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataStore.NotifyGameSessionEnded", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -68,7 +68,7 @@ public partial class UIDataStore : BmSDK.Engine.UIDataProvider, BmSDK.IGameObjec
     /// <summary>
     /// Function: SubscriberDetached
     /// </summary>
-    public unsafe void SubscriberDetached(BmSDK.Engine.UIDataStoreSubscriber Subscriber)
+    public unsafe virtual void SubscriberDetached(BmSDK.Engine.UIDataStoreSubscriber Subscriber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataStore.SubscriberDetached", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -80,7 +80,7 @@ public partial class UIDataStore : BmSDK.Engine.UIDataProvider, BmSDK.IGameObjec
     /// <summary>
     /// Function: SubscriberAttached
     /// </summary>
-    public unsafe void SubscriberAttached(BmSDK.Engine.UIDataStoreSubscriber Subscriber)
+    public unsafe virtual void SubscriberAttached(BmSDK.Engine.UIDataStoreSubscriber Subscriber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataStore.SubscriberAttached", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -92,7 +92,7 @@ public partial class UIDataStore : BmSDK.Engine.UIDataProvider, BmSDK.IGameObjec
     /// <summary>
     /// Function: Unregistered
     /// </summary>
-    public unsafe void Unregistered(BmSDK.Engine.LocalPlayer PlayerOwner)
+    public unsafe virtual void Unregistered(BmSDK.Engine.LocalPlayer PlayerOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataStore.Unregistered", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -104,7 +104,7 @@ public partial class UIDataStore : BmSDK.Engine.UIDataProvider, BmSDK.IGameObjec
     /// <summary>
     /// Function: Registered
     /// </summary>
-    public unsafe void Registered(BmSDK.Engine.LocalPlayer PlayerOwner)
+    public unsafe virtual void Registered(BmSDK.Engine.LocalPlayer PlayerOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataStore.Registered", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -116,7 +116,7 @@ public partial class UIDataStore : BmSDK.Engine.UIDataProvider, BmSDK.IGameObjec
     /// <summary>
     /// Function: OnDataStoreValueUpdated
     /// </summary>
-    public unsafe void OnDataStoreValueUpdated(BmSDK.Engine.UIDataStore SourceDataStore, bool bValuesInvalidated, BmSDK.FName PropertyTag, BmSDK.Engine.UIDataProvider SourceProvider, int ArrayIndex)
+    public unsafe virtual void OnDataStoreValueUpdated(BmSDK.Engine.UIDataStore SourceDataStore, bool bValuesInvalidated, BmSDK.FName PropertyTag, BmSDK.Engine.UIDataProvider SourceProvider, int ArrayIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataStore.OnDataStoreValueUpdated", true);
         byte* paramsPtr = stackalloc byte[32];

@@ -71,7 +71,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: Refresh
     /// </summary>
-    public unsafe void Refresh(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void Refresh(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.Refresh", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.UnTouch", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -95,7 +95,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.Touch", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -110,7 +110,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPerimeterBlockingActive
     /// </summary>
-    public unsafe void SetPerimeterBlockingActive(bool are_active)
+    public unsafe virtual void SetPerimeterBlockingActive(bool are_active)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.SetPerimeterBlockingActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -122,7 +122,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: SetCrimesceneEngaged
     /// </summary>
-    public unsafe void SetCrimesceneEngaged(bool IsEngaged, bool ForceShowHide = default)
+    public unsafe virtual void SetCrimesceneEngaged(bool IsEngaged, bool ForceShowHide = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.SetCrimesceneEngaged", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -135,7 +135,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: EnterCrimeScene
     /// </summary>
-    public unsafe void EnterCrimeScene(BmSDK.BmGame.RPlayerController RPC)
+    public unsafe virtual void EnterCrimeScene(BmSDK.BmGame.RPlayerController RPC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.EnterCrimeScene", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -147,7 +147,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: IsCrimeSceneUnlocked
     /// </summary>
-    public unsafe bool IsCrimeSceneUnlocked()
+    public unsafe virtual bool IsCrimeSceneUnlocked()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.IsCrimeSceneUnlocked", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -158,7 +158,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: SetActorsVisible
     /// </summary>
-    public unsafe void SetActorsVisible(bool make_visible)
+    public unsafe virtual void SetActorsVisible(bool make_visible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.SetActorsVisible", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -170,7 +170,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: RefreshCrimeSceneState
     /// </summary>
-    public unsafe void RefreshCrimeSceneState(bool forced_update)
+    public unsafe virtual void RefreshCrimeSceneState(bool forced_update)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.RefreshCrimeSceneState", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -182,7 +182,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: DeepScanHideAll
     /// </summary>
-    public unsafe void DeepScanHideAll(bool bSet)
+    public unsafe virtual void DeepScanHideAll(bool bSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.DeepScanHideAll", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -194,7 +194,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: AutoSetDeepScanActorsVisible
     /// </summary>
-    public unsafe void AutoSetDeepScanActorsVisible()
+    public unsafe virtual void AutoSetDeepScanActorsVisible()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.AutoSetDeepScanActorsVisible", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -205,7 +205,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: DeepScanResetObjectStates
     /// </summary>
-    public unsafe void DeepScanResetObjectStates()
+    public unsafe virtual void DeepScanResetObjectStates()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.DeepScanResetObjectStates", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -216,7 +216,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: DeepScanTick
     /// </summary>
-    public unsafe void DeepScanTick(float DeltaTime)
+    public unsafe virtual void DeepScanTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.DeepScanTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -228,7 +228,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: DeepScanLevelPlusMinus
     /// </summary>
-    public unsafe bool DeepScanLevelPlusMinus(BmSDK.BmGame.RPlayerController RPC, int plus_minus)
+    public unsafe virtual bool DeepScanLevelPlusMinus(BmSDK.BmGame.RPlayerController RPC, int plus_minus)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.DeepScanLevelPlusMinus", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -241,7 +241,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: SetEarlyCompletion
     /// </summary>
-    public unsafe void SetEarlyCompletion()
+    public unsafe virtual void SetEarlyCompletion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.SetEarlyCompletion", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -252,7 +252,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: AutogenerateInternalName
     /// </summary>
-    public unsafe void AutogenerateInternalName()
+    public unsafe virtual void AutogenerateInternalName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.AutogenerateInternalName", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -263,7 +263,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: GetEarlyCompletionFlag
     /// </summary>
-    public unsafe BmSDK.FString GetEarlyCompletionFlag()
+    public unsafe virtual BmSDK.FString GetEarlyCompletionFlag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.GetEarlyCompletionFlag", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -274,7 +274,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: GetConstrainVectorFromProportion
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetConstrainVectorFromProportion(float in_proportion)
+    public unsafe virtual System.Numerics.Vector3 GetConstrainVectorFromProportion(float in_proportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.GetConstrainVectorFromProportion", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -286,7 +286,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: GetConstrainProportionFromVector
     /// </summary>
-    public unsafe float GetConstrainProportionFromVector(System.Numerics.Vector3 in_vector)
+    public unsafe virtual float GetConstrainProportionFromVector(System.Numerics.Vector3 in_vector)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.GetConstrainProportionFromVector", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -298,7 +298,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: ConstrainVectorToCurve
     /// </summary>
-    public unsafe System.Numerics.Vector3 ConstrainVectorToCurve(System.Numerics.Vector3 in_vector)
+    public unsafe virtual System.Numerics.Vector3 ConstrainVectorToCurve(System.Numerics.Vector3 in_vector)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.ConstrainVectorToCurve", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -310,7 +310,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawDebugStuff
     /// </summary>
-    public unsafe void DrawDebugStuff(BmSDK.BmGame.RPlayerController RPC)
+    public unsafe virtual void DrawDebugStuff(BmSDK.BmGame.RPlayerController RPC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.DrawDebugStuff", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -322,7 +322,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: FoundMissingPersonsEvidenceForCurrentLayer
     /// </summary>
-    public unsafe void FoundMissingPersonsEvidenceForCurrentLayer(BmSDK.BmGame.RPlayerController RPC)
+    public unsafe virtual void FoundMissingPersonsEvidenceForCurrentLayer(BmSDK.BmGame.RPlayerController RPC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.FoundMissingPersonsEvidenceForCurrentLayer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -334,7 +334,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: InitMissingPersonsDataOnHud
     /// </summary>
-    public unsafe void InitMissingPersonsDataOnHud(BmSDK.BmGame.RPlayerController RPC)
+    public unsafe virtual void InitMissingPersonsDataOnHud(BmSDK.BmGame.RPlayerController RPC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.InitMissingPersonsDataOnHud", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -346,7 +346,7 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

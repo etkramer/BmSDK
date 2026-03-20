@@ -71,7 +71,7 @@ public partial class MAEC_Sub_AttractEnemiesToLocation : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_Sub_AttractEnemiesToLocation.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class MAEC_Sub_AttractEnemiesToLocation : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_Sub_AttractEnemiesToLocation.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class MAEC_Sub_AttractEnemiesToLocation : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_Sub_AttractEnemiesToLocation.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -106,7 +106,7 @@ public partial class MAEC_Sub_AttractEnemiesToLocation : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// Function: AssignTarget
     /// </summary>
-    public unsafe void AssignTarget(BmSDK.Engine.Actor NewAttractPoint, BmSDK.Engine.Actor NewAttractor, float NewAttractDuration, bool NewWasInIdleBehaviour)
+    public unsafe virtual void AssignTarget(BmSDK.Engine.Actor NewAttractPoint, BmSDK.Engine.Actor NewAttractor, float NewAttractDuration, bool NewWasInIdleBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_Sub_AttractEnemiesToLocation.AssignTarget", true);
         byte* paramsPtr = stackalloc byte[24];

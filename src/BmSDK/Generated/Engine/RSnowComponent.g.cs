@@ -36,7 +36,7 @@ public partial class RSnowComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// Function: DisableSnowSound
     /// </summary>
-    public unsafe void DisableSnowSound()
+    public unsafe virtual void DisableSnowSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RSnowComponent.DisableSnowSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class RSnowComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// Function: EnableSnowSound
     /// </summary>
-    public unsafe void EnableSnowSound()
+    public unsafe virtual void EnableSnowSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RSnowComponent.EnableSnowSound", true);
         byte* paramsPtr = stackalloc byte[0];

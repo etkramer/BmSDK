@@ -36,7 +36,7 @@ public partial class RSeqAct_PlayGfxMovie : BmSDK.GFxUI.GFxAction_OpenMovie, BmS
     /// <summary>
     /// Function: PauseGame
     /// </summary>
-    public unsafe void PauseGame(bool Pause)
+    public unsafe virtual void PauseGame(bool Pause)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayGfxMovie.PauseGame", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -48,7 +48,7 @@ public partial class RSeqAct_PlayGfxMovie : BmSDK.GFxUI.GFxAction_OpenMovie, BmS
     /// <summary>
     /// Function: MovieFinished
     /// </summary>
-    public unsafe void MovieFinished()
+    public unsafe virtual void MovieFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayGfxMovie.MovieFinished", true);
         byte* paramsPtr = stackalloc byte[0];

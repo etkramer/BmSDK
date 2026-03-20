@@ -36,7 +36,7 @@ public partial class RVehicleBehaviour_TankGuard : BmSDK.BmGame.RVehicleBehaviou
     /// <summary>
     /// Function: OnHostVehicleDied
     /// </summary>
-    public unsafe void OnHostVehicleDied(BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe override void OnHostVehicleDied(BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_TankGuard.OnHostVehicleDied", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -49,7 +49,7 @@ public partial class RVehicleBehaviour_TankGuard : BmSDK.BmGame.RVehicleBehaviou
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_TankGuard.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -61,7 +61,7 @@ public partial class RVehicleBehaviour_TankGuard : BmSDK.BmGame.RVehicleBehaviou
     /// <summary>
     /// Function: HandlesTurretAndShooting
     /// </summary>
-    public unsafe bool HandlesTurretAndShooting()
+    public unsafe override bool HandlesTurretAndShooting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_TankGuard.HandlesTurretAndShooting", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -72,7 +72,7 @@ public partial class RVehicleBehaviour_TankGuard : BmSDK.BmGame.RVehicleBehaviou
     /// <summary>
     /// Function: NotifyTakeDamage
     /// </summary>
-    public unsafe void NotifyTakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void NotifyTakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_TankGuard.NotifyTakeDamage", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -90,7 +90,7 @@ public partial class RVehicleBehaviour_TankGuard : BmSDK.BmGame.RVehicleBehaviou
     /// <summary>
     /// Function: ExitBehaviour
     /// </summary>
-    public unsafe void ExitBehaviour(BmSDK.BmGame.RVehicleBehaviour NextBehaviour)
+    public unsafe override void ExitBehaviour(BmSDK.BmGame.RVehicleBehaviour NextBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_TankGuard.ExitBehaviour", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -102,7 +102,7 @@ public partial class RVehicleBehaviour_TankGuard : BmSDK.BmGame.RVehicleBehaviou
     /// <summary>
     /// Function: EnterBehaviour
     /// </summary>
-    public unsafe void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
+    public unsafe override void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_TankGuard.EnterBehaviour", true);
         byte* paramsPtr = stackalloc byte[28];

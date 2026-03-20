@@ -71,7 +71,7 @@ public partial class RTankMissile : BmSDK.BmGame.RProjectile, BmSDK.IGameObject
     /// <summary>
     /// Function: ProcessNewTouch
     /// </summary>
-    public unsafe void ProcessNewTouch(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, BmSDK.Engine.PrimitiveComponent HitComponent)
+    public unsafe override void ProcessNewTouch(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, BmSDK.Engine.PrimitiveComponent HitComponent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTankMissile.ProcessNewTouch", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -86,7 +86,7 @@ public partial class RTankMissile : BmSDK.BmGame.RProjectile, BmSDK.IGameObject
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, bool bPlayExplosionSound = default)
+    public unsafe override void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, bool bPlayExplosionSound = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTankMissile.Explode", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -100,7 +100,7 @@ public partial class RTankMissile : BmSDK.BmGame.RProjectile, BmSDK.IGameObject
     /// <summary>
     /// Function: Invincible
     /// </summary>
-    public unsafe void Invincible()
+    public unsafe virtual void Invincible()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTankMissile.Invincible", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -111,7 +111,7 @@ public partial class RTankMissile : BmSDK.BmGame.RProjectile, BmSDK.IGameObject
     /// <summary>
     /// Function: TakeDamageFromWeapon
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.EWeaponDamageResult TakeDamageFromWeapon(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default, bool bHeadShot = default)
+    public unsafe override BmSDK.Engine.Actor.EWeaponDamageResult TakeDamageFromWeapon(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default, bool bHeadShot = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTankMissile.TakeDamageFromWeapon", true);
         byte* paramsPtr = stackalloc byte[109];
@@ -131,7 +131,7 @@ public partial class RTankMissile : BmSDK.BmGame.RProjectile, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTankMissile.Tick", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -143,7 +143,7 @@ public partial class RTankMissile : BmSDK.BmGame.RProjectile, BmSDK.IGameObject
     /// <summary>
     /// Function: StartHoming
     /// </summary>
-    public unsafe void StartHoming()
+    public unsafe virtual void StartHoming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTankMissile.StartHoming", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -154,7 +154,7 @@ public partial class RTankMissile : BmSDK.BmGame.RProjectile, BmSDK.IGameObject
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(System.Numerics.Vector3 Direction)
+    public unsafe override void Init(System.Numerics.Vector3 Direction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTankMissile.Init", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -166,7 +166,7 @@ public partial class RTankMissile : BmSDK.BmGame.RProjectile, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTankMissile.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -177,7 +177,7 @@ public partial class RTankMissile : BmSDK.BmGame.RProjectile, BmSDK.IGameObject
     /// <summary>
     /// Function: SetTarget
     /// </summary>
-    public unsafe void SetTarget(BmSDK.Engine.Actor tgt)
+    public unsafe override void SetTarget(BmSDK.Engine.Actor tgt)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTankMissile.SetTarget", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -66,7 +66,7 @@ public partial class RVehicleWalkerBase : BmSDK.BmGame.RVehicleNPC, BmSDK.IGameO
     /// <summary>
     /// Function: UpdateFallingLocation
     /// </summary>
-    public unsafe void UpdateFallingLocation()
+    public unsafe virtual void UpdateFallingLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleWalkerBase.UpdateFallingLocation", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -84,7 +84,7 @@ public partial class RVehicleWalkerBase : BmSDK.BmGame.RVehicleNPC, BmSDK.IGameO
     /// <summary>
     /// Function: TryToDodgeHeavyCannon
     /// </summary>
-    public unsafe System.Numerics.Vector3 TryToDodgeHeavyCannon(System.Numerics.Vector3 WeaponOrigin, System.Numerics.Vector3 FireDirection)
+    public unsafe virtual System.Numerics.Vector3 TryToDodgeHeavyCannon(System.Numerics.Vector3 WeaponOrigin, System.Numerics.Vector3 FireDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleWalkerBase.TryToDodgeHeavyCannon", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -104,7 +104,7 @@ public partial class RVehicleWalkerBase : BmSDK.BmGame.RVehicleNPC, BmSDK.IGameO
     /// <summary>
     /// Function: SelfDrive
     /// </summary>
-    public unsafe bool SelfDrive(float DeltaTime)
+    public unsafe override bool SelfDrive(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleWalkerBase.SelfDrive", true);
         byte* paramsPtr = stackalloc byte[8];

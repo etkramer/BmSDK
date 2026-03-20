@@ -71,7 +71,7 @@ public partial class RJokerIncidentalPoint : BmSDK.BmGame.RDummyTarget, BmSDK.IG
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerIncidentalPoint.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RJokerIncidentalPoint : BmSDK.BmGame.RDummyTarget, BmSDK.IG
     /// <summary>
     /// Function: InitMeshes
     /// </summary>
-    public unsafe void InitMeshes()
+    public unsafe virtual void InitMeshes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerIncidentalPoint.InitMeshes", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_CustomDoorMove : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CustomDoorMove.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_CustomDoorMove : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: SetStaggNormal
     /// </summary>
-    public unsafe void SetStaggNormal()
+    public unsafe virtual void SetStaggNormal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CustomDoorMove.SetStaggNormal", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RSpecialMoveInstance_CustomDoorMove : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: SetStaggScanning
     /// </summary>
-    public unsafe void SetStaggScanning()
+    public unsafe virtual void SetStaggScanning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CustomDoorMove.SetStaggScanning", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RSpecialMoveInstance_CustomDoorMove : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: SetStaggOpen
     /// </summary>
-    public unsafe void SetStaggOpen()
+    public unsafe virtual void SetStaggOpen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CustomDoorMove.SetStaggOpen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RSpecialMoveInstance_CustomDoorMove : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: DetachStaggLight
     /// </summary>
-    public unsafe void DetachStaggLight()
+    public unsafe virtual void DetachStaggLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CustomDoorMove.DetachStaggLight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RSpecialMoveInstance_CustomDoorMove : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: AttachStaggLight
     /// </summary>
-    public unsafe void AttachStaggLight()
+    public unsafe virtual void AttachStaggLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CustomDoorMove.AttachStaggLight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -137,7 +137,7 @@ public partial class RSpecialMoveInstance_CustomDoorMove : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: TeleportToOtherSide
     /// </summary>
-    public unsafe void TeleportToOtherSide()
+    public unsafe virtual void TeleportToOtherSide()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CustomDoorMove.TeleportToOtherSide", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -148,7 +148,7 @@ public partial class RSpecialMoveInstance_CustomDoorMove : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CustomDoorMove.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -160,7 +160,7 @@ public partial class RSpecialMoveInstance_CustomDoorMove : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CustomDoorMove.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[140];

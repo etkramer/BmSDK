@@ -36,7 +36,7 @@ public partial class RBMBehaviour_JokerBossRiddlerHostage : BmSDK.BmGame.RBMBeha
     /// <summary>
     /// Function: ShotByJokerGun
     /// </summary>
-    public unsafe void ShotByJokerGun()
+    public unsafe virtual void ShotByJokerGun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossRiddlerHostage.ShotByJokerGun", true);
         byte* paramsPtr = stackalloc byte[0];

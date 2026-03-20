@@ -66,7 +66,7 @@ public partial class RPredatorSpecialMovePointBase : BmSDK.Engine.Actor, BmSDK.I
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorSpecialMovePointBase.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -78,7 +78,7 @@ public partial class RPredatorSpecialMovePointBase : BmSDK.Engine.Actor, BmSDK.I
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorSpecialMovePointBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class RPredatorSpecialMovePointBase : BmSDK.Engine.Actor, BmSDK.I
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorSpecialMovePointBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -100,7 +100,7 @@ public partial class RPredatorSpecialMovePointBase : BmSDK.Engine.Actor, BmSDK.I
     /// <summary>
     /// Function: UnInitialise
     /// </summary>
-    public unsafe void UnInitialise()
+    public unsafe virtual void UnInitialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorSpecialMovePointBase.UnInitialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -111,7 +111,7 @@ public partial class RPredatorSpecialMovePointBase : BmSDK.Engine.Actor, BmSDK.I
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe virtual void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorSpecialMovePointBase.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -122,7 +122,7 @@ public partial class RPredatorSpecialMovePointBase : BmSDK.Engine.Actor, BmSDK.I
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorSpecialMovePointBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -133,7 +133,7 @@ public partial class RPredatorSpecialMovePointBase : BmSDK.Engine.Actor, BmSDK.I
     /// <summary>
     /// Function: RegisterWithNavMesh
     /// </summary>
-    public unsafe void RegisterWithNavMesh(bool bRegister)
+    public unsafe virtual void RegisterWithNavMesh(bool bRegister)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorSpecialMovePointBase.RegisterWithNavMesh", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -152,7 +152,7 @@ public partial class RPredatorSpecialMovePointBase : BmSDK.Engine.Actor, BmSDK.I
     /// <summary>
     /// Function: AddActionsToQueue
     /// </summary>
-    public unsafe void AddActionsToQueue(BmSDK.BmGame.RAEC_Search_Sub_PredatorPoint UserAEC, BmSDK.FString actionID)
+    public unsafe virtual void AddActionsToQueue(BmSDK.BmGame.RAEC_Search_Sub_PredatorPoint UserAEC, BmSDK.FString actionID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorSpecialMovePointBase.AddActionsToQueue", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -165,7 +165,7 @@ public partial class RPredatorSpecialMovePointBase : BmSDK.Engine.Actor, BmSDK.I
     /// <summary>
     /// Function: UseSpecialMovePoint
     /// </summary>
-    public unsafe bool UseSpecialMovePoint(BmSDK.BmGame.RPawnVillain User)
+    public unsafe virtual bool UseSpecialMovePoint(BmSDK.BmGame.RPawnVillain User)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorSpecialMovePointBase.UseSpecialMovePoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -177,7 +177,7 @@ public partial class RPredatorSpecialMovePointBase : BmSDK.Engine.Actor, BmSDK.I
     /// <summary>
     /// Function: UnLockPredatorPoint
     /// </summary>
-    public unsafe void UnLockPredatorPoint(BmSDK.BmGame.RPawnVillain User)
+    public unsafe virtual void UnLockPredatorPoint(BmSDK.BmGame.RPawnVillain User)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorSpecialMovePointBase.UnLockPredatorPoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -189,7 +189,7 @@ public partial class RPredatorSpecialMovePointBase : BmSDK.Engine.Actor, BmSDK.I
     /// <summary>
     /// Function: LockPredatorPoint
     /// </summary>
-    public unsafe void LockPredatorPoint(BmSDK.BmGame.RPawnVillain User)
+    public unsafe virtual void LockPredatorPoint(BmSDK.BmGame.RPawnVillain User)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorSpecialMovePointBase.LockPredatorPoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -201,7 +201,7 @@ public partial class RPredatorSpecialMovePointBase : BmSDK.Engine.Actor, BmSDK.I
     /// <summary>
     /// Function: CanBeUsedBy
     /// </summary>
-    public unsafe bool CanBeUsedBy(BmSDK.BmGame.RPawnVillain User)
+    public unsafe virtual bool CanBeUsedBy(BmSDK.BmGame.RPawnVillain User)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorSpecialMovePointBase.CanBeUsedBy", true);
         byte* paramsPtr = stackalloc byte[12];

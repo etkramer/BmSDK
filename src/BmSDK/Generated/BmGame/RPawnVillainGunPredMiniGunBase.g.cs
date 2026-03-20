@@ -71,7 +71,7 @@ public partial class RPawnVillainGunPredMiniGunBase : BmSDK.BmGame.RPawnVillainG
     /// <summary>
     /// Function: CanAerialAttack
     /// </summary>
-    public unsafe bool CanAerialAttack()
+    public unsafe override bool CanAerialAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunPredMiniGunBase.CanAerialAttack", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RPawnVillainGunPredMiniGunBase : BmSDK.BmGame.RPawnVillainG
     /// <summary>
     /// Function: GetFreezeBlastTorsoEffectScale
     /// </summary>
-    public unsafe float GetFreezeBlastTorsoEffectScale()
+    public unsafe override float GetFreezeBlastTorsoEffectScale()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunPredMiniGunBase.GetFreezeBlastTorsoEffectScale", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RPawnVillainGunPredMiniGunBase : BmSDK.BmGame.RPawnVillainG
     /// <summary>
     /// Function: PlayAttemptedTakedownDialogueLine
     /// </summary>
-    public unsafe void PlayAttemptedTakedownDialogueLine(BmSDK.BmGame.RPawnPlayer Attacker)
+    public unsafe virtual void PlayAttemptedTakedownDialogueLine(BmSDK.BmGame.RPawnPlayer Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunPredMiniGunBase.PlayAttemptedTakedownDialogueLine", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RPawnVillainGunPredMiniGunBase : BmSDK.BmGame.RPawnVillainG
     /// <summary>
     /// Function: GetFallingTakedownAttackerAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetFallingTakedownAttackerAnimset(BmSDK.BmGame.RPawnPlayer Attacker)
+    public unsafe virtual BmSDK.Engine.AnimSet GetFallingTakedownAttackerAnimset(BmSDK.BmGame.RPawnPlayer Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunPredMiniGunBase.GetFallingTakedownAttackerAnimset", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -117,7 +117,7 @@ public partial class RPawnVillainGunPredMiniGunBase : BmSDK.BmGame.RPawnVillainG
     /// <summary>
     /// Function: GetFallingTakedownAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetFallingTakedownAnimset(BmSDK.BmGame.RPawnPlayer Attacker)
+    public unsafe virtual BmSDK.Engine.AnimSet GetFallingTakedownAnimset(BmSDK.BmGame.RPawnPlayer Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunPredMiniGunBase.GetFallingTakedownAnimset", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -129,7 +129,7 @@ public partial class RPawnVillainGunPredMiniGunBase : BmSDK.BmGame.RPawnVillainG
     /// <summary>
     /// Function: ShouldUseAimingStanceDuringChase
     /// </summary>
-    public unsafe bool ShouldUseAimingStanceDuringChase()
+    public unsafe override bool ShouldUseAimingStanceDuringChase()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunPredMiniGunBase.ShouldUseAimingStanceDuringChase", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -140,7 +140,7 @@ public partial class RPawnVillainGunPredMiniGunBase : BmSDK.BmGame.RPawnVillainG
     /// <summary>
     /// Function: ModifyDamageAmount
     /// </summary>
-    public unsafe void ModifyDamageAmount(BmSDK.Class dmgType, out float DmgAmount)
+    public unsafe override void ModifyDamageAmount(BmSDK.Class dmgType, out float DmgAmount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunPredMiniGunBase.ModifyDamageAmount", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -153,7 +153,7 @@ public partial class RPawnVillainGunPredMiniGunBase : BmSDK.BmGame.RPawnVillainG
     /// <summary>
     /// Function: ShouldGoRagdoll
     /// </summary>
-    public unsafe bool ShouldGoRagdoll(BmSDK.Class dmgType, float DamageAmount)
+    public unsafe override bool ShouldGoRagdoll(BmSDK.Class dmgType, float DamageAmount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunPredMiniGunBase.ShouldGoRagdoll", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -166,7 +166,7 @@ public partial class RPawnVillainGunPredMiniGunBase : BmSDK.BmGame.RPawnVillainG
     /// <summary>
     /// Function: ProcessDamagedBy
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult ProcessDamagedBy(out BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult ProcessDamagedBy(out BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunPredMiniGunBase.ProcessDamagedBy", true);
         byte* paramsPtr = stackalloc byte[249];
@@ -178,7 +178,7 @@ public partial class RPawnVillainGunPredMiniGunBase : BmSDK.BmGame.RPawnVillainG
     /// <summary>
     /// Function: StartTargetedCustomStrike
     /// </summary>
-    public unsafe bool StartTargetedCustomStrike()
+    public unsafe override bool StartTargetedCustomStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunPredMiniGunBase.StartTargetedCustomStrike", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -189,7 +189,7 @@ public partial class RPawnVillainGunPredMiniGunBase : BmSDK.BmGame.RPawnVillainG
     /// <summary>
     /// Function: CanRedirect
     /// </summary>
-    public unsafe bool CanRedirect()
+    public unsafe override bool CanRedirect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunPredMiniGunBase.CanRedirect", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -200,7 +200,7 @@ public partial class RPawnVillainGunPredMiniGunBase : BmSDK.BmGame.RPawnVillainG
     /// <summary>
     /// Function: CanBeTargettedByPlayer
     /// </summary>
-    public unsafe bool CanBeTargettedByPlayer(BmSDK.Class DamageType, BmSDK.BmGame.RPawnPlayerCombat NewPlayer)
+    public unsafe override bool CanBeTargettedByPlayer(BmSDK.Class DamageType, BmSDK.BmGame.RPawnPlayerCombat NewPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunPredMiniGunBase.CanBeTargettedByPlayer", true);
         byte* paramsPtr = stackalloc byte[20];

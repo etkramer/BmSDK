@@ -71,7 +71,7 @@ public partial class RXrayInterpActor : BmSDK.Engine.InterpActor, BmSDK.IGameObj
     /// <summary>
     /// Function: OnToggleHidden
     /// </summary>
-    public unsafe void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
+    public unsafe override void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RXrayInterpActor.OnToggleHidden", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RXrayInterpActor : BmSDK.Engine.InterpActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetInXrayMode
     /// </summary>
-    public unsafe void SetInXrayMode(bool On, bool bForceOff)
+    public unsafe virtual void SetInXrayMode(bool On, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RXrayInterpActor.SetInXrayMode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -96,7 +96,7 @@ public partial class RXrayInterpActor : BmSDK.Engine.InterpActor, BmSDK.IGameObj
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RXrayInterpActor.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class RXrayInterpActor : BmSDK.Engine.InterpActor, BmSDK.IGameObj
     /// <summary>
     /// Function: IsMaterialUnlitOrNone
     /// </summary>
-    public unsafe bool IsMaterialUnlitOrNone(BmSDK.Engine.MaterialInterface MatInterface)
+    public unsafe virtual bool IsMaterialUnlitOrNone(BmSDK.Engine.MaterialInterface MatInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RXrayInterpActor.IsMaterialUnlitOrNone", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -119,7 +119,7 @@ public partial class RXrayInterpActor : BmSDK.Engine.InterpActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetInThermalMode
     /// </summary>
-    public unsafe void SetInThermalMode(bool On, bool bForceOff)
+    public unsafe virtual void SetInThermalMode(bool On, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RXrayInterpActor.SetInThermalMode", true);
         byte* paramsPtr = stackalloc byte[8];

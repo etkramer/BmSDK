@@ -71,7 +71,7 @@ public partial class RBMAIAction_ShutdownJammerPack : BmSDK.BmGame.RBMAIAction, 
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ShutdownJammerPack.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_ShutdownJammerPack : BmSDK.BmGame.RBMAIAction, 
     /// <summary>
     /// Function: ShutdownComplete
     /// </summary>
-    public unsafe void ShutdownComplete()
+    public unsafe virtual void ShutdownComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ShutdownJammerPack.ShutdownComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RBMAIAction_ShutdownJammerPack : BmSDK.BmGame.RBMAIAction, 
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ShutdownJammerPack.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_ShutdownJammerPack : BmSDK.BmGame.RBMAIAction, 
     /// <summary>
     /// Function: StartAnim
     /// </summary>
-    public unsafe void StartAnim()
+    public unsafe virtual void StartAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ShutdownJammerPack.StartAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RBMAIAction_ShutdownJammerPack : BmSDK.BmGame.RBMAIAction, 
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ShutdownJammerPack.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

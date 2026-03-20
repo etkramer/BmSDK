@@ -71,7 +71,7 @@ public partial class RAEC_MuseumBooth_PerPoint : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MuseumBooth_PerPoint.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_MuseumBooth_PerPoint : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: ClearPathRequests
     /// </summary>
-    public unsafe void ClearPathRequests()
+    public unsafe virtual void ClearPathRequests()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MuseumBooth_PerPoint.ClearPathRequests", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RAEC_MuseumBooth_PerPoint : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmGame.RPred_MuseumBoothReactionPointBase NewBoothPoint)
+    public unsafe virtual void Initialise(BmSDK.BmGame.RPred_MuseumBoothReactionPointBase NewBoothPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MuseumBooth_PerPoint.Initialise", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -105,7 +105,7 @@ public partial class RAEC_MuseumBooth_PerPoint : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MuseumBooth_PerPoint.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -117,7 +117,7 @@ public partial class RAEC_MuseumBooth_PerPoint : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MuseumBooth_PerPoint.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RAEC_MuseumBooth_PerPoint : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MuseumBooth_PerPoint.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];

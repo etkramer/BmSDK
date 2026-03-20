@@ -71,7 +71,7 @@ public partial class RCrowdAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAttractor.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RCrowdAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawDebug
     /// </summary>
-    public unsafe void DrawDebug()
+    public unsafe virtual void DrawDebug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAttractor.DrawDebug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RCrowdAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAndClearInfluencedAgentsCount
     /// </summary>
-    public unsafe int GetAndClearInfluencedAgentsCount()
+    public unsafe virtual int GetAndClearInfluencedAgentsCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAttractor.GetAndClearInfluencedAgentsCount", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RCrowdAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAttractor.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RCrowdAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAttractor.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RCrowdAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAttractor.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -139,7 +139,7 @@ public partial class RCrowdAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAttractionForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAttractionForce(BmSDK.BmGame.RCrowdAgent Agent, float DeltaTime)
+    public unsafe virtual System.Numerics.Vector3 GetAttractionForce(BmSDK.BmGame.RCrowdAgent Agent, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAttractor.GetAttractionForce", true);
         byte* paramsPtr = stackalloc byte[24];

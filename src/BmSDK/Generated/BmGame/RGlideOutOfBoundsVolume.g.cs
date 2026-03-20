@@ -71,7 +71,7 @@ public partial class RGlideOutOfBoundsVolume : BmSDK.Engine.BlockingVolume, BmSD
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGlideOutOfBoundsVolume.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RGlideOutOfBoundsVolume : BmSDK.Engine.BlockingVolume, BmSD
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGlideOutOfBoundsVolume.Tick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -94,7 +94,7 @@ public partial class RGlideOutOfBoundsVolume : BmSDK.Engine.BlockingVolume, BmSD
     /// <summary>
     /// Function: TriggerOOBEvent
     /// </summary>
-    public unsafe void TriggerOOBEvent(BmSDK.BmGame.RPawnPlayer Player)
+    public unsafe virtual void TriggerOOBEvent(BmSDK.BmGame.RPawnPlayer Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGlideOutOfBoundsVolume.TriggerOOBEvent", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -106,7 +106,7 @@ public partial class RGlideOutOfBoundsVolume : BmSDK.Engine.BlockingVolume, BmSD
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGlideOutOfBoundsVolume.Touch", true);
         byte* paramsPtr = stackalloc byte[208];
@@ -121,7 +121,7 @@ public partial class RGlideOutOfBoundsVolume : BmSDK.Engine.BlockingVolume, BmSD
     /// <summary>
     /// Function: Bump
     /// </summary>
-    public unsafe void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGlideOutOfBoundsVolume.Bump", true);
         byte* paramsPtr = stackalloc byte[212];

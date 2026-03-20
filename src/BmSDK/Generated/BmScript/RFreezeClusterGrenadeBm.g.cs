@@ -71,7 +71,7 @@ public partial class RFreezeClusterGrenadeBm : BmSDK.BmGame.RFreezeClusterGrenad
     /// <summary>
     /// Function: SpawnIceSphere
     /// </summary>
-    public unsafe void SpawnIceSphere(System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation)
+    public unsafe override void SpawnIceSphere(System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeClusterGrenadeBm.SpawnIceSphere", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -84,7 +84,7 @@ public partial class RFreezeClusterGrenadeBm : BmSDK.BmGame.RFreezeClusterGrenad
     /// <summary>
     /// Function: GetProjectileTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetProjectileTargetLocation()
+    public unsafe override System.Numerics.Vector3 GetProjectileTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeClusterGrenadeBm.GetProjectileTargetLocation", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -95,7 +95,7 @@ public partial class RFreezeClusterGrenadeBm : BmSDK.BmGame.RFreezeClusterGrenad
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeClusterGrenadeBm.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -108,7 +108,7 @@ public partial class RFreezeClusterGrenadeBm : BmSDK.BmGame.RFreezeClusterGrenad
     /// <summary>
     /// Function: GetPrimedPose
     /// </summary>
-    public unsafe BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
+    public unsafe override BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeClusterGrenadeBm.GetPrimedPose", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -125,7 +125,7 @@ public partial class RFreezeClusterGrenadeBm : BmSDK.BmGame.RFreezeClusterGrenad
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeClusterGrenadeBm.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -136,7 +136,7 @@ public partial class RFreezeClusterGrenadeBm : BmSDK.BmGame.RFreezeClusterGrenad
     /// <summary>
     /// Function: GetStopFreezeIceBubbleAkEvent
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetStopFreezeIceBubbleAkEvent()
+    public unsafe override BmSDK.Engine.AkEvent GetStopFreezeIceBubbleAkEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeClusterGrenadeBm.GetStopFreezeIceBubbleAkEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -147,7 +147,7 @@ public partial class RFreezeClusterGrenadeBm : BmSDK.BmGame.RFreezeClusterGrenad
     /// <summary>
     /// Function: GetPlayFreezeIceBubbleAkEvent
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetPlayFreezeIceBubbleAkEvent()
+    public unsafe override BmSDK.Engine.AkEvent GetPlayFreezeIceBubbleAkEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeClusterGrenadeBm.GetPlayFreezeIceBubbleAkEvent", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RPawnPlayerJoker : BmSDK.BmGame.RPawnPlayerJokerBase, BmSDK
     /// <summary>
     /// Function: PlayShotReaction
     /// </summary>
-    public unsafe void PlayShotReaction(System.Numerics.Vector3 HitDir)
+    public unsafe override void PlayShotReaction(System.Numerics.Vector3 HitDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerJoker.PlayShotReaction", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RPawnPlayerJoker : BmSDK.BmGame.RPawnPlayerJokerBase, BmSDK
     /// <summary>
     /// Function: ShotBy
     /// </summary>
-    public unsafe void ShotBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo, System.Numerics.Vector3 HitLocation = default)
+    public unsafe override void ShotBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo, System.Numerics.Vector3 HitLocation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerJoker.ShotBy", true);
         byte* paramsPtr = stackalloc byte[264];
@@ -96,7 +96,7 @@ public partial class RPawnPlayerJoker : BmSDK.BmGame.RPawnPlayerJokerBase, BmSDK
     /// <summary>
     /// Function: AddDefaultInventory
     /// </summary>
-    public unsafe void AddDefaultInventory()
+    public unsafe override void AddDefaultInventory()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerJoker.AddDefaultInventory", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class RPawnPlayerJoker : BmSDK.BmGame.RPawnPlayerJokerBase, BmSDK
     /// <summary>
     /// Function: BeginBatmanSurprise
     /// </summary>
-    public unsafe void BeginBatmanSurprise(BmSDK.Engine.Volume Vol)
+    public unsafe override void BeginBatmanSurprise(BmSDK.Engine.Volume Vol)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerJoker.BeginBatmanSurprise", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -119,7 +119,7 @@ public partial class RPawnPlayerJoker : BmSDK.BmGame.RPawnPlayerJokerBase, BmSDK
     /// <summary>
     /// Function: EnableGunCursor
     /// </summary>
-    public unsafe void EnableGunCursor()
+    public unsafe virtual void EnableGunCursor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerJoker.EnableGunCursor", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class RPawnPlayerJoker : BmSDK.BmGame.RPawnPlayerJokerBase, BmSDK
     /// <summary>
     /// Function: DebugGiveAllGadgets
     /// </summary>
-    public unsafe void DebugGiveAllGadgets()
+    public unsafe override void DebugGiveAllGadgets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerJoker.DebugGiveAllGadgets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RPawnPlayerJoker : BmSDK.BmGame.RPawnPlayerJokerBase, BmSDK
     /// <summary>
     /// Function: GetGunOut
     /// </summary>
-    public unsafe void GetGunOut()
+    public unsafe virtual void GetGunOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerJoker.GetGunOut", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -152,7 +152,7 @@ public partial class RPawnPlayerJoker : BmSDK.BmGame.RPawnPlayerJokerBase, BmSDK
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerJoker.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -164,7 +164,7 @@ public partial class RPawnPlayerJoker : BmSDK.BmGame.RPawnPlayerJokerBase, BmSDK
     /// <summary>
     /// Function: GetJokerSickVector
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor GetJokerSickVector()
+    public unsafe virtual BmSDK.GameObject.FLinearColor GetJokerSickVector()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerJoker.GetJokerSickVector", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -175,7 +175,7 @@ public partial class RPawnPlayerJoker : BmSDK.BmGame.RPawnPlayerJokerBase, BmSDK
     /// <summary>
     /// Function: UpdateSickMaterials
     /// </summary>
-    public unsafe void UpdateSickMaterials()
+    public unsafe virtual void UpdateSickMaterials()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerJoker.UpdateSickMaterials", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -186,7 +186,7 @@ public partial class RPawnPlayerJoker : BmSDK.BmGame.RPawnPlayerJokerBase, BmSDK
     /// <summary>
     /// Function: AllowScreenShakeOnShot
     /// </summary>
-    public unsafe bool AllowScreenShakeOnShot()
+    public unsafe override bool AllowScreenShakeOnShot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerJoker.AllowScreenShakeOnShot", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -197,7 +197,7 @@ public partial class RPawnPlayerJoker : BmSDK.BmGame.RPawnPlayerJokerBase, BmSDK
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerJoker.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

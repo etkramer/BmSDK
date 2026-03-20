@@ -71,7 +71,7 @@ public partial class RCombatAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetForceToGiveToPawn
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetForceToGiveToPawn(BmSDK.BmGame.RPawnCombat Receiver, float MaxForce)
+    public unsafe virtual System.Numerics.Vector3 GetForceToGiveToPawn(BmSDK.BmGame.RPawnCombat Receiver, float MaxForce)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatAttractor.GetForceToGiveToPawn", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -84,7 +84,7 @@ public partial class RCombatAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatAttractor.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class RCombatAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatAttractor.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RCombatAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatAttractor.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RCombatAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetCurrentPylon
     /// </summary>
-    public unsafe void SetCurrentPylon()
+    public unsafe virtual void SetCurrentPylon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatAttractor.SetCurrentPylon", true);
         byte* paramsPtr = stackalloc byte[0];

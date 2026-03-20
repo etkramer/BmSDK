@@ -66,7 +66,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetVoiceForEmote
     /// </summary>
-    public unsafe BmSDK.Engine.AkDialogueVoice GetVoiceForEmote()
+    public unsafe virtual BmSDK.Engine.AkDialogueVoice GetVoiceForEmote()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetVoiceForEmote", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -77,7 +77,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddToThoughtHistory
     /// </summary>
-    public unsafe void AddToThoughtHistory(BmSDK.FString BehaviourInfoString, BmSDK.Engine.Pawn.PawnHistoryType T = default)
+    public unsafe virtual void AddToThoughtHistory(BmSDK.FString BehaviourInfoString, BmSDK.Engine.Pawn.PawnHistoryType T = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.AddToThoughtHistory", true);
         byte* paramsPtr = stackalloc byte[17];
@@ -97,7 +97,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DestroyOrReturnToPool
     /// </summary>
-    public unsafe void DestroyOrReturnToPool(bool bForce = default, bool bStreamedOut = default)
+    public unsafe virtual void DestroyOrReturnToPool(bool bForce = default, bool bStreamedOut = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.DestroyOrReturnToPool", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnSetVelocity
     /// </summary>
-    public unsafe void OnSetVelocity(BmSDK.Engine.SeqAct_SetVelocity Action)
+    public unsafe override void OnSetVelocity(BmSDK.Engine.SeqAct_SetVelocity Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.OnSetVelocity", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetScalarParameterInterp
     /// </summary>
-    public unsafe void SetScalarParameterInterp(out BmSDK.Engine.Pawn.FScalarParameterInterpStruct ScalarParameterInterp)
+    public unsafe virtual void SetScalarParameterInterp(out BmSDK.Engine.Pawn.FScalarParameterInterpStruct ScalarParameterInterp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SetScalarParameterInterp", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -148,7 +148,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetRootMotionInterpCurrentTime
     /// </summary>
-    public unsafe void SetRootMotionInterpCurrentTime(float inTime, float DeltaTime = default, bool bUpdateSkelPose = default)
+    public unsafe virtual void SetRootMotionInterpCurrentTime(float inTime, float DeltaTime = default, bool bUpdateSkelPose = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SetRootMotionInterpCurrentTime", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -169,7 +169,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PreventedWalkingOverLedge
     /// </summary>
-    public unsafe void PreventedWalkingOverLedge()
+    public unsafe virtual void PreventedWalkingOverLedge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.PreventedWalkingOverLedge", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -180,7 +180,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetCinematicMode
     /// </summary>
-    public unsafe void SetCinematicMode(bool bInCinematicMode)
+    public unsafe virtual void SetCinematicMode(bool bInCinematicMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SetCinematicMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -192,7 +192,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ZeroMovementVariables
     /// </summary>
-    public unsafe void ZeroMovementVariables()
+    public unsafe virtual void ZeroMovementVariables()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ZeroMovementVariables", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -203,7 +203,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearPathStep
     /// </summary>
-    public unsafe void ClearPathStep()
+    public unsafe virtual void ClearPathStep()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ClearPathStep", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -221,7 +221,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawPathStep
     /// </summary>
-    public unsafe void DrawPathStep(BmSDK.Engine.Canvas C)
+    public unsafe virtual void DrawPathStep(BmSDK.Engine.Canvas C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.DrawPathStep", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -240,7 +240,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IncrementPathChild
     /// </summary>
-    public unsafe void IncrementPathChild(int Cnt, BmSDK.Engine.Canvas C)
+    public unsafe virtual void IncrementPathChild(int Cnt, BmSDK.Engine.Canvas C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.IncrementPathChild", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -260,7 +260,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IncrementPathStep
     /// </summary>
-    public unsafe void IncrementPathStep(int Cnt, BmSDK.Engine.Canvas C)
+    public unsafe virtual void IncrementPathStep(int Cnt, BmSDK.Engine.Canvas C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.IncrementPathStep", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -280,7 +280,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CreatePathGoalEvaluator
     /// </summary>
-    public unsafe BmSDK.Engine.PathGoalEvaluator CreatePathGoalEvaluator(BmSDK.Class GoalEvalClass)
+    public unsafe virtual BmSDK.Engine.PathGoalEvaluator CreatePathGoalEvaluator(BmSDK.Class GoalEvalClass)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.CreatePathGoalEvaluator", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -292,7 +292,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CreatePathConstraint
     /// </summary>
-    public unsafe BmSDK.Engine.PathConstraint CreatePathConstraint(BmSDK.Class ConstraintClass)
+    public unsafe virtual BmSDK.Engine.PathConstraint CreatePathConstraint(BmSDK.Class ConstraintClass)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.CreatePathConstraint", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -304,7 +304,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddGoalEvaluator
     /// </summary>
-    public unsafe void AddGoalEvaluator(BmSDK.Engine.PathGoalEvaluator Evaluator)
+    public unsafe virtual void AddGoalEvaluator(BmSDK.Engine.PathGoalEvaluator Evaluator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.AddGoalEvaluator", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -323,7 +323,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddPathConstraint
     /// </summary>
-    public unsafe void AddPathConstraint(BmSDK.Engine.PathConstraint Constraint)
+    public unsafe virtual void AddPathConstraint(BmSDK.Engine.PathConstraint Constraint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.AddPathConstraint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -342,7 +342,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearConstraints
     /// </summary>
-    public unsafe void ClearConstraints()
+    public unsafe virtual void ClearConstraints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ClearConstraints", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -360,7 +360,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SoakPause
     /// </summary>
-    public unsafe void SoakPause()
+    public unsafe virtual void SoakPause()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SoakPause", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -371,7 +371,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BecomeViewTarget
     /// </summary>
-    public unsafe void BecomeViewTarget(BmSDK.Engine.PlayerController PC)
+    public unsafe override void BecomeViewTarget(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.BecomeViewTarget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -383,7 +383,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: MessagePlayer
     /// </summary>
-    public unsafe void MessagePlayer(BmSDK.FString msg)
+    public unsafe virtual void MessagePlayer(BmSDK.FString msg)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.MessagePlayer", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -395,7 +395,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnTeleport
     /// </summary>
-    public unsafe void OnTeleport(BmSDK.Engine.SeqAct_Teleport Action)
+    public unsafe override void OnTeleport(BmSDK.Engine.SeqAct_Teleport Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.OnTeleport", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -407,7 +407,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EmitOnTeleport
     /// </summary>
-    public unsafe void EmitOnTeleport()
+    public unsafe virtual void EmitOnTeleport()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.EmitOnTeleport", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -418,7 +418,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnSetMaterialInstance
     /// </summary>
-    public unsafe void OnSetMaterialInstance(BmSDK.Engine.RSeqAct_SetMaterialInstance Action)
+    public unsafe virtual void OnSetMaterialInstance(BmSDK.Engine.RSeqAct_SetMaterialInstance Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.OnSetMaterialInstance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -430,7 +430,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnSetMaterial
     /// </summary>
-    public unsafe void OnSetMaterial(BmSDK.Engine.SeqAct_SetMaterial Action)
+    public unsafe virtual void OnSetMaterial(BmSDK.Engine.SeqAct_SetMaterial Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.OnSetMaterial", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -442,7 +442,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDamageScaling
     /// </summary>
-    public unsafe float GetDamageScaling()
+    public unsafe virtual float GetDamageScaling()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetDamageScaling", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -453,7 +453,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DoKismetAttachment
     /// </summary>
-    public unsafe void DoKismetAttachment(BmSDK.Engine.Actor Attachment, BmSDK.Engine.SeqAct_AttachToActor Action)
+    public unsafe override void DoKismetAttachment(BmSDK.Engine.Actor Attachment, BmSDK.Engine.SeqAct_AttachToActor Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.DoKismetAttachment", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -466,7 +466,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnedByKismet
     /// </summary>
-    public unsafe void SpawnedByKismet()
+    public unsafe override void SpawnedByKismet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SpawnedByKismet", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -477,7 +477,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsStationary
     /// </summary>
-    public unsafe bool IsStationary()
+    public unsafe override bool IsStationary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.IsStationary", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -488,7 +488,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCollisionExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCollisionExtent()
+    public unsafe virtual System.Numerics.Vector3 GetCollisionExtent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetCollisionExtent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -499,7 +499,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCollisionHeight
     /// </summary>
-    public unsafe float GetCollisionHeight()
+    public unsafe virtual float GetCollisionHeight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetCollisionHeight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -510,7 +510,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCollisionRadius
     /// </summary>
-    public unsafe float GetCollisionRadius()
+    public unsafe virtual float GetCollisionRadius()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetCollisionRadius", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -521,7 +521,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheatFly
     /// </summary>
-    public unsafe bool CheatFly()
+    public unsafe virtual bool CheatFly()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.CheatFly", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -532,7 +532,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheatGhost
     /// </summary>
-    public unsafe bool CheatGhost()
+    public unsafe virtual bool CheatGhost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.CheatGhost", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -543,7 +543,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheatWalk
     /// </summary>
-    public unsafe bool CheatWalk()
+    public unsafe virtual bool CheatWalk()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.CheatWalk", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -554,7 +554,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayWeaponSwitch
     /// </summary>
-    public unsafe void PlayWeaponSwitch(BmSDK.Engine.Weapon OldWeapon, BmSDK.Engine.Weapon NewWeapon)
+    public unsafe virtual void PlayWeaponSwitch(BmSDK.Engine.Weapon OldWeapon, BmSDK.Engine.Weapon NewWeapon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.PlayWeaponSwitch", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -567,7 +567,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetActiveWeapon
     /// </summary>
-    public unsafe void SetActiveWeapon(BmSDK.Engine.Weapon NewWeapon)
+    public unsafe virtual void SetActiveWeapon(BmSDK.Engine.Weapon NewWeapon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SetActiveWeapon", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -579,7 +579,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TossInventory
     /// </summary>
-    public unsafe void TossInventory(BmSDK.Engine.Inventory Inv, System.Numerics.Vector3 ForceVelocity = default)
+    public unsafe virtual void TossInventory(BmSDK.Engine.Inventory Inv, System.Numerics.Vector3 ForceVelocity = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.TossInventory", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -592,7 +592,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ThrowActiveWeapon
     /// </summary>
-    public unsafe void ThrowActiveWeapon(bool bDestroyWeap = default)
+    public unsafe virtual void ThrowActiveWeapon(bool bDestroyWeap = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ThrowActiveWeapon", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -604,7 +604,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.HUD H)
+    public unsafe virtual void DrawHUD(BmSDK.Engine.HUD H)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -616,7 +616,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FindInventoryType
     /// </summary>
-    public unsafe BmSDK.Engine.Inventory FindInventoryType(BmSDK.Class DesiredClass, bool bAllowSubclass = default)
+    public unsafe virtual BmSDK.Engine.Inventory FindInventoryType(BmSDK.Class DesiredClass, bool bAllowSubclass = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.FindInventoryType", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -629,7 +629,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CreateInventory
     /// </summary>
-    public unsafe BmSDK.Engine.Inventory CreateInventory(BmSDK.Class NewInvClass, bool bDoNotActivate = default, BmSDK.Engine.Actor NewArchetype = default)
+    public unsafe virtual BmSDK.Engine.Inventory CreateInventory(BmSDK.Class NewInvClass, bool bDoNotActivate = default, BmSDK.Engine.Actor NewArchetype = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.CreateInventory", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -643,7 +643,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddDefaultInventory
     /// </summary>
-    public unsafe void AddDefaultInventory()
+    public unsafe virtual void AddDefaultInventory()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.AddDefaultInventory", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -654,7 +654,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StopDriving
     /// </summary>
-    public unsafe void StopDriving(BmSDK.Engine.Vehicle V)
+    public unsafe virtual void StopDriving(BmSDK.Engine.Vehicle V)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.StopDriving", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -666,7 +666,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StartDriving
     /// </summary>
-    public unsafe void StartDriving(BmSDK.Engine.Vehicle V)
+    public unsafe virtual void StartDriving(BmSDK.Engine.Vehicle V)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.StartDriving", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -678,7 +678,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanThrowWeapon
     /// </summary>
-    public unsafe bool CanThrowWeapon()
+    public unsafe virtual bool CanThrowWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.CanThrowWeapon", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -689,7 +689,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Suicide
     /// </summary>
-    public unsafe void Suicide()
+    public unsafe virtual void Suicide()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.Suicide", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -700,7 +700,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetVehicleBase
     /// </summary>
-    public unsafe BmSDK.Engine.Vehicle GetVehicleBase()
+    public unsafe virtual BmSDK.Engine.Vehicle GetVehicleBase()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetVehicleBase", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -718,7 +718,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayLanded
     /// </summary>
-    public unsafe void PlayLanded(float ImpactVel)
+    public unsafe virtual void PlayLanded(float ImpactVel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.PlayLanded", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -730,7 +730,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CannotJumpNow
     /// </summary>
-    public unsafe bool CannotJumpNow()
+    public unsafe virtual bool CannotJumpNow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.CannotJumpNow", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -741,7 +741,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CleanUpSounds
     /// </summary>
-    public unsafe void CleanUpSounds()
+    public unsafe virtual void CleanUpSounds()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.CleanUpSounds", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -752,7 +752,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayFootStepSound
     /// </summary>
-    public unsafe void PlayFootStepSound(int FootDown)
+    public unsafe virtual void PlayFootStepSound(int FootDown)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.PlayFootStepSound", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -764,7 +764,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TornOff
     /// </summary>
-    public unsafe void TornOff()
+    public unsafe override void TornOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.TornOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -775,7 +775,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayDying
     /// </summary>
-    public unsafe void PlayDying(BmSDK.Class DamageType, System.Numerics.Vector3 HitLoc)
+    public unsafe virtual void PlayDying(BmSDK.Class DamageType, System.Numerics.Vector3 HitLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.PlayDying", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -788,7 +788,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDyingPhysics
     /// </summary>
-    public unsafe void SetDyingPhysics()
+    public unsafe virtual void SetDyingPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SetDyingPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -799,7 +799,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TurnOff
     /// </summary>
-    public unsafe void TurnOff()
+    public unsafe virtual void TurnOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.TurnOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -810,7 +810,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayHit
     /// </summary>
-    public unsafe void PlayHit(float Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, BmSDK.Class DamageType, System.Numerics.Vector3 Momentum, BmSDK.Engine.Actor.FTraceHitInfo HitInfo)
+    public unsafe virtual void PlayHit(float Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, BmSDK.Class DamageType, System.Numerics.Vector3 Momentum, BmSDK.Engine.Actor.FTraceHitInfo HitInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.PlayHit", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -827,7 +827,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayDyingSound
     /// </summary>
-    public unsafe void PlayDyingSound()
+    public unsafe virtual void PlayDyingSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.PlayDyingSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -838,7 +838,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DoJump
     /// </summary>
-    public unsafe bool DoJump(bool bUpdating)
+    public unsafe virtual bool DoJump(bool bUpdating)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.DoJump", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -850,7 +850,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckWaterJump
     /// </summary>
-    public unsafe bool CheckWaterJump(out System.Numerics.Vector3 WallNormal)
+    public unsafe virtual bool CheckWaterJump(out System.Numerics.Vector3 WallNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.CheckWaterJump", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -862,7 +862,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TakeDrowningDamage
     /// </summary>
-    public unsafe void TakeDrowningDamage()
+    public unsafe virtual void TakeDrowningDamage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.TakeDrowningDamage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -873,7 +873,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BreathTimer
     /// </summary>
-    public unsafe void BreathTimer()
+    public unsafe virtual void BreathTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.BreathTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -884,7 +884,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TouchingWaterVolume
     /// </summary>
-    public unsafe bool TouchingWaterVolume()
+    public unsafe virtual bool TouchingWaterVolume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.TouchingWaterVolume", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -895,7 +895,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HeadVolumeChange
     /// </summary>
-    public unsafe void HeadVolumeChange(BmSDK.Engine.PhysicsVolume newHeadVolume)
+    public unsafe virtual void HeadVolumeChange(BmSDK.Engine.PhysicsVolume newHeadVolume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.HeadVolumeChange", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -907,7 +907,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TickSpecial
     /// </summary>
-    public unsafe void TickSpecial(float DeltaTime)
+    public unsafe virtual void TickSpecial(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.TickSpecial", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -919,7 +919,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Landed
     /// </summary>
-    public unsafe void Landed(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor FloorActor)
+    public unsafe override void Landed(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor FloorActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.Landed", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -932,7 +932,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AnimationTriggerCallback
     /// </summary>
-    public unsafe void AnimationTriggerCallback(BmSDK.FName TagName, BmSDK.TArray<BmSDK.FString> Params, BmSDK.Engine.AnimSet TagAnimSet, float Time)
+    public unsafe override void AnimationTriggerCallback(BmSDK.FName TagName, BmSDK.TArray<BmSDK.FString> Params, BmSDK.Engine.AnimSet TagAnimSet, float Time)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.AnimationTriggerCallback", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -947,7 +947,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Falling
     /// </summary>
-    public unsafe void Falling()
+    public unsafe override void Falling()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.Falling", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -958,7 +958,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DelayTriggerDeath
     /// </summary>
-    public unsafe void DelayTriggerDeath()
+    public unsafe virtual void DelayTriggerDeath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.DelayTriggerDeath", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -969,7 +969,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Died
     /// </summary>
-    public unsafe bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe virtual bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.Died", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -983,7 +983,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ThrowWeaponOnDeath
     /// </summary>
-    public unsafe void ThrowWeaponOnDeath()
+    public unsafe virtual void ThrowWeaponOnDeath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ThrowWeaponOnDeath", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -994,7 +994,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsSameTeam
     /// </summary>
-    public unsafe bool IsSameTeam(BmSDK.Engine.Pawn Other)
+    public unsafe virtual bool IsSameTeam(BmSDK.Engine.Pawn Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.IsSameTeam", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1006,7 +1006,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTeam
     /// </summary>
-    public unsafe BmSDK.Engine.TeamInfo GetTeam()
+    public unsafe virtual BmSDK.Engine.TeamInfo GetTeam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetTeam", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1017,7 +1017,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTeamNum
     /// </summary>
-    public unsafe byte GetTeamNum()
+    public unsafe override byte GetTeamNum()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetTeamNum", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -1035,7 +1035,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[112];
@@ -1053,7 +1053,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetKillInstigator
     /// </summary>
-    public unsafe BmSDK.Engine.Controller SetKillInstigator(BmSDK.Engine.Controller InstigatedBy, BmSDK.Class DamageType)
+    public unsafe virtual BmSDK.Engine.Controller SetKillInstigator(BmSDK.Engine.Controller InstigatedBy, BmSDK.Class DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SetKillInstigator", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1066,7 +1066,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyTakeHit
     /// </summary>
-    public unsafe void NotifyTakeHit(BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, int Damage, BmSDK.Class DamageType, System.Numerics.Vector3 Momentum, BmSDK.Engine.Actor DamageCauser)
+    public unsafe virtual void NotifyTakeHit(BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, int Damage, BmSDK.Class DamageType, System.Numerics.Vector3 Momentum, BmSDK.Engine.Actor DamageCauser)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.NotifyTakeHit", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -1083,7 +1083,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TakeRadiusDamageOnBones
     /// </summary>
-    public unsafe bool TakeRadiusDamageOnBones(BmSDK.Engine.Controller InstigatedBy, float BaseDamage, float DamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, bool bFullDamage, BmSDK.Engine.Actor DamageCauser, BmSDK.TArray<BmSDK.FName> Bones)
+    public unsafe virtual bool TakeRadiusDamageOnBones(BmSDK.Engine.Controller InstigatedBy, float BaseDamage, float DamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, bool bFullDamage, BmSDK.Engine.Actor DamageCauser, BmSDK.TArray<BmSDK.FName> Bones)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.TakeRadiusDamageOnBones", true);
         byte* paramsPtr = stackalloc byte[152];
@@ -1103,7 +1103,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PruneDamagedBoneList
     /// </summary>
-    public unsafe void PruneDamagedBoneList(out BmSDK.TArray<BmSDK.FName> Bones)
+    public unsafe virtual void PruneDamagedBoneList(out BmSDK.TArray<BmSDK.FName> Bones)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.PruneDamagedBoneList", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1115,7 +1115,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HealDamage
     /// </summary>
-    public unsafe bool HealDamage(int Amount, BmSDK.Engine.Controller Healer, BmSDK.Class DamageType)
+    public unsafe override bool HealDamage(int Amount, BmSDK.Engine.Controller Healer, BmSDK.Class DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.HealDamage", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1129,7 +1129,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AdjustDamage
     /// </summary>
-    public unsafe void AdjustDamage(out int InDamage, out System.Numerics.Vector3 Momentum, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo, BmSDK.Engine.Actor DamageCauser)
+    public unsafe virtual void AdjustDamage(out int InDamage, out System.Numerics.Vector3 Momentum, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo, BmSDK.Engine.Actor DamageCauser)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.AdjustDamage", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -1147,7 +1147,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetMovementPhysics
     /// </summary>
-    public unsafe void SetMovementPhysics()
+    public unsafe virtual void SetMovementPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SetMovementPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1158,7 +1158,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Gasp
     /// </summary>
-    public unsafe void Gasp()
+    public unsafe virtual void Gasp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.Gasp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1169,7 +1169,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnGiveInventory
     /// </summary>
-    public unsafe void OnGiveInventory(BmSDK.Engine.SeqAct_GiveInventory inAction)
+    public unsafe virtual void OnGiveInventory(BmSDK.Engine.SeqAct_GiveInventory inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.OnGiveInventory", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -1181,7 +1181,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnAssignController
     /// </summary>
-    public unsafe void OnAssignController(BmSDK.Engine.SeqAct_AssignController inAction)
+    public unsafe virtual void OnAssignController(BmSDK.Engine.SeqAct_AssignController inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.OnAssignController", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1193,7 +1193,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ReceivedNewEvent
     /// </summary>
-    public unsafe void ReceivedNewEvent(BmSDK.Engine.SequenceEvent Evt)
+    public unsafe override void ReceivedNewEvent(BmSDK.Engine.SequenceEvent Evt)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ReceivedNewEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1205,7 +1205,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnDefaultController
     /// </summary>
-    public unsafe void SpawnDefaultController()
+    public unsafe virtual void SpawnDefaultController()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SpawnDefaultController", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1216,7 +1216,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1227,7 +1227,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1238,7 +1238,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1249,7 +1249,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DetachFromController
     /// </summary>
-    public unsafe void DetachFromController(bool bDestroyController = default)
+    public unsafe virtual void DetachFromController(bool bDestroyController = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.DetachFromController", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1261,7 +1261,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CrushedBy
     /// </summary>
-    public unsafe void CrushedBy(BmSDK.Engine.Pawn OtherPawn)
+    public unsafe virtual void CrushedBy(BmSDK.Engine.Pawn OtherPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.CrushedBy", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1273,7 +1273,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanBeBaseForPawn
     /// </summary>
-    public unsafe bool CanBeBaseForPawn(BmSDK.Engine.Pawn aPawn)
+    public unsafe virtual bool CanBeBaseForPawn(BmSDK.Engine.Pawn aPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.CanBeBaseForPawn", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1285,7 +1285,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BaseChange
     /// </summary>
-    public unsafe void BaseChange()
+    public unsafe override void BaseChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.BaseChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1296,7 +1296,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StuckOnPawn
     /// </summary>
-    public unsafe void StuckOnPawn(BmSDK.Engine.Pawn OtherPawn)
+    public unsafe virtual void StuckOnPawn(BmSDK.Engine.Pawn OtherPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.StuckOnPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1308,7 +1308,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: JumpOffPawn
     /// </summary>
-    public unsafe void JumpOffPawn()
+    public unsafe virtual void JumpOffPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.JumpOffPawn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1326,7 +1326,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: gibbedBy
     /// </summary>
-    public unsafe void gibbedBy(BmSDK.Engine.Actor Other)
+    public unsafe virtual void gibbedBy(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.gibbedBy", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1338,7 +1338,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EncroachedBy
     /// </summary>
-    public unsafe void EncroachedBy(BmSDK.Engine.Actor Other)
+    public unsafe override void EncroachedBy(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.EncroachedBy", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1350,7 +1350,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FaceRotation
     /// </summary>
-    public unsafe void FaceRotation(BmSDK.Rotator NewRotation, float DeltaTime)
+    public unsafe virtual void FaceRotation(BmSDK.Rotator NewRotation, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.FaceRotation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1370,7 +1370,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ClientSetRotation
     /// </summary>
-    public unsafe void ClientSetRotation(BmSDK.Rotator NewRotation)
+    public unsafe virtual void ClientSetRotation(BmSDK.Rotator NewRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ClientSetRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1382,7 +1382,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ClientRestart
     /// </summary>
-    public unsafe void ClientRestart()
+    public unsafe virtual void ClientRestart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ClientRestart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1393,7 +1393,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Restart
     /// </summary>
-    public unsafe void Restart()
+    public unsafe virtual void Restart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.Restart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1404,7 +1404,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TakeFallingDamage
     /// </summary>
-    public unsafe void TakeFallingDamage()
+    public unsafe virtual void TakeFallingDamage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.TakeFallingDamage", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1415,7 +1415,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: KilledBy
     /// </summary>
-    public unsafe void KilledBy(BmSDK.Engine.Pawn EventInstigator)
+    public unsafe override void KilledBy(BmSDK.Engine.Pawn EventInstigator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.KilledBy", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1427,7 +1427,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddVelocity
     /// </summary>
-    public unsafe void AddVelocity(System.Numerics.Vector3 NewVelocity, System.Numerics.Vector3 HitLocation, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default)
+    public unsafe virtual void AddVelocity(System.Numerics.Vector3 NewVelocity, System.Numerics.Vector3 HitLocation, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.AddVelocity", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -1449,7 +1449,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HandleMomentum
     /// </summary>
-    public unsafe void HandleMomentum(System.Numerics.Vector3 Momentum, System.Numerics.Vector3 HitLocation, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default)
+    public unsafe virtual void HandleMomentum(System.Numerics.Vector3 Momentum, System.Numerics.Vector3 HitLocation, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.HandleMomentum", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -1464,7 +1464,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StartCrouch
     /// </summary>
-    public unsafe void StartCrouch(float HeightAdjust)
+    public unsafe virtual void StartCrouch(float HeightAdjust)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.StartCrouch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1476,7 +1476,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EndCrouch
     /// </summary>
-    public unsafe void EndCrouch(float HeightAdjust)
+    public unsafe virtual void EndCrouch(float HeightAdjust)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.EndCrouch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1488,7 +1488,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldCrouch
     /// </summary>
-    public unsafe void ShouldCrouch(bool bCrouch)
+    public unsafe virtual void ShouldCrouch(bool bCrouch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ShouldCrouch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1500,7 +1500,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnCrouch
     /// </summary>
-    public unsafe void UnCrouch()
+    public unsafe virtual void UnCrouch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.UnCrouch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1511,7 +1511,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OutsideWorldBounds
     /// </summary>
-    public unsafe void OutsideWorldBounds()
+    public unsafe override void OutsideWorldBounds()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.OutsideWorldBounds", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1522,7 +1522,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FellOutOfWorld
     /// </summary>
-    public unsafe void FellOutOfWorld(BmSDK.Class dmgType)
+    public unsafe override void FellOutOfWorld(BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.FellOutOfWorld", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1534,7 +1534,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ClientMessage
     /// </summary>
-    public unsafe void ClientMessage(BmSDK.FString S, BmSDK.FName Type = default)
+    public unsafe virtual void ClientMessage(BmSDK.FString S, BmSDK.FName Type = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ClientMessage", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1547,7 +1547,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HandlePickup
     /// </summary>
-    public unsafe void HandlePickup(BmSDK.Engine.Inventory Inv)
+    public unsafe virtual void HandlePickup(BmSDK.Engine.Inventory Inv)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.HandlePickup", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1559,7 +1559,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: LineOfSightTo
     /// </summary>
-    public unsafe bool LineOfSightTo(BmSDK.Engine.Actor Other)
+    public unsafe virtual bool LineOfSightTo(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.LineOfSightTo", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1571,7 +1571,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetMoveTarget
     /// </summary>
-    public unsafe void SetMoveTarget(BmSDK.Engine.Actor NewTarget)
+    public unsafe virtual void SetMoveTarget(BmSDK.Engine.Actor NewTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SetMoveTarget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1583,7 +1583,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: InGodMode
     /// </summary>
-    public unsafe bool InGodMode()
+    public unsafe virtual bool InGodMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.InGodMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1594,7 +1594,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetViewRotation
     /// </summary>
-    public unsafe void SetViewRotation(BmSDK.Rotator NewRotation)
+    public unsafe virtual void SetViewRotation(BmSDK.Rotator NewRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SetViewRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1606,7 +1606,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAdjustedAimFor
     /// </summary>
-    public unsafe BmSDK.Rotator GetAdjustedAimFor(BmSDK.Engine.Weapon W, System.Numerics.Vector3 StartFireLoc)
+    public unsafe virtual BmSDK.Rotator GetAdjustedAimFor(BmSDK.Engine.Weapon W, System.Numerics.Vector3 StartFireLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetAdjustedAimFor", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -1619,7 +1619,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: InFreeCam
     /// </summary>
-    public unsafe bool InFreeCam()
+    public unsafe virtual bool InFreeCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.InFreeCam", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1637,7 +1637,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBaseAimRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetBaseAimRotation()
+    public unsafe virtual BmSDK.Rotator GetBaseAimRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetBaseAimRotation", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -1648,7 +1648,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetWeaponStartTraceLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWeaponStartTraceLocation(BmSDK.Engine.Weapon CurrentWeapon = default)
+    public unsafe virtual System.Numerics.Vector3 GetWeaponStartTraceLocation(BmSDK.Engine.Weapon CurrentWeapon = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetWeaponStartTraceLocation", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -1660,7 +1660,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPawnViewLocLocal
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetPawnViewLocLocal()
+    public unsafe virtual System.Numerics.Vector3 GetPawnViewLocLocal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetPawnViewLocLocal", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1671,7 +1671,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPawnViewLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetPawnViewLocation()
+    public unsafe virtual System.Numerics.Vector3 GetPawnViewLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetPawnViewLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1689,7 +1689,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetViewRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetViewRotation()
+    public unsafe virtual BmSDK.Rotator GetViewRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetViewRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1707,7 +1707,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetActorEyesViewPoint
     /// </summary>
-    public unsafe void GetActorEyesViewPoint(out System.Numerics.Vector3 out_Location, out BmSDK.Rotator out_Rotation)
+    public unsafe override void GetActorEyesViewPoint(out System.Numerics.Vector3 out_Location, out BmSDK.Rotator out_Rotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetActorEyesViewPoint", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1720,7 +1720,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ProcessViewRotation
     /// </summary>
-    public unsafe void ProcessViewRotation(float DeltaTime, out BmSDK.Rotator out_ViewRotation, out BmSDK.Rotator out_DeltaRot)
+    public unsafe virtual void ProcessViewRotation(float DeltaTime, out BmSDK.Rotator out_ViewRotation, out BmSDK.Rotator out_DeltaRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ProcessViewRotation", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -1734,7 +1734,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsFirstPerson
     /// </summary>
-    public unsafe bool IsFirstPerson()
+    public unsafe virtual bool IsFirstPerson()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.IsFirstPerson", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1745,7 +1745,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPlayerPawn
     /// </summary>
-    public unsafe bool IsPlayerPawn()
+    public unsafe virtual bool IsPlayerPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.IsPlayerPawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1763,7 +1763,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsLocallyControlled
     /// </summary>
-    public unsafe bool IsLocallyControlled()
+    public unsafe virtual bool IsLocallyControlled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.IsLocallyControlled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1781,7 +1781,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsHumanControlled
     /// </summary>
-    public unsafe bool IsHumanControlled(BmSDK.Engine.Controller PawnController = default)
+    public unsafe virtual bool IsHumanControlled(BmSDK.Engine.Controller PawnController = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.IsHumanControlled", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1800,7 +1800,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ClimbLadder
     /// </summary>
-    public unsafe void ClimbLadder(BmSDK.Engine.LadderVolume L)
+    public unsafe virtual void ClimbLadder(BmSDK.Engine.LadderVolume L)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ClimbLadder", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1812,7 +1812,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EndClimbLadder
     /// </summary>
-    public unsafe void EndClimbLadder(BmSDK.Engine.LadderVolume OldLadder)
+    public unsafe virtual void EndClimbLadder(BmSDK.Engine.LadderVolume OldLadder)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.EndClimbLadder", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1824,7 +1824,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanSplash
     /// </summary>
-    public unsafe bool CanSplash()
+    public unsafe override bool CanSplash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.CanSplash", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1835,7 +1835,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetWalking
     /// </summary>
-    public unsafe void SetWalking(bool bNewIsWalking)
+    public unsafe virtual void SetWalking(bool bNewIsWalking)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SetWalking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1847,7 +1847,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RangedAttackTime
     /// </summary>
-    public unsafe float RangedAttackTime()
+    public unsafe virtual float RangedAttackTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.RangedAttackTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1858,7 +1858,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RecommendLongRangedAttack
     /// </summary>
-    public unsafe bool RecommendLongRangedAttack()
+    public unsafe virtual bool RecommendLongRangedAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.RecommendLongRangedAttack", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1869,7 +1869,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanGrabLadder
     /// </summary>
-    public unsafe bool CanGrabLadder()
+    public unsafe virtual bool CanGrabLadder()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.CanGrabLadder", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1880,7 +1880,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DropToGround
     /// </summary>
-    public unsafe void DropToGround()
+    public unsafe virtual void DropToGround()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.DropToGround", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1891,7 +1891,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultCameraMode
     /// </summary>
-    public unsafe BmSDK.FName GetDefaultCameraMode(BmSDK.Engine.PlayerController RequestedBy)
+    public unsafe virtual BmSDK.FName GetDefaultCameraMode(BmSDK.Engine.PlayerController RequestedBy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetDefaultCameraMode", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1903,7 +1903,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnPossessed
     /// </summary>
-    public unsafe void UnPossessed()
+    public unsafe virtual void UnPossessed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.UnPossessed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1914,7 +1914,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateControllerOnPossess
     /// </summary>
-    public unsafe void UpdateControllerOnPossess(bool bVehicleTransition)
+    public unsafe virtual void UpdateControllerOnPossess(bool bVehicleTransition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.UpdateControllerOnPossess", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1926,7 +1926,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PossessedBy
     /// </summary>
-    public unsafe void PossessedBy(BmSDK.Engine.Controller C, bool bVehicleTransition)
+    public unsafe virtual void PossessedBy(BmSDK.Engine.Controller C, bool bVehicleTransition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.PossessedBy", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1939,7 +1939,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyTeamChanged
     /// </summary>
-    public unsafe void NotifyTeamChanged()
+    public unsafe virtual void NotifyTeamChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.NotifyTeamChanged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1950,7 +1950,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayTeleportEffect
     /// </summary>
-    public unsafe void PlayTeleportEffect(bool bOut, bool bSound)
+    public unsafe override void PlayTeleportEffect(bool bOut, bool bSound)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.PlayTeleportEffect", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1963,7 +1963,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetHumanReadableName
     /// </summary>
-    public unsafe BmSDK.FString GetHumanReadableName()
+    public unsafe override BmSDK.FString GetHumanReadableName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetHumanReadableName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1974,7 +1974,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: NeedToTurn
     /// </summary>
-    public unsafe bool NeedToTurn(System.Numerics.Vector3 targ)
+    public unsafe virtual bool NeedToTurn(System.Numerics.Vector3 targ)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.NeedToTurn", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -1986,7 +1986,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsFiring
     /// </summary>
-    public unsafe bool IsFiring()
+    public unsafe virtual bool IsFiring()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.IsFiring", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1997,7 +1997,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HasRangedAttack
     /// </summary>
-    public unsafe bool HasRangedAttack()
+    public unsafe virtual bool HasRangedAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.HasRangedAttack", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2008,7 +2008,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FireOnRelease
     /// </summary>
-    public unsafe bool FireOnRelease()
+    public unsafe virtual bool FireOnRelease()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.FireOnRelease", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2019,7 +2019,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TooCloseToAttack
     /// </summary>
-    public unsafe bool TooCloseToAttack(BmSDK.Engine.Actor Other)
+    public unsafe virtual bool TooCloseToAttack(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.TooCloseToAttack", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2031,7 +2031,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanAttack
     /// </summary>
-    public unsafe bool CanAttack(BmSDK.Engine.Actor Other)
+    public unsafe virtual bool CanAttack(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.CanAttack", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2043,7 +2043,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BotFire
     /// </summary>
-    public unsafe bool BotFire(bool bFinished)
+    public unsafe virtual bool BotFire(bool bFinished)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.BotFire", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2055,7 +2055,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: WeaponStoppedFiring
     /// </summary>
-    public unsafe void WeaponStoppedFiring(BmSDK.Engine.Weapon InWeapon, bool bViaReplication)
+    public unsafe virtual void WeaponStoppedFiring(BmSDK.Engine.Weapon InWeapon, bool bViaReplication)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.WeaponStoppedFiring", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2068,7 +2068,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: WeaponFired
     /// </summary>
-    public unsafe void WeaponFired(BmSDK.Engine.Weapon InWeapon, bool bViaReplication, System.Numerics.Vector3 HitLocation = default)
+    public unsafe virtual void WeaponFired(BmSDK.Engine.Weapon InWeapon, bool bViaReplication, System.Numerics.Vector3 HitLocation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.WeaponFired", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -2082,7 +2082,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FlashLocationUpdated
     /// </summary>
-    public unsafe void FlashLocationUpdated(BmSDK.Engine.Weapon InWeapon, System.Numerics.Vector3 InFlashLocation, bool bViaReplication)
+    public unsafe virtual void FlashLocationUpdated(BmSDK.Engine.Weapon InWeapon, System.Numerics.Vector3 InFlashLocation, bool bViaReplication)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.FlashLocationUpdated", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -2096,7 +2096,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearFlashLocation
     /// </summary>
-    public unsafe void ClearFlashLocation(BmSDK.Engine.Weapon InWeapon)
+    public unsafe virtual void ClearFlashLocation(BmSDK.Engine.Weapon InWeapon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ClearFlashLocation", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2108,7 +2108,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetFlashLocation
     /// </summary>
-    public unsafe void SetFlashLocation(BmSDK.Engine.Weapon InWeapon, byte InFiringMode, System.Numerics.Vector3 NewLoc)
+    public unsafe virtual void SetFlashLocation(BmSDK.Engine.Weapon InWeapon, byte InFiringMode, System.Numerics.Vector3 NewLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SetFlashLocation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -2122,7 +2122,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearFlashCount
     /// </summary>
-    public unsafe void ClearFlashCount(BmSDK.Engine.Weapon InWeapon)
+    public unsafe virtual void ClearFlashCount(BmSDK.Engine.Weapon InWeapon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ClearFlashCount", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2134,7 +2134,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FlashCountUpdated
     /// </summary>
-    public unsafe void FlashCountUpdated(BmSDK.Engine.Weapon InWeapon, byte InFlashCount, bool bViaReplication)
+    public unsafe virtual void FlashCountUpdated(BmSDK.Engine.Weapon InWeapon, byte InFlashCount, bool bViaReplication)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.FlashCountUpdated", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2148,7 +2148,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IncrementFlashCount
     /// </summary>
-    public unsafe void IncrementFlashCount(BmSDK.Engine.Weapon InWeapon, byte InFiringMode)
+    public unsafe virtual void IncrementFlashCount(BmSDK.Engine.Weapon InWeapon, byte InFiringMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.IncrementFlashCount", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -2161,7 +2161,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FiringModeUpdated
     /// </summary>
-    public unsafe void FiringModeUpdated(BmSDK.Engine.Weapon InWeapon, byte InFiringMode, bool bViaReplication)
+    public unsafe virtual void FiringModeUpdated(BmSDK.Engine.Weapon InWeapon, byte InFiringMode, bool bViaReplication)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.FiringModeUpdated", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2175,7 +2175,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetFiringMode
     /// </summary>
-    public unsafe void SetFiringMode(BmSDK.Engine.Weapon InWeapon, byte InFiringMode)
+    public unsafe virtual void SetFiringMode(BmSDK.Engine.Weapon InWeapon, byte InFiringMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SetFiringMode", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -2188,7 +2188,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetWeaponFiringMode
     /// </summary>
-    public unsafe byte GetWeaponFiringMode(BmSDK.Engine.Weapon InWeapon)
+    public unsafe virtual byte GetWeaponFiringMode(BmSDK.Engine.Weapon InWeapon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetWeaponFiringMode", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -2200,7 +2200,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StopFire
     /// </summary>
-    public unsafe void StopFire(byte FireModeNum)
+    public unsafe virtual void StopFire(byte FireModeNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.StopFire", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -2212,7 +2212,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StartFire
     /// </summary>
-    public unsafe void StartFire(byte FireModeNum)
+    public unsafe virtual void StartFire(byte FireModeNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.StartFire", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -2224,7 +2224,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StopFiring
     /// </summary>
-    public unsafe bool StopFiring()
+    public unsafe virtual bool StopFiring()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.StopFiring", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2235,7 +2235,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Reset
     /// </summary>
-    public unsafe void Reset()
+    public unsafe override void Reset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.Reset", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2246,7 +2246,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayerChangedTeam
     /// </summary>
-    public unsafe void PlayerChangedTeam()
+    public unsafe virtual void PlayerChangedTeam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.PlayerChangedTeam", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2257,7 +2257,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetBaseEyeheight
     /// </summary>
-    public unsafe void SetBaseEyeheight()
+    public unsafe virtual void SetBaseEyeheight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SetBaseEyeheight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2268,7 +2268,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpecialMoveThruEdge
     /// </summary>
-    public unsafe bool SpecialMoveThruEdge(BmSDK.Engine.Pylon.ENavMeshEdgeType EdgeType, int Dir, System.Numerics.Vector3 MoveStart, System.Numerics.Vector3 MoveDest, BmSDK.Engine.Actor RelActor = default, int RelItem = default, BmSDK.Engine.NavigationHandle NavHandle = default)
+    public unsafe virtual bool SpecialMoveThruEdge(BmSDK.Engine.Pylon.ENavMeshEdgeType EdgeType, int Dir, System.Numerics.Vector3 MoveStart, System.Numerics.Vector3 MoveDest, BmSDK.Engine.Actor RelActor = default, int RelItem = default, BmSDK.Engine.NavigationHandle NavHandle = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SpecialMoveThruEdge", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -2286,7 +2286,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpecialMoveTo
     /// </summary>
-    public unsafe bool SpecialMoveTo(BmSDK.Engine.NavigationPoint Start, BmSDK.Engine.NavigationPoint End, BmSDK.Engine.Actor Next)
+    public unsafe virtual bool SpecialMoveTo(BmSDK.Engine.NavigationPoint Start, BmSDK.Engine.NavigationPoint End, BmSDK.Engine.Actor Next)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SpecialMoveTo", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -2300,7 +2300,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TermRagdoll
     /// </summary>
-    public unsafe bool TermRagdoll()
+    public unsafe virtual bool TermRagdoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.TermRagdoll", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2318,7 +2318,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: InitRagdoll
     /// </summary>
-    public unsafe bool InitRagdoll()
+    public unsafe virtual bool InitRagdoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.InitRagdoll", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2336,7 +2336,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBoundingCylinder
     /// </summary>
-    public unsafe void GetBoundingCylinder(out float CollisionRadius, out float CollisionHeight)
+    public unsafe override void GetBoundingCylinder(out float CollisionRadius, out float CollisionHeight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetBoundingCylinder", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2356,7 +2356,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ReachedDesiredRotation
     /// </summary>
-    public unsafe bool ReachedDesiredRotation()
+    public unsafe virtual bool ReachedDesiredRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ReachedDesiredRotation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2374,7 +2374,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPushesRigidBodies
     /// </summary>
-    public unsafe void SetPushesRigidBodies(bool NewPush)
+    public unsafe virtual void SetPushesRigidBodies(bool NewPush)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SetPushesRigidBodies", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2393,7 +2393,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ForceCrouch
     /// </summary>
-    public unsafe void ForceCrouch()
+    public unsafe virtual void ForceCrouch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ForceCrouch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2411,7 +2411,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ReachedPoint
     /// </summary>
-    public unsafe bool ReachedPoint(System.Numerics.Vector3 Point, BmSDK.Engine.Actor NewAnchor)
+    public unsafe virtual bool ReachedPoint(System.Numerics.Vector3 Point, BmSDK.Engine.Actor NewAnchor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ReachedPoint", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -2431,7 +2431,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ReachedDestination
     /// </summary>
-    public unsafe bool ReachedDestination(BmSDK.Engine.Actor Goal)
+    public unsafe virtual bool ReachedDestination(BmSDK.Engine.Actor Goal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ReachedDestination", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2450,7 +2450,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBestAnchor
     /// </summary>
-    public unsafe BmSDK.Engine.NavigationPoint GetBestAnchor(BmSDK.Engine.Actor TestActor, System.Numerics.Vector3 TestLocation, bool bStartPoint, bool bOnlyCheckVisible, out float out_Dist)
+    public unsafe virtual BmSDK.Engine.NavigationPoint GetBestAnchor(BmSDK.Engine.Actor TestActor, System.Numerics.Vector3 TestLocation, bool bStartPoint, bool bOnlyCheckVisible, out float out_Dist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetBestAnchor", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -2473,7 +2473,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetAnchor
     /// </summary>
-    public unsafe void SetAnchor(BmSDK.Engine.NavigationPoint NewAnchor)
+    public unsafe virtual void SetAnchor(BmSDK.Engine.NavigationPoint NewAnchor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SetAnchor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2492,7 +2492,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetRemoteViewPitch
     /// </summary>
-    public unsafe void SetRemoteViewPitch(int NewRemoteViewPitch)
+    public unsafe virtual void SetRemoteViewPitch(int NewRemoteViewPitch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SetRemoteViewPitch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2511,7 +2511,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsInvisible
     /// </summary>
-    public unsafe bool IsInvisible()
+    public unsafe virtual bool IsInvisible()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.IsInvisible", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2529,7 +2529,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsValidEnemyTargetFor
     /// </summary>
-    public unsafe bool IsValidEnemyTargetFor(BmSDK.Engine.PlayerReplicationInfo PRI, bool bNoPRIisEnemy)
+    public unsafe virtual bool IsValidEnemyTargetFor(BmSDK.Engine.PlayerReplicationInfo PRI, bool bNoPRIisEnemy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.IsValidEnemyTargetFor", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2549,7 +2549,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFallDuration
     /// </summary>
-    public unsafe float GetFallDuration()
+    public unsafe virtual float GetFallDuration()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetFallDuration", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2567,7 +2567,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SuggestJumpVelocity
     /// </summary>
-    public unsafe bool SuggestJumpVelocity(out System.Numerics.Vector3 JumpVelocity, System.Numerics.Vector3 Destination, System.Numerics.Vector3 Start, bool bRequireFallLanding = default)
+    public unsafe virtual bool SuggestJumpVelocity(out System.Numerics.Vector3 JumpVelocity, System.Numerics.Vector3 Destination, System.Numerics.Vector3 Start, bool bRequireFallLanding = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SuggestJumpVelocity", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -2589,7 +2589,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ValidAnchor
     /// </summary>
-    public unsafe bool ValidAnchor()
+    public unsafe virtual bool ValidAnchor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ValidAnchor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2607,7 +2607,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AdjustDestination
     /// </summary>
-    public unsafe System.Numerics.Vector3 AdjustDestination(BmSDK.Engine.Actor GoalActor, System.Numerics.Vector3 Dest = default)
+    public unsafe virtual System.Numerics.Vector3 AdjustDestination(BmSDK.Engine.Actor GoalActor, System.Numerics.Vector3 Dest = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.AdjustDestination", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -2627,7 +2627,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsAliveAndWell
     /// </summary>
-    public unsafe bool IsAliveAndWell()
+    public unsafe virtual bool IsAliveAndWell()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.IsAliveAndWell", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2645,7 +2645,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ReplicatedEvent
     /// </summary>
-    public unsafe void ReplicatedEvent(BmSDK.FName VarName)
+    public unsafe override void ReplicatedEvent(BmSDK.FName VarName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ReplicatedEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2657,7 +2657,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetSkelControlScale
     /// </summary>
-    public unsafe void SetSkelControlScale(BmSDK.FName SkelControlName, float Scale)
+    public unsafe override void SetSkelControlScale(BmSDK.FName SkelControlName, float Scale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SetSkelControlScale", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2670,7 +2670,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetMorphWeight
     /// </summary>
-    public unsafe void SetMorphWeight(BmSDK.FName MorphNodeName, float MorphWeight)
+    public unsafe override void SetMorphWeight(BmSDK.FName MorphNodeName, float MorphWeight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SetMorphWeight", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2683,7 +2683,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetActorFaceFXAsset
     /// </summary>
-    public unsafe BmSDK.Engine.FaceFXAsset GetActorFaceFXAsset()
+    public unsafe override BmSDK.Engine.FaceFXAsset GetActorFaceFXAsset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.GetActorFaceFXAsset", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2694,7 +2694,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnPlayFaceFXAnim
     /// </summary>
-    public unsafe void OnPlayFaceFXAnim(BmSDK.Engine.SeqAct_PlayFaceFXAnim inAction)
+    public unsafe virtual void OnPlayFaceFXAnim(BmSDK.Engine.SeqAct_PlayFaceFXAnim inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.OnPlayFaceFXAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2706,7 +2706,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanActorPlayFaceFXAnim
     /// </summary>
-    public unsafe bool CanActorPlayFaceFXAnim()
+    public unsafe override bool CanActorPlayFaceFXAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.CanActorPlayFaceFXAnim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2717,7 +2717,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsActorPlayingFaceFXAnim
     /// </summary>
-    public unsafe bool IsActorPlayingFaceFXAnim()
+    public unsafe override bool IsActorPlayingFaceFXAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.IsActorPlayingFaceFXAnim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2728,7 +2728,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StopActorFaceFXAnim
     /// </summary>
-    public unsafe void StopActorFaceFXAnim()
+    public unsafe override void StopActorFaceFXAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.StopActorFaceFXAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2739,7 +2739,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayActorFaceFXAnim
     /// </summary>
-    public unsafe bool PlayActorFaceFXAnim(BmSDK.Engine.FaceFXAnimSet AnimSet, BmSDK.FString GroupName, BmSDK.FString SeqName, BmSDK.Engine.SoundCue SoundCueToPlay)
+    public unsafe override bool PlayActorFaceFXAnim(BmSDK.Engine.FaceFXAnimSet AnimSet, BmSDK.FString GroupName, BmSDK.FString SeqName, BmSDK.Engine.SoundCue SoundCueToPlay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.PlayActorFaceFXAnim", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -2754,7 +2754,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: MAT_FinishAIGroup
     /// </summary>
-    public unsafe void MAT_FinishAIGroup()
+    public unsafe virtual void MAT_FinishAIGroup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.MAT_FinishAIGroup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2765,7 +2765,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: MAT_BeginAIGroup
     /// </summary>
-    public unsafe void MAT_BeginAIGroup(System.Numerics.Vector3 StartLoc, BmSDK.Rotator StartRot)
+    public unsafe virtual void MAT_BeginAIGroup(System.Numerics.Vector3 StartLoc, BmSDK.Rotator StartRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.MAT_BeginAIGroup", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -2778,7 +2778,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FinishAIGroup
     /// </summary>
-    public unsafe void FinishAIGroup()
+    public unsafe virtual void FinishAIGroup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.FinishAIGroup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2789,7 +2789,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BeginAIGroup
     /// </summary>
-    public unsafe void BeginAIGroup()
+    public unsafe virtual void BeginAIGroup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.BeginAIGroup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2800,7 +2800,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: InterpolationFinished
     /// </summary>
-    public unsafe void InterpolationFinished(BmSDK.Engine.SeqAct_Interp InterpAction)
+    public unsafe override void InterpolationFinished(BmSDK.Engine.SeqAct_Interp InterpAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.InterpolationFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2812,7 +2812,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: InterpolationStarted
     /// </summary>
-    public unsafe void InterpolationStarted(BmSDK.Engine.SeqAct_Interp InterpAction, BmSDK.Engine.InterpGroupInst GroupInst)
+    public unsafe override void InterpolationStarted(BmSDK.Engine.SeqAct_Interp InterpAction, BmSDK.Engine.InterpGroupInst GroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.InterpolationStarted", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2825,7 +2825,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: MAT_SetSkelControlStrength
     /// </summary>
-    public unsafe void MAT_SetSkelControlStrength(BmSDK.FName SkelControlName, float ControlStrength)
+    public unsafe virtual void MAT_SetSkelControlStrength(BmSDK.FName SkelControlName, float ControlStrength)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.MAT_SetSkelControlStrength", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2845,7 +2845,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: MAT_SetSkelControlScale
     /// </summary>
-    public unsafe void MAT_SetSkelControlScale(BmSDK.FName SkelControlName, float Scale)
+    public unsafe virtual void MAT_SetSkelControlScale(BmSDK.FName SkelControlName, float Scale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.MAT_SetSkelControlScale", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2865,7 +2865,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: MAT_SetMorphWeight
     /// </summary>
-    public unsafe void MAT_SetMorphWeight(BmSDK.FName MorphNodeName, float MorphWeight)
+    public unsafe virtual void MAT_SetMorphWeight(BmSDK.FName MorphNodeName, float MorphWeight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.MAT_SetMorphWeight", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2885,7 +2885,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: MAT_SetAnimWeights
     /// </summary>
-    public unsafe void MAT_SetAnimWeights(BmSDK.TArray<BmSDK.Engine.Actor.FAnimSlotInfo> SlotInfos)
+    public unsafe virtual void MAT_SetAnimWeights(BmSDK.TArray<BmSDK.Engine.Actor.FAnimSlotInfo> SlotInfos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.MAT_SetAnimWeights", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2904,7 +2904,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: MAT_SetAnimPosition
     /// </summary>
-    public unsafe void MAT_SetAnimPosition(BmSDK.FName SlotName, int ChannelIndex, BmSDK.FName InAnimSeqName, float InPosition, bool bFireNotifies, bool bLooping, bool bEnableRootMotion)
+    public unsafe virtual void MAT_SetAnimPosition(BmSDK.FName SlotName, int ChannelIndex, BmSDK.FName InAnimSeqName, float InPosition, bool bFireNotifies, bool bLooping, bool bEnableRootMotion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.MAT_SetAnimPosition", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -2929,7 +2929,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetAnimPosition
     /// </summary>
-    public unsafe void SetAnimPosition(BmSDK.Engine.InterpGroupInst InterpGroupInst, BmSDK.FName SlotName, int ChannelIndex, BmSDK.FName InAnimSeqName, float InPosition, bool bFireNotifies, bool bLooping, bool bEnableRootMotion)
+    public unsafe override void SetAnimPosition(BmSDK.Engine.InterpGroupInst InterpGroupInst, BmSDK.FName SlotName, int ChannelIndex, BmSDK.FName InAnimSeqName, float InPosition, bool bFireNotifies, bool bLooping, bool bEnableRootMotion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SetAnimPosition", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -2948,7 +2948,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: MAT_FinishAnimControl
     /// </summary>
-    public unsafe void MAT_FinishAnimControl(BmSDK.Engine.InterpGroup InInterpGroup)
+    public unsafe virtual void MAT_FinishAnimControl(BmSDK.Engine.InterpGroup InInterpGroup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.MAT_FinishAnimControl", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2967,7 +2967,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FinishAnimControl
     /// </summary>
-    public unsafe void FinishAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void FinishAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.FinishAnimControl", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2980,7 +2980,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: MAT_BeginAnimControl
     /// </summary>
-    public unsafe void MAT_BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup)
+    public unsafe virtual void MAT_BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.MAT_BeginAnimControl", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2999,7 +2999,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BeginAnimControl
     /// </summary>
-    public unsafe void BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.BeginAnimControl", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -3012,7 +3012,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RestoreAnimSetsToDefault
     /// </summary>
-    public unsafe bool RestoreAnimSetsToDefault()
+    public unsafe virtual bool RestoreAnimSetsToDefault()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.RestoreAnimSetsToDefault", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3023,7 +3023,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AnimSetListUpdated
     /// </summary>
-    public unsafe void AnimSetListUpdated()
+    public unsafe virtual void AnimSetListUpdated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.AnimSetListUpdated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -3034,7 +3034,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddAnimSets
     /// </summary>
-    public unsafe void AddAnimSets(out BmSDK.TArray<BmSDK.Engine.AnimSet> CustomAnimSets)
+    public unsafe virtual void AddAnimSets(out BmSDK.TArray<BmSDK.Engine.AnimSet> CustomAnimSets)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.AddAnimSets", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -3053,7 +3053,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BuildScriptAnimSetList
     /// </summary>
-    public unsafe void BuildScriptAnimSetList()
+    public unsafe virtual void BuildScriptAnimSetList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.BuildScriptAnimSetList", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -3064,7 +3064,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateAnimSetList
     /// </summary>
-    public unsafe void UpdateAnimSetList()
+    public unsafe virtual void UpdateAnimSetList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.UpdateAnimSetList", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -3082,7 +3082,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearAnimNodes
     /// </summary>
-    public unsafe void ClearAnimNodes()
+    public unsafe virtual void ClearAnimNodes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ClearAnimNodes", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -3100,7 +3100,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CacheAnimNodes
     /// </summary>
-    public unsafe void CacheAnimNodes()
+    public unsafe virtual void CacheAnimNodes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.CacheAnimNodes", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -3118,7 +3118,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsDesiredRotationLocked
     /// </summary>
-    public unsafe bool IsDesiredRotationLocked()
+    public unsafe virtual bool IsDesiredRotationLocked()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.IsDesiredRotationLocked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3136,7 +3136,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsDesiredRotationInUse
     /// </summary>
-    public unsafe bool IsDesiredRotationInUse()
+    public unsafe virtual bool IsDesiredRotationInUse()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.IsDesiredRotationInUse", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3154,7 +3154,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckDesiredRotation
     /// </summary>
-    public unsafe void CheckDesiredRotation()
+    public unsafe virtual void CheckDesiredRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.CheckDesiredRotation", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -3172,7 +3172,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetDesiredRotation
     /// </summary>
-    public unsafe void ResetDesiredRotation()
+    public unsafe virtual void ResetDesiredRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.ResetDesiredRotation", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -3190,7 +3190,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: LockDesiredRotation
     /// </summary>
-    public unsafe void LockDesiredRotation(bool Lock, bool InUnlockWhenReached = default)
+    public unsafe virtual void LockDesiredRotation(bool Lock, bool InUnlockWhenReached = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.LockDesiredRotation", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -3210,7 +3210,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDesiredRotation
     /// </summary>
-    public unsafe bool SetDesiredRotation(BmSDK.Rotator TargetDesiredRotation, bool InLockDesiredRotation = default, bool InUnlockWhenReached = default, float InterpolationTime = default, bool bResetRotationRate = default)
+    public unsafe virtual bool SetDesiredRotation(BmSDK.Rotator TargetDesiredRotation, bool InLockDesiredRotation = default, bool InUnlockWhenReached = default, float InterpolationTime = default, bool bResetRotationRate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.SetDesiredRotation", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -3233,7 +3233,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PickWallAdjust
     /// </summary>
-    public unsafe bool PickWallAdjust(System.Numerics.Vector3 WallHitNormal, BmSDK.Engine.Actor HitActor)
+    public unsafe virtual bool PickWallAdjust(System.Numerics.Vector3 WallHitNormal, BmSDK.Engine.Actor HitActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pawn.PickWallAdjust", true);
         byte* paramsPtr = stackalloc byte[24];

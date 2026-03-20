@@ -47,7 +47,7 @@ public partial class RSeqAct_BMBLUpgradeConversation : BmSDK.BmGame.RSeqAct_Play
     /// <summary>
     /// Function: UpgradeChosen
     /// </summary>
-    public unsafe void UpgradeChosen(int Index)
+    public unsafe virtual void UpgradeChosen(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BMBLUpgradeConversation.UpgradeChosen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RSeqAct_BMBLUpgradeConversation : BmSDK.BmGame.RSeqAct_Play
     /// <summary>
     /// Function: SwitchToInteractivePhase
     /// </summary>
-    public unsafe void SwitchToInteractivePhase()
+    public unsafe virtual void SwitchToInteractivePhase()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BMBLUpgradeConversation.SwitchToInteractivePhase", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RSeqAct_BMBLUpgradeConversation : BmSDK.BmGame.RSeqAct_Play
     /// <summary>
     /// Function: SpeechAndMovieEnded
     /// </summary>
-    public unsafe void SpeechAndMovieEnded()
+    public unsafe override void SpeechAndMovieEnded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BMBLUpgradeConversation.SpeechAndMovieEnded", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RSeqAct_BMBLUpgradeConversation : BmSDK.BmGame.RSeqAct_Play
     /// <summary>
     /// Function: DialogueOverCUEFromMovie
     /// </summary>
-    public unsafe void DialogueOverCUEFromMovie()
+    public unsafe override void DialogueOverCUEFromMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BMBLUpgradeConversation.DialogueOverCUEFromMovie", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -92,7 +92,7 @@ public partial class RSeqAct_BMBLUpgradeConversation : BmSDK.BmGame.RSeqAct_Play
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BMBLUpgradeConversation.Update", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -104,7 +104,7 @@ public partial class RSeqAct_BMBLUpgradeConversation : BmSDK.BmGame.RSeqAct_Play
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BMBLUpgradeConversation.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RSeqAct_BMBLUpgradeConversation : BmSDK.BmGame.RSeqAct_Play
     /// <summary>
     /// Function: StopSpeechNative
     /// </summary>
-    public unsafe void StopSpeechNative()
+    public unsafe override void StopSpeechNative()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BMBLUpgradeConversation.StopSpeechNative", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -133,7 +133,7 @@ public partial class RSeqAct_BMBLUpgradeConversation : BmSDK.BmGame.RSeqAct_Play
     /// <summary>
     /// Function: HandleInputLinks
     /// </summary>
-    public unsafe void HandleInputLinks()
+    public unsafe override void HandleInputLinks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BMBLUpgradeConversation.HandleInputLinks", true);
         byte* paramsPtr = stackalloc byte[0];

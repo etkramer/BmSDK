@@ -71,7 +71,7 @@ public partial class RRoadLink : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRoadLink.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RRoadLink : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDisabled
     /// </summary>
-    public unsafe void SetDisabled(bool Value)
+    public unsafe virtual void SetDisabled(bool Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRoadLink.SetDisabled", true);
         byte* paramsPtr = stackalloc byte[4];

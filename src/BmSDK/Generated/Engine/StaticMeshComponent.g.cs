@@ -36,7 +36,7 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
     /// <summary>
     /// Function: CanBecomeDynamic
     /// </summary>
-    public unsafe bool CanBecomeDynamic()
+    public unsafe virtual bool CanBecomeDynamic()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.StaticMeshComponent.CanBecomeDynamic", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -54,7 +54,7 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
     /// <summary>
     /// Function: IsComponentAttached
     /// </summary>
-    public unsafe bool IsComponentAttached(BmSDK.Engine.ActorComponent Component, BmSDK.FName BoneName = default)
+    public unsafe virtual bool IsComponentAttached(BmSDK.Engine.ActorComponent Component, BmSDK.FName BoneName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.StaticMeshComponent.IsComponentAttached", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -74,7 +74,7 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
     /// <summary>
     /// Function: GetSocketByName
     /// </summary>
-    public unsafe BmSDK.Engine.StaticMeshSocket GetSocketByName(BmSDK.FName InSocketName)
+    public unsafe virtual BmSDK.Engine.StaticMeshSocket GetSocketByName(BmSDK.FName InSocketName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.StaticMeshComponent.GetSocketByName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -93,7 +93,7 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
     /// <summary>
     /// Function: GetSocketWorldLocationAndRotation
     /// </summary>
-    public unsafe bool GetSocketWorldLocationAndRotation(BmSDK.FName InSocketName, out System.Numerics.Vector3 OutLocation, out BmSDK.Rotator OutRotation, int Space)
+    public unsafe virtual bool GetSocketWorldLocationAndRotation(BmSDK.FName InSocketName, out System.Numerics.Vector3 OutLocation, out BmSDK.Rotator OutRotation, int Space)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.StaticMeshComponent.GetSocketWorldLocationAndRotation", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -115,7 +115,7 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
     /// <summary>
     /// Function: AttachComponentToSocket
     /// </summary>
-    public unsafe void AttachComponentToSocket(BmSDK.Engine.ActorComponent Component, BmSDK.FName SocketName)
+    public unsafe virtual void AttachComponentToSocket(BmSDK.Engine.ActorComponent Component, BmSDK.FName SocketName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.StaticMeshComponent.AttachComponentToSocket", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -135,7 +135,7 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
     /// <summary>
     /// Function: DetachComponent
     /// </summary>
-    public unsafe void DetachComponent(BmSDK.Engine.ActorComponent Component)
+    public unsafe virtual void DetachComponent(BmSDK.Engine.ActorComponent Component)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.StaticMeshComponent.DetachComponent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -154,7 +154,7 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
     /// <summary>
     /// Function: AttachComponent
     /// </summary>
-    public unsafe void AttachComponent(BmSDK.Engine.ActorComponent Component, System.Numerics.Vector3 RelativeLocation = default, BmSDK.Rotator RelativeRotation = default, System.Numerics.Vector3 RelativeScale = default)
+    public unsafe virtual void AttachComponent(BmSDK.Engine.ActorComponent Component, System.Numerics.Vector3 RelativeLocation = default, BmSDK.Rotator RelativeRotation = default, System.Numerics.Vector3 RelativeScale = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.StaticMeshComponent.AttachComponent", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -176,7 +176,7 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
     /// <summary>
     /// Function: GetUseSimpleLineCollision
     /// </summary>
-    public unsafe bool GetUseSimpleLineCollision()
+    public unsafe override bool GetUseSimpleLineCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.StaticMeshComponent.GetUseSimpleLineCollision", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -194,7 +194,7 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
     /// <summary>
     /// Function: GetUseSimpleBoxCollision
     /// </summary>
-    public unsafe bool GetUseSimpleBoxCollision()
+    public unsafe override bool GetUseSimpleBoxCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.StaticMeshComponent.GetUseSimpleBoxCollision", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -212,7 +212,7 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetForceStaticDecals
     /// </summary>
-    public unsafe void SetForceStaticDecals(bool bInForceStaticDecals)
+    public unsafe virtual void SetForceStaticDecals(bool bInForceStaticDecals)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.StaticMeshComponent.SetForceStaticDecals", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -231,7 +231,7 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
     /// <summary>
     /// Function: DisableRBCollisionWithSMC
     /// </summary>
-    public unsafe void DisableRBCollisionWithSMC(BmSDK.Engine.PrimitiveComponent OtherSMC, bool bDisabled)
+    public unsafe virtual void DisableRBCollisionWithSMC(BmSDK.Engine.PrimitiveComponent OtherSMC, bool bDisabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.StaticMeshComponent.DisableRBCollisionWithSMC", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -251,7 +251,7 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetStaticMesh
     /// </summary>
-    public unsafe bool SetStaticMesh(BmSDK.Engine.StaticMesh NewMesh, bool bForce = default)
+    public unsafe virtual bool SetStaticMesh(BmSDK.Engine.StaticMesh NewMesh, bool bForce = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.StaticMeshComponent.SetStaticMesh", true);
         byte* paramsPtr = stackalloc byte[16];

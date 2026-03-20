@@ -71,7 +71,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: ShowHelpPrompt
     /// </summary>
-    public unsafe bool ShowHelpPrompt()
+    public unsafe virtual bool ShowHelpPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.ShowHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: ShouldCancelAttack
     /// </summary>
-    public unsafe bool ShouldCancelAttack()
+    public unsafe virtual bool ShouldCancelAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.ShouldCancelAttack", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: IsOnTheSameLevel
     /// </summary>
-    public unsafe bool IsOnTheSameLevel()
+    public unsafe virtual bool IsOnTheSameLevel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.IsOnTheSameLevel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: GetDamageAmount
     /// </summary>
-    public unsafe float GetDamageAmount(BmSDK.BmGame.RPawnVillain AttackerPawn)
+    public unsafe virtual float GetDamageAmount(BmSDK.BmGame.RPawnVillain AttackerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.GetDamageAmount", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -116,7 +116,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: CheckEnvInfo
     /// </summary>
-    public unsafe bool CheckEnvInfo(out System.Numerics.Vector3 WallLocOut, out float WallYawOut, out BmSDK.BmGame.RCombatMove_VillainUnarmedGrab.EBreakoutDir DirOut)
+    public unsafe virtual bool CheckEnvInfo(out System.Numerics.Vector3 WallLocOut, out float WallYawOut, out BmSDK.BmGame.RCombatMove_VillainUnarmedGrab.EBreakoutDir DirOut)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.CheckEnvInfo", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -130,7 +130,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: CheckEnvInfoInDir
     /// </summary>
-    public unsafe bool CheckEnvInfoInDir(System.Numerics.Vector3 CheckDir, out System.Numerics.Vector3 WallLocOut, out float WallYawOut)
+    public unsafe virtual bool CheckEnvInfoInDir(System.Numerics.Vector3 CheckDir, out System.Numerics.Vector3 WallLocOut, out float WallYawOut)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.CheckEnvInfoInDir", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -144,7 +144,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: GetBreakoutAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetBreakoutAnimName(BmSDK.BmGame.RCombatMove_VillainUnarmedGrab.EBreakoutDir Dir, bool bEnvAnims)
+    public unsafe virtual BmSDK.FName GetBreakoutAnimName(BmSDK.BmGame.RCombatMove_VillainUnarmedGrab.EBreakoutDir Dir, bool bEnvAnims)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.GetBreakoutAnimName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -157,7 +157,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: GetBreakOutDirType
     /// </summary>
-    public unsafe BmSDK.BmGame.RCombatMove_VillainUnarmedGrab.EBreakoutDir GetBreakOutDirType(float TestYaw)
+    public unsafe virtual BmSDK.BmGame.RCombatMove_VillainUnarmedGrab.EBreakoutDir GetBreakOutDirType(float TestYaw)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.GetBreakOutDirType", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -169,7 +169,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: GetStrikeIdleName
     /// </summary>
-    public unsafe BmSDK.FName GetStrikeIdleName(int StrikeVariation)
+    public unsafe virtual BmSDK.FName GetStrikeIdleName(int StrikeVariation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.GetStrikeIdleName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -181,7 +181,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: GetStrikeAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetStrikeAnimName(int StrikeVariation)
+    public unsafe virtual BmSDK.FName GetStrikeAnimName(int StrikeVariation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.GetStrikeAnimName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -193,7 +193,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -204,7 +204,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat ExitPawn)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat ExitPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -216,7 +216,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -228,7 +228,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: TriggerDualTakedownAttempted
     /// </summary>
-    public unsafe void TriggerDualTakedownAttempted()
+    public unsafe override void TriggerDualTakedownAttempted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.TriggerDualTakedownAttempted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -239,7 +239,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: MoveOverridenForPawn
     /// </summary>
-    public unsafe void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
+    public unsafe override void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.MoveOverridenForPawn", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -252,7 +252,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: DamagedBy
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat DamageReceiver, BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat DamageReceiver, BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.DamagedBy", true);
         byte* paramsPtr = stackalloc byte[268];
@@ -265,7 +265,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: OverrideHitReaction
     /// </summary>
-    public unsafe bool OverrideHitReaction(BmSDK.BmGame.RPawnCombat HitPawn)
+    public unsafe override bool OverrideHitReaction(BmSDK.BmGame.RPawnCombat HitPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.OverrideHitReaction", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -277,7 +277,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: CanPerformNextComboMove
     /// </summary>
-    public unsafe bool CanPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
+    public unsafe override bool CanPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.CanPerformNextComboMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -290,7 +290,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: IsAttacking
     /// </summary>
-    public unsafe bool IsAttacking()
+    public unsafe override bool IsAttacking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.IsAttacking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -301,7 +301,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: EarlyExit
     /// </summary>
-    public unsafe void EarlyExit()
+    public unsafe virtual void EarlyExit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.EarlyExit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -312,7 +312,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.Initialise", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -337,7 +337,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: CanCounterStart
     /// </summary>
-    public unsafe void CanCounterStart()
+    public unsafe override void CanCounterStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.CanCounterStart", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -348,7 +348,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: BreakStuffOff
     /// </summary>
-    public unsafe void BreakStuffOff()
+    public unsafe virtual void BreakStuffOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.BreakStuffOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -359,7 +359,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: BreakStuffOn
     /// </summary>
-    public unsafe void BreakStuffOn()
+    public unsafe virtual void BreakStuffOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.BreakStuffOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -370,7 +370,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: TargetGoRagdoll
     /// </summary>
-    public unsafe void TargetGoRagdoll()
+    public unsafe virtual void TargetGoRagdoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.TargetGoRagdoll", true);
         byte* paramsPtr = stackalloc byte[248];
@@ -381,7 +381,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: Rumble
     /// </summary>
-    public unsafe void Rumble()
+    public unsafe virtual void Rumble()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.Rumble", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -392,7 +392,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: DoImpact
     /// </summary>
-    public unsafe bool DoImpact()
+    public unsafe virtual bool DoImpact()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.DoImpact", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -403,7 +403,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: ImpactBat
     /// </summary>
-    public unsafe void ImpactBat()
+    public unsafe virtual void ImpactBat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.ImpactBat", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -414,7 +414,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: Impact
     /// </summary>
-    public unsafe void Impact()
+    public unsafe virtual void Impact()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.Impact", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -425,7 +425,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: AllowMovementExit
     /// </summary>
-    public unsafe void AllowMovementExit()
+    public unsafe virtual void AllowMovementExit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.AllowMovementExit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -436,7 +436,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: AllowNextStrike
     /// </summary>
-    public unsafe void AllowNextStrike()
+    public unsafe virtual void AllowNextStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.AllowNextStrike", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -447,7 +447,7 @@ public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: AllowStrikes
     /// </summary>
-    public unsafe void AllowStrikes()
+    public unsafe virtual void AllowStrikes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainUnarmedGrab.AllowStrikes", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class RSeqAct_CinematicMode : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: DualPlayPressed
     /// </summary>
-    public unsafe void DualPlayPressed()
+    public unsafe virtual void DualPlayPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CinematicMode.DualPlayPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RSeqAct_CinematicMode : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: BattleModeMove
     /// </summary>
-    public unsafe void BattleModeMove()
+    public unsafe virtual void BattleModeMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CinematicMode.BattleModeMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_CinematicMode : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: BattleModePressed
     /// </summary>
-    public unsafe void BattleModePressed()
+    public unsafe virtual void BattleModePressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CinematicMode.BattleModePressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RSeqAct_CinematicMode : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: YButtonPressed
     /// </summary>
-    public unsafe void YButtonPressed()
+    public unsafe virtual void YButtonPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CinematicMode.YButtonPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RSeqAct_CinematicMode : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: AButtonPressed
     /// </summary>
-    public unsafe void AButtonPressed()
+    public unsafe virtual void AButtonPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CinematicMode.AButtonPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -91,7 +91,7 @@ public partial class RSeqAct_CinematicMode : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: TriedToUseGadget
     /// </summary>
-    public unsafe void TriedToUseGadget(BmSDK.BmGame.RInventoryGadget Gadget)
+    public unsafe virtual void TriedToUseGadget(BmSDK.BmGame.RInventoryGadget Gadget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CinematicMode.TriedToUseGadget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -114,7 +114,7 @@ public partial class RSeqAct_CinematicMode : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: Skip
     /// </summary>
-    public unsafe bool Skip()
+    public unsafe virtual bool Skip()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CinematicMode.Skip", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -125,7 +125,7 @@ public partial class RSeqAct_CinematicMode : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: IsSkippable
     /// </summary>
-    public unsafe bool IsSkippable()
+    public unsafe virtual bool IsSkippable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CinematicMode.IsSkippable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -136,7 +136,7 @@ public partial class RSeqAct_CinematicMode : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: IsPotentiallySkippable
     /// </summary>
-    public unsafe bool IsPotentiallySkippable()
+    public unsafe virtual bool IsPotentiallySkippable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CinematicMode.IsPotentiallySkippable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -147,7 +147,7 @@ public partial class RSeqAct_CinematicMode : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: CutsceneJustStarted
     /// </summary>
-    public unsafe bool CutsceneJustStarted()
+    public unsafe virtual bool CutsceneJustStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CinematicMode.CutsceneJustStarted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -158,7 +158,7 @@ public partial class RSeqAct_CinematicMode : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: IsStreamingInstallStillRunning
     /// </summary>
-    public unsafe bool IsStreamingInstallStillRunning()
+    public unsafe virtual bool IsStreamingInstallStillRunning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CinematicMode.IsStreamingInstallStillRunning", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -169,7 +169,7 @@ public partial class RSeqAct_CinematicMode : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: IsLoadingLevel
     /// </summary>
-    public unsafe bool IsLoadingLevel()
+    public unsafe virtual bool IsLoadingLevel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CinematicMode.IsLoadingLevel", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -180,7 +180,7 @@ public partial class RSeqAct_CinematicMode : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: SetButtonPromptsAllowed
     /// </summary>
-    public unsafe void SetButtonPromptsAllowed(bool is_allowed)
+    public unsafe virtual void SetButtonPromptsAllowed(bool is_allowed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CinematicMode.SetButtonPromptsAllowed", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -192,7 +192,7 @@ public partial class RSeqAct_CinematicMode : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: SetTargetsHudAllowed
     /// </summary>
-    public unsafe void SetTargetsHudAllowed(bool is_allowed)
+    public unsafe virtual void SetTargetsHudAllowed(bool is_allowed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CinematicMode.SetTargetsHudAllowed", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -204,7 +204,7 @@ public partial class RSeqAct_CinematicMode : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: SetObjectiveHudAllowed
     /// </summary>
-    public unsafe void SetObjectiveHudAllowed(bool is_allowed)
+    public unsafe virtual void SetObjectiveHudAllowed(bool is_allowed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CinematicMode.SetObjectiveHudAllowed", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -216,7 +216,7 @@ public partial class RSeqAct_CinematicMode : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: ApplyHudRestrictions
     /// </summary>
-    public unsafe void ApplyHudRestrictions(bool do_apply)
+    public unsafe virtual void ApplyHudRestrictions(bool do_apply)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CinematicMode.ApplyHudRestrictions", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -228,7 +228,7 @@ public partial class RSeqAct_CinematicMode : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CinematicMode.Activated", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -239,7 +239,7 @@ public partial class RSeqAct_CinematicMode : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: AllowGadget
     /// </summary>
-    public unsafe bool AllowGadget(BmSDK.Class TestClass)
+    public unsafe virtual bool AllowGadget(BmSDK.Class TestClass)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CinematicMode.AllowGadget", true);
         byte* paramsPtr = stackalloc byte[16];

@@ -71,7 +71,7 @@ public partial class RARZoneBase : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFlashFrame
     /// </summary>
-    public unsafe int GetFlashFrame()
+    public unsafe virtual int GetFlashFrame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RARZoneBase.GetFlashFrame", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_RestoreRECedGear : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_RestoreRECedGear.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Sub_RestoreRECedGear : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// Function: GetRestoreActionClass
     /// </summary>
-    public unsafe BmSDK.Class GetRestoreActionClass()
+    public unsafe virtual BmSDK.Class GetRestoreActionClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_RestoreRECedGear.GetRestoreActionClass", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RAEC_Search_Sub_RestoreRECedGear : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_RestoreRECedGear.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];

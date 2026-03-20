@@ -47,7 +47,7 @@ public partial class RSeqAct_MovePlayer : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: HasReachedDestination
     /// </summary>
-    public unsafe void HasReachedDestination()
+    public unsafe virtual void HasReachedDestination()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MovePlayer.HasReachedDestination", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_MovePlayer : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: Stop
     /// </summary>
-    public unsafe void Stop()
+    public unsafe virtual void Stop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MovePlayer.Stop", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -69,7 +69,7 @@ public partial class RSeqAct_MovePlayer : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: UpdateMoveSpeed
     /// </summary>
-    public unsafe void UpdateMoveSpeed()
+    public unsafe virtual void UpdateMoveSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MovePlayer.UpdateMoveSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RSeqAct_MovePlayer : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: Move
     /// </summary>
-    public unsafe void Move()
+    public unsafe virtual void Move()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MovePlayer.Move", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -91,7 +91,7 @@ public partial class RSeqAct_MovePlayer : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: SelectForensicModePressed
     /// </summary>
-    public unsafe void SelectForensicModePressed()
+    public unsafe virtual void SelectForensicModePressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MovePlayer.SelectForensicModePressed", true);
         byte* paramsPtr = stackalloc byte[0];

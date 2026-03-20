@@ -71,7 +71,7 @@ public partial class RCombatMove_VillainRobotAttack : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: CanCounterStart
     /// </summary>
-    public unsafe void CanCounterStart()
+    public unsafe override void CanCounterStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_VillainRobotAttack.CanCounterStart", true);
         byte* paramsPtr = stackalloc byte[0];

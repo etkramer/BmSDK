@@ -71,7 +71,7 @@ public partial class RSmokeScreenBM : BmSDK.BmGame.RSmokeScreen, BmSDK.IGameObje
     /// <summary>
     /// Function: InitSmoke
     /// </summary>
-    public unsafe void InitSmoke(bool bHitWall, bool bSmokePellet)
+    public unsafe override void InitSmoke(bool bHitWall, bool bSmokePellet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSmokeScreenBM.InitSmoke", true);
         byte* paramsPtr = stackalloc byte[16];

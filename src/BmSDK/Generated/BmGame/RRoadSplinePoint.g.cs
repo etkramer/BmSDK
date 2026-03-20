@@ -71,7 +71,7 @@ public partial class RRoadSplinePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateDisplayLines
     /// </summary>
-    public unsafe void UpdateDisplayLines()
+    public unsafe virtual void UpdateDisplayLines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRoadSplinePoint.UpdateDisplayLines", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class RRoadSplinePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRoadSplinePoint.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -101,7 +101,7 @@ public partial class RRoadSplinePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRoadSplinePoint.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[20];

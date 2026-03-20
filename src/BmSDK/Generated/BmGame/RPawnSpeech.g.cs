@@ -66,7 +66,7 @@ public partial class RPawnSpeech : BmSDK.BmGame.RBMPawnAI, BmSDK.IGameObject
     /// <summary>
     /// Function: UnregisterBarkCharDefList
     /// </summary>
-    public unsafe void UnregisterBarkCharDefList()
+    public unsafe virtual void UnregisterBarkCharDefList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnSpeech.UnregisterBarkCharDefList", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -77,7 +77,7 @@ public partial class RPawnSpeech : BmSDK.BmGame.RBMPawnAI, BmSDK.IGameObject
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnSpeech.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -88,7 +88,7 @@ public partial class RPawnSpeech : BmSDK.BmGame.RBMPawnAI, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnSpeech.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -99,7 +99,7 @@ public partial class RPawnSpeech : BmSDK.BmGame.RBMPawnAI, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveBarkCharDef
     /// </summary>
-    public unsafe void RemoveBarkCharDef(BmSDK.BmGame.RBarkCharacterDef OldDef)
+    public unsafe virtual void RemoveBarkCharDef(BmSDK.BmGame.RBarkCharacterDef OldDef)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnSpeech.RemoveBarkCharDef", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -111,7 +111,7 @@ public partial class RPawnSpeech : BmSDK.BmGame.RBMPawnAI, BmSDK.IGameObject
     /// <summary>
     /// Function: AddBarkCharDef
     /// </summary>
-    public unsafe void AddBarkCharDef(BmSDK.BmGame.RBarkCharacterDef NewDef)
+    public unsafe virtual void AddBarkCharDef(BmSDK.BmGame.RBarkCharacterDef NewDef)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnSpeech.AddBarkCharDef", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -123,7 +123,7 @@ public partial class RPawnSpeech : BmSDK.BmGame.RBMPawnAI, BmSDK.IGameObject
     /// <summary>
     /// Function: AsyncLoadDone
     /// </summary>
-    public unsafe void AsyncLoadDone(BmSDK.FString ObjectFinished)
+    public unsafe override void AsyncLoadDone(BmSDK.FString ObjectFinished)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnSpeech.AsyncLoadDone", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -135,7 +135,7 @@ public partial class RPawnSpeech : BmSDK.BmGame.RBMPawnAI, BmSDK.IGameObject
     /// <summary>
     /// Function: PostInitCharacter
     /// </summary>
-    public unsafe void PostInitCharacter()
+    public unsafe override void PostInitCharacter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnSpeech.PostInitCharacter", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -146,7 +146,7 @@ public partial class RPawnSpeech : BmSDK.BmGame.RBMPawnAI, BmSDK.IGameObject
     /// <summary>
     /// Function: CanUseVoice
     /// </summary>
-    public unsafe bool CanUseVoice(BmSDK.Engine.AkDialogueVoice TestVoice)
+    public unsafe virtual bool CanUseVoice(BmSDK.Engine.AkDialogueVoice TestVoice)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnSpeech.CanUseVoice", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -165,7 +165,7 @@ public partial class RPawnSpeech : BmSDK.BmGame.RBMPawnAI, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAkDialogueComponent
     /// </summary>
-    public unsafe BmSDK.Engine.AkDialogueComponent GetAkDialogueComponent(bool allowCreate = default)
+    public unsafe override BmSDK.Engine.AkDialogueComponent GetAkDialogueComponent(bool allowCreate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnSpeech.GetAkDialogueComponent", true);
         byte* paramsPtr = stackalloc byte[12];

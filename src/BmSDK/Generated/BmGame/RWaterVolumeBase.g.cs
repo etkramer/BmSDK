@@ -71,7 +71,7 @@ public partial class RWaterVolumeBase : BmSDK.BmGame.RWaterRescueVolumeBase, BmS
     /// <summary>
     /// Function: ApplyDefaultFloatingForcesToComponent
     /// </summary>
-    public unsafe bool ApplyDefaultFloatingForcesToComponent(BmSDK.Engine.PrimitiveComponent pComponent, float zbias, float DeltaTime, bool DontApplyDragTorque)
+    public unsafe virtual bool ApplyDefaultFloatingForcesToComponent(BmSDK.Engine.PrimitiveComponent pComponent, float zbias, float DeltaTime, bool DontApplyDragTorque)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterVolumeBase.ApplyDefaultFloatingForcesToComponent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -93,7 +93,7 @@ public partial class RWaterVolumeBase : BmSDK.BmGame.RWaterRescueVolumeBase, BmS
     /// <summary>
     /// Function: GetWaterLinearVelocityAtPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWaterLinearVelocityAtPosition(System.Numerics.Vector3 Position)
+    public unsafe virtual System.Numerics.Vector3 GetWaterLinearVelocityAtPosition(System.Numerics.Vector3 Position)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterVolumeBase.GetWaterLinearVelocityAtPosition", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -112,7 +112,7 @@ public partial class RWaterVolumeBase : BmSDK.BmGame.RWaterRescueVolumeBase, BmS
     /// <summary>
     /// Function: FindRelativeSurfacePosition
     /// </summary>
-    public unsafe bool FindRelativeSurfacePosition(System.Numerics.Vector3 TestPosition, System.Numerics.Vector3 TestDirection, out System.Numerics.Vector3 OutSurfacePosition, out System.Numerics.Vector3 OutSurfaceNormal)
+    public unsafe virtual bool FindRelativeSurfacePosition(System.Numerics.Vector3 TestPosition, System.Numerics.Vector3 TestDirection, out System.Numerics.Vector3 OutSurfacePosition, out System.Numerics.Vector3 OutSurfaceNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterVolumeBase.FindRelativeSurfacePosition", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -134,7 +134,7 @@ public partial class RWaterVolumeBase : BmSDK.BmGame.RWaterRescueVolumeBase, BmS
     /// <summary>
     /// Function: PlaySplashAtLocation
     /// </summary>
-    public unsafe bool PlaySplashAtLocation(System.Numerics.Vector3 SplashLocation, BmSDK.Rotator SplashRotation = default)
+    public unsafe virtual bool PlaySplashAtLocation(System.Numerics.Vector3 SplashLocation, BmSDK.Rotator SplashRotation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterVolumeBase.PlaySplashAtLocation", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -147,7 +147,7 @@ public partial class RWaterVolumeBase : BmSDK.BmGame.RWaterRescueVolumeBase, BmS
     /// <summary>
     /// Function: PlayExitSplash
     /// </summary>
-    public unsafe void PlayExitSplash(BmSDK.Engine.Actor Other)
+    public unsafe virtual void PlayExitSplash(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterVolumeBase.PlayExitSplash", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -159,7 +159,7 @@ public partial class RWaterVolumeBase : BmSDK.BmGame.RWaterRescueVolumeBase, BmS
     /// <summary>
     /// Function: PlayEntrySplash
     /// </summary>
-    public unsafe void PlayEntrySplash(BmSDK.Engine.Actor Other)
+    public unsafe virtual void PlayEntrySplash(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterVolumeBase.PlayEntrySplash", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -171,7 +171,7 @@ public partial class RWaterVolumeBase : BmSDK.BmGame.RWaterRescueVolumeBase, BmS
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterVolumeBase.UnTouch", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -183,7 +183,7 @@ public partial class RWaterVolumeBase : BmSDK.BmGame.RWaterRescueVolumeBase, BmS
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterVolumeBase.Touch", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -198,7 +198,7 @@ public partial class RWaterVolumeBase : BmSDK.BmGame.RWaterRescueVolumeBase, BmS
     /// <summary>
     /// Function: GetWaterDepth
     /// </summary>
-    public unsafe float GetWaterDepth()
+    public unsafe virtual float GetWaterDepth()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterVolumeBase.GetWaterDepth", true);
         byte* paramsPtr = stackalloc byte[4];

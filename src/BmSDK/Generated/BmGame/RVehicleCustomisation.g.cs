@@ -36,7 +36,7 @@ public partial class RVehicleCustomisation : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetupDeadVehicleMaterials
     /// </summary>
-    public unsafe void SetupDeadVehicleMaterials(BmSDK.Engine.SkeletalMeshComponent SkeletalMeshComponent)
+    public unsafe virtual void SetupDeadVehicleMaterials(BmSDK.Engine.SkeletalMeshComponent SkeletalMeshComponent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCustomisation.SetupDeadVehicleMaterials", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -48,7 +48,7 @@ public partial class RVehicleCustomisation : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetupCustomisationOptions
     /// </summary>
-    public unsafe void SetupCustomisationOptions(BmSDK.Engine.SkeletalMeshComponent SkeletalMeshComponent, int ForceMaterialIndex = default)
+    public unsafe virtual void SetupCustomisationOptions(BmSDK.Engine.SkeletalMeshComponent SkeletalMeshComponent, int ForceMaterialIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCustomisation.SetupCustomisationOptions", true);
         byte* paramsPtr = stackalloc byte[16];

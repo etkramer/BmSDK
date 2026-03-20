@@ -71,7 +71,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggleHidden
     /// </summary>
-    public unsafe void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
+    public unsafe override void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineActor.OnToggleHidden", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineActor.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPathTotalLength
     /// </summary>
-    public unsafe float GetPathTotalLength()
+    public unsafe virtual float GetPathTotalLength()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineActor.GetPathTotalLength", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -113,7 +113,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTangentAtDistanceAlongPath
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTangentAtDistanceAlongPath(float Distance)
+    public unsafe virtual System.Numerics.Vector3 GetTangentAtDistanceAlongPath(float Distance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineActor.GetTangentAtDistanceAlongPath", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -132,7 +132,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLocationAtDistanceAlongPath
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLocationAtDistanceAlongPath(float Distance)
+    public unsafe virtual System.Numerics.Vector3 GetLocationAtDistanceAlongPath(float Distance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineActor.GetLocationAtDistanceAlongPath", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -151,7 +151,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EstimateDistanceAlongPathToClosestPoint
     /// </summary>
-    public unsafe float EstimateDistanceAlongPathToClosestPoint(System.Numerics.Vector3 TestPointInWorldSpace)
+    public unsafe virtual float EstimateDistanceAlongPathToClosestPoint(System.Numerics.Vector3 TestPointInWorldSpace)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineActor.EstimateDistanceAlongPathToClosestPoint", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -170,7 +170,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAllConnectedSplineActors
     /// </summary>
-    public unsafe void GetAllConnectedSplineActors(out BmSDK.TArray<BmSDK.Engine.SplineActor> OutSet)
+    public unsafe virtual void GetAllConnectedSplineActors(out BmSDK.TArray<BmSDK.Engine.SplineActor> OutSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineActor.GetAllConnectedSplineActors", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -189,7 +189,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FindSplinePathTo
     /// </summary>
-    public unsafe bool FindSplinePathTo(BmSDK.Engine.SplineActor Goal, out BmSDK.TArray<BmSDK.Engine.SplineActor> OutRoute)
+    public unsafe virtual bool FindSplinePathTo(BmSDK.Engine.SplineActor Goal, out BmSDK.TArray<BmSDK.Engine.SplineActor> OutRoute)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineActor.FindSplinePathTo", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -209,7 +209,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBestConnectionInDirection
     /// </summary>
-    public unsafe BmSDK.Engine.SplineActor GetBestConnectionInDirection(System.Numerics.Vector3 DesiredDir, bool bUseLinksFrom = default)
+    public unsafe virtual BmSDK.Engine.SplineActor GetBestConnectionInDirection(System.Numerics.Vector3 DesiredDir, bool bUseLinksFrom = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineActor.GetBestConnectionInDirection", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -229,7 +229,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRandomConnection
     /// </summary>
-    public unsafe BmSDK.Engine.SplineActor GetRandomConnection(bool bUseLinksFrom = default)
+    public unsafe virtual BmSDK.Engine.SplineActor GetRandomConnection(bool bUseLinksFrom = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineActor.GetRandomConnection", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -248,7 +248,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BreakAllConnectionsFrom
     /// </summary>
-    public unsafe void BreakAllConnectionsFrom()
+    public unsafe virtual void BreakAllConnectionsFrom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineActor.BreakAllConnectionsFrom", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -266,7 +266,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BreakAllConnections
     /// </summary>
-    public unsafe void BreakAllConnections()
+    public unsafe virtual void BreakAllConnections()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineActor.BreakAllConnections", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -284,7 +284,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BreakConnectionTo
     /// </summary>
-    public unsafe void BreakConnectionTo(BmSDK.Engine.SplineActor NextActor)
+    public unsafe virtual void BreakConnectionTo(BmSDK.Engine.SplineActor NextActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineActor.BreakConnectionTo", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -303,7 +303,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FindTargetForComponent
     /// </summary>
-    public unsafe BmSDK.Engine.SplineActor FindTargetForComponent(BmSDK.Engine.SplineComponent SplineComp)
+    public unsafe virtual BmSDK.Engine.SplineActor FindTargetForComponent(BmSDK.Engine.SplineComponent SplineComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineActor.FindTargetForComponent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -322,7 +322,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FindSplineComponentTo
     /// </summary>
-    public unsafe BmSDK.Engine.SplineComponent FindSplineComponentTo(BmSDK.Engine.SplineActor NextActor)
+    public unsafe virtual BmSDK.Engine.SplineComponent FindSplineComponentTo(BmSDK.Engine.SplineActor NextActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineActor.FindSplineComponentTo", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -341,7 +341,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsConnectedTo
     /// </summary>
-    public unsafe bool IsConnectedTo(BmSDK.Engine.SplineActor NextActor, bool bCheckForDisableDestination)
+    public unsafe virtual bool IsConnectedTo(BmSDK.Engine.SplineActor NextActor, bool bCheckForDisableDestination)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineActor.IsConnectedTo", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -361,7 +361,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddConnectionTo
     /// </summary>
-    public unsafe void AddConnectionTo(BmSDK.Engine.SplineActor NextActor)
+    public unsafe virtual void AddConnectionTo(BmSDK.Engine.SplineActor NextActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineActor.AddConnectionTo", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -380,7 +380,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateConnectedSplineComponents
     /// </summary>
-    public unsafe void UpdateConnectedSplineComponents(bool bFinish)
+    public unsafe virtual void UpdateConnectedSplineComponents(bool bFinish)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineActor.UpdateConnectedSplineComponents", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -399,7 +399,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateSplineComponents
     /// </summary>
-    public unsafe void UpdateSplineComponents()
+    public unsafe virtual void UpdateSplineComponents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineActor.UpdateSplineComponents", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -417,7 +417,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetWorldSpaceTangent
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWorldSpaceTangent()
+    public unsafe virtual System.Numerics.Vector3 GetWorldSpaceTangent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineActor.GetWorldSpaceTangent", true);
         byte* paramsPtr = stackalloc byte[12];

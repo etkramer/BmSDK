@@ -71,7 +71,7 @@ public partial class RPhysicsTriggerVolume : BmSDK.Engine.Volume, BmSDK.IGameObj
     /// <summary>
     /// Function: SetActive
     /// </summary>
-    public unsafe void SetActive(bool bNewActive)
+    public unsafe virtual void SetActive(bool bNewActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsTriggerVolume.SetActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -90,7 +90,7 @@ public partial class RPhysicsTriggerVolume : BmSDK.Engine.Volume, BmSDK.IGameObj
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsTriggerVolume.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];

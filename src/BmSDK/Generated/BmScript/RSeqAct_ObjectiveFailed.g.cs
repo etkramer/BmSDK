@@ -36,7 +36,7 @@ public partial class RSeqAct_ObjectiveFailed : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ObjectiveFailed.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -48,7 +48,7 @@ public partial class RSeqAct_ObjectiveFailed : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: GetGameOverSequence
     /// </summary>
-    public unsafe BmSDK.FString GetGameOverSequence()
+    public unsafe virtual BmSDK.FString GetGameOverSequence()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ObjectiveFailed.GetGameOverSequence", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -59,7 +59,7 @@ public partial class RSeqAct_ObjectiveFailed : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ObjectiveFailed.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RSeqAct_ObjectiveFailed : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: GetPC
     /// </summary>
-    public unsafe BmSDK.BmGame.RPlayerController GetPC()
+    public unsafe virtual BmSDK.BmGame.RPlayerController GetPC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ObjectiveFailed.GetPC", true);
         byte* paramsPtr = stackalloc byte[8];

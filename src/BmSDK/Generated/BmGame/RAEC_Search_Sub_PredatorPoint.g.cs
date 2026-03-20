@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_PredatorPoint : BmSDK.BmGame.RAEC_Search_Su
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_PredatorPoint.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Sub_PredatorPoint : BmSDK.BmGame.RAEC_Search_Su
     /// <summary>
     /// Function: StartFromSearch
     /// </summary>
-    public unsafe void StartFromSearch(BmSDK.BmGame.RBMAIController NewCon, BmSDK.BmGame.RPredatorSpecialMovePointBase NewPredatorPoint)
+    public unsafe virtual void StartFromSearch(BmSDK.BmGame.RBMAIController NewCon, BmSDK.BmGame.RPredatorSpecialMovePointBase NewPredatorPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_PredatorPoint.StartFromSearch", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -95,7 +95,7 @@ public partial class RAEC_Search_Sub_PredatorPoint : BmSDK.BmGame.RAEC_Search_Su
     /// <summary>
     /// Function: OnVillainStolen
     /// </summary>
-    public unsafe void OnVillainStolen()
+    public unsafe override void OnVillainStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_PredatorPoint.OnVillainStolen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RAEC_Search_Sub_PredatorPoint : BmSDK.BmGame.RAEC_Search_Su
     /// <summary>
     /// Function: GetCurrentPathHandle
     /// </summary>
-    public unsafe BmSDK.BmGame.RNavigationHandle GetCurrentPathHandle()
+    public unsafe override BmSDK.BmGame.RNavigationHandle GetCurrentPathHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_PredatorPoint.GetCurrentPathHandle", true);
         byte* paramsPtr = stackalloc byte[8];

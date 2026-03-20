@@ -36,7 +36,7 @@ public partial class OnlineCustomContentRequestHydra : BmSDK.Engine.OnlineCustom
     /// <summary>
     /// Function: CancelCustomContentRequest
     /// </summary>
-    public unsafe void CancelCustomContentRequest()
+    public unsafe override void CancelCustomContentRequest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequestHydra.CancelCustomContentRequest", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class OnlineCustomContentRequestHydra : BmSDK.Engine.OnlineCustom
     /// <summary>
     /// Function: GetCustomContentAsString
     /// </summary>
-    public unsafe void GetCustomContentAsString(out BmSDK.FString ContentData)
+    public unsafe override void GetCustomContentAsString(out BmSDK.FString ContentData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequestHydra.GetCustomContentAsString", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -73,7 +73,7 @@ public partial class OnlineCustomContentRequestHydra : BmSDK.Engine.OnlineCustom
     /// <summary>
     /// Function: GetCustomContent
     /// </summary>
-    public unsafe void GetCustomContent(out BmSDK.TArray<byte> ContentData)
+    public unsafe override void GetCustomContent(out BmSDK.TArray<byte> ContentData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequestHydra.GetCustomContent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -92,7 +92,7 @@ public partial class OnlineCustomContentRequestHydra : BmSDK.Engine.OnlineCustom
     /// <summary>
     /// Function: StartCustomContentRequest
     /// </summary>
-    public unsafe void StartCustomContentRequest(BmSDK.FString sContentName, BmSDK.FString sCustomId, System.IntPtr dRequestCustomContentComplete)
+    public unsafe override void StartCustomContentRequest(BmSDK.FString sContentName, BmSDK.FString sCustomId, System.IntPtr dRequestCustomContentComplete)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequestHydra.StartCustomContentRequest", true);
         byte* paramsPtr = stackalloc byte[48];

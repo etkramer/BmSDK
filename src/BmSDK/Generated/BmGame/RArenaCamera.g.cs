@@ -71,7 +71,7 @@ public partial class RArenaCamera : BmSDK.BmGame.RMultiTargetCamera, BmSDK.IGame
     /// <summary>
     /// Function: UpdateCorrection
     /// </summary>
-    public unsafe void UpdateCorrection(float DeltaTime)
+    public unsafe virtual void UpdateCorrection(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RArenaCamera.UpdateCorrection", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -90,7 +90,7 @@ public partial class RArenaCamera : BmSDK.BmGame.RMultiTargetCamera, BmSDK.IGame
     /// <summary>
     /// Function: GetCameraView
     /// </summary>
-    public unsafe void GetCameraView(float DeltaTime, out BmSDK.GameObject.FTPOV OutPOV)
+    public unsafe override void GetCameraView(float DeltaTime, out BmSDK.GameObject.FTPOV OutPOV)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RArenaCamera.GetCameraView", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -103,7 +103,7 @@ public partial class RArenaCamera : BmSDK.BmGame.RMultiTargetCamera, BmSDK.IGame
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RArenaCamera.Tick", true);
         byte* paramsPtr = stackalloc byte[4];

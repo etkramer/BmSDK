@@ -71,7 +71,7 @@ public partial class RBMCombatDamageProxy : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: RegisterTransform
     /// </summary>
-    public unsafe void RegisterTransform(System.Numerics.Vector3 NewLoc, BmSDK.Rotator NewRot)
+    public unsafe virtual void RegisterTransform(System.Numerics.Vector3 NewLoc, BmSDK.Rotator NewRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDamageProxy.RegisterTransform", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -91,7 +91,7 @@ public partial class RBMCombatDamageProxy : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDamageProxy.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -102,7 +102,7 @@ public partial class RBMCombatDamageProxy : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: CombatTouch
     /// </summary>
-    public unsafe bool CombatTouch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual bool CombatTouch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDamageProxy.CombatTouch", true);
         byte* paramsPtr = stackalloc byte[144];
@@ -117,7 +117,7 @@ public partial class RBMCombatDamageProxy : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetDamageDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDamageDirection()
+    public unsafe virtual System.Numerics.Vector3 GetDamageDirection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDamageProxy.GetDamageDirection", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -128,7 +128,7 @@ public partial class RBMCombatDamageProxy : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: Deactivate
     /// </summary>
-    public unsafe void Deactivate()
+    public unsafe virtual void Deactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDamageProxy.Deactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RBMCombatDamageProxy : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: DeactivateDelayed
     /// </summary>
-    public unsafe void DeactivateDelayed(float Delay)
+    public unsafe virtual void DeactivateDelayed(float Delay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDamageProxy.DeactivateDelayed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -151,7 +151,7 @@ public partial class RBMCombatDamageProxy : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: ActivateOnSocket
     /// </summary>
-    public unsafe void ActivateOnSocket(float NewRadius, BmSDK.Engine.SkeletalMeshComponent NewMesh, BmSDK.FName NewSocketName, float NewActiveTime = default, System.Numerics.Vector3 NewCylinderProjection = default, bool bHasCollision = default)
+    public unsafe virtual void ActivateOnSocket(float NewRadius, BmSDK.Engine.SkeletalMeshComponent NewMesh, BmSDK.FName NewSocketName, float NewActiveTime = default, System.Numerics.Vector3 NewCylinderProjection = default, bool bHasCollision = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDamageProxy.ActivateOnSocket", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -168,7 +168,7 @@ public partial class RBMCombatDamageProxy : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: Activate
     /// </summary>
-    public unsafe void Activate(float NewRadius, BmSDK.FName NewBoneName, float NewActiveTime = default, System.Numerics.Vector3 NewCylinderProjection = default, bool bHasCollision = default)
+    public unsafe virtual void Activate(float NewRadius, BmSDK.FName NewBoneName, float NewActiveTime = default, System.Numerics.Vector3 NewCylinderProjection = default, bool bHasCollision = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDamageProxy.Activate", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -184,7 +184,7 @@ public partial class RBMCombatDamageProxy : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDamageProxy.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -195,7 +195,7 @@ public partial class RBMCombatDamageProxy : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: UpdateLocation
     /// </summary>
-    public unsafe void UpdateLocation()
+    public unsafe virtual void UpdateLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDamageProxy.UpdateLocation", true);
         byte* paramsPtr = stackalloc byte[0];

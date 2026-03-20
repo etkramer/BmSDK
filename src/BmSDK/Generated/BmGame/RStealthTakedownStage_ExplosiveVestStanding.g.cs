@@ -71,7 +71,7 @@ public partial class RStealthTakedownStage_ExplosiveVestStanding : BmSDK.BmGame.
     /// <summary>
     /// Function: SwitchExplosiveVestColourToGrey
     /// </summary>
-    public unsafe void SwitchExplosiveVestColourToGrey()
+    public unsafe virtual void SwitchExplosiveVestColourToGrey()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ExplosiveVestStanding.SwitchExplosiveVestColourToGrey", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -82,7 +82,7 @@ public partial class RStealthTakedownStage_ExplosiveVestStanding : BmSDK.BmGame.
     /// <summary>
     /// Function: SwitchExplosiveVestColourToGreen
     /// </summary>
-    public unsafe void SwitchExplosiveVestColourToGreen()
+    public unsafe virtual void SwitchExplosiveVestColourToGreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ExplosiveVestStanding.SwitchExplosiveVestColourToGreen", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -93,7 +93,7 @@ public partial class RStealthTakedownStage_ExplosiveVestStanding : BmSDK.BmGame.
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ExplosiveVestStanding.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -106,7 +106,7 @@ public partial class RStealthTakedownStage_ExplosiveVestStanding : BmSDK.BmGame.
     /// <summary>
     /// Function: OverrideChosenAnim
     /// </summary>
-    public unsafe void OverrideChosenAnim(out int Anim)
+    public unsafe override void OverrideChosenAnim(out int Anim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ExplosiveVestStanding.OverrideChosenAnim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -118,7 +118,7 @@ public partial class RStealthTakedownStage_ExplosiveVestStanding : BmSDK.BmGame.
     /// <summary>
     /// Function: GetFinishState
     /// </summary>
-    public unsafe BmSDK.FName GetFinishState()
+    public unsafe override BmSDK.FName GetFinishState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ExplosiveVestStanding.GetFinishState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RStealthTakedownStage_ExplosiveVestStanding : BmSDK.BmGame.
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ExplosiveVestStanding.Begin", true);
         byte* paramsPtr = stackalloc byte[0];

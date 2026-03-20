@@ -71,7 +71,7 @@ public partial class RBMAIAction_BuddyJoin : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_BuddyJoin.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_BuddyJoin : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_BuddyJoin.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_BuddyJoin : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: PlayAnim
     /// </summary>
-    public unsafe void PlayAnim()
+    public unsafe virtual void PlayAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_BuddyJoin.PlayAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_BuddyJoin : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: GetAnimNames
     /// </summary>
-    public unsafe void GetAnimNames()
+    public unsafe virtual void GetAnimNames()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_BuddyJoin.GetAnimNames", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -116,7 +116,7 @@ public partial class RBMAIAction_BuddyJoin : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: GetAnimBounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FSimpleBox GetAnimBounds()
+    public unsafe virtual BmSDK.GameObject.FSimpleBox GetAnimBounds()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_BuddyJoin.GetAnimBounds", true);
         byte* paramsPtr = stackalloc byte[168];
@@ -127,7 +127,7 @@ public partial class RBMAIAction_BuddyJoin : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: ExpandBoxBounds
     /// </summary>
-    public unsafe void ExpandBoxBounds(out BmSDK.GameObject.FSimpleBox OutBox, System.Numerics.Vector3 NewPoint)
+    public unsafe virtual void ExpandBoxBounds(out BmSDK.GameObject.FSimpleBox OutBox, System.Numerics.Vector3 NewPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_BuddyJoin.ExpandBoxBounds", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -140,7 +140,7 @@ public partial class RBMAIAction_BuddyJoin : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_BuddyJoin.OnActivate", true);
         byte* paramsPtr = stackalloc byte[56];

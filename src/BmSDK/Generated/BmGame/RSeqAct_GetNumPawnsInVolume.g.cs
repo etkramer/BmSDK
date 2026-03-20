@@ -36,7 +36,7 @@ public partial class RSeqAct_GetNumPawnsInVolume : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GetNumPawnsInVolume.Activated", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RSeqAct_GetNumPawnsInVolume : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Function: GetPawnFromActor
     /// </summary>
-    public unsafe BmSDK.Engine.Pawn GetPawnFromActor(BmSDK.Engine.Actor act)
+    public unsafe virtual BmSDK.Engine.Pawn GetPawnFromActor(BmSDK.Engine.Actor act)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GetNumPawnsInVolume.GetPawnFromActor", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -66,7 +66,7 @@ public partial class RSeqAct_GetNumPawnsInVolume : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Function: CheckPawns
     /// </summary>
-    public unsafe void CheckPawns(bool bForceEncompassCheck)
+    public unsafe virtual void CheckPawns(bool bForceEncompassCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GetNumPawnsInVolume.CheckPawns", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -85,7 +85,7 @@ public partial class RSeqAct_GetNumPawnsInVolume : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Function: ShouldCheckPawn
     /// </summary>
-    public unsafe bool ShouldCheckPawn(BmSDK.BmGame.RPawnCharacter TestPawn)
+    public unsafe virtual bool ShouldCheckPawn(BmSDK.BmGame.RPawnCharacter TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GetNumPawnsInVolume.ShouldCheckPawn", true);
         byte* paramsPtr = stackalloc byte[12];

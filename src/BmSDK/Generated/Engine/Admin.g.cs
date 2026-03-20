@@ -71,7 +71,7 @@ public partial class Admin : BmSDK.Engine.PlayerController, BmSDK.IGameObject
     /// <summary>
     /// Function: ServerSwitch
     /// </summary>
-    public unsafe void ServerSwitch(BmSDK.FString URL)
+    public unsafe virtual void ServerSwitch(BmSDK.FString URL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Admin.ServerSwitch", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class Admin : BmSDK.Engine.PlayerController, BmSDK.IGameObject
     /// <summary>
     /// Function: Switch
     /// </summary>
-    public unsafe void Switch(BmSDK.FString URL)
+    public unsafe virtual void Switch(BmSDK.FString URL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Admin.Switch", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -95,7 +95,7 @@ public partial class Admin : BmSDK.Engine.PlayerController, BmSDK.IGameObject
     /// <summary>
     /// Function: ServerRestartMap
     /// </summary>
-    public unsafe void ServerRestartMap()
+    public unsafe virtual void ServerRestartMap()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Admin.ServerRestartMap", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class Admin : BmSDK.Engine.PlayerController, BmSDK.IGameObject
     /// <summary>
     /// Function: RestartMap
     /// </summary>
-    public unsafe void RestartMap()
+    public unsafe virtual void RestartMap()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Admin.RestartMap", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class Admin : BmSDK.Engine.PlayerController, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayerList
     /// </summary>
-    public unsafe void PlayerList()
+    public unsafe virtual void PlayerList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Admin.PlayerList", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -128,7 +128,7 @@ public partial class Admin : BmSDK.Engine.PlayerController, BmSDK.IGameObject
     /// <summary>
     /// Function: ServerKick
     /// </summary>
-    public unsafe void ServerKick(BmSDK.FString S)
+    public unsafe virtual void ServerKick(BmSDK.FString S)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Admin.ServerKick", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -140,7 +140,7 @@ public partial class Admin : BmSDK.Engine.PlayerController, BmSDK.IGameObject
     /// <summary>
     /// Function: Kick
     /// </summary>
-    public unsafe void Kick(BmSDK.FString S)
+    public unsafe virtual void Kick(BmSDK.FString S)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Admin.Kick", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -152,7 +152,7 @@ public partial class Admin : BmSDK.Engine.PlayerController, BmSDK.IGameObject
     /// <summary>
     /// Function: ServerKickBan
     /// </summary>
-    public unsafe void ServerKickBan(BmSDK.FString S)
+    public unsafe virtual void ServerKickBan(BmSDK.FString S)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Admin.ServerKickBan", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -164,7 +164,7 @@ public partial class Admin : BmSDK.Engine.PlayerController, BmSDK.IGameObject
     /// <summary>
     /// Function: KickBan
     /// </summary>
-    public unsafe void KickBan(BmSDK.FString S)
+    public unsafe virtual void KickBan(BmSDK.FString S)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Admin.KickBan", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -176,7 +176,7 @@ public partial class Admin : BmSDK.Engine.PlayerController, BmSDK.IGameObject
     /// <summary>
     /// Function: ServerAdmin
     /// </summary>
-    public unsafe void ServerAdmin(BmSDK.FString CommandLine)
+    public unsafe virtual void ServerAdmin(BmSDK.FString CommandLine)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Admin.ServerAdmin", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -188,7 +188,7 @@ public partial class Admin : BmSDK.Engine.PlayerController, BmSDK.IGameObject
     /// <summary>
     /// Function: Admin
     /// </summary>
-    public unsafe void _Admin(BmSDK.FString CommandLine)
+    public unsafe virtual void _Admin(BmSDK.FString CommandLine)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Admin.Admin", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -200,7 +200,7 @@ public partial class Admin : BmSDK.Engine.PlayerController, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Admin.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class RVehicleSimFlyingNPC : BmSDK.BmGame.RVehicleSimNPC, BmSDK.I
     /// <summary>
     /// Function: SetDisabledByDroneDisruptor
     /// </summary>
-    public unsafe void SetDisabledByDroneDisruptor(bool Disabled)
+    public unsafe override void SetDisabledByDroneDisruptor(bool Disabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleSimFlyingNPC.SetDisabledByDroneDisruptor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RVehicleSimFlyingNPC : BmSDK.BmGame.RVehicleSimNPC, BmSDK.I
     /// <summary>
     /// Function: SetDisabledByEMP
     /// </summary>
-    public unsafe void SetDisabledByEMP(bool Disabled)
+    public unsafe override void SetDisabledByEMP(bool Disabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleSimFlyingNPC.SetDisabledByEMP", true);
         byte* paramsPtr = stackalloc byte[4];

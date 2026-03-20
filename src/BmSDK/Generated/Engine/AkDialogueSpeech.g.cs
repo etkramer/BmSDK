@@ -31,7 +31,7 @@ public partial class AkDialogueSpeech : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckChapterFlags
     /// </summary>
-    public unsafe bool CheckChapterFlags(bool checkAll = default)
+    public unsafe virtual bool CheckChapterFlags(bool checkAll = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueSpeech.CheckChapterFlags", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -50,7 +50,7 @@ public partial class AkDialogueSpeech : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLineIndex
     /// </summary>
-    public unsafe int GetLineIndex(BmSDK.Engine.AkDialogueLine dlgLine)
+    public unsafe virtual int GetLineIndex(BmSDK.Engine.AkDialogueLine dlgLine)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueSpeech.GetLineIndex", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -69,7 +69,7 @@ public partial class AkDialogueSpeech : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLine
     /// </summary>
-    public unsafe BmSDK.Engine.AkDialogueLine GetLine(int dlgLineIndex)
+    public unsafe virtual BmSDK.Engine.AkDialogueLine GetLine(int dlgLineIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueSpeech.GetLine", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -88,7 +88,7 @@ public partial class AkDialogueSpeech : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: GetVoiceCount
     /// </summary>
-    public unsafe int GetVoiceCount()
+    public unsafe virtual int GetVoiceCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueSpeech.GetVoiceCount", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class AkDialogueSpeech : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLineCount
     /// </summary>
-    public unsafe int GetLineCount()
+    public unsafe virtual int GetLineCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueSpeech.GetLineCount", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -124,7 +124,7 @@ public partial class AkDialogueSpeech : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDialogueType_
     /// </summary>
-    public unsafe BmSDK.Engine.AkDialogueType GetDialogueType_()
+    public unsafe virtual BmSDK.Engine.AkDialogueType GetDialogueType_()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueSpeech.GetDialogueType_", true);
         byte* paramsPtr = stackalloc byte[8];

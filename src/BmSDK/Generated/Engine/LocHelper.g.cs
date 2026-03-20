@@ -47,7 +47,7 @@ public partial class LocHelper : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLegalCountry
     /// </summary>
-    public unsafe BmSDK.FString GetLegalCountry()
+    public unsafe virtual BmSDK.FString GetLegalCountry()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocHelper.GetLegalCountry", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -58,7 +58,7 @@ public partial class LocHelper : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FindCountryCodeInfo
     /// </summary>
-    public unsafe bool FindCountryCodeInfo(BmSDK.FString CountryCode, out BmSDK.Engine.LocHelper.FCountryCodeMap Output)
+    public unsafe virtual bool FindCountryCodeInfo(BmSDK.FString CountryCode, out BmSDK.Engine.LocHelper.FCountryCodeMap Output)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocHelper.FindCountryCodeInfo", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -71,7 +71,7 @@ public partial class LocHelper : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetValidAge
     /// </summary>
-    public unsafe int GetValidAge()
+    public unsafe virtual int GetValidAge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocHelper.GetValidAge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -89,7 +89,7 @@ public partial class LocHelper : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetIsCountryValid
     /// </summary>
-    public unsafe bool GetIsCountryValid()
+    public unsafe virtual bool GetIsCountryValid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocHelper.GetIsCountryValid", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -107,7 +107,7 @@ public partial class LocHelper : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetIsAgeValid
     /// </summary>
-    public unsafe bool GetIsAgeValid()
+    public unsafe virtual bool GetIsAgeValid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocHelper.GetIsAgeValid", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -125,7 +125,7 @@ public partial class LocHelper : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCountry
     /// </summary>
-    public unsafe BmSDK.FString GetCountry()
+    public unsafe virtual BmSDK.FString GetCountry()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocHelper.GetCountry", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -143,7 +143,7 @@ public partial class LocHelper : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCountryCodeLookupIndex
     /// </summary>
-    public unsafe int GetCountryCodeLookupIndex()
+    public unsafe virtual int GetCountryCodeLookupIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocHelper.GetCountryCodeLookupIndex", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RDestructibleProp_SignPost : BmSDK.BmGame.RDestructibleProp
     /// <summary>
     /// Function: OverrideDamageParams
     /// </summary>
-    public unsafe void OverrideDamageParams(out float BaseDamage, out float DamageRadius, out float Momentum, BmSDK.Class DamageType)
+    public unsafe override void OverrideDamageParams(out float BaseDamage, out float DamageRadius, out float Momentum, BmSDK.Class DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_SignPost.OverrideDamageParams", true);
         byte* paramsPtr = stackalloc byte[20];

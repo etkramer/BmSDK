@@ -71,7 +71,7 @@ public partial class MSpecialMoveInstance_RedhoodGunWindow : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: FireThugShotWhileStunnedEvent
     /// </summary>
-    public unsafe void FireThugShotWhileStunnedEvent()
+    public unsafe virtual void FireThugShotWhileStunnedEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSpecialMoveInstance_RedhoodGunWindow.FireThugShotWhileStunnedEvent", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -82,7 +82,7 @@ public partial class MSpecialMoveInstance_RedhoodGunWindow : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: FireThugShotThroughWindowEvent
     /// </summary>
-    public unsafe void FireThugShotThroughWindowEvent()
+    public unsafe virtual void FireThugShotThroughWindowEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSpecialMoveInstance_RedhoodGunWindow.FireThugShotThroughWindowEvent", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -93,7 +93,7 @@ public partial class MSpecialMoveInstance_RedhoodGunWindow : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: ShotVillainBehindWindow
     /// </summary>
-    public unsafe void ShotVillainBehindWindow(System.Numerics.Vector3 ExplodeLocation)
+    public unsafe virtual void ShotVillainBehindWindow(System.Numerics.Vector3 ExplodeLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSpecialMoveInstance_RedhoodGunWindow.ShotVillainBehindWindow", true);
         byte* paramsPtr = stackalloc byte[304];
@@ -105,7 +105,7 @@ public partial class MSpecialMoveInstance_RedhoodGunWindow : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: BreakWindow
     /// </summary>
-    public unsafe void BreakWindow()
+    public unsafe virtual void BreakWindow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSpecialMoveInstance_RedhoodGunWindow.BreakWindow", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -116,7 +116,7 @@ public partial class MSpecialMoveInstance_RedhoodGunWindow : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: StartTurnAnimation
     /// </summary>
-    public unsafe void StartTurnAnimation()
+    public unsafe virtual void StartTurnAnimation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSpecialMoveInstance_RedhoodGunWindow.StartTurnAnimation", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -127,7 +127,7 @@ public partial class MSpecialMoveInstance_RedhoodGunWindow : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSpecialMoveInstance_RedhoodGunWindow.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -139,7 +139,7 @@ public partial class MSpecialMoveInstance_RedhoodGunWindow : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSpecialMoveInstance_RedhoodGunWindow.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -150,7 +150,7 @@ public partial class MSpecialMoveInstance_RedhoodGunWindow : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSpecialMoveInstance_RedhoodGunWindow.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[132];

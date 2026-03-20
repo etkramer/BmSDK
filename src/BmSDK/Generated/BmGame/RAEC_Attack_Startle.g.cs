@@ -71,7 +71,7 @@ public partial class RAEC_Attack_Startle : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: MoveAllToAttack
     /// </summary>
-    public unsafe void MoveAllToAttack()
+    public unsafe virtual void MoveAllToAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Startle.MoveAllToAttack", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RAEC_Attack_Startle : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: AssignToEvent
     /// </summary>
-    public unsafe void AssignToEvent(BmSDK.BmGame.RBMAIController Con)
+    public unsafe override void AssignToEvent(BmSDK.BmGame.RBMAIController Con)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Startle.AssignToEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RAEC_Attack_Startle : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: AddGunStartled
     /// </summary>
-    public unsafe void AddGunStartled(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe virtual void AddGunStartled(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Startle.AddGunStartled", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -106,7 +106,7 @@ public partial class RAEC_Attack_Startle : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: AddBatShocked
     /// </summary>
-    public unsafe void AddBatShocked(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe virtual void AddBatShocked(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Startle.AddBatShocked", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -118,7 +118,7 @@ public partial class RAEC_Attack_Startle : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Startle.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -130,7 +130,7 @@ public partial class RAEC_Attack_Startle : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: OnRemoveSoloChild
     /// </summary>
-    public unsafe void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
+    public unsafe override void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Startle.OnRemoveSoloChild", true);
         byte* paramsPtr = stackalloc byte[8];

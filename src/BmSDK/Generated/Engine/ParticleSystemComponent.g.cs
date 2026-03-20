@@ -36,7 +36,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetStopSpawning
     /// </summary>
-    public unsafe void SetStopSpawning(int InEmitterIndex, bool bInStopSpawning)
+    public unsafe virtual void SetStopSpawning(int InEmitterIndex, bool bInStopSpawning)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetStopSpawning", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -56,7 +56,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: ResetToDefaults
     /// </summary>
-    public unsafe void ResetToDefaults()
+    public unsafe virtual void ResetToDefaults()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.ResetToDefaults", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -74,7 +74,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetActive
     /// </summary>
-    public unsafe void SetActive(bool bNowActive, bool bFlagAsJustAttached = default)
+    public unsafe virtual void SetActive(bool bNowActive, bool bFlagAsJustAttached = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetActive", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetVectorArrayElementParameter
     /// </summary>
-    public unsafe void SetVectorArrayElementParameter(BmSDK.FName ParameterName, int Index, System.Numerics.Vector3 Param)
+    public unsafe virtual void SetVectorArrayElementParameter(BmSDK.FName ParameterName, int Index, System.Numerics.Vector3 Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetVectorArrayElementParameter", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -115,7 +115,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetVectorArrayParameter
     /// </summary>
-    public unsafe void SetVectorArrayParameter(BmSDK.FName ParameterName, out BmSDK.TArray<System.Numerics.Vector3> Param)
+    public unsafe virtual void SetVectorArrayParameter(BmSDK.FName ParameterName, out BmSDK.TArray<System.Numerics.Vector3> Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetVectorArrayParameter", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -135,7 +135,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: ClearParameter
     /// </summary>
-    public unsafe void ClearParameter(BmSDK.FName ParameterName, BmSDK.Engine.ParticleSystemComponent.EParticleSysParamType ParameterType = default)
+    public unsafe virtual void ClearParameter(BmSDK.FName ParameterName, BmSDK.Engine.ParticleSystemComponent.EParticleSysParamType ParameterType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.ClearParameter", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -155,7 +155,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: GetMaterialParameter
     /// </summary>
-    public unsafe bool GetMaterialParameter(BmSDK.FName InName, out BmSDK.Engine.MaterialInterface OutMaterial)
+    public unsafe virtual bool GetMaterialParameter(BmSDK.FName InName, out BmSDK.Engine.MaterialInterface OutMaterial)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetMaterialParameter", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -175,7 +175,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: GetActorParameter
     /// </summary>
-    public unsafe bool GetActorParameter(BmSDK.FName InName, out BmSDK.Engine.Actor OutActor)
+    public unsafe virtual bool GetActorParameter(BmSDK.FName InName, out BmSDK.Engine.Actor OutActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetActorParameter", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -195,7 +195,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: GetColorParameter
     /// </summary>
-    public unsafe bool GetColorParameter(BmSDK.FName InName, out BmSDK.GameObject.FColor OutColor)
+    public unsafe virtual bool GetColorParameter(BmSDK.FName InName, out BmSDK.GameObject.FColor OutColor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetColorParameter", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -215,7 +215,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: GetVectorParameter
     /// </summary>
-    public unsafe bool GetVectorParameter(BmSDK.FName InName, out System.Numerics.Vector3 OutVector)
+    public unsafe virtual bool GetVectorParameter(BmSDK.FName InName, out System.Numerics.Vector3 OutVector)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetVectorParameter", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -235,7 +235,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: GetFloatParameter
     /// </summary>
-    public unsafe bool GetFloatParameter(BmSDK.FName InName, out float OutFloat)
+    public unsafe virtual bool GetFloatParameter(BmSDK.FName InName, out float OutFloat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetFloatParameter", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -255,7 +255,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetSpawnScale
     /// </summary>
-    public unsafe void SetSpawnScale(float Value)
+    public unsafe virtual void SetSpawnScale(float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetSpawnScale", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -274,7 +274,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: GetSpawnScale
     /// </summary>
-    public unsafe float GetSpawnScale()
+    public unsafe virtual float GetSpawnScale()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetSpawnScale", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -292,7 +292,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetMaterialParameter
     /// </summary>
-    public unsafe void SetMaterialParameter(BmSDK.FName ParameterName, BmSDK.Engine.MaterialInterface Param)
+    public unsafe virtual void SetMaterialParameter(BmSDK.FName ParameterName, BmSDK.Engine.MaterialInterface Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetMaterialParameter", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -312,7 +312,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetActorParameter
     /// </summary>
-    public unsafe void SetActorParameter(BmSDK.FName ParameterName, BmSDK.Engine.Actor Param)
+    public unsafe virtual void SetActorParameter(BmSDK.FName ParameterName, BmSDK.Engine.Actor Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetActorParameter", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -332,7 +332,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetColorParameter
     /// </summary>
-    public unsafe void SetColorParameter(BmSDK.FName ParameterName, BmSDK.GameObject.FColor Param)
+    public unsafe virtual void SetColorParameter(BmSDK.FName ParameterName, BmSDK.GameObject.FColor Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetColorParameter", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -352,7 +352,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetVectorRandParameter
     /// </summary>
-    public unsafe void SetVectorRandParameter(BmSDK.FName ParameterName, out System.Numerics.Vector3 Param, out System.Numerics.Vector3 ParamLow)
+    public unsafe virtual void SetVectorRandParameter(BmSDK.FName ParameterName, out System.Numerics.Vector3 Param, out System.Numerics.Vector3 ParamLow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetVectorRandParameter", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -373,7 +373,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetVectorParameter
     /// </summary>
-    public unsafe void SetVectorParameter(BmSDK.FName ParameterName, System.Numerics.Vector3 Param)
+    public unsafe virtual void SetVectorParameter(BmSDK.FName ParameterName, System.Numerics.Vector3 Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetVectorParameter", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -393,7 +393,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetFloatRandParameter
     /// </summary>
-    public unsafe void SetFloatRandParameter(BmSDK.FName ParameterName, float Param, float ParamLow)
+    public unsafe virtual void SetFloatRandParameter(BmSDK.FName ParameterName, float Param, float ParamLow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetFloatRandParameter", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -414,7 +414,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetFloatParameter
     /// </summary>
-    public unsafe void SetFloatParameter(BmSDK.FName ParameterName, float Param)
+    public unsafe virtual void SetFloatParameter(BmSDK.FName ParameterName, float Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetFloatParameter", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -434,7 +434,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: GetEditorLODLevel
     /// </summary>
-    public unsafe int GetEditorLODLevel()
+    public unsafe virtual int GetEditorLODLevel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetEditorLODLevel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -452,7 +452,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: GetLODLevel
     /// </summary>
-    public unsafe int GetLODLevel()
+    public unsafe virtual int GetLODLevel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetLODLevel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -470,7 +470,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetEditorLODLevel
     /// </summary>
-    public unsafe void SetEditorLODLevel(int InLODLevel)
+    public unsafe virtual void SetEditorLODLevel(int InLODLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetEditorLODLevel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -489,7 +489,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetLODLevel
     /// </summary>
-    public unsafe void SetLODLevel(int InLODLevel)
+    public unsafe virtual void SetLODLevel(int InLODLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetLODLevel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -508,7 +508,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetEmitterRate
     /// </summary>
-    public unsafe void SetEmitterRate(int EmitterIndex, float MinRate, float MaxRate)
+    public unsafe virtual void SetEmitterRate(int EmitterIndex, float MinRate, float MaxRate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetEmitterRate", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -529,7 +529,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SystemHasCompleted
     /// </summary>
-    public unsafe bool SystemHasCompleted()
+    public unsafe virtual bool SystemHasCompleted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SystemHasCompleted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -547,7 +547,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: GetMaxLifespan
     /// </summary>
-    public unsafe float GetMaxLifespan()
+    public unsafe virtual float GetMaxLifespan()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetMaxLifespan", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -565,7 +565,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: AnyParticlesActive
     /// </summary>
-    public unsafe bool AnyParticlesActive()
+    public unsafe virtual bool AnyParticlesActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.AnyParticlesActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -583,7 +583,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetBaseVelocityRadial
     /// </summary>
-    public unsafe void SetBaseVelocityRadial(System.Numerics.Vector3 pos, float velInner, float velOuter, float Radius)
+    public unsafe virtual void SetBaseVelocityRadial(System.Numerics.Vector3 pos, float velInner, float velOuter, float Radius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBaseVelocityRadial", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -605,7 +605,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: DetermineLODLevelForLocation
     /// </summary>
-    public unsafe int DetermineLODLevelForLocation(out System.Numerics.Vector3 EffectLocation)
+    public unsafe virtual int DetermineLODLevelForLocation(out System.Numerics.Vector3 EffectLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.DetermineLODLevelForLocation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -624,7 +624,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetBeamTargetStrength
     /// </summary>
-    public unsafe void SetBeamTargetStrength(int EmitterIndex, float NewTargetStrength, int TargetIndex)
+    public unsafe virtual void SetBeamTargetStrength(int EmitterIndex, float NewTargetStrength, int TargetIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamTargetStrength", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -645,7 +645,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetBeamTargetTangent
     /// </summary>
-    public unsafe void SetBeamTargetTangent(int EmitterIndex, System.Numerics.Vector3 NewTangentPoint, int TargetIndex)
+    public unsafe virtual void SetBeamTargetTangent(int EmitterIndex, System.Numerics.Vector3 NewTangentPoint, int TargetIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamTargetTangent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -666,7 +666,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetBeamTargetActor
     /// </summary>
-    public unsafe void SetBeamTargetActor(int EmitterIndex, BmSDK.Engine.Actor Actor)
+    public unsafe virtual void SetBeamTargetActor(int EmitterIndex, BmSDK.Engine.Actor Actor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamTargetActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -686,7 +686,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetBeamTargetPoint
     /// </summary>
-    public unsafe void SetBeamTargetPoint(int EmitterIndex, System.Numerics.Vector3 NewTargetPoint, int TargetIndex)
+    public unsafe virtual void SetBeamTargetPoint(int EmitterIndex, System.Numerics.Vector3 NewTargetPoint, int TargetIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamTargetPoint", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -707,7 +707,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetBeamSourceStrength
     /// </summary>
-    public unsafe void SetBeamSourceStrength(int EmitterIndex, float NewSourceStrength, int SourceIndex)
+    public unsafe virtual void SetBeamSourceStrength(int EmitterIndex, float NewSourceStrength, int SourceIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamSourceStrength", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -728,7 +728,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetBeamSourceTangent
     /// </summary>
-    public unsafe void SetBeamSourceTangent(int EmitterIndex, System.Numerics.Vector3 NewTangentPoint, int SourceIndex)
+    public unsafe virtual void SetBeamSourceTangent(int EmitterIndex, System.Numerics.Vector3 NewTangentPoint, int SourceIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamSourceTangent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -749,7 +749,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetBeamSourceActor
     /// </summary>
-    public unsafe void SetBeamSourceActor(int EmitterIndex, BmSDK.Engine.Actor Actor)
+    public unsafe virtual void SetBeamSourceActor(int EmitterIndex, BmSDK.Engine.Actor Actor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamSourceActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -769,7 +769,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetBeamSourcePoint
     /// </summary>
-    public unsafe void SetBeamSourcePoint(int EmitterIndex, System.Numerics.Vector3 NewSourcePoint, int SourceIndex)
+    public unsafe virtual void SetBeamSourcePoint(int EmitterIndex, System.Numerics.Vector3 NewSourcePoint, int SourceIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamSourcePoint", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -790,7 +790,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetBeamDistance
     /// </summary>
-    public unsafe void SetBeamDistance(int EmitterIndex, float Distance)
+    public unsafe virtual void SetBeamDistance(int EmitterIndex, float Distance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamDistance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -810,7 +810,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetBeamEndPoint
     /// </summary>
-    public unsafe void SetBeamEndPoint(int EmitterIndex, System.Numerics.Vector3 NewEndPoint)
+    public unsafe virtual void SetBeamEndPoint(int EmitterIndex, System.Numerics.Vector3 NewEndPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamEndPoint", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -830,7 +830,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetBeamTessellationFactor
     /// </summary>
-    public unsafe void SetBeamTessellationFactor(int EmitterIndex, float NewFactor)
+    public unsafe virtual void SetBeamTessellationFactor(int EmitterIndex, float NewFactor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamTessellationFactor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -850,7 +850,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetBeamType
     /// </summary>
-    public unsafe void SetBeamType(int EmitterIndex, int NewMethod)
+    public unsafe virtual void SetBeamType(int EmitterIndex, int NewMethod)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamType", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -870,7 +870,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: RewindEmitterInstances
     /// </summary>
-    public unsafe void RewindEmitterInstances()
+    public unsafe virtual void RewindEmitterInstances()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.RewindEmitterInstances", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -888,7 +888,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: RewindEmitterInstance
     /// </summary>
-    public unsafe void RewindEmitterInstance(int EmitterIndex)
+    public unsafe virtual void RewindEmitterInstance(int EmitterIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.RewindEmitterInstance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -907,7 +907,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetKillOnCompleted
     /// </summary>
-    public unsafe void SetKillOnCompleted(int EmitterIndex, bool bKill)
+    public unsafe virtual void SetKillOnCompleted(int EmitterIndex, bool bKill)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetKillOnCompleted", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -927,7 +927,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetKillOnDeactivate
     /// </summary>
-    public unsafe void SetKillOnDeactivate(int EmitterIndex, bool bKill)
+    public unsafe virtual void SetKillOnDeactivate(int EmitterIndex, bool bKill)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetKillOnDeactivate", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -947,7 +947,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: GetSkipBoundsUpdate
     /// </summary>
-    public unsafe bool GetSkipBoundsUpdate()
+    public unsafe virtual bool GetSkipBoundsUpdate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetSkipBoundsUpdate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -965,7 +965,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetSkipBoundsUpdate
     /// </summary>
-    public unsafe void SetSkipBoundsUpdate(bool bInSkipBoundsUpdate)
+    public unsafe virtual void SetSkipBoundsUpdate(bool bInSkipBoundsUpdate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetSkipBoundsUpdate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -984,7 +984,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: GetSkipUpdateDynamicDataDuringTick
     /// </summary>
-    public unsafe bool GetSkipUpdateDynamicDataDuringTick()
+    public unsafe virtual bool GetSkipUpdateDynamicDataDuringTick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetSkipUpdateDynamicDataDuringTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1002,7 +1002,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetSkipUpdateDynamicDataDuringTick
     /// </summary>
-    public unsafe void SetSkipUpdateDynamicDataDuringTick(bool bInSkipUpdateDynamicDataDuringTick)
+    public unsafe virtual void SetSkipUpdateDynamicDataDuringTick(bool bInSkipUpdateDynamicDataDuringTick)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetSkipUpdateDynamicDataDuringTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1021,7 +1021,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: KillParticlesInEmitter
     /// </summary>
-    public unsafe void KillParticlesInEmitter(BmSDK.FName InEmitterName)
+    public unsafe virtual void KillParticlesInEmitter(BmSDK.FName InEmitterName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.KillParticlesInEmitter", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1040,7 +1040,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: ForceKillParticlesWithEvents
     /// </summary>
-    public unsafe void ForceKillParticlesWithEvents()
+    public unsafe virtual void ForceKillParticlesWithEvents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.ForceKillParticlesWithEvents", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1058,7 +1058,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: ResetSpawnFraction
     /// </summary>
-    public unsafe void ResetSpawnFraction()
+    public unsafe virtual void ResetSpawnFraction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.ResetSpawnFraction", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1076,7 +1076,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: NotifyEnteringStasis
     /// </summary>
-    public unsafe void NotifyEnteringStasis()
+    public unsafe virtual void NotifyEnteringStasis()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.NotifyEnteringStasis", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1094,7 +1094,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: KillParticlesForced
     /// </summary>
-    public unsafe void KillParticlesForced()
+    public unsafe virtual void KillParticlesForced()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.KillParticlesForced", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1112,7 +1112,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: DeactivateSystemDeferred
     /// </summary>
-    public unsafe void DeactivateSystemDeferred()
+    public unsafe virtual void DeactivateSystemDeferred()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.DeactivateSystemDeferred", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1130,7 +1130,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: DeactivateSystem
     /// </summary>
-    public unsafe void DeactivateSystem()
+    public unsafe virtual void DeactivateSystem()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.DeactivateSystem", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1148,7 +1148,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: ActivateSystemDeferred
     /// </summary>
-    public unsafe void ActivateSystemDeferred(bool bFlagAsJustAttached = default, bool DontUpdateTransform = default)
+    public unsafe virtual void ActivateSystemDeferred(bool bFlagAsJustAttached = default, bool DontUpdateTransform = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.ActivateSystemDeferred", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1168,7 +1168,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: ActivateSystem
     /// </summary>
-    public unsafe void ActivateSystem(bool bFlagAsJustAttached = default, bool DontUpdateTransform = default)
+    public unsafe virtual void ActivateSystem(bool bFlagAsJustAttached = default, bool DontUpdateTransform = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.ActivateSystem", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1188,7 +1188,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetTemplate
     /// </summary>
-    public unsafe void SetTemplate(BmSDK.Engine.ParticleSystem NewTemplate)
+    public unsafe virtual void SetTemplate(BmSDK.Engine.ParticleSystem NewTemplate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetTemplate", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1207,7 +1207,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: OnSystemFinished
     /// </summary>
-    public unsafe void OnSystemFinished(BmSDK.Engine.ParticleSystemComponent PSystem)
+    public unsafe virtual void OnSystemFinished(BmSDK.Engine.ParticleSystemComponent PSystem)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.OnSystemFinished", true);
         byte* paramsPtr = stackalloc byte[8];

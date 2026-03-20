@@ -47,7 +47,7 @@ public partial class RSeqAct_BossHudBase : BmSDK.Engine.SequenceAction, BmSDK.IG
     /// <summary>
     /// Function: CreateScreen
     /// </summary>
-    public unsafe void CreateScreen()
+    public unsafe virtual void CreateScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BossHudBase.CreateScreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_BossHudBase : BmSDK.Engine.SequenceAction, BmSDK.IG
     /// <summary>
     /// Function: SuppressSurveillanceIfNecessary
     /// </summary>
-    public unsafe void SuppressSurveillanceIfNecessary(bool bSuppress)
+    public unsafe virtual void SuppressSurveillanceIfNecessary(bool bSuppress)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BossHudBase.SuppressSurveillanceIfNecessary", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -70,7 +70,7 @@ public partial class RSeqAct_BossHudBase : BmSDK.Engine.SequenceAction, BmSDK.IG
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BossHudBase.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

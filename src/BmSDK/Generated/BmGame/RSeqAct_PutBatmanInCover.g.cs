@@ -47,7 +47,7 @@ public partial class RSeqAct_PutBatmanInCover : BmSDK.Engine.SequenceAction, BmS
     /// <summary>
     /// Function: FinishedSpecialMove
     /// </summary>
-    public unsafe void FinishedSpecialMove()
+    public unsafe virtual void FinishedSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PutBatmanInCover.FinishedSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_PutBatmanInCover : BmSDK.Engine.SequenceAction, BmS
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PutBatmanInCover.Activated", true);
         byte* paramsPtr = stackalloc byte[168];

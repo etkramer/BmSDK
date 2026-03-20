@@ -36,7 +36,7 @@ public partial class AkParameterName : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: MapParameterValue
     /// </summary>
-    public unsafe float MapParameterValue(float curValue, float rangeMin = default, float rangeMax = default)
+    public unsafe virtual float MapParameterValue(float curValue, float rangeMin = default, float rangeMax = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkParameterName.MapParameterValue", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -57,7 +57,7 @@ public partial class AkParameterName : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: ClampParameterValue
     /// </summary>
-    public unsafe float ClampParameterValue(float curValue)
+    public unsafe virtual float ClampParameterValue(float curValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkParameterName.ClampParameterValue", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RAEC_FearDart_Watcher : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FearDart_Watcher.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_FearDart_Watcher : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: ShootingStarted
     /// </summary>
-    public unsafe void ShootingStarted()
+    public unsafe virtual void ShootingStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FearDart_Watcher.ShootingStarted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RAEC_FearDart_Watcher : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: InitThugHideSearch
     /// </summary>
-    public unsafe void InitThugHideSearch(int TS_j)
+    public unsafe virtual void InitThugHideSearch(int TS_j)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FearDart_Watcher.InitThugHideSearch", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RAEC_FearDart_Watcher : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: InitHideSearchMultiNavHandleWrapper
     /// </summary>
-    public unsafe void InitHideSearchMultiNavHandleWrapper()
+    public unsafe virtual void InitHideSearchMultiNavHandleWrapper()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FearDart_Watcher.InitHideSearchMultiNavHandleWrapper", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RAEC_FearDart_Watcher : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: ChaseSearchInvalidated
     /// </summary>
-    public unsafe void ChaseSearchInvalidated(BmSDK.BmGame.RChaseLocationSearch CompletedSearch)
+    public unsafe virtual void ChaseSearchInvalidated(BmSDK.BmGame.RChaseLocationSearch CompletedSearch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FearDart_Watcher.ChaseSearchInvalidated", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -128,7 +128,7 @@ public partial class RAEC_FearDart_Watcher : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: ChaseSearchDone
     /// </summary>
-    public unsafe void ChaseSearchDone(BmSDK.BmGame.RChaseLocationSearch CompletedSearch)
+    public unsafe virtual void ChaseSearchDone(BmSDK.BmGame.RChaseLocationSearch CompletedSearch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FearDart_Watcher.ChaseSearchDone", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -140,7 +140,7 @@ public partial class RAEC_FearDart_Watcher : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: AddWatcher
     /// </summary>
-    public unsafe bool AddWatcher(BmSDK.BmGame.RBMAIController C)
+    public unsafe virtual bool AddWatcher(BmSDK.BmGame.RBMAIController C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FearDart_Watcher.AddWatcher", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -152,7 +152,7 @@ public partial class RAEC_FearDart_Watcher : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: ClearThugHideSearch
     /// </summary>
-    public unsafe void ClearThugHideSearch()
+    public unsafe virtual void ClearThugHideSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FearDart_Watcher.ClearThugHideSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -163,7 +163,7 @@ public partial class RAEC_FearDart_Watcher : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: GetAIThoughts
     /// </summary>
-    public unsafe void GetAIThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetAIThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FearDart_Watcher.GetAIThoughts", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -175,7 +175,7 @@ public partial class RAEC_FearDart_Watcher : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FearDart_Watcher.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -187,7 +187,7 @@ public partial class RAEC_FearDart_Watcher : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FearDart_Watcher.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -198,7 +198,7 @@ public partial class RAEC_FearDart_Watcher : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: SetHitThug
     /// </summary>
-    public unsafe void SetHitThug(BmSDK.BmGame.RPawnVillain NewHitThug)
+    public unsafe virtual void SetHitThug(BmSDK.BmGame.RPawnVillain NewHitThug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FearDart_Watcher.SetHitThug", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -210,7 +210,7 @@ public partial class RAEC_FearDart_Watcher : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FearDart_Watcher.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

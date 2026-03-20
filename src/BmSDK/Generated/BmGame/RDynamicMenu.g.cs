@@ -71,7 +71,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RenderItem
     /// </summary>
-    public unsafe void RenderItem(BmSDK.FString Label, BmSDK.FString Item)
+    public unsafe virtual void RenderItem(BmSDK.FString Label, BmSDK.FString Item)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.RenderItem", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -84,7 +84,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RenderCustomItem
     /// </summary>
-    public unsafe void RenderCustomItem(BmSDK.FString Label, BmSDK.FString Item, byte R, byte G, byte B)
+    public unsafe virtual void RenderCustomItem(BmSDK.FString Label, BmSDK.FString Item, byte R, byte G, byte B)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.RenderCustomItem", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -100,7 +100,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldRenderItem
     /// </summary>
-    public unsafe bool ShouldRenderItem(BmSDK.FString Label, bool readOnly = default, bool labelOnly = default)
+    public unsafe virtual bool ShouldRenderItem(BmSDK.FString Label, bool readOnly = default, bool labelOnly = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.ShouldRenderItem", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -137,7 +137,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DoMenu
     /// </summary>
-    public unsafe bool DoMenu(BmSDK.Engine.Canvas C, float DeltaTime)
+    public unsafe virtual bool DoMenu(BmSDK.Engine.Canvas C, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.DoMenu", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -150,7 +150,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DoMenuInternal
     /// </summary>
-    public unsafe bool DoMenuInternal(BmSDK.Engine.Canvas C)
+    public unsafe virtual bool DoMenuInternal(BmSDK.Engine.Canvas C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.DoMenuInternal", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -162,7 +162,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PressedNumber
     /// </summary>
-    public unsafe void PressedNumber(int Num)
+    public unsafe virtual void PressedNumber(int Num)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.PressedNumber", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -174,7 +174,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PressedStepDown
     /// </summary>
-    public unsafe void PressedStepDown()
+    public unsafe virtual void PressedStepDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.PressedStepDown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -185,7 +185,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PressedStepUp
     /// </summary>
-    public unsafe void PressedStepUp()
+    public unsafe virtual void PressedStepUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.PressedStepUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -196,7 +196,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ReleasedInput
     /// </summary>
-    public unsafe void ReleasedInput(int Input)
+    public unsafe virtual void ReleasedInput(int Input)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.ReleasedInput", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -208,7 +208,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PressedInput
     /// </summary>
-    public unsafe void PressedInput(int Input)
+    public unsafe virtual void PressedInput(int Input)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.PressedInput", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -220,7 +220,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SelectCurrentItemY
     /// </summary>
-    public unsafe void SelectCurrentItemY()
+    public unsafe virtual void SelectCurrentItemY()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.SelectCurrentItemY", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -231,7 +231,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SelectCurrentItemX
     /// </summary>
-    public unsafe void SelectCurrentItemX()
+    public unsafe virtual void SelectCurrentItemX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.SelectCurrentItemX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -242,7 +242,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SelectCurrentItemB
     /// </summary>
-    public unsafe void SelectCurrentItemB()
+    public unsafe virtual void SelectCurrentItemB()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.SelectCurrentItemB", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -253,7 +253,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SelectCurrentItemA
     /// </summary>
-    public unsafe void SelectCurrentItemA()
+    public unsafe virtual void SelectCurrentItemA()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.SelectCurrentItemA", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -264,7 +264,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GoToNextPage
     /// </summary>
-    public unsafe void GoToNextPage()
+    public unsafe virtual void GoToNextPage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.GoToNextPage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -275,7 +275,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GoToPrevPage
     /// </summary>
-    public unsafe void GoToPrevPage()
+    public unsafe virtual void GoToPrevPage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.GoToPrevPage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -286,7 +286,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDisplayed
     /// </summary>
-    public unsafe void SetDisplayed(bool On)
+    public unsafe virtual void SetDisplayed(bool On)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.SetDisplayed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -298,7 +298,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPage
     /// </summary>
-    public unsafe void SetPage(BmSDK.FString PageTitle)
+    public unsafe virtual void SetPage(BmSDK.FString PageTitle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.SetPage", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -310,7 +310,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldPauseGame
     /// </summary>
-    public unsafe bool ShouldPauseGame()
+    public unsafe virtual bool ShouldPauseGame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.ShouldPauseGame", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -321,7 +321,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PageSetNumberShortcut
     /// </summary>
-    public unsafe void PageSetNumberShortcut(int Num, int Page = default)
+    public unsafe virtual void PageSetNumberShortcut(int Num, int Page = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.PageSetNumberShortcut", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -334,7 +334,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ItemSetNumberShortcut
     /// </summary>
-    public unsafe void ItemSetNumberShortcut(int Num)
+    public unsafe virtual void ItemSetNumberShortcut(int Num)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.ItemSetNumberShortcut", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -346,7 +346,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ItemGap
     /// </summary>
-    public unsafe void ItemGap()
+    public unsafe virtual void ItemGap()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.ItemGap", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -357,7 +357,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ItemFRO
     /// </summary>
-    public unsafe void ItemFRO(BmSDK.FString Label, float Value, byte R = default, byte G = default, byte B = default)
+    public unsafe virtual void ItemFRO(BmSDK.FString Label, float Value, byte R = default, byte G = default, byte B = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.ItemFRO", true);
         byte* paramsPtr = stackalloc byte[23];
@@ -373,7 +373,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ItemIRO
     /// </summary>
-    public unsafe void ItemIRO(BmSDK.FString Label, int Value, byte R = default, byte G = default, byte B = default)
+    public unsafe virtual void ItemIRO(BmSDK.FString Label, int Value, byte R = default, byte G = default, byte B = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.ItemIRO", true);
         byte* paramsPtr = stackalloc byte[23];
@@ -389,7 +389,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ItemBRO
     /// </summary>
-    public unsafe void ItemBRO(BmSDK.FString Label, bool Value, byte R = default, byte G = default, byte B = default)
+    public unsafe virtual void ItemBRO(BmSDK.FString Label, bool Value, byte R = default, byte G = default, byte B = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.ItemBRO", true);
         byte* paramsPtr = stackalloc byte[23];
@@ -405,7 +405,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ItemRO
     /// </summary>
-    public unsafe void ItemRO(BmSDK.FString Label, byte R = default, byte G = default, byte B = default)
+    public unsafe virtual void ItemRO(BmSDK.FString Label, byte R = default, byte G = default, byte B = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.ItemRO", true);
         byte* paramsPtr = stackalloc byte[19];
@@ -420,7 +420,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RItemCol
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor RItemCol(BmSDK.FString Label, BmSDK.GameObject.FColor Value)
+    public unsafe virtual BmSDK.GameObject.FColor RItemCol(BmSDK.FString Label, BmSDK.GameObject.FColor Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.RItemCol", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -433,7 +433,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RItemV
     /// </summary>
-    public unsafe System.Numerics.Vector3 RItemV(BmSDK.FString label1, BmSDK.FString label2, BmSDK.FString label3, System.Numerics.Vector3 Value, float MinValue, float MaxValue, float StepSize)
+    public unsafe virtual System.Numerics.Vector3 RItemV(BmSDK.FString label1, BmSDK.FString label2, BmSDK.FString label3, System.Numerics.Vector3 Value, float MinValue, float MaxValue, float StepSize)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.RItemV", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -451,7 +451,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RItemFExp
     /// </summary>
-    public unsafe float RItemFExp(BmSDK.FString Label, float Value, float MinValue, float MaxValue, float stepMult)
+    public unsafe virtual float RItemFExp(BmSDK.FString Label, float Value, float MinValue, float MaxValue, float stepMult)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.RItemFExp", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -467,7 +467,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RItemF
     /// </summary>
-    public unsafe float RItemF(BmSDK.FString Label, float Value, float MinValue, float MaxValue, float StepSize)
+    public unsafe virtual float RItemF(BmSDK.FString Label, float Value, float MinValue, float MaxValue, float StepSize)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.RItemF", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -483,7 +483,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RItemByte
     /// </summary>
-    public unsafe byte RItemByte(BmSDK.FString Label, byte Value, int MinValue, int MaxValue)
+    public unsafe virtual byte RItemByte(BmSDK.FString Label, byte Value, int MinValue, int MaxValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.RItemByte", true);
         byte* paramsPtr = stackalloc byte[29];
@@ -498,7 +498,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RItemI
     /// </summary>
-    public unsafe int RItemI(BmSDK.FString Label, int Value, int MinValue, int MaxValue, int Step = default)
+    public unsafe virtual int RItemI(BmSDK.FString Label, int Value, int MinValue, int MaxValue, int Step = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.RItemI", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -514,7 +514,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RItemL
     /// </summary>
-    public unsafe int RItemL(BmSDK.FString Label, int Value, BmSDK.TArray<BmSDK.FString> List, BmSDK.TArray<BmSDK.FString> details = default)
+    public unsafe virtual int RItemL(BmSDK.FString Label, int Value, BmSDK.TArray<BmSDK.FString> List, BmSDK.TArray<BmSDK.FString> details = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.RItemL", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -529,7 +529,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RItemB
     /// </summary>
-    public unsafe bool RItemB(BmSDK.FString Label, bool Value, BmSDK.FString details = default)
+    public unsafe virtual bool RItemB(BmSDK.FString Label, bool Value, BmSDK.FString details = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.RItemB", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -543,7 +543,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ItemButtonExtended
     /// </summary>
-    public unsafe int ItemButtonExtended(BmSDK.FString Label, bool highlight = default, byte R = default, byte G = default, byte B = default)
+    public unsafe virtual int ItemButtonExtended(BmSDK.FString Label, bool highlight = default, byte R = default, byte G = default, byte B = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.ItemButtonExtended", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -559,7 +559,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ItemButton
     /// </summary>
-    public unsafe bool ItemButton(BmSDK.FString Label, bool highlight = default, BmSDK.FString details = default, byte R = default, byte G = default, byte B = default)
+    public unsafe virtual bool ItemButton(BmSDK.FString Label, bool highlight = default, BmSDK.FString details = default, byte R = default, byte G = default, byte B = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.ItemButton", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -576,7 +576,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ItemCol
     /// </summary>
-    public unsafe bool ItemCol(BmSDK.FString Label, out BmSDK.GameObject.FColor Value)
+    public unsafe virtual bool ItemCol(BmSDK.FString Label, out BmSDK.GameObject.FColor Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.ItemCol", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -589,7 +589,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ItemV
     /// </summary>
-    public unsafe bool ItemV(BmSDK.FString label1, BmSDK.FString label2, BmSDK.FString label3, out System.Numerics.Vector3 Value, float MinValue, float MaxValue, float StepSize)
+    public unsafe virtual bool ItemV(BmSDK.FString label1, BmSDK.FString label2, BmSDK.FString label3, out System.Numerics.Vector3 Value, float MinValue, float MaxValue, float StepSize)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.ItemV", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -607,7 +607,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ItemFExp
     /// </summary>
-    public unsafe bool ItemFExp(BmSDK.FString Label, out float Value, float MinValue, float MaxValue, float stepMult)
+    public unsafe virtual bool ItemFExp(BmSDK.FString Label, out float Value, float MinValue, float MaxValue, float stepMult)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.ItemFExp", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -623,7 +623,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ItemF
     /// </summary>
-    public unsafe bool ItemF(BmSDK.FString Label, out float Value, float MinValue, float MaxValue, float StepSize)
+    public unsafe virtual bool ItemF(BmSDK.FString Label, out float Value, float MinValue, float MaxValue, float StepSize)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.ItemF", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -639,7 +639,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ItemByte
     /// </summary>
-    public unsafe bool ItemByte(BmSDK.FString Label, out byte Value, int MinValue, int MaxValue)
+    public unsafe virtual bool ItemByte(BmSDK.FString Label, out byte Value, int MinValue, int MaxValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.ItemByte", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -654,7 +654,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ItemI
     /// </summary>
-    public unsafe bool ItemI(BmSDK.FString Label, out int Value, int MinValue, int MaxValue, int Step = default)
+    public unsafe virtual bool ItemI(BmSDK.FString Label, out int Value, int MinValue, int MaxValue, int Step = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.ItemI", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -670,7 +670,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ItemLabelL
     /// </summary>
-    public unsafe bool ItemLabelL(out int Value, BmSDK.TArray<BmSDK.FString> List)
+    public unsafe virtual bool ItemLabelL(out int Value, BmSDK.TArray<BmSDK.FString> List)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.ItemLabelL", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -683,7 +683,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ItemL
     /// </summary>
-    public unsafe bool ItemL(BmSDK.FString Label, out int Value, BmSDK.TArray<BmSDK.FString> List, BmSDK.TArray<BmSDK.FString> details = default)
+    public unsafe virtual bool ItemL(BmSDK.FString Label, out int Value, BmSDK.TArray<BmSDK.FString> List, BmSDK.TArray<BmSDK.FString> details = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.ItemL", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -698,7 +698,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateItemL
     /// </summary>
-    public unsafe bool UpdateItemL(out int Value, BmSDK.TArray<BmSDK.FString> List)
+    public unsafe virtual bool UpdateItemL(out int Value, BmSDK.TArray<BmSDK.FString> List)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.UpdateItemL", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -711,7 +711,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Title
     /// </summary>
-    public unsafe bool Title(BmSDK.FString _Title, bool bUseNumberShortcut = default)
+    public unsafe virtual bool Title(BmSDK.FString _Title, bool bUseNumberShortcut = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.Title", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -724,7 +724,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetTitleFont
     /// </summary>
-    public unsafe void SetTitleFont(BmSDK.Engine.Font NewTitleFont)
+    public unsafe virtual void SetTitleFont(BmSDK.Engine.Font NewTitleFont)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.SetTitleFont", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -736,7 +736,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetItemFont
     /// </summary>
-    public unsafe void SetItemFont(BmSDK.Engine.Font NewItemFont)
+    public unsafe virtual void SetItemFont(BmSDK.Engine.Font NewItemFont)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.SetItemFont", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -748,7 +748,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaSeconds)
+    public unsafe override void Tick(float DeltaSeconds)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -760,7 +760,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -771,7 +771,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: NumberInputFExp
     /// </summary>
-    public unsafe bool NumberInputFExp(out float Value, float MinValue, float MaxValue, float stepMult)
+    public unsafe virtual bool NumberInputFExp(out float Value, float MinValue, float MaxValue, float stepMult)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.NumberInputFExp", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -786,7 +786,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: NumberInputF
     /// </summary>
-    public unsafe bool NumberInputF(out float Value, float MinValue, float MaxValue, float StepSize)
+    public unsafe virtual bool NumberInputF(out float Value, float MinValue, float MaxValue, float StepSize)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.NumberInputF", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -801,7 +801,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: NumberInputB
     /// </summary>
-    public unsafe bool NumberInputB(out byte Value, int MinValue, int MaxValue)
+    public unsafe virtual bool NumberInputB(out byte Value, int MinValue, int MaxValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.NumberInputB", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -815,7 +815,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: NumberInputI
     /// </summary>
-    public unsafe bool NumberInputI(out int Value, int MinValue, int MaxValue, int Step)
+    public unsafe virtual bool NumberInputI(out int Value, int MinValue, int MaxValue, int Step)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.NumberInputI", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -830,7 +830,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PressedIn
     /// </summary>
-    public unsafe bool PressedIn()
+    public unsafe virtual bool PressedIn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.PressedIn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -841,7 +841,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PressedInY
     /// </summary>
-    public unsafe bool PressedInY()
+    public unsafe virtual bool PressedInY()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.PressedInY", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -852,7 +852,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PressedInX
     /// </summary>
-    public unsafe bool PressedInX()
+    public unsafe virtual bool PressedInX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.PressedInX", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -863,7 +863,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PressedInB
     /// </summary>
-    public unsafe bool PressedInB()
+    public unsafe virtual bool PressedInB()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.PressedInB", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -874,7 +874,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PressedInA
     /// </summary>
-    public unsafe bool PressedInA()
+    public unsafe virtual bool PressedInA()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.PressedInA", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -907,7 +907,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnThisItem
     /// </summary>
-    public unsafe bool OnThisItem()
+    public unsafe virtual bool OnThisItem()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.OnThisItem", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -918,7 +918,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnThisPage
     /// </summary>
-    public unsafe bool OnThisPage()
+    public unsafe virtual bool OnThisPage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.OnThisPage", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -929,7 +929,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: InitialisingPage
     /// </summary>
-    public unsafe bool InitialisingPage()
+    public unsafe virtual bool InitialisingPage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.InitialisingPage", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -940,7 +940,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsBeingDisplayed
     /// </summary>
-    public unsafe bool IsBeingDisplayed()
+    public unsafe virtual bool IsBeingDisplayed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.IsBeingDisplayed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -951,7 +951,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: InitialisingThisPage
     /// </summary>
-    public unsafe bool InitialisingThisPage()
+    public unsafe virtual bool InitialisingThisPage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.InitialisingThisPage", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -962,7 +962,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ViewingThisPage
     /// </summary>
-    public unsafe bool ViewingThisPage()
+    public unsafe virtual bool ViewingThisPage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.ViewingThisPage", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -973,7 +973,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DoMenuItems
     /// </summary>
-    public unsafe void DoMenuItems()
+    public unsafe virtual void DoMenuItems()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.DoMenuItems", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -984,7 +984,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnMenuClosed
     /// </summary>
-    public unsafe void OnMenuClosed()
+    public unsafe virtual void OnMenuClosed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.OnMenuClosed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -995,7 +995,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnMenuOpened
     /// </summary>
-    public unsafe void OnMenuOpened()
+    public unsafe virtual void OnMenuOpened()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicMenu.OnMenuOpened", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_CornerTerrified : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: IsPlayerBehind
     /// </summary>
-    public unsafe bool IsPlayerBehind()
+    public unsafe virtual bool IsPlayerBehind()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_CornerTerrified.IsPlayerBehind", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Sub_CornerTerrified : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: StartFromSearch
     /// </summary>
-    public unsafe void StartFromSearch(BmSDK.BmGame.RBMAIController NewCon, BmSDK.BmGame.RCornerWallMarker NewStartCorner, BmSDK.BmGame.RCornerWallMarker NewEndCorner)
+    public unsafe virtual void StartFromSearch(BmSDK.BmGame.RBMAIController NewCon, BmSDK.BmGame.RCornerWallMarker NewStartCorner, BmSDK.BmGame.RCornerWallMarker NewEndCorner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_CornerTerrified.StartFromSearch", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -96,7 +96,7 @@ public partial class RAEC_Search_Sub_CornerTerrified : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: OnVillainStolen
     /// </summary>
-    public unsafe void OnVillainStolen()
+    public unsafe override void OnVillainStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_CornerTerrified.OnVillainStolen", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -31,7 +31,7 @@ public partial class RBMBehaviour_GangMovementBaseBase : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: CreateRunVariantWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateRunVariantWeaponConfig()
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateRunVariantWeaponConfig()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_GangMovementBaseBase.CreateRunVariantWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[1304];
@@ -42,7 +42,7 @@ public partial class RBMBehaviour_GangMovementBaseBase : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: ShouldCreateCustomWeapConfig
     /// </summary>
-    public unsafe bool ShouldCreateCustomWeapConfig()
+    public unsafe virtual bool ShouldCreateCustomWeapConfig()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_GangMovementBaseBase.ShouldCreateCustomWeapConfig", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -53,7 +53,7 @@ public partial class RBMBehaviour_GangMovementBaseBase : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: SpookedByTank
     /// </summary>
-    public unsafe bool SpookedByTank()
+    public unsafe virtual bool SpookedByTank()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_GangMovementBaseBase.SpookedByTank", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -71,7 +71,7 @@ public partial class RBMBehaviour_GangMovementBaseBase : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: SetGrafittiTag
     /// </summary>
-    public unsafe void SetGrafittiTag(BmSDK.Engine.Emitter GrafTag, BmSDK.Engine.MaterialInterface NewTag)
+    public unsafe virtual void SetGrafittiTag(BmSDK.Engine.Emitter GrafTag, BmSDK.Engine.MaterialInterface NewTag)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_GangMovementBaseBase.SetGrafittiTag", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -91,7 +91,7 @@ public partial class RBMBehaviour_GangMovementBaseBase : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: CheckForOnTopOfCar
     /// </summary>
-    public unsafe void CheckForOnTopOfCar()
+    public unsafe virtual void CheckForOnTopOfCar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_GangMovementBaseBase.CheckForOnTopOfCar", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -102,7 +102,7 @@ public partial class RBMBehaviour_GangMovementBaseBase : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: NotReadyToAdvanceAnimation
     /// </summary>
-    public unsafe void NotReadyToAdvanceAnimation()
+    public unsafe virtual void NotReadyToAdvanceAnimation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_GangMovementBaseBase.NotReadyToAdvanceAnimation", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -113,7 +113,7 @@ public partial class RBMBehaviour_GangMovementBaseBase : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: AdvanceAnimation
     /// </summary>
-    public unsafe void AdvanceAnimation(float DeltaTime)
+    public unsafe virtual void AdvanceAnimation(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_GangMovementBaseBase.AdvanceAnimation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -125,7 +125,7 @@ public partial class RBMBehaviour_GangMovementBaseBase : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: ReadyToAdvanceAnimation
     /// </summary>
-    public unsafe bool ReadyToAdvanceAnimation()
+    public unsafe virtual bool ReadyToAdvanceAnimation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_GangMovementBaseBase.ReadyToAdvanceAnimation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -136,7 +136,7 @@ public partial class RBMBehaviour_GangMovementBaseBase : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: LeaveDueToTimeout
     /// </summary>
-    public unsafe void LeaveDueToTimeout()
+    public unsafe virtual void LeaveDueToTimeout()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_GangMovementBaseBase.LeaveDueToTimeout", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -147,7 +147,7 @@ public partial class RBMBehaviour_GangMovementBaseBase : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: ShouldReactBeforeJoiningCombat
     /// </summary>
-    public unsafe bool ShouldReactBeforeJoiningCombat()
+    public unsafe override bool ShouldReactBeforeJoiningCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_GangMovementBaseBase.ShouldReactBeforeJoiningCombat", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -158,7 +158,7 @@ public partial class RBMBehaviour_GangMovementBaseBase : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: CanSpeakInChatter
     /// </summary>
-    public unsafe void CanSpeakInChatter()
+    public unsafe virtual void CanSpeakInChatter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_GangMovementBaseBase.CanSpeakInChatter", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -169,7 +169,7 @@ public partial class RBMBehaviour_GangMovementBaseBase : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: CaptainDied
     /// </summary>
-    public unsafe void CaptainDied()
+    public unsafe virtual void CaptainDied()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_GangMovementBaseBase.CaptainDied", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -180,7 +180,7 @@ public partial class RBMBehaviour_GangMovementBaseBase : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: RiotHandleSpookedBy
     /// </summary>
-    public unsafe bool RiotHandleSpookedBy(BmSDK.Engine.Actor Threat, bool bAlertNeighours = default)
+    public unsafe override bool RiotHandleSpookedBy(BmSDK.Engine.Actor Threat, bool bAlertNeighours = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_GangMovementBaseBase.RiotHandleSpookedBy", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -193,7 +193,7 @@ public partial class RBMBehaviour_GangMovementBaseBase : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: GetDestinationActor
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetDestinationActor()
+    public unsafe virtual BmSDK.Engine.Actor GetDestinationActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_GangMovementBaseBase.GetDestinationActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -204,7 +204,7 @@ public partial class RBMBehaviour_GangMovementBaseBase : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: NotifyStopped
     /// </summary>
-    public unsafe void NotifyStopped(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyStopped(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_GangMovementBaseBase.NotifyStopped", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -216,7 +216,7 @@ public partial class RBMBehaviour_GangMovementBaseBase : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_GangMovementBaseBase.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -228,7 +228,7 @@ public partial class RBMBehaviour_GangMovementBaseBase : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_GangMovementBaseBase.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];

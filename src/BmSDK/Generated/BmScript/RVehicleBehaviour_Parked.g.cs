@@ -36,7 +36,7 @@ public partial class RVehicleBehaviour_Parked : BmSDK.BmGame.RVehicleBehaviour, 
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBehaviour_Parked.Tick", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -48,7 +48,7 @@ public partial class RVehicleBehaviour_Parked : BmSDK.BmGame.RVehicleBehaviour, 
     /// <summary>
     /// Function: EnterBehaviour
     /// </summary>
-    public unsafe void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
+    public unsafe override void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBehaviour_Parked.EnterBehaviour", true);
         byte* paramsPtr = stackalloc byte[8];

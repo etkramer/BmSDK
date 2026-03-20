@@ -36,7 +36,7 @@ public partial class RJobAssignment_MiniManDown : BmSDK.BmGame.RJobAssignment, B
     /// <summary>
     /// Function: IsAMiniManDownActive
     /// </summary>
-    public unsafe bool IsAMiniManDownActive(BmSDK.BmGame.RBMRoomAIState RoomState)
+    public unsafe virtual bool IsAMiniManDownActive(BmSDK.BmGame.RBMRoomAIState RoomState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJobAssignment_MiniManDown.IsAMiniManDownActive", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -48,7 +48,7 @@ public partial class RJobAssignment_MiniManDown : BmSDK.BmGame.RJobAssignment, B
     /// <summary>
     /// Function: IsAManDownActive
     /// </summary>
-    public unsafe bool IsAManDownActive(BmSDK.BmGame.RBMRoomAIState RoomState)
+    public unsafe virtual bool IsAManDownActive(BmSDK.BmGame.RBMRoomAIState RoomState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJobAssignment_MiniManDown.IsAManDownActive", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -60,7 +60,7 @@ public partial class RJobAssignment_MiniManDown : BmSDK.BmGame.RJobAssignment, B
     /// <summary>
     /// Function: DoAssignment
     /// </summary>
-    public unsafe void DoAssignment(BmSDK.BmGame.RBMRoomAIState RoomState, BmSDK.BmGame.RBMAIController ThugCon, BmSDK.GameObject AssignTarget)
+    public unsafe override void DoAssignment(BmSDK.BmGame.RBMRoomAIState RoomState, BmSDK.BmGame.RBMAIController ThugCon, BmSDK.GameObject AssignTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJobAssignment_MiniManDown.DoAssignment", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -74,7 +74,7 @@ public partial class RJobAssignment_MiniManDown : BmSDK.BmGame.RJobAssignment, B
     /// <summary>
     /// Function: CanBeAssigned
     /// </summary>
-    public unsafe bool CanBeAssigned(BmSDK.BmGame.RBMRoomAIState RoomState, BmSDK.BmGame.RBMAIController ThugCon, BmSDK.GameObject AssignTarget)
+    public unsafe override bool CanBeAssigned(BmSDK.BmGame.RBMRoomAIState RoomState, BmSDK.BmGame.RBMAIController ThugCon, BmSDK.GameObject AssignTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJobAssignment_MiniManDown.CanBeAssigned", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -88,7 +88,7 @@ public partial class RJobAssignment_MiniManDown : BmSDK.BmGame.RJobAssignment, B
     /// <summary>
     /// Function: IsAlreadyDoingJob
     /// </summary>
-    public unsafe bool IsAlreadyDoingJob(BmSDK.BmGame.RBMAIController TestCon)
+    public unsafe override bool IsAlreadyDoingJob(BmSDK.BmGame.RBMAIController TestCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJobAssignment_MiniManDown.IsAlreadyDoingJob", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -100,7 +100,7 @@ public partial class RJobAssignment_MiniManDown : BmSDK.BmGame.RJobAssignment, B
     /// <summary>
     /// Function: AddToDestList
     /// </summary>
-    public unsafe void AddToDestList(BmSDK.BmGame.RBMRoomAIState RoomState, out BmSDK.TArray<BmSDK.BmGame.RAEC_LevelScripting.FSearchTarget> OutList)
+    public unsafe override void AddToDestList(BmSDK.BmGame.RBMRoomAIState RoomState, out BmSDK.TArray<BmSDK.BmGame.RAEC_LevelScripting.FSearchTarget> OutList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJobAssignment_MiniManDown.AddToDestList", true);
         byte* paramsPtr = stackalloc byte[53];

@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_ChainTakedown_GrabFromGargoyleHangSta
     /// <summary>
     /// Function: BackToPlayerCamera
     /// </summary>
-    public unsafe void BackToPlayerCamera()
+    public unsafe virtual void BackToPlayerCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ChainTakedown_GrabFromGargoyleHangStart.BackToPlayerCamera", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RStealthTakeDownStage_ChainTakedown_GrabFromGargoyleHangSta
     /// <summary>
     /// Function: AttackerDamaged
     /// </summary>
-    public unsafe void AttackerDamaged()
+    public unsafe override void AttackerDamaged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ChainTakedown_GrabFromGargoyleHangStart.AttackerDamaged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RStealthTakeDownStage_ChainTakedown_GrabFromGargoyleHangSta
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ChainTakedown_GrabFromGargoyleHangStart.Begin", true);
         byte* paramsPtr = stackalloc byte[88];

@@ -71,7 +71,7 @@ public partial class RBMWeaponBatmanInCell : BmSDK.BmGame.RBMWeapon, BmSDK.IGame
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponBatmanInCell.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -83,7 +83,7 @@ public partial class RBMWeaponBatmanInCell : BmSDK.BmGame.RBMWeapon, BmSDK.IGame
     /// <summary>
     /// Function: ItemRemovedFromInvManager
     /// </summary>
-    public unsafe void ItemRemovedFromInvManager()
+    public unsafe override void ItemRemovedFromInvManager()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponBatmanInCell.ItemRemovedFromInvManager", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RBMWeaponBatmanInCell : BmSDK.BmGame.RBMWeapon, BmSDK.IGame
     /// <summary>
     /// Function: GivenTo
     /// </summary>
-    public unsafe void GivenTo(BmSDK.Engine.Pawn thisPawn, bool bDoNotActivate = default)
+    public unsafe override void GivenTo(BmSDK.Engine.Pawn thisPawn, bool bDoNotActivate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponBatmanInCell.GivenTo", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -107,7 +107,7 @@ public partial class RBMWeaponBatmanInCell : BmSDK.BmGame.RBMWeapon, BmSDK.IGame
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponBatmanInCell.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

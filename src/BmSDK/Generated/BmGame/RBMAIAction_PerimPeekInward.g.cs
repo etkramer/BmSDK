@@ -71,7 +71,7 @@ public partial class RBMAIAction_PerimPeekInward : BmSDK.BmGame.RBMAIAction, BmS
     /// <summary>
     /// Function: ChoosePeekOverlay
     /// </summary>
-    public unsafe BmSDK.FName ChoosePeekOverlay()
+    public unsafe virtual BmSDK.FName ChoosePeekOverlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PerimPeekInward.ChoosePeekOverlay", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_PerimPeekInward : BmSDK.BmGame.RBMAIAction, BmS
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PerimPeekInward.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_PerimPeekInward : BmSDK.BmGame.RBMAIAction, BmS
     /// <summary>
     /// Function: StartPeek
     /// </summary>
-    public unsafe void StartPeek(BmSDK.FName StanceName, BmSDK.FName PeekOverlayName)
+    public unsafe virtual void StartPeek(BmSDK.FName StanceName, BmSDK.FName PeekOverlayName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PerimPeekInward.StartPeek", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -107,7 +107,7 @@ public partial class RBMAIAction_PerimPeekInward : BmSDK.BmGame.RBMAIAction, BmS
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PerimPeekInward.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class RBMAIAction_PerimPeekInward : BmSDK.BmGame.RBMAIAction, BmS
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PerimPeekInward.OnActivate", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -129,7 +129,7 @@ public partial class RBMAIAction_PerimPeekInward : BmSDK.BmGame.RBMAIAction, BmS
     /// <summary>
     /// Function: SetPositions
     /// </summary>
-    public unsafe void SetPositions(System.Numerics.Vector3 NewCentre, System.Numerics.Vector3 NewLookat)
+    public unsafe virtual void SetPositions(System.Numerics.Vector3 NewCentre, System.Numerics.Vector3 NewLookat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PerimPeekInward.SetPositions", true);
         byte* paramsPtr = stackalloc byte[24];

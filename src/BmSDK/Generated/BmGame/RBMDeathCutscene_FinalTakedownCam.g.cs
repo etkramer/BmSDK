@@ -36,7 +36,7 @@ public partial class RBMDeathCutscene_FinalTakedownCam : BmSDK.BmGame.RBMDeathCu
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene_FinalTakedownCam.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMDeathCutscene_FinalTakedownCam : BmSDK.BmGame.RBMDeathCu
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene_FinalTakedownCam.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RBMDeathCutscene_FinalTakedownCam : BmSDK.BmGame.RBMDeathCu
     /// <summary>
     /// Function: SetSlowMoOff
     /// </summary>
-    public unsafe void SetSlowMoOff()
+    public unsafe virtual void SetSlowMoOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene_FinalTakedownCam.SetSlowMoOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RBMDeathCutscene_FinalTakedownCam : BmSDK.BmGame.RBMDeathCu
     /// <summary>
     /// Function: SetSlowMoSpeed
     /// </summary>
-    public unsafe void SetSlowMoSpeed(float Speed)
+    public unsafe virtual void SetSlowMoSpeed(float Speed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene_FinalTakedownCam.SetSlowMoSpeed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMDeathCutscene_FinalTakedownCam : BmSDK.BmGame.RBMDeathCu
     /// <summary>
     /// Function: StrikeImpact
     /// </summary>
-    public unsafe void StrikeImpact(bool bFinalImpact = default)
+    public unsafe override void StrikeImpact(bool bFinalImpact = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene_FinalTakedownCam.StrikeImpact", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RBMDeathCutscene_FinalTakedownCam : BmSDK.BmGame.RBMDeathCu
     /// <summary>
     /// Function: CanSkip
     /// </summary>
-    public unsafe bool CanSkip()
+    public unsafe override bool CanSkip()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene_FinalTakedownCam.CanSkip", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RBMDeathCutscene_FinalTakedownCam : BmSDK.BmGame.RBMDeathCu
     /// <summary>
     /// Function: ResetViewTarget
     /// </summary>
-    public unsafe void ResetViewTarget()
+    public unsafe override void ResetViewTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene_FinalTakedownCam.ResetViewTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RBMDeathCutscene_FinalTakedownCam : BmSDK.BmGame.RBMDeathCu
     /// <summary>
     /// Function: SetCamPos
     /// </summary>
-    public unsafe void SetCamPos(float DeltaTime, int OverrideSpin = default)
+    public unsafe virtual void SetCamPos(float DeltaTime, int OverrideSpin = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene_FinalTakedownCam.SetCamPos", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RBMDeathCutscene_FinalTakedownCam : BmSDK.BmGame.RBMDeathCu
     /// <summary>
     /// Function: SetPosFromYaw
     /// </summary>
-    public unsafe void SetPosFromYaw(int NewYaw)
+    public unsafe virtual void SetPosFromYaw(int NewYaw)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene_FinalTakedownCam.SetPosFromYaw", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -141,7 +141,7 @@ public partial class RBMDeathCutscene_FinalTakedownCam : BmSDK.BmGame.RBMDeathCu
     /// <summary>
     /// Function: HaveLOSToCurrPos
     /// </summary>
-    public unsafe bool HaveLOSToCurrPos()
+    public unsafe virtual bool HaveLOSToCurrPos()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene_FinalTakedownCam.HaveLOSToCurrPos", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -152,7 +152,7 @@ public partial class RBMDeathCutscene_FinalTakedownCam : BmSDK.BmGame.RBMDeathCu
     /// <summary>
     /// Function: GetLookAtPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLookAtPoint()
+    public unsafe virtual System.Numerics.Vector3 GetLookAtPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene_FinalTakedownCam.GetLookAtPoint", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -163,7 +163,7 @@ public partial class RBMDeathCutscene_FinalTakedownCam : BmSDK.BmGame.RBMDeathCu
     /// <summary>
     /// Function: GetCenterPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCenterPoint()
+    public unsafe virtual System.Numerics.Vector3 GetCenterPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene_FinalTakedownCam.GetCenterPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -174,7 +174,7 @@ public partial class RBMDeathCutscene_FinalTakedownCam : BmSDK.BmGame.RBMDeathCu
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe bool OnActivate()
+    public unsafe override bool OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene_FinalTakedownCam.OnActivate", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -47,7 +47,7 @@ public partial class RSeqAct_StartGauntletMovie : BmSDK.BmGame.RSeqAct_StartGaun
     /// <summary>
     /// Function: ResolvePortraitNames
     /// </summary>
-    public unsafe BmSDK.FString ResolvePortraitNames()
+    public unsafe virtual BmSDK.FString ResolvePortraitNames()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartGauntletMovie.ResolvePortraitNames", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -58,7 +58,7 @@ public partial class RSeqAct_StartGauntletMovie : BmSDK.BmGame.RSeqAct_StartGaun
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartGauntletMovie.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RSeqAct_StartGauntletMovie : BmSDK.BmGame.RSeqAct_StartGaun
     /// <summary>
     /// Function: EndMovie
     /// </summary>
-    public unsafe void EndMovie()
+    public unsafe virtual void EndMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartGauntletMovie.EndMovie", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -80,7 +80,7 @@ public partial class RSeqAct_StartGauntletMovie : BmSDK.BmGame.RSeqAct_StartGaun
     /// <summary>
     /// Function: StartMovie
     /// </summary>
-    public unsafe void StartMovie(bool bAutoPause)
+    public unsafe virtual void StartMovie(bool bAutoPause)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartGauntletMovie.StartMovie", true);
         byte* paramsPtr = stackalloc byte[20];

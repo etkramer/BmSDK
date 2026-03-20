@@ -71,7 +71,7 @@ public partial class RInvestigateSkeletalMeshActor : BmSDK.BmGame.RSkeletalMeshA
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInvestigateSkeletalMeshActor.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RInvestigateSkeletalMeshActor : BmSDK.BmGame.RSkeletalMeshA
     /// <summary>
     /// Function: HasActiveInvestigateInfoWithFlagCheck
     /// </summary>
-    public unsafe bool HasActiveInvestigateInfoWithFlagCheck()
+    public unsafe virtual bool HasActiveInvestigateInfoWithFlagCheck()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInvestigateSkeletalMeshActor.HasActiveInvestigateInfoWithFlagCheck", true);
         byte* paramsPtr = stackalloc byte[20];

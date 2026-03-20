@@ -36,7 +36,7 @@ public partial class RSeqAct_ComboValueReached : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: Deactivated
     /// </summary>
-    public unsafe void Deactivated()
+    public unsafe override void Deactivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ComboValueReached.Deactivated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RSeqAct_ComboValueReached : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ComboValueReached.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RSeqAct_ComboValueReached : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: ReachedComboValue
     /// </summary>
-    public unsafe void ReachedComboValue(int PrevValue, int NewValue)
+    public unsafe virtual void ReachedComboValue(int PrevValue, int NewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ComboValueReached.ReachedComboValue", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -72,7 +72,7 @@ public partial class RSeqAct_ComboValueReached : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ComboValueReached.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

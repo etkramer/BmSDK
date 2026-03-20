@@ -36,7 +36,7 @@ public partial class RBMBehaviour_JokerBossPenguin : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: CanSeeBatman
     /// </summary>
-    public unsafe bool CanSeeBatman()
+    public unsafe virtual bool CanSeeBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossPenguin.CanSeeBatman", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_JokerBossPenguin : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: ShotByJokerGun
     /// </summary>
-    public unsafe void ShotByJokerGun()
+    public unsafe virtual void ShotByJokerGun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossPenguin.ShotByJokerGun", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_JokerBossPenguin : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: DisAllowWaveDeath
     /// </summary>
-    public unsafe void DisAllowWaveDeath()
+    public unsafe virtual void DisAllowWaveDeath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossPenguin.DisAllowWaveDeath", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_JokerBossPenguin : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: DisAllowPleadDeath
     /// </summary>
-    public unsafe void DisAllowPleadDeath()
+    public unsafe virtual void DisAllowPleadDeath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossPenguin.DisAllowPleadDeath", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_JokerBossPenguin : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: AllowPleadDeath
     /// </summary>
-    public unsafe void AllowPleadDeath()
+    public unsafe virtual void AllowPleadDeath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossPenguin.AllowPleadDeath", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -91,7 +91,7 @@ public partial class RBMBehaviour_JokerBossPenguin : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: JokerGunFired
     /// </summary>
-    public unsafe void JokerGunFired()
+    public unsafe virtual void JokerGunFired()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossPenguin.JokerGunFired", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -102,7 +102,7 @@ public partial class RBMBehaviour_JokerBossPenguin : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: GetReadyToShootBatman
     /// </summary>
-    public unsafe void GetReadyToShootBatman()
+    public unsafe virtual void GetReadyToShootBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossPenguin.GetReadyToShootBatman", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_RunningRelativeAnimMove : BmSDK.BmGame
     /// <summary>
     /// Function: GetPredictedEndParameters
     /// </summary>
-    public unsafe void GetPredictedEndParameters(out System.Numerics.Vector3 EndLocation, out System.Numerics.Vector3 EndVelocity)
+    public unsafe virtual void GetPredictedEndParameters(out System.Numerics.Vector3 EndLocation, out System.Numerics.Vector3 EndVelocity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RunningRelativeAnimMove.GetPredictedEndParameters", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -84,7 +84,7 @@ public partial class RSpecialMoveInstance_RunningRelativeAnimMove : BmSDK.BmGame
     /// <summary>
     /// Function: PickRandomAnim
     /// </summary>
-    public unsafe void PickRandomAnim()
+    public unsafe override void PickRandomAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RunningRelativeAnimMove.PickRandomAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -102,7 +102,7 @@ public partial class RSpecialMoveInstance_RunningRelativeAnimMove : BmSDK.BmGame
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RunningRelativeAnimMove.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -113,7 +113,7 @@ public partial class RSpecialMoveInstance_RunningRelativeAnimMove : BmSDK.BmGame
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RunningRelativeAnimMove.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[176];

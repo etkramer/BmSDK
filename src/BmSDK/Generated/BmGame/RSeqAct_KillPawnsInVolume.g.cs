@@ -36,7 +36,7 @@ public partial class RSeqAct_KillPawnsInVolume : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// Function: GetPawnFromActor
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCharacter GetPawnFromActor(BmSDK.Engine.Actor act)
+    public unsafe virtual BmSDK.BmGame.RPawnCharacter GetPawnFromActor(BmSDK.Engine.Actor act)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_KillPawnsInVolume.GetPawnFromActor", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -48,7 +48,7 @@ public partial class RSeqAct_KillPawnsInVolume : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_KillPawnsInVolume.Activated", true);
         byte* paramsPtr = stackalloc byte[16];

@@ -36,7 +36,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: IsDefault
     /// </summary>
-    public unsafe bool IsDefault()
+    public unsafe virtual bool IsDefault()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.IsDefault", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -54,7 +54,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: MakeDefault
     /// </summary>
-    public unsafe void MakeDefault(bool setAsDefault = default)
+    public unsafe virtual void MakeDefault(bool setAsDefault = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.MakeDefault", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -73,7 +73,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: ShouldKillSoundsOnDestroy
     /// </summary>
-    public unsafe bool ShouldKillSoundsOnDestroy()
+    public unsafe virtual bool ShouldKillSoundsOnDestroy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.ShouldKillSoundsOnDestroy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -91,7 +91,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: KillSoundsOnDestroy
     /// </summary>
-    public unsafe void KillSoundsOnDestroy(bool Kill)
+    public unsafe virtual void KillSoundsOnDestroy(bool Kill)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.KillSoundsOnDestroy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -110,7 +110,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: IsAutoDestroyedWhenDead
     /// </summary>
-    public unsafe bool IsAutoDestroyedWhenDead()
+    public unsafe virtual bool IsAutoDestroyedWhenDead()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.IsAutoDestroyedWhenDead", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: IsAutoDestroyedWhenHidden
     /// </summary>
-    public unsafe bool IsAutoDestroyedWhenHidden()
+    public unsafe virtual bool IsAutoDestroyedWhenHidden()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.IsAutoDestroyedWhenHidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -146,7 +146,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: IsNeverAutoDestroyed
     /// </summary>
-    public unsafe bool IsNeverAutoDestroyed()
+    public unsafe virtual bool IsNeverAutoDestroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.IsNeverAutoDestroyed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -164,7 +164,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetAutoDestroyWhenDead
     /// </summary>
-    public unsafe void SetAutoDestroyWhenDead(bool autoDestroy)
+    public unsafe virtual void SetAutoDestroyWhenDead(bool autoDestroy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.SetAutoDestroyWhenDead", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -183,7 +183,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetAutoDestroyWhenHidden
     /// </summary>
-    public unsafe void SetAutoDestroyWhenHidden(bool autoDestroy)
+    public unsafe virtual void SetAutoDestroyWhenHidden(bool autoDestroy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.SetAutoDestroyWhenHidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -202,7 +202,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetNeverAutoDestroy
     /// </summary>
-    public unsafe void SetNeverAutoDestroy(bool neverAutoDestroy)
+    public unsafe virtual void SetNeverAutoDestroy(bool neverAutoDestroy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.SetNeverAutoDestroy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -221,7 +221,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: IsOwnerSpeaking
     /// </summary>
-    public unsafe bool IsOwnerSpeaking()
+    public unsafe virtual bool IsOwnerSpeaking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.IsOwnerSpeaking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -239,7 +239,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: IsOwnerDead
     /// </summary>
-    public unsafe bool IsOwnerDead()
+    public unsafe virtual bool IsOwnerDead()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.IsOwnerDead", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -257,7 +257,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: IsOwnerOnScreen
     /// </summary>
-    public unsafe bool IsOwnerOnScreen()
+    public unsafe virtual bool IsOwnerOnScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.IsOwnerOnScreen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -275,7 +275,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: IsOwnerHidden
     /// </summary>
-    public unsafe bool IsOwnerHidden()
+    public unsafe virtual bool IsOwnerHidden()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.IsOwnerHidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -293,7 +293,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: IsOwnerPlayer
     /// </summary>
-    public unsafe bool IsOwnerPlayer()
+    public unsafe virtual bool IsOwnerPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.IsOwnerPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -311,7 +311,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetPeakAudibilityRadius
     /// </summary>
-    public unsafe void SetPeakAudibilityRadius(float peakRadius)
+    public unsafe virtual void SetPeakAudibilityRadius(float peakRadius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.SetPeakAudibilityRadius", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -330,7 +330,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetPeakAudibilityRadius
     /// </summary>
-    public unsafe float GetPeakAudibilityRadius()
+    public unsafe virtual float GetPeakAudibilityRadius()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.GetPeakAudibilityRadius", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -348,7 +348,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetSourceVisibility
     /// </summary>
-    public unsafe float GetSourceVisibility()
+    public unsafe virtual float GetSourceVisibility()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.GetSourceVisibility", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -366,7 +366,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetSourceVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetSourceVelocity()
+    public unsafe virtual System.Numerics.Vector3 GetSourceVelocity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.GetSourceVelocity", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -384,7 +384,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetDistanceToListener
     /// </summary>
-    public unsafe float GetDistanceToListener()
+    public unsafe virtual float GetDistanceToListener()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.GetDistanceToListener", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -402,7 +402,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetFalloffEnhancementMultiplier
     /// </summary>
-    public unsafe float GetFalloffEnhancementMultiplier()
+    public unsafe virtual float GetFalloffEnhancementMultiplier()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.GetFalloffEnhancementMultiplier", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -420,7 +420,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetFalloffRadiusMultiplier
     /// </summary>
-    public unsafe float GetFalloffRadiusMultiplier()
+    public unsafe virtual float GetFalloffRadiusMultiplier()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.GetFalloffRadiusMultiplier", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -438,7 +438,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: IsFalloffEnhancementEnabled
     /// </summary>
-    public unsafe bool IsFalloffEnhancementEnabled()
+    public unsafe virtual bool IsFalloffEnhancementEnabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.IsFalloffEnhancementEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -456,7 +456,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: DisableFalloffEnhancement
     /// </summary>
-    public unsafe void DisableFalloffEnhancement()
+    public unsafe virtual void DisableFalloffEnhancement()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.DisableFalloffEnhancement", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -474,7 +474,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: EnableFalloffEnhancement
     /// </summary>
-    public unsafe void EnableFalloffEnhancement(float enhancementRadius, bool easeIn = default)
+    public unsafe virtual void EnableFalloffEnhancement(float enhancementRadius, bool easeIn = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.EnableFalloffEnhancement", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -494,7 +494,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: ApplyFalloffRadiusMultiplier
     /// </summary>
-    public unsafe void ApplyFalloffRadiusMultiplier(float falloffMultiplier, bool mixInOut)
+    public unsafe virtual void ApplyFalloffRadiusMultiplier(float falloffMultiplier, bool mixInOut)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.ApplyFalloffRadiusMultiplier", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -514,7 +514,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: DisableSecondaryOutput
     /// </summary>
-    public unsafe void DisableSecondaryOutput()
+    public unsafe virtual void DisableSecondaryOutput()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.DisableSecondaryOutput", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -532,7 +532,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: EnableSecondaryOutput
     /// </summary>
-    public unsafe void EnableSecondaryOutput(bool forceViaAux = default)
+    public unsafe virtual void EnableSecondaryOutput(bool forceViaAux = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.EnableSecondaryOutput", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -551,7 +551,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: IsOcclusionEnabled
     /// </summary>
-    public unsafe bool IsOcclusionEnabled()
+    public unsafe virtual bool IsOcclusionEnabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.IsOcclusionEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -569,7 +569,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: DisableOcclusion
     /// </summary>
-    public unsafe void DisableOcclusion()
+    public unsafe virtual void DisableOcclusion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.DisableOcclusion", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -587,7 +587,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: EnableOcclusion
     /// </summary>
-    public unsafe void EnableOcclusion(bool paramOnlyOcc = default, float fastUpdate = default, float slowUpdate = default)
+    public unsafe virtual void EnableOcclusion(bool paramOnlyOcc = default, float fastUpdate = default, float slowUpdate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.EnableOcclusion", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -608,7 +608,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: DisableDialogueMeterEffect
     /// </summary>
-    public unsafe void DisableDialogueMeterEffect()
+    public unsafe virtual void DisableDialogueMeterEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.DisableDialogueMeterEffect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -626,7 +626,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: EnableDialogueMeterEffect
     /// </summary>
-    public unsafe void EnableDialogueMeterEffect(bool enableMeter, BmSDK.Engine.AkEnvironmentName optionalMeterEffect)
+    public unsafe virtual void EnableDialogueMeterEffect(bool enableMeter, BmSDK.Engine.AkEnvironmentName optionalMeterEffect)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.EnableDialogueMeterEffect", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -646,7 +646,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: DisableEnvironmentalEffects
     /// </summary>
-    public unsafe void DisableEnvironmentalEffects()
+    public unsafe virtual void DisableEnvironmentalEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.DisableEnvironmentalEffects", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -664,7 +664,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: EnableEnvironmentalEffects
     /// </summary>
-    public unsafe void EnableEnvironmentalEffects()
+    public unsafe virtual void EnableEnvironmentalEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.EnableEnvironmentalEffects", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -682,7 +682,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: IsLinkedToListenerEnvironments
     /// </summary>
-    public unsafe bool IsLinkedToListenerEnvironments()
+    public unsafe virtual bool IsLinkedToListenerEnvironments()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.IsLinkedToListenerEnvironments", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -700,7 +700,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: LinkToListenerEnvironments
     /// </summary>
-    public unsafe void LinkToListenerEnvironments(bool linkListenerEnvs)
+    public unsafe virtual void LinkToListenerEnvironments(bool linkListenerEnvs)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.LinkToListenerEnvironments", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -719,7 +719,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnregisterEnvironments
     /// </summary>
-    public unsafe void UnregisterEnvironments(BmSDK.TArray<BmSDK.Engine.AkWwise.FAkEnvironmentSettings> envs)
+    public unsafe virtual void UnregisterEnvironments(BmSDK.TArray<BmSDK.Engine.AkWwise.FAkEnvironmentSettings> envs)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.UnregisterEnvironments", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -738,7 +738,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: RegisterEnvironments
     /// </summary>
-    public unsafe void RegisterEnvironments(BmSDK.TArray<BmSDK.Engine.AkWwise.FAkEnvironmentSettings> envs)
+    public unsafe virtual void RegisterEnvironments(BmSDK.TArray<BmSDK.Engine.AkWwise.FAkEnvironmentSettings> envs)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.RegisterEnvironments", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -757,7 +757,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetOcclusionBubble
     /// </summary>
-    public unsafe float GetOcclusionBubble()
+    public unsafe virtual float GetOcclusionBubble()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.GetOcclusionBubble", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -775,7 +775,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetOcclusionBubble
     /// </summary>
-    public unsafe void SetOcclusionBubble(float bubbleRadius)
+    public unsafe virtual void SetOcclusionBubble(float bubbleRadius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.SetOcclusionBubble", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -794,7 +794,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnregisterOcclusionMultipliers
     /// </summary>
-    public unsafe void UnregisterOcclusionMultipliers(float Multiplier, float multiplierAux, float multiplierDlg)
+    public unsafe virtual void UnregisterOcclusionMultipliers(float Multiplier, float multiplierAux, float multiplierDlg)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.UnregisterOcclusionMultipliers", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -815,7 +815,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: RegisterOcclusionMultipliers
     /// </summary>
-    public unsafe void RegisterOcclusionMultipliers(float Multiplier, float multiplierAux, float multiplierDlg)
+    public unsafe virtual void RegisterOcclusionMultipliers(float Multiplier, float multiplierAux, float multiplierDlg)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.RegisterOcclusionMultipliers", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -836,7 +836,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetSourceSpatialBone
     /// </summary>
-    public unsafe void SetSourceSpatialBone(BmSDK.FName boneToFollow, BmSDK.Engine.AkComponent.EAkComponentUpdate newUpdateType = default)
+    public unsafe virtual void SetSourceSpatialBone(BmSDK.FName boneToFollow, BmSDK.Engine.AkComponent.EAkComponentUpdate newUpdateType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.SetSourceSpatialBone", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -856,7 +856,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetSourceSpatialBeam
     /// </summary>
-    public unsafe void SetSourceSpatialBeam(System.Numerics.Vector3 beamStartPoint, System.Numerics.Vector3 beamEndPoint, BmSDK.Rotator Orientation = default, BmSDK.Engine.AkComponent.EAkComponentUpdate newUpdateType = default)
+    public unsafe virtual void SetSourceSpatialBeam(System.Numerics.Vector3 beamStartPoint, System.Numerics.Vector3 beamEndPoint, BmSDK.Rotator Orientation = default, BmSDK.Engine.AkComponent.EAkComponentUpdate newUpdateType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.SetSourceSpatialBeam", true);
         byte* paramsPtr = stackalloc byte[37];
@@ -878,7 +878,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetSourceSpatialRay
     /// </summary>
-    public unsafe void SetSourceSpatialRay(System.Numerics.Vector3 rayOrigin, BmSDK.Rotator rayOrientation, BmSDK.Rotator Orientation = default, BmSDK.Engine.AkComponent.EAkComponentUpdate newUpdateType = default)
+    public unsafe virtual void SetSourceSpatialRay(System.Numerics.Vector3 rayOrigin, BmSDK.Rotator rayOrientation, BmSDK.Rotator Orientation = default, BmSDK.Engine.AkComponent.EAkComponentUpdate newUpdateType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.SetSourceSpatialRay", true);
         byte* paramsPtr = stackalloc byte[37];
@@ -900,7 +900,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetSourceSpatialMulti
     /// </summary>
-    public unsafe void SetSourceSpatialMulti(BmSDK.TArray<BmSDK.Engine.AkWwise.FAkSourceSpatial> multiPositions, bool Additive, System.Numerics.Vector3 primaryPosition, BmSDK.Rotator primaryOrientation = default, BmSDK.Engine.AkComponent.EAkComponentUpdate newUpdateType = default)
+    public unsafe virtual void SetSourceSpatialMulti(BmSDK.TArray<BmSDK.Engine.AkWwise.FAkSourceSpatial> multiPositions, bool Additive, System.Numerics.Vector3 primaryPosition, BmSDK.Rotator primaryOrientation = default, BmSDK.Engine.AkComponent.EAkComponentUpdate newUpdateType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.SetSourceSpatialMulti", true);
         byte* paramsPtr = stackalloc byte[45];
@@ -923,7 +923,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetDialogueSourceSpatial
     /// </summary>
-    public unsafe void SetDialogueSourceSpatial(System.Numerics.Vector3 Position, BmSDK.Rotator Orientation = default)
+    public unsafe virtual void SetDialogueSourceSpatial(System.Numerics.Vector3 Position, BmSDK.Rotator Orientation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.SetDialogueSourceSpatial", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -943,7 +943,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetSourceSpatial
     /// </summary>
-    public unsafe void SetSourceSpatial(System.Numerics.Vector3 Position, BmSDK.Rotator Orientation = default, BmSDK.Engine.AkComponent.EAkComponentUpdate newUpdateType = default)
+    public unsafe virtual void SetSourceSpatial(System.Numerics.Vector3 Position, BmSDK.Rotator Orientation = default, BmSDK.Engine.AkComponent.EAkComponentUpdate newUpdateType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.SetSourceSpatial", true);
         byte* paramsPtr = stackalloc byte[25];
@@ -964,7 +964,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetDopplerVelocity
     /// </summary>
-    public unsafe void SetDopplerVelocity(float dopplerVel)
+    public unsafe virtual void SetDopplerVelocity(float dopplerVel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.SetDopplerVelocity", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -983,7 +983,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetSurfaceSwitch
     /// </summary>
-    public unsafe void SetSurfaceSwitch(BmSDK.Engine.AkSwitchName SwitchName, BmSDK.Engine.AkSwitchName fallbackSwitchName, BmSDK.FString charName)
+    public unsafe virtual void SetSurfaceSwitch(BmSDK.Engine.AkSwitchName SwitchName, BmSDK.Engine.AkSwitchName fallbackSwitchName, BmSDK.FString charName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.SetSurfaceSwitch", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -1004,7 +1004,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetSourceSwitch
     /// </summary>
-    public unsafe void SetSourceSwitch(BmSDK.Engine.AkSwitchName SwitchName)
+    public unsafe virtual void SetSourceSwitch(BmSDK.Engine.AkSwitchName SwitchName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.SetSourceSwitch", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1023,7 +1023,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetSourceParameter
     /// </summary>
-    public unsafe float GetSourceParameter(BmSDK.Engine.AkParameterName ParamName)
+    public unsafe virtual float GetSourceParameter(BmSDK.Engine.AkParameterName ParamName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.GetSourceParameter", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1042,7 +1042,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetSourceParameter
     /// </summary>
-    public unsafe void SetSourceParameter(BmSDK.Engine.AkParameterName ParamName, float ParamValue)
+    public unsafe virtual void SetSourceParameter(BmSDK.Engine.AkParameterName ParamName, float ParamValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.SetSourceParameter", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1062,7 +1062,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: HasAnyLoopingEvents
     /// </summary>
-    public unsafe bool HasAnyLoopingEvents()
+    public unsafe virtual bool HasAnyLoopingEvents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.HasAnyLoopingEvents", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1080,7 +1080,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: HasLoopingEvent
     /// </summary>
-    public unsafe bool HasLoopingEvent(BmSDK.Engine.AkEvent AudioEvent)
+    public unsafe virtual bool HasLoopingEvent(BmSDK.Engine.AkEvent AudioEvent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.HasLoopingEvent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1099,7 +1099,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: RemoveAllLoopingEvents
     /// </summary>
-    public unsafe void RemoveAllLoopingEvents()
+    public unsafe virtual void RemoveAllLoopingEvents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.RemoveAllLoopingEvents", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1117,7 +1117,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: RemoveLoopingAudioEvent
     /// </summary>
-    public unsafe void RemoveLoopingAudioEvent(BmSDK.Engine.AkEvent AudioEvent)
+    public unsafe virtual void RemoveLoopingAudioEvent(BmSDK.Engine.AkEvent AudioEvent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.RemoveLoopingAudioEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1136,7 +1136,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: AddLoopingAudioEvent
     /// </summary>
-    public unsafe void AddLoopingAudioEvent(BmSDK.Engine.AkEvent AudioEvent)
+    public unsafe virtual void AddLoopingAudioEvent(BmSDK.Engine.AkEvent AudioEvent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.AddLoopingAudioEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1155,7 +1155,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: KillSounds
     /// </summary>
-    public unsafe void KillSounds(bool destroySources)
+    public unsafe virtual void KillSounds(bool destroySources)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.KillSounds", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1174,7 +1174,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: StopEvent
     /// </summary>
-    public unsafe void StopEvent(out BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle)
+    public unsafe virtual void StopEvent(out BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.StopEvent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1193,7 +1193,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: StartAuxEvent
     /// </summary>
-    public unsafe bool StartAuxEvent(BmSDK.Engine.AkEvent AudioEvent, System.Numerics.Vector3 Position, System.IntPtr SoundCallbackDelegate = default, int SoundCallbackFlags = default)
+    public unsafe virtual bool StartAuxEvent(BmSDK.Engine.AkEvent AudioEvent, System.Numerics.Vector3 Position, System.IntPtr SoundCallbackDelegate = default, int SoundCallbackFlags = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.StartAuxEvent", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -1215,7 +1215,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Function: StartEvent
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle StartEvent(BmSDK.Engine.AkEvent AudioEvent, System.IntPtr SoundCallbackDelegate = default, int SoundCallbackFlags = default)
+    public unsafe virtual BmSDK.Engine.AkWwise.FAkSoundHandle StartEvent(BmSDK.Engine.AkEvent AudioEvent, System.IntPtr SoundCallbackDelegate = default, int SoundCallbackFlags = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkComponent.StartEvent", true);
         byte* paramsPtr = stackalloc byte[44];

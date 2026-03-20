@@ -36,7 +36,7 @@ public partial class RGFxMovieNoController : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// <summary>
     /// Function: XI_OnOut
     /// </summary>
-    public unsafe void XI_OnOut()
+    public unsafe virtual void XI_OnOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieNoController.XI_OnOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RGFxMovieNoController : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// <summary>
     /// Function: DoClose
     /// </summary>
-    public unsafe void DoClose()
+    public unsafe virtual void DoClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieNoController.DoClose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RGFxMovieNoController : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// <summary>
     /// Function: XI_GetMessage
     /// </summary>
-    public unsafe BmSDK.FString XI_GetMessage()
+    public unsafe virtual BmSDK.FString XI_GetMessage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieNoController.XI_GetMessage", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -69,7 +69,7 @@ public partial class RGFxMovieNoController : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// <summary>
     /// Function: XI_OnA
     /// </summary>
-    public unsafe void XI_OnA(int ControllerId)
+    public unsafe virtual void XI_OnA(int ControllerId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieNoController.XI_OnA", true);
         byte* paramsPtr = stackalloc byte[12];

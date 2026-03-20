@@ -71,7 +71,7 @@ public partial class MAEC_ShootStickyConcussionGrenade_Solo : BmSDK.BmGame.RAler
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_ShootStickyConcussionGrenade_Solo.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class MAEC_ShootStickyConcussionGrenade_Solo : BmSDK.BmGame.RAler
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_ShootStickyConcussionGrenade_Solo.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class MAEC_ShootStickyConcussionGrenade_Solo : BmSDK.BmGame.RAler
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_ShootStickyConcussionGrenade_Solo.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class MAEC_ShootStickyConcussionGrenade_Solo : BmSDK.BmGame.RAler
     /// <summary>
     /// Function: SetupShoot
     /// </summary>
-    public unsafe void SetupShoot(BmSDK.BmGame.MStickyConcussionGrenadeProjectile NewProjectile)
+    public unsafe virtual void SetupShoot(BmSDK.BmGame.MStickyConcussionGrenadeProjectile NewProjectile)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_ShootStickyConcussionGrenade_Solo.SetupShoot", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class MAEC_ShootStickyConcussionGrenade_Solo : BmSDK.BmGame.RAler
     /// <summary>
     /// Function: SetupMoveAndShoot
     /// </summary>
-    public unsafe void SetupMoveAndShoot(System.Numerics.Vector3 SpotToShootFrom, BmSDK.BmGame.MStickyConcussionGrenadeProjectile NewProjectile)
+    public unsafe virtual void SetupMoveAndShoot(System.Numerics.Vector3 SpotToShootFrom, BmSDK.BmGame.MStickyConcussionGrenadeProjectile NewProjectile)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_ShootStickyConcussionGrenade_Solo.SetupMoveAndShoot", true);
         byte* paramsPtr = stackalloc byte[20];

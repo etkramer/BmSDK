@@ -47,7 +47,7 @@ public partial class RSeqAct_WaitForBatmobileAction : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: BatmobileMoved
     /// </summary>
-    public unsafe void BatmobileMoved()
+    public unsafe virtual void BatmobileMoved()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_WaitForBatmobileAction.BatmobileMoved", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_WaitForBatmobileAction : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_WaitForBatmobileAction.Update", true);
         byte* paramsPtr = stackalloc byte[8];

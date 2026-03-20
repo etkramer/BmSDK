@@ -71,7 +71,7 @@ public partial class RDummyTarget_Spawnable : BmSDK.BmGame.RDummyTarget, BmSDK.I
     /// <summary>
     /// Function: EndMatineeControl
     /// </summary>
-    public unsafe void EndMatineeControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void EndMatineeControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDummyTarget_Spawnable.EndMatineeControl", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -84,7 +84,7 @@ public partial class RDummyTarget_Spawnable : BmSDK.BmGame.RDummyTarget, BmSDK.I
     /// <summary>
     /// Function: BeginMatineeControl
     /// </summary>
-    public unsafe void BeginMatineeControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void BeginMatineeControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDummyTarget_Spawnable.BeginMatineeControl", true);
         byte* paramsPtr = stackalloc byte[16];

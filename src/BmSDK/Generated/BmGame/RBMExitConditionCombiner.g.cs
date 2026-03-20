@@ -36,7 +36,7 @@ public partial class RBMExitConditionCombiner : BmSDK.BmGame.RBMExitCondition, B
     /// <summary>
     /// Function: TriggerExitConditionCombiner
     /// </summary>
-    public unsafe void TriggerExitConditionCombiner()
+    public unsafe virtual void TriggerExitConditionCombiner()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitConditionCombiner.TriggerExitConditionCombiner", true);
         byte* paramsPtr = stackalloc byte[0];

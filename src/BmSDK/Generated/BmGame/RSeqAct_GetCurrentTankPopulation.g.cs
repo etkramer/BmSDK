@@ -36,7 +36,7 @@ public partial class RSeqAct_GetCurrentTankPopulation : BmSDK.Engine.SequenceAct
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GetCurrentTankPopulation.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

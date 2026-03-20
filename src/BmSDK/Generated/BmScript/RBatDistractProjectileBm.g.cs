@@ -71,7 +71,7 @@ public partial class RBatDistractProjectileBm : BmSDK.BmGame.RBatDistractProject
     /// <summary>
     /// Function: StopSpinSound
     /// </summary>
-    public unsafe void StopSpinSound()
+    public unsafe override void StopSpinSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatDistractProjectileBm.StopSpinSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RBatDistractProjectileBm : BmSDK.BmGame.RBatDistractProject
     /// <summary>
     /// Function: StartSpinSound
     /// </summary>
-    public unsafe void StartSpinSound()
+    public unsafe override void StartSpinSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatDistractProjectileBm.StartSpinSound", true);
         byte* paramsPtr = stackalloc byte[0];

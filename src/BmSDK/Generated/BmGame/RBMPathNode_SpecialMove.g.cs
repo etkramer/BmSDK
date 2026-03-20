@@ -66,7 +66,7 @@ public partial class RBMPathNode_SpecialMove : BmSDK.BmGame.RPathNode, BmSDK.IGa
     /// <summary>
     /// Function: UnlockSlot
     /// </summary>
-    public unsafe void UnlockSlot(BmSDK.BmGame.RPawn User)
+    public unsafe virtual void UnlockSlot(BmSDK.BmGame.RPawn User)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_SpecialMove.UnlockSlot", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -78,7 +78,7 @@ public partial class RBMPathNode_SpecialMove : BmSDK.BmGame.RPathNode, BmSDK.IGa
     /// <summary>
     /// Function: GetDynamicMoveSlotFor
     /// </summary>
-    public unsafe bool GetDynamicMoveSlotFor(BmSDK.BmGame.RPawn User, System.Numerics.Vector3 DestPoint, out System.Numerics.Vector3 SlotLocation)
+    public unsafe virtual bool GetDynamicMoveSlotFor(BmSDK.BmGame.RPawn User, System.Numerics.Vector3 DestPoint, out System.Numerics.Vector3 SlotLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_SpecialMove.GetDynamicMoveSlotFor", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -92,7 +92,7 @@ public partial class RBMPathNode_SpecialMove : BmSDK.BmGame.RPathNode, BmSDK.IGa
     /// <summary>
     /// Function: ReachedBy
     /// </summary>
-    public unsafe bool ReachedBy(BmSDK.BmGame.RPawn TestPawn)
+    public unsafe virtual bool ReachedBy(BmSDK.BmGame.RPawn TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_SpecialMove.ReachedBy", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -104,7 +104,7 @@ public partial class RBMPathNode_SpecialMove : BmSDK.BmGame.RPathNode, BmSDK.IGa
     /// <summary>
     /// Function: GetUsePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetUsePosition()
+    public unsafe virtual System.Numerics.Vector3 GetUsePosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_SpecialMove.GetUsePosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -115,7 +115,7 @@ public partial class RBMPathNode_SpecialMove : BmSDK.BmGame.RPathNode, BmSDK.IGa
     /// <summary>
     /// Function: CanUseSpecialMoveNode
     /// </summary>
-    public unsafe bool CanUseSpecialMoveNode(BmSDK.BmGame.RBMAIController User)
+    public unsafe virtual bool CanUseSpecialMoveNode(BmSDK.BmGame.RBMAIController User)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_SpecialMove.CanUseSpecialMoveNode", true);
         byte* paramsPtr = stackalloc byte[12];

@@ -71,7 +71,7 @@ public partial class TannoyVoiceSynthActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: PlayLine
     /// </summary>
-    public unsafe bool PlayLine(BmSDK.Engine.Actor Subject, BmSDK.FName flag, BmSDK.BmGame.RAlertEventCoordinatorBase owningEvent, BmSDK.TArray<BmSDK.Engine.Actor> extraSpeakers = default, BmSDK.FName nInvestigateTargetFlag = default, System.IntPtr NewBarkFinished = default)
+    public unsafe virtual bool PlayLine(BmSDK.Engine.Actor Subject, BmSDK.FName flag, BmSDK.BmGame.RAlertEventCoordinatorBase owningEvent, BmSDK.TArray<BmSDK.Engine.Actor> extraSpeakers = default, BmSDK.FName nInvestigateTargetFlag = default, System.IntPtr NewBarkFinished = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.TannoyVoiceSynthActor.PlayLine", true);
         byte* paramsPtr = stackalloc byte[100];
@@ -88,7 +88,7 @@ public partial class TannoyVoiceSynthActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.TannoyVoiceSynthActor.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -99,7 +99,7 @@ public partial class TannoyVoiceSynthActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.TannoyVoiceSynthActor.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -110,7 +110,7 @@ public partial class TannoyVoiceSynthActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: SetBCD
     /// </summary>
-    public unsafe void SetBCD(BmSDK.BmGame.RBarkCharacterDef NewCharDef)
+    public unsafe virtual void SetBCD(BmSDK.BmGame.RBarkCharacterDef NewCharDef)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.TannoyVoiceSynthActor.SetBCD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -122,7 +122,7 @@ public partial class TannoyVoiceSynthActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: SetVoice
     /// </summary>
-    public unsafe void SetVoice(BmSDK.Engine.AkDialogueVoice NewVoice)
+    public unsafe virtual void SetVoice(BmSDK.Engine.AkDialogueVoice NewVoice)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.TannoyVoiceSynthActor.SetVoice", true);
         byte* paramsPtr = stackalloc byte[8];

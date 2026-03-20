@@ -71,7 +71,7 @@ public partial class RBMAIAction_DiscoverMissingGrate : BmSDK.BmGame.RBMAIAction
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DiscoverMissingGrate.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_DiscoverMissingGrate : BmSDK.BmGame.RBMAIAction
     /// <summary>
     /// Function: StartGestureAnim
     /// </summary>
-    public unsafe void StartGestureAnim()
+    public unsafe virtual void StartGestureAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DiscoverMissingGrate.StartGestureAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_DiscoverMissingGrate : BmSDK.BmGame.RBMAIAction
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DiscoverMissingGrate.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

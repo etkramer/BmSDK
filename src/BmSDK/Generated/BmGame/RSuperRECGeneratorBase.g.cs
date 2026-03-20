@@ -71,7 +71,7 @@ public partial class RSuperRECGeneratorBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: HitByREC
     /// </summary>
-    public unsafe void HitByREC(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.BmGame.RMagneticBlast.MBImpulseType HitType, BmSDK.Engine.Controller InstigatedBy)
+    public unsafe virtual void HitByREC(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.BmGame.RMagneticBlast.MBImpulseType HitType, BmSDK.Engine.Controller InstigatedBy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSuperRECGeneratorBase.HitByREC", true);
         byte* paramsPtr = stackalloc byte[36];

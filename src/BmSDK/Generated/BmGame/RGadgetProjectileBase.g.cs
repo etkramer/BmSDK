@@ -71,7 +71,7 @@ public partial class RGadgetProjectileBase : BmSDK.BmGame.RProjectile, BmSDK.IGa
     /// <summary>
     /// Function: ProximityTriggered
     /// </summary>
-    public unsafe void ProximityTriggered(BmSDK.BmGame.RPawnVillain NearbyVillain)
+    public unsafe virtual void ProximityTriggered(BmSDK.BmGame.RPawnVillain NearbyVillain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetProjectileBase.ProximityTriggered", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RGadgetProjectileBase : BmSDK.BmGame.RProjectile, BmSDK.IGa
     /// <summary>
     /// Function: GetImpactMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.RPhysicalMaterialProperty GetImpactMaterial(BmSDK.Engine.Actor.FImpactInfo Impact)
+    public unsafe override BmSDK.Engine.RPhysicalMaterialProperty GetImpactMaterial(BmSDK.Engine.Actor.FImpactInfo Impact)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetProjectileBase.GetImpactMaterial", true);
         byte* paramsPtr = stackalloc byte[104];
@@ -95,7 +95,7 @@ public partial class RGadgetProjectileBase : BmSDK.BmGame.RProjectile, BmSDK.IGa
     /// <summary>
     /// Function: TriggerSniperReaction
     /// </summary>
-    public unsafe void TriggerSniperReaction(System.Numerics.Vector3 EventLocation)
+    public unsafe virtual void TriggerSniperReaction(System.Numerics.Vector3 EventLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetProjectileBase.TriggerSniperReaction", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -107,7 +107,7 @@ public partial class RGadgetProjectileBase : BmSDK.BmGame.RProjectile, BmSDK.IGa
     /// <summary>
     /// Function: TriggerCombatReaction
     /// </summary>
-    public unsafe void TriggerCombatReaction(System.Numerics.Vector3 EventLocation)
+    public unsafe virtual void TriggerCombatReaction(System.Numerics.Vector3 EventLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetProjectileBase.TriggerCombatReaction", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -119,7 +119,7 @@ public partial class RGadgetProjectileBase : BmSDK.BmGame.RProjectile, BmSDK.IGa
     /// <summary>
     /// Function: PredAIStartleReaction
     /// </summary>
-    public unsafe void PredAIStartleReaction(System.Numerics.Vector3 SafeNoiseLocation)
+    public unsafe virtual void PredAIStartleReaction(System.Numerics.Vector3 SafeNoiseLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetProjectileBase.PredAIStartleReaction", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -131,7 +131,7 @@ public partial class RGadgetProjectileBase : BmSDK.BmGame.RProjectile, BmSDK.IGa
     /// <summary>
     /// Function: TriggerAIReaction
     /// </summary>
-    public unsafe void TriggerAIReaction(System.Numerics.Vector3 SafeNoiseLocation, bool bWasBoothButton)
+    public unsafe virtual void TriggerAIReaction(System.Numerics.Vector3 SafeNoiseLocation, bool bWasBoothButton)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetProjectileBase.TriggerAIReaction", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -144,7 +144,7 @@ public partial class RGadgetProjectileBase : BmSDK.BmGame.RProjectile, BmSDK.IGa
     /// <summary>
     /// Function: TriggerNoiseEvent
     /// </summary>
-    public unsafe void TriggerNoiseEvent()
+    public unsafe virtual void TriggerNoiseEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetProjectileBase.TriggerNoiseEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -155,7 +155,7 @@ public partial class RGadgetProjectileBase : BmSDK.BmGame.RProjectile, BmSDK.IGa
     /// <summary>
     /// Function: IsBlockedByActorComp
     /// </summary>
-    public unsafe bool IsBlockedByActorComp(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp)
+    public unsafe virtual bool IsBlockedByActorComp(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetProjectileBase.IsBlockedByActorComp", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -175,7 +175,7 @@ public partial class RGadgetProjectileBase : BmSDK.BmGame.RProjectile, BmSDK.IGa
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetProjectileBase.Touch", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -190,7 +190,7 @@ public partial class RGadgetProjectileBase : BmSDK.BmGame.RProjectile, BmSDK.IGa
     /// <summary>
     /// Function: SetCookTime
     /// </summary>
-    public unsafe void SetCookTime(float CookTime)
+    public unsafe virtual void SetCookTime(float CookTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetProjectileBase.SetCookTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -202,7 +202,7 @@ public partial class RGadgetProjectileBase : BmSDK.BmGame.RProjectile, BmSDK.IGa
     /// <summary>
     /// Function: Fire
     /// </summary>
-    public unsafe void Fire(System.Numerics.Vector3 LaunchLocation, System.Numerics.Vector3 TargetLocation, System.Numerics.Vector3 StartSpeed, bool bSecondary, BmSDK.Engine.Actor Target, System.Numerics.Vector3 ActualTargetLocation)
+    public unsafe virtual void Fire(System.Numerics.Vector3 LaunchLocation, System.Numerics.Vector3 TargetLocation, System.Numerics.Vector3 StartSpeed, bool bSecondary, BmSDK.Engine.Actor Target, System.Numerics.Vector3 ActualTargetLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetProjectileBase.Fire", true);
         byte* paramsPtr = stackalloc byte[60];

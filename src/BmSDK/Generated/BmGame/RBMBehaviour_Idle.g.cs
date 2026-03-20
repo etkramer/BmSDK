@@ -47,7 +47,7 @@ public partial class RBMBehaviour_Idle : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameO
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Idle.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_Idle : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameO
     /// <summary>
     /// Function: CanLookAtPlayer
     /// </summary>
-    public unsafe bool CanLookAtPlayer()
+    public unsafe override bool CanLookAtPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Idle.CanLookAtPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_Idle : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameO
     /// <summary>
     /// Function: TriggerCombat
     /// </summary>
-    public unsafe void TriggerCombat()
+    public unsafe virtual void TriggerCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Idle.TriggerCombat", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_Idle : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameO
     /// <summary>
     /// Function: PlayerBumped
     /// </summary>
-    public unsafe void PlayerBumped(bool bFriendly)
+    public unsafe override void PlayerBumped(bool bFriendly)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Idle.PlayerBumped", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -92,7 +92,7 @@ public partial class RBMBehaviour_Idle : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameO
     /// <summary>
     /// Function: HandleNoise
     /// </summary>
-    public unsafe void HandleNoise(BmSDK.BmGame.RPawnPlayer PlayerInstigator)
+    public unsafe override void HandleNoise(BmSDK.BmGame.RPawnPlayer PlayerInstigator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Idle.HandleNoise", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -104,7 +104,7 @@ public partial class RBMBehaviour_Idle : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameO
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Idle.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RBMBehaviour_Idle : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameO
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Idle.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RBMBehaviour_Idle : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameO
     /// <summary>
     /// Function: ShouldMirror
     /// </summary>
-    public unsafe bool ShouldMirror()
+    public unsafe virtual bool ShouldMirror()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Idle.ShouldMirror", true);
         byte* paramsPtr = stackalloc byte[4];

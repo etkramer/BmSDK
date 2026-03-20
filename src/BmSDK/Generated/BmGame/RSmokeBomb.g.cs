@@ -66,7 +66,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: ResetForChallenge
     /// </summary>
-    public unsafe void ResetForChallenge(bool bChallengeStarted)
+    public unsafe override void ResetForChallenge(bool bChallengeStarted)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.ResetForChallenge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -78,7 +78,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: UpdateAutoTarget
     /// </summary>
-    public unsafe void UpdateAutoTarget()
+    public unsafe override void UpdateAutoTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.UpdateAutoTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: RestockAmmo
     /// </summary>
-    public unsafe void RestockAmmo()
+    public unsafe override void RestockAmmo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.RestockAmmo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -100,7 +100,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: RecentlyThrown
     /// </summary>
-    public unsafe void RecentlyThrown()
+    public unsafe virtual void RecentlyThrown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.RecentlyThrown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -111,7 +111,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: WaitForDetectiveMode
     /// </summary>
-    public unsafe void WaitForDetectiveMode()
+    public unsafe virtual void WaitForDetectiveMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.WaitForDetectiveMode", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -122,7 +122,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: FireGadgetCombat
     /// </summary>
-    public unsafe bool FireGadgetCombat()
+    public unsafe override bool FireGadgetCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.FireGadgetCombat", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -133,7 +133,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: UpdateSmokePercentage
     /// </summary>
-    public unsafe void UpdateSmokePercentage(float Percentage)
+    public unsafe virtual void UpdateSmokePercentage(float Percentage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.UpdateSmokePercentage", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -145,7 +145,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.Tick", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -157,7 +157,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: UpdateAllowRecharge
     /// </summary>
-    public unsafe void UpdateAllowRecharge()
+    public unsafe virtual void UpdateAllowRecharge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.UpdateAllowRecharge", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -168,7 +168,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: CanThrowGadget
     /// </summary>
-    public unsafe bool CanThrowGadget()
+    public unsafe override bool CanThrowGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.CanThrowGadget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -179,7 +179,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: OnRoomChange
     /// </summary>
-    public unsafe void OnRoomChange()
+    public unsafe override void OnRoomChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.OnRoomChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -190,7 +190,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -203,7 +203,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: CanShowUnderFireHelpPrompt
     /// </summary>
-    public unsafe bool CanShowUnderFireHelpPrompt()
+    public unsafe virtual bool CanShowUnderFireHelpPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.CanShowUnderFireHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -214,7 +214,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: GetUnderFireHelpPrompt
     /// </summary>
-    public unsafe void GetUnderFireHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool Secondary = default)
+    public unsafe virtual void GetUnderFireHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool Secondary = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.GetUnderFireHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -227,7 +227,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: GadgetNoiseEvent
     /// </summary>
-    public unsafe void GadgetNoiseEvent(System.Numerics.Vector3 SmokeBombLoc)
+    public unsafe virtual void GadgetNoiseEvent(System.Numerics.Vector3 SmokeBombLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.GadgetNoiseEvent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -239,7 +239,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: DetonateSmokeBomb
     /// </summary>
-    public unsafe void DetonateSmokeBomb(System.Numerics.Vector3 SmokeBombLoc, bool bHitWall)
+    public unsafe virtual void DetonateSmokeBomb(System.Numerics.Vector3 SmokeBombLoc, bool bHitWall)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.DetonateSmokeBomb", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -252,7 +252,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: TriggerSmokeBombFloor
     /// </summary>
-    public unsafe void TriggerSmokeBombFloor()
+    public unsafe virtual void TriggerSmokeBombFloor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.TriggerSmokeBombFloor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -263,7 +263,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: DropSmokeBomb
     /// </summary>
-    public unsafe void DropSmokeBomb()
+    public unsafe virtual void DropSmokeBomb()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.DropSmokeBomb", true);
         byte* paramsPtr = stackalloc byte[140];
@@ -274,7 +274,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: SetSmokeTimers
     /// </summary>
-    public unsafe void SetSmokeTimers()
+    public unsafe virtual void SetSmokeTimers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.SetSmokeTimers", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -285,7 +285,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: GadgetUsed
     /// </summary>
-    public unsafe void GadgetUsed()
+    public unsafe override void GadgetUsed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.GadgetUsed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -296,7 +296,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: FireSmokeBombGrapple
     /// </summary>
-    public unsafe bool FireSmokeBombGrapple()
+    public unsafe virtual bool FireSmokeBombGrapple()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.FireSmokeBombGrapple", true);
         byte* paramsPtr = stackalloc byte[156];
@@ -307,7 +307,7 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: GetPrimedPose
     /// </summary>
-    public unsafe BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
+    public unsafe override BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeBomb.GetPrimedPose", true);
         byte* paramsPtr = stackalloc byte[36];

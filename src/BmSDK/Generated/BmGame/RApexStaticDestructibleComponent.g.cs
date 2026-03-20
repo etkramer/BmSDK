@@ -36,7 +36,7 @@ public partial class RApexStaticDestructibleComponent : BmSDK.Engine.ApexStaticD
     /// <summary>
     /// Function: GetSocketWorldLocationAndRotation
     /// </summary>
-    public unsafe bool GetSocketWorldLocationAndRotation(BmSDK.FName InSocketName, out System.Numerics.Vector3 OutLocation, out BmSDK.Rotator OutRotation, int Space)
+    public unsafe virtual bool GetSocketWorldLocationAndRotation(BmSDK.FName InSocketName, out System.Numerics.Vector3 OutLocation, out BmSDK.Rotator OutRotation, int Space)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RApexStaticDestructibleComponent.GetSocketWorldLocationAndRotation", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -58,7 +58,7 @@ public partial class RApexStaticDestructibleComponent : BmSDK.Engine.ApexStaticD
     /// <summary>
     /// Function: CalculateStaticCollisionBoundingBox
     /// </summary>
-    public unsafe void CalculateStaticCollisionBoundingBox(out BmSDK.GameObject.FMatrix OutBoundsTransform, out System.Numerics.Vector3 OutBoundsHalfExtents)
+    public unsafe virtual void CalculateStaticCollisionBoundingBox(out BmSDK.GameObject.FMatrix OutBoundsTransform, out System.Numerics.Vector3 OutBoundsHalfExtents)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RApexStaticDestructibleComponent.CalculateStaticCollisionBoundingBox", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -78,7 +78,7 @@ public partial class RApexStaticDestructibleComponent : BmSDK.Engine.ApexStaticD
     /// <summary>
     /// Function: LoadDamageStateFromSaveGame
     /// </summary>
-    public unsafe void LoadDamageStateFromSaveGame()
+    public unsafe virtual void LoadDamageStateFromSaveGame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RApexStaticDestructibleComponent.LoadDamageStateFromSaveGame", true);
         byte* paramsPtr = stackalloc byte[0];

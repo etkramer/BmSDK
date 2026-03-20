@@ -66,7 +66,7 @@ public partial class MLaughingGasBase : BmSDK.BmGame.RSmokeBomb, BmSDK.IGameObje
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MLaughingGasBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class MLaughingGasBase : BmSDK.BmGame.RSmokeBomb, BmSDK.IGameObje
     /// <summary>
     /// Function: GetLaughingGasReactionClass
     /// </summary>
-    public unsafe BmSDK.Class GetLaughingGasReactionClass(BmSDK.BmGame.RPawnVillain PawnVillain, BmSDK.BmGame.RBMWeapon Weapon)
+    public unsafe virtual BmSDK.Class GetLaughingGasReactionClass(BmSDK.BmGame.RPawnVillain PawnVillain, BmSDK.BmGame.RBMWeapon Weapon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MLaughingGasBase.GetLaughingGasReactionClass", true);
         byte* paramsPtr = stackalloc byte[24];

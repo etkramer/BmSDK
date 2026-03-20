@@ -36,7 +36,7 @@ public partial class RSeqEvent_3GelWallsUsedForTakedowns : BmSDK.Engine.Sequence
     /// <summary>
     /// Function: RegisterWallUsedForTakedown
     /// </summary>
-    public unsafe void RegisterWallUsedForTakedown(BmSDK.Engine.Actor Wall)
+    public unsafe virtual void RegisterWallUsedForTakedown(BmSDK.Engine.Actor Wall)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_3GelWallsUsedForTakedowns.RegisterWallUsedForTakedown", true);
         byte* paramsPtr = stackalloc byte[8];

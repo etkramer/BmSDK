@@ -36,7 +36,7 @@ public partial class RSeqAct_VehicleDriveSpline : BmSDK.BmGame.RSeqAct_VehicleSe
     /// <summary>
     /// Function: OnArrived
     /// </summary>
-    public unsafe void OnArrived()
+    public unsafe override void OnArrived()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleDriveSpline.OnArrived", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RSeqAct_VehicleDriveSpline : BmSDK.BmGame.RSeqAct_VehicleSe
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleDriveSpline.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

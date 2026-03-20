@@ -71,7 +71,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnLostFocusPause
     /// </summary>
-    public unsafe void OnLostFocusPause(bool bEnable)
+    public unsafe virtual void OnLostFocusPause(bool bEnable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.OnLostFocusPause", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyBindPostProcessEffects
     /// </summary>
-    public unsafe void NotifyBindPostProcessEffects()
+    public unsafe virtual void NotifyBindPostProcessEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.NotifyBindPostProcessEffects", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayerOwnerDied
     /// </summary>
-    public unsafe void PlayerOwnerDied()
+    public unsafe virtual void PlayerOwnerDied()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.PlayerOwnerDied", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawText
     /// </summary>
-    public unsafe void DrawText(BmSDK.FString Text, System.Numerics.Vector2 Position, BmSDK.Engine.Font TextFont, System.Numerics.Vector2 FontScale, BmSDK.GameObject.FColor TextColor, out BmSDK.Engine.Canvas.FFontRenderInfo RenderInfo)
+    public unsafe virtual void DrawText(BmSDK.FString Text, System.Numerics.Vector2 Position, BmSDK.Engine.Font TextFont, System.Numerics.Vector2 FontScale, BmSDK.GameObject.FColor TextColor, out BmSDK.Engine.Canvas.FFontRenderInfo RenderInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.DrawText", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -134,7 +134,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DisplayKismetMessages
     /// </summary>
-    public unsafe void DisplayKismetMessages()
+    public unsafe virtual void DisplayKismetMessages()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.DisplayKismetMessages", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -145,7 +145,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DisplayLocalMessages
     /// </summary>
-    public unsafe void DisplayLocalMessages()
+    public unsafe virtual void DisplayLocalMessages()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.DisplayLocalMessages", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -156,7 +156,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawMessageText
     /// </summary>
-    public unsafe void DrawMessageText(BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessage, float ScreenX, float ScreenY)
+    public unsafe virtual void DrawMessageText(BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessage, float ScreenX, float ScreenY)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.DrawMessageText", true);
         byte* paramsPtr = stackalloc byte[128];
@@ -170,7 +170,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawMessage
     /// </summary>
-    public unsafe void DrawMessage(int I, float PosY, out float DX, out float DY)
+    public unsafe virtual void DrawMessage(int I, float PosY, out float DX, out float DY)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.DrawMessage", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -185,7 +185,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetScreenCoords
     /// </summary>
-    public unsafe void GetScreenCoords(float PosY, out float ScreenX, out float ScreenY, out BmSDK.Engine.HUD.FHudLocalizedMessage InMessage)
+    public unsafe virtual void GetScreenCoords(float PosY, out float ScreenX, out float ScreenY, out BmSDK.Engine.HUD.FHudLocalizedMessage InMessage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.GetScreenCoords", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -200,7 +200,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddLocalizedMessage
     /// </summary>
-    public unsafe void AddLocalizedMessage(int Index, BmSDK.Class InMessageClass, BmSDK.FString CriticalString, int Switch, float Position, float Lifetime, int FontSize, BmSDK.GameObject.FColor DrawColor, int MessageCount = default, BmSDK.GameObject OptionalObject = default)
+    public unsafe virtual void AddLocalizedMessage(int Index, BmSDK.Class InMessageClass, BmSDK.FString CriticalString, int Switch, float Position, float Lifetime, int FontSize, BmSDK.GameObject.FColor DrawColor, int MessageCount = default, BmSDK.GameObject OptionalObject = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.AddLocalizedMessage", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -221,7 +221,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: LocalizedMessage
     /// </summary>
-    public unsafe void LocalizedMessage(BmSDK.Class InMessageClass, BmSDK.Engine.PlayerReplicationInfo RelatedPRI, BmSDK.Engine.PlayerReplicationInfo RelatedPRI_1, BmSDK.FString CriticalString, int Switch, float Position, float Lifetime, int FontSize, BmSDK.GameObject.FColor DrawColor, BmSDK.GameObject OptionalObject = default)
+    public unsafe virtual void LocalizedMessage(BmSDK.Class InMessageClass, BmSDK.Engine.PlayerReplicationInfo RelatedPRI, BmSDK.Engine.PlayerReplicationInfo RelatedPRI_1, BmSDK.FString CriticalString, int Switch, float Position, float Lifetime, int FontSize, BmSDK.GameObject.FColor DrawColor, BmSDK.GameObject OptionalObject = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.LocalizedMessage", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -242,7 +242,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddConsoleMessage
     /// </summary>
-    public unsafe void AddConsoleMessage(BmSDK.FString M, BmSDK.Class InMessageClass, BmSDK.Engine.PlayerReplicationInfo PRI, float Lifetime = default)
+    public unsafe virtual void AddConsoleMessage(BmSDK.FString M, BmSDK.Class InMessageClass, BmSDK.Engine.PlayerReplicationInfo PRI, float Lifetime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.AddConsoleMessage", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -257,7 +257,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldShowConsoleMessage
     /// </summary>
-    public unsafe bool ShouldShowConsoleMessage(BmSDK.Engine.HUD.FConsoleMessage InConsoleMessage)
+    public unsafe virtual bool ShouldShowConsoleMessage(BmSDK.Engine.HUD.FConsoleMessage InConsoleMessage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.ShouldShowConsoleMessage", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -269,7 +269,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DisplayConsoleMessages
     /// </summary>
-    public unsafe void DisplayConsoleMessages()
+    public unsafe virtual void DisplayConsoleMessages()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.DisplayConsoleMessages", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -280,7 +280,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Message
     /// </summary>
-    public unsafe void Message(BmSDK.Engine.PlayerReplicationInfo PRI, BmSDK.FString msg, BmSDK.FName MsgType, float Lifetime = default)
+    public unsafe virtual void Message(BmSDK.Engine.PlayerReplicationInfo PRI, BmSDK.FString msg, BmSDK.FName MsgType, float Lifetime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.Message", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -295,7 +295,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearMessage
     /// </summary>
-    public unsafe void ClearMessage(out BmSDK.Engine.HUD.FHudLocalizedMessage M)
+    public unsafe virtual void ClearMessage(out BmSDK.Engine.HUD.FHudLocalizedMessage M)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.ClearMessage", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -307,7 +307,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DisplayBadConnectionAlert
     /// </summary>
-    public unsafe void DisplayBadConnectionAlert()
+    public unsafe virtual void DisplayBadConnectionAlert()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.DisplayBadConnectionAlert", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -318,7 +318,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD()
+    public unsafe virtual void DrawHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -329,7 +329,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PreRender
     /// </summary>
-    public unsafe void PreRender()
+    public unsafe virtual void PreRender()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.PreRender", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -340,7 +340,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostRender
     /// </summary>
-    public unsafe void PostRender()
+    public unsafe virtual void PostRender()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.PostRender", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -351,7 +351,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PreCalcValues
     /// </summary>
-    public unsafe void PreCalcValues()
+    public unsafe virtual void PreCalcValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.PreCalcValues", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -362,7 +362,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowDebugInfo
     /// </summary>
-    public unsafe void ShowDebugInfo(out float out_YL, out float out_YPos)
+    public unsafe virtual void ShowDebugInfo(out float out_YL, out float out_YPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.ShowDebugInfo", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -375,7 +375,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ToggleDirectorInfoDebug
     /// </summary>
-    public unsafe void ToggleDirectorInfoDebug()
+    public unsafe virtual void ToggleDirectorInfoDebug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.ToggleDirectorInfoDebug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -386,7 +386,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ToggleDirectorInfoHUD
     /// </summary>
-    public unsafe void ToggleDirectorInfoHUD()
+    public unsafe virtual void ToggleDirectorInfoHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.ToggleDirectorInfoHUD", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -397,7 +397,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldDisplayDebug
     /// </summary>
-    public unsafe bool ShouldDisplayDebug(BmSDK.FName DebugType)
+    public unsafe virtual bool ShouldDisplayDebug(BmSDK.FName DebugType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.ShouldDisplayDebug", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -409,7 +409,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowDebug
     /// </summary>
-    public unsafe void ShowDebug(BmSDK.FName DebugType = default)
+    public unsafe virtual void ShowDebug(BmSDK.FName DebugType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.ShowDebug", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -421,7 +421,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetShowScores
     /// </summary>
-    public unsafe void SetShowScores(bool bNewValue)
+    public unsafe virtual void SetShowScores(bool bNewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.SetShowScores", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -433,7 +433,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowScores
     /// </summary>
-    public unsafe void ShowScores()
+    public unsafe virtual void ShowScores()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.ShowScores", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -444,7 +444,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowHUD
     /// </summary>
-    public unsafe void ShowHUD()
+    public unsafe virtual void ShowHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.ShowHUD", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -455,7 +455,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ToggleHUD
     /// </summary>
-    public unsafe void ToggleHUD()
+    public unsafe virtual void ToggleHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.ToggleHUD", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -466,7 +466,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddPostRenderedActor
     /// </summary>
-    public unsafe void AddPostRenderedActor(BmSDK.Engine.Actor A)
+    public unsafe virtual void AddPostRenderedActor(BmSDK.Engine.Actor A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.AddPostRenderedActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -478,7 +478,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemovePostRenderedActor
     /// </summary>
-    public unsafe void RemovePostRenderedActor(BmSDK.Engine.Actor A)
+    public unsafe virtual void RemovePostRenderedActor(BmSDK.Engine.Actor A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.RemovePostRenderedActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -490,7 +490,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawActorOverlays
     /// </summary>
-    public unsafe void DrawActorOverlays(System.Numerics.Vector3 ViewPoint, BmSDK.Rotator ViewRotation)
+    public unsafe virtual void DrawActorOverlays(System.Numerics.Vector3 ViewPoint, BmSDK.Rotator ViewRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.DrawActorOverlays", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -510,7 +510,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -521,7 +521,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Draw2DLine
     /// </summary>
-    public unsafe void Draw2DLine(int X1, int Y1, int X2, int Y2, BmSDK.GameObject.FColor LineColor)
+    public unsafe virtual void Draw2DLine(int X1, int Y1, int X2, int Y2, BmSDK.GameObject.FColor LineColor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.Draw2DLine", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -544,7 +544,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Draw3DLine
     /// </summary>
-    public unsafe void Draw3DLine(System.Numerics.Vector3 Start, System.Numerics.Vector3 End, BmSDK.GameObject.FColor LineColor)
+    public unsafe virtual void Draw3DLine(System.Numerics.Vector3 Start, System.Numerics.Vector3 End, BmSDK.GameObject.FColor LineColor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.Draw3DLine", true);
         byte* paramsPtr = stackalloc byte[28];

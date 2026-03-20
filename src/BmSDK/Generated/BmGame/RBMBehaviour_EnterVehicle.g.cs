@@ -36,7 +36,7 @@ public partial class RBMBehaviour_EnterVehicle : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: InteriorLightsOff
     /// </summary>
-    public unsafe void InteriorLightsOff()
+    public unsafe virtual void InteriorLightsOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_EnterVehicle.InteriorLightsOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_EnterVehicle : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: InteriorLightsOn
     /// </summary>
-    public unsafe void InteriorLightsOn()
+    public unsafe virtual void InteriorLightsOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_EnterVehicle.InteriorLightsOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_EnterVehicle : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_EnterVehicle.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_EnterVehicle : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: SetInitialState
     /// </summary>
-    public unsafe void SetInitialState()
+    public unsafe override void SetInitialState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_EnterVehicle.SetInitialState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_EnterVehicle : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: PlayEnterAnim
     /// </summary>
-    public unsafe void PlayEnterAnim()
+    public unsafe virtual void PlayEnterAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_EnterVehicle.PlayEnterAnim", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -91,7 +91,7 @@ public partial class RBMBehaviour_EnterVehicle : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: GetAnimRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetAnimRotation()
+    public unsafe virtual BmSDK.Rotator GetAnimRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_EnterVehicle.GetAnimRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -102,7 +102,7 @@ public partial class RBMBehaviour_EnterVehicle : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: GetStartAnimLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetStartAnimLocation()
+    public unsafe virtual System.Numerics.Vector3 GetStartAnimLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_EnterVehicle.GetStartAnimLocation", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -113,7 +113,7 @@ public partial class RBMBehaviour_EnterVehicle : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: GetAnimLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAnimLocation()
+    public unsafe virtual System.Numerics.Vector3 GetAnimLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_EnterVehicle.GetAnimLocation", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -124,7 +124,7 @@ public partial class RBMBehaviour_EnterVehicle : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: UnableToAssignToSlot
     /// </summary>
-    public unsafe void UnableToAssignToSlot()
+    public unsafe virtual void UnableToAssignToSlot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_EnterVehicle.UnableToAssignToSlot", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -135,7 +135,7 @@ public partial class RBMBehaviour_EnterVehicle : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe virtual void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_EnterVehicle.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -146,7 +146,7 @@ public partial class RBMBehaviour_EnterVehicle : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_EnterVehicle.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

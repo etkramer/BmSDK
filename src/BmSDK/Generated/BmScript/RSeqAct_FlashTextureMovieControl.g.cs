@@ -47,7 +47,7 @@ public partial class RSeqAct_FlashTextureMovieControl : BmSDK.BmGame.RSeqAct_Fla
     /// <summary>
     /// Function: FetchAudioSource
     /// </summary>
-    public unsafe void FetchAudioSource(out BmSDK.TArray<float> pos, out BmSDK.TArray<float> Rot)
+    public unsafe virtual void FetchAudioSource(out BmSDK.TArray<float> pos, out BmSDK.TArray<float> Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_FlashTextureMovieControl.FetchAudioSource", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -60,7 +60,7 @@ public partial class RSeqAct_FlashTextureMovieControl : BmSDK.BmGame.RSeqAct_Fla
     /// <summary>
     /// Function: AtEndClose
     /// </summary>
-    public unsafe void AtEndClose()
+    public unsafe override void AtEndClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_FlashTextureMovieControl.AtEndClose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -71,7 +71,7 @@ public partial class RSeqAct_FlashTextureMovieControl : BmSDK.BmGame.RSeqAct_Fla
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_FlashTextureMovieControl.Activated", true);
         byte* paramsPtr = stackalloc byte[44];

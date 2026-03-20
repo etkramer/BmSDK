@@ -71,7 +71,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat ExitPawn)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat ExitPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: IgnoreDamagedByOnPlayer
     /// </summary>
-    public unsafe bool IgnoreDamagedByOnPlayer()
+    public unsafe override bool IgnoreDamagedByOnPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.IgnoreDamagedByOnPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: GetLeapInAnimPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLeapInAnimPos(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn, BmSDK.FName LeapInAnimName)
+    public unsafe virtual System.Numerics.Vector3 GetLeapInAnimPos(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn, BmSDK.FName LeapInAnimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.GetLeapInAnimPos", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -118,7 +118,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: GetForceToGiveToPawn
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetForceToGiveToPawn(BmSDK.BmGame.RPawnCombat Receiver, float MaxForce, float MinRange = default, float MaxRange = default)
+    public unsafe override System.Numerics.Vector3 GetForceToGiveToPawn(BmSDK.BmGame.RPawnCombat Receiver, float MaxForce, float MinRange = default, float MaxRange = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.GetForceToGiveToPawn", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -133,7 +133,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: GetOffsetFromAnim
     /// </summary>
-    public unsafe float GetOffsetFromAnim(BmSDK.BmGame.RPawnPlayerCombat TestPlayer, BmSDK.FName TestAnimName)
+    public unsafe virtual float GetOffsetFromAnim(BmSDK.BmGame.RPawnPlayerCombat TestPlayer, BmSDK.FName TestAnimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.GetOffsetFromAnim", true);
         byte* paramsPtr = stackalloc byte[108];
@@ -146,7 +146,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: OverrideForceToGiveToPawn
     /// </summary>
-    public unsafe bool OverrideForceToGiveToPawn()
+    public unsafe override bool OverrideForceToGiveToPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.OverrideForceToGiveToPawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -157,7 +157,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: CanBeHitByThrownObject
     /// </summary>
-    public unsafe bool CanBeHitByThrownObject()
+    public unsafe override bool CanBeHitByThrownObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.CanBeHitByThrownObject", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -168,7 +168,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: MoveOverridenForPawn
     /// </summary>
-    public unsafe void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
+    public unsafe override void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.MoveOverridenForPawn", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -181,7 +181,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: CanBeTargettedByPlayer
     /// </summary>
-    public unsafe bool CanBeTargettedByPlayer(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType, BmSDK.BmGame.RPawnPlayerCombat NewPlayer)
+    public unsafe override bool CanBeTargettedByPlayer(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType, BmSDK.BmGame.RPawnPlayerCombat NewPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.CanBeTargettedByPlayer", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -195,7 +195,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: CanReceiveAttackFromPawn
     /// </summary>
-    public unsafe bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
+    public unsafe override bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.CanReceiveAttackFromPawn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -208,7 +208,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: CanNewAttackBeStarted
     /// </summary>
-    public unsafe bool CanNewAttackBeStarted()
+    public unsafe override bool CanNewAttackBeStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.CanNewAttackBeStarted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -219,7 +219,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: CanPerformNextComboMove
     /// </summary>
-    public unsafe bool CanPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
+    public unsafe override bool CanPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.CanPerformNextComboMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -294,7 +294,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: ClearPrompt
     /// </summary>
-    public unsafe void ClearPrompt()
+    public unsafe virtual void ClearPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.ClearPrompt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -305,7 +305,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: GetHighlightMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInstance GetHighlightMaterial()
+    public unsafe virtual BmSDK.Engine.MaterialInstance GetHighlightMaterial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.GetHighlightMaterial", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -316,7 +316,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: TryBuddyJoin
     /// </summary>
-    public unsafe bool TryBuddyJoin()
+    public unsafe virtual bool TryBuddyJoin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.TryBuddyJoin", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -327,7 +327,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: IsTooFarToStartAnim
     /// </summary>
-    public unsafe bool IsTooFarToStartAnim(BmSDK.BmGame.RPawnPlayerCombat TestPlayerPawn, BmSDK.FName TestAnimName, BmSDK.Engine.AnimSet TestPlayerAnimSet)
+    public unsafe virtual bool IsTooFarToStartAnim(BmSDK.BmGame.RPawnPlayerCombat TestPlayerPawn, BmSDK.FName TestAnimName, BmSDK.Engine.AnimSet TestPlayerAnimSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.IsTooFarToStartAnim", true);
         byte* paramsPtr = stackalloc byte[136];
@@ -341,7 +341,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: GetInAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetInAnimName()
+    public unsafe virtual BmSDK.FName GetInAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.GetInAnimName", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -352,7 +352,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.Initialise", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -363,7 +363,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: ChangeCol
     /// </summary>
-    public unsafe void ChangeCol()
+    public unsafe virtual void ChangeCol()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.ChangeCol", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -374,7 +374,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: SetDofVictim
     /// </summary>
-    public unsafe void SetDofVictim()
+    public unsafe virtual void SetDofVictim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.SetDofVictim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -385,7 +385,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: SetDofBuddy
     /// </summary>
-    public unsafe void SetDofBuddy()
+    public unsafe virtual void SetDofBuddy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.SetDofBuddy", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -396,7 +396,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: SetDofInitiator
     /// </summary>
-    public unsafe void SetDofInitiator()
+    public unsafe virtual void SetDofInitiator()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.SetDofInitiator", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -407,7 +407,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: DualPlaySwitch
     /// </summary>
-    public unsafe void DualPlaySwitch()
+    public unsafe virtual void DualPlaySwitch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.DualPlaySwitch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -418,7 +418,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: SlowMoStop
     /// </summary>
-    public unsafe void SlowMoStop()
+    public unsafe virtual void SlowMoStop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.SlowMoStop", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -429,7 +429,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: SlowMoStart
     /// </summary>
-    public unsafe void SlowMoStart()
+    public unsafe virtual void SlowMoStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.SlowMoStart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -440,7 +440,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: AllowAttacks
     /// </summary>
-    public unsafe void AllowAttacks()
+    public unsafe virtual void AllowAttacks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.AllowAttacks", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -451,7 +451,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: PlayerHitThug
     /// </summary>
-    public unsafe void PlayerHitThug()
+    public unsafe virtual void PlayerHitThug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.PlayerHitThug", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -462,7 +462,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: AllowMovementExit
     /// </summary>
-    public unsafe void AllowMovementExit()
+    public unsafe virtual void AllowMovementExit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.AllowMovementExit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -473,7 +473,7 @@ public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: TakedownHit
     /// </summary>
-    public unsafe void TakedownHit()
+    public unsafe virtual void TakedownHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_DualTakedown.TakedownHit", true);
         byte* paramsPtr = stackalloc byte[248];

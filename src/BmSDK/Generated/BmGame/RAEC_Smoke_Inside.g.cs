@@ -71,7 +71,7 @@ public partial class RAEC_Smoke_Inside : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: DisarmedDuringSmoke
     /// </summary>
-    public unsafe void DisarmedDuringSmoke(BmSDK.BmGame.RBMAIController CaughtCon)
+    public unsafe virtual void DisarmedDuringSmoke(BmSDK.BmGame.RBMAIController CaughtCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Smoke_Inside.DisarmedDuringSmoke", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RAEC_Smoke_Inside : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: OnAssign
     /// </summary>
-    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe override void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Smoke_Inside.OnAssign", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -95,7 +95,7 @@ public partial class RAEC_Smoke_Inside : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: SetSmokeScreen
     /// </summary>
-    public unsafe void SetSmokeScreen(BmSDK.BmGame.RSmokeScreen NewSmokeScreen)
+    public unsafe virtual void SetSmokeScreen(BmSDK.BmGame.RSmokeScreen NewSmokeScreen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Smoke_Inside.SetSmokeScreen", true);
         byte* paramsPtr = stackalloc byte[8];

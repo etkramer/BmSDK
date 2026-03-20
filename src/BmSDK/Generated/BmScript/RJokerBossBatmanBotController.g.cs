@@ -71,7 +71,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: CanDoSteamVent
     /// </summary>
-    public unsafe bool CanDoSteamVent()
+    public unsafe virtual bool CanDoSteamVent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.CanDoSteamVent", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -82,7 +82,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: CanDoLantern
     /// </summary>
-    public unsafe bool CanDoLantern()
+    public unsafe virtual bool CanDoLantern()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.CanDoLantern", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -93,7 +93,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: NotifyShot
     /// </summary>
-    public unsafe void NotifyShot()
+    public unsafe virtual void NotifyShot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.NotifyShot", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: NotifyShow
     /// </summary>
-    public unsafe void NotifyShow()
+    public unsafe virtual void NotifyShow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.NotifyShow", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: NotifyHideInstant
     /// </summary>
-    public unsafe void NotifyHideInstant()
+    public unsafe virtual void NotifyHideInstant()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.NotifyHideInstant", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: NotifyHide
     /// </summary>
-    public unsafe void NotifyHide()
+    public unsafe virtual void NotifyHide()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.NotifyHide", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -137,7 +137,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: ActualShow
     /// </summary>
-    public unsafe void ActualShow()
+    public unsafe virtual void ActualShow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.ActualShow", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -148,7 +148,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: ActualHide
     /// </summary>
-    public unsafe void ActualHide()
+    public unsafe virtual void ActualHide()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.ActualHide", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -159,7 +159,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: BeginAppearFX
     /// </summary>
-    public unsafe void BeginAppearFX()
+    public unsafe virtual void BeginAppearFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.BeginAppearFX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -170,7 +170,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: BeginTeleport
     /// </summary>
-    public unsafe void BeginTeleport()
+    public unsafe virtual void BeginTeleport()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.BeginTeleport", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -181,7 +181,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: GetJokerSickVector
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor GetJokerSickVector()
+    public unsafe virtual BmSDK.GameObject.FLinearColor GetJokerSickVector()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.GetJokerSickVector", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -192,7 +192,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: UpdateJokerSickLevel
     /// </summary>
-    public unsafe void UpdateJokerSickLevel(float DeltaTime)
+    public unsafe virtual void UpdateJokerSickLevel(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.UpdateJokerSickLevel", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -204,7 +204,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: SetJokerFullySick
     /// </summary>
-    public unsafe void SetJokerFullySick()
+    public unsafe virtual void SetJokerFullySick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.SetJokerFullySick", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -215,7 +215,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: ProgressJokerSickLevel
     /// </summary>
-    public unsafe void ProgressJokerSickLevel()
+    public unsafe virtual void ProgressJokerSickLevel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.ProgressJokerSickLevel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -226,7 +226,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: JokerNearEdge
     /// </summary>
-    public unsafe bool JokerNearEdge()
+    public unsafe virtual bool JokerNearEdge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.JokerNearEdge", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -237,7 +237,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: PlayerPulledTrigger
     /// </summary>
-    public unsafe bool PlayerPulledTrigger()
+    public unsafe virtual bool PlayerPulledTrigger()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.PlayerPulledTrigger", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -248,7 +248,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: HitByJokerShotgun
     /// </summary>
-    public unsafe void HitByJokerShotgun()
+    public unsafe virtual void HitByJokerShotgun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.HitByJokerShotgun", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -259,7 +259,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: CanDoRedHerring
     /// </summary>
-    public unsafe bool CanDoRedHerring()
+    public unsafe virtual bool CanDoRedHerring()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.CanDoRedHerring", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -270,7 +270,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: CanTakedown
     /// </summary>
-    public unsafe bool CanTakedown(BmSDK.BmScript.RJokerBossBatmanBotController.JokerBossTakedownTypes takedownType)
+    public unsafe virtual bool CanTakedown(BmSDK.BmScript.RJokerBossBatmanBotController.JokerBossTakedownTypes takedownType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.CanTakedown", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -282,7 +282,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: UpdateFades
     /// </summary>
-    public unsafe void UpdateFades(float DeltaTime)
+    public unsafe virtual void UpdateFades(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.UpdateFades", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -294,7 +294,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: SwapMatsToFadeMats
     /// </summary>
-    public unsafe void SwapMatsToFadeMats(bool ToFade)
+    public unsafe virtual void SwapMatsToFadeMats(bool ToFade)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.SwapMatsToFadeMats", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -306,7 +306,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: GoingToRedHerring
     /// </summary>
-    public unsafe void GoingToRedHerring()
+    public unsafe virtual void GoingToRedHerring()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.GoingToRedHerring", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -317,7 +317,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: CheckForRedHerring
     /// </summary>
-    public unsafe void CheckForRedHerring()
+    public unsafe virtual void CheckForRedHerring()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.CheckForRedHerring", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -328,7 +328,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -340,7 +340,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: GetPlayerPawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer GetPlayerPawn()
+    public unsafe virtual BmSDK.BmGame.RPawnPlayer GetPlayerPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.GetPlayerPawn", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -351,7 +351,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: ClearNavigation
     /// </summary>
-    public unsafe void ClearNavigation()
+    public unsafe virtual void ClearNavigation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.ClearNavigation", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -362,7 +362,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: UnPossess
     /// </summary>
-    public unsafe void UnPossess()
+    public unsafe override void UnPossess()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.UnPossess", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -373,7 +373,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: Possess
     /// </summary>
-    public unsafe void Possess(BmSDK.Engine.Pawn inPawn, bool bVehicleTransition)
+    public unsafe override void Possess(BmSDK.Engine.Pawn inPawn, bool bVehicleTransition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.Possess", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -386,7 +386,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerBossBatmanBotController.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

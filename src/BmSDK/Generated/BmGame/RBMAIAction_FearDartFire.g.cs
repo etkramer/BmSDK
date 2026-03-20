@@ -71,7 +71,7 @@ public partial class RBMAIAction_FearDartFire : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_FearDartFire.ActionTick", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_FearDartFire : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: GetTurnAnim
     /// </summary>
-    public unsafe BmSDK.FName GetTurnAnim(BmSDK.Rotator DestRot)
+    public unsafe virtual BmSDK.FName GetTurnAnim(BmSDK.Rotator DestRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_FearDartFire.GetTurnAnim", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -95,7 +95,7 @@ public partial class RBMAIAction_FearDartFire : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: PlayTurn
     /// </summary>
-    public unsafe void PlayTurn(BmSDK.Rotator NewRot)
+    public unsafe virtual void PlayTurn(BmSDK.Rotator NewRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_FearDartFire.PlayTurn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -107,7 +107,7 @@ public partial class RBMAIAction_FearDartFire : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: PlayBeginAnim
     /// </summary>
-    public unsafe void PlayBeginAnim()
+    public unsafe virtual void PlayBeginAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_FearDartFire.PlayBeginAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class RBMAIAction_FearDartFire : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: GunStop
     /// </summary>
-    public unsafe void GunStop()
+    public unsafe virtual void GunStop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_FearDartFire.GunStop", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RBMAIAction_FearDartFire : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: GunStart
     /// </summary>
-    public unsafe void GunStart()
+    public unsafe virtual void GunStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_FearDartFire.GunStart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class RBMAIAction_FearDartFire : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_FearDartFire.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -151,7 +151,7 @@ public partial class RBMAIAction_FearDartFire : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_FearDartFire.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

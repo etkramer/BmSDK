@@ -71,7 +71,7 @@ public partial class RBMWeaponChokePoint : BmSDK.BmGame.RBMWeaponRanged, BmSDK.I
     /// <summary>
     /// Function: GetDamage
     /// </summary>
-    public unsafe float GetDamage(BmSDK.Engine.Actor Target)
+    public unsafe override float GetDamage(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponChokePoint.GetDamage", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RBMWeaponChokePoint : BmSDK.BmGame.RBMWeaponRanged, BmSDK.I
     /// <summary>
     /// Function: GetLaunchLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLaunchLocation()
+    public unsafe virtual System.Numerics.Vector3 GetLaunchLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponChokePoint.GetLaunchLocation", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -94,7 +94,7 @@ public partial class RBMWeaponChokePoint : BmSDK.BmGame.RBMWeaponRanged, BmSDK.I
     /// <summary>
     /// Function: FireHomingRocket
     /// </summary>
-    public unsafe void FireHomingRocket(BmSDK.Engine.Actor TargetActor, System.Numerics.Vector3 FireDirection = default)
+    public unsafe virtual void FireHomingRocket(BmSDK.Engine.Actor TargetActor, System.Numerics.Vector3 FireDirection = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponChokePoint.FireHomingRocket", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -107,7 +107,7 @@ public partial class RBMWeaponChokePoint : BmSDK.BmGame.RBMWeaponRanged, BmSDK.I
     /// <summary>
     /// Function: FireFastRocket
     /// </summary>
-    public unsafe void FireFastRocket(System.Numerics.Vector3 FireDirection = default)
+    public unsafe virtual void FireFastRocket(System.Numerics.Vector3 FireDirection = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponChokePoint.FireFastRocket", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -119,7 +119,7 @@ public partial class RBMWeaponChokePoint : BmSDK.BmGame.RBMWeaponRanged, BmSDK.I
     /// <summary>
     /// Function: FireRocket
     /// </summary>
-    public unsafe void FireRocket(System.Numerics.Vector3 FireDirection = default)
+    public unsafe virtual void FireRocket(System.Numerics.Vector3 FireDirection = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponChokePoint.FireRocket", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -131,7 +131,7 @@ public partial class RBMWeaponChokePoint : BmSDK.BmGame.RBMWeaponRanged, BmSDK.I
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponChokePoint.Tick", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -143,7 +143,7 @@ public partial class RBMWeaponChokePoint : BmSDK.BmGame.RBMWeaponRanged, BmSDK.I
     /// <summary>
     /// Function: GetLookFromLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLookFromLocation()
+    public unsafe virtual System.Numerics.Vector3 GetLookFromLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponChokePoint.GetLookFromLocation", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -154,7 +154,7 @@ public partial class RBMWeaponChokePoint : BmSDK.BmGame.RBMWeaponRanged, BmSDK.I
     /// <summary>
     /// Function: TurnOffVisibleSight
     /// </summary>
-    public unsafe void TurnOffVisibleSight()
+    public unsafe virtual void TurnOffVisibleSight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponChokePoint.TurnOffVisibleSight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -165,7 +165,7 @@ public partial class RBMWeaponChokePoint : BmSDK.BmGame.RBMWeaponRanged, BmSDK.I
     /// <summary>
     /// Function: TurnOnVisibleSight
     /// </summary>
-    public unsafe void TurnOnVisibleSight()
+    public unsafe virtual void TurnOnVisibleSight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponChokePoint.TurnOnVisibleSight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -176,7 +176,7 @@ public partial class RBMWeaponChokePoint : BmSDK.BmGame.RBMWeaponRanged, BmSDK.I
     /// <summary>
     /// Function: AttachWeapon
     /// </summary>
-    public unsafe void AttachWeapon()
+    public unsafe override void AttachWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponChokePoint.AttachWeapon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -198,7 +198,7 @@ public partial class RBMWeaponChokePoint : BmSDK.BmGame.RBMWeaponRanged, BmSDK.I
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponChokePoint.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -210,7 +210,7 @@ public partial class RBMWeaponChokePoint : BmSDK.BmGame.RBMWeaponRanged, BmSDK.I
     /// <summary>
     /// Function: CreateBasicGunWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateBasicGunWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateBasicGunWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponChokePoint.CreateBasicGunWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[880];

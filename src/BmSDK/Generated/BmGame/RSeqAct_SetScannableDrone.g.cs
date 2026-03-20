@@ -36,7 +36,7 @@ public partial class RSeqAct_SetScannableDrone : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// Function: TargetKilled
     /// </summary>
-    public unsafe void TargetKilled()
+    public unsafe virtual void TargetKilled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetScannableDrone.TargetKilled", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RSeqAct_SetScannableDrone : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// Function: TargetScanned
     /// </summary>
-    public unsafe void TargetScanned()
+    public unsafe virtual void TargetScanned()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetScannableDrone.TargetScanned", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_SetScannableDrone : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetScannableDrone.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

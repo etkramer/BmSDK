@@ -71,7 +71,7 @@ public partial class RPickup_JackInTheBoxBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: IsStaticForFloorCorrection
     /// </summary>
-    public unsafe bool IsStaticForFloorCorrection()
+    public unsafe override bool IsStaticForFloorCorrection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_JackInTheBoxBase.IsStaticForFloorCorrection", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -89,7 +89,7 @@ public partial class RPickup_JackInTheBoxBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: GetOverworldHintRange
     /// </summary>
-    public unsafe int GetOverworldHintRange()
+    public unsafe virtual int GetOverworldHintRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_JackInTheBoxBase.GetOverworldHintRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -100,7 +100,7 @@ public partial class RPickup_JackInTheBoxBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: GetSatnavToRoadAtSameHeight
     /// </summary>
-    public unsafe bool GetSatnavToRoadAtSameHeight()
+    public unsafe virtual bool GetSatnavToRoadAtSameHeight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_JackInTheBoxBase.GetSatnavToRoadAtSameHeight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -111,7 +111,7 @@ public partial class RPickup_JackInTheBoxBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: GetSatnavToRoadBelow
     /// </summary>
-    public unsafe bool GetSatnavToRoadBelow()
+    public unsafe virtual bool GetSatnavToRoadBelow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_JackInTheBoxBase.GetSatnavToRoadBelow", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -122,7 +122,7 @@ public partial class RPickup_JackInTheBoxBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: GetCustomFlag
     /// </summary>
-    public unsafe BmSDK.FString GetCustomFlag()
+    public unsafe virtual BmSDK.FString GetCustomFlag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_JackInTheBoxBase.GetCustomFlag", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -133,7 +133,7 @@ public partial class RPickup_JackInTheBoxBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: GetUnlockedChapter
     /// </summary>
-    public unsafe int GetUnlockedChapter()
+    public unsafe virtual int GetUnlockedChapter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_JackInTheBoxBase.GetUnlockedChapter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -144,7 +144,7 @@ public partial class RPickup_JackInTheBoxBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: GetMapIconFloatUpAdjustment
     /// </summary>
-    public unsafe int GetMapIconFloatUpAdjustment()
+    public unsafe virtual int GetMapIconFloatUpAdjustment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_JackInTheBoxBase.GetMapIconFloatUpAdjustment", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -155,7 +155,7 @@ public partial class RPickup_JackInTheBoxBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: UseSecretLocation
     /// </summary>
-    public unsafe bool UseSecretLocation()
+    public unsafe virtual bool UseSecretLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_JackInTheBoxBase.UseSecretLocation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -166,7 +166,7 @@ public partial class RPickup_JackInTheBoxBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: GetSecretLocationZ
     /// </summary>
-    public unsafe int GetSecretLocationZ()
+    public unsafe virtual int GetSecretLocationZ()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_JackInTheBoxBase.GetSecretLocationZ", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -177,7 +177,7 @@ public partial class RPickup_JackInTheBoxBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: GetSecretLocationY
     /// </summary>
-    public unsafe int GetSecretLocationY()
+    public unsafe virtual int GetSecretLocationY()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_JackInTheBoxBase.GetSecretLocationY", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -188,7 +188,7 @@ public partial class RPickup_JackInTheBoxBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: GetSecretLocationX
     /// </summary>
-    public unsafe int GetSecretLocationX()
+    public unsafe virtual int GetSecretLocationX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_JackInTheBoxBase.GetSecretLocationX", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -199,7 +199,7 @@ public partial class RPickup_JackInTheBoxBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: GetSecretZone
     /// </summary>
-    public unsafe byte GetSecretZone()
+    public unsafe virtual byte GetSecretZone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_JackInTheBoxBase.GetSecretZone", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -210,7 +210,7 @@ public partial class RPickup_JackInTheBoxBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: GetSecretPickupIndex
     /// </summary>
-    public unsafe int GetSecretPickupIndex()
+    public unsafe virtual int GetSecretPickupIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_JackInTheBoxBase.GetSecretPickupIndex", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -221,7 +221,7 @@ public partial class RPickup_JackInTheBoxBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: GetSecretSubType
     /// </summary>
-    public unsafe BmSDK.FString GetSecretSubType()
+    public unsafe virtual BmSDK.FString GetSecretSubType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_JackInTheBoxBase.GetSecretSubType", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -232,7 +232,7 @@ public partial class RPickup_JackInTheBoxBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: GetSecretName
     /// </summary>
-    public unsafe BmSDK.FString GetSecretName()
+    public unsafe virtual BmSDK.FString GetSecretName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_JackInTheBoxBase.GetSecretName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -243,7 +243,7 @@ public partial class RPickup_JackInTheBoxBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: IsValidSecret
     /// </summary>
-    public unsafe bool IsValidSecret()
+    public unsafe virtual bool IsValidSecret()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_JackInTheBoxBase.IsValidSecret", true);
         byte* paramsPtr = stackalloc byte[4];

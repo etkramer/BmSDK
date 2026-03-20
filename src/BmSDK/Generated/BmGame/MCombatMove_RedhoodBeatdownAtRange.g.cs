@@ -71,7 +71,7 @@ public partial class MCombatMove_RedhoodBeatdownAtRange : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: StrikeContact
     /// </summary>
-    public unsafe void StrikeContact(bool bPreStrike)
+    public unsafe override void StrikeContact(bool bPreStrike)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodBeatdownAtRange.StrikeContact", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class MCombatMove_RedhoodBeatdownAtRange : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: GetValidTargetStrikeRange
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.StrikeRange GetValidTargetStrikeRange()
+    public unsafe override BmSDK.BmGame.RGameInfo.StrikeRange GetValidTargetStrikeRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodBeatdownAtRange.GetValidTargetStrikeRange", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -94,7 +94,7 @@ public partial class MCombatMove_RedhoodBeatdownAtRange : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: SetDamageInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.FDamageInfo SetDamageInfo(BmSDK.BmGame.RPawnCombat DamageReceiver, float DmgAmount)
+    public unsafe override BmSDK.BmGame.RPawnCombat.FDamageInfo SetDamageInfo(BmSDK.BmGame.RPawnCombat DamageReceiver, float DmgAmount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodBeatdownAtRange.SetDamageInfo", true);
         byte* paramsPtr = stackalloc byte[508];
@@ -107,7 +107,7 @@ public partial class MCombatMove_RedhoodBeatdownAtRange : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: PlayStrike
     /// </summary>
-    public unsafe void PlayStrike(bool bQueue, bool bSimulated)
+    public unsafe override void PlayStrike(bool bQueue, bool bSimulated)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodBeatdownAtRange.PlayStrike", true);
         byte* paramsPtr = stackalloc byte[308];

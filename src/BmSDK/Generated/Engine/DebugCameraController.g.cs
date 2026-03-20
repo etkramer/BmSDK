@@ -71,7 +71,7 @@ public partial class DebugCameraController : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: ConsoleCommand
     /// </summary>
-    public unsafe BmSDK.FString ConsoleCommand(BmSDK.FString Command, bool bWriteToLog = default)
+    public unsafe override BmSDK.FString ConsoleCommand(BmSDK.FString Command, bool bWriteToLog = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DebugCameraController.ConsoleCommand", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -91,7 +91,7 @@ public partial class DebugCameraController : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: ShowDebugSelectedInfo
     /// </summary>
-    public unsafe void ShowDebugSelectedInfo()
+    public unsafe virtual void ShowDebugSelectedInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DebugCameraController.ShowDebugSelectedInfo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -102,7 +102,7 @@ public partial class DebugCameraController : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: NativeInputKey
     /// </summary>
-    public unsafe bool NativeInputKey(int ControllerId, BmSDK.FName Key, BmSDK.GameObject.EInputEvent Event, float AmountDepressed = default, bool bGamepad = default)
+    public unsafe virtual bool NativeInputKey(int ControllerId, BmSDK.FName Key, BmSDK.GameObject.EInputEvent Event, float AmountDepressed = default, bool bGamepad = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DebugCameraController.NativeInputKey", true);
         byte* paramsPtr = stackalloc byte[136];
@@ -118,7 +118,7 @@ public partial class DebugCameraController : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DisableDebugCamera
     /// </summary>
-    public unsafe void DisableDebugCamera()
+    public unsafe virtual void DisableDebugCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DebugCameraController.DisableDebugCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class DebugCameraController : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: NormalSpeed
     /// </summary>
-    public unsafe void NormalSpeed()
+    public unsafe virtual void NormalSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DebugCameraController.NormalSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class DebugCameraController : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: MoreSpeed
     /// </summary>
-    public unsafe void MoreSpeed()
+    public unsafe virtual void MoreSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DebugCameraController.MoreSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -151,7 +151,7 @@ public partial class DebugCameraController : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: SetFreezeRendering
     /// </summary>
-    public unsafe void SetFreezeRendering()
+    public unsafe virtual void SetFreezeRendering()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DebugCameraController.SetFreezeRendering", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -162,7 +162,7 @@ public partial class DebugCameraController : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate(BmSDK.Engine.PlayerController PC)
+    public unsafe virtual void OnDeactivate(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DebugCameraController.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -174,7 +174,7 @@ public partial class DebugCameraController : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate(BmSDK.Engine.PlayerController PC)
+    public unsafe virtual void OnActivate(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DebugCameraController.OnActivate", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -186,7 +186,7 @@ public partial class DebugCameraController : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DebugCameraController.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -197,7 +197,7 @@ public partial class DebugCameraController : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: Unselect
     /// </summary>
-    public unsafe void Unselect()
+    public unsafe virtual void Unselect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DebugCameraController.Unselect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -215,7 +215,7 @@ public partial class DebugCameraController : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: SecondarySelect
     /// </summary>
-    public unsafe void SecondarySelect(System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor.FTraceHitInfo HitInfo)
+    public unsafe virtual void SecondarySelect(System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor.FTraceHitInfo HitInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DebugCameraController.SecondarySelect", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -236,7 +236,7 @@ public partial class DebugCameraController : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: PrimarySelect
     /// </summary>
-    public unsafe void PrimarySelect(System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor.FTraceHitInfo HitInfo)
+    public unsafe virtual void PrimarySelect(System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor.FTraceHitInfo HitInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DebugCameraController.PrimarySelect", true);
         byte* paramsPtr = stackalloc byte[64];

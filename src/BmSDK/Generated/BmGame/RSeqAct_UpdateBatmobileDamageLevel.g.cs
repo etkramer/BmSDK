@@ -36,7 +36,7 @@ public partial class RSeqAct_UpdateBatmobileDamageLevel : BmSDK.Engine.SequenceA
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_UpdateBatmobileDamageLevel.Activated", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -58,7 +58,7 @@ public partial class RSeqAct_UpdateBatmobileDamageLevel : BmSDK.Engine.SequenceA
     /// <summary>
     /// Function: OnDataLoaded
     /// </summary>
-    public unsafe void OnDataLoaded()
+    public unsafe virtual void OnDataLoaded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_UpdateBatmobileDamageLevel.OnDataLoaded", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -76,7 +76,7 @@ public partial class RSeqAct_UpdateBatmobileDamageLevel : BmSDK.Engine.SequenceA
     /// <summary>
     /// Function: ReleaseData
     /// </summary>
-    public unsafe void ReleaseData()
+    public unsafe virtual void ReleaseData()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_UpdateBatmobileDamageLevel.ReleaseData", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RSeqAct_UpdateBatmobileDamageLevel : BmSDK.Engine.SequenceA
     /// <summary>
     /// Function: LoadData
     /// </summary>
-    public unsafe void LoadData()
+    public unsafe virtual void LoadData()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_UpdateBatmobileDamageLevel.LoadData", true);
         byte* paramsPtr = stackalloc byte[0];

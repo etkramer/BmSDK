@@ -36,7 +36,7 @@ public partial class RNavMeshGoal_WithinVolume : BmSDK.Engine.NavMeshPathGoalEva
     /// <summary>
     /// Function: Recycle
     /// </summary>
-    public unsafe void Recycle()
+    public unsafe override void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshGoal_WithinVolume.Recycle", true);
         byte* paramsPtr = stackalloc byte[0];

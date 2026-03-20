@@ -71,7 +71,7 @@ public partial class RGangSpectatorPoint : BmSDK.BmGame.RGangSpectatorPointBase,
     /// <summary>
     /// Function: SetFinished
     /// </summary>
-    public unsafe void SetFinished(BmSDK.BmGame.RBMPawnAI P)
+    public unsafe override void SetFinished(BmSDK.BmGame.RBMPawnAI P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangSpectatorPoint.SetFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RGangSpectatorPoint : BmSDK.BmGame.RGangSpectatorPointBase,
     /// <summary>
     /// Function: SetInUse
     /// </summary>
-    public unsafe void SetInUse(BmSDK.BmGame.RBMPawnAI UsagePawn)
+    public unsafe override void SetInUse(BmSDK.BmGame.RBMPawnAI UsagePawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangSpectatorPoint.SetInUse", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RGangSpectatorPoint : BmSDK.BmGame.RGangSpectatorPointBase,
     /// <summary>
     /// Function: GetPOILocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetPOILocation()
+    public unsafe override System.Numerics.Vector3 GetPOILocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangSpectatorPoint.GetPOILocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -106,7 +106,7 @@ public partial class RGangSpectatorPoint : BmSDK.BmGame.RGangSpectatorPointBase,
     /// <summary>
     /// Function: GetBehaviourClass
     /// </summary>
-    public unsafe BmSDK.Class GetBehaviourClass()
+    public unsafe override BmSDK.Class GetBehaviourClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangSpectatorPoint.GetBehaviourClass", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RGangSpectatorPoint : BmSDK.BmGame.RGangSpectatorPointBase,
     /// <summary>
     /// Function: GetSelectionScore
     /// </summary>
-    public unsafe float GetSelectionScore()
+    public unsafe override float GetSelectionScore()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangSpectatorPoint.GetSelectionScore", true);
         byte* paramsPtr = stackalloc byte[8];

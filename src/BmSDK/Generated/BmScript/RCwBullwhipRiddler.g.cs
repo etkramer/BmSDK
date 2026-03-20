@@ -71,7 +71,7 @@ public partial class RCwBullwhipRiddler : BmSDK.BmScript.RCwBullwhip, BmSDK.IGam
     /// <summary>
     /// Function: GetGadgetClassNameForHUD
     /// </summary>
-    public unsafe BmSDK.FName GetGadgetClassNameForHUD()
+    public unsafe override BmSDK.FName GetGadgetClassNameForHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwBullwhipRiddler.GetGadgetClassNameForHUD", true);
         byte* paramsPtr = stackalloc byte[8];

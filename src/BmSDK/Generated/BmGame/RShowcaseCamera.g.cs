@@ -71,7 +71,7 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: UpdateLightRigs
     /// </summary>
-    public unsafe void UpdateLightRigs()
+    public unsafe virtual void UpdateLightRigs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShowcaseCamera.UpdateLightRigs", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: UpdateInput
     /// </summary>
-    public unsafe void UpdateInput(float fFrameTime, float fr, float fU, float FF)
+    public unsafe virtual void UpdateInput(float fFrameTime, float fr, float fU, float FF)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShowcaseCamera.UpdateInput", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -97,7 +97,7 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: UpdateFrame
     /// </summary>
-    public unsafe bool UpdateFrame(float fFrameTime, BmSDK.BmGame.RPlayerInput iInput)
+    public unsafe virtual bool UpdateFrame(float fFrameTime, BmSDK.BmGame.RPlayerInput iInput)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShowcaseCamera.UpdateFrame", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -110,7 +110,7 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: LightRigsRelease
     /// </summary>
-    public unsafe void LightRigsRelease()
+    public unsafe virtual void LightRigsRelease()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShowcaseCamera.LightRigsRelease", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -121,7 +121,7 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: LightRigsInitialize
     /// </summary>
-    public unsafe void LightRigsInitialize()
+    public unsafe virtual void LightRigsInitialize()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShowcaseCamera.LightRigsInitialize", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -132,7 +132,7 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetMode
     /// </summary>
-    public unsafe void SetMode(BmSDK.BmGame.RShowcaseCamera.ShowcaseCameraMode eMode, BmSDK.BmGame.RShowcaseCamera.ShowcaseCameraVantageRequirement eRequirement)
+    public unsafe virtual void SetMode(BmSDK.BmGame.RShowcaseCamera.ShowcaseCameraMode eMode, BmSDK.BmGame.RShowcaseCamera.ShowcaseCameraVantageRequirement eRequirement)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShowcaseCamera.SetMode", true);
         byte* paramsPtr = stackalloc byte[2];
@@ -145,7 +145,7 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetInspectParams
     /// </summary>
-    public unsafe void SetInspectParams(System.Numerics.Vector4 vHeights, System.Numerics.Vector4 vAngles, System.Numerics.Vector3 vFOVs, float fDistance)
+    public unsafe virtual void SetInspectParams(System.Numerics.Vector4 vHeights, System.Numerics.Vector4 vAngles, System.Numerics.Vector3 vFOVs, float fDistance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShowcaseCamera.SetInspectParams", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -160,7 +160,7 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetVantageParams
     /// </summary>
-    public unsafe void SetVantageParams(System.Numerics.Vector3 vPosition, System.Numerics.Vector3 vLookAt, float fFOV)
+    public unsafe virtual void SetVantageParams(System.Numerics.Vector3 vPosition, System.Numerics.Vector3 vLookAt, float fFOV)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShowcaseCamera.SetVantageParams", true);
         byte* paramsPtr = stackalloc byte[28];

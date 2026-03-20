@@ -66,7 +66,7 @@ public partial class RBMWeaponRocketLauncherBase : BmSDK.BmGame.RBMWeapon, BmSDK
     /// <summary>
     /// Function: GetLaunchLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLaunchLocation()
+    public unsafe virtual System.Numerics.Vector3 GetLaunchLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponRocketLauncherBase.GetLaunchLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -77,7 +77,7 @@ public partial class RBMWeaponRocketLauncherBase : BmSDK.BmGame.RBMWeapon, BmSDK
     /// <summary>
     /// Function: FireHomingRocket
     /// </summary>
-    public unsafe void FireHomingRocket(BmSDK.Engine.Actor TargetActor, System.Numerics.Vector3 FireDirection = default)
+    public unsafe virtual void FireHomingRocket(BmSDK.Engine.Actor TargetActor, System.Numerics.Vector3 FireDirection = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponRocketLauncherBase.FireHomingRocket", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -90,7 +90,7 @@ public partial class RBMWeaponRocketLauncherBase : BmSDK.BmGame.RBMWeapon, BmSDK
     /// <summary>
     /// Function: FireFastRocket
     /// </summary>
-    public unsafe void FireFastRocket(System.Numerics.Vector3 FireDirection = default)
+    public unsafe virtual void FireFastRocket(System.Numerics.Vector3 FireDirection = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponRocketLauncherBase.FireFastRocket", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -102,7 +102,7 @@ public partial class RBMWeaponRocketLauncherBase : BmSDK.BmGame.RBMWeapon, BmSDK
     /// <summary>
     /// Function: FireRocket
     /// </summary>
-    public unsafe void FireRocket(System.Numerics.Vector3 FireDirection = default)
+    public unsafe virtual void FireRocket(System.Numerics.Vector3 FireDirection = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponRocketLauncherBase.FireRocket", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -114,7 +114,7 @@ public partial class RBMWeaponRocketLauncherBase : BmSDK.BmGame.RBMWeapon, BmSDK
     /// <summary>
     /// Function: TurnOffLaserSight
     /// </summary>
-    public unsafe void TurnOffLaserSight()
+    public unsafe virtual void TurnOffLaserSight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponRocketLauncherBase.TurnOffLaserSight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -125,7 +125,7 @@ public partial class RBMWeaponRocketLauncherBase : BmSDK.BmGame.RBMWeapon, BmSDK
     /// <summary>
     /// Function: TurnOnLaserSight
     /// </summary>
-    public unsafe void TurnOnLaserSight()
+    public unsafe virtual void TurnOnLaserSight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponRocketLauncherBase.TurnOnLaserSight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -136,7 +136,7 @@ public partial class RBMWeaponRocketLauncherBase : BmSDK.BmGame.RBMWeapon, BmSDK
     /// <summary>
     /// Function: GetRECHitReactionAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetRECHitReactionAnimName()
+    public unsafe override BmSDK.FName GetRECHitReactionAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponRocketLauncherBase.GetRECHitReactionAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -158,7 +158,7 @@ public partial class RBMWeaponRocketLauncherBase : BmSDK.BmGame.RBMWeapon, BmSDK
     /// <summary>
     /// Function: GetLookFromLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLookFromLocation()
+    public unsafe virtual System.Numerics.Vector3 GetLookFromLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponRocketLauncherBase.GetLookFromLocation", true);
         byte* paramsPtr = stackalloc byte[12];

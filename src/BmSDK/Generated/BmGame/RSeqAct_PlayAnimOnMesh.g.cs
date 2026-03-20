@@ -47,7 +47,7 @@ public partial class RSeqAct_PlayAnimOnMesh : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayAnimOnMesh.Update", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -59,7 +59,7 @@ public partial class RSeqAct_PlayAnimOnMesh : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: CanEarlyOut
     /// </summary>
-    public unsafe bool CanEarlyOut()
+    public unsafe virtual bool CanEarlyOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayAnimOnMesh.CanEarlyOut", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -70,7 +70,7 @@ public partial class RSeqAct_PlayAnimOnMesh : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: PlayAnim
     /// </summary>
-    public unsafe void PlayAnim()
+    public unsafe virtual void PlayAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayAnimOnMesh.PlayAnim", true);
         byte* paramsPtr = stackalloc byte[32];

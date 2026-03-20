@@ -36,7 +36,7 @@ public partial class RGFxMovieFrontendBGFader : BmSDK.BmGame.RGFxMovie, BmSDK.IG
     /// <summary>
     /// Function: SideScreenFadeIn
     /// </summary>
-    public unsafe void SideScreenFadeIn(float OverSeconds)
+    public unsafe virtual void SideScreenFadeIn(float OverSeconds)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieFrontendBGFader.SideScreenFadeIn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RGFxMovieFrontendBGFader : BmSDK.BmGame.RGFxMovie, BmSDK.IG
     /// <summary>
     /// Function: SideScreenFadeOut
     /// </summary>
-    public unsafe void SideScreenFadeOut(float OverSeconds)
+    public unsafe virtual void SideScreenFadeOut(float OverSeconds)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieFrontendBGFader.SideScreenFadeOut", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -60,7 +60,7 @@ public partial class RGFxMovieFrontendBGFader : BmSDK.BmGame.RGFxMovie, BmSDK.IG
     /// <summary>
     /// Function: SetSimpleFade
     /// </summary>
-    public unsafe void SetSimpleFade(float Opacity, int RGB = default)
+    public unsafe virtual void SetSimpleFade(float Opacity, int RGB = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieFrontendBGFader.SetSimpleFade", true);
         byte* paramsPtr = stackalloc byte[8];

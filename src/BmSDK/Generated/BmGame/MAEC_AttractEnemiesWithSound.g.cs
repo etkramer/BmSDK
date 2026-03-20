@@ -71,7 +71,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesWithSound.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesWithSound.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController AttractedCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController AttractedCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesWithSound.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: CleanupVillain
     /// </summary>
-    public unsafe void CleanupVillain(BmSDK.BmGame.RBMAIController AttractedCon)
+    public unsafe virtual void CleanupVillain(BmSDK.BmGame.RBMAIController AttractedCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesWithSound.CleanupVillain", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -117,7 +117,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: CleanupPaths
     /// </summary>
-    public unsafe void CleanupPaths()
+    public unsafe virtual void CleanupPaths()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesWithSound.CleanupPaths", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: OnRemoveSoloChild
     /// </summary>
-    public unsafe void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
+    public unsafe override void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesWithSound.OnRemoveSoloChild", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -140,7 +140,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: ThugFailedToBeAttracted
     /// </summary>
-    public unsafe void ThugFailedToBeAttracted(BmSDK.BmGame.RBMAIController AttractedCon)
+    public unsafe virtual void ThugFailedToBeAttracted(BmSDK.BmGame.RBMAIController AttractedCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesWithSound.ThugFailedToBeAttracted", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -152,7 +152,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: ThugSuccessfullyAttracted
     /// </summary>
-    public unsafe void ThugSuccessfullyAttracted(BmSDK.BmGame.RBMAIController AttractedCon)
+    public unsafe virtual void ThugSuccessfullyAttracted(BmSDK.BmGame.RBMAIController AttractedCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesWithSound.ThugSuccessfullyAttracted", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -164,7 +164,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: ReleaseNavPoints
     /// </summary>
-    public unsafe void ReleaseNavPoints(BmSDK.BmGame.MAEC_AttractEnemiesWithSound.FPathfindingController pfVillain)
+    public unsafe virtual void ReleaseNavPoints(BmSDK.BmGame.MAEC_AttractEnemiesWithSound.FPathfindingController pfVillain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesWithSound.ReleaseNavPoints", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -176,7 +176,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: FindBestPath
     /// </summary>
-    public unsafe int FindBestPath(BmSDK.BmGame.MAEC_AttractEnemiesWithSound.FPathfindingController pfVillain)
+    public unsafe virtual int FindBestPath(BmSDK.BmGame.MAEC_AttractEnemiesWithSound.FPathfindingController pfVillain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesWithSound.FindBestPath", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -188,7 +188,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: IsDonePathFinding
     /// </summary>
-    public unsafe bool IsDonePathFinding(BmSDK.BmGame.MAEC_AttractEnemiesWithSound.FPathfindingController pfVillain)
+    public unsafe virtual bool IsDonePathFinding(BmSDK.BmGame.MAEC_AttractEnemiesWithSound.FPathfindingController pfVillain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesWithSound.IsDonePathFinding", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -200,7 +200,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: ThugHasBeenAttractedBySound
     /// </summary>
-    public unsafe void ThugHasBeenAttractedBySound(BmSDK.BmGame.RBMAIController AttractedThug)
+    public unsafe virtual void ThugHasBeenAttractedBySound(BmSDK.BmGame.RBMAIController AttractedThug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesWithSound.ThugHasBeenAttractedBySound", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -212,7 +212,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: StartPathFinding
     /// </summary>
-    public unsafe void StartPathFinding(int Index)
+    public unsafe virtual void StartPathFinding(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesWithSound.StartPathFinding", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -224,7 +224,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: GatherPointsFromCenter
     /// </summary>
-    public unsafe void GatherPointsFromCenter()
+    public unsafe virtual void GatherPointsFromCenter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesWithSound.GatherPointsFromCenter", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -235,7 +235,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: SortControllersByPawnVillainDistanceToSelf
     /// </summary>
-    public unsafe int SortControllersByPawnVillainDistanceToSelf(BmSDK.BmGame.MAEC_AttractEnemiesWithSound.FPathfindingController A, BmSDK.BmGame.MAEC_AttractEnemiesWithSound.FPathfindingController B)
+    public unsafe virtual int SortControllersByPawnVillainDistanceToSelf(BmSDK.BmGame.MAEC_AttractEnemiesWithSound.FPathfindingController A, BmSDK.BmGame.MAEC_AttractEnemiesWithSound.FPathfindingController B)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesWithSound.SortControllersByPawnVillainDistanceToSelf", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -248,7 +248,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: SortControllersByDistanceToSelf
     /// </summary>
-    public unsafe int SortControllersByDistanceToSelf(BmSDK.BmGame.MAEC_AttractEnemiesWithSound.FPathfindingController A, BmSDK.BmGame.MAEC_AttractEnemiesWithSound.FPathfindingController B)
+    public unsafe virtual int SortControllersByDistanceToSelf(BmSDK.BmGame.MAEC_AttractEnemiesWithSound.FPathfindingController A, BmSDK.BmGame.MAEC_AttractEnemiesWithSound.FPathfindingController B)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesWithSound.SortControllersByDistanceToSelf", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -261,7 +261,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: Setup
     /// </summary>
-    public unsafe void Setup(BmSDK.BmGame.MJackInBoxTrapBase NewTrap, BmSDK.BmGame.MAEC_AttractEnemiesWithSound.AttractAlertLevel NewAlertLevel)
+    public unsafe virtual void Setup(BmSDK.BmGame.MJackInBoxTrapBase NewTrap, BmSDK.BmGame.MAEC_AttractEnemiesWithSound.AttractAlertLevel NewAlertLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesWithSound.Setup", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -274,7 +274,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: AttractThugs
     /// </summary>
-    public unsafe void AttractThugs()
+    public unsafe virtual void AttractThugs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesWithSound.AttractThugs", true);
         byte* paramsPtr = stackalloc byte[0];

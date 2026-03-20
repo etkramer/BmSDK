@@ -71,7 +71,7 @@ public partial class InternetLink : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: ResolveFailed
     /// </summary>
-    public unsafe void ResolveFailed()
+    public unsafe virtual void ResolveFailed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.InternetLink.ResolveFailed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class InternetLink : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: Resolved
     /// </summary>
-    public unsafe void Resolved(BmSDK.IpDrv.InternetLink.FIpAddr Addr)
+    public unsafe virtual void Resolved(BmSDK.IpDrv.InternetLink.FIpAddr Addr)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.InternetLink.Resolved", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class InternetLink : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLocalIP
     /// </summary>
-    public unsafe void GetLocalIP(out BmSDK.IpDrv.InternetLink.FIpAddr Arg)
+    public unsafe virtual void GetLocalIP(out BmSDK.IpDrv.InternetLink.FIpAddr Arg)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.InternetLink.GetLocalIP", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -113,7 +113,7 @@ public partial class InternetLink : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: StringToIpAddr
     /// </summary>
-    public unsafe bool StringToIpAddr(BmSDK.FString Str, out BmSDK.IpDrv.InternetLink.FIpAddr Addr)
+    public unsafe virtual bool StringToIpAddr(BmSDK.FString Str, out BmSDK.IpDrv.InternetLink.FIpAddr Addr)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.InternetLink.StringToIpAddr", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -133,7 +133,7 @@ public partial class InternetLink : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: IpAddrToString
     /// </summary>
-    public unsafe BmSDK.FString IpAddrToString(BmSDK.IpDrv.InternetLink.FIpAddr Arg)
+    public unsafe virtual BmSDK.FString IpAddrToString(BmSDK.IpDrv.InternetLink.FIpAddr Arg)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.InternetLink.IpAddrToString", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -152,7 +152,7 @@ public partial class InternetLink : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLastError
     /// </summary>
-    public unsafe int GetLastError()
+    public unsafe virtual int GetLastError()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.InternetLink.GetLastError", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -170,7 +170,7 @@ public partial class InternetLink : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: Resolve
     /// </summary>
-    public unsafe void Resolve(BmSDK.FString Domain)
+    public unsafe virtual void Resolve(BmSDK.FString Domain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.InternetLink.Resolve", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -189,7 +189,7 @@ public partial class InternetLink : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: ParseURL
     /// </summary>
-    public unsafe bool ParseURL(BmSDK.FString URL, out BmSDK.FString Addr, out int PortNum, out BmSDK.FString LevelName, out BmSDK.FString EntryName)
+    public unsafe virtual bool ParseURL(BmSDK.FString URL, out BmSDK.FString Addr, out int PortNum, out BmSDK.FString LevelName, out BmSDK.FString EntryName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.InternetLink.ParseURL", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -212,7 +212,7 @@ public partial class InternetLink : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: IsDataPending
     /// </summary>
-    public unsafe bool IsDataPending()
+    public unsafe virtual bool IsDataPending()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.InternetLink.IsDataPending", true);
         byte* paramsPtr = stackalloc byte[4];

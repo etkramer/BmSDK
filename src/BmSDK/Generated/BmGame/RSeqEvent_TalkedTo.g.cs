@@ -36,7 +36,7 @@ public partial class RSeqEvent_TalkedTo : BmSDK.Engine.SequenceEvent, BmSDK.IGam
     /// <summary>
     /// Function: Toggled
     /// </summary>
-    public unsafe void Toggled()
+    public unsafe override void Toggled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_TalkedTo.Toggled", true);
         byte* paramsPtr = stackalloc byte[0];

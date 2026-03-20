@@ -31,7 +31,7 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: TriggerSecondChaseOutroGauntlet
     /// </summary>
-    public unsafe bool TriggerSecondChaseOutroGauntlet()
+    public unsafe virtual bool TriggerSecondChaseOutroGauntlet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FireflyFleeBase.TriggerSecondChaseOutroGauntlet", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -42,7 +42,7 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: TriggerFirstChaseOutroGauntlet
     /// </summary>
-    public unsafe bool TriggerFirstChaseOutroGauntlet()
+    public unsafe virtual bool TriggerFirstChaseOutroGauntlet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FireflyFleeBase.TriggerFirstChaseOutroGauntlet", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -53,7 +53,7 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: TriggerFFBark
     /// </summary>
-    public unsafe bool TriggerFFBark(BmSDK.FName eventFlagName)
+    public unsafe virtual bool TriggerFFBark(BmSDK.FName eventFlagName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FireflyFleeBase.TriggerFFBark", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -65,7 +65,7 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: TryTriggerNextBombInSequence
     /// </summary>
-    public unsafe void TryTriggerNextBombInSequence()
+    public unsafe virtual void TryTriggerNextBombInSequence()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FireflyFleeBase.TryTriggerNextBombInSequence", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -76,7 +76,7 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: WarnAboutRiotSurpressorShot
     /// </summary>
-    public unsafe void WarnAboutRiotSurpressorShot()
+    public unsafe virtual void WarnAboutRiotSurpressorShot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FireflyFleeBase.WarnAboutRiotSurpressorShot", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -87,7 +87,7 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: NotifyFFFliesAwayAfterBeatdown
     /// </summary>
-    public unsafe void NotifyFFFliesAwayAfterBeatdown()
+    public unsafe virtual void NotifyFFFliesAwayAfterBeatdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FireflyFleeBase.NotifyFFFliesAwayAfterBeatdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -98,7 +98,7 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: NotifyGrenadeDidDamage
     /// </summary>
-    public unsafe void NotifyGrenadeDidDamage()
+    public unsafe virtual void NotifyGrenadeDidDamage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FireflyFleeBase.NotifyGrenadeDidDamage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -109,7 +109,7 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: NotifyCityOutOfView
     /// </summary>
-    public unsafe void NotifyCityOutOfView()
+    public unsafe virtual void NotifyCityOutOfView()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FireflyFleeBase.NotifyCityOutOfView", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -120,7 +120,7 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: NotifyBeatdownFailed
     /// </summary>
-    public unsafe void NotifyBeatdownFailed()
+    public unsafe virtual void NotifyBeatdownFailed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FireflyFleeBase.NotifyBeatdownFailed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -131,7 +131,7 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: NotifyBeatdownComplete
     /// </summary>
-    public unsafe void NotifyBeatdownComplete()
+    public unsafe virtual void NotifyBeatdownComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FireflyFleeBase.NotifyBeatdownComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -142,7 +142,7 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: NotifyTakedownStarted
     /// </summary>
-    public unsafe System.Numerics.Vector3 NotifyTakedownStarted()
+    public unsafe virtual System.Numerics.Vector3 NotifyTakedownStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FireflyFleeBase.NotifyTakedownStarted", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -153,7 +153,7 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: NotifyBMMadeContactWithFirefly
     /// </summary>
-    public unsafe void NotifyBMMadeContactWithFirefly()
+    public unsafe virtual void NotifyBMMadeContactWithFirefly()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FireflyFleeBase.NotifyBMMadeContactWithFirefly", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -164,7 +164,7 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: CheckForWorldCollision
     /// </summary>
-    public unsafe bool CheckForWorldCollision(System.Numerics.Vector3 Start, System.Numerics.Vector3 End, out System.Numerics.Vector3 HitLoc, out System.Numerics.Vector3 HitNormal)
+    public unsafe virtual bool CheckForWorldCollision(System.Numerics.Vector3 Start, System.Numerics.Vector3 End, out System.Numerics.Vector3 HitLoc, out System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FireflyFleeBase.CheckForWorldCollision", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -179,7 +179,7 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: NeedsFallbackTakedownInstructions
     /// </summary>
-    public unsafe bool NeedsFallbackTakedownInstructions()
+    public unsafe virtual bool NeedsFallbackTakedownInstructions()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FireflyFleeBase.NeedsFallbackTakedownInstructions", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -190,7 +190,7 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: InRangeForActualTakedown
     /// </summary>
-    public unsafe bool InRangeForActualTakedown(System.Numerics.Vector3 Loc)
+    public unsafe virtual bool InRangeForActualTakedown(System.Numerics.Vector3 Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FireflyFleeBase.InRangeForActualTakedown", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -202,7 +202,7 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: InRangeForTakedownPrompt
     /// </summary>
-    public unsafe bool InRangeForTakedownPrompt(System.Numerics.Vector3 Loc)
+    public unsafe virtual bool InRangeForTakedownPrompt(System.Numerics.Vector3 Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FireflyFleeBase.InRangeForTakedownPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -214,7 +214,7 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: ReadyForInteraction
     /// </summary>
-    public unsafe bool ReadyForInteraction()
+    public unsafe virtual bool ReadyForInteraction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FireflyFleeBase.ReadyForInteraction", true);
         byte* paramsPtr = stackalloc byte[4];

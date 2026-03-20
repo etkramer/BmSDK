@@ -71,7 +71,7 @@ public partial class RAEC_SetBombOnPlant : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SetBombOnPlant.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_SetBombOnPlant : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: OnAssign
     /// </summary>
-    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe override void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SetBombOnPlant.OnAssign", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -94,7 +94,7 @@ public partial class RAEC_SetBombOnPlant : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: OnRemoveSoloChild
     /// </summary>
-    public unsafe void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
+    public unsafe override void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SetBombOnPlant.OnRemoveSoloChild", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RAEC_SetBombOnPlant : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SetBombOnPlant.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RBMAIAction_SmokePerim : BmSDK.BmGame.RBMAIAction, BmSDK.IG
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_SmokePerim.ActionTick", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_SmokePerim : BmSDK.BmGame.RBMAIAction, BmSDK.IG
     /// <summary>
     /// Function: PlayLookAnim
     /// </summary>
-    public unsafe void PlayLookAnim(BmSDK.FName AnimName)
+    public unsafe virtual void PlayLookAnim(BmSDK.FName AnimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_SmokePerim.PlayLookAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RBMAIAction_SmokePerim : BmSDK.BmGame.RBMAIAction, BmSDK.IG
     /// <summary>
     /// Function: FaceAtIsCloseEnoughToTarget
     /// </summary>
-    public unsafe bool FaceAtIsCloseEnoughToTarget()
+    public unsafe virtual bool FaceAtIsCloseEnoughToTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_SmokePerim.FaceAtIsCloseEnoughToTarget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RBMAIAction_SmokePerim : BmSDK.BmGame.RBMAIAction, BmSDK.IG
     /// <summary>
     /// Function: SetLifetime
     /// </summary>
-    public unsafe void SetLifetime(float NewLifetime)
+    public unsafe virtual void SetLifetime(float NewLifetime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_SmokePerim.SetLifetime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -118,7 +118,7 @@ public partial class RBMAIAction_SmokePerim : BmSDK.BmGame.RBMAIAction, BmSDK.IG
     /// <summary>
     /// Function: SetAimTarget
     /// </summary>
-    public unsafe void SetAimTarget(System.Numerics.Vector3 NewTarget)
+    public unsafe virtual void SetAimTarget(System.Numerics.Vector3 NewTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_SmokePerim.SetAimTarget", true);
         byte* paramsPtr = stackalloc byte[12];

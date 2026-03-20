@@ -36,7 +36,7 @@ public partial class RBMBehaviour_Combat2D : BmSDK.BmGame.RBMBehaviour_CombatAI,
     /// <summary>
     /// Function: ShouldUseEnvironment
     /// </summary>
-    public unsafe bool ShouldUseEnvironment(float DeltaTime, bool bForceCheck)
+    public unsafe override bool ShouldUseEnvironment(float DeltaTime, bool bForceCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Combat2D.ShouldUseEnvironment", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -49,7 +49,7 @@ public partial class RBMBehaviour_Combat2D : BmSDK.BmGame.RBMBehaviour_CombatAI,
     /// <summary>
     /// Function: GetTauntMoveStance
     /// </summary>
-    public unsafe BmSDK.FName GetTauntMoveStance()
+    public unsafe override BmSDK.FName GetTauntMoveStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Combat2D.GetTauntMoveStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -60,7 +60,7 @@ public partial class RBMBehaviour_Combat2D : BmSDK.BmGame.RBMBehaviour_CombatAI,
     /// <summary>
     /// Function: GetPossibleMoves
     /// </summary>
-    public unsafe void GetPossibleMoves(out BmSDK.TArray<BmSDK.Class> PossibleMoves)
+    public unsafe override void GetPossibleMoves(out BmSDK.TArray<BmSDK.Class> PossibleMoves)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Combat2D.GetPossibleMoves", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -72,7 +72,7 @@ public partial class RBMBehaviour_Combat2D : BmSDK.BmGame.RBMBehaviour_CombatAI,
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Combat2D.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

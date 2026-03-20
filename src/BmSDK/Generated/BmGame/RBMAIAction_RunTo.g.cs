@@ -71,7 +71,7 @@ public partial class RBMAIAction_RunTo : BmSDK.BmGame.RBMAIAction_BaseMove, BmSD
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunTo.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_RunTo : BmSDK.BmGame.RBMAIAction_BaseMove, BmSD
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunTo.ActionTick", true);
         byte* paramsPtr = stackalloc byte[73];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_RunTo : BmSDK.BmGame.RBMAIAction_BaseMove, BmSD
     /// <summary>
     /// Function: BuildHandle
     /// </summary>
-    public unsafe BmSDK.BmGame.RNavigationHandle BuildHandle()
+    public unsafe override BmSDK.BmGame.RNavigationHandle BuildHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunTo.BuildHandle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_RunTo : BmSDK.BmGame.RBMAIAction_BaseMove, BmSD
     /// <summary>
     /// Function: SetCanExitEarlyIfSeeDest
     /// </summary>
-    public unsafe void SetCanExitEarlyIfSeeDest(bool bNewCanExitEarlyIfSeeDest, float NewCanSeeDistance = default)
+    public unsafe virtual void SetCanExitEarlyIfSeeDest(bool bNewCanExitEarlyIfSeeDest, float NewCanSeeDistance = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunTo.SetCanExitEarlyIfSeeDest", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RBMAIAction_RunTo : BmSDK.BmGame.RBMAIAction_BaseMove, BmSD
     /// <summary>
     /// Function: SetWalkDist
     /// </summary>
-    public unsafe void SetWalkDist(float NewWalkDist)
+    public unsafe virtual void SetWalkDist(float NewWalkDist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunTo.SetWalkDist", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -130,7 +130,7 @@ public partial class RBMAIAction_RunTo : BmSDK.BmGame.RBMAIAction_BaseMove, BmSD
     /// <summary>
     /// Function: SetAimTarget
     /// </summary>
-    public unsafe void SetAimTarget(BmSDK.Engine.Actor NewTarget)
+    public unsafe virtual void SetAimTarget(BmSDK.Engine.Actor NewTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunTo.SetAimTarget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -142,7 +142,7 @@ public partial class RBMAIAction_RunTo : BmSDK.BmGame.RBMAIAction_BaseMove, BmSD
     /// <summary>
     /// Function: SetDestActor
     /// </summary>
-    public unsafe void SetDestActor(BmSDK.Engine.Actor NewActor)
+    public unsafe virtual void SetDestActor(BmSDK.Engine.Actor NewActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunTo.SetDestActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -154,7 +154,7 @@ public partial class RBMAIAction_RunTo : BmSDK.BmGame.RBMAIAction_BaseMove, BmSD
     /// <summary>
     /// Function: SetupGoal
     /// </summary>
-    public unsafe void SetupGoal(System.Numerics.Vector3 NewGoalPos)
+    public unsafe virtual void SetupGoal(System.Numerics.Vector3 NewGoalPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunTo.SetupGoal", true);
         byte* paramsPtr = stackalloc byte[12];

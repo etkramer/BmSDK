@@ -71,7 +71,7 @@ public partial class MAEC_Sub_SnaredThug : BmSDK.BmGame.RAEC_Sub_FrozenThug, BmS
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_Sub_SnaredThug.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class MAEC_Sub_SnaredThug : BmSDK.BmGame.RAEC_Sub_FrozenThug, BmS
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_Sub_SnaredThug.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[0];

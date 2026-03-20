@@ -36,7 +36,7 @@ public partial class RHudModuleFirefly : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: TurnOffHealthBar
     /// </summary>
-    public unsafe void TurnOffHealthBar()
+    public unsafe virtual void TurnOffHealthBar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleFirefly.TurnOffHealthBar", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RHudModuleFirefly : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: SetHealthBar
     /// </summary>
-    public unsafe void SetHealthBar(int Health)
+    public unsafe virtual void SetHealthBar(int Health)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleFirefly.SetHealthBar", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RHudModuleFirefly : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleFirefly.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RHudModuleFirefly : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleFirefly.Init", true);
         byte* paramsPtr = stackalloc byte[44];

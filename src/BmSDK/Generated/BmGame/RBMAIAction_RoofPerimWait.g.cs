@@ -71,7 +71,7 @@ public partial class RBMAIAction_RoofPerimWait : BmSDK.BmGame.RBMAIAction_Patrol
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RoofPerimWait.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

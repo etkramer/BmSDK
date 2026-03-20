@@ -71,7 +71,7 @@ public partial class RPawnVillainMultiStageKnifeTutorial : BmSDK.BmScript.RPawnV
     /// <summary>
     /// Function: CreateMultiStageWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateMultiStageWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateMultiStageWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainMultiStageKnifeTutorial.CreateMultiStageWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[1992];

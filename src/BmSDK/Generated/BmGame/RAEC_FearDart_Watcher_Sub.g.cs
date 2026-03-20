@@ -71,7 +71,7 @@ public partial class RAEC_FearDart_Watcher_Sub : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: SetRunLocation
     /// </summary>
-    public unsafe void SetRunLocation(System.Numerics.Vector3 NewPos)
+    public unsafe virtual void SetRunLocation(System.Numerics.Vector3 NewPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FearDart_Watcher_Sub.SetRunLocation", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -83,7 +83,7 @@ public partial class RAEC_FearDart_Watcher_Sub : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FearDart_Watcher_Sub.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: SuppressDetectiveModeVisibilityThroughWalls
     /// </summary>
-    public unsafe void SuppressDetectiveModeVisibilityThroughWalls(bool bSuppress)
+    public unsafe virtual void SuppressDetectiveModeVisibilityThroughWalls(bool bSuppress)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.SuppressDetectiveModeVisibilityThroughWalls", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: UnregisterDMThroughWallsSuppressable
     /// </summary>
-    public unsafe void UnregisterDMThroughWallsSuppressable()
+    public unsafe virtual void UnregisterDMThroughWallsSuppressable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.UnregisterDMThroughWallsSuppressable", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: RegisterDMThroughWallsSuppressable
     /// </summary>
-    public unsafe void RegisterDMThroughWallsSuppressable()
+    public unsafe virtual void RegisterDMThroughWallsSuppressable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.RegisterDMThroughWallsSuppressable", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: DetachFiringComponents
     /// </summary>
-    public unsafe void DetachFiringComponents()
+    public unsafe virtual void DetachFiringComponents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.DetachFiringComponents", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: AttachFiringComponents
     /// </summary>
-    public unsafe void AttachFiringComponents()
+    public unsafe override void AttachFiringComponents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.AttachFiringComponents", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: CanDamagePlayer
     /// </summary>
-    public unsafe bool CanDamagePlayer()
+    public unsafe override bool CanDamagePlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.CanDamagePlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -138,7 +138,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: ShouldForceMissedShot
     /// </summary>
-    public unsafe bool ShouldForceMissedShot(BmSDK.BmGame.RPawnPlayer TargetPlayer)
+    public unsafe virtual bool ShouldForceMissedShot(BmSDK.BmGame.RPawnPlayer TargetPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.ShouldForceMissedShot", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -150,7 +150,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: ClearInvestigateData
     /// </summary>
-    public unsafe void ClearInvestigateData()
+    public unsafe override void ClearInvestigateData()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.ClearInvestigateData", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -161,7 +161,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: DoShotFX
     /// </summary>
-    public unsafe void DoShotFX(System.Numerics.Vector3 TargetLoc, bool bDoImpactFX)
+    public unsafe override void DoShotFX(System.Numerics.Vector3 TargetLoc, bool bDoImpactFX)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.DoShotFX", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -174,7 +174,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: StoppedShooting
     /// </summary>
-    public unsafe void StoppedShooting()
+    public unsafe override void StoppedShooting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.StoppedShooting", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -185,7 +185,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: StartedShooting
     /// </summary>
-    public unsafe void StartedShooting()
+    public unsafe override void StartedShooting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.StartedShooting", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -196,7 +196,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: RemoveInvalidTargets
     /// </summary>
-    public unsafe void RemoveInvalidTargets()
+    public unsafe override void RemoveInvalidTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.RemoveInvalidTargets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -207,7 +207,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: StopsProjectile
     /// </summary>
-    public unsafe bool StopsProjectile(BmSDK.Engine.Projectile P, BmSDK.Engine.PrimitiveComponent HitComponent = default)
+    public unsafe override bool StopsProjectile(BmSDK.Engine.Projectile P, BmSDK.Engine.PrimitiveComponent HitComponent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.StopsProjectile", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -220,7 +220,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: ShieldCooldown
     /// </summary>
-    public unsafe void ShieldCooldown()
+    public unsafe virtual void ShieldCooldown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.ShieldCooldown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -231,7 +231,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.Touch", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -246,7 +246,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: WatchtowerTakenOut
     /// </summary>
-    public unsafe void WatchtowerTakenOut(bool bForceSilent)
+    public unsafe virtual void WatchtowerTakenOut(bool bForceSilent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.WatchtowerTakenOut", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -258,7 +258,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -269,7 +269,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -280,7 +280,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -291,7 +291,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: SwitchOff
     /// </summary>
-    public unsafe void SwitchOff()
+    public unsafe override void SwitchOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.SwitchOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -302,7 +302,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: SwitchOn
     /// </summary>
-    public unsafe void SwitchOn()
+    public unsafe override void SwitchOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.SwitchOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -313,7 +313,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: GetDisplayTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDisplayTargetLocation()
+    public unsafe override System.Numerics.Vector3 GetDisplayTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.GetDisplayTargetLocation", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -324,7 +324,7 @@ public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, B
     /// <summary>
     /// Function: Trigger
     /// </summary>
-    public unsafe bool Trigger(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool Trigger(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurret_Watchtower.Trigger", true);
         byte* paramsPtr = stackalloc byte[12];

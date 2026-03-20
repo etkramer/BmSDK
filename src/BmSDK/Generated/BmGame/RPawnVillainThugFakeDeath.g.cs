@@ -71,7 +71,7 @@ public partial class RPawnVillainThugFakeDeath : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: GetUpFromFakeDeath
     /// </summary>
-    public unsafe void GetUpFromFakeDeath(BmSDK.FName CustomGetUpAnimName, BmSDK.FName StandIdleName, BmSDK.Engine.AnimSet CustomGetUpAnimset)
+    public unsafe virtual void GetUpFromFakeDeath(BmSDK.FName CustomGetUpAnimName, BmSDK.FName StandIdleName, BmSDK.Engine.AnimSet CustomGetUpAnimset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugFakeDeath.GetUpFromFakeDeath", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -85,7 +85,7 @@ public partial class RPawnVillainThugFakeDeath : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: CanBeHitAgain
     /// </summary>
-    public unsafe void CanBeHitAgain()
+    public unsafe virtual void CanBeHitAgain()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugFakeDeath.CanBeHitAgain", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -96,7 +96,7 @@ public partial class RPawnVillainThugFakeDeath : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugFakeDeath.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -108,7 +108,7 @@ public partial class RPawnVillainThugFakeDeath : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: Died
     /// </summary>
-    public unsafe bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe override bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugFakeDeath.Died", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -122,7 +122,7 @@ public partial class RPawnVillainThugFakeDeath : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: ProcessDamagedBy
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult ProcessDamagedBy(out BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult ProcessDamagedBy(out BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugFakeDeath.ProcessDamagedBy", true);
         byte* paramsPtr = stackalloc byte[249];
@@ -134,7 +134,7 @@ public partial class RPawnVillainThugFakeDeath : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: CanRedirect
     /// </summary>
-    public unsafe bool CanRedirect()
+    public unsafe override bool CanRedirect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugFakeDeath.CanRedirect", true);
         byte* paramsPtr = stackalloc byte[4];

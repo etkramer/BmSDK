@@ -31,7 +31,7 @@ public partial class RBarkConvoPawnRef : BmSDK.BmGame.RBarkConvoNode, BmSDK.IGam
     /// <summary>
     /// Function: OnLockedSpeakerFound
     /// </summary>
-    public unsafe void OnLockedSpeakerFound(BmSDK.BmGame.RBarkConvo Convo)
+    public unsafe virtual void OnLockedSpeakerFound(BmSDK.BmGame.RBarkConvo Convo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoPawnRef.OnLockedSpeakerFound", true);
         byte* paramsPtr = stackalloc byte[8];

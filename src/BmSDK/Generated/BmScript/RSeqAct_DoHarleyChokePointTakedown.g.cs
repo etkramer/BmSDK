@@ -47,7 +47,7 @@ public partial class RSeqAct_DoHarleyChokePointTakedown : BmSDK.Engine.SeqAct_La
     /// <summary>
     /// Function: ActivateHarleyDead
     /// </summary>
-    public unsafe void ActivateHarleyDead()
+    public unsafe virtual void ActivateHarleyDead()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_DoHarleyChokePointTakedown.ActivateHarleyDead", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_DoHarleyChokePointTakedown : BmSDK.Engine.SeqAct_La
     /// <summary>
     /// Function: SpawnMove
     /// </summary>
-    public unsafe void SpawnMove()
+    public unsafe virtual void SpawnMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_DoHarleyChokePointTakedown.SpawnMove", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -69,7 +69,7 @@ public partial class RSeqAct_DoHarleyChokePointTakedown : BmSDK.Engine.SeqAct_La
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_DoHarleyChokePointTakedown.Update", true);
         byte* paramsPtr = stackalloc byte[20];

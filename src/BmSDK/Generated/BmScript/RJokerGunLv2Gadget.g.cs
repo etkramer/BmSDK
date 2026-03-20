@@ -71,7 +71,7 @@ public partial class RJokerGunLv2Gadget : BmSDK.BmGame.RJokerGunGadgetBase, BmSD
     /// <summary>
     /// Function: RestockAmmo
     /// </summary>
-    public unsafe void RestockAmmo()
+    public unsafe override void RestockAmmo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerGunLv2Gadget.RestockAmmo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RJokerGunLv2Gadget : BmSDK.BmGame.RJokerGunGadgetBase, BmSD
     /// <summary>
     /// Function: RecentlyThrown
     /// </summary>
-    public unsafe void RecentlyThrown()
+    public unsafe virtual void RecentlyThrown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerGunLv2Gadget.RecentlyThrown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RJokerGunLv2Gadget : BmSDK.BmGame.RJokerGunGadgetBase, BmSD
     /// <summary>
     /// Function: FireGadgetCombat
     /// </summary>
-    public unsafe bool FireGadgetCombat()
+    public unsafe override bool FireGadgetCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerGunLv2Gadget.FireGadgetCombat", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RJokerGunLv2Gadget : BmSDK.BmGame.RJokerGunGadgetBase, BmSD
     /// <summary>
     /// Function: AttachToBelt
     /// </summary>
-    public unsafe void AttachToBelt()
+    public unsafe override void AttachToBelt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerGunLv2Gadget.AttachToBelt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RJokerGunLv2Gadget : BmSDK.BmGame.RJokerGunGadgetBase, BmSD
     /// <summary>
     /// Function: CanThrowGadget
     /// </summary>
-    public unsafe bool CanThrowGadget()
+    public unsafe override bool CanThrowGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerGunLv2Gadget.CanThrowGadget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -126,7 +126,7 @@ public partial class RJokerGunLv2Gadget : BmSDK.BmGame.RJokerGunGadgetBase, BmSD
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerGunLv2Gadget.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -138,7 +138,7 @@ public partial class RJokerGunLv2Gadget : BmSDK.BmGame.RJokerGunGadgetBase, BmSD
     /// <summary>
     /// Function: FireNuke
     /// </summary>
-    public unsafe void FireNuke()
+    public unsafe virtual void FireNuke()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerGunLv2Gadget.FireNuke", true);
         byte* paramsPtr = stackalloc byte[408];
@@ -149,7 +149,7 @@ public partial class RJokerGunLv2Gadget : BmSDK.BmGame.RJokerGunGadgetBase, BmSD
     /// <summary>
     /// Function: CalculateBulletTrajectory
     /// </summary>
-    public unsafe void CalculateBulletTrajectory()
+    public unsafe virtual void CalculateBulletTrajectory()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerGunLv2Gadget.CalculateBulletTrajectory", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -160,7 +160,7 @@ public partial class RJokerGunLv2Gadget : BmSDK.BmGame.RJokerGunGadgetBase, BmSD
     /// <summary>
     /// Function: GetGunLaunchPoint
     /// </summary>
-    public unsafe void GetGunLaunchPoint(out System.Numerics.Vector3 LaunchPoint, out BmSDK.Rotator LaunchRot)
+    public unsafe virtual void GetGunLaunchPoint(out System.Numerics.Vector3 LaunchPoint, out BmSDK.Rotator LaunchRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerGunLv2Gadget.GetGunLaunchPoint", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -173,7 +173,7 @@ public partial class RJokerGunLv2Gadget : BmSDK.BmGame.RJokerGunGadgetBase, BmSD
     /// <summary>
     /// Function: PreRender
     /// </summary>
-    public unsafe void PreRender(BmSDK.Engine.Canvas HudCanvas)
+    public unsafe override void PreRender(BmSDK.Engine.Canvas HudCanvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerGunLv2Gadget.PreRender", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -185,7 +185,7 @@ public partial class RJokerGunLv2Gadget : BmSDK.BmGame.RJokerGunGadgetBase, BmSD
     /// <summary>
     /// Function: AllCopsDead
     /// </summary>
-    public unsafe void AllCopsDead()
+    public unsafe virtual void AllCopsDead()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerGunLv2Gadget.AllCopsDead", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -196,7 +196,7 @@ public partial class RJokerGunLv2Gadget : BmSDK.BmGame.RJokerGunGadgetBase, BmSD
     /// <summary>
     /// Function: GetPrimedPose
     /// </summary>
-    public unsafe BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
+    public unsafe override BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerGunLv2Gadget.GetPrimedPose", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -213,7 +213,7 @@ public partial class RJokerGunLv2Gadget : BmSDK.BmGame.RJokerGunGadgetBase, BmSD
     /// <summary>
     /// Function: SetCustomParams
     /// </summary>
-    public unsafe void SetCustomParams(float LaserThugDamage, float LaserCarDamage)
+    public unsafe virtual void SetCustomParams(float LaserThugDamage, float LaserCarDamage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJokerGunLv2Gadget.SetCustomParams", true);
         byte* paramsPtr = stackalloc byte[8];

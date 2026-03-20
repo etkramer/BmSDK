@@ -71,7 +71,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: NoteSelectionChange
     /// </summary>
-    public unsafe void NoteSelectionChange()
+    public unsafe virtual void NoteSelectionChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.NoteSelectionChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateActorTransform
     /// </summary>
-    public unsafe void UpdateActorTransform()
+    public unsafe virtual void UpdateActorTransform()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.UpdateActorTransform", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: MarkDirtyAndModify
     /// </summary>
-    public unsafe void MarkDirtyAndModify()
+    public unsafe virtual void MarkDirtyAndModify()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.MarkDirtyAndModify", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -125,7 +125,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DetachEndsFromActor
     /// </summary>
-    public unsafe void DetachEndsFromActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe virtual void DetachEndsFromActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.DetachEndsFromActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -144,7 +144,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AttachEndToWorld
     /// </summary>
-    public unsafe void AttachEndToWorld(BmSDK.BmGame.RRope2Component.ERope2EndType NewAttachEnd)
+    public unsafe virtual void AttachEndToWorld(BmSDK.BmGame.RRope2Component.ERope2EndType NewAttachEnd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.AttachEndToWorld", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -163,7 +163,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AttachEndToActor
     /// </summary>
-    public unsafe void AttachEndToActor(BmSDK.BmGame.RRope2Component.ERope2EndType NewAttachEnd, BmSDK.Engine.Actor LinkTarget, System.Numerics.Vector3 AttachPosition = default, BmSDK.Engine.PrimitiveComponent AttachComponent = default)
+    public unsafe virtual void AttachEndToActor(BmSDK.BmGame.RRope2Component.ERope2EndType NewAttachEnd, BmSDK.Engine.Actor LinkTarget, System.Numerics.Vector3 AttachPosition = default, BmSDK.Engine.PrimitiveComponent AttachComponent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.AttachEndToActor", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -185,7 +185,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: NofityComponentsOfRopeCut
     /// </summary>
-    public unsafe void NofityComponentsOfRopeCut(BmSDK.Engine.Actor DamageCauser)
+    public unsafe virtual void NofityComponentsOfRopeCut(BmSDK.Engine.Actor DamageCauser)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.NofityComponentsOfRopeCut", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -204,7 +204,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnCutRopeFX
     /// </summary>
-    public unsafe void SpawnCutRopeFX(System.Numerics.Vector3 CutPos)
+    public unsafe virtual void SpawnCutRopeFX(System.Numerics.Vector3 CutPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.SpawnCutRopeFX", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -216,7 +216,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[104];
@@ -234,7 +234,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -246,7 +246,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -258,7 +258,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -269,7 +269,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnDestroy
     /// </summary>
-    public unsafe void OnDestroy(BmSDK.Engine.SeqAct_Destroy Action)
+    public unsafe override void OnDestroy(BmSDK.Engine.SeqAct_Destroy Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.OnDestroy", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -281,7 +281,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBatarangSpeedBoost
     /// </summary>
-    public unsafe float GetBatarangSpeedBoost()
+    public unsafe virtual float GetBatarangSpeedBoost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.GetBatarangSpeedBoost", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -292,7 +292,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ForceHitAtEndOfFlight
     /// </summary>
-    public unsafe bool ForceHitAtEndOfFlight()
+    public unsafe virtual bool ForceHitAtEndOfFlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.ForceHitAtEndOfFlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -303,7 +303,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBatarangPriority
     /// </summary>
-    public unsafe float GetBatarangPriority()
+    public unsafe virtual float GetBatarangPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.GetBatarangPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -314,7 +314,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsBatarangable
     /// </summary>
-    public unsafe bool IsBatarangable()
+    public unsafe virtual bool IsBatarangable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.IsBatarangable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -325,7 +325,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBatarangTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
+    public unsafe virtual System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.GetBatarangTargetPosition", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -339,7 +339,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CopyRopeActorParams
     /// </summary>
-    public unsafe void CopyRopeActorParams(BmSDK.BmGame.RRope2Base CopyParams)
+    public unsafe virtual void CopyRopeActorParams(BmSDK.BmGame.RRope2Base CopyParams)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.CopyRopeActorParams", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -358,7 +358,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnRope
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2Base SpawnRope()
+    public unsafe virtual BmSDK.BmGame.RRope2Base SpawnRope()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.SpawnRope", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -369,7 +369,7 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SplitRope
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2Base SplitRope(float SplitPos, System.Numerics.Vector3 SplitImpulse = default)
+    public unsafe virtual BmSDK.BmGame.RRope2Base SplitRope(float SplitPos, System.Numerics.Vector3 SplitImpulse = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2Base.SplitRope", true);
         byte* paramsPtr = stackalloc byte[24];

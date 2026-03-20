@@ -71,7 +71,7 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AdvanceFlockStage
     /// </summary>
-    public unsafe void AdvanceFlockStage(int StageNum = default)
+    public unsafe virtual void AdvanceFlockStage(int StageNum = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAgent.AdvanceFlockStage", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -83,7 +83,7 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DestroyAgent
     /// </summary>
-    public unsafe void DestroyAgent()
+    public unsafe virtual void DestroyAgent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAgent.DestroyAgent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: KillAgent
     /// </summary>
-    public unsafe void KillAgent()
+    public unsafe virtual void KillAgent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAgent.KillAgent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAgent.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -123,7 +123,7 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAgent.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -134,7 +134,7 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanRespondToAttractor
     /// </summary>
-    public unsafe bool CanRespondToAttractor(BmSDK.BmGame.RCrowdAttractor Attractor)
+    public unsafe virtual bool CanRespondToAttractor(BmSDK.BmGame.RCrowdAttractor Attractor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAgent.CanRespondToAttractor", true);
         byte* paramsPtr = stackalloc byte[12];

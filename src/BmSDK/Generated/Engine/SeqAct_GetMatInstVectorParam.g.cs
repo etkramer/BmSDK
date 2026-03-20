@@ -36,7 +36,7 @@ public partial class SeqAct_GetMatInstVectorParam : BmSDK.Engine.SequenceAction,
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_GetMatInstVectorParam.Activated", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -47,7 +47,7 @@ public partial class SeqAct_GetMatInstVectorParam : BmSDK.Engine.SequenceAction,
     /// <summary>
     /// Function: GetColour
     /// </summary>
-    public unsafe void GetColour(out BmSDK.GameObject.FLinearColor Colour)
+    public unsafe virtual void GetColour(out BmSDK.GameObject.FLinearColor Colour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_GetMatInstVectorParam.GetColour", true);
         byte* paramsPtr = stackalloc byte[16];

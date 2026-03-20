@@ -71,7 +71,7 @@ public partial class RRiotObjectBase : BmSDK.Engine.KAsset, BmSDK.IGameObject
     /// <summary>
     /// Function: CrackCommanderScreen
     /// </summary>
-    public unsafe void CrackCommanderScreen()
+    public unsafe virtual void CrackCommanderScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotObjectBase.CrackCommanderScreen", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RRiotObjectBase : BmSDK.Engine.KAsset, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayAnimOnMesh
     /// </summary>
-    public unsafe void PlayAnimOnMesh(BmSDK.BmGame.RAnimNotify_PickupProp MeshNotify)
+    public unsafe virtual void PlayAnimOnMesh(BmSDK.BmGame.RAnimNotify_PickupProp MeshNotify)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotObjectBase.PlayAnimOnMesh", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RRiotObjectBase : BmSDK.Engine.KAsset, BmSDK.IGameObject
     /// <summary>
     /// Function: DoKismetAttachment
     /// </summary>
-    public unsafe void DoKismetAttachment(BmSDK.Engine.Actor Attachment, BmSDK.Engine.SeqAct_AttachToActor Action)
+    public unsafe override void DoKismetAttachment(BmSDK.Engine.Actor Attachment, BmSDK.Engine.SeqAct_AttachToActor Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotObjectBase.DoKismetAttachment", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -107,7 +107,7 @@ public partial class RRiotObjectBase : BmSDK.Engine.KAsset, BmSDK.IGameObject
     /// <summary>
     /// Function: DropObject
     /// </summary>
-    public unsafe void DropObject(BmSDK.BmGame.RAnimNotify_PickupProp DropNotify)
+    public unsafe virtual void DropObject(BmSDK.BmGame.RAnimNotify_PickupProp DropNotify)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotObjectBase.DropObject", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -119,7 +119,7 @@ public partial class RRiotObjectBase : BmSDK.Engine.KAsset, BmSDK.IGameObject
     /// <summary>
     /// Function: AttachToPawn
     /// </summary>
-    public unsafe void AttachToPawn(BmSDK.Engine.Pawn HoldingPawn)
+    public unsafe virtual void AttachToPawn(BmSDK.Engine.Pawn HoldingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotObjectBase.AttachToPawn", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -131,7 +131,7 @@ public partial class RRiotObjectBase : BmSDK.Engine.KAsset, BmSDK.IGameObject
     /// <summary>
     /// Function: ManualSetupStatic
     /// </summary>
-    public unsafe void ManualSetupStatic(bool bLeft, BmSDK.Engine.StaticMesh StaMesh)
+    public unsafe virtual void ManualSetupStatic(bool bLeft, BmSDK.Engine.StaticMesh StaMesh)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotObjectBase.ManualSetupStatic", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -144,7 +144,7 @@ public partial class RRiotObjectBase : BmSDK.Engine.KAsset, BmSDK.IGameObject
     /// <summary>
     /// Function: ManualSetupSkeletal
     /// </summary>
-    public unsafe void ManualSetupSkeletal(bool bLeft, BmSDK.Engine.SkeletalMesh SkelMesh, BmSDK.Engine.PhysicsAsset PhysAss)
+    public unsafe virtual void ManualSetupSkeletal(bool bLeft, BmSDK.Engine.SkeletalMesh SkelMesh, BmSDK.Engine.PhysicsAsset PhysAss)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotObjectBase.ManualSetupSkeletal", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -158,7 +158,7 @@ public partial class RRiotObjectBase : BmSDK.Engine.KAsset, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPickup
     /// </summary>
-    public unsafe void SetPickup(BmSDK.BmGame.RAnimNotify_PickupProp PickType)
+    public unsafe virtual void SetPickup(BmSDK.BmGame.RAnimNotify_PickupProp PickType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotObjectBase.SetPickup", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -170,7 +170,7 @@ public partial class RRiotObjectBase : BmSDK.Engine.KAsset, BmSDK.IGameObject
     /// <summary>
     /// Function: StopAllFx
     /// </summary>
-    public unsafe void StopAllFx()
+    public unsafe virtual void StopAllFx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotObjectBase.StopAllFx", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -181,7 +181,7 @@ public partial class RRiotObjectBase : BmSDK.Engine.KAsset, BmSDK.IGameObject
     /// <summary>
     /// Function: canDestroy
     /// </summary>
-    public unsafe bool canDestroy()
+    public unsafe virtual bool canDestroy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotObjectBase.canDestroy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -192,7 +192,7 @@ public partial class RRiotObjectBase : BmSDK.Engine.KAsset, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotObjectBase.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -204,7 +204,7 @@ public partial class RRiotObjectBase : BmSDK.Engine.KAsset, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotObjectBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

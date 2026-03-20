@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_BatmobileInterrogationBase : BmSDK.BmG
     /// <summary>
     /// Function: GetRootPointFromBatmanAnimation
     /// </summary>
-    public unsafe void GetRootPointFromBatmanAnimation(BmSDK.Engine.AnimSequence BatmanAnimation, float TimeInAnim, out System.Numerics.Vector3 RootLoc, out BmSDK.Rotator RootRot, int bUseRefPoint = default)
+    public unsafe virtual void GetRootPointFromBatmanAnimation(BmSDK.Engine.AnimSequence BatmanAnimation, float TimeInAnim, out System.Numerics.Vector3 RootLoc, out BmSDK.Rotator RootRot, int bUseRefPoint = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_BatmobileInterrogationBase.GetRootPointFromBatmanAnimation", true);
         byte* paramsPtr = stackalloc byte[40];

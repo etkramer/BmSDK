@@ -71,7 +71,7 @@ public partial class RBatmobileVehicleTracker : BmSDK.BmGame.RPursuitModeMissile
     /// <summary>
     /// Function: ReadyToFire
     /// </summary>
-    public unsafe bool ReadyToFire()
+    public unsafe override bool ReadyToFire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileVehicleTracker.ReadyToFire", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBatmobileVehicleTracker : BmSDK.BmGame.RPursuitModeMissile
     /// <summary>
     /// Function: CheckAutoTarget
     /// </summary>
-    public unsafe bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
+    public unsafe override bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileVehicleTracker.CheckAutoTarget", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -98,7 +98,7 @@ public partial class RBatmobileVehicleTracker : BmSDK.BmGame.RPursuitModeMissile
     /// <summary>
     /// Function: ProjectileHitActor
     /// </summary>
-    public unsafe void ProjectileHitActor(BmSDK.Engine.Actor Target, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitVelocity, int Damage)
+    public unsafe override void ProjectileHitActor(BmSDK.Engine.Actor Target, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitVelocity, int Damage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileVehicleTracker.ProjectileHitActor", true);
         byte* paramsPtr = stackalloc byte[44];

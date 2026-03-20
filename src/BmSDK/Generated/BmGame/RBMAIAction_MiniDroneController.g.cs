@@ -71,7 +71,7 @@ public partial class RBMAIAction_MiniDroneController : BmSDK.BmGame.RBMAIAction_
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_MiniDroneController.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_MiniDroneController : BmSDK.BmGame.RBMAIAction_
     /// <summary>
     /// Function: OnExitRequested
     /// </summary>
-    public unsafe void OnExitRequested(BmSDK.BmGame.RBMAIAction NextAction = default)
+    public unsafe override void OnExitRequested(BmSDK.BmGame.RBMAIAction NextAction = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_MiniDroneController.OnExitRequested", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_MiniDroneController : BmSDK.BmGame.RBMAIAction_
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_MiniDroneController.ActionTick", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -106,7 +106,7 @@ public partial class RBMAIAction_MiniDroneController : BmSDK.BmGame.RBMAIAction_
     /// <summary>
     /// Function: SetGuardPoint
     /// </summary>
-    public unsafe void SetGuardPoint(BmSDK.BmGame.RGuardPoint NewGuardPoint)
+    public unsafe override void SetGuardPoint(BmSDK.BmGame.RGuardPoint NewGuardPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_MiniDroneController.SetGuardPoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RBMAIAction_MiniDroneController : BmSDK.BmGame.RBMAIAction_
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_MiniDroneController.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

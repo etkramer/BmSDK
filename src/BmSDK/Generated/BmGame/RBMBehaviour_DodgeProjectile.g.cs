@@ -36,7 +36,7 @@ public partial class RBMBehaviour_DodgeProjectile : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DodgeProjectile.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_DodgeProjectile : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: CanDodgeProjectile
     /// </summary>
-    public unsafe bool CanDodgeProjectile(System.Numerics.Vector3 ThrownFromPos, int CheckBatarangID)
+    public unsafe override bool CanDodgeProjectile(System.Numerics.Vector3 ThrownFromPos, int CheckBatarangID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DodgeProjectile.CanDodgeProjectile", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -60,7 +60,7 @@ public partial class RBMBehaviour_DodgeProjectile : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: CanDodgeToPoint
     /// </summary>
-    public unsafe bool CanDodgeToPoint(System.Numerics.Vector3 DodgePoint)
+    public unsafe virtual bool CanDodgeToPoint(System.Numerics.Vector3 DodgePoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DodgeProjectile.CanDodgeToPoint", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -72,7 +72,7 @@ public partial class RBMBehaviour_DodgeProjectile : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: AlreadyDodging
     /// </summary>
-    public unsafe bool AlreadyDodging()
+    public unsafe virtual bool AlreadyDodging()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DodgeProjectile.AlreadyDodging", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RBMBehaviour_DodgeProjectile : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: CanDodgeLineLaunchKick
     /// </summary>
-    public unsafe bool CanDodgeLineLaunchKick(BmSDK.BmGame.RPawnPlayer Attacker, System.Numerics.Vector3 KickDirection)
+    public unsafe override bool CanDodgeLineLaunchKick(BmSDK.BmGame.RPawnPlayer Attacker, System.Numerics.Vector3 KickDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DodgeProjectile.CanDodgeLineLaunchKick", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -96,7 +96,7 @@ public partial class RBMBehaviour_DodgeProjectile : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: CanDodgeAgain
     /// </summary>
-    public unsafe void CanDodgeAgain()
+    public unsafe virtual void CanDodgeAgain()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DodgeProjectile.CanDodgeAgain", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class RBMBehaviour_DodgeProjectile : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: SetThrower
     /// </summary>
-    public unsafe void SetThrower(BmSDK.BmGame.RPawn NewThrower, BmSDK.FName NewTargetBone, int NewBatarangID, bool bNewPredAttackOnFinish, bool bnewDodgeAwayFromPosition = default)
+    public unsafe virtual void SetThrower(BmSDK.BmGame.RPawn NewThrower, BmSDK.FName NewTargetBone, int NewBatarangID, bool bNewPredAttackOnFinish, bool bnewDodgeAwayFromPosition = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DodgeProjectile.SetThrower", true);
         byte* paramsPtr = stackalloc byte[28];

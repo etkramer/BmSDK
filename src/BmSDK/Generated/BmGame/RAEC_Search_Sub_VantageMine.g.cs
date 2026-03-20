@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_VantageMine : BmSDK.BmGame.RAEC_Search_Sub_
     /// <summary>
     /// Function: AddVantageResponseAction
     /// </summary>
-    public unsafe void AddVantageResponseAction(BmSDK.FString actionlabel)
+    public unsafe override void AddVantageResponseAction(BmSDK.FString actionlabel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_VantageMine.AddVantageResponseAction", true);
         byte* paramsPtr = stackalloc byte[24];

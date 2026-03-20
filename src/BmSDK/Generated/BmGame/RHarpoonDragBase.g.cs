@@ -66,7 +66,7 @@ public partial class RHarpoonDragBase : BmSDK.Engine.InterpActor, BmSDK.IGameObj
     /// <summary>
     /// Function: MoveObject
     /// </summary>
-    public unsafe BmSDK.BmGame.RHarpoonDragBase.DragMovingState MoveObject(System.Numerics.Vector3 Direction, float DeltaTime)
+    public unsafe virtual BmSDK.BmGame.RHarpoonDragBase.DragMovingState MoveObject(System.Numerics.Vector3 Direction, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragBase.MoveObject", true);
         byte* paramsPtr = stackalloc byte[17];

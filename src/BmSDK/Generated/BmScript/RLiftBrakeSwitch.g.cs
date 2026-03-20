@@ -71,7 +71,7 @@ public partial class RLiftBrakeSwitch : BmSDK.BmGame.RInteractableItem, BmSDK.IG
     /// <summary>
     /// Function: UsedBy
     /// </summary>
-    public unsafe bool UsedBy(BmSDK.Engine.Pawn User)
+    public unsafe override bool UsedBy(BmSDK.Engine.Pawn User)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLiftBrakeSwitch.UsedBy", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -83,7 +83,7 @@ public partial class RLiftBrakeSwitch : BmSDK.BmGame.RInteractableItem, BmSDK.IG
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLiftBrakeSwitch.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RLiftBrakeSwitch : BmSDK.BmGame.RInteractableItem, BmSDK.IG
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLiftBrakeSwitch.IsActive", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -106,7 +106,7 @@ public partial class RLiftBrakeSwitch : BmSDK.BmGame.RInteractableItem, BmSDK.IG
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLiftBrakeSwitch.Interact", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RLiftBrakeSwitch : BmSDK.BmGame.RInteractableItem, BmSDK.IG
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLiftBrakeSwitch.OnToggle", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -130,7 +130,7 @@ public partial class RLiftBrakeSwitch : BmSDK.BmGame.RInteractableItem, BmSDK.IG
     /// <summary>
     /// Function: ChangeLight
     /// </summary>
-    public unsafe void ChangeLight(bool bNewState, bool bInstant = default)
+    public unsafe virtual void ChangeLight(bool bNewState, bool bInstant = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLiftBrakeSwitch.ChangeLight", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -143,7 +143,7 @@ public partial class RLiftBrakeSwitch : BmSDK.BmGame.RInteractableItem, BmSDK.IG
     /// <summary>
     /// Function: ChangeLightReal
     /// </summary>
-    public unsafe void ChangeLightReal()
+    public unsafe virtual void ChangeLightReal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLiftBrakeSwitch.ChangeLightReal", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -154,7 +154,7 @@ public partial class RLiftBrakeSwitch : BmSDK.BmGame.RInteractableItem, BmSDK.IG
     /// <summary>
     /// Function: TurnOn
     /// </summary>
-    public unsafe void TurnOn()
+    public unsafe virtual void TurnOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLiftBrakeSwitch.TurnOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -165,7 +165,7 @@ public partial class RLiftBrakeSwitch : BmSDK.BmGame.RInteractableItem, BmSDK.IG
     /// <summary>
     /// Function: TurnOff
     /// </summary>
-    public unsafe void TurnOff()
+    public unsafe virtual void TurnOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLiftBrakeSwitch.TurnOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -176,7 +176,7 @@ public partial class RLiftBrakeSwitch : BmSDK.BmGame.RInteractableItem, BmSDK.IG
     /// <summary>
     /// Function: UpdateLightColor
     /// </summary>
-    public unsafe void UpdateLightColor()
+    public unsafe virtual void UpdateLightColor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLiftBrakeSwitch.UpdateLightColor", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -187,7 +187,7 @@ public partial class RLiftBrakeSwitch : BmSDK.BmGame.RInteractableItem, BmSDK.IG
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe override BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLiftBrakeSwitch.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[24];

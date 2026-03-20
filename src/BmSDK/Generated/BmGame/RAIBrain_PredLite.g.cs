@@ -36,7 +36,7 @@ public partial class RAIBrain_PredLite : BmSDK.BmGame.RAIBrain_Pred, BmSDK.IGame
     /// <summary>
     /// Function: SetSearchlightCowerAEC
     /// </summary>
-    public unsafe void SetSearchlightCowerAEC(BmSDK.BmGame.RAEC_SearchlightCower NewVal)
+    public unsafe virtual void SetSearchlightCowerAEC(BmSDK.BmGame.RAEC_SearchlightCower NewVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain_PredLite.SetSearchlightCowerAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -48,7 +48,7 @@ public partial class RAIBrain_PredLite : BmSDK.BmGame.RAIBrain_Pred, BmSDK.IGame
     /// <summary>
     /// Function: HasMidPriorityEvent
     /// </summary>
-    public unsafe bool HasMidPriorityEvent(out BmSDK.FName NewName, out BmSDK.BmGame.RAlertEventCoordinatorBase NewAEC)
+    public unsafe override bool HasMidPriorityEvent(out BmSDK.FName NewName, out BmSDK.BmGame.RAlertEventCoordinatorBase NewAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain_PredLite.HasMidPriorityEvent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -61,7 +61,7 @@ public partial class RAIBrain_PredLite : BmSDK.BmGame.RAIBrain_Pred, BmSDK.IGame
     /// <summary>
     /// Function: SetBasicState
     /// </summary>
-    public unsafe void SetBasicState(out BmSDK.FName NewName, out BmSDK.BmGame.RAlertEventCoordinatorBase NewAEC)
+    public unsafe override void SetBasicState(out BmSDK.FName NewName, out BmSDK.BmGame.RAlertEventCoordinatorBase NewAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain_PredLite.SetBasicState", true);
         byte* paramsPtr = stackalloc byte[16];

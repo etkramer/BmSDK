@@ -66,7 +66,7 @@ public partial class RBankDoorControlPanelBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: TriggerCower
     /// </summary>
-    public unsafe void TriggerCower()
+    public unsafe virtual void TriggerCower()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorControlPanelBase.TriggerCower", true);
         byte* paramsPtr = stackalloc byte[256];
@@ -77,7 +77,7 @@ public partial class RBankDoorControlPanelBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: SetBroken
     /// </summary>
-    public unsafe void SetBroken(bool bSilent = default)
+    public unsafe virtual void SetBroken(bool bSilent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorControlPanelBase.SetBroken", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -89,7 +89,7 @@ public partial class RBankDoorControlPanelBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: HideBomb
     /// </summary>
-    public unsafe void HideBomb()
+    public unsafe virtual void HideBomb()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorControlPanelBase.HideBomb", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -100,7 +100,7 @@ public partial class RBankDoorControlPanelBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: AttachBombToPanel
     /// </summary>
-    public unsafe void AttachBombToPanel()
+    public unsafe virtual void AttachBombToPanel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorControlPanelBase.AttachBombToPanel", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -111,7 +111,7 @@ public partial class RBankDoorControlPanelBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: AttachBombToThug
     /// </summary>
-    public unsafe void AttachBombToThug(BmSDK.BmGame.RBMPawnAI Thug)
+    public unsafe virtual void AttachBombToThug(BmSDK.BmGame.RBMPawnAI Thug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorControlPanelBase.AttachBombToThug", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -123,7 +123,7 @@ public partial class RBankDoorControlPanelBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorControlPanelBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -31,7 +31,7 @@ public partial class OnlineSubsystemCommonImpl : BmSDK.Engine.OnlineSubsystem, B
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe virtual void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineSubsystemCommonImpl.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -50,7 +50,7 @@ public partial class OnlineSubsystemCommonImpl : BmSDK.Engine.OnlineSubsystem, B
     /// <summary>
     /// Function: CancelCustomContentRequest
     /// </summary>
-    public unsafe void CancelCustomContentRequest(BmSDK.FString sCustomId)
+    public unsafe virtual void CancelCustomContentRequest(BmSDK.FString sCustomId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineSubsystemCommonImpl.CancelCustomContentRequest", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -69,7 +69,7 @@ public partial class OnlineSubsystemCommonImpl : BmSDK.Engine.OnlineSubsystem, B
     /// <summary>
     /// Function: GetCustomContentAsString
     /// </summary>
-    public unsafe void GetCustomContentAsString(BmSDK.FString sCustomId, out BmSDK.FString ContentData)
+    public unsafe virtual void GetCustomContentAsString(BmSDK.FString sCustomId, out BmSDK.FString ContentData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineSubsystemCommonImpl.GetCustomContentAsString", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -89,7 +89,7 @@ public partial class OnlineSubsystemCommonImpl : BmSDK.Engine.OnlineSubsystem, B
     /// <summary>
     /// Function: GetCustomContent
     /// </summary>
-    public unsafe void GetCustomContent(BmSDK.FString sCustomId, out BmSDK.TArray<byte> ContentData)
+    public unsafe virtual void GetCustomContent(BmSDK.FString sCustomId, out BmSDK.TArray<byte> ContentData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineSubsystemCommonImpl.GetCustomContent", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -109,7 +109,7 @@ public partial class OnlineSubsystemCommonImpl : BmSDK.Engine.OnlineSubsystem, B
     /// <summary>
     /// Function: StartCustomContentRequest
     /// </summary>
-    public unsafe void StartCustomContentRequest(BmSDK.FString sContentName, BmSDK.FString sCustomId, System.IntPtr dReadCustomContentComplete, BmSDK.Engine.OnlineSubsystem.ECustomContentAccessMode eCCAM = default, BmSDK.FString Category = default)
+    public unsafe virtual void StartCustomContentRequest(BmSDK.FString sContentName, BmSDK.FString sCustomId, System.IntPtr dReadCustomContentComplete, BmSDK.Engine.OnlineSubsystem.ECustomContentAccessMode eCCAM = default, BmSDK.FString Category = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineSubsystemCommonImpl.StartCustomContentRequest", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -132,7 +132,7 @@ public partial class OnlineSubsystemCommonImpl : BmSDK.Engine.OnlineSubsystem, B
     /// <summary>
     /// Function: IsCustomContentAccessModeAvailable
     /// </summary>
-    public unsafe bool IsCustomContentAccessModeAvailable(BmSDK.Engine.OnlineSubsystem.ECustomContentAccessMode eCCAM)
+    public unsafe virtual bool IsCustomContentAccessModeAvailable(BmSDK.Engine.OnlineSubsystem.ECustomContentAccessMode eCCAM)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineSubsystemCommonImpl.IsCustomContentAccessModeAvailable", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -151,7 +151,7 @@ public partial class OnlineSubsystemCommonImpl : BmSDK.Engine.OnlineSubsystem, B
     /// <summary>
     /// Function: IsCustomContentTypeAvailable
     /// </summary>
-    public unsafe bool IsCustomContentTypeAvailable(BmSDK.Engine.OnlineSubsystem.ECustomContentType CustomContentType)
+    public unsafe virtual bool IsCustomContentTypeAvailable(BmSDK.Engine.OnlineSubsystem.ECustomContentType CustomContentType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineSubsystemCommonImpl.IsCustomContentTypeAvailable", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -170,7 +170,7 @@ public partial class OnlineSubsystemCommonImpl : BmSDK.Engine.OnlineSubsystem, B
     /// <summary>
     /// Function: IsCustomContentAvailable
     /// </summary>
-    public unsafe bool IsCustomContentAvailable()
+    public unsafe virtual bool IsCustomContentAvailable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineSubsystemCommonImpl.IsCustomContentAvailable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -188,7 +188,7 @@ public partial class OnlineSubsystemCommonImpl : BmSDK.Engine.OnlineSubsystem, B
     /// <summary>
     /// Function: GetRegisteredPlayers
     /// </summary>
-    public unsafe void GetRegisteredPlayers(BmSDK.FName SessionName, out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId> OutRegisteredPlayers)
+    public unsafe virtual void GetRegisteredPlayers(BmSDK.FName SessionName, out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId> OutRegisteredPlayers)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineSubsystemCommonImpl.GetRegisteredPlayers", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -201,7 +201,7 @@ public partial class OnlineSubsystemCommonImpl : BmSDK.Engine.OnlineSubsystem, B
     /// <summary>
     /// Function: IsPlayerInSession
     /// </summary>
-    public unsafe bool IsPlayerInSession(BmSDK.FName SessionName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID)
+    public unsafe virtual bool IsPlayerInSession(BmSDK.FName SessionName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineSubsystemCommonImpl.IsPlayerInSession", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -221,7 +221,7 @@ public partial class OnlineSubsystemCommonImpl : BmSDK.Engine.OnlineSubsystem, B
     /// <summary>
     /// Function: GetPlayerNicknameFromIndex
     /// </summary>
-    public unsafe BmSDK.FString GetPlayerNicknameFromIndex(int UserIndex)
+    public unsafe virtual BmSDK.FString GetPlayerNicknameFromIndex(int UserIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineSubsystemCommonImpl.GetPlayerNicknameFromIndex", true);
         byte* paramsPtr = stackalloc byte[20];

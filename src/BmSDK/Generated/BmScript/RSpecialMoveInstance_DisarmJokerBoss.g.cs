@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_DisarmJokerBoss : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe void GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override void GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_DisarmJokerBoss.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -84,7 +84,7 @@ public partial class RSpecialMoveInstance_DisarmJokerBoss : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_DisarmJokerBoss.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -96,7 +96,7 @@ public partial class RSpecialMoveInstance_DisarmJokerBoss : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_DisarmJokerBoss.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class RSpecialMoveInstance_DisarmJokerBoss : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_DisarmJokerBoss.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -119,7 +119,7 @@ public partial class RSpecialMoveInstance_DisarmJokerBoss : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_DisarmJokerBoss.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[132];

@@ -71,7 +71,7 @@ public partial class RFakeVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFakeVehicle.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RFakeVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: AudioGetRPM
     /// </summary>
-    public unsafe float AudioGetRPM(bool unlerped = default)
+    public unsafe override float AudioGetRPM(bool unlerped = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFakeVehicle.AudioGetRPM", true);
         byte* paramsPtr = stackalloc byte[8];

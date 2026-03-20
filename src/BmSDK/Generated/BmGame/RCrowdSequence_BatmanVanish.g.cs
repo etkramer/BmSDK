@@ -71,7 +71,7 @@ public partial class RCrowdSequence_BatmanVanish : BmSDK.BmGame.RCrowdSequence, 
     /// <summary>
     /// Function: EndSequence
     /// </summary>
-    public unsafe void EndSequence()
+    public unsafe override void EndSequence()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSequence_BatmanVanish.EndSequence", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCrowdSequence_BatmanVanish : BmSDK.BmGame.RCrowdSequence, 
     /// <summary>
     /// Function: UpdateAttractors
     /// </summary>
-    public unsafe void UpdateAttractors(float DeltaTime)
+    public unsafe override void UpdateAttractors(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSequence_BatmanVanish.UpdateAttractors", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RCrowdSequence_BatmanVanish : BmSDK.BmGame.RCrowdSequence, 
     /// <summary>
     /// Function: SkipFirstStage
     /// </summary>
-    public unsafe void SkipFirstStage()
+    public unsafe virtual void SkipFirstStage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSequence_BatmanVanish.SkipFirstStage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RCrowdSequence_BatmanVanish : BmSDK.BmGame.RCrowdSequence, 
     /// <summary>
     /// Function: CreateAttractors
     /// </summary>
-    public unsafe void CreateAttractors()
+    public unsafe override void CreateAttractors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSequence_BatmanVanish.CreateAttractors", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RCrowdSequence_BatmanVanish : BmSDK.BmGame.RCrowdSequence, 
     /// <summary>
     /// Function: GetSpawnLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetSpawnLocation()
+    public unsafe override System.Numerics.Vector3 GetSpawnLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSequence_BatmanVanish.GetSpawnLocation", true);
         byte* paramsPtr = stackalloc byte[12];

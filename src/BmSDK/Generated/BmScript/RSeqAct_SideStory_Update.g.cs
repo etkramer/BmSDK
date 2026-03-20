@@ -47,7 +47,7 @@ public partial class RSeqAct_SideStory_Update : BmSDK.Engine.SequenceAction, BmS
     /// <summary>
     /// Function: ShowDiscoveryElementOnHudIfNew
     /// </summary>
-    public unsafe bool ShowDiscoveryElementOnHudIfNew()
+    public unsafe virtual bool ShowDiscoveryElementOnHudIfNew()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SideStory_Update.ShowDiscoveryElementOnHudIfNew", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RSeqAct_SideStory_Update : BmSDK.Engine.SequenceAction, BmS
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SideStory_Update.Activated", true);
         byte* paramsPtr = stackalloc byte[152];

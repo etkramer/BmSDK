@@ -66,7 +66,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: LightSetup
     /// </summary>
-    public unsafe void LightSetup(float innerAngle, float outerAngle, float Radius)
+    public unsafe virtual void LightSetup(float innerAngle, float outerAngle, float Radius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.LightSetup", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -87,7 +87,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: SetDesiredRotation
     /// </summary>
-    public unsafe void SetDesiredRotation(BmSDK.Rotator DesiredRot)
+    public unsafe virtual void SetDesiredRotation(BmSDK.Rotator DesiredRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.SetDesiredRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -106,7 +106,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: TurnTowards
     /// </summary>
-    public unsafe void TurnTowards(BmSDK.Rotator WantedRotation)
+    public unsafe virtual void TurnTowards(BmSDK.Rotator WantedRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.TurnTowards", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -125,7 +125,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -136,7 +136,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: StopDisabledSound
     /// </summary>
-    public unsafe void StopDisabledSound()
+    public unsafe virtual void StopDisabledSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.StopDisabledSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -147,7 +147,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: StartDisabledSound
     /// </summary>
-    public unsafe void StartDisabledSound()
+    public unsafe virtual void StartDisabledSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.StartDisabledSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -158,7 +158,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetBlindedTimeRemaining
     /// </summary>
-    public unsafe float GetBlindedTimeRemaining()
+    public unsafe virtual float GetBlindedTimeRemaining()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetBlindedTimeRemaining", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -169,7 +169,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: IsBlinded
     /// </summary>
-    public unsafe bool IsBlinded()
+    public unsafe virtual bool IsBlinded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.IsBlinded", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -180,7 +180,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: UnBlind
     /// </summary>
-    public unsafe void UnBlind()
+    public unsafe virtual void UnBlind()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.UnBlind", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -191,7 +191,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: RequiresBlindDroneUpgrade
     /// </summary>
-    public unsafe bool RequiresBlindDroneUpgrade()
+    public unsafe virtual bool RequiresBlindDroneUpgrade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.RequiresBlindDroneUpgrade", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -202,7 +202,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: Trigger
     /// </summary>
-    public unsafe bool Trigger(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool Trigger(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.Trigger", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -214,7 +214,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: CanTrigger
     /// </summary>
-    public unsafe bool CanTrigger(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool CanTrigger(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.CanTrigger", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -226,7 +226,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: CanBeTargettedByRHD
     /// </summary>
-    public unsafe bool CanBeTargettedByRHD(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool CanBeTargettedByRHD(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.CanBeTargettedByRHD", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -238,7 +238,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetDisplayTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDisplayTargetLocation()
+    public unsafe virtual System.Numerics.Vector3 GetDisplayTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetDisplayTargetLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -249,7 +249,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetDisplayLockOnState
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayLockOnState()
+    public unsafe virtual BmSDK.FString GetDisplayLockOnState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetDisplayLockOnState", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -260,7 +260,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetDisplayTitle
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayTitle()
+    public unsafe virtual BmSDK.FString GetDisplayTitle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetDisplayTitle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -271,7 +271,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetDisplayDescription
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayDescription()
+    public unsafe virtual BmSDK.FString GetDisplayDescription()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetDisplayDescription", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -282,7 +282,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetDisplayIconName
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayIconName()
+    public unsafe virtual BmSDK.FString GetDisplayIconName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetDisplayIconName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -293,7 +293,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: NeedDisplayRefresh
     /// </summary>
-    public unsafe bool NeedDisplayRefresh()
+    public unsafe virtual bool NeedDisplayRefresh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.NeedDisplayRefresh", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -304,7 +304,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetInteractionPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetInteractionPrompt()
+    public unsafe virtual BmSDK.FString GetInteractionPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetInteractionPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -315,7 +315,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: ShouldInteractionPromptBeDisplayedInCentreOfScreen
     /// </summary>
-    public unsafe bool ShouldInteractionPromptBeDisplayedInCentreOfScreen()
+    public unsafe virtual bool ShouldInteractionPromptBeDisplayedInCentreOfScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.ShouldInteractionPromptBeDisplayedInCentreOfScreen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -326,7 +326,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetInteractionPromptSecondary
     /// </summary>
-    public unsafe BmSDK.FString GetInteractionPromptSecondary()
+    public unsafe virtual BmSDK.FString GetInteractionPromptSecondary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetInteractionPromptSecondary", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -337,7 +337,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetInteractionType
     /// </summary>
-    public unsafe BmSDK.BmGame.RRemoteControlLowSecurityInterface.EOmnitronInteractionType GetInteractionType()
+    public unsafe virtual BmSDK.BmGame.RRemoteControlLowSecurityInterface.EOmnitronInteractionType GetInteractionType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetInteractionType", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -348,7 +348,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: TriggerSecondary
     /// </summary>
-    public unsafe bool TriggerSecondary(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool TriggerSecondary(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.TriggerSecondary", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -360,7 +360,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: CanTargetTroughWalls
     /// </summary>
-    public unsafe bool CanTargetTroughWalls()
+    public unsafe virtual bool CanTargetTroughWalls()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.CanTargetTroughWalls", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -371,7 +371,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetMiniGameHelpPrompt
     /// </summary>
-    public unsafe void GetMiniGameHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe virtual void GetMiniGameHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetMiniGameHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -384,7 +384,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: TriggerLeft
     /// </summary>
-    public unsafe void TriggerLeft(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void TriggerLeft(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.TriggerLeft", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -396,7 +396,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: TriggerRight
     /// </summary>
-    public unsafe void TriggerRight(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void TriggerRight(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.TriggerRight", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -408,7 +408,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetOverworldHintRange
     /// </summary>
-    public unsafe int GetOverworldHintRange()
+    public unsafe virtual int GetOverworldHintRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetOverworldHintRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -419,7 +419,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetSatnavToRoadAtSameHeight
     /// </summary>
-    public unsafe bool GetSatnavToRoadAtSameHeight()
+    public unsafe virtual bool GetSatnavToRoadAtSameHeight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetSatnavToRoadAtSameHeight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -430,7 +430,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetSatnavToRoadBelow
     /// </summary>
-    public unsafe bool GetSatnavToRoadBelow()
+    public unsafe virtual bool GetSatnavToRoadBelow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetSatnavToRoadBelow", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -441,7 +441,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetCustomFlag
     /// </summary>
-    public unsafe BmSDK.FString GetCustomFlag()
+    public unsafe virtual BmSDK.FString GetCustomFlag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetCustomFlag", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -452,7 +452,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetUnlockedChapter
     /// </summary>
-    public unsafe int GetUnlockedChapter()
+    public unsafe virtual int GetUnlockedChapter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetUnlockedChapter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -463,7 +463,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetMapIconFloatUpAdjustment
     /// </summary>
-    public unsafe int GetMapIconFloatUpAdjustment()
+    public unsafe virtual int GetMapIconFloatUpAdjustment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetMapIconFloatUpAdjustment", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -474,7 +474,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: UseSecretLocation
     /// </summary>
-    public unsafe bool UseSecretLocation()
+    public unsafe virtual bool UseSecretLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.UseSecretLocation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -485,7 +485,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetSecretLocationZ
     /// </summary>
-    public unsafe int GetSecretLocationZ()
+    public unsafe virtual int GetSecretLocationZ()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetSecretLocationZ", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -496,7 +496,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetSecretLocationY
     /// </summary>
-    public unsafe int GetSecretLocationY()
+    public unsafe virtual int GetSecretLocationY()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetSecretLocationY", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -507,7 +507,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetSecretLocationX
     /// </summary>
-    public unsafe int GetSecretLocationX()
+    public unsafe virtual int GetSecretLocationX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetSecretLocationX", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -518,7 +518,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetSecretZone
     /// </summary>
-    public unsafe byte GetSecretZone()
+    public unsafe virtual byte GetSecretZone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetSecretZone", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -529,7 +529,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetSecretPickupIndex
     /// </summary>
-    public unsafe int GetSecretPickupIndex()
+    public unsafe virtual int GetSecretPickupIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetSecretPickupIndex", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -540,7 +540,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetSecretSubType
     /// </summary>
-    public unsafe BmSDK.FString GetSecretSubType()
+    public unsafe virtual BmSDK.FString GetSecretSubType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetSecretSubType", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -551,7 +551,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: GetSecretName
     /// </summary>
-    public unsafe BmSDK.FString GetSecretName()
+    public unsafe virtual BmSDK.FString GetSecretName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetSecretName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -562,7 +562,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// Function: IsValidSecret
     /// </summary>
-    public unsafe bool IsValidSecret()
+    public unsafe virtual bool IsValidSecret()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.IsValidSecret", true);
         byte* paramsPtr = stackalloc byte[4];

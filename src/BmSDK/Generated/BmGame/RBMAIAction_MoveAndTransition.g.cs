@@ -71,7 +71,7 @@ public partial class RBMAIAction_MoveAndTransition : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_MoveAndTransition.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_MoveAndTransition : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// Function: GetApproachOption
     /// </summary>
-    public unsafe int GetApproachOption()
+    public unsafe virtual int GetApproachOption()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_MoveAndTransition.GetApproachOption", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_MoveAndTransition : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// Function: StartInAnim
     /// </summary>
-    public unsafe void StartInAnim()
+    public unsafe virtual void StartInAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_MoveAndTransition.StartInAnim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_MoveAndTransition : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// Function: GetMoveDest
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMoveDest(out float MeetingPointTravelDist)
+    public unsafe virtual System.Numerics.Vector3 GetMoveDest(out float MeetingPointTravelDist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_MoveAndTransition.GetMoveDest", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -117,7 +117,7 @@ public partial class RBMAIAction_MoveAndTransition : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// Function: BuildHandle
     /// </summary>
-    public unsafe BmSDK.BmGame.RNavigationHandle BuildHandle()
+    public unsafe override BmSDK.BmGame.RNavigationHandle BuildHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_MoveAndTransition.BuildHandle", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -128,7 +128,7 @@ public partial class RBMAIAction_MoveAndTransition : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_MoveAndTransition.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

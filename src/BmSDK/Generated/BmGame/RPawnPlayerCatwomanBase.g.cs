@@ -66,7 +66,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: GetCornerCoverIdleOverlayAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetCornerCoverIdleOverlayAnimset()
+    public unsafe virtual BmSDK.Engine.AnimSet GetCornerCoverIdleOverlayAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.GetCornerCoverIdleOverlayAnimset", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -77,7 +77,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: CheckRiddleScanVisibility
     /// </summary>
-    public unsafe bool CheckRiddleScanVisibility(BmSDK.GameObject.FTPOV CameraPOV, out BmSDK.BmGame.RGameInfo.FVisibilityResult ReasonItFailed)
+    public unsafe override bool CheckRiddleScanVisibility(BmSDK.GameObject.FTPOV CameraPOV, out BmSDK.BmGame.RGameInfo.FVisibilityResult ReasonItFailed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.CheckRiddleScanVisibility", true);
         byte* paramsPtr = stackalloc byte[136];
@@ -90,7 +90,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: RiddleFound
     /// </summary>
-    public unsafe void RiddleFound(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void RiddleFound(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.RiddleFound", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -102,7 +102,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: GetRiddle
     /// </summary>
-    public unsafe BmSDK.FString GetRiddle()
+    public unsafe virtual BmSDK.FString GetRiddle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.GetRiddle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -113,7 +113,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: RiddleReScanned
     /// </summary>
-    public unsafe void RiddleReScanned(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void RiddleReScanned(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.RiddleReScanned", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -125,7 +125,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: TakePhoto
     /// </summary>
-    public unsafe void TakePhoto(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void TakePhoto(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.TakePhoto", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -137,7 +137,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: ReleaseWall
     /// </summary>
-    public unsafe void ReleaseWall()
+    public unsafe virtual void ReleaseWall()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.ReleaseWall", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -148,7 +148,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: ClimbOnWall
     /// </summary>
-    public unsafe void ClimbOnWall()
+    public unsafe virtual void ClimbOnWall()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.ClimbOnWall", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -159,7 +159,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: DisplayCatwomanWhipRappelPromptIfNecessary
     /// </summary>
-    public unsafe void DisplayCatwomanWhipRappelPromptIfNecessary(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bDisplayPromptInCentreOfScreen)
+    public unsafe virtual void DisplayCatwomanWhipRappelPromptIfNecessary(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bDisplayPromptInCentreOfScreen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.DisplayCatwomanWhipRappelPromptIfNecessary", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -172,7 +172,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: IsCatwomanTouchingAWallClimbVolume
     /// </summary>
-    public unsafe bool IsCatwomanTouchingAWallClimbVolume()
+    public unsafe virtual bool IsCatwomanTouchingAWallClimbVolume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.IsCatwomanTouchingAWallClimbVolume", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -183,7 +183,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: CanJumpOffWallStick
     /// </summary>
-    public unsafe bool CanJumpOffWallStick(BmSDK.BmGame.RSpecialMoveConfig Config, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe virtual bool CanJumpOffWallStick(BmSDK.BmGame.RSpecialMoveConfig Config, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.CanJumpOffWallStick", true);
         byte* paramsPtr = stackalloc byte[144];
@@ -196,7 +196,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: FlushDebugDraws
     /// </summary>
-    public unsafe void FlushDebugDraws(bool bOnlyOncePerFrame = default)
+    public unsafe virtual void FlushDebugDraws(bool bOnlyOncePerFrame = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.FlushDebugDraws", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -215,7 +215,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: OnHelicopterHit
     /// </summary>
-    public unsafe void OnHelicopterHit(BmSDK.BmGame.RHelicopterBase Heli, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual void OnHelicopterHit(BmSDK.BmGame.RHelicopterBase Heli, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.OnHelicopterHit", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -229,7 +229,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: ClampPointToCeilingVolumes
     /// </summary>
-    public unsafe bool ClampPointToCeilingVolumes(out System.Numerics.Vector3 Point, float ExtraShiftInwards = default, bool bDebugDraw = default)
+    public unsafe virtual bool ClampPointToCeilingVolumes(out System.Numerics.Vector3 Point, float ExtraShiftInwards = default, bool bDebugDraw = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.ClampPointToCeilingVolumes", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -250,7 +250,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: UpdateTouchingCeilingVolume
     /// </summary>
-    public unsafe void UpdateTouchingCeilingVolume()
+    public unsafe virtual void UpdateTouchingCeilingVolume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.UpdateTouchingCeilingVolume", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -268,7 +268,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: ButtonMashPenalty
     /// </summary>
-    public unsafe void ButtonMashPenalty()
+    public unsafe virtual void ButtonMashPenalty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.ButtonMashPenalty", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -279,7 +279,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: ResetAutoSwing
     /// </summary>
-    public unsafe void ResetAutoSwing()
+    public unsafe virtual void ResetAutoSwing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.ResetAutoSwing", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -290,7 +290,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: TriggerAerialWhipPounce
     /// </summary>
-    public unsafe bool TriggerAerialWhipPounce()
+    public unsafe virtual bool TriggerAerialWhipPounce()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.TriggerAerialWhipPounce", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -301,7 +301,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: GetEdgeSwingGrappleLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetEdgeSwingGrappleLocation()
+    public unsafe virtual System.Numerics.Vector3 GetEdgeSwingGrappleLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.GetEdgeSwingGrappleLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -312,7 +312,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: GetEdgeSwingWallLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetEdgeSwingWallLocation(out System.Numerics.Vector3 WallNormal)
+    public unsafe virtual System.Numerics.Vector3 GetEdgeSwingWallLocation(out System.Numerics.Vector3 WallNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.GetEdgeSwingWallLocation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -324,7 +324,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: GetEdgeSwingStartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetEdgeSwingStartLocation()
+    public unsafe virtual System.Numerics.Vector3 GetEdgeSwingStartLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.GetEdgeSwingStartLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -335,7 +335,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: IsAutoSwingToGargoyle
     /// </summary>
-    public unsafe bool IsAutoSwingToGargoyle()
+    public unsafe virtual bool IsAutoSwingToGargoyle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.IsAutoSwingToGargoyle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -346,7 +346,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: IsAutoSwing
     /// </summary>
-    public unsafe bool IsAutoSwing()
+    public unsafe virtual bool IsAutoSwing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.IsAutoSwing", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -357,7 +357,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: IsConcealedDuringSwing
     /// </summary>
-    public unsafe bool IsConcealedDuringSwing()
+    public unsafe virtual bool IsConcealedDuringSwing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.IsConcealedDuringSwing", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -368,7 +368,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: SetAutoSwingState
     /// </summary>
-    public unsafe void SetAutoSwingState(BmSDK.BmGame.RPawnPlayerCatwomanBase.EAutoSwingState State)
+    public unsafe virtual void SetAutoSwingState(BmSDK.BmGame.RPawnPlayerCatwomanBase.EAutoSwingState State)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.SetAutoSwingState", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -380,7 +380,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: IsValidClimbStartPoint
     /// </summary>
-    public unsafe bool IsValidClimbStartPoint()
+    public unsafe virtual bool IsValidClimbStartPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.IsValidClimbStartPoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -391,7 +391,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: GetFirstClimbPoint
     /// </summary>
-    public unsafe void GetFirstClimbPoint(out System.Numerics.Vector3 Position, out System.Numerics.Vector3 Normal)
+    public unsafe virtual void GetFirstClimbPoint(out System.Numerics.Vector3 Position, out System.Numerics.Vector3 Normal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.GetFirstClimbPoint", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -404,7 +404,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: RecalculatePath
     /// </summary>
-    public unsafe void RecalculatePath()
+    public unsafe virtual void RecalculatePath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.RecalculatePath", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -415,7 +415,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: HasPath
     /// </summary>
-    public unsafe bool HasPath()
+    public unsafe virtual bool HasPath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.HasPath", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -426,7 +426,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: ClearPath
     /// </summary>
-    public unsafe void ClearPath()
+    public unsafe virtual void ClearPath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.ClearPath", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -437,7 +437,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: SetAllowAerialWhipPounce
     /// </summary>
-    public unsafe void SetAllowAerialWhipPounce(bool bAllow)
+    public unsafe virtual void SetAllowAerialWhipPounce(bool bAllow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.SetAllowAerialWhipPounce", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -449,7 +449,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: TriggerHitAndDropFromCeilingMove
     /// </summary>
-    public unsafe void TriggerHitAndDropFromCeilingMove()
+    public unsafe virtual void TriggerHitAndDropFromCeilingMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.TriggerHitAndDropFromCeilingMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -460,7 +460,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: SetWhipTargetPose
     /// </summary>
-    public unsafe void SetWhipTargetPose(System.Numerics.Vector3 NewPosition, BmSDK.Rotator NewRotation = default)
+    public unsafe virtual void SetWhipTargetPose(System.Numerics.Vector3 NewPosition, BmSDK.Rotator NewRotation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.SetWhipTargetPose", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -480,7 +480,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: GetWhipTargetPose
     /// </summary>
-    public unsafe void GetWhipTargetPose(out System.Numerics.Vector3 OutPosition, out BmSDK.Rotator OutRotation)
+    public unsafe virtual void GetWhipTargetPose(out System.Numerics.Vector3 OutPosition, out BmSDK.Rotator OutRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.GetWhipTargetPose", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -500,7 +500,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: FindNearbyLedgeFromCeiling
     /// </summary>
-    public unsafe bool FindNearbyLedgeFromCeiling(System.Numerics.Vector3 PlayerLocation, out BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Locator)
+    public unsafe virtual bool FindNearbyLedgeFromCeiling(System.Numerics.Vector3 PlayerLocation, out BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Locator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.FindNearbyLedgeFromCeiling", true);
         byte* paramsPtr = stackalloc byte[148];
@@ -520,7 +520,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: AddEdgeCollisionNormals
     /// </summary>
-    public unsafe void AddEdgeCollisionNormals(System.Numerics.Vector3 Delta)
+    public unsafe virtual void AddEdgeCollisionNormals(System.Numerics.Vector3 Delta)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.AddEdgeCollisionNormals", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -539,7 +539,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: SlideOffCeilingVolumeBorders
     /// </summary>
-    public unsafe System.Numerics.Vector3 SlideOffCeilingVolumeBorders(System.Numerics.Vector3 Delta)
+    public unsafe virtual System.Numerics.Vector3 SlideOffCeilingVolumeBorders(System.Numerics.Vector3 Delta)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.SlideOffCeilingVolumeBorders", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -558,7 +558,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: RestrictMoveToCeiling
     /// </summary>
-    public unsafe System.Numerics.Vector3 RestrictMoveToCeiling(System.Numerics.Vector3 Delta)
+    public unsafe virtual System.Numerics.Vector3 RestrictMoveToCeiling(System.Numerics.Vector3 Delta)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.RestrictMoveToCeiling", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -577,7 +577,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: GetPlayerThoughts
     /// </summary>
-    public unsafe void GetPlayerThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetPlayerThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.GetPlayerThoughts", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -596,7 +596,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: DrawSwingSpot
     /// </summary>
-    public unsafe void DrawSwingSpot()
+    public unsafe virtual void DrawSwingSpot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.DrawSwingSpot", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -607,7 +607,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: DrawSwingLastFrame
     /// </summary>
-    public unsafe void DrawSwingLastFrame()
+    public unsafe virtual void DrawSwingLastFrame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.DrawSwingLastFrame", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -618,7 +618,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: StopSwingFallSound
     /// </summary>
-    public unsafe void StopSwingFallSound()
+    public unsafe virtual void StopSwingFallSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.StopSwingFallSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -629,7 +629,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Function: StartSwingFallSound
     /// </summary>
-    public unsafe void StartSwingFallSound()
+    public unsafe virtual void StartSwingFallSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.StartSwingFallSound", true);
         byte* paramsPtr = stackalloc byte[0];

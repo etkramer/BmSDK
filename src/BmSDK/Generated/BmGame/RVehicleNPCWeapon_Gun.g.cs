@@ -71,7 +71,7 @@ public partial class RVehicleNPCWeapon_Gun : BmSDK.BmGame.RVehicleNPCWeapon, BmS
     /// <summary>
     /// Function: ThrowGrenade
     /// </summary>
-    public unsafe void ThrowGrenade()
+    public unsafe virtual void ThrowGrenade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleNPCWeapon_Gun.ThrowGrenade", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RVehicleNPCWeapon_Gun : BmSDK.BmGame.RVehicleNPCWeapon, BmS
     /// <summary>
     /// Function: GrabGrenade
     /// </summary>
-    public unsafe void GrabGrenade()
+    public unsafe virtual void GrabGrenade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleNPCWeapon_Gun.GrabGrenade", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RVehicleNPCWeapon_Gun : BmSDK.BmGame.RVehicleNPCWeapon, BmS
     /// <summary>
     /// Function: CanShootTarget
     /// </summary>
-    public unsafe bool CanShootTarget(BmSDK.Engine.Actor Target)
+    public unsafe override bool CanShootTarget(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleNPCWeapon_Gun.CanShootTarget", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -105,7 +105,7 @@ public partial class RVehicleNPCWeapon_Gun : BmSDK.BmGame.RVehicleNPCWeapon, BmS
     /// <summary>
     /// Function: IsFiring
     /// </summary>
-    public unsafe bool IsFiring()
+    public unsafe override bool IsFiring()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleNPCWeapon_Gun.IsFiring", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RVehicleNPCWeapon_Gun : BmSDK.BmGame.RVehicleNPCWeapon, BmS
     /// <summary>
     /// Function: CancelAttack
     /// </summary>
-    public unsafe void CancelAttack(bool DueToBeingRammed)
+    public unsafe override void CancelAttack(bool DueToBeingRammed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleNPCWeapon_Gun.CancelAttack", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -128,7 +128,7 @@ public partial class RVehicleNPCWeapon_Gun : BmSDK.BmGame.RVehicleNPCWeapon, BmS
     /// <summary>
     /// Function: StopAttack
     /// </summary>
-    public unsafe void StopAttack()
+    public unsafe override void StopAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleNPCWeapon_Gun.StopAttack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RVehicleNPCWeapon_Gun : BmSDK.BmGame.RVehicleNPCWeapon, BmS
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleNPCWeapon_Gun.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -151,7 +151,7 @@ public partial class RVehicleNPCWeapon_Gun : BmSDK.BmGame.RVehicleNPCWeapon, BmS
     /// <summary>
     /// Function: StartAttack
     /// </summary>
-    public unsafe bool StartAttack(BmSDK.Engine.Actor Target, float WarningTime, System.Numerics.Vector3 AttackLoc = default)
+    public unsafe override bool StartAttack(BmSDK.Engine.Actor Target, float WarningTime, System.Numerics.Vector3 AttackLoc = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleNPCWeapon_Gun.StartAttack", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -165,7 +165,7 @@ public partial class RVehicleNPCWeapon_Gun : BmSDK.BmGame.RVehicleNPCWeapon, BmS
     /// <summary>
     /// Function: CanDisableTick
     /// </summary>
-    public unsafe bool CanDisableTick()
+    public unsafe override bool CanDisableTick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleNPCWeapon_Gun.CanDisableTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -176,7 +176,7 @@ public partial class RVehicleNPCWeapon_Gun : BmSDK.BmGame.RVehicleNPCWeapon, BmS
     /// <summary>
     /// Function: CreateAimingPoseConfig
     /// </summary>
-    public unsafe bool CreateAimingPoseConfig(BmSDK.BmGame.RBMPawnAI Pawn, BmSDK.Engine.AnimSet Anims)
+    public unsafe virtual bool CreateAimingPoseConfig(BmSDK.BmGame.RBMPawnAI Pawn, BmSDK.Engine.AnimSet Anims)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleNPCWeapon_Gun.CreateAimingPoseConfig", true);
         byte* paramsPtr = stackalloc byte[1792];
@@ -189,7 +189,7 @@ public partial class RVehicleNPCWeapon_Gun : BmSDK.BmGame.RVehicleNPCWeapon, BmS
     /// <summary>
     /// Function: Deinit
     /// </summary>
-    public unsafe void Deinit()
+    public unsafe override void Deinit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleNPCWeapon_Gun.Deinit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -200,7 +200,7 @@ public partial class RVehicleNPCWeapon_Gun : BmSDK.BmGame.RVehicleNPCWeapon, BmS
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(int PassengerIndex, BmSDK.BmGame.RVehicleNPC NewOwner)
+    public unsafe override void Init(int PassengerIndex, BmSDK.BmGame.RVehicleNPC NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleNPCWeapon_Gun.Init", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -213,7 +213,7 @@ public partial class RVehicleNPCWeapon_Gun : BmSDK.BmGame.RVehicleNPCWeapon, BmS
     /// <summary>
     /// Function: UpdatePawnAnim
     /// </summary>
-    public unsafe float UpdatePawnAnim(System.Numerics.Vector3 Target, float DeltaTime, bool IsFiring)
+    public unsafe virtual float UpdatePawnAnim(System.Numerics.Vector3 Target, float DeltaTime, bool IsFiring)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleNPCWeapon_Gun.UpdatePawnAnim", true);
         byte* paramsPtr = stackalloc byte[24];

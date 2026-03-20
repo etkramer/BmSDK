@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_GargSmash : BmSDK.BmGame.RAEC_Search_Sub_Va
     /// <summary>
     /// Function: AddVantageResponseAction
     /// </summary>
-    public unsafe void AddVantageResponseAction(BmSDK.FString actionlabel)
+    public unsafe override void AddVantageResponseAction(BmSDK.FString actionlabel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_GargSmash.AddVantageResponseAction", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -83,7 +83,7 @@ public partial class RAEC_Search_Sub_GargSmash : BmSDK.BmGame.RAEC_Search_Sub_Va
     /// <summary>
     /// Function: NotifyGunEmpty
     /// </summary>
-    public unsafe void NotifyGunEmpty()
+    public unsafe override void NotifyGunEmpty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_GargSmash.NotifyGunEmpty", true);
         byte* paramsPtr = stackalloc byte[16];

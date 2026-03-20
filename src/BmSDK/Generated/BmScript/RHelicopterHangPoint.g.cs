@@ -71,7 +71,7 @@ public partial class RHelicopterHangPoint : BmSDK.BmGame.RHangPointSpawnable, Bm
     /// <summary>
     /// Function: WillSmashIfShot
     /// </summary>
-    public unsafe bool WillSmashIfShot()
+    public unsafe override bool WillSmashIfShot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopterHangPoint.WillSmashIfShot", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RHelicopterHangPoint : BmSDK.BmGame.RHangPointSpawnable, Bm
     /// <summary>
     /// Function: SetInvestigateHighlighted
     /// </summary>
-    public unsafe void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
+    public unsafe override void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopterHangPoint.SetInvestigateHighlighted", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -95,7 +95,7 @@ public partial class RHelicopterHangPoint : BmSDK.BmGame.RHangPointSpawnable, Bm
     /// <summary>
     /// Function: SetHangpointUnusable
     /// </summary>
-    public unsafe void SetHangpointUnusable(bool unusable)
+    public unsafe virtual void SetHangpointUnusable(bool unusable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopterHangPoint.SetHangpointUnusable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -107,7 +107,7 @@ public partial class RHelicopterHangPoint : BmSDK.BmGame.RHangPointSpawnable, Bm
     /// <summary>
     /// Function: MovePawnTo
     /// </summary>
-    public unsafe void MovePawnTo(BmSDK.Engine.Pawn PawnToMove)
+    public unsafe override void MovePawnTo(BmSDK.Engine.Pawn PawnToMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopterHangPoint.MovePawnTo", true);
         byte* paramsPtr = stackalloc byte[140];

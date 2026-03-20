@@ -80,7 +80,7 @@ public partial class Inventory : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DropFrom
     /// </summary>
-    public unsafe void DropFrom(System.Numerics.Vector3 StartLocation, System.Numerics.Vector3 StartVelocity)
+    public unsafe virtual void DropFrom(System.Numerics.Vector3 StartLocation, System.Numerics.Vector3 StartVelocity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Inventory.DropFrom", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -93,7 +93,7 @@ public partial class Inventory : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DenyPickupQuery
     /// </summary>
-    public unsafe bool DenyPickupQuery(BmSDK.Class ItemClass, BmSDK.Engine.Actor Pickup)
+    public unsafe virtual bool DenyPickupQuery(BmSDK.Class ItemClass, BmSDK.Engine.Actor Pickup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Inventory.DenyPickupQuery", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -106,7 +106,7 @@ public partial class Inventory : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ItemRemovedFromInvManager
     /// </summary>
-    public unsafe void ItemRemovedFromInvManager()
+    public unsafe virtual void ItemRemovedFromInvManager()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Inventory.ItemRemovedFromInvManager", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class Inventory : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ClientGivenTo
     /// </summary>
-    public unsafe void ClientGivenTo(BmSDK.Engine.Pawn NewOwner, bool bDoNotActivate)
+    public unsafe virtual void ClientGivenTo(BmSDK.Engine.Pawn NewOwner, bool bDoNotActivate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Inventory.ClientGivenTo", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -130,7 +130,7 @@ public partial class Inventory : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GivenTo
     /// </summary>
-    public unsafe void GivenTo(BmSDK.Engine.Pawn thisPawn, bool bDoNotActivate = default)
+    public unsafe virtual void GivenTo(BmSDK.Engine.Pawn thisPawn, bool bDoNotActivate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Inventory.GivenTo", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -143,7 +143,7 @@ public partial class Inventory : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AnnouncePickup
     /// </summary>
-    public unsafe void AnnouncePickup(BmSDK.Engine.Pawn Other)
+    public unsafe virtual void AnnouncePickup(BmSDK.Engine.Pawn Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Inventory.AnnouncePickup", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -155,7 +155,7 @@ public partial class Inventory : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GiveTo
     /// </summary>
-    public unsafe void GiveTo(BmSDK.Engine.Pawn Other)
+    public unsafe virtual void GiveTo(BmSDK.Engine.Pawn Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Inventory.GiveTo", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -194,7 +194,7 @@ public partial class Inventory : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Inventory.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -205,7 +205,7 @@ public partial class Inventory : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetHumanReadableName
     /// </summary>
-    public unsafe BmSDK.FString GetHumanReadableName()
+    public unsafe override BmSDK.FString GetHumanReadableName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Inventory.GetHumanReadableName", true);
         byte* paramsPtr = stackalloc byte[16];

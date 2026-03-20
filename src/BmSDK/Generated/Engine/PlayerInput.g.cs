@@ -36,7 +36,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// Function: PreClientTravel
     /// </summary>
-    public unsafe void PreClientTravel(BmSDK.FString PendingURL, BmSDK.Engine.Actor.ETravelType TravelType, bool bIsSeamlessTravel)
+    public unsafe virtual void PreClientTravel(BmSDK.FString PendingURL, BmSDK.Engine.Actor.ETravelType TravelType, bool bIsSeamlessTravel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerInput.PreClientTravel", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -50,7 +50,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// Function: ClientInitInputSystem
     /// </summary>
-    public unsafe void ClientInitInputSystem()
+    public unsafe virtual void ClientInitInputSystem()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerInput.ClientInitInputSystem", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -61,7 +61,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// Function: InitInputSystem
     /// </summary>
-    public unsafe void InitInputSystem()
+    public unsafe virtual void InitInputSystem()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerInput.InitInputSystem", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -79,7 +79,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// Function: SmoothMouse
     /// </summary>
-    public unsafe float SmoothMouse(float aMouse, float DeltaTime, out byte SampleCount, int Index)
+    public unsafe virtual float SmoothMouse(float aMouse, float DeltaTime, out byte SampleCount, int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerInput.SmoothMouse", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -94,7 +94,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearSmoothing
     /// </summary>
-    public unsafe void ClearSmoothing()
+    public unsafe virtual void ClearSmoothing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerInput.ClearSmoothing", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// Function: SmartJump
     /// </summary>
-    public unsafe void SmartJump()
+    public unsafe virtual void SmartJump()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerInput.SmartJump", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// Function: Jump
     /// </summary>
-    public unsafe void Jump()
+    public unsafe virtual void Jump()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerInput.Jump", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// Function: ProcessInputMatching
     /// </summary>
-    public unsafe void ProcessInputMatching(float DeltaTime)
+    public unsafe virtual void ProcessInputMatching(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerInput.ProcessInputMatching", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -139,7 +139,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckForDoubleClickMove
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.EDoubleClickDir CheckForDoubleClickMove(float DeltaTime)
+    public unsafe virtual BmSDK.Engine.Actor.EDoubleClickDir CheckForDoubleClickMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerInput.CheckForDoubleClickMove", true);
         byte* paramsPtr = stackalloc byte[7];
@@ -151,7 +151,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// Function: CatchDoubleClickInput
     /// </summary>
-    public unsafe void CatchDoubleClickInput()
+    public unsafe virtual void CatchDoubleClickInput()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerInput.CatchDoubleClickInput", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -162,7 +162,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayerInput
     /// </summary>
-    public unsafe void _PlayerInput(float DeltaTime)
+    public unsafe virtual void _PlayerInput(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerInput.PlayerInput", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -174,7 +174,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// Function: AdjustMouseSensitivity
     /// </summary>
-    public unsafe void AdjustMouseSensitivity(float FOVScale)
+    public unsafe virtual void AdjustMouseSensitivity(float FOVScale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerInput.AdjustMouseSensitivity", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -186,7 +186,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// Function: PostProcessInput
     /// </summary>
-    public unsafe void PostProcessInput(float DeltaTime)
+    public unsafe virtual void PostProcessInput(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerInput.PostProcessInput", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -198,7 +198,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// Function: PreProcessInput
     /// </summary>
-    public unsafe void PreProcessInput(float DeltaTime)
+    public unsafe virtual void PreProcessInput(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerInput.PreProcessInput", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -210,7 +210,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.HUD H)
+    public unsafe virtual void DrawHUD(BmSDK.Engine.HUD H)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerInput.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -222,7 +222,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// Function: SetSensitivity
     /// </summary>
-    public unsafe void SetSensitivity(float F)
+    public unsafe virtual void SetSensitivity(float F)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerInput.SetSensitivity", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -234,7 +234,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// Function: InvertTurn
     /// </summary>
-    public unsafe bool InvertTurn()
+    public unsafe virtual bool InvertTurn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerInput.InvertTurn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -245,7 +245,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// Function: InvertMouse
     /// </summary>
-    public unsafe bool InvertMouse()
+    public unsafe virtual bool InvertMouse()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerInput.InvertMouse", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -256,7 +256,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// Function: CancelMobileInput
     /// </summary>
-    public unsafe void CancelMobileInput()
+    public unsafe virtual void CancelMobileInput()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerInput.CancelMobileInput", true);
         byte* paramsPtr = stackalloc byte[0];

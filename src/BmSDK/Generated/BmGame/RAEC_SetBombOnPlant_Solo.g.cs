@@ -71,7 +71,7 @@ public partial class RAEC_SetBombOnPlant_Solo : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: GetBombAnimOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBombAnimOffset(bool bCocky, out float MeetingPointTravelDist)
+    public unsafe virtual System.Numerics.Vector3 GetBombAnimOffset(bool bCocky, out float MeetingPointTravelDist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SetBombOnPlant_Solo.GetBombAnimOffset", true);
         byte* paramsPtr = stackalloc byte[100];
@@ -84,7 +84,7 @@ public partial class RAEC_SetBombOnPlant_Solo : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SetBombOnPlant_Solo.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -95,7 +95,7 @@ public partial class RAEC_SetBombOnPlant_Solo : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: WantsToGlanceAt
     /// </summary>
-    public unsafe bool WantsToGlanceAt(BmSDK.Engine.Actor TestTarget)
+    public unsafe override bool WantsToGlanceAt(BmSDK.Engine.Actor TestTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SetBombOnPlant_Solo.WantsToGlanceAt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -107,7 +107,7 @@ public partial class RAEC_SetBombOnPlant_Solo : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SetBombOnPlant_Solo.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -119,7 +119,7 @@ public partial class RAEC_SetBombOnPlant_Solo : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SetBombOnPlant_Solo.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];

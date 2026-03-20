@@ -71,7 +71,7 @@ public partial class RCombatMove_LieutenantSmokeReaction : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: CombatAnimHitStart
     /// </summary>
-    public unsafe void CombatAnimHitStart()
+    public unsafe virtual void CombatAnimHitStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LieutenantSmokeReaction.CombatAnimHitStart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_LieutenantSmokeReaction : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: GetAnimInfo
     /// </summary>
-    public unsafe void GetAnimInfo(out BmSDK.FName AnimName, out float DurationScale)
+    public unsafe override void GetAnimInfo(out BmSDK.FName AnimName, out float DurationScale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LieutenantSmokeReaction.GetAnimInfo", true);
         byte* paramsPtr = stackalloc byte[12];

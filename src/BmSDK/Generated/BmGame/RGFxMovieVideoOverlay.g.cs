@@ -36,7 +36,7 @@ public partial class RGFxMovieVideoOverlay : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// <summary>
     /// Function: UC_ConfirmUpgrade
     /// </summary>
-    public unsafe void UC_ConfirmUpgrade()
+    public unsafe virtual void UC_ConfirmUpgrade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieVideoOverlay.UC_ConfirmUpgrade", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RGFxMovieVideoOverlay : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// <summary>
     /// Function: UC_ShowUpgrade
     /// </summary>
-    public unsafe void UC_ShowUpgrade(bool bShow)
+    public unsafe virtual void UC_ShowUpgrade(bool bShow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieVideoOverlay.UC_ShowUpgrade", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RGFxMovieVideoOverlay : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// <summary>
     /// Function: UC_HighlightChoice
     /// </summary>
-    public unsafe void UC_HighlightChoice(int nUpgrade)
+    public unsafe virtual void UC_HighlightChoice(int nUpgrade)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieVideoOverlay.UC_HighlightChoice", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -71,7 +71,7 @@ public partial class RGFxMovieVideoOverlay : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// <summary>
     /// Function: UC_SetGauntletConnectionLost
     /// </summary>
-    public unsafe void UC_SetGauntletConnectionLost()
+    public unsafe virtual void UC_SetGauntletConnectionLost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieVideoOverlay.UC_SetGauntletConnectionLost", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RGFxMovieVideoOverlay : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// <summary>
     /// Function: UC_SetGauntletConnectionFailed
     /// </summary>
-    public unsafe void UC_SetGauntletConnectionFailed()
+    public unsafe virtual void UC_SetGauntletConnectionFailed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieVideoOverlay.UC_SetGauntletConnectionFailed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RGFxMovieVideoOverlay : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// <summary>
     /// Function: UC_SetHeaderText
     /// </summary>
-    public unsafe void UC_SetHeaderText(BmSDK.FString HeaderText)
+    public unsafe virtual void UC_SetHeaderText(BmSDK.FString HeaderText)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieVideoOverlay.UC_SetHeaderText", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -105,7 +105,7 @@ public partial class RGFxMovieVideoOverlay : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// <summary>
     /// Function: UC_SetWaveformScale
     /// </summary>
-    public unsafe void UC_SetWaveformScale(float fAmplitude)
+    public unsafe virtual void UC_SetWaveformScale(float fAmplitude)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieVideoOverlay.UC_SetWaveformScale", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -117,7 +117,7 @@ public partial class RGFxMovieVideoOverlay : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// <summary>
     /// Function: UC_SetPortrait
     /// </summary>
-    public unsafe void UC_SetPortrait(BmSDK.FString sPortrait)
+    public unsafe virtual void UC_SetPortrait(BmSDK.FString sPortrait)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieVideoOverlay.UC_SetPortrait", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -129,7 +129,7 @@ public partial class RGFxMovieVideoOverlay : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// <summary>
     /// Function: UC_ShowPortraitAndWaveform
     /// </summary>
-    public unsafe void UC_ShowPortraitAndWaveform(bool bVisible)
+    public unsafe virtual void UC_ShowPortraitAndWaveform(bool bVisible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieVideoOverlay.UC_ShowPortraitAndWaveform", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -141,7 +141,7 @@ public partial class RGFxMovieVideoOverlay : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// <summary>
     /// Function: PollUpgradeChosen
     /// </summary>
-    public unsafe int PollUpgradeChosen()
+    public unsafe virtual int PollUpgradeChosen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieVideoOverlay.PollUpgradeChosen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -152,7 +152,7 @@ public partial class RGFxMovieVideoOverlay : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// <summary>
     /// Function: UC_SetBatmobileUpgradeParams
     /// </summary>
-    public unsafe void UC_SetBatmobileUpgradeParams(int GadgetState0, int GadgetState2, int GadgetState3, int GadgetState4)
+    public unsafe virtual void UC_SetBatmobileUpgradeParams(int GadgetState0, int GadgetState2, int GadgetState3, int GadgetState4)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieVideoOverlay.UC_SetBatmobileUpgradeParams", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -167,7 +167,7 @@ public partial class RGFxMovieVideoOverlay : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// <summary>
     /// Function: UC_SkipIntro
     /// </summary>
-    public unsafe void UC_SkipIntro()
+    public unsafe virtual void UC_SkipIntro()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieVideoOverlay.UC_SkipIntro", true);
         byte* paramsPtr = stackalloc byte[0];

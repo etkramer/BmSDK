@@ -71,7 +71,7 @@ public partial class RBatmobileMissile : BmSDK.BmGame.RBasicProjectile, BmSDK.IG
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, bool bPlayExplosionSound = default)
+    public unsafe override void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, bool bPlayExplosionSound = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileMissile.Explode", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -85,7 +85,7 @@ public partial class RBatmobileMissile : BmSDK.BmGame.RBasicProjectile, BmSDK.IG
     /// <summary>
     /// Function: ProcessNewTouch
     /// </summary>
-    public unsafe void ProcessNewTouch(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, BmSDK.Engine.PrimitiveComponent HitComponent)
+    public unsafe override void ProcessNewTouch(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, BmSDK.Engine.PrimitiveComponent HitComponent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileMissile.ProcessNewTouch", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -100,7 +100,7 @@ public partial class RBatmobileMissile : BmSDK.BmGame.RBasicProjectile, BmSDK.IG
     /// <summary>
     /// Function: ProcessTouch
     /// </summary>
-    public unsafe void ProcessTouch(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void ProcessTouch(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileMissile.ProcessTouch", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -114,7 +114,7 @@ public partial class RBatmobileMissile : BmSDK.BmGame.RBasicProjectile, BmSDK.IG
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileMissile.Tick", true);
         byte* paramsPtr = stackalloc byte[100];
@@ -126,7 +126,7 @@ public partial class RBatmobileMissile : BmSDK.BmGame.RBasicProjectile, BmSDK.IG
     /// <summary>
     /// Function: GetMissileTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMissileTargetLocation()
+    public unsafe virtual System.Numerics.Vector3 GetMissileTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileMissile.GetMissileTargetLocation", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -137,7 +137,7 @@ public partial class RBatmobileMissile : BmSDK.BmGame.RBasicProjectile, BmSDK.IG
     /// <summary>
     /// Function: StartHoming
     /// </summary>
-    public unsafe void StartHoming()
+    public unsafe virtual void StartHoming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileMissile.StartHoming", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -148,7 +148,7 @@ public partial class RBatmobileMissile : BmSDK.BmGame.RBasicProjectile, BmSDK.IG
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileMissile.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -159,7 +159,7 @@ public partial class RBatmobileMissile : BmSDK.BmGame.RBasicProjectile, BmSDK.IG
     /// <summary>
     /// Function: SetTarget
     /// </summary>
-    public unsafe void SetTarget(BmSDK.Engine.Actor tgt)
+    public unsafe override void SetTarget(BmSDK.Engine.Actor tgt)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileMissile.SetTarget", true);
         byte* paramsPtr = stackalloc byte[8];

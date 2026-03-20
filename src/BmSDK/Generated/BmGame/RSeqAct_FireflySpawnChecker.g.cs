@@ -47,7 +47,7 @@ public partial class RSeqAct_FireflySpawnChecker : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Function: FireOutputs
     /// </summary>
-    public unsafe void FireOutputs()
+    public unsafe virtual void FireOutputs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireflySpawnChecker.FireOutputs", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_FireflySpawnChecker : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Function: CheckInputs
     /// </summary>
-    public unsafe void CheckInputs()
+    public unsafe virtual void CheckInputs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireflySpawnChecker.CheckInputs", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RSeqAct_FireflySpawnChecker : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireflySpawnChecker.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RSeqAct_FireflySpawnChecker : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Function: GetEncounterState
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_FireflySpawnChecker.FireflyEncounterState GetEncounterState(int inEncounterIndex)
+    public unsafe virtual BmSDK.BmGame.RSeqAct_FireflySpawnChecker.FireflyEncounterState GetEncounterState(int inEncounterIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireflySpawnChecker.GetEncounterState", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -92,7 +92,7 @@ public partial class RSeqAct_FireflySpawnChecker : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Function: SetEncounterFlag
     /// </summary>
-    public unsafe bool SetEncounterFlag(int inEncounterIndex, BmSDK.BmGame.RSeqAct_FireflySpawnChecker.FireflyEncounterState encounterState, bool val = default, bool bAutoPan = default)
+    public unsafe virtual bool SetEncounterFlag(int inEncounterIndex, BmSDK.BmGame.RSeqAct_FireflySpawnChecker.FireflyEncounterState encounterState, bool val = default, bool bAutoPan = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireflySpawnChecker.SetEncounterFlag", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -107,7 +107,7 @@ public partial class RSeqAct_FireflySpawnChecker : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Function: IsEncounterFlagSet
     /// </summary>
-    public unsafe bool IsEncounterFlagSet(int inEncounterIndex, BmSDK.BmGame.RSeqAct_FireflySpawnChecker.FireflyEncounterState encounterState)
+    public unsafe virtual bool IsEncounterFlagSet(int inEncounterIndex, BmSDK.BmGame.RSeqAct_FireflySpawnChecker.FireflyEncounterState encounterState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireflySpawnChecker.IsEncounterFlagSet", true);
         byte* paramsPtr = stackalloc byte[28];

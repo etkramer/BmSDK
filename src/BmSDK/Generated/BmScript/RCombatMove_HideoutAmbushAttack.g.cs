@@ -71,7 +71,7 @@ public partial class RCombatMove_HideoutAmbushAttack : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_HideoutAmbushAttack.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_HideoutAmbushAttack : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: ShouldHitTarget
     /// </summary>
-    public unsafe bool ShouldHitTarget()
+    public unsafe override bool ShouldHitTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_HideoutAmbushAttack.ShouldHitTarget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RCombatMove_HideoutAmbushAttack : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: CanSeeTarget
     /// </summary>
-    public unsafe bool CanSeeTarget()
+    public unsafe virtual bool CanSeeTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_HideoutAmbushAttack.CanSeeTarget", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -104,7 +104,7 @@ public partial class RCombatMove_HideoutAmbushAttack : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: ChangeTargetToBatman
     /// </summary>
-    public unsafe void ChangeTargetToBatman()
+    public unsafe virtual void ChangeTargetToBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_HideoutAmbushAttack.ChangeTargetToBatman", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RCombatMove_HideoutAmbushAttack : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_HideoutAmbushAttack.Initialise", true);
         byte* paramsPtr = stackalloc byte[8];

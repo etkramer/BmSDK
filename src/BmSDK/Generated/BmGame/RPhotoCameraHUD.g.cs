@@ -71,7 +71,7 @@ public partial class RPhotoCameraHUD : BmSDK.Engine.HUD, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD()
+    public unsafe override void DrawHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoCameraHUD.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RPhotoCameraHUD : BmSDK.Engine.HUD, BmSDK.IGameObject
     /// <summary>
     /// Function: PostRender
     /// </summary>
-    public unsafe void PostRender()
+    public unsafe override void PostRender()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoCameraHUD.PostRender", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RPhotoCameraHUD : BmSDK.Engine.HUD, BmSDK.IGameObject
     /// <summary>
     /// Function: PreRender
     /// </summary>
-    public unsafe void PreRender()
+    public unsafe override void PreRender()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoCameraHUD.PreRender", true);
         byte* paramsPtr = stackalloc byte[0];

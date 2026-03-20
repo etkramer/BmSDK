@@ -71,7 +71,7 @@ public partial class RAEC_BankFearStartle : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BankFearStartle.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RAEC_BankFearStartle : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: FearTakedownStartle
     /// </summary>
-    public unsafe void FearTakedownStartle(BmSDK.BmGame.RPawnVillain Screamer, BmSDK.Engine.Actor ForceMissActor)
+    public unsafe virtual void FearTakedownStartle(BmSDK.BmGame.RPawnVillain Screamer, BmSDK.Engine.Actor ForceMissActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BankFearStartle.FearTakedownStartle", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -96,7 +96,7 @@ public partial class RAEC_BankFearStartle : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: AddGunStartled
     /// </summary>
-    public unsafe void AddGunStartled(BmSDK.BmGame.RBMAIController NewCon, System.Numerics.Vector3 StartleLoc, BmSDK.Engine.Actor ForceMissActor)
+    public unsafe virtual void AddGunStartled(BmSDK.BmGame.RBMAIController NewCon, System.Numerics.Vector3 StartleLoc, BmSDK.Engine.Actor ForceMissActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BankFearStartle.AddGunStartled", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -110,7 +110,7 @@ public partial class RAEC_BankFearStartle : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: WantsToGlanceAt
     /// </summary>
-    public unsafe bool WantsToGlanceAt(BmSDK.Engine.Actor TestTarget)
+    public unsafe override bool WantsToGlanceAt(BmSDK.Engine.Actor TestTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BankFearStartle.WantsToGlanceAt", true);
         byte* paramsPtr = stackalloc byte[12];

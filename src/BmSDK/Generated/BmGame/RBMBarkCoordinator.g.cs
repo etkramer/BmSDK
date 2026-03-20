@@ -113,7 +113,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DecreaseDialogueFrequency
     /// </summary>
-    public unsafe void DecreaseDialogueFrequency()
+    public unsafe virtual void DecreaseDialogueFrequency()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.DecreaseDialogueFrequency", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -124,7 +124,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetMinRandomBarkTime
     /// </summary>
-    public unsafe void SetMinRandomBarkTime(float NewMin)
+    public unsafe virtual void SetMinRandomBarkTime(float NewMin)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.SetMinRandomBarkTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -136,7 +136,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: InstigateRandomBark
     /// </summary>
-    public unsafe void InstigateRandomBark()
+    public unsafe virtual void InstigateRandomBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.InstigateRandomBark", true);
         byte* paramsPtr = stackalloc byte[112];
@@ -158,7 +158,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DumpStateToLog
     /// </summary>
-    public unsafe void DumpStateToLog()
+    public unsafe virtual void DumpStateToLog()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.DumpStateToLog", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -169,7 +169,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PawnDied
     /// </summary>
-    public unsafe void PawnDied(BmSDK.BmGame.RPawnVillain DeadPawn)
+    public unsafe virtual void PawnDied(BmSDK.BmGame.RPawnVillain DeadPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.PawnDied", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -181,7 +181,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FreeLock
     /// </summary>
-    public unsafe void FreeLock(BmSDK.GameObject ExLockee)
+    public unsafe virtual void FreeLock(BmSDK.GameObject ExLockee)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.FreeLock", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -193,7 +193,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetLock
     /// </summary>
-    public unsafe void SetLock(BmSDK.GameObject NewLockee)
+    public unsafe virtual void SetLock(BmSDK.GameObject NewLockee)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.SetLock", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -205,7 +205,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DialogueLockedByObjectOfClass
     /// </summary>
-    public unsafe bool DialogueLockedByObjectOfClass(BmSDK.Class TestClass)
+    public unsafe virtual bool DialogueLockedByObjectOfClass(BmSDK.Class TestClass)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.DialogueLockedByObjectOfClass", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -224,7 +224,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DialogueLockedBySpecificObject
     /// </summary>
-    public unsafe bool DialogueLockedBySpecificObject(BmSDK.GameObject Obj)
+    public unsafe virtual bool DialogueLockedBySpecificObject(BmSDK.GameObject Obj)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.DialogueLockedBySpecificObject", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -236,7 +236,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DialogueLockedBySpecificEvent
     /// </summary>
-    public unsafe bool DialogueLockedBySpecificEvent(BmSDK.BmGame.RAlertEventCoordinatorBase Event)
+    public unsafe virtual bool DialogueLockedBySpecificEvent(BmSDK.BmGame.RAlertEventCoordinatorBase Event)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.DialogueLockedBySpecificEvent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -261,7 +261,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddLocationFlags
     /// </summary>
-    public unsafe void AddLocationFlags(BmSDK.Engine.Actor Subject, out BmSDK.BmGame.RBarkFlagBase ContextFlags)
+    public unsafe virtual void AddLocationFlags(BmSDK.Engine.Actor Subject, out BmSDK.BmGame.RBarkFlagBase ContextFlags)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.AddLocationFlags", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -274,7 +274,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLocationFlag
     /// </summary>
-    public unsafe BmSDK.FName GetLocationFlag(BmSDK.Engine.Actor Subject)
+    public unsafe virtual BmSDK.FName GetLocationFlag(BmSDK.Engine.Actor Subject)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.GetLocationFlag", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -286,7 +286,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanPlayBark
     /// </summary>
-    public unsafe bool CanPlayBark()
+    public unsafe virtual bool CanPlayBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.CanPlayBark", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -297,7 +297,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StopCurrentConversationIfPawnInvolved
     /// </summary>
-    public unsafe void StopCurrentConversationIfPawnInvolved(BmSDK.BmGame.RPawnVillain Pawn)
+    public unsafe virtual void StopCurrentConversationIfPawnInvolved(BmSDK.BmGame.RPawnVillain Pawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.StopCurrentConversationIfPawnInvolved", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -309,7 +309,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StopCurrentConversation
     /// </summary>
-    public unsafe void StopCurrentConversation(bool bHardStop = default)
+    public unsafe virtual void StopCurrentConversation(bool bHardStop = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.StopCurrentConversation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -321,7 +321,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyPawnDestroyed
     /// </summary>
-    public unsafe void NotifyPawnDestroyed(BmSDK.BmGame.RPawnVillain Pawn)
+    public unsafe virtual void NotifyPawnDestroyed(BmSDK.BmGame.RPawnVillain Pawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.NotifyPawnDestroyed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -333,7 +333,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StartBarkConvo
     /// </summary>
-    public unsafe void StartBarkConvo(BmSDK.BmGame.RBarkConvo NewBarkConvo, BmSDK.BmGame.RBarkGroupContext BGC, bool bOrphan = default, System.IntPtr NewBarkFinished = default)
+    public unsafe virtual void StartBarkConvo(BmSDK.BmGame.RBarkConvo NewBarkConvo, BmSDK.BmGame.RBarkGroupContext BGC, bool bOrphan = default, System.IntPtr NewBarkFinished = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.StartBarkConvo", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -348,7 +348,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayBarkConvoForContext
     /// </summary>
-    public unsafe bool PlayBarkConvoForContext(BmSDK.TArray<BmSDK.Engine.Actor> OrderedSpeakerList, BmSDK.BmGame.RAlertEventCoordinatorBase NewOwningEvent, BmSDK.BmGame.RBarkFlagBase ContextFlags, BmSDK.BmGame.RBarkGroupContext GroupContext, System.IntPtr NewBarkFinished, bool bOrphan, out BmSDK.BmGame.RBarkFlagBase UsedLineContext, out int bFoundSomethingThatMatchedFlags)
+    public unsafe virtual bool PlayBarkConvoForContext(BmSDK.TArray<BmSDK.Engine.Actor> OrderedSpeakerList, BmSDK.BmGame.RAlertEventCoordinatorBase NewOwningEvent, BmSDK.BmGame.RBarkFlagBase ContextFlags, BmSDK.BmGame.RBarkGroupContext GroupContext, System.IntPtr NewBarkFinished, bool bOrphan, out BmSDK.BmGame.RBarkFlagBase UsedLineContext, out int bFoundSomethingThatMatchedFlags)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.PlayBarkConvoForContext", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -367,7 +367,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBarkFromFlagsAndSpeakers
     /// </summary>
-    public unsafe BmSDK.BmGame.RBarkConvo GetBarkFromFlagsAndSpeakers(BmSDK.BmGame.RBarkFlagBase ContextFlags, BmSDK.TArray<BmSDK.Engine.Actor> OrderedSpeakerList, out float Score, out int bFoundSomethingThatMatchedFlags)
+    public unsafe virtual BmSDK.BmGame.RBarkConvo GetBarkFromFlagsAndSpeakers(BmSDK.BmGame.RBarkFlagBase ContextFlags, BmSDK.TArray<BmSDK.Engine.Actor> OrderedSpeakerList, out float Score, out int bFoundSomethingThatMatchedFlags)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.GetBarkFromFlagsAndSpeakers", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -382,7 +382,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PawnPlayBark
     /// </summary>
-    public unsafe bool PawnPlayBark(BmSDK.BmGame.RPawnVillain Speaker, BmSDK.BmGame.RBarkFlagBase ContextFlags, BmSDK.BmGame.RBarkGroupContext GroupContext = default)
+    public unsafe virtual bool PawnPlayBark(BmSDK.BmGame.RPawnVillain Speaker, BmSDK.BmGame.RBarkFlagBase ContextFlags, BmSDK.BmGame.RBarkGroupContext GroupContext = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.PawnPlayBark", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -396,7 +396,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PawnIsCurrentSpeaker
     /// </summary>
-    public unsafe bool PawnIsCurrentSpeaker(BmSDK.BmGame.RPawnVillain TestPawn)
+    public unsafe virtual bool PawnIsCurrentSpeaker(BmSDK.BmGame.RPawnVillain TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.PawnIsCurrentSpeaker", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -408,7 +408,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HasBarksToPlay
     /// </summary>
-    public unsafe bool HasBarksToPlay()
+    public unsafe virtual bool HasBarksToPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.HasBarksToPlay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -419,7 +419,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetLastSpeechTime
     /// </summary>
-    public unsafe void ResetLastSpeechTime()
+    public unsafe virtual void ResetLastSpeechTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.ResetLastSpeechTime", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -430,7 +430,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DialogueLocked
     /// </summary>
-    public unsafe bool DialogueLocked()
+    public unsafe virtual bool DialogueLocked()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.DialogueLocked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -448,7 +448,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HasRunningBarks
     /// </summary>
-    public unsafe bool HasRunningBarks()
+    public unsafe virtual bool HasRunningBarks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.HasRunningBarks", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -510,7 +510,7 @@ public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBarkConvo
     /// </summary>
-    public unsafe BmSDK.BmGame.RBarkConvo GetBarkConvo(BmSDK.BmGame.RPawnVillain Barker, BmSDK.BmGame.RBarkFlagBase ContextFlags)
+    public unsafe virtual BmSDK.BmGame.RBarkConvo GetBarkConvo(BmSDK.BmGame.RPawnVillain Barker, BmSDK.BmGame.RBarkFlagBase ContextFlags)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBarkCoordinator.GetBarkConvo", true);
         byte* paramsPtr = stackalloc byte[24];

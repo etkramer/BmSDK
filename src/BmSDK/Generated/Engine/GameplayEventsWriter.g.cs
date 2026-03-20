@@ -36,7 +36,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: RecordCoverLinkFireLinks
     /// </summary>
-    public unsafe int RecordCoverLinkFireLinks(BmSDK.Engine.CoverLink Link, BmSDK.Engine.Controller Player)
+    public unsafe override int RecordCoverLinkFireLinks(BmSDK.Engine.CoverLink Link, BmSDK.Engine.Controller Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.RecordCoverLinkFireLinks", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -49,7 +49,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: RecordAIPathFail
     /// </summary>
-    public unsafe void RecordAIPathFail(BmSDK.Engine.Controller AI, BmSDK.FString Reason, System.Numerics.Vector3 Dest)
+    public unsafe override void RecordAIPathFail(BmSDK.Engine.Controller AI, BmSDK.FString Reason, System.Numerics.Vector3 Dest)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.RecordAIPathFail", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -63,7 +63,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: GetGenericParamListEntry
     /// </summary>
-    public unsafe BmSDK.Engine.GenericParamListStatEntry GetGenericParamListEntry()
+    public unsafe virtual BmSDK.Engine.GenericParamListStatEntry GetGenericParamListEntry()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.GetGenericParamListEntry", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -81,7 +81,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: LogSystemPollEvents
     /// </summary>
-    public unsafe void LogSystemPollEvents()
+    public unsafe override void LogSystemPollEvents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.LogSystemPollEvents", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -99,7 +99,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: LogProjectileIntEvent
     /// </summary>
-    public unsafe void LogProjectileIntEvent(int EventID, BmSDK.Engine.Controller Player, BmSDK.Class Proj, int Value)
+    public unsafe override void LogProjectileIntEvent(int EventID, BmSDK.Engine.Controller Player, BmSDK.Class Proj, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.LogProjectileIntEvent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -121,7 +121,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: LogDamageEvent
     /// </summary>
-    public unsafe void LogDamageEvent(int EventID, BmSDK.Engine.Controller Player, BmSDK.Class dmgType, BmSDK.Engine.Controller Target, int Amount)
+    public unsafe override void LogDamageEvent(int EventID, BmSDK.Engine.Controller Player, BmSDK.Class dmgType, BmSDK.Engine.Controller Target, int Amount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.LogDamageEvent", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -144,7 +144,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: LogWeaponIntEvent
     /// </summary>
-    public unsafe void LogWeaponIntEvent(int EventID, BmSDK.Engine.Controller Player, BmSDK.Class WeaponClass, int Value)
+    public unsafe override void LogWeaponIntEvent(int EventID, BmSDK.Engine.Controller Player, BmSDK.Class WeaponClass, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.LogWeaponIntEvent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -166,7 +166,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: LogPlayerPlayerEvent
     /// </summary>
-    public unsafe void LogPlayerPlayerEvent(int EventID, BmSDK.Engine.Controller Player, BmSDK.Engine.Controller Target)
+    public unsafe override void LogPlayerPlayerEvent(int EventID, BmSDK.Engine.Controller Player, BmSDK.Engine.Controller Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.LogPlayerPlayerEvent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -187,7 +187,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: LogPlayerKillDeath
     /// </summary>
-    public unsafe void LogPlayerKillDeath(int EventID, int KillType, BmSDK.Engine.Controller Killer, BmSDK.Class dmgType, BmSDK.Engine.Controller Dead)
+    public unsafe override void LogPlayerKillDeath(int EventID, int KillType, BmSDK.Engine.Controller Killer, BmSDK.Class dmgType, BmSDK.Engine.Controller Dead)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.LogPlayerKillDeath", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -210,7 +210,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: LogAllPlayerPositionsEvent
     /// </summary>
-    public unsafe void LogAllPlayerPositionsEvent(int EventID)
+    public unsafe override void LogAllPlayerPositionsEvent(int EventID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.LogAllPlayerPositionsEvent", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -229,7 +229,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: LogPlayerLoginChange
     /// </summary>
-    public unsafe void LogPlayerLoginChange(int EventID, BmSDK.Engine.Controller Player, BmSDK.FString PlayerName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID, bool bSplitScreen)
+    public unsafe override void LogPlayerLoginChange(int EventID, BmSDK.Engine.Controller Player, BmSDK.FString PlayerName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID, bool bSplitScreen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.LogPlayerLoginChange", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -252,7 +252,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: LogPlayerSpawnEvent
     /// </summary>
-    public unsafe void LogPlayerSpawnEvent(int EventID, BmSDK.Engine.Controller Player, BmSDK.Class PawnClass, int TeamID)
+    public unsafe override void LogPlayerSpawnEvent(int EventID, BmSDK.Engine.Controller Player, BmSDK.Class PawnClass, int TeamID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.LogPlayerSpawnEvent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -274,7 +274,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: LogPlayerStringEvent
     /// </summary>
-    public unsafe void LogPlayerStringEvent(int EventID, BmSDK.Engine.Controller Player, BmSDK.FString EventString)
+    public unsafe override void LogPlayerStringEvent(int EventID, BmSDK.Engine.Controller Player, BmSDK.FString EventString)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.LogPlayerStringEvent", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -295,7 +295,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: LogPlayerFloatEvent
     /// </summary>
-    public unsafe void LogPlayerFloatEvent(int EventID, BmSDK.Engine.Controller Player, float Value)
+    public unsafe override void LogPlayerFloatEvent(int EventID, BmSDK.Engine.Controller Player, float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.LogPlayerFloatEvent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -316,7 +316,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: LogPlayerIntEvent
     /// </summary>
-    public unsafe void LogPlayerIntEvent(int EventID, BmSDK.Engine.Controller Player, int Value)
+    public unsafe override void LogPlayerIntEvent(int EventID, BmSDK.Engine.Controller Player, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.LogPlayerIntEvent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -337,7 +337,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: LogTeamStringEvent
     /// </summary>
-    public unsafe void LogTeamStringEvent(int EventID, BmSDK.Engine.TeamInfo Team, BmSDK.FString Value)
+    public unsafe override void LogTeamStringEvent(int EventID, BmSDK.Engine.TeamInfo Team, BmSDK.FString Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.LogTeamStringEvent", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -358,7 +358,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: LogTeamFloatEvent
     /// </summary>
-    public unsafe void LogTeamFloatEvent(int EventID, BmSDK.Engine.TeamInfo Team, float Value)
+    public unsafe override void LogTeamFloatEvent(int EventID, BmSDK.Engine.TeamInfo Team, float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.LogTeamFloatEvent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -379,7 +379,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: LogTeamIntEvent
     /// </summary>
-    public unsafe void LogTeamIntEvent(int EventID, BmSDK.Engine.TeamInfo Team, int Value)
+    public unsafe override void LogTeamIntEvent(int EventID, BmSDK.Engine.TeamInfo Team, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.LogTeamIntEvent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -400,7 +400,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: LogGamePositionEvent
     /// </summary>
-    public unsafe void LogGamePositionEvent(int EventID, out System.Numerics.Vector3 Position, float Value)
+    public unsafe override void LogGamePositionEvent(int EventID, out System.Numerics.Vector3 Position, float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.LogGamePositionEvent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -421,7 +421,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: LogGameFloatEvent
     /// </summary>
-    public unsafe void LogGameFloatEvent(int EventID, float Value)
+    public unsafe override void LogGameFloatEvent(int EventID, float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.LogGameFloatEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -441,7 +441,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: LogGameStringEvent
     /// </summary>
-    public unsafe void LogGameStringEvent(int EventID, BmSDK.FString Value)
+    public unsafe override void LogGameStringEvent(int EventID, BmSDK.FString Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.LogGameStringEvent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -461,7 +461,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: LogGameIntEvent
     /// </summary>
-    public unsafe void LogGameIntEvent(int EventID, int Value)
+    public unsafe override void LogGameIntEvent(int EventID, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.LogGameIntEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -481,7 +481,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: EndLogging
     /// </summary>
-    public unsafe void EndLogging()
+    public unsafe override void EndLogging()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.EndLogging", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -499,7 +499,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: ResetLogging
     /// </summary>
-    public unsafe void ResetLogging(float HeartbeatDelta = default)
+    public unsafe override void ResetLogging(float HeartbeatDelta = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.ResetLogging", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -518,7 +518,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: StartLogging
     /// </summary>
-    public unsafe void StartLogging(float HeartbeatDelta = default)
+    public unsafe override void StartLogging(float HeartbeatDelta = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.StartLogging", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -537,7 +537,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: SerializeFooter
     /// </summary>
-    public unsafe bool SerializeFooter()
+    public unsafe virtual bool SerializeFooter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.SerializeFooter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -555,7 +555,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: SerializeHeader
     /// </summary>
-    public unsafe bool SerializeHeader()
+    public unsafe virtual bool SerializeHeader()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.SerializeHeader", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -573,7 +573,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: CloseStatsFile
     /// </summary>
-    public unsafe void CloseStatsFile()
+    public unsafe override void CloseStatsFile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.CloseStatsFile", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -591,7 +591,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: OpenStatsFile
     /// </summary>
-    public unsafe bool OpenStatsFile(BmSDK.FString Filename)
+    public unsafe override bool OpenStatsFile(BmSDK.FString Filename)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.OpenStatsFile", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -610,7 +610,7 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// Function: ResolvePlayerIndex
     /// </summary>
-    public unsafe int ResolvePlayerIndex(BmSDK.Engine.Controller Player)
+    public unsafe virtual int ResolvePlayerIndex(BmSDK.Engine.Controller Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsWriter.ResolvePlayerIndex", true);
         byte* paramsPtr = stackalloc byte[12];

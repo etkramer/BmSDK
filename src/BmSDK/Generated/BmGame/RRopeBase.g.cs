@@ -71,7 +71,7 @@ public partial class RRopeBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnCutRopeFX
     /// </summary>
-    public unsafe void SpawnCutRopeFX(System.Numerics.Vector3 CutPos)
+    public unsafe virtual void SpawnCutRopeFX(System.Numerics.Vector3 CutPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeBase.SpawnCutRopeFX", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -83,7 +83,7 @@ public partial class RRopeBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeBase.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[97];
@@ -101,7 +101,7 @@ public partial class RRopeBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBatarangSpeedBoost
     /// </summary>
-    public unsafe float GetBatarangSpeedBoost()
+    public unsafe virtual float GetBatarangSpeedBoost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeBase.GetBatarangSpeedBoost", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -112,7 +112,7 @@ public partial class RRopeBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ForceHitAtEndOfFlight
     /// </summary>
-    public unsafe bool ForceHitAtEndOfFlight()
+    public unsafe virtual bool ForceHitAtEndOfFlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeBase.ForceHitAtEndOfFlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -123,7 +123,7 @@ public partial class RRopeBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBatarangPriority
     /// </summary>
-    public unsafe float GetBatarangPriority()
+    public unsafe virtual float GetBatarangPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeBase.GetBatarangPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -134,7 +134,7 @@ public partial class RRopeBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsBatarangable
     /// </summary>
-    public unsafe bool IsBatarangable()
+    public unsafe virtual bool IsBatarangable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeBase.IsBatarangable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -145,7 +145,7 @@ public partial class RRopeBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBatarangTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
+    public unsafe virtual System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeBase.GetBatarangTargetPosition", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -159,7 +159,7 @@ public partial class RRopeBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeBase.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -171,7 +171,7 @@ public partial class RRopeBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeBase.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -183,7 +183,7 @@ public partial class RRopeBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -194,7 +194,7 @@ public partial class RRopeBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnDestroy
     /// </summary>
-    public unsafe void OnDestroy(BmSDK.Engine.SeqAct_Destroy Action)
+    public unsafe override void OnDestroy(BmSDK.Engine.SeqAct_Destroy Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeBase.OnDestroy", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -206,7 +206,7 @@ public partial class RRopeBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: JoinRope
     /// </summary>
-    public unsafe void JoinRope(BmSDK.BmGame.RRopeBase OtherRope, BmSDK.BmGame.RRopeComponentBase.ERopeEndType ThisRopeJoinEnd, BmSDK.BmGame.RRopeComponentBase.ERopeEndType OtherRopeJoinEnd)
+    public unsafe virtual void JoinRope(BmSDK.BmGame.RRopeBase OtherRope, BmSDK.BmGame.RRopeComponentBase.ERopeEndType ThisRopeJoinEnd, BmSDK.BmGame.RRopeComponentBase.ERopeEndType OtherRopeJoinEnd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeBase.JoinRope", true);
         byte* paramsPtr = stackalloc byte[10];
@@ -227,7 +227,7 @@ public partial class RRopeBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SplitRope
     /// </summary>
-    public unsafe BmSDK.BmGame.RRopeBase SplitRope(float SplitPos, BmSDK.BmGame.RRopeComponentBase.ERopeEndType MeasurementRopeEnd, out BmSDK.BmGame.RRopeComponentBase.ERopeEndType ThisSplitEnd)
+    public unsafe virtual BmSDK.BmGame.RRopeBase SplitRope(float SplitPos, BmSDK.BmGame.RRopeComponentBase.ERopeEndType MeasurementRopeEnd, out BmSDK.BmGame.RRopeComponentBase.ERopeEndType ThisSplitEnd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeBase.SplitRope", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -248,7 +248,7 @@ public partial class RRopeBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AlignRagdollYaw
     /// </summary>
-    public unsafe void AlignRagdollYaw(System.Numerics.Vector3 FwdDir, float Torque, BmSDK.Engine.SkeletalMeshComponent Ragdoll)
+    public unsafe virtual void AlignRagdollYaw(System.Numerics.Vector3 FwdDir, float Torque, BmSDK.Engine.SkeletalMeshComponent Ragdoll)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeBase.AlignRagdollYaw", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -269,7 +269,7 @@ public partial class RRopeBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ConstrainRagdollToBoxXY
     /// </summary>
-    public unsafe void ConstrainRagdollToBoxXY(System.Numerics.Vector3 BoxPos, System.Numerics.Vector3 BoxDir, float BoxRadius, BmSDK.Engine.SkeletalMeshComponent Ragdoll)
+    public unsafe virtual void ConstrainRagdollToBoxXY(System.Numerics.Vector3 BoxPos, System.Numerics.Vector3 BoxDir, float BoxRadius, BmSDK.Engine.SkeletalMeshComponent Ragdoll)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeBase.ConstrainRagdollToBoxXY", true);
         byte* paramsPtr = stackalloc byte[36];

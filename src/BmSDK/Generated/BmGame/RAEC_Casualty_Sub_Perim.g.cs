@@ -71,7 +71,7 @@ public partial class RAEC_Casualty_Sub_Perim : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: CanReassign
     /// </summary>
-    public unsafe bool CanReassign()
+    public unsafe virtual bool CanReassign()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Perim.CanReassign", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RAEC_Casualty_Sub_Perim : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: IsAtPerimeter
     /// </summary>
-    public unsafe bool IsAtPerimeter()
+    public unsafe virtual bool IsAtPerimeter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Perim.IsAtPerimeter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RAEC_Casualty_Sub_Perim : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: ReAssign
     /// </summary>
-    public unsafe void ReAssign(System.Numerics.Vector3 NewPoint, BmSDK.TArray<System.Numerics.Vector3> WatchPoint)
+    public unsafe virtual void ReAssign(System.Numerics.Vector3 NewPoint, BmSDK.TArray<System.Numerics.Vector3> WatchPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Perim.ReAssign", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -106,7 +106,7 @@ public partial class RAEC_Casualty_Sub_Perim : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: AssignPosition
     /// </summary>
-    public unsafe void AssignPosition(System.Numerics.Vector3 NewCentre, System.Numerics.Vector3 PeekAimPos, System.Numerics.Vector3 NewStandPos, BmSDK.TArray<System.Numerics.Vector3> WatchPoint)
+    public unsafe virtual void AssignPosition(System.Numerics.Vector3 NewCentre, System.Numerics.Vector3 PeekAimPos, System.Numerics.Vector3 NewStandPos, BmSDK.TArray<System.Numerics.Vector3> WatchPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Perim.AssignPosition", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -121,7 +121,7 @@ public partial class RAEC_Casualty_Sub_Perim : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: NotifyEvent
     /// </summary>
-    public unsafe void NotifyEvent(BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
+    public unsafe override void NotifyEvent(BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Perim.NotifyEvent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -134,7 +134,7 @@ public partial class RAEC_Casualty_Sub_Perim : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Perim.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -146,7 +146,7 @@ public partial class RAEC_Casualty_Sub_Perim : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Perim.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -158,7 +158,7 @@ public partial class RAEC_Casualty_Sub_Perim : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: GetAIThoughts
     /// </summary>
-    public unsafe void GetAIThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetAIThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Perim.GetAIThoughts", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -170,7 +170,7 @@ public partial class RAEC_Casualty_Sub_Perim : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Perim.Tick", true);
         byte* paramsPtr = stackalloc byte[4];

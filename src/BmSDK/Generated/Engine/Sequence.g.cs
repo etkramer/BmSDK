@@ -36,7 +36,7 @@ public partial class Sequence : BmSDK.Engine.SequenceOp, BmSDK.IGameObject
     /// <summary>
     /// Function: SetEnabled
     /// </summary>
-    public unsafe void SetEnabled(bool bInEnabled)
+    public unsafe virtual void SetEnabled(bool bInEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Sequence.SetEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -55,7 +55,7 @@ public partial class Sequence : BmSDK.Engine.SequenceOp, BmSDK.IGameObject
     /// <summary>
     /// Function: Reset
     /// </summary>
-    public unsafe void Reset()
+    public unsafe override void Reset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Sequence.Reset", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -66,7 +66,7 @@ public partial class Sequence : BmSDK.Engine.SequenceOp, BmSDK.IGameObject
     /// <summary>
     /// Function: FindSeqObjectsByName
     /// </summary>
-    public unsafe void FindSeqObjectsByName(BmSDK.FString SeqObjName, bool bCheckComment, out BmSDK.TArray<BmSDK.Engine.SequenceObject> OutputObjects, bool bRecursive = default, bool bUseFullLevelName = default)
+    public unsafe virtual void FindSeqObjectsByName(BmSDK.FString SeqObjName, bool bCheckComment, out BmSDK.TArray<BmSDK.Engine.SequenceObject> OutputObjects, bool bRecursive = default, bool bUseFullLevelName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Sequence.FindSeqObjectsByName", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -89,7 +89,7 @@ public partial class Sequence : BmSDK.Engine.SequenceOp, BmSDK.IGameObject
     /// <summary>
     /// Function: FindSeqObjectsByClass
     /// </summary>
-    public unsafe void FindSeqObjectsByClass(BmSDK.Class DesiredClass, bool bRecursive, out BmSDK.TArray<BmSDK.Engine.SequenceObject> OutputObjects)
+    public unsafe virtual void FindSeqObjectsByClass(BmSDK.Class DesiredClass, bool bRecursive, out BmSDK.TArray<BmSDK.Engine.SequenceObject> OutputObjects)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Sequence.FindSeqObjectsByClass", true);
         byte* paramsPtr = stackalloc byte[28];

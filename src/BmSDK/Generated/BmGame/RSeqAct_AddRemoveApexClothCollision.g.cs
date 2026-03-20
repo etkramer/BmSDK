@@ -47,7 +47,7 @@ public partial class RSeqAct_AddRemoveApexClothCollision : BmSDK.Engine.Sequence
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AddRemoveApexClothCollision.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_AddRemoveApexClothCollision : BmSDK.Engine.Sequence
     /// <summary>
     /// Function: RemoveClothCollision
     /// </summary>
-    public unsafe void RemoveClothCollision()
+    public unsafe virtual void RemoveClothCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AddRemoveApexClothCollision.RemoveClothCollision", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -76,7 +76,7 @@ public partial class RSeqAct_AddRemoveApexClothCollision : BmSDK.Engine.Sequence
     /// <summary>
     /// Function: AddClothCollision
     /// </summary>
-    public unsafe void AddClothCollision()
+    public unsafe virtual void AddClothCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AddRemoveApexClothCollision.AddClothCollision", true);
         byte* paramsPtr = stackalloc byte[0];

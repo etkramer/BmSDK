@@ -71,7 +71,7 @@ public partial class RPawnPlayerCatwoman_Riddler : BmSDK.BmScript.RPawnPlayerCat
     /// <summary>
     /// Function: CatCollarExplode
     /// </summary>
-    public unsafe void CatCollarExplode()
+    public unsafe virtual void CatCollarExplode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerCatwoman_Riddler.CatCollarExplode", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RPawnPlayerCatwoman_Riddler : BmSDK.BmScript.RPawnPlayerCat
     /// <summary>
     /// Function: UpdateCatCollar
     /// </summary>
-    public unsafe void UpdateCatCollar()
+    public unsafe virtual void UpdateCatCollar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerCatwoman_Riddler.UpdateCatCollar", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RPawnPlayerCatwoman_Riddler : BmSDK.BmScript.RPawnPlayerCat
     /// <summary>
     /// Function: UnPossessed
     /// </summary>
-    public unsafe void UnPossessed()
+    public unsafe override void UnPossessed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerCatwoman_Riddler.UnPossessed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RPawnPlayerCatwoman_Riddler : BmSDK.BmScript.RPawnPlayerCat
     /// <summary>
     /// Function: PossessedBy
     /// </summary>
-    public unsafe void PossessedBy(BmSDK.Engine.Controller C, bool bVehicleTransition)
+    public unsafe override void PossessedBy(BmSDK.Engine.Controller C, bool bVehicleTransition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerCatwoman_Riddler.PossessedBy", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -117,7 +117,7 @@ public partial class RPawnPlayerCatwoman_Riddler : BmSDK.BmScript.RPawnPlayerCat
     /// <summary>
     /// Function: AddDefaultInventory
     /// </summary>
-    public unsafe void AddDefaultInventory()
+    public unsafe override void AddDefaultInventory()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerCatwoman_Riddler.AddDefaultInventory", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -128,7 +128,7 @@ public partial class RPawnPlayerCatwoman_Riddler : BmSDK.BmScript.RPawnPlayerCat
     /// <summary>
     /// Function: SetNoCollarOverlays
     /// </summary>
-    public unsafe void SetNoCollarOverlays()
+    public unsafe virtual void SetNoCollarOverlays()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerCatwoman_Riddler.SetNoCollarOverlays", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RPawnPlayerCatwoman_Riddler : BmSDK.BmScript.RPawnPlayerCat
     /// <summary>
     /// Function: RemoveCollar
     /// </summary>
-    public unsafe void RemoveCollar()
+    public unsafe virtual void RemoveCollar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerCatwoman_Riddler.RemoveCollar", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class RPawnPlayerCatwoman_Riddler : BmSDK.BmScript.RPawnPlayerCat
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerCatwoman_Riddler.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

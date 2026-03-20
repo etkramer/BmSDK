@@ -36,7 +36,7 @@ public partial class RCapeRenderingComponent : BmSDK.Engine.ActorComponent, BmSD
     /// <summary>
     /// Function: HandleDebugLineDrawing
     /// </summary>
-    public unsafe void HandleDebugLineDrawing()
+    public unsafe virtual void HandleDebugLineDrawing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeRenderingComponent.HandleDebugLineDrawing", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// <summary>
     /// Function: CanLookAtPoint
     /// </summary>
-    public unsafe bool CanLookAtPoint(System.Numerics.Vector3 PointLoc, bool bDrawDebugInfo = default, bool bDebugUsePersistentLines = default, bool bDebugFlushLinesFirst = default)
+    public unsafe virtual bool CanLookAtPoint(System.Numerics.Vector3 PointLoc, bool bDrawDebugInfo = default, bool bDebugUsePersistentLines = default, bool bDebugFlushLinesFirst = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkelControlLookAt.CanLookAtPoint", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -58,7 +58,7 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// <summary>
     /// Function: SetLookAtAlpha
     /// </summary>
-    public unsafe void SetLookAtAlpha(float DesiredAlpha, float DesiredBlendTime)
+    public unsafe virtual void SetLookAtAlpha(float DesiredAlpha, float DesiredBlendTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkelControlLookAt.SetLookAtAlpha", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -78,7 +78,7 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// <summary>
     /// Function: InterpolateTargetLocation
     /// </summary>
-    public unsafe void InterpolateTargetLocation(float DeltaTime)
+    public unsafe virtual void InterpolateTargetLocation(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkelControlLookAt.InterpolateTargetLocation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -97,7 +97,7 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// <summary>
     /// Function: SetTargetLocation
     /// </summary>
-    public unsafe void SetTargetLocation(System.Numerics.Vector3 NewTargetLocation)
+    public unsafe virtual void SetTargetLocation(System.Numerics.Vector3 NewTargetLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkelControlLookAt.SetTargetLocation", true);
         byte* paramsPtr = stackalloc byte[12];

@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_Terrified : BmSDK.BmGame.RAEC_Search_Sub, B
     /// <summary>
     /// Function: GetCurrentForward
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCurrentForward()
+    public unsafe virtual System.Numerics.Vector3 GetCurrentForward()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Terrified.GetCurrentForward", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Sub_Terrified : BmSDK.BmGame.RAEC_Search_Sub, B
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Terrified.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RAEC_Search_Sub_Terrified : BmSDK.BmGame.RAEC_Search_Sub, B
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Terrified.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RAEC_Search_Sub_Terrified : BmSDK.BmGame.RAEC_Search_Sub, B
     /// <summary>
     /// Function: RestartAfterFollowSplit
     /// </summary>
-    public unsafe void RestartAfterFollowSplit(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe virtual void RestartAfterFollowSplit(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Terrified.RestartAfterFollowSplit", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RAEC_Search_Sub_Terrified : BmSDK.BmGame.RAEC_Search_Sub, B
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Terrified.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RAEC_Search_Sub_Terrified : BmSDK.BmGame.RAEC_Search_Sub, B
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Terrified.Tick", true);
         byte* paramsPtr = stackalloc byte[28];

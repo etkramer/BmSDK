@@ -71,7 +71,7 @@ public partial class RAEC_HideFromBatmobile : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_HideFromBatmobile.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_HideFromBatmobile : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: GetSoloAECFor
     /// </summary>
-    public unsafe BmSDK.BmGame.RAEC_HideFromBatmobile_Solo GetSoloAECFor(BmSDK.BmGame.RBMAIController C)
+    public unsafe virtual BmSDK.BmGame.RAEC_HideFromBatmobile_Solo GetSoloAECFor(BmSDK.BmGame.RBMAIController C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_HideFromBatmobile.GetSoloAECFor", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -94,7 +94,7 @@ public partial class RAEC_HideFromBatmobile : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: DoEndBark
     /// </summary>
-    public unsafe void DoEndBark()
+    public unsafe virtual void DoEndBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_HideFromBatmobile.DoEndBark", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RAEC_HideFromBatmobile : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: InitGoalDataInstance
     /// </summary>
-    public unsafe BmSDK.BmGame.RMultiDestGoalData InitGoalDataInstance()
+    public unsafe virtual BmSDK.BmGame.RMultiDestGoalData InitGoalDataInstance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_HideFromBatmobile.InitGoalDataInstance", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -116,7 +116,7 @@ public partial class RAEC_HideFromBatmobile : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: InitMultiGoalSearch
     /// </summary>
-    public unsafe void InitMultiGoalSearch()
+    public unsafe virtual void InitMultiGoalSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_HideFromBatmobile.InitMultiGoalSearch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class RAEC_HideFromBatmobile : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: StartHideRouting
     /// </summary>
-    public unsafe void StartHideRouting()
+    public unsafe virtual void StartHideRouting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_HideFromBatmobile.StartHideRouting", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -138,7 +138,7 @@ public partial class RAEC_HideFromBatmobile : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: StartHideBarkFinished
     /// </summary>
-    public unsafe void StartHideBarkFinished(bool bInterrupted)
+    public unsafe virtual void StartHideBarkFinished(bool bInterrupted)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_HideFromBatmobile.StartHideBarkFinished", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -150,7 +150,7 @@ public partial class RAEC_HideFromBatmobile : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: TriggerReaction
     /// </summary>
-    public unsafe void TriggerReaction(System.Numerics.Vector3 ReactionCentre)
+    public unsafe virtual void TriggerReaction(System.Numerics.Vector3 ReactionCentre)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_HideFromBatmobile.TriggerReaction", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -162,7 +162,7 @@ public partial class RAEC_HideFromBatmobile : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: ClearHidePointSearch
     /// </summary>
-    public unsafe void ClearHidePointSearch()
+    public unsafe virtual void ClearHidePointSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_HideFromBatmobile.ClearHidePointSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -173,7 +173,7 @@ public partial class RAEC_HideFromBatmobile : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_HideFromBatmobile.Tick", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -185,7 +185,7 @@ public partial class RAEC_HideFromBatmobile : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: GetBarkPriority
     /// </summary>
-    public unsafe int GetBarkPriority()
+    public unsafe override int GetBarkPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_HideFromBatmobile.GetBarkPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -196,7 +196,7 @@ public partial class RAEC_HideFromBatmobile : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_HideFromBatmobile.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -207,7 +207,7 @@ public partial class RAEC_HideFromBatmobile : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: OnAssign
     /// </summary>
-    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewMember)
+    public unsafe override void OnAssign(BmSDK.BmGame.RBMAIController NewMember)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_HideFromBatmobile.OnAssign", true);
         byte* paramsPtr = stackalloc byte[8];

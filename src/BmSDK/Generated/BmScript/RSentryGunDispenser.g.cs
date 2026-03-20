@@ -71,7 +71,7 @@ public partial class RSentryGunDispenser : BmSDK.BmGame.RLootSourceBase, BmSDK.I
     /// <summary>
     /// Function: SetXrayMaterials
     /// </summary>
-    public unsafe void SetXrayMaterials()
+    public unsafe override void SetXrayMaterials()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSentryGunDispenser.SetXrayMaterials", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RSentryGunDispenser : BmSDK.BmGame.RLootSourceBase, BmSDK.I
     /// <summary>
     /// Function: HitByDisruptorGadgetCharge
     /// </summary>
-    public unsafe bool HitByDisruptorGadgetCharge()
+    public unsafe override bool HitByDisruptorGadgetCharge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSentryGunDispenser.HitByDisruptorGadgetCharge", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RSentryGunDispenser : BmSDK.BmGame.RLootSourceBase, BmSDK.I
     /// <summary>
     /// Function: SetLootExhausted
     /// </summary>
-    public unsafe void SetLootExhausted()
+    public unsafe override void SetLootExhausted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSentryGunDispenser.SetLootExhausted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RSentryGunDispenser : BmSDK.BmGame.RLootSourceBase, BmSDK.I
     /// <summary>
     /// Function: BagSpawned
     /// </summary>
-    public unsafe void BagSpawned(BmSDK.BmGame.RCarriableObjectBagBase NewBag)
+    public unsafe override void BagSpawned(BmSDK.BmGame.RCarriableObjectBagBase NewBag)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSentryGunDispenser.BagSpawned", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -116,7 +116,7 @@ public partial class RSentryGunDispenser : BmSDK.BmGame.RLootSourceBase, BmSDK.I
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSentryGunDispenser.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class RForensicsMoviePlayer : BmSDK.Engine.ActorComponent, BmSDK.
     /// <summary>
     /// Function: IsZooming
     /// </summary>
-    public unsafe bool IsZooming()
+    public unsafe virtual bool IsZooming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsMoviePlayer.IsZooming", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RForensicsMoviePlayer : BmSDK.Engine.ActorComponent, BmSDK.
     /// <summary>
     /// Function: SetZoomMultiplication
     /// </summary>
-    public unsafe void SetZoomMultiplication(int _ZoomMultiplication)
+    public unsafe virtual void SetZoomMultiplication(int _ZoomMultiplication)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsMoviePlayer.SetZoomMultiplication", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RForensicsMoviePlayer : BmSDK.Engine.ActorComponent, BmSDK.
     /// <summary>
     /// Function: ZoomToSection
     /// </summary>
-    public unsafe void ZoomToSection(int SectionId)
+    public unsafe virtual void ZoomToSection(int SectionId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsMoviePlayer.ZoomToSection", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -71,7 +71,7 @@ public partial class RForensicsMoviePlayer : BmSDK.Engine.ActorComponent, BmSDK.
     /// <summary>
     /// Function: PlayerMoveTime
     /// </summary>
-    public unsafe void PlayerMoveTime(float AddTimeSeconds)
+    public unsafe virtual void PlayerMoveTime(float AddTimeSeconds)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsMoviePlayer.PlayerMoveTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -90,7 +90,7 @@ public partial class RForensicsMoviePlayer : BmSDK.Engine.ActorComponent, BmSDK.
     /// <summary>
     /// Function: ClosePlayer
     /// </summary>
-    public unsafe void ClosePlayer()
+    public unsafe virtual void ClosePlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsMoviePlayer.ClosePlayer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -108,7 +108,7 @@ public partial class RForensicsMoviePlayer : BmSDK.Engine.ActorComponent, BmSDK.
     /// <summary>
     /// Function: InitPlayer
     /// </summary>
-    public unsafe void InitPlayer()
+    public unsafe virtual void InitPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsMoviePlayer.InitPlayer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RForensicsMoviePlayer : BmSDK.Engine.ActorComponent, BmSDK.
     /// <summary>
     /// Function: GetMovieDuration
     /// </summary>
-    public unsafe float GetMovieDuration()
+    public unsafe virtual float GetMovieDuration()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsMoviePlayer.GetMovieDuration", true);
         byte* paramsPtr = stackalloc byte[4];

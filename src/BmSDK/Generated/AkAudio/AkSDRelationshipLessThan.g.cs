@@ -36,7 +36,7 @@ public partial class AkSDRelationshipLessThan : BmSDK.AkAudio.AkSDRelationship, 
     /// <summary>
     /// Function: Evaluate
     /// </summary>
-    public unsafe float Evaluate()
+    public unsafe override float Evaluate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkSDRelationshipLessThan.Evaluate", true);
         byte* paramsPtr = stackalloc byte[4];

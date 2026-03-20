@@ -71,7 +71,7 @@ public partial class RHUDBase : BmSDK.Engine.HUD, BmSDK.IGameObject
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDBase.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RHUDBase : BmSDK.Engine.HUD, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD()
+    public unsafe override void DrawHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDBase.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -93,7 +93,7 @@ public partial class RHUDBase : BmSDK.Engine.HUD, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldDrawHUD
     /// </summary>
-    public unsafe bool ShouldDrawHUD()
+    public unsafe virtual bool ShouldDrawHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDBase.ShouldDrawHUD", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RHUDBase : BmSDK.Engine.HUD, BmSDK.IGameObject
     /// <summary>
     /// Function: PostRender
     /// </summary>
-    public unsafe void PostRender()
+    public unsafe override void PostRender()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDBase.PostRender", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -115,7 +115,7 @@ public partial class RHUDBase : BmSDK.Engine.HUD, BmSDK.IGameObject
     /// <summary>
     /// Function: SetRenderGFX
     /// </summary>
-    public unsafe void SetRenderGFX(bool bRender)
+    public unsafe virtual void SetRenderGFX(bool bRender)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDBase.SetRenderGFX", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -134,7 +134,7 @@ public partial class RHUDBase : BmSDK.Engine.HUD, BmSDK.IGameObject
     /// <summary>
     /// Function: RenderDebugQuadTreeMap
     /// </summary>
-    public unsafe void RenderDebugQuadTreeMap()
+    public unsafe virtual void RenderDebugQuadTreeMap()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDBase.RenderDebugQuadTreeMap", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -152,7 +152,7 @@ public partial class RHUDBase : BmSDK.Engine.HUD, BmSDK.IGameObject
     /// <summary>
     /// Function: RenderDebugMiniMap
     /// </summary>
-    public unsafe void RenderDebugMiniMap()
+    public unsafe virtual void RenderDebugMiniMap()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDBase.RenderDebugMiniMap", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -170,7 +170,7 @@ public partial class RHUDBase : BmSDK.Engine.HUD, BmSDK.IGameObject
     /// <summary>
     /// Function: ToggleDebugMiniMap
     /// </summary>
-    public unsafe void ToggleDebugMiniMap()
+    public unsafe virtual void ToggleDebugMiniMap()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDBase.ToggleDebugMiniMap", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -188,7 +188,7 @@ public partial class RHUDBase : BmSDK.Engine.HUD, BmSDK.IGameObject
     /// <summary>
     /// Function: DumpAssets
     /// </summary>
-    public unsafe void DumpAssets(bool bViewIt = default)
+    public unsafe virtual void DumpAssets(bool bViewIt = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDBase.DumpAssets", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -207,7 +207,7 @@ public partial class RHUDBase : BmSDK.Engine.HUD, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearDuplicateWarningsAndErrors
     /// </summary>
-    public unsafe void ClearDuplicateWarningsAndErrors()
+    public unsafe virtual void ClearDuplicateWarningsAndErrors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDBase.ClearDuplicateWarningsAndErrors", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -225,7 +225,7 @@ public partial class RHUDBase : BmSDK.Engine.HUD, BmSDK.IGameObject
     /// <summary>
     /// Function: DisplayWarningsAndErrors
     /// </summary>
-    public unsafe void DisplayWarningsAndErrors(bool ShowDuplicates, bool Outline, int Max)
+    public unsafe virtual void DisplayWarningsAndErrors(bool ShowDuplicates, bool Outline, int Max)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDBase.DisplayWarningsAndErrors", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -246,7 +246,7 @@ public partial class RHUDBase : BmSDK.Engine.HUD, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearWarningsAndErrors
     /// </summary>
-    public unsafe void ClearWarningsAndErrors()
+    public unsafe virtual void ClearWarningsAndErrors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDBase.ClearWarningsAndErrors", true);
         byte* paramsPtr = stackalloc byte[0];

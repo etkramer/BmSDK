@@ -36,7 +36,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPointWeapon : BmSDK.Bm
     /// <summary>
     /// Function: GetAnimationForPaired
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetAnimationForPaired(BmSDK.FName AnimationName, int Index)
+    public unsafe override BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetAnimationForPaired(BmSDK.FName AnimationName, int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPointWeapon.GetAnimationForPaired", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -49,7 +49,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPointWeapon : BmSDK.Bm
     /// <summary>
     /// Function: GetAnimation
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetAnimation(BmSDK.FName AnimationName)
+    public unsafe override BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetAnimation(BmSDK.FName AnimationName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPointWeapon.GetAnimation", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -61,7 +61,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPointWeapon : BmSDK.Bm
     /// <summary>
     /// Function: GetRandomAnimationFromArrayForPaired
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetRandomAnimationFromArrayForPaired(BmSDK.TArray<BmSDK.FName> AnimationArray, int Index)
+    public unsafe override BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetRandomAnimationFromArrayForPaired(BmSDK.TArray<BmSDK.FName> AnimationArray, int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPointWeapon.GetRandomAnimationFromArrayForPaired", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -74,7 +74,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPointWeapon : BmSDK.Bm
     /// <summary>
     /// Function: GetRandomAnimationFromArray
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetRandomAnimationFromArray(BmSDK.TArray<BmSDK.FName> AnimationArray)
+    public unsafe override BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetRandomAnimationFromArray(BmSDK.TArray<BmSDK.FName> AnimationArray)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPointWeapon.GetRandomAnimationFromArray", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -86,7 +86,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPointWeapon : BmSDK.Bm
     /// <summary>
     /// Function: GetWeaponAnimationSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetWeaponAnimationSet()
+    public unsafe virtual BmSDK.Engine.AnimSet GetWeaponAnimationSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPointWeapon.GetWeaponAnimationSet", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -97,7 +97,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPointWeapon : BmSDK.Bm
     /// <summary>
     /// Function: SetInitialState
     /// </summary>
-    public unsafe void SetInitialState()
+    public unsafe override void SetInitialState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPointWeapon.SetInitialState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -108,7 +108,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPointWeapon : BmSDK.Bm
     /// <summary>
     /// Function: SetRunVariants
     /// </summary>
-    public unsafe void SetRunVariants(BmSDK.BmGame.RBMAIAction_RiotRunBase MoveAction)
+    public unsafe override void SetRunVariants(BmSDK.BmGame.RBMAIAction_RiotRunBase MoveAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPointWeapon.SetRunVariants", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -120,7 +120,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPointWeapon : BmSDK.Bm
     /// <summary>
     /// Function: CreateRunVariantWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateRunVariantWeaponConfig()
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateRunVariantWeaponConfig()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPointWeapon.CreateRunVariantWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[8];

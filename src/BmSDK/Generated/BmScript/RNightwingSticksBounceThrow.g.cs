@@ -71,7 +71,7 @@ public partial class RNightwingSticksBounceThrow : BmSDK.BmGame.RBatarang, BmSDK
     /// <summary>
     /// Function: GetPrimedPose
     /// </summary>
-    public unsafe BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
+    public unsafe override BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceThrow.GetPrimedPose", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -88,7 +88,7 @@ public partial class RNightwingSticksBounceThrow : BmSDK.BmGame.RBatarang, BmSDK
     /// <summary>
     /// Function: DrawAimingHUD
     /// </summary>
-    public unsafe void DrawAimingHUD()
+    public unsafe override void DrawAimingHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceThrow.DrawAimingHUD", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -99,7 +99,7 @@ public partial class RNightwingSticksBounceThrow : BmSDK.BmGame.RBatarang, BmSDK
     /// <summary>
     /// Function: DoAffectCombo
     /// </summary>
-    public unsafe void DoAffectCombo(BmSDK.BmGame.RPlayerControllerCombat PC, BmSDK.BmGame.RBatarangProjectile Projectile, BmSDK.Engine.Actor ThisTarget, bool bDodged)
+    public unsafe override void DoAffectCombo(BmSDK.BmGame.RPlayerControllerCombat PC, BmSDK.BmGame.RBatarangProjectile Projectile, BmSDK.Engine.Actor ThisTarget, bool bDodged)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceThrow.DoAffectCombo", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -114,7 +114,7 @@ public partial class RNightwingSticksBounceThrow : BmSDK.BmGame.RBatarang, BmSDK
     /// <summary>
     /// Function: SpawnProjectile
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarangProjectile SpawnProjectile(BmSDK.Class SpawnProjectileClass, System.Numerics.Vector3 LaunchLoc, bool Managed = default)
+    public unsafe override BmSDK.BmGame.RBatarangProjectile SpawnProjectile(BmSDK.Class SpawnProjectileClass, System.Numerics.Vector3 LaunchLoc, bool Managed = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceThrow.SpawnProjectile", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -128,7 +128,7 @@ public partial class RNightwingSticksBounceThrow : BmSDK.BmGame.RBatarang, BmSDK
     /// <summary>
     /// Function: GetInitialDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetInitialDirection(System.Numerics.Vector3 StartLocation, float BatarangSpeed)
+    public unsafe override System.Numerics.Vector3 GetInitialDirection(System.Numerics.Vector3 StartLocation, float BatarangSpeed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceThrow.GetInitialDirection", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -141,7 +141,7 @@ public partial class RNightwingSticksBounceThrow : BmSDK.BmGame.RBatarang, BmSDK
     /// <summary>
     /// Function: DrawDebugTrajectory
     /// </summary>
-    public unsafe void DrawDebugTrajectory()
+    public unsafe virtual void DrawDebugTrajectory()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceThrow.DrawDebugTrajectory", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -152,7 +152,7 @@ public partial class RNightwingSticksBounceThrow : BmSDK.BmGame.RBatarang, BmSDK
     /// <summary>
     /// Function: CanThrowGadget
     /// </summary>
-    public unsafe bool CanThrowGadget()
+    public unsafe override bool CanThrowGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceThrow.CanThrowGadget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -163,7 +163,7 @@ public partial class RNightwingSticksBounceThrow : BmSDK.BmGame.RBatarang, BmSDK
     /// <summary>
     /// Function: GetThrowStartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetThrowStartLocation()
+    public unsafe virtual System.Numerics.Vector3 GetThrowStartLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceThrow.GetThrowStartLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -174,7 +174,7 @@ public partial class RNightwingSticksBounceThrow : BmSDK.BmGame.RBatarang, BmSDK
     /// <summary>
     /// Function: AddAutoTargetExtraTargets
     /// </summary>
-    public unsafe void AddAutoTargetExtraTargets(BmSDK.BmGame.RPawnVillain HitVillain)
+    public unsafe virtual void AddAutoTargetExtraTargets(BmSDK.BmGame.RPawnVillain HitVillain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceThrow.AddAutoTargetExtraTargets", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -186,7 +186,7 @@ public partial class RNightwingSticksBounceThrow : BmSDK.BmGame.RBatarang, BmSDK
     /// <summary>
     /// Function: AddAutoTargetsToBouncePoints
     /// </summary>
-    public unsafe void AddAutoTargetsToBouncePoints()
+    public unsafe virtual void AddAutoTargetsToBouncePoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceThrow.AddAutoTargetsToBouncePoints", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -197,7 +197,7 @@ public partial class RNightwingSticksBounceThrow : BmSDK.BmGame.RBatarang, BmSDK
     /// <summary>
     /// Function: AddInFrontBouncePoint
     /// </summary>
-    public unsafe void AddInFrontBouncePoint()
+    public unsafe virtual void AddInFrontBouncePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceThrow.AddInFrontBouncePoint", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -208,7 +208,7 @@ public partial class RNightwingSticksBounceThrow : BmSDK.BmGame.RBatarang, BmSDK
     /// <summary>
     /// Function: UpdateTarget
     /// </summary>
-    public unsafe void UpdateTarget()
+    public unsafe override void UpdateTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceThrow.UpdateTarget", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -219,7 +219,7 @@ public partial class RNightwingSticksBounceThrow : BmSDK.BmGame.RBatarang, BmSDK
     /// <summary>
     /// Function: UpdateBouncePointsAge
     /// </summary>
-    public unsafe void UpdateBouncePointsAge(float DeltaTime)
+    public unsafe virtual void UpdateBouncePointsAge(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceThrow.UpdateBouncePointsAge", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -231,7 +231,7 @@ public partial class RNightwingSticksBounceThrow : BmSDK.BmGame.RBatarang, BmSDK
     /// <summary>
     /// Function: AttachToBelt
     /// </summary>
-    public unsafe void AttachToBelt()
+    public unsafe override void AttachToBelt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceThrow.AttachToBelt", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -242,7 +242,7 @@ public partial class RNightwingSticksBounceThrow : BmSDK.BmGame.RBatarang, BmSDK
     /// <summary>
     /// Function: AttachToHand
     /// </summary>
-    public unsafe void AttachToHand(BmSDK.FName CustomBone = default)
+    public unsafe override void AttachToHand(BmSDK.FName CustomBone = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceThrow.AttachToHand", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -254,7 +254,7 @@ public partial class RNightwingSticksBounceThrow : BmSDK.BmGame.RBatarang, BmSDK
     /// <summary>
     /// Function: FireGadgetCombat
     /// </summary>
-    public unsafe bool FireGadgetCombat()
+    public unsafe override bool FireGadgetCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceThrow.FireGadgetCombat", true);
         byte* paramsPtr = stackalloc byte[16];

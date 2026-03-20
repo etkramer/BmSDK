@@ -71,7 +71,7 @@ public partial class RBMAIAction_ShootGarg : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ShootGarg.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_ShootGarg : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: SpotPlayers
     /// </summary>
-    public unsafe void SpotPlayers()
+    public unsafe virtual void SpotPlayers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ShootGarg.SpotPlayers", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_ShootGarg : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ShootGarg.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_ShootGarg : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ShootGarg.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RBMAIAction_ShootGarg : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: SetupVantage
     /// </summary>
-    public unsafe void SetupVantage(BmSDK.BmGame.RHidePoint NewVantage)
+    public unsafe virtual void SetupVantage(BmSDK.BmGame.RHidePoint NewVantage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ShootGarg.SetupVantage", true);
         byte* paramsPtr = stackalloc byte[8];

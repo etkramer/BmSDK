@@ -71,7 +71,7 @@ public partial class RPopulationDistrictVolume : BmSDK.Engine.Volume, BmSDK.IGam
     /// <summary>
     /// Function: SetDistrictName
     /// </summary>
-    public unsafe void SetDistrictName(BmSDK.FString NewName)
+    public unsafe virtual void SetDistrictName(BmSDK.FString NewName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationDistrictVolume.SetDistrictName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RPopulationDistrictVolume : BmSDK.Engine.Volume, BmSDK.IGam
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationDistrictVolume.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

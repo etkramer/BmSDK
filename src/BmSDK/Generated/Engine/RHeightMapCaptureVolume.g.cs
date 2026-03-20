@@ -71,7 +71,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: WindAtPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 WindAtPosition(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual System.Numerics.Vector3 WindAtPosition(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.WindAtPosition", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -90,7 +90,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: SkydomeOcclusion
     /// </summary>
-    public unsafe float SkydomeOcclusion(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual float SkydomeOcclusion(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.SkydomeOcclusion", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -109,7 +109,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: GetHeightIntersectionFromPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetHeightIntersectionFromPos(System.Numerics.Vector3 TestLocation, int OffsetX, int OffsetY)
+    public unsafe virtual System.Numerics.Vector3 GetHeightIntersectionFromPos(System.Numerics.Vector3 TestLocation, int OffsetX, int OffsetY)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.GetHeightIntersectionFromPos", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -130,7 +130,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: GetVolumeWeatherType
     /// </summary>
-    public unsafe int GetVolumeWeatherType()
+    public unsafe virtual int GetVolumeWeatherType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.GetVolumeWeatherType", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -148,7 +148,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: GetPollenDensity
     /// </summary>
-    public unsafe float GetPollenDensity()
+    public unsafe virtual float GetPollenDensity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.GetPollenDensity", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -166,7 +166,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: IsInsidePollenVolume
     /// </summary>
-    public unsafe bool IsInsidePollenVolume(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual bool IsInsidePollenVolume(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.IsInsidePollenVolume", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -185,7 +185,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: GetLocationPollenDepth
     /// </summary>
-    public unsafe float GetLocationPollenDepth(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual float GetLocationPollenDepth(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.GetLocationPollenDepth", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -204,7 +204,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: SignedDistanceToPollenZ
     /// </summary>
-    public unsafe float SignedDistanceToPollenZ(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual float SignedDistanceToPollenZ(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.SignedDistanceToPollenZ", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -223,7 +223,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: IsLocationPollen
     /// </summary>
-    public unsafe bool IsLocationPollen(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual bool IsLocationPollen(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.IsLocationPollen", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -242,7 +242,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: GetActiveFearGasDensity
     /// </summary>
-    public unsafe float GetActiveFearGasDensity()
+    public unsafe virtual float GetActiveFearGasDensity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.GetActiveFearGasDensity", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -260,7 +260,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: GetFearGasDensity
     /// </summary>
-    public unsafe float GetFearGasDensity()
+    public unsafe virtual float GetFearGasDensity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.GetFearGasDensity", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -278,7 +278,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: IsInsideFearGasVolume
     /// </summary>
-    public unsafe bool IsInsideFearGasVolume(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual bool IsInsideFearGasVolume(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.IsInsideFearGasVolume", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -297,7 +297,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: GetLocationDustDepth
     /// </summary>
-    public unsafe float GetLocationDustDepth(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual float GetLocationDustDepth(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.GetLocationDustDepth", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -316,7 +316,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: FearGasTransitionAlpha
     /// </summary>
-    public unsafe float FearGasTransitionAlpha(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual float FearGasTransitionAlpha(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.FearGasTransitionAlpha", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -335,7 +335,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: GetFearGasWorldHeight
     /// </summary>
-    public unsafe float GetFearGasWorldHeight(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual float GetFearGasWorldHeight(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.GetFearGasWorldHeight", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -354,7 +354,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: SignedDistanceToFearGasZ
     /// </summary>
-    public unsafe float SignedDistanceToFearGasZ(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual float SignedDistanceToFearGasZ(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.SignedDistanceToFearGasZ", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -373,7 +373,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: IsLocationFearGas
     /// </summary>
-    public unsafe bool IsLocationFearGas(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual bool IsLocationFearGas(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.IsLocationFearGas", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -392,7 +392,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: GetRainDensity
     /// </summary>
-    public unsafe float GetRainDensity()
+    public unsafe virtual float GetRainDensity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.GetRainDensity", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -410,7 +410,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: LocationRainHeight
     /// </summary>
-    public unsafe float LocationRainHeight(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual float LocationRainHeight(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.LocationRainHeight", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -429,7 +429,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: DistanceToRainZ
     /// </summary>
-    public unsafe float DistanceToRainZ(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual float DistanceToRainZ(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.DistanceToRainZ", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -448,7 +448,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: GetLocationPuddleDepth
     /// </summary>
-    public unsafe float GetLocationPuddleDepth(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual float GetLocationPuddleDepth(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.GetLocationPuddleDepth", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -467,7 +467,7 @@ public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// Function: IsLocationRaining
     /// </summary>
-    public unsafe bool IsLocationRaining(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual bool IsLocationRaining(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RHeightMapCaptureVolume.IsLocationRaining", true);
         byte* paramsPtr = stackalloc byte[16];

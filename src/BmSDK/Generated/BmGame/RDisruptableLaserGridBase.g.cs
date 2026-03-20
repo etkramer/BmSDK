@@ -71,7 +71,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: CanBasePawn
     /// </summary>
-    public unsafe bool CanBasePawn(BmSDK.Engine.Pawn P)
+    public unsafe override bool CanBasePawn(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.CanBasePawn", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: RemoveThrowTarget
     /// </summary>
-    public unsafe void RemoveThrowTarget()
+    public unsafe virtual void RemoveThrowTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.RemoveThrowTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: CreateThrowTarget
     /// </summary>
-    public unsafe void CreateThrowTarget()
+    public unsafe virtual void CreateThrowTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.CreateThrowTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: ActorHit
     /// </summary>
-    public unsafe void ActorHit(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual void ActorHit(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.ActorHit", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -119,7 +119,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: Bump
     /// </summary>
-    public unsafe void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.Bump", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -133,7 +133,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: Attach
     /// </summary>
-    public unsafe void Attach(BmSDK.Engine.Actor Other)
+    public unsafe override void Attach(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.Attach", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -145,7 +145,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: PlayShockedSound
     /// </summary>
-    public unsafe void PlayShockedSound()
+    public unsafe override void PlayShockedSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.PlayShockedSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -156,7 +156,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: GetDamageType
     /// </summary>
-    public unsafe BmSDK.Class GetDamageType()
+    public unsafe override BmSDK.Class GetDamageType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.GetDamageType", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -167,7 +167,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: GetBatsShockedPFX
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem GetBatsShockedPFX()
+    public unsafe virtual BmSDK.Engine.ParticleSystem GetBatsShockedPFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.GetBatsShockedPFX", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -178,7 +178,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: HitPawn
     /// </summary>
-    public unsafe void HitPawn(BmSDK.BmGame.RPawnCombat PawnToHit, bool bUseDamagedBy = default)
+    public unsafe virtual void HitPawn(BmSDK.BmGame.RPawnCombat PawnToHit, bool bUseDamagedBy = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.HitPawn", true);
         byte* paramsPtr = stackalloc byte[272];
@@ -191,7 +191,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.Tick", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -203,7 +203,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.OnToggle", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -215,7 +215,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: TurnOn
     /// </summary>
-    public unsafe void TurnOn(bool Changed = default)
+    public unsafe virtual void TurnOn(bool Changed = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.TurnOn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -227,7 +227,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: ForceStopExtraEffects
     /// </summary>
-    public unsafe void ForceStopExtraEffects()
+    public unsafe virtual void ForceStopExtraEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.ForceStopExtraEffects", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -238,7 +238,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: StopExtraEffects
     /// </summary>
-    public unsafe void StopExtraEffects(bool IsBats = default)
+    public unsafe override void StopExtraEffects(bool IsBats = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.StopExtraEffects", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -250,7 +250,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: StartExtraEffects
     /// </summary>
-    public unsafe void StartExtraEffects(bool IsBats = default)
+    public unsafe override void StartExtraEffects(bool IsBats = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.StartExtraEffects", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -262,7 +262,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: OnToggleHidden
     /// </summary>
-    public unsafe void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
+    public unsafe override void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.OnToggleHidden", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -274,7 +274,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: SuccessfullyDisrupted
     /// </summary>
-    public unsafe void SuccessfullyDisrupted()
+    public unsafe virtual void SuccessfullyDisrupted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.SuccessfullyDisrupted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -285,7 +285,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -296,7 +296,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: SetInvestigateHighlighted
     /// </summary>
-    public unsafe void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
+    public unsafe override void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.SetInvestigateHighlighted", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -309,7 +309,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -320,7 +320,7 @@ public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableLaserGridBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];

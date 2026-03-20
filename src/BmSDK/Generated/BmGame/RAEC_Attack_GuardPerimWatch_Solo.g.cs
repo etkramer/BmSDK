@@ -71,7 +71,7 @@ public partial class RAEC_Attack_GuardPerimWatch_Solo : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_GuardPerimWatch_Solo.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Attack_GuardPerimWatch_Solo : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// Function: FindPointOnPathThatLeavesGuardVol
     /// </summary>
-    public unsafe void FindPointOnPathThatLeavesGuardVol()
+    public unsafe virtual void FindPointOnPathThatLeavesGuardVol()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_GuardPerimWatch_Solo.FindPointOnPathThatLeavesGuardVol", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -93,7 +93,7 @@ public partial class RAEC_Attack_GuardPerimWatch_Solo : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// Function: CreateActions
     /// </summary>
-    public unsafe void CreateActions()
+    public unsafe virtual void CreateActions()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_GuardPerimWatch_Solo.CreateActions", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -104,7 +104,7 @@ public partial class RAEC_Attack_GuardPerimWatch_Solo : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_GuardPerimWatch_Solo.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RAEC_Attack_GuardPerimWatch_Solo : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_GuardPerimWatch_Solo.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[0];

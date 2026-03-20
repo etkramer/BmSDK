@@ -71,7 +71,7 @@ public partial class RBmStealthTakeDownStage_VentAttack : BmSDK.BmGame.RStealthT
     /// <summary>
     /// Function: OverrideChosenAnim
     /// </summary>
-    public unsafe void OverrideChosenAnim(out int Anim)
+    public unsafe override void OverrideChosenAnim(out int Anim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBmStealthTakeDownStage_VentAttack.OverrideChosenAnim", true);
         byte* paramsPtr = stackalloc byte[72];

@@ -47,7 +47,7 @@ public partial class SeqAct_SetCameraTarget : BmSDK.Engine.SequenceAction, BmSDK
     /// <summary>
     /// Function: IsValidLevelSequenceObject
     /// </summary>
-    public unsafe bool IsValidLevelSequenceObject()
+    public unsafe override bool IsValidLevelSequenceObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_SetCameraTarget.IsValidLevelSequenceObject", true);
         byte* paramsPtr = stackalloc byte[4];

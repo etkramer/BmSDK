@@ -31,7 +31,7 @@ public partial class Commandlet : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Main
     /// </summary>
-    public unsafe int Main(BmSDK.FString Params)
+    public unsafe virtual int Main(BmSDK.FString Params)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Commandlet.Main", true);
         byte* paramsPtr = stackalloc byte[20];

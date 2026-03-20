@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanWallStrike : BmSDK.BmGame.RCombatMove_Bat
     /// <summary>
     /// Function: PlayedQueuedStrikeAnimSimulated
     /// </summary>
-    public unsafe void PlayedQueuedStrikeAnimSimulated(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedAnimID, float TimeLeftOver)
+    public unsafe override void PlayedQueuedStrikeAnimSimulated(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedAnimID, float TimeLeftOver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWallStrike.PlayedQueuedStrikeAnimSimulated", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -84,7 +84,7 @@ public partial class RCombatMove_BatmanWallStrike : BmSDK.BmGame.RCombatMove_Bat
     /// <summary>
     /// Function: PlayedQueuedStrikeAnim
     /// </summary>
-    public unsafe void PlayedQueuedStrikeAnim(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedAnimID, float TimeLeftOver)
+    public unsafe override void PlayedQueuedStrikeAnim(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedAnimID, float TimeLeftOver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWallStrike.PlayedQueuedStrikeAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -97,7 +97,7 @@ public partial class RCombatMove_BatmanWallStrike : BmSDK.BmGame.RCombatMove_Bat
     /// <summary>
     /// Function: GotoFirstStateSimulated
     /// </summary>
-    public unsafe void GotoFirstStateSimulated()
+    public unsafe virtual void GotoFirstStateSimulated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWallStrike.GotoFirstStateSimulated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -108,7 +108,7 @@ public partial class RCombatMove_BatmanWallStrike : BmSDK.BmGame.RCombatMove_Bat
     /// <summary>
     /// Function: GotoFirstState
     /// </summary>
-    public unsafe void GotoFirstState()
+    public unsafe override void GotoFirstState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWallStrike.GotoFirstState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -119,7 +119,7 @@ public partial class RCombatMove_BatmanWallStrike : BmSDK.BmGame.RCombatMove_Bat
     /// <summary>
     /// Function: TryToFindTarget
     /// </summary>
-    public unsafe void TryToFindTarget()
+    public unsafe override void TryToFindTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWallStrike.TryToFindTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class RCombatMove_BatmanWallStrike : BmSDK.BmGame.RCombatMove_Bat
     /// <summary>
     /// Function: SetNoTargetDir
     /// </summary>
-    public unsafe void SetNoTargetDir()
+    public unsafe override void SetNoTargetDir()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWallStrike.SetNoTargetDir", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RCombatMove_BatmanWallStrike : BmSDK.BmGame.RCombatMove_Bat
     /// <summary>
     /// Function: RegisterHit
     /// </summary>
-    public unsafe void RegisterHit()
+    public unsafe virtual void RegisterHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWallStrike.RegisterHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -152,7 +152,7 @@ public partial class RCombatMove_BatmanWallStrike : BmSDK.BmGame.RCombatMove_Bat
     /// <summary>
     /// Function: ProcessDamageResult
     /// </summary>
-    public unsafe void ProcessDamageResult(BmSDK.BmGame.RPawnCombat.DamageResult DmgResult, BmSDK.BmGame.RPawnCombat DamageReceiver)
+    public unsafe override void ProcessDamageResult(BmSDK.BmGame.RPawnCombat.DamageResult DmgResult, BmSDK.BmGame.RPawnCombat DamageReceiver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWallStrike.ProcessDamageResult", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -165,7 +165,7 @@ public partial class RCombatMove_BatmanWallStrike : BmSDK.BmGame.RCombatMove_Bat
     /// <summary>
     /// Function: GetDamagePower
     /// </summary>
-    public unsafe float GetDamagePower()
+    public unsafe override float GetDamagePower()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWallStrike.GetDamagePower", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -176,7 +176,7 @@ public partial class RCombatMove_BatmanWallStrike : BmSDK.BmGame.RCombatMove_Bat
     /// <summary>
     /// Function: GetComboIncrease
     /// </summary>
-    public unsafe void GetComboIncrease(out int ComboIncrease, out int SpecialMoveCountIncrease)
+    public unsafe override void GetComboIncrease(out int ComboIncrease, out int SpecialMoveCountIncrease)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWallStrike.GetComboIncrease", true);
         byte* paramsPtr = stackalloc byte[8];

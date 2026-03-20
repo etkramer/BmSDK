@@ -36,7 +36,7 @@ public partial class RHudModuleGadgetSelect : BmSDK.BmGame.RHudModule, BmSDK.IGa
     /// <summary>
     /// Function: SelectGadget
     /// </summary>
-    public unsafe void SelectGadget(BmSDK.FString gadget_name)
+    public unsafe virtual void SelectGadget(BmSDK.FString gadget_name)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleGadgetSelect.SelectGadget", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -48,7 +48,7 @@ public partial class RHudModuleGadgetSelect : BmSDK.BmGame.RHudModule, BmSDK.IGa
     /// <summary>
     /// Function: SelectGadgetByIndex
     /// </summary>
-    public unsafe void SelectGadgetByIndex(int gadget_index)
+    public unsafe virtual void SelectGadgetByIndex(int gadget_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleGadgetSelect.SelectGadgetByIndex", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -60,7 +60,7 @@ public partial class RHudModuleGadgetSelect : BmSDK.BmGame.RHudModule, BmSDK.IGa
     /// <summary>
     /// Function: PostSetupGadgets
     /// </summary>
-    public unsafe void PostSetupGadgets()
+    public unsafe virtual void PostSetupGadgets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleGadgetSelect.PostSetupGadgets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -71,7 +71,7 @@ public partial class RHudModuleGadgetSelect : BmSDK.BmGame.RHudModule, BmSDK.IGa
     /// <summary>
     /// Function: SetupGadget
     /// </summary>
-    public unsafe void SetupGadget(int gadget_index, BmSDK.FString gadget_name, int max_ammo, int current_ammo, int recharge_level)
+    public unsafe virtual void SetupGadget(int gadget_index, BmSDK.FString gadget_name, int max_ammo, int current_ammo, int recharge_level)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleGadgetSelect.SetupGadget", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -87,7 +87,7 @@ public partial class RHudModuleGadgetSelect : BmSDK.BmGame.RHudModule, BmSDK.IGa
     /// <summary>
     /// Function: FadeOutGadgetCharge
     /// </summary>
-    public unsafe void FadeOutGadgetCharge(int Id)
+    public unsafe virtual void FadeOutGadgetCharge(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleGadgetSelect.FadeOutGadgetCharge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -99,7 +99,7 @@ public partial class RHudModuleGadgetSelect : BmSDK.BmGame.RHudModule, BmSDK.IGa
     /// <summary>
     /// Function: SetGadgetParam
     /// </summary>
-    public unsafe void SetGadgetParam(int Id, int Recharge, int Quantity)
+    public unsafe virtual void SetGadgetParam(int Id, int Recharge, int Quantity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleGadgetSelect.SetGadgetParam", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -113,7 +113,7 @@ public partial class RHudModuleGadgetSelect : BmSDK.BmGame.RHudModule, BmSDK.IGa
     /// <summary>
     /// Function: SetGadgetIconName
     /// </summary>
-    public unsafe void SetGadgetIconName(BmSDK.FString _GadgetIconName)
+    public unsafe virtual void SetGadgetIconName(BmSDK.FString _GadgetIconName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleGadgetSelect.SetGadgetIconName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -125,7 +125,7 @@ public partial class RHudModuleGadgetSelect : BmSDK.BmGame.RHudModule, BmSDK.IGa
     /// <summary>
     /// Function: SetVisualState
     /// </summary>
-    public unsafe void SetVisualState(bool IsOnscreen, bool IsDeployed, int Gadget_OutOfSixteen)
+    public unsafe virtual void SetVisualState(bool IsOnscreen, bool IsDeployed, int Gadget_OutOfSixteen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleGadgetSelect.SetVisualState", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -139,7 +139,7 @@ public partial class RHudModuleGadgetSelect : BmSDK.BmGame.RHudModule, BmSDK.IGa
     /// <summary>
     /// Function: ShowRequiredGadget
     /// </summary>
-    public unsafe void ShowRequiredGadget(int RequiredGadget_OutOfSixteen, bool _bHighlightOn)
+    public unsafe virtual void ShowRequiredGadget(int RequiredGadget_OutOfSixteen, bool _bHighlightOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleGadgetSelect.ShowRequiredGadget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -152,7 +152,7 @@ public partial class RHudModuleGadgetSelect : BmSDK.BmGame.RHudModule, BmSDK.IGa
     /// <summary>
     /// Function: ShowFailedGadget
     /// </summary>
-    public unsafe void ShowFailedGadget(int FailedGadget_OutOfSixteen)
+    public unsafe virtual void ShowFailedGadget(int FailedGadget_OutOfSixteen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleGadgetSelect.ShowFailedGadget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -164,7 +164,7 @@ public partial class RHudModuleGadgetSelect : BmSDK.BmGame.RHudModule, BmSDK.IGa
     /// <summary>
     /// Function: DetonateExplosiveGel
     /// </summary>
-    public unsafe void DetonateExplosiveGel()
+    public unsafe virtual void DetonateExplosiveGel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleGadgetSelect.DetonateExplosiveGel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -175,7 +175,7 @@ public partial class RHudModuleGadgetSelect : BmSDK.BmGame.RHudModule, BmSDK.IGa
     /// <summary>
     /// Function: ShowExplosiveGelCount
     /// </summary>
-    public unsafe void ShowExplosiveGelCount(int NumVictims, bool WillKnockdown)
+    public unsafe virtual void ShowExplosiveGelCount(int NumVictims, bool WillKnockdown)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleGadgetSelect.ShowExplosiveGelCount", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -188,7 +188,7 @@ public partial class RHudModuleGadgetSelect : BmSDK.BmGame.RHudModule, BmSDK.IGa
     /// <summary>
     /// Function: SendGadgets
     /// </summary>
-    public unsafe void SendGadgets()
+    public unsafe virtual void SendGadgets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleGadgetSelect.SendGadgets", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -199,7 +199,7 @@ public partial class RHudModuleGadgetSelect : BmSDK.BmGame.RHudModule, BmSDK.IGa
     /// <summary>
     /// Function: ConvertGadgetIndexTwelveToSixteen
     /// </summary>
-    public unsafe int ConvertGadgetIndexTwelveToSixteen(int value_out_of_twelve)
+    public unsafe virtual int ConvertGadgetIndexTwelveToSixteen(int value_out_of_twelve)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleGadgetSelect.ConvertGadgetIndexTwelveToSixteen", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -211,7 +211,7 @@ public partial class RHudModuleGadgetSelect : BmSDK.BmGame.RHudModule, BmSDK.IGa
     /// <summary>
     /// Function: SendBlankGadget
     /// </summary>
-    public unsafe void SendBlankGadget(int gadgetIndex)
+    public unsafe virtual void SendBlankGadget(int gadgetIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleGadgetSelect.SendBlankGadget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -223,7 +223,7 @@ public partial class RHudModuleGadgetSelect : BmSDK.BmGame.RHudModule, BmSDK.IGa
     /// <summary>
     /// Function: InitialiseFlash
     /// </summary>
-    public unsafe void InitialiseFlash()
+    public unsafe override void InitialiseFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleGadgetSelect.InitialiseFlash", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -234,7 +234,7 @@ public partial class RHudModuleGadgetSelect : BmSDK.BmGame.RHudModule, BmSDK.IGa
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleGadgetSelect.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -245,7 +245,7 @@ public partial class RHudModuleGadgetSelect : BmSDK.BmGame.RHudModule, BmSDK.IGa
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleGadgetSelect.Init", true);
         byte* paramsPtr = stackalloc byte[44];

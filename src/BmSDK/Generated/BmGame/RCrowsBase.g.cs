@@ -66,7 +66,7 @@ public partial class RCrowsBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Startle
     /// </summary>
-    public unsafe void Startle(System.Numerics.Vector3 StartleLoc, bool startledByKismet = default)
+    public unsafe virtual void Startle(System.Numerics.Vector3 StartleLoc, bool startledByKismet = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowsBase.Startle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -79,7 +79,7 @@ public partial class RCrowsBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateEditorComponents
     /// </summary>
-    public unsafe void UpdateEditorComponents()
+    public unsafe virtual void UpdateEditorComponents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowsBase.UpdateEditorComponents", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -97,7 +97,7 @@ public partial class RCrowsBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckForThugsScaring
     /// </summary>
-    public unsafe void CheckForThugsScaring()
+    public unsafe virtual void CheckForThugsScaring()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowsBase.CheckForThugsScaring", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RCrowsBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FindClosestVisibleSkelMesh
     /// </summary>
-    public unsafe bool FindClosestVisibleSkelMesh(System.Numerics.Vector3 TestLoc, float Range, out System.Numerics.Vector3 CrowLoc)
+    public unsafe virtual bool FindClosestVisibleSkelMesh(System.Numerics.Vector3 TestLoc, float Range, out System.Numerics.Vector3 CrowLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowsBase.FindClosestVisibleSkelMesh", true);
         byte* paramsPtr = stackalloc byte[32];

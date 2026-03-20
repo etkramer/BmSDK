@@ -71,7 +71,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: StrikeOverriden
     /// </summary>
-    public unsafe void StrikeOverriden()
+    public unsafe override void StrikeOverriden()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.StrikeOverriden", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: PlayAllyLandBark
     /// </summary>
-    public unsafe void PlayAllyLandBark()
+    public unsafe virtual void PlayAllyLandBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.PlayAllyLandBark", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: CurrentMoveDodgesAttack
     /// </summary>
-    public unsafe bool CurrentMoveDodgesAttack(BmSDK.BmGame.RPawnCombat NewAttacker, BmSDK.BmGame.RPawnCombat NewDefender, BmSDK.Class dmgType, bool bFar)
+    public unsafe override bool CurrentMoveDodgesAttack(BmSDK.BmGame.RPawnCombat NewAttacker, BmSDK.BmGame.RPawnCombat NewDefender, BmSDK.Class dmgType, bool bFar)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.CurrentMoveDodgesAttack", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -108,7 +108,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: TurnOnHighlight
     /// </summary>
-    public unsafe void TurnOnHighlight()
+    public unsafe override void TurnOnHighlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.TurnOnHighlight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -119,7 +119,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: SingleAttacksEnabled
     /// </summary>
-    public unsafe bool SingleAttacksEnabled()
+    public unsafe virtual bool SingleAttacksEnabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.SingleAttacksEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -130,7 +130,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: JumpOffAllyAttacksEnabled
     /// </summary>
-    public unsafe bool JumpOffAllyAttacksEnabled()
+    public unsafe virtual bool JumpOffAllyAttacksEnabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.JumpOffAllyAttacksEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -141,7 +141,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: JumpOffWallAttacksEnabled
     /// </summary>
-    public unsafe bool JumpOffWallAttacksEnabled()
+    public unsafe virtual bool JumpOffWallAttacksEnabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.JumpOffWallAttacksEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -152,7 +152,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -163,7 +163,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -175,7 +175,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: PlayedJumpOffAlly
     /// </summary>
-    public unsafe void PlayedJumpOffAlly(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId NewId, float TimeLeftOver)
+    public unsafe virtual void PlayedJumpOffAlly(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId NewId, float TimeLeftOver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.PlayedJumpOffAlly", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -188,7 +188,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: PlayedJumpOffWall
     /// </summary>
-    public unsafe void PlayedJumpOffWall(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId NewId, float TimeLeftOver)
+    public unsafe virtual void PlayedJumpOffWall(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId NewId, float TimeLeftOver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.PlayedJumpOffWall", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -201,7 +201,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: CanBlock
     /// </summary>
-    public unsafe bool CanBlock()
+    public unsafe override bool CanBlock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.CanBlock", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -212,7 +212,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: DamageCollisionBetween
     /// </summary>
-    public unsafe void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
+    public unsafe override void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.DamageCollisionBetween", true);
         byte* paramsPtr = stackalloc byte[276];
@@ -226,7 +226,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: DamageCollisionDeactivated
     /// </summary>
-    public unsafe void DamageCollisionDeactivated()
+    public unsafe virtual void DamageCollisionDeactivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.DamageCollisionDeactivated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -237,7 +237,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: ForceHitTarget
     /// </summary>
-    public unsafe void ForceHitTarget()
+    public unsafe virtual void ForceHitTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.ForceHitTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -248,7 +248,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: CombatAnimHit
     /// </summary>
-    public unsafe void CombatAnimHit()
+    public unsafe virtual void CombatAnimHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.CombatAnimHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -259,7 +259,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: VillainAttackNotifyTriggered
     /// </summary>
-    public unsafe void VillainAttackNotifyTriggered(BmSDK.BmGame.RGameInfo.FVillainAttackInfo AttackInfo)
+    public unsafe override void VillainAttackNotifyTriggered(BmSDK.BmGame.RGameInfo.FVillainAttackInfo AttackInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.VillainAttackNotifyTriggered", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -271,7 +271,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: GetAdditionalTargetPriority
     /// </summary>
-    public unsafe bool GetAdditionalTargetPriority(BmSDK.Class dmgType, BmSDK.BmGame.RPawnCombat TargetPawn, out float AdditionalPriority)
+    public unsafe override bool GetAdditionalTargetPriority(BmSDK.Class dmgType, BmSDK.BmGame.RPawnCombat TargetPawn, out float AdditionalPriority)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.GetAdditionalTargetPriority", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -285,7 +285,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: IsPawnVulnerableToPawn
     /// </summary>
-    public unsafe bool IsPawnVulnerableToPawn(BmSDK.BmGame.RPawnCombat Defender, BmSDK.BmGame.RPawnCombat Attacker)
+    public unsafe override bool IsPawnVulnerableToPawn(BmSDK.BmGame.RPawnCombat Defender, BmSDK.BmGame.RPawnCombat Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.IsPawnVulnerableToPawn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -298,7 +298,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: PawnCanDodgeStrike
     /// </summary>
-    public unsafe bool PawnCanDodgeStrike(BmSDK.BmGame.RPawnCombat Dodger, BmSDK.BmGame.RPawnCombat Attacker, BmSDK.Class dmgType)
+    public unsafe override bool PawnCanDodgeStrike(BmSDK.BmGame.RPawnCombat Dodger, BmSDK.BmGame.RPawnCombat Attacker, BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.PawnCanDodgeStrike", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -312,7 +312,7 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaSingleSwordAttack.Initialise", true);
         byte* paramsPtr = stackalloc byte[16];

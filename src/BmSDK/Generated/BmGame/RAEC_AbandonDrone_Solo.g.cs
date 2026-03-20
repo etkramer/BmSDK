@@ -71,7 +71,7 @@ public partial class RAEC_AbandonDrone_Solo : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_AbandonDrone_Solo.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_AbandonDrone_Solo : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: NotifyStopped
     /// </summary>
-    public unsafe void NotifyStopped(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyStopped(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_AbandonDrone_Solo.NotifyStopped", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RAEC_AbandonDrone_Solo : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_AbandonDrone_Solo.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RAEC_AbandonDrone_Solo : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_AbandonDrone_Solo.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[16];

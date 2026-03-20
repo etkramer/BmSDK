@@ -71,7 +71,7 @@ public partial class RBMCombatThrownObject_BatDestroyed : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: Drop
     /// </summary>
-    public unsafe void Drop()
+    public unsafe override void Drop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_BatDestroyed.Drop", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RBMCombatThrownObject_BatDestroyed : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: SetMaxTimesCanBeUsed
     /// </summary>
-    public unsafe void SetMaxTimesCanBeUsed()
+    public unsafe virtual void SetMaxTimesCanBeUsed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_BatDestroyed.SetMaxTimesCanBeUsed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RBMCombatThrownObject_BatDestroyed : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: CaughtByPlayer
     /// </summary>
-    public unsafe void CaughtByPlayer()
+    public unsafe override void CaughtByPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_BatDestroyed.CaughtByPlayer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RBMCombatThrownObject_BatDestroyed : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: SetBreakOnNextHit
     /// </summary>
-    public unsafe void SetBreakOnNextHit()
+    public unsafe override void SetBreakOnNextHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_BatDestroyed.SetBreakOnNextHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RBMCombatThrownObject_BatDestroyed : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: UsedByPlayer
     /// </summary>
-    public unsafe void UsedByPlayer()
+    public unsafe override void UsedByPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_BatDestroyed.UsedByPlayer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RBMCombatThrownObject_BatDestroyed : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: NumTimesCanBeUsed
     /// </summary>
-    public unsafe int NumTimesCanBeUsed()
+    public unsafe override int NumTimesCanBeUsed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_BatDestroyed.NumTimesCanBeUsed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -137,7 +137,7 @@ public partial class RBMCombatThrownObject_BatDestroyed : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: CanStillBeUsedByPlayer
     /// </summary>
-    public unsafe bool CanStillBeUsedByPlayer()
+    public unsafe override bool CanStillBeUsedByPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_BatDestroyed.CanStillBeUsedByPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -148,7 +148,7 @@ public partial class RBMCombatThrownObject_BatDestroyed : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: SetCanStillBeUsedByPlayer
     /// </summary>
-    public unsafe void SetCanStillBeUsedByPlayer(bool bStillUsable)
+    public unsafe override void SetCanStillBeUsedByPlayer(bool bStillUsable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_BatDestroyed.SetCanStillBeUsedByPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -160,7 +160,7 @@ public partial class RBMCombatThrownObject_BatDestroyed : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: DetachAllAttachments
     /// </summary>
-    public unsafe void DetachAllAttachments()
+    public unsafe override void DetachAllAttachments()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_BatDestroyed.DetachAllAttachments", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -171,7 +171,7 @@ public partial class RBMCombatThrownObject_BatDestroyed : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: DoEvent
     /// </summary>
-    public unsafe void DoEvent()
+    public unsafe override void DoEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_BatDestroyed.DoEvent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -182,7 +182,7 @@ public partial class RBMCombatThrownObject_BatDestroyed : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: SpawnAttachment
     /// </summary>
-    public unsafe void SpawnAttachment()
+    public unsafe virtual void SpawnAttachment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_BatDestroyed.SpawnAttachment", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -193,7 +193,7 @@ public partial class RBMCombatThrownObject_BatDestroyed : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_BatDestroyed.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

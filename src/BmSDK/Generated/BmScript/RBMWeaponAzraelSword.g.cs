@@ -71,7 +71,7 @@ public partial class RBMWeaponAzraelSword : BmSDK.BmGame.RBMWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponAzraelSword.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -83,7 +83,7 @@ public partial class RBMWeaponAzraelSword : BmSDK.BmGame.RBMWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: ItemRemovedFromInvManager
     /// </summary>
-    public unsafe void ItemRemovedFromInvManager()
+    public unsafe override void ItemRemovedFromInvManager()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponAzraelSword.ItemRemovedFromInvManager", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RBMWeaponAzraelSword : BmSDK.BmGame.RBMWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: GivenTo
     /// </summary>
-    public unsafe void GivenTo(BmSDK.Engine.Pawn thisPawn, bool bDoNotActivate = default)
+    public unsafe override void GivenTo(BmSDK.Engine.Pawn thisPawn, bool bDoNotActivate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponAzraelSword.GivenTo", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -107,7 +107,7 @@ public partial class RBMWeaponAzraelSword : BmSDK.BmGame.RBMWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponAzraelSword.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

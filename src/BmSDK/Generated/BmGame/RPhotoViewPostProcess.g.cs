@@ -36,7 +36,7 @@ public partial class RPhotoViewPostProcess : BmSDK.BmGame.RViewPostProcess, BmSD
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe void Update(float DeltaTime)
+    public unsafe override void Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoViewPostProcess.Update", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RBMAIAction_StandAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_StandAndShoot.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_StandAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: IsReadyToShoot
     /// </summary>
-    public unsafe bool IsReadyToShoot()
+    public unsafe virtual bool IsReadyToShoot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_StandAndShoot.IsReadyToShoot", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RBMAIAction_StandAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_StandAndShoot.ActionTick", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_StandAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_StandAndShoot.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RBMAIAction_StandAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: SetPlayerAlert
     /// </summary>
-    public unsafe void SetPlayerAlert(BmSDK.BmGame.AlertInstance NewAlert)
+    public unsafe virtual void SetPlayerAlert(BmSDK.BmGame.AlertInstance NewAlert)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_StandAndShoot.SetPlayerAlert", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -128,7 +128,7 @@ public partial class RBMAIAction_StandAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: ShootInit
     /// </summary>
-    public unsafe void ShootInit()
+    public unsafe virtual void ShootInit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_StandAndShoot.ShootInit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RBMAIAction_StandAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: TriggerBagCarrierShootingEvents
     /// </summary>
-    public unsafe void TriggerBagCarrierShootingEvents()
+    public unsafe virtual void TriggerBagCarrierShootingEvents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_StandAndShoot.TriggerBagCarrierShootingEvents", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -150,7 +150,7 @@ public partial class RBMAIAction_StandAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_StandAndShoot.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

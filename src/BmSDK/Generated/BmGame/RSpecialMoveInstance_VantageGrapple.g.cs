@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_VantageGrapple : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: FireGrapple
     /// </summary>
-    public unsafe void FireGrapple()
+    public unsafe virtual void FireGrapple()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_VantageGrapple.FireGrapple", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_VantageGrapple : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_VantageGrapple.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[132];

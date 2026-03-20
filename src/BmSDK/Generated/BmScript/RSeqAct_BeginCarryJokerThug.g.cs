@@ -47,7 +47,7 @@ public partial class RSeqAct_BeginCarryJokerThug : BmSDK.BmGame.RSeqAct_BeginCar
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BeginCarryJokerThug.Update", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -59,7 +59,7 @@ public partial class RSeqAct_BeginCarryJokerThug : BmSDK.BmGame.RSeqAct_BeginCar
     /// <summary>
     /// Function: TryPlayCustomAdditiveHarley
     /// </summary>
-    public unsafe void TryPlayCustomAdditiveHarley()
+    public unsafe virtual void TryPlayCustomAdditiveHarley()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BeginCarryJokerThug.TryPlayCustomAdditiveHarley", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -70,7 +70,7 @@ public partial class RSeqAct_BeginCarryJokerThug : BmSDK.BmGame.RSeqAct_BeginCar
     /// <summary>
     /// Function: SetMovePoint
     /// </summary>
-    public unsafe void SetMovePoint(int JokerType)
+    public unsafe virtual void SetMovePoint(int JokerType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BeginCarryJokerThug.SetMovePoint", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -82,7 +82,7 @@ public partial class RSeqAct_BeginCarryJokerThug : BmSDK.BmGame.RSeqAct_BeginCar
     /// <summary>
     /// Function: DestroyWeapons
     /// </summary>
-    public unsafe void DestroyWeapons()
+    public unsafe virtual void DestroyWeapons()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BeginCarryJokerThug.DestroyWeapons", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RSeqAct_BeginCarryJokerThug : BmSDK.BmGame.RSeqAct_BeginCar
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BeginCarryJokerThug.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RSeqAct_BeginCarryJokerThug : BmSDK.BmGame.RSeqAct_BeginCar
     /// <summary>
     /// Function: AttachJoker
     /// </summary>
-    public unsafe void AttachJoker(int JokerType)
+    public unsafe virtual void AttachJoker(int JokerType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BeginCarryJokerThug.AttachJoker", true);
         byte* paramsPtr = stackalloc byte[460];
@@ -116,7 +116,7 @@ public partial class RSeqAct_BeginCarryJokerThug : BmSDK.BmGame.RSeqAct_BeginCar
     /// <summary>
     /// Function: AddBatWalkIfCan
     /// </summary>
-    public unsafe void AddBatWalkIfCan(BmSDK.BmScript.RSeqAct_BeginCarryJokerThug.JokerTypes JokerType)
+    public unsafe virtual void AddBatWalkIfCan(BmSDK.BmScript.RSeqAct_BeginCarryJokerThug.JokerTypes JokerType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BeginCarryJokerThug.AddBatWalkIfCan", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -128,7 +128,7 @@ public partial class RSeqAct_BeginCarryJokerThug : BmSDK.BmGame.RSeqAct_BeginCar
     /// <summary>
     /// Function: PutDownJoker
     /// </summary>
-    public unsafe void PutDownJoker(BmSDK.BmScript.RSeqAct_BeginCarryJokerThug.JokerTypes JokerType)
+    public unsafe virtual void PutDownJoker(BmSDK.BmScript.RSeqAct_BeginCarryJokerThug.JokerTypes JokerType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BeginCarryJokerThug.PutDownJoker", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -140,7 +140,7 @@ public partial class RSeqAct_BeginCarryJokerThug : BmSDK.BmGame.RSeqAct_BeginCar
     /// <summary>
     /// Function: RemoveBatWalk
     /// </summary>
-    public unsafe void RemoveBatWalk()
+    public unsafe virtual void RemoveBatWalk()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BeginCarryJokerThug.RemoveBatWalk", true);
         byte* paramsPtr = stackalloc byte[0];

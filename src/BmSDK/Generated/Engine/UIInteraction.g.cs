@@ -36,7 +36,7 @@ public partial class UIInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyGameSessionEnded
     /// </summary>
-    public unsafe void NotifyGameSessionEnded()
+    public unsafe override void NotifyGameSessionEnded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIInteraction.NotifyGameSessionEnded", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class UIInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLowestLoginStatusOfControllers
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineSubsystem.ELoginStatus GetLowestLoginStatusOfControllers()
+    public unsafe virtual BmSDK.Engine.OnlineSubsystem.ELoginStatus GetLowestLoginStatusOfControllers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIInteraction.GetLowestLoginStatusOfControllers", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -152,7 +152,7 @@ public partial class UIInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyPlayerRemoved
     /// </summary>
-    public unsafe void NotifyPlayerRemoved(int PlayerIndex, BmSDK.Engine.LocalPlayer RemovedPlayer)
+    public unsafe override void NotifyPlayerRemoved(int PlayerIndex, BmSDK.Engine.LocalPlayer RemovedPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIInteraction.NotifyPlayerRemoved", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -165,7 +165,7 @@ public partial class UIInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyPlayerAdded
     /// </summary>
-    public unsafe void NotifyPlayerAdded(int PlayerIndex, BmSDK.Engine.LocalPlayer AddedPlayer)
+    public unsafe override void NotifyPlayerAdded(int PlayerIndex, BmSDK.Engine.LocalPlayer AddedPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIInteraction.NotifyPlayerAdded", true);
         byte* paramsPtr = stackalloc byte[32];

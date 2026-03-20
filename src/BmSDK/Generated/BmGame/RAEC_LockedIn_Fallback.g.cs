@@ -71,7 +71,7 @@ public partial class RAEC_LockedIn_Fallback : BmSDK.BmGame.RAEC_LockedIn_GroupBa
     /// <summary>
     /// Function: OnAssign
     /// </summary>
-    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe override void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LockedIn_Fallback.OnAssign", true);
         byte* paramsPtr = stackalloc byte[16];

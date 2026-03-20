@@ -36,7 +36,7 @@ public partial class RVehicleBehaviour_StopAndSpawnBase : BmSDK.BmGame.RVehicleB
     /// <summary>
     /// Function: RunOverPlayer
     /// </summary>
-    public unsafe void RunOverPlayer(BmSDK.BmGame.RPawnPlayer Target)
+    public unsafe override void RunOverPlayer(BmSDK.BmGame.RPawnPlayer Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_StopAndSpawnBase.RunOverPlayer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -48,7 +48,7 @@ public partial class RVehicleBehaviour_StopAndSpawnBase : BmSDK.BmGame.RVehicleB
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_StopAndSpawnBase.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -60,7 +60,7 @@ public partial class RVehicleBehaviour_StopAndSpawnBase : BmSDK.BmGame.RVehicleB
     /// <summary>
     /// Function: EnterBehaviour
     /// </summary>
-    public unsafe void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
+    public unsafe override void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_StopAndSpawnBase.EnterBehaviour", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -72,7 +72,7 @@ public partial class RVehicleBehaviour_StopAndSpawnBase : BmSDK.BmGame.RVehicleB
     /// <summary>
     /// Function: CheckToHitTarget
     /// </summary>
-    public unsafe bool CheckToHitTarget()
+    public unsafe virtual bool CheckToHitTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_StopAndSpawnBase.CheckToHitTarget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -90,7 +90,7 @@ public partial class RVehicleBehaviour_StopAndSpawnBase : BmSDK.BmGame.RVehicleB
     /// <summary>
     /// Function: SpawnPawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawn SpawnPawn(BmSDK.Class PawnClass, BmSDK.BmGame.RCharacterDefine CharacterDefine, BmSDK.Class CharacterType, BmSDK.Class WeaponType, System.Numerics.Vector3 NewSpawnLoc, BmSDK.Rotator NewSpawnRot)
+    public unsafe virtual BmSDK.BmGame.RPawn SpawnPawn(BmSDK.Class PawnClass, BmSDK.BmGame.RCharacterDefine CharacterDefine, BmSDK.Class CharacterType, BmSDK.Class WeaponType, System.Numerics.Vector3 NewSpawnLoc, BmSDK.Rotator NewSpawnRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_StopAndSpawnBase.SpawnPawn", true);
         byte* paramsPtr = stackalloc byte[64];

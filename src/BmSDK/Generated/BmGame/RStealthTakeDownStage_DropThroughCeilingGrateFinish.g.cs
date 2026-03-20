@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_DropThroughCeilingGrateFinish : BmSDK
     /// <summary>
     /// Function: DoGlassTakedownChallengeGoalEvent
     /// </summary>
-    public unsafe void DoGlassTakedownChallengeGoalEvent(BmSDK.BmGame.RPawnVillain TheVictim)
+    public unsafe override void DoGlassTakedownChallengeGoalEvent(BmSDK.BmGame.RPawnVillain TheVictim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DropThroughCeilingGrateFinish.DoGlassTakedownChallengeGoalEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RStealthTakeDownStage_DropThroughCeilingGrateFinish : BmSDK
     /// <summary>
     /// Function: FinishAttackVictim
     /// </summary>
-    public unsafe bool FinishAttackVictim(int iVictimNumber)
+    public unsafe override bool FinishAttackVictim(int iVictimNumber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DropThroughCeilingGrateFinish.FinishAttackVictim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -95,7 +95,7 @@ public partial class RStealthTakeDownStage_DropThroughCeilingGrateFinish : BmSDK
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DropThroughCeilingGrateFinish.Begin", true);
         byte* paramsPtr = stackalloc byte[0];

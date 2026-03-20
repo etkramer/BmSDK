@@ -71,7 +71,7 @@ public partial class RAEC_LevelScriptingRoot : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive()
+    public unsafe override bool IsActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScriptingRoot.IsActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RAEC_LevelScriptingRoot : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: OnAssign
     /// </summary>
-    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe override void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScriptingRoot.OnAssign", true);
         byte* paramsPtr = stackalloc byte[16];

@@ -47,7 +47,7 @@ public partial class RSeqAct_TwoFaceLairController : BmSDK.BmGame.RSeqAct_Combat
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_TwoFaceLairController.Update", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -59,7 +59,7 @@ public partial class RSeqAct_TwoFaceLairController : BmSDK.BmGame.RSeqAct_Combat
     /// <summary>
     /// Function: StartTwoface
     /// </summary>
-    public unsafe void StartTwoface()
+    public unsafe virtual void StartTwoface()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_TwoFaceLairController.StartTwoface", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RSeqAct_TwoFaceLairController : BmSDK.BmGame.RSeqAct_Combat
     /// <summary>
     /// Function: SpawnTwoface
     /// </summary>
-    public unsafe void SpawnTwoface()
+    public unsafe virtual void SpawnTwoface()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_TwoFaceLairController.SpawnTwoface", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RSeqAct_TwoFaceLairController : BmSDK.BmGame.RSeqAct_Combat
     /// <summary>
     /// Function: SpawnPenguin
     /// </summary>
-    public unsafe void SpawnPenguin()
+    public unsafe virtual void SpawnPenguin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_TwoFaceLairController.SpawnPenguin", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -92,7 +92,7 @@ public partial class RSeqAct_TwoFaceLairController : BmSDK.BmGame.RSeqAct_Combat
     /// <summary>
     /// Function: SpawnRiddler
     /// </summary>
-    public unsafe void SpawnRiddler()
+    public unsafe virtual void SpawnRiddler()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_TwoFaceLairController.SpawnRiddler", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -103,7 +103,7 @@ public partial class RSeqAct_TwoFaceLairController : BmSDK.BmGame.RSeqAct_Combat
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_TwoFaceLairController.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

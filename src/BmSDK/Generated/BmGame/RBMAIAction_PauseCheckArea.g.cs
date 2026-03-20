@@ -71,7 +71,7 @@ public partial class RBMAIAction_PauseCheckArea : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PauseCheckArea.ActionTick", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_PauseCheckArea : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: GetLookAnimName_Minigunner
     /// </summary>
-    public unsafe BmSDK.FName GetLookAnimName_Minigunner()
+    public unsafe virtual BmSDK.FName GetLookAnimName_Minigunner()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PauseCheckArea.GetLookAnimName_Minigunner", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_PauseCheckArea : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: GetLookAnimName_Standard
     /// </summary>
-    public unsafe BmSDK.FName GetLookAnimName_Standard()
+    public unsafe virtual BmSDK.FName GetLookAnimName_Standard()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PauseCheckArea.GetLookAnimName_Standard", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_PauseCheckArea : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PauseCheckArea.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RBMAIAction_PauseCheckArea : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PauseCheckArea.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

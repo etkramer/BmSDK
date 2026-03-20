@@ -71,7 +71,7 @@ public partial class RBMAIAction_MinigunKnockback : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// Function: MinigunKnockback
     /// </summary>
-    public unsafe void MinigunKnockback()
+    public unsafe virtual void MinigunKnockback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_MinigunKnockback.MinigunKnockback", true);
         byte* paramsPtr = stackalloc byte[272];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_MinigunKnockback : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_MinigunKnockback.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_MinigunKnockback : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_MinigunKnockback.OnActivate", true);
         byte* paramsPtr = stackalloc byte[12];

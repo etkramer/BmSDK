@@ -71,7 +71,7 @@ public partial class RBatmobileGelGun : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGame
     /// <summary>
     /// Function: FireWeapon
     /// </summary>
-    public unsafe bool FireWeapon()
+    public unsafe override bool FireWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileGelGun.FireWeapon", true);
         byte* paramsPtr = stackalloc byte[372];

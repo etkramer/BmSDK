@@ -36,7 +36,7 @@ public partial class RBMBehaviour_BatClawed : BmSDK.BmGame.RBMBehaviour_HitReact
     /// <summary>
     /// Function: CancelBatclawed
     /// </summary>
-    public unsafe void CancelBatclawed()
+    public unsafe virtual void CancelBatclawed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BatClawed.CancelBatclawed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_BatClawed : BmSDK.BmGame.RBMBehaviour_HitReact
     /// <summary>
     /// Function: CanRepel
     /// </summary>
-    public unsafe bool CanRepel()
+    public unsafe override bool CanRepel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BatClawed.CanRepel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_BatClawed : BmSDK.BmGame.RBMBehaviour_HitReact
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BatClawed.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_BatClawed : BmSDK.BmGame.RBMBehaviour_HitReact
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BatClawed.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_BatClawed : BmSDK.BmGame.RBMBehaviour_HitReact
     /// <summary>
     /// Function: YankTarget
     /// </summary>
-    public unsafe void YankTarget()
+    public unsafe virtual void YankTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BatClawed.YankTarget", true);
         byte* paramsPtr = stackalloc byte[272];
@@ -91,7 +91,7 @@ public partial class RBMBehaviour_BatClawed : BmSDK.BmGame.RBMBehaviour_HitReact
     /// <summary>
     /// Function: FallOffLedge
     /// </summary>
-    public unsafe void FallOffLedge()
+    public unsafe virtual void FallOffLedge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BatClawed.FallOffLedge", true);
         byte* paramsPtr = stackalloc byte[248];
@@ -102,7 +102,7 @@ public partial class RBMBehaviour_BatClawed : BmSDK.BmGame.RBMBehaviour_HitReact
     /// <summary>
     /// Function: TripTargetInvisibleCollision
     /// </summary>
-    public unsafe void TripTargetInvisibleCollision()
+    public unsafe virtual void TripTargetInvisibleCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BatClawed.TripTargetInvisibleCollision", true);
         byte* paramsPtr = stackalloc byte[248];
@@ -113,7 +113,7 @@ public partial class RBMBehaviour_BatClawed : BmSDK.BmGame.RBMBehaviour_HitReact
     /// <summary>
     /// Function: UpdateTripAndFall
     /// </summary>
-    public unsafe void UpdateTripAndFall(float DeltaTime)
+    public unsafe virtual void UpdateTripAndFall(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BatClawed.UpdateTripAndFall", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -132,7 +132,7 @@ public partial class RBMBehaviour_BatClawed : BmSDK.BmGame.RBMBehaviour_HitReact
     /// <summary>
     /// Function: BumpedIntoPlayer
     /// </summary>
-    public unsafe void BumpedIntoPlayer()
+    public unsafe virtual void BumpedIntoPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BatClawed.BumpedIntoPlayer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -143,7 +143,7 @@ public partial class RBMBehaviour_BatClawed : BmSDK.BmGame.RBMBehaviour_HitReact
     /// <summary>
     /// Function: PlayBumpHitReaction
     /// </summary>
-    public unsafe void PlayBumpHitReaction(System.Numerics.Vector3 PushImpulse, BmSDK.BmGame.RPawnCombat Attacker)
+    public unsafe virtual void PlayBumpHitReaction(System.Numerics.Vector3 PushImpulse, BmSDK.BmGame.RPawnCombat Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BatClawed.PlayBumpHitReaction", true);
         byte* paramsPtr = stackalloc byte[268];
@@ -156,7 +156,7 @@ public partial class RBMBehaviour_BatClawed : BmSDK.BmGame.RBMBehaviour_HitReact
     /// <summary>
     /// Function: PushOverWithImpulse
     /// </summary>
-    public unsafe void PushOverWithImpulse(System.Numerics.Vector3 PushImpulse, BmSDK.BmGame.RPawnCombat Attacker)
+    public unsafe virtual void PushOverWithImpulse(System.Numerics.Vector3 PushImpulse, BmSDK.BmGame.RPawnCombat Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BatClawed.PushOverWithImpulse", true);
         byte* paramsPtr = stackalloc byte[268];
@@ -169,7 +169,7 @@ public partial class RBMBehaviour_BatClawed : BmSDK.BmGame.RBMBehaviour_HitReact
     /// <summary>
     /// Function: NudgeRigidBodies
     /// </summary>
-    public unsafe void NudgeRigidBodies(float TimeStep)
+    public unsafe override void NudgeRigidBodies(float TimeStep)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BatClawed.NudgeRigidBodies", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -181,7 +181,7 @@ public partial class RBMBehaviour_BatClawed : BmSDK.BmGame.RBMBehaviour_HitReact
     /// <summary>
     /// Function: DissipateCharge
     /// </summary>
-    public unsafe void DissipateCharge()
+    public unsafe virtual void DissipateCharge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BatClawed.DissipateCharge", true);
         byte* paramsPtr = stackalloc byte[44];

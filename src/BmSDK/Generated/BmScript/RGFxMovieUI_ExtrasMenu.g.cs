@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_ExtrasMenu : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: XI_OnClicked
     /// </summary>
-    public unsafe void XI_OnClicked(int Id)
+    public unsafe override void XI_OnClicked(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ExtrasMenu.XI_OnClicked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RGFxMovieUI_ExtrasMenu : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: XI_OnOut
     /// </summary>
-    public unsafe void XI_OnOut()
+    public unsafe override void XI_OnOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ExtrasMenu.XI_OnOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -59,7 +59,7 @@ public partial class RGFxMovieUI_ExtrasMenu : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: XI_SetupMenu
     /// </summary>
-    public unsafe void XI_SetupMenu(BmSDK.FString TargetPath)
+    public unsafe override void XI_SetupMenu(BmSDK.FString TargetPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ExtrasMenu.XI_SetupMenu", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -71,7 +71,7 @@ public partial class RGFxMovieUI_ExtrasMenu : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: SetupScreenPrompts
     /// </summary>
-    public unsafe void SetupScreenPrompts()
+    public unsafe override void SetupScreenPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ExtrasMenu.SetupScreenPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RGFxMovieUI_ExtrasMenu : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ExtrasMenu.Init", true);
         byte* paramsPtr = stackalloc byte[8];

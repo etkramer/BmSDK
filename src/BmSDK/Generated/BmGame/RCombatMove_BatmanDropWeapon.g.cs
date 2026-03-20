@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanDropWeapon : BmSDK.BmGame.RCombatMove_Bat
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanDropWeapon.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_BatmanDropWeapon : BmSDK.BmGame.RCombatMove_Bat
     /// <summary>
     /// Function: ShouldDropWeaponInHand
     /// </summary>
-    public unsafe bool ShouldDropWeaponInHand()
+    public unsafe override bool ShouldDropWeaponInHand()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanDropWeapon.ShouldDropWeaponInHand", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RCombatMove_BatmanDropWeapon : BmSDK.BmGame.RCombatMove_Bat
     /// <summary>
     /// Function: CanPerformNextComboMove
     /// </summary>
-    public unsafe bool CanPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
+    public unsafe override bool CanPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanDropWeapon.CanPerformNextComboMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -106,7 +106,7 @@ public partial class RCombatMove_BatmanDropWeapon : BmSDK.BmGame.RCombatMove_Bat
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanDropWeapon.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RCombatMove_BatmanDropWeapon : BmSDK.BmGame.RCombatMove_Bat
     /// <summary>
     /// Function: LetGo
     /// </summary>
-    public unsafe void LetGo()
+    public unsafe virtual void LetGo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanDropWeapon.LetGo", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class RGrenadeGrateAssignmentPicker : BmSDK.BmGame.RGroupAssignme
     /// <summary>
     /// Function: InitGoalDataInstance
     /// </summary>
-    public unsafe BmSDK.BmGame.RMultiDestGoalData InitGoalDataInstance()
+    public unsafe virtual BmSDK.BmGame.RMultiDestGoalData InitGoalDataInstance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrenadeGrateAssignmentPicker.InitGoalDataInstance", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -47,7 +47,7 @@ public partial class RGrenadeGrateAssignmentPicker : BmSDK.BmGame.RGroupAssignme
     /// <summary>
     /// Function: BuildThugSearch
     /// </summary>
-    public unsafe void BuildThugSearch()
+    public unsafe virtual void BuildThugSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrenadeGrateAssignmentPicker.BuildThugSearch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RGrenadeGrateAssignmentPicker : BmSDK.BmGame.RGroupAssignme
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update()
+    public unsafe override bool Update()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrenadeGrateAssignmentPicker.Update", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -69,7 +69,7 @@ public partial class RGrenadeGrateAssignmentPicker : BmSDK.BmGame.RGroupAssignme
     /// <summary>
     /// Function: ClearAllSearch
     /// </summary>
-    public unsafe void ClearAllSearch()
+    public unsafe virtual void ClearAllSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrenadeGrateAssignmentPicker.ClearAllSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RGrenadeGrateAssignmentPicker : BmSDK.BmGame.RGroupAssignme
     /// <summary>
     /// Function: Abort
     /// </summary>
-    public unsafe void Abort()
+    public unsafe virtual void Abort()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrenadeGrateAssignmentPicker.Abort", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -91,7 +91,7 @@ public partial class RGrenadeGrateAssignmentPicker : BmSDK.BmGame.RGroupAssignme
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.BmGame.RBMRoomAIState NewRoomState, System.IntPtr NewGrenadeGrateAssignmentFound, System.IntPtr NewGrenadeGrateAssignmentFailed)
+    public unsafe virtual void Init(BmSDK.BmGame.RBMRoomAIState NewRoomState, System.IntPtr NewGrenadeGrateAssignmentFound, System.IntPtr NewGrenadeGrateAssignmentFailed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrenadeGrateAssignmentPicker.Init", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -105,7 +105,7 @@ public partial class RGrenadeGrateAssignmentPicker : BmSDK.BmGame.RGroupAssignme
     /// <summary>
     /// Function: GrenadeGrateAssignmentFailed
     /// </summary>
-    public unsafe void GrenadeGrateAssignmentFailed(BmSDK.BmGame.RGrenadeGrateAssignmentPicker GMAP)
+    public unsafe virtual void GrenadeGrateAssignmentFailed(BmSDK.BmGame.RGrenadeGrateAssignmentPicker GMAP)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrenadeGrateAssignmentPicker.GrenadeGrateAssignmentFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RGrenadeGrateAssignmentPicker : BmSDK.BmGame.RGroupAssignme
     /// <summary>
     /// Function: GrenadeGrateAssignmentFound
     /// </summary>
-    public unsafe void GrenadeGrateAssignmentFound(BmSDK.BmGame.RGrenadeGrateAssignmentPicker GMAP, BmSDK.BmGame.RTunnelGrateBase Grate, BmSDK.BmGame.RBMPawnAI GrenadePawn)
+    public unsafe virtual void GrenadeGrateAssignmentFound(BmSDK.BmGame.RGrenadeGrateAssignmentPicker GMAP, BmSDK.BmGame.RTunnelGrateBase Grate, BmSDK.BmGame.RBMPawnAI GrenadePawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrenadeGrateAssignmentPicker.GrenadeGrateAssignmentFound", true);
         byte* paramsPtr = stackalloc byte[24];

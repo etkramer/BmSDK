@@ -71,7 +71,7 @@ public partial class MAEC_StickyConcussionGrenadeReaction_Sub_Disarmed : BmSDK.B
     /// <summary>
     /// Function: ThugHitByStrike
     /// </summary>
-    public unsafe void ThugHitByStrike()
+    public unsafe override void ThugHitByStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_StickyConcussionGrenadeReaction_Sub_Disarmed.ThugHitByStrike", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class MAEC_StickyConcussionGrenadeReaction_Sub_Disarmed : BmSDK.B
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FailedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FailedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_StickyConcussionGrenadeReaction_Sub_Disarmed.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class MAEC_StickyConcussionGrenadeReaction_Sub_Disarmed : BmSDK.B
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_StickyConcussionGrenadeReaction_Sub_Disarmed.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class MAEC_StickyConcussionGrenadeReaction_Sub_Disarmed : BmSDK.B
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_StickyConcussionGrenadeReaction_Sub_Disarmed.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -36,7 +36,7 @@ public partial class RBMExitCondition_Triggered : BmSDK.BmGame.RBMExitCondition,
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitCondition_Triggered.Tick", true);
         byte* paramsPtr = stackalloc byte[4];

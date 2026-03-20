@@ -66,7 +66,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: EnableTurretLights
     /// </summary>
-    public unsafe void EnableTurretLights(bool bEnable)
+    public unsafe virtual void EnableTurretLights(bool bEnable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.EnableTurretLights", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -78,7 +78,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: SetDamagedx
     /// </summary>
-    public unsafe void SetDamagedx()
+    public unsafe virtual void SetDamagedx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.SetDamagedx", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: SetDamaged
     /// </summary>
-    public unsafe void SetDamaged()
+    public unsafe virtual void SetDamaged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.SetDamaged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -100,7 +100,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: GetTrackingOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTrackingOrigin()
+    public unsafe override System.Numerics.Vector3 GetTrackingOrigin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.GetTrackingOrigin", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -118,7 +118,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: ClearInvestigateData
     /// </summary>
-    public unsafe void ClearInvestigateData()
+    public unsafe virtual void ClearInvestigateData()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.ClearInvestigateData", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: Disrupted
     /// </summary>
-    public unsafe void Disrupted()
+    public unsafe virtual void Disrupted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.Disrupted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: HitByDisruptorGadgetCharge
     /// </summary>
-    public unsafe bool HitByDisruptorGadgetCharge()
+    public unsafe override bool HitByDisruptorGadgetCharge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.HitByDisruptorGadgetCharge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -151,7 +151,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: CanBeDisrupted
     /// </summary>
-    public unsafe bool CanBeDisrupted()
+    public unsafe override bool CanBeDisrupted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.CanBeDisrupted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -162,7 +162,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: IsDisrupted
     /// </summary>
-    public unsafe bool IsDisrupted()
+    public unsafe virtual bool IsDisrupted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.IsDisrupted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -180,7 +180,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive()
+    public unsafe virtual bool IsActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.IsActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -191,7 +191,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: VolumeTouched
     /// </summary>
-    public unsafe void VolumeTouched(BmSDK.Engine.Actor toucher)
+    public unsafe virtual void VolumeTouched(BmSDK.Engine.Actor toucher)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.VolumeTouched", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -203,7 +203,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: SwitchOffMuzzleFlash2
     /// </summary>
-    public unsafe void SwitchOffMuzzleFlash2()
+    public unsafe virtual void SwitchOffMuzzleFlash2()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.SwitchOffMuzzleFlash2", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -214,7 +214,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: SwitchOffMuzzleFlash1
     /// </summary>
-    public unsafe void SwitchOffMuzzleFlash1()
+    public unsafe virtual void SwitchOffMuzzleFlash1()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.SwitchOffMuzzleFlash1", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -225,7 +225,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: SwitchOffMuzzleFlash0
     /// </summary>
-    public unsafe void SwitchOffMuzzleFlash0()
+    public unsafe virtual void SwitchOffMuzzleFlash0()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.SwitchOffMuzzleFlash0", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -236,7 +236,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: DoShotFX
     /// </summary>
-    public unsafe void DoShotFX(System.Numerics.Vector3 TargetLoc, bool bDoImpactFX)
+    public unsafe virtual void DoShotFX(System.Numerics.Vector3 TargetLoc, bool bDoImpactFX)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.DoShotFX", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -249,7 +249,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: ShootAtTarget
     /// </summary>
-    public unsafe void ShootAtTarget(BmSDK.Engine.Actor Target)
+    public unsafe virtual void ShootAtTarget(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.ShootAtTarget", true);
         byte* paramsPtr = stackalloc byte[676];
@@ -261,7 +261,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: CanDamagePlayer
     /// </summary>
-    public unsafe bool CanDamagePlayer()
+    public unsafe virtual bool CanDamagePlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.CanDamagePlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -272,7 +272,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: ShootTooCloseTargets
     /// </summary>
-    public unsafe void ShootTooCloseTargets()
+    public unsafe virtual void ShootTooCloseTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.ShootTooCloseTargets", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -283,7 +283,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: RemoveTarget
     /// </summary>
-    public unsafe void RemoveTarget(int Index)
+    public unsafe virtual void RemoveTarget(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.RemoveTarget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -302,7 +302,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: RemoveTargetFromList
     /// </summary>
-    public unsafe void RemoveTargetFromList(BmSDK.Engine.Actor ActorToRemove)
+    public unsafe virtual void RemoveTargetFromList(BmSDK.Engine.Actor ActorToRemove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.RemoveTargetFromList", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -321,7 +321,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: CheckForBMInVolume
     /// </summary>
-    public unsafe void CheckForBMInVolume()
+    public unsafe virtual void CheckForBMInVolume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.CheckForBMInVolume", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -339,7 +339,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: RemoveInvalidTargets
     /// </summary>
-    public unsafe void RemoveInvalidTargets()
+    public unsafe virtual void RemoveInvalidTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.RemoveInvalidTargets", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -350,7 +350,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: IsBatClawValidTarget
     /// </summary>
-    public unsafe bool IsBatClawValidTarget(BmSDK.BmGame.RHarpoonProjectile batClawProj)
+    public unsafe virtual bool IsBatClawValidTarget(BmSDK.BmGame.RHarpoonProjectile batClawProj)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.IsBatClawValidTarget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -362,7 +362,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: PostInit
     /// </summary>
-    public unsafe void PostInit(BmSDK.BmGame.RSeqAct_UpdateTurret SeqAct)
+    public unsafe virtual void PostInit(BmSDK.BmGame.RSeqAct_UpdateTurret SeqAct)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.PostInit", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -374,7 +374,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: IsBatarangable
     /// </summary>
-    public unsafe bool IsBatarangable()
+    public unsafe override bool IsBatarangable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.IsBatarangable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -385,7 +385,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -403,7 +403,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: GetClosestTargetIndex
     /// </summary>
-    public unsafe int GetClosestTargetIndex()
+    public unsafe virtual int GetClosestTargetIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.GetClosestTargetIndex", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -421,7 +421,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: StoppedShooting
     /// </summary>
-    public unsafe void StoppedShooting()
+    public unsafe virtual void StoppedShooting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.StoppedShooting", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -432,7 +432,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: StartedShooting
     /// </summary>
-    public unsafe void StartedShooting()
+    public unsafe virtual void StartedShooting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.StartedShooting", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -443,7 +443,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: SwitchOff
     /// </summary>
-    public unsafe void SwitchOff()
+    public unsafe virtual void SwitchOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.SwitchOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -454,7 +454,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: SwitchOn
     /// </summary>
-    public unsafe void SwitchOn()
+    public unsafe virtual void SwitchOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.SwitchOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -465,7 +465,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -476,7 +476,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: IsValidSecret
     /// </summary>
-    public unsafe bool IsValidSecret()
+    public unsafe override bool IsValidSecret()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.IsValidSecret", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -487,7 +487,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: GetRotationRootOrientation
     /// </summary>
-    public unsafe BmSDK.Rotator GetRotationRootOrientation()
+    public unsafe virtual BmSDK.Rotator GetRotationRootOrientation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.GetRotationRootOrientation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -505,7 +505,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: GetRotationRootLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetRotationRootLocation()
+    public unsafe virtual System.Numerics.Vector3 GetRotationRootLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.GetRotationRootLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -523,7 +523,7 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// Function: CanShootAtCurrentTarget
     /// </summary>
-    public unsafe bool CanShootAtCurrentTarget()
+    public unsafe virtual bool CanShootAtCurrentTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurretBase.CanShootAtCurrentTarget", true);
         byte* paramsPtr = stackalloc byte[4];

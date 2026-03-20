@@ -36,7 +36,7 @@ public partial class RRope2SimplePhysicsUpdater : BmSDK.BmGame.RRope2BasePhysics
     /// <summary>
     /// Function: PutToSleep
     /// </summary>
-    public unsafe void PutToSleep()
+    public unsafe virtual void PutToSleep()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsUpdater.PutToSleep", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class RRope2SimplePhysicsUpdater : BmSDK.BmGame.RRope2BasePhysics
     /// <summary>
     /// Function: GetThoughts
     /// </summary>
-    public unsafe void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList, out System.Numerics.Vector3 ThoughtLocationOverride, BmSDK.FString IndentString = default)
+    public unsafe override void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList, out System.Numerics.Vector3 ThoughtLocationOverride, BmSDK.FString IndentString = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsUpdater.GetThoughts", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -75,7 +75,7 @@ public partial class RRope2SimplePhysicsUpdater : BmSDK.BmGame.RRope2BasePhysics
     /// <summary>
     /// Function: SetTargetTighteningFactor
     /// </summary>
-    public unsafe void SetTargetTighteningFactor(float NewTargetTighteningFactor)
+    public unsafe virtual void SetTargetTighteningFactor(float NewTargetTighteningFactor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsUpdater.SetTargetTighteningFactor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RRope2SimplePhysicsUpdater : BmSDK.BmGame.RRope2BasePhysics
     /// <summary>
     /// Function: CalculateLowestDanglePointNearXYPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 CalculateLowestDanglePointNearXYPos(BmSDK.BmGame.RRope2Component RopeComp, System.Numerics.Vector3 XYPos, out float RopePos)
+    public unsafe virtual System.Numerics.Vector3 CalculateLowestDanglePointNearXYPos(BmSDK.BmGame.RRope2Component RopeComp, System.Numerics.Vector3 XYPos, out float RopePos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsUpdater.CalculateLowestDanglePointNearXYPos", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -115,7 +115,7 @@ public partial class RRope2SimplePhysicsUpdater : BmSDK.BmGame.RRope2BasePhysics
     /// <summary>
     /// Function: CalculateLowestDanglePointForRopePos
     /// </summary>
-    public unsafe System.Numerics.Vector3 CalculateLowestDanglePointForRopePos(float RopePos)
+    public unsafe virtual System.Numerics.Vector3 CalculateLowestDanglePointForRopePos(float RopePos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsUpdater.CalculateLowestDanglePointForRopePos", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -134,7 +134,7 @@ public partial class RRope2SimplePhysicsUpdater : BmSDK.BmGame.RRope2BasePhysics
     /// <summary>
     /// Function: ClearAllControlPoints
     /// </summary>
-    public unsafe void ClearAllControlPoints()
+    public unsafe virtual void ClearAllControlPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsUpdater.ClearAllControlPoints", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -152,7 +152,7 @@ public partial class RRope2SimplePhysicsUpdater : BmSDK.BmGame.RRope2BasePhysics
     /// <summary>
     /// Function: RemoveControlPoint
     /// </summary>
-    public unsafe void RemoveControlPoint(BmSDK.BmGame.RRope2SimplePhysicsControlPoint RemovePoint)
+    public unsafe virtual void RemoveControlPoint(BmSDK.BmGame.RRope2SimplePhysicsControlPoint RemovePoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsUpdater.RemoveControlPoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -171,7 +171,7 @@ public partial class RRope2SimplePhysicsUpdater : BmSDK.BmGame.RRope2BasePhysics
     /// <summary>
     /// Function: AddControlPoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2SimplePhysicsControlPoint AddControlPoint(float AddRopePosition)
+    public unsafe virtual BmSDK.BmGame.RRope2SimplePhysicsControlPoint AddControlPoint(float AddRopePosition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsUpdater.AddControlPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -190,7 +190,7 @@ public partial class RRope2SimplePhysicsUpdater : BmSDK.BmGame.RRope2BasePhysics
     /// <summary>
     /// Function: GetControlPoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2SimplePhysicsControlPoint GetControlPoint(int ControlPointIndex)
+    public unsafe virtual BmSDK.BmGame.RRope2SimplePhysicsControlPoint GetControlPoint(int ControlPointIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsUpdater.GetControlPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -209,7 +209,7 @@ public partial class RRope2SimplePhysicsUpdater : BmSDK.BmGame.RRope2BasePhysics
     /// <summary>
     /// Function: GetNumControlPoints
     /// </summary>
-    public unsafe int GetNumControlPoints()
+    public unsafe virtual int GetNumControlPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsUpdater.GetNumControlPoints", true);
         byte* paramsPtr = stackalloc byte[4];

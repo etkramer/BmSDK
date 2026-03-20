@@ -36,7 +36,7 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
     /// <summary>
     /// Function: SortSearchResults
     /// </summary>
-    public unsafe void SortSearchResults()
+    public unsafe virtual void SortSearchResults()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineGameSearch.SortSearchResults", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
     /// <summary>
     /// Function: SetSkillOverride
     /// </summary>
-    public unsafe void SetSkillOverride(int LeaderboardId, out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId> Players)
+    public unsafe virtual void SetSkillOverride(int LeaderboardId, out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId> Players)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineGameSearch.SetSkillOverride", true);
         byte* paramsPtr = stackalloc byte[20];

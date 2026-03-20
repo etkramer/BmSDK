@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_PairedOpenDoor : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: PlaySpecialCameraAnim
     /// </summary>
-    public unsafe bool PlaySpecialCameraAnim(BmSDK.BmGame.RPlayerController InController, BmSDK.FName AnimName, bool bPlaying, bool bCamMirrored, float FOV = default, bool bLoop = default, float AnimStartTime = default, bool bProportionalMotion = default, float fBlendInTime = default, BmSDK.Engine.SkeletalMeshComponent SlavedToSkelComponent = default, BmSDK.Engine.AnimSequence SlavedToAnim = default, bool bIgnoreBlend = default, bool bBlendEvenIfInactive = default)
+    public unsafe override bool PlaySpecialCameraAnim(BmSDK.BmGame.RPlayerController InController, BmSDK.FName AnimName, bool bPlaying, bool bCamMirrored, float FOV = default, bool bLoop = default, float AnimStartTime = default, bool bProportionalMotion = default, float fBlendInTime = default, BmSDK.Engine.SkeletalMeshComponent SlavedToSkelComponent = default, BmSDK.Engine.AnimSequence SlavedToAnim = default, bool bIgnoreBlend = default, bool bBlendEvenIfInactive = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_PairedOpenDoor.PlaySpecialCameraAnim", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -95,7 +95,7 @@ public partial class RSpecialMoveInstance_PairedOpenDoor : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: GetRobinAnimationSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetRobinAnimationSet()
+    public unsafe virtual BmSDK.Engine.AnimSet GetRobinAnimationSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_PairedOpenDoor.GetRobinAnimationSet", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -106,7 +106,7 @@ public partial class RSpecialMoveInstance_PairedOpenDoor : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: GetRobinAnimationName
     /// </summary>
-    public unsafe BmSDK.FName GetRobinAnimationName()
+    public unsafe virtual BmSDK.FName GetRobinAnimationName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_PairedOpenDoor.GetRobinAnimationName", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -117,7 +117,7 @@ public partial class RSpecialMoveInstance_PairedOpenDoor : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: GetCatwomanAnimationNameFollowing
     /// </summary>
-    public unsafe BmSDK.FName GetCatwomanAnimationNameFollowing()
+    public unsafe virtual BmSDK.FName GetCatwomanAnimationNameFollowing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_PairedOpenDoor.GetCatwomanAnimationNameFollowing", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -128,7 +128,7 @@ public partial class RSpecialMoveInstance_PairedOpenDoor : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: UseReverseDoorAnim
     /// </summary>
-    public unsafe bool UseReverseDoorAnim(BmSDK.Engine.Actor Door)
+    public unsafe virtual bool UseReverseDoorAnim(BmSDK.Engine.Actor Door)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_PairedOpenDoor.UseReverseDoorAnim", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -140,7 +140,7 @@ public partial class RSpecialMoveInstance_PairedOpenDoor : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: GetAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetAnimSet()
+    public unsafe override BmSDK.Engine.AnimSet GetAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_PairedOpenDoor.GetAnimSet", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -151,7 +151,7 @@ public partial class RSpecialMoveInstance_PairedOpenDoor : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: PickRandomAnim
     /// </summary>
-    public unsafe void PickRandomAnim()
+    public unsafe override void PickRandomAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_PairedOpenDoor.PickRandomAnim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -162,7 +162,7 @@ public partial class RSpecialMoveInstance_PairedOpenDoor : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_PairedOpenDoor.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -173,7 +173,7 @@ public partial class RSpecialMoveInstance_PairedOpenDoor : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_PairedOpenDoor.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -185,7 +185,7 @@ public partial class RSpecialMoveInstance_PairedOpenDoor : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_PairedOpenDoor.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[132];

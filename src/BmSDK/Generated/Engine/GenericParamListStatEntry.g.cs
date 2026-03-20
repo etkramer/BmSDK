@@ -36,7 +36,7 @@ public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Function: CommitToDisk
     /// </summary>
-    public unsafe void CommitToDisk()
+    public unsafe virtual void CommitToDisk()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GenericParamListStatEntry.CommitToDisk", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Function: GetString
     /// </summary>
-    public unsafe bool GetString(BmSDK.FName ParamName, out BmSDK.FString out_string)
+    public unsafe virtual bool GetString(BmSDK.FName ParamName, out BmSDK.FString out_string)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GenericParamListStatEntry.GetString", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -74,7 +74,7 @@ public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Function: GetVector
     /// </summary>
-    public unsafe bool GetVector(BmSDK.FName ParamName, out System.Numerics.Vector3 out_vector)
+    public unsafe virtual bool GetVector(BmSDK.FName ParamName, out System.Numerics.Vector3 out_vector)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GenericParamListStatEntry.GetVector", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -94,7 +94,7 @@ public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Function: GetInt
     /// </summary>
-    public unsafe bool GetInt(BmSDK.FName ParamName, out int out_int)
+    public unsafe virtual bool GetInt(BmSDK.FName ParamName, out int out_int)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GenericParamListStatEntry.GetInt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -114,7 +114,7 @@ public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Function: GetFloat
     /// </summary>
-    public unsafe bool GetFloat(BmSDK.FName ParamName, out float out_Float)
+    public unsafe virtual bool GetFloat(BmSDK.FName ParamName, out float out_Float)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GenericParamListStatEntry.GetFloat", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -134,7 +134,7 @@ public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Function: AddString
     /// </summary>
-    public unsafe void AddString(BmSDK.FName ParamName, BmSDK.FString Value)
+    public unsafe virtual void AddString(BmSDK.FName ParamName, BmSDK.FString Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GenericParamListStatEntry.AddString", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -154,7 +154,7 @@ public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Function: AddVector
     /// </summary>
-    public unsafe void AddVector(BmSDK.FName ParamName, System.Numerics.Vector3 Value)
+    public unsafe virtual void AddVector(BmSDK.FName ParamName, System.Numerics.Vector3 Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GenericParamListStatEntry.AddVector", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -174,7 +174,7 @@ public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Function: AddInt
     /// </summary>
-    public unsafe void AddInt(BmSDK.FName ParamName, int Value)
+    public unsafe virtual void AddInt(BmSDK.FName ParamName, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GenericParamListStatEntry.AddInt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -194,7 +194,7 @@ public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Function: AddFloat
     /// </summary>
-    public unsafe void AddFloat(BmSDK.FName ParamName, float Value)
+    public unsafe virtual void AddFloat(BmSDK.FName ParamName, float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GenericParamListStatEntry.AddFloat", true);
         byte* paramsPtr = stackalloc byte[12];

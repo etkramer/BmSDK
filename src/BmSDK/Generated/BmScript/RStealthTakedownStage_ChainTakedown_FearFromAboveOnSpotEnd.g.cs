@@ -71,7 +71,7 @@ public partial class RStealthTakedownStage_ChainTakedown_FearFromAboveOnSpotEnd 
     /// <summary>
     /// Function: GetStageAnim
     /// </summary>
-    public unsafe int GetStageAnim()
+    public unsafe override int GetStageAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_ChainTakedown_FearFromAboveOnSpotEnd.GetStageAnim", true);
         byte* paramsPtr = stackalloc byte[12];

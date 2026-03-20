@@ -71,7 +71,7 @@ public partial class RBMAIAction_DroneComFixDisruption : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DroneComFixDisruption.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_DroneComFixDisruption : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: OnExitRequested
     /// </summary>
-    public unsafe void OnExitRequested(BmSDK.BmGame.RBMAIAction NextAction = default)
+    public unsafe override void OnExitRequested(BmSDK.BmGame.RBMAIAction NextAction = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DroneComFixDisruption.OnExitRequested", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_DroneComFixDisruption : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DroneComFixDisruption.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -106,7 +106,7 @@ public partial class RBMAIAction_DroneComFixDisruption : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: RestoreFinished
     /// </summary>
-    public unsafe void RestoreFinished()
+    public unsafe virtual void RestoreFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DroneComFixDisruption.RestoreFinished", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RBMAIAction_DroneComFixDisruption : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: StartOutAnim
     /// </summary>
-    public unsafe void StartOutAnim()
+    public unsafe virtual void StartOutAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DroneComFixDisruption.StartOutAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RBMAIAction_DroneComFixDisruption : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: StartInAnim
     /// </summary>
-    public unsafe void StartInAnim()
+    public unsafe virtual void StartInAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DroneComFixDisruption.StartInAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RBMAIAction_DroneComFixDisruption : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: DroneFixOut
     /// </summary>
-    public unsafe BmSDK.FName DroneFixOut()
+    public unsafe virtual BmSDK.FName DroneFixOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DroneComFixDisruption.DroneFixOut", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -150,7 +150,7 @@ public partial class RBMAIAction_DroneComFixDisruption : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: DroneFixIdle
     /// </summary>
-    public unsafe BmSDK.FName DroneFixIdle()
+    public unsafe virtual BmSDK.FName DroneFixIdle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DroneComFixDisruption.DroneFixIdle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -161,7 +161,7 @@ public partial class RBMAIAction_DroneComFixDisruption : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: DroneFixInTransition
     /// </summary>
-    public unsafe BmSDK.FName DroneFixInTransition()
+    public unsafe virtual BmSDK.FName DroneFixInTransition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DroneComFixDisruption.DroneFixInTransition", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -172,7 +172,7 @@ public partial class RBMAIAction_DroneComFixDisruption : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DroneComFixDisruption.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: SwitchPawnToIdlePose
     /// </summary>
-    public unsafe void SwitchPawnToIdlePose()
+    public unsafe virtual void SwitchPawnToIdlePose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.SwitchPawnToIdlePose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: SwitchPawnToAimingBolasPose
     /// </summary>
-    public unsafe void SwitchPawnToAimingBolasPose()
+    public unsafe virtual void SwitchPawnToAimingBolasPose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.SwitchPawnToAimingBolasPose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: RestartCheckCentre
     /// </summary>
-    public unsafe void RestartCheckCentre()
+    public unsafe virtual void RestartCheckCentre()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.RestartCheckCentre", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: RestartCheckCommon
     /// </summary>
-    public unsafe void RestartCheckCommon(BmSDK.FName nAnimationName, bool bNeedsBackwardsHack)
+    public unsafe virtual void RestartCheckCommon(BmSDK.FName nAnimationName, bool bNeedsBackwardsHack)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.RestartCheckCommon", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -117,7 +117,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: RestartCheckFrontNear
     /// </summary>
-    public unsafe void RestartCheckFrontNear()
+    public unsafe virtual void RestartCheckFrontNear()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.RestartCheckFrontNear", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: RestartCheckFrontFar
     /// </summary>
-    public unsafe void RestartCheckFrontFar()
+    public unsafe virtual void RestartCheckFrontFar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.RestartCheckFrontFar", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: RestartCheckBackNear
     /// </summary>
-    public unsafe void RestartCheckBackNear()
+    public unsafe virtual void RestartCheckBackNear()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.RestartCheckBackNear", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: RestartCheckBackFar
     /// </summary>
-    public unsafe void RestartCheckBackFar()
+    public unsafe virtual void RestartCheckBackFar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.RestartCheckBackFar", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -161,7 +161,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: ResetPositionToCentre
     /// </summary>
-    public unsafe void ResetPositionToCentre()
+    public unsafe virtual void ResetPositionToCentre()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.ResetPositionToCentre", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -172,7 +172,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: SlowdownCheckForwards
     /// </summary>
-    public unsafe void SlowdownCheckForwards()
+    public unsafe virtual void SlowdownCheckForwards()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.SlowdownCheckForwards", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -183,7 +183,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: SlowdownCheckBackwards
     /// </summary>
-    public unsafe void SlowdownCheckBackwards()
+    public unsafe virtual void SlowdownCheckBackwards()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.SlowdownCheckBackwards", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -194,7 +194,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: ResetDirectionRear
     /// </summary>
-    public unsafe void ResetDirectionRear()
+    public unsafe virtual void ResetDirectionRear()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.ResetDirectionRear", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -205,7 +205,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: ResetDirectionFront
     /// </summary>
-    public unsafe void ResetDirectionFront()
+    public unsafe virtual void ResetDirectionFront()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.ResetDirectionFront", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -216,7 +216,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: PerfectJumpPoint
     /// </summary>
-    public unsafe void PerfectJumpPoint()
+    public unsafe virtual void PerfectJumpPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.PerfectJumpPoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -227,7 +227,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: PerformJump
     /// </summary>
-    public unsafe void PerformJump()
+    public unsafe virtual void PerformJump()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.PerformJump", true);
         byte* paramsPtr = stackalloc byte[188];
@@ -238,7 +238,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: ResetFallingGravity
     /// </summary>
-    public unsafe void ResetFallingGravity()
+    public unsafe virtual void ResetFallingGravity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.ResetFallingGravity", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -249,7 +249,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -261,7 +261,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -272,7 +272,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: CartwheelingAnimFinished
     /// </summary>
-    public unsafe void CartwheelingAnimFinished(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id, float TimeLeftOver)
+    public unsafe virtual void CartwheelingAnimFinished(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id, float TimeLeftOver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.CartwheelingAnimFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -285,7 +285,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: WhippingAnimFinished
     /// </summary>
-    public unsafe void WhippingAnimFinished(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id, float TimeLeftOver)
+    public unsafe virtual void WhippingAnimFinished(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id, float TimeLeftOver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.WhippingAnimFinished", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -298,7 +298,7 @@ public partial class RSpecialMoveInstance_WhipRappel_Catwoman : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_WhipRappel_Catwoman.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[248];

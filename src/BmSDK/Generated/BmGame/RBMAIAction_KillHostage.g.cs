@@ -71,7 +71,7 @@ public partial class RBMAIAction_KillHostage : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_KillHostage.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_KillHostage : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// Function: TriggerGameOver
     /// </summary>
-    public unsafe void TriggerGameOver()
+    public unsafe virtual void TriggerGameOver()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_KillHostage.TriggerGameOver", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RBMAIAction_KillHostage : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// Function: GunStop
     /// </summary>
-    public unsafe void GunStop()
+    public unsafe virtual void GunStop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_KillHostage.GunStop", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RBMAIAction_KillHostage : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// Function: GunStart
     /// </summary>
-    public unsafe void GunStart()
+    public unsafe virtual void GunStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_KillHostage.GunStart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RBMAIAction_KillHostage : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_KillHostage.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -127,7 +127,7 @@ public partial class RBMAIAction_KillHostage : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// Function: PlayKill
     /// </summary>
-    public unsafe void PlayKill(System.Numerics.Vector3 KillLoc, BmSDK.BmGame.RPawnFriendly TargetHostage)
+    public unsafe virtual void PlayKill(System.Numerics.Vector3 KillLoc, BmSDK.BmGame.RPawnFriendly TargetHostage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_KillHostage.PlayKill", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -140,7 +140,7 @@ public partial class RBMAIAction_KillHostage : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_KillHostage.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -151,7 +151,7 @@ public partial class RBMAIAction_KillHostage : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_KillHostage.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -162,7 +162,7 @@ public partial class RBMAIAction_KillHostage : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// Function: SetSpottedPlayer
     /// </summary>
-    public unsafe void SetSpottedPlayer(BmSDK.BmGame.RPlayerController NewPC)
+    public unsafe virtual void SetSpottedPlayer(BmSDK.BmGame.RPlayerController NewPC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_KillHostage.SetSpottedPlayer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -174,7 +174,7 @@ public partial class RBMAIAction_KillHostage : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// Function: SetHostage
     /// </summary>
-    public unsafe void SetHostage(BmSDK.BmGame.RPawnFriendly NewHostage)
+    public unsafe virtual void SetHostage(BmSDK.BmGame.RPawnFriendly NewHostage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_KillHostage.SetHostage", true);
         byte* paramsPtr = stackalloc byte[8];

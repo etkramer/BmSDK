@@ -71,7 +71,7 @@ public partial class RCombatMove_RiddlerMechChargeUp : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechChargeUp.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_RiddlerMechChargeUp : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: ChargeUpRobots
     /// </summary>
-    public unsafe void ChargeUpRobots()
+    public unsafe virtual void ChargeUpRobots()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechChargeUp.ChargeUpRobots", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RCombatMove_RiddlerMechChargeUp : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechChargeUp.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RCombatMove_RiddlerMechChargeUp : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: IsAttacking
     /// </summary>
-    public unsafe bool IsAttacking()
+    public unsafe override bool IsAttacking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechChargeUp.IsAttacking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -142,7 +142,7 @@ public partial class RCombatMove_RiddlerMechChargeUp : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: ChargeUpStart
     /// </summary>
-    public unsafe void ChargeUpStart()
+    public unsafe virtual void ChargeUpStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechChargeUp.ChargeUpStart", true);
         byte* paramsPtr = stackalloc byte[0];

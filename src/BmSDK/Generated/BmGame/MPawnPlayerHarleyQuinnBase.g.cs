@@ -66,7 +66,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: SpawnComboTakeDown
     /// </summary>
-    public unsafe void SpawnComboTakeDown(BmSDK.BmGame.RPawnVillain TargetPawn)
+    public unsafe override void SpawnComboTakeDown(BmSDK.BmGame.RPawnVillain TargetPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.SpawnComboTakeDown", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -78,7 +78,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: CanDoSecondaryGroupCombatMove
     /// </summary>
-    public unsafe bool CanDoSecondaryGroupCombatMove()
+    public unsafe override bool CanDoSecondaryGroupCombatMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.CanDoSecondaryGroupCombatMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -89,7 +89,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: PlayReminderConversation
     /// </summary>
-    public unsafe void PlayReminderConversation()
+    public unsafe virtual void PlayReminderConversation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.PlayReminderConversation", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -100,7 +100,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: UnEquipBaseBallBat
     /// </summary>
-    public unsafe void UnEquipBaseBallBat()
+    public unsafe virtual void UnEquipBaseBallBat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.UnEquipBaseBallBat", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -111,7 +111,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: HoldOnBaseBallBat
     /// </summary>
-    public unsafe void HoldOnBaseBallBat()
+    public unsafe virtual void HoldOnBaseBallBat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.HoldOnBaseBallBat", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -122,7 +122,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: NotifyTutorialCompleted
     /// </summary>
-    public unsafe void NotifyTutorialCompleted()
+    public unsafe virtual void NotifyTutorialCompleted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.NotifyTutorialCompleted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -133,7 +133,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: SelectDeathTip_HQ
     /// </summary>
-    public unsafe BmSDK.FString SelectDeathTip_HQ(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe virtual BmSDK.FString SelectDeathTip_HQ(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.SelectDeathTip_HQ", true);
         byte* paramsPtr = stackalloc byte[124];
@@ -147,7 +147,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: SelectDeathMovie_HQ
     /// </summary>
-    public unsafe BmSDK.FString SelectDeathMovie_HQ(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe virtual BmSDK.FString SelectDeathMovie_HQ(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.SelectDeathMovie_HQ", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -161,7 +161,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: Died
     /// </summary>
-    public unsafe bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe override bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.Died", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -175,7 +175,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -186,7 +186,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: UnPossessed
     /// </summary>
-    public unsafe void UnPossessed()
+    public unsafe override void UnPossessed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.UnPossessed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -197,7 +197,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: HasBeenSeen_UpdateData
     /// </summary>
-    public unsafe void HasBeenSeen_UpdateData()
+    public unsafe override void HasBeenSeen_UpdateData()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.HasBeenSeen_UpdateData", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -208,7 +208,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: HidePointLeft
     /// </summary>
-    public unsafe void HidePointLeft()
+    public unsafe virtual void HidePointLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.HidePointLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -219,7 +219,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: HidePointEntered
     /// </summary>
-    public unsafe void HidePointEntered(BmSDK.BmGame.RHidePoint TargetHidePoint)
+    public unsafe virtual void HidePointEntered(BmSDK.BmGame.RHidePoint TargetHidePoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.HidePointEntered", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -231,7 +231,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: CurrentRoomCallback
     /// </summary>
-    public unsafe void CurrentRoomCallback()
+    public unsafe override void CurrentRoomCallback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.CurrentRoomCallback", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -242,7 +242,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: DoCustomVisCheck
     /// </summary>
-    public unsafe bool DoCustomVisCheck()
+    public unsafe override bool DoCustomVisCheck()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.DoCustomVisCheck", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -253,7 +253,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: CleanImportantIdleConversations
     /// </summary>
-    public unsafe void CleanImportantIdleConversations()
+    public unsafe virtual void CleanImportantIdleConversations()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.CleanImportantIdleConversations", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -271,7 +271,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: GetPlayerThoughts
     /// </summary>
-    public unsafe void GetPlayerThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetPlayerThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.GetPlayerThoughts", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -290,7 +290,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: ShouldAutoClimbAfterGrapple
     /// </summary>
-    public unsafe bool ShouldAutoClimbAfterGrapple(System.Numerics.Vector3 ApproxClimbLoc)
+    public unsafe virtual bool ShouldAutoClimbAfterGrapple(System.Numerics.Vector3 ApproxClimbLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.ShouldAutoClimbAfterGrapple", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -309,7 +309,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: CheckDetonateTarget
     /// </summary>
-    public unsafe void CheckDetonateTarget()
+    public unsafe virtual void CheckDetonateTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.CheckDetonateTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -320,7 +320,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: ActivateMayhemMode
     /// </summary>
-    public unsafe void ActivateMayhemMode(bool val, bool bForce = default, bool bCausedByCineMode = default)
+    public unsafe virtual void ActivateMayhemMode(bool val, bool bForce = default, bool bCausedByCineMode = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.ActivateMayhemMode", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -334,7 +334,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: TriggerMayhemMode
     /// </summary>
-    public unsafe void TriggerMayhemMode()
+    public unsafe virtual void TriggerMayhemMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.TriggerMayhemMode", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -345,7 +345,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: CanActivateMayhemMode
     /// </summary>
-    public unsafe bool CanActivateMayhemMode()
+    public unsafe virtual bool CanActivateMayhemMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.CanActivateMayhemMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -356,7 +356,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: NumberPawnInCurrentLevel
     /// </summary>
-    public unsafe int NumberPawnInCurrentLevel(bool OnlyValidCombatant = default)
+    public unsafe virtual int NumberPawnInCurrentLevel(bool OnlyValidCombatant = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.NumberPawnInCurrentLevel", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -368,7 +368,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: UpdateMayhemMeterHUD
     /// </summary>
-    public unsafe void UpdateMayhemMeterHUD()
+    public unsafe virtual void UpdateMayhemMeterHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.UpdateMayhemMeterHUD", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -379,7 +379,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: ShouldDeactivateMayhemMode
     /// </summary>
-    public unsafe bool ShouldDeactivateMayhemMode()
+    public unsafe virtual bool ShouldDeactivateMayhemMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.ShouldDeactivateMayhemMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -390,7 +390,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: GetHelpMayhemModeInstructionPrompt
     /// </summary>
-    public unsafe void GetHelpMayhemModeInstructionPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe virtual void GetHelpMayhemModeInstructionPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.GetHelpMayhemModeInstructionPrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -403,7 +403,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: GetMayhemPrompt
     /// </summary>
-    public unsafe void GetMayhemPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe virtual void GetMayhemPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.GetMayhemPrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -416,7 +416,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: ForceSpecialMove
     /// </summary>
-    public unsafe bool ForceSpecialMove()
+    public unsafe virtual bool ForceSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.ForceSpecialMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -427,7 +427,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: DamagedBy
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.DamagedBy", true);
         byte* paramsPtr = stackalloc byte[250];
@@ -439,7 +439,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: IncMayhemMeter
     /// </summary>
-    public unsafe void IncMayhemMeter(BmSDK.BmGame.MPawnPlayerHarleyQuinnBase.EHarleyMayhemMove MayhemMove, BmSDK.BmGame.RPawnVillain Villain = default)
+    public unsafe virtual void IncMayhemMeter(BmSDK.BmGame.MPawnPlayerHarleyQuinnBase.EHarleyMayhemMove MayhemMove, BmSDK.BmGame.RPawnVillain Villain = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.IncMayhemMeter", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -452,7 +452,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: OnModifyMayhemMeter
     /// </summary>
-    public unsafe void OnModifyMayhemMeter()
+    public unsafe virtual void OnModifyMayhemMeter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.OnModifyMayhemMeter", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -463,7 +463,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: LoadHealth
     /// </summary>
-    public unsafe void LoadHealth()
+    public unsafe override void LoadHealth()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.LoadHealth", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -474,7 +474,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: InitMayhemMeterHUD
     /// </summary>
-    public unsafe void InitMayhemMeterHUD()
+    public unsafe virtual void InitMayhemMeterHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.InitMayhemMeterHUD", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -485,7 +485,7 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// Function: ShowAttracMayhemModeMeter
     /// </summary>
-    public unsafe void ShowAttracMayhemModeMeter(bool Enable)
+    public unsafe virtual void ShowAttracMayhemModeMeter(bool Enable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnPlayerHarleyQuinnBase.ShowAttracMayhemModeMeter", true);
         byte* paramsPtr = stackalloc byte[4];

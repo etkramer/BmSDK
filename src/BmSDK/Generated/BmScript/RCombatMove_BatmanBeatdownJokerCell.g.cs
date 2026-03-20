@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanBeatdownJokerCell : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: PlayStrike
     /// </summary>
-    public unsafe void PlayStrike(bool bQueue, bool bSimulated)
+    public unsafe override void PlayStrike(bool bQueue, bool bSimulated)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanBeatdownJokerCell.PlayStrike", true);
         byte* paramsPtr = stackalloc byte[312];

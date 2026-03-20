@@ -71,7 +71,7 @@ public partial class PhysicsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: ApplyCheckpointRecord
     /// </summary>
-    public unsafe void ApplyCheckpointRecord(out BmSDK.Engine.PhysicsVolume.FCheckpointRecord Record)
+    public unsafe virtual void ApplyCheckpointRecord(out BmSDK.Engine.PhysicsVolume.FCheckpointRecord Record)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicsVolume.ApplyCheckpointRecord", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class PhysicsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: CreateCheckpointRecord
     /// </summary>
-    public unsafe void CreateCheckpointRecord(out BmSDK.Engine.PhysicsVolume.FCheckpointRecord Record)
+    public unsafe virtual void CreateCheckpointRecord(out BmSDK.Engine.PhysicsVolume.FCheckpointRecord Record)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicsVolume.CreateCheckpointRecord", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class PhysicsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldSaveForCheckpoint
     /// </summary>
-    public unsafe bool ShouldSaveForCheckpoint()
+    public unsafe virtual bool ShouldSaveForCheckpoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicsVolume.ShouldSaveForCheckpoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class PhysicsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: OnSetDamageInstigator
     /// </summary>
-    public unsafe void OnSetDamageInstigator(BmSDK.Engine.SeqAct_SetDamageInstigator Action)
+    public unsafe virtual void OnSetDamageInstigator(BmSDK.Engine.SeqAct_SetDamageInstigator Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicsVolume.OnSetDamageInstigator", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class PhysicsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyPawnBecameViewTarget
     /// </summary>
-    public unsafe void NotifyPawnBecameViewTarget(BmSDK.Engine.Pawn P, BmSDK.Engine.PlayerController PC)
+    public unsafe virtual void NotifyPawnBecameViewTarget(BmSDK.Engine.Pawn P, BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicsVolume.NotifyPawnBecameViewTarget", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -131,7 +131,7 @@ public partial class PhysicsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: ModifyPlayer
     /// </summary>
-    public unsafe void ModifyPlayer(BmSDK.Engine.Pawn PlayerPawn)
+    public unsafe virtual void ModifyPlayer(BmSDK.Engine.Pawn PlayerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicsVolume.ModifyPlayer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -143,7 +143,7 @@ public partial class PhysicsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: CausePainTo
     /// </summary>
-    public unsafe void CausePainTo(BmSDK.Engine.Actor Other)
+    public unsafe virtual void CausePainTo(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicsVolume.CausePainTo", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -155,7 +155,7 @@ public partial class PhysicsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicsVolume.Touch", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -170,7 +170,7 @@ public partial class PhysicsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: CollisionChanged
     /// </summary>
-    public unsafe void CollisionChanged()
+    public unsafe override void CollisionChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicsVolume.CollisionChanged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -181,7 +181,7 @@ public partial class PhysicsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicsVolume.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -193,7 +193,7 @@ public partial class PhysicsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: Reset
     /// </summary>
-    public unsafe void Reset()
+    public unsafe override void Reset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicsVolume.Reset", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -204,7 +204,7 @@ public partial class PhysicsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicsVolume.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -215,7 +215,7 @@ public partial class PhysicsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: GetZoneVelocityForActor
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetZoneVelocityForActor(BmSDK.Engine.Actor TheActor)
+    public unsafe virtual System.Numerics.Vector3 GetZoneVelocityForActor(BmSDK.Engine.Actor TheActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicsVolume.GetZoneVelocityForActor", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -234,7 +234,7 @@ public partial class PhysicsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: GetGravityZ
     /// </summary>
-    public unsafe float GetGravityZ()
+    public unsafe override float GetGravityZ()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicsVolume.GetGravityZ", true);
         byte* paramsPtr = stackalloc byte[4];

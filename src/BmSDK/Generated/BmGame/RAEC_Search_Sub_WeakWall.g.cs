@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_WeakWall : BmSDK.BmGame.RAEC_Search_Sub_For
     /// <summary>
     /// Function: GetGunDamageType
     /// </summary>
-    public unsafe BmSDK.Class GetGunDamageType()
+    public unsafe virtual BmSDK.Class GetGunDamageType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_WeakWall.GetGunDamageType", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Sub_WeakWall : BmSDK.BmGame.RAEC_Search_Sub_For
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_WeakWall.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RAEC_Search_Sub_WeakWall : BmSDK.BmGame.RAEC_Search_Sub_For
     /// <summary>
     /// Function: StartFromSearch
     /// </summary>
-    public unsafe void StartFromSearch(BmSDK.BmGame.RBMAIController NewCon, BmSDK.BmGame.RDestructibleProp_FractureWall inWeakWall, System.Numerics.Vector3 inWallLoc)
+    public unsafe virtual void StartFromSearch(BmSDK.BmGame.RBMAIController NewCon, BmSDK.BmGame.RDestructibleProp_FractureWall inWeakWall, System.Numerics.Vector3 inWallLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_WeakWall.StartFromSearch", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -108,7 +108,7 @@ public partial class RAEC_Search_Sub_WeakWall : BmSDK.BmGame.RAEC_Search_Sub_For
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_WeakWall.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -120,7 +120,7 @@ public partial class RAEC_Search_Sub_WeakWall : BmSDK.BmGame.RAEC_Search_Sub_For
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_WeakWall.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -132,7 +132,7 @@ public partial class RAEC_Search_Sub_WeakWall : BmSDK.BmGame.RAEC_Search_Sub_For
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_WeakWall.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -143,7 +143,7 @@ public partial class RAEC_Search_Sub_WeakWall : BmSDK.BmGame.RAEC_Search_Sub_For
     /// <summary>
     /// Function: OnVillainStolen
     /// </summary>
-    public unsafe void OnVillainStolen()
+    public unsafe override void OnVillainStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_WeakWall.OnVillainStolen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -154,7 +154,7 @@ public partial class RAEC_Search_Sub_WeakWall : BmSDK.BmGame.RAEC_Search_Sub_For
     /// <summary>
     /// Function: Cleanup
     /// </summary>
-    public unsafe void Cleanup()
+    public unsafe virtual void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_WeakWall.Cleanup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -165,7 +165,7 @@ public partial class RAEC_Search_Sub_WeakWall : BmSDK.BmGame.RAEC_Search_Sub_For
     /// <summary>
     /// Function: InPositionToShoot
     /// </summary>
-    public unsafe bool InPositionToShoot()
+    public unsafe virtual bool InPositionToShoot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_WeakWall.InPositionToShoot", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -176,7 +176,7 @@ public partial class RAEC_Search_Sub_WeakWall : BmSDK.BmGame.RAEC_Search_Sub_For
     /// <summary>
     /// Function: CheckLOSToWall
     /// </summary>
-    public unsafe void CheckLOSToWall()
+    public unsafe virtual void CheckLOSToWall()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_WeakWall.CheckLOSToWall", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -187,7 +187,7 @@ public partial class RAEC_Search_Sub_WeakWall : BmSDK.BmGame.RAEC_Search_Sub_For
     /// <summary>
     /// Function: GetCurrentPathHandle
     /// </summary>
-    public unsafe BmSDK.BmGame.RNavigationHandle GetCurrentPathHandle()
+    public unsafe override BmSDK.BmGame.RNavigationHandle GetCurrentPathHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_WeakWall.GetCurrentPathHandle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -198,7 +198,7 @@ public partial class RAEC_Search_Sub_WeakWall : BmSDK.BmGame.RAEC_Search_Sub_For
     /// <summary>
     /// Function: StopWallFiring
     /// </summary>
-    public unsafe void StopWallFiring()
+    public unsafe virtual void StopWallFiring()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_WeakWall.StopWallFiring", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -209,7 +209,7 @@ public partial class RAEC_Search_Sub_WeakWall : BmSDK.BmGame.RAEC_Search_Sub_For
     /// <summary>
     /// Function: StartWallFiring
     /// </summary>
-    public unsafe void StartWallFiring()
+    public unsafe virtual void StartWallFiring()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_WeakWall.StartWallFiring", true);
         byte* paramsPtr = stackalloc byte[0];

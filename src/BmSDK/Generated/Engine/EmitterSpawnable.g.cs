@@ -71,7 +71,7 @@ public partial class EmitterSpawnable : BmSDK.Engine.Emitter, BmSDK.IGameObject
     /// <summary>
     /// Function: ReplicatedEvent
     /// </summary>
-    public unsafe void ReplicatedEvent(BmSDK.FName VarName)
+    public unsafe override void ReplicatedEvent(BmSDK.FName VarName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EmitterSpawnable.ReplicatedEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class EmitterSpawnable : BmSDK.Engine.Emitter, BmSDK.IGameObject
     /// <summary>
     /// Function: SetTemplate
     /// </summary>
-    public unsafe void SetTemplate(BmSDK.Engine.ParticleSystem NewTemplate, bool bDestroyOnFinish)
+    public unsafe override void SetTemplate(BmSDK.Engine.ParticleSystem NewTemplate, bool bDestroyOnFinish)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EmitterSpawnable.SetTemplate", true);
         byte* paramsPtr = stackalloc byte[12];

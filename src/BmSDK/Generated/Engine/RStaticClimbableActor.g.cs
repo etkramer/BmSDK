@@ -66,7 +66,7 @@ public partial class RStaticClimbableActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: DisableShimmy
     /// </summary>
-    public unsafe void DisableShimmy()
+    public unsafe virtual void DisableShimmy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RStaticClimbableActor.DisableShimmy", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -84,7 +84,7 @@ public partial class RStaticClimbableActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: EnableRailings
     /// </summary>
-    public unsafe void EnableRailings()
+    public unsafe virtual void EnableRailings()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RStaticClimbableActor.EnableRailings", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -102,7 +102,7 @@ public partial class RStaticClimbableActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: SetBatmanCanClimb
     /// </summary>
-    public unsafe void SetBatmanCanClimb(bool bCanClimb)
+    public unsafe override void SetBatmanCanClimb(bool bCanClimb)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RStaticClimbableActor.SetBatmanCanClimb", true);
         byte* paramsPtr = stackalloc byte[4];

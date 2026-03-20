@@ -36,7 +36,7 @@ public partial class SoundNodeWave : BmSDK.Engine.SoundNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GeneratePCMData
     /// </summary>
-    public unsafe void GeneratePCMData(out BmSDK.TArray<byte> Buffer, int SamplesNeeded)
+    public unsafe virtual void GeneratePCMData(out BmSDK.TArray<byte> Buffer, int SamplesNeeded)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SoundNodeWave.GeneratePCMData", true);
         byte* paramsPtr = stackalloc byte[20];

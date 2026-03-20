@@ -71,7 +71,7 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// Function: OnToggleHidden
     /// </summary>
-    public unsafe void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
+    public unsafe override void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RDustVolume.OnToggleHidden", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RDustVolume.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// Function: ToggleFearGasVis
     /// </summary>
-    public unsafe void ToggleFearGasVis(bool bHide)
+    public unsafe virtual void ToggleFearGasVis(bool bHide)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RDustVolume.ToggleFearGasVis", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -107,7 +107,7 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// Function: ShowFearGas
     /// </summary>
-    public unsafe void ShowFearGas()
+    public unsafe virtual void ShowFearGas()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RDustVolume.ShowFearGas", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// Function: HideFearGas
     /// </summary>
-    public unsafe void HideFearGas()
+    public unsafe virtual void HideFearGas()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RDustVolume.HideFearGas", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// Function: QueueFadeOut
     /// </summary>
-    public unsafe void QueueFadeOut(bool bSwitchInstant)
+    public unsafe virtual void QueueFadeOut(bool bSwitchInstant)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RDustVolume.QueueFadeOut", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -141,7 +141,7 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// Function: QueueFadeIn
     /// </summary>
-    public unsafe void QueueFadeIn(bool bSwitchInstant)
+    public unsafe virtual void QueueFadeIn(bool bSwitchInstant)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RDustVolume.QueueFadeIn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -153,7 +153,7 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// Function: CreateResources
     /// </summary>
-    public unsafe void CreateResources()
+    public unsafe virtual void CreateResources()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RDustVolume.CreateResources", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -164,7 +164,7 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RDustVolume.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -175,7 +175,7 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// Function: GetActiveFearGasDensity
     /// </summary>
-    public unsafe float GetActiveFearGasDensity()
+    public unsafe override float GetActiveFearGasDensity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RDustVolume.GetActiveFearGasDensity", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -193,7 +193,7 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// Function: GetFearGasDensity
     /// </summary>
-    public unsafe float GetFearGasDensity()
+    public unsafe override float GetFearGasDensity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RDustVolume.GetFearGasDensity", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -211,7 +211,7 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// Function: IsInsideFearGasVolume
     /// </summary>
-    public unsafe bool IsInsideFearGasVolume(System.Numerics.Vector3 TestLocation)
+    public unsafe override bool IsInsideFearGasVolume(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RDustVolume.IsInsideFearGasVolume", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -230,7 +230,7 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// Function: GetLocationDustDepth
     /// </summary>
-    public unsafe float GetLocationDustDepth(System.Numerics.Vector3 TestLocation)
+    public unsafe override float GetLocationDustDepth(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RDustVolume.GetLocationDustDepth", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -249,7 +249,7 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// Function: FearGasTransitionAlpha
     /// </summary>
-    public unsafe float FearGasTransitionAlpha(System.Numerics.Vector3 TestLocation)
+    public unsafe override float FearGasTransitionAlpha(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RDustVolume.FearGasTransitionAlpha", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -268,7 +268,7 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// Function: GetFearGasWorldHeight
     /// </summary>
-    public unsafe float GetFearGasWorldHeight(System.Numerics.Vector3 TestLocation)
+    public unsafe override float GetFearGasWorldHeight(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RDustVolume.GetFearGasWorldHeight", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -287,7 +287,7 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// Function: SignedDistanceToFearGasZ
     /// </summary>
-    public unsafe float SignedDistanceToFearGasZ(System.Numerics.Vector3 TestLocation)
+    public unsafe override float SignedDistanceToFearGasZ(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RDustVolume.SignedDistanceToFearGasZ", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -306,7 +306,7 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// Function: IsLocationFearGas
     /// </summary>
-    public unsafe bool IsLocationFearGas(System.Numerics.Vector3 TestLocation)
+    public unsafe override bool IsLocationFearGas(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RDustVolume.IsLocationFearGas", true);
         byte* paramsPtr = stackalloc byte[16];

@@ -71,7 +71,7 @@ public partial class RAEC_MissingGrate : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MissingGrate.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_MissingGrate : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: PostFinish
     /// </summary>
-    public unsafe void PostFinish()
+    public unsafe virtual void PostFinish()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MissingGrate.PostFinish", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -93,7 +93,7 @@ public partial class RAEC_MissingGrate : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: DoDiscoveryBark
     /// </summary>
-    public unsafe void DoDiscoveryBark(BmSDK.BmGame.RPawnVillain LeaderPawn)
+    public unsafe virtual void DoDiscoveryBark(BmSDK.BmGame.RPawnVillain LeaderPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MissingGrate.DoDiscoveryBark", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -105,7 +105,7 @@ public partial class RAEC_MissingGrate : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: InitFollowers
     /// </summary>
-    public unsafe void InitFollowers(BmSDK.TArray<BmSDK.BmGame.RBMAIController> FollowerList)
+    public unsafe virtual void InitFollowers(BmSDK.TArray<BmSDK.BmGame.RBMAIController> FollowerList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MissingGrate.InitFollowers", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -117,7 +117,7 @@ public partial class RAEC_MissingGrate : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: GetPossibleBuddies
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RBMAIController> GetPossibleBuddies(BmSDK.BmGame.RBMAIController TestLeader)
+    public unsafe virtual BmSDK.TArray<BmSDK.BmGame.RBMAIController> GetPossibleBuddies(BmSDK.BmGame.RBMAIController TestLeader)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MissingGrate.GetPossibleBuddies", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -129,7 +129,7 @@ public partial class RAEC_MissingGrate : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: HandleSpotted
     /// </summary>
-    public unsafe bool HandleSpotted(BmSDK.BmGame.RBMAIController Spotter)
+    public unsafe virtual bool HandleSpotted(BmSDK.BmGame.RBMAIController Spotter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MissingGrate.HandleSpotted", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -141,7 +141,7 @@ public partial class RAEC_MissingGrate : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: SetMissingPoint
     /// </summary>
-    public unsafe void SetMissingPoint(BmSDK.BmGame.RMissingWallGrateAIMarker NewPoint)
+    public unsafe virtual void SetMissingPoint(BmSDK.BmGame.RMissingWallGrateAIMarker NewPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MissingGrate.SetMissingPoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -153,7 +153,7 @@ public partial class RAEC_MissingGrate : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: GetBarkPriority
     /// </summary>
-    public unsafe int GetBarkPriority()
+    public unsafe override int GetBarkPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MissingGrate.GetBarkPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -164,7 +164,7 @@ public partial class RAEC_MissingGrate : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: OnRemoveSoloChild
     /// </summary>
-    public unsafe void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
+    public unsafe override void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MissingGrate.OnRemoveSoloChild", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -176,7 +176,7 @@ public partial class RAEC_MissingGrate : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: OnRemoveGroupChild
     /// </summary>
-    public unsafe void OnRemoveGroupChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
+    public unsafe override void OnRemoveGroupChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MissingGrate.OnRemoveGroupChild", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -188,7 +188,7 @@ public partial class RAEC_MissingGrate : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MissingGrate.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];

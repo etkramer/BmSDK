@@ -66,7 +66,7 @@ public partial class MSnareTrap : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: UpdateAutoTarget
     /// </summary>
-    public unsafe void UpdateAutoTarget()
+    public unsafe override void UpdateAutoTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrap.UpdateAutoTarget", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -77,7 +77,7 @@ public partial class MSnareTrap : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrap.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -88,7 +88,7 @@ public partial class MSnareTrap : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: CheckAutoTarget
     /// </summary>
-    public unsafe bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
+    public unsafe override bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrap.CheckAutoTarget", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -104,7 +104,7 @@ public partial class MSnareTrap : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: OnProjectileFired
     /// </summary>
-    public unsafe void OnProjectileFired(BmSDK.BmGame.MSnareTrapProjectile Projectile)
+    public unsafe virtual void OnProjectileFired(BmSDK.BmGame.MSnareTrapProjectile Projectile)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrap.OnProjectileFired", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -116,7 +116,7 @@ public partial class MSnareTrap : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: DestroyAllProjectiles
     /// </summary>
-    public unsafe void DestroyAllProjectiles()
+    public unsafe virtual void DestroyAllProjectiles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrap.DestroyAllProjectiles", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class MSnareTrap : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: TrySuccessfulComboHit
     /// </summary>
-    public unsafe void TrySuccessfulComboHit()
+    public unsafe override void TrySuccessfulComboHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrap.TrySuccessfulComboHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class MSnareTrap : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: TryContinueComboStartMove
     /// </summary>
-    public unsafe void TryContinueComboStartMove()
+    public unsafe override void TryContinueComboStartMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrap.TryContinueComboStartMove", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -149,7 +149,7 @@ public partial class MSnareTrap : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: FireGadgetCombat
     /// </summary>
-    public unsafe bool FireGadgetCombat()
+    public unsafe override bool FireGadgetCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrap.FireGadgetCombat", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -160,7 +160,7 @@ public partial class MSnareTrap : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: GetPrimedPose
     /// </summary>
-    public unsafe BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
+    public unsafe override BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrap.GetPrimedPose", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -177,7 +177,7 @@ public partial class MSnareTrap : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: GadgetUsed
     /// </summary>
-    public unsafe void GadgetUsed()
+    public unsafe override void GadgetUsed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrap.GadgetUsed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -188,7 +188,7 @@ public partial class MSnareTrap : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: AttachToHand
     /// </summary>
-    public unsafe void AttachToHand(BmSDK.FName CustomBone = default)
+    public unsafe override void AttachToHand(BmSDK.FName CustomBone = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrap.AttachToHand", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -200,7 +200,7 @@ public partial class MSnareTrap : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: Deployed
     /// </summary>
-    public unsafe void Deployed(BmSDK.BmGame.MHQBehaviour_SnareTrapTripped BehaviourDeployed)
+    public unsafe virtual void Deployed(BmSDK.BmGame.MHQBehaviour_SnareTrapTripped BehaviourDeployed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrap.Deployed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -212,7 +212,7 @@ public partial class MSnareTrap : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// Function: Throw
     /// </summary>
-    public unsafe bool Throw(bool bSecondary = default)
+    public unsafe override bool Throw(bool bSecondary = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSnareTrap.Throw", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RAEC_Casualty_Sub_Rail : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Rail.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Casualty_Sub_Rail : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: HandOverFenceLock
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMPathNode_FenceJumpProxy HandOverFenceLock()
+    public unsafe virtual BmSDK.BmGame.RBMPathNode_FenceJumpProxy HandOverFenceLock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Rail.HandOverFenceLock", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -93,7 +93,7 @@ public partial class RAEC_Casualty_Sub_Rail : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: IsAtRail
     /// </summary>
-    public unsafe bool IsAtRail()
+    public unsafe virtual bool IsAtRail()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Rail.IsAtRail", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RAEC_Casualty_Sub_Rail : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.BmGame.RBMPathNode_FenceJump FenceCentreNode, System.Numerics.Vector3 StartPoint)
+    public unsafe virtual void Init(BmSDK.BmGame.RBMPathNode_FenceJump FenceCentreNode, System.Numerics.Vector3 StartPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Rail.Init", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -117,7 +117,7 @@ public partial class RAEC_Casualty_Sub_Rail : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: OnVillainStolen
     /// </summary>
-    public unsafe void OnVillainStolen()
+    public unsafe override void OnVillainStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Rail.OnVillainStolen", true);
         byte* paramsPtr = stackalloc byte[0];

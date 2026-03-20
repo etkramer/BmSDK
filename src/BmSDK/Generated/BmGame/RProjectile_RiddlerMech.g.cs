@@ -71,7 +71,7 @@ public partial class RProjectile_RiddlerMech : BmSDK.BmGame.RProjectile, BmSDK.I
     /// <summary>
     /// Function: HitTarget
     /// </summary>
-    public unsafe void HitTarget()
+    public unsafe virtual void HitTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectile_RiddlerMech.HitTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RProjectile_RiddlerMech : BmSDK.BmGame.RProjectile, BmSDK.I
     /// <summary>
     /// Function: LaunchProjectile
     /// </summary>
-    public unsafe void LaunchProjectile(BmSDK.BmGame.RPawnVillain NewTarget, float TravelTime, BmSDK.Engine.ParticleSystem NewFxTemplate)
+    public unsafe virtual void LaunchProjectile(BmSDK.BmGame.RPawnVillain NewTarget, float TravelTime, BmSDK.Engine.ParticleSystem NewFxTemplate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectile_RiddlerMech.LaunchProjectile", true);
         byte* paramsPtr = stackalloc byte[36];

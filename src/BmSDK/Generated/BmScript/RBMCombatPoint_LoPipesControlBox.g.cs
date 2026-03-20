@@ -71,7 +71,7 @@ public partial class RBMCombatPoint_LoPipesControlBox : BmSDK.BmGame.RBMCombatPo
     /// <summary>
     /// Function: DebugReset
     /// </summary>
-    public unsafe void DebugReset(BmSDK.BmGame.RBMCombatManager CM)
+    public unsafe virtual void DebugReset(BmSDK.BmGame.RBMCombatManager CM)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_LoPipesControlBox.DebugReset", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RBMCombatPoint_LoPipesControlBox : BmSDK.BmGame.RBMCombatPo
     /// <summary>
     /// Function: OnFxEvent
     /// </summary>
-    public unsafe void OnFxEvent()
+    public unsafe virtual void OnFxEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_LoPipesControlBox.OnFxEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RBMCombatPoint_LoPipesControlBox : BmSDK.BmGame.RBMCombatPo
     /// <summary>
     /// Function: SetControlBoxMaterial
     /// </summary>
-    public unsafe void SetControlBoxMaterial(bool bBoxActive)
+    public unsafe virtual void SetControlBoxMaterial(bool bBoxActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_LoPipesControlBox.SetControlBoxMaterial", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RBMCombatPoint_LoPipesControlBox : BmSDK.BmGame.RBMCombatPo
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_LoPipesControlBox.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RBMCombatPoint_LoPipesControlBox : BmSDK.BmGame.RBMCombatPo
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_LoPipesControlBox.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class RGFxMovieModularHud_Disposable : BmSDK.BmGame.RGFxMovieModu
     /// <summary>
     /// Function: DeleteHudExtension
     /// </summary>
-    public unsafe void DeleteHudExtension(BmSDK.FString _ExtensionName)
+    public unsafe override void DeleteHudExtension(BmSDK.FString _ExtensionName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud_Disposable.DeleteHudExtension", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -48,7 +48,7 @@ public partial class RGFxMovieModularHud_Disposable : BmSDK.BmGame.RGFxMovieModu
     /// <summary>
     /// Function: CreateHudExtension
     /// </summary>
-    public unsafe void CreateHudExtension(BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath, int ModulePriority, bool CanBeTinted)
+    public unsafe override void CreateHudExtension(BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath, int ModulePriority, bool CanBeTinted)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud_Disposable.CreateHudExtension", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -63,7 +63,7 @@ public partial class RGFxMovieModularHud_Disposable : BmSDK.BmGame.RGFxMovieModu
     /// <summary>
     /// Function: SetRequestsCleanup
     /// </summary>
-    public unsafe void SetRequestsCleanup(bool _RequestsCleanup)
+    public unsafe virtual void SetRequestsCleanup(bool _RequestsCleanup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud_Disposable.SetRequestsCleanup", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -75,7 +75,7 @@ public partial class RGFxMovieModularHud_Disposable : BmSDK.BmGame.RGFxMovieModu
     /// <summary>
     /// Function: OnClose
     /// </summary>
-    public unsafe void OnClose()
+    public unsafe override void OnClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud_Disposable.OnClose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -86,7 +86,7 @@ public partial class RGFxMovieModularHud_Disposable : BmSDK.BmGame.RGFxMovieModu
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud_Disposable.Init", true);
         byte* paramsPtr = stackalloc byte[8];

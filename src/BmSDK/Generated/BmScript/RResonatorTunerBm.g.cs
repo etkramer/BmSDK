@@ -71,7 +71,7 @@ public partial class RResonatorTunerBm : BmSDK.BmGame.RResonatorTuner, BmSDK.IGa
     /// <summary>
     /// Function: ConversationReTriggerTimeout
     /// </summary>
-    public unsafe void ConversationReTriggerTimeout()
+    public unsafe virtual void ConversationReTriggerTimeout()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RResonatorTunerBm.ConversationReTriggerTimeout", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RResonatorTunerBm : BmSDK.BmGame.RResonatorTuner, BmSDK.IGa
     /// <summary>
     /// Function: PlayCodesNeededDialogue
     /// </summary>
-    public unsafe void PlayCodesNeededDialogue()
+    public unsafe override void PlayCodesNeededDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RResonatorTunerBm.PlayCodesNeededDialogue", true);
         byte* paramsPtr = stackalloc byte[16];

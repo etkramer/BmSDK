@@ -71,7 +71,7 @@ public partial class RTunnelGrateShared : BmSDK.BmGame.RTunnelGrateBase, BmSDK.I
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTunnelGrateShared.Tick", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -83,7 +83,7 @@ public partial class RTunnelGrateShared : BmSDK.BmGame.RTunnelGrateBase, BmSDK.I
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe override BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTunnelGrateShared.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -95,7 +95,7 @@ public partial class RTunnelGrateShared : BmSDK.BmGame.RTunnelGrateBase, BmSDK.I
     /// <summary>
     /// Function: OverridesRun
     /// </summary>
-    public unsafe float OverridesRun(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override float OverridesRun(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTunnelGrateShared.OverridesRun", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -107,7 +107,7 @@ public partial class RTunnelGrateShared : BmSDK.BmGame.RTunnelGrateBase, BmSDK.I
     /// <summary>
     /// Function: CanReachItem
     /// </summary>
-    public unsafe bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
+    public unsafe override bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTunnelGrateShared.CanReachItem", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -119,7 +119,7 @@ public partial class RTunnelGrateShared : BmSDK.BmGame.RTunnelGrateBase, BmSDK.I
     /// <summary>
     /// Function: GetInteractButton
     /// </summary>
-    public unsafe BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton GetInteractButton(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton GetInteractButton(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTunnelGrateShared.GetInteractButton", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -131,7 +131,7 @@ public partial class RTunnelGrateShared : BmSDK.BmGame.RTunnelGrateBase, BmSDK.I
     /// <summary>
     /// Function: MustBeCrouched
     /// </summary>
-    public unsafe bool MustBeCrouched(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool MustBeCrouched(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTunnelGrateShared.MustBeCrouched", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -143,7 +143,7 @@ public partial class RTunnelGrateShared : BmSDK.BmGame.RTunnelGrateBase, BmSDK.I
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTunnelGrateShared.IsActive", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -155,7 +155,7 @@ public partial class RTunnelGrateShared : BmSDK.BmGame.RTunnelGrateBase, BmSDK.I
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTunnelGrateShared.Interact", true);
         byte* paramsPtr = stackalloc byte[208];
@@ -167,7 +167,7 @@ public partial class RTunnelGrateShared : BmSDK.BmGame.RTunnelGrateBase, BmSDK.I
     /// <summary>
     /// Function: TriggerFarMove
     /// </summary>
-    public unsafe void TriggerFarMove(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void TriggerFarMove(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTunnelGrateShared.TriggerFarMove", true);
         byte* paramsPtr = stackalloc byte[176];
@@ -179,7 +179,7 @@ public partial class RTunnelGrateShared : BmSDK.BmGame.RTunnelGrateBase, BmSDK.I
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.Engine.PlayerController PC)
+    public unsafe override void TriggerSpecialMove(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTunnelGrateShared.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[176];
@@ -191,7 +191,7 @@ public partial class RTunnelGrateShared : BmSDK.BmGame.RTunnelGrateBase, BmSDK.I
     /// <summary>
     /// Function: GetFOVDegrees
     /// </summary>
-    public unsafe float GetFOVDegrees(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override float GetFOVDegrees(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTunnelGrateShared.GetFOVDegrees", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -203,7 +203,7 @@ public partial class RTunnelGrateShared : BmSDK.BmGame.RTunnelGrateBase, BmSDK.I
     /// <summary>
     /// Function: GetHeightRange
     /// </summary>
-    public unsafe float GetHeightRange()
+    public unsafe override float GetHeightRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTunnelGrateShared.GetHeightRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -214,7 +214,7 @@ public partial class RTunnelGrateShared : BmSDK.BmGame.RTunnelGrateBase, BmSDK.I
     /// <summary>
     /// Function: PostBeginPlay_Delayed
     /// </summary>
-    public unsafe void PostBeginPlay_Delayed()
+    public unsafe override void PostBeginPlay_Delayed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTunnelGrateShared.PostBeginPlay_Delayed", true);
         byte* paramsPtr = stackalloc byte[0];

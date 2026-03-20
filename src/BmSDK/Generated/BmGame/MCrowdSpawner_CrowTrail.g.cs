@@ -71,7 +71,7 @@ public partial class MCrowdSpawner_CrowTrail : BmSDK.BmGame.RCrowdSpawner, BmSDK
     /// <summary>
     /// Function: SpawnAgent
     /// </summary>
-    public unsafe BmSDK.BmGame.RCrowdAgent SpawnAgent()
+    public unsafe override BmSDK.BmGame.RCrowdAgent SpawnAgent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCrowdSpawner_CrowTrail.SpawnAgent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class MCrowdSpawner_CrowTrail : BmSDK.BmGame.RCrowdSpawner, BmSDK
     /// <summary>
     /// Function: GetSpawnLocationVariation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetSpawnLocationVariation()
+    public unsafe override System.Numerics.Vector3 GetSpawnLocationVariation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCrowdSpawner_CrowTrail.GetSpawnLocationVariation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -93,7 +93,7 @@ public partial class MCrowdSpawner_CrowTrail : BmSDK.BmGame.RCrowdSpawner, BmSDK
     /// <summary>
     /// Function: SpawnCrowd
     /// </summary>
-    public unsafe void SpawnCrowd(int NumToSpawn, int NewFlockID = default, BmSDK.BmGame.RCrowdSequence NewCrowdSequence = default)
+    public unsafe override void SpawnCrowd(int NumToSpawn, int NewFlockID = default, BmSDK.BmGame.RCrowdSequence NewCrowdSequence = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCrowdSpawner_CrowTrail.SpawnCrowd", true);
         byte* paramsPtr = stackalloc byte[16];

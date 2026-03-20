@@ -66,7 +66,7 @@ public partial class RBMPathNode_VariablePositionTraverseProxy : BmSDK.BmGame.RB
     /// <summary>
     /// Function: UnlockSlot
     /// </summary>
-    public unsafe void UnlockSlot(BmSDK.BmGame.RPawn User)
+    public unsafe override void UnlockSlot(BmSDK.BmGame.RPawn User)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_VariablePositionTraverseProxy.UnlockSlot", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -78,7 +78,7 @@ public partial class RBMPathNode_VariablePositionTraverseProxy : BmSDK.BmGame.RB
     /// <summary>
     /// Function: GetDynamicMoveSlotFor
     /// </summary>
-    public unsafe bool GetDynamicMoveSlotFor(BmSDK.BmGame.RPawn User, System.Numerics.Vector3 DestPoint, out System.Numerics.Vector3 SlotLocation)
+    public unsafe override bool GetDynamicMoveSlotFor(BmSDK.BmGame.RPawn User, System.Numerics.Vector3 DestPoint, out System.Numerics.Vector3 SlotLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_VariablePositionTraverseProxy.GetDynamicMoveSlotFor", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -92,7 +92,7 @@ public partial class RBMPathNode_VariablePositionTraverseProxy : BmSDK.BmGame.RB
     /// <summary>
     /// Function: GetSpecialMoveNode
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMPathNode_SpecialMove GetSpecialMoveNode()
+    public unsafe virtual BmSDK.BmGame.RBMPathNode_SpecialMove GetSpecialMoveNode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_VariablePositionTraverseProxy.GetSpecialMoveNode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -103,7 +103,7 @@ public partial class RBMPathNode_VariablePositionTraverseProxy : BmSDK.BmGame.RB
     /// <summary>
     /// Function: GetIntersectionPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetIntersectionPoint(System.Numerics.Vector3 pawnLoc, System.Numerics.Vector3 DestLoc)
+    public unsafe virtual System.Numerics.Vector3 GetIntersectionPoint(System.Numerics.Vector3 pawnLoc, System.Numerics.Vector3 DestLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_VariablePositionTraverseProxy.GetIntersectionPoint", true);
         byte* paramsPtr = stackalloc byte[36];

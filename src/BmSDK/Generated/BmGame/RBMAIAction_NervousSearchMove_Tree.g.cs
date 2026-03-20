@@ -71,7 +71,7 @@ public partial class RBMAIAction_NervousSearchMove_Tree : BmSDK.BmGame.RBMAIActi
     /// <summary>
     /// Function: BuildHandle
     /// </summary>
-    public unsafe BmSDK.BmGame.RNavigationHandle BuildHandle()
+    public unsafe override BmSDK.BmGame.RNavigationHandle BuildHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousSearchMove_Tree.BuildHandle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_NervousSearchMove_Tree : BmSDK.BmGame.RBMAIActi
     /// <summary>
     /// Function: SetupSearchGoal
     /// </summary>
-    public unsafe void SetupSearchGoal(BmSDK.BmGame.RChasePoint NewStartSearchPoint, BmSDK.BmGame.RChasePoint NewGoalSearchPoint)
+    public unsafe virtual void SetupSearchGoal(BmSDK.BmGame.RChasePoint NewStartSearchPoint, BmSDK.BmGame.RChasePoint NewGoalSearchPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousSearchMove_Tree.SetupSearchGoal", true);
         byte* paramsPtr = stackalloc byte[16];

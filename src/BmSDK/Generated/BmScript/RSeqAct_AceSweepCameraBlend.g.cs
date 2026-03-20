@@ -47,7 +47,7 @@ public partial class RSeqAct_AceSweepCameraBlend : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_AceSweepCameraBlend.Update", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -59,7 +59,7 @@ public partial class RSeqAct_AceSweepCameraBlend : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_AceSweepCameraBlend.Activated", true);
         byte* paramsPtr = stackalloc byte[17];

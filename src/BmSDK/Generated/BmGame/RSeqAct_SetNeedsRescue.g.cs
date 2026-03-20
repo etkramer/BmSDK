@@ -47,7 +47,7 @@ public partial class RSeqAct_SetNeedsRescue : BmSDK.Engine.SequenceAction, BmSDK
     /// <summary>
     /// Function: SetNR
     /// </summary>
-    public unsafe void SetNR()
+    public unsafe virtual void SetNR()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetNeedsRescue.SetNR", true);
         byte* paramsPtr = stackalloc byte[0];

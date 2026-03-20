@@ -71,7 +71,7 @@ public partial class MAEC_LaughingGas : BmSDK.BmGame.RAEC_Smoke, BmSDK.IGameObje
     /// <summary>
     /// Function: AddSmokeSpotter
     /// </summary>
-    public unsafe bool AddSmokeSpotter(BmSDK.BmGame.RBMAIController C)
+    public unsafe override bool AddSmokeSpotter(BmSDK.BmGame.RBMAIController C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_LaughingGas.AddSmokeSpotter", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class MAEC_LaughingGas : BmSDK.BmGame.RAEC_Smoke, BmSDK.IGameObje
     /// <summary>
     /// Function: InitOutsideThugs
     /// </summary>
-    public unsafe void InitOutsideThugs(bool bIsExtinguisher)
+    public unsafe override void InitOutsideThugs(bool bIsExtinguisher)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_LaughingGas.InitOutsideThugs", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -95,7 +95,7 @@ public partial class MAEC_LaughingGas : BmSDK.BmGame.RAEC_Smoke, BmSDK.IGameObje
     /// <summary>
     /// Function: SetSmokeScreen
     /// </summary>
-    public unsafe void SetSmokeScreen(BmSDK.BmGame.RSmokeScreen NewSmokeScreen)
+    public unsafe override void SetSmokeScreen(BmSDK.BmGame.RSmokeScreen NewSmokeScreen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_LaughingGas.SetSmokeScreen", true);
         byte* paramsPtr = stackalloc byte[8];

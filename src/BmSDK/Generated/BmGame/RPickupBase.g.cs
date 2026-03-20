@@ -66,7 +66,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: AllowLongRangeInteraction
     /// </summary>
-    public unsafe bool AllowLongRangeInteraction(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool AllowLongRangeInteraction(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.AllowLongRangeInteraction", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -78,7 +78,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: HarpoonDestroy
     /// </summary>
-    public unsafe void HarpoonDestroy()
+    public unsafe virtual void HarpoonDestroy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.HarpoonDestroy", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: FailedHarpoonPickup
     /// </summary>
-    public unsafe void FailedHarpoonPickup()
+    public unsafe virtual void FailedHarpoonPickup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.FailedHarpoonPickup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -100,7 +100,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetScanLocationOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetScanLocationOffset()
+    public unsafe override System.Numerics.Vector3 GetScanLocationOffset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetScanLocationOffset", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -111,7 +111,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: CanReachItem
     /// </summary>
-    public unsafe bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
+    public unsafe virtual bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.CanReachItem", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -123,7 +123,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: OverridesRun
     /// </summary>
-    public unsafe float OverridesRun(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual float OverridesRun(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.OverridesRun", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -135,7 +135,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetLocationOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLocationOffset()
+    public unsafe override System.Numerics.Vector3 GetLocationOffset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetLocationOffset", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -146,7 +146,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: CanUseInCinematicMode
     /// </summary>
-    public unsafe bool CanUseInCinematicMode()
+    public unsafe virtual bool CanUseInCinematicMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.CanUseInCinematicMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -157,7 +157,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.Interact", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -169,7 +169,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GenerateScanEvent
     /// </summary>
-    public unsafe void GenerateScanEvent(BmSDK.BmGame.RPlayerController RPC, bool Rescanned)
+    public unsafe override void GenerateScanEvent(BmSDK.BmGame.RPlayerController RPC, bool Rescanned)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GenerateScanEvent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -182,7 +182,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: CanScanAndAddToMap
     /// </summary>
-    public unsafe bool CanScanAndAddToMap()
+    public unsafe override bool CanScanAndAddToMap()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.CanScanAndAddToMap", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -193,7 +193,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: HasBeenPickedUp
     /// </summary>
-    public unsafe bool HasBeenPickedUp()
+    public unsafe override bool HasBeenPickedUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.HasBeenPickedUp", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -204,7 +204,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: PickedUp
     /// </summary>
-    public unsafe void PickedUp(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void PickedUp(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.PickedUp", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -216,7 +216,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: PreHarpoonPickup
     /// </summary>
-    public unsafe void PreHarpoonPickup()
+    public unsafe virtual void PreHarpoonPickup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.PreHarpoonPickup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -227,7 +227,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: MustBeCrouched
     /// </summary>
-    public unsafe bool MustBeCrouched(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool MustBeCrouched(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.MustBeCrouched", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -239,7 +239,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: IsButtonPrompt
     /// </summary>
-    public unsafe bool IsButtonPrompt()
+    public unsafe virtual bool IsButtonPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.IsButtonPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -250,7 +250,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.IsActive", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -262,7 +262,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetPriority
     /// </summary>
-    public unsafe float GetPriority()
+    public unsafe virtual float GetPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -273,7 +273,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetUpperPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetUpperPrompt()
+    public unsafe virtual BmSDK.FString GetUpperPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetUpperPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -284,7 +284,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetFOVDegrees
     /// </summary>
-    public unsafe float GetFOVDegrees(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual float GetFOVDegrees(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetFOVDegrees", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -296,7 +296,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetHeightRange
     /// </summary>
-    public unsafe float GetHeightRange()
+    public unsafe virtual float GetHeightRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetHeightRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -307,7 +307,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetRange
     /// </summary>
-    public unsafe float GetRange()
+    public unsafe virtual float GetRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -318,7 +318,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: OverridePreviousLines
     /// </summary>
-    public unsafe bool OverridePreviousLines()
+    public unsafe virtual bool OverridePreviousLines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.OverridePreviousLines", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -329,7 +329,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetInteractButton
     /// </summary>
-    public unsafe BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton GetInteractButton(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton GetInteractButton(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetInteractButton", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -341,7 +341,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe virtual BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -353,7 +353,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -364,7 +364,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: InitialFlagCheckHack
     /// </summary>
-    public unsafe void InitialFlagCheckHack()
+    public unsafe virtual void InitialFlagCheckHack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.InitialFlagCheckHack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -375,7 +375,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: InitialFlagCheck
     /// </summary>
-    public unsafe void InitialFlagCheck()
+    public unsafe virtual void InitialFlagCheck()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.InitialFlagCheck", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -386,7 +386,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: EarlyDestroy
     /// </summary>
-    public unsafe bool EarlyDestroy()
+    public unsafe virtual bool EarlyDestroy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.EarlyDestroy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -397,7 +397,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetPickedUpName
     /// </summary>
-    public unsafe BmSDK.FString GetPickedUpName()
+    public unsafe override BmSDK.FString GetPickedUpName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetPickedUpName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -408,7 +408,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetMapVisibleName
     /// </summary>
-    public unsafe BmSDK.FString GetMapVisibleName()
+    public unsafe override BmSDK.FString GetMapVisibleName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetMapVisibleName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -419,7 +419,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetLevelName
     /// </summary>
-    public unsafe BmSDK.FString GetLevelName()
+    public unsafe virtual BmSDK.FString GetLevelName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetLevelName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -449,7 +449,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -461,7 +461,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: CanBeHarpooned
     /// </summary>
-    public unsafe bool CanBeHarpooned()
+    public unsafe virtual bool CanBeHarpooned()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.CanBeHarpooned", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -472,7 +472,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetIgnoreRayTrace
     /// </summary>
-    public unsafe bool GetIgnoreRayTrace()
+    public unsafe override bool GetIgnoreRayTrace()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetIgnoreRayTrace", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -483,7 +483,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetRiddlerPieceType
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.ERiddlerPiece GetRiddlerPieceType()
+    public unsafe override BmSDK.BmGame.RGameInfo.ERiddlerPiece GetRiddlerPieceType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetRiddlerPieceType", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -494,7 +494,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetScanDistMax
     /// </summary>
-    public unsafe float GetScanDistMax()
+    public unsafe override float GetScanDistMax()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetScanDistMax", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -505,7 +505,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetScannedStringDesc
     /// </summary>
-    public unsafe BmSDK.FString GetScannedStringDesc(bool bAlreadyTagged)
+    public unsafe override BmSDK.FString GetScannedStringDesc(bool bAlreadyTagged)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetScannedStringDesc", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -517,7 +517,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetScannedStringTitle
     /// </summary>
-    public unsafe BmSDK.FString GetScannedStringTitle(bool bAlreadyTagged)
+    public unsafe override BmSDK.FString GetScannedStringTitle(bool bAlreadyTagged)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetScannedStringTitle", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -529,7 +529,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetOverworldHintRange
     /// </summary>
-    public unsafe int GetOverworldHintRange()
+    public unsafe virtual int GetOverworldHintRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetOverworldHintRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -540,7 +540,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetSatnavToRoadBelow
     /// </summary>
-    public unsafe bool GetSatnavToRoadBelow()
+    public unsafe virtual bool GetSatnavToRoadBelow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetSatnavToRoadBelow", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -551,7 +551,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetSatnavToRoadAtSameHeight
     /// </summary>
-    public unsafe bool GetSatnavToRoadAtSameHeight()
+    public unsafe virtual bool GetSatnavToRoadAtSameHeight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetSatnavToRoadAtSameHeight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -562,7 +562,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetCustomFlag
     /// </summary>
-    public unsafe BmSDK.FString GetCustomFlag()
+    public unsafe virtual BmSDK.FString GetCustomFlag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetCustomFlag", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -573,7 +573,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetUnlockedChapter
     /// </summary>
-    public unsafe int GetUnlockedChapter()
+    public unsafe virtual int GetUnlockedChapter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetUnlockedChapter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -584,7 +584,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetMapIconFloatUpAdjustment
     /// </summary>
-    public unsafe int GetMapIconFloatUpAdjustment()
+    public unsafe virtual int GetMapIconFloatUpAdjustment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetMapIconFloatUpAdjustment", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -595,7 +595,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: UseSecretLocation
     /// </summary>
-    public unsafe bool UseSecretLocation()
+    public unsafe virtual bool UseSecretLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.UseSecretLocation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -606,7 +606,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetSecretLocationZ
     /// </summary>
-    public unsafe int GetSecretLocationZ()
+    public unsafe virtual int GetSecretLocationZ()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetSecretLocationZ", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -617,7 +617,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetSecretLocationY
     /// </summary>
-    public unsafe int GetSecretLocationY()
+    public unsafe virtual int GetSecretLocationY()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetSecretLocationY", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -628,7 +628,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetSecretLocationX
     /// </summary>
-    public unsafe int GetSecretLocationX()
+    public unsafe virtual int GetSecretLocationX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetSecretLocationX", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -639,7 +639,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetSecretZone
     /// </summary>
-    public unsafe byte GetSecretZone()
+    public unsafe virtual byte GetSecretZone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetSecretZone", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -650,7 +650,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetSecretPickupIndex
     /// </summary>
-    public unsafe int GetSecretPickupIndex()
+    public unsafe virtual int GetSecretPickupIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetSecretPickupIndex", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -661,7 +661,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetSecretSubType
     /// </summary>
-    public unsafe BmSDK.FString GetSecretSubType()
+    public unsafe virtual BmSDK.FString GetSecretSubType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetSecretSubType", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -672,7 +672,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetSecretName
     /// </summary>
-    public unsafe BmSDK.FString GetSecretName()
+    public unsafe virtual BmSDK.FString GetSecretName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.GetSecretName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -683,7 +683,7 @@ public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObje
     /// <summary>
     /// Function: IsValidSecret
     /// </summary>
-    public unsafe bool IsValidSecret()
+    public unsafe virtual bool IsValidSecret()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickupBase.IsValidSecret", true);
         byte* paramsPtr = stackalloc byte[4];

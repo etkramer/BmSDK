@@ -31,7 +31,7 @@ public partial class RBMBehaviour_JokerRooftopBase : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: DoesJokerTypeTrumpMine
     /// </summary>
-    public unsafe bool DoesJokerTypeTrumpMine(BmSDK.FString NewCaseIdentifier)
+    public unsafe virtual bool DoesJokerTypeTrumpMine(BmSDK.FString NewCaseIdentifier)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_JokerRooftopBase.DoesJokerTypeTrumpMine", true);
         byte* paramsPtr = stackalloc byte[20];

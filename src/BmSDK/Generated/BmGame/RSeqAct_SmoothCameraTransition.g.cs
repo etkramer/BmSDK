@@ -47,7 +47,7 @@ public partial class RSeqAct_SmoothCameraTransition : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe bool Tick(float DeltaTime)
+    public unsafe virtual bool Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SmoothCameraTransition.Tick", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -59,7 +59,7 @@ public partial class RSeqAct_SmoothCameraTransition : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: SetInitialValues
     /// </summary>
-    public unsafe bool SetInitialValues()
+    public unsafe virtual bool SetInitialValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SmoothCameraTransition.SetInitialValues", true);
         byte* paramsPtr = stackalloc byte[4];

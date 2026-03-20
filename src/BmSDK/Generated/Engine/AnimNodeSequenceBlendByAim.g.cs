@@ -36,7 +36,7 @@ public partial class AnimNodeSequenceBlendByAim : BmSDK.Engine.AnimNodeSequenceB
     /// <summary>
     /// Function: CheckAnimsUpToDate
     /// </summary>
-    public unsafe void CheckAnimsUpToDate()
+    public unsafe virtual void CheckAnimsUpToDate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeSequenceBlendByAim.CheckAnimsUpToDate", true);
         byte* paramsPtr = stackalloc byte[0];

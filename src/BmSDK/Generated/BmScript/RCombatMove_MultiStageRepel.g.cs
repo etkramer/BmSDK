@@ -71,7 +71,7 @@ public partial class RCombatMove_MultiStageRepel : BmSDK.BmGame.RCombatMove, BmS
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageRepel.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_MultiStageRepel : BmSDK.BmGame.RCombatMove, BmS
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageRepel.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RCombatMove_MultiStageRepel : BmSDK.BmGame.RCombatMove, BmS
     /// <summary>
     /// Function: Zap
     /// </summary>
-    public unsafe void Zap()
+    public unsafe virtual void Zap()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageRepel.Zap", true);
         byte* paramsPtr = stackalloc byte[0];

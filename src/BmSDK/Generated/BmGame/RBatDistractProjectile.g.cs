@@ -66,7 +66,7 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     /// <summary>
     /// Function: CantFindTarget
     /// </summary>
-    public unsafe void CantFindTarget()
+    public unsafe virtual void CantFindTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatDistractProjectile.CantFindTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     /// <summary>
     /// Function: CanSeeTarget
     /// </summary>
-    public unsafe bool CanSeeTarget(BmSDK.BmGame.RPawnVillain TargetVillain, out BmSDK.TArray<BmSDK.FName> CheckBoneNames)
+    public unsafe virtual bool CanSeeTarget(BmSDK.BmGame.RPawnVillain TargetVillain, out BmSDK.TArray<BmSDK.FName> CheckBoneNames)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatDistractProjectile.CanSeeTarget", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -97,7 +97,7 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     /// <summary>
     /// Function: Ricochet
     /// </summary>
-    public unsafe void Ricochet(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor HitActor)
+    public unsafe override void Ricochet(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor HitActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatDistractProjectile.Ricochet", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -110,7 +110,7 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     /// <summary>
     /// Function: DoSmashFX
     /// </summary>
-    public unsafe void DoSmashFX()
+    public unsafe virtual void DoSmashFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatDistractProjectile.DoSmashFX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -121,7 +121,7 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     /// <summary>
     /// Function: TurnOff
     /// </summary>
-    public unsafe void TurnOff()
+    public unsafe virtual void TurnOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatDistractProjectile.TurnOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -132,7 +132,7 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, bool bPlayExplosionSound = default)
+    public unsafe override void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, bool bPlayExplosionSound = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatDistractProjectile.Explode", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -146,7 +146,7 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     /// <summary>
     /// Function: GoAttract
     /// </summary>
-    public unsafe void GoAttract()
+    public unsafe virtual void GoAttract()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatDistractProjectile.GoAttract", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -157,7 +157,7 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     /// <summary>
     /// Function: HitWall
     /// </summary>
-    public unsafe void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent WallComp)
+    public unsafe override void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent WallComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatDistractProjectile.HitWall", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -171,7 +171,7 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     /// <summary>
     /// Function: GetDetonateTarget
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnVillain GetDetonateTarget()
+    public unsafe virtual BmSDK.BmGame.RPawnVillain GetDetonateTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatDistractProjectile.GetDetonateTarget", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -182,7 +182,7 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     /// <summary>
     /// Function: Detonate
     /// </summary>
-    public unsafe void Detonate()
+    public unsafe virtual void Detonate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatDistractProjectile.Detonate", true);
         byte* paramsPtr = stackalloc byte[268];
@@ -193,7 +193,7 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatDistractProjectile.Touch", true);
         byte* paramsPtr = stackalloc byte[128];
@@ -208,7 +208,7 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     /// <summary>
     /// Function: GetGlanceScore
     /// </summary>
-    public unsafe int GetGlanceScore()
+    public unsafe virtual int GetGlanceScore()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatDistractProjectile.GetGlanceScore", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -219,7 +219,7 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     /// <summary>
     /// Function: CheckVisibility
     /// </summary>
-    public unsafe bool CheckVisibility(BmSDK.BmGame.RBMAIController TestController)
+    public unsafe virtual bool CheckVisibility(BmSDK.BmGame.RBMAIController TestController)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatDistractProjectile.CheckVisibility", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -231,7 +231,7 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     /// <summary>
     /// Function: InitBatarang
     /// </summary>
-    public unsafe void InitBatarang(System.Numerics.Vector3 ThrowDirection, BmSDK.BmGame.RBatarang Launcher, bool bFlightPathMirrored = default, BmSDK.FName BoneTarget = default, float SpeedMod = default, bool bStraightPath = default)
+    public unsafe override void InitBatarang(System.Numerics.Vector3 ThrowDirection, BmSDK.BmGame.RBatarang Launcher, bool bFlightPathMirrored = default, BmSDK.FName BoneTarget = default, float SpeedMod = default, bool bStraightPath = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatDistractProjectile.InitBatarang", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -248,7 +248,7 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatDistractProjectile.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -259,7 +259,7 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatDistractProjectile.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

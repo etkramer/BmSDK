@@ -36,7 +36,7 @@ public partial class Interaction : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyPlayerRemoved
     /// </summary>
-    public unsafe void NotifyPlayerRemoved(int PlayerIndex, BmSDK.Engine.LocalPlayer RemovedPlayer)
+    public unsafe virtual void NotifyPlayerRemoved(int PlayerIndex, BmSDK.Engine.LocalPlayer RemovedPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Interaction.NotifyPlayerRemoved", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -49,7 +49,7 @@ public partial class Interaction : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyPlayerAdded
     /// </summary>
-    public unsafe void NotifyPlayerAdded(int PlayerIndex, BmSDK.Engine.LocalPlayer AddedPlayer)
+    public unsafe virtual void NotifyPlayerAdded(int PlayerIndex, BmSDK.Engine.LocalPlayer AddedPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Interaction.NotifyPlayerAdded", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -62,7 +62,7 @@ public partial class Interaction : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyGameSessionEnded
     /// </summary>
-    public unsafe void NotifyGameSessionEnded()
+    public unsafe virtual void NotifyGameSessionEnded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Interaction.NotifyGameSessionEnded", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -73,7 +73,7 @@ public partial class Interaction : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: Initialized
     /// </summary>
-    public unsafe void Initialized()
+    public unsafe virtual void Initialized()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Interaction.Initialized", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -84,7 +84,7 @@ public partial class Interaction : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: OnInitialize
     /// </summary>
-    public unsafe void OnInitialize()
+    public unsafe virtual void OnInitialize()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Interaction.OnInitialize", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class Interaction : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init()
+    public unsafe virtual void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Interaction.Init", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -113,7 +113,7 @@ public partial class Interaction : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: PostRender
     /// </summary>
-    public unsafe void PostRender(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void PostRender(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Interaction.PostRender", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -125,7 +125,7 @@ public partial class Interaction : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe virtual void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Interaction.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -137,7 +137,7 @@ public partial class Interaction : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: OnReceivedNativeInputChar
     /// </summary>
-    public unsafe bool OnReceivedNativeInputChar(int ControllerId, BmSDK.FString Unicode)
+    public unsafe virtual bool OnReceivedNativeInputChar(int ControllerId, BmSDK.FString Unicode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Interaction.OnReceivedNativeInputChar", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -150,7 +150,7 @@ public partial class Interaction : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: OnReceivedNativeInputAxis
     /// </summary>
-    public unsafe bool OnReceivedNativeInputAxis(int ControllerId, BmSDK.FName Key, float Delta, float DeltaTime, bool bGamepad = default)
+    public unsafe virtual bool OnReceivedNativeInputAxis(int ControllerId, BmSDK.FName Key, float Delta, float DeltaTime, bool bGamepad = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Interaction.OnReceivedNativeInputAxis", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -202,7 +202,7 @@ public partial class Interaction : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: OnReceivedNativeInputKey
     /// </summary>
-    public unsafe bool OnReceivedNativeInputKey(int ControllerId, BmSDK.FName Key, BmSDK.GameObject.EInputEvent EventType, float AmountDepressed = default, bool bGamepad = default)
+    public unsafe virtual bool OnReceivedNativeInputKey(int ControllerId, BmSDK.FName Key, BmSDK.GameObject.EInputEvent EventType, float AmountDepressed = default, bool bGamepad = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Interaction.OnReceivedNativeInputKey", true);
         byte* paramsPtr = stackalloc byte[28];

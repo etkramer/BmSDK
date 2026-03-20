@@ -36,7 +36,7 @@ public partial class RAIBrain_PredFull : BmSDK.BmGame.RAIBrain_Pred, BmSDK.IGame
     /// <summary>
     /// Function: SetSentryGunAEC
     /// </summary>
-    public unsafe void SetSentryGunAEC(BmSDK.BmGame.RAEC_PlaceSentryGun NewSentryGunAEC)
+    public unsafe virtual void SetSentryGunAEC(BmSDK.BmGame.RAEC_PlaceSentryGun NewSentryGunAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain_PredFull.SetSentryGunAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -48,7 +48,7 @@ public partial class RAIBrain_PredFull : BmSDK.BmGame.RAIBrain_Pred, BmSDK.IGame
     /// <summary>
     /// Function: SetIncendiaryStartleAEC
     /// </summary>
-    public unsafe void SetIncendiaryStartleAEC(BmSDK.BmGame.RAEC_IncendiaryStartle NewVal)
+    public unsafe virtual void SetIncendiaryStartleAEC(BmSDK.BmGame.RAEC_IncendiaryStartle NewVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain_PredFull.SetIncendiaryStartleAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -60,7 +60,7 @@ public partial class RAIBrain_PredFull : BmSDK.BmGame.RAIBrain_Pred, BmSDK.IGame
     /// <summary>
     /// Function: SetEnviroStartleAEC
     /// </summary>
-    public unsafe void SetEnviroStartleAEC(BmSDK.BmGame.RAEC_EnvironmentStartle NewVal)
+    public unsafe virtual void SetEnviroStartleAEC(BmSDK.BmGame.RAEC_EnvironmentStartle NewVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain_PredFull.SetEnviroStartleAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -72,7 +72,7 @@ public partial class RAIBrain_PredFull : BmSDK.BmGame.RAIBrain_Pred, BmSDK.IGame
     /// <summary>
     /// Function: RemoveMusBoothAEC
     /// </summary>
-    public unsafe void RemoveMusBoothAEC(BmSDK.BmGame.RAEC_MuseumBooth_PerPoint FinishedBooth)
+    public unsafe virtual void RemoveMusBoothAEC(BmSDK.BmGame.RAEC_MuseumBooth_PerPoint FinishedBooth)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain_PredFull.RemoveMusBoothAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -84,7 +84,7 @@ public partial class RAIBrain_PredFull : BmSDK.BmGame.RAIBrain_Pred, BmSDK.IGame
     /// <summary>
     /// Function: AddMusBoothAEC
     /// </summary>
-    public unsafe void AddMusBoothAEC(BmSDK.BmGame.RAEC_MuseumBooth_PerPoint NewBooth)
+    public unsafe virtual void AddMusBoothAEC(BmSDK.BmGame.RAEC_MuseumBooth_PerPoint NewBooth)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain_PredFull.AddMusBoothAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -96,7 +96,7 @@ public partial class RAIBrain_PredFull : BmSDK.BmGame.RAIBrain_Pred, BmSDK.IGame
     /// <summary>
     /// Function: HasSonicBatarangAEC
     /// </summary>
-    public unsafe bool HasSonicBatarangAEC()
+    public unsafe virtual bool HasSonicBatarangAEC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain_PredFull.HasSonicBatarangAEC", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -107,7 +107,7 @@ public partial class RAIBrain_PredFull : BmSDK.BmGame.RAIBrain_Pred, BmSDK.IGame
     /// <summary>
     /// Function: SetSonicBatarangAEC
     /// </summary>
-    public unsafe void SetSonicBatarangAEC(BmSDK.BmGame.RAEC_SonicBatarang NewVal)
+    public unsafe virtual void SetSonicBatarangAEC(BmSDK.BmGame.RAEC_SonicBatarang NewVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain_PredFull.SetSonicBatarangAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -119,7 +119,7 @@ public partial class RAIBrain_PredFull : BmSDK.BmGame.RAIBrain_Pred, BmSDK.IGame
     /// <summary>
     /// Function: HasLowPriorityEvent
     /// </summary>
-    public unsafe bool HasLowPriorityEvent(out BmSDK.FName NewName, out BmSDK.BmGame.RAlertEventCoordinatorBase NewAEC)
+    public unsafe override bool HasLowPriorityEvent(out BmSDK.FName NewName, out BmSDK.BmGame.RAlertEventCoordinatorBase NewAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain_PredFull.HasLowPriorityEvent", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -132,7 +132,7 @@ public partial class RAIBrain_PredFull : BmSDK.BmGame.RAIBrain_Pred, BmSDK.IGame
     /// <summary>
     /// Function: BagCarryIsSentryGun
     /// </summary>
-    public unsafe bool BagCarryIsSentryGun(out BmSDK.FName NewName, out BmSDK.BmGame.RAlertEventCoordinatorBase NewAEC, bool bAllowBatarangResponse)
+    public unsafe override bool BagCarryIsSentryGun(out BmSDK.FName NewName, out BmSDK.BmGame.RAlertEventCoordinatorBase NewAEC, bool bAllowBatarangResponse)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain_PredFull.BagCarryIsSentryGun", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -146,7 +146,7 @@ public partial class RAIBrain_PredFull : BmSDK.BmGame.RAIBrain_Pred, BmSDK.IGame
     /// <summary>
     /// Function: HasLessThanShootButMoreThanChaseEvent
     /// </summary>
-    public unsafe bool HasLessThanShootButMoreThanChaseEvent(out BmSDK.FName NewName, out BmSDK.BmGame.RAlertEventCoordinatorBase NewAEC)
+    public unsafe override bool HasLessThanShootButMoreThanChaseEvent(out BmSDK.FName NewName, out BmSDK.BmGame.RAlertEventCoordinatorBase NewAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain_PredFull.HasLessThanShootButMoreThanChaseEvent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -159,7 +159,7 @@ public partial class RAIBrain_PredFull : BmSDK.BmGame.RAIBrain_Pred, BmSDK.IGame
     /// <summary>
     /// Function: HasFullPredEventThatInterruptsBagCarry
     /// </summary>
-    public unsafe bool HasFullPredEventThatInterruptsBagCarry(out BmSDK.FName NewName, out BmSDK.BmGame.RAlertEventCoordinatorBase NewAEC)
+    public unsafe override bool HasFullPredEventThatInterruptsBagCarry(out BmSDK.FName NewName, out BmSDK.BmGame.RAlertEventCoordinatorBase NewAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain_PredFull.HasFullPredEventThatInterruptsBagCarry", true);
         byte* paramsPtr = stackalloc byte[20];

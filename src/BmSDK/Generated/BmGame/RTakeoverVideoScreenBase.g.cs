@@ -66,7 +66,7 @@ public partial class RTakeoverVideoScreenBase : BmSDK.Engine.StaticMeshActor, Bm
     /// <summary>
     /// Function: OnSetMaterialInstance
     /// </summary>
-    public unsafe void OnSetMaterialInstance(BmSDK.Engine.RSeqAct_SetMaterialInstance Action)
+    public unsafe virtual void OnSetMaterialInstance(BmSDK.Engine.RSeqAct_SetMaterialInstance Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTakeoverVideoScreenBase.OnSetMaterialInstance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -78,7 +78,7 @@ public partial class RTakeoverVideoScreenBase : BmSDK.Engine.StaticMeshActor, Bm
     /// <summary>
     /// Function: OnSetMaterial
     /// </summary>
-    public unsafe void OnSetMaterial(BmSDK.Engine.SeqAct_SetMaterial Action)
+    public unsafe virtual void OnSetMaterial(BmSDK.Engine.SeqAct_SetMaterial Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTakeoverVideoScreenBase.OnSetMaterial", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -90,7 +90,7 @@ public partial class RTakeoverVideoScreenBase : BmSDK.Engine.StaticMeshActor, Bm
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTakeoverVideoScreenBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -101,7 +101,7 @@ public partial class RTakeoverVideoScreenBase : BmSDK.Engine.StaticMeshActor, Bm
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTakeoverVideoScreenBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -112,7 +112,7 @@ public partial class RTakeoverVideoScreenBase : BmSDK.Engine.StaticMeshActor, Bm
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTakeoverVideoScreenBase.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -123,7 +123,7 @@ public partial class RTakeoverVideoScreenBase : BmSDK.Engine.StaticMeshActor, Bm
     /// <summary>
     /// Function: SetStaticTransitionParameter
     /// </summary>
-    public unsafe void SetStaticTransitionParameter(float val)
+    public unsafe virtual void SetStaticTransitionParameter(float val)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTakeoverVideoScreenBase.SetStaticTransitionParameter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -135,7 +135,7 @@ public partial class RTakeoverVideoScreenBase : BmSDK.Engine.StaticMeshActor, Bm
     /// <summary>
     /// Function: RevertToStandardTexture
     /// </summary>
-    public unsafe void RevertToStandardTexture()
+    public unsafe virtual void RevertToStandardTexture()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTakeoverVideoScreenBase.RevertToStandardTexture", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -146,7 +146,7 @@ public partial class RTakeoverVideoScreenBase : BmSDK.Engine.StaticMeshActor, Bm
     /// <summary>
     /// Function: SetTakeoverTexture
     /// </summary>
-    public unsafe void SetTakeoverTexture(BmSDK.Engine.TextureRenderTarget2D takeoverTexture)
+    public unsafe virtual void SetTakeoverTexture(BmSDK.Engine.TextureRenderTarget2D takeoverTexture)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTakeoverVideoScreenBase.SetTakeoverTexture", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -158,7 +158,7 @@ public partial class RTakeoverVideoScreenBase : BmSDK.Engine.StaticMeshActor, Bm
     /// <summary>
     /// Function: CanBeTakenOverByScarecrow
     /// </summary>
-    public unsafe bool CanBeTakenOverByScarecrow()
+    public unsafe virtual bool CanBeTakenOverByScarecrow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTakeoverVideoScreenBase.CanBeTakenOverByScarecrow", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -169,7 +169,7 @@ public partial class RTakeoverVideoScreenBase : BmSDK.Engine.StaticMeshActor, Bm
     /// <summary>
     /// Function: CanBeTakenOverByRiddler
     /// </summary>
-    public unsafe bool CanBeTakenOverByRiddler()
+    public unsafe virtual bool CanBeTakenOverByRiddler()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTakeoverVideoScreenBase.CanBeTakenOverByRiddler", true);
         byte* paramsPtr = stackalloc byte[4];

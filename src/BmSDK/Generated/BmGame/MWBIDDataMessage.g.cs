@@ -36,7 +36,7 @@ public partial class MWBIDDataMessage : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Flush
     /// </summary>
-    public unsafe void Flush()
+    public unsafe virtual void Flush()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDDataMessage.Flush", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class MWBIDDataMessage : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init()
+    public unsafe virtual void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDDataMessage.Init", true);
         byte* paramsPtr = stackalloc byte[0];

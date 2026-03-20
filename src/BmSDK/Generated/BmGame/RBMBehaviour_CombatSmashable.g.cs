@@ -36,7 +36,7 @@ public partial class RBMBehaviour_CombatSmashable : BmSDK.BmGame.RBMBehaviour_Co
     /// <summary>
     /// Function: DropHeavyObject
     /// </summary>
-    public unsafe void DropHeavyObject()
+    public unsafe virtual void DropHeavyObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatSmashable.DropHeavyObject", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_CombatSmashable : BmSDK.BmGame.RBMBehaviour_Co
     /// <summary>
     /// Function: GetAttackPriority
     /// </summary>
-    public unsafe int GetAttackPriority(bool bForceAttack)
+    public unsafe override int GetAttackPriority(bool bForceAttack)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatSmashable.GetAttackPriority", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_CombatSmashable : BmSDK.BmGame.RBMBehaviour_Co
     /// <summary>
     /// Function: GetPossibleMoves
     /// </summary>
-    public unsafe void GetPossibleMoves(out BmSDK.TArray<BmSDK.Class> PossibleMoves)
+    public unsafe override void GetPossibleMoves(out BmSDK.TArray<BmSDK.Class> PossibleMoves)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatSmashable.GetPossibleMoves", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -71,7 +71,7 @@ public partial class RBMBehaviour_CombatSmashable : BmSDK.BmGame.RBMBehaviour_Co
     /// <summary>
     /// Function: ShouldUseEnvironment
     /// </summary>
-    public unsafe bool ShouldUseEnvironment(float DeltaTime, bool bForceCheck)
+    public unsafe override bool ShouldUseEnvironment(float DeltaTime, bool bForceCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatSmashable.ShouldUseEnvironment", true);
         byte* paramsPtr = stackalloc byte[12];

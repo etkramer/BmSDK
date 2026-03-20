@@ -36,7 +36,7 @@ public partial class CameraAnimInst : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPlaySpace
     /// </summary>
-    public unsafe void SetPlaySpace(BmSDK.Engine.Camera.ECameraAnimPlaySpace NewSpace, BmSDK.Rotator UserPlaySpace = default)
+    public unsafe virtual void SetPlaySpace(BmSDK.Engine.Camera.ECameraAnimPlaySpace NewSpace, BmSDK.Rotator UserPlaySpace = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraAnimInst.SetPlaySpace", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -56,7 +56,7 @@ public partial class CameraAnimInst : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ApplyTransientScaling
     /// </summary>
-    public unsafe void ApplyTransientScaling(float Scalar)
+    public unsafe virtual void ApplyTransientScaling(float Scalar)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraAnimInst.ApplyTransientScaling", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -75,7 +75,7 @@ public partial class CameraAnimInst : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Stop
     /// </summary>
-    public unsafe void Stop(bool bImmediate = default)
+    public unsafe virtual void Stop(bool bImmediate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraAnimInst.Stop", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class CameraAnimInst : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AdvanceAnim
     /// </summary>
-    public unsafe void AdvanceAnim(float DeltaTime, bool bJump)
+    public unsafe virtual void AdvanceAnim(float DeltaTime, bool bJump)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraAnimInst.AdvanceAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -114,7 +114,7 @@ public partial class CameraAnimInst : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe void Update(float NewRate, float NewScale, float NewBlendInTime, float NewBlendOutTime, float NewDuration = default)
+    public unsafe virtual void Update(float NewRate, float NewScale, float NewBlendInTime, float NewBlendOutTime, float NewDuration = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraAnimInst.Update", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -137,7 +137,7 @@ public partial class CameraAnimInst : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Play
     /// </summary>
-    public unsafe void Play(BmSDK.Engine.CameraAnim Anim, BmSDK.Engine.Actor CamActor, float InRate, float InScale, float InBlendInTime, float InBlendOutTime, bool bInLoop, bool bRandomStartTime, float Duration = default)
+    public unsafe virtual void Play(BmSDK.Engine.CameraAnim Anim, BmSDK.Engine.Actor CamActor, float InRate, float InScale, float InBlendInTime, float InBlendOutTime, bool bInLoop, bool bRandomStartTime, float Duration = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraAnimInst.Play", true);
         byte* paramsPtr = stackalloc byte[44];

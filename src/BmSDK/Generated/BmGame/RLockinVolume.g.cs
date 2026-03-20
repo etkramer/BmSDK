@@ -71,7 +71,7 @@ public partial class RLockinVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: AllAccessBlocked
     /// </summary>
-    public unsafe bool AllAccessBlocked()
+    public unsafe virtual bool AllAccessBlocked()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLockinVolume.AllAccessBlocked", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -82,7 +82,7 @@ public partial class RLockinVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: AccessChanged
     /// </summary>
-    public unsafe void AccessChanged()
+    public unsafe virtual void AccessChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLockinVolume.AccessChanged", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -93,7 +93,7 @@ public partial class RLockinVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLockinVolume.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RLockinVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLockinVolume.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RLockinVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: InitForCoordinatorParent
     /// </summary>
-    public unsafe void InitForCoordinatorParent(BmSDK.BmGame.RAEC_Parent NewParent)
+    public unsafe virtual void InitForCoordinatorParent(BmSDK.BmGame.RAEC_Parent NewParent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLockinVolume.InitForCoordinatorParent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -127,7 +127,7 @@ public partial class RLockinVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: InitForRoomstate
     /// </summary>
-    public unsafe void InitForRoomstate(BmSDK.BmGame.RBMRoomAIState NewRoomState)
+    public unsafe virtual void InitForRoomstate(BmSDK.BmGame.RBMRoomAIState NewRoomState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLockinVolume.InitForRoomstate", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -139,7 +139,7 @@ public partial class RLockinVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLockinVolume.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];

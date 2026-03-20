@@ -36,7 +36,7 @@ public partial class MicroTransactionBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// Function: GetProductIndex
     /// </summary>
-    public unsafe int GetProductIndex(BmSDK.FString Identifier)
+    public unsafe virtual int GetProductIndex(BmSDK.FString Identifier)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MicroTransactionBase.GetProductIndex", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -55,7 +55,7 @@ public partial class MicroTransactionBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// Function: BeginPurchase
     /// </summary>
-    public unsafe bool BeginPurchase(int Index)
+    public unsafe virtual bool BeginPurchase(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MicroTransactionBase.BeginPurchase", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -74,7 +74,7 @@ public partial class MicroTransactionBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// Function: IsAllowedToMakePurchases
     /// </summary>
-    public unsafe bool IsAllowedToMakePurchases()
+    public unsafe virtual bool IsAllowedToMakePurchases()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MicroTransactionBase.IsAllowedToMakePurchases", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -92,7 +92,7 @@ public partial class MicroTransactionBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// Function: QueryForAvailablePurchases
     /// </summary>
-    public unsafe bool QueryForAvailablePurchases()
+    public unsafe virtual bool QueryForAvailablePurchases()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MicroTransactionBase.QueryForAvailablePurchases", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -110,7 +110,7 @@ public partial class MicroTransactionBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init()
+    public unsafe virtual void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MicroTransactionBase.Init", true);
         byte* paramsPtr = stackalloc byte[0];

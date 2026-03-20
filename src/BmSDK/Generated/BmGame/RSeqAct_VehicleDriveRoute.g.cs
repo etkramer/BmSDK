@@ -36,7 +36,7 @@ public partial class RSeqAct_VehicleDriveRoute : BmSDK.BmGame.RSeqAct_VehicleSel
     /// <summary>
     /// Function: OnArrived
     /// </summary>
-    public unsafe void OnArrived()
+    public unsafe override void OnArrived()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleDriveRoute.OnArrived", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RSeqAct_VehicleDriveRoute : BmSDK.BmGame.RSeqAct_VehicleSel
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleDriveRoute.Activated", true);
         byte* paramsPtr = stackalloc byte[16];

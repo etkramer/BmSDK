@@ -71,7 +71,7 @@ public partial class MToggleSubroutine : BmSDK.BmGame.MHackSubroutine, BmSDK.IGa
     /// <summary>
     /// Function: Execute
     /// </summary>
-    public unsafe bool Execute(float DeltaTime)
+    public unsafe override bool Execute(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MToggleSubroutine.Execute", true);
         byte* paramsPtr = stackalloc byte[16];

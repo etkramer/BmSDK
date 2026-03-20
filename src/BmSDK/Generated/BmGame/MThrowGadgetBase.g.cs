@@ -71,7 +71,7 @@ public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetGadgetCamera
     /// </summary>
-    public unsafe BmSDK.FName GetGadgetCamera(bool InSoftCover = default, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType = default)
+    public unsafe override BmSDK.FName GetGadgetCamera(bool InSoftCover = default, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MThrowGadgetBase.GetGadgetCamera", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -84,7 +84,7 @@ public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetThrowFinishPose
     /// </summary>
-    public unsafe BmSDK.FName GetThrowFinishPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess)
+    public unsafe virtual BmSDK.FName GetThrowFinishPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MThrowGadgetBase.GetThrowFinishPose", true);
         byte* paramsPtr = stackalloc byte[21];
@@ -97,7 +97,7 @@ public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetThrowAnim
     /// </summary>
-    public unsafe BmSDK.FName GetThrowAnim(BmSDK.Rotator ThrowDirection, out BmSDK.BmGame.RPawnPlayerAnim.AimingConfigDesc AimingConfig, bool Mirrored)
+    public unsafe virtual BmSDK.FName GetThrowAnim(BmSDK.Rotator ThrowDirection, out BmSDK.BmGame.RPawnPlayerAnim.AimingConfigDesc AimingConfig, bool Mirrored)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MThrowGadgetBase.GetThrowAnim", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -111,7 +111,7 @@ public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetAutoTargetAngle
     /// </summary>
-    public unsafe float GetAutoTargetAngle()
+    public unsafe virtual float GetAutoTargetAngle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MThrowGadgetBase.GetAutoTargetAngle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -122,7 +122,7 @@ public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: PlayThrowAnim
     /// </summary>
-    public unsafe void PlayThrowAnim()
+    public unsafe virtual void PlayThrowAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MThrowGadgetBase.PlayThrowAnim", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -133,7 +133,7 @@ public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: DrawAimingHUD
     /// </summary>
-    public unsafe void DrawAimingHUD()
+    public unsafe virtual void DrawAimingHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MThrowGadgetBase.DrawAimingHUD", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -144,7 +144,7 @@ public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: UpdateAutoTarget
     /// </summary>
-    public unsafe void UpdateAutoTarget()
+    public unsafe virtual void UpdateAutoTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MThrowGadgetBase.UpdateAutoTarget", true);
         byte* paramsPtr = stackalloc byte[144];
@@ -155,7 +155,7 @@ public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: IsAllowedToExitFiring
     /// </summary>
-    public unsafe bool IsAllowedToExitFiring()
+    public unsafe virtual bool IsAllowedToExitFiring()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MThrowGadgetBase.IsAllowedToExitFiring", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -166,7 +166,7 @@ public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: IsVillainInTargettableState
     /// </summary>
-    public unsafe bool IsVillainInTargettableState(BmSDK.BmGame.RPawnVillain Villain)
+    public unsafe virtual bool IsVillainInTargettableState(BmSDK.BmGame.RPawnVillain Villain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MThrowGadgetBase.IsVillainInTargettableState", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -178,7 +178,7 @@ public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: ThrowGadget
     /// </summary>
-    public unsafe void ThrowGadget(System.Numerics.Vector3 ThrownFromPos, BmSDK.BmGame.RBMAIController.BRAECReactionType Type, int LaunchID)
+    public unsafe override void ThrowGadget(System.Numerics.Vector3 ThrownFromPos, BmSDK.BmGame.RBMAIController.BRAECReactionType Type, int LaunchID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MThrowGadgetBase.ThrowGadget", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -192,7 +192,7 @@ public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: CanFireGadget
     /// </summary>
-    public unsafe bool CanFireGadget()
+    public unsafe virtual bool CanFireGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MThrowGadgetBase.CanFireGadget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -203,7 +203,7 @@ public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: AllowMovementExit
     /// </summary>
-    public unsafe void AllowMovementExit()
+    public unsafe virtual void AllowMovementExit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MThrowGadgetBase.AllowMovementExit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -214,7 +214,7 @@ public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: TryContinueComboStartMove
     /// </summary>
-    public unsafe void TryContinueComboStartMove()
+    public unsafe virtual void TryContinueComboStartMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MThrowGadgetBase.TryContinueComboStartMove", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -225,7 +225,7 @@ public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: FireGadgetCombat
     /// </summary>
-    public unsafe bool FireGadgetCombat()
+    public unsafe override bool FireGadgetCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MThrowGadgetBase.FireGadgetCombat", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -236,7 +236,7 @@ public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: CalculateFireGunHitResult
     /// </summary>
-    public unsafe bool CalculateFireGunHitResult(BmSDK.Rotator FireRotation, System.Numerics.Vector3 FirePosition, out BmSDK.Engine.Actor.FImpactInfo OutImpactInfo, float CheckBoxExtent = default)
+    public unsafe virtual bool CalculateFireGunHitResult(BmSDK.Rotator FireRotation, System.Numerics.Vector3 FirePosition, out BmSDK.Engine.Actor.FImpactInfo OutImpactInfo, float CheckBoxExtent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MThrowGadgetBase.CalculateFireGunHitResult", true);
         byte* paramsPtr = stackalloc byte[128];
@@ -258,7 +258,7 @@ public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: CalculateAutoTargetHitResult
     /// </summary>
-    public unsafe bool CalculateAutoTargetHitResult(System.Numerics.Vector3 LaunchPosition, BmSDK.Rotator LaunchAngle, float Range, float TargetAngle, out BmSDK.Engine.Actor.FImpactInfo OutImpactInfo, float CheckBoxExtent = default)
+    public unsafe virtual bool CalculateAutoTargetHitResult(System.Numerics.Vector3 LaunchPosition, BmSDK.Rotator LaunchAngle, float Range, float TargetAngle, out BmSDK.Engine.Actor.FImpactInfo OutImpactInfo, float CheckBoxExtent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MThrowGadgetBase.CalculateAutoTargetHitResult", true);
         byte* paramsPtr = stackalloc byte[136];

@@ -36,7 +36,7 @@ public partial class HttpResponseWindows : BmSDK.Engine.HttpResponseInterface, B
     /// <summary>
     /// Function: GetResponseCode
     /// </summary>
-    public unsafe int GetResponseCode()
+    public unsafe override int GetResponseCode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "WinDrv.HttpResponseWindows.GetResponseCode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -54,7 +54,7 @@ public partial class HttpResponseWindows : BmSDK.Engine.HttpResponseInterface, B
     /// <summary>
     /// Function: GetContentAsString
     /// </summary>
-    public unsafe BmSDK.FString GetContentAsString()
+    public unsafe override BmSDK.FString GetContentAsString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "WinDrv.HttpResponseWindows.GetContentAsString", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -72,7 +72,7 @@ public partial class HttpResponseWindows : BmSDK.Engine.HttpResponseInterface, B
     /// <summary>
     /// Function: GetContent
     /// </summary>
-    public unsafe void GetContent(out BmSDK.TArray<byte> Content)
+    public unsafe override void GetContent(out BmSDK.TArray<byte> Content)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "WinDrv.HttpResponseWindows.GetContent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -91,7 +91,7 @@ public partial class HttpResponseWindows : BmSDK.Engine.HttpResponseInterface, B
     /// <summary>
     /// Function: GetURL
     /// </summary>
-    public unsafe BmSDK.FString GetURL()
+    public unsafe override BmSDK.FString GetURL()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "WinDrv.HttpResponseWindows.GetURL", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -109,7 +109,7 @@ public partial class HttpResponseWindows : BmSDK.Engine.HttpResponseInterface, B
     /// <summary>
     /// Function: GetContentLength
     /// </summary>
-    public unsafe int GetContentLength()
+    public unsafe override int GetContentLength()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "WinDrv.HttpResponseWindows.GetContentLength", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class HttpResponseWindows : BmSDK.Engine.HttpResponseInterface, B
     /// <summary>
     /// Function: GetContentType
     /// </summary>
-    public unsafe BmSDK.FString GetContentType()
+    public unsafe override BmSDK.FString GetContentType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "WinDrv.HttpResponseWindows.GetContentType", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -145,7 +145,7 @@ public partial class HttpResponseWindows : BmSDK.Engine.HttpResponseInterface, B
     /// <summary>
     /// Function: GetURLParameter
     /// </summary>
-    public unsafe BmSDK.FString GetURLParameter(BmSDK.FString ParameterName)
+    public unsafe override BmSDK.FString GetURLParameter(BmSDK.FString ParameterName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "WinDrv.HttpResponseWindows.GetURLParameter", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -164,7 +164,7 @@ public partial class HttpResponseWindows : BmSDK.Engine.HttpResponseInterface, B
     /// <summary>
     /// Function: GetHeaders
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> GetHeaders()
+    public unsafe override BmSDK.TArray<BmSDK.FString> GetHeaders()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "WinDrv.HttpResponseWindows.GetHeaders", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -182,7 +182,7 @@ public partial class HttpResponseWindows : BmSDK.Engine.HttpResponseInterface, B
     /// <summary>
     /// Function: GetHeader
     /// </summary>
-    public unsafe BmSDK.FString GetHeader(BmSDK.FString HeaderName)
+    public unsafe override BmSDK.FString GetHeader(BmSDK.FString HeaderName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "WinDrv.HttpResponseWindows.GetHeader", true);
         byte* paramsPtr = stackalloc byte[32];

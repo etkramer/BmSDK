@@ -71,7 +71,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Converge.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: HasThugTryingToFire
     /// </summary>
-    public unsafe bool HasThugTryingToFire()
+    public unsafe virtual bool HasThugTryingToFire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Converge.HasThugTryingToFire", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: InitRail
     /// </summary>
-    public unsafe BmSDK.BmGame.RAEC_Attack_Sub_Rail InitRail(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe virtual BmSDK.BmGame.RAEC_Attack_Sub_Rail InitRail(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Converge.InitRail", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -105,7 +105,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: InitHoldPos
     /// </summary>
-    public unsafe BmSDK.BmGame.RAEC_Attack_Sub_HoldPos InitHoldPos(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe virtual BmSDK.BmGame.RAEC_Attack_Sub_HoldPos InitHoldPos(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Converge.InitHoldPos", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -117,7 +117,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: InterruptPlayerDoingFearTakedown
     /// </summary>
-    public unsafe void InterruptPlayerDoingFearTakedown(BmSDK.BmGame.RBMAIController NewCon, float PoseChangeDeadline)
+    public unsafe virtual void InterruptPlayerDoingFearTakedown(BmSDK.BmGame.RBMAIController NewCon, float PoseChangeDeadline)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Converge.InterruptPlayerDoingFearTakedown", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -130,7 +130,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: ShouldStartOnRail
     /// </summary>
-    public unsafe bool ShouldStartOnRail(BmSDK.BmGame.RBMAIController TestCon, out BmSDK.BmGame.RBMPathNode_FenceJumpProxy CurrentFenceProxy)
+    public unsafe virtual bool ShouldStartOnRail(BmSDK.BmGame.RBMAIController TestCon, out BmSDK.BmGame.RBMPathNode_FenceJumpProxy CurrentFenceProxy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Converge.ShouldStartOnRail", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -143,7 +143,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: AddToGroup
     /// </summary>
-    public unsafe void AddToGroup(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe virtual void AddToGroup(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Converge.AddToGroup", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -155,7 +155,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: ShouldStartle
     /// </summary>
-    public unsafe bool ShouldStartle(BmSDK.BmGame.RPawnVillain TestVillain)
+    public unsafe virtual bool ShouldStartle(BmSDK.BmGame.RPawnVillain TestVillain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Converge.ShouldStartle", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -167,7 +167,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: ClearConvergeSearch
     /// </summary>
-    public unsafe void ClearConvergeSearch()
+    public unsafe virtual void ClearConvergeSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Converge.ClearConvergeSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -178,7 +178,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: InitGoalDataInstance
     /// </summary>
-    public unsafe BmSDK.BmGame.RMultiDestGoalData InitGoalDataInstance()
+    public unsafe virtual BmSDK.BmGame.RMultiDestGoalData InitGoalDataInstance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Converge.InitGoalDataInstance", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -189,7 +189,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: InitMultiGoalSearch
     /// </summary>
-    public unsafe void InitMultiGoalSearch()
+    public unsafe virtual void InitMultiGoalSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Converge.InitMultiGoalSearch", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -200,7 +200,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: UpdatePlayerSeenInGuardVolumes
     /// </summary>
-    public unsafe void UpdatePlayerSeenInGuardVolumes()
+    public unsafe virtual void UpdatePlayerSeenInGuardVolumes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Converge.UpdatePlayerSeenInGuardVolumes", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -211,7 +211,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: GetAIThoughts
     /// </summary>
-    public unsafe void GetAIThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetAIThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Converge.GetAIThoughts", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -223,7 +223,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: SetStable
     /// </summary>
-    public unsafe void SetStable()
+    public unsafe virtual void SetStable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Converge.SetStable", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -234,7 +234,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Converge.Tick", true);
         byte* paramsPtr = stackalloc byte[156];
@@ -246,7 +246,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: GetNumActivelyResponding
     /// </summary>
-    public unsafe int GetNumActivelyResponding()
+    public unsafe virtual int GetNumActivelyResponding()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Converge.GetNumActivelyResponding", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -257,7 +257,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: CanCurrentlyRespond
     /// </summary>
-    public unsafe bool CanCurrentlyRespond(BmSDK.BmGame.RBMAIController TestCon)
+    public unsafe virtual bool CanCurrentlyRespond(BmSDK.BmGame.RBMAIController TestCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Converge.CanCurrentlyRespond", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -269,7 +269,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: GetDangerLadder
     /// </summary>
-    public unsafe BmSDK.BmGame.RLadder GetDangerLadder()
+    public unsafe virtual BmSDK.BmGame.RLadder GetDangerLadder()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Converge.GetDangerLadder", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -280,7 +280,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: ForceStartAttack
     /// </summary>
-    public unsafe void ForceStartAttack(bool bForceRestart = default, BmSDK.BmGame.RPawnVillain TriggeringVillain = default)
+    public unsafe virtual void ForceStartAttack(bool bForceRestart = default, BmSDK.BmGame.RPawnVillain TriggeringVillain = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Converge.ForceStartAttack", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -293,7 +293,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Converge.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];

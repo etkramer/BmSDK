@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_DoubleHangingFearFinish : BmSDK.BmGam
     /// <summary>
     /// Function: GetFinishState
     /// </summary>
-    public unsafe BmSDK.FName GetFinishState()
+    public unsafe override BmSDK.FName GetFinishState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleHangingFearFinish.GetFinishState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RStealthTakeDownStage_DoubleHangingFearFinish : BmSDK.BmGam
     /// <summary>
     /// Function: AttackerDamaged
     /// </summary>
-    public unsafe void AttackerDamaged()
+    public unsafe override void AttackerDamaged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleHangingFearFinish.AttackerDamaged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RStealthTakeDownStage_DoubleHangingFearFinish : BmSDK.BmGam
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleHangingFearFinish.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -106,7 +106,7 @@ public partial class RStealthTakeDownStage_DoubleHangingFearFinish : BmSDK.BmGam
     /// <summary>
     /// Function: ResetCameraBehindBatman
     /// </summary>
-    public unsafe bool ResetCameraBehindBatman(out BmSDK.Rotator out_ResetRotation)
+    public unsafe override bool ResetCameraBehindBatman(out BmSDK.Rotator out_ResetRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleHangingFearFinish.ResetCameraBehindBatman", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -118,7 +118,7 @@ public partial class RStealthTakeDownStage_DoubleHangingFearFinish : BmSDK.BmGam
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleHangingFearFinish.Begin", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RStealthTakeDownStage_DoubleHangingFearFinish : BmSDK.BmGam
     /// <summary>
     /// Function: HideMove
     /// </summary>
-    public unsafe void HideMove(BmSDK.BmGame.RHidePoint NewHidePoint, float TravelTime, BmSDK.BmGame.RPawnPlayer Pawn)
+    public unsafe virtual void HideMove(BmSDK.BmGame.RHidePoint NewHidePoint, float TravelTime, BmSDK.BmGame.RPawnPlayer Pawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleHangingFearFinish.HideMove", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -143,7 +143,7 @@ public partial class RStealthTakeDownStage_DoubleHangingFearFinish : BmSDK.BmGam
     /// <summary>
     /// Function: End
     /// </summary>
-    public unsafe void End(bool bLastStage = default)
+    public unsafe override void End(bool bLastStage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleHangingFearFinish.End", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -155,7 +155,7 @@ public partial class RStealthTakeDownStage_DoubleHangingFearFinish : BmSDK.BmGam
     /// <summary>
     /// Function: FinishAttackVictim
     /// </summary>
-    public unsafe bool FinishAttackVictim(int iVictimNumber)
+    public unsafe override bool FinishAttackVictim(int iVictimNumber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleHangingFearFinish.FinishAttackVictim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -167,7 +167,7 @@ public partial class RStealthTakeDownStage_DoubleHangingFearFinish : BmSDK.BmGam
     /// <summary>
     /// Function: GetWritheAnim
     /// </summary>
-    public unsafe BmSDK.FName GetWritheAnim()
+    public unsafe override BmSDK.FName GetWritheAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleHangingFearFinish.GetWritheAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -178,7 +178,7 @@ public partial class RStealthTakeDownStage_DoubleHangingFearFinish : BmSDK.BmGam
     /// <summary>
     /// Function: ServerCreateRope
     /// </summary>
-    public unsafe void ServerCreateRope(int I)
+    public unsafe virtual void ServerCreateRope(int I)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleHangingFearFinish.ServerCreateRope", true);
         byte* paramsPtr = stackalloc byte[172];

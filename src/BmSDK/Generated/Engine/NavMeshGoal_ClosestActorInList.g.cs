@@ -36,7 +36,7 @@ public partial class NavMeshGoal_ClosestActorInList : BmSDK.Engine.NavMeshPathGo
     /// <summary>
     /// Function: RecycleInternal
     /// </summary>
-    public unsafe void RecycleInternal()
+    public unsafe virtual void RecycleInternal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshGoal_ClosestActorInList.RecycleInternal", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class NavMeshGoal_ClosestActorInList : BmSDK.Engine.NavMeshPathGo
     /// <summary>
     /// Function: Recycle
     /// </summary>
-    public unsafe void Recycle()
+    public unsafe override void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshGoal_ClosestActorInList.Recycle", true);
         byte* paramsPtr = stackalloc byte[0];

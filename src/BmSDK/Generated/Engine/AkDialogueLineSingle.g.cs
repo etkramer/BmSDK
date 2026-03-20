@@ -36,7 +36,7 @@ public partial class AkDialogueLineSingle : BmSDK.Engine.AkDialogueLine, BmSDK.I
     /// <summary>
     /// Function: GetSingleDialogueEventDuration
     /// </summary>
-    public unsafe float GetSingleDialogueEventDuration()
+    public unsafe virtual float GetSingleDialogueEventDuration()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueLineSingle.GetSingleDialogueEventDuration", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -54,7 +54,7 @@ public partial class AkDialogueLineSingle : BmSDK.Engine.AkDialogueLine, BmSDK.I
     /// <summary>
     /// Function: GetSingleDialogueEvent
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetSingleDialogueEvent()
+    public unsafe virtual BmSDK.Engine.AkEvent GetSingleDialogueEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueLineSingle.GetSingleDialogueEvent", true);
         byte* paramsPtr = stackalloc byte[8];

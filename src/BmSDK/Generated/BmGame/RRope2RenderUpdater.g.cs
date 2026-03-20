@@ -31,7 +31,7 @@ public partial class RRope2RenderUpdater : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetMaterialOverride
     /// </summary>
-    public unsafe void SetMaterialOverride(BmSDK.Engine.MaterialInstanceConstant OverrideMat)
+    public unsafe virtual void SetMaterialOverride(BmSDK.Engine.MaterialInstanceConstant OverrideMat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2RenderUpdater.SetMaterialOverride", true);
         byte* paramsPtr = stackalloc byte[8];

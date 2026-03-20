@@ -71,7 +71,7 @@ public partial class AkRattleEmitter : BmSDK.AkAudio.AkEmitter, BmSDK.IGameObjec
     /// <summary>
     /// Function: HandleUnlink
     /// </summary>
-    public unsafe bool HandleUnlink(BmSDK.Engine.Actor Target)
+    public unsafe virtual bool HandleUnlink(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkRattleEmitter.HandleUnlink", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -90,7 +90,7 @@ public partial class AkRattleEmitter : BmSDK.AkAudio.AkEmitter, BmSDK.IGameObjec
     /// <summary>
     /// Function: HandleLink
     /// </summary>
-    public unsafe bool HandleLink(BmSDK.Engine.Actor Target)
+    public unsafe virtual bool HandleLink(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkRattleEmitter.HandleLink", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -109,7 +109,7 @@ public partial class AkRattleEmitter : BmSDK.AkAudio.AkEmitter, BmSDK.IGameObjec
     /// <summary>
     /// Function: ApplyEmitterSpatial
     /// </summary>
-    public unsafe void ApplyEmitterSpatial()
+    public unsafe override void ApplyEmitterSpatial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkRattleEmitter.ApplyEmitterSpatial", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class AkRattleEmitter : BmSDK.AkAudio.AkEmitter, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetAudioSpatial
     /// </summary>
-    public unsafe void GetAudioSpatial(out System.Numerics.Vector3 sndPosition, out BmSDK.Rotator sndOrientation, BmSDK.GameObject caller = default)
+    public unsafe override void GetAudioSpatial(out System.Numerics.Vector3 sndPosition, out BmSDK.Rotator sndOrientation, BmSDK.GameObject caller = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkRattleEmitter.GetAudioSpatial", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -148,7 +148,7 @@ public partial class AkRattleEmitter : BmSDK.AkAudio.AkEmitter, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkRattleEmitter.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -160,7 +160,7 @@ public partial class AkRattleEmitter : BmSDK.AkAudio.AkEmitter, BmSDK.IGameObjec
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkRattleEmitter.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];

@@ -36,7 +36,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     /// <summary>
     /// Function: GetVoiceListForBindingIndex
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.AkDialogueVoice> GetVoiceListForBindingIndex(int OrderIndex)
+    public unsafe virtual BmSDK.TArray<BmSDK.Engine.AkDialogueVoice> GetVoiceListForBindingIndex(int OrderIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.GetVoiceListForBindingIndex", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -48,7 +48,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     /// <summary>
     /// Function: IsResolved
     /// </summary>
-    public unsafe bool IsResolved()
+    public unsafe virtual bool IsResolved()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.IsResolved", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -66,7 +66,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     /// <summary>
     /// Function: Unresolve
     /// </summary>
-    public unsafe void Unresolve()
+    public unsafe virtual void Unresolve()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.Unresolve", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -84,7 +84,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     /// <summary>
     /// Function: AutoResolve
     /// </summary>
-    public unsafe bool AutoResolve(bool forceMultiVoiceConv = default)
+    public unsafe virtual bool AutoResolve(bool forceMultiVoiceConv = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.AutoResolve", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -103,7 +103,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     /// <summary>
     /// Function: ResolveFromIds
     /// </summary>
-    public unsafe bool ResolveFromIds(BmSDK.TArray<int> spkrVoiceIds)
+    public unsafe virtual bool ResolveFromIds(BmSDK.TArray<int> spkrVoiceIds)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.ResolveFromIds", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -122,7 +122,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     /// <summary>
     /// Function: Resolve
     /// </summary>
-    public unsafe bool Resolve(BmSDK.TArray<BmSDK.Engine.AkDialogueVoice> spkrVoices)
+    public unsafe virtual bool Resolve(BmSDK.TArray<BmSDK.Engine.AkDialogueVoice> spkrVoices)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.Resolve", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -141,7 +141,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     /// <summary>
     /// Function: ResolveAll
     /// </summary>
-    public unsafe bool ResolveAll(BmSDK.TArray<BmSDK.Engine.AkDialogueVoice> spkrVoices)
+    public unsafe virtual bool ResolveAll(BmSDK.TArray<BmSDK.Engine.AkDialogueVoice> spkrVoices)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.ResolveAll", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -160,7 +160,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     /// <summary>
     /// Function: GetTimeSinceLastPlayed
     /// </summary>
-    public unsafe float GetTimeSinceLastPlayed()
+    public unsafe virtual float GetTimeSinceLastPlayed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.GetTimeSinceLastPlayed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -178,7 +178,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     /// <summary>
     /// Function: GetTotalPlayCount
     /// </summary>
-    public unsafe float GetTotalPlayCount()
+    public unsafe virtual float GetTotalPlayCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.GetTotalPlayCount", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -196,7 +196,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     /// <summary>
     /// Function: GetMaxPlayCount
     /// </summary>
-    public unsafe float GetMaxPlayCount()
+    public unsafe virtual float GetMaxPlayCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.GetMaxPlayCount", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -214,7 +214,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     /// <summary>
     /// Function: GetDynamicVoiceCount
     /// </summary>
-    public unsafe int GetDynamicVoiceCount()
+    public unsafe virtual int GetDynamicVoiceCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.GetDynamicVoiceCount", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -232,7 +232,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     /// <summary>
     /// Function: GetVoiceCount
     /// </summary>
-    public unsafe int GetVoiceCount()
+    public unsafe override int GetVoiceCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.GetVoiceCount", true);
         byte* paramsPtr = stackalloc byte[4];

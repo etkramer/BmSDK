@@ -36,7 +36,7 @@ public partial class TwitterIntegrationBase : BmSDK.Engine.PlatformInterfaceBase
     /// <summary>
     /// Function: TwitterRequest
     /// </summary>
-    public unsafe bool TwitterRequest(BmSDK.FString URL, BmSDK.TArray<BmSDK.FString> ParamKeysAndValues, BmSDK.Engine.TwitterIntegrationBase.ETwitterRequestMethod RequestMethod, int AccountIndex)
+    public unsafe virtual bool TwitterRequest(BmSDK.FString URL, BmSDK.TArray<BmSDK.FString> ParamKeysAndValues, BmSDK.Engine.TwitterIntegrationBase.ETwitterRequestMethod RequestMethod, int AccountIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TwitterIntegrationBase.TwitterRequest", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -58,7 +58,7 @@ public partial class TwitterIntegrationBase : BmSDK.Engine.PlatformInterfaceBase
     /// <summary>
     /// Function: GetAccountId
     /// </summary>
-    public unsafe BmSDK.FString GetAccountId(int AccountIndex)
+    public unsafe virtual BmSDK.FString GetAccountId(int AccountIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TwitterIntegrationBase.GetAccountId", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -77,7 +77,7 @@ public partial class TwitterIntegrationBase : BmSDK.Engine.PlatformInterfaceBase
     /// <summary>
     /// Function: GetAccountName
     /// </summary>
-    public unsafe BmSDK.FString GetAccountName(int AccountIndex)
+    public unsafe virtual BmSDK.FString GetAccountName(int AccountIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TwitterIntegrationBase.GetAccountName", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -96,7 +96,7 @@ public partial class TwitterIntegrationBase : BmSDK.Engine.PlatformInterfaceBase
     /// <summary>
     /// Function: GetNumAccounts
     /// </summary>
-    public unsafe int GetNumAccounts()
+    public unsafe virtual int GetNumAccounts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TwitterIntegrationBase.GetNumAccounts", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -114,7 +114,7 @@ public partial class TwitterIntegrationBase : BmSDK.Engine.PlatformInterfaceBase
     /// <summary>
     /// Function: AuthorizeAccounts
     /// </summary>
-    public unsafe bool AuthorizeAccounts()
+    public unsafe virtual bool AuthorizeAccounts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TwitterIntegrationBase.AuthorizeAccounts", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -132,7 +132,7 @@ public partial class TwitterIntegrationBase : BmSDK.Engine.PlatformInterfaceBase
     /// <summary>
     /// Function: ShowTweetUI
     /// </summary>
-    public unsafe bool ShowTweetUI(BmSDK.FString InitialMessage = default, BmSDK.FString URL = default, BmSDK.FString Picture = default)
+    public unsafe virtual bool ShowTweetUI(BmSDK.FString InitialMessage = default, BmSDK.FString URL = default, BmSDK.FString Picture = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TwitterIntegrationBase.ShowTweetUI", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -153,7 +153,7 @@ public partial class TwitterIntegrationBase : BmSDK.Engine.PlatformInterfaceBase
     /// <summary>
     /// Function: CanShowTweetUI
     /// </summary>
-    public unsafe bool CanShowTweetUI()
+    public unsafe virtual bool CanShowTweetUI()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TwitterIntegrationBase.CanShowTweetUI", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -171,7 +171,7 @@ public partial class TwitterIntegrationBase : BmSDK.Engine.PlatformInterfaceBase
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init()
+    public unsafe virtual void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TwitterIntegrationBase.Init", true);
         byte* paramsPtr = stackalloc byte[0];

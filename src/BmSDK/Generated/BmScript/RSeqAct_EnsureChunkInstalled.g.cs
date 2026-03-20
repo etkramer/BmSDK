@@ -36,7 +36,7 @@ public partial class RSeqAct_EnsureChunkInstalled : BmSDK.Engine.SequenceAction,
     /// <summary>
     /// Function: ShowUI
     /// </summary>
-    public unsafe void ShowUI()
+    public unsafe virtual void ShowUI()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_EnsureChunkInstalled.ShowUI", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -47,7 +47,7 @@ public partial class RSeqAct_EnsureChunkInstalled : BmSDK.Engine.SequenceAction,
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_EnsureChunkInstalled.Activated", true);
         byte* paramsPtr = stackalloc byte[8];

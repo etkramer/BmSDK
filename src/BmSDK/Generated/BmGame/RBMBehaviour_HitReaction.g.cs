@@ -36,7 +36,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: CheckForLaserGrid
     /// </summary>
-    public unsafe void CheckForLaserGrid()
+    public unsafe virtual void CheckForLaserGrid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.CheckForLaserGrid", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: AirStrikeRagdoll
     /// </summary>
-    public unsafe void AirStrikeRagdoll()
+    public unsafe virtual void AirStrikeRagdoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.AirStrikeRagdoll", true);
         byte* paramsPtr = stackalloc byte[248];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: HitWall
     /// </summary>
-    public unsafe void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent WallComp)
+    public unsafe override void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent WallComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.HitWall", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -72,7 +72,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: DamageCollisionBetween
     /// </summary>
-    public unsafe void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
+    public unsafe override void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.DamageCollisionBetween", true);
         byte* paramsPtr = stackalloc byte[276];
@@ -86,7 +86,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: CombatAnimHitEnd
     /// </summary>
-    public unsafe void CombatAnimHitEnd()
+    public unsafe virtual void CombatAnimHitEnd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.CombatAnimHitEnd", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -97,7 +97,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: CombatAnimHit
     /// </summary>
-    public unsafe void CombatAnimHit()
+    public unsafe virtual void CombatAnimHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.CombatAnimHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -108,7 +108,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: ShouldPlayLowHit
     /// </summary>
-    public unsafe bool ShouldPlayLowHit()
+    public unsafe virtual bool ShouldPlayLowHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.ShouldPlayLowHit", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -119,7 +119,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: NudgeRigidBodies
     /// </summary>
-    public unsafe void NudgeRigidBodies(float TimeStep)
+    public unsafe virtual void NudgeRigidBodies(float TimeStep)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.NudgeRigidBodies", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -131,7 +131,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: StopCheckForEnvironment
     /// </summary>
-    public unsafe void StopCheckForEnvironment()
+    public unsafe virtual void StopCheckForEnvironment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.StopCheckForEnvironment", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -142,7 +142,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: StartCheckForEnvironment
     /// </summary>
-    public unsafe void StartCheckForEnvironment()
+    public unsafe virtual void StartCheckForEnvironment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.StartCheckForEnvironment", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -153,7 +153,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: FireShotgun
     /// </summary>
-    public unsafe void FireShotgun()
+    public unsafe virtual void FireShotgun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.FireShotgun", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -164,7 +164,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: MFAGunStop
     /// </summary>
-    public unsafe void MFAGunStop()
+    public unsafe virtual void MFAGunStop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.MFAGunStop", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -175,7 +175,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: MFAGunStart
     /// </summary>
-    public unsafe void MFAGunStart()
+    public unsafe virtual void MFAGunStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.MFAGunStart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -186,7 +186,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -197,7 +197,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: TargetGoRagdoll
     /// </summary>
-    public unsafe void TargetGoRagdoll()
+    public unsafe virtual void TargetGoRagdoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.TargetGoRagdoll", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -208,7 +208,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: WeaponChanged
     /// </summary>
-    public unsafe void WeaponChanged()
+    public unsafe override void WeaponChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.WeaponChanged", true);
         byte* paramsPtr = stackalloc byte[248];
@@ -219,7 +219,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -230,7 +230,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: CanShovePawns
     /// </summary>
-    public unsafe bool CanShovePawns()
+    public unsafe override bool CanShovePawns()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.CanShovePawns", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -241,7 +241,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: CanHitLaserGrid
     /// </summary>
-    public unsafe bool CanHitLaserGrid()
+    public unsafe override bool CanHitLaserGrid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.CanHitLaserGrid", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -252,7 +252,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmGame.RPawnCombat.FDamageInfo NewDmgInfo, bool bNewInterruptedHitReaction = default)
+    public unsafe virtual void Initialise(BmSDK.BmGame.RPawnCombat.FDamageInfo NewDmgInfo, bool bNewInterruptedHitReaction = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.Initialise", true);
         byte* paramsPtr = stackalloc byte[252];
@@ -265,7 +265,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: CanBeHitInCombat
     /// </summary>
-    public unsafe bool CanBeHitInCombat(BmSDK.BmGame.RDamageType DamageType)
+    public unsafe override bool CanBeHitInCombat(BmSDK.BmGame.RDamageType DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.CanBeHitInCombat", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -277,7 +277,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: CanRepel
     /// </summary>
-    public unsafe bool CanRepel()
+    public unsafe override bool CanRepel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.CanRepel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -288,7 +288,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: CanBlock
     /// </summary>
-    public unsafe bool CanBlock()
+    public unsafe override bool CanBlock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.CanBlock", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -299,7 +299,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: AllowBlocking
     /// </summary>
-    public unsafe void AllowBlocking()
+    public unsafe virtual void AllowBlocking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.AllowBlocking", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -310,7 +310,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: CanDodgeProjectile
     /// </summary>
-    public unsafe bool CanDodgeProjectile(System.Numerics.Vector3 ThrownFromPos, int CheckBatarangID)
+    public unsafe override bool CanDodgeProjectile(System.Numerics.Vector3 ThrownFromPos, int CheckBatarangID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.CanDodgeProjectile", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -323,7 +323,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: TurnOffFx
     /// </summary>
-    public unsafe void TurnOffFx()
+    public unsafe virtual void TurnOffFx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.TurnOffFx", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -334,7 +334,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: AwareOfPlayer
     /// </summary>
-    public unsafe bool AwareOfPlayer(BmSDK.Engine.Actor Player, BmSDK.Class dmgType = default)
+    public unsafe override bool AwareOfPlayer(BmSDK.Engine.Actor Player, BmSDK.Class dmgType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.AwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -347,7 +347,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: CanCheckFalling
     /// </summary>
-    public unsafe bool CanCheckFalling()
+    public unsafe override bool CanCheckFalling()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.CanCheckFalling", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -365,7 +365,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: FindEnvironmentInDirForHitReaction
     /// </summary>
-    public unsafe int FindEnvironmentInDirForHitReaction(System.Numerics.Vector3 CheckDir, float CheckDist, float CheckWidth, out System.Numerics.Vector3 WallLoc, out System.Numerics.Vector3 WallNormal)
+    public unsafe virtual int FindEnvironmentInDirForHitReaction(System.Numerics.Vector3 CheckDir, float CheckDist, float CheckWidth, out System.Numerics.Vector3 WallLoc, out System.Numerics.Vector3 WallNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReaction.FindEnvironmentInDirForHitReaction", true);
         byte* paramsPtr = stackalloc byte[48];

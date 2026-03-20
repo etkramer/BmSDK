@@ -47,7 +47,7 @@ public partial class RSeqAct_UpdateJokerNuke : BmSDK.BmGame.RSeqAct_UpdateJokerN
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_UpdateJokerNuke.Activated", true);
         byte* paramsPtr = stackalloc byte[8];

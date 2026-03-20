@@ -36,7 +36,7 @@ public partial class RGFxWorldMovieComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Function: SetTransformedToWorld
     /// </summary>
-    public unsafe void SetTransformedToWorld()
+    public unsafe virtual void SetTransformedToWorld()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxWorldMovieComponent.SetTransformedToWorld", true);
         byte* paramsPtr = stackalloc byte[0];

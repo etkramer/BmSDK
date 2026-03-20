@@ -71,7 +71,7 @@ public partial class RCombatMove_LieutenantMFAReaction : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: ExitMoveNaturally
     /// </summary>
-    public unsafe void ExitMoveNaturally()
+    public unsafe override void ExitMoveNaturally()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LieutenantMFAReaction.ExitMoveNaturally", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RCombatMove_LieutenantMFAReaction : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: CombatAnimHitEnd
     /// </summary>
-    public unsafe void CombatAnimHitEnd()
+    public unsafe override void CombatAnimHitEnd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LieutenantMFAReaction.CombatAnimHitEnd", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RCombatMove_LieutenantMFAReaction : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: CombatAnimHit
     /// </summary>
-    public unsafe void CombatAnimHit()
+    public unsafe override void CombatAnimHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LieutenantMFAReaction.CombatAnimHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RCombatMove_LieutenantMFAReaction : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: GetAnimInfo
     /// </summary>
-    public unsafe void GetAnimInfo(out BmSDK.FName AnimName, out float DurationScale)
+    public unsafe override void GetAnimInfo(out BmSDK.FName AnimName, out float DurationScale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LieutenantMFAReaction.GetAnimInfo", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -117,7 +117,7 @@ public partial class RCombatMove_LieutenantMFAReaction : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: CanRespondToDamageType
     /// </summary>
-    public unsafe bool CanRespondToDamageType(BmSDK.Class dmgType)
+    public unsafe override bool CanRespondToDamageType(BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LieutenantMFAReaction.CanRespondToDamageType", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -129,7 +129,7 @@ public partial class RCombatMove_LieutenantMFAReaction : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LieutenantMFAReaction.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

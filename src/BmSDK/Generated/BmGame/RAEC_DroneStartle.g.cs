@@ -71,7 +71,7 @@ public partial class RAEC_DroneStartle : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: DoStartleDialogue
     /// </summary>
-    public unsafe void DoStartleDialogue()
+    public unsafe virtual void DoStartleDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DroneStartle.DoStartleDialogue", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -82,7 +82,7 @@ public partial class RAEC_DroneStartle : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DroneStartle.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RAEC_DroneStartle : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: OnAssign
     /// </summary>
-    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe override void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DroneStartle.OnAssign", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -106,7 +106,7 @@ public partial class RAEC_DroneStartle : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: IsRelevant
     /// </summary>
-    public unsafe bool IsRelevant(BmSDK.BmGame.RBMAIController C)
+    public unsafe virtual bool IsRelevant(BmSDK.BmGame.RBMAIController C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DroneStartle.IsRelevant", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -118,7 +118,7 @@ public partial class RAEC_DroneStartle : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: StartReaction
     /// </summary>
-    public unsafe bool StartReaction()
+    public unsafe virtual bool StartReaction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DroneStartle.StartReaction", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -129,7 +129,7 @@ public partial class RAEC_DroneStartle : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: IsAvailableToReact
     /// </summary>
-    public unsafe bool IsAvailableToReact(BmSDK.BmGame.RBMAIController C)
+    public unsafe virtual bool IsAvailableToReact(BmSDK.BmGame.RBMAIController C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DroneStartle.IsAvailableToReact", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -141,7 +141,7 @@ public partial class RAEC_DroneStartle : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: GetBarkPriority
     /// </summary>
-    public unsafe int GetBarkPriority()
+    public unsafe override int GetBarkPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DroneStartle.GetBarkPriority", true);
         byte* paramsPtr = stackalloc byte[4];

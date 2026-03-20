@@ -36,7 +36,7 @@ public partial class RHudModule : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetVariableBool
     /// </summary>
-    public unsafe bool GetVariableBool(BmSDK.FString variable_name_relative_tolocal_root)
+    public unsafe virtual bool GetVariableBool(BmSDK.FString variable_name_relative_tolocal_root)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModule.GetVariableBool", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -48,7 +48,7 @@ public partial class RHudModule : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CallActionscriptFunction
     /// </summary>
-    public unsafe void CallActionscriptFunction(BmSDK.FString FunctionName)
+    public unsafe virtual void CallActionscriptFunction(BmSDK.FString FunctionName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModule.CallActionscriptFunction", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -60,7 +60,7 @@ public partial class RHudModule : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetVisible
     /// </summary>
-    public unsafe void SetVisible(bool is_visible)
+    public unsafe virtual void SetVisible(bool is_visible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModule.SetVisible", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -72,7 +72,7 @@ public partial class RHudModule : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: RequestQuit
     /// </summary>
-    public unsafe void RequestQuit()
+    public unsafe virtual void RequestQuit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModule.RequestQuit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -83,7 +83,7 @@ public partial class RHudModule : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Hide
     /// </summary>
-    public unsafe void Hide()
+    public unsafe virtual void Hide()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModule.Hide", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RHudModule : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: show
     /// </summary>
-    public unsafe void show()
+    public unsafe virtual void show()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModule.show", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RHudModule : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsReadyToCallFunctions
     /// </summary>
-    public unsafe bool IsReadyToCallFunctions()
+    public unsafe virtual bool IsReadyToCallFunctions()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModule.IsReadyToCallFunctions", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RHudModule : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLocalRoot
     /// </summary>
-    public unsafe BmSDK.FString GetLocalRoot()
+    public unsafe virtual BmSDK.FString GetLocalRoot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModule.GetLocalRoot", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -127,7 +127,7 @@ public partial class RHudModule : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: InitialiseFlash
     /// </summary>
-    public unsafe void InitialiseFlash()
+    public unsafe virtual void InitialiseFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModule.InitialiseFlash", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RHudModule : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: OverrideMovieInfo
     /// </summary>
-    public unsafe void OverrideMovieInfo(BmSDK.GFxUI.SwfMovie NewMovieInfo)
+    public unsafe virtual void OverrideMovieInfo(BmSDK.GFxUI.SwfMovie NewMovieInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModule.OverrideMovieInfo", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -150,7 +150,7 @@ public partial class RHudModule : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsModuleVisible
     /// </summary>
-    public unsafe bool IsModuleVisible()
+    public unsafe virtual bool IsModuleVisible()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModule.IsModuleVisible", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -161,7 +161,7 @@ public partial class RHudModule : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe virtual void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModule.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -172,7 +172,7 @@ public partial class RHudModule : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: InitFromSwf
     /// </summary>
-    public unsafe bool InitFromSwf(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.GFxUI.SwfMovie _ModuleSwf)
+    public unsafe virtual bool InitFromSwf(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.GFxUI.SwfMovie _ModuleSwf)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModule.InitFromSwf", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -186,7 +186,7 @@ public partial class RHudModule : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe virtual bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModule.Init", true);
         byte* paramsPtr = stackalloc byte[44];

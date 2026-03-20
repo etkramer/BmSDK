@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: CloseScreen
     /// </summary>
-    public unsafe void CloseScreen()
+    public unsafe override void CloseScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.CloseScreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: ResetResolution
     /// </summary>
-    public unsafe void ResetResolution()
+    public unsafe virtual void ResetResolution()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.ResetResolution", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: XI_OnX
     /// </summary>
-    public unsafe void XI_OnX()
+    public unsafe override void XI_OnX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.XI_OnX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: XI_Tick
     /// </summary>
-    public unsafe void XI_Tick()
+    public unsafe override void XI_Tick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.XI_Tick", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: CheckRestartChange
     /// </summary>
-    public unsafe void CheckRestartChange()
+    public unsafe virtual void CheckRestartChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.CheckRestartChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -91,7 +91,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: CheckResolution
     /// </summary>
-    public unsafe void CheckResolution()
+    public unsafe virtual void CheckResolution()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.CheckResolution", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -102,7 +102,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: DoExit
     /// </summary>
-    public unsafe void DoExit(bool ApplyChanges)
+    public unsafe override void DoExit(bool ApplyChanges)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.DoExit", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -114,7 +114,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: OnApply
     /// </summary>
-    public unsafe void OnApply()
+    public unsafe virtual void OnApply()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.OnApply", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -125,7 +125,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: XI_OnBack
     /// </summary>
-    public unsafe void XI_OnBack()
+    public unsafe override void XI_OnBack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.XI_OnBack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -136,7 +136,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: PopupRequester_Callback
     /// </summary>
-    public unsafe void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
+    public unsafe override void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.PopupRequester_Callback", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -149,7 +149,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: XI_Set
     /// </summary>
-    public unsafe void XI_Set(int Id, BmSDK.FString Type, int Value)
+    public unsafe virtual void XI_Set(int Id, BmSDK.FString Type, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.XI_Set", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -163,7 +163,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: XI_Get
     /// </summary>
-    public unsafe int XI_Get(int Id, BmSDK.FString Type)
+    public unsafe virtual int XI_Get(int Id, BmSDK.FString Type)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.XI_Get", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -176,7 +176,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: XI_GetDefault
     /// </summary>
-    public unsafe int XI_GetDefault(int Id, BmSDK.FString Type)
+    public unsafe virtual int XI_GetDefault(int Id, BmSDK.FString Type)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.XI_GetDefault", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -189,7 +189,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: ConvertOptionIndexToAdaptiveVsync
     /// </summary>
-    public unsafe int ConvertOptionIndexToAdaptiveVsync(int OptionIndex)
+    public unsafe virtual int ConvertOptionIndexToAdaptiveVsync(int OptionIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.ConvertOptionIndexToAdaptiveVsync", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -201,7 +201,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: ConvertOptionIndexToVsync
     /// </summary>
-    public unsafe int ConvertOptionIndexToVsync(int OptionIndex)
+    public unsafe virtual int ConvertOptionIndexToVsync(int OptionIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.ConvertOptionIndexToVsync", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -213,7 +213,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: ConvertToVsyncOptionIndex
     /// </summary>
-    public unsafe int ConvertToVsyncOptionIndex(int Vsync, int AdaptiveVsync)
+    public unsafe virtual int ConvertToVsyncOptionIndex(int Vsync, int AdaptiveVsync)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.ConvertToVsyncOptionIndex", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -226,7 +226,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: BuildVsyncList
     /// </summary>
-    public unsafe BmSDK.FString BuildVsyncList()
+    public unsafe virtual BmSDK.FString BuildVsyncList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.BuildVsyncList", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -237,7 +237,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: GetFPSIndex
     /// </summary>
-    public unsafe int GetFPSIndex(int FPS)
+    public unsafe virtual int GetFPSIndex(int FPS)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.GetFPSIndex", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -249,7 +249,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: SortByFPS
     /// </summary>
-    public unsafe int SortByFPS(int A, int B)
+    public unsafe virtual int SortByFPS(int A, int B)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.SortByFPS", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -262,7 +262,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: BuildFPSList
     /// </summary>
-    public unsafe BmSDK.FString BuildFPSList()
+    public unsafe virtual BmSDK.FString BuildFPSList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.BuildFPSList", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -273,7 +273,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: XI_SetupMenu
     /// </summary>
-    public unsafe void XI_SetupMenu(BmSDK.FString TargetPath)
+    public unsafe override void XI_SetupMenu(BmSDK.FString TargetPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.XI_SetupMenu", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -285,7 +285,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: EnableResolutionMenuItem
     /// </summary>
-    public unsafe void EnableResolutionMenuItem()
+    public unsafe virtual void EnableResolutionMenuItem()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.EnableResolutionMenuItem", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -296,7 +296,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: DisableResolutionMenuItem
     /// </summary>
-    public unsafe void DisableResolutionMenuItem()
+    public unsafe virtual void DisableResolutionMenuItem()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.DisableResolutionMenuItem", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -307,7 +307,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: EnableResolutionMenuItem_ASHelper
     /// </summary>
-    public unsafe void EnableResolutionMenuItem_ASHelper(int AllMenuIndex, int MenuItemsIndex)
+    public unsafe virtual void EnableResolutionMenuItem_ASHelper(int AllMenuIndex, int MenuItemsIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.EnableResolutionMenuItem_ASHelper", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -320,7 +320,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: DisableResolutionMenuItem_ASHelper
     /// </summary>
-    public unsafe void DisableResolutionMenuItem_ASHelper(int Index)
+    public unsafe virtual void DisableResolutionMenuItem_ASHelper(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.DisableResolutionMenuItem_ASHelper", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -332,7 +332,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: SetAlphaOfMenuItem_ASHelper
     /// </summary>
-    public unsafe void SetAlphaOfMenuItem_ASHelper(int indexIntoAllItems, float newAlpha)
+    public unsafe virtual void SetAlphaOfMenuItem_ASHelper(int indexIntoAllItems, float newAlpha)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.SetAlphaOfMenuItem_ASHelper", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -345,7 +345,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: CopyOptions
     /// </summary>
-    public unsafe void CopyOptions()
+    public unsafe virtual void CopyOptions()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.CopyOptions", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -356,7 +356,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: AddResolutionLabel
     /// </summary>
-    public unsafe void AddResolutionLabel()
+    public unsafe virtual void AddResolutionLabel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.AddResolutionLabel", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -367,7 +367,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.Init", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -379,7 +379,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: GetResolutionLabelNames
     /// </summary>
-    public unsafe bool GetResolutionLabelNames()
+    public unsafe virtual bool GetResolutionLabelNames()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.GetResolutionLabelNames", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -397,7 +397,7 @@ public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: ApplySelectedOptions
     /// </summary>
-    public unsafe void ApplySelectedOptions()
+    public unsafe virtual void ApplySelectedOptions()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsGraphics.ApplySelectedOptions", true);
         byte* paramsPtr = stackalloc byte[0];

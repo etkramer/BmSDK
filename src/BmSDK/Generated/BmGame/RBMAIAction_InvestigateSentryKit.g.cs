@@ -84,7 +84,7 @@ public partial class RBMAIAction_InvestigateSentryKit : BmSDK.BmGame.RBMAIAction
     /// <summary>
     /// Function: DisruptedExplosion
     /// </summary>
-    public unsafe void DisruptedExplosion()
+    public unsafe virtual void DisruptedExplosion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_InvestigateSentryKit.DisruptedExplosion", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class RBMAIAction_InvestigateSentryKit : BmSDK.BmGame.RBMAIAction
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_InvestigateSentryKit.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RBMAIAction_InvestigateSentryKit : BmSDK.BmGame.RBMAIAction
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_InvestigateSentryKit.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -118,7 +118,7 @@ public partial class RBMAIAction_InvestigateSentryKit : BmSDK.BmGame.RBMAIAction
     /// <summary>
     /// Function: Cleanup
     /// </summary>
-    public unsafe void Cleanup()
+    public unsafe override void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_InvestigateSentryKit.Cleanup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RBMAIAction_InvestigateSentryKit : BmSDK.BmGame.RBMAIAction
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_InvestigateSentryKit.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class RBMAIAction_InvestigateSentryKit : BmSDK.BmGame.RBMAIAction
     /// <summary>
     /// Function: SetSentryKit
     /// </summary>
-    public unsafe void SetSentryKit(BmSDK.BmGame.RLootSourceBase NewKit)
+    public unsafe virtual void SetSentryKit(BmSDK.BmGame.RLootSourceBase NewKit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_InvestigateSentryKit.SetSentryKit", true);
         byte* paramsPtr = stackalloc byte[8];

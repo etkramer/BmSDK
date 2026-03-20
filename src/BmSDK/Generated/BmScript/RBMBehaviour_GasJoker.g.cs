@@ -36,7 +36,7 @@ public partial class RBMBehaviour_GasJoker : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// Function: GetEvadeVehicleType
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.EEvadeVehicleType GetEvadeVehicleType(BmSDK.Engine.Actor V, float CarSpeed, bool bZap)
+    public unsafe override BmSDK.BmGame.RGameInfo.EEvadeVehicleType GetEvadeVehicleType(BmSDK.Engine.Actor V, float CarSpeed, bool bZap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GasJoker.GetEvadeVehicleType", true);
         byte* paramsPtr = stackalloc byte[17];
@@ -50,7 +50,7 @@ public partial class RBMBehaviour_GasJoker : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GasJoker.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class RBMBehaviour_ChinookPassenger : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: OnEndInterrupt
     /// </summary>
-    public unsafe void OnEndInterrupt()
+    public unsafe override void OnEndInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ChinookPassenger.OnEndInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_ChinookPassenger : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: EnterCombatTauntPose
     /// </summary>
-    public unsafe void EnterCombatTauntPose()
+    public unsafe virtual void EnterCombatTauntPose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ChinookPassenger.EnterCombatTauntPose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_ChinookPassenger : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: AlertToPlayer
     /// </summary>
-    public unsafe void AlertToPlayer()
+    public unsafe virtual void AlertToPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ChinookPassenger.AlertToPlayer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_ChinookPassenger : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: PlayTransitionIntoIdle
     /// </summary>
-    public unsafe void PlayTransitionIntoIdle(BmSDK.FName TransitionAnimName = default)
+    public unsafe virtual void PlayTransitionIntoIdle(BmSDK.FName TransitionAnimName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ChinookPassenger.PlayTransitionIntoIdle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_ChinookPassenger : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: CheckForPlayerClose
     /// </summary>
-    public unsafe void CheckForPlayerClose()
+    public unsafe virtual void CheckForPlayerClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ChinookPassenger.CheckForPlayerClose", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -92,7 +92,7 @@ public partial class RBMBehaviour_ChinookPassenger : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: StartAbseiling
     /// </summary>
-    public unsafe bool StartAbseiling()
+    public unsafe virtual bool StartAbseiling()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ChinookPassenger.StartAbseiling", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -103,7 +103,7 @@ public partial class RBMBehaviour_ChinookPassenger : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: SetupPassengerInfo
     /// </summary>
-    public unsafe void SetupPassengerInfo()
+    public unsafe virtual void SetupPassengerInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ChinookPassenger.SetupPassengerInfo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -114,7 +114,7 @@ public partial class RBMBehaviour_ChinookPassenger : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ChinookPassenger.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

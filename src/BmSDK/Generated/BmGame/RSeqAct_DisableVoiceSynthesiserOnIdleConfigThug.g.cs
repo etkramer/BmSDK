@@ -47,7 +47,7 @@ public partial class RSeqAct_DisableVoiceSynthesiserOnIdleConfigThug : BmSDK.Eng
     /// <summary>
     /// Function: VoiceSynthesiserSelectionFailedBecausePlayerTriedToSelectIdleConfigThug
     /// </summary>
-    public unsafe void VoiceSynthesiserSelectionFailedBecausePlayerTriedToSelectIdleConfigThug()
+    public unsafe virtual void VoiceSynthesiserSelectionFailedBecausePlayerTriedToSelectIdleConfigThug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_DisableVoiceSynthesiserOnIdleConfigThug.VoiceSynthesiserSelectionFailedBecausePlayerTriedToSelectIdleConfigThug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_DisableVoiceSynthesiserOnIdleConfigThug : BmSDK.Eng
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_DisableVoiceSynthesiserOnIdleConfigThug.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

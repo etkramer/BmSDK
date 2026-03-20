@@ -71,7 +71,7 @@ public partial class RCombatMove_VillainJump : BmSDK.BmGame.RCombatMove, BmSDK.I
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainJump.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_VillainJump : BmSDK.BmGame.RCombatMove, BmSDK.I
     /// <summary>
     /// Function: CanBeTargettedByPlayer
     /// </summary>
-    public unsafe bool CanBeTargettedByPlayer(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType, BmSDK.BmGame.RPawnPlayerCombat NewPlayer)
+    public unsafe override bool CanBeTargettedByPlayer(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType, BmSDK.BmGame.RPawnPlayerCombat NewPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainJump.CanBeTargettedByPlayer", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -96,7 +96,7 @@ public partial class RCombatMove_VillainJump : BmSDK.BmGame.RCombatMove, BmSDK.I
     /// <summary>
     /// Function: PlayJumpAnim
     /// </summary>
-    public unsafe void PlayJumpAnim()
+    public unsafe virtual void PlayJumpAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainJump.PlayJumpAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class RCombatMove_VillainJump : BmSDK.BmGame.RCombatMove, BmSDK.I
     /// <summary>
     /// Function: GetJumpAnim
     /// </summary>
-    public unsafe BmSDK.FName GetJumpAnim()
+    public unsafe virtual BmSDK.FName GetJumpAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainJump.GetJumpAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RCombatMove_VillainJump : BmSDK.BmGame.RCombatMove, BmSDK.I
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainJump.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

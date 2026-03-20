@@ -66,7 +66,7 @@ public partial class RJokerSwappableBase : BmSDK.Engine.StaticMeshActor, BmSDK.I
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerSwappableBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class RJokerSwappableBase : BmSDK.Engine.StaticMeshActor, BmSDK.I
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerSwappableBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -88,7 +88,7 @@ public partial class RJokerSwappableBase : BmSDK.Engine.StaticMeshActor, BmSDK.I
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerSwappableBase.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -99,7 +99,7 @@ public partial class RJokerSwappableBase : BmSDK.Engine.StaticMeshActor, BmSDK.I
     /// <summary>
     /// Function: UnForce
     /// </summary>
-    public unsafe void UnForce()
+    public unsafe virtual void UnForce()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerSwappableBase.UnForce", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -110,7 +110,7 @@ public partial class RJokerSwappableBase : BmSDK.Engine.StaticMeshActor, BmSDK.I
     /// <summary>
     /// Function: SwapToOriginalVersion
     /// </summary>
-    public unsafe void SwapToOriginalVersion(bool bForce = default)
+    public unsafe virtual void SwapToOriginalVersion(bool bForce = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerSwappableBase.SwapToOriginalVersion", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -122,7 +122,7 @@ public partial class RJokerSwappableBase : BmSDK.Engine.StaticMeshActor, BmSDK.I
     /// <summary>
     /// Function: SwapToJokerVersion
     /// </summary>
-    public unsafe void SwapToJokerVersion(bool bForce = default)
+    public unsafe virtual void SwapToJokerVersion(bool bForce = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerSwappableBase.SwapToJokerVersion", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -134,7 +134,7 @@ public partial class RJokerSwappableBase : BmSDK.Engine.StaticMeshActor, BmSDK.I
     /// <summary>
     /// Function: Swap
     /// </summary>
-    public unsafe void Swap()
+    public unsafe virtual void Swap()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerSwappableBase.Swap", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -145,7 +145,7 @@ public partial class RJokerSwappableBase : BmSDK.Engine.StaticMeshActor, BmSDK.I
     /// <summary>
     /// Function: UnswapsAutomatically
     /// </summary>
-    public unsafe bool UnswapsAutomatically()
+    public unsafe virtual bool UnswapsAutomatically()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerSwappableBase.UnswapsAutomatically", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -156,7 +156,7 @@ public partial class RJokerSwappableBase : BmSDK.Engine.StaticMeshActor, BmSDK.I
     /// <summary>
     /// Function: CanSwapOffscreen
     /// </summary>
-    public unsafe bool CanSwapOffscreen()
+    public unsafe virtual bool CanSwapOffscreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerSwappableBase.CanSwapOffscreen", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RainVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.IG
     /// <summary>
     /// Function: SetRainSettings
     /// </summary>
-    public unsafe void SetRainSettings()
+    public unsafe virtual void SetRainSettings()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RainVolume.SetRainSettings", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RainVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.IG
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RainVolume.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RainVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.IG
     /// <summary>
     /// Function: GetRainDensity
     /// </summary>
-    public unsafe float GetRainDensity()
+    public unsafe override float GetRainDensity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RainVolume.GetRainDensity", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -112,7 +112,7 @@ public partial class RainVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.IG
     /// <summary>
     /// Function: LocationRainHeight
     /// </summary>
-    public unsafe float LocationRainHeight(System.Numerics.Vector3 TestLocation)
+    public unsafe override float LocationRainHeight(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RainVolume.LocationRainHeight", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -131,7 +131,7 @@ public partial class RainVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.IG
     /// <summary>
     /// Function: DistanceToRainZ
     /// </summary>
-    public unsafe float DistanceToRainZ(System.Numerics.Vector3 TestLocation)
+    public unsafe override float DistanceToRainZ(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RainVolume.DistanceToRainZ", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -150,7 +150,7 @@ public partial class RainVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.IG
     /// <summary>
     /// Function: GetLocationPuddleDepth
     /// </summary>
-    public unsafe float GetLocationPuddleDepth(System.Numerics.Vector3 TestLocation)
+    public unsafe override float GetLocationPuddleDepth(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RainVolume.GetLocationPuddleDepth", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -169,7 +169,7 @@ public partial class RainVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.IG
     /// <summary>
     /// Function: IsLocationRaining
     /// </summary>
-    public unsafe bool IsLocationRaining(System.Numerics.Vector3 TestLocation)
+    public unsafe override bool IsLocationRaining(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RainVolume.IsLocationRaining", true);
         byte* paramsPtr = stackalloc byte[16];

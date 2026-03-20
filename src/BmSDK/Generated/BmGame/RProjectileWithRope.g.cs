@@ -71,7 +71,7 @@ public partial class RProjectileWithRope : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsLocationInFearGas
     /// </summary>
-    public unsafe bool IsLocationInFearGas(System.Numerics.Vector3 vTestLocation)
+    public unsafe virtual bool IsLocationInFearGas(System.Numerics.Vector3 vTestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectileWithRope.IsLocationInFearGas", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -90,7 +90,7 @@ public partial class RProjectileWithRope : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ProcessFearGasCollision
     /// </summary>
-    public unsafe void ProcessFearGasCollision()
+    public unsafe virtual void ProcessFearGasCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectileWithRope.ProcessFearGasCollision", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -108,7 +108,7 @@ public partial class RProjectileWithRope : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsLocationAboveOcean
     /// </summary>
-    public unsafe bool IsLocationAboveOcean(System.Numerics.Vector3 vTestLocation)
+    public unsafe virtual bool IsLocationAboveOcean(System.Numerics.Vector3 vTestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectileWithRope.IsLocationAboveOcean", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -127,7 +127,7 @@ public partial class RProjectileWithRope : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ProcessOceanCollision
     /// </summary>
-    public unsafe void ProcessOceanCollision()
+    public unsafe virtual void ProcessOceanCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectileWithRope.ProcessOceanCollision", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -145,7 +145,7 @@ public partial class RProjectileWithRope : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HitFearGas
     /// </summary>
-    public unsafe void HitFearGas(System.Numerics.Vector3 vHitLocation)
+    public unsafe virtual void HitFearGas(System.Numerics.Vector3 vHitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectileWithRope.HitFearGas", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -157,7 +157,7 @@ public partial class RProjectileWithRope : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HitOcean
     /// </summary>
-    public unsafe void HitOcean(System.Numerics.Vector3 vHitLocation)
+    public unsafe virtual void HitOcean(System.Numerics.Vector3 vHitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectileWithRope.HitOcean", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -169,7 +169,7 @@ public partial class RProjectileWithRope : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ReachedDest
     /// </summary>
-    public unsafe void ReachedDest()
+    public unsafe virtual void ReachedDest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectileWithRope.ReachedDest", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -180,7 +180,7 @@ public partial class RProjectileWithRope : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StopPhysics
     /// </summary>
-    public unsafe void StopPhysics()
+    public unsafe virtual void StopPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectileWithRope.StopPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -191,7 +191,7 @@ public partial class RProjectileWithRope : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StartPhysics
     /// </summary>
-    public unsafe void StartPhysics()
+    public unsafe virtual void StartPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectileWithRope.StartPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -202,7 +202,7 @@ public partial class RProjectileWithRope : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RetractRopeForFailedGrapple
     /// </summary>
-    public unsafe void RetractRopeForFailedGrapple()
+    public unsafe virtual void RetractRopeForFailedGrapple()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectileWithRope.RetractRopeForFailedGrapple", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -213,7 +213,7 @@ public partial class RProjectileWithRope : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GrappleSlip
     /// </summary>
-    public unsafe void GrappleSlip()
+    public unsafe virtual void GrappleSlip()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectileWithRope.GrappleSlip", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -224,7 +224,7 @@ public partial class RProjectileWithRope : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DisableTickForHidden
     /// </summary>
-    public unsafe void DisableTickForHidden()
+    public unsafe virtual void DisableTickForHidden()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectileWithRope.DisableTickForHidden", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -235,7 +235,7 @@ public partial class RProjectileWithRope : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Hide
     /// </summary>
-    public unsafe void Hide(bool NewHidden)
+    public unsafe virtual void Hide(bool NewHidden)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectileWithRope.Hide", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -247,7 +247,7 @@ public partial class RProjectileWithRope : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Drop
     /// </summary>
-    public unsafe void Drop()
+    public unsafe virtual void Drop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectileWithRope.Drop", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -258,7 +258,7 @@ public partial class RProjectileWithRope : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Fire
     /// </summary>
-    public unsafe void Fire(System.Numerics.Vector3 To)
+    public unsafe virtual void Fire(System.Numerics.Vector3 To)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectileWithRope.Fire", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -270,7 +270,7 @@ public partial class RProjectileWithRope : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.FName NewAttachToBoneName, bool bSocket = default)
+    public unsafe virtual void Initialise(BmSDK.FName NewAttachToBoneName, bool bSocket = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectileWithRope.Initialise", true);
         byte* paramsPtr = stackalloc byte[12];

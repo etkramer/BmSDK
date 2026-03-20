@@ -66,7 +66,7 @@ public partial class AkSoundActor : BmSDK.Engine.AkActor, BmSDK.IGameObject
     /// <summary>
     /// Function: EndMatineeControl
     /// </summary>
-    public unsafe void EndMatineeControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void EndMatineeControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkSoundActor.EndMatineeControl", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -79,7 +79,7 @@ public partial class AkSoundActor : BmSDK.Engine.AkActor, BmSDK.IGameObject
     /// <summary>
     /// Function: BeginMatineeControl
     /// </summary>
-    public unsafe void BeginMatineeControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void BeginMatineeControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkSoundActor.BeginMatineeControl", true);
         byte* paramsPtr = stackalloc byte[16];

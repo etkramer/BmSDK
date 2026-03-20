@@ -36,7 +36,7 @@ public partial class RBarkConvoPawnRef_BestForFlagType : BmSDK.BmGame.RBarkConvo
     /// <summary>
     /// Function: OnLockedSpeakerFound
     /// </summary>
-    public unsafe void OnLockedSpeakerFound(BmSDK.BmGame.RBarkConvo Convo)
+    public unsafe override void OnLockedSpeakerFound(BmSDK.BmGame.RBarkConvo Convo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoPawnRef_BestForFlagType.OnLockedSpeakerFound", true);
         byte* paramsPtr = stackalloc byte[32];

@@ -66,7 +66,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTargetDistance
     /// </summary>
-    public unsafe float GetTargetDistance()
+    public unsafe virtual float GetTargetDistance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.GetTargetDistance", true);
         byte* paramsPtr = stackalloc byte[112];
@@ -77,7 +77,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: CacheAIController
     /// </summary>
-    public unsafe void CacheAIController()
+    public unsafe virtual void CacheAIController()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.CacheAIController", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -88,7 +88,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: WeaponIsDown
     /// </summary>
-    public unsafe void WeaponIsDown()
+    public unsafe virtual void WeaponIsDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.WeaponIsDown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -99,7 +99,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: StillFiring
     /// </summary>
-    public unsafe bool StillFiring(byte FireMode)
+    public unsafe virtual bool StillFiring(byte FireMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.StillFiring", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -111,7 +111,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldRefire
     /// </summary>
-    public unsafe bool ShouldRefire()
+    public unsafe virtual bool ShouldRefire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.ShouldRefire", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -122,7 +122,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyWeaponFinishedFiring
     /// </summary>
-    public unsafe void NotifyWeaponFinishedFiring(byte FireMode)
+    public unsafe virtual void NotifyWeaponFinishedFiring(byte FireMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.NotifyWeaponFinishedFiring", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -134,7 +134,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyWeaponFired
     /// </summary>
-    public unsafe void NotifyWeaponFired(byte FireMode)
+    public unsafe virtual void NotifyWeaponFired(byte FireMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.NotifyWeaponFired", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -146,7 +146,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: HandleFinishedFiring
     /// </summary>
-    public unsafe void HandleFinishedFiring()
+    public unsafe virtual void HandleFinishedFiring()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.HandleFinishedFiring", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -157,7 +157,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: TryPutDown
     /// </summary>
-    public unsafe bool TryPutDown()
+    public unsafe virtual bool TryPutDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.TryPutDown", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -168,7 +168,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPhysicalFireStartLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetPhysicalFireStartLoc(System.Numerics.Vector3 AimDir = default)
+    public unsafe virtual System.Numerics.Vector3 GetPhysicalFireStartLoc(System.Numerics.Vector3 AimDir = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.GetPhysicalFireStartLoc", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -187,7 +187,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMuzzleLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMuzzleLoc()
+    public unsafe virtual System.Numerics.Vector3 GetMuzzleLoc()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.GetMuzzleLoc", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -198,7 +198,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: CustomFire
     /// </summary>
-    public unsafe void CustomFire()
+    public unsafe virtual void CustomFire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.CustomFire", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -209,7 +209,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: ProjectileFire
     /// </summary>
-    public unsafe BmSDK.Engine.Projectile ProjectileFire()
+    public unsafe virtual BmSDK.Engine.Projectile ProjectileFire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.ProjectileFire", true);
         byte* paramsPtr = stackalloc byte[160];
@@ -220,7 +220,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: ProcessInstantHit
     /// </summary>
-    public unsafe void ProcessInstantHit(byte FiringMode, BmSDK.Engine.Actor.FImpactInfo Impact, int NumHits = default)
+    public unsafe virtual void ProcessInstantHit(byte FiringMode, BmSDK.Engine.Actor.FImpactInfo Impact, int NumHits = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.ProcessInstantHit", true);
         byte* paramsPtr = stackalloc byte[124];
@@ -234,7 +234,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: InstantFire
     /// </summary>
-    public unsafe void InstantFire()
+    public unsafe virtual void InstantFire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.InstantFire", true);
         byte* paramsPtr = stackalloc byte[140];
@@ -257,7 +257,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: CalcWeaponFire
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.FImpactInfo CalcWeaponFire(System.Numerics.Vector3 StartTrace, System.Numerics.Vector3 EndTrace, out BmSDK.TArray<BmSDK.Engine.Actor.FImpactInfo> ImpactList, System.Numerics.Vector3 Extent)
+    public unsafe virtual BmSDK.Engine.Actor.FImpactInfo CalcWeaponFire(System.Numerics.Vector3 StartTrace, System.Numerics.Vector3 EndTrace, out BmSDK.TArray<BmSDK.Engine.Actor.FImpactInfo> ImpactList, System.Numerics.Vector3 Extent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.CalcWeaponFire", true);
         byte* paramsPtr = stackalloc byte[348];
@@ -272,7 +272,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTraceOwner
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetTraceOwner()
+    public unsafe virtual BmSDK.Engine.Actor GetTraceOwner()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.GetTraceOwner", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -283,7 +283,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTraceRange
     /// </summary>
-    public unsafe float GetTraceRange()
+    public unsafe virtual float GetTraceRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.GetTraceRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -294,7 +294,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAdjustedAim
     /// </summary>
-    public unsafe BmSDK.Rotator GetAdjustedAim(System.Numerics.Vector3 StartFireLoc)
+    public unsafe virtual BmSDK.Rotator GetAdjustedAim(System.Numerics.Vector3 StartFireLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.GetAdjustedAim", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -306,7 +306,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: FireAmmunition
     /// </summary>
-    public unsafe void FireAmmunition()
+    public unsafe virtual void FireAmmunition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.FireAmmunition", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -317,7 +317,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: FireModeUpdated
     /// </summary>
-    public unsafe void FireModeUpdated(byte FiringMode, bool bViaReplication)
+    public unsafe virtual void FireModeUpdated(byte FiringMode, bool bViaReplication)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.FireModeUpdated", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -330,7 +330,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: SetCurrentFireMode
     /// </summary>
-    public unsafe void SetCurrentFireMode(byte FiringModeNum)
+    public unsafe virtual void SetCurrentFireMode(byte FiringModeNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.SetCurrentFireMode", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -342,7 +342,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: SendToFiringState
     /// </summary>
-    public unsafe void SendToFiringState(byte FireModeNum)
+    public unsafe virtual void SendToFiringState(byte FireModeNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.SendToFiringState", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -354,7 +354,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: ForceEndFire
     /// </summary>
-    public unsafe void ForceEndFire()
+    public unsafe virtual void ForceEndFire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.ForceEndFire", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -365,7 +365,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: EndFire
     /// </summary>
-    public unsafe void EndFire(byte FireModeNum)
+    public unsafe virtual void EndFire(byte FireModeNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.EndFire", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -377,7 +377,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: ServerStopFire
     /// </summary>
-    public unsafe void ServerStopFire(byte FireModeNum)
+    public unsafe virtual void ServerStopFire(byte FireModeNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.ServerStopFire", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -389,7 +389,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: StopFire
     /// </summary>
-    public unsafe void StopFire(byte FireModeNum)
+    public unsafe virtual void StopFire(byte FireModeNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.StopFire", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -401,7 +401,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: BeginFire
     /// </summary>
-    public unsafe void BeginFire(byte FireModeNum)
+    public unsafe virtual void BeginFire(byte FireModeNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.BeginFire", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -413,7 +413,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: ServerStartFire
     /// </summary>
-    public unsafe void ServerStartFire(byte FireModeNum)
+    public unsafe virtual void ServerStartFire(byte FireModeNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.ServerStartFire", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -425,7 +425,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: StartFire
     /// </summary>
-    public unsafe void StartFire(byte FireModeNum)
+    public unsafe virtual void StartFire(byte FireModeNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.StartFire", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -437,7 +437,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: ClientWeaponSet
     /// </summary>
-    public unsafe void ClientWeaponSet(bool bOptionalSet, bool bDoNotActivate = default)
+    public unsafe virtual void ClientWeaponSet(bool bOptionalSet, bool bDoNotActivate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.ClientWeaponSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -450,7 +450,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: ClientGivenTo
     /// </summary>
-    public unsafe void ClientGivenTo(BmSDK.Engine.Pawn NewOwner, bool bDoNotActivate)
+    public unsafe override void ClientGivenTo(BmSDK.Engine.Pawn NewOwner, bool bDoNotActivate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.ClientGivenTo", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -463,7 +463,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: DetachWeapon
     /// </summary>
-    public unsafe void DetachWeapon()
+    public unsafe virtual void DetachWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.DetachWeapon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -474,7 +474,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: AttachWeaponTo
     /// </summary>
-    public unsafe void AttachWeaponTo(BmSDK.Engine.SkeletalMeshComponent MeshCpnt, BmSDK.FName SocketName = default)
+    public unsafe virtual void AttachWeaponTo(BmSDK.Engine.SkeletalMeshComponent MeshCpnt, BmSDK.FName SocketName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.AttachWeaponTo", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -487,7 +487,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearFlashLocation
     /// </summary>
-    public unsafe void ClearFlashLocation()
+    public unsafe virtual void ClearFlashLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.ClearFlashLocation", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -498,7 +498,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: SetFlashLocation
     /// </summary>
-    public unsafe void SetFlashLocation(System.Numerics.Vector3 HitLocation)
+    public unsafe virtual void SetFlashLocation(System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.SetFlashLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -510,7 +510,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearFlashCount
     /// </summary>
-    public unsafe void ClearFlashCount()
+    public unsafe virtual void ClearFlashCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.ClearFlashCount", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -521,7 +521,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: IncrementFlashCount
     /// </summary>
-    public unsafe void IncrementFlashCount()
+    public unsafe virtual void IncrementFlashCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.IncrementFlashCount", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -532,7 +532,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: WeaponEmpty
     /// </summary>
-    public unsafe void WeaponEmpty()
+    public unsafe virtual void WeaponEmpty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.WeaponEmpty", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -543,7 +543,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: DenyPickupQuery
     /// </summary>
-    public unsafe bool DenyPickupQuery(BmSDK.Class ItemClass, BmSDK.Engine.Actor Pickup)
+    public unsafe override bool DenyPickupQuery(BmSDK.Class ItemClass, BmSDK.Engine.Actor Pickup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.DenyPickupQuery", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -556,7 +556,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: PutDownWeapon
     /// </summary>
-    public unsafe void PutDownWeapon()
+    public unsafe virtual void PutDownWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.PutDownWeapon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -567,7 +567,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: Activate
     /// </summary>
-    public unsafe void Activate()
+    public unsafe virtual void Activate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.Activate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -578,7 +578,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: TimeWeaponEquipping
     /// </summary>
-    public unsafe void TimeWeaponEquipping()
+    public unsafe virtual void TimeWeaponEquipping()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.TimeWeaponEquipping", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -589,7 +589,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: TimeWeaponPutDown
     /// </summary>
-    public unsafe void TimeWeaponPutDown()
+    public unsafe virtual void TimeWeaponPutDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.TimeWeaponPutDown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -600,7 +600,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: RefireCheckTimer
     /// </summary>
-    public unsafe void RefireCheckTimer()
+    public unsafe virtual void RefireCheckTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.RefireCheckTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -611,7 +611,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: TimeWeaponFiring
     /// </summary>
-    public unsafe void TimeWeaponFiring(byte FireModeNum)
+    public unsafe virtual void TimeWeaponFiring(byte FireModeNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.TimeWeaponFiring", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -623,7 +623,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFireInterval
     /// </summary>
-    public unsafe float GetFireInterval(byte FireModeNum)
+    public unsafe virtual float GetFireInterval(byte FireModeNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.GetFireInterval", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -635,7 +635,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: StopFireEffects
     /// </summary>
-    public unsafe void StopFireEffects(byte FireModeNum)
+    public unsafe virtual void StopFireEffects(byte FireModeNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.StopFireEffects", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -647,7 +647,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayFireEffects
     /// </summary>
-    public unsafe void PlayFireEffects(byte FireModeNum, System.Numerics.Vector3 HitLocation = default)
+    public unsafe virtual void PlayFireEffects(byte FireModeNum, System.Numerics.Vector3 HitLocation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.PlayFireEffects", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -660,7 +660,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: StopWeaponAnimation
     /// </summary>
-    public unsafe void StopWeaponAnimation()
+    public unsafe virtual void StopWeaponAnimation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.StopWeaponAnimation", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -671,7 +671,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayWeaponAnimation
     /// </summary>
-    public unsafe void PlayWeaponAnimation(BmSDK.FName Sequence, float fDesiredDuration, bool bLoop = default, BmSDK.Engine.SkeletalMeshComponent SkelMesh = default)
+    public unsafe virtual void PlayWeaponAnimation(BmSDK.FName Sequence, float fDesiredDuration, bool bLoop = default, BmSDK.Engine.SkeletalMeshComponent SkelMesh = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.PlayWeaponAnimation", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -686,7 +686,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: GetWeaponAnimNodeSeq
     /// </summary>
-    public unsafe BmSDK.Engine.AnimNodeSequence GetWeaponAnimNodeSeq()
+    public unsafe virtual BmSDK.Engine.AnimNodeSequence GetWeaponAnimNodeSeq()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.GetWeaponAnimNodeSeq", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -697,7 +697,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: FireOnRelease
     /// </summary>
-    public unsafe bool FireOnRelease()
+    public unsafe virtual bool FireOnRelease()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.FireOnRelease", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -708,7 +708,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: CanAttack
     /// </summary>
-    public unsafe bool CanAttack(BmSDK.Engine.Actor Other)
+    public unsafe virtual bool CanAttack(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.CanAttack", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -720,7 +720,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: GetWeaponRating
     /// </summary>
-    public unsafe float GetWeaponRating()
+    public unsafe virtual float GetWeaponRating()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.GetWeaponRating", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -731,7 +731,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAIRating
     /// </summary>
-    public unsafe float GetAIRating()
+    public unsafe virtual float GetAIRating()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.GetAIRating", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -742,7 +742,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: MaxRange
     /// </summary>
-    public unsafe float MaxRange()
+    public unsafe virtual float MaxRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.MaxRange", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -753,7 +753,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: AddSpread
     /// </summary>
-    public unsafe BmSDK.Rotator AddSpread(BmSDK.Rotator BaseAim)
+    public unsafe virtual BmSDK.Rotator AddSpread(BmSDK.Rotator BaseAim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.AddSpread", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -765,7 +765,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: GetProjectileClass
     /// </summary>
-    public unsafe BmSDK.Class GetProjectileClass()
+    public unsafe virtual BmSDK.Class GetProjectileClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.GetProjectileClass", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -776,7 +776,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearPendingFire
     /// </summary>
-    public unsafe void ClearPendingFire(int FireMode)
+    public unsafe virtual void ClearPendingFire(int FireMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.ClearPendingFire", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -788,7 +788,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPendingFire
     /// </summary>
-    public unsafe void SetPendingFire(int FireMode)
+    public unsafe virtual void SetPendingFire(int FireMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.SetPendingFire", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -800,7 +800,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: PendingFire
     /// </summary>
-    public unsafe bool PendingFire(int FireMode)
+    public unsafe virtual bool PendingFire(int FireMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.PendingFire", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -812,7 +812,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPendingFireLength
     /// </summary>
-    public unsafe int GetPendingFireLength()
+    public unsafe virtual int GetPendingFireLength()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.GetPendingFireLength", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -823,7 +823,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: HasAnyAmmo
     /// </summary>
-    public unsafe bool HasAnyAmmo()
+    public unsafe virtual bool HasAnyAmmo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.HasAnyAmmo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -834,7 +834,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: HasAmmo
     /// </summary>
-    public unsafe bool HasAmmo(byte FireModeNum, int Amount = default)
+    public unsafe virtual bool HasAmmo(byte FireModeNum, int Amount = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.HasAmmo", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -847,7 +847,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: AddAmmo
     /// </summary>
-    public unsafe int AddAmmo(int Amount)
+    public unsafe virtual int AddAmmo(int Amount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.AddAmmo", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -859,7 +859,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: ConsumeAmmo
     /// </summary>
-    public unsafe void ConsumeAmmo(byte FireModeNum)
+    public unsafe virtual void ConsumeAmmo(byte FireModeNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.ConsumeAmmo", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -871,7 +871,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: GetWeaponDebug
     /// </summary>
-    public unsafe void GetWeaponDebug(out BmSDK.TArray<BmSDK.FString> DebugInfo)
+    public unsafe virtual void GetWeaponDebug(out BmSDK.TArray<BmSDK.FString> DebugInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.GetWeaponDebug", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -883,7 +883,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: DisplayDebug
     /// </summary>
-    public unsafe void DisplayDebug(BmSDK.Engine.HUD HUD, out float out_YL, out float out_YPos)
+    public unsafe override void DisplayDebug(BmSDK.Engine.HUD HUD, out float out_YL, out float out_YPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.DisplayDebug", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -897,7 +897,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: DenyClientWeaponSet
     /// </summary>
-    public unsafe bool DenyClientWeaponSet()
+    public unsafe virtual bool DenyClientWeaponSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.DenyClientWeaponSet", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -908,7 +908,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: IsFiring
     /// </summary>
-    public unsafe bool IsFiring()
+    public unsafe virtual bool IsFiring()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.IsFiring", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -919,7 +919,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: ClientWeaponThrown
     /// </summary>
-    public unsafe void ClientWeaponThrown()
+    public unsafe virtual void ClientWeaponThrown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.ClientWeaponThrown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -930,7 +930,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: CanThrow
     /// </summary>
-    public unsafe bool CanThrow()
+    public unsafe virtual bool CanThrow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.CanThrow", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -941,7 +941,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: DropFrom
     /// </summary>
-    public unsafe void DropFrom(System.Numerics.Vector3 StartLocation, System.Numerics.Vector3 StartVelocity)
+    public unsafe override void DropFrom(System.Numerics.Vector3 StartLocation, System.Numerics.Vector3 StartVelocity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.DropFrom", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -954,7 +954,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: DoOverridePrevWeapon
     /// </summary>
-    public unsafe bool DoOverridePrevWeapon()
+    public unsafe virtual bool DoOverridePrevWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.DoOverridePrevWeapon", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -965,7 +965,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: DoOverrideNextWeapon
     /// </summary>
-    public unsafe bool DoOverrideNextWeapon()
+    public unsafe virtual bool DoOverrideNextWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.DoOverrideNextWeapon", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -976,7 +976,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: HolderDied
     /// </summary>
-    public unsafe void HolderDied()
+    public unsafe virtual void HolderDied()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.HolderDied", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -987,7 +987,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: ItemRemovedFromInvManager
     /// </summary>
-    public unsafe void ItemRemovedFromInvManager()
+    public unsafe override void ItemRemovedFromInvManager()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.ItemRemovedFromInvManager", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -998,7 +998,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Weapon.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];

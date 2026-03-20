@@ -71,7 +71,7 @@ public partial class RBMAIAction_RunToPerimPeek : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunToPerimPeek.ActionTick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_RunToPerimPeek : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: IsAnimSafeToPlay
     /// </summary>
-    public unsafe bool IsAnimSafeToPlay(BmSDK.Rotator transRot, BmSDK.FName AnimName)
+    public unsafe virtual bool IsAnimSafeToPlay(BmSDK.Rotator transRot, BmSDK.FName AnimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunToPerimPeek.IsAnimSafeToPlay", true);
         byte* paramsPtr = stackalloc byte[124];
@@ -96,7 +96,7 @@ public partial class RBMAIAction_RunToPerimPeek : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: Cleanup
     /// </summary>
-    public unsafe void Cleanup()
+    public unsafe override void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunToPerimPeek.Cleanup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class RBMAIAction_RunToPerimPeek : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunToPerimPeek.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class RBMAIAction_RunToPerimPeek : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunToPerimPeek.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RBMAIAction_RunToPerimPeek : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: SetupGoal
     /// </summary>
-    public unsafe void SetupGoal(System.Numerics.Vector3 NewCentre, System.Numerics.Vector3 NewPerim, System.Numerics.Vector3 NewAimPos)
+    public unsafe virtual void SetupGoal(System.Numerics.Vector3 NewCentre, System.Numerics.Vector3 NewPerim, System.Numerics.Vector3 NewAimPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunToPerimPeek.SetupGoal", true);
         byte* paramsPtr = stackalloc byte[36];

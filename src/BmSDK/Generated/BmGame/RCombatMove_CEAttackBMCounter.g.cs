@@ -71,7 +71,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: PlayFuryBark
     /// </summary>
-    public unsafe void PlayFuryBark()
+    public unsafe virtual void PlayFuryBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.PlayFuryBark", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: ShouldAttackHit
     /// </summary>
-    public unsafe bool ShouldAttackHit()
+    public unsafe virtual bool ShouldAttackHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.ShouldAttackHit", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: CanNewAttackBeStarted
     /// </summary>
-    public unsafe bool CanNewAttackBeStarted()
+    public unsafe override bool CanNewAttackBeStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.CanNewAttackBeStarted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -115,7 +115,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -127,7 +127,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: TriggerDualTakedownAttempted
     /// </summary>
-    public unsafe void TriggerDualTakedownAttempted()
+    public unsafe override void TriggerDualTakedownAttempted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.TriggerDualTakedownAttempted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: MoveOverridenForPawn
     /// </summary>
-    public unsafe void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
+    public unsafe override void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.MoveOverridenForPawn", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -151,7 +151,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: IsAttacking
     /// </summary>
-    public unsafe bool IsAttacking()
+    public unsafe override bool IsAttacking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.IsAttacking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -162,7 +162,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: GetFOVModifier
     /// </summary>
-    public unsafe float GetFOVModifier()
+    public unsafe override float GetFOVModifier()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.GetFOVModifier", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -173,7 +173,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: PlayNextAttack
     /// </summary>
-    public unsafe void PlayNextAttack()
+    public unsafe virtual void PlayNextAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.PlayNextAttack", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -184,7 +184,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: GetCounterName
     /// </summary>
-    public unsafe BmSDK.FName GetCounterName(int Counter)
+    public unsafe virtual BmSDK.FName GetCounterName(int Counter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.GetCounterName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -196,7 +196,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: GetAttackName
     /// </summary>
-    public unsafe BmSDK.FName GetAttackName(int Attack)
+    public unsafe virtual BmSDK.FName GetAttackName(int Attack)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.GetAttackName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -208,7 +208,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: GetIdleAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetIdleAnimName()
+    public unsafe virtual BmSDK.FName GetIdleAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.GetIdleAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -219,7 +219,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: GetCounterLimb
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.CounterLimb GetCounterLimb(BmSDK.BmGame.RPawnCombat TestPawn)
+    public unsafe override BmSDK.BmGame.RGameInfo.CounterLimb GetCounterLimb(BmSDK.BmGame.RPawnCombat TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.GetCounterLimb", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -231,7 +231,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: PawnCanDodgeStrike
     /// </summary>
-    public unsafe bool PawnCanDodgeStrike(BmSDK.BmGame.RPawnCombat Dodger, BmSDK.BmGame.RPawnCombat Attacker, BmSDK.Class dmgType)
+    public unsafe override bool PawnCanDodgeStrike(BmSDK.BmGame.RPawnCombat Dodger, BmSDK.BmGame.RPawnCombat Attacker, BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.PawnCanDodgeStrike", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -245,7 +245,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: CanBeStruckBy
     /// </summary>
-    public unsafe bool CanBeStruckBy(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.BmGame.RPawnCombat Defender)
+    public unsafe override bool CanBeStruckBy(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.BmGame.RPawnCombat Defender)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.CanBeStruckBy", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -258,7 +258,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: CanPerformNextComboMove
     /// </summary>
-    public unsafe bool CanPerformNextComboMove(bool bSpeOcialMove = default, bool bStrike = default)
+    public unsafe override bool CanPerformNextComboMove(bool bSpeOcialMove = default, bool bStrike = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.CanPerformNextComboMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -271,7 +271,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: ImpactOnCombatExpert
     /// </summary>
-    public unsafe void ImpactOnCombatExpert(bool bFinalHit)
+    public unsafe virtual void ImpactOnCombatExpert(bool bFinalHit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.ImpactOnCombatExpert", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -283,7 +283,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: StartFirstAttack
     /// </summary>
-    public unsafe void StartFirstAttack()
+    public unsafe virtual void StartFirstAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.StartFirstAttack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -294,7 +294,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.Initialise", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -319,7 +319,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: FinalHitRagdoll
     /// </summary>
-    public unsafe void FinalHitRagdoll()
+    public unsafe virtual void FinalHitRagdoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.FinalHitRagdoll", true);
         byte* paramsPtr = stackalloc byte[248];
@@ -330,7 +330,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: StrikeImpact
     /// </summary>
-    public unsafe void StrikeImpact()
+    public unsafe virtual void StrikeImpact()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.StrikeImpact", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -341,7 +341,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: SmallStrikeImpact
     /// </summary>
-    public unsafe void SmallStrikeImpact()
+    public unsafe virtual void SmallStrikeImpact()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.SmallStrikeImpact", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -352,7 +352,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: VulnerableNow
     /// </summary>
-    public unsafe void VulnerableNow()
+    public unsafe virtual void VulnerableNow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.VulnerableNow", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -363,7 +363,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: StartNextAttack
     /// </summary>
-    public unsafe void StartNextAttack(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedAnimID, float TimeLeftOver)
+    public unsafe virtual void StartNextAttack(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedAnimID, float TimeLeftOver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.StartNextAttack", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -376,7 +376,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: TargetMovingAway
     /// </summary>
-    public unsafe bool TargetMovingAway()
+    public unsafe virtual bool TargetMovingAway()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.TargetMovingAway", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -387,7 +387,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: HitImpact
     /// </summary>
-    public unsafe void HitImpact()
+    public unsafe virtual void HitImpact()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.HitImpact", true);
         byte* paramsPtr = stackalloc byte[260];
@@ -398,7 +398,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: BlockImpact
     /// </summary>
-    public unsafe void BlockImpact()
+    public unsafe virtual void BlockImpact()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.BlockImpact", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -409,7 +409,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: AllowMovementExit
     /// </summary>
-    public unsafe void AllowMovementExit()
+    public unsafe virtual void AllowMovementExit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.AllowMovementExit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -420,7 +420,7 @@ public partial class RCombatMove_CEAttackBMCounter : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// Function: AllowNextStrike
     /// </summary>
-    public unsafe void AllowNextStrike()
+    public unsafe virtual void AllowNextStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CEAttackBMCounter.AllowNextStrike", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class SeqVar_Object : BmSDK.Engine.SequenceVariable, BmSDK.IGameO
     /// <summary>
     /// Function: SetObjectValue
     /// </summary>
-    public unsafe void SetObjectValue(BmSDK.GameObject NewValue)
+    public unsafe virtual void SetObjectValue(BmSDK.GameObject NewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqVar_Object.SetObjectValue", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -48,7 +48,7 @@ public partial class SeqVar_Object : BmSDK.Engine.SequenceVariable, BmSDK.IGameO
     /// <summary>
     /// Function: GetObjectValue
     /// </summary>
-    public unsafe BmSDK.GameObject GetObjectValue()
+    public unsafe virtual BmSDK.GameObject GetObjectValue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqVar_Object.GetObjectValue", true);
         byte* paramsPtr = stackalloc byte[8];

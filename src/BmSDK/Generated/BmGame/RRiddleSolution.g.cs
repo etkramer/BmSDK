@@ -71,7 +71,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: RiddleReScanned
     /// </summary>
-    public unsafe void RiddleReScanned(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void RiddleReScanned(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.RiddleReScanned", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: RiddleFound
     /// </summary>
-    public unsafe void RiddleFound(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void RiddleFound(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.RiddleFound", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -118,7 +118,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: GetRiddle
     /// </summary>
-    public unsafe BmSDK.FString GetRiddle()
+    public unsafe virtual BmSDK.FString GetRiddle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.GetRiddle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -129,7 +129,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: GetObjectName
     /// </summary>
-    public unsafe BmSDK.FString GetObjectName()
+    public unsafe override BmSDK.FString GetObjectName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.GetObjectName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -140,7 +140,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: CheckVisibility
     /// </summary>
-    public unsafe bool CheckVisibility(BmSDK.GameObject.FTPOV CameraPOV, out BmSDK.BmGame.RGameInfo.FVisibilityResult ReasonItFailed)
+    public unsafe override bool CheckVisibility(BmSDK.GameObject.FTPOV CameraPOV, out BmSDK.BmGame.RGameInfo.FVisibilityResult ReasonItFailed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.CheckVisibility", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -153,7 +153,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: GetOverworldHintRange
     /// </summary>
-    public unsafe int GetOverworldHintRange()
+    public unsafe virtual int GetOverworldHintRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.GetOverworldHintRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -164,7 +164,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: GetSatnavToRoadAtSameHeight
     /// </summary>
-    public unsafe bool GetSatnavToRoadAtSameHeight()
+    public unsafe virtual bool GetSatnavToRoadAtSameHeight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.GetSatnavToRoadAtSameHeight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -175,7 +175,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: GetSatnavToRoadBelow
     /// </summary>
-    public unsafe bool GetSatnavToRoadBelow()
+    public unsafe virtual bool GetSatnavToRoadBelow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.GetSatnavToRoadBelow", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -186,7 +186,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: GetCustomFlag
     /// </summary>
-    public unsafe BmSDK.FString GetCustomFlag()
+    public unsafe virtual BmSDK.FString GetCustomFlag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.GetCustomFlag", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -197,7 +197,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: GetUnlockedChapter
     /// </summary>
-    public unsafe int GetUnlockedChapter()
+    public unsafe virtual int GetUnlockedChapter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.GetUnlockedChapter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -208,7 +208,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: GetMapIconFloatUpAdjustment
     /// </summary>
-    public unsafe int GetMapIconFloatUpAdjustment()
+    public unsafe virtual int GetMapIconFloatUpAdjustment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.GetMapIconFloatUpAdjustment", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -219,7 +219,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: UseSecretLocation
     /// </summary>
-    public unsafe bool UseSecretLocation()
+    public unsafe virtual bool UseSecretLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.UseSecretLocation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -230,7 +230,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: GetSecretLocationZ
     /// </summary>
-    public unsafe int GetSecretLocationZ()
+    public unsafe virtual int GetSecretLocationZ()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.GetSecretLocationZ", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -241,7 +241,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: GetSecretLocationY
     /// </summary>
-    public unsafe int GetSecretLocationY()
+    public unsafe virtual int GetSecretLocationY()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.GetSecretLocationY", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -252,7 +252,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: GetSecretLocationX
     /// </summary>
-    public unsafe int GetSecretLocationX()
+    public unsafe virtual int GetSecretLocationX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.GetSecretLocationX", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -263,7 +263,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: GetSecretZone
     /// </summary>
-    public unsafe byte GetSecretZone()
+    public unsafe virtual byte GetSecretZone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.GetSecretZone", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -274,7 +274,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: GetSecretPickupIndex
     /// </summary>
-    public unsafe int GetSecretPickupIndex()
+    public unsafe virtual int GetSecretPickupIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.GetSecretPickupIndex", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -285,7 +285,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: GetSecretSubType
     /// </summary>
-    public unsafe BmSDK.FString GetSecretSubType()
+    public unsafe virtual BmSDK.FString GetSecretSubType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.GetSecretSubType", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -296,7 +296,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: GetSecretName
     /// </summary>
-    public unsafe BmSDK.FString GetSecretName()
+    public unsafe virtual BmSDK.FString GetSecretName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.GetSecretName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -307,7 +307,7 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.I
     /// <summary>
     /// Function: IsValidSecret
     /// </summary>
-    public unsafe bool IsValidSecret()
+    public unsafe virtual bool IsValidSecret()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleSolution.IsValidSecret", true);
         byte* paramsPtr = stackalloc byte[4];

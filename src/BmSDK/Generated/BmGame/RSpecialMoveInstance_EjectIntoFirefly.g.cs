@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: FireFireflyEvent
     /// </summary>
-    public unsafe void FireFireflyEvent(int Index)
+    public unsafe virtual void FireFireflyEvent(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.FireFireflyEvent", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -106,7 +106,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: AutomaticTutorialTextAllowed
     /// </summary>
-    public unsafe bool AutomaticTutorialTextAllowed()
+    public unsafe override bool AutomaticTutorialTextAllowed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.AutomaticTutorialTextAllowed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -117,7 +117,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe void GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override void GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -130,7 +130,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: HandleAction
     /// </summary>
-    public unsafe void HandleAction(BmSDK.FName actionName)
+    public unsafe override void HandleAction(BmSDK.FName actionName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.HandleAction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -142,7 +142,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: NotifyNoMorePunches
     /// </summary>
-    public unsafe void NotifyNoMorePunches()
+    public unsafe virtual void NotifyNoMorePunches()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.NotifyNoMorePunches", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -153,7 +153,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: NotifyPunchConnected
     /// </summary>
-    public unsafe void NotifyPunchConnected()
+    public unsafe virtual void NotifyPunchConnected()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.NotifyPunchConnected", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -164,7 +164,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: GetFFClearanceInDirection
     /// </summary>
-    public unsafe float GetFFClearanceInDirection(System.Numerics.Vector3 Dir)
+    public unsafe virtual float GetFFClearanceInDirection(System.Numerics.Vector3 Dir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.GetFFClearanceInDirection", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -176,7 +176,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: TriggerEscapeFinalAnim
     /// </summary>
-    public unsafe void TriggerEscapeFinalAnim()
+    public unsafe virtual void TriggerEscapeFinalAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.TriggerEscapeFinalAnim", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -187,7 +187,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: TriggerEscapeDialogue
     /// </summary>
-    public unsafe void TriggerEscapeDialogue()
+    public unsafe virtual void TriggerEscapeDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.TriggerEscapeDialogue", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -198,7 +198,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: UpdateCineCamLookat
     /// </summary>
-    public unsafe void UpdateCineCamLookat()
+    public unsafe virtual void UpdateCineCamLookat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.UpdateCineCamLookat", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -209,7 +209,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: TriggerPunch
     /// </summary>
-    public unsafe void TriggerPunch()
+    public unsafe virtual void TriggerPunch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.TriggerPunch", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -220,7 +220,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: CheckForWorldCollision
     /// </summary>
-    public unsafe bool CheckForWorldCollision(System.Numerics.Vector3 Start, System.Numerics.Vector3 End, System.Numerics.Vector3 CollisionCheckExtent, out System.Numerics.Vector3 HitLoc, out System.Numerics.Vector3 HitNormal)
+    public unsafe virtual bool CheckForWorldCollision(System.Numerics.Vector3 Start, System.Numerics.Vector3 End, System.Numerics.Vector3 CollisionCheckExtent, out System.Numerics.Vector3 HitLoc, out System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.CheckForWorldCollision", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -236,7 +236,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: PlayAdditivePunchAnim
     /// </summary>
-    public unsafe void PlayAdditivePunchAnim()
+    public unsafe virtual void PlayAdditivePunchAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.PlayAdditivePunchAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -247,7 +247,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: TriggerSlavedAnim
     /// </summary>
-    public unsafe void TriggerSlavedAnim(BmSDK.FName AnimName, bool useIdleFromConfig, float TransitionDurationScale, BmSDK.BmGame.RAnimUtil_PosePlayer.EAnimTransitionType transType, BmSDK.FName CustomIdleName, bool bQueued = default, bool bNoCameraAnim = default, bool bBlendFromPreviousCineCam = default)
+    public unsafe virtual void TriggerSlavedAnim(BmSDK.FName AnimName, bool useIdleFromConfig, float TransitionDurationScale, BmSDK.BmGame.RAnimUtil_PosePlayer.EAnimTransitionType transType, BmSDK.FName CustomIdleName, bool bQueued = default, bool bNoCameraAnim = default, bool bBlendFromPreviousCineCam = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.TriggerSlavedAnim", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -266,7 +266,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: LandingAnimStarted
     /// </summary>
-    public unsafe void LandingAnimStarted(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedAnimID, float TimeLeftOver)
+    public unsafe virtual void LandingAnimStarted(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedAnimID, float TimeLeftOver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.LandingAnimStarted", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -279,7 +279,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: ClearLandingArea
     /// </summary>
-    public unsafe void ClearLandingArea(System.Numerics.Vector3 landingLoc, float Radius)
+    public unsafe virtual void ClearLandingArea(System.Numerics.Vector3 landingLoc, float Radius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.ClearLandingArea", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -292,7 +292,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: SnapToRoad
     /// </summary>
-    public unsafe float SnapToRoad(System.Numerics.Vector3 InLoc, out System.Numerics.Vector3 outLoc, out System.Numerics.Vector3 outRefRot)
+    public unsafe virtual float SnapToRoad(System.Numerics.Vector3 InLoc, out System.Numerics.Vector3 outLoc, out System.Numerics.Vector3 outRefRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.SnapToRoad", true);
         byte* paramsPtr = stackalloc byte[180];
@@ -306,7 +306,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: ChooseLandingAnim
     /// </summary>
-    public unsafe void ChooseLandingAnim()
+    public unsafe virtual void ChooseLandingAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.ChooseLandingAnim", true);
         byte* paramsPtr = stackalloc byte[128];
@@ -317,7 +317,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: UpdateFFMaterials
     /// </summary>
-    public unsafe void UpdateFFMaterials()
+    public unsafe virtual void UpdateFFMaterials()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.UpdateFFMaterials", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -328,7 +328,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[132];
@@ -340,7 +340,7 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: StoppedSkidding
     /// </summary>
-    public unsafe void StoppedSkidding()
+    public unsafe virtual void StoppedSkidding()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_EjectIntoFirefly.StoppedSkidding", true);
         byte* paramsPtr = stackalloc byte[0];

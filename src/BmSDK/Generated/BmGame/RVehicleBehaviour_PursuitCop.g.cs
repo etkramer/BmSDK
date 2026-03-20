@@ -36,7 +36,7 @@ public partial class RVehicleBehaviour_PursuitCop : BmSDK.BmGame.RVehicleBehavio
     /// <summary>
     /// Function: CanAttack
     /// </summary>
-    public unsafe bool CanAttack(BmSDK.Engine.Actor Target)
+    public unsafe override bool CanAttack(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_PursuitCop.CanAttack", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -48,7 +48,7 @@ public partial class RVehicleBehaviour_PursuitCop : BmSDK.BmGame.RVehicleBehavio
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_PursuitCop.Tick", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -60,7 +60,7 @@ public partial class RVehicleBehaviour_PursuitCop : BmSDK.BmGame.RVehicleBehavio
     /// <summary>
     /// Function: ExitBehaviour
     /// </summary>
-    public unsafe void ExitBehaviour(BmSDK.BmGame.RVehicleBehaviour NextBehaviour)
+    public unsafe override void ExitBehaviour(BmSDK.BmGame.RVehicleBehaviour NextBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_PursuitCop.ExitBehaviour", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -72,7 +72,7 @@ public partial class RVehicleBehaviour_PursuitCop : BmSDK.BmGame.RVehicleBehavio
     /// <summary>
     /// Function: EnterBehaviour
     /// </summary>
-    public unsafe void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
+    public unsafe override void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_PursuitCop.EnterBehaviour", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -84,7 +84,7 @@ public partial class RVehicleBehaviour_PursuitCop : BmSDK.BmGame.RVehicleBehavio
     /// <summary>
     /// Function: NotifyLeaderBumpedBatmobile
     /// </summary>
-    public unsafe void NotifyLeaderBumpedBatmobile(float Speed)
+    public unsafe override void NotifyLeaderBumpedBatmobile(float Speed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_PursuitCop.NotifyLeaderBumpedBatmobile", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -96,7 +96,7 @@ public partial class RVehicleBehaviour_PursuitCop : BmSDK.BmGame.RVehicleBehavio
     /// <summary>
     /// Function: OnHostVehicleDied
     /// </summary>
-    public unsafe void OnHostVehicleDied(BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe override void OnHostVehicleDied(BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_PursuitCop.OnHostVehicleDied", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -109,7 +109,7 @@ public partial class RVehicleBehaviour_PursuitCop : BmSDK.BmGame.RVehicleBehavio
     /// <summary>
     /// Function: OnFollowVehicleDied
     /// </summary>
-    public unsafe void OnFollowVehicleDied()
+    public unsafe override void OnFollowVehicleDied()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_PursuitCop.OnFollowVehicleDied", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -120,7 +120,7 @@ public partial class RVehicleBehaviour_PursuitCop : BmSDK.BmGame.RVehicleBehavio
     /// <summary>
     /// Function: OnFollowVehicleStopped
     /// </summary>
-    public unsafe void OnFollowVehicleStopped()
+    public unsafe override void OnFollowVehicleStopped()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_PursuitCop.OnFollowVehicleStopped", true);
         byte* paramsPtr = stackalloc byte[0];

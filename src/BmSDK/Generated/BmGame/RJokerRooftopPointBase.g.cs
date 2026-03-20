@@ -71,7 +71,7 @@ public partial class RJokerRooftopPointBase : BmSDK.BmGame.RDummyTarget, BmSDK.I
     /// <summary>
     /// Function: CanBasePawn
     /// </summary>
-    public unsafe bool CanBasePawn(BmSDK.Engine.Pawn P)
+    public unsafe override bool CanBasePawn(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerRooftopPointBase.CanBasePawn", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RJokerRooftopPointBase : BmSDK.BmGame.RDummyTarget, BmSDK.I
     /// <summary>
     /// Function: InitMeshes
     /// </summary>
-    public unsafe void InitMeshes()
+    public unsafe virtual void InitMeshes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerRooftopPointBase.InitMeshes", true);
         byte* paramsPtr = stackalloc byte[0];

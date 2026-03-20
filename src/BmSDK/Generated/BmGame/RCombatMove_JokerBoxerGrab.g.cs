@@ -71,7 +71,7 @@ public partial class RCombatMove_JokerBoxerGrab : BmSDK.BmGame.RCombatMove_Villa
     /// <summary>
     /// Function: StartCustomStrike
     /// </summary>
-    public unsafe bool StartCustomStrike()
+    public unsafe override bool StartCustomStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_JokerBoxerGrab.StartCustomStrike", true);
         byte* paramsPtr = stackalloc byte[4];

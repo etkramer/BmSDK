@@ -71,7 +71,7 @@ public partial class RDisableAIDivingAwayFromVehiclesVolume : BmSDK.Engine.Volum
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisableAIDivingAwayFromVehiclesVolume.UnTouch", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RDisableAIDivingAwayFromVehiclesVolume : BmSDK.Engine.Volum
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisableAIDivingAwayFromVehiclesVolume.Touch", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -98,7 +98,7 @@ public partial class RDisableAIDivingAwayFromVehiclesVolume : BmSDK.Engine.Volum
     /// <summary>
     /// Function: UpdateActive
     /// </summary>
-    public unsafe void UpdateActive()
+    public unsafe virtual void UpdateActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisableAIDivingAwayFromVehiclesVolume.UpdateActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -109,7 +109,7 @@ public partial class RDisableAIDivingAwayFromVehiclesVolume : BmSDK.Engine.Volum
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisableAIDivingAwayFromVehiclesVolume.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -121,7 +121,7 @@ public partial class RDisableAIDivingAwayFromVehiclesVolume : BmSDK.Engine.Volum
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisableAIDivingAwayFromVehiclesVolume.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -132,7 +132,7 @@ public partial class RDisableAIDivingAwayFromVehiclesVolume : BmSDK.Engine.Volum
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisableAIDivingAwayFromVehiclesVolume.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -143,7 +143,7 @@ public partial class RDisableAIDivingAwayFromVehiclesVolume : BmSDK.Engine.Volum
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisableAIDivingAwayFromVehiclesVolume.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

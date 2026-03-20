@@ -71,7 +71,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: SuppressDetectiveModeVisibilityThroughWalls
     /// </summary>
-    public unsafe void SuppressDetectiveModeVisibilityThroughWalls(bool bSuppress)
+    public unsafe virtual void SuppressDetectiveModeVisibilityThroughWalls(bool bSuppress)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.SuppressDetectiveModeVisibilityThroughWalls", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: UnregisterDMThroughWallsSuppressable
     /// </summary>
-    public unsafe void UnregisterDMThroughWallsSuppressable()
+    public unsafe virtual void UnregisterDMThroughWallsSuppressable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.UnregisterDMThroughWallsSuppressable", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: RegisterDMThroughWallsSuppressable
     /// </summary>
-    public unsafe void RegisterDMThroughWallsSuppressable()
+    public unsafe virtual void RegisterDMThroughWallsSuppressable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.RegisterDMThroughWallsSuppressable", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: ShouldBeInNeutralState
     /// </summary>
-    public unsafe bool ShouldBeInNeutralState()
+    public unsafe virtual bool ShouldBeInNeutralState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.ShouldBeInNeutralState", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: ShouldBeInPoweredDownState
     /// </summary>
-    public unsafe bool ShouldBeInPoweredDownState()
+    public unsafe virtual bool ShouldBeInPoweredDownState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.ShouldBeInPoweredDownState", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -127,7 +127,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: GetHostileRange
     /// </summary>
-    public unsafe float GetHostileRange()
+    public unsafe virtual float GetHostileRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.GetHostileRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -138,7 +138,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: GetFriendlyRange
     /// </summary>
-    public unsafe float GetFriendlyRange()
+    public unsafe virtual float GetFriendlyRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.GetFriendlyRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -149,7 +149,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: GetDisruptorTargetMesh
     /// </summary>
-    public unsafe BmSDK.Engine.MeshComponent GetDisruptorTargetMesh()
+    public unsafe override BmSDK.Engine.MeshComponent GetDisruptorTargetMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.GetDisruptorTargetMesh", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -160,7 +160,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: SetXrayHighlight
     /// </summary>
-    public unsafe void SetXrayHighlight(bool bEnabled)
+    public unsafe virtual void SetXrayHighlight(bool bEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.SetXrayHighlight", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -172,7 +172,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: GetDamagedFlagName
     /// </summary>
-    public unsafe BmSDK.FString GetDamagedFlagName()
+    public unsafe virtual BmSDK.FString GetDamagedFlagName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.GetDamagedFlagName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -183,7 +183,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: IsDamagedFlagSet
     /// </summary>
-    public unsafe bool IsDamagedFlagSet()
+    public unsafe virtual bool IsDamagedFlagSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.IsDamagedFlagSet", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -194,7 +194,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: UpdateFXState
     /// </summary>
-    public unsafe void UpdateFXState(bool bInCar, bool bInDetectiveMode, bool bNeutralMode)
+    public unsafe virtual void UpdateFXState(bool bInCar, bool bInDetectiveMode, bool bNeutralMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.UpdateFXState", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -208,7 +208,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: IsReloading
     /// </summary>
-    public unsafe bool IsReloading()
+    public unsafe virtual bool IsReloading()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.IsReloading", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -219,7 +219,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: TriggerReload
     /// </summary>
-    public unsafe void TriggerReload()
+    public unsafe virtual void TriggerReload()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.TriggerReload", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -230,7 +230,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: UpdateReloading
     /// </summary>
-    public unsafe void UpdateReloading(float DeltaTime)
+    public unsafe virtual void UpdateReloading(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.UpdateReloading", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -242,7 +242,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: TriggerNPCVehicleAttack
     /// </summary>
-    public unsafe void TriggerNPCVehicleAttack(BmSDK.BmGame.RVehicle Vehicle)
+    public unsafe virtual void TriggerNPCVehicleAttack(BmSDK.BmGame.RVehicle Vehicle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.TriggerNPCVehicleAttack", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -254,7 +254,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: TriggerBMBLAttack
     /// </summary>
-    public unsafe void TriggerBMBLAttack(BmSDK.BmGame.RVehicleBatmobileBase Bmbl)
+    public unsafe virtual void TriggerBMBLAttack(BmSDK.BmGame.RVehicleBatmobileBase Bmbl)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.TriggerBMBLAttack", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -266,7 +266,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: SetDamagedState
     /// </summary>
-    public unsafe void SetDamagedState(bool bDamagedState, bool bSilent = default)
+    public unsafe virtual void SetDamagedState(bool bDamagedState, bool bSilent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.SetDamagedState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -279,7 +279,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -297,7 +297,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -308,7 +308,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -319,7 +319,7 @@ public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.I
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckPointMine.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

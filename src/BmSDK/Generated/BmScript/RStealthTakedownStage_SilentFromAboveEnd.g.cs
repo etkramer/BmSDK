@@ -71,7 +71,7 @@ public partial class RStealthTakedownStage_SilentFromAboveEnd : BmSDK.BmGame.RSt
     /// <summary>
     /// Function: BlockPlayerFromForceCrouching
     /// </summary>
-    public unsafe bool BlockPlayerFromForceCrouching()
+    public unsafe override bool BlockPlayerFromForceCrouching()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_SilentFromAboveEnd.BlockPlayerFromForceCrouching", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RStealthTakedownStage_SilentFromAboveEnd : BmSDK.BmGame.RSt
     /// <summary>
     /// Function: FinishAttackVictim
     /// </summary>
-    public unsafe bool FinishAttackVictim(int iVictimNumber)
+    public unsafe override bool FinishAttackVictim(int iVictimNumber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_SilentFromAboveEnd.FinishAttackVictim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RStealthTakedownStage_SilentFromAboveEnd : BmSDK.BmGame.RSt
     /// <summary>
     /// Function: GotoStageEx
     /// </summary>
-    public unsafe void GotoStageEx(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages NextStageClass, bool bClientRequest = default, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator EscapeLoc = default, bool bEscapeTakedown = default, bool bNextStageIsFearTakedown = default, bool bNextStageIsKnockoutSmash = default)
+    public unsafe override void GotoStageEx(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages NextStageClass, bool bClientRequest = default, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator EscapeLoc = default, bool bEscapeTakedown = default, bool bNextStageIsFearTakedown = default, bool bNextStageIsKnockoutSmash = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_SilentFromAboveEnd.GotoStageEx", true);
         byte* paramsPtr = stackalloc byte[156];
@@ -111,7 +111,7 @@ public partial class RStealthTakedownStage_SilentFromAboveEnd : BmSDK.BmGame.RSt
     /// <summary>
     /// Function: Cancel
     /// </summary>
-    public unsafe void Cancel(bool SetState = default, bool bAbandonVictims = default, bool bResetPlayerPose = default)
+    public unsafe override void Cancel(bool SetState = default, bool bAbandonVictims = default, bool bResetPlayerPose = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_SilentFromAboveEnd.Cancel", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -125,7 +125,7 @@ public partial class RStealthTakedownStage_SilentFromAboveEnd : BmSDK.BmGame.RSt
     /// <summary>
     /// Function: FinishGrapple
     /// </summary>
-    public unsafe void FinishGrapple()
+    public unsafe virtual void FinishGrapple()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_SilentFromAboveEnd.FinishGrapple", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -136,7 +136,7 @@ public partial class RStealthTakedownStage_SilentFromAboveEnd : BmSDK.BmGame.RSt
     /// <summary>
     /// Function: OverrideChosenAnim
     /// </summary>
-    public unsafe void OverrideChosenAnim(out int Anim)
+    public unsafe override void OverrideChosenAnim(out int Anim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_SilentFromAboveEnd.OverrideChosenAnim", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -148,7 +148,7 @@ public partial class RStealthTakedownStage_SilentFromAboveEnd : BmSDK.BmGame.RSt
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_SilentFromAboveEnd.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[24];

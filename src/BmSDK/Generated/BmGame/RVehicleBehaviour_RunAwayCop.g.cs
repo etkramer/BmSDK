@@ -36,7 +36,7 @@ public partial class RVehicleBehaviour_RunAwayCop : BmSDK.BmGame.RVehicleBehavio
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_RunAwayCop.Tick", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -48,7 +48,7 @@ public partial class RVehicleBehaviour_RunAwayCop : BmSDK.BmGame.RVehicleBehavio
     /// <summary>
     /// Function: ExitBehaviour
     /// </summary>
-    public unsafe void ExitBehaviour(BmSDK.BmGame.RVehicleBehaviour NextBehaviour)
+    public unsafe override void ExitBehaviour(BmSDK.BmGame.RVehicleBehaviour NextBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_RunAwayCop.ExitBehaviour", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -60,7 +60,7 @@ public partial class RVehicleBehaviour_RunAwayCop : BmSDK.BmGame.RVehicleBehavio
     /// <summary>
     /// Function: EnterBehaviour
     /// </summary>
-    public unsafe void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
+    public unsafe override void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_RunAwayCop.EnterBehaviour", true);
         byte* paramsPtr = stackalloc byte[8];

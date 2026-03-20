@@ -71,7 +71,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: CalculateDiscoveryMethod
     /// </summary>
-    public unsafe bool CalculateDiscoveryMethod(BmSDK.Engine.Actor Actor, BmSDK.Engine.Actor.FTraceHitInfo Hit)
+    public unsafe virtual bool CalculateDiscoveryMethod(BmSDK.Engine.Actor Actor, BmSDK.Engine.Actor.FTraceHitInfo Hit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.CalculateDiscoveryMethod", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -91,7 +91,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: PhysObjectDetectorUpdate
     /// </summary>
-    public unsafe bool PhysObjectDetectorUpdate(System.Numerics.Vector3 GrabberLocation, BmSDK.Rotator GrabberRotation, out float OutUnrealHitDistance, out BmSDK.Engine.Actor OutHitActor, out BmSDK.Engine.RB_BodyInstance OutHitBodyInstance, out System.Numerics.Vector3 OutHitShapeBoundsCentre, out System.Numerics.Vector3 OutHitShapeBoundsExtents, out System.Numerics.Vector3 OutHitLocation, out System.Numerics.Vector3 OutHitNormal)
+    public unsafe virtual bool PhysObjectDetectorUpdate(System.Numerics.Vector3 GrabberLocation, BmSDK.Rotator GrabberRotation, out float OutUnrealHitDistance, out BmSDK.Engine.Actor OutHitActor, out BmSDK.Engine.RB_BodyInstance OutHitBodyInstance, out System.Numerics.Vector3 OutHitShapeBoundsCentre, out System.Numerics.Vector3 OutHitShapeBoundsExtents, out System.Numerics.Vector3 OutHitLocation, out System.Numerics.Vector3 OutHitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.PhysObjectDetectorUpdate", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -118,7 +118,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: PlayerTick
     /// </summary>
-    public unsafe void PlayerTick(float DeltaTime)
+    public unsafe override void PlayerTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.PlayerTick", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -130,7 +130,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: StopPhysicsDrag
     /// </summary>
-    public unsafe void StopPhysicsDrag()
+    public unsafe virtual void StopPhysicsDrag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.StopPhysicsDrag", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: StartPhysicsDrag
     /// </summary>
-    public unsafe void StartPhysicsDrag()
+    public unsafe virtual void StartPhysicsDrag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.StartPhysicsDrag", true);
         byte* paramsPtr = stackalloc byte[128];
@@ -152,7 +152,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: PhysicsDragRaycast
     /// </summary>
-    public unsafe void PhysicsDragRaycast(out BmSDK.Engine.Actor HitActor, out BmSDK.Engine.PrimitiveComponent HitComponent, out System.Numerics.Vector3 HitLocation, out System.Numerics.Vector3 HitNormal, out float HitDistance, out BmSDK.FName HitBoneName)
+    public unsafe virtual void PhysicsDragRaycast(out BmSDK.Engine.Actor HitActor, out BmSDK.Engine.PrimitiveComponent HitComponent, out System.Numerics.Vector3 HitLocation, out System.Numerics.Vector3 HitNormal, out float HitDistance, out BmSDK.FName HitBoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.PhysicsDragRaycast", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -169,7 +169,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: CancelGadget
     /// </summary>
-    public unsafe void CancelGadget()
+    public unsafe override void CancelGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.CancelGadget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -180,7 +180,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -193,7 +193,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: GetRBBodyInstancePointerString
     /// </summary>
-    public unsafe BmSDK.FString GetRBBodyInstancePointerString()
+    public unsafe virtual BmSDK.FString GetRBBodyInstancePointerString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.GetRBBodyInstancePointerString", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -211,7 +211,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.HUD H)
+    public unsafe override void DrawHUD(BmSDK.Engine.HUD H)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -223,7 +223,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: DoNavMeshSurfaceTypeRender
     /// </summary>
-    public unsafe void DoNavMeshSurfaceTypeRender(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void DoNavMeshSurfaceTypeRender(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.DoNavMeshSurfaceTypeRender", true);
         byte* paramsPtr = stackalloc byte[132];
@@ -235,7 +235,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: TriggerImpactEffect
     /// </summary>
-    public unsafe void TriggerImpactEffect()
+    public unsafe virtual void TriggerImpactEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.TriggerImpactEffect", true);
         byte* paramsPtr = stackalloc byte[212];
@@ -246,7 +246,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: ToggleImpactType
     /// </summary>
-    public unsafe void ToggleImpactType()
+    public unsafe virtual void ToggleImpactType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.ToggleImpactType", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -257,7 +257,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: DoSurfaceTypeRender
     /// </summary>
-    public unsafe void DoSurfaceTypeRender(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void DoSurfaceTypeRender(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.DoSurfaceTypeRender", true);
         byte* paramsPtr = stackalloc byte[312];
@@ -269,7 +269,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: CopyToClipboard
     /// </summary>
-    public unsafe void CopyToClipboard(BmSDK.FString MeshName)
+    public unsafe virtual void CopyToClipboard(BmSDK.FString MeshName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.CopyToClipboard", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -281,7 +281,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: GetRMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.RPhysicalMaterialProperty GetRMaterial(BmSDK.Engine.PhysicalMaterial PhysMaterial)
+    public unsafe virtual BmSDK.Engine.RPhysicalMaterialProperty GetRMaterial(BmSDK.Engine.PhysicalMaterial PhysMaterial)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.GetRMaterial", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -293,7 +293,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: GetSurfaceType
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetSurfaceType(out BmSDK.Engine.Actor.FImpactInfo HitInfo, out float Dist, out BmSDK.Engine.Actor.FImpactInfo Foot, out BmSDK.Engine.PhysicalMaterial simpleCollision, out int usingSimple, out float simpleDifference)
+    public unsafe virtual BmSDK.Engine.Actor GetSurfaceType(out BmSDK.Engine.Actor.FImpactInfo HitInfo, out float Dist, out BmSDK.Engine.Actor.FImpactInfo Foot, out BmSDK.Engine.PhysicalMaterial simpleCollision, out int usingSimple, out float simpleDifference)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.GetSurfaceType", true);
         byte* paramsPtr = stackalloc byte[468];
@@ -322,7 +322,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: SecondaryButtonPressed
     /// </summary>
-    public unsafe void SecondaryButtonPressed()
+    public unsafe override void SecondaryButtonPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.SecondaryButtonPressed", true);
         byte* paramsPtr = stackalloc byte[220];
@@ -333,7 +333,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: ButtonReleased
     /// </summary>
-    public unsafe void ButtonReleased()
+    public unsafe override void ButtonReleased()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.ButtonReleased", true);
         byte* paramsPtr = stackalloc byte[220];
@@ -344,7 +344,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: ButtonPressed
     /// </summary>
-    public unsafe void ButtonPressed()
+    public unsafe override void ButtonPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.ButtonPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -355,7 +355,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: GetName
     /// </summary>
-    public unsafe BmSDK.FString GetName()
+    public unsafe override BmSDK.FString GetName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.GetName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -366,7 +366,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: GetStartEndTracePoints
     /// </summary>
-    public unsafe void GetStartEndTracePoints(out System.Numerics.Vector3 TraceStart, out System.Numerics.Vector3 TraceEnd)
+    public unsafe virtual void GetStartEndTracePoints(out System.Numerics.Vector3 TraceStart, out System.Numerics.Vector3 TraceEnd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.GetStartEndTracePoints", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -386,7 +386,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: GetApexDestructibleChunkIndex
     /// </summary>
-    public unsafe int GetApexDestructibleChunkIndex(BmSDK.BmGame.RApexStaticDestructibleComponent ApexComponent)
+    public unsafe virtual int GetApexDestructibleChunkIndex(BmSDK.BmGame.RApexStaticDestructibleComponent ApexComponent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.GetApexDestructibleChunkIndex", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -405,7 +405,7 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// Function: GetNavMeshInfo
     /// </summary>
-    public unsafe bool GetNavMeshInfo(System.Numerics.Vector3 Start, System.Numerics.Vector3 End, out BmSDK.FString NavMeshString, out System.Numerics.Vector3 NavMeshHitPoint, out System.Numerics.Vector3 NavMeshHitNormal, out int StringR, out int StringG, out int StringB)
+    public unsafe virtual bool GetNavMeshInfo(System.Numerics.Vector3 Start, System.Numerics.Vector3 End, out BmSDK.FString NavMeshString, out System.Numerics.Vector3 NavMeshHitPoint, out System.Numerics.Vector3 NavMeshHitNormal, out int StringR, out int StringG, out int StringB)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicsGrabber.GetNavMeshInfo", true);
         byte* paramsPtr = stackalloc byte[80];

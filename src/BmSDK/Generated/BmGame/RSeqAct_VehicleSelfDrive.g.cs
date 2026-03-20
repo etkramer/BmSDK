@@ -31,7 +31,7 @@ public partial class RSeqAct_VehicleSelfDrive : BmSDK.Engine.SequenceAction, BmS
     /// <summary>
     /// Function: OnArrived
     /// </summary>
-    public unsafe void OnArrived()
+    public unsafe virtual void OnArrived()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleSelfDrive.OnArrived", true);
         byte* paramsPtr = stackalloc byte[0];

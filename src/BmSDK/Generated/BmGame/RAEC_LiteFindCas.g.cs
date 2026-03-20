@@ -71,7 +71,7 @@ public partial class RAEC_LiteFindCas : BmSDK.BmGame.RAlertEventCoordinatorSolo,
     /// <summary>
     /// Function: PlayDiscoverBark
     /// </summary>
-    public unsafe void PlayDiscoverBark()
+    public unsafe virtual void PlayDiscoverBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LiteFindCas.PlayDiscoverBark", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_LiteFindCas : BmSDK.BmGame.RAlertEventCoordinatorSolo,
     /// <summary>
     /// Function: SetCas
     /// </summary>
-    public unsafe void SetCas(BmSDK.BmGame.RPawnVillain NewCas)
+    public unsafe virtual void SetCas(BmSDK.BmGame.RPawnVillain NewCas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LiteFindCas.SetCas", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -94,7 +94,7 @@ public partial class RAEC_LiteFindCas : BmSDK.BmGame.RAlertEventCoordinatorSolo,
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LiteFindCas.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RAEC_LiteFindCas : BmSDK.BmGame.RAlertEventCoordinatorSolo,
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LiteFindCas.Tick", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: GetAutoTargetOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAutoTargetOrigin(BmSDK.Rotator AimDirection)
+    public unsafe override System.Numerics.Vector3 GetAutoTargetOrigin(BmSDK.Rotator AimDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.GetAutoTargetOrigin", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -90,7 +90,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: GetAutoTargetRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetAutoTargetRotation()
+    public unsafe override BmSDK.Rotator GetAutoTargetRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.GetAutoTargetRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -108,7 +108,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: NotifyOwnerDamaged
     /// </summary>
-    public unsafe void NotifyOwnerDamaged()
+    public unsafe override void NotifyOwnerDamaged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.NotifyOwnerDamaged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -119,7 +119,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: DriverLeft
     /// </summary>
-    public unsafe void DriverLeft()
+    public unsafe override void DriverLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.DriverLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: GetAdditionalHelpPrompt
     /// </summary>
-    public unsafe void GetAdditionalHelpPrompt(BmSDK.BmGame.RHUDPrompt HUDPrompt)
+    public unsafe override void GetAdditionalHelpPrompt(BmSDK.BmGame.RHUDPrompt HUDPrompt)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.GetAdditionalHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -142,7 +142,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: GetDumbFireTarget
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetDumbFireTarget(System.Numerics.Vector3 AimDirection)
+    public unsafe virtual BmSDK.Engine.Actor GetDumbFireTarget(System.Numerics.Vector3 AimDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.GetDumbFireTarget", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -161,7 +161,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: SwitchLockOnTarget
     /// </summary>
-    public unsafe void SwitchLockOnTarget(System.Numerics.Vector3 WorldDirection)
+    public unsafe virtual void SwitchLockOnTarget(System.Numerics.Vector3 WorldDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.SwitchLockOnTarget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -180,7 +180,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: OnProjectileSpawned
     /// </summary>
-    public unsafe void OnProjectileSpawned(BmSDK.BmGame.RProjectile Projectile, BmSDK.Engine.Actor Target)
+    public unsafe override void OnProjectileSpawned(BmSDK.BmGame.RProjectile Projectile, BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.OnProjectileSpawned", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -193,7 +193,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: CalculateDamageFactor
     /// </summary>
-    public unsafe float CalculateDamageFactor(BmSDK.BmGame.RVehicleNPC Target)
+    public unsafe virtual float CalculateDamageFactor(BmSDK.BmGame.RVehicleNPC Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.CalculateDamageFactor", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -205,7 +205,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: GetTarget
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetTarget()
+    public unsafe override BmSDK.Engine.Actor GetTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.GetTarget", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -216,7 +216,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: ProjectileHitActor
     /// </summary>
-    public unsafe void ProjectileHitActor(BmSDK.Engine.Actor Target, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitVelocity, int Damage)
+    public unsafe override void ProjectileHitActor(BmSDK.Engine.Actor Target, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitVelocity, int Damage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.ProjectileHitActor", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -231,7 +231,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: AcquireNewLock
     /// </summary>
-    public unsafe void AcquireNewLock()
+    public unsafe virtual void AcquireNewLock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.AcquireNewLock", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -242,7 +242,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: SetLockOnTarget
     /// </summary>
-    public unsafe void SetLockOnTarget(BmSDK.BmGame.RVehicleNPC VehTarget)
+    public unsafe virtual void SetLockOnTarget(BmSDK.BmGame.RVehicleNPC VehTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.SetLockOnTarget", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -254,7 +254,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: FireMissile
     /// </summary>
-    public unsafe bool FireMissile(System.Numerics.Vector3 FireDir)
+    public unsafe virtual bool FireMissile(System.Numerics.Vector3 FireDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.FireMissile", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -266,7 +266,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: CanDisableTick
     /// </summary>
-    public unsafe bool CanDisableTick()
+    public unsafe override bool CanDisableTick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.CanDisableTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -277,7 +277,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: GetDrivingLookRotation
     /// </summary>
-    public unsafe float GetDrivingLookRotation()
+    public unsafe virtual float GetDrivingLookRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.GetDrivingLookRotation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -288,7 +288,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: UpdateTagTarget
     /// </summary>
-    public unsafe void UpdateTagTarget()
+    public unsafe virtual void UpdateTagTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.UpdateTagTarget", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -299,7 +299,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: UnTagTarget
     /// </summary>
-    public unsafe void UnTagTarget()
+    public unsafe virtual void UnTagTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.UnTagTarget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -310,7 +310,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: BattleModeFireButtonPressed
     /// </summary>
-    public unsafe void BattleModeFireButtonPressed(BmSDK.BmGame.RVehicleNPC Target)
+    public unsafe virtual void BattleModeFireButtonPressed(BmSDK.BmGame.RVehicleNPC Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.BattleModeFireButtonPressed", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -322,7 +322,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: TagNewTarget
     /// </summary>
-    public unsafe void TagNewTarget()
+    public unsafe virtual void TagNewTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.TagNewTarget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -333,7 +333,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: ButtonReleased
     /// </summary>
-    public unsafe void ButtonReleased()
+    public unsafe override void ButtonReleased()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.ButtonReleased", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -344,7 +344,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: PreRender
     /// </summary>
-    public unsafe void PreRender(BmSDK.Engine.Canvas Canvas)
+    public unsafe override void PreRender(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.PreRender", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -356,7 +356,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: UpdateAnimState
     /// </summary>
-    public unsafe void UpdateAnimState()
+    public unsafe virtual void UpdateAnimState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.UpdateAnimState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -367,7 +367,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -379,7 +379,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: CheckAutoTarget
     /// </summary>
-    public unsafe bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
+    public unsafe override bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.CheckAutoTarget", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -395,7 +395,7 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// Function: GivenTo
     /// </summary>
-    public unsafe void GivenTo(BmSDK.Engine.Pawn thisPawn, bool bDoNotActivate = default)
+    public unsafe override void GivenTo(BmSDK.Engine.Pawn thisPawn, bool bDoNotActivate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMPMissile.GivenTo", true);
         byte* paramsPtr = stackalloc byte[12];

@@ -71,7 +71,7 @@ public partial class RPyroFearGasAttachedToCamera : BmSDK.Engine.Volume, BmSDK.I
     /// <summary>
     /// Function: StopPyroFearGasFX
     /// </summary>
-    public unsafe void StopPyroFearGasFX()
+    public unsafe virtual void StopPyroFearGasFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPyroFearGasAttachedToCamera.StopPyroFearGasFX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RPyroFearGasAttachedToCamera : BmSDK.Engine.Volume, BmSDK.I
     /// <summary>
     /// Function: StartPyroFearGasFX
     /// </summary>
-    public unsafe void StartPyroFearGasFX(BmSDK.Engine.RPyroFearGasComponent.FRockPyroFearGasSettings PyroFearGasSettings, BmSDK.Engine.Texture2D OverrideDataMap, BmSDK.Engine.Texture2D OverrideLightMap)
+    public unsafe virtual void StartPyroFearGasFX(BmSDK.Engine.RPyroFearGasComponent.FRockPyroFearGasSettings PyroFearGasSettings, BmSDK.Engine.Texture2D OverrideDataMap, BmSDK.Engine.Texture2D OverrideLightMap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPyroFearGasAttachedToCamera.StartPyroFearGasFX", true);
         byte* paramsPtr = stackalloc byte[132];
@@ -96,7 +96,7 @@ public partial class RPyroFearGasAttachedToCamera : BmSDK.Engine.Volume, BmSDK.I
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPyroFearGasAttachedToCamera.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class RPyroFearGasAttachedToCamera : BmSDK.Engine.Volume, BmSDK.I
     /// <summary>
     /// Function: CacheReferences
     /// </summary>
-    public unsafe void CacheReferences()
+    public unsafe virtual void CacheReferences()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPyroFearGasAttachedToCamera.CacheReferences", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class RPyroFearGasAttachedToCamera : BmSDK.Engine.Volume, BmSDK.I
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPyroFearGasAttachedToCamera.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RPyroFearGasAttachedToCamera : BmSDK.Engine.Volume, BmSDK.I
     /// <summary>
     /// Function: GetLocalMaxWorldHeight
     /// </summary>
-    public unsafe float GetLocalMaxWorldHeight(System.Numerics.Vector3 Position, int xOffset, int yOffset)
+    public unsafe virtual float GetLocalMaxWorldHeight(System.Numerics.Vector3 Position, int xOffset, int yOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPyroFearGasAttachedToCamera.GetLocalMaxWorldHeight", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -150,7 +150,7 @@ public partial class RPyroFearGasAttachedToCamera : BmSDK.Engine.Volume, BmSDK.I
     /// <summary>
     /// Function: GetGlobalMinWorldHeight
     /// </summary>
-    public unsafe float GetGlobalMinWorldHeight()
+    public unsafe virtual float GetGlobalMinWorldHeight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPyroFearGasAttachedToCamera.GetGlobalMinWorldHeight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -168,7 +168,7 @@ public partial class RPyroFearGasAttachedToCamera : BmSDK.Engine.Volume, BmSDK.I
     /// <summary>
     /// Function: GetGlobalMaxWorldHeight
     /// </summary>
-    public unsafe float GetGlobalMaxWorldHeight()
+    public unsafe virtual float GetGlobalMaxWorldHeight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPyroFearGasAttachedToCamera.GetGlobalMaxWorldHeight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -186,7 +186,7 @@ public partial class RPyroFearGasAttachedToCamera : BmSDK.Engine.Volume, BmSDK.I
     /// <summary>
     /// Function: GetDataMapAtPos
     /// </summary>
-    public unsafe System.Numerics.Vector4 GetDataMapAtPos(System.Numerics.Vector3 Position, int xOffset, int yOffset)
+    public unsafe virtual System.Numerics.Vector4 GetDataMapAtPos(System.Numerics.Vector3 Position, int xOffset, int yOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPyroFearGasAttachedToCamera.GetDataMapAtPos", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -207,7 +207,7 @@ public partial class RPyroFearGasAttachedToCamera : BmSDK.Engine.Volume, BmSDK.I
     /// <summary>
     /// Function: GetMagnitudeAtPos
     /// </summary>
-    public unsafe float GetMagnitudeAtPos(System.Numerics.Vector3 Position, int xOffset, int yOffset)
+    public unsafe virtual float GetMagnitudeAtPos(System.Numerics.Vector3 Position, int xOffset, int yOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPyroFearGasAttachedToCamera.GetMagnitudeAtPos", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -228,7 +228,7 @@ public partial class RPyroFearGasAttachedToCamera : BmSDK.Engine.Volume, BmSDK.I
     /// <summary>
     /// Function: IsPyroFearGasPosFastCheck
     /// </summary>
-    public unsafe bool IsPyroFearGasPosFastCheck(System.Numerics.Vector2 UV, int SizeX, int SizeY)
+    public unsafe virtual bool IsPyroFearGasPosFastCheck(System.Numerics.Vector2 UV, int SizeX, int SizeY)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPyroFearGasAttachedToCamera.IsPyroFearGasPosFastCheck", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -249,7 +249,7 @@ public partial class RPyroFearGasAttachedToCamera : BmSDK.Engine.Volume, BmSDK.I
     /// <summary>
     /// Function: IsPyroFearGasAtUV
     /// </summary>
-    public unsafe bool IsPyroFearGasAtUV(System.Numerics.Vector2 UV, int xOffset, int yOffset)
+    public unsafe virtual bool IsPyroFearGasAtUV(System.Numerics.Vector2 UV, int xOffset, int yOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPyroFearGasAttachedToCamera.IsPyroFearGasAtUV", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -270,7 +270,7 @@ public partial class RPyroFearGasAttachedToCamera : BmSDK.Engine.Volume, BmSDK.I
     /// <summary>
     /// Function: GetPyroFearGasShoreDistAtPos
     /// </summary>
-    public unsafe float GetPyroFearGasShoreDistAtPos(System.Numerics.Vector3 Position, int xOffset, int yOffset)
+    public unsafe virtual float GetPyroFearGasShoreDistAtPos(System.Numerics.Vector3 Position, int xOffset, int yOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPyroFearGasAttachedToCamera.GetPyroFearGasShoreDistAtPos", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -291,7 +291,7 @@ public partial class RPyroFearGasAttachedToCamera : BmSDK.Engine.Volume, BmSDK.I
     /// <summary>
     /// Function: IsPyroFearGasAtPos
     /// </summary>
-    public unsafe bool IsPyroFearGasAtPos(System.Numerics.Vector3 Position, int xOffset, int yOffset)
+    public unsafe virtual bool IsPyroFearGasAtPos(System.Numerics.Vector3 Position, int xOffset, int yOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPyroFearGasAttachedToCamera.IsPyroFearGasAtPos", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -312,7 +312,7 @@ public partial class RPyroFearGasAttachedToCamera : BmSDK.Engine.Volume, BmSDK.I
     /// <summary>
     /// Function: GetWaveSample
     /// </summary>
-    public unsafe float GetWaveSample(float U, float V)
+    public unsafe virtual float GetWaveSample(float U, float V)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPyroFearGasAttachedToCamera.GetWaveSample", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -332,7 +332,7 @@ public partial class RPyroFearGasAttachedToCamera : BmSDK.Engine.Volume, BmSDK.I
     /// <summary>
     /// Function: GetPyroFearGasHeightAtPosition
     /// </summary>
-    public unsafe System.Numerics.Vector2 GetPyroFearGasHeightAtPosition(System.Numerics.Vector3 Position)
+    public unsafe virtual System.Numerics.Vector2 GetPyroFearGasHeightAtPosition(System.Numerics.Vector3 Position)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPyroFearGasAttachedToCamera.GetPyroFearGasHeightAtPosition", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -351,7 +351,7 @@ public partial class RPyroFearGasAttachedToCamera : BmSDK.Engine.Volume, BmSDK.I
     /// <summary>
     /// Function: StopPlayerPyroFearGasEffect
     /// </summary>
-    public unsafe void StopPlayerPyroFearGasEffect()
+    public unsafe virtual void StopPlayerPyroFearGasEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPyroFearGasAttachedToCamera.StopPlayerPyroFearGasEffect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -369,7 +369,7 @@ public partial class RPyroFearGasAttachedToCamera : BmSDK.Engine.Volume, BmSDK.I
     /// <summary>
     /// Function: UpdatePlayerPyroFearGasEffect
     /// </summary>
-    public unsafe void UpdatePlayerPyroFearGasEffect(float DeltaTime)
+    public unsafe virtual void UpdatePlayerPyroFearGasEffect(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPyroFearGasAttachedToCamera.UpdatePlayerPyroFearGasEffect", true);
         byte* paramsPtr = stackalloc byte[4];

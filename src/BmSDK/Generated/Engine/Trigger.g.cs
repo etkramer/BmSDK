@@ -71,7 +71,7 @@ public partial class Trigger : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ApplyCheckpointRecord
     /// </summary>
-    public unsafe void ApplyCheckpointRecord(out BmSDK.Engine.Trigger.FCheckpointRecord Record)
+    public unsafe virtual void ApplyCheckpointRecord(out BmSDK.Engine.Trigger.FCheckpointRecord Record)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Trigger.ApplyCheckpointRecord", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class Trigger : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CreateCheckpointRecord
     /// </summary>
-    public unsafe void CreateCheckpointRecord(out BmSDK.Engine.Trigger.FCheckpointRecord Record)
+    public unsafe virtual void CreateCheckpointRecord(out BmSDK.Engine.Trigger.FCheckpointRecord Record)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Trigger.CreateCheckpointRecord", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class Trigger : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldSaveForCheckpoint
     /// </summary>
-    public unsafe bool ShouldSaveForCheckpoint()
+    public unsafe virtual bool ShouldSaveForCheckpoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Trigger.ShouldSaveForCheckpoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class Trigger : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StopsProjectile
     /// </summary>
-    public unsafe bool StopsProjectile(BmSDK.Engine.Projectile P, BmSDK.Engine.PrimitiveComponent HitComponent = default)
+    public unsafe override bool StopsProjectile(BmSDK.Engine.Projectile P, BmSDK.Engine.PrimitiveComponent HitComponent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Trigger.StopsProjectile", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -119,7 +119,7 @@ public partial class Trigger : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnTrigger
     /// </summary>
-    public unsafe void UnTrigger()
+    public unsafe virtual void UnTrigger()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Trigger.UnTrigger", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class Trigger : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyTriggered
     /// </summary>
-    public unsafe void NotifyTriggered()
+    public unsafe virtual void NotifyTriggered()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Trigger.NotifyTriggered", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class Trigger : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Trigger.Touch", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -156,7 +156,7 @@ public partial class Trigger : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Trigger.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];

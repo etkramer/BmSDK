@@ -36,7 +36,7 @@ public partial class MorphNodePose : BmSDK.Engine.MorphNodeBase, BmSDK.IGameObje
     /// <summary>
     /// Function: SetMorphTarget
     /// </summary>
-    public unsafe void SetMorphTarget(BmSDK.FName MorphTargetName)
+    public unsafe virtual void SetMorphTarget(BmSDK.FName MorphTargetName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MorphNodePose.SetMorphTarget", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RPawnVillainThug_RobotPuzzle : BmSDK.BmScript.RPawnVillainT
     /// <summary>
     /// Function: WakeFromDead
     /// </summary>
-    public unsafe void WakeFromDead(BmSDK.BmGame.RPawnCharacter NewGetUpMaster = default, BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId NewGetUpMasterAnimID = default, BmSDK.Engine.AnimSet NewGetUpAnimset = default, BmSDK.FName NewGetUpAnimName = default, BmSDK.FName GetUpMovementStance = default, bool bDoAnim = default, bool bAnimImmediate = default)
+    public unsafe override void WakeFromDead(BmSDK.BmGame.RPawnCharacter NewGetUpMaster = default, BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId NewGetUpMasterAnimID = default, BmSDK.Engine.AnimSet NewGetUpAnimset = default, BmSDK.FName NewGetUpAnimName = default, BmSDK.FName GetUpMovementStance = default, bool bDoAnim = default, bool bAnimImmediate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_RobotPuzzle.WakeFromDead", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -89,7 +89,7 @@ public partial class RPawnVillainThug_RobotPuzzle : BmSDK.BmScript.RPawnVillainT
     /// <summary>
     /// Function: ColourHasSwitched
     /// </summary>
-    public unsafe void ColourHasSwitched()
+    public unsafe override void ColourHasSwitched()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_RobotPuzzle.ColourHasSwitched", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -100,7 +100,7 @@ public partial class RPawnVillainThug_RobotPuzzle : BmSDK.BmScript.RPawnVillainT
     /// <summary>
     /// Function: Died
     /// </summary>
-    public unsafe bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe override bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_RobotPuzzle.Died", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -114,7 +114,7 @@ public partial class RPawnVillainThug_RobotPuzzle : BmSDK.BmScript.RPawnVillainT
     /// <summary>
     /// Function: SetGoodAsDead
     /// </summary>
-    public unsafe void SetGoodAsDead()
+    public unsafe override void SetGoodAsDead()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_RobotPuzzle.SetGoodAsDead", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -125,7 +125,7 @@ public partial class RPawnVillainThug_RobotPuzzle : BmSDK.BmScript.RPawnVillainT
     /// <summary>
     /// Function: SetFinishedCombatSpecialMove
     /// </summary>
-    public unsafe void SetFinishedCombatSpecialMove(BmSDK.Class DamageType)
+    public unsafe virtual void SetFinishedCombatSpecialMove(BmSDK.Class DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_RobotPuzzle.SetFinishedCombatSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -137,7 +137,7 @@ public partial class RPawnVillainThug_RobotPuzzle : BmSDK.BmScript.RPawnVillainT
     /// <summary>
     /// Function: CreateWeaponConfigUnarmed
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfigUnarmed(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfigUnarmed(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_RobotPuzzle.CreateWeaponConfigUnarmed", true);
         byte* paramsPtr = stackalloc byte[16];

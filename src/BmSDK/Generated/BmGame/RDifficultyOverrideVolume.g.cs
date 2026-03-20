@@ -71,7 +71,7 @@ public partial class RDifficultyOverrideVolume : BmSDK.Engine.Volume, BmSDK.IGam
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDifficultyOverrideVolume.OnToggle", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RDifficultyOverrideVolume : BmSDK.Engine.Volume, BmSDK.IGam
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDifficultyOverrideVolume.UnTouch", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -95,7 +95,7 @@ public partial class RDifficultyOverrideVolume : BmSDK.Engine.Volume, BmSDK.IGam
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDifficultyOverrideVolume.Touch", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -110,7 +110,7 @@ public partial class RDifficultyOverrideVolume : BmSDK.Engine.Volume, BmSDK.IGam
     /// <summary>
     /// Function: SetActive
     /// </summary>
-    public unsafe void SetActive(bool bNewActive)
+    public unsafe virtual void SetActive(bool bNewActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDifficultyOverrideVolume.SetActive", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -122,7 +122,7 @@ public partial class RDifficultyOverrideVolume : BmSDK.Engine.Volume, BmSDK.IGam
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDifficultyOverrideVolume.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -133,7 +133,7 @@ public partial class RDifficultyOverrideVolume : BmSDK.Engine.Volume, BmSDK.IGam
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDifficultyOverrideVolume.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -144,7 +144,7 @@ public partial class RDifficultyOverrideVolume : BmSDK.Engine.Volume, BmSDK.IGam
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDifficultyOverrideVolume.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

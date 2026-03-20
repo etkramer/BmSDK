@@ -71,7 +71,7 @@ public partial class RGangInteractBillboard : BmSDK.BmGame.RGangInteractPointBre
     /// <summary>
     /// Function: SetFinished
     /// </summary>
-    public unsafe void SetFinished(BmSDK.BmGame.RBMPawnAI P)
+    public unsafe override void SetFinished(BmSDK.BmGame.RBMPawnAI P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangInteractBillboard.SetFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RGangInteractBillboard : BmSDK.BmGame.RGangInteractPointBre
     /// <summary>
     /// Function: SetInUse
     /// </summary>
-    public unsafe void SetInUse(BmSDK.BmGame.RBMPawnAI UsagePawn)
+    public unsafe override void SetInUse(BmSDK.BmGame.RBMPawnAI UsagePawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangInteractBillboard.SetInUse", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RGangInteractBillboard : BmSDK.BmGame.RGangInteractPointBre
     /// <summary>
     /// Function: CrackObject
     /// </summary>
-    public unsafe void CrackObject(System.Numerics.Vector3 SmashLocation, System.Numerics.Vector3 SmashNormal, System.Numerics.Vector3 SmashSpeed, bool bCanSmash, bool bForceSmash, BmSDK.Engine.Actor SmashActor = default)
+    public unsafe override void CrackObject(System.Numerics.Vector3 SmashLocation, System.Numerics.Vector3 SmashNormal, System.Numerics.Vector3 SmashSpeed, bool bCanSmash, bool bForceSmash, BmSDK.Engine.Actor SmashActor = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangInteractBillboard.CrackObject", true);
         byte* paramsPtr = stackalloc byte[116];

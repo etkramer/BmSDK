@@ -36,7 +36,7 @@ public partial class RBMBehaviour_CombatStunStick : BmSDK.BmGame.RBMBehaviour_Co
     /// <summary>
     /// Function: GetForceToGiveToPawn
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetForceToGiveToPawn(BmSDK.BmGame.RPawnCombat ForceReceiver, float MaxForce, float MinRange = default, float MaxRange = default)
+    public unsafe override System.Numerics.Vector3 GetForceToGiveToPawn(BmSDK.BmGame.RPawnCombat ForceReceiver, float MaxForce, float MinRange = default, float MaxRange = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatStunStick.GetForceToGiveToPawn", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_CombatStunStick : BmSDK.BmGame.RBMBehaviour_Co
     /// <summary>
     /// Function: GetMovementSpeed
     /// </summary>
-    public unsafe BmSDK.Engine.RAutomaticTransitions.EMovementSpeed GetMovementSpeed()
+    public unsafe override BmSDK.Engine.RAutomaticTransitions.EMovementSpeed GetMovementSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatStunStick.GetMovementSpeed", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_CombatStunStick : BmSDK.BmGame.RBMBehaviour_Co
     /// <summary>
     /// Function: CanPlayIdleOverlay
     /// </summary>
-    public unsafe bool CanPlayIdleOverlay()
+    public unsafe override bool CanPlayIdleOverlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatStunStick.CanPlayIdleOverlay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_CombatStunStick : BmSDK.BmGame.RBMBehaviour_Co
     /// <summary>
     /// Function: GetCurrentWeaponStance
     /// </summary>
-    public unsafe BmSDK.FName GetCurrentWeaponStance()
+    public unsafe override BmSDK.FName GetCurrentWeaponStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatStunStick.GetCurrentWeaponStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -91,7 +91,7 @@ public partial class RBMBehaviour_CombatStunStick : BmSDK.BmGame.RBMBehaviour_Co
     /// <summary>
     /// Function: GetAttackPriority
     /// </summary>
-    public unsafe int GetAttackPriority(bool bForceAttack)
+    public unsafe override int GetAttackPriority(bool bForceAttack)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatStunStick.GetAttackPriority", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -103,7 +103,7 @@ public partial class RBMBehaviour_CombatStunStick : BmSDK.BmGame.RBMBehaviour_Co
     /// <summary>
     /// Function: CanStartAttacking
     /// </summary>
-    public unsafe bool CanStartAttacking()
+    public unsafe override bool CanStartAttacking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatStunStick.CanStartAttacking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -114,7 +114,7 @@ public partial class RBMBehaviour_CombatStunStick : BmSDK.BmGame.RBMBehaviour_Co
     /// <summary>
     /// Function: Redirected
     /// </summary>
-    public unsafe void Redirected()
+    public unsafe override void Redirected()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatStunStick.Redirected", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -125,7 +125,7 @@ public partial class RBMBehaviour_CombatStunStick : BmSDK.BmGame.RBMBehaviour_Co
     /// <summary>
     /// Function: RepelledAttacker
     /// </summary>
-    public unsafe void RepelledAttacker(BmSDK.BmGame.RPawnCombat Attacker)
+    public unsafe override void RepelledAttacker(BmSDK.BmGame.RPawnCombat Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatStunStick.RepelledAttacker", true);
         byte* paramsPtr = stackalloc byte[256];
@@ -137,7 +137,7 @@ public partial class RBMBehaviour_CombatStunStick : BmSDK.BmGame.RBMBehaviour_Co
     /// <summary>
     /// Function: CanRepel
     /// </summary>
-    public unsafe bool CanRepel()
+    public unsafe override bool CanRepel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatStunStick.CanRepel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -148,7 +148,7 @@ public partial class RBMBehaviour_CombatStunStick : BmSDK.BmGame.RBMBehaviour_Co
     /// <summary>
     /// Function: ShouldUseEnvironment
     /// </summary>
-    public unsafe bool ShouldUseEnvironment(float DeltaTime, bool bForceCheck)
+    public unsafe override bool ShouldUseEnvironment(float DeltaTime, bool bForceCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatStunStick.ShouldUseEnvironment", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -161,7 +161,7 @@ public partial class RBMBehaviour_CombatStunStick : BmSDK.BmGame.RBMBehaviour_Co
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatStunStick.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

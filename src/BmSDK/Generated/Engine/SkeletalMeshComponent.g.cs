@@ -36,7 +36,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: AddRandomTorqueImpulseToBodies
     /// </summary>
-    public unsafe void AddRandomTorqueImpulseToBodies(float TorqueMin, float TorqueMax)
+    public unsafe virtual void AddRandomTorqueImpulseToBodies(float TorqueMin, float TorqueMax)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.AddRandomTorqueImpulseToBodies", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -96,7 +96,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetContactModification
     /// </summary>
-    public unsafe void SetContactModification(bool isEnableContactModificationCallback)
+    public unsafe override void SetContactModification(bool isEnableContactModificationCallback)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetContactModification", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -115,7 +115,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: ResetRagdollCalmingMeasures
     /// </summary>
-    public unsafe void ResetRagdollCalmingMeasures()
+    public unsafe virtual void ResetRagdollCalmingMeasures()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.ResetRagdollCalmingMeasures", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -133,7 +133,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetDisableRagdollCalmingMeasures
     /// </summary>
-    public unsafe void SetDisableRagdollCalmingMeasures(bool bEnabled)
+    public unsafe virtual void SetDisableRagdollCalmingMeasures(bool bEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetDisableRagdollCalmingMeasures", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -152,7 +152,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetAreRagdollCalmingMeasuresDisabled
     /// </summary>
-    public unsafe bool GetAreRagdollCalmingMeasuresDisabled()
+    public unsafe virtual bool GetAreRagdollCalmingMeasuresDisabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetAreRagdollCalmingMeasuresDisabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -170,7 +170,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetUseSimpleLineCollision
     /// </summary>
-    public unsafe bool GetUseSimpleLineCollision()
+    public unsafe override bool GetUseSimpleLineCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetUseSimpleLineCollision", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -188,7 +188,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetUseSimpleBoxCollision
     /// </summary>
-    public unsafe bool GetUseSimpleBoxCollision()
+    public unsafe override bool GetUseSimpleBoxCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetUseSimpleBoxCollision", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -206,7 +206,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetDisableColourWrites
     /// </summary>
-    public unsafe void SetDisableColourWrites(bool bNewDisableColourWrites)
+    public unsafe virtual void SetDisableColourWrites(bool bNewDisableColourWrites)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetDisableColourWrites", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -225,7 +225,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetDepthBias
     /// </summary>
-    public unsafe void SetDepthBias(BmSDK.Engine.SkeletalMeshComponent.FDepthBiasData NewDepthBiasData)
+    public unsafe virtual void SetDepthBias(BmSDK.Engine.SkeletalMeshComponent.FDepthBiasData NewDepthBiasData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetDepthBias", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -244,7 +244,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetDepthBiasData
     /// </summary>
-    public unsafe void GetDepthBiasData(out BmSDK.Engine.SkeletalMeshComponent.FDepthBiasData OutDepthBiasData)
+    public unsafe virtual void GetDepthBiasData(out BmSDK.Engine.SkeletalMeshComponent.FDepthBiasData OutDepthBiasData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetDepthBiasData", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -263,7 +263,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetMaterial
     /// </summary>
-    public unsafe void SetMaterial(int ElementIndex, BmSDK.Engine.MaterialInterface Material)
+    public unsafe override void SetMaterial(int ElementIndex, BmSDK.Engine.MaterialInterface Material)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetMaterial", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -283,7 +283,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetRotation()
+    public unsafe override BmSDK.Rotator GetRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -301,7 +301,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetPosition()
+    public unsafe override System.Numerics.Vector3 GetPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -319,7 +319,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SkelMeshCompOnParticleSystemFinished
     /// </summary>
-    public unsafe void SkelMeshCompOnParticleSystemFinished(BmSDK.Engine.ParticleSystemComponent PSC)
+    public unsafe virtual void SkelMeshCompOnParticleSystemFinished(BmSDK.Engine.ParticleSystemComponent PSC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SkelMeshCompOnParticleSystemFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -331,7 +331,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: PlayParticleEffect
     /// </summary>
-    public unsafe bool PlayParticleEffect(BmSDK.Engine.AnimNotify_PlayParticleEffect AnimNotifyData)
+    public unsafe virtual bool PlayParticleEffect(BmSDK.Engine.AnimNotify_PlayParticleEffect AnimNotifyData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.PlayParticleEffect", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -343,7 +343,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: CreateForceField
     /// </summary>
-    public unsafe bool CreateForceField(BmSDK.Engine.AnimNotify_ForceField AnimNotifyData)
+    public unsafe virtual bool CreateForceField(BmSDK.Engine.AnimNotify_ForceField AnimNotifyData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.CreateForceField", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -355,7 +355,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SpawnApexVortexFieldSampler
     /// </summary>
-    public unsafe void SpawnApexVortexFieldSampler(BmSDK.Engine.AnimNotify_ForceField AnimNotifyData, BmSDK.Engine.NxForceFieldTornadoComponent TornadoForceFieldComponent, BmSDK.Engine.ApexFieldSamplerComponent.FSS_FieldSamplerScene FieldSamplerScene, float RotationalStrengthMultiplier, float RadialStrengthMultiplier, float LiftStrengthMultiplier, float DurationMultiplier)
+    public unsafe virtual void SpawnApexVortexFieldSampler(BmSDK.Engine.AnimNotify_ForceField AnimNotifyData, BmSDK.Engine.NxForceFieldTornadoComponent TornadoForceFieldComponent, BmSDK.Engine.ApexFieldSamplerComponent.FSS_FieldSamplerScene FieldSamplerScene, float RotationalStrengthMultiplier, float RadialStrengthMultiplier, float LiftStrengthMultiplier, float DurationMultiplier)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SpawnApexVortexFieldSampler", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -373,7 +373,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: StopAnim
     /// </summary>
-    public unsafe void StopAnim()
+    public unsafe virtual void StopAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.StopAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -384,7 +384,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: PlayAnim
     /// </summary>
-    public unsafe void PlayAnim(BmSDK.FName AnimName, float Duration = default, bool bLoop = default, bool bRestartIfAlreadyPlaying = default, float StartTime = default, bool bPlayBackwards = default, float PlayRate = default)
+    public unsafe virtual void PlayAnim(BmSDK.FName AnimName, float Duration = default, bool bLoop = default, bool bRestartIfAlreadyPlaying = default, float StartTime = default, bool bPlayBackwards = default, float PlayRate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.PlayAnim", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -402,7 +402,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: RemoveApexClothCollision
     /// </summary>
-    public unsafe void RemoveApexClothCollision()
+    public unsafe virtual void RemoveApexClothCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.RemoveApexClothCollision", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -420,7 +420,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetHidden
     /// </summary>
-    public unsafe void SetHidden(bool NewHidden)
+    public unsafe override void SetHidden(bool NewHidden)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetHidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -439,7 +439,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: AddApexClothCollision
     /// </summary>
-    public unsafe void AddApexClothCollision(BmSDK.Engine.RApexClothBlockingVolume ClothBlockingVolume)
+    public unsafe virtual void AddApexClothCollision(BmSDK.Engine.RApexClothBlockingVolume ClothBlockingVolume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.AddApexClothCollision", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -458,7 +458,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: IsPermanentlyFixed
     /// </summary>
-    public unsafe bool IsPermanentlyFixed()
+    public unsafe virtual bool IsPermanentlyFixed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.IsPermanentlyFixed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -476,7 +476,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: ShowMaterialSection
     /// </summary>
-    public unsafe void ShowMaterialSection(int MaterialID, bool bShow, int LODIndex = default)
+    public unsafe virtual void ShowMaterialSection(int MaterialID, bool bShow, int LODIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.ShowMaterialSection", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -497,7 +497,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetPhysicalMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.PhysicalMaterial GetPhysicalMaterial(int BodyIndex = default)
+    public unsafe override BmSDK.Engine.PhysicalMaterial GetPhysicalMaterial(int BodyIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetPhysicalMaterial", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -516,7 +516,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: UpdateDampingRampUp
     /// </summary>
-    public unsafe void UpdateDampingRampUp(float DeltaTime, bool bAllowDampingRampup)
+    public unsafe virtual void UpdateDampingRampUp(float DeltaTime, bool bAllowDampingRampup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.UpdateDampingRampUp", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -536,7 +536,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: UpdatePermanentFixing
     /// </summary>
-    public unsafe void UpdatePermanentFixing()
+    public unsafe virtual void UpdatePermanentFixing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.UpdatePermanentFixing", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -554,7 +554,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetHasFallenOutOfWorld
     /// </summary>
-    public unsafe bool GetHasFallenOutOfWorld()
+    public unsafe override bool GetHasFallenOutOfWorld()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetHasFallenOutOfWorld", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -572,7 +572,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetForceJointProjection
     /// </summary>
-    public unsafe void SetForceJointProjection(bool bNewForceJointProjection)
+    public unsafe virtual void SetForceJointProjection(bool bNewForceJointProjection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetForceJointProjection", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -591,7 +591,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: UpdateMeshForBrokenConstraints
     /// </summary>
-    public unsafe void UpdateMeshForBrokenConstraints()
+    public unsafe virtual void UpdateMeshForBrokenConstraints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.UpdateMeshForBrokenConstraints", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -609,7 +609,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: UnHideBoneByName
     /// </summary>
-    public unsafe void UnHideBoneByName(BmSDK.FName BoneName)
+    public unsafe virtual void UnHideBoneByName(BmSDK.FName BoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.UnHideBoneByName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -628,7 +628,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: HideBoneByName
     /// </summary>
-    public unsafe void HideBoneByName(BmSDK.FName BoneName, BmSDK.Engine.SkeletalMeshComponent.EPhysBodyOp PhysBodyOption)
+    public unsafe virtual void HideBoneByName(BmSDK.FName BoneName, BmSDK.Engine.SkeletalMeshComponent.EPhysBodyOp PhysBodyOption)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.HideBoneByName", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -648,7 +648,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: IsBoneHidden
     /// </summary>
-    public unsafe bool IsBoneHidden(int BoneIndex)
+    public unsafe virtual bool IsBoneHidden(int BoneIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.IsBoneHidden", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -667,7 +667,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: UnHideBone
     /// </summary>
-    public unsafe void UnHideBone(int BoneIndex)
+    public unsafe virtual void UnHideBone(int BoneIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.UnHideBone", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -686,7 +686,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: HideBone
     /// </summary>
-    public unsafe void HideBone(int BoneIndex, BmSDK.Engine.SkeletalMeshComponent.EPhysBodyOp PhysBodyOption)
+    public unsafe virtual void HideBone(int BoneIndex, BmSDK.Engine.SkeletalMeshComponent.EPhysBodyOp PhysBodyOption)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.HideBone", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -706,7 +706,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: ResetFaceFXRegistersByOwner
     /// </summary>
-    public unsafe void ResetFaceFXRegistersByOwner(BmSDK.Engine.RSkeletalMeshComponent_Export.EFaceFXRegisterOwner RegOwner)
+    public unsafe virtual void ResetFaceFXRegistersByOwner(BmSDK.Engine.RSkeletalMeshComponent_Export.EFaceFXRegisterOwner RegOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.ResetFaceFXRegistersByOwner", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -725,7 +725,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: ResetAllFaceFXRegisters
     /// </summary>
-    public unsafe void ResetAllFaceFXRegisters()
+    public unsafe virtual void ResetAllFaceFXRegisters()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.ResetAllFaceFXRegisters", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -743,7 +743,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetFaceFXRegisterByOwner
     /// </summary>
-    public unsafe void SetFaceFXRegisterByOwner(BmSDK.FString RegName, float RegVal, BmSDK.Engine.RSkeletalMeshComponent_Export.EFaceFXRegisterOwner RegOwner, float InterpDuration = default)
+    public unsafe virtual void SetFaceFXRegisterByOwner(BmSDK.FString RegName, float RegVal, BmSDK.Engine.RSkeletalMeshComponent_Export.EFaceFXRegisterOwner RegOwner, float InterpDuration = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetFaceFXRegisterByOwner", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -765,7 +765,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetFaceFXRegister
     /// </summary>
-    public unsafe void SetFaceFXRegister(BmSDK.FString RegName, float RegVal, BmSDK.Engine.SkeletalMeshComponent.EFaceFXRegOp RegOp, float InterpDuration = default)
+    public unsafe virtual void SetFaceFXRegister(BmSDK.FString RegName, float RegVal, BmSDK.Engine.SkeletalMeshComponent.EFaceFXRegOp RegOp, float InterpDuration = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetFaceFXRegister", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -787,7 +787,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: IsPlayingFaceFXAnim
     /// </summary>
-    public unsafe bool IsPlayingFaceFXAnim()
+    public unsafe virtual bool IsPlayingFaceFXAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.IsPlayingFaceFXAnim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -805,7 +805,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: StopFaceFXAnim
     /// </summary>
-    public unsafe void StopFaceFXAnim()
+    public unsafe virtual void StopFaceFXAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.StopFaceFXAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -823,7 +823,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: PlayFaceFXAnim
     /// </summary>
-    public unsafe bool PlayFaceFXAnim(BmSDK.Engine.FaceFXAnimSet FaceFXAnimSetRef, BmSDK.FString AnimName, BmSDK.FString GroupName, BmSDK.Engine.SoundCue SoundCueToPlay)
+    public unsafe virtual bool PlayFaceFXAnim(BmSDK.Engine.FaceFXAnimSet FaceFXAnimSetRef, BmSDK.FString AnimName, BmSDK.FString GroupName, BmSDK.Engine.SoundCue SoundCueToPlay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.PlayFaceFXAnim", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -845,7 +845,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: ToggleInstanceVertexWeights
     /// </summary>
-    public unsafe void ToggleInstanceVertexWeights(bool bEnable, int LODIdx)
+    public unsafe virtual void ToggleInstanceVertexWeights(bool bEnable, int LODIdx)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.ToggleInstanceVertexWeights", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -865,7 +865,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: UpdateInstanceVertexWeightBones
     /// </summary>
-    public unsafe void UpdateInstanceVertexWeightBones(BmSDK.TArray<BmSDK.Engine.SkeletalMeshComponent.FBonePair> BonePairs)
+    public unsafe virtual void UpdateInstanceVertexWeightBones(BmSDK.TArray<BmSDK.Engine.SkeletalMeshComponent.FBonePair> BonePairs)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.UpdateInstanceVertexWeightBones", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -884,7 +884,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: FindInstanceVertexweightBonePair
     /// </summary>
-    public unsafe int FindInstanceVertexweightBonePair(BmSDK.Engine.SkeletalMeshComponent.FBonePair Bones)
+    public unsafe virtual int FindInstanceVertexweightBonePair(BmSDK.Engine.SkeletalMeshComponent.FBonePair Bones)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.FindInstanceVertexweightBonePair", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -903,7 +903,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: RemoveInstanceVertexWeightBoneParented
     /// </summary>
-    public unsafe void RemoveInstanceVertexWeightBoneParented(BmSDK.FName BoneName)
+    public unsafe virtual void RemoveInstanceVertexWeightBoneParented(BmSDK.FName BoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.RemoveInstanceVertexWeightBoneParented", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -922,7 +922,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: AddInstanceVertexWeightBoneParented
     /// </summary>
-    public unsafe void AddInstanceVertexWeightBoneParented(BmSDK.FName BoneName, bool bPairWithParent = default)
+    public unsafe virtual void AddInstanceVertexWeightBoneParented(BmSDK.FName BoneName, bool bPairWithParent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.AddInstanceVertexWeightBoneParented", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -942,7 +942,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetBonesWithinRadius
     /// </summary>
-    public unsafe bool GetBonesWithinRadius(System.Numerics.Vector3 Origin, float Radius, int TraceFlags, out BmSDK.TArray<BmSDK.FName> out_Bones)
+    public unsafe virtual bool GetBonesWithinRadius(System.Numerics.Vector3 Origin, float Radius, int TraceFlags, out BmSDK.TArray<BmSDK.FName> out_Bones)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetBonesWithinRadius", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -964,7 +964,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: UpdateAnimations
     /// </summary>
-    public unsafe void UpdateAnimations()
+    public unsafe virtual void UpdateAnimations()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.UpdateAnimations", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -982,7 +982,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: ForceSkelUpdate
     /// </summary>
-    public unsafe void ForceSkelUpdate()
+    public unsafe virtual void ForceSkelUpdate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.ForceSkelUpdate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1000,7 +1000,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: UpdateRBBonesFromSpaceBases
     /// </summary>
-    public unsafe void UpdateRBBonesFromSpaceBases(bool bMoveUnfixedBodies, bool bTeleport)
+    public unsafe virtual void UpdateRBBonesFromSpaceBases(bool bMoveUnfixedBodies, bool bTeleport)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.UpdateRBBonesFromSpaceBases", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1020,7 +1020,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetAllowRFlapsAssetInstance
     /// </summary>
-    public unsafe void SetAllowRFlapsAssetInstance(bool bHasInstance)
+    public unsafe virtual void SetAllowRFlapsAssetInstance(bool bHasInstance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetAllowRFlapsAssetInstance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1039,7 +1039,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetHasPhysicsAssetInstance
     /// </summary>
-    public unsafe void SetHasPhysicsAssetInstance(bool bHasInstance, bool bUseCurrentPosition = default)
+    public unsafe virtual void SetHasPhysicsAssetInstance(bool bHasInstance, bool bUseCurrentPosition = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetHasPhysicsAssetInstance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1059,7 +1059,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: FindBodyInstanceNamed
     /// </summary>
-    public unsafe BmSDK.Engine.RB_BodyInstance FindBodyInstanceNamed(BmSDK.FName BoneName)
+    public unsafe virtual BmSDK.Engine.RB_BodyInstance FindBodyInstanceNamed(BmSDK.FName BoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.FindBodyInstanceNamed", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1078,7 +1078,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: FindConstraintBoneName
     /// </summary>
-    public unsafe BmSDK.FName FindConstraintBoneName(int ConstraintIndex)
+    public unsafe virtual BmSDK.FName FindConstraintBoneName(int ConstraintIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.FindConstraintBoneName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1097,7 +1097,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: FindConstraintIndex
     /// </summary>
-    public unsafe int FindConstraintIndex(BmSDK.FName ConstraintName)
+    public unsafe virtual int FindConstraintIndex(BmSDK.FName ConstraintName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.FindConstraintIndex", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1116,7 +1116,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: InitMorphTargets
     /// </summary>
-    public unsafe void InitMorphTargets()
+    public unsafe virtual void InitMorphTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.InitMorphTargets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1134,7 +1134,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: InitSkelControls
     /// </summary>
-    public unsafe void InitSkelControls()
+    public unsafe virtual void InitSkelControls()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.InitSkelControls", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1152,7 +1152,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: UpdateParentBoneMap
     /// </summary>
-    public unsafe void UpdateParentBoneMap()
+    public unsafe virtual void UpdateParentBoneMap()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.UpdateParentBoneMap", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1170,7 +1170,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetParentAnimComponent
     /// </summary>
-    public unsafe void SetParentAnimComponent(BmSDK.Engine.SkeletalMeshComponent NewParentAnimComp)
+    public unsafe virtual void SetParentAnimComponent(BmSDK.Engine.SkeletalMeshComponent NewParentAnimComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetParentAnimComponent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1189,7 +1189,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetAnimTreeTemplate
     /// </summary>
-    public unsafe void SetAnimTreeTemplate(BmSDK.Engine.AnimTree NewTemplate)
+    public unsafe virtual void SetAnimTreeTemplate(BmSDK.Engine.AnimTree NewTemplate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetAnimTreeTemplate", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1208,7 +1208,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetAnimations
     /// </summary>
-    public unsafe void SetAnimations(BmSDK.Engine.AnimNode NewAnimations)
+    public unsafe virtual void SetAnimations(BmSDK.Engine.AnimNode NewAnimations)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetAnimations", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1227,7 +1227,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetClosestCollidingBoneLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetClosestCollidingBoneLocation(System.Numerics.Vector3 TestLocation, bool bCheckZeroExtent, bool bCheckNonZeroExtent)
+    public unsafe virtual System.Numerics.Vector3 GetClosestCollidingBoneLocation(System.Numerics.Vector3 TestLocation, bool bCheckZeroExtent, bool bCheckNonZeroExtent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetClosestCollidingBoneLocation", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -1248,7 +1248,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: FindClosestBone
     /// </summary>
-    public unsafe BmSDK.FName FindClosestBone(System.Numerics.Vector3 TestLocation, out System.Numerics.Vector3 BoneLocation, float IgnoreScale)
+    public unsafe virtual BmSDK.FName FindClosestBone(System.Numerics.Vector3 TestLocation, out System.Numerics.Vector3 BoneLocation, float IgnoreScale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.FindClosestBone", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -1269,7 +1269,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: TransformFromBoneSpace
     /// </summary>
-    public unsafe void TransformFromBoneSpace(BmSDK.FName BoneName, System.Numerics.Vector3 InPosition, BmSDK.Rotator InRotation, out System.Numerics.Vector3 OutPosition, out BmSDK.Rotator OutRotation)
+    public unsafe virtual void TransformFromBoneSpace(BmSDK.FName BoneName, System.Numerics.Vector3 InPosition, BmSDK.Rotator InRotation, out System.Numerics.Vector3 OutPosition, out BmSDK.Rotator OutRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.TransformFromBoneSpace", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -1292,7 +1292,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: TransformToBoneSpace
     /// </summary>
-    public unsafe void TransformToBoneSpace(BmSDK.FName BoneName, System.Numerics.Vector3 InPosition, BmSDK.Rotator InRotation, out System.Numerics.Vector3 OutPosition, out BmSDK.Rotator OutRotation)
+    public unsafe virtual void TransformToBoneSpace(BmSDK.FName BoneName, System.Numerics.Vector3 InPosition, BmSDK.Rotator InRotation, out System.Numerics.Vector3 OutPosition, out BmSDK.Rotator OutRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.TransformToBoneSpace", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -1315,7 +1315,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetBoneAxis
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBoneAxis(BmSDK.FName BoneName, BmSDK.GameObject.EAxis Axis)
+    public unsafe virtual System.Numerics.Vector3 GetBoneAxis(BmSDK.FName BoneName, BmSDK.GameObject.EAxis Axis)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetBoneAxis", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1335,7 +1335,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetRefPosePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetRefPosePosition(int BoneIndex)
+    public unsafe virtual System.Numerics.Vector3 GetRefPosePosition(int BoneIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetRefPosePosition", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1354,7 +1354,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: BoneIsChildOf
     /// </summary>
-    public unsafe bool BoneIsChildOf(BmSDK.FName BoneName, BmSDK.FName ParentBoneName)
+    public unsafe virtual bool BoneIsChildOf(BmSDK.FName BoneName, BmSDK.FName ParentBoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.BoneIsChildOf", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -1374,7 +1374,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetBoneNames
     /// </summary>
-    public unsafe void GetBoneNames(out BmSDK.TArray<BmSDK.FName> BoneNames)
+    public unsafe virtual void GetBoneNames(out BmSDK.TArray<BmSDK.FName> BoneNames)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetBoneNames", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1393,7 +1393,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetParentBone
     /// </summary>
-    public unsafe BmSDK.FName GetParentBone(BmSDK.FName BoneName)
+    public unsafe virtual BmSDK.FName GetParentBone(BmSDK.FName BoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetParentBone", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1412,7 +1412,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetBoneMatrix
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix GetBoneMatrix(int BoneIndex)
+    public unsafe virtual BmSDK.GameObject.FMatrix GetBoneMatrix(int BoneIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetBoneMatrix", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -1431,7 +1431,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetBoneName
     /// </summary>
-    public unsafe BmSDK.FName GetBoneName(int BoneIndex)
+    public unsafe virtual BmSDK.FName GetBoneName(int BoneIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetBoneName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1450,7 +1450,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: MatchRefBone
     /// </summary>
-    public unsafe int MatchRefBone(BmSDK.FName BoneName)
+    public unsafe virtual int MatchRefBone(BmSDK.FName BoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.MatchRefBone", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1469,7 +1469,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetBoneLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBoneLocation(BmSDK.FName BoneName, int Space = default)
+    public unsafe virtual System.Numerics.Vector3 GetBoneLocation(BmSDK.FName BoneName, int Space = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetBoneLocation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1489,7 +1489,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetBoneQuaternion
     /// </summary>
-    public unsafe BmSDK.GameObject.FQuat GetBoneQuaternion(BmSDK.FName BoneName, int Space = default)
+    public unsafe virtual BmSDK.GameObject.FQuat GetBoneQuaternion(BmSDK.FName BoneName, int Space = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetBoneQuaternion", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -1509,7 +1509,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: FindMorphNode
     /// </summary>
-    public unsafe BmSDK.Engine.MorphNodeBase FindMorphNode(BmSDK.FName InNodeName)
+    public unsafe virtual BmSDK.Engine.MorphNodeBase FindMorphNode(BmSDK.FName InNodeName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.FindMorphNode", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1528,7 +1528,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: FindSkelControls
     /// </summary>
-    public unsafe void FindSkelControls(BmSDK.FName InControlName, out BmSDK.TArray<BmSDK.Engine.SkelControlBase> SkelControls)
+    public unsafe virtual void FindSkelControls(BmSDK.FName InControlName, out BmSDK.TArray<BmSDK.Engine.SkelControlBase> SkelControls)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.FindSkelControls", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1548,7 +1548,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: FindSkelControl
     /// </summary>
-    public unsafe BmSDK.Engine.SkelControlBase FindSkelControl(BmSDK.FName InControlName)
+    public unsafe virtual BmSDK.Engine.SkelControlBase FindSkelControl(BmSDK.FName InControlName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.FindSkelControl", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1568,7 +1568,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: FindAnimNode
     /// </summary>
-    public unsafe BmSDK.Engine.AnimNode FindAnimNode(BmSDK.FName InNodeName)
+    public unsafe virtual BmSDK.Engine.AnimNode FindAnimNode(BmSDK.FName InNodeName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.FindAnimNode", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1587,7 +1587,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: FindMorphTarget
     /// </summary>
-    public unsafe BmSDK.Engine.MorphTarget FindMorphTarget(BmSDK.FName MorphTargetName)
+    public unsafe virtual BmSDK.Engine.MorphTarget FindMorphTarget(BmSDK.FName MorphTargetName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.FindMorphTarget", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1606,7 +1606,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetAnimLength
     /// </summary>
-    public unsafe float GetAnimLength(BmSDK.FName AnimSeqName)
+    public unsafe virtual float GetAnimLength(BmSDK.FName AnimSeqName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetAnimLength", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -1618,7 +1618,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetAnimRateByDuration
     /// </summary>
-    public unsafe float GetAnimRateByDuration(BmSDK.FName AnimSeqName, float Duration)
+    public unsafe virtual float GetAnimRateByDuration(BmSDK.FName AnimSeqName, float Duration)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetAnimRateByDuration", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1631,7 +1631,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: RestoreSavedAnimSets
     /// </summary>
-    public unsafe void RestoreSavedAnimSets()
+    public unsafe virtual void RestoreSavedAnimSets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.RestoreSavedAnimSets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1649,7 +1649,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SaveAnimSets
     /// </summary>
-    public unsafe void SaveAnimSets()
+    public unsafe virtual void SaveAnimSets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SaveAnimSets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1667,7 +1667,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: FindAnimSequence
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSequence FindAnimSequence(BmSDK.FName AnimSeqName)
+    public unsafe virtual BmSDK.Engine.AnimSequence FindAnimSequence(BmSDK.FName AnimSeqName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.FindAnimSequence", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1686,7 +1686,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: WakeSoftBody
     /// </summary>
-    public unsafe void WakeSoftBody()
+    public unsafe virtual void WakeSoftBody()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.WakeSoftBody", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1704,7 +1704,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetSoftBodyFrozen
     /// </summary>
-    public unsafe void SetSoftBodyFrozen(bool bNewFrozen)
+    public unsafe virtual void SetSoftBodyFrozen(bool bNewFrozen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetSoftBodyFrozen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1723,7 +1723,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: UpdateSoftBodyParams
     /// </summary>
-    public unsafe void UpdateSoftBodyParams()
+    public unsafe virtual void UpdateSoftBodyParams()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.UpdateSoftBodyParams", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1741,7 +1741,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetClothValidBounds
     /// </summary>
-    public unsafe void SetClothValidBounds(System.Numerics.Vector3 ClothValidBoundsMin, System.Numerics.Vector3 ClothValidBoundsMax)
+    public unsafe virtual void SetClothValidBounds(System.Numerics.Vector3 ClothValidBoundsMin, System.Numerics.Vector3 ClothValidBoundsMax)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetClothValidBounds", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1761,7 +1761,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: EnableClothValidBounds
     /// </summary>
-    public unsafe void EnableClothValidBounds(bool IfEnableClothValidBounds)
+    public unsafe virtual void EnableClothValidBounds(bool IfEnableClothValidBounds)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.EnableClothValidBounds", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1780,7 +1780,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: AttachClothToCollidingShapes
     /// </summary>
-    public unsafe void AttachClothToCollidingShapes(bool AttatchTwoWay, bool AttachTearable)
+    public unsafe virtual void AttachClothToCollidingShapes(bool AttatchTwoWay, bool AttachTearable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.AttachClothToCollidingShapes", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1800,7 +1800,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetClothVelocity
     /// </summary>
-    public unsafe void SetClothVelocity(System.Numerics.Vector3 VelocityOffSet)
+    public unsafe virtual void SetClothVelocity(System.Numerics.Vector3 VelocityOffSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetClothVelocity", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1819,7 +1819,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetClothPosition
     /// </summary>
-    public unsafe void SetClothPosition(System.Numerics.Vector3 ClothOffSet)
+    public unsafe virtual void SetClothPosition(System.Numerics.Vector3 ClothOffSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetClothPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1838,7 +1838,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetClothSleep
     /// </summary>
-    public unsafe void SetClothSleep(bool IfClothSleep)
+    public unsafe virtual void SetClothSleep(bool IfClothSleep)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetClothSleep", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1857,7 +1857,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetClothThickness
     /// </summary>
-    public unsafe void SetClothThickness(float ClothThickness)
+    public unsafe virtual void SetClothThickness(float ClothThickness)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetClothThickness", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1876,7 +1876,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetClothTearFactor
     /// </summary>
-    public unsafe void SetClothTearFactor(float ClothTearFactor)
+    public unsafe virtual void SetClothTearFactor(float ClothTearFactor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetClothTearFactor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1895,7 +1895,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetClothStretchingStiffness
     /// </summary>
-    public unsafe void SetClothStretchingStiffness(float ClothStretchingStiffness)
+    public unsafe virtual void SetClothStretchingStiffness(float ClothStretchingStiffness)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetClothStretchingStiffness", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1914,7 +1914,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetClothSolverIterations
     /// </summary>
-    public unsafe void SetClothSolverIterations(int ClothSolverIterations)
+    public unsafe virtual void SetClothSolverIterations(int ClothSolverIterations)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetClothSolverIterations", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1933,7 +1933,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetClothSleepLinearVelocity
     /// </summary>
-    public unsafe void SetClothSleepLinearVelocity(float ClothSleepLinearVelocity)
+    public unsafe virtual void SetClothSleepLinearVelocity(float ClothSleepLinearVelocity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetClothSleepLinearVelocity", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1952,7 +1952,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetClothPressure
     /// </summary>
-    public unsafe void SetClothPressure(float ClothPressure)
+    public unsafe virtual void SetClothPressure(float ClothPressure)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetClothPressure", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1971,7 +1971,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetClothFriction
     /// </summary>
-    public unsafe void SetClothFriction(float ClothFriction)
+    public unsafe virtual void SetClothFriction(float ClothFriction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetClothFriction", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1990,7 +1990,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetClothFlags
     /// </summary>
-    public unsafe void SetClothFlags(int ClothFlags)
+    public unsafe virtual void SetClothFlags(int ClothFlags)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetClothFlags", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2009,7 +2009,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetClothDampingCoefficient
     /// </summary>
-    public unsafe void SetClothDampingCoefficient(float ClothDampingCoefficient)
+    public unsafe virtual void SetClothDampingCoefficient(float ClothDampingCoefficient)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetClothDampingCoefficient", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2028,7 +2028,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetClothCollisionResponseCoefficient
     /// </summary>
-    public unsafe void SetClothCollisionResponseCoefficient(float ClothCollisionResponseCoefficient)
+    public unsafe virtual void SetClothCollisionResponseCoefficient(float ClothCollisionResponseCoefficient)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetClothCollisionResponseCoefficient", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2047,7 +2047,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetClothBendingStiffness
     /// </summary>
-    public unsafe void SetClothBendingStiffness(float ClothBendingStiffness)
+    public unsafe virtual void SetClothBendingStiffness(float ClothBendingStiffness)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetClothBendingStiffness", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2066,7 +2066,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetClothAttachmentTearFactor
     /// </summary>
-    public unsafe void SetClothAttachmentTearFactor(float ClothAttachTearFactor)
+    public unsafe virtual void SetClothAttachmentTearFactor(float ClothAttachTearFactor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetClothAttachmentTearFactor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2085,7 +2085,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetClothAttachmentResponseCoefficient
     /// </summary>
-    public unsafe void SetClothAttachmentResponseCoefficient(float ClothAttachmentResponseCoefficient)
+    public unsafe virtual void SetClothAttachmentResponseCoefficient(float ClothAttachmentResponseCoefficient)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetClothAttachmentResponseCoefficient", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2104,7 +2104,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetClothThickness
     /// </summary>
-    public unsafe float GetClothThickness()
+    public unsafe virtual float GetClothThickness()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetClothThickness", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2122,7 +2122,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetClothTearFactor
     /// </summary>
-    public unsafe float GetClothTearFactor()
+    public unsafe virtual float GetClothTearFactor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetClothTearFactor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2140,7 +2140,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetClothStretchingStiffness
     /// </summary>
-    public unsafe float GetClothStretchingStiffness()
+    public unsafe virtual float GetClothStretchingStiffness()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetClothStretchingStiffness", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2158,7 +2158,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetClothSolverIterations
     /// </summary>
-    public unsafe int GetClothSolverIterations()
+    public unsafe virtual int GetClothSolverIterations()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetClothSolverIterations", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2176,7 +2176,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetClothSleepLinearVelocity
     /// </summary>
-    public unsafe float GetClothSleepLinearVelocity()
+    public unsafe virtual float GetClothSleepLinearVelocity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetClothSleepLinearVelocity", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2194,7 +2194,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetClothPressure
     /// </summary>
-    public unsafe float GetClothPressure()
+    public unsafe virtual float GetClothPressure()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetClothPressure", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2212,7 +2212,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetClothFriction
     /// </summary>
-    public unsafe float GetClothFriction()
+    public unsafe virtual float GetClothFriction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetClothFriction", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2230,7 +2230,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetClothFlags
     /// </summary>
-    public unsafe int GetClothFlags()
+    public unsafe virtual int GetClothFlags()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetClothFlags", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2248,7 +2248,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetClothDampingCoefficient
     /// </summary>
-    public unsafe float GetClothDampingCoefficient()
+    public unsafe virtual float GetClothDampingCoefficient()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetClothDampingCoefficient", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2266,7 +2266,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetClothCollisionResponseCoefficient
     /// </summary>
-    public unsafe float GetClothCollisionResponseCoefficient()
+    public unsafe virtual float GetClothCollisionResponseCoefficient()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetClothCollisionResponseCoefficient", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2284,7 +2284,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetClothBendingStiffness
     /// </summary>
-    public unsafe float GetClothBendingStiffness()
+    public unsafe virtual float GetClothBendingStiffness()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetClothBendingStiffness", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2302,7 +2302,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetClothAttachmentTearFactor
     /// </summary>
-    public unsafe float GetClothAttachmentTearFactor()
+    public unsafe virtual float GetClothAttachmentTearFactor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetClothAttachmentTearFactor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2320,7 +2320,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetClothAttachmentResponseCoefficient
     /// </summary>
-    public unsafe float GetClothAttachmentResponseCoefficient()
+    public unsafe virtual float GetClothAttachmentResponseCoefficient()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetClothAttachmentResponseCoefficient", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2338,7 +2338,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: EnableApexClothing
     /// </summary>
-    public unsafe void EnableApexClothing()
+    public unsafe virtual void EnableApexClothing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.EnableApexClothing", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2356,7 +2356,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: DisableApexClothing
     /// </summary>
-    public unsafe void DisableApexClothing()
+    public unsafe virtual void DisableApexClothing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.DisableApexClothing", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2374,7 +2374,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: ForceApexClothingTeleport
     /// </summary>
-    public unsafe void ForceApexClothingTeleport()
+    public unsafe virtual void ForceApexClothingTeleport()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.ForceApexClothingTeleport", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2392,7 +2392,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: ForceApexClothingTeleportAndReset
     /// </summary>
-    public unsafe void ForceApexClothingTeleportAndReset()
+    public unsafe virtual void ForceApexClothingTeleportAndReset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.ForceApexClothingTeleportAndReset", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2410,7 +2410,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: ResetClothVertsToRefPose
     /// </summary>
-    public unsafe void ResetClothVertsToRefPose()
+    public unsafe virtual void ResetClothVertsToRefPose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.ResetClothVertsToRefPose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2428,7 +2428,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetAttachClothVertsToBaseBody
     /// </summary>
-    public unsafe void SetAttachClothVertsToBaseBody(bool bAttachVerts)
+    public unsafe virtual void SetAttachClothVertsToBaseBody(bool bAttachVerts)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetAttachClothVertsToBaseBody", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2447,7 +2447,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetClothExternalForce
     /// </summary>
-    public unsafe void SetClothExternalForce(System.Numerics.Vector3 InForce)
+    public unsafe virtual void SetClothExternalForce(System.Numerics.Vector3 InForce)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetClothExternalForce", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2466,7 +2466,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: UpdateClothParams
     /// </summary>
-    public unsafe void UpdateClothParams()
+    public unsafe virtual void UpdateClothParams()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.UpdateClothParams", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2484,7 +2484,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetEnableClothingSimulation
     /// </summary>
-    public unsafe void SetEnableClothingSimulation(bool bInEnable)
+    public unsafe virtual void SetEnableClothingSimulation(bool bInEnable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetEnableClothingSimulation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2503,7 +2503,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetClothFrozen
     /// </summary>
-    public unsafe void SetClothFrozen(bool bNewFrozen)
+    public unsafe virtual void SetClothFrozen(bool bNewFrozen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetClothFrozen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2522,7 +2522,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetEnableClothSimulation
     /// </summary>
-    public unsafe void SetEnableClothSimulation(bool bInEnable)
+    public unsafe virtual void SetEnableClothSimulation(bool bInEnable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetEnableClothSimulation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2541,7 +2541,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetClothRBCollidesWithChannel
     /// </summary>
-    public unsafe void SetClothRBCollidesWithChannel(BmSDK.Engine.PrimitiveComponent.ERBCollisionChannel Channel, bool bNewCollides)
+    public unsafe virtual void SetClothRBCollidesWithChannel(BmSDK.Engine.PrimitiveComponent.ERBCollisionChannel Channel, bool bNewCollides)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetClothRBCollidesWithChannel", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2561,7 +2561,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetForceRefPose
     /// </summary>
-    public unsafe void SetForceRefPose(bool bNewForceRefPose)
+    public unsafe virtual void SetForceRefPose(bool bNewForceRefPose)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetForceRefPose", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2580,7 +2580,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetPhysicsAsset
     /// </summary>
-    public unsafe void SetPhysicsAsset(BmSDK.Engine.PhysicsAsset NewPhysicsAsset, bool bForceReInit = default)
+    public unsafe virtual void SetPhysicsAsset(BmSDK.Engine.PhysicsAsset NewPhysicsAsset, bool bForceReInit = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetPhysicsAsset", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2600,7 +2600,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: SetSkeletalMesh
     /// </summary>
-    public unsafe void SetSkeletalMesh(BmSDK.Engine.SkeletalMesh NewMesh, bool bKeepSpaceBases = default)
+    public unsafe virtual void SetSkeletalMesh(BmSDK.Engine.SkeletalMesh NewMesh, bool bKeepSpaceBases = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.SetSkeletalMesh", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2620,7 +2620,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetTransformMatrix
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix GetTransformMatrix()
+    public unsafe virtual BmSDK.GameObject.FMatrix GetTransformMatrix()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetTransformMatrix", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -2639,7 +2639,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: IsComponentAttached
     /// </summary>
-    public unsafe bool IsComponentAttached(BmSDK.Engine.ActorComponent Component, BmSDK.FName BoneName = default)
+    public unsafe virtual bool IsComponentAttached(BmSDK.Engine.ActorComponent Component, BmSDK.FName BoneName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.IsComponentAttached", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -2659,7 +2659,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: FindComponentAttachedToBone
     /// </summary>
-    public unsafe BmSDK.Engine.ActorComponent FindComponentAttachedToBone(BmSDK.FName InBoneName)
+    public unsafe virtual BmSDK.Engine.ActorComponent FindComponentAttachedToBone(BmSDK.FName InBoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.FindComponentAttachedToBone", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2678,7 +2678,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetSocketBoneName
     /// </summary>
-    public unsafe BmSDK.FName GetSocketBoneName(BmSDK.FName InSocketName)
+    public unsafe virtual BmSDK.FName GetSocketBoneName(BmSDK.FName InSocketName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetSocketBoneName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2697,7 +2697,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetSocketByName
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshSocket GetSocketByName(BmSDK.FName InSocketName)
+    public unsafe virtual BmSDK.Engine.SkeletalMeshSocket GetSocketByName(BmSDK.FName InSocketName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetSocketByName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2716,7 +2716,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: GetSocketWorldLocationAndRotation
     /// </summary>
-    public unsafe bool GetSocketWorldLocationAndRotation(BmSDK.FName InSocketName, out System.Numerics.Vector3 OutLocation, out BmSDK.Rotator OutRotation, int Space)
+    public unsafe virtual bool GetSocketWorldLocationAndRotation(BmSDK.FName InSocketName, out System.Numerics.Vector3 OutLocation, out BmSDK.Rotator OutRotation, int Space)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.GetSocketWorldLocationAndRotation", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -2738,7 +2738,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: AttachComponentToSocket
     /// </summary>
-    public unsafe void AttachComponentToSocket(BmSDK.Engine.ActorComponent Component, BmSDK.FName SocketName)
+    public unsafe virtual void AttachComponentToSocket(BmSDK.Engine.ActorComponent Component, BmSDK.FName SocketName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.AttachComponentToSocket", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2758,7 +2758,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: OverrideApexClothingMaxDistanceScale
     /// </summary>
-    public unsafe void OverrideApexClothingMaxDistanceScale(float StartScale, float EndScale, float Duration)
+    public unsafe virtual void OverrideApexClothingMaxDistanceScale(float StartScale, float EndScale, float Duration)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.OverrideApexClothingMaxDistanceScale", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2779,7 +2779,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: DetachComponent
     /// </summary>
-    public unsafe void DetachComponent(BmSDK.Engine.ActorComponent Component)
+    public unsafe virtual void DetachComponent(BmSDK.Engine.ActorComponent Component)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.DetachComponent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2798,7 +2798,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Function: AttachComponent
     /// </summary>
-    public unsafe void AttachComponent(BmSDK.Engine.ActorComponent Component, BmSDK.FName BoneName, System.Numerics.Vector3 RelativeLocation = default, BmSDK.Rotator RelativeRotation = default, System.Numerics.Vector3 RelativeScale = default)
+    public unsafe virtual void AttachComponent(BmSDK.Engine.ActorComponent Component, BmSDK.FName BoneName, System.Numerics.Vector3 RelativeLocation = default, BmSDK.Rotator RelativeRotation = default, System.Numerics.Vector3 RelativeScale = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkeletalMeshComponent.AttachComponent", true);
         byte* paramsPtr = stackalloc byte[52];

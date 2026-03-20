@@ -36,7 +36,7 @@ public partial class RBarkCharacterDefInstance : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Function: GetFilenameFromBarkSetName
     /// </summary>
-    public unsafe void GetFilenameFromBarkSetName(out BmSDK.BmGame.RBarkCharacterDefInstance.FBarkSetName ThisName, out BmSDK.FString OutString)
+    public unsafe virtual void GetFilenameFromBarkSetName(out BmSDK.BmGame.RBarkCharacterDefInstance.FBarkSetName ThisName, out BmSDK.FString OutString)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkCharacterDefInstance.GetFilenameFromBarkSetName", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -56,7 +56,7 @@ public partial class RBarkCharacterDefInstance : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Function: UpdateDynamicSetList
     /// </summary>
-    public unsafe void UpdateDynamicSetList(BmSDK.TArray<BmSDK.FString> SuffixList)
+    public unsafe virtual void UpdateDynamicSetList(BmSDK.TArray<BmSDK.FString> SuffixList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkCharacterDefInstance.UpdateDynamicSetList", true);
         byte* paramsPtr = stackalloc byte[16];

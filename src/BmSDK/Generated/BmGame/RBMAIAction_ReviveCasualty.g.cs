@@ -71,7 +71,7 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: HasAtLeastOneThugNearby
     /// </summary>
-    public unsafe bool HasAtLeastOneThugNearby()
+    public unsafe virtual bool HasAtLeastOneThugNearby()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReviveCasualty.HasAtLeastOneThugNearby", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: GoToAtCasualtyState
     /// </summary>
-    public unsafe void GoToAtCasualtyState()
+    public unsafe virtual void GoToAtCasualtyState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReviveCasualty.GoToAtCasualtyState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReviveCasualty.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReviveCasualty.OnActivate", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -115,7 +115,7 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: PlayCasualtyRecoverLine
     /// </summary>
-    public unsafe void PlayCasualtyRecoverLine()
+    public unsafe virtual void PlayCasualtyRecoverLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReviveCasualty.PlayCasualtyRecoverLine", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -126,7 +126,7 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: PlayMedicDiagnoseLine
     /// </summary>
-    public unsafe void PlayMedicDiagnoseLine()
+    public unsafe virtual void PlayMedicDiagnoseLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReviveCasualty.PlayMedicDiagnoseLine", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -137,7 +137,7 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: SetCasualty
     /// </summary>
-    public unsafe void SetCasualty(BmSDK.BmGame.RPawnVillain NewCas)
+    public unsafe virtual void SetCasualty(BmSDK.BmGame.RPawnVillain NewCas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReviveCasualty.SetCasualty", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -149,7 +149,7 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: GetAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetAnimName(BmSDK.BmGame.RBMAIAction_ReviveCasualty.eReviveAnimType Type)
+    public unsafe virtual BmSDK.FName GetAnimName(BmSDK.BmGame.RBMAIAction_ReviveCasualty.eReviveAnimType Type)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReviveCasualty.GetAnimName", true);
         byte* paramsPtr = stackalloc byte[12];

@@ -71,7 +71,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: GetAnimRot
     /// </summary>
-    public unsafe BmSDK.Rotator GetAnimRot()
+    public unsafe virtual BmSDK.Rotator GetAnimRot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.GetAnimRot", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: GetMovePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMovePoint(BmSDK.BmGame.RBMPawnAI TestPawn)
+    public unsafe virtual System.Numerics.Vector3 GetMovePoint(BmSDK.BmGame.RBMPawnAI TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.GetMovePoint", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -94,7 +94,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: TriggerReaction
     /// </summary>
-    public unsafe void TriggerReaction()
+    public unsafe virtual void TriggerReaction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.TriggerReaction", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -116,7 +116,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: TriggerRight
     /// </summary>
-    public unsafe void TriggerRight(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void TriggerRight(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.TriggerRight", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -128,7 +128,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: TriggerLeft
     /// </summary>
-    public unsafe void TriggerLeft(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void TriggerLeft(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.TriggerLeft", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -140,7 +140,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: TriggerSecondary
     /// </summary>
-    public unsafe bool TriggerSecondary(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool TriggerSecondary(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.TriggerSecondary", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -152,7 +152,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: Trigger
     /// </summary>
-    public unsafe bool Trigger(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool Trigger(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.Trigger", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -164,7 +164,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: CanTrigger
     /// </summary>
-    public unsafe bool CanTrigger(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool CanTrigger(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.CanTrigger", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -176,7 +176,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: CanBeTargettedByRHD
     /// </summary>
-    public unsafe bool CanBeTargettedByRHD(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool CanBeTargettedByRHD(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.CanBeTargettedByRHD", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -188,7 +188,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: RequiresBlindDroneUpgrade
     /// </summary>
-    public unsafe bool RequiresBlindDroneUpgrade()
+    public unsafe virtual bool RequiresBlindDroneUpgrade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.RequiresBlindDroneUpgrade", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -199,7 +199,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: GetMiniGameHelpPrompt
     /// </summary>
-    public unsafe void GetMiniGameHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe virtual void GetMiniGameHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.GetMiniGameHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -212,7 +212,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: CanTargetTroughWalls
     /// </summary>
-    public unsafe bool CanTargetTroughWalls()
+    public unsafe virtual bool CanTargetTroughWalls()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.CanTargetTroughWalls", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -223,7 +223,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: GetInteractionType
     /// </summary>
-    public unsafe BmSDK.BmGame.RRemoteControlLowSecurityInterface.EOmnitronInteractionType GetInteractionType()
+    public unsafe virtual BmSDK.BmGame.RRemoteControlLowSecurityInterface.EOmnitronInteractionType GetInteractionType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.GetInteractionType", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -234,7 +234,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: GetInteractionPromptSecondary
     /// </summary>
-    public unsafe BmSDK.FString GetInteractionPromptSecondary()
+    public unsafe virtual BmSDK.FString GetInteractionPromptSecondary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.GetInteractionPromptSecondary", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -245,7 +245,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: ShouldInteractionPromptBeDisplayedInCentreOfScreen
     /// </summary>
-    public unsafe bool ShouldInteractionPromptBeDisplayedInCentreOfScreen()
+    public unsafe virtual bool ShouldInteractionPromptBeDisplayedInCentreOfScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.ShouldInteractionPromptBeDisplayedInCentreOfScreen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -256,7 +256,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: GetInteractionPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetInteractionPrompt()
+    public unsafe virtual BmSDK.FString GetInteractionPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.GetInteractionPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -267,7 +267,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: NeedDisplayRefresh
     /// </summary>
-    public unsafe bool NeedDisplayRefresh()
+    public unsafe virtual bool NeedDisplayRefresh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.NeedDisplayRefresh", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -278,7 +278,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: GetDisplayIconName
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayIconName()
+    public unsafe virtual BmSDK.FString GetDisplayIconName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.GetDisplayIconName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -289,7 +289,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: GetDisplayDescription
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayDescription()
+    public unsafe virtual BmSDK.FString GetDisplayDescription()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.GetDisplayDescription", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -300,7 +300,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: GetDisplayTitle
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayTitle()
+    public unsafe virtual BmSDK.FString GetDisplayTitle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.GetDisplayTitle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -311,7 +311,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: GetDisplayLockOnState
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayLockOnState()
+    public unsafe virtual BmSDK.FString GetDisplayLockOnState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.GetDisplayLockOnState", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -322,7 +322,7 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
     /// <summary>
     /// Function: GetDisplayTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDisplayTargetLocation()
+    public unsafe virtual System.Numerics.Vector3 GetDisplayTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPred_MuseumBoothReactionPointBase.GetDisplayTargetLocation", true);
         byte* paramsPtr = stackalloc byte[12];

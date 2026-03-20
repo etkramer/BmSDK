@@ -71,7 +71,7 @@ public partial class RGuardVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: TryAssignBarkFor
     /// </summary>
-    public unsafe void TryAssignBarkFor(BmSDK.BmGame.RPawnVillain BarkPawn)
+    public unsafe virtual void TryAssignBarkFor(BmSDK.BmGame.RPawnVillain BarkPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGuardVolume.TryAssignBarkFor", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -83,7 +83,7 @@ public partial class RGuardVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldThugTraverseWhileRunning
     /// </summary>
-    public unsafe bool ShouldThugTraverseWhileRunning()
+    public unsafe virtual bool ShouldThugTraverseWhileRunning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGuardVolume.ShouldThugTraverseWhileRunning", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RGuardVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: HasFreeGuardPoint
     /// </summary>
-    public unsafe bool HasFreeGuardPoint(BmSDK.BmGame.RBMAIController TestCon, out BmSDK.BmGame.RGuardPoint OutGuardPoint)
+    public unsafe virtual bool HasFreeGuardPoint(BmSDK.BmGame.RBMAIController TestCon, out BmSDK.BmGame.RGuardPoint OutGuardPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGuardVolume.HasFreeGuardPoint", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -107,7 +107,7 @@ public partial class RGuardVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: ShutdownAEC
     /// </summary>
-    public unsafe void ShutdownAEC()
+    public unsafe virtual void ShutdownAEC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGuardVolume.ShutdownAEC", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class RGuardVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGuardVolume.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RGuardVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGuardVolume.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];

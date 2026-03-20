@@ -71,7 +71,7 @@ public partial class RBMAIAction_TerrorGestureAtCasualty : BmSDK.BmGame.RBMAIAct
     /// <summary>
     /// Function: GetDiscoverAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetDiscoverAnimName()
+    public unsafe virtual BmSDK.FName GetDiscoverAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrorGestureAtCasualty.GetDiscoverAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_TerrorGestureAtCasualty : BmSDK.BmGame.RBMAIAct
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrorGestureAtCasualty.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_TerrorGestureAtCasualty : BmSDK.BmGame.RBMAIAct
     /// <summary>
     /// Function: StartGestureAnim
     /// </summary>
-    public unsafe void StartGestureAnim(int AnimYaw, BmSDK.FName AnimName)
+    public unsafe virtual void StartGestureAnim(int AnimYaw, BmSDK.FName AnimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrorGestureAtCasualty.StartGestureAnim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -107,7 +107,7 @@ public partial class RBMAIAction_TerrorGestureAtCasualty : BmSDK.BmGame.RBMAIAct
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrorGestureAtCasualty.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

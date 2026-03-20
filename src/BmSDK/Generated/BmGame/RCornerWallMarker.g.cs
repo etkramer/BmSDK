@@ -71,7 +71,7 @@ public partial class RCornerWallMarker : BmSDK.BmGame.RCornerWallMarkerBase, BmS
     /// <summary>
     /// Function: GetAmbushDir
     /// </summary>
-    public unsafe BmSDK.BmGame.RCornerPointBase.AmbushDir GetAmbushDir(BmSDK.BmGame.RCornerWallMarker AmbushEnd)
+    public unsafe virtual BmSDK.BmGame.RCornerPointBase.AmbushDir GetAmbushDir(BmSDK.BmGame.RCornerWallMarker AmbushEnd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerWallMarker.GetAmbushDir", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -83,7 +83,7 @@ public partial class RCornerWallMarker : BmSDK.BmGame.RCornerWallMarkerBase, BmS
     /// <summary>
     /// Function: UnLock
     /// </summary>
-    public unsafe void UnLock(BmSDK.BmGame.RBMAIController Unlocker)
+    public unsafe virtual void UnLock(BmSDK.BmGame.RBMAIController Unlocker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerWallMarker.UnLock", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RCornerWallMarker : BmSDK.BmGame.RCornerWallMarkerBase, BmS
     /// <summary>
     /// Function: Lock
     /// </summary>
-    public unsafe void Lock(BmSDK.BmGame.RBMAIController NewLockee)
+    public unsafe virtual void Lock(BmSDK.BmGame.RBMAIController NewLockee)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerWallMarker.Lock", true);
         byte* paramsPtr = stackalloc byte[8];

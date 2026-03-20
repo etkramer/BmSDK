@@ -71,7 +71,7 @@ public partial class RBMCombatThrownObject_Grenade : BmSDK.BmGame.RBMCombatThrow
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode()
+    public unsafe virtual void Explode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_Grenade.Explode", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class RBMCombatThrownObject_Grenade : BmSDK.BmGame.RBMCombatThrow
     /// <summary>
     /// Function: HitSomething
     /// </summary>
-    public unsafe void HitSomething(BmSDK.BmGame.RPawnCombat HitPawn, float Speed)
+    public unsafe override void HitSomething(BmSDK.BmGame.RPawnCombat HitPawn, float Speed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_Grenade.HitSomething", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -95,7 +95,7 @@ public partial class RBMCombatThrownObject_Grenade : BmSDK.BmGame.RBMCombatThrow
     /// <summary>
     /// Function: ThrowAtPos
     /// </summary>
-    public unsafe void ThrowAtPos(System.Numerics.Vector3 TargetPos, float TimeMultiplier = default)
+    public unsafe override void ThrowAtPos(System.Numerics.Vector3 TargetPos, float TimeMultiplier = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_Grenade.ThrowAtPos", true);
         byte* paramsPtr = stackalloc byte[16];

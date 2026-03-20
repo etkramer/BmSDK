@@ -71,7 +71,7 @@ public partial class RCornerWallMarkerBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: GetTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTargetLocation(BmSDK.Engine.Actor RequestedBy = default, bool bRequestAlternateLoc = default)
+    public unsafe override System.Numerics.Vector3 GetTargetLocation(BmSDK.Engine.Actor RequestedBy = default, bool bRequestAlternateLoc = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerWallMarkerBase.GetTargetLocation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -91,7 +91,7 @@ public partial class RCornerWallMarkerBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerWallMarkerBase.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -103,7 +103,7 @@ public partial class RCornerWallMarkerBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: CanBeLockedBy
     /// </summary>
-    public unsafe bool CanBeLockedBy(BmSDK.BmGame.RBMAIController TestLockedBy)
+    public unsafe virtual bool CanBeLockedBy(BmSDK.BmGame.RBMAIController TestLockedBy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerWallMarkerBase.CanBeLockedBy", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -122,7 +122,7 @@ public partial class RCornerWallMarkerBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: GetBatmanCornerPositionAndRotation
     /// </summary>
-    public unsafe void GetBatmanCornerPositionAndRotation(float CollisionRadius, out System.Numerics.Vector3 BatmanPosition, out BmSDK.Rotator BatmanCoverRotation)
+    public unsafe virtual void GetBatmanCornerPositionAndRotation(float CollisionRadius, out System.Numerics.Vector3 BatmanPosition, out BmSDK.Rotator BatmanCoverRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCornerWallMarkerBase.GetBatmanCornerPositionAndRotation", true);
         byte* paramsPtr = stackalloc byte[28];

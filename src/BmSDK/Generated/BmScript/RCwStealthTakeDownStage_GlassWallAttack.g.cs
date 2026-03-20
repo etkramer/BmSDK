@@ -71,7 +71,7 @@ public partial class RCwStealthTakeDownStage_GlassWallAttack : BmSDK.BmGame.RSte
     /// <summary>
     /// Function: OverrideChosenAnim
     /// </summary>
-    public unsafe void OverrideChosenAnim(out int Anim)
+    public unsafe override void OverrideChosenAnim(out int Anim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwStealthTakeDownStage_GlassWallAttack.OverrideChosenAnim", true);
         byte* paramsPtr = stackalloc byte[4];

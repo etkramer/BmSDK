@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_TakedownSentryGun : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: ForceShootStumble
     /// </summary>
-    public unsafe bool ForceShootStumble()
+    public unsafe override bool ForceShootStumble()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_TakedownSentryGun.ForceShootStumble", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_TakedownSentryGun : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: PlayAnims
     /// </summary>
-    public unsafe void PlayAnims()
+    public unsafe virtual void PlayAnims()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_TakedownSentryGun.PlayAnims", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -93,7 +93,7 @@ public partial class RSpecialMoveInstance_TakedownSentryGun : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_TakedownSentryGun.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RSpecialMoveInstance_TakedownSentryGun : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_TakedownSentryGun.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RSpecialMoveInstance_TakedownSentryGun : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_TakedownSentryGun.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RSpecialMoveInstance_TakedownSentryGun : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: SentryGunGoPhysics
     /// </summary>
-    public unsafe void SentryGunGoPhysics()
+    public unsafe virtual void SentryGunGoPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_TakedownSentryGun.SentryGunGoPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RSpecialMoveInstance_TakedownSentryGun : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: SentryGunTakenOut
     /// </summary>
-    public unsafe void SentryGunTakenOut()
+    public unsafe virtual void SentryGunTakenOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_TakedownSentryGun.SentryGunTakenOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class RSpecialMoveInstance_TakedownSentryGun : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_TakedownSentryGun.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[132];

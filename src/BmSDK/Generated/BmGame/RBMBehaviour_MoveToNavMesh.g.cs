@@ -47,7 +47,7 @@ public partial class RBMBehaviour_MoveToNavMesh : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: StartActorPathFind
     /// </summary>
-    public unsafe void StartActorPathFind()
+    public unsafe virtual void StartActorPathFind()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToNavMesh.StartActorPathFind", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_MoveToNavMesh : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: StartAPS
     /// </summary>
-    public unsafe void StartAPS()
+    public unsafe virtual void StartAPS()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToNavMesh.StartAPS", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_MoveToNavMesh : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: StartExitPoints
     /// </summary>
-    public unsafe void StartExitPoints()
+    public unsafe virtual void StartExitPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToNavMesh.StartExitPoints", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_MoveToNavMesh : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: StartChaseLocationSearch
     /// </summary>
-    public unsafe void StartChaseLocationSearch()
+    public unsafe virtual void StartChaseLocationSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToNavMesh.StartChaseLocationSearch", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -91,7 +91,7 @@ public partial class RBMBehaviour_MoveToNavMesh : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: FindChasePointPath
     /// </summary>
-    public unsafe void FindChasePointPath()
+    public unsafe virtual void FindChasePointPath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToNavMesh.FindChasePointPath", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -102,7 +102,7 @@ public partial class RBMBehaviour_MoveToNavMesh : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: GetChaseTip
     /// </summary>
-    public unsafe BmSDK.BmGame.RChasePoint GetChaseTip(BmSDK.BmGame.RChasePoint Root)
+    public unsafe virtual BmSDK.BmGame.RChasePoint GetChaseTip(BmSDK.BmGame.RChasePoint Root)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToNavMesh.GetChaseTip", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -114,7 +114,7 @@ public partial class RBMBehaviour_MoveToNavMesh : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: FindIntersectionPath
     /// </summary>
-    public unsafe void FindIntersectionPath()
+    public unsafe virtual void FindIntersectionPath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToNavMesh.FindIntersectionPath", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -125,7 +125,7 @@ public partial class RBMBehaviour_MoveToNavMesh : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: FoundIntersectionPath
     /// </summary>
-    public unsafe void FoundIntersectionPath(BmSDK.BmGame.RNavigationHandle NavH)
+    public unsafe virtual void FoundIntersectionPath(BmSDK.BmGame.RNavigationHandle NavH)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToNavMesh.FoundIntersectionPath", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -137,7 +137,7 @@ public partial class RBMBehaviour_MoveToNavMesh : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: ChaseSearchDone
     /// </summary>
-    public unsafe void ChaseSearchDone(BmSDK.BmGame.RChaseLocationSearch CompletedSearch)
+    public unsafe virtual void ChaseSearchDone(BmSDK.BmGame.RChaseLocationSearch CompletedSearch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToNavMesh.ChaseSearchDone", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -149,7 +149,7 @@ public partial class RBMBehaviour_MoveToNavMesh : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: PathNotFound
     /// </summary>
-    public unsafe void PathNotFound(BmSDK.BmGame.RNavigationHandle Nav)
+    public unsafe virtual void PathNotFound(BmSDK.BmGame.RNavigationHandle Nav)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToNavMesh.PathNotFound", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -161,7 +161,7 @@ public partial class RBMBehaviour_MoveToNavMesh : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: PathFound
     /// </summary>
-    public unsafe void PathFound(BmSDK.BmGame.RNavigationHandle Nav)
+    public unsafe virtual void PathFound(BmSDK.BmGame.RNavigationHandle Nav)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToNavMesh.PathFound", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -173,7 +173,7 @@ public partial class RBMBehaviour_MoveToNavMesh : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: StartPathFinding
     /// </summary>
-    public unsafe void StartPathFinding()
+    public unsafe virtual void StartPathFinding()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToNavMesh.StartPathFinding", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -184,7 +184,7 @@ public partial class RBMBehaviour_MoveToNavMesh : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: GetSearchDestination
     /// </summary>
-    public unsafe void GetSearchDestination()
+    public unsafe virtual void GetSearchDestination()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToNavMesh.GetSearchDestination", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -195,7 +195,7 @@ public partial class RBMBehaviour_MoveToNavMesh : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: SetMoveToSpeed
     /// </summary>
-    public unsafe void SetMoveToSpeed()
+    public unsafe virtual void SetMoveToSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToNavMesh.SetMoveToSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -206,7 +206,7 @@ public partial class RBMBehaviour_MoveToNavMesh : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToNavMesh.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -217,7 +217,7 @@ public partial class RBMBehaviour_MoveToNavMesh : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToNavMesh.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -228,7 +228,7 @@ public partial class RBMBehaviour_MoveToNavMesh : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: GetMoveLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMoveLocation()
+    public unsafe virtual System.Numerics.Vector3 GetMoveLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToNavMesh.GetMoveLocation", true);
         byte* paramsPtr = stackalloc byte[12];

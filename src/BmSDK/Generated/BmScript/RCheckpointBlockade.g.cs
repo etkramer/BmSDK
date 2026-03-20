@@ -71,7 +71,7 @@ public partial class RCheckpointBlockade : BmSDK.BmGame.RCheckpointBlockadeBase,
     /// <summary>
     /// Function: SetBarrierState
     /// </summary>
-    public unsafe void SetBarrierState(bool bNewVal)
+    public unsafe override void SetBarrierState(bool bNewVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckpointBlockade.SetBarrierState", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RCheckpointBlockade : BmSDK.BmGame.RCheckpointBlockadeBase,
     /// <summary>
     /// Function: SetMaterialICs
     /// </summary>
-    public unsafe void SetMaterialICs()
+    public unsafe virtual void SetMaterialICs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckpointBlockade.SetMaterialICs", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RCheckpointBlockade : BmSDK.BmGame.RCheckpointBlockadeBase,
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckpointBlockade.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RCheckpointBlockade : BmSDK.BmGame.RCheckpointBlockadeBase,
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckpointBlockade.OnToggle", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -118,7 +118,7 @@ public partial class RCheckpointBlockade : BmSDK.BmGame.RCheckpointBlockadeBase,
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCheckpointBlockade.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

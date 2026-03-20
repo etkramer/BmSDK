@@ -36,7 +36,7 @@ public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Function: DebugDraw
     /// </summary>
-    public unsafe void DebugDraw(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void DebugDraw(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineImageDownloaderWeb.DebugDraw", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -73,7 +73,7 @@ public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Function: ClearAllDownloads
     /// </summary>
-    public unsafe void ClearAllDownloads()
+    public unsafe virtual void ClearAllDownloads()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineImageDownloaderWeb.ClearAllDownloads", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -84,7 +84,7 @@ public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Function: ClearDownloads
     /// </summary>
-    public unsafe void ClearDownloads(BmSDK.TArray<BmSDK.FString> URLs)
+    public unsafe virtual void ClearDownloads(BmSDK.TArray<BmSDK.FString> URLs)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineImageDownloaderWeb.ClearDownloads", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -96,7 +96,7 @@ public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Function: GetNumPendingDownloads
     /// </summary>
-    public unsafe int GetNumPendingDownloads()
+    public unsafe virtual int GetNumPendingDownloads()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineImageDownloaderWeb.GetNumPendingDownloads", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -107,7 +107,7 @@ public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Function: RequestOnlineImages
     /// </summary>
-    public unsafe void RequestOnlineImages(BmSDK.TArray<BmSDK.FString> URLs)
+    public unsafe virtual void RequestOnlineImages(BmSDK.TArray<BmSDK.FString> URLs)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineImageDownloaderWeb.RequestOnlineImages", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -119,7 +119,7 @@ public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Function: GetOnlineImageTexture
     /// </summary>
-    public unsafe BmSDK.Engine.Texture GetOnlineImageTexture(BmSDK.FString URL)
+    public unsafe virtual BmSDK.Engine.Texture GetOnlineImageTexture(BmSDK.FString URL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineImageDownloaderWeb.GetOnlineImageTexture", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -131,7 +131,7 @@ public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Function: OnOnlineImageDownloaded
     /// </summary>
-    public unsafe void OnOnlineImageDownloaded(BmSDK.IpDrv.OnlineImageDownloaderWeb.FOnlineImageDownload CachedEntry)
+    public unsafe virtual void OnOnlineImageDownloaded(BmSDK.IpDrv.OnlineImageDownloaderWeb.FOnlineImageDownload CachedEntry)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineImageDownloaderWeb.OnOnlineImageDownloaded", true);
         byte* paramsPtr = stackalloc byte[40];

@@ -66,7 +66,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: UpdatePCResonatorPos
     /// </summary>
-    public unsafe void UpdatePCResonatorPos(BmSDK.BmGame.RPlayerInput Input, float DeltaTime, float TurnSpeed, float Accel, float Decel)
+    public unsafe virtual void UpdatePCResonatorPos(BmSDK.BmGame.RPlayerInput Input, float DeltaTime, float TurnSpeed, float Accel, float Decel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.UpdatePCResonatorPos", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -89,7 +89,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: GetLeftAndRightAngles
     /// </summary>
-    public unsafe void GetLeftAndRightAngles(out float LeftAngle, out float RightAngle, float RawLeftX, float RawLeftY, float RawRightX, float RawRightY)
+    public unsafe virtual void GetLeftAndRightAngles(out float LeftAngle, out float RightAngle, float RawLeftX, float RawLeftY, float RawRightX, float RawRightY)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.GetLeftAndRightAngles", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -113,7 +113,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: InterpThumbStraight
     /// </summary>
-    public unsafe float InterpThumbStraight(float DesiredPos, float CurrentPos, float DeltaTime)
+    public unsafe virtual float InterpThumbStraight(float DesiredPos, float CurrentPos, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.InterpThumbStraight", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -134,7 +134,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: InterpThumb
     /// </summary>
-    public unsafe float InterpThumb(float DesiredPos, float CurrentPos, float DeltaTime)
+    public unsafe virtual float InterpThumb(float DesiredPos, float CurrentPos, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.InterpThumb", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -155,7 +155,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: FindDistanceFromPointToLine
     /// </summary>
-    public unsafe float FindDistanceFromPointToLine(float nodePointX, float nodePointY, float laserPointX, float laserPointY, float laser_angle)
+    public unsafe virtual float FindDistanceFromPointToLine(float nodePointX, float nodePointY, float laserPointX, float laserPointY, float laser_angle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.FindDistanceFromPointToLine", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -171,7 +171,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: DoGameOver
     /// </summary>
-    public unsafe void DoGameOver(bool did_player_win)
+    public unsafe virtual void DoGameOver(bool did_player_win)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.DoGameOver", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -183,7 +183,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: SetNodeState
     /// </summary>
-    public unsafe void SetNodeState(int side_index, int node_index, int iState)
+    public unsafe virtual void SetNodeState(int side_index, int node_index, int iState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.SetNodeState", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -197,7 +197,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: SetBeamIntersectNodes
     /// </summary>
-    public unsafe void SetBeamIntersectNodes(int node1, int node2)
+    public unsafe virtual void SetBeamIntersectNodes(int node1, int node2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.SetBeamIntersectNodes", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -210,7 +210,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: SetBombMeterProportion
     /// </summary>
-    public unsafe void SetBombMeterProportion(float Proportion)
+    public unsafe virtual void SetBombMeterProportion(float Proportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.SetBombMeterProportion", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -222,7 +222,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: SetupMadHatterMinigame
     /// </summary>
-    public unsafe void SetupMadHatterMinigame(float fHitArea, float fProportion, float fLaserSpeed)
+    public unsafe virtual void SetupMadHatterMinigame(float fHitArea, float fProportion, float fLaserSpeed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.SetupMadHatterMinigame", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -236,7 +236,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: SetLaserPositionAndAngle
     /// </summary>
-    public unsafe void SetLaserPositionAndAngle(int side_index, float fDollyX, float fDollyY, float fAngleToFocus)
+    public unsafe virtual void SetLaserPositionAndAngle(int side_index, float fDollyX, float fDollyY, float fAngleToFocus)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.SetLaserPositionAndAngle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -251,7 +251,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: TickIntersect
     /// </summary>
-    public unsafe void TickIntersect(BmSDK.TArray<int> aNodesLeft, BmSDK.TArray<int> aNodesRight)
+    public unsafe virtual void TickIntersect(BmSDK.TArray<int> aNodesLeft, BmSDK.TArray<int> aNodesRight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.TickIntersect", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -264,7 +264,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: SetCurveData
     /// </summary>
-    public unsafe void SetCurveData(float CurveAngleRange, float CurveAngleMin, float CurveAngleMax, float CurveRadiusHorz, float CurveRadiusVert, float CurveCentreX, float CurveCentreY, float CurveFocusX, float CurveFocusY)
+    public unsafe virtual void SetCurveData(float CurveAngleRange, float CurveAngleMin, float CurveAngleMax, float CurveRadiusHorz, float CurveRadiusVert, float CurveCentreX, float CurveCentreY, float CurveFocusX, float CurveFocusY)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.SetCurveData", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -284,7 +284,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: StickStartsOrStopsMoving
     /// </summary>
-    public unsafe void StickStartsOrStopsMoving(int stick_index, bool is_moving)
+    public unsafe virtual void StickStartsOrStopsMoving(int stick_index, bool is_moving)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.StickStartsOrStopsMoving", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -297,7 +297,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: MiniGameBarProportion
     /// </summary>
-    public unsafe void MiniGameBarProportion(float barProportion)
+    public unsafe virtual void MiniGameBarProportion(float barProportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.MiniGameBarProportion", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -309,7 +309,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: MiniGameLost
     /// </summary>
-    public unsafe void MiniGameLost()
+    public unsafe virtual void MiniGameLost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.MiniGameLost", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -320,7 +320,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: MiniGameWon
     /// </summary>
-    public unsafe void MiniGameWon()
+    public unsafe virtual void MiniGameWon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.MiniGameWon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -331,7 +331,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: PlayCalibrationComplete
     /// </summary>
-    public unsafe void PlayCalibrationComplete()
+    public unsafe virtual void PlayCalibrationComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.PlayCalibrationComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -342,7 +342,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: WinClearPrompts
     /// </summary>
-    public unsafe void WinClearPrompts()
+    public unsafe virtual void WinClearPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.WinClearPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -353,7 +353,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: AudioParams
     /// </summary>
-    public unsafe void AudioParams(float audioSpeedMod, float audioValue)
+    public unsafe virtual void AudioParams(float audioSpeedMod, float audioValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.AudioParams", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -366,7 +366,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: StopVoicePlayback
     /// </summary>
-    public unsafe void StopVoicePlayback()
+    public unsafe virtual void StopVoicePlayback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.StopVoicePlayback", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -377,7 +377,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: StartVoicePlayback
     /// </summary>
-    public unsafe void StartVoicePlayback()
+    public unsafe virtual void StartVoicePlayback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.StartVoicePlayback", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -388,7 +388,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: ClosingDialogueBoxAfterOutro
     /// </summary>
-    public unsafe void ClosingDialogueBoxAfterOutro()
+    public unsafe virtual void ClosingDialogueBoxAfterOutro()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.ClosingDialogueBoxAfterOutro", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -399,7 +399,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: ClosingDialogueBoxAfterScan
     /// </summary>
-    public unsafe void ClosingDialogueBoxAfterScan()
+    public unsafe virtual void ClosingDialogueBoxAfterScan()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.ClosingDialogueBoxAfterScan", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -410,7 +410,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: ClosingDialogueBoxAfterIntro
     /// </summary>
-    public unsafe void ClosingDialogueBoxAfterIntro()
+    public unsafe virtual void ClosingDialogueBoxAfterIntro()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.ClosingDialogueBoxAfterIntro", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -421,7 +421,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: PlayVoiceNormal
     /// </summary>
-    public unsafe void PlayVoiceNormal()
+    public unsafe virtual void PlayVoiceNormal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.PlayVoiceNormal", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -432,7 +432,7 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: PlayAudio
     /// </summary>
-    public unsafe void PlayAudio()
+    public unsafe virtual void PlayAudio()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMovieInstance_MinigameBase.PlayAudio", true);
         byte* paramsPtr = stackalloc byte[0];

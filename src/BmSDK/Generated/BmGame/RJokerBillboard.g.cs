@@ -71,7 +71,7 @@ public partial class RJokerBillboard : BmSDK.BmGame.RJokerSwappableBase, BmSDK.I
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerBillboard.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RJokerBillboard : BmSDK.BmGame.RJokerSwappableBase, BmSDK.I
     /// <summary>
     /// Function: SwapToOriginalVersion
     /// </summary>
-    public unsafe void SwapToOriginalVersion(bool bForce = default)
+    public unsafe override void SwapToOriginalVersion(bool bForce = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerBillboard.SwapToOriginalVersion", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RJokerBillboard : BmSDK.BmGame.RJokerSwappableBase, BmSDK.I
     /// <summary>
     /// Function: SwapToJokerVersion
     /// </summary>
-    public unsafe void SwapToJokerVersion(bool bForce = default)
+    public unsafe override void SwapToJokerVersion(bool bForce = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerBillboard.SwapToJokerVersion", true);
         byte* paramsPtr = stackalloc byte[4];

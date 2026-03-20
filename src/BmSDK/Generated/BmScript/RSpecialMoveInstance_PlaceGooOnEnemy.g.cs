@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_PlaceGooOnEnemy : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: PlaceBomb
     /// </summary>
-    public unsafe void PlaceBomb()
+    public unsafe virtual void PlaceBomb()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_PlaceGooOnEnemy.PlaceBomb", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_PlaceGooOnEnemy : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_PlaceGooOnEnemy.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[256];
@@ -94,7 +94,7 @@ public partial class RSpecialMoveInstance_PlaceGooOnEnemy : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_PlaceGooOnEnemy.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RSpecialMoveInstance_PlaceGooOnEnemy : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_PlaceGooOnEnemy.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RSpecialMoveInstance_PlaceGooOnEnemy : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_PlaceGooOnEnemy.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[132];

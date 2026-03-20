@@ -36,7 +36,7 @@ public partial class RWeaponPickupSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetThoughtString
     /// </summary>
-    public unsafe BmSDK.FString GetThoughtString()
+    public unsafe virtual BmSDK.FString GetThoughtString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeaponPickupSearch.GetThoughtString", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -47,7 +47,7 @@ public partial class RWeaponPickupSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: WeaponSearchFailed
     /// </summary>
-    public unsafe void WeaponSearchFailed()
+    public unsafe virtual void WeaponSearchFailed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeaponPickupSearch.WeaponSearchFailed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RWeaponPickupSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe virtual void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeaponPickupSearch.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -70,7 +70,7 @@ public partial class RWeaponPickupSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive()
+    public unsafe virtual bool IsActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeaponPickupSearch.IsActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -81,7 +81,7 @@ public partial class RWeaponPickupSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PathToWeaponNotFound
     /// </summary>
-    public unsafe void PathToWeaponNotFound(BmSDK.BmGame.RNavigationHandle Nav)
+    public unsafe virtual void PathToWeaponNotFound(BmSDK.BmGame.RNavigationHandle Nav)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeaponPickupSearch.PathToWeaponNotFound", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RWeaponPickupSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PathToWeaponFound
     /// </summary>
-    public unsafe void PathToWeaponFound(BmSDK.BmGame.RNavigationHandle Nav)
+    public unsafe virtual void PathToWeaponFound(BmSDK.BmGame.RNavigationHandle Nav)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeaponPickupSearch.PathToWeaponFound", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RWeaponPickupSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPathToNextWeapon
     /// </summary>
-    public unsafe void GetPathToNextWeapon()
+    public unsafe virtual void GetPathToNextWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeaponPickupSearch.GetPathToNextWeapon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RWeaponPickupSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNextWeapon
     /// </summary>
-    public unsafe void GetNextWeapon()
+    public unsafe virtual void GetNextWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeaponPickupSearch.GetNextWeapon", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -127,7 +127,7 @@ public partial class RWeaponPickupSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsValidPickup
     /// </summary>
-    public unsafe bool IsValidPickup(BmSDK.BmGame.RBMCombatThrownObject TestPickup)
+    public unsafe virtual bool IsValidPickup(BmSDK.BmGame.RBMCombatThrownObject TestPickup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeaponPickupSearch.IsValidPickup", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -139,7 +139,7 @@ public partial class RWeaponPickupSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CancelSearch
     /// </summary>
-    public unsafe void CancelSearch()
+    public unsafe virtual void CancelSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeaponPickupSearch.CancelSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class RWeaponPickupSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmGame.RBMPawnAI NewHostPawn, BmSDK.Class NewPickupClass, float NewMaxRadius = default, BmSDK.BmGame.RBMCombatThrownObject NewPickupToTestFirst = default)
+    public unsafe virtual void Initialise(BmSDK.BmGame.RBMPawnAI NewHostPawn, BmSDK.Class NewPickupClass, float NewMaxRadius = default, BmSDK.BmGame.RBMCombatThrownObject NewPickupToTestFirst = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeaponPickupSearch.Initialise", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -165,7 +165,7 @@ public partial class RWeaponPickupSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: WeaponPickupSearchFailure
     /// </summary>
-    public unsafe void WeaponPickupSearchFailure()
+    public unsafe virtual void WeaponPickupSearchFailure()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeaponPickupSearch.WeaponPickupSearchFailure", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -176,7 +176,7 @@ public partial class RWeaponPickupSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: WeaponPickupSearchSuccess
     /// </summary>
-    public unsafe void WeaponPickupSearchSuccess(BmSDK.BmGame.RBMCombatThrownObject NewWeapon)
+    public unsafe virtual void WeaponPickupSearchSuccess(BmSDK.BmGame.RBMCombatThrownObject NewWeapon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeaponPickupSearch.WeaponPickupSearchSuccess", true);
         byte* paramsPtr = stackalloc byte[8];

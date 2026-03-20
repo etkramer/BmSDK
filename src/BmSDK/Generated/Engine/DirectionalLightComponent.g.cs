@@ -36,7 +36,7 @@ public partial class DirectionalLightComponent : BmSDK.Engine.LightComponent, Bm
     /// <summary>
     /// Function: OnUpdatePropertyBrightness
     /// </summary>
-    public unsafe void OnUpdatePropertyBrightness()
+    public unsafe override void OnUpdatePropertyBrightness()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DirectionalLightComponent.OnUpdatePropertyBrightness", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class DirectionalLightComponent : BmSDK.Engine.LightComponent, Bm
     /// <summary>
     /// Function: OnUpdatePropertyLightColor
     /// </summary>
-    public unsafe void OnUpdatePropertyLightColor()
+    public unsafe override void OnUpdatePropertyLightColor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DirectionalLightComponent.OnUpdatePropertyLightColor", true);
         byte* paramsPtr = stackalloc byte[0];

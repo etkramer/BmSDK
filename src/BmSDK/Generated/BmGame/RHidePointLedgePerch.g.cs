@@ -71,7 +71,7 @@ public partial class RHidePointLedgePerch : BmSDK.BmGame.RHidePoint, BmSDK.IGame
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePointLedgePerch.Touch", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -86,7 +86,7 @@ public partial class RHidePointLedgePerch : BmSDK.BmGame.RHidePoint, BmSDK.IGame
     /// <summary>
     /// Function: MovePawnTo
     /// </summary>
-    public unsafe void MovePawnTo(BmSDK.Engine.Pawn PawnToMove)
+    public unsafe override void MovePawnTo(BmSDK.Engine.Pawn PawnToMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePointLedgePerch.MovePawnTo", true);
         byte* paramsPtr = stackalloc byte[200];
@@ -98,7 +98,7 @@ public partial class RHidePointLedgePerch : BmSDK.BmGame.RHidePoint, BmSDK.IGame
     /// <summary>
     /// Function: SetHighlighted
     /// </summary>
-    public unsafe void SetHighlighted(bool bHighlight)
+    public unsafe virtual void SetHighlighted(bool bHighlight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePointLedgePerch.SetHighlighted", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -110,7 +110,7 @@ public partial class RHidePointLedgePerch : BmSDK.BmGame.RHidePoint, BmSDK.IGame
     /// <summary>
     /// Function: SetLinkedHidePointsHighlight
     /// </summary>
-    public unsafe void SetLinkedHidePointsHighlight(bool bHighlight)
+    public unsafe override void SetLinkedHidePointsHighlight(bool bHighlight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePointLedgePerch.SetLinkedHidePointsHighlight", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -122,7 +122,7 @@ public partial class RHidePointLedgePerch : BmSDK.BmGame.RHidePoint, BmSDK.IGame
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePointLedgePerch.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     /// <summary>
     /// Function: CurrentTargetSubroutineChanged
     /// </summary>
-    public unsafe void CurrentTargetSubroutineChanged(bool bSubroutineDisable)
+    public unsafe virtual void CurrentTargetSubroutineChanged(bool bSubroutineDisable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.CurrentTargetSubroutineChanged", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     /// <summary>
     /// Function: OmnitronGameSuccesful
     /// </summary>
-    public unsafe void OmnitronGameSuccesful()
+    public unsafe virtual void OmnitronGameSuccesful()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.OmnitronGameSuccesful", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     /// <summary>
     /// Function: isGadgetActive
     /// </summary>
-    public unsafe bool isGadgetActive()
+    public unsafe virtual bool isGadgetActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.isGadgetActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     /// <summary>
     /// Function: ChangeCurrentSubroutine
     /// </summary>
-    public unsafe void ChangeCurrentSubroutine(bool bGoToNext)
+    public unsafe virtual void ChangeCurrentSubroutine(bool bGoToNext)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.ChangeCurrentSubroutine", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -117,7 +117,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     /// <summary>
     /// Function: SetViewInHackingModeOnPrimitiveComponent
     /// </summary>
-    public unsafe void SetViewInHackingModeOnPrimitiveComponent(BmSDK.Engine.PrimitiveComponent TheComponent)
+    public unsafe virtual void SetViewInHackingModeOnPrimitiveComponent(BmSDK.Engine.PrimitiveComponent TheComponent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.SetViewInHackingModeOnPrimitiveComponent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -136,7 +136,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     /// <summary>
     /// Function: ControlThumbPadLightIntensity
     /// </summary>
-    public unsafe void ControlThumbPadLightIntensity(float fLightIntensity)
+    public unsafe virtual void ControlThumbPadLightIntensity(float fLightIntensity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.ControlThumbPadLightIntensity", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -148,7 +148,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     /// <summary>
     /// Function: SetThumbStickPositionRight
     /// </summary>
-    public unsafe void SetThumbStickPositionRight(float RightPos)
+    public unsafe virtual void SetThumbStickPositionRight(float RightPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.SetThumbStickPositionRight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -160,7 +160,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     /// <summary>
     /// Function: SetThumbStickPositionLeft
     /// </summary>
-    public unsafe void SetThumbStickPositionLeft(float LeftPos)
+    public unsafe virtual void SetThumbStickPositionLeft(float LeftPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.SetThumbStickPositionLeft", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -172,7 +172,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     /// <summary>
     /// Function: GetHolsteredPose
     /// </summary>
-    public unsafe BmSDK.FName GetHolsteredPose(out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess)
+    public unsafe virtual BmSDK.FName GetHolsteredPose(out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.GetHolsteredPose", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -184,7 +184,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     /// <summary>
     /// Function: GetHolsteredControllerState
     /// </summary>
-    public unsafe BmSDK.FName GetHolsteredControllerState()
+    public unsafe virtual BmSDK.FName GetHolsteredControllerState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.GetHolsteredControllerState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -195,7 +195,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     /// <summary>
     /// Function: PowerOffScreen
     /// </summary>
-    public unsafe void PowerOffScreen()
+    public unsafe virtual void PowerOffScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.PowerOffScreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -206,7 +206,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     /// <summary>
     /// Function: PowerOnScreen
     /// </summary>
-    public unsafe void PowerOnScreen()
+    public unsafe virtual void PowerOnScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.PowerOnScreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -217,7 +217,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     /// <summary>
     /// Function: CancelGadget
     /// </summary>
-    public unsafe void CancelGadget()
+    public unsafe override void CancelGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.CancelGadget", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RBMAIAction_RiotFollow : BmSDK.BmGame.RBMAIAction_BaseMove,
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMAIAction_RiotFollow.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_RiotFollow : BmSDK.BmGame.RBMAIAction_BaseMove,
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMAIAction_RiotFollow.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_RiotFollow : BmSDK.BmGame.RBMAIAction_BaseMove,
     /// <summary>
     /// Function: MoveToInit
     /// </summary>
-    public unsafe void MoveToInit(BmSDK.FName IdleName)
+    public unsafe virtual void MoveToInit(BmSDK.FName IdleName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMAIAction_RiotFollow.MoveToInit", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RBMAIAction_RiotFollow : BmSDK.BmGame.RBMAIAction_BaseMove,
     /// <summary>
     /// Function: BuildHandle
     /// </summary>
-    public unsafe BmSDK.BmGame.RNavigationHandle BuildHandle()
+    public unsafe override BmSDK.BmGame.RNavigationHandle BuildHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMAIAction_RiotFollow.BuildHandle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -117,7 +117,7 @@ public partial class RBMAIAction_RiotFollow : BmSDK.BmGame.RBMAIAction_BaseMove,
     /// <summary>
     /// Function: GetGoalPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetGoalPos()
+    public unsafe virtual System.Numerics.Vector3 GetGoalPos()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMAIAction_RiotFollow.GetGoalPos", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -128,7 +128,7 @@ public partial class RBMAIAction_RiotFollow : BmSDK.BmGame.RBMAIAction_BaseMove,
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMAIAction_RiotFollow.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RBMAIAction_RiotFollow : BmSDK.BmGame.RBMAIAction_BaseMove,
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMAIAction_RiotFollow.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

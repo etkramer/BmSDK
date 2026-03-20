@@ -71,7 +71,7 @@ public partial class RAirshipStabilityControl : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAirshipStabilityControl.Tick", true);
         byte* paramsPtr = stackalloc byte[128];

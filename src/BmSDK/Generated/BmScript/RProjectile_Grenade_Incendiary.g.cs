@@ -71,7 +71,7 @@ public partial class RProjectile_Grenade_Incendiary : BmSDK.BmScript.RProjectile
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RProjectile_Grenade_Incendiary.Destroyed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RProjectile_Grenade_Incendiary : BmSDK.BmScript.RProjectile
     /// <summary>
     /// Function: CheckLocationForCharge
     /// </summary>
-    public unsafe bool CheckLocationForCharge(System.Numerics.Vector3 CheckLoc)
+    public unsafe virtual bool CheckLocationForCharge(System.Numerics.Vector3 CheckLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RProjectile_Grenade_Incendiary.CheckLocationForCharge", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -94,7 +94,7 @@ public partial class RProjectile_Grenade_Incendiary : BmSDK.BmScript.RProjectile
     /// <summary>
     /// Function: DeployCharge_OpenSpace
     /// </summary>
-    public unsafe BmSDK.BmScript.RIncendiaryGrenadeCharge DeployCharge_OpenSpace(System.Numerics.Vector3 prevLoc, System.Numerics.Vector3 currentLoc, int Depth, System.Numerics.Vector3 toNeighbourOffsets)
+    public unsafe virtual BmSDK.BmScript.RIncendiaryGrenadeCharge DeployCharge_OpenSpace(System.Numerics.Vector3 prevLoc, System.Numerics.Vector3 currentLoc, int Depth, System.Numerics.Vector3 toNeighbourOffsets)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RProjectile_Grenade_Incendiary.DeployCharge_OpenSpace", true);
         byte* paramsPtr = stackalloc byte[144];
@@ -109,7 +109,7 @@ public partial class RProjectile_Grenade_Incendiary : BmSDK.BmScript.RProjectile
     /// <summary>
     /// Function: DeployCharge_Grate
     /// </summary>
-    public unsafe BmSDK.BmScript.RIncendiaryGrenadeCharge DeployCharge_Grate(BmSDK.BmGame.RTunnelGrateBase currentGrate, int Depth)
+    public unsafe virtual BmSDK.BmScript.RIncendiaryGrenadeCharge DeployCharge_Grate(BmSDK.BmGame.RTunnelGrateBase currentGrate, int Depth)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RProjectile_Grenade_Incendiary.DeployCharge_Grate", true);
         byte* paramsPtr = stackalloc byte[172];
@@ -122,7 +122,7 @@ public partial class RProjectile_Grenade_Incendiary : BmSDK.BmScript.RProjectile
     /// <summary>
     /// Function: SpawnCharges
     /// </summary>
-    public unsafe void SpawnCharges()
+    public unsafe virtual void SpawnCharges()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RProjectile_Grenade_Incendiary.SpawnCharges", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -133,7 +133,7 @@ public partial class RProjectile_Grenade_Incendiary : BmSDK.BmScript.RProjectile
     /// <summary>
     /// Function: AddToList_OpenSpace
     /// </summary>
-    public unsafe void AddToList_OpenSpace(System.Numerics.Vector3 prevLoc, System.Numerics.Vector3 currentLoc, int Depth, System.Numerics.Vector3 toNeighbourOffsets)
+    public unsafe virtual void AddToList_OpenSpace(System.Numerics.Vector3 prevLoc, System.Numerics.Vector3 currentLoc, int Depth, System.Numerics.Vector3 toNeighbourOffsets)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RProjectile_Grenade_Incendiary.AddToList_OpenSpace", true);
         byte* paramsPtr = stackalloc byte[172];
@@ -148,7 +148,7 @@ public partial class RProjectile_Grenade_Incendiary : BmSDK.BmScript.RProjectile
     /// <summary>
     /// Function: AddToList_Grate
     /// </summary>
-    public unsafe void AddToList_Grate(BmSDK.BmGame.RTunnelGrateBase Grate, int Depth)
+    public unsafe virtual void AddToList_Grate(BmSDK.BmGame.RTunnelGrateBase Grate, int Depth)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RProjectile_Grenade_Incendiary.AddToList_Grate", true);
         byte* paramsPtr = stackalloc byte[108];
@@ -161,7 +161,7 @@ public partial class RProjectile_Grenade_Incendiary : BmSDK.BmScript.RProjectile
     /// <summary>
     /// Function: GetOffsetsFromNorthRot
     /// </summary>
-    public unsafe void GetOffsetsFromNorthRot(BmSDK.Rotator NorthRot, out System.Numerics.Vector3 toNeighbourOffsets)
+    public unsafe virtual void GetOffsetsFromNorthRot(BmSDK.Rotator NorthRot, out System.Numerics.Vector3 toNeighbourOffsets)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RProjectile_Grenade_Incendiary.GetOffsetsFromNorthRot", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -174,7 +174,7 @@ public partial class RProjectile_Grenade_Incendiary : BmSDK.BmScript.RProjectile
     /// <summary>
     /// Function: StopAudio
     /// </summary>
-    public unsafe void StopAudio()
+    public unsafe virtual void StopAudio()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RProjectile_Grenade_Incendiary.StopAudio", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -185,7 +185,7 @@ public partial class RProjectile_Grenade_Incendiary : BmSDK.BmScript.RProjectile
     /// <summary>
     /// Function: DoBlast
     /// </summary>
-    public unsafe void DoBlast()
+    public unsafe override void DoBlast()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RProjectile_Grenade_Incendiary.DoBlast", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -196,7 +196,7 @@ public partial class RProjectile_Grenade_Incendiary : BmSDK.BmScript.RProjectile
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RProjectile_Grenade_Incendiary.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

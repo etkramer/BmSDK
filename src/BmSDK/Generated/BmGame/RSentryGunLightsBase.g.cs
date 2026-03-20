@@ -71,7 +71,7 @@ public partial class RSentryGunLightsBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetAlphaModifier
     /// </summary>
-    public unsafe void SetAlphaModifier(float newAlphaMod)
+    public unsafe virtual void SetAlphaModifier(float newAlphaMod)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunLightsBase.SetAlphaModifier", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -90,7 +90,7 @@ public partial class RSentryGunLightsBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetConeAngleAndRadius
     /// </summary>
-    public unsafe bool SetConeAngleAndRadius(float innerAngle, float outerAngle, float Radius, float shaftBrightnessModifier)
+    public unsafe virtual bool SetConeAngleAndRadius(float innerAngle, float outerAngle, float Radius, float shaftBrightnessModifier)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunLightsBase.SetConeAngleAndRadius", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -112,7 +112,7 @@ public partial class RSentryGunLightsBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetLightMode
     /// </summary>
-    public unsafe bool SetLightMode(BmSDK.BmGame.RSentryGunLightsBase.eLightMode NewMode)
+    public unsafe virtual bool SetLightMode(BmSDK.BmGame.RSentryGunLightsBase.eLightMode NewMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunLightsBase.SetLightMode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -131,7 +131,7 @@ public partial class RSentryGunLightsBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetColour
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor GetColour()
+    public unsafe virtual BmSDK.GameObject.FColor GetColour()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunLightsBase.GetColour", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -149,7 +149,7 @@ public partial class RSentryGunLightsBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunLightsBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

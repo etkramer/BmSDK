@@ -71,7 +71,7 @@ public partial class RLockedInReactionPoint : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetBehaviourRootFor
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqEvent_StartBangOnDoor GetBehaviourRootFor(BmSDK.BmGame.RPawnVillain TestPawn)
+    public unsafe virtual BmSDK.BmGame.RSeqEvent_StartBangOnDoor GetBehaviourRootFor(BmSDK.BmGame.RPawnVillain TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLockedInReactionPoint.GetBehaviourRootFor", true);
         byte* paramsPtr = stackalloc byte[28];

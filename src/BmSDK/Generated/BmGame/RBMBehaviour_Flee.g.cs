@@ -36,7 +36,7 @@ public partial class RBMBehaviour_Flee : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameO
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Flee.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_Flee : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameO
     /// <summary>
     /// Function: RagdollDrop
     /// </summary>
-    public unsafe void RagdollDrop()
+    public unsafe virtual void RagdollDrop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Flee.RagdollDrop", true);
         byte* paramsPtr = stackalloc byte[248];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_Flee : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameO
     /// <summary>
     /// Function: FailedToFlee
     /// </summary>
-    public unsafe void FailedToFlee()
+    public unsafe virtual void FailedToFlee()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Flee.FailedToFlee", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_Flee : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameO
     /// <summary>
     /// Function: ReachedFleePoint
     /// </summary>
-    public unsafe void ReachedFleePoint(BmSDK.BmGame.RNavigationHandle Nav)
+    public unsafe virtual void ReachedFleePoint(BmSDK.BmGame.RNavigationHandle Nav)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Flee.ReachedFleePoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_Flee : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameO
     /// <summary>
     /// Function: StartPathingToFleePoint
     /// </summary>
-    public unsafe void StartPathingToFleePoint()
+    public unsafe virtual void StartPathingToFleePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Flee.StartPathingToFleePoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -92,7 +92,7 @@ public partial class RBMBehaviour_Flee : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameO
     /// <summary>
     /// Function: SetFleePoint
     /// </summary>
-    public unsafe bool SetFleePoint()
+    public unsafe virtual bool SetFleePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Flee.SetFleePoint", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -103,7 +103,7 @@ public partial class RBMBehaviour_Flee : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameO
     /// <summary>
     /// Function: SetFleePointFromKismet
     /// </summary>
-    public unsafe bool SetFleePointFromKismet()
+    public unsafe virtual bool SetFleePointFromKismet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Flee.SetFleePointFromKismet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -114,7 +114,7 @@ public partial class RBMBehaviour_Flee : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameO
     /// <summary>
     /// Function: SetupMultiNavHandleWrapper
     /// </summary>
-    public unsafe void SetupMultiNavHandleWrapper()
+    public unsafe virtual void SetupMultiNavHandleWrapper()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Flee.SetupMultiNavHandleWrapper", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -125,7 +125,7 @@ public partial class RBMBehaviour_Flee : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameO
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Flee.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

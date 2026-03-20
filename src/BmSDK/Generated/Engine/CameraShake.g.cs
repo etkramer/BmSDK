@@ -36,7 +36,7 @@ public partial class CameraShake : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLocOscillationMagnitude
     /// </summary>
-    public unsafe float GetLocOscillationMagnitude()
+    public unsafe virtual float GetLocOscillationMagnitude()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraShake.GetLocOscillationMagnitude", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -47,7 +47,7 @@ public partial class CameraShake : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRotOscillationMagnitude
     /// </summary>
-    public unsafe float GetRotOscillationMagnitude()
+    public unsafe virtual float GetRotOscillationMagnitude()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraShake.GetRotOscillationMagnitude", true);
         byte* paramsPtr = stackalloc byte[16];

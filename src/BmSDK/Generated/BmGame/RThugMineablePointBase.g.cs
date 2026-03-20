@@ -66,7 +66,7 @@ public partial class RThugMineablePointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: IsReadyForMinePlacement
     /// </summary>
-    public unsafe bool IsReadyForMinePlacement()
+    public unsafe virtual bool IsReadyForMinePlacement()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineablePointBase.IsReadyForMinePlacement", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -77,7 +77,7 @@ public partial class RThugMineablePointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetStandPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetStandPoint()
+    public unsafe virtual System.Numerics.Vector3 GetStandPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineablePointBase.GetStandPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -88,7 +88,7 @@ public partial class RThugMineablePointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive()
+    public unsafe virtual bool IsActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineablePointBase.IsActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -99,7 +99,7 @@ public partial class RThugMineablePointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetActive
     /// </summary>
-    public unsafe void SetActive(bool bNewActive)
+    public unsafe virtual void SetActive(bool bNewActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineablePointBase.SetActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -111,7 +111,7 @@ public partial class RThugMineablePointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: MinePlaced
     /// </summary>
-    public unsafe void MinePlaced(BmSDK.BmGame.RThugMineBase NewMine)
+    public unsafe virtual void MinePlaced(BmSDK.BmGame.RThugMineBase NewMine)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineablePointBase.MinePlaced", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -123,7 +123,7 @@ public partial class RThugMineablePointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetClosestActiveLinkedMinePoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RThugMineablePointBase GetClosestActiveLinkedMinePoint()
+    public unsafe virtual BmSDK.BmGame.RThugMineablePointBase GetClosestActiveLinkedMinePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineablePointBase.GetClosestActiveLinkedMinePoint", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -134,7 +134,7 @@ public partial class RThugMineablePointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetAssignedMiner
     /// </summary>
-    public unsafe BmSDK.BmGame.RAEC_Search_Sub_FloorMine GetAssignedMiner()
+    public unsafe virtual BmSDK.BmGame.RAEC_Search_Sub_FloorMine GetAssignedMiner()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineablePointBase.GetAssignedMiner", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -145,7 +145,7 @@ public partial class RThugMineablePointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: AssignMiner
     /// </summary>
-    public unsafe void AssignMiner(BmSDK.BmGame.RAEC_Search_Sub_FloorMine assignee)
+    public unsafe virtual void AssignMiner(BmSDK.BmGame.RAEC_Search_Sub_FloorMine assignee)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineablePointBase.AssignMiner", true);
         byte* paramsPtr = stackalloc byte[12];

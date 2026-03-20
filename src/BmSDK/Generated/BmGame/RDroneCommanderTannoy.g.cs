@@ -71,7 +71,7 @@ public partial class RDroneCommanderTannoy : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDroneCommanderTannoy.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RDroneCommanderTannoy : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDroneCommanderTannoy.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RDroneCommanderTannoy : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: PlayTestBark
     /// </summary>
-    public unsafe void PlayTestBark(BmSDK.FName EventID, BmSDK.FName Loc, BmSDK.FName VehicleType, BmSDK.FName Battle, int Priority = default, float Delay = default)
+    public unsafe virtual void PlayTestBark(BmSDK.FName EventID, BmSDK.FName Loc, BmSDK.FName VehicleType, BmSDK.FName Battle, int Priority = default, float Delay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDroneCommanderTannoy.PlayTestBark", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -110,7 +110,7 @@ public partial class RDroneCommanderTannoy : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: PlayBark
     /// </summary>
-    public unsafe void PlayBark(BmSDK.FName EventID, int Priority = default, BmSDK.Engine.Actor Subject = default, float Delay = default, int Slot = default)
+    public unsafe virtual void PlayBark(BmSDK.FName EventID, int Priority = default, BmSDK.Engine.Actor Subject = default, float Delay = default, int Slot = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDroneCommanderTannoy.PlayBark", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -126,7 +126,7 @@ public partial class RDroneCommanderTannoy : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: UpdateCommentator
     /// </summary>
-    public unsafe void UpdateCommentator()
+    public unsafe virtual void UpdateCommentator()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDroneCommanderTannoy.UpdateCommentator", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -137,7 +137,7 @@ public partial class RDroneCommanderTannoy : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: InternalPlaySlotBark
     /// </summary>
-    public unsafe void InternalPlaySlotBark(int Slot)
+    public unsafe virtual void InternalPlaySlotBark(int Slot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDroneCommanderTannoy.InternalPlaySlotBark", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -149,7 +149,7 @@ public partial class RDroneCommanderTannoy : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDroneCommanderTannoy.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

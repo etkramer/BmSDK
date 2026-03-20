@@ -71,7 +71,7 @@ public partial class RAEC_GelMineExplosion : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: GetNumCurrentlyStartled
     /// </summary>
-    public unsafe int GetNumCurrentlyStartled()
+    public unsafe virtual int GetNumCurrentlyStartled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_GelMineExplosion.GetNumCurrentlyStartled", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RAEC_GelMineExplosion : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: GlanceEnd
     /// </summary>
-    public unsafe void GlanceEnd()
+    public unsafe virtual void GlanceEnd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_GelMineExplosion.GlanceEnd", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RAEC_GelMineExplosion : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: TriggerReaction
     /// </summary>
-    public unsafe void TriggerReaction(System.Numerics.Vector3 ReactionCentre)
+    public unsafe virtual void TriggerReaction(System.Numerics.Vector3 ReactionCentre)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_GelMineExplosion.TriggerReaction", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -105,7 +105,7 @@ public partial class RAEC_GelMineExplosion : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_GelMineExplosion.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RAEC_GelMineExplosion : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: OnRemoveSoloChild
     /// </summary>
-    public unsafe void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
+    public unsafe override void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_GelMineExplosion.OnRemoveSoloChild", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RAEC_GelMineExplosion : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: OnRemoveGroupChild
     /// </summary>
-    public unsafe void OnRemoveGroupChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
+    public unsafe override void OnRemoveGroupChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_GelMineExplosion.OnRemoveGroupChild", true);
         byte* paramsPtr = stackalloc byte[8];

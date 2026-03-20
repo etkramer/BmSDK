@@ -71,7 +71,7 @@ public partial class RCombatMove_RiddlerMechFarAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechFarAttack.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_RiddlerMechFarAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Function: UpdateBeam
     /// </summary>
-    public unsafe void UpdateBeam(float DeltaTime)
+    public unsafe virtual void UpdateBeam(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechFarAttack.UpdateBeam", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -94,7 +94,7 @@ public partial class RCombatMove_RiddlerMechFarAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Function: SetBeamDir
     /// </summary>
-    public unsafe void SetBeamDir(System.Numerics.Vector3 FireLoc, BmSDK.Rotator FireRot)
+    public unsafe virtual void SetBeamDir(System.Numerics.Vector3 FireLoc, BmSDK.Rotator FireRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechFarAttack.SetBeamDir", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -107,7 +107,7 @@ public partial class RCombatMove_RiddlerMechFarAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Function: GetBeamContactLoc
     /// </summary>
-    public unsafe void GetBeamContactLoc(System.Numerics.Vector3 FromLoc, System.Numerics.Vector3 BeamVec, out System.Numerics.Vector3 TargetLoc, out System.Numerics.Vector3 TargetNormal)
+    public unsafe virtual void GetBeamContactLoc(System.Numerics.Vector3 FromLoc, System.Numerics.Vector3 BeamVec, out System.Numerics.Vector3 TargetLoc, out System.Numerics.Vector3 TargetNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechFarAttack.GetBeamContactLoc", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -122,7 +122,7 @@ public partial class RCombatMove_RiddlerMechFarAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Function: DamageRobot
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamageRobot(BmSDK.BmGame.RPawnCombat DamageReceiver, System.Numerics.Vector3 Impulse)
+    public unsafe virtual BmSDK.BmGame.RPawnCombat.DamageResult DamageRobot(BmSDK.BmGame.RPawnCombat DamageReceiver, System.Numerics.Vector3 Impulse)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechFarAttack.DamageRobot", true);
         byte* paramsPtr = stackalloc byte[272];
@@ -135,7 +135,7 @@ public partial class RCombatMove_RiddlerMechFarAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Function: DamagePlayer
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagePlayer(BmSDK.BmGame.RPawnCombat DamageReceiver)
+    public unsafe virtual BmSDK.BmGame.RPawnCombat.DamageResult DamagePlayer(BmSDK.BmGame.RPawnCombat DamageReceiver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechFarAttack.DamagePlayer", true);
         byte* paramsPtr = stackalloc byte[272];
@@ -147,7 +147,7 @@ public partial class RCombatMove_RiddlerMechFarAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Function: TargetMovingAway
     /// </summary>
-    public unsafe bool TargetMovingAway()
+    public unsafe virtual bool TargetMovingAway()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechFarAttack.TargetMovingAway", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -158,7 +158,7 @@ public partial class RCombatMove_RiddlerMechFarAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Function: IsAttacking
     /// </summary>
-    public unsafe bool IsAttacking()
+    public unsafe override bool IsAttacking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechFarAttack.IsAttacking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -169,7 +169,7 @@ public partial class RCombatMove_RiddlerMechFarAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechFarAttack.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -194,7 +194,7 @@ public partial class RCombatMove_RiddlerMechFarAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Function: StopBeam
     /// </summary>
-    public unsafe void StopBeam()
+    public unsafe virtual void StopBeam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechFarAttack.StopBeam", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -205,7 +205,7 @@ public partial class RCombatMove_RiddlerMechFarAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Function: StartBeam
     /// </summary>
-    public unsafe void StartBeam()
+    public unsafe virtual void StartBeam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechFarAttack.StartBeam", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -216,7 +216,7 @@ public partial class RCombatMove_RiddlerMechFarAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Function: StopChargeUp
     /// </summary>
-    public unsafe void StopChargeUp()
+    public unsafe virtual void StopChargeUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechFarAttack.StopChargeUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -227,7 +227,7 @@ public partial class RCombatMove_RiddlerMechFarAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Function: StartChargeUp
     /// </summary>
-    public unsafe void StartChargeUp()
+    public unsafe virtual void StartChargeUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechFarAttack.StartChargeUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -238,7 +238,7 @@ public partial class RCombatMove_RiddlerMechFarAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Function: DoRumble
     /// </summary>
-    public unsafe void DoRumble()
+    public unsafe virtual void DoRumble()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechFarAttack.DoRumble", true);
         byte* paramsPtr = stackalloc byte[0];

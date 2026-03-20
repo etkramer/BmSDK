@@ -71,7 +71,7 @@ public partial class RRoadArea : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Rebuild
     /// </summary>
-    public unsafe void Rebuild()
+    public unsafe virtual void Rebuild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRoadArea.Rebuild", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class RRoadArea : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateDisplayLines
     /// </summary>
-    public unsafe void UpdateDisplayLines()
+    public unsafe virtual void UpdateDisplayLines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRoadArea.UpdateDisplayLines", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class RRoadArea : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRoadArea.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -119,7 +119,7 @@ public partial class RRoadArea : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDisabled
     /// </summary>
-    public unsafe void SetDisabled(bool Value)
+    public unsafe virtual void SetDisabled(bool Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRoadArea.SetDisabled", true);
         byte* paramsPtr = stackalloc byte[4];

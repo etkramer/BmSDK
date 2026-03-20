@@ -36,7 +36,7 @@ public partial class RRope2SimplePhysicsControlPoint : BmSDK.GameObject, BmSDK.I
     /// <summary>
     /// Function: Invalidate
     /// </summary>
-    public unsafe void Invalidate()
+    public unsafe virtual void Invalidate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsControlPoint.Invalidate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class RRope2SimplePhysicsControlPoint : BmSDK.GameObject, BmSDK.I
     /// <summary>
     /// Function: GetIsValid
     /// </summary>
-    public unsafe bool GetIsValid()
+    public unsafe virtual bool GetIsValid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsControlPoint.GetIsValid", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -72,7 +72,7 @@ public partial class RRope2SimplePhysicsControlPoint : BmSDK.GameObject, BmSDK.I
     /// <summary>
     /// Function: SetVelocity
     /// </summary>
-    public unsafe void SetVelocity(out System.Numerics.Vector3 NewVelocity)
+    public unsafe virtual void SetVelocity(out System.Numerics.Vector3 NewVelocity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsControlPoint.SetVelocity", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -91,7 +91,7 @@ public partial class RRope2SimplePhysicsControlPoint : BmSDK.GameObject, BmSDK.I
     /// <summary>
     /// Function: GetVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetVelocity()
+    public unsafe virtual System.Numerics.Vector3 GetVelocity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsControlPoint.GetVelocity", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -109,7 +109,7 @@ public partial class RRope2SimplePhysicsControlPoint : BmSDK.GameObject, BmSDK.I
     /// <summary>
     /// Function: SetPosition
     /// </summary>
-    public unsafe void SetPosition(out System.Numerics.Vector3 NewPosition)
+    public unsafe virtual void SetPosition(out System.Numerics.Vector3 NewPosition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsControlPoint.SetPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -128,7 +128,7 @@ public partial class RRope2SimplePhysicsControlPoint : BmSDK.GameObject, BmSDK.I
     /// <summary>
     /// Function: GetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetPosition()
+    public unsafe virtual System.Numerics.Vector3 GetPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsControlPoint.GetPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -146,7 +146,7 @@ public partial class RRope2SimplePhysicsControlPoint : BmSDK.GameObject, BmSDK.I
     /// <summary>
     /// Function: ClearForces
     /// </summary>
-    public unsafe void ClearForces()
+    public unsafe virtual void ClearForces()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsControlPoint.ClearForces", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -164,7 +164,7 @@ public partial class RRope2SimplePhysicsControlPoint : BmSDK.GameObject, BmSDK.I
     /// <summary>
     /// Function: ApplyImpulse
     /// </summary>
-    public unsafe void ApplyImpulse(out System.Numerics.Vector3 ImpulseToApply)
+    public unsafe virtual void ApplyImpulse(out System.Numerics.Vector3 ImpulseToApply)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsControlPoint.ApplyImpulse", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -183,7 +183,7 @@ public partial class RRope2SimplePhysicsControlPoint : BmSDK.GameObject, BmSDK.I
     /// <summary>
     /// Function: ApplyForce
     /// </summary>
-    public unsafe void ApplyForce(out System.Numerics.Vector3 ForceToApply)
+    public unsafe virtual void ApplyForce(out System.Numerics.Vector3 ForceToApply)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsControlPoint.ApplyForce", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -202,7 +202,7 @@ public partial class RRope2SimplePhysicsControlPoint : BmSDK.GameObject, BmSDK.I
     /// <summary>
     /// Function: SetControlPointPhysicsType
     /// </summary>
-    public unsafe void SetControlPointPhysicsType(BmSDK.BmGame.RRope2SimplePhysicsControlPoint.ControlPointPhysicsType NewPhysicsType)
+    public unsafe virtual void SetControlPointPhysicsType(BmSDK.BmGame.RRope2SimplePhysicsControlPoint.ControlPointPhysicsType NewPhysicsType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsControlPoint.SetControlPointPhysicsType", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -221,7 +221,7 @@ public partial class RRope2SimplePhysicsControlPoint : BmSDK.GameObject, BmSDK.I
     /// <summary>
     /// Function: GetControlPointPhysicsType
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2SimplePhysicsControlPoint.ControlPointPhysicsType GetControlPointPhysicsType()
+    public unsafe virtual BmSDK.BmGame.RRope2SimplePhysicsControlPoint.ControlPointPhysicsType GetControlPointPhysicsType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2SimplePhysicsControlPoint.GetControlPointPhysicsType", true);
         byte* paramsPtr = stackalloc byte[1];

@@ -31,7 +31,7 @@ public partial class RSeqAct_SpawnerBase : BmSDK.Engine.SequenceAction, BmSDK.IG
     /// <summary>
     /// Function: OnDataLoaded
     /// </summary>
-    public unsafe void OnDataLoaded()
+    public unsafe virtual void OnDataLoaded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpawnerBase.OnDataLoaded", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -42,7 +42,7 @@ public partial class RSeqAct_SpawnerBase : BmSDK.Engine.SequenceAction, BmSDK.IG
     /// <summary>
     /// Function: SetCharacterData
     /// </summary>
-    public unsafe void SetCharacterData(out int Slot, BmSDK.FName PlayableCharacterName, BmSDK.BmGame.RAddContentPlayerCharacter PlayableCharacter, BmSDK.BmGame.RAddContentPlayerCharacterMesh CharacterMesh)
+    public unsafe virtual void SetCharacterData(out int Slot, BmSDK.FName PlayableCharacterName, BmSDK.BmGame.RAddContentPlayerCharacter PlayableCharacter, BmSDK.BmGame.RAddContentPlayerCharacterMesh CharacterMesh)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpawnerBase.SetCharacterData", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -64,7 +64,7 @@ public partial class RSeqAct_SpawnerBase : BmSDK.Engine.SequenceAction, BmSDK.IG
     /// <summary>
     /// Function: StoreObjVar
     /// </summary>
-    public unsafe void StoreObjVar(BmSDK.FString Ident, int Index, BmSDK.GameObject Obj)
+    public unsafe virtual void StoreObjVar(BmSDK.FString Ident, int Index, BmSDK.GameObject Obj)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpawnerBase.StoreObjVar", true);
         byte* paramsPtr = stackalloc byte[28];

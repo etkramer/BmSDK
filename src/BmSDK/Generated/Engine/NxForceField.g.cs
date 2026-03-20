@@ -66,7 +66,7 @@ public partial class NxForceField : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NxForceField.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -78,7 +78,7 @@ public partial class NxForceField : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DoInitRBPhys
     /// </summary>
-    public unsafe void DoInitRBPhys()
+    public unsafe virtual void DoInitRBPhys()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NxForceField.DoInitRBPhys", true);
         byte* paramsPtr = stackalloc byte[0];

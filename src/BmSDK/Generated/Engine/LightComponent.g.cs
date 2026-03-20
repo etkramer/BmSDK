@@ -31,7 +31,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: OnUpdatePropertyLightColor
     /// </summary>
-    public unsafe void OnUpdatePropertyLightColor()
+    public unsafe virtual void OnUpdatePropertyLightColor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LightComponent.OnUpdatePropertyLightColor", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -42,7 +42,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: OnUpdatePropertyBrightness
     /// </summary>
-    public unsafe void OnUpdatePropertyBrightness()
+    public unsafe virtual void OnUpdatePropertyBrightness()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LightComponent.OnUpdatePropertyBrightness", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -53,7 +53,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: OnUpdatePropertyOcclusionMaskDarkness
     /// </summary>
-    public unsafe void OnUpdatePropertyOcclusionMaskDarkness()
+    public unsafe virtual void OnUpdatePropertyOcclusionMaskDarkness()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LightComponent.OnUpdatePropertyOcclusionMaskDarkness", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -64,7 +64,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: OnUpdatePropertyBloomTint
     /// </summary>
-    public unsafe void OnUpdatePropertyBloomTint()
+    public unsafe virtual void OnUpdatePropertyBloomTint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LightComponent.OnUpdatePropertyBloomTint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -75,7 +75,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: OnUpdatePropertyBloomScale
     /// </summary>
-    public unsafe void OnUpdatePropertyBloomScale()
+    public unsafe virtual void OnUpdatePropertyBloomScale()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LightComponent.OnUpdatePropertyBloomScale", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -86,7 +86,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: GetLightEffectorFactor
     /// </summary>
-    public unsafe float GetLightEffectorFactor(float WorldTime)
+    public unsafe virtual float GetLightEffectorFactor(float WorldTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LightComponent.GetLightEffectorFactor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: UpdateLightShaftParameters
     /// </summary>
-    public unsafe void UpdateLightShaftParameters()
+    public unsafe virtual void UpdateLightShaftParameters()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LightComponent.UpdateLightShaftParameters", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -123,7 +123,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: UpdateColorAndBrightness
     /// </summary>
-    public unsafe void UpdateColorAndBrightness()
+    public unsafe virtual void UpdateColorAndBrightness()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LightComponent.UpdateColorAndBrightness", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: GetDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDirection()
+    public unsafe virtual System.Numerics.Vector3 GetDirection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LightComponent.GetDirection", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -159,7 +159,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: GetOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetOrigin()
+    public unsafe virtual System.Numerics.Vector3 GetOrigin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LightComponent.GetOrigin", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -177,7 +177,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: SetLightProperties
     /// </summary>
-    public unsafe void SetLightProperties(float NewBrightness = default, BmSDK.GameObject.FColor NewLightColor = default, BmSDK.Engine.LightFunction NewLightFunction = default)
+    public unsafe virtual void SetLightProperties(float NewBrightness = default, BmSDK.GameObject.FColor NewLightColor = default, BmSDK.Engine.LightFunction NewLightFunction = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LightComponent.SetLightProperties", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -198,7 +198,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: SetEnabled
     /// </summary>
-    public unsafe void SetEnabled(bool bSetEnabled)
+    public unsafe virtual void SetEnabled(bool bSetEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LightComponent.SetEnabled", true);
         byte* paramsPtr = stackalloc byte[4];

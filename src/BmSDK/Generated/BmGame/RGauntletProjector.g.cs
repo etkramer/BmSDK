@@ -36,7 +36,7 @@ public partial class RGauntletProjector : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayerTick
     /// </summary>
-    public unsafe void PlayerTick(float DeltaTime)
+    public unsafe virtual void PlayerTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGauntletProjector.PlayerTick", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -48,7 +48,7 @@ public partial class RGauntletProjector : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FlashMovieFinished
     /// </summary>
-    public unsafe void FlashMovieFinished(BmSDK.FString VideoResource)
+    public unsafe virtual void FlashMovieFinished(BmSDK.FString VideoResource)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGauntletProjector.FlashMovieFinished", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -71,7 +71,7 @@ public partial class RGauntletProjector : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: StopProjection
     /// </summary>
-    public unsafe void StopProjection(BmSDK.BmGame.RSeqAct_PlayRadioOrThoughtDialogue caller = default, BmSDK.FString VideoResource = default, float fTransitionOutDurationOverride = default)
+    public unsafe virtual void StopProjection(BmSDK.BmGame.RSeqAct_PlayRadioOrThoughtDialogue caller = default, BmSDK.FString VideoResource = default, float fTransitionOutDurationOverride = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGauntletProjector.StopProjection", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -85,7 +85,7 @@ public partial class RGauntletProjector : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetOpaque
     /// </summary>
-    public unsafe void SetOpaque(bool is_opaque)
+    public unsafe virtual void SetOpaque(bool is_opaque)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGauntletProjector.SetOpaque", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -97,7 +97,7 @@ public partial class RGauntletProjector : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: _InitializeHologram
     /// </summary>
-    public unsafe void _InitializeHologram(BmSDK.BmGame.RGFxMovie iMovie, BmSDK.Engine.SkeletalMeshComponent iAttachToSkeleton = default, BmSDK.FName sAttachToBone = default, BmSDK.FName sAttachToSocket = default)
+    public unsafe virtual void _InitializeHologram(BmSDK.BmGame.RGFxMovie iMovie, BmSDK.Engine.SkeletalMeshComponent iAttachToSkeleton = default, BmSDK.FName sAttachToBone = default, BmSDK.FName sAttachToSocket = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGauntletProjector._InitializeHologram", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -112,7 +112,7 @@ public partial class RGauntletProjector : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: StartHackingProjection
     /// </summary>
-    public unsafe void StartHackingProjection(BmSDK.Engine.SkeletalMeshComponent iAttachToSkeleton = default, BmSDK.FName sAttachToBone = default, BmSDK.FName sAttachToSocket = default, bool bBrainHacking = default)
+    public unsafe virtual void StartHackingProjection(BmSDK.Engine.SkeletalMeshComponent iAttachToSkeleton = default, BmSDK.FName sAttachToBone = default, BmSDK.FName sAttachToSocket = default, bool bBrainHacking = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGauntletProjector.StartHackingProjection", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -127,7 +127,7 @@ public partial class RGauntletProjector : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetGauntletConnectionLost
     /// </summary>
-    public unsafe void SetGauntletConnectionLost()
+    public unsafe virtual void SetGauntletConnectionLost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGauntletProjector.SetGauntletConnectionLost", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RGauntletProjector : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetVideoPortrait
     /// </summary>
-    public unsafe void SetVideoPortrait(BmSDK.FString PortraitName)
+    public unsafe virtual void SetVideoPortrait(BmSDK.FString PortraitName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGauntletProjector.SetVideoPortrait", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -150,7 +150,7 @@ public partial class RGauntletProjector : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: StartVideoProjection
     /// </summary>
-    public unsafe void StartVideoProjection(BmSDK.FString sVideoResource, BmSDK.FString sHeaderText, bool bForceOpaque = default, bool bWithOverlay = default, bool bConnectionFailedOn = default, bool bSkipIntro = default, BmSDK.Engine.SkeletalMeshComponent meshToAttachTo = default, bool bNoMovie = default, bool bAutoPause = default)
+    public unsafe virtual void StartVideoProjection(BmSDK.FString sVideoResource, BmSDK.FString sHeaderText, bool bForceOpaque = default, bool bWithOverlay = default, bool bConnectionFailedOn = default, bool bSkipIntro = default, BmSDK.Engine.SkeletalMeshComponent meshToAttachTo = default, bool bNoMovie = default, bool bAutoPause = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGauntletProjector.StartVideoProjection", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -170,7 +170,7 @@ public partial class RGauntletProjector : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: QueueVideoProjection
     /// </summary>
-    public unsafe void QueueVideoProjection(BmSDK.FString sVideoResource, BmSDK.FString sHeaderText, bool bForceOpaque = default, bool bWithOverlay = default, bool bConnectionFailedOn = default, bool bSkipIntro = default, BmSDK.FString PortraitName = default)
+    public unsafe virtual void QueueVideoProjection(BmSDK.FString sVideoResource, BmSDK.FString sHeaderText, bool bForceOpaque = default, bool bWithOverlay = default, bool bConnectionFailedOn = default, bool bSkipIntro = default, BmSDK.FString PortraitName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGauntletProjector.QueueVideoProjection", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -188,7 +188,7 @@ public partial class RGauntletProjector : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmGame.RPlayerController _RPC)
+    public unsafe virtual void Initialise(BmSDK.BmGame.RPlayerController _RPC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGauntletProjector.Initialise", true);
         byte* paramsPtr = stackalloc byte[8];

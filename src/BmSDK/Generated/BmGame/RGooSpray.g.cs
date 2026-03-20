@@ -66,7 +66,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: ResetForChallenge
     /// </summary>
-    public unsafe void ResetForChallenge(bool bChallengeStarted)
+    public unsafe override void ResetForChallenge(bool bChallengeStarted)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.ResetForChallenge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -78,7 +78,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: GetLaunchLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLaunchLocation()
+    public unsafe override System.Numerics.Vector3 GetLaunchLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.GetLaunchLocation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -89,7 +89,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: GetGadgetCamera
     /// </summary>
-    public unsafe BmSDK.FName GetGadgetCamera(bool InSoftCover = default, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType = default)
+    public unsafe override BmSDK.FName GetGadgetCamera(bool InSoftCover = default, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.GetGadgetCamera", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -102,7 +102,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: FireGadgetGliding
     /// </summary>
-    public unsafe BmSDK.Engine.Actor FireGadgetGliding()
+    public unsafe override BmSDK.Engine.Actor FireGadgetGliding()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.FireGadgetGliding", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -113,7 +113,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: UpgradeToSuperComboGadget
     /// </summary>
-    public unsafe bool UpgradeToSuperComboGadget()
+    public unsafe override bool UpgradeToSuperComboGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.UpgradeToSuperComboGadget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -124,7 +124,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: ThrowProjectile
     /// </summary>
-    public unsafe void ThrowProjectile()
+    public unsafe override void ThrowProjectile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.ThrowProjectile", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -135,7 +135,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: GetProjectileArchetype
     /// </summary>
-    public unsafe BmSDK.BmGame.RGadgetProjectileBase GetProjectileArchetype(bool bSecondary)
+    public unsafe override BmSDK.BmGame.RGadgetProjectileBase GetProjectileArchetype(bool bSecondary)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.GetProjectileArchetype", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -147,7 +147,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: CanQuickFire
     /// </summary>
-    public unsafe bool CanQuickFire()
+    public unsafe override bool CanQuickFire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.CanQuickFire", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -158,7 +158,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: UseDetonator
     /// </summary>
-    public unsafe bool UseDetonator()
+    public unsafe virtual bool UseDetonator()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.UseDetonator", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -169,7 +169,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: FireGadgetCombat
     /// </summary>
-    public unsafe bool FireGadgetCombat()
+    public unsafe override bool FireGadgetCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.FireGadgetCombat", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -180,7 +180,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: MergeServerGelSpray
     /// </summary>
-    public unsafe void MergeServerGelSpray(BmSDK.BmGame.RExplosiveGooMine ServerMine)
+    public unsafe virtual void MergeServerGelSpray(BmSDK.BmGame.RExplosiveGooMine ServerMine)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.MergeServerGelSpray", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -199,7 +199,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -210,7 +210,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: RemovePlacedGel
     /// </summary>
-    public unsafe void RemovePlacedGel(bool IgnoreTitanCrates = default, bool IgnoreHelis = default)
+    public unsafe virtual void RemovePlacedGel(bool IgnoreTitanCrates = default, bool IgnoreHelis = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.RemovePlacedGel", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -223,7 +223,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: RemoveGelForMatinee
     /// </summary>
-    public unsafe void RemoveGelForMatinee()
+    public unsafe virtual void RemoveGelForMatinee()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.RemoveGelForMatinee", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -234,7 +234,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: OnRoomChange
     /// </summary>
-    public unsafe void OnRoomChange()
+    public unsafe override void OnRoomChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.OnRoomChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -245,7 +245,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: DisplayTutorial
     /// </summary>
-    public unsafe bool DisplayTutorial()
+    public unsafe override bool DisplayTutorial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.DisplayTutorial", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -256,7 +256,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: StopDetonateAudio
     /// </summary>
-    public unsafe void StopDetonateAudio()
+    public unsafe virtual void StopDetonateAudio()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.StopDetonateAudio", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -267,7 +267,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: PlayDetonateAudio
     /// </summary>
-    public unsafe void PlayDetonateAudio()
+    public unsafe virtual void PlayDetonateAudio()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.PlayDetonateAudio", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -278,7 +278,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: TriggerFailedEvent
     /// </summary>
-    public unsafe void TriggerFailedEvent()
+    public unsafe virtual void TriggerFailedEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.TriggerFailedEvent", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -289,7 +289,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -302,7 +302,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: CanPlaceGooMine
     /// </summary>
-    public unsafe bool CanPlaceGooMine(BmSDK.BmGame.RPawnVillain Villain)
+    public unsafe virtual bool CanPlaceGooMine(BmSDK.BmGame.RPawnVillain Villain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.CanPlaceGooMine", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -314,7 +314,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: UpdateTargets
     /// </summary>
-    public unsafe void UpdateTargets()
+    public unsafe virtual void UpdateTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.UpdateTargets", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -325,7 +325,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: BeginDetonate
     /// </summary>
-    public unsafe bool BeginDetonate()
+    public unsafe virtual bool BeginDetonate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.BeginDetonate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -336,7 +336,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: PlayHostageInDangerLine
     /// </summary>
-    public unsafe void PlayHostageInDangerLine()
+    public unsafe virtual void PlayHostageInDangerLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.PlayHostageInDangerLine", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -347,7 +347,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: DetonateTarget
     /// </summary>
-    public unsafe void DetonateTarget(BmSDK.Engine.Actor Target, float TimeDelay)
+    public unsafe virtual void DetonateTarget(BmSDK.Engine.Actor Target, float TimeDelay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.DetonateTarget", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -360,7 +360,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: ActualDetonateTarget
     /// </summary>
-    public unsafe void ActualDetonateTarget(BmSDK.Engine.Actor Target, float TimeDelay)
+    public unsafe virtual void ActualDetonateTarget(BmSDK.Engine.Actor Target, float TimeDelay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.ActualDetonateTarget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -373,7 +373,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: DoExplodeStartle
     /// </summary>
-    public unsafe void DoExplodeStartle(BmSDK.Engine.Actor BombOwner)
+    public unsafe virtual void DoExplodeStartle(BmSDK.Engine.Actor BombOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.DoExplodeStartle", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -385,7 +385,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: ExplodeVillainMine
     /// </summary>
-    public unsafe void ExplodeVillainMine(BmSDK.Engine.MeshComponent Mine)
+    public unsafe virtual void ExplodeVillainMine(BmSDK.Engine.MeshComponent Mine)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.ExplodeVillainMine", true);
         byte* paramsPtr = stackalloc byte[340];
@@ -397,7 +397,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: IsValidMineTarget
     /// </summary>
-    public unsafe bool IsValidMineTarget(BmSDK.Engine.Actor TestActor)
+    public unsafe virtual bool IsValidMineTarget(BmSDK.Engine.Actor TestActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.IsValidMineTarget", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -409,7 +409,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: DetonatorPressed
     /// </summary>
-    public unsafe void DetonatorPressed()
+    public unsafe virtual void DetonatorPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.DetonatorPressed", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -420,7 +420,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: PlayFailedGelAnim
     /// </summary>
-    public unsafe void PlayFailedGelAnim()
+    public unsafe virtual void PlayFailedGelAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.PlayFailedGelAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -431,7 +431,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: PlayDetonatorAnim
     /// </summary>
-    public unsafe void PlayDetonatorAnim()
+    public unsafe virtual void PlayDetonatorAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.PlayDetonatorAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -442,7 +442,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: DrawTargets
     /// </summary>
-    public unsafe void DrawTargets(BmSDK.Engine.HUD H, bool quickGelOnly = default)
+    public unsafe virtual void DrawTargets(BmSDK.Engine.HUD H, bool quickGelOnly = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.DrawTargets", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -455,7 +455,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: GetVillainSocketLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetVillainSocketLocation(BmSDK.BmGame.RPawnVillain Victim)
+    public unsafe virtual System.Numerics.Vector3 GetVillainSocketLocation(BmSDK.BmGame.RPawnVillain Victim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.GetVillainSocketLocation", true);
         byte* paramsPtr = stackalloc byte[228];
@@ -467,7 +467,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: AttachToHand
     /// </summary>
-    public unsafe void AttachToHand(BmSDK.FName CustomBone = default)
+    public unsafe override void AttachToHand(BmSDK.FName CustomBone = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.AttachToHand", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -479,7 +479,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: AttachToBelt
     /// </summary>
-    public unsafe void AttachToBelt()
+    public unsafe override void AttachToBelt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.AttachToBelt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -490,7 +490,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: UpdateTouchingEnemies
     /// </summary>
-    public unsafe bool UpdateTouchingEnemies()
+    public unsafe virtual bool UpdateTouchingEnemies()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.UpdateTouchingEnemies", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -508,7 +508,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.Tick", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -520,7 +520,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: UnequipSelf
     /// </summary>
-    public unsafe bool UnequipSelf()
+    public unsafe override bool UnequipSelf()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.UnequipSelf", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -531,7 +531,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: ExplodeAllGooMines
     /// </summary>
-    public unsafe void ExplodeAllGooMines()
+    public unsafe virtual void ExplodeAllGooMines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.ExplodeAllGooMines", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -542,7 +542,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: DetonateAll
     /// </summary>
-    public unsafe void DetonateAll()
+    public unsafe virtual void DetonateAll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.DetonateAll", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -553,7 +553,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: CanThrowGadget
     /// </summary>
-    public unsafe bool CanThrowGadget()
+    public unsafe override bool CanThrowGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.CanThrowGadget", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -564,7 +564,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: PlayGooExplosionReaction
     /// </summary>
-    public unsafe void PlayGooExplosionReaction(System.Numerics.Vector3 ExplosionLocation)
+    public unsafe virtual void PlayGooExplosionReaction(System.Numerics.Vector3 ExplosionLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.PlayGooExplosionReaction", true);
         byte* paramsPtr = stackalloc byte[176];
@@ -576,7 +576,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: UnequipGelSpray2
     /// </summary>
-    public unsafe void UnequipGelSpray2()
+    public unsafe virtual void UnequipGelSpray2()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.UnequipGelSpray2", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -587,7 +587,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: EquipGelSpray2
     /// </summary>
-    public unsafe void EquipGelSpray2()
+    public unsafe virtual void EquipGelSpray2()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.EquipGelSpray2", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -598,7 +598,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: ExplodeParticles
     /// </summary>
-    public unsafe void ExplodeParticles()
+    public unsafe virtual void ExplodeParticles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.ExplodeParticles", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -609,7 +609,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: EndGelSpray2
     /// </summary>
-    public unsafe void EndGelSpray2()
+    public unsafe virtual void EndGelSpray2()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.EndGelSpray2", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -620,7 +620,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: StartGelSpray2
     /// </summary>
-    public unsafe void StartGelSpray2()
+    public unsafe virtual void StartGelSpray2()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.StartGelSpray2", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -631,7 +631,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: EndGelSpray
     /// </summary>
-    public unsafe void EndGelSpray()
+    public unsafe virtual void EndGelSpray()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.EndGelSpray", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -642,7 +642,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: StartGelSpray
     /// </summary>
-    public unsafe void StartGelSpray()
+    public unsafe virtual void StartGelSpray()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.StartGelSpray", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -653,7 +653,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: PlayerTick
     /// </summary>
-    public unsafe void PlayerTick(float DeltaTime)
+    public unsafe override void PlayerTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.PlayerTick", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -665,7 +665,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: GetPrimedPose
     /// </summary>
-    public unsafe BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
+    public unsafe override BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.GetPrimedPose", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -682,7 +682,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: IsValidTarget
     /// </summary>
-    public unsafe bool IsValidTarget(BmSDK.Engine.Actor Target, BmSDK.Engine.PrimitiveComponent Component)
+    public unsafe virtual bool IsValidTarget(BmSDK.Engine.Actor Target, BmSDK.Engine.PrimitiveComponent Component)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.IsValidTarget", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -702,7 +702,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: UseExplosiveGel
     /// </summary>
-    public unsafe void UseExplosiveGel(bool CombatFire = default)
+    public unsafe virtual void UseExplosiveGel(bool CombatFire = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.UseExplosiveGel", true);
         byte* paramsPtr = stackalloc byte[548];
@@ -714,7 +714,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: CheckAutoTarget
     /// </summary>
-    public unsafe bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
+    public unsafe override bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.CheckAutoTarget", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -730,7 +730,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: ShouldInstantDetonate
     /// </summary>
-    public unsafe bool ShouldInstantDetonate()
+    public unsafe virtual bool ShouldInstantDetonate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.ShouldInstantDetonate", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -741,7 +741,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: IsSprayingGel
     /// </summary>
-    public unsafe bool IsSprayingGel()
+    public unsafe virtual bool IsSprayingGel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.IsSprayingGel", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -752,7 +752,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: CanIOnlyDetonate
     /// </summary>
-    public unsafe bool CanIOnlyDetonate()
+    public unsafe virtual bool CanIOnlyDetonate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.CanIOnlyDetonate", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -763,7 +763,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -774,7 +774,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: CanDisableTick
     /// </summary>
-    public unsafe bool CanDisableTick()
+    public unsafe override bool CanDisableTick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.CanDisableTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -785,7 +785,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: UpdateForceZeroAmmo
     /// </summary>
-    public unsafe void UpdateForceZeroAmmo()
+    public unsafe virtual void UpdateForceZeroAmmo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.UpdateForceZeroAmmo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -796,7 +796,7 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     /// <summary>
     /// Function: GetCurrentDetonateTarget
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetCurrentDetonateTarget()
+    public unsafe virtual BmSDK.Engine.Actor GetCurrentDetonateTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGooSpray.GetCurrentDetonateTarget", true);
         byte* paramsPtr = stackalloc byte[8];

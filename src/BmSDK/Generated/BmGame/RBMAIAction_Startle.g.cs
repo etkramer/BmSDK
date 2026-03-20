@@ -71,7 +71,7 @@ public partial class RBMAIAction_Startle : BmSDK.BmGame.RBMAIAction, BmSDK.IGame
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_Startle.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_Startle : BmSDK.BmGame.RBMAIAction, BmSDK.IGame
     /// <summary>
     /// Function: PlayStartleAnim
     /// </summary>
-    public unsafe void PlayStartleAnim()
+    public unsafe virtual void PlayStartleAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_Startle.PlayStartleAnim", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_Startle : BmSDK.BmGame.RBMAIAction, BmSDK.IGame
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_Startle.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_Startle : BmSDK.BmGame.RBMAIAction, BmSDK.IGame
     /// <summary>
     /// Function: SetStartleLoc
     /// </summary>
-    public unsafe void SetStartleLoc(System.Numerics.Vector3 NewLoc)
+    public unsafe virtual void SetStartleLoc(System.Numerics.Vector3 NewLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_Startle.SetStartleLoc", true);
         byte* paramsPtr = stackalloc byte[12];

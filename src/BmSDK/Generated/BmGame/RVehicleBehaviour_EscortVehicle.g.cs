@@ -36,7 +36,7 @@ public partial class RVehicleBehaviour_EscortVehicle : BmSDK.BmGame.RVehicleBeha
     /// <summary>
     /// Function: NotifyTakeDamage
     /// </summary>
-    public unsafe void NotifyTakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void NotifyTakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_EscortVehicle.NotifyTakeDamage", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -54,7 +54,7 @@ public partial class RVehicleBehaviour_EscortVehicle : BmSDK.BmGame.RVehicleBeha
     /// <summary>
     /// Function: ShouldPassengersExitingOnDeathRunAway
     /// </summary>
-    public unsafe bool ShouldPassengersExitingOnDeathRunAway()
+    public unsafe override bool ShouldPassengersExitingOnDeathRunAway()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_EscortVehicle.ShouldPassengersExitingOnDeathRunAway", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -65,7 +65,7 @@ public partial class RVehicleBehaviour_EscortVehicle : BmSDK.BmGame.RVehicleBeha
     /// <summary>
     /// Function: CanAttack
     /// </summary>
-    public unsafe bool CanAttack(BmSDK.Engine.Actor Target)
+    public unsafe override bool CanAttack(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_EscortVehicle.CanAttack", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -77,7 +77,7 @@ public partial class RVehicleBehaviour_EscortVehicle : BmSDK.BmGame.RVehicleBeha
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_EscortVehicle.Tick", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -89,7 +89,7 @@ public partial class RVehicleBehaviour_EscortVehicle : BmSDK.BmGame.RVehicleBeha
     /// <summary>
     /// Function: UpdateFollowMinMaxThrottle
     /// </summary>
-    public unsafe void UpdateFollowMinMaxThrottle()
+    public unsafe override void UpdateFollowMinMaxThrottle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_EscortVehicle.UpdateFollowMinMaxThrottle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -100,7 +100,7 @@ public partial class RVehicleBehaviour_EscortVehicle : BmSDK.BmGame.RVehicleBeha
     /// <summary>
     /// Function: GetDesiredFollowOffsetBehind
     /// </summary>
-    public unsafe float GetDesiredFollowOffsetBehind(int FollowerIndex)
+    public unsafe override float GetDesiredFollowOffsetBehind(int FollowerIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_EscortVehicle.GetDesiredFollowOffsetBehind", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -112,7 +112,7 @@ public partial class RVehicleBehaviour_EscortVehicle : BmSDK.BmGame.RVehicleBeha
     /// <summary>
     /// Function: GetFollowLaneLimitsForFollowerIndex
     /// </summary>
-    public unsafe void GetFollowLaneLimitsForFollowerIndex(out float FollowLaneMinOut, out float FollowLaneMaxOut, int FollowerIndex)
+    public unsafe virtual void GetFollowLaneLimitsForFollowerIndex(out float FollowLaneMinOut, out float FollowLaneMaxOut, int FollowerIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_EscortVehicle.GetFollowLaneLimitsForFollowerIndex", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -126,7 +126,7 @@ public partial class RVehicleBehaviour_EscortVehicle : BmSDK.BmGame.RVehicleBeha
     /// <summary>
     /// Function: GetMinMaxOffsetBehindFollowVehicle
     /// </summary>
-    public unsafe void GetMinMaxOffsetBehindFollowVehicle(out float MinOffsetBehindOut, out float MaxOffsetBehindOut, BmSDK.BmGame.RVehicleNPC FollowVehicleOut)
+    public unsafe virtual void GetMinMaxOffsetBehindFollowVehicle(out float MinOffsetBehindOut, out float MaxOffsetBehindOut, BmSDK.BmGame.RVehicleNPC FollowVehicleOut)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_EscortVehicle.GetMinMaxOffsetBehindFollowVehicle", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -140,7 +140,7 @@ public partial class RVehicleBehaviour_EscortVehicle : BmSDK.BmGame.RVehicleBeha
     /// <summary>
     /// Function: FireDisembarkLink
     /// </summary>
-    public unsafe void FireDisembarkLink()
+    public unsafe virtual void FireDisembarkLink()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_EscortVehicle.FireDisembarkLink", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -151,7 +151,7 @@ public partial class RVehicleBehaviour_EscortVehicle : BmSDK.BmGame.RVehicleBeha
     /// <summary>
     /// Function: FillPassengerVariables
     /// </summary>
-    public unsafe void FillPassengerVariables()
+    public unsafe virtual void FillPassengerVariables()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_EscortVehicle.FillPassengerVariables", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -169,7 +169,7 @@ public partial class RVehicleBehaviour_EscortVehicle : BmSDK.BmGame.RVehicleBeha
     /// <summary>
     /// Function: OnFollowVehicleDied
     /// </summary>
-    public unsafe void OnFollowVehicleDied()
+    public unsafe override void OnFollowVehicleDied()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_EscortVehicle.OnFollowVehicleDied", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -180,7 +180,7 @@ public partial class RVehicleBehaviour_EscortVehicle : BmSDK.BmGame.RVehicleBeha
     /// <summary>
     /// Function: OnHostVehicleDied
     /// </summary>
-    public unsafe void OnHostVehicleDied(BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe override void OnHostVehicleDied(BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_EscortVehicle.OnHostVehicleDied", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -193,7 +193,7 @@ public partial class RVehicleBehaviour_EscortVehicle : BmSDK.BmGame.RVehicleBeha
     /// <summary>
     /// Function: ExitBehaviour
     /// </summary>
-    public unsafe void ExitBehaviour(BmSDK.BmGame.RVehicleBehaviour NextBehaviour)
+    public unsafe override void ExitBehaviour(BmSDK.BmGame.RVehicleBehaviour NextBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_EscortVehicle.ExitBehaviour", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -205,7 +205,7 @@ public partial class RVehicleBehaviour_EscortVehicle : BmSDK.BmGame.RVehicleBeha
     /// <summary>
     /// Function: EnterBehaviour
     /// </summary>
-    public unsafe void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
+    public unsafe override void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_EscortVehicle.EnterBehaviour", true);
         byte* paramsPtr = stackalloc byte[16];

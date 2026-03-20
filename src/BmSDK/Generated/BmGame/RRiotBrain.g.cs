@@ -36,7 +36,7 @@ public partial class RRiotBrain : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: BecomeJoker
     /// </summary>
-    public unsafe void BecomeJoker(BmSDK.BmGame.RBMPawnAI HostPawn)
+    public unsafe virtual void BecomeJoker(BmSDK.BmGame.RBMPawnAI HostPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotBrain.BecomeJoker", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -48,7 +48,7 @@ public partial class RRiotBrain : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetUpJokerFlaps
     /// </summary>
-    public unsafe void SetUpJokerFlaps(BmSDK.BmGame.RBMPawnAI HostPawn, BmSDK.Engine.SkeletalMeshComponent JokerMesh)
+    public unsafe virtual void SetUpJokerFlaps(BmSDK.BmGame.RBMPawnAI HostPawn, BmSDK.Engine.SkeletalMeshComponent JokerMesh)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotBrain.SetUpJokerFlaps", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -80,7 +80,7 @@ public partial class RRiotBrain : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: BecomeNormal
     /// </summary>
-    public unsafe void BecomeNormal(BmSDK.BmGame.RBMPawnAI HostPawn)
+    public unsafe virtual void BecomeNormal(BmSDK.BmGame.RBMPawnAI HostPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotBrain.BecomeNormal", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -92,7 +92,7 @@ public partial class RRiotBrain : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsOffScreenAsJoker
     /// </summary>
-    public unsafe bool IsOffScreenAsJoker(BmSDK.BmGame.RBMAIController OwnerController)
+    public unsafe virtual bool IsOffScreenAsJoker(BmSDK.BmGame.RBMAIController OwnerController)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotBrain.IsOffScreenAsJoker", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -104,7 +104,7 @@ public partial class RRiotBrain : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsOffScreen
     /// </summary>
-    public unsafe bool IsOffScreen(BmSDK.BmGame.RBMAIController OwnerController)
+    public unsafe virtual bool IsOffScreen(BmSDK.BmGame.RBMAIController OwnerController)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotBrain.IsOffScreen", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -116,7 +116,7 @@ public partial class RRiotBrain : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateRiotBrain
     /// </summary>
-    public unsafe void UpdateRiotBrain(float DeltaTime, BmSDK.BmGame.RBMAIController OwnerController)
+    public unsafe virtual void UpdateRiotBrain(float DeltaTime, BmSDK.BmGame.RBMAIController OwnerController)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotBrain.UpdateRiotBrain", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -136,7 +136,7 @@ public partial class RRiotBrain : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AddNewRiotPoint
     /// </summary>
-    public unsafe void AddNewRiotPoint(BmSDK.BmGame.RGangInteractPointBase Point)
+    public unsafe virtual void AddNewRiotPoint(BmSDK.BmGame.RGangInteractPointBase Point)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotBrain.AddNewRiotPoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -148,7 +148,7 @@ public partial class RRiotBrain : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterIssue
     /// </summary>
-    public unsafe void RegisterIssue(BmSDK.BmGame.RRiotBrain.RiotFailReason FailReason, BmSDK.BmGame.RGangInteractPointBase RiotPoint)
+    public unsafe virtual void RegisterIssue(BmSDK.BmGame.RRiotBrain.RiotFailReason FailReason, BmSDK.BmGame.RGangInteractPointBase RiotPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotBrain.RegisterIssue", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -161,7 +161,7 @@ public partial class RRiotBrain : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsRiotPointValidForRioter
     /// </summary>
-    public unsafe bool IsRiotPointValidForRioter(BmSDK.BmGame.RGangInteractPointBase TestPoint)
+    public unsafe virtual bool IsRiotPointValidForRioter(BmSDK.BmGame.RGangInteractPointBase TestPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotBrain.IsRiotPointValidForRioter", true);
         byte* paramsPtr = stackalloc byte[12];

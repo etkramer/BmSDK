@@ -71,7 +71,7 @@ public partial class RHidePoint_GargoyleBase : BmSDK.BmGame.RHidePoint_Mesh, BmS
     /// <summary>
     /// Function: ScanDone
     /// </summary>
-    public unsafe void ScanDone()
+    public unsafe override void ScanDone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_GargoyleBase.ScanDone", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RHidePoint_GargoyleBase : BmSDK.BmGame.RHidePoint_Mesh, BmS
     /// <summary>
     /// Function: BMLeft
     /// </summary>
-    public unsafe void BMLeft()
+    public unsafe override void BMLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_GargoyleBase.BMLeft", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -93,7 +93,7 @@ public partial class RHidePoint_GargoyleBase : BmSDK.BmGame.RHidePoint_Mesh, BmS
     /// <summary>
     /// Function: BMInverting
     /// </summary>
-    public unsafe void BMInverting()
+    public unsafe override void BMInverting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_GargoyleBase.BMInverting", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -104,7 +104,7 @@ public partial class RHidePoint_GargoyleBase : BmSDK.BmGame.RHidePoint_Mesh, BmS
     /// <summary>
     /// Function: StartedMountMove
     /// </summary>
-    public unsafe void StartedMountMove()
+    public unsafe override void StartedMountMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_GargoyleBase.StartedMountMove", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -115,7 +115,7 @@ public partial class RHidePoint_GargoyleBase : BmSDK.BmGame.RHidePoint_Mesh, BmS
     /// <summary>
     /// Function: DoJokerOverlay
     /// </summary>
-    public unsafe void DoJokerOverlay()
+    public unsafe virtual void DoJokerOverlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_GargoyleBase.DoJokerOverlay", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -126,7 +126,7 @@ public partial class RHidePoint_GargoyleBase : BmSDK.BmGame.RHidePoint_Mesh, BmS
     /// <summary>
     /// Function: PickJokerMountAnims
     /// </summary>
-    public unsafe void PickJokerMountAnims(out BmSDK.FName TransIn, out BmSDK.FName Idle)
+    public unsafe virtual void PickJokerMountAnims(out BmSDK.FName TransIn, out BmSDK.FName Idle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_GargoyleBase.PickJokerMountAnims", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -139,7 +139,7 @@ public partial class RHidePoint_GargoyleBase : BmSDK.BmGame.RHidePoint_Mesh, BmS
     /// <summary>
     /// Function: ThugsAroundInPred
     /// </summary>
-    public unsafe bool ThugsAroundInPred()
+    public unsafe virtual bool ThugsAroundInPred()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_GargoyleBase.ThugsAroundInPred", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -150,7 +150,7 @@ public partial class RHidePoint_GargoyleBase : BmSDK.BmGame.RHidePoint_Mesh, BmS
     /// <summary>
     /// Function: DoJokerHallucination
     /// </summary>
-    public unsafe bool DoJokerHallucination()
+    public unsafe virtual bool DoJokerHallucination()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_GargoyleBase.DoJokerHallucination", true);
         byte* paramsPtr = stackalloc byte[4];

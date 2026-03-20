@@ -36,7 +36,7 @@ public partial class RSeqAct_ToggleRobinLieutenantAssist : BmSDK.Engine.Sequence
     /// <summary>
     /// Function: Grapple
     /// </summary>
-    public unsafe void Grapple(bool bUseSpecialMove = default)
+    public unsafe virtual void Grapple(bool bUseSpecialMove = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ToggleRobinLieutenantAssist.Grapple", true);
         byte* paramsPtr = stackalloc byte[160];
@@ -48,7 +48,7 @@ public partial class RSeqAct_ToggleRobinLieutenantAssist : BmSDK.Engine.Sequence
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ToggleRobinLieutenantAssist.Activated", true);
         byte* paramsPtr = stackalloc byte[12];

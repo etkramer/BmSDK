@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_DropToLedgeHang : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: PickRandomAnim
     /// </summary>
-    public unsafe void PickRandomAnim()
+    public unsafe override void PickRandomAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_DropToLedgeHang.PickRandomAnim", true);
         byte* paramsPtr = stackalloc byte[141];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_DropToLedgeHang : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_DropToLedgeHang.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RSpecialMoveInstance_DropToLedgeHang : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_DropToLedgeHang.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[132];

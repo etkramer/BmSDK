@@ -71,7 +71,7 @@ public partial class RLootSourceBankBase : BmSDK.BmGame.RLootSourceBase, BmSDK.I
     /// <summary>
     /// Function: SetLootNotExhausted
     /// </summary>
-    public unsafe void SetLootNotExhausted()
+    public unsafe override void SetLootNotExhausted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLootSourceBankBase.SetLootNotExhausted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RLootSourceBankBase : BmSDK.BmGame.RLootSourceBase, BmSDK.I
     /// <summary>
     /// Function: SetLootExhausted
     /// </summary>
-    public unsafe void SetLootExhausted()
+    public unsafe override void SetLootExhausted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLootSourceBankBase.SetLootExhausted", true);
         byte* paramsPtr = stackalloc byte[0];

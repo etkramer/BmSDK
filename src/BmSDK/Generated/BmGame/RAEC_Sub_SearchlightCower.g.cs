@@ -71,7 +71,7 @@ public partial class RAEC_Sub_SearchlightCower : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: ResetLightTime
     /// </summary>
-    public unsafe void ResetLightTime()
+    public unsafe virtual void ResetLightTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_SearchlightCower.ResetLightTime", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Sub_SearchlightCower : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_SearchlightCower.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RAEC_Sub_SearchlightCower : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_SearchlightCower.Tick", true);
         byte* paramsPtr = stackalloc byte[4];

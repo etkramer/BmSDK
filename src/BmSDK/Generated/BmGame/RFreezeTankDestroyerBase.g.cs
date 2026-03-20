@@ -71,7 +71,7 @@ public partial class RFreezeTankDestroyerBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: DestroyTarget
     /// </summary>
-    public unsafe void DestroyTarget()
+    public unsafe virtual void DestroyTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeTankDestroyerBase.DestroyTarget", true);
         byte* paramsPtr = stackalloc byte[0];

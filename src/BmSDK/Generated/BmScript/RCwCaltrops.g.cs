@@ -71,7 +71,7 @@ public partial class RCwCaltrops : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGa
     /// <summary>
     /// Function: GetGadgetCamera
     /// </summary>
-    public unsafe BmSDK.FName GetGadgetCamera(bool InSoftCover = default, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType = default)
+    public unsafe override BmSDK.FName GetGadgetCamera(bool InSoftCover = default, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwCaltrops.GetGadgetCamera", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -84,7 +84,7 @@ public partial class RCwCaltrops : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGa
     /// <summary>
     /// Function: GetPrimedPose
     /// </summary>
-    public unsafe BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
+    public unsafe override BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwCaltrops.GetPrimedPose", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -101,7 +101,7 @@ public partial class RCwCaltrops : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGa
     /// <summary>
     /// Function: CanThrowGadget
     /// </summary>
-    public unsafe bool CanThrowGadget()
+    public unsafe override bool CanThrowGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwCaltrops.CanThrowGadget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -112,7 +112,7 @@ public partial class RCwCaltrops : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGa
     /// <summary>
     /// Function: GetName
     /// </summary>
-    public unsafe BmSDK.FString GetName()
+    public unsafe override BmSDK.FString GetName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwCaltrops.GetName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -123,7 +123,7 @@ public partial class RCwCaltrops : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGa
     /// <summary>
     /// Function: OnRoomChange
     /// </summary>
-    public unsafe void OnRoomChange()
+    public unsafe override void OnRoomChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwCaltrops.OnRoomChange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -134,7 +134,7 @@ public partial class RCwCaltrops : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGa
     /// <summary>
     /// Function: RemoveTrap
     /// </summary>
-    public unsafe void RemoveTrap(BmSDK.BmScript.RCwCaltropsTrap OldTrap)
+    public unsafe virtual void RemoveTrap(BmSDK.BmScript.RCwCaltropsTrap OldTrap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwCaltrops.RemoveTrap", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -146,7 +146,7 @@ public partial class RCwCaltrops : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGa
     /// <summary>
     /// Function: AddTrap
     /// </summary>
-    public unsafe void AddTrap(BmSDK.BmScript.RCwCaltropsTrap NewTrap)
+    public unsafe virtual void AddTrap(BmSDK.BmScript.RCwCaltropsTrap NewTrap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwCaltrops.AddTrap", true);
         byte* paramsPtr = stackalloc byte[8];

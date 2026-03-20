@@ -71,7 +71,7 @@ public partial class RPawnPlayer_Azrael : BmSDK.BmScript.RPawnPlayerBm, BmSDK.IG
     /// <summary>
     /// Function: CanPerformFearTakedowns
     /// </summary>
-    public unsafe bool CanPerformFearTakedowns()
+    public unsafe override bool CanPerformFearTakedowns()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayer_Azrael.CanPerformFearTakedowns", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RPawnPlayer_Azrael : BmSDK.BmScript.RPawnPlayerBm, BmSDK.IG
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayer_Azrael.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -100,7 +100,7 @@ public partial class RPawnPlayer_Azrael : BmSDK.BmScript.RPawnPlayerBm, BmSDK.IG
     /// <summary>
     /// Function: CanDoThrowCounter
     /// </summary>
-    public unsafe bool CanDoThrowCounter()
+    public unsafe override bool CanDoThrowCounter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayer_Azrael.CanDoThrowCounter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -111,7 +111,7 @@ public partial class RPawnPlayer_Azrael : BmSDK.BmScript.RPawnPlayerBm, BmSDK.IG
     /// <summary>
     /// Function: DebugGiveAllGadgets
     /// </summary>
-    public unsafe void DebugGiveAllGadgets()
+    public unsafe override void DebugGiveAllGadgets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayer_Azrael.DebugGiveAllGadgets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -122,7 +122,7 @@ public partial class RPawnPlayer_Azrael : BmSDK.BmScript.RPawnPlayerBm, BmSDK.IG
     /// <summary>
     /// Function: AddDefaultInventory
     /// </summary>
-    public unsafe void AddDefaultInventory()
+    public unsafe override void AddDefaultInventory()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayer_Azrael.AddDefaultInventory", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -133,7 +133,7 @@ public partial class RPawnPlayer_Azrael : BmSDK.BmScript.RPawnPlayerBm, BmSDK.IG
     /// <summary>
     /// Function: SetSwitchCharacterInXray
     /// </summary>
-    public unsafe void SetSwitchCharacterInXray(bool On, bool bForceOff)
+    public unsafe override void SetSwitchCharacterInXray(bool On, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayer_Azrael.SetSwitchCharacterInXray", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -146,7 +146,7 @@ public partial class RPawnPlayer_Azrael : BmSDK.BmScript.RPawnPlayerBm, BmSDK.IG
     /// <summary>
     /// Function: SetInXrayMode
     /// </summary>
-    public unsafe void SetInXrayMode(bool On, bool bForceOff)
+    public unsafe override void SetInXrayMode(bool On, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayer_Azrael.SetInXrayMode", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -159,7 +159,7 @@ public partial class RPawnPlayer_Azrael : BmSDK.BmScript.RPawnPlayerBm, BmSDK.IG
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayer_Azrael.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

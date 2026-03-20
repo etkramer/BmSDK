@@ -71,7 +71,7 @@ public partial class RBMCombatDestructibleDamageProxy : BmSDK.Engine.Actor, BmSD
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDestructibleDamageProxy.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RBMCombatDestructibleDamageProxy : BmSDK.Engine.Actor, BmSD
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDestructibleDamageProxy.Touch", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -97,7 +97,7 @@ public partial class RBMCombatDestructibleDamageProxy : BmSDK.Engine.Actor, BmSD
     /// <summary>
     /// Function: Deactivate
     /// </summary>
-    public unsafe void Deactivate()
+    public unsafe virtual void Deactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDestructibleDamageProxy.Deactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -108,7 +108,7 @@ public partial class RBMCombatDestructibleDamageProxy : BmSDK.Engine.Actor, BmSD
     /// <summary>
     /// Function: Activate
     /// </summary>
-    public unsafe void Activate(float NewRadius, BmSDK.FName NewBoneName, float NewActiveTime = default, System.Numerics.Vector3 NewCylinderProjection = default, bool bHasCollision = default)
+    public unsafe virtual void Activate(float NewRadius, BmSDK.FName NewBoneName, float NewActiveTime = default, System.Numerics.Vector3 NewCylinderProjection = default, bool bHasCollision = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDestructibleDamageProxy.Activate", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -124,7 +124,7 @@ public partial class RBMCombatDestructibleDamageProxy : BmSDK.Engine.Actor, BmSD
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDestructibleDamageProxy.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

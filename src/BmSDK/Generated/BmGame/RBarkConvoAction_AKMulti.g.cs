@@ -36,7 +36,7 @@ public partial class RBarkConvoAction_AKMulti : BmSDK.BmGame.RBarkConvoAction_Sp
     /// <summary>
     /// Function: GetCurrentDialogueType
     /// </summary>
-    public unsafe BmSDK.Engine.AkDialogueType GetCurrentDialogueType()
+    public unsafe override BmSDK.Engine.AkDialogueType GetCurrentDialogueType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_AKMulti.GetCurrentDialogueType", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -47,7 +47,7 @@ public partial class RBarkConvoAction_AKMulti : BmSDK.BmGame.RBarkConvoAction_Sp
     /// <summary>
     /// Function: CheckLineRepetitionOkay
     /// </summary>
-    public unsafe bool CheckLineRepetitionOkay(int SearchID)
+    public unsafe override bool CheckLineRepetitionOkay(int SearchID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_AKMulti.CheckLineRepetitionOkay", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -66,7 +66,7 @@ public partial class RBarkConvoAction_AKMulti : BmSDK.BmGame.RBarkConvoAction_Sp
     /// <summary>
     /// Function: ContainsOnceEverDialogueEvent
     /// </summary>
-    public unsafe bool ContainsOnceEverDialogueEvent(int SearchID)
+    public unsafe override bool ContainsOnceEverDialogueEvent(int SearchID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_AKMulti.ContainsOnceEverDialogueEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -85,7 +85,7 @@ public partial class RBarkConvoAction_AKMulti : BmSDK.BmGame.RBarkConvoAction_Sp
     /// <summary>
     /// Function: ContainsOnceOnlyDialogueEvent
     /// </summary>
-    public unsafe bool ContainsOnceOnlyDialogueEvent(int SearchID)
+    public unsafe override bool ContainsOnceOnlyDialogueEvent(int SearchID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_AKMulti.ContainsOnceOnlyDialogueEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -104,7 +104,7 @@ public partial class RBarkConvoAction_AKMulti : BmSDK.BmGame.RBarkConvoAction_Sp
     /// <summary>
     /// Function: GBFSSearchHandlePawnRefList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> GBFSSearchHandlePawnRefList(BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> InList)
+    public unsafe override BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> GBFSSearchHandlePawnRefList(BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> InList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_AKMulti.GBFSSearchHandlePawnRefList", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -116,7 +116,7 @@ public partial class RBarkConvoAction_AKMulti : BmSDK.BmGame.RBarkConvoAction_Sp
     /// <summary>
     /// Function: GetPawnRefList
     /// </summary>
-    public unsafe void GetPawnRefList(int SearchID, out BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> PawnRefList)
+    public unsafe override void GetPawnRefList(int SearchID, out BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> PawnRefList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_AKMulti.GetPawnRefList", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -129,7 +129,7 @@ public partial class RBarkConvoAction_AKMulti : BmSDK.BmGame.RBarkConvoAction_Sp
     /// <summary>
     /// Function: GetLocalPlayedScore
     /// </summary>
-    public unsafe float GetLocalPlayedScore()
+    public unsafe override float GetLocalPlayedScore()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_AKMulti.GetLocalPlayedScore", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -140,7 +140,7 @@ public partial class RBarkConvoAction_AKMulti : BmSDK.BmGame.RBarkConvoAction_Sp
     /// <summary>
     /// Function: IsFinished
     /// </summary>
-    public unsafe bool IsFinished()
+    public unsafe override bool IsFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_AKMulti.IsFinished", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -151,7 +151,7 @@ public partial class RBarkConvoAction_AKMulti : BmSDK.BmGame.RBarkConvoAction_Sp
     /// <summary>
     /// Function: Stop
     /// </summary>
-    public unsafe void Stop(bool bHardStop, bool bOrphan = default)
+    public unsafe override void Stop(bool bHardStop, bool bOrphan = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_AKMulti.Stop", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -164,7 +164,7 @@ public partial class RBarkConvoAction_AKMulti : BmSDK.BmGame.RBarkConvoAction_Sp
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_AKMulti.OnActivate", true);
         byte* paramsPtr = stackalloc byte[152];

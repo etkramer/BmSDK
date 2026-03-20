@@ -71,7 +71,7 @@ public partial class LensFlareSource : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetActorParameter
     /// </summary>
-    public unsafe void SetActorParameter(BmSDK.FName ParameterName, BmSDK.Engine.Actor Param)
+    public unsafe virtual void SetActorParameter(BmSDK.FName ParameterName, BmSDK.Engine.Actor Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareSource.SetActorParameter", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -84,7 +84,7 @@ public partial class LensFlareSource : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetExtColorParameter
     /// </summary>
-    public unsafe void SetExtColorParameter(BmSDK.FName ParameterName, float Red, float Green, float Blue, float Alpha)
+    public unsafe virtual void SetExtColorParameter(BmSDK.FName ParameterName, float Red, float Green, float Blue, float Alpha)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareSource.SetExtColorParameter", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -100,7 +100,7 @@ public partial class LensFlareSource : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetColorParameter
     /// </summary>
-    public unsafe void SetColorParameter(BmSDK.FName ParameterName, BmSDK.GameObject.FLinearColor Param)
+    public unsafe virtual void SetColorParameter(BmSDK.FName ParameterName, BmSDK.GameObject.FLinearColor Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareSource.SetColorParameter", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -113,7 +113,7 @@ public partial class LensFlareSource : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetVectorParameter
     /// </summary>
-    public unsafe void SetVectorParameter(BmSDK.FName ParameterName, System.Numerics.Vector3 Param)
+    public unsafe virtual void SetVectorParameter(BmSDK.FName ParameterName, System.Numerics.Vector3 Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareSource.SetVectorParameter", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -126,7 +126,7 @@ public partial class LensFlareSource : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetFloatParameter
     /// </summary>
-    public unsafe void SetFloatParameter(BmSDK.FName ParameterName, float Param)
+    public unsafe virtual void SetFloatParameter(BmSDK.FName ParameterName, float Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareSource.SetFloatParameter", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -139,7 +139,7 @@ public partial class LensFlareSource : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ReplicatedEvent
     /// </summary>
-    public unsafe void ReplicatedEvent(BmSDK.FName VarName)
+    public unsafe override void ReplicatedEvent(BmSDK.FName VarName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareSource.ReplicatedEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -151,7 +151,7 @@ public partial class LensFlareSource : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareSource.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -163,7 +163,7 @@ public partial class LensFlareSource : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareSource.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -174,7 +174,7 @@ public partial class LensFlareSource : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetTemplate
     /// </summary>
-    public unsafe void SetTemplate(BmSDK.Engine.LensFlare NewTemplate)
+    public unsafe virtual void SetTemplate(BmSDK.Engine.LensFlare NewTemplate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareSource.SetTemplate", true);
         byte* paramsPtr = stackalloc byte[8];

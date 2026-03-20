@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_FloorMine : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: Cleanup
     /// </summary>
-    public unsafe void Cleanup()
+    public unsafe virtual void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_FloorMine.Cleanup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Sub_FloorMine : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: OnVillainStolen
     /// </summary>
-    public unsafe void OnVillainStolen()
+    public unsafe override void OnVillainStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_FloorMine.OnVillainStolen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RAEC_Search_Sub_FloorMine : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_FloorMine.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RAEC_Search_Sub_FloorMine : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: PlaceMineFinished
     /// </summary>
-    public unsafe void PlaceMineFinished()
+    public unsafe virtual void PlaceMineFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_FloorMine.PlaceMineFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -115,7 +115,7 @@ public partial class RAEC_Search_Sub_FloorMine : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_FloorMine.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RAEC_Search_Sub_FloorMine : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_FloorMine.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];

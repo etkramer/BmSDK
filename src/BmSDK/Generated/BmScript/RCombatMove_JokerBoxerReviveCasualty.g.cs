@@ -71,7 +71,7 @@ public partial class RCombatMove_JokerBoxerReviveCasualty : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: SetReviveAnims
     /// </summary>
-    public unsafe void SetReviveAnims()
+    public unsafe override void SetReviveAnims()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_JokerBoxerReviveCasualty.SetReviveAnims", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -82,7 +82,7 @@ public partial class RCombatMove_JokerBoxerReviveCasualty : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_JokerBoxerReviveCasualty.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

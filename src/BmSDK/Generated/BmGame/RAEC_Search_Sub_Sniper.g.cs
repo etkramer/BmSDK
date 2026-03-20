@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_Sniper : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: WantsToGlanceAt
     /// </summary>
-    public unsafe bool WantsToGlanceAt(BmSDK.Engine.Actor TestTarget)
+    public unsafe override bool WantsToGlanceAt(BmSDK.Engine.Actor TestTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Sniper.WantsToGlanceAt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RAEC_Search_Sub_Sniper : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Sniper.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RAEC_Search_Sub_Sniper : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: IsAttacking
     /// </summary>
-    public unsafe bool IsAttacking()
+    public unsafe virtual bool IsAttacking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Sniper.IsAttacking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RAEC_Search_Sub_Sniper : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: NotifyEvent
     /// </summary>
-    public unsafe void NotifyEvent(BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
+    public unsafe override void NotifyEvent(BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Sniper.NotifyEvent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -118,7 +118,7 @@ public partial class RAEC_Search_Sub_Sniper : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Sniper.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -130,7 +130,7 @@ public partial class RAEC_Search_Sub_Sniper : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Sniper.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -142,7 +142,7 @@ public partial class RAEC_Search_Sub_Sniper : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: Cleanup
     /// </summary>
-    public unsafe void Cleanup()
+    public unsafe virtual void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Sniper.Cleanup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -153,7 +153,7 @@ public partial class RAEC_Search_Sub_Sniper : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: MoveToNextSniperPoint
     /// </summary>
-    public unsafe void MoveToNextSniperPoint()
+    public unsafe virtual void MoveToNextSniperPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Sniper.MoveToNextSniperPoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -164,7 +164,7 @@ public partial class RAEC_Search_Sub_Sniper : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: SetSniperPoint
     /// </summary>
-    public unsafe void SetSniperPoint(BmSDK.BmGame.RSniperPoint NewSniperPoint)
+    public unsafe virtual void SetSniperPoint(BmSDK.BmGame.RSniperPoint NewSniperPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Sniper.SetSniperPoint", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -176,7 +176,7 @@ public partial class RAEC_Search_Sub_Sniper : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Sniper.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -187,7 +187,7 @@ public partial class RAEC_Search_Sub_Sniper : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Sniper.Tick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -199,7 +199,7 @@ public partial class RAEC_Search_Sub_Sniper : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: OnVillainStolen
     /// </summary>
-    public unsafe void OnVillainStolen()
+    public unsafe override void OnVillainStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Sniper.OnVillainStolen", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class RBarkConvoAction_Pause : BmSDK.BmGame.RBarkConvoAction, BmS
     /// <summary>
     /// Function: IsFinished
     /// </summary>
-    public unsafe bool IsFinished()
+    public unsafe override bool IsFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_Pause.IsFinished", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RBarkConvoAction_Pause : BmSDK.BmGame.RBarkConvoAction, BmS
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_Pause.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

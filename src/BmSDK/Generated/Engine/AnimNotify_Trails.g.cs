@@ -36,7 +36,7 @@ public partial class AnimNotify_Trails : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
     /// <summary>
     /// Function: GetNumSteps
     /// </summary>
-    public unsafe int GetNumSteps(int InLastTrailIndex)
+    public unsafe virtual int GetNumSteps(int InLastTrailIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNotify_Trails.GetNumSteps", true);
         byte* paramsPtr = stackalloc byte[8];

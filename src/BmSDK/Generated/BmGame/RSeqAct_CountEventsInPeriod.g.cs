@@ -47,7 +47,7 @@ public partial class RSeqAct_CountEventsInPeriod : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Function: TryTriggerSuccess
     /// </summary>
-    public unsafe void TryTriggerSuccess()
+    public unsafe virtual void TryTriggerSuccess()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CountEventsInPeriod.TryTriggerSuccess", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_CountEventsInPeriod : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Function: RemoveExpiredEvents
     /// </summary>
-    public unsafe void RemoveExpiredEvents()
+    public unsafe virtual void RemoveExpiredEvents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CountEventsInPeriod.RemoveExpiredEvents", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -69,7 +69,7 @@ public partial class RSeqAct_CountEventsInPeriod : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CountEventsInPeriod.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

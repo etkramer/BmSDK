@@ -31,7 +31,7 @@ public partial class RSeqAct_SpawnVehicleBase : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: SpawnedActorBatmanSeen
     /// </summary>
-    public unsafe void SpawnedActorBatmanSeen(BmSDK.Engine.Actor ExActor)
+    public unsafe virtual void SpawnedActorBatmanSeen(BmSDK.Engine.Actor ExActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpawnVehicleBase.SpawnedActorBatmanSeen", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -43,7 +43,7 @@ public partial class RSeqAct_SpawnVehicleBase : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: SpawnedActorDied
     /// </summary>
-    public unsafe void SpawnedActorDied(BmSDK.Engine.Actor ExActor)
+    public unsafe virtual void SpawnedActorDied(BmSDK.Engine.Actor ExActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpawnVehicleBase.SpawnedActorDied", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -55,7 +55,7 @@ public partial class RSeqAct_SpawnVehicleBase : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: IsNewGamePlus
     /// </summary>
-    public unsafe bool IsNewGamePlus()
+    public unsafe virtual bool IsNewGamePlus()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpawnVehicleBase.IsNewGamePlus", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -73,7 +73,7 @@ public partial class RSeqAct_SpawnVehicleBase : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: UpdateNewGamePlus
     /// </summary>
-    public unsafe void UpdateNewGamePlus()
+    public unsafe virtual void UpdateNewGamePlus()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpawnVehicleBase.UpdateNewGamePlus", true);
         byte* paramsPtr = stackalloc byte[0];

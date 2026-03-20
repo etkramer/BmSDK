@@ -36,7 +36,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMaxDamageInstances
     /// </summary>
-    public unsafe int GetMaxDamageInstances()
+    public unsafe virtual int GetMaxDamageInstances()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RObjectPool.GetMaxDamageInstances", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDamageInstanceIndex
     /// </summary>
-    public unsafe int GetDamageInstanceIndex(BmSDK.Engine.Actor ImpactActor, System.Numerics.Vector3 ImpactLocation, float Radius)
+    public unsafe virtual int GetDamageInstanceIndex(BmSDK.Engine.Actor ImpactActor, System.Numerics.Vector3 ImpactLocation, float Radius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RObjectPool.GetDamageInstanceIndex", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -61,7 +61,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.Engine.GameReplicationInfo Game)
+    public unsafe virtual void Initialise(BmSDK.Engine.GameReplicationInfo Game)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RObjectPool.Initialise", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -73,7 +73,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CreateDecal
     /// </summary>
-    public unsafe BmSDK.Engine.RockDecalComponent CreateDecal()
+    public unsafe virtual BmSDK.Engine.RockDecalComponent CreateDecal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RObjectPool.CreateDecal", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -84,7 +84,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AddDecal
     /// </summary>
-    public unsafe BmSDK.Engine.RockDecalComponent AddDecal(BmSDK.Engine.MaterialInterface DecalMaterial, System.Numerics.Vector3 DecalLocation, System.Numerics.Vector3 DecalNormal, float DecalRoll, float DecalWidth, float DecalHeight, BmSDK.Engine.Actor HitActor, BmSDK.Engine.PrimitiveComponent HitComponent, BmSDK.FName HitBone = default)
+    public unsafe virtual BmSDK.Engine.RockDecalComponent AddDecal(BmSDK.Engine.MaterialInterface DecalMaterial, System.Numerics.Vector3 DecalLocation, System.Numerics.Vector3 DecalNormal, float DecalRoll, float DecalWidth, float DecalHeight, BmSDK.Engine.Actor HitActor, BmSDK.Engine.PrimitiveComponent HitComponent, BmSDK.FName HitBone = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RObjectPool.AddDecal", true);
         byte* paramsPtr = stackalloc byte[100];
@@ -104,7 +104,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSpawnedDecalDepth
     /// </summary>
-    public unsafe float GetSpawnedDecalDepth()
+    public unsafe virtual float GetSpawnedDecalDepth()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RObjectPool.GetSpawnedDecalDepth", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -122,7 +122,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetUnscaledDecalMatrix
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix GetUnscaledDecalMatrix(System.Numerics.Vector3 Location, BmSDK.Rotator Rotation, float Roll)
+    public unsafe virtual BmSDK.GameObject.FMatrix GetUnscaledDecalMatrix(System.Numerics.Vector3 Location, BmSDK.Rotator Rotation, float Roll)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RObjectPool.GetUnscaledDecalMatrix", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -143,7 +143,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDecalMatrix
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix GetDecalMatrix(System.Numerics.Vector3 Location, BmSDK.Rotator Rotation, float Roll, float Width, float Height, float Depth)
+    public unsafe virtual BmSDK.GameObject.FMatrix GetDecalMatrix(System.Numerics.Vector3 Location, BmSDK.Rotator Rotation, float Roll, float Width, float Height, float Depth)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RObjectPool.GetDecalMatrix", true);
         byte* paramsPtr = stackalloc byte[112];
@@ -167,7 +167,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDecalClipValuesFromScale
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDecalClipValuesFromScale(float Width, float Height, float Depth)
+    public unsafe virtual System.Numerics.Vector3 GetDecalClipValuesFromScale(float Width, float Height, float Depth)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RObjectPool.GetDecalClipValuesFromScale", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -188,7 +188,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFreeDecal
     /// </summary>
-    public unsafe BmSDK.Engine.RockDecalComponent GetFreeDecal()
+    public unsafe virtual BmSDK.Engine.RockDecalComponent GetFreeDecal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RObjectPool.GetFreeDecal", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -199,7 +199,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: EnlargeNearbyDecal
     /// </summary>
-    public unsafe BmSDK.Engine.RockDecalComponent EnlargeNearbyDecal(BmSDK.Engine.MaterialInterface DecalMaterial, System.Numerics.Vector3 DecalLocation, float DecalWidth, float DecalHeight, BmSDK.Engine.Actor HitActor)
+    public unsafe virtual BmSDK.Engine.RockDecalComponent EnlargeNearbyDecal(BmSDK.Engine.MaterialInterface DecalMaterial, System.Numerics.Vector3 DecalLocation, float DecalWidth, float DecalHeight, BmSDK.Engine.Actor HitActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RObjectPool.EnlargeNearbyDecal", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -215,7 +215,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnEmitterOnSocket
     /// </summary>
-    public unsafe BmSDK.Engine.Emitter SpawnEmitterOnSocket(BmSDK.Engine.ParticleSystem Tamplate, BmSDK.Engine.SkeletalMeshComponent Skeleton, BmSDK.FName SocketName, bool bAttachToMesh = default, float DrawScale = default)
+    public unsafe virtual BmSDK.Engine.Emitter SpawnEmitterOnSocket(BmSDK.Engine.ParticleSystem Tamplate, BmSDK.Engine.SkeletalMeshComponent Skeleton, BmSDK.FName SocketName, bool bAttachToMesh = default, float DrawScale = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RObjectPool.SpawnEmitterOnSocket", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -231,7 +231,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnEmitterOnMesh
     /// </summary>
-    public unsafe BmSDK.Engine.Emitter SpawnEmitterOnMesh(BmSDK.Engine.ParticleSystem Template, System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation, BmSDK.Engine.SkeletalMeshComponent Skeleton = default, BmSDK.FName Bone = default, bool HardAttach = default, float DrawScale = default)
+    public unsafe virtual BmSDK.Engine.Emitter SpawnEmitterOnMesh(BmSDK.Engine.ParticleSystem Template, System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation, BmSDK.Engine.SkeletalMeshComponent Skeleton = default, BmSDK.FName Bone = default, bool HardAttach = default, float DrawScale = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RObjectPool.SpawnEmitterOnMesh", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -249,7 +249,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnEmitterOnPawn
     /// </summary>
-    public unsafe BmSDK.Engine.Emitter SpawnEmitterOnPawn(BmSDK.Engine.ParticleSystem Template, System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation, BmSDK.Engine.Pawn P = default, BmSDK.FName Bone = default, bool HardAttach = default, float DrawScale = default)
+    public unsafe virtual BmSDK.Engine.Emitter SpawnEmitterOnPawn(BmSDK.Engine.ParticleSystem Template, System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation, BmSDK.Engine.Pawn P = default, BmSDK.FName Bone = default, bool HardAttach = default, float DrawScale = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RObjectPool.SpawnEmitterOnPawn", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -267,7 +267,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnEmitter
     /// </summary>
-    public unsafe BmSDK.Engine.Emitter SpawnEmitter(BmSDK.Engine.ParticleSystem Template, System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation, int TranslucencySortPriority = default, float DrawScale = default)
+    public unsafe virtual BmSDK.Engine.Emitter SpawnEmitter(BmSDK.Engine.ParticleSystem Template, System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation, int TranslucencySortPriority = default, float DrawScale = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RObjectPool.SpawnEmitter", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -290,7 +290,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: StopEmittersWithTemplate
     /// </summary>
-    public unsafe void StopEmittersWithTemplate(BmSDK.Engine.ParticleSystem Template)
+    public unsafe virtual void StopEmittersWithTemplate(BmSDK.Engine.ParticleSystem Template)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RObjectPool.StopEmittersWithTemplate", true);
         byte* paramsPtr = stackalloc byte[12];

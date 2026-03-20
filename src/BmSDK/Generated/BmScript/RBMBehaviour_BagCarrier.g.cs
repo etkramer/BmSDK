@@ -47,7 +47,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: CheckFuturePathOrientation
     /// </summary>
-    public unsafe bool CheckFuturePathOrientation()
+    public unsafe virtual bool CheckFuturePathOrientation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.CheckFuturePathOrientation", true);
         byte* paramsPtr = stackalloc byte[128];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: BagCarrier_GetNavHandle_PathToPoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RNavigationHandle BagCarrier_GetNavHandle_PathToPoint(System.Numerics.Vector3 DestPos, bool bAllowTraversal = default, BmSDK.FName ClaimName = default)
+    public unsafe virtual BmSDK.BmGame.RNavigationHandle BagCarrier_GetNavHandle_PathToPoint(System.Numerics.Vector3 DestPos, bool bAllowTraversal = default, BmSDK.FName ClaimName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.BagCarrier_GetNavHandle_PathToPoint", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -72,7 +72,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetNextWaypointIndex
     /// </summary>
-    public unsafe int GetNextWaypointIndex(bool bTowardsPickUpPoint)
+    public unsafe virtual int GetNextWaypointIndex(bool bTowardsPickUpPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetNextWaypointIndex", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -84,7 +84,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetWaypointScore
     /// </summary>
-    public unsafe float GetWaypointScore(System.Numerics.Vector3 currentLoc, System.Numerics.Vector3 Destination, System.Numerics.Vector3 waypointLoc)
+    public unsafe virtual float GetWaypointScore(System.Numerics.Vector3 currentLoc, System.Numerics.Vector3 Destination, System.Numerics.Vector3 waypointLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetWaypointScore", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -98,7 +98,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetBestWaypointIndex
     /// </summary>
-    public unsafe int GetBestWaypointIndex(bool bTowardsPickUpPoint)
+    public unsafe virtual int GetBestWaypointIndex(bool bTowardsPickUpPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetBestWaypointIndex", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -110,7 +110,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: FindClosestShootingPawnToPlayer
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawn FindClosestShootingPawnToPlayer()
+    public unsafe virtual BmSDK.BmGame.RPawn FindClosestShootingPawnToPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.FindClosestShootingPawnToPlayer", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -121,7 +121,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: AreAnyPawnsCheatChasing
     /// </summary>
-    public unsafe bool AreAnyPawnsCheatChasing()
+    public unsafe virtual bool AreAnyPawnsCheatChasing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.AreAnyPawnsCheatChasing", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -132,7 +132,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: ShouldCheatChase
     /// </summary>
-    public unsafe bool ShouldCheatChase()
+    public unsafe virtual bool ShouldCheatChase()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.ShouldCheatChase", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -143,7 +143,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: FindClosestPawnWaitingForCurrentDropOffPoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawn FindClosestPawnWaitingForCurrentDropOffPoint()
+    public unsafe virtual BmSDK.BmGame.RPawn FindClosestPawnWaitingForCurrentDropOffPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.FindClosestPawnWaitingForCurrentDropOffPoint", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -154,7 +154,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: HandlePathFail
     /// </summary>
-    public unsafe void HandlePathFail()
+    public unsafe override void HandlePathFail()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.HandlePathFail", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -165,7 +165,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: CheckAssignBetterDropOffPoint
     /// </summary>
-    public unsafe bool CheckAssignBetterDropOffPoint()
+    public unsafe virtual bool CheckAssignBetterDropOffPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.CheckAssignBetterDropOffPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -176,7 +176,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: OkToCarryOnBagCarrying
     /// </summary>
-    public unsafe bool OkToCarryOnBagCarrying()
+    public unsafe virtual bool OkToCarryOnBagCarrying()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.OkToCarryOnBagCarrying", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -187,7 +187,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: RunToExitPoint
     /// </summary>
-    public unsafe void RunToExitPoint(BmSDK.Engine.Actor inExitPoint)
+    public unsafe virtual void RunToExitPoint(BmSDK.Engine.Actor inExitPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.RunToExitPoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -199,7 +199,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: TryTriggerExitBark
     /// </summary>
-    public unsafe void TryTriggerExitBark()
+    public unsafe virtual void TryTriggerExitBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.TryTriggerExitBark", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -210,7 +210,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: SnapPointToNavMesh
     /// </summary>
-    public unsafe bool SnapPointToNavMesh(out System.Numerics.Vector3 TestPoint)
+    public unsafe virtual bool SnapPointToNavMesh(out System.Numerics.Vector3 TestPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.SnapPointToNavMesh", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -222,7 +222,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: HasLineOfSightToThrowGrenadeOnGrate
     /// </summary>
-    public unsafe bool HasLineOfSightToThrowGrenadeOnGrate(BmSDK.BmGame.RTunnelGrateBase Grate)
+    public unsafe virtual bool HasLineOfSightToThrowGrenadeOnGrate(BmSDK.BmGame.RTunnelGrateBase Grate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.HasLineOfSightToThrowGrenadeOnGrate", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -234,7 +234,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GotLOSToPlayer
     /// </summary>
-    public unsafe bool GotLOSToPlayer()
+    public unsafe virtual bool GotLOSToPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GotLOSToPlayer", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -245,7 +245,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: ShouldStopAndShootPlayer
     /// </summary>
-    public unsafe bool ShouldStopAndShootPlayer()
+    public unsafe override bool ShouldStopAndShootPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.ShouldStopAndShootPlayer", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -256,7 +256,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: TriggerGrateResponse
     /// </summary>
-    public unsafe void TriggerGrateResponse(BmSDK.BmGame.RTunnelGrateBase Grate, bool canDestroy = default)
+    public unsafe override void TriggerGrateResponse(BmSDK.BmGame.RTunnelGrateBase Grate, bool canDestroy = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.TriggerGrateResponse", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -269,7 +269,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float UpdateTime)
+    public unsafe override void Tick(float UpdateTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.Tick", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -281,7 +281,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: UpdateBagVFX
     /// </summary>
-    public unsafe void UpdateBagVFX()
+    public unsafe virtual void UpdateBagVFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.UpdateBagVFX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -292,7 +292,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: NotifyGunEmpty
     /// </summary>
-    public unsafe void NotifyGunEmpty()
+    public unsafe override void NotifyGunEmpty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.NotifyGunEmpty", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -303,7 +303,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -315,7 +315,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -327,7 +327,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetDestination
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDestination(bool bFinalDestQueryOnly = default)
+    public unsafe virtual System.Numerics.Vector3 GetDestination(bool bFinalDestQueryOnly = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetDestination", true);
         byte* paramsPtr = stackalloc byte[100];
@@ -339,7 +339,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: UnlockCurrentDropoffPoint
     /// </summary>
-    public unsafe void UnlockCurrentDropoffPoint()
+    public unsafe override void UnlockCurrentDropoffPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.UnlockCurrentDropoffPoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -350,7 +350,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: UnlockPickupPoints
     /// </summary>
-    public unsafe void UnlockPickupPoints()
+    public unsafe override void UnlockPickupPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.UnlockPickupPoints", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -361,7 +361,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: LockCurrentPickupPoint
     /// </summary>
-    public unsafe void LockCurrentPickupPoint()
+    public unsafe virtual void LockCurrentPickupPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.LockCurrentPickupPoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -372,7 +372,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetBestEnabledDropOffPoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RLootDestinationBase GetBestEnabledDropOffPoint()
+    public unsafe virtual BmSDK.BmGame.RLootDestinationBase GetBestEnabledDropOffPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetBestEnabledDropOffPoint", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -383,7 +383,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: AssignPickUpPoint
     /// </summary>
-    public unsafe void AssignPickUpPoint(BmSDK.BmGame.RLootSourceBase chosenPickUpPoint)
+    public unsafe virtual void AssignPickUpPoint(BmSDK.BmGame.RLootSourceBase chosenPickUpPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.AssignPickUpPoint", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -395,7 +395,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: ChoosePickUpPoint
     /// </summary>
-    public unsafe void ChoosePickUpPoint()
+    public unsafe virtual void ChoosePickUpPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.ChoosePickUpPoint", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -406,7 +406,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: NeedsRandomPickupPoint
     /// </summary>
-    public unsafe bool NeedsRandomPickupPoint()
+    public unsafe virtual bool NeedsRandomPickupPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.NeedsRandomPickupPoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -417,7 +417,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: SetOverridingDropOffPoint
     /// </summary>
-    public unsafe void SetOverridingDropOffPoint(BmSDK.BmGame.RLootDestinationBase dropoffPoint)
+    public unsafe override void SetOverridingDropOffPoint(BmSDK.BmGame.RLootDestinationBase dropoffPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.SetOverridingDropOffPoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -429,7 +429,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: SetOverridingPickupPoint
     /// </summary>
-    public unsafe void SetOverridingPickupPoint(BmSDK.BmGame.RLootSourceBase PickupPoint)
+    public unsafe override void SetOverridingPickupPoint(BmSDK.BmGame.RLootSourceBase PickupPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.SetOverridingPickupPoint", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -441,7 +441,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetPickUpPointTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetPickUpPointTargetLocation(BmSDK.BmGame.RLootSourceBase PickupPoint, out BmSDK.BmGame.RCarriableObjectBagBase existingBag)
+    public unsafe virtual System.Numerics.Vector3 GetPickUpPointTargetLocation(BmSDK.BmGame.RLootSourceBase PickupPoint, out BmSDK.BmGame.RCarriableObjectBagBase existingBag)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetPickUpPointTargetLocation", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -454,7 +454,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: IsLocationProhibitedByTakedownVolume
     /// </summary>
-    public unsafe bool IsLocationProhibitedByTakedownVolume(System.Numerics.Vector3 Location)
+    public unsafe virtual bool IsLocationProhibitedByTakedownVolume(System.Numerics.Vector3 Location)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.IsLocationProhibitedByTakedownVolume", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -466,7 +466,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetLeastBusyLootSourceGroups
     /// </summary>
-    public unsafe BmSDK.TArray<int> GetLeastBusyLootSourceGroups()
+    public unsafe virtual BmSDK.TArray<int> GetLeastBusyLootSourceGroups()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetLeastBusyLootSourceGroups", true);
         byte* paramsPtr = stackalloc byte[100];
@@ -477,7 +477,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetActorForPredVolTest
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetActorForPredVolTest()
+    public unsafe override BmSDK.Engine.Actor GetActorForPredVolTest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetActorForPredVolTest", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -488,7 +488,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetJoiningLocations
     /// </summary>
-    public unsafe bool GetJoiningLocations(out BmSDK.TArray<System.Numerics.Vector3> outLocations, out BmSDK.TArray<BmSDK.GameObject> outObjects)
+    public unsafe override bool GetJoiningLocations(out BmSDK.TArray<System.Numerics.Vector3> outLocations, out BmSDK.TArray<BmSDK.GameObject> outObjects)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetJoiningLocations", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -501,7 +501,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: PriorityBehaviourWaiting
     /// </summary>
-    public unsafe void PriorityBehaviourWaiting()
+    public unsafe override void PriorityBehaviourWaiting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.PriorityBehaviourWaiting", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -512,7 +512,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: LootBagDroppedOff
     /// </summary>
-    public unsafe void LootBagDroppedOff()
+    public unsafe virtual void LootBagDroppedOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.LootBagDroppedOff", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -523,7 +523,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: DettachBagInternal
     /// </summary>
-    public unsafe void DettachBagInternal(bool bEnablePhys, bool bNoPoseChange = default)
+    public unsafe virtual void DettachBagInternal(bool bEnablePhys, bool bNoPoseChange = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.DettachBagInternal", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -536,7 +536,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: DettachBagNoPhysics
     /// </summary>
-    public unsafe void DettachBagNoPhysics()
+    public unsafe virtual void DettachBagNoPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.DettachBagNoPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -547,7 +547,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: DettachBagNoPoseChange
     /// </summary>
-    public unsafe void DettachBagNoPoseChange()
+    public unsafe virtual void DettachBagNoPoseChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.DettachBagNoPoseChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -558,7 +558,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: DettachBag
     /// </summary>
-    public unsafe void DettachBag()
+    public unsafe virtual void DettachBag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.DettachBag", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -569,7 +569,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: DisruptedExplosion
     /// </summary>
-    public unsafe void DisruptedExplosion()
+    public unsafe virtual void DisruptedExplosion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.DisruptedExplosion", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -580,7 +580,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: AttachBag
     /// </summary>
-    public unsafe void AttachBag()
+    public unsafe virtual void AttachBag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.AttachBag", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -591,7 +591,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: DoPoseChange
     /// </summary>
-    public unsafe void DoPoseChange()
+    public unsafe virtual void DoPoseChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.DoPoseChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -602,7 +602,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: DestroyBagNoPoseChange
     /// </summary>
-    public unsafe void DestroyBagNoPoseChange()
+    public unsafe virtual void DestroyBagNoPoseChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.DestroyBagNoPoseChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -613,7 +613,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: DestroyBag
     /// </summary>
-    public unsafe void DestroyBag()
+    public unsafe virtual void DestroyBag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.DestroyBag", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -624,7 +624,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: SpawnBag
     /// </summary>
-    public unsafe void SpawnBag()
+    public unsafe virtual void SpawnBag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.SpawnBag", true);
         byte* paramsPtr = stackalloc byte[21];
@@ -635,7 +635,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetBombReactAnim
     /// </summary>
-    public unsafe bool GetBombReactAnim(bool bFront, out BmSDK.FName AnimName)
+    public unsafe override bool GetBombReactAnim(bool bFront, out BmSDK.FName AnimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetBombReactAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -648,7 +648,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: OnEndInterrupt
     /// </summary>
-    public unsafe void OnEndInterrupt()
+    public unsafe override void OnEndInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.OnEndInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -659,7 +659,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -670,7 +670,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: OnExitBehaviourCalled
     /// </summary>
-    public unsafe void OnExitBehaviourCalled()
+    public unsafe override void OnExitBehaviourCalled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.OnExitBehaviourCalled", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -681,7 +681,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: OnExitConditionTriggered
     /// </summary>
-    public unsafe void OnExitConditionTriggered()
+    public unsafe override void OnExitConditionTriggered()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.OnExitConditionTriggered", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -692,7 +692,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -703,7 +703,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: FinishActivation
     /// </summary>
-    public unsafe void FinishActivation()
+    public unsafe virtual void FinishActivation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.FinishActivation", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -714,7 +714,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: SetInitialState
     /// </summary>
-    public unsafe void SetInitialState()
+    public unsafe override void SetInitialState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.SetInitialState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -725,7 +725,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -736,7 +736,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetLootPoints
     /// </summary>
-    public unsafe void GetLootPoints()
+    public unsafe virtual void GetLootPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetLootPoints", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -747,7 +747,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -758,7 +758,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: Cleanup
     /// </summary>
-    public unsafe void Cleanup()
+    public unsafe virtual void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.Cleanup", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -769,7 +769,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: ResetTimeTillOverlay
     /// </summary>
-    public unsafe void ResetTimeTillOverlay()
+    public unsafe virtual void ResetTimeTillOverlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.ResetTimeTillOverlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -780,7 +780,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetBagCarrierWeaponStance
     /// </summary>
-    public unsafe BmSDK.FName GetBagCarrierWeaponStance()
+    public unsafe virtual BmSDK.FName GetBagCarrierWeaponStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetBagCarrierWeaponStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -791,7 +791,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetBagCarrierMovementStance
     /// </summary>
-    public unsafe BmSDK.FName GetBagCarrierMovementStance()
+    public unsafe virtual BmSDK.FName GetBagCarrierMovementStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetBagCarrierMovementStance", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -802,7 +802,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetBagCarrierMovementStance_WithBag
     /// </summary>
-    public unsafe BmSDK.FName GetBagCarrierMovementStance_WithBag()
+    public unsafe virtual BmSDK.FName GetBagCarrierMovementStance_WithBag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetBagCarrierMovementStance_WithBag", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -813,7 +813,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetBagCarrierMovementStance_NoBag
     /// </summary>
-    public unsafe BmSDK.FName GetBagCarrierMovementStance_NoBag()
+    public unsafe virtual BmSDK.FName GetBagCarrierMovementStance_NoBag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetBagCarrierMovementStance_NoBag", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -824,7 +824,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetPickupOffFloorAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetPickupOffFloorAnimName()
+    public unsafe virtual BmSDK.FName GetPickupOffFloorAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetPickupOffFloorAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -835,7 +835,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetDropOffAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetDropOffAnimName()
+    public unsafe virtual BmSDK.FName GetDropOffAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetDropOffAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -846,7 +846,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: ChooseDropoffDirection
     /// </summary>
-    public unsafe BmSDK.BmScript.RBMBehaviour_BagCarrier.eLootPointInteractDirection ChooseDropoffDirection()
+    public unsafe virtual BmSDK.BmScript.RBMBehaviour_BagCarrier.eLootPointInteractDirection ChooseDropoffDirection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.ChooseDropoffDirection", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -857,7 +857,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: HasDirectionalDropoffAnims
     /// </summary>
-    public unsafe bool HasDirectionalDropoffAnims()
+    public unsafe virtual bool HasDirectionalDropoffAnims()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.HasDirectionalDropoffAnims", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -868,7 +868,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetBagAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetBagAnimSet()
+    public unsafe virtual BmSDK.Engine.AnimSet GetBagAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetBagAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -879,7 +879,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetDoorWaitIdleAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetDoorWaitIdleAnimName()
+    public unsafe virtual BmSDK.FName GetDoorWaitIdleAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetDoorWaitIdleAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -890,7 +890,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetDoorWaitInAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetDoorWaitInAnimName()
+    public unsafe virtual BmSDK.FName GetDoorWaitInAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetDoorWaitInAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -901,7 +901,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetDoorWaitAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetDoorWaitAnimSet()
+    public unsafe virtual BmSDK.Engine.AnimSet GetDoorWaitAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetDoorWaitAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -912,7 +912,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetExitAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetExitAnimName(bool bDeterministic = default)
+    public unsafe virtual BmSDK.FName GetExitAnimName(bool bDeterministic = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetExitAnimName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -924,7 +924,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetEntryAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetEntryAnimName()
+    public unsafe virtual BmSDK.FName GetEntryAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetEntryAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -935,7 +935,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetEntryExitAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetEntryExitAnimSet()
+    public unsafe virtual BmSDK.Engine.AnimSet GetEntryExitAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetEntryExitAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -946,7 +946,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetLootingOutAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetLootingOutAnimName()
+    public unsafe virtual BmSDK.FName GetLootingOutAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetLootingOutAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -957,7 +957,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetLootingIdleAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetLootingIdleAnimName()
+    public unsafe virtual BmSDK.FName GetLootingIdleAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetLootingIdleAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -968,7 +968,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetLootingInAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetLootingInAnimName()
+    public unsafe virtual BmSDK.FName GetLootingInAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetLootingInAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -979,7 +979,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetLootingAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetLootingAnimSet()
+    public unsafe virtual BmSDK.Engine.AnimSet GetLootingAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetLootingAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -990,7 +990,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: PlayLootPointDropoffAnim
     /// </summary>
-    public unsafe void PlayLootPointDropoffAnim()
+    public unsafe virtual void PlayLootPointDropoffAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.PlayLootPointDropoffAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1001,7 +1001,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: PlayLootPointPickupAnim
     /// </summary>
-    public unsafe void PlayLootPointPickupAnim()
+    public unsafe virtual void PlayLootPointPickupAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.PlayLootPointPickupAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1012,7 +1012,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: DropoffPointStateChange
     /// </summary>
-    public unsafe void DropoffPointStateChange()
+    public unsafe virtual void DropoffPointStateChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.DropoffPointStateChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1023,7 +1023,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: MainStateChange
     /// </summary>
-    public unsafe void MainStateChange()
+    public unsafe virtual void MainStateChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.MainStateChange", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1034,7 +1034,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: InitialStateChange
     /// </summary>
-    public unsafe void InitialStateChange()
+    public unsafe virtual void InitialStateChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.InitialStateChange", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1045,7 +1045,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetPickupPointAnimInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RLootPointBase.FLootingAnimInfo GetPickupPointAnimInfo()
+    public unsafe virtual BmSDK.BmGame.RLootPointBase.FLootingAnimInfo GetPickupPointAnimInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetPickupPointAnimInfo", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -1056,7 +1056,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: IsLongWayFromDropoff
     /// </summary>
-    public unsafe bool IsLongWayFromDropoff()
+    public unsafe override bool IsLongWayFromDropoff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.IsLongWayFromDropoff", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1067,7 +1067,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: GetDistFromDropoff
     /// </summary>
-    public unsafe float GetDistFromDropoff()
+    public unsafe override float GetDistFromDropoff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.GetDistFromDropoff", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1078,7 +1078,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: ShutdownTimerHUD
     /// </summary>
-    public unsafe void ShutdownTimerHUD()
+    public unsafe virtual void ShutdownTimerHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.ShutdownTimerHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1089,7 +1089,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: TryUpdateTimerHUD
     /// </summary>
-    public unsafe void TryUpdateTimerHUD(int IntRemainingTime)
+    public unsafe virtual void TryUpdateTimerHUD(int IntRemainingTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.TryUpdateTimerHUD", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1101,7 +1101,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Function: InitTimerHUD
     /// </summary>
-    public unsafe void InitTimerHUD()
+    public unsafe virtual void InitTimerHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BagCarrier.InitTimerHUD", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RHarpoonProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     /// <summary>
     /// Function: HitFearGas
     /// </summary>
-    public unsafe void HitFearGas(System.Numerics.Vector3 vHitLocation)
+    public unsafe override void HitFearGas(System.Numerics.Vector3 vHitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonProjectile.HitFearGas", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RHarpoonProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     /// <summary>
     /// Function: HitOcean
     /// </summary>
-    public unsafe void HitOcean(System.Numerics.Vector3 vHitLocation)
+    public unsafe override void HitOcean(System.Numerics.Vector3 vHitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonProjectile.HitOcean", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -95,7 +95,7 @@ public partial class RHarpoonProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     /// <summary>
     /// Function: HitWall
     /// </summary>
-    public unsafe void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent WallComp)
+    public unsafe override void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent WallComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonProjectile.HitWall", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -109,7 +109,7 @@ public partial class RHarpoonProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     /// <summary>
     /// Function: BumpLevel
     /// </summary>
-    public unsafe void BumpLevel(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual void BumpLevel(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonProjectile.BumpLevel", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -122,7 +122,7 @@ public partial class RHarpoonProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     /// <summary>
     /// Function: ApplyFluidSurfaceImpact
     /// </summary>
-    public unsafe void ApplyFluidSurfaceImpact(BmSDK.Engine.FluidSurfaceActor Fluid, System.Numerics.Vector3 HitLocation)
+    public unsafe override void ApplyFluidSurfaceImpact(BmSDK.Engine.FluidSurfaceActor Fluid, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonProjectile.ApplyFluidSurfaceImpact", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -135,7 +135,7 @@ public partial class RHarpoonProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     /// <summary>
     /// Function: SpawnHitEffects
     /// </summary>
-    public unsafe bool SpawnHitEffects(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitVelocity, BmSDK.Engine.RPhysicalMaterialProperty.EPhysMaterialImpactTypes ImpactType, BmSDK.Engine.Interface_AudioImpact audioImpact, bool bPlaySound = default)
+    public unsafe virtual bool SpawnHitEffects(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitVelocity, BmSDK.Engine.RPhysicalMaterialProperty.EPhysMaterialImpactTypes ImpactType, BmSDK.Engine.Interface_AudioImpact audioImpact, bool bPlaySound = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonProjectile.SpawnHitEffects", true);
         byte* paramsPtr = stackalloc byte[176];
@@ -151,7 +151,7 @@ public partial class RHarpoonProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     /// <summary>
     /// Function: GetImpactMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.RPhysicalMaterialProperty GetImpactMaterial(BmSDK.Engine.Actor.FImpactInfo Impact)
+    public unsafe virtual BmSDK.Engine.RPhysicalMaterialProperty GetImpactMaterial(BmSDK.Engine.Actor.FImpactInfo Impact)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonProjectile.GetImpactMaterial", true);
         byte* paramsPtr = stackalloc byte[104];
@@ -163,7 +163,7 @@ public partial class RHarpoonProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     /// <summary>
     /// Function: BaseChange
     /// </summary>
-    public unsafe void BaseChange()
+    public unsafe override void BaseChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonProjectile.BaseChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -174,7 +174,7 @@ public partial class RHarpoonProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     /// <summary>
     /// Function: Hide
     /// </summary>
-    public unsafe void Hide(bool NewHidden)
+    public unsafe override void Hide(bool NewHidden)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonProjectile.Hide", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -186,7 +186,7 @@ public partial class RHarpoonProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     /// <summary>
     /// Function: PlayClawAnim
     /// </summary>
-    public unsafe void PlayClawAnim(BmSDK.FName GadgetAnim)
+    public unsafe virtual void PlayClawAnim(BmSDK.FName GadgetAnim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonProjectile.PlayClawAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -198,7 +198,7 @@ public partial class RHarpoonProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     /// <summary>
     /// Function: SpawnRicochetFX
     /// </summary>
-    public unsafe void SpawnRicochetFX()
+    public unsafe virtual void SpawnRicochetFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonProjectile.SpawnRicochetFX", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -209,7 +209,7 @@ public partial class RHarpoonProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     /// <summary>
     /// Function: TriggerNoiseEvent
     /// </summary>
-    public unsafe void TriggerNoiseEvent()
+    public unsafe virtual void TriggerNoiseEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonProjectile.TriggerNoiseEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -220,7 +220,7 @@ public partial class RHarpoonProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     /// <summary>
     /// Function: Fire
     /// </summary>
-    public unsafe void Fire(System.Numerics.Vector3 To)
+    public unsafe override void Fire(System.Numerics.Vector3 To)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonProjectile.Fire", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -232,7 +232,7 @@ public partial class RHarpoonProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     /// <summary>
     /// Function: ReachedDest
     /// </summary>
-    public unsafe void ReachedDest()
+    public unsafe override void ReachedDest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonProjectile.ReachedDest", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -243,7 +243,7 @@ public partial class RHarpoonProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonProjectile.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

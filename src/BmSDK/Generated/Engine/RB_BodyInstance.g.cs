@@ -36,7 +36,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetAngularDamping
     /// </summary>
-    public unsafe void SetAngularDamping(float AngularDamping)
+    public unsafe virtual void SetAngularDamping(float AngularDamping)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.SetAngularDamping", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -55,7 +55,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDampingRampupProportion
     /// </summary>
-    public unsafe void SetDampingRampupProportion(float NewDampingRampupProportion)
+    public unsafe virtual void SetDampingRampupProportion(float NewDampingRampupProportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.SetDampingRampupProportion", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -74,7 +74,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateDampingProperties
     /// </summary>
-    public unsafe void UpdateDampingProperties()
+    public unsafe virtual void UpdateDampingProperties()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.UpdateDampingProperties", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -92,7 +92,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateMassProperties
     /// </summary>
-    public unsafe void UpdateMassProperties(BmSDK.Engine.RB_BodySetup Setup, float MassOverride = default)
+    public unsafe virtual void UpdateMassProperties(BmSDK.Engine.RB_BodySetup Setup, float MassOverride = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.UpdateMassProperties", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -112,7 +112,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetContactReportForceThreshold
     /// </summary>
-    public unsafe void SetContactReportForceThreshold(float Threshold)
+    public unsafe virtual void SetContactReportForceThreshold(float Threshold)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.SetContactReportForceThreshold", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -131,7 +131,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: EnableCollisionResponse
     /// </summary>
-    public unsafe void EnableCollisionResponse(bool bEnableResponse)
+    public unsafe virtual void EnableCollisionResponse(bool bEnableResponse)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.EnableCollisionResponse", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -150,7 +150,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPhysMaterialOverride
     /// </summary>
-    public unsafe void SetPhysMaterialOverride(BmSDK.Engine.PhysicalMaterial NewPhysMaterial)
+    public unsafe virtual void SetPhysMaterialOverride(BmSDK.Engine.PhysicalMaterial NewPhysMaterial)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.SetPhysMaterialOverride", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -169,7 +169,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetBlockRigidBody
     /// </summary>
-    public unsafe void SetBlockRigidBody(bool bNewBlockRigidBody, bool bEnableSceneQueries)
+    public unsafe virtual void SetBlockRigidBody(bool bNewBlockRigidBody, bool bEnableSceneQueries)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.SetBlockRigidBody", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -189,7 +189,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetUnrealWorldVelocityAtPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetUnrealWorldVelocityAtPoint(System.Numerics.Vector3 Point)
+    public unsafe virtual System.Numerics.Vector3 GetUnrealWorldVelocityAtPoint(System.Numerics.Vector3 Point)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealWorldVelocityAtPoint", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -208,7 +208,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetUnrealCoMWorldAngularVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetUnrealCoMWorldAngularVelocity()
+    public unsafe virtual System.Numerics.Vector3 GetUnrealCoMWorldAngularVelocity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealCoMWorldAngularVelocity", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -226,7 +226,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetUnrealCoMWorldVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetUnrealCoMWorldVelocity()
+    public unsafe virtual System.Numerics.Vector3 GetUnrealCoMWorldVelocity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealCoMWorldVelocity", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -244,7 +244,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetUnrealCoMWorldOrientation
     /// </summary>
-    public unsafe BmSDK.GameObject.FQuat GetUnrealCoMWorldOrientation()
+    public unsafe virtual BmSDK.GameObject.FQuat GetUnrealCoMWorldOrientation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealCoMWorldOrientation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -262,7 +262,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetUnrealCoMWorldPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetUnrealCoMWorldPosition()
+    public unsafe virtual System.Numerics.Vector3 GetUnrealCoMWorldPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealCoMWorldPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -280,7 +280,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetUnrealWorldOrientation
     /// </summary>
-    public unsafe BmSDK.GameObject.FQuat GetUnrealWorldOrientation()
+    public unsafe virtual BmSDK.GameObject.FQuat GetUnrealWorldOrientation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealWorldOrientation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -298,7 +298,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetUnrealWorldPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetUnrealWorldPosition()
+    public unsafe virtual System.Numerics.Vector3 GetUnrealWorldPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealWorldPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -316,7 +316,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetUnrealWorldAngularVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetUnrealWorldAngularVelocity()
+    public unsafe virtual System.Numerics.Vector3 GetUnrealWorldAngularVelocity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealWorldAngularVelocity", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -334,7 +334,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetUnrealWorldVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetUnrealWorldVelocity()
+    public unsafe virtual System.Numerics.Vector3 GetUnrealWorldVelocity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealWorldVelocity", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -352,7 +352,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetUnrealWorldLinearAndAngularVelocity
     /// </summary>
-    public unsafe void GetUnrealWorldLinearAndAngularVelocity(out System.Numerics.Vector3 LinearVelocity, out System.Numerics.Vector3 AngularVelocity)
+    public unsafe virtual void GetUnrealWorldLinearAndAngularVelocity(out System.Numerics.Vector3 LinearVelocity, out System.Numerics.Vector3 AngularVelocity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealWorldLinearAndAngularVelocity", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -372,7 +372,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetUnrealWorldBoneAtom
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoneAtom GetUnrealWorldBoneAtom()
+    public unsafe virtual BmSDK.GameObject.FBoneAtom GetUnrealWorldBoneAtom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealWorldBoneAtom", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -390,7 +390,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetUnrealWorldTM
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix GetUnrealWorldTM()
+    public unsafe virtual BmSDK.GameObject.FMatrix GetUnrealWorldTM()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealWorldTM", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -408,7 +408,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPhysicsAssetInstance
     /// </summary>
-    public unsafe BmSDK.Engine.PhysicsAssetInstance GetPhysicsAssetInstance()
+    public unsafe virtual BmSDK.Engine.PhysicsAssetInstance GetPhysicsAssetInstance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetPhysicsAssetInstance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -426,7 +426,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsValidBodyInstance
     /// </summary>
-    public unsafe bool IsValidBodyInstance()
+    public unsafe virtual bool IsValidBodyInstance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.IsValidBodyInstance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -444,7 +444,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsFixed
     /// </summary>
-    public unsafe bool IsFixed()
+    public unsafe virtual bool IsFixed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.IsFixed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -462,7 +462,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetFixed
     /// </summary>
-    public unsafe void SetFixed(bool bNewFixed)
+    public unsafe virtual void SetFixed(bool bNewFixed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.SetFixed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -481,7 +481,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBodyMass
     /// </summary>
-    public unsafe float GetBodyMass()
+    public unsafe virtual float GetBodyMass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetBodyMass", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -499,7 +499,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetIsInitialised
     /// </summary>
-    public unsafe bool GetIsInitialised()
+    public unsafe virtual bool GetIsInitialised()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetIsInitialised", true);
         byte* paramsPtr = stackalloc byte[4];

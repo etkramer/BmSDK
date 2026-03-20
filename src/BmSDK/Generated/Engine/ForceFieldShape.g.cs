@@ -31,7 +31,7 @@ public partial class ForceFieldShape : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDrawComponent
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent GetDrawComponent()
+    public unsafe virtual BmSDK.Engine.PrimitiveComponent GetDrawComponent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ForceFieldShape.GetDrawComponent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -42,7 +42,7 @@ public partial class ForceFieldShape : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FillByCylinder
     /// </summary>
-    public unsafe void FillByCylinder(float BottomRadius, float TopRadius, float Height, float HeightOffset)
+    public unsafe virtual void FillByCylinder(float BottomRadius, float TopRadius, float Height, float HeightOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ForceFieldShape.FillByCylinder", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -57,7 +57,7 @@ public partial class ForceFieldShape : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FillByCapsule
     /// </summary>
-    public unsafe void FillByCapsule(float Height, float Radius)
+    public unsafe virtual void FillByCapsule(float Height, float Radius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ForceFieldShape.FillByCapsule", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -70,7 +70,7 @@ public partial class ForceFieldShape : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FillByBox
     /// </summary>
-    public unsafe void FillByBox(System.Numerics.Vector3 Dimension)
+    public unsafe virtual void FillByBox(System.Numerics.Vector3 Dimension)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ForceFieldShape.FillByBox", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class ForceFieldShape : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FillBySphere
     /// </summary>
-    public unsafe void FillBySphere(float Radius)
+    public unsafe virtual void FillBySphere(float Radius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ForceFieldShape.FillBySphere", true);
         byte* paramsPtr = stackalloc byte[4];

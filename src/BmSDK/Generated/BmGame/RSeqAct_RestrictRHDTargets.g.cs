@@ -47,7 +47,7 @@ public partial class RSeqAct_RestrictRHDTargets : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: FiredAtWrongTarget
     /// </summary>
-    public unsafe void FiredAtWrongTarget()
+    public unsafe virtual void FiredAtWrongTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RestrictRHDTargets.FiredAtWrongTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_RestrictRHDTargets : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: IsCurrentTargetAllowed
     /// </summary>
-    public unsafe bool IsCurrentTargetAllowed(BmSDK.Engine.Actor CheckTarget)
+    public unsafe virtual bool IsCurrentTargetAllowed(BmSDK.Engine.Actor CheckTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RestrictRHDTargets.IsCurrentTargetAllowed", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -70,7 +70,7 @@ public partial class RSeqAct_RestrictRHDTargets : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RestrictRHDTargets.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

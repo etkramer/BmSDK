@@ -71,7 +71,7 @@ public partial class RMovingRadialImpulseActor : BmSDK.Engine.RB_RadialImpulseAc
     /// <summary>
     /// Function: OnFireImpulse
     /// </summary>
-    public unsafe void OnFireImpulse()
+    public unsafe virtual void OnFireImpulse()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMovingRadialImpulseActor.OnFireImpulse", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RMovingRadialImpulseActor : BmSDK.Engine.RB_RadialImpulseAc
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMovingRadialImpulseActor.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];

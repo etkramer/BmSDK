@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanBarge : BmSDK.BmGame.RCombatMove_BatmanSt
     /// <summary>
     /// Function: AffectSurroundingArea
     /// </summary>
-    public unsafe void AffectSurroundingArea()
+    public unsafe virtual void AffectSurroundingArea()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBarge.AffectSurroundingArea", true);
         byte* paramsPtr = stackalloc byte[308];
@@ -82,7 +82,7 @@ public partial class RCombatMove_BatmanBarge : BmSDK.BmGame.RCombatMove_BatmanSt
     /// <summary>
     /// Function: SetDamageInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.FDamageInfo SetDamageInfo(BmSDK.BmGame.RPawnCombat DamageReceiver, float DmgAmount)
+    public unsafe override BmSDK.BmGame.RPawnCombat.FDamageInfo SetDamageInfo(BmSDK.BmGame.RPawnCombat DamageReceiver, float DmgAmount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBarge.SetDamageInfo", true);
         byte* paramsPtr = stackalloc byte[520];
@@ -95,7 +95,7 @@ public partial class RCombatMove_BatmanBarge : BmSDK.BmGame.RCombatMove_BatmanSt
     /// <summary>
     /// Function: ShouldIncCombo
     /// </summary>
-    public unsafe bool ShouldIncCombo(out int ComboIncrease, out int SpecialMoveCountIncrease)
+    public unsafe override bool ShouldIncCombo(out int ComboIncrease, out int SpecialMoveCountIncrease)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBarge.ShouldIncCombo", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -108,7 +108,7 @@ public partial class RCombatMove_BatmanBarge : BmSDK.BmGame.RCombatMove_BatmanSt
     /// <summary>
     /// Function: DamagePawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagePawn(BmSDK.BmGame.RPawnCombat DamageReceiver)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult DamagePawn(BmSDK.BmGame.RPawnCombat DamageReceiver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBarge.DamagePawn", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -120,7 +120,7 @@ public partial class RCombatMove_BatmanBarge : BmSDK.BmGame.RCombatMove_BatmanSt
     /// <summary>
     /// Function: GetStrikeDurationScale
     /// </summary>
-    public unsafe float GetStrikeDurationScale()
+    public unsafe override float GetStrikeDurationScale()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBarge.GetStrikeDurationScale", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -131,7 +131,7 @@ public partial class RCombatMove_BatmanBarge : BmSDK.BmGame.RCombatMove_BatmanSt
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBarge.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

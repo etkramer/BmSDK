@@ -71,7 +71,7 @@ public partial class RLevelTransitionShutterDoorsRiddler : BmSDK.BmScript.RLevel
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionShutterDoorsRiddler.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RLevelTransitionShutterDoorsRiddler : BmSDK.BmScript.RLevel
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionShutterDoorsRiddler.IsActive", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -94,7 +94,7 @@ public partial class RLevelTransitionShutterDoorsRiddler : BmSDK.BmScript.RLevel
     /// <summary>
     /// Function: CheckForRiddlerfy
     /// </summary>
-    public unsafe void CheckForRiddlerfy()
+    public unsafe virtual void CheckForRiddlerfy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionShutterDoorsRiddler.CheckForRiddlerfy", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RLevelTransitionShutterDoorsRiddler : BmSDK.BmScript.RLevel
     /// <summary>
     /// Function: CheckForUnlock
     /// </summary>
-    public unsafe void CheckForUnlock()
+    public unsafe virtual void CheckForUnlock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionShutterDoorsRiddler.CheckForUnlock", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RLevelTransitionShutterDoorsRiddler : BmSDK.BmScript.RLevel
     /// <summary>
     /// Function: SetRiddlerfied
     /// </summary>
-    public unsafe void SetRiddlerfied()
+    public unsafe virtual void SetRiddlerfied()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionShutterDoorsRiddler.SetRiddlerfied", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -127,7 +127,7 @@ public partial class RLevelTransitionShutterDoorsRiddler : BmSDK.BmScript.RLevel
     /// <summary>
     /// Function: AllowedToBeOpen
     /// </summary>
-    public unsafe bool AllowedToBeOpen(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool AllowedToBeOpen(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionShutterDoorsRiddler.AllowedToBeOpen", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -139,7 +139,7 @@ public partial class RLevelTransitionShutterDoorsRiddler : BmSDK.BmScript.RLevel
     /// <summary>
     /// Function: ShouldLockDoors
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.ECombatLockType ShouldLockDoors()
+    public unsafe override BmSDK.BmGame.RGameInfo.ECombatLockType ShouldLockDoors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionShutterDoorsRiddler.ShouldLockDoors", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -150,7 +150,7 @@ public partial class RLevelTransitionShutterDoorsRiddler : BmSDK.BmScript.RLevel
     /// <summary>
     /// Function: DisabledByPassenger
     /// </summary>
-    public unsafe bool DisabledByPassenger(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool DisabledByPassenger(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionShutterDoorsRiddler.DisabledByPassenger", true);
         byte* paramsPtr = stackalloc byte[16];

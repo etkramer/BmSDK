@@ -47,7 +47,7 @@ public partial class RSeqAct_AzraelFinale : BmSDK.BmGame.RSeqAct_HelpText, BmSDK
     /// <summary>
     /// Function: GetLine
     /// </summary>
-    public unsafe BmSDK.BmGame.RHUDPrompt.FHelpLine GetLine(int I)
+    public unsafe override BmSDK.BmGame.RHUDPrompt.FHelpLine GetLine(int I)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_AzraelFinale.GetLine", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -59,7 +59,7 @@ public partial class RSeqAct_AzraelFinale : BmSDK.BmGame.RSeqAct_HelpText, BmSDK
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_AzraelFinale.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -71,7 +71,7 @@ public partial class RSeqAct_AzraelFinale : BmSDK.BmGame.RSeqAct_HelpText, BmSDK
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_AzraelFinale.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RSeqAct_AzraelFinale : BmSDK.BmGame.RSeqAct_HelpText, BmSDK
     /// <summary>
     /// Function: AddSword
     /// </summary>
-    public unsafe void AddSword()
+    public unsafe virtual void AddSword()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_AzraelFinale.AddSword", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RSeqAct_AzraelFinale : BmSDK.BmGame.RSeqAct_HelpText, BmSDK
     /// <summary>
     /// Function: RemoveSword
     /// </summary>
-    public unsafe void RemoveSword()
+    public unsafe virtual void RemoveSword()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_AzraelFinale.RemoveSword", true);
         byte* paramsPtr = stackalloc byte[0];

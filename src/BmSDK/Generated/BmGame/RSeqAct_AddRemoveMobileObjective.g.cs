@@ -36,7 +36,7 @@ public partial class RSeqAct_AddRemoveMobileObjective : BmSDK.Engine.SequenceAct
     /// <summary>
     /// Function: CollectLinkedWaveSpawners
     /// </summary>
-    public unsafe void CollectLinkedWaveSpawners()
+    public unsafe virtual void CollectLinkedWaveSpawners()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AddRemoveMobileObjective.CollectLinkedWaveSpawners", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -65,7 +65,7 @@ public partial class RSeqAct_AddRemoveMobileObjective : BmSDK.Engine.SequenceAct
     /// <summary>
     /// Function: FindSeqAct
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_MultipleMobileObjectives FindSeqAct()
+    public unsafe virtual BmSDK.BmGame.RSeqAct_MultipleMobileObjectives FindSeqAct()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AddRemoveMobileObjective.FindSeqAct", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -76,7 +76,7 @@ public partial class RSeqAct_AddRemoveMobileObjective : BmSDK.Engine.SequenceAct
     /// <summary>
     /// Function: PassActors
     /// </summary>
-    public unsafe void PassActors(BmSDK.BmGame.RSeqAct_MultipleMobileObjectives MainSeqAct, bool dooAdd)
+    public unsafe virtual void PassActors(BmSDK.BmGame.RSeqAct_MultipleMobileObjectives MainSeqAct, bool dooAdd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AddRemoveMobileObjective.PassActors", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -89,7 +89,7 @@ public partial class RSeqAct_AddRemoveMobileObjective : BmSDK.Engine.SequenceAct
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AddRemoveMobileObjective.Activated", true);
         byte* paramsPtr = stackalloc byte[8];

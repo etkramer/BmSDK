@@ -36,7 +36,7 @@ public partial class RBMBehaviour_JokerBossTwoface : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: EndCameraZoom
     /// </summary>
-    public unsafe void EndCameraZoom()
+    public unsafe virtual void EndCameraZoom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossTwoface.EndCameraZoom", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_JokerBossTwoface : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: AllowShootInZoom
     /// </summary>
-    public unsafe void AllowShootInZoom()
+    public unsafe virtual void AllowShootInZoom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossTwoface.AllowShootInZoom", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_JokerBossTwoface : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: StartCameraZoom
     /// </summary>
-    public unsafe void StartCameraZoom()
+    public unsafe virtual void StartCameraZoom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossTwoface.StartCameraZoom", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_JokerBossTwoface : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: ShotJoker
     /// </summary>
-    public unsafe void ShotJoker()
+    public unsafe virtual void ShotJoker()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossTwoface.ShotJoker", true);
         byte* paramsPtr = stackalloc byte[196];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_JokerBossTwoface : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: ShotByJoker
     /// </summary>
-    public unsafe void ShotByJoker()
+    public unsafe virtual void ShotByJoker()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossTwoface.ShotByJoker", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -91,7 +91,7 @@ public partial class RBMBehaviour_JokerBossTwoface : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: JokerGunFired
     /// </summary>
-    public unsafe void JokerGunFired()
+    public unsafe virtual void JokerGunFired()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossTwoface.JokerGunFired", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -102,7 +102,7 @@ public partial class RBMBehaviour_JokerBossTwoface : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: CanSeeJoker
     /// </summary>
-    public unsafe bool CanSeeJoker()
+    public unsafe virtual bool CanSeeJoker()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossTwoface.CanSeeJoker", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -113,7 +113,7 @@ public partial class RBMBehaviour_JokerBossTwoface : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: TwoFaceTalkingOver
     /// </summary>
-    public unsafe void TwoFaceTalkingOver()
+    public unsafe virtual void TwoFaceTalkingOver()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossTwoface.TwoFaceTalkingOver", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -124,7 +124,7 @@ public partial class RBMBehaviour_JokerBossTwoface : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: GetJokerDist
     /// </summary>
-    public unsafe float GetJokerDist()
+    public unsafe virtual float GetJokerDist()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossTwoface.GetJokerDist", true);
         byte* paramsPtr = stackalloc byte[20];

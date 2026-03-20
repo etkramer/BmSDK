@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_Jump : BmSDK.BmGame.RSpecialMoveInstan
     /// <summary>
     /// Function: CorrectJumpVelocity
     /// </summary>
-    public unsafe bool CorrectJumpVelocity(out System.Numerics.Vector3 InJumpVelocity, out BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe virtual bool CorrectJumpVelocity(out System.Numerics.Vector3 InJumpVelocity, out BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Jump.CorrectJumpVelocity", true);
         byte* paramsPtr = stackalloc byte[148];
@@ -91,7 +91,7 @@ public partial class RSpecialMoveInstance_Jump : BmSDK.BmGame.RSpecialMoveInstan
     /// <summary>
     /// Function: GetPredictedEndParameters
     /// </summary>
-    public unsafe void GetPredictedEndParameters(out System.Numerics.Vector3 EndLocation, out System.Numerics.Vector3 EndVelocity)
+    public unsafe override void GetPredictedEndParameters(out System.Numerics.Vector3 EndLocation, out System.Numerics.Vector3 EndVelocity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Jump.GetPredictedEndParameters", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -104,7 +104,7 @@ public partial class RSpecialMoveInstance_Jump : BmSDK.BmGame.RSpecialMoveInstan
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Jump.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -116,7 +116,7 @@ public partial class RSpecialMoveInstance_Jump : BmSDK.BmGame.RSpecialMoveInstan
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Jump.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -127,7 +127,7 @@ public partial class RSpecialMoveInstance_Jump : BmSDK.BmGame.RSpecialMoveInstan
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Jump.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[204];

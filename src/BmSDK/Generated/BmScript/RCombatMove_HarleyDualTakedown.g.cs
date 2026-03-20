@@ -71,7 +71,7 @@ public partial class RCombatMove_HarleyDualTakedown : BmSDK.BmGame.RCombatMove, 
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_HarleyDualTakedown.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_HarleyDualTakedown : BmSDK.BmGame.RCombatMove, 
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_HarleyDualTakedown.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RCombatMove_HarleyDualTakedown : BmSDK.BmGame.RCombatMove, 
     /// <summary>
     /// Function: PlayTakedown
     /// </summary>
-    public unsafe void PlayTakedown()
+    public unsafe virtual void PlayTakedown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_HarleyDualTakedown.PlayTakedown", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RCombatMove_HarleyDualTakedown : BmSDK.BmGame.RCombatMove, 
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_HarleyDualTakedown.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RCombatMove_HarleyDualTakedown : BmSDK.BmGame.RCombatMove, 
     /// <summary>
     /// Function: KillHit
     /// </summary>
-    public unsafe void KillHit()
+    public unsafe virtual void KillHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_HarleyDualTakedown.KillHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RCombatMove_HarleyDualTakedown : BmSDK.BmGame.RCombatMove, 
     /// <summary>
     /// Function: StrikeHit
     /// </summary>
-    public unsafe void StrikeHit()
+    public unsafe virtual void StrikeHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_HarleyDualTakedown.StrikeHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RCombatMove_HarleyDualTakedown : BmSDK.BmGame.RCombatMove, 
     /// <summary>
     /// Function: BlockHit
     /// </summary>
-    public unsafe void BlockHit()
+    public unsafe virtual void BlockHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_HarleyDualTakedown.BlockHit", true);
         byte* paramsPtr = stackalloc byte[0];

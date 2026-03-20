@@ -71,7 +71,7 @@ public partial class RStaticMeshActorDamageable : BmSDK.Engine.StaticMeshActor, 
     /// <summary>
     /// Function: ReceiveHit
     /// </summary>
-    public unsafe void ReceiveHit()
+    public unsafe virtual void ReceiveHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RStaticMeshActorDamageable.ReceiveHit", true);
         byte* paramsPtr = stackalloc byte[0];

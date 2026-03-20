@@ -36,7 +36,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_bUsingDPad
     /// </summary>
-    public unsafe void XI_bUsingDPad(BmSDK.FString TargetPath)
+    public unsafe virtual void XI_bUsingDPad(BmSDK.FString TargetPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_bUsingDPad", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -48,7 +48,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: UC_ReFetchChallengeBoard
     /// </summary>
-    public unsafe void UC_ReFetchChallengeBoard()
+    public unsafe virtual void UC_ReFetchChallengeBoard()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.UC_ReFetchChallengeBoard", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -59,7 +59,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: UC_OpenMainChallengeBoard
     /// </summary>
-    public unsafe void UC_OpenMainChallengeBoard()
+    public unsafe virtual void UC_OpenMainChallengeBoard()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.UC_OpenMainChallengeBoard", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: FetchChallengeBoard
     /// </summary>
-    public unsafe bool FetchChallengeBoard()
+    public unsafe virtual bool FetchChallengeBoard()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.FetchChallengeBoard", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -81,7 +81,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_FetchBoard
     /// </summary>
-    public unsafe void XI_FetchBoard(int _ChallengeId, int RequestedMode, BmSDK.FString TargetPath)
+    public unsafe virtual void XI_FetchBoard(int _ChallengeId, int RequestedMode, BmSDK.FString TargetPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_FetchBoard", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -95,7 +95,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: UC_TriggerLeaderboard
     /// </summary>
-    public unsafe void UC_TriggerLeaderboard(int FriendCount)
+    public unsafe virtual void UC_TriggerLeaderboard(int FriendCount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.UC_TriggerLeaderboard", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -107,7 +107,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: SendLeaderBoardToFlash
     /// </summary>
-    public unsafe void SendLeaderBoardToFlash(int Id, int total, BmSDK.TArray<int> FriendIndex, BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId> NetIDs, BmSDK.TArray<int> Ranks, BmSDK.TArray<BmSDK.FString> NickNames, BmSDK.TArray<int> Stars, BmSDK.TArray<float> Scores, BmSDK.TArray<int> RivalPoints, BmSDK.TArray<float> Story, BmSDK.TArray<float> MW, BmSDK.TArray<float> AR)
+    public unsafe override void SendLeaderBoardToFlash(int Id, int total, BmSDK.TArray<int> FriendIndex, BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId> NetIDs, BmSDK.TArray<int> Ranks, BmSDK.TArray<BmSDK.FString> NickNames, BmSDK.TArray<int> Stars, BmSDK.TArray<float> Scores, BmSDK.TArray<int> RivalPoints, BmSDK.TArray<float> Story, BmSDK.TArray<float> MW, BmSDK.TArray<float> AR)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.SendLeaderBoardToFlash", true);
         byte* paramsPtr = stackalloc byte[316];
@@ -130,7 +130,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: UC_SetLeaderboardLine
     /// </summary>
-    public unsafe void UC_SetLeaderboardLine(int Index, int Rank, BmSDK.FString NickName, int Medals, BmSDK.FString Score)
+    public unsafe virtual void UC_SetLeaderboardLine(int Index, int Rank, BmSDK.FString NickName, int Medals, BmSDK.FString Score)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.UC_SetLeaderboardLine", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -146,7 +146,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: UC_SetGoal
     /// </summary>
-    public unsafe void UC_SetGoal(int GoalId, BmSDK.FString GoalStr)
+    public unsafe virtual void UC_SetGoal(int GoalId, BmSDK.FString GoalStr)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.UC_SetGoal", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -159,7 +159,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_SetupContents
     /// </summary>
-    public unsafe void XI_SetupContents()
+    public unsafe virtual void XI_SetupContents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_SetupContents", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -170,7 +170,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_ClosedMainBoard
     /// </summary>
-    public unsafe void XI_ClosedMainBoard()
+    public unsafe virtual void XI_ClosedMainBoard()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_ClosedMainBoard", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -181,7 +181,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: LeaderboardTick
     /// </summary>
-    public unsafe void LeaderboardTick()
+    public unsafe virtual void LeaderboardTick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.LeaderboardTick", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -192,7 +192,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_ShowMWGamercard
     /// </summary>
-    public unsafe void XI_ShowMWGamercard(int Index)
+    public unsafe virtual void XI_ShowMWGamercard(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_ShowMWGamercard", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -204,7 +204,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_WillASetRival
     /// </summary>
-    public unsafe void XI_WillASetRival(int Status)
+    public unsafe virtual void XI_WillASetRival(int Status)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_WillASetRival", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -216,7 +216,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: IsPollingBoards
     /// </summary>
-    public unsafe bool IsPollingBoards()
+    public unsafe virtual bool IsPollingBoards()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.IsPollingBoards", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -227,7 +227,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_PS4CanAccessLB
     /// </summary>
-    public unsafe bool XI_PS4CanAccessLB()
+    public unsafe virtual bool XI_PS4CanAccessLB()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_PS4CanAccessLB", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -238,7 +238,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: UC_ReFetchBoard
     /// </summary>
-    public unsafe void UC_ReFetchBoard()
+    public unsafe virtual void UC_ReFetchBoard()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.UC_ReFetchBoard", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -249,7 +249,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: UC_OpenMWMainBoard
     /// </summary>
-    public unsafe void UC_OpenMWMainBoard()
+    public unsafe virtual void UC_OpenMWMainBoard()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.UC_OpenMWMainBoard", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -260,7 +260,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: UC_GotMWLeaderboardData
     /// </summary>
-    public unsafe void UC_GotMWLeaderboardData(int Count)
+    public unsafe virtual void UC_GotMWLeaderboardData(int Count)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.UC_GotMWLeaderboardData", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -272,7 +272,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_SetRivalIndex
     /// </summary>
-    public unsafe void XI_SetRivalIndex(int Index, bool bChallengeData)
+    public unsafe virtual void XI_SetRivalIndex(int Index, bool bChallengeData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_SetRivalIndex", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -285,7 +285,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_GetRivalIndex
     /// </summary>
-    public unsafe int XI_GetRivalIndex(bool bChallengeData)
+    public unsafe virtual int XI_GetRivalIndex(bool bChallengeData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_GetRivalIndex", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -297,7 +297,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_GetSelfIndex
     /// </summary>
-    public unsafe int XI_GetSelfIndex(bool bChallengeData)
+    public unsafe virtual int XI_GetSelfIndex(bool bChallengeData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_GetSelfIndex", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -309,7 +309,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: OnMWLeaderboardRead
     /// </summary>
-    public unsafe void OnMWLeaderboardRead(bool bWasSuccessful, BmSDK.BmGame.ROnlineStatsReadMostWanted MWStats)
+    public unsafe override void OnMWLeaderboardRead(bool bWasSuccessful, BmSDK.BmGame.ROnlineStatsReadMostWanted MWStats)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.OnMWLeaderboardRead", true);
         byte* paramsPtr = stackalloc byte[132];
@@ -322,7 +322,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_FetchMWBoard
     /// </summary>
-    public unsafe void XI_FetchMWBoard(BmSDK.FString TargetPath)
+    public unsafe virtual void XI_FetchMWBoard(BmSDK.FString TargetPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_FetchMWBoard", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -334,7 +334,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_SetMWBoardRef
     /// </summary>
-    public unsafe void XI_SetMWBoardRef(BmSDK.FString TargetPath)
+    public unsafe virtual void XI_SetMWBoardRef(BmSDK.FString TargetPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_SetMWBoardRef", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -346,7 +346,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_GetMostWantedStatForRival
     /// </summary>
-    public unsafe int XI_GetMostWantedStatForRival()
+    public unsafe virtual int XI_GetMostWantedStatForRival()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_GetMostWantedStatForRival", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -357,7 +357,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_GetBatmobileUnavailable
     /// </summary>
-    public unsafe BmSDK.FString XI_GetBatmobileUnavailable()
+    public unsafe virtual BmSDK.FString XI_GetBatmobileUnavailable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_GetBatmobileUnavailable", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -368,7 +368,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_ClearTutorial
     /// </summary>
-    public unsafe void XI_ClearTutorial(BmSDK.FString sWheelType)
+    public unsafe virtual void XI_ClearTutorial(BmSDK.FString sWheelType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_ClearTutorial", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -380,7 +380,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_ClearNewFlag
     /// </summary>
-    public unsafe void XI_ClearNewFlag(BmSDK.FString sMissionName, bool bOnlyClearOneShot)
+    public unsafe virtual void XI_ClearNewFlag(BmSDK.FString sMissionName, bool bOnlyClearOneShot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_ClearNewFlag", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -393,7 +393,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_ClearCompleteAnim
     /// </summary>
-    public unsafe void XI_ClearCompleteAnim(BmSDK.FString sMissionName)
+    public unsafe virtual void XI_ClearCompleteAnim(BmSDK.FString sMissionName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_ClearCompleteAnim", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -405,7 +405,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_PlayMissionSound
     /// </summary>
-    public unsafe void XI_PlayMissionSound(BmSDK.FString sDialogueCase)
+    public unsafe virtual void XI_PlayMissionSound(BmSDK.FString sDialogueCase)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_PlayMissionSound", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -417,7 +417,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_PlayMissionSoundForMissionInWheel
     /// </summary>
-    public unsafe void XI_PlayMissionSoundForMissionInWheel(BmSDK.FString sMission, BmSDK.FString sSpecialCase)
+    public unsafe virtual void XI_PlayMissionSoundForMissionInWheel(BmSDK.FString sMission, BmSDK.FString sSpecialCase)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_PlayMissionSoundForMissionInWheel", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -430,7 +430,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_CancelMissionSoundForMissionOutsideOfWheel
     /// </summary>
-    public unsafe void XI_CancelMissionSoundForMissionOutsideOfWheel()
+    public unsafe virtual void XI_CancelMissionSoundForMissionOutsideOfWheel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_CancelMissionSoundForMissionOutsideOfWheel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -441,7 +441,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_PlayMissionSoundForMissionOutsideOfWheel
     /// </summary>
-    public unsafe void XI_PlayMissionSoundForMissionOutsideOfWheel(BmSDK.FString sMission, BmSDK.FString sSpecialCase)
+    public unsafe virtual void XI_PlayMissionSoundForMissionOutsideOfWheel(BmSDK.FString sMission, BmSDK.FString sSpecialCase)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_PlayMissionSoundForMissionOutsideOfWheel", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -454,7 +454,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_TutorialPopUp
     /// </summary>
-    public unsafe void XI_TutorialPopUp(BmSDK.FString sWheelType)
+    public unsafe virtual void XI_TutorialPopUp(BmSDK.FString sWheelType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_TutorialPopUp", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -466,7 +466,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_RequestClose
     /// </summary>
-    public unsafe void XI_RequestClose()
+    public unsafe virtual void XI_RequestClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_RequestClose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -477,7 +477,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_GetStickAngMag
     /// </summary>
-    public unsafe void XI_GetStickAngMag(BmSDK.FString TargetBasePath)
+    public unsafe virtual void XI_GetStickAngMag(BmSDK.FString TargetBasePath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_GetStickAngMag", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -489,7 +489,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_Tick
     /// </summary>
-    public unsafe void XI_Tick()
+    public unsafe override void XI_Tick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_Tick", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -500,7 +500,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_ToggleMission
     /// </summary>
-    public unsafe void XI_ToggleMission(BmSDK.FString sMission, int iExtraParameter)
+    public unsafe virtual void XI_ToggleMission(BmSDK.FString sMission, int iExtraParameter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_ToggleMission", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -513,7 +513,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_LastHighlight
     /// </summary>
-    public unsafe void XI_LastHighlight(BmSDK.FString sType, BmSDK.FString sMission)
+    public unsafe virtual void XI_LastHighlight(BmSDK.FString sType, BmSDK.FString sMission)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_LastHighlight", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -526,7 +526,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_SetMWWheelDefaultType
     /// </summary>
-    public unsafe void XI_SetMWWheelDefaultType(BmSDK.FString sType)
+    public unsafe virtual void XI_SetMWWheelDefaultType(BmSDK.FString sType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_SetMWWheelDefaultType", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -538,7 +538,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_AlternateCarRace
     /// </summary>
-    public unsafe bool XI_AlternateCarRace(int nId)
+    public unsafe virtual bool XI_AlternateCarRace(int nId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_AlternateCarRace", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -550,7 +550,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_IsChallengeAwarded
     /// </summary>
-    public unsafe bool XI_IsChallengeAwarded(int nId)
+    public unsafe virtual bool XI_IsChallengeAwarded(int nId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_IsChallengeAwarded", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -562,7 +562,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_IsUniqueGoalMap
     /// </summary>
-    public unsafe bool XI_IsUniqueGoalMap(int nId)
+    public unsafe virtual bool XI_IsUniqueGoalMap(int nId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_IsUniqueGoalMap", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -574,7 +574,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_GetExtraChallengeMedals
     /// </summary>
-    public unsafe int XI_GetExtraChallengeMedals(int iChallengeCategory)
+    public unsafe virtual int XI_GetExtraChallengeMedals(int iChallengeCategory)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_GetExtraChallengeMedals", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -586,7 +586,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: FireFlyActive
     /// </summary>
-    public unsafe bool FireFlyActive()
+    public unsafe virtual bool FireFlyActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.FireFlyActive", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -597,7 +597,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: WheelSetSubtitles
     /// </summary>
-    public unsafe void WheelSetSubtitles(BmSDK.FString sSubtitle)
+    public unsafe virtual void WheelSetSubtitles(BmSDK.FString sSubtitle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.WheelSetSubtitles", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -609,7 +609,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: UC_SetWheel
     /// </summary>
-    public unsafe void UC_SetWheel(BmSDK.FString sType, BmSDK.FString sBackTarget, BmSDK.FString sMissionToHighlight)
+    public unsafe virtual void UC_SetWheel(BmSDK.FString sType, BmSDK.FString sBackTarget, BmSDK.FString sMissionToHighlight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.UC_SetWheel", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -660,7 +660,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: GetCurrentMission
     /// </summary>
-    public unsafe BmSDK.FString GetCurrentMission()
+    public unsafe virtual BmSDK.FString GetCurrentMission()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.GetCurrentMission", true);
         byte* paramsPtr = stackalloc byte[69];
@@ -671,7 +671,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: SortById
     /// </summary>
-    public unsafe int SortById(BmSDK.BmGame.RGameInfo.FMostWantedSetup A, BmSDK.BmGame.RGameInfo.FMostWantedSetup B)
+    public unsafe virtual int SortById(BmSDK.BmGame.RGameInfo.FMostWantedSetup A, BmSDK.BmGame.RGameInfo.FMostWantedSetup B)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.SortById", true);
         byte* paramsPtr = stackalloc byte[196];
@@ -684,7 +684,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: AddItems
     /// </summary>
-    public unsafe void AddItems(BmSDK.TArray<BmSDK.BmGame.RGFxMovieMissionWheel.FMission_Data> aItems)
+    public unsafe virtual void AddItems(BmSDK.TArray<BmSDK.BmGame.RGFxMovieMissionWheel.FMission_Data> aItems)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.AddItems", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -696,7 +696,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: AddInSummaryAndSetAngles
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RGFxMovieMissionWheel.FMission_Data> AddInSummaryAndSetAngles(BmSDK.TArray<BmSDK.BmGame.RGFxMovieMissionWheel.FMission_Data> aItems, BmSDK.BmGame.RGFxMovieMissionWheel.FMission_Data structItem)
+    public unsafe virtual BmSDK.TArray<BmSDK.BmGame.RGFxMovieMissionWheel.FMission_Data> AddInSummaryAndSetAngles(BmSDK.TArray<BmSDK.BmGame.RGFxMovieMissionWheel.FMission_Data> aItems, BmSDK.BmGame.RGFxMovieMissionWheel.FMission_Data structItem)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.AddInSummaryAndSetAngles", true);
         byte* paramsPtr = stackalloc byte[468];
@@ -709,7 +709,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: GetChallengeDistance
     /// </summary>
-    public unsafe int GetChallengeDistance(int iId)
+    public unsafe virtual int GetChallengeDistance(int iId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.GetChallengeDistance", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -721,7 +721,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: UC_SetAltCarTextOn
     /// </summary>
-    public unsafe void UC_SetAltCarTextOn()
+    public unsafe virtual void UC_SetAltCarTextOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.UC_SetAltCarTextOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -732,7 +732,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: GetChallengeData_Sub
     /// </summary>
-    public unsafe void GetChallengeData_Sub(BmSDK.FString sType)
+    public unsafe virtual void GetChallengeData_Sub(BmSDK.FString sType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.GetChallengeData_Sub", true);
         byte* paramsPtr = stackalloc byte[820];
@@ -744,7 +744,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: IsInRightCategory
     /// </summary>
-    public unsafe bool IsInRightCategory(BmSDK.FString CategoryName, int ChallengeListIndex)
+    public unsafe virtual bool IsInRightCategory(BmSDK.FString CategoryName, int ChallengeListIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.IsInRightCategory", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -757,7 +757,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: GetChallengeDisabled
     /// </summary>
-    public unsafe bool GetChallengeDisabled(int nId)
+    public unsafe virtual bool GetChallengeDisabled(int nId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.GetChallengeDisabled", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -769,7 +769,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: GetChallengeData_Categories
     /// </summary>
-    public unsafe void GetChallengeData_Categories()
+    public unsafe virtual void GetChallengeData_Categories()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.GetChallengeData_Categories", true);
         byte* paramsPtr = stackalloc byte[812];
@@ -780,7 +780,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: GetMostWantedData_DLC
     /// </summary>
-    public unsafe void GetMostWantedData_DLC()
+    public unsafe virtual void GetMostWantedData_DLC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.GetMostWantedData_DLC", true);
         byte* paramsPtr = stackalloc byte[816];
@@ -791,7 +791,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: GetMostWantedData
     /// </summary>
-    public unsafe void GetMostWantedData()
+    public unsafe virtual void GetMostWantedData()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.GetMostWantedData", true);
         byte* paramsPtr = stackalloc byte[948];
@@ -802,7 +802,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_AnyDLCMissionsPresent
     /// </summary>
-    public unsafe bool XI_AnyDLCMissionsPresent()
+    public unsafe virtual bool XI_AnyDLCMissionsPresent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_AnyDLCMissionsPresent", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -813,7 +813,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_SetupWheelData
     /// </summary>
-    public unsafe void XI_SetupWheelData(BmSDK.FString sWheelType)
+    public unsafe virtual void XI_SetupWheelData(BmSDK.FString sWheelType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.XI_SetupWheelData", true);
         byte* paramsPtr = stackalloc byte[65];
@@ -825,7 +825,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: InitFlash
     /// </summary>
-    public unsafe void InitFlash(BmSDK.FString sType, BmSDK.TArray<BmSDK.FString> aWheelsAvailable, int iKnightfall, int iMidKnightfall, bool bMW_Tutorial, bool bAR_Tutorial, bool bMW_DLC_Tutorial, bool bAR_DLC_Tutorial)
+    public unsafe virtual void InitFlash(BmSDK.FString sType, BmSDK.TArray<BmSDK.FString> aWheelsAvailable, int iKnightfall, int iMidKnightfall, bool bMW_Tutorial, bool bAR_Tutorial, bool bMW_DLC_Tutorial, bool bAR_DLC_Tutorial)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.InitFlash", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -844,7 +844,7 @@ public partial class RGFxMovieMissionWheel : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieMissionWheel.Init", true);
         byte* paramsPtr = stackalloc byte[8];

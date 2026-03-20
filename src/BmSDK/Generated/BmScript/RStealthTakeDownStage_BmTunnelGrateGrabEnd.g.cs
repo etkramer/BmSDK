@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_BmTunnelGrateGrabEnd : BmSDK.BmGame.R
     /// <summary>
     /// Function: PlayGrateAnim
     /// </summary>
-    public unsafe void PlayGrateAnim()
+    public unsafe virtual void PlayGrateAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakeDownStage_BmTunnelGrateGrabEnd.PlayGrateAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RStealthTakeDownStage_BmTunnelGrateGrabEnd : BmSDK.BmGame.R
     /// <summary>
     /// Function: SwitchToFinalCamera
     /// </summary>
-    public unsafe void SwitchToFinalCamera()
+    public unsafe virtual void SwitchToFinalCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakeDownStage_BmTunnelGrateGrabEnd.SwitchToFinalCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RStealthTakeDownStage_BmTunnelGrateGrabEnd : BmSDK.BmGame.R
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakeDownStage_BmTunnelGrateGrabEnd.Begin", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -104,7 +104,7 @@ public partial class RStealthTakeDownStage_BmTunnelGrateGrabEnd : BmSDK.BmGame.R
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakeDownStage_BmTunnelGrateGrabEnd.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[24];

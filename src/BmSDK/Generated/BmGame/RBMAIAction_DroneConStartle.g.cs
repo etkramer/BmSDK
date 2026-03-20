@@ -71,7 +71,7 @@ public partial class RBMAIAction_DroneConStartle : BmSDK.BmGame.RBMAIAction, BmS
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DroneConStartle.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_DroneConStartle : BmSDK.BmGame.RBMAIAction, BmS
     /// <summary>
     /// Function: PlayStartleAnim
     /// </summary>
-    public unsafe void PlayStartleAnim()
+    public unsafe virtual void PlayStartleAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DroneConStartle.PlayStartleAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_DroneConStartle : BmSDK.BmGame.RBMAIAction, BmS
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DroneConStartle.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_DroneConStartle : BmSDK.BmGame.RBMAIAction, BmS
     /// <summary>
     /// Function: SetStartleLoc
     /// </summary>
-    public unsafe void SetStartleLoc(System.Numerics.Vector3 NewLoc)
+    public unsafe virtual void SetStartleLoc(System.Numerics.Vector3 NewLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DroneConStartle.SetStartleLoc", true);
         byte* paramsPtr = stackalloc byte[12];

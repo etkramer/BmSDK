@@ -71,7 +71,7 @@ public partial class RCombatMove_VillainSmokeBombReaction_Lieutenant : BmSDK.BmG
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_VillainSmokeBombReaction_Lieutenant.Initialise", true);
         byte* paramsPtr = stackalloc byte[8];

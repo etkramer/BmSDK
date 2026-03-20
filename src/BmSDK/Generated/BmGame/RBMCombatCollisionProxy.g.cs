@@ -71,7 +71,7 @@ public partial class RBMCombatCollisionProxy : BmSDK.Engine.Actor, BmSDK.IGameOb
     /// <summary>
     /// Function: GetRadius
     /// </summary>
-    public unsafe float GetRadius()
+    public unsafe virtual float GetRadius()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatCollisionProxy.GetRadius", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMCombatCollisionProxy : BmSDK.Engine.Actor, BmSDK.IGameOb
     /// <summary>
     /// Function: ResetRadius
     /// </summary>
-    public unsafe void ResetRadius()
+    public unsafe virtual void ResetRadius()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatCollisionProxy.ResetRadius", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RBMCombatCollisionProxy : BmSDK.Engine.Actor, BmSDK.IGameOb
     /// <summary>
     /// Function: SetRadius
     /// </summary>
-    public unsafe void SetRadius(float NewRadius)
+    public unsafe virtual void SetRadius(float NewRadius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatCollisionProxy.SetRadius", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RBMCombatCollisionProxy : BmSDK.Engine.Actor, BmSDK.IGameOb
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(float Radius, float Height)
+    public unsafe virtual void Initialise(float Radius, float Height)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatCollisionProxy.Initialise", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RBMCombatCollisionProxy : BmSDK.Engine.Actor, BmSDK.IGameOb
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatCollisionProxy.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RBMCombatCollisionProxy : BmSDK.Engine.Actor, BmSDK.IGameOb
     /// <summary>
     /// Function: UpdateLocation
     /// </summary>
-    public unsafe void UpdateLocation(System.Numerics.Vector3 NewLocation)
+    public unsafe virtual void UpdateLocation(System.Numerics.Vector3 NewLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatCollisionProxy.UpdateLocation", true);
         byte* paramsPtr = stackalloc byte[12];

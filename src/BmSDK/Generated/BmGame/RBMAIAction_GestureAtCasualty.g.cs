@@ -71,7 +71,7 @@ public partial class RBMAIAction_GestureAtCasualty : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// Function: PickDiscoverAnim
     /// </summary>
-    public unsafe void PickDiscoverAnim(out BmSDK.FName AnimName, out BmSDK.Engine.AnimSet AnimSet)
+    public unsafe virtual void PickDiscoverAnim(out BmSDK.FName AnimName, out BmSDK.Engine.AnimSet AnimSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_GestureAtCasualty.PickDiscoverAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -84,7 +84,7 @@ public partial class RBMAIAction_GestureAtCasualty : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_GestureAtCasualty.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -96,7 +96,7 @@ public partial class RBMAIAction_GestureAtCasualty : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// Function: StartGestureAnim
     /// </summary>
-    public unsafe void StartGestureAnim(BmSDK.FName AnimName, BmSDK.Engine.AnimSet AnimSet)
+    public unsafe virtual void StartGestureAnim(BmSDK.FName AnimName, BmSDK.Engine.AnimSet AnimSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_GestureAtCasualty.StartGestureAnim", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -109,7 +109,7 @@ public partial class RBMAIAction_GestureAtCasualty : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_GestureAtCasualty.OnActivate", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -120,7 +120,7 @@ public partial class RBMAIAction_GestureAtCasualty : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_GestureAtCasualty.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];

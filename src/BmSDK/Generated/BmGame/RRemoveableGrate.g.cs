@@ -71,7 +71,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: SuperEasy
     /// </summary>
-    public unsafe bool SuperEasy()
+    public unsafe virtual bool SuperEasy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.SuperEasy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: GetHarpoonTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetHarpoonTargetLocation()
+    public unsafe virtual System.Numerics.Vector3 GetHarpoonTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.GetHarpoonTargetLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: OnSetMaterial
     /// </summary>
-    public unsafe void OnSetMaterial(BmSDK.Engine.SeqAct_SetMaterial Action)
+    public unsafe virtual void OnSetMaterial(BmSDK.Engine.SeqAct_SetMaterial Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.OnSetMaterial", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: PlayGrateAnim
     /// </summary>
-    public unsafe void PlayGrateAnim(BmSDK.FName AnimName, bool bAnimMirrored = default, bool bReset = default, float Rate = default, float StartTime = default)
+    public unsafe virtual void PlayGrateAnim(BmSDK.FName AnimName, bool bAnimMirrored = default, bool bReset = default, float Rate = default, float StartTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.PlayGrateAnim", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -121,7 +121,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: OverridesRun
     /// </summary>
-    public unsafe float OverridesRun(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override float OverridesRun(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.OverridesRun", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -133,7 +133,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: SpawnTunnelFunnel
     /// </summary>
-    public unsafe void SpawnTunnelFunnel(bool bSpawnMissingGrateMarker = default)
+    public unsafe virtual void SpawnTunnelFunnel(bool bSpawnMissingGrateMarker = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.SpawnTunnelFunnel", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -145,7 +145,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: CanReachItem
     /// </summary>
-    public unsafe bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
+    public unsafe override bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.CanReachItem", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -157,7 +157,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -169,7 +169,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: TriggerGrateDust
     /// </summary>
-    public unsafe void TriggerGrateDust(int NumBoltsToTrigger = default)
+    public unsafe virtual void TriggerGrateDust(int NumBoltsToTrigger = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.TriggerGrateDust", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -181,7 +181,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: IsButtonPrompt
     /// </summary>
-    public unsafe bool IsButtonPrompt()
+    public unsafe override bool IsButtonPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.IsButtonPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -192,7 +192,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe override BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -204,7 +204,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: TermGrateConstraint
     /// </summary>
-    public unsafe void TermGrateConstraint()
+    public unsafe virtual void TermGrateConstraint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.TermGrateConstraint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -222,7 +222,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: InitGrateConstraint
     /// </summary>
-    public unsafe void InitGrateConstraint()
+    public unsafe virtual void InitGrateConstraint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.InitGrateConstraint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -240,7 +240,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: BottomRightDust
     /// </summary>
-    public unsafe void BottomRightDust()
+    public unsafe virtual void BottomRightDust()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.BottomRightDust", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -251,7 +251,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: BottomLeftDust
     /// </summary>
-    public unsafe void BottomLeftDust()
+    public unsafe virtual void BottomLeftDust()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.BottomLeftDust", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -262,7 +262,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: TopRightDust
     /// </summary>
-    public unsafe void TopRightDust()
+    public unsafe virtual void TopRightDust()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.TopRightDust", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -273,7 +273,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: TopLeftDust
     /// </summary>
-    public unsafe void TopLeftDust()
+    public unsafe virtual void TopLeftDust()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.TopLeftDust", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -284,7 +284,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: BoltDust
     /// </summary>
-    public unsafe void BoltDust(BmSDK.BmGame.RRemoveableGrate.EGrateBoltPosition BoltToBreak)
+    public unsafe virtual void BoltDust(BmSDK.BmGame.RRemoveableGrate.EGrateBoltPosition BoltToBreak)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.BoltDust", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -296,7 +296,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: BreakBottomRightBolt
     /// </summary>
-    public unsafe void BreakBottomRightBolt()
+    public unsafe virtual void BreakBottomRightBolt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.BreakBottomRightBolt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -307,7 +307,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: BreakBottomLeftBolt
     /// </summary>
-    public unsafe void BreakBottomLeftBolt()
+    public unsafe virtual void BreakBottomLeftBolt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.BreakBottomLeftBolt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -318,7 +318,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: BreakTopRightBolt
     /// </summary>
-    public unsafe void BreakTopRightBolt()
+    public unsafe virtual void BreakTopRightBolt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.BreakTopRightBolt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -329,7 +329,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: BreakTopLeftBolt
     /// </summary>
-    public unsafe void BreakTopLeftBolt()
+    public unsafe virtual void BreakTopLeftBolt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.BreakTopLeftBolt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -340,7 +340,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: BreakBolt
     /// </summary>
-    public unsafe void BreakBolt(BmSDK.BmGame.RRemoveableGrate.EGrateBoltPosition BoltToBreak)
+    public unsafe virtual void BreakBolt(BmSDK.BmGame.RRemoveableGrate.EGrateBoltPosition BoltToBreak)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.BreakBolt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -352,7 +352,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -364,7 +364,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -376,7 +376,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.Engine.PlayerController PC)
+    public unsafe override void TriggerSpecialMove(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -388,7 +388,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: IsHarpoonable
     /// </summary>
-    public unsafe bool IsHarpoonable(BmSDK.BmGame.RHarpoonGun HarpoonGun)
+    public unsafe virtual bool IsHarpoonable(BmSDK.BmGame.RHarpoonGun HarpoonGun)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.IsHarpoonable", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -400,7 +400,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: SetTension
     /// </summary>
-    public unsafe void SetTension(BmSDK.Engine.Pawn AttemptingPawn, float Value)
+    public unsafe virtual void SetTension(BmSDK.Engine.Pawn AttemptingPawn, float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.SetTension", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -413,7 +413,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: StartRemoveAttempt
     /// </summary>
-    public unsafe void StartRemoveAttempt(BmSDK.Engine.Pawn AttemptingPawn, System.Numerics.Vector3 HitLocation)
+    public unsafe virtual void StartRemoveAttempt(BmSDK.Engine.Pawn AttemptingPawn, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.StartRemoveAttempt", true);
         byte* paramsPtr = stackalloc byte[160];
@@ -426,7 +426,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: FailedToRemove
     /// </summary>
-    public unsafe void FailedToRemove(BmSDK.Engine.Pawn AttemptingPawn)
+    public unsafe virtual void FailedToRemove(BmSDK.Engine.Pawn AttemptingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.FailedToRemove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -438,7 +438,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: Remove
     /// </summary>
-    public unsafe void Remove(BmSDK.Engine.Pawn AttemptingPawn)
+    public unsafe virtual void Remove(BmSDK.Engine.Pawn AttemptingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.Remove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -450,7 +450,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: ApplyGoPhysicsImpulse
     /// </summary>
-    public unsafe void ApplyGoPhysicsImpulse(bool Reset)
+    public unsafe virtual void ApplyGoPhysicsImpulse(bool Reset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.ApplyGoPhysicsImpulse", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -462,7 +462,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: HandleGrateImpulse
     /// </summary>
-    public unsafe void HandleGrateImpulse(System.Numerics.Vector3 Impulse, float Duration)
+    public unsafe virtual void HandleGrateImpulse(System.Numerics.Vector3 Impulse, float Duration)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.HandleGrateImpulse", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -475,7 +475,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: GoPhysics
     /// </summary>
-    public unsafe void GoPhysics()
+    public unsafe virtual void GoPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.GoPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -486,7 +486,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.IsActive", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -498,7 +498,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: GetRange
     /// </summary>
-    public unsafe float GetRange()
+    public unsafe override float GetRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.GetRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -509,7 +509,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: OnDestroy
     /// </summary>
-    public unsafe void OnDestroy(BmSDK.Engine.SeqAct_Destroy Action)
+    public unsafe override void OnDestroy(BmSDK.Engine.SeqAct_Destroy Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.OnDestroy", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -521,7 +521,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -532,7 +532,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: ResetGrateRBCollision
     /// </summary>
-    public unsafe void ResetGrateRBCollision()
+    public unsafe virtual void ResetGrateRBCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.ResetGrateRBCollision", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -550,7 +550,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.Interact", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -562,7 +562,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: SetSecondStage
     /// </summary>
-    public unsafe void SetSecondStage()
+    public unsafe virtual void SetSecondStage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.SetSecondStage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -573,7 +573,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: GetHarpoonOpenGrateMove
     /// </summary>
-    public unsafe BmSDK.BmGame.RSpecialMoveConfig GetHarpoonOpenGrateMove()
+    public unsafe virtual BmSDK.BmGame.RSpecialMoveConfig GetHarpoonOpenGrateMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.GetHarpoonOpenGrateMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -584,7 +584,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: DestroyImpactEffects
     /// </summary>
-    public unsafe void DestroyImpactEffects()
+    public unsafe virtual void DestroyImpactEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.DestroyImpactEffects", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -602,7 +602,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: UpdateImpactEffects
     /// </summary>
-    public unsafe void UpdateImpactEffects()
+    public unsafe virtual void UpdateImpactEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.UpdateImpactEffects", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -620,7 +620,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: GetBatClawImpactSound
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetBatClawImpactSound()
+    public unsafe virtual BmSDK.Engine.AkEvent GetBatClawImpactSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.GetBatClawImpactSound", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -631,7 +631,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: ARChallengeEnded
     /// </summary>
-    public unsafe void ARChallengeEnded()
+    public unsafe virtual void ARChallengeEnded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.ARChallengeEnded", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -642,7 +642,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Function: ARChallengeStarted
     /// </summary>
-    public unsafe void ARChallengeStarted(bool bGratesStartOpen)
+    public unsafe virtual void ARChallengeStarted(bool bGratesStartOpen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoveableGrate.ARChallengeStarted", true);
         byte* paramsPtr = stackalloc byte[36];

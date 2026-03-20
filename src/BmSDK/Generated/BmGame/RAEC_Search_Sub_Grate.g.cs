@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// Function: SetStance
     /// </summary>
-    public unsafe void SetStance(bool bLookingInGrates)
+    public unsafe virtual void SetStance(bool bLookingInGrates)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Grate.SetStance", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// Function: DisableGrateVis
     /// </summary>
-    public unsafe void DisableGrateVis()
+    public unsafe virtual void DisableGrateVis()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Grate.DisableGrateVis", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// Function: EnableGrateVis
     /// </summary>
-    public unsafe void EnableGrateVis()
+    public unsafe virtual void EnableGrateVis()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Grate.EnableGrateVis", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// Function: OnVillainStolen
     /// </summary>
-    public unsafe void OnVillainStolen()
+    public unsafe override void OnVillainStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Grate.OnVillainStolen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Grate.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// Function: Cleanup
     /// </summary>
-    public unsafe void Cleanup()
+    public unsafe virtual void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Grate.Cleanup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// Function: GetCurrentPathHandle
     /// </summary>
-    public unsafe BmSDK.BmGame.RNavigationHandle GetCurrentPathHandle()
+    public unsafe override BmSDK.BmGame.RNavigationHandle GetCurrentPathHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Grate.GetCurrentPathHandle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -149,7 +149,7 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// Function: SetHasBackwardsFollower
     /// </summary>
-    public unsafe void SetHasBackwardsFollower(bool bNewVal)
+    public unsafe override void SetHasBackwardsFollower(bool bNewVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Grate.SetHasBackwardsFollower", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -161,7 +161,7 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// Function: GetGrateLookRefPoint
     /// </summary>
-    public unsafe bool GetGrateLookRefPoint()
+    public unsafe virtual bool GetGrateLookRefPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Grate.GetGrateLookRefPoint", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -172,7 +172,7 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// Function: FindSlave
     /// </summary>
-    public unsafe void FindSlave()
+    public unsafe virtual void FindSlave()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Grate.FindSlave", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -183,7 +183,7 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// Function: HasGrateBeenSearchedRecently
     /// </summary>
-    public unsafe bool HasGrateBeenSearchedRecently(BmSDK.BmGame.RTunnelGrateBase Grate)
+    public unsafe virtual bool HasGrateBeenSearchedRecently(BmSDK.BmGame.RTunnelGrateBase Grate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Grate.HasGrateBeenSearchedRecently", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -195,7 +195,7 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// Function: AddNeighboursRecursive
     /// </summary>
-    public unsafe void AddNeighboursRecursive(BmSDK.BmGame.RTunnelGrateBase Grate, int numRecursions, out BmSDK.TArray<BmSDK.BmGame.RTunnelGrateBase> OutList)
+    public unsafe virtual void AddNeighboursRecursive(BmSDK.BmGame.RTunnelGrateBase Grate, int numRecursions, out BmSDK.TArray<BmSDK.BmGame.RTunnelGrateBase> OutList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Grate.AddNeighboursRecursive", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -209,7 +209,7 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// Function: CurrentGrateOpenable
     /// </summary>
-    public unsafe bool CurrentGrateOpenable()
+    public unsafe virtual bool CurrentGrateOpenable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Grate.CurrentGrateOpenable", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -220,7 +220,7 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// Function: DbgDrawInitialState
     /// </summary>
-    public unsafe void DbgDrawInitialState()
+    public unsafe virtual void DbgDrawInitialState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Grate.DbgDrawInitialState", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -231,7 +231,7 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// Function: ShortenPath
     /// </summary>
-    public unsafe void ShortenPath()
+    public unsafe virtual void ShortenPath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Grate.ShortenPath", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -242,7 +242,7 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// Function: StartFromSearch
     /// </summary>
-    public unsafe void StartFromSearch(BmSDK.BmGame.RBMAIController NewCon, BmSDK.BmGame.RTunnelGrateBase FirstGrateOnPath, BmSDK.BmGame.RTunnelGrateBase LastGrateOnPath, System.Numerics.Vector3 StandAtEndPoint)
+    public unsafe virtual void StartFromSearch(BmSDK.BmGame.RBMAIController NewCon, BmSDK.BmGame.RTunnelGrateBase FirstGrateOnPath, BmSDK.BmGame.RTunnelGrateBase LastGrateOnPath, System.Numerics.Vector3 StandAtEndPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Grate.StartFromSearch", true);
         byte* paramsPtr = stackalloc byte[40];

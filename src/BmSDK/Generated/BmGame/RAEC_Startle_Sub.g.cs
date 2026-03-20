@@ -71,7 +71,7 @@ public partial class RAEC_Startle_Sub : BmSDK.BmGame.RAlertEventCoordinatorSolo,
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Startle_Sub.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Startle_Sub : BmSDK.BmGame.RAlertEventCoordinatorSolo,
     /// <summary>
     /// Function: OnVillainStolen
     /// </summary>
-    public unsafe void OnVillainStolen()
+    public unsafe override void OnVillainStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Startle_Sub.OnVillainStolen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RAEC_Startle_Sub : BmSDK.BmGame.RAlertEventCoordinatorSolo,
     /// <summary>
     /// Function: SetStartleLoc
     /// </summary>
-    public unsafe void SetStartleLoc(System.Numerics.Vector3 NewPos, BmSDK.Engine.Actor NewTarget = default)
+    public unsafe virtual void SetStartleLoc(System.Numerics.Vector3 NewPos, BmSDK.Engine.Actor NewTarget = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Startle_Sub.SetStartleLoc", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -106,7 +106,7 @@ public partial class RAEC_Startle_Sub : BmSDK.BmGame.RAlertEventCoordinatorSolo,
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Startle_Sub.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RAEC_Startle_Sub : BmSDK.BmGame.RAlertEventCoordinatorSolo,
     /// <summary>
     /// Function: NotifyStopped
     /// </summary>
-    public unsafe void NotifyStopped(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyStopped(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Startle_Sub.NotifyStopped", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -130,7 +130,7 @@ public partial class RAEC_Startle_Sub : BmSDK.BmGame.RAlertEventCoordinatorSolo,
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Startle_Sub.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -142,7 +142,7 @@ public partial class RAEC_Startle_Sub : BmSDK.BmGame.RAlertEventCoordinatorSolo,
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Startle_Sub.Tick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -154,7 +154,7 @@ public partial class RAEC_Startle_Sub : BmSDK.BmGame.RAlertEventCoordinatorSolo,
     /// <summary>
     /// Function: WantsToGlanceAt
     /// </summary>
-    public unsafe bool WantsToGlanceAt(BmSDK.Engine.Actor TestTarget)
+    public unsafe override bool WantsToGlanceAt(BmSDK.Engine.Actor TestTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Startle_Sub.WantsToGlanceAt", true);
         byte* paramsPtr = stackalloc byte[12];

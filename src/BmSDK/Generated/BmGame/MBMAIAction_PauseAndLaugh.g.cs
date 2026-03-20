@@ -71,7 +71,7 @@ public partial class MBMAIAction_PauseAndLaugh : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMAIAction_PauseAndLaugh.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class MBMAIAction_PauseAndLaugh : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: StartPause
     /// </summary>
-    public unsafe void StartPause()
+    public unsafe virtual void StartPause()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMAIAction_PauseAndLaugh.StartPause", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class MBMAIAction_PauseAndLaugh : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: InitAnimSet
     /// </summary>
-    public unsafe void InitAnimSet(BmSDK.Engine.AnimSet AnimSet)
+    public unsafe virtual void InitAnimSet(BmSDK.Engine.AnimSet AnimSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMAIAction_PauseAndLaugh.InitAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class MBMAIAction_PauseAndLaugh : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: CanPlayOutAnimation
     /// </summary>
-    public unsafe bool CanPlayOutAnimation()
+    public unsafe virtual bool CanPlayOutAnimation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMAIAction_PauseAndLaugh.CanPlayOutAnimation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -117,7 +117,7 @@ public partial class MBMAIAction_PauseAndLaugh : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: PlayLaughingIdleAnimation
     /// </summary>
-    public unsafe void PlayLaughingIdleAnimation()
+    public unsafe virtual void PlayLaughingIdleAnimation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMAIAction_PauseAndLaugh.PlayLaughingIdleAnimation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -128,7 +128,7 @@ public partial class MBMAIAction_PauseAndLaugh : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMAIAction_PauseAndLaugh.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class MBMAIAction_PauseAndLaugh : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: SetLookLocation
     /// </summary>
-    public unsafe void SetLookLocation(System.Numerics.Vector3 NewLoc)
+    public unsafe virtual void SetLookLocation(System.Numerics.Vector3 NewLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMAIAction_PauseAndLaugh.SetLookLocation", true);
         byte* paramsPtr = stackalloc byte[12];

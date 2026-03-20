@@ -71,7 +71,7 @@ public partial class RRobinStaff : BmSDK.BmGame.RStaffBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStaff.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -84,7 +84,7 @@ public partial class RRobinStaff : BmSDK.BmGame.RStaffBase, BmSDK.IGameObject
     /// <summary>
     /// Function: FireGadgetCombat
     /// </summary>
-    public unsafe bool FireGadgetCombat()
+    public unsafe override bool FireGadgetCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStaff.FireGadgetCombat", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RRobinStaff : BmSDK.BmGame.RStaffBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStaff.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -107,7 +107,7 @@ public partial class RRobinStaff : BmSDK.BmGame.RStaffBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateLaunch
     /// </summary>
-    public unsafe void UpdateLaunch()
+    public unsafe virtual void UpdateLaunch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStaff.UpdateLaunch", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -118,7 +118,7 @@ public partial class RRobinStaff : BmSDK.BmGame.RStaffBase, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawAimingHUD
     /// </summary>
-    public unsafe void DrawAimingHUD()
+    public unsafe virtual void DrawAimingHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStaff.DrawAimingHUD", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RRobinStaff : BmSDK.BmGame.RStaffBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsFiring
     /// </summary>
-    public unsafe bool IsFiring()
+    public unsafe override bool IsFiring()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStaff.IsFiring", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -140,7 +140,7 @@ public partial class RRobinStaff : BmSDK.BmGame.RStaffBase, BmSDK.IGameObject
     /// <summary>
     /// Function: AttachToBelt
     /// </summary>
-    public unsafe void AttachToBelt()
+    public unsafe override void AttachToBelt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStaff.AttachToBelt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -151,7 +151,7 @@ public partial class RRobinStaff : BmSDK.BmGame.RStaffBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStaff.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -162,7 +162,7 @@ public partial class RRobinStaff : BmSDK.BmGame.RStaffBase, BmSDK.IGameObject
     /// <summary>
     /// Function: CanPlayerMove
     /// </summary>
-    public unsafe bool CanPlayerMove()
+    public unsafe override bool CanPlayerMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStaff.CanPlayerMove", true);
         byte* paramsPtr = stackalloc byte[4];

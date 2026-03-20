@@ -47,7 +47,7 @@ public partial class RSeqAct_VehicleState : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleState.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RSeqAct_VehicleState : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// <summary>
     /// Function: SetVehicleState
     /// </summary>
-    public unsafe void SetVehicleState()
+    public unsafe virtual void SetVehicleState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleState.SetVehicleState", true);
         byte* paramsPtr = stackalloc byte[0];

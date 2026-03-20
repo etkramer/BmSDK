@@ -36,7 +36,7 @@ public partial class RBMBehaviour_CombatHeavyObject : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: GetForceToGiveToPawn
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetForceToGiveToPawn(BmSDK.BmGame.RPawnCombat ForceReceiver, float MaxForce, float MinRange = default, float MaxRange = default)
+    public unsafe override System.Numerics.Vector3 GetForceToGiveToPawn(BmSDK.BmGame.RPawnCombat ForceReceiver, float MaxForce, float MinRange = default, float MaxRange = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatHeavyObject.GetForceToGiveToPawn", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_CombatHeavyObject : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: CanChangeTarget
     /// </summary>
-    public unsafe bool CanChangeTarget(BmSDK.BmGame.RPawnPlayerCombat TestTarget)
+    public unsafe override bool CanChangeTarget(BmSDK.BmGame.RPawnPlayerCombat TestTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatHeavyObject.CanChangeTarget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -70,7 +70,7 @@ public partial class RBMBehaviour_CombatHeavyObject : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: TriggerWeaponBomb
     /// </summary>
-    public unsafe bool TriggerWeaponBomb()
+    public unsafe override bool TriggerWeaponBomb()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatHeavyObject.TriggerWeaponBomb", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_CombatHeavyObject : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: DropHeavyObject
     /// </summary>
-    public unsafe void DropHeavyObject()
+    public unsafe virtual void DropHeavyObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatHeavyObject.DropHeavyObject", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -92,7 +92,7 @@ public partial class RBMBehaviour_CombatHeavyObject : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: GetMovementForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMovementForce(System.Numerics.Vector3 SourceLocation = default)
+    public unsafe override System.Numerics.Vector3 GetMovementForce(System.Numerics.Vector3 SourceLocation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatHeavyObject.GetMovementForce", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -111,7 +111,7 @@ public partial class RBMBehaviour_CombatHeavyObject : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: GetAttackPriority
     /// </summary>
-    public unsafe int GetAttackPriority(bool bForceAttack)
+    public unsafe override int GetAttackPriority(bool bForceAttack)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatHeavyObject.GetAttackPriority", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -123,7 +123,7 @@ public partial class RBMBehaviour_CombatHeavyObject : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: GetPossibleMoves
     /// </summary>
-    public unsafe void GetPossibleMoves(out BmSDK.TArray<BmSDK.Class> PossibleMoves)
+    public unsafe override void GetPossibleMoves(out BmSDK.TArray<BmSDK.Class> PossibleMoves)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatHeavyObject.GetPossibleMoves", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -135,7 +135,7 @@ public partial class RBMBehaviour_CombatHeavyObject : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: ShouldUseEnvironment
     /// </summary>
-    public unsafe bool ShouldUseEnvironment(float DeltaTime, bool bForceCheck)
+    public unsafe override bool ShouldUseEnvironment(float DeltaTime, bool bForceCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatHeavyObject.ShouldUseEnvironment", true);
         byte* paramsPtr = stackalloc byte[12];

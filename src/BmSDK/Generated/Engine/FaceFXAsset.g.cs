@@ -36,7 +36,7 @@ public partial class FaceFXAsset : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: UnmountFaceFXAnimSet
     /// </summary>
-    public unsafe void UnmountFaceFXAnimSet(BmSDK.Engine.FaceFXAnimSet AnimSet)
+    public unsafe virtual void UnmountFaceFXAnimSet(BmSDK.Engine.FaceFXAnimSet AnimSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FaceFXAsset.UnmountFaceFXAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -55,7 +55,7 @@ public partial class FaceFXAsset : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: MountFaceFXAnimSet
     /// </summary>
-    public unsafe void MountFaceFXAnimSet(BmSDK.Engine.FaceFXAnimSet AnimSet)
+    public unsafe virtual void MountFaceFXAnimSet(BmSDK.Engine.FaceFXAnimSet AnimSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FaceFXAsset.MountFaceFXAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];

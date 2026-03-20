@@ -36,7 +36,7 @@ public partial class RVehicleBehaviour_FlyingGuard : BmSDK.BmGame.RVehicleBehavi
     /// <summary>
     /// Function: OnHostVehicleDied
     /// </summary>
-    public unsafe void OnHostVehicleDied(BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe override void OnHostVehicleDied(BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_FlyingGuard.OnHostVehicleDied", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -49,7 +49,7 @@ public partial class RVehicleBehaviour_FlyingGuard : BmSDK.BmGame.RVehicleBehavi
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_FlyingGuard.Tick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -61,7 +61,7 @@ public partial class RVehicleBehaviour_FlyingGuard : BmSDK.BmGame.RVehicleBehavi
     /// <summary>
     /// Function: HandlesTurretAndShooting
     /// </summary>
-    public unsafe bool HandlesTurretAndShooting()
+    public unsafe override bool HandlesTurretAndShooting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_FlyingGuard.HandlesTurretAndShooting", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -72,7 +72,7 @@ public partial class RVehicleBehaviour_FlyingGuard : BmSDK.BmGame.RVehicleBehavi
     /// <summary>
     /// Function: ExitBehaviour
     /// </summary>
-    public unsafe void ExitBehaviour(BmSDK.BmGame.RVehicleBehaviour NextBehaviour)
+    public unsafe override void ExitBehaviour(BmSDK.BmGame.RVehicleBehaviour NextBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_FlyingGuard.ExitBehaviour", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -84,7 +84,7 @@ public partial class RVehicleBehaviour_FlyingGuard : BmSDK.BmGame.RVehicleBehavi
     /// <summary>
     /// Function: EnterBehaviour
     /// </summary>
-    public unsafe void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
+    public unsafe override void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_FlyingGuard.EnterBehaviour", true);
         byte* paramsPtr = stackalloc byte[28];

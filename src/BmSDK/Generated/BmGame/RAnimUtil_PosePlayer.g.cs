@@ -40,7 +40,7 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DummyOnPlayedQueuedTransition
     /// </summary>
-    public unsafe void DummyOnPlayedQueuedTransition(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id, float TimeLeftOver)
+    public unsafe virtual void DummyOnPlayedQueuedTransition(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id, float TimeLeftOver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimUtil_PosePlayer.DummyOnPlayedQueuedTransition", true);
         byte* paramsPtr = stackalloc byte[8];

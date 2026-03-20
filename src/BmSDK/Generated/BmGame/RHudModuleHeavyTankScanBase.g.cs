@@ -36,7 +36,7 @@ public partial class RHudModuleHeavyTankScanBase : BmSDK.BmGame.RHudModule, BmSD
     /// <summary>
     /// Function: XI_HeavyTankScan_ThreeDeeAnimComplete
     /// </summary>
-    public unsafe void XI_HeavyTankScan_ThreeDeeAnimComplete()
+    public unsafe virtual void XI_HeavyTankScan_ThreeDeeAnimComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleHeavyTankScanBase.XI_HeavyTankScan_ThreeDeeAnimComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RHudModuleHeavyTankScanBase : BmSDK.BmGame.RHudModule, BmSD
     /// <summary>
     /// Function: XI_HeavyTankScan_ScanResolved
     /// </summary>
-    public unsafe void XI_HeavyTankScan_ScanResolved(float proportion_revealed_this_scan, float total_proportion_revealed, float scan_angle)
+    public unsafe virtual void XI_HeavyTankScan_ScanResolved(float proportion_revealed_this_scan, float total_proportion_revealed, float scan_angle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleHeavyTankScanBase.XI_HeavyTankScan_ScanResolved", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -61,7 +61,7 @@ public partial class RHudModuleHeavyTankScanBase : BmSDK.BmGame.RHudModule, BmSD
     /// <summary>
     /// Function: AnalyseAndOutro
     /// </summary>
-    public unsafe void AnalyseAndOutro()
+    public unsafe virtual void AnalyseAndOutro()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleHeavyTankScanBase.AnalyseAndOutro", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -72,7 +72,7 @@ public partial class RHudModuleHeavyTankScanBase : BmSDK.BmGame.RHudModule, BmSD
     /// <summary>
     /// Function: RevealParts
     /// </summary>
-    public unsafe void RevealParts(float AngleRangeDegrees, float AngleRangeForBack)
+    public unsafe virtual void RevealParts(float AngleRangeDegrees, float AngleRangeForBack)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleHeavyTankScanBase.RevealParts", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -85,7 +85,7 @@ public partial class RHudModuleHeavyTankScanBase : BmSDK.BmGame.RHudModule, BmSD
     /// <summary>
     /// Function: SetAngles
     /// </summary>
-    public unsafe void SetAngles(float tank_angle_degrees, float turret_angle_degrees)
+    public unsafe virtual void SetAngles(float tank_angle_degrees, float turret_angle_degrees)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleHeavyTankScanBase.SetAngles", true);
         byte* paramsPtr = stackalloc byte[8];

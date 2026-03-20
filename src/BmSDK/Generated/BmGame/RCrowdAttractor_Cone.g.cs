@@ -71,7 +71,7 @@ public partial class RCrowdAttractor_Cone : BmSDK.BmGame.RCrowdAttractor, BmSDK.
     /// <summary>
     /// Function: GetAttractionForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAttractionForce(BmSDK.BmGame.RCrowdAgent Agent, float DeltaTime)
+    public unsafe override System.Numerics.Vector3 GetAttractionForce(BmSDK.BmGame.RCrowdAgent Agent, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAttractor_Cone.GetAttractionForce", true);
         byte* paramsPtr = stackalloc byte[24];

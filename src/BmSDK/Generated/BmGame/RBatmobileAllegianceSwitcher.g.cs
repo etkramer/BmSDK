@@ -71,7 +71,7 @@ public partial class RBatmobileAllegianceSwitcher : BmSDK.BmGame.RVehicleWeapon,
     /// <summary>
     /// Function: ReadyToFire
     /// </summary>
-    public unsafe bool ReadyToFire()
+    public unsafe override bool ReadyToFire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileAllegianceSwitcher.ReadyToFire", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBatmobileAllegianceSwitcher : BmSDK.BmGame.RVehicleWeapon,
     /// <summary>
     /// Function: FireAllegianceSwitch
     /// </summary>
-    public unsafe void FireAllegianceSwitch()
+    public unsafe virtual void FireAllegianceSwitch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileAllegianceSwitcher.FireAllegianceSwitch", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -93,7 +93,7 @@ public partial class RBatmobileAllegianceSwitcher : BmSDK.BmGame.RVehicleWeapon,
     /// <summary>
     /// Function: CheckAutoTarget
     /// </summary>
-    public unsafe bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
+    public unsafe override bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileAllegianceSwitcher.CheckAutoTarget", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -109,7 +109,7 @@ public partial class RBatmobileAllegianceSwitcher : BmSDK.BmGame.RVehicleWeapon,
     /// <summary>
     /// Function: FireWeapon
     /// </summary>
-    public unsafe bool FireWeapon()
+    public unsafe override bool FireWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileAllegianceSwitcher.FireWeapon", true);
         byte* paramsPtr = stackalloc byte[56];

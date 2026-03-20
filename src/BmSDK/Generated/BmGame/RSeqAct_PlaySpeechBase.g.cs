@@ -42,7 +42,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: NeedsRadioMode
     /// </summary>
-    public unsafe bool NeedsRadioMode()
+    public unsafe virtual bool NeedsRadioMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.NeedsRadioMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -53,7 +53,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: IsDialogueSkippable
     /// </summary>
-    public unsafe bool IsDialogueSkippable()
+    public unsafe virtual bool IsDialogueSkippable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.IsDialogueSkippable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -77,7 +77,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: SkipMovie
     /// </summary>
-    public unsafe void SkipMovie()
+    public unsafe virtual void SkipMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.SkipMovie", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -88,7 +88,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: DialogueTapGauntletCUEFromMovie
     /// </summary>
-    public unsafe void DialogueTapGauntletCUEFromMovie()
+    public unsafe virtual void DialogueTapGauntletCUEFromMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.DialogueTapGauntletCUEFromMovie", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -99,7 +99,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: DialogueOverCUEFromMovie
     /// </summary>
-    public unsafe void DialogueOverCUEFromMovie()
+    public unsafe virtual void DialogueOverCUEFromMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.DialogueOverCUEFromMovie", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -110,7 +110,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: LineCUEFromMovie
     /// </summary>
-    public unsafe void LineCUEFromMovie()
+    public unsafe virtual void LineCUEFromMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.LineCUEFromMovie", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -121,7 +121,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: DialogueTOCFromMovie
     /// </summary>
-    public unsafe void DialogueTOCFromMovie(BmSDK.FString TOC)
+    public unsafe virtual void DialogueTOCFromMovie(BmSDK.FString TOC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.DialogueTOCFromMovie", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -133,7 +133,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: SkipMovie_FromCue
     /// </summary>
-    public unsafe void SkipMovie_FromCue()
+    public unsafe virtual void SkipMovie_FromCue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.SkipMovie_FromCue", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -144,7 +144,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: NotifyMovieAboutToEnd
     /// </summary>
-    public unsafe void NotifyMovieAboutToEnd()
+    public unsafe virtual void NotifyMovieAboutToEnd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.NotifyMovieAboutToEnd", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -155,7 +155,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: NotifyMovieFinished
     /// </summary>
-    public unsafe void NotifyMovieFinished(BmSDK.FString VideoResource)
+    public unsafe virtual void NotifyMovieFinished(BmSDK.FString VideoResource)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.NotifyMovieFinished", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -167,7 +167,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: PlaySpeechDesignerWarn
     /// </summary>
-    public unsafe void PlaySpeechDesignerWarn(BmSDK.FString Text, bool addSelfInfo = default, bool noWarn = default)
+    public unsafe virtual void PlaySpeechDesignerWarn(BmSDK.FString Text, bool addSelfInfo = default, bool noWarn = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.PlaySpeechDesignerWarn", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -181,7 +181,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: PlaySpeechDesignerInfo
     /// </summary>
-    public unsafe void PlaySpeechDesignerInfo(BmSDK.FString Text, bool addSelfInfo = default)
+    public unsafe virtual void PlaySpeechDesignerInfo(BmSDK.FString Text, bool addSelfInfo = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.PlaySpeechDesignerInfo", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -194,7 +194,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: SuspendStasis
     /// </summary>
-    public unsafe void SuspendStasis(bool bSuspendStasis)
+    public unsafe virtual void SuspendStasis(bool bSuspendStasis)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.SuspendStasis", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -206,7 +206,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: CheckForMissedCustomOutputs
     /// </summary>
-    public unsafe void CheckForMissedCustomOutputs(BmSDK.Engine.AkDialogueLine Line)
+    public unsafe virtual void CheckForMissedCustomOutputs(BmSDK.Engine.AkDialogueLine Line)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.CheckForMissedCustomOutputs", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -218,7 +218,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: CheckForCustomOutput
     /// </summary>
-    public unsafe void CheckForCustomOutput(bool bSkippingLine = default)
+    public unsafe virtual void CheckForCustomOutput(bool bSkippingLine = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.CheckForCustomOutput", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -230,7 +230,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: ShouldPlayMovie
     /// </summary>
-    public unsafe bool ShouldPlayMovie()
+    public unsafe virtual bool ShouldPlayMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.ShouldPlayMovie", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -241,7 +241,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.Update", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -253,7 +253,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: InitialiseVariables
     /// </summary>
-    public unsafe void InitialiseVariables()
+    public unsafe virtual void InitialiseVariables()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.InitialiseVariables", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -264,7 +264,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: DoPlayerSpeechCleanup
     /// </summary>
-    public unsafe void DoPlayerSpeechCleanup()
+    public unsafe virtual void DoPlayerSpeechCleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.DoPlayerSpeechCleanup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -275,7 +275,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: LineStopped
     /// </summary>
-    public unsafe void LineStopped(BmSDK.GameObject Speaker, bool bInterrupted)
+    public unsafe virtual void LineStopped(BmSDK.GameObject Speaker, bool bInterrupted)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.LineStopped", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -288,7 +288,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: LineStarted
     /// </summary>
-    public unsafe bool LineStarted(BmSDK.GameObject Speaker, BmSDK.Engine.AkDialogueLine Line)
+    public unsafe virtual bool LineStarted(BmSDK.GameObject Speaker, BmSDK.Engine.AkDialogueLine Line)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.LineStarted", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -301,7 +301,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: SpeechStopped
     /// </summary>
-    public unsafe void SpeechStopped(bool bInterrupted)
+    public unsafe virtual void SpeechStopped(bool bInterrupted)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.SpeechStopped", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -313,7 +313,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: SpeechStarted
     /// </summary>
-    public unsafe void SpeechStarted()
+    public unsafe virtual void SpeechStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.SpeechStarted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -324,7 +324,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: FreeBarkLock
     /// </summary>
-    public unsafe void FreeBarkLock()
+    public unsafe virtual void FreeBarkLock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.FreeBarkLock", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -335,7 +335,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: SetBarkLock
     /// </summary>
-    public unsafe void SetBarkLock()
+    public unsafe virtual void SetBarkLock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.SetBarkLock", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -346,7 +346,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: OnStopSpeechTriggered
     /// </summary>
-    public unsafe void OnStopSpeechTriggered()
+    public unsafe virtual void OnStopSpeechTriggered()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.OnStopSpeechTriggered", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -357,7 +357,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: OnPlaySpeechTriggered
     /// </summary>
-    public unsafe void OnPlaySpeechTriggered()
+    public unsafe virtual void OnPlaySpeechTriggered()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.OnPlaySpeechTriggered", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -368,7 +368,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: IsGameLoading
     /// </summary>
-    public unsafe bool IsGameLoading()
+    public unsafe virtual bool IsGameLoading()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.IsGameLoading", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -386,7 +386,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: BlockedByCineMode
     /// </summary>
-    public unsafe bool BlockedByCineMode()
+    public unsafe virtual bool BlockedByCineMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.BlockedByCineMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -404,7 +404,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: ChangeWaitForNotifies
     /// </summary>
-    public unsafe void ChangeWaitForNotifies(bool bWait)
+    public unsafe virtual void ChangeWaitForNotifies(bool bWait)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.ChangeWaitForNotifies", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -423,7 +423,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: IsWaitingForNotifies
     /// </summary>
-    public unsafe bool IsWaitingForNotifies(bool waitingNow)
+    public unsafe virtual bool IsWaitingForNotifies(bool waitingNow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.IsWaitingForNotifies", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -442,7 +442,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: IsMovieTypeConvo
     /// </summary>
-    public unsafe bool IsMovieTypeConvo()
+    public unsafe virtual bool IsMovieTypeConvo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.IsMovieTypeConvo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -460,7 +460,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: PlaySpeechDesignerInfoNative
     /// </summary>
-    public unsafe void PlaySpeechDesignerInfoNative(BmSDK.FString Text)
+    public unsafe virtual void PlaySpeechDesignerInfoNative(BmSDK.FString Text)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.PlaySpeechDesignerInfoNative", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -479,7 +479,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: IsMoviePlaying
     /// </summary>
-    public unsafe bool IsMoviePlaying()
+    public unsafe virtual bool IsMoviePlaying()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.IsMoviePlaying", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -497,7 +497,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: IsSpeechMissing
     /// </summary>
-    public unsafe bool IsSpeechMissing()
+    public unsafe virtual bool IsSpeechMissing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.IsSpeechMissing", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -515,7 +515,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: SearchForMovie
     /// </summary>
-    public unsafe bool SearchForMovie(BmSDK.FString MovieName)
+    public unsafe virtual bool SearchForMovie(BmSDK.FString MovieName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.SearchForMovie", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -534,7 +534,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: GetCurrentDialogueTime
     /// </summary>
-    public unsafe float GetCurrentDialogueTime(BmSDK.Engine.Actor SearchActor)
+    public unsafe virtual float GetCurrentDialogueTime(BmSDK.Engine.Actor SearchActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.GetCurrentDialogueTime", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -553,7 +553,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: SkipLineNative
     /// </summary>
-    public unsafe void SkipLineNative()
+    public unsafe virtual void SkipLineNative()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.SkipLineNative", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -571,7 +571,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: StopSpeechNative
     /// </summary>
-    public unsafe void StopSpeechNative()
+    public unsafe virtual void StopSpeechNative()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.StopSpeechNative", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -589,7 +589,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: StartSpeechNative
     /// </summary>
-    public unsafe bool StartSpeechNative()
+    public unsafe virtual bool StartSpeechNative()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.StartSpeechNative", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -607,7 +607,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: TryStartSpeech
     /// </summary>
-    public unsafe bool TryStartSpeech()
+    public unsafe virtual bool TryStartSpeech()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.TryStartSpeech", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -625,7 +625,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: HandleInputLinks
     /// </summary>
-    public unsafe void HandleInputLinks()
+    public unsafe virtual void HandleInputLinks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlaySpeechBase.HandleInputLinks", true);
         byte* paramsPtr = stackalloc byte[0];

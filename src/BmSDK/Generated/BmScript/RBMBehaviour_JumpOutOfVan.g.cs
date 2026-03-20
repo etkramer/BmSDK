@@ -36,7 +36,7 @@ public partial class RBMBehaviour_JumpOutOfVan : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JumpOutOfVan.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_JumpOutOfVan : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JumpOutOfVan.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_JumpOutOfVan : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: Drop
     /// </summary>
-    public unsafe void Drop()
+    public unsafe virtual void Drop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JumpOutOfVan.Drop", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_JumpOutOfVan : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: GotoCombat
     /// </summary>
-    public unsafe void GotoCombat()
+    public unsafe virtual void GotoCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JumpOutOfVan.GotoCombat", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_JumpOutOfVan : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JumpOutOfVan.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -92,7 +92,7 @@ public partial class RBMBehaviour_JumpOutOfVan : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: CanBeHitInCombat
     /// </summary>
-    public unsafe bool CanBeHitInCombat(BmSDK.BmGame.RDamageType DamageType)
+    public unsafe override bool CanBeHitInCombat(BmSDK.BmGame.RDamageType DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JumpOutOfVan.CanBeHitInCombat", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -104,7 +104,7 @@ public partial class RBMBehaviour_JumpOutOfVan : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JumpOutOfVan.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

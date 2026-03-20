@@ -71,7 +71,7 @@ public partial class RVehicleNPCWeapon_APCMissileLauncher : BmSDK.BmGame.RVehicl
     /// <summary>
     /// Function: CancelAttack
     /// </summary>
-    public unsafe void CancelAttack(bool DueToBeingRammed)
+    public unsafe override void CancelAttack(bool DueToBeingRammed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleNPCWeapon_APCMissileLauncher.CancelAttack", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RVehicleNPCWeapon_APCMissileLauncher : BmSDK.BmGame.RVehicl
     /// <summary>
     /// Function: CreateAimingPoseConfig
     /// </summary>
-    public unsafe bool CreateAimingPoseConfig(BmSDK.BmGame.RBMPawnAI Pawn, BmSDK.Engine.AnimSet Anims)
+    public unsafe override bool CreateAimingPoseConfig(BmSDK.BmGame.RBMPawnAI Pawn, BmSDK.Engine.AnimSet Anims)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleNPCWeapon_APCMissileLauncher.CreateAimingPoseConfig", true);
         byte* paramsPtr = stackalloc byte[1036];
@@ -96,7 +96,7 @@ public partial class RVehicleNPCWeapon_APCMissileLauncher : BmSDK.BmGame.RVehicl
     /// <summary>
     /// Function: UpdatePawnAnim
     /// </summary>
-    public unsafe float UpdatePawnAnim(System.Numerics.Vector3 Target, float DeltaTime, bool IsFiring)
+    public unsafe override float UpdatePawnAnim(System.Numerics.Vector3 Target, float DeltaTime, bool IsFiring)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleNPCWeapon_APCMissileLauncher.UpdatePawnAnim", true);
         byte* paramsPtr = stackalloc byte[24];

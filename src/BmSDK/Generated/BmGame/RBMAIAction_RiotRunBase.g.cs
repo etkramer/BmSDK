@@ -71,7 +71,7 @@ public partial class RBMAIAction_RiotRunBase : BmSDK.BmGame.RBMAIAction_BaseMove
     /// <summary>
     /// Function: Cleanup
     /// </summary>
-    public unsafe void Cleanup()
+    public unsafe override void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RiotRunBase.Cleanup", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_RiotRunBase : BmSDK.BmGame.RBMAIAction_BaseMove
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RiotRunBase.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RBMAIAction_RiotRunBase : BmSDK.BmGame.RBMAIAction_BaseMove
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RiotRunBase.ActionTick", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_RiotRunBase : BmSDK.BmGame.RBMAIAction_BaseMove
     /// <summary>
     /// Function: ForceFleeRunVariant
     /// </summary>
-    public unsafe bool ForceFleeRunVariant()
+    public unsafe virtual bool ForceFleeRunVariant()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RiotRunBase.ForceFleeRunVariant", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RBMAIAction_RiotRunBase : BmSDK.BmGame.RBMAIAction_BaseMove
     /// <summary>
     /// Function: VeryCloseToGoal
     /// </summary>
-    public unsafe bool VeryCloseToGoal(float CheckDist, float CheckDist2D)
+    public unsafe virtual bool VeryCloseToGoal(float CheckDist, float CheckDist2D)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RiotRunBase.VeryCloseToGoal", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -129,7 +129,7 @@ public partial class RBMAIAction_RiotRunBase : BmSDK.BmGame.RBMAIAction_BaseMove
     /// <summary>
     /// Function: UpdateRandomLookAtPos
     /// </summary>
-    public unsafe void UpdateRandomLookAtPos(BmSDK.Rotator RandCentre, float RandWidth, float RandVertUp = default, float RandVertDown = default)
+    public unsafe override void UpdateRandomLookAtPos(BmSDK.Rotator RandCentre, float RandWidth, float RandVertUp = default, float RandVertDown = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RiotRunBase.UpdateRandomLookAtPos", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -144,7 +144,7 @@ public partial class RBMAIAction_RiotRunBase : BmSDK.BmGame.RBMAIAction_BaseMove
     /// <summary>
     /// Function: CheckForFriendlies
     /// </summary>
-    public unsafe bool CheckForFriendlies()
+    public unsafe virtual bool CheckForFriendlies()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RiotRunBase.CheckForFriendlies", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -155,7 +155,7 @@ public partial class RBMAIAction_RiotRunBase : BmSDK.BmGame.RBMAIAction_BaseMove
     /// <summary>
     /// Function: MoveToInit
     /// </summary>
-    public unsafe void MoveToInit(BmSDK.FName IdleName)
+    public unsafe virtual void MoveToInit(BmSDK.FName IdleName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RiotRunBase.MoveToInit", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -167,7 +167,7 @@ public partial class RBMAIAction_RiotRunBase : BmSDK.BmGame.RBMAIAction_BaseMove
     /// <summary>
     /// Function: GetNavHandle
     /// </summary>
-    public unsafe BmSDK.BmGame.RNavigationHandle GetNavHandle(bool bFullSmooth = default)
+    public unsafe override BmSDK.BmGame.RNavigationHandle GetNavHandle(bool bFullSmooth = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RiotRunBase.GetNavHandle", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -179,7 +179,7 @@ public partial class RBMAIAction_RiotRunBase : BmSDK.BmGame.RBMAIAction_BaseMove
     /// <summary>
     /// Function: BuildHandle
     /// </summary>
-    public unsafe BmSDK.BmGame.RNavigationHandle BuildHandle()
+    public unsafe override BmSDK.BmGame.RNavigationHandle BuildHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RiotRunBase.BuildHandle", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -190,7 +190,7 @@ public partial class RBMAIAction_RiotRunBase : BmSDK.BmGame.RBMAIAction_BaseMove
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RiotRunBase.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -201,7 +201,7 @@ public partial class RBMAIAction_RiotRunBase : BmSDK.BmGame.RBMAIAction_BaseMove
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RiotRunBase.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -212,7 +212,7 @@ public partial class RBMAIAction_RiotRunBase : BmSDK.BmGame.RBMAIAction_BaseMove
     /// <summary>
     /// Function: AllowRunVariants
     /// </summary>
-    public unsafe void AllowRunVariants(bool bAllow, bool bAllowCorners, bool bFleeing, bool bNoPushOffs = default, bool bNoOvershoot = default)
+    public unsafe virtual void AllowRunVariants(bool bAllow, bool bAllowCorners, bool bFleeing, bool bNoPushOffs = default, bool bNoOvershoot = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RiotRunBase.AllowRunVariants", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -228,7 +228,7 @@ public partial class RBMAIAction_RiotRunBase : BmSDK.BmGame.RBMAIAction_BaseMove
     /// <summary>
     /// Function: SetGoalList
     /// </summary>
-    public unsafe void SetGoalList(BmSDK.TArray<System.Numerics.Vector3> NewGoalList)
+    public unsafe virtual void SetGoalList(BmSDK.TArray<System.Numerics.Vector3> NewGoalList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RiotRunBase.SetGoalList", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -240,7 +240,7 @@ public partial class RBMAIAction_RiotRunBase : BmSDK.BmGame.RBMAIAction_BaseMove
     /// <summary>
     /// Function: SetupGoal
     /// </summary>
-    public unsafe void SetupGoal(System.Numerics.Vector3 NewGoalPos)
+    public unsafe virtual void SetupGoal(System.Numerics.Vector3 NewGoalPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RiotRunBase.SetupGoal", true);
         byte* paramsPtr = stackalloc byte[12];

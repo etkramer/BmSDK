@@ -36,7 +36,7 @@ public partial class MGFxWidgetOverlayMain : BmSDK.GFxUI.GFxObject, BmSDK.IGameO
     /// <summary>
     /// Function: HandleMouseWheel
     /// </summary>
-    public unsafe void HandleMouseWheel(int btnIdx, bool directionUp)
+    public unsafe virtual void HandleMouseWheel(int btnIdx, bool directionUp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayMain.HandleMouseWheel", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -49,7 +49,7 @@ public partial class MGFxWidgetOverlayMain : BmSDK.GFxUI.GFxObject, BmSDK.IGameO
     /// <summary>
     /// Function: HandleMouseRollOut
     /// </summary>
-    public unsafe void HandleMouseRollOut(int btnIdx)
+    public unsafe virtual void HandleMouseRollOut(int btnIdx)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayMain.HandleMouseRollOut", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -61,7 +61,7 @@ public partial class MGFxWidgetOverlayMain : BmSDK.GFxUI.GFxObject, BmSDK.IGameO
     /// <summary>
     /// Function: HandleMouseRollOver
     /// </summary>
-    public unsafe void HandleMouseRollOver(int btnIdx)
+    public unsafe virtual void HandleMouseRollOver(int btnIdx)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayMain.HandleMouseRollOver", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -73,7 +73,7 @@ public partial class MGFxWidgetOverlayMain : BmSDK.GFxUI.GFxObject, BmSDK.IGameO
     /// <summary>
     /// Function: HandleMouseInput
     /// </summary>
-    public unsafe void HandleMouseInput(int btnIdx)
+    public unsafe virtual void HandleMouseInput(int btnIdx)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayMain.HandleMouseInput", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -85,7 +85,7 @@ public partial class MGFxWidgetOverlayMain : BmSDK.GFxUI.GFxObject, BmSDK.IGameO
     /// <summary>
     /// Function: OnImageLoadComplete
     /// </summary>
-    public unsafe void OnImageLoadComplete(BmSDK.GFxUI.GFxObject pRef)
+    public unsafe virtual void OnImageLoadComplete(BmSDK.GFxUI.GFxObject pRef)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayMain.OnImageLoadComplete", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -97,7 +97,7 @@ public partial class MGFxWidgetOverlayMain : BmSDK.GFxUI.GFxObject, BmSDK.IGameO
     /// <summary>
     /// Function: KeyUpInput
     /// </summary>
-    public unsafe void KeyUpInput(int Key)
+    public unsafe virtual void KeyUpInput(int Key)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayMain.KeyUpInput", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -109,7 +109,7 @@ public partial class MGFxWidgetOverlayMain : BmSDK.GFxUI.GFxObject, BmSDK.IGameO
     /// <summary>
     /// Function: HandleInput
     /// </summary>
-    public unsafe void HandleInput(int Key, bool bIsRepeat)
+    public unsafe virtual void HandleInput(int Key, bool bIsRepeat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayMain.HandleInput", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -122,7 +122,7 @@ public partial class MGFxWidgetOverlayMain : BmSDK.GFxUI.GFxObject, BmSDK.IGameO
     /// <summary>
     /// Function: Terminate
     /// </summary>
-    public unsafe void Terminate()
+    public unsafe virtual void Terminate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayMain.Terminate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -133,7 +133,7 @@ public partial class MGFxWidgetOverlayMain : BmSDK.GFxUI.GFxObject, BmSDK.IGameO
     /// <summary>
     /// Function: onTransistionCompleteCallback
     /// </summary>
-    public unsafe void onTransistionCompleteCallback(bool bIsActive)
+    public unsafe virtual void onTransistionCompleteCallback(bool bIsActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayMain.onTransistionCompleteCallback", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -145,7 +145,7 @@ public partial class MGFxWidgetOverlayMain : BmSDK.GFxUI.GFxObject, BmSDK.IGameO
     /// <summary>
     /// Function: UnloadOverlay
     /// </summary>
-    public unsafe void UnloadOverlay()
+    public unsafe virtual void UnloadOverlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayMain.UnloadOverlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -156,7 +156,7 @@ public partial class MGFxWidgetOverlayMain : BmSDK.GFxUI.GFxObject, BmSDK.IGameO
     /// <summary>
     /// Function: LoadOverlay
     /// </summary>
-    public unsafe void LoadOverlay(BmSDK.FString Overlay)
+    public unsafe virtual void LoadOverlay(BmSDK.FString Overlay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayMain.LoadOverlay", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -168,7 +168,7 @@ public partial class MGFxWidgetOverlayMain : BmSDK.GFxUI.GFxObject, BmSDK.IGameO
     /// <summary>
     /// Function: LoadNew
     /// </summary>
-    public unsafe void LoadNew(BmSDK.BmGame.MWBIDOverlayManager.E_WBID_Screen_Type screen)
+    public unsafe virtual void LoadNew(BmSDK.BmGame.MWBIDOverlayManager.E_WBID_Screen_Type screen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayMain.LoadNew", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -180,7 +180,7 @@ public partial class MGFxWidgetOverlayMain : BmSDK.GFxUI.GFxObject, BmSDK.IGameO
     /// <summary>
     /// Function: WidgetInitialized
     /// </summary>
-    public unsafe bool WidgetInitialized(BmSDK.FName WidgetName, BmSDK.FName WidgetPath, BmSDK.GFxUI.GFxObject Widget)
+    public unsafe override bool WidgetInitialized(BmSDK.FName WidgetName, BmSDK.FName WidgetPath, BmSDK.GFxUI.GFxObject Widget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayMain.WidgetInitialized", true);
         byte* paramsPtr = stackalloc byte[28];

@@ -71,7 +71,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: GetEquipmentPropSkeletalsIndex
     /// </summary>
-    public unsafe int GetEquipmentPropSkeletalsIndex()
+    public unsafe override int GetEquipmentPropSkeletalsIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.GetEquipmentPropSkeletalsIndex", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: InformOfDroneExploding
     /// </summary>
-    public unsafe void InformOfDroneExploding()
+    public unsafe virtual void InformOfDroneExploding()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.InformOfDroneExploding", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: CodesHaveFinishedDownloading
     /// </summary>
-    public unsafe void CodesHaveFinishedDownloading()
+    public unsafe virtual void CodesHaveFinishedDownloading()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.CodesHaveFinishedDownloading", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: FindMiniDrone
     /// </summary>
-    public unsafe BmSDK.BmGame.RHelicopterBase FindMiniDrone()
+    public unsafe virtual BmSDK.BmGame.RHelicopterBase FindMiniDrone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.FindMiniDrone", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -115,7 +115,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: GetControllerToMiniDroneLineStartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetControllerToMiniDroneLineStartLocation()
+    public unsafe virtual System.Numerics.Vector3 GetControllerToMiniDroneLineStartLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.GetControllerToMiniDroneLineStartLocation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -126,7 +126,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: HasDroneRemoteInHand
     /// </summary>
-    public unsafe bool HasDroneRemoteInHand()
+    public unsafe override bool HasDroneRemoteInHand()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.HasDroneRemoteInHand", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -137,7 +137,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: GetMyMiniDrone
     /// </summary>
-    public unsafe BmSDK.BmGame.RHelicopterBase GetMyMiniDrone()
+    public unsafe override BmSDK.BmGame.RHelicopterBase GetMyMiniDrone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.GetMyMiniDrone", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -148,7 +148,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: IsMinidroneController
     /// </summary>
-    public unsafe bool IsMinidroneController()
+    public unsafe override bool IsMinidroneController()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.IsMinidroneController", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -159,7 +159,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: ThrowRemoteAway
     /// </summary>
-    public unsafe void ThrowRemoteAway()
+    public unsafe override void ThrowRemoteAway()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.ThrowRemoteAway", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -170,7 +170,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: HasRemoteBeenThrownAway
     /// </summary>
-    public unsafe bool HasRemoteBeenThrownAway()
+    public unsafe override bool HasRemoteBeenThrownAway()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.HasRemoteBeenThrownAway", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -181,7 +181,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: IsMiniDroneDisabledByREC
     /// </summary>
-    public unsafe bool IsMiniDroneDisabledByREC()
+    public unsafe override bool IsMiniDroneDisabledByREC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.IsMiniDroneDisabledByREC", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -192,7 +192,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: MiniDroneRecoveredFromDisruptor
     /// </summary>
-    public unsafe void MiniDroneRecoveredFromDisruptor()
+    public unsafe virtual void MiniDroneRecoveredFromDisruptor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.MiniDroneRecoveredFromDisruptor", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -203,7 +203,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: MiniDroneHitByDisruptor
     /// </summary>
-    public unsafe void MiniDroneHitByDisruptor()
+    public unsafe virtual void MiniDroneHitByDisruptor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.MiniDroneHitByDisruptor", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -214,7 +214,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: SpawnJammedExplosion
     /// </summary>
-    public unsafe void SpawnJammedExplosion()
+    public unsafe virtual void SpawnJammedExplosion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.SpawnJammedExplosion", true);
         byte* paramsPtr = stackalloc byte[272];
@@ -225,7 +225,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: MiniDroneAttackingTarget
     /// </summary>
-    public unsafe void MiniDroneAttackingTarget()
+    public unsafe virtual void MiniDroneAttackingTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.MiniDroneAttackingTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -236,7 +236,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: MiniDroneFoundCasualty
     /// </summary>
-    public unsafe void MiniDroneFoundCasualty(BmSDK.BmGame.RPawnVillain Casualty)
+    public unsafe virtual void MiniDroneFoundCasualty(BmSDK.BmGame.RPawnVillain Casualty)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.MiniDroneFoundCasualty", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -248,7 +248,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: GetDisruptedEquipmentLocationAndRotation
     /// </summary>
-    public unsafe void GetDisruptedEquipmentLocationAndRotation(out System.Numerics.Vector3 vLocation, out BmSDK.Rotator rRotation)
+    public unsafe override void GetDisruptedEquipmentLocationAndRotation(out System.Numerics.Vector3 vLocation, out BmSDK.Rotator rRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.GetDisruptedEquipmentLocationAndRotation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -261,7 +261,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: DisruptorDisableEquipment
     /// </summary>
-    public unsafe void DisruptorDisableEquipment()
+    public unsafe override void DisruptorDisableEquipment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.DisruptorDisableEquipment", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -272,7 +272,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: UnequipMiniDroneController
     /// </summary>
-    public unsafe void UnequipMiniDroneController()
+    public unsafe override void UnequipMiniDroneController()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.UnequipMiniDroneController", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -283,7 +283,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: EquipMiniDroneController
     /// </summary>
-    public unsafe void EquipMiniDroneController()
+    public unsafe override void EquipMiniDroneController()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.EquipMiniDroneController", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -294,7 +294,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: RestoreDisruptorDisabledEquipment
     /// </summary>
-    public unsafe void RestoreDisruptorDisabledEquipment()
+    public unsafe override void RestoreDisruptorDisabledEquipment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.RestoreDisruptorDisabledEquipment", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -305,7 +305,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: GetDroneControllerAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetDroneControllerAnimset()
+    public unsafe override BmSDK.Engine.AnimSet GetDroneControllerAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.GetDroneControllerAnimset", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -316,7 +316,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: AddPawnProps
     /// </summary>
-    public unsafe void AddPawnProps()
+    public unsafe override void AddPawnProps()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.AddPawnProps", true);
         byte* paramsPtr = stackalloc byte[184];
@@ -327,7 +327,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: AttachProps
     /// </summary>
-    public unsafe void AttachProps()
+    public unsafe override void AttachProps()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.AttachProps", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -338,7 +338,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMiniDroneController.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

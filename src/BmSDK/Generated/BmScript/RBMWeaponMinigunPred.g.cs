@@ -71,7 +71,7 @@ public partial class RBMWeaponMinigunPred : BmSDK.BmGame.RBMWeaponRiflePredBase,
     /// <summary>
     /// Function: CreateBasicGunWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateBasicGunWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateBasicGunWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponMinigunPred.CreateBasicGunWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[8248];
@@ -85,7 +85,7 @@ public partial class RBMWeaponMinigunPred : BmSDK.BmGame.RBMWeaponRiflePredBase,
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponMinigunPred.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -97,7 +97,7 @@ public partial class RBMWeaponMinigunPred : BmSDK.BmGame.RBMWeaponRiflePredBase,
     /// <summary>
     /// Function: GetDamage
     /// </summary>
-    public unsafe float GetDamage(BmSDK.Engine.Actor Target)
+    public unsafe override float GetDamage(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponMinigunPred.GetDamage", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -109,7 +109,7 @@ public partial class RBMWeaponMinigunPred : BmSDK.BmGame.RBMWeaponRiflePredBase,
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponMinigunPred.Tick", true);
         byte* paramsPtr = stackalloc byte[28];

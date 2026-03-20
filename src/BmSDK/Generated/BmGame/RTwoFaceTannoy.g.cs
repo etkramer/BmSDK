@@ -71,7 +71,7 @@ public partial class RTwoFaceTannoy : BmSDK.BmGame.RPredator_Tannoy, BmSDK.IGame
     /// <summary>
     /// Function: IsAbleToPlayChatter
     /// </summary>
-    public unsafe bool IsAbleToPlayChatter()
+    public unsafe override bool IsAbleToPlayChatter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTwoFaceTannoy.IsAbleToPlayChatter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RTwoFaceTannoy : BmSDK.BmGame.RPredator_Tannoy, BmSDK.IGame
     /// <summary>
     /// Function: IsAbleToPlayLines
     /// </summary>
-    public unsafe bool IsAbleToPlayLines()
+    public unsafe override bool IsAbleToPlayLines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTwoFaceTannoy.IsAbleToPlayLines", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RTwoFaceTannoy : BmSDK.BmGame.RPredator_Tannoy, BmSDK.IGame
     /// <summary>
     /// Function: IsTannoyActive
     /// </summary>
-    public unsafe bool IsTannoyActive()
+    public unsafe override bool IsTannoyActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTwoFaceTannoy.IsTannoyActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RTwoFaceTannoy : BmSDK.BmGame.RPredator_Tannoy, BmSDK.IGame
     /// <summary>
     /// Function: HandleBarkPlayed
     /// </summary>
-    public unsafe void HandleBarkPlayed(BmSDK.BmGame.RBarkFlagBase FlagsOfLinePlayed)
+    public unsafe override void HandleBarkPlayed(BmSDK.BmGame.RBarkFlagBase FlagsOfLinePlayed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTwoFaceTannoy.HandleBarkPlayed", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -116,7 +116,7 @@ public partial class RTwoFaceTannoy : BmSDK.BmGame.RPredator_Tannoy, BmSDK.IGame
     /// <summary>
     /// Function: GetLine
     /// </summary>
-    public unsafe BmSDK.BmGame.RBarkConvo GetLine(out float PlayedScore)
+    public unsafe override BmSDK.BmGame.RBarkConvo GetLine(out float PlayedScore)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTwoFaceTannoy.GetLine", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -128,7 +128,7 @@ public partial class RTwoFaceTannoy : BmSDK.BmGame.RPredator_Tannoy, BmSDK.IGame
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTwoFaceTannoy.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];

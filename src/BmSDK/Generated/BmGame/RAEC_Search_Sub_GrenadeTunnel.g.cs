@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_GrenadeTunnel : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: OnVillainStolen
     /// </summary>
-    public unsafe void OnVillainStolen()
+    public unsafe override void OnVillainStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_GrenadeTunnel.OnVillainStolen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Sub_GrenadeTunnel : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_GrenadeTunnel.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RAEC_Search_Sub_GrenadeTunnel : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: DoFlinch
     /// </summary>
-    public unsafe void DoFlinch()
+    public unsafe virtual void DoFlinch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_GrenadeTunnel.DoFlinch", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -104,7 +104,7 @@ public partial class RAEC_Search_Sub_GrenadeTunnel : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: NotifyEvent
     /// </summary>
-    public unsafe void NotifyEvent(BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
+    public unsafe override void NotifyEvent(BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_GrenadeTunnel.NotifyEvent", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -117,7 +117,7 @@ public partial class RAEC_Search_Sub_GrenadeTunnel : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_GrenadeTunnel.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RAEC_Search_Sub_GrenadeTunnel : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_GrenadeTunnel.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -141,7 +141,7 @@ public partial class RAEC_Search_Sub_GrenadeTunnel : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: QueueActionsForEnd
     /// </summary>
-    public unsafe void QueueActionsForEnd()
+    public unsafe virtual void QueueActionsForEnd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_GrenadeTunnel.QueueActionsForEnd", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -152,7 +152,7 @@ public partial class RAEC_Search_Sub_GrenadeTunnel : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_GrenadeTunnel.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -163,7 +163,7 @@ public partial class RAEC_Search_Sub_GrenadeTunnel : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_GrenadeTunnel.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];

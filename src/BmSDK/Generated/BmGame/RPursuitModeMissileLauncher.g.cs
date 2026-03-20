@@ -71,7 +71,7 @@ public partial class RPursuitModeMissileLauncher : BmSDK.BmGame.RVehicleWeapon, 
     /// <summary>
     /// Function: ModifyLaunchRotation
     /// </summary>
-    public unsafe BmSDK.Rotator ModifyLaunchRotation(BmSDK.Rotator InRotation)
+    public unsafe virtual BmSDK.Rotator ModifyLaunchRotation(BmSDK.Rotator InRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPursuitModeMissileLauncher.ModifyLaunchRotation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -90,7 +90,7 @@ public partial class RPursuitModeMissileLauncher : BmSDK.BmGame.RVehicleWeapon, 
     /// <summary>
     /// Function: OnProjectileSpawned
     /// </summary>
-    public unsafe void OnProjectileSpawned(BmSDK.BmGame.RProjectile Projectile, BmSDK.Engine.Actor Target)
+    public unsafe virtual void OnProjectileSpawned(BmSDK.BmGame.RProjectile Projectile, BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPursuitModeMissileLauncher.OnProjectileSpawned", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -103,7 +103,7 @@ public partial class RPursuitModeMissileLauncher : BmSDK.BmGame.RVehicleWeapon, 
     /// <summary>
     /// Function: FireBatTracker
     /// </summary>
-    public unsafe void FireBatTracker()
+    public unsafe virtual void FireBatTracker()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPursuitModeMissileLauncher.FireBatTracker", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -114,7 +114,7 @@ public partial class RPursuitModeMissileLauncher : BmSDK.BmGame.RVehicleWeapon, 
     /// <summary>
     /// Function: GetTarget
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetTarget()
+    public unsafe virtual BmSDK.Engine.Actor GetTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPursuitModeMissileLauncher.GetTarget", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -125,7 +125,7 @@ public partial class RPursuitModeMissileLauncher : BmSDK.BmGame.RVehicleWeapon, 
     /// <summary>
     /// Function: FireWeapon
     /// </summary>
-    public unsafe bool FireWeapon()
+    public unsafe override bool FireWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPursuitModeMissileLauncher.FireWeapon", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -136,7 +136,7 @@ public partial class RPursuitModeMissileLauncher : BmSDK.BmGame.RVehicleWeapon, 
     /// <summary>
     /// Function: GivenTo
     /// </summary>
-    public unsafe void GivenTo(BmSDK.Engine.Pawn thisPawn, bool bDoNotActivate = default)
+    public unsafe override void GivenTo(BmSDK.Engine.Pawn thisPawn, bool bDoNotActivate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPursuitModeMissileLauncher.GivenTo", true);
         byte* paramsPtr = stackalloc byte[28];

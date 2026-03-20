@@ -36,7 +36,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowChaseBranch
     /// </summary>
-    public unsafe void ShowChaseBranch(BmSDK.Engine.Actor DrawActor, System.Numerics.Vector3 Offset, float ChaseDist, float ChaseTime, BmSDK.Engine.Actor TestActor = default)
+    public unsafe virtual void ShowChaseBranch(BmSDK.Engine.Actor DrawActor, System.Numerics.Vector3 Offset, float ChaseDist, float ChaseTime, BmSDK.Engine.Actor TestActor = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.ShowChaseBranch", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -52,7 +52,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: RecursiveHasChecked
     /// </summary>
-    public unsafe bool RecursiveHasChecked()
+    public unsafe virtual bool RecursiveHasChecked()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.RecursiveHasChecked", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -63,7 +63,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: HasUncheckedVerts
     /// </summary>
-    public unsafe bool HasUncheckedVerts(float ChaseTime)
+    public unsafe virtual bool HasUncheckedVerts(float ChaseTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.HasUncheckedVerts", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -75,7 +75,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: HasTooManyUncheckedVisibleVerts
     /// </summary>
-    public unsafe bool HasTooManyUncheckedVisibleVerts(float TimeSinceStart)
+    public unsafe virtual bool HasTooManyUncheckedVisibleVerts(float TimeSinceStart)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.HasTooManyUncheckedVisibleVerts", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -87,7 +87,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FindNextBranchChild
     /// </summary>
-    public unsafe BmSDK.BmGame.RChasePoint FindNextBranchChild(float TimeSinceStart)
+    public unsafe virtual BmSDK.BmGame.RChasePoint FindNextBranchChild(float TimeSinceStart)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.FindNextBranchChild", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -99,7 +99,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FindTipsFromCompletelyUncheckedBranches
     /// </summary>
-    public unsafe void FindTipsFromCompletelyUncheckedBranches(out BmSDK.TArray<BmSDK.BmGame.RChasePoint> UncheckedTips)
+    public unsafe virtual void FindTipsFromCompletelyUncheckedBranches(out BmSDK.TArray<BmSDK.BmGame.RChasePoint> UncheckedTips)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.FindTipsFromCompletelyUncheckedBranches", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -111,7 +111,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNumAvailableAtBranch
     /// </summary>
-    public unsafe int GetNumAvailableAtBranch()
+    public unsafe virtual int GetNumAvailableAtBranch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.GetNumAvailableAtBranch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -122,7 +122,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNumDownBranchRecursive
     /// </summary>
-    public unsafe int GetNumDownBranchRecursive()
+    public unsafe virtual int GetNumDownBranchRecursive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.GetNumDownBranchRecursive", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -133,7 +133,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNumAssignedDownBranch
     /// </summary>
-    public unsafe int GetNumAssignedDownBranch()
+    public unsafe virtual int GetNumAssignedDownBranch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.GetNumAssignedDownBranch", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -144,7 +144,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: UnregisterChaser
     /// </summary>
-    public unsafe void UnregisterChaser(BmSDK.BmGame.RAEC_Attack_Sub_Chase ExChaser)
+    public unsafe virtual void UnregisterChaser(BmSDK.BmGame.RAEC_Attack_Sub_Chase ExChaser)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.UnregisterChaser", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -156,7 +156,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterChaser
     /// </summary>
-    public unsafe void RegisterChaser(BmSDK.BmGame.RAEC_Attack_Sub_Chase NewChaser)
+    public unsafe virtual void RegisterChaser(BmSDK.BmGame.RAEC_Attack_Sub_Chase NewChaser)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.RegisterChaser", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -168,7 +168,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AddAbstractChaser
     /// </summary>
-    public unsafe void AddAbstractChaser()
+    public unsafe virtual void AddAbstractChaser()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.AddAbstractChaser", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -179,7 +179,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Register
     /// </summary>
-    public unsafe void Register()
+    public unsafe virtual void Register()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.Register", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -197,7 +197,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: RecursiveInvalidate
     /// </summary>
-    public unsafe void RecursiveInvalidate()
+    public unsafe virtual void RecursiveInvalidate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.RecursiveInvalidate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -215,7 +215,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsLadderJumpDown
     /// </summary>
-    public unsafe bool IsLadderJumpDown()
+    public unsafe virtual bool IsLadderJumpDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.IsLadderJumpDown", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -233,7 +233,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsSpecialTraverseEdge
     /// </summary>
-    public unsafe bool IsSpecialTraverseEdge()
+    public unsafe virtual bool IsSpecialTraverseEdge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.IsSpecialTraverseEdge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -251,7 +251,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetVert2
     /// </summary>
-    public unsafe int GetVert2()
+    public unsafe virtual int GetVert2()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.GetVert2", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -269,7 +269,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetVert1
     /// </summary>
-    public unsafe int GetVert1()
+    public unsafe virtual int GetVert1()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.GetVert1", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -287,7 +287,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsOnSubmesh
     /// </summary>
-    public unsafe bool IsOnSubmesh()
+    public unsafe virtual bool IsOnSubmesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.IsOnSubmesh", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -305,7 +305,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRadiusFromCenter
     /// </summary>
-    public unsafe void GetRadiusFromCenter(System.Numerics.Vector3 TreeLocation, out float MaxRadiusSq)
+    public unsafe virtual void GetRadiusFromCenter(System.Numerics.Vector3 TreeLocation, out float MaxRadiusSq)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.GetRadiusFromCenter", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -325,7 +325,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAveragePointLocation
     /// </summary>
-    public unsafe void GetAveragePointLocation(out System.Numerics.Vector3 TreeLocation, out int NumPoints)
+    public unsafe virtual void GetAveragePointLocation(out System.Numerics.Vector3 TreeLocation, out int NumPoints)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.GetAveragePointLocation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -345,7 +345,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTreeBounds
     /// </summary>
-    public unsafe void GetTreeBounds(out System.Numerics.Vector3 TreeLocation, out float TreeRadius)
+    public unsafe virtual void GetTreeBounds(out System.Numerics.Vector3 TreeLocation, out float TreeRadius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.GetTreeBounds", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -365,7 +365,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: HasBeenChecked
     /// </summary>
-    public unsafe bool HasBeenChecked()
+    public unsafe virtual bool HasBeenChecked()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.HasBeenChecked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -383,7 +383,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: MarkAsChecked
     /// </summary>
-    public unsafe void MarkAsChecked()
+    public unsafe virtual void MarkAsChecked()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.MarkAsChecked", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -401,7 +401,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveBranch
     /// </summary>
-    public unsafe void RemoveBranch()
+    public unsafe virtual void RemoveBranch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.RemoveBranch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -419,7 +419,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: BranchContainsLocation
     /// </summary>
-    public unsafe bool BranchContainsLocation(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual bool BranchContainsLocation(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.BranchContainsLocation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -438,7 +438,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetIntersectionWithHandlePath
     /// </summary>
-    public unsafe BmSDK.BmGame.RChasePoint GetIntersectionWithHandlePath(BmSDK.BmGame.RNavigationHandle TestHandle)
+    public unsafe virtual BmSDK.BmGame.RChasePoint GetIntersectionWithHandlePath(BmSDK.BmGame.RNavigationHandle TestHandle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.GetIntersectionWithHandlePath", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -457,7 +457,7 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsValid
     /// </summary>
-    public unsafe bool IsValid()
+    public unsafe virtual bool IsValid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChasePoint.IsValid", true);
         byte* paramsPtr = stackalloc byte[4];

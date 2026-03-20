@@ -66,7 +66,7 @@ public partial class RBMCombatThrownObject_HeavyObject : BmSDK.BmGame.RBMCombatT
     /// <summary>
     /// Function: CaughtByPlayer
     /// </summary>
-    public unsafe void CaughtByPlayer()
+    public unsafe override void CaughtByPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_HeavyObject.CaughtByPlayer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class RBMCombatThrownObject_HeavyObject : BmSDK.BmGame.RBMCombatT
     /// <summary>
     /// Function: HitSomething
     /// </summary>
-    public unsafe void HitSomething(BmSDK.BmGame.RPawnCombat HitPawn, float Speed)
+    public unsafe override void HitSomething(BmSDK.BmGame.RPawnCombat HitPawn, float Speed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_HeavyObject.HitSomething", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -90,7 +90,7 @@ public partial class RBMCombatThrownObject_HeavyObject : BmSDK.BmGame.RBMCombatT
     /// <summary>
     /// Function: HitPawnValueChanged
     /// </summary>
-    public unsafe void HitPawnValueChanged()
+    public unsafe override void HitPawnValueChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_HeavyObject.HitPawnValueChanged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -101,7 +101,7 @@ public partial class RBMCombatThrownObject_HeavyObject : BmSDK.BmGame.RBMCombatT
     /// <summary>
     /// Function: StopAttackingFX
     /// </summary>
-    public unsafe void StopAttackingFX(bool bSuccessfulCounter = default)
+    public unsafe virtual void StopAttackingFX(bool bSuccessfulCounter = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_HeavyObject.StopAttackingFX", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -113,7 +113,7 @@ public partial class RBMCombatThrownObject_HeavyObject : BmSDK.BmGame.RBMCombatT
     /// <summary>
     /// Function: StartAttackingFX
     /// </summary>
-    public unsafe void StartAttackingFX()
+    public unsafe virtual void StartAttackingFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_HeavyObject.StartAttackingFX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -124,7 +124,7 @@ public partial class RBMCombatThrownObject_HeavyObject : BmSDK.BmGame.RBMCombatT
     /// <summary>
     /// Function: CanStillBeUsedByPlayer
     /// </summary>
-    public unsafe bool CanStillBeUsedByPlayer()
+    public unsafe override bool CanStillBeUsedByPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_HeavyObject.CanStillBeUsedByPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -135,7 +135,7 @@ public partial class RBMCombatThrownObject_HeavyObject : BmSDK.BmGame.RBMCombatT
     /// <summary>
     /// Function: EnableStasis
     /// </summary>
-    public unsafe void EnableStasis()
+    public unsafe virtual void EnableStasis()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_HeavyObject.EnableStasis", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -146,7 +146,7 @@ public partial class RBMCombatThrownObject_HeavyObject : BmSDK.BmGame.RBMCombatT
     /// <summary>
     /// Function: DelayedSetCanHitPawn
     /// </summary>
-    public unsafe void DelayedSetCanHitPawn()
+    public unsafe virtual void DelayedSetCanHitPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_HeavyObject.DelayedSetCanHitPawn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -157,7 +157,7 @@ public partial class RBMCombatThrownObject_HeavyObject : BmSDK.BmGame.RBMCombatT
     /// <summary>
     /// Function: SetCanHitPawn
     /// </summary>
-    public unsafe void SetCanHitPawn(bool bNewValue)
+    public unsafe override void SetCanHitPawn(bool bNewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_HeavyObject.SetCanHitPawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -169,7 +169,7 @@ public partial class RBMCombatThrownObject_HeavyObject : BmSDK.BmGame.RBMCombatT
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_HeavyObject.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

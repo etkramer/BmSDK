@@ -126,7 +126,7 @@ public partial class GameEngine : BmSDK.Engine._Engine, BmSDK.IGameObject
     /// <summary>
     /// Function: DestroyNamedNetDriver
     /// </summary>
-    public unsafe void DestroyNamedNetDriver(BmSDK.FName NetDriverName)
+    public unsafe virtual void DestroyNamedNetDriver(BmSDK.FName NetDriverName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameEngine.DestroyNamedNetDriver", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -145,7 +145,7 @@ public partial class GameEngine : BmSDK.Engine._Engine, BmSDK.IGameObject
     /// <summary>
     /// Function: CreateNamedNetDriver
     /// </summary>
-    public unsafe bool CreateNamedNetDriver(BmSDK.FName NetDriverName)
+    public unsafe virtual bool CreateNamedNetDriver(BmSDK.FName NetDriverName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameEngine.CreateNamedNetDriver", true);
         byte* paramsPtr = stackalloc byte[12];

@@ -71,7 +71,7 @@ public partial class RRobinBatClaw : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// <summary>
     /// Function: CalculateEquipBoneName
     /// </summary>
-    public unsafe void CalculateEquipBoneName(out BmSDK.FName OutEquipBoneName, out BmSDK.FName OutEquipBoneName2, out BmSDK.Rotator OutRelativeRotation, BmSDK.FName CustomBone = default)
+    public unsafe override void CalculateEquipBoneName(out BmSDK.FName OutEquipBoneName, out BmSDK.FName OutEquipBoneName2, out BmSDK.Rotator OutRelativeRotation, BmSDK.FName CustomBone = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClaw.CalculateEquipBoneName", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -86,7 +86,7 @@ public partial class RRobinBatClaw : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// <summary>
     /// Function: ProjectileCam
     /// </summary>
-    public unsafe void ProjectileCam()
+    public unsafe override void ProjectileCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClaw.ProjectileCam", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -97,7 +97,7 @@ public partial class RRobinBatClaw : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// <summary>
     /// Function: StartPullMove
     /// </summary>
-    public unsafe void StartPullMove()
+    public unsafe override void StartPullMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClaw.StartPullMove", true);
         byte* paramsPtr = stackalloc byte[160];
@@ -108,7 +108,7 @@ public partial class RRobinBatClaw : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckAutoTarget
     /// </summary>
-    public unsafe bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
+    public unsafe override bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClaw.CheckAutoTarget", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -124,7 +124,7 @@ public partial class RRobinBatClaw : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateHarpoonTarget
     /// </summary>
-    public unsafe bool UpdateHarpoonTarget(bool bInFlight = default)
+    public unsafe override bool UpdateHarpoonTarget(bool bInFlight = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClaw.UpdateHarpoonTarget", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -136,7 +136,7 @@ public partial class RRobinBatClaw : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateTarget
     /// </summary>
-    public unsafe void UpdateTarget()
+    public unsafe override void UpdateTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClaw.UpdateTarget", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -147,7 +147,7 @@ public partial class RRobinBatClaw : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// <summary>
     /// Function: FinalBlowCam
     /// </summary>
-    public unsafe void FinalBlowCam()
+    public unsafe virtual void FinalBlowCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClaw.FinalBlowCam", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -158,7 +158,7 @@ public partial class RRobinBatClaw : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// <summary>
     /// Function: DoFireMove
     /// </summary>
-    public unsafe void DoFireMove()
+    public unsafe override void DoFireMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClaw.DoFireMove", true);
         byte* paramsPtr = stackalloc byte[144];
@@ -169,7 +169,7 @@ public partial class RRobinBatClaw : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPrimedPose
     /// </summary>
-    public unsafe BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
+    public unsafe override BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClaw.GetPrimedPose", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -186,7 +186,7 @@ public partial class RRobinBatClaw : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClaw.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -197,7 +197,7 @@ public partial class RRobinBatClaw : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// <summary>
     /// Function: GetImpactAudioEvent
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetImpactAudioEvent(BmSDK.Engine.AkWwise.EAkWorldMaterial Mat)
+    public unsafe override BmSDK.Engine.AkEvent GetImpactAudioEvent(BmSDK.Engine.AkWwise.EAkWorldMaterial Mat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClaw.GetImpactAudioEvent", true);
         byte* paramsPtr = stackalloc byte[12];

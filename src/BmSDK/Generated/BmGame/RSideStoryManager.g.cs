@@ -36,7 +36,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLocalisedRiddleFromRefName
     /// </summary>
-    public unsafe BmSDK.FString GetLocalisedRiddleFromRefName(BmSDK.FString RefName)
+    public unsafe virtual BmSDK.FString GetLocalisedRiddleFromRefName(BmSDK.FString RefName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GetLocalisedRiddleFromRefName", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -48,7 +48,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CreateActorGroup
     /// </summary>
-    public unsafe int CreateActorGroup(BmSDK.FString SideStoryIconName)
+    public unsafe virtual int CreateActorGroup(BmSDK.FString SideStoryIconName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.CreateActorGroup", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -60,7 +60,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetActorGroupIndex
     /// </summary>
-    public unsafe int GetActorGroupIndex(BmSDK.FString SideStoryIconName, bool CreateIfDoesntExist = default)
+    public unsafe virtual int GetActorGroupIndex(BmSDK.FString SideStoryIconName, bool CreateIfDoesntExist = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GetActorGroupIndex", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -73,7 +73,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetActorIndex
     /// </summary>
-    public unsafe int GetActorIndex(int ActorGroupIndex, BmSDK.Engine.Actor TheActor)
+    public unsafe virtual int GetActorIndex(int ActorGroupIndex, BmSDK.Engine.Actor TheActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GetActorIndex", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -86,7 +86,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveActorFromGroup
     /// </summary>
-    public unsafe void RemoveActorFromGroup(int ActorGroupIndex, BmSDK.Engine.Actor TheActor)
+    public unsafe virtual void RemoveActorFromGroup(int ActorGroupIndex, BmSDK.Engine.Actor TheActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.RemoveActorFromGroup", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -99,7 +99,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DeregisterVisualDiscoveryActor
     /// </summary>
-    public unsafe void DeregisterVisualDiscoveryActor(BmSDK.Engine.Actor TheActor)
+    public unsafe virtual void DeregisterVisualDiscoveryActor(BmSDK.Engine.Actor TheActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.DeregisterVisualDiscoveryActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -111,7 +111,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterVisualDiscoveryActor
     /// </summary>
-    public unsafe void RegisterVisualDiscoveryActor(BmSDK.Engine.Actor TheActor, BmSDK.FString SideStoryIconName, int SideStoryDiscoveryHeight, bool bIsMainActor = default, bool CanBeDiscoveredDuringCloudburst = default)
+    public unsafe virtual void RegisterVisualDiscoveryActor(BmSDK.Engine.Actor TheActor, BmSDK.FString SideStoryIconName, int SideStoryDiscoveryHeight, bool bIsMainActor = default, bool CanBeDiscoveredDuringCloudburst = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.RegisterVisualDiscoveryActor", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -127,7 +127,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCustomTrailWaypointDistance
     /// </summary>
-    public unsafe float GetCustomTrailWaypointDistance()
+    public unsafe virtual float GetCustomTrailWaypointDistance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GetCustomTrailWaypointDistance", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -138,7 +138,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMidKnightfall
     /// </summary>
-    public unsafe int GetMidKnightfall()
+    public unsafe virtual int GetMidKnightfall()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GetMidKnightfall", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -149,7 +149,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetKnightfallState
     /// </summary>
-    public unsafe BmSDK.BmGame.RSideStoryManager.KnightfallState GetKnightfallState()
+    public unsafe virtual BmSDK.BmGame.RSideStoryManager.KnightfallState GetKnightfallState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GetKnightfallState", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -160,7 +160,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetSideStoryDiscoveryState
     /// </summary>
-    public unsafe bool SetSideStoryDiscoveryState(int SSIndex, BmSDK.FString IconName, byte DiscoveryState, bool bAddToAutoPan = default)
+    public unsafe virtual bool SetSideStoryDiscoveryState(int SSIndex, BmSDK.FString IconName, byte DiscoveryState, bool bAddToAutoPan = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.SetSideStoryDiscoveryState", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -175,7 +175,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CanSideStoryBeReaddedOnceRemoved
     /// </summary>
-    public unsafe bool CanSideStoryBeReaddedOnceRemoved(BmSDK.FString StoryName)
+    public unsafe virtual bool CanSideStoryBeReaddedOnceRemoved(BmSDK.FString StoryName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.CanSideStoryBeReaddedOnceRemoved", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -187,7 +187,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDiscoveryState
     /// </summary>
-    public unsafe byte GetDiscoveryState(BmSDK.FString IconName)
+    public unsafe virtual byte GetDiscoveryState(BmSDK.FString IconName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GetDiscoveryState", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -199,7 +199,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRGI
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo GetRGI()
+    public unsafe virtual BmSDK.BmGame.RGameInfo GetRGI()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GetRGI", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -210,7 +210,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveIconFromMap
     /// </summary>
-    public unsafe void RemoveIconFromMap(int SSIndex, BmSDK.FString IconName, bool MakeUnavailableInsteadOfActuallyRemoved = default)
+    public unsafe virtual void RemoveIconFromMap(int SSIndex, BmSDK.FString IconName, bool MakeUnavailableInsteadOfActuallyRemoved = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.RemoveIconFromMap", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -224,7 +224,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AddIconToMap
     /// </summary>
-    public unsafe void AddIconToMap(int SSIndex, BmSDK.FString IconName, bool bAddToAutoPan, bool ShowDiscoveryOnHud, BmSDK.Engine.Actor HudDiscoveryActor = default)
+    public unsafe virtual void AddIconToMap(int SSIndex, BmSDK.FString IconName, bool bAddToAutoPan, bool ShowDiscoveryOnHud, BmSDK.Engine.Actor HudDiscoveryActor = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.AddIconToMap", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -240,7 +240,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: MakeIconDiscoverable
     /// </summary>
-    public unsafe void MakeIconDiscoverable(int SSIndex, BmSDK.FString IconName, bool bAddToAutoPan)
+    public unsafe virtual void MakeIconDiscoverable(int SSIndex, BmSDK.FString IconName, bool bAddToAutoPan)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.MakeIconDiscoverable", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -254,7 +254,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DebugDiscoverAllIcons
     /// </summary>
-    public unsafe void DebugDiscoverAllIcons()
+    public unsafe virtual void DebugDiscoverAllIcons()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.DebugDiscoverAllIcons", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -265,7 +265,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMainActorForGroup
     /// </summary>
-    public unsafe int GetMainActorForGroup(int GroupIndex)
+    public unsafe virtual int GetMainActorForGroup(int GroupIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GetMainActorForGroup", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -277,7 +277,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GroupActorSpotted
     /// </summary>
-    public unsafe void GroupActorSpotted(int GroupIndex, BmSDK.Engine.Actor TheActor, bool ShowDiscoveryOnHud = default)
+    public unsafe virtual void GroupActorSpotted(int GroupIndex, BmSDK.Engine.Actor TheActor, bool ShowDiscoveryOnHud = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GroupActorSpotted", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -291,7 +291,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFocusDetailForSideStory
     /// </summary>
-    public unsafe BmSDK.FString GetFocusDetailForSideStory(int ss_index)
+    public unsafe virtual BmSDK.FString GetFocusDetailForSideStory(int ss_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GetFocusDetailForSideStory", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -303,7 +303,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ChooseBestSideStoryForIntel
     /// </summary>
-    public unsafe BmSDK.FString ChooseBestSideStoryForIntel()
+    public unsafe virtual BmSDK.FString ChooseBestSideStoryForIntel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.ChooseBestSideStoryForIntel", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -314,7 +314,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNumberOfDifferentSideStoryMissionsOnMap
     /// </summary>
-    public unsafe int GetNumberOfDifferentSideStoryMissionsOnMap()
+    public unsafe virtual int GetNumberOfDifferentSideStoryMissionsOnMap()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GetNumberOfDifferentSideStoryMissionsOnMap", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -325,7 +325,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckWhetherIntelValid
     /// </summary>
-    public unsafe bool CheckWhetherIntelValid(BmSDK.FString SideStoryIntelState)
+    public unsafe virtual bool CheckWhetherIntelValid(BmSDK.FString SideStoryIntelState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.CheckWhetherIntelValid", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -337,7 +337,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: InvalidIntelIfNoLongerValid
     /// </summary>
-    public unsafe void InvalidIntelIfNoLongerValid()
+    public unsafe virtual void InvalidIntelIfNoLongerValid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.InvalidIntelIfNoLongerValid", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -348,7 +348,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearIntel
     /// </summary>
-    public unsafe void ClearIntel()
+    public unsafe virtual void ClearIntel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.ClearIntel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -359,7 +359,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GiveIntelPoint
     /// </summary>
-    public unsafe void GiveIntelPoint(int UnlessThisManyIconsAlreadyOnMap)
+    public unsafe virtual void GiveIntelPoint(int UnlessThisManyIconsAlreadyOnMap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GiveIntelPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -371,7 +371,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DisplayLowUrgencyOpenWheelMessageCheck
     /// </summary>
-    public unsafe void DisplayLowUrgencyOpenWheelMessageCheck()
+    public unsafe virtual void DisplayLowUrgencyOpenWheelMessageCheck()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.DisplayLowUrgencyOpenWheelMessageCheck", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -382,7 +382,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDesignerLowUrgency
     /// </summary>
-    public unsafe void SetDesignerLowUrgency(bool IsLowUrgency, int GiveIntelUnlessThisManyDifferentIconsAlreadyOnMap = default, bool GivePenguinIntel = default)
+    public unsafe virtual void SetDesignerLowUrgency(bool IsLowUrgency, int GiveIntelUnlessThisManyDifferentIconsAlreadyOnMap = default, bool GivePenguinIntel = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.SetDesignerLowUrgency", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -396,7 +396,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: MaxAndFinishedCountPerIsland
     /// </summary>
-    public unsafe BmSDK.TArray<int> MaxAndFinishedCountPerIsland(BmSDK.FString sMission, int District)
+    public unsafe virtual BmSDK.TArray<int> MaxAndFinishedCountPerIsland(BmSDK.FString sMission, int District)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.MaxAndFinishedCountPerIsland", true);
         byte* paramsPtr = stackalloc byte[264];
@@ -409,7 +409,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AnyRadialMapIconsActive
     /// </summary>
-    public unsafe bool AnyRadialMapIconsActive(int SideStoryIndex, BmSDK.BmGame.RPersistentData pData)
+    public unsafe virtual bool AnyRadialMapIconsActive(int SideStoryIndex, BmSDK.BmGame.RPersistentData pData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.AnyRadialMapIconsActive", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -422,7 +422,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CanShowIntelForSideStory
     /// </summary>
-    public unsafe bool CanShowIntelForSideStory(BmSDK.FString SideStoryName)
+    public unsafe virtual bool CanShowIntelForSideStory(BmSDK.FString SideStoryName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.CanShowIntelForSideStory", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -434,7 +434,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetIntelMapIconThenClearIntel
     /// </summary>
-    public unsafe BmSDK.FString GetIntelMapIconThenClearIntel()
+    public unsafe virtual BmSDK.FString GetIntelMapIconThenClearIntel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GetIntelMapIconThenClearIntel", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -445,7 +445,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsRadialMapIconStory
     /// </summary>
-    public unsafe bool IsRadialMapIconStory(BmSDK.FString StoryName)
+    public unsafe virtual bool IsRadialMapIconStory(BmSDK.FString StoryName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.IsRadialMapIconStory", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -457,7 +457,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SideStoryRequiresTracker
     /// </summary>
-    public unsafe bool SideStoryRequiresTracker(BmSDK.BmGame.RSideStoryManager.ActiveSideStoryEnum TheSideStory)
+    public unsafe virtual bool SideStoryRequiresTracker(BmSDK.BmGame.RSideStoryManager.ActiveSideStoryEnum TheSideStory)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.SideStoryRequiresTracker", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -469,7 +469,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetIntelSideStory
     /// </summary>
-    public unsafe BmSDK.FString GetIntelSideStory(bool ChooseBestIfCurrentlyWild = default)
+    public unsafe virtual BmSDK.FString GetIntelSideStory(bool ChooseBestIfCurrentlyWild = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GetIntelSideStory", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -481,7 +481,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetApcIntelAvailable
     /// </summary>
-    public unsafe void SetApcIntelAvailable(bool is_available)
+    public unsafe virtual void SetApcIntelAvailable(bool is_available)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.SetApcIntelAvailable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -493,7 +493,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AwardPenguinIntel
     /// </summary>
-    public unsafe void AwardPenguinIntel()
+    public unsafe virtual void AwardPenguinIntel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.AwardPenguinIntel", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -504,7 +504,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearPenguinIntel
     /// </summary>
-    public unsafe void ClearPenguinIntel()
+    public unsafe virtual void ClearPenguinIntel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.ClearPenguinIntel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -515,7 +515,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPenguinIntelAvailable
     /// </summary>
-    public unsafe bool IsPenguinIntelAvailable()
+    public unsafe virtual bool IsPenguinIntelAvailable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.IsPenguinIntelAvailable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -526,7 +526,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCurrentActiveSideStory
     /// </summary>
-    public unsafe BmSDK.BmGame.RSideStoryManager.ActiveSideStoryEnum GetCurrentActiveSideStory()
+    public unsafe virtual BmSDK.BmGame.RSideStoryManager.ActiveSideStoryEnum GetCurrentActiveSideStory()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GetCurrentActiveSideStory", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -537,7 +537,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetActiveSideStoryFromString
     /// </summary>
-    public unsafe BmSDK.BmGame.RSideStoryManager.ActiveSideStoryEnum GetActiveSideStoryFromString(BmSDK.FString SideStoryName, out BmSDK.FString ShortenedName)
+    public unsafe virtual BmSDK.BmGame.RSideStoryManager.ActiveSideStoryEnum GetActiveSideStoryFromString(BmSDK.FString SideStoryName, out BmSDK.FString ShortenedName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GetActiveSideStoryFromString", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -550,7 +550,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetStringFromActiveSideStoryEnum
     /// </summary>
-    public unsafe BmSDK.FString GetStringFromActiveSideStoryEnum(int the_enum)
+    public unsafe virtual BmSDK.FString GetStringFromActiveSideStoryEnum(int the_enum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GetStringFromActiveSideStoryEnum", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -562,7 +562,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSideStoryNameFromEnum
     /// </summary>
-    public unsafe BmSDK.FString GetSideStoryNameFromEnum(int the_enum)
+    public unsafe virtual BmSDK.FString GetSideStoryNameFromEnum(int the_enum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GetSideStoryNameFromEnum", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -574,7 +574,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDebugSideStoryIntel
     /// </summary>
-    public unsafe void SetDebugSideStoryIntel(int the_enum)
+    public unsafe virtual void SetDebugSideStoryIntel(int the_enum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.SetDebugSideStoryIntel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -586,7 +586,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFocusDetailBySideStoryIconName
     /// </summary>
-    public unsafe BmSDK.FString GetFocusDetailBySideStoryIconName(BmSDK.FString SideStoryIconName)
+    public unsafe virtual BmSDK.FString GetFocusDetailBySideStoryIconName(BmSDK.FString SideStoryIconName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GetFocusDetailBySideStoryIconName", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -598,7 +598,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowDebugSpheres
     /// </summary>
-    public unsafe void ShowDebugSpheres()
+    public unsafe virtual void ShowDebugSpheres()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.ShowDebugSpheres", true);
         byte* paramsPtr = stackalloc byte[33];
@@ -609,7 +609,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: TickDiscoveryTargets
     /// </summary>
-    public unsafe void TickDiscoveryTargets(float DeltaT)
+    public unsafe virtual void TickDiscoveryTargets(float DeltaT)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.TickDiscoveryTargets", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -621,7 +621,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AddDiscoveryTarget
     /// </summary>
-    public unsafe void AddDiscoveryTarget(BmSDK.Engine.Actor TheActor, BmSDK.FString AnimName, float ShowDuration)
+    public unsafe virtual void AddDiscoveryTarget(BmSDK.Engine.Actor TheActor, BmSDK.FString AnimName, float ShowDuration)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.AddDiscoveryTarget", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -635,7 +635,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SendDummyHudTargetToFlash
     /// </summary>
-    public unsafe void SendDummyHudTargetToFlash()
+    public unsafe virtual void SendDummyHudTargetToFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.SendDummyHudTargetToFlash", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -646,7 +646,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ObjectiveSystemSetsActiveSideStory
     /// </summary>
-    public unsafe void ObjectiveSystemSetsActiveSideStory(BmSDK.FString ActiveSideStoryName, BmSDK.FString SideStoryMapMarker)
+    public unsafe virtual void ObjectiveSystemSetsActiveSideStory(BmSDK.FString ActiveSideStoryName, BmSDK.FString SideStoryMapMarker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.ObjectiveSystemSetsActiveSideStory", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -659,7 +659,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetObjectiveTypeByIconString
     /// </summary>
-    public unsafe BmSDK.FString GetObjectiveTypeByIconString(BmSDK.FString IconString)
+    public unsafe virtual BmSDK.FString GetObjectiveTypeByIconString(BmSDK.FString IconString)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.GetObjectiveTypeByIconString", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -671,7 +671,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetMissionWheelHighlights
     /// </summary>
-    public unsafe void SetMissionWheelHighlights(BmSDK.FString ActiveSideStoryName)
+    public unsafe virtual void SetMissionWheelHighlights(BmSDK.FString ActiveSideStoryName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.SetMissionWheelHighlights", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -683,7 +683,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetActiveSideStory
     /// </summary>
-    public unsafe void SetActiveSideStory(BmSDK.FString ActiveSideStoryName, BmSDK.FString OptionalSideStoryMapMarker = default)
+    public unsafe virtual void SetActiveSideStory(BmSDK.FString ActiveSideStoryName, BmSDK.FString OptionalSideStoryMapMarker = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.SetActiveSideStory", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -696,7 +696,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetActiveSideStoryByEnumWithoutMapMarker
     /// </summary>
-    public unsafe void SetActiveSideStoryByEnumWithoutMapMarker(BmSDK.BmGame.RSideStoryManager.ActiveSideStoryEnum the_side_story)
+    public unsafe virtual void SetActiveSideStoryByEnumWithoutMapMarker(BmSDK.BmGame.RSideStoryManager.ActiveSideStoryEnum the_side_story)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.SetActiveSideStoryByEnumWithoutMapMarker", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -708,7 +708,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: MarkActiveSideStoryComplete
     /// </summary>
-    public unsafe void MarkActiveSideStoryComplete(BmSDK.BmGame.RSideStoryManager.ActiveSideStoryEnum the_side_story)
+    public unsafe virtual void MarkActiveSideStoryComplete(BmSDK.BmGame.RSideStoryManager.ActiveSideStoryEnum the_side_story)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.MarkActiveSideStoryComplete", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -720,7 +720,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ObjectiveSystemClearsActiveSideStory
     /// </summary>
-    public unsafe void ObjectiveSystemClearsActiveSideStory(bool MainPathObjective)
+    public unsafe virtual void ObjectiveSystemClearsActiveSideStory(bool MainPathObjective)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.ObjectiveSystemClearsActiveSideStory", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -732,7 +732,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayRiddlerHint
     /// </summary>
-    public unsafe BmSDK.FString PlayRiddlerHint(BmSDK.FString RefName)
+    public unsafe virtual BmSDK.FString PlayRiddlerHint(BmSDK.FString RefName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.PlayRiddlerHint", true);
         byte* paramsPtr = stackalloc byte[152];
@@ -744,7 +744,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsLockupWaypoint
     /// </summary>
-    public unsafe bool IsLockupWaypoint(BmSDK.FString waypoint_name)
+    public unsafe virtual bool IsLockupWaypoint(BmSDK.FString waypoint_name)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.IsLockupWaypoint", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -756,7 +756,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: InitialiseManager
     /// </summary>
-    public unsafe void InitialiseManager()
+    public unsafe virtual void InitialiseManager()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.InitialiseManager", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -767,7 +767,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SideStoryEnumToString
     /// </summary>
-    public unsafe BmSDK.FString SideStoryEnumToString(BmSDK.BmGame.RSideStoryManager.ActiveSideStoryEnum SideStory)
+    public unsafe virtual BmSDK.FString SideStoryEnumToString(BmSDK.BmGame.RSideStoryManager.ActiveSideStoryEnum SideStory)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.SideStoryEnumToString", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -786,7 +786,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FindLineOfSightActor
     /// </summary>
-    public unsafe bool FindLineOfSightActor()
+    public unsafe virtual bool FindLineOfSightActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.FindLineOfSightActor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -804,7 +804,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsSideStoryActorVisible
     /// </summary>
-    public unsafe float IsSideStoryActorVisible(int group_index, int actor_index, bool is_zoomed)
+    public unsafe virtual float IsSideStoryActorVisible(int group_index, int actor_index, bool is_zoomed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.IsSideStoryActorVisible", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -825,7 +825,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(BmSDK.BmGame.RPlayerController RPC, float DeltaTime)
+    public unsafe virtual void Tick(BmSDK.BmGame.RPlayerController RPC, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.Tick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -845,7 +845,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsAnyMissionDialogueLoading
     /// </summary>
-    public unsafe bool IsAnyMissionDialogueLoading()
+    public unsafe virtual bool IsAnyMissionDialogueLoading()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.IsAnyMissionDialogueLoading", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -863,7 +863,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsWheelDialoguePlayingOfType
     /// </summary>
-    public unsafe int IsWheelDialoguePlayingOfType(byte Type)
+    public unsafe virtual int IsWheelDialoguePlayingOfType(byte Type)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.IsWheelDialoguePlayingOfType", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -882,7 +882,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: StopOrCancelMissionDialogue
     /// </summary>
-    public unsafe void StopOrCancelMissionDialogue(int DialogueIndex, bool bUseFade)
+    public unsafe virtual void StopOrCancelMissionDialogue(int DialogueIndex, bool bUseFade)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.StopOrCancelMissionDialogue", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -902,7 +902,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CancelAllMissionDialogue
     /// </summary>
-    public unsafe void CancelAllMissionDialogue()
+    public unsafe virtual void CancelAllMissionDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.CancelAllMissionDialogue", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -920,7 +920,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayMissionWheelDialogue
     /// </summary>
-    public unsafe void PlayMissionWheelDialogue(int DialogueIndex)
+    public unsafe virtual void PlayMissionWheelDialogue(int DialogueIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.PlayMissionWheelDialogue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -939,7 +939,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetMissionDialogueState_
     /// </summary>
-    public unsafe void SetMissionDialogueState_(int DialogueIndex)
+    public unsafe virtual void SetMissionDialogueState_(int DialogueIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.SetMissionDialogueState_", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -958,7 +958,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetOfMissionDialogue
     /// </summary>
-    public unsafe void SetOfMissionDialogue(BmSDK.FString PackageName, byte Type, bool bUseFadeOnOldDialogue)
+    public unsafe virtual void SetOfMissionDialogue(BmSDK.FString PackageName, byte Type, bool bUseFadeOnOldDialogue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.SetOfMissionDialogue", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -979,7 +979,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: TickMissionDialogue
     /// </summary>
-    public unsafe void TickMissionDialogue(BmSDK.BmGame.RPlayerController RPC)
+    public unsafe virtual void TickMissionDialogue(BmSDK.BmGame.RPlayerController RPC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSideStoryManager.TickMissionDialogue", true);
         byte* paramsPtr = stackalloc byte[8];

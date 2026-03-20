@@ -36,7 +36,7 @@ public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// Function: DebugLogNotification
     /// </summary>
-    public unsafe void DebugLogNotification(out BmSDK.Engine.AppNotificationsBase.FNotificationInfo Notification)
+    public unsafe virtual void DebugLogNotification(out BmSDK.Engine.AppNotificationsBase.FNotificationInfo Notification)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AppNotificationsBase.DebugLogNotification", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -48,7 +48,7 @@ public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// Function: OnReceivedRemoteNotification
     /// </summary>
-    public unsafe void OnReceivedRemoteNotification(out BmSDK.Engine.AppNotificationsBase.FNotificationInfo Notification, bool bWasAppActive)
+    public unsafe virtual void OnReceivedRemoteNotification(out BmSDK.Engine.AppNotificationsBase.FNotificationInfo Notification, bool bWasAppActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AppNotificationsBase.OnReceivedRemoteNotification", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -61,7 +61,7 @@ public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// Function: OnReceivedLocalNotification
     /// </summary>
-    public unsafe void OnReceivedLocalNotification(out BmSDK.Engine.AppNotificationsBase.FNotificationInfo Notification, bool bWasAppActive)
+    public unsafe virtual void OnReceivedLocalNotification(out BmSDK.Engine.AppNotificationsBase.FNotificationInfo Notification, bool bWasAppActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AppNotificationsBase.OnReceivedLocalNotification", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -74,7 +74,7 @@ public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// Function: CancelAllScheduledLocalNotifications
     /// </summary>
-    public unsafe void CancelAllScheduledLocalNotifications()
+    public unsafe virtual void CancelAllScheduledLocalNotifications()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AppNotificationsBase.CancelAllScheduledLocalNotifications", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -92,7 +92,7 @@ public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// Function: ScheduleLocalNotification
     /// </summary>
-    public unsafe void ScheduleLocalNotification(out BmSDK.Engine.AppNotificationsBase.FNotificationInfo Notification, int StartOffsetSeconds)
+    public unsafe virtual void ScheduleLocalNotification(out BmSDK.Engine.AppNotificationsBase.FNotificationInfo Notification, int StartOffsetSeconds)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AppNotificationsBase.ScheduleLocalNotification", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -112,7 +112,7 @@ public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// Function: WasLaunchedViaNotification
     /// </summary>
-    public unsafe bool WasLaunchedViaNotification()
+    public unsafe virtual bool WasLaunchedViaNotification()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AppNotificationsBase.WasLaunchedViaNotification", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -123,7 +123,7 @@ public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init()
+    public unsafe virtual void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AppNotificationsBase.Init", true);
         byte* paramsPtr = stackalloc byte[0];

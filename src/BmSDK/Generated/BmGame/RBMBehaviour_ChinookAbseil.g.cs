@@ -36,7 +36,7 @@ public partial class RBMBehaviour_ChinookAbseil : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ChinookAbseil.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_ChinookAbseil : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmGame.RHelicopterBase Chopper, int NewAbseilSlot)
+    public unsafe virtual void Initialise(BmSDK.BmGame.RHelicopterBase Chopper, int NewAbseilSlot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ChinookAbseil.Initialise", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -60,7 +60,7 @@ public partial class RBMBehaviour_ChinookAbseil : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ChinookAbseil.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

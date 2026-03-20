@@ -47,7 +47,7 @@ public partial class RSeqAct_BatmobileForensicsSideStory : BmSDK.Engine.Sequence
     /// <summary>
     /// Function: DebugLineTest
     /// </summary>
-    public unsafe void DebugLineTest()
+    public unsafe virtual void DebugLineTest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmobileForensicsSideStory.DebugLineTest", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RSeqAct_BatmobileForensicsSideStory : BmSDK.Engine.Sequence
     /// <summary>
     /// Function: DoPulse
     /// </summary>
-    public unsafe bool DoPulse()
+    public unsafe virtual bool DoPulse()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmobileForensicsSideStory.DoPulse", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -69,7 +69,7 @@ public partial class RSeqAct_BatmobileForensicsSideStory : BmSDK.Engine.Sequence
     /// <summary>
     /// Function: IsActorInCone
     /// </summary>
-    public unsafe bool IsActorInCone(int actor_index)
+    public unsafe virtual bool IsActorInCone(int actor_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmobileForensicsSideStory.IsActorInCone", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -81,7 +81,7 @@ public partial class RSeqAct_BatmobileForensicsSideStory : BmSDK.Engine.Sequence
     /// <summary>
     /// Function: SetUpPulseParams
     /// </summary>
-    public unsafe void SetUpPulseParams()
+    public unsafe virtual void SetUpPulseParams()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmobileForensicsSideStory.SetUpPulseParams", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -92,7 +92,7 @@ public partial class RSeqAct_BatmobileForensicsSideStory : BmSDK.Engine.Sequence
     /// <summary>
     /// Function: TryToActivateTrail
     /// </summary>
-    public unsafe bool TryToActivateTrail()
+    public unsafe virtual bool TryToActivateTrail()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmobileForensicsSideStory.TryToActivateTrail", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -103,7 +103,7 @@ public partial class RSeqAct_BatmobileForensicsSideStory : BmSDK.Engine.Sequence
     /// <summary>
     /// Function: ForensicsTick
     /// </summary>
-    public unsafe void ForensicsTick(float DeltaT)
+    public unsafe virtual void ForensicsTick(float DeltaT)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmobileForensicsSideStory.ForensicsTick", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -115,7 +115,7 @@ public partial class RSeqAct_BatmobileForensicsSideStory : BmSDK.Engine.Sequence
     /// <summary>
     /// Function: SetDisplayIndex
     /// </summary>
-    public unsafe void SetDisplayIndex(float new_disp_index)
+    public unsafe virtual void SetDisplayIndex(float new_disp_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmobileForensicsSideStory.SetDisplayIndex", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -127,7 +127,7 @@ public partial class RSeqAct_BatmobileForensicsSideStory : BmSDK.Engine.Sequence
     /// <summary>
     /// Function: GetActorByPlusTwoIndex
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatmobileForensicsBaseActor GetActorByPlusTwoIndex(int actor_index)
+    public unsafe virtual BmSDK.BmGame.RBatmobileForensicsBaseActor GetActorByPlusTwoIndex(int actor_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmobileForensicsSideStory.GetActorByPlusTwoIndex", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -139,7 +139,7 @@ public partial class RSeqAct_BatmobileForensicsSideStory : BmSDK.Engine.Sequence
     /// <summary>
     /// Function: SortNodes
     /// </summary>
-    public unsafe void SortNodes()
+    public unsafe virtual void SortNodes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmobileForensicsSideStory.SortNodes", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -150,7 +150,7 @@ public partial class RSeqAct_BatmobileForensicsSideStory : BmSDK.Engine.Sequence
     /// <summary>
     /// Function: SetTrailEngaged
     /// </summary>
-    public unsafe void SetTrailEngaged(bool is_engaged)
+    public unsafe virtual void SetTrailEngaged(bool is_engaged)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmobileForensicsSideStory.SetTrailEngaged", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -162,7 +162,7 @@ public partial class RSeqAct_BatmobileForensicsSideStory : BmSDK.Engine.Sequence
     /// <summary>
     /// Function: SetTrailComplete
     /// </summary>
-    public unsafe void SetTrailComplete()
+    public unsafe virtual void SetTrailComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmobileForensicsSideStory.SetTrailComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -173,7 +173,7 @@ public partial class RSeqAct_BatmobileForensicsSideStory : BmSDK.Engine.Sequence
     /// <summary>
     /// Function: SetInBatmobile
     /// </summary>
-    public unsafe void SetInBatmobile(bool in_batmobile)
+    public unsafe virtual void SetInBatmobile(bool in_batmobile)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmobileForensicsSideStory.SetInBatmobile", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -185,7 +185,7 @@ public partial class RSeqAct_BatmobileForensicsSideStory : BmSDK.Engine.Sequence
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmobileForensicsSideStory.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -196,7 +196,7 @@ public partial class RSeqAct_BatmobileForensicsSideStory : BmSDK.Engine.Sequence
     /// <summary>
     /// Function: SetRegistered
     /// </summary>
-    public unsafe void SetRegistered(bool do_register)
+    public unsafe virtual void SetRegistered(bool do_register)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmobileForensicsSideStory.SetRegistered", true);
         byte* paramsPtr = stackalloc byte[4];

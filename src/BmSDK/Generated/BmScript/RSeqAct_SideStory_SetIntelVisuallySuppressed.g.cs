@@ -47,7 +47,7 @@ public partial class RSeqAct_SideStory_SetIntelVisuallySuppressed : BmSDK.Engine
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SideStory_SetIntelVisuallySuppressed.Activated", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RHelicopterPointOfInterest : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterPointOfInterest.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RHelicopterPointOfInterest : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: SetPointOfInterestActive
     /// </summary>
-    public unsafe void SetPointOfInterestActive(bool IsActive)
+    public unsafe virtual void SetPointOfInterestActive(bool IsActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterPointOfInterest.SetPointOfInterestActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RHelicopterPointOfInterest : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: SetPointOfInterestActivePersistent
     /// </summary>
-    public unsafe void SetPointOfInterestActivePersistent(bool IsActive)
+    public unsafe virtual void SetPointOfInterestActivePersistent(bool IsActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterPointOfInterest.SetPointOfInterestActivePersistent", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RHelicopterPointOfInterest : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterPointOfInterest.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

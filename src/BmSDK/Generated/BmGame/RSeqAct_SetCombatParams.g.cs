@@ -47,7 +47,7 @@ public partial class RSeqAct_SetCombatParams : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// Function: ResetParams
     /// </summary>
-    public unsafe void ResetParams()
+    public unsafe virtual void ResetParams()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetCombatParams.ResetParams", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -58,7 +58,7 @@ public partial class RSeqAct_SetCombatParams : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// Function: ApplyParams
     /// </summary>
-    public unsafe void ApplyParams()
+    public unsafe virtual void ApplyParams()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetCombatParams.ApplyParams", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -69,7 +69,7 @@ public partial class RSeqAct_SetCombatParams : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetCombatParams.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

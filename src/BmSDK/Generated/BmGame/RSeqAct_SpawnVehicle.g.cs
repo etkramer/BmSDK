@@ -36,7 +36,7 @@ public partial class RSeqAct_SpawnVehicle : BmSDK.BmGame.RSeqAct_SpawnVehicleBas
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpawnVehicle.Activated", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -47,7 +47,7 @@ public partial class RSeqAct_SpawnVehicle : BmSDK.BmGame.RSeqAct_SpawnVehicleBas
     /// <summary>
     /// Function: SpawnCars
     /// </summary>
-    public unsafe bool SpawnCars(BmSDK.TArray<BmSDK.GameObject> SpawnPoints)
+    public unsafe virtual bool SpawnCars(BmSDK.TArray<BmSDK.GameObject> SpawnPoints)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpawnVehicle.SpawnCars", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -77,7 +77,7 @@ public partial class RSeqAct_SpawnVehicle : BmSDK.BmGame.RSeqAct_SpawnVehicleBas
     /// <summary>
     /// Function: SpawnedActorBatmanSeen
     /// </summary>
-    public unsafe void SpawnedActorBatmanSeen(BmSDK.Engine.Actor ExActor)
+    public unsafe override void SpawnedActorBatmanSeen(BmSDK.Engine.Actor ExActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpawnVehicle.SpawnedActorBatmanSeen", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -89,7 +89,7 @@ public partial class RSeqAct_SpawnVehicle : BmSDK.BmGame.RSeqAct_SpawnVehicleBas
     /// <summary>
     /// Function: SpawnedActorActivated
     /// </summary>
-    public unsafe void SpawnedActorActivated(BmSDK.Engine.Actor ExActor)
+    public unsafe virtual void SpawnedActorActivated(BmSDK.Engine.Actor ExActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpawnVehicle.SpawnedActorActivated", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -101,7 +101,7 @@ public partial class RSeqAct_SpawnVehicle : BmSDK.BmGame.RSeqAct_SpawnVehicleBas
     /// <summary>
     /// Function: SpawnedActorDied
     /// </summary>
-    public unsafe void SpawnedActorDied(BmSDK.Engine.Actor ExActor)
+    public unsafe override void SpawnedActorDied(BmSDK.Engine.Actor ExActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpawnVehicle.SpawnedActorDied", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -113,7 +113,7 @@ public partial class RSeqAct_SpawnVehicle : BmSDK.BmGame.RSeqAct_SpawnVehicleBas
     /// <summary>
     /// Function: StoreObjVar
     /// </summary>
-    public unsafe void StoreObjVar(BmSDK.FString Ident, int Index, BmSDK.GameObject Obj)
+    public unsafe virtual void StoreObjVar(BmSDK.FString Ident, int Index, BmSDK.GameObject Obj)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpawnVehicle.StoreObjVar", true);
         byte* paramsPtr = stackalloc byte[28];

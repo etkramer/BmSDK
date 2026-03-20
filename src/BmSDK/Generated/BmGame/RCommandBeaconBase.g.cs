@@ -66,7 +66,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: SetWinchingAllowed
     /// </summary>
-    public unsafe void SetWinchingAllowed(bool bAllowed)
+    public unsafe virtual void SetWinchingAllowed(bool bAllowed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.SetWinchingAllowed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -78,7 +78,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: TakeDamageFromWeapon
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.EWeaponDamageResult TakeDamageFromWeapon(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default, bool bHeadShot = default)
+    public unsafe override BmSDK.Engine.Actor.EWeaponDamageResult TakeDamageFromWeapon(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default, bool bHeadShot = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.TakeDamageFromWeapon", true);
         byte* paramsPtr = stackalloc byte[109];
@@ -98,7 +98,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: AllowLongRangeTargeting
     /// </summary>
-    public unsafe bool AllowLongRangeTargeting()
+    public unsafe virtual bool AllowLongRangeTargeting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.AllowLongRangeTargeting", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -109,7 +109,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: IsGenerator
     /// </summary>
-    public unsafe bool IsGenerator()
+    public unsafe virtual bool IsGenerator()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.IsGenerator", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -120,7 +120,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: ApplyRevs
     /// </summary>
-    public unsafe void ApplyRevs(float Revs, BmSDK.BmGame.RPlayerController Controller)
+    public unsafe virtual void ApplyRevs(float Revs, BmSDK.BmGame.RPlayerController Controller)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.ApplyRevs", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -133,7 +133,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: GetRevsMaxDelta
     /// </summary>
-    public unsafe float GetRevsMaxDelta()
+    public unsafe virtual float GetRevsMaxDelta()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.GetRevsMaxDelta", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -144,7 +144,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: GetRevs
     /// </summary>
-    public unsafe float GetRevs()
+    public unsafe virtual float GetRevs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.GetRevs", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -155,7 +155,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: ShowRevPrompt
     /// </summary>
-    public unsafe bool ShowRevPrompt()
+    public unsafe virtual bool ShowRevPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.ShowRevPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -166,7 +166,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: CustomPromptButtonPressed
     /// </summary>
-    public unsafe void CustomPromptButtonPressed()
+    public unsafe virtual void CustomPromptButtonPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.CustomPromptButtonPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -177,7 +177,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: ShowCustomPrompt
     /// </summary>
-    public unsafe bool ShowCustomPrompt()
+    public unsafe virtual bool ShowCustomPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.ShowCustomPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -188,7 +188,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: AlwaysShowElectricEffectsOnCable
     /// </summary>
-    public unsafe bool AlwaysShowElectricEffectsOnCable()
+    public unsafe virtual bool AlwaysShowElectricEffectsOnCable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.AlwaysShowElectricEffectsOnCable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -199,7 +199,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: AllowElectrifyHUD
     /// </summary>
-    public unsafe bool AllowElectrifyHUD()
+    public unsafe virtual bool AllowElectrifyHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.AllowElectrifyHUD", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -210,7 +210,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: IsPoweredUp
     /// </summary>
-    public unsafe bool IsPoweredUp()
+    public unsafe virtual bool IsPoweredUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.IsPoweredUp", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -221,7 +221,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: BlocksInteraction
     /// </summary>
-    public unsafe bool BlocksInteraction()
+    public unsafe virtual bool BlocksInteraction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.BlocksInteraction", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -232,7 +232,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: StopElectricityEffects
     /// </summary>
-    public unsafe void StopElectricityEffects()
+    public unsafe virtual void StopElectricityEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.StopElectricityEffects", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -243,7 +243,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: StartElectricityEffects
     /// </summary>
-    public unsafe void StartElectricityEffects()
+    public unsafe virtual void StartElectricityEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.StartElectricityEffects", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -254,7 +254,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: WinchAborted
     /// </summary>
-    public unsafe void WinchAborted(int Reason)
+    public unsafe virtual void WinchAborted(int Reason)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.WinchAborted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -266,7 +266,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: WinchReleased
     /// </summary>
-    public unsafe void WinchReleased(BmSDK.BmGame.RBatmobileWinch Winch)
+    public unsafe virtual void WinchReleased(BmSDK.BmGame.RBatmobileWinch Winch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.WinchReleased", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -278,7 +278,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: WinchAttached
     /// </summary>
-    public unsafe void WinchAttached(BmSDK.BmGame.RBatmobileWinch Winch)
+    public unsafe virtual void WinchAttached(BmSDK.BmGame.RBatmobileWinch Winch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.WinchAttached", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -290,7 +290,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: GetWinchTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWinchTargetLocation()
+    public unsafe virtual System.Numerics.Vector3 GetWinchTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.GetWinchTargetLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -301,7 +301,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: IsSideStory
     /// </summary>
-    public unsafe bool IsSideStory()
+    public unsafe virtual bool IsSideStory()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.IsSideStory", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -312,7 +312,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: ClearArea
     /// </summary>
-    public unsafe void ClearArea(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void ClearArea(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.ClearArea", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -324,7 +324,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.Interact", true);
         byte* paramsPtr = stackalloc byte[208];
@@ -336,7 +336,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: GetInteractButton
     /// </summary>
-    public unsafe BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton GetInteractButton(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton GetInteractButton(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.GetInteractButton", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -348,7 +348,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: OverridePreviousLines
     /// </summary>
-    public unsafe bool OverridePreviousLines()
+    public unsafe override bool OverridePreviousLines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.OverridePreviousLines", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -359,7 +359,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: GetUpperPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetUpperPrompt()
+    public unsafe override BmSDK.FString GetUpperPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.GetUpperPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -370,7 +370,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: OverridesRun
     /// </summary>
-    public unsafe float OverridesRun(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override float OverridesRun(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.OverridesRun", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -382,7 +382,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: CanReachItem
     /// </summary>
-    public unsafe bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
+    public unsafe override bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.CanReachItem", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -394,7 +394,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: GetLocationOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLocationOffset()
+    public unsafe override System.Numerics.Vector3 GetLocationOffset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.GetLocationOffset", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -405,7 +405,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: CanUseInCinematicMode
     /// </summary>
-    public unsafe bool CanUseInCinematicMode()
+    public unsafe override bool CanUseInCinematicMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.CanUseInCinematicMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -416,7 +416,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: MustBeCrouched
     /// </summary>
-    public unsafe bool MustBeCrouched(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool MustBeCrouched(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.MustBeCrouched", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -428,7 +428,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: IsButtonPrompt
     /// </summary>
-    public unsafe bool IsButtonPrompt()
+    public unsafe override bool IsButtonPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.IsButtonPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -439,7 +439,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.IsActive", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -451,7 +451,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: GetPriority
     /// </summary>
-    public unsafe float GetPriority()
+    public unsafe override float GetPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.GetPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -462,7 +462,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: GetFOVDegrees
     /// </summary>
-    public unsafe float GetFOVDegrees(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override float GetFOVDegrees(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.GetFOVDegrees", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -474,7 +474,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: GetHeightRange
     /// </summary>
-    public unsafe float GetHeightRange()
+    public unsafe override float GetHeightRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.GetHeightRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -485,7 +485,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: GetRange
     /// </summary>
-    public unsafe float GetRange()
+    public unsafe override float GetRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.GetRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -496,7 +496,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe override BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -508,7 +508,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: ShutdownHUD
     /// </summary>
-    public unsafe void ShutdownHUD()
+    public unsafe virtual void ShutdownHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.ShutdownHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -519,7 +519,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: TryUpdateTimerHUD
     /// </summary>
-    public unsafe void TryUpdateTimerHUD(float RemainingTime)
+    public unsafe virtual void TryUpdateTimerHUD(float RemainingTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.TryUpdateTimerHUD", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -531,7 +531,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: RemoveOutOfVirusRangeTimer
     /// </summary>
-    public unsafe void RemoveOutOfVirusRangeTimer()
+    public unsafe virtual void RemoveOutOfVirusRangeTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.RemoveOutOfVirusRangeTimer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -542,7 +542,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: InitHUD
     /// </summary>
-    public unsafe void InitHUD()
+    public unsafe virtual void InitHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.InitHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -553,7 +553,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: SetXrayHighlight
     /// </summary>
-    public unsafe void SetXrayHighlight(bool bEnabled)
+    public unsafe virtual void SetXrayHighlight(bool bEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.SetXrayHighlight", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -565,7 +565,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: TryPlayBeaconDialogue
     /// </summary>
-    public unsafe void TryPlayBeaconDialogue(BmSDK.BmGame.RSeqEvent_CommandBeaconDialogueTrigger.CommandBeaconDialogue DialogueEnum)
+    public unsafe virtual void TryPlayBeaconDialogue(BmSDK.BmGame.RSeqEvent_CommandBeaconDialogueTrigger.CommandBeaconDialogue DialogueEnum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.TryPlayBeaconDialogue", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -577,7 +577,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: FindDialogueTriggerEvent
     /// </summary>
-    public unsafe bool FindDialogueTriggerEvent()
+    public unsafe virtual bool FindDialogueTriggerEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.FindDialogueTriggerEvent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -588,7 +588,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: TriggerBMBLAttack
     /// </summary>
-    public unsafe void TriggerBMBLAttack(BmSDK.BmGame.RVehicleBatmobileBase Bmbl)
+    public unsafe virtual void TriggerBMBLAttack(BmSDK.BmGame.RVehicleBatmobileBase Bmbl)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.TriggerBMBLAttack", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -600,7 +600,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: NotifyBMBLTeleported
     /// </summary>
-    public unsafe void NotifyBMBLTeleported()
+    public unsafe virtual void NotifyBMBLTeleported()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.NotifyBMBLTeleported", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -611,7 +611,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -622,7 +622,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -633,7 +633,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -644,7 +644,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: TriggerFailExplosion
     /// </summary>
-    public unsafe void TriggerFailExplosion()
+    public unsafe virtual void TriggerFailExplosion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.TriggerFailExplosion", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -655,7 +655,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: BMBLExitedOuterDist
     /// </summary>
-    public unsafe void BMBLExitedOuterDist()
+    public unsafe virtual void BMBLExitedOuterDist()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.BMBLExitedOuterDist", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -666,7 +666,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: BMBLEnteredOuterDist
     /// </summary>
-    public unsafe void BMBLEnteredOuterDist()
+    public unsafe virtual void BMBLEnteredOuterDist()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.BMBLEnteredOuterDist", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -677,7 +677,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: NotifyDronesDead
     /// </summary>
-    public unsafe void NotifyDronesDead()
+    public unsafe virtual void NotifyDronesDead()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.NotifyDronesDead", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -688,7 +688,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: VirusUploadComplete
     /// </summary>
-    public unsafe void VirusUploadComplete()
+    public unsafe virtual void VirusUploadComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.VirusUploadComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -699,7 +699,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: VirusUploadStarted
     /// </summary>
-    public unsafe void VirusUploadStarted()
+    public unsafe virtual void VirusUploadStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.VirusUploadStarted", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -710,7 +710,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: OnInteractFailBecauseBMBLUnavailable
     /// </summary>
-    public unsafe void OnInteractFailBecauseBMBLUnavailable()
+    public unsafe virtual void OnInteractFailBecauseBMBLUnavailable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.OnInteractFailBecauseBMBLUnavailable", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -721,7 +721,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: OnInteractFail
     /// </summary>
-    public unsafe void OnInteractFail()
+    public unsafe virtual void OnInteractFail()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.OnInteractFail", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -732,7 +732,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: SpecialMoveFinished
     /// </summary>
-    public unsafe void SpecialMoveFinished()
+    public unsafe override void SpecialMoveFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.SpecialMoveFinished", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -743,7 +743,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: SetCanTriggerReinforcements
     /// </summary>
-    public unsafe void SetCanTriggerReinforcements(bool bAllowed)
+    public unsafe virtual void SetCanTriggerReinforcements(bool bAllowed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.SetCanTriggerReinforcements", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -755,7 +755,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: GetDestroyedFlagName
     /// </summary>
-    public unsafe BmSDK.FString GetDestroyedFlagName()
+    public unsafe virtual BmSDK.FString GetDestroyedFlagName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.GetDestroyedFlagName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -766,7 +766,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: IsBeaconDestroyed
     /// </summary>
-    public unsafe bool IsBeaconDestroyed()
+    public unsafe virtual bool IsBeaconDestroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.IsBeaconDestroyed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -777,7 +777,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: SetBeaconDestroyedFlag
     /// </summary>
-    public unsafe void SetBeaconDestroyedFlag()
+    public unsafe virtual void SetBeaconDestroyedFlag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.SetBeaconDestroyedFlag", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -788,7 +788,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: DrawDebug
     /// </summary>
-    public unsafe void DrawDebug()
+    public unsafe virtual void DrawDebug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.DrawDebug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -799,7 +799,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: BlockLevelName
     /// </summary>
-    public unsafe bool BlockLevelName()
+    public unsafe virtual bool BlockLevelName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.BlockLevelName", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -810,7 +810,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: PreRender
     /// </summary>
-    public unsafe void PreRender(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void PreRender(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.PreRender", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -822,7 +822,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void DrawHUD(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -834,7 +834,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.OnToggle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -846,7 +846,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: RestorePoweredUpState
     /// </summary>
-    public unsafe bool RestorePoweredUpState()
+    public unsafe virtual bool RestorePoweredUpState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.RestorePoweredUpState", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -857,7 +857,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: UpdateWinch
     /// </summary>
-    public unsafe void UpdateWinch(float DeltaTime)
+    public unsafe virtual void UpdateWinch(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.UpdateWinch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -869,7 +869,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: SetState
     /// </summary>
-    public unsafe void SetState(BmSDK.BmGame.RCommandBeaconBase.eCommandBeaconState NewState, bool bSilent = default)
+    public unsafe virtual void SetState(BmSDK.BmGame.RCommandBeaconBase.eCommandBeaconState NewState, bool bSilent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.SetState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -882,7 +882,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: AudioUpdateLight
     /// </summary>
-    public unsafe void AudioUpdateLight(BmSDK.Engine.PointLightComponent Light, float dt)
+    public unsafe virtual void AudioUpdateLight(BmSDK.Engine.PointLightComponent Light, float dt)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.AudioUpdateLight", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -902,7 +902,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: CheckBMBLRange
     /// </summary>
-    public unsafe void CheckBMBLRange()
+    public unsafe virtual void CheckBMBLRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.CheckBMBLRange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -920,7 +920,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: TryTriggerBMBLAttack
     /// </summary>
-    public unsafe void TryTriggerBMBLAttack()
+    public unsafe virtual void TryTriggerBMBLAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.TryTriggerBMBLAttack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -938,7 +938,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: GetHostileRange
     /// </summary>
-    public unsafe float GetHostileRange()
+    public unsafe virtual float GetHostileRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.GetHostileRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -956,7 +956,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: GetFriendlyRange
     /// </summary>
-    public unsafe float GetFriendlyRange()
+    public unsafe virtual float GetFriendlyRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.GetFriendlyRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -974,7 +974,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: ShouldBeInPoweredDownState
     /// </summary>
-    public unsafe bool ShouldBeInPoweredDownState()
+    public unsafe virtual bool ShouldBeInPoweredDownState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.ShouldBeInPoweredDownState", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -992,7 +992,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: InStasis
     /// </summary>
-    public unsafe bool InStasis()
+    public unsafe virtual bool InStasis()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.InStasis", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1010,7 +1010,7 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     /// <summary>
     /// Function: Tick_Native
     /// </summary>
-    public unsafe void Tick_Native(float DeltaTime)
+    public unsafe virtual void Tick_Native(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconBase.Tick_Native", true);
         byte* paramsPtr = stackalloc byte[4];

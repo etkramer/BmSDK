@@ -71,7 +71,7 @@ public partial class RRadarTower : BmSDK.BmGame.RRadarTowerBase, BmSDK.IGameObje
     /// <summary>
     /// Function: SuppressDetectiveModeVisibilityThroughWalls
     /// </summary>
-    public unsafe void SuppressDetectiveModeVisibilityThroughWalls(bool bSuppress)
+    public unsafe virtual void SuppressDetectiveModeVisibilityThroughWalls(bool bSuppress)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRadarTower.SuppressDetectiveModeVisibilityThroughWalls", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RRadarTower : BmSDK.BmGame.RRadarTowerBase, BmSDK.IGameObje
     /// <summary>
     /// Function: UnregisterDMThroughWallsSuppressable
     /// </summary>
-    public unsafe void UnregisterDMThroughWallsSuppressable()
+    public unsafe virtual void UnregisterDMThroughWallsSuppressable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRadarTower.UnregisterDMThroughWallsSuppressable", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RRadarTower : BmSDK.BmGame.RRadarTowerBase, BmSDK.IGameObje
     /// <summary>
     /// Function: RegisterDMThroughWallsSuppressable
     /// </summary>
-    public unsafe void RegisterDMThroughWallsSuppressable()
+    public unsafe virtual void RegisterDMThroughWallsSuppressable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRadarTower.RegisterDMThroughWallsSuppressable", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RRadarTower : BmSDK.BmGame.RRadarTowerBase, BmSDK.IGameObje
     /// <summary>
     /// Function: SetXrayMaterials
     /// </summary>
-    public unsafe void SetXrayMaterials(bool bHighlight)
+    public unsafe virtual void SetXrayMaterials(bool bHighlight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRadarTower.SetXrayMaterials", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RRadarTower : BmSDK.BmGame.RRadarTowerBase, BmSDK.IGameObje
     /// <summary>
     /// Function: HidePanel
     /// </summary>
-    public unsafe void HidePanel()
+    public unsafe virtual void HidePanel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRadarTower.HidePanel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RRadarTower : BmSDK.BmGame.RRadarTowerBase, BmSDK.IGameObje
     /// <summary>
     /// Function: EnterDamagedState
     /// </summary>
-    public unsafe void EnterDamagedState(bool bInstant)
+    public unsafe virtual void EnterDamagedState(bool bInstant)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRadarTower.EnterDamagedState", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -140,7 +140,7 @@ public partial class RRadarTower : BmSDK.BmGame.RRadarTowerBase, BmSDK.IGameObje
     /// <summary>
     /// Function: InValidPositionToPlaceGel
     /// </summary>
-    public unsafe bool InValidPositionToPlaceGel(BmSDK.BmGame.RPawnPlayer Player)
+    public unsafe virtual bool InValidPositionToPlaceGel(BmSDK.BmGame.RPawnPlayer Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRadarTower.InValidPositionToPlaceGel", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -152,7 +152,7 @@ public partial class RRadarTower : BmSDK.BmGame.RRadarTowerBase, BmSDK.IGameObje
     /// <summary>
     /// Function: DetonateGel
     /// </summary>
-    public unsafe void DetonateGel()
+    public unsafe virtual void DetonateGel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRadarTower.DetonateGel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -163,7 +163,7 @@ public partial class RRadarTower : BmSDK.BmGame.RRadarTowerBase, BmSDK.IGameObje
     /// <summary>
     /// Function: PlaceExplosiveGel
     /// </summary>
-    public unsafe bool PlaceExplosiveGel(BmSDK.BmGame.RPawnPlayer Player)
+    public unsafe virtual bool PlaceExplosiveGel(BmSDK.BmGame.RPawnPlayer Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRadarTower.PlaceExplosiveGel", true);
         byte* paramsPtr = stackalloc byte[148];
@@ -175,7 +175,7 @@ public partial class RRadarTower : BmSDK.BmGame.RRadarTowerBase, BmSDK.IGameObje
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRadarTower.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -187,7 +187,7 @@ public partial class RRadarTower : BmSDK.BmGame.RRadarTowerBase, BmSDK.IGameObje
     /// <summary>
     /// Function: IsTowerDestroyed
     /// </summary>
-    public unsafe bool IsTowerDestroyed()
+    public unsafe virtual bool IsTowerDestroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRadarTower.IsTowerDestroyed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -198,7 +198,7 @@ public partial class RRadarTower : BmSDK.BmGame.RRadarTowerBase, BmSDK.IGameObje
     /// <summary>
     /// Function: SetTowerDestroyedFlag
     /// </summary>
-    public unsafe void SetTowerDestroyedFlag()
+    public unsafe virtual void SetTowerDestroyedFlag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRadarTower.SetTowerDestroyedFlag", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -209,7 +209,7 @@ public partial class RRadarTower : BmSDK.BmGame.RRadarTowerBase, BmSDK.IGameObje
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRadarTower.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -221,7 +221,7 @@ public partial class RRadarTower : BmSDK.BmGame.RRadarTowerBase, BmSDK.IGameObje
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRadarTower.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -232,7 +232,7 @@ public partial class RRadarTower : BmSDK.BmGame.RRadarTowerBase, BmSDK.IGameObje
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRadarTower.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -243,7 +243,7 @@ public partial class RRadarTower : BmSDK.BmGame.RRadarTowerBase, BmSDK.IGameObje
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRadarTower.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

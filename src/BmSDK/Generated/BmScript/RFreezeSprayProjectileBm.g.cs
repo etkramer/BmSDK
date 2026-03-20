@@ -71,7 +71,7 @@ public partial class RFreezeSprayProjectileBm : BmSDK.BmGame.RFreezeSprayProject
     /// <summary>
     /// Function: SuperComboBlast
     /// </summary>
-    public unsafe void SuperComboBlast(BmSDK.BmGame.RPawnVillain Victim)
+    public unsafe override void SuperComboBlast(BmSDK.BmGame.RPawnVillain Victim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeSprayProjectileBm.SuperComboBlast", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RFreezeSprayProjectileBm : BmSDK.BmGame.RFreezeSprayProject
     /// <summary>
     /// Function: SpawnSmallIceSphere
     /// </summary>
-    public unsafe BmSDK.Engine.Actor SpawnSmallIceSphere(System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation)
+    public unsafe override BmSDK.Engine.Actor SpawnSmallIceSphere(System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeSprayProjectileBm.SpawnSmallIceSphere", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -96,7 +96,7 @@ public partial class RFreezeSprayProjectileBm : BmSDK.BmGame.RFreezeSprayProject
     /// <summary>
     /// Function: SpawnIceSphere
     /// </summary>
-    public unsafe void SpawnIceSphere(System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation)
+    public unsafe override void SpawnIceSphere(System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeSprayProjectileBm.SpawnIceSphere", true);
         byte* paramsPtr = stackalloc byte[24];

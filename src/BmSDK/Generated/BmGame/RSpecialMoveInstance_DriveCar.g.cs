@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_DriveCar : BmSDK.BmGame.RSpecialMoveIn
     /// <summary>
     /// Function: ToggleBatmansRagdoll
     /// </summary>
-    public unsafe void ToggleBatmansRagdoll(bool bEnableRagdoll)
+    public unsafe virtual void ToggleBatmansRagdoll(bool bEnableRagdoll)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_DriveCar.ToggleBatmansRagdoll", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RSpecialMoveInstance_DriveCar : BmSDK.BmGame.RSpecialMoveIn
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_DriveCar.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RSpecialMoveInstance_DriveCar : BmSDK.BmGame.RSpecialMoveIn
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_DriveCar.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RSpecialMoveInstance_DriveCar : BmSDK.BmGame.RSpecialMoveIn
     /// <summary>
     /// Function: GetEndMovementStance
     /// </summary>
-    public unsafe BmSDK.FName GetEndMovementStance()
+    public unsafe override BmSDK.FName GetEndMovementStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_DriveCar.GetEndMovementStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RSpecialMoveInstance_DriveCar : BmSDK.BmGame.RSpecialMoveIn
     /// <summary>
     /// Function: ApplyBrakes
     /// </summary>
-    public unsafe void ApplyBrakes()
+    public unsafe virtual void ApplyBrakes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_DriveCar.ApplyBrakes", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -128,7 +128,7 @@ public partial class RSpecialMoveInstance_DriveCar : BmSDK.BmGame.RSpecialMoveIn
     /// <summary>
     /// Function: SwitchToCar
     /// </summary>
-    public unsafe void SwitchToCar()
+    public unsafe virtual void SwitchToCar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_DriveCar.SwitchToCar", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RSpecialMoveInstance_DriveCar : BmSDK.BmGame.RSpecialMoveIn
     /// <summary>
     /// Function: UpdatePlayerAnims
     /// </summary>
-    public unsafe void UpdatePlayerAnims(float DeltaTime)
+    public unsafe virtual void UpdatePlayerAnims(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_DriveCar.UpdatePlayerAnims", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -151,7 +151,7 @@ public partial class RSpecialMoveInstance_DriveCar : BmSDK.BmGame.RSpecialMoveIn
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_DriveCar.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -163,7 +163,7 @@ public partial class RSpecialMoveInstance_DriveCar : BmSDK.BmGame.RSpecialMoveIn
     /// <summary>
     /// Function: GetCustomIdle
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetCustomIdle()
+    public unsafe override BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetCustomIdle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_DriveCar.GetCustomIdle", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -174,7 +174,7 @@ public partial class RSpecialMoveInstance_DriveCar : BmSDK.BmGame.RSpecialMoveIn
     /// <summary>
     /// Function: CloseCockpit
     /// </summary>
-    public unsafe void CloseCockpit()
+    public unsafe virtual void CloseCockpit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_DriveCar.CloseCockpit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -185,7 +185,7 @@ public partial class RSpecialMoveInstance_DriveCar : BmSDK.BmGame.RSpecialMoveIn
     /// <summary>
     /// Function: OpenCockpit
     /// </summary>
-    public unsafe void OpenCockpit()
+    public unsafe virtual void OpenCockpit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_DriveCar.OpenCockpit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -196,7 +196,7 @@ public partial class RSpecialMoveInstance_DriveCar : BmSDK.BmGame.RSpecialMoveIn
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_DriveCar.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[148];

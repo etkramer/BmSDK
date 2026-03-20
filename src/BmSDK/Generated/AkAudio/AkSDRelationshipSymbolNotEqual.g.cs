@@ -36,7 +36,7 @@ public partial class AkSDRelationshipSymbolNotEqual : BmSDK.AkAudio.AkSDRelation
     /// <summary>
     /// Function: Evaluate
     /// </summary>
-    public unsafe float Evaluate()
+    public unsafe override float Evaluate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkSDRelationshipSymbolNotEqual.Evaluate", true);
         byte* paramsPtr = stackalloc byte[4];

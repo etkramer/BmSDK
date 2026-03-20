@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_CwCeilingToCatwalk : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: NotifyBump
     /// </summary>
-    public unsafe void NotifyBump(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitNormal)
+    public unsafe override void NotifyBump(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwCeilingToCatwalk.NotifyBump", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -84,7 +84,7 @@ public partial class RSpecialMoveInstance_CwCeilingToCatwalk : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwCeilingToCatwalk.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class RSpecialMoveInstance_CwCeilingToCatwalk : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwCeilingToCatwalk.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -107,7 +107,7 @@ public partial class RSpecialMoveInstance_CwCeilingToCatwalk : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: SetCameraDirection
     /// </summary>
-    public unsafe void SetCameraDirection()
+    public unsafe virtual void SetCameraDirection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwCeilingToCatwalk.SetCameraDirection", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -118,7 +118,7 @@ public partial class RSpecialMoveInstance_CwCeilingToCatwalk : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: SetCeilingToCatwalkCamera
     /// </summary>
-    public unsafe void SetCeilingToCatwalkCamera()
+    public unsafe virtual void SetCeilingToCatwalkCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwCeilingToCatwalk.SetCeilingToCatwalkCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RSpecialMoveInstance_CwCeilingToCatwalk : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwCeilingToCatwalk.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[141];

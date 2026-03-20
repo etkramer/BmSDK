@@ -31,7 +31,7 @@ public partial class ActorComponent : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Function: DetachFromAny
     /// </summary>
-    public unsafe void DetachFromAny()
+    public unsafe virtual void DetachFromAny()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ActorComponent.DetachFromAny", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -49,7 +49,7 @@ public partial class ActorComponent : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Function: QueueReattach
     /// </summary>
-    public unsafe void QueueReattach(bool bTransformOnly)
+    public unsafe virtual void QueueReattach(bool bTransformOnly)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ActorComponent.QueueReattach", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -68,7 +68,7 @@ public partial class ActorComponent : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Function: ForceUpdate
     /// </summary>
-    public unsafe void ForceUpdate(bool bTransformOnly)
+    public unsafe virtual void ForceUpdate(bool bTransformOnly)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ActorComponent.ForceUpdate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -87,7 +87,7 @@ public partial class ActorComponent : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Function: SetComponentRBFixed
     /// </summary>
-    public unsafe void SetComponentRBFixed(bool bFixed)
+    public unsafe virtual void SetComponentRBFixed(bool bFixed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ActorComponent.SetComponentRBFixed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class ActorComponent : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Function: SetTickGroup
     /// </summary>
-    public unsafe void SetTickGroup(BmSDK.GameObject.ETickingGroup NewTickGroup)
+    public unsafe virtual void SetTickGroup(BmSDK.GameObject.ETickingGroup NewTickGroup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ActorComponent.SetTickGroup", true);
         byte* paramsPtr = stackalloc byte[1];

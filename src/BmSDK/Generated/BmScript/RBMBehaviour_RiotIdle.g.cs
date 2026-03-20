@@ -36,7 +36,7 @@ public partial class RBMBehaviour_RiotIdle : BmSDK.BmGame.RBMBehaviour_GangMovem
     /// <summary>
     /// Function: RiotHandleSpookedBy
     /// </summary>
-    public unsafe bool RiotHandleSpookedBy(BmSDK.Engine.Actor Threat, bool bAlertNeighours = default)
+    public unsafe override bool RiotHandleSpookedBy(BmSDK.Engine.Actor Threat, bool bAlertNeighours = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RiotIdle.RiotHandleSpookedBy", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -49,7 +49,7 @@ public partial class RBMBehaviour_RiotIdle : BmSDK.BmGame.RBMBehaviour_GangMovem
     /// <summary>
     /// Function: GetEvadeVehicleType
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.EEvadeVehicleType GetEvadeVehicleType(BmSDK.Engine.Actor V, float CarSpeed, bool bZap)
+    public unsafe override BmSDK.BmGame.RGameInfo.EEvadeVehicleType GetEvadeVehicleType(BmSDK.Engine.Actor V, float CarSpeed, bool bZap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RiotIdle.GetEvadeVehicleType", true);
         byte* paramsPtr = stackalloc byte[17];
@@ -63,7 +63,7 @@ public partial class RBMBehaviour_RiotIdle : BmSDK.BmGame.RBMBehaviour_GangMovem
     /// <summary>
     /// Function: PutIntoCorrectPose
     /// </summary>
-    public unsafe void PutIntoCorrectPose()
+    public unsafe virtual void PutIntoCorrectPose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RiotIdle.PutIntoCorrectPose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -74,7 +74,7 @@ public partial class RBMBehaviour_RiotIdle : BmSDK.BmGame.RBMBehaviour_GangMovem
     /// <summary>
     /// Function: CheckRiotVolume
     /// </summary>
-    public unsafe bool CheckRiotVolume()
+    public unsafe virtual bool CheckRiotVolume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RiotIdle.CheckRiotVolume", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -85,7 +85,7 @@ public partial class RBMBehaviour_RiotIdle : BmSDK.BmGame.RBMBehaviour_GangMovem
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RiotIdle.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -97,7 +97,7 @@ public partial class RBMBehaviour_RiotIdle : BmSDK.BmGame.RBMBehaviour_GangMovem
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RiotIdle.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -108,7 +108,7 @@ public partial class RBMBehaviour_RiotIdle : BmSDK.BmGame.RBMBehaviour_GangMovem
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RiotIdle.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class RBarkGroupContext : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDlgComponentsOfGroup
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.AkDialogueComponent> GetDlgComponentsOfGroup()
+    public unsafe virtual BmSDK.TArray<BmSDK.Engine.AkDialogueComponent> GetDlgComponentsOfGroup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkGroupContext.GetDlgComponentsOfGroup", true);
         byte* paramsPtr = stackalloc byte[16];

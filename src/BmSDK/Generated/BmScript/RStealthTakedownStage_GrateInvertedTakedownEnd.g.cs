@@ -71,7 +71,7 @@ public partial class RStealthTakedownStage_GrateInvertedTakedownEnd : BmSDK.BmGa
     /// <summary>
     /// Function: GrappleStopSound
     /// </summary>
-    public unsafe void GrappleStopSound()
+    public unsafe virtual void GrappleStopSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GrateInvertedTakedownEnd.GrappleStopSound", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RStealthTakedownStage_GrateInvertedTakedownEnd : BmSDK.BmGa
     /// <summary>
     /// Function: GrappleStartSound
     /// </summary>
-    public unsafe void GrappleStartSound()
+    public unsafe virtual void GrappleStartSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GrateInvertedTakedownEnd.GrappleStartSound", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RStealthTakedownStage_GrateInvertedTakedownEnd : BmSDK.BmGa
     /// <summary>
     /// Function: FinishGrapple
     /// </summary>
-    public unsafe void FinishGrapple()
+    public unsafe virtual void FinishGrapple()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GrateInvertedTakedownEnd.FinishGrapple", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -104,7 +104,7 @@ public partial class RStealthTakedownStage_GrateInvertedTakedownEnd : BmSDK.BmGa
     /// <summary>
     /// Function: GetFinishState
     /// </summary>
-    public unsafe BmSDK.FName GetFinishState()
+    public unsafe override BmSDK.FName GetFinishState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GrateInvertedTakedownEnd.GetFinishState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -115,7 +115,7 @@ public partial class RStealthTakedownStage_GrateInvertedTakedownEnd : BmSDK.BmGa
     /// <summary>
     /// Function: AttackerDamaged
     /// </summary>
-    public unsafe void AttackerDamaged()
+    public unsafe override void AttackerDamaged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GrateInvertedTakedownEnd.AttackerDamaged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RStealthTakedownStage_GrateInvertedTakedownEnd : BmSDK.BmGa
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GrateInvertedTakedownEnd.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -139,7 +139,7 @@ public partial class RStealthTakedownStage_GrateInvertedTakedownEnd : BmSDK.BmGa
     /// <summary>
     /// Function: ResetCameraBehindBatman
     /// </summary>
-    public unsafe bool ResetCameraBehindBatman(out BmSDK.Rotator out_ResetRotation)
+    public unsafe override bool ResetCameraBehindBatman(out BmSDK.Rotator out_ResetRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GrateInvertedTakedownEnd.ResetCameraBehindBatman", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -151,7 +151,7 @@ public partial class RStealthTakedownStage_GrateInvertedTakedownEnd : BmSDK.BmGa
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GrateInvertedTakedownEnd.Begin", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -162,7 +162,7 @@ public partial class RStealthTakedownStage_GrateInvertedTakedownEnd : BmSDK.BmGa
     /// <summary>
     /// Function: HideMove
     /// </summary>
-    public unsafe void HideMove(BmSDK.BmGame.RHidePoint NewHidePoint, float TravelTime, BmSDK.BmGame.RPawnPlayer Pawn)
+    public unsafe virtual void HideMove(BmSDK.BmGame.RHidePoint NewHidePoint, float TravelTime, BmSDK.BmGame.RPawnPlayer Pawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GrateInvertedTakedownEnd.HideMove", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -176,7 +176,7 @@ public partial class RStealthTakedownStage_GrateInvertedTakedownEnd : BmSDK.BmGa
     /// <summary>
     /// Function: End
     /// </summary>
-    public unsafe void End(bool bLastStage = default)
+    public unsafe override void End(bool bLastStage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GrateInvertedTakedownEnd.End", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -188,7 +188,7 @@ public partial class RStealthTakedownStage_GrateInvertedTakedownEnd : BmSDK.BmGa
     /// <summary>
     /// Function: FinishAttackVictim
     /// </summary>
-    public unsafe bool FinishAttackVictim(int iVictimNumber)
+    public unsafe override bool FinishAttackVictim(int iVictimNumber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GrateInvertedTakedownEnd.FinishAttackVictim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -200,7 +200,7 @@ public partial class RStealthTakedownStage_GrateInvertedTakedownEnd : BmSDK.BmGa
     /// <summary>
     /// Function: GetWritheAnim
     /// </summary>
-    public unsafe BmSDK.FName GetWritheAnim()
+    public unsafe override BmSDK.FName GetWritheAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GrateInvertedTakedownEnd.GetWritheAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -211,7 +211,7 @@ public partial class RStealthTakedownStage_GrateInvertedTakedownEnd : BmSDK.BmGa
     /// <summary>
     /// Function: ServerCreateRope
     /// </summary>
-    public unsafe void ServerCreateRope()
+    public unsafe virtual void ServerCreateRope()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GrateInvertedTakedownEnd.ServerCreateRope", true);
         byte* paramsPtr = stackalloc byte[168];

@@ -36,7 +36,7 @@ public partial class RAnimNode_VehicleMotionExtraction : BmSDK.Engine.AnimNodeSe
     /// <summary>
     /// Function: PlayAnim
     /// </summary>
-    public unsafe void PlayAnim(bool bLoop = default, float InRate = default, float StartTime = default)
+    public unsafe override void PlayAnim(bool bLoop = default, float InRate = default, float StartTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_VehicleMotionExtraction.PlayAnim", true);
         byte* paramsPtr = stackalloc byte[12];

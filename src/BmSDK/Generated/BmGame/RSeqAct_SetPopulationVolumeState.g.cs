@@ -36,7 +36,7 @@ public partial class RSeqAct_SetPopulationVolumeState : BmSDK.Engine.SequenceAct
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetPopulationVolumeState.Activated", true);
         byte* paramsPtr = stackalloc byte[8];

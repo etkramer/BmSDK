@@ -36,7 +36,7 @@ public partial class RSeqAct_GameActionPerformed : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: Deactivated
     /// </summary>
-    public unsafe void Deactivated()
+    public unsafe override void Deactivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GameActionPerformed.Deactivated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RSeqAct_GameActionPerformed : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GameActionPerformed.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RSeqAct_GameActionPerformed : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: GameActionPerformed
     /// </summary>
-    public unsafe void GameActionPerformed(BmSDK.BmGame.RGameInfo.EGameAction ActionPerformed, BmSDK.Engine.Actor Target)
+    public unsafe virtual void GameActionPerformed(BmSDK.BmGame.RGameInfo.EGameAction ActionPerformed, BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GameActionPerformed.GameActionPerformed", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -72,7 +72,7 @@ public partial class RSeqAct_GameActionPerformed : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GameActionPerformed.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

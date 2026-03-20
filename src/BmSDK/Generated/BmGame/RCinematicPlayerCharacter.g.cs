@@ -66,7 +66,7 @@ public partial class RCinematicPlayerCharacter : BmSDK.BmGame.RCinematicActor, B
     /// <summary>
     /// Function: GetMeshComponents
     /// </summary>
-    public unsafe void GetMeshComponents(int Flags, out BmSDK.TArray<BmSDK.Engine.SkeletalMeshComponent> Out)
+    public unsafe override void GetMeshComponents(int Flags, out BmSDK.TArray<BmSDK.Engine.SkeletalMeshComponent> Out)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicPlayerCharacter.GetMeshComponents", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -86,7 +86,7 @@ public partial class RCinematicPlayerCharacter : BmSDK.BmGame.RCinematicActor, B
     /// <summary>
     /// Function: RefreshDamageLevel
     /// </summary>
-    public unsafe void RefreshDamageLevel(BmSDK.FName PlayerCharacterName)
+    public unsafe virtual void RefreshDamageLevel(BmSDK.FName PlayerCharacterName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicPlayerCharacter.RefreshDamageLevel", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RCinematicPlayerCharacter : BmSDK.BmGame.RCinematicActor, B
     /// <summary>
     /// Function: SetCharacterMeshData
     /// </summary>
-    public unsafe void SetCharacterMeshData(BmSDK.BmGame.RAddContentPlayerCharacterMesh MeshData)
+    public unsafe virtual void SetCharacterMeshData(BmSDK.BmGame.RAddContentPlayerCharacterMesh MeshData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicPlayerCharacter.SetCharacterMeshData", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -124,7 +124,7 @@ public partial class RCinematicPlayerCharacter : BmSDK.BmGame.RCinematicActor, B
     /// <summary>
     /// Function: DetachPlayerMesh
     /// </summary>
-    public unsafe void DetachPlayerMesh()
+    public unsafe virtual void DetachPlayerMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicPlayerCharacter.DetachPlayerMesh", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -142,7 +142,7 @@ public partial class RCinematicPlayerCharacter : BmSDK.BmGame.RCinematicActor, B
     /// <summary>
     /// Function: BlockOnPlayerMeshAttached
     /// </summary>
-    public unsafe void BlockOnPlayerMeshAttached()
+    public unsafe virtual void BlockOnPlayerMeshAttached()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicPlayerCharacter.BlockOnPlayerMeshAttached", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -160,7 +160,7 @@ public partial class RCinematicPlayerCharacter : BmSDK.BmGame.RCinematicActor, B
     /// <summary>
     /// Function: CancelAttachPlayerMesh
     /// </summary>
-    public unsafe void CancelAttachPlayerMesh()
+    public unsafe virtual void CancelAttachPlayerMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicPlayerCharacter.CancelAttachPlayerMesh", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -178,7 +178,7 @@ public partial class RCinematicPlayerCharacter : BmSDK.BmGame.RCinematicActor, B
     /// <summary>
     /// Function: AttachPlayerMesh
     /// </summary>
-    public unsafe void AttachPlayerMesh()
+    public unsafe virtual void AttachPlayerMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicPlayerCharacter.AttachPlayerMesh", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -196,7 +196,7 @@ public partial class RCinematicPlayerCharacter : BmSDK.BmGame.RCinematicActor, B
     /// <summary>
     /// Function: GetSkinName
     /// </summary>
-    public unsafe BmSDK.FString GetSkinName()
+    public unsafe virtual BmSDK.FString GetSkinName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicPlayerCharacter.GetSkinName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -214,7 +214,7 @@ public partial class RCinematicPlayerCharacter : BmSDK.BmGame.RCinematicActor, B
     /// <summary>
     /// Function: BeginAnimControl
     /// </summary>
-    public unsafe void BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicPlayerCharacter.BeginAnimControl", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -227,7 +227,7 @@ public partial class RCinematicPlayerCharacter : BmSDK.BmGame.RCinematicActor, B
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicPlayerCharacter.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -238,7 +238,7 @@ public partial class RCinematicPlayerCharacter : BmSDK.BmGame.RCinematicActor, B
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicPlayerCharacter.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -249,7 +249,7 @@ public partial class RCinematicPlayerCharacter : BmSDK.BmGame.RCinematicActor, B
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicPlayerCharacter.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

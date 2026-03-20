@@ -36,7 +36,7 @@ public partial class RSpecialMoveConfig_CwJump : BmSDK.BmGame.RSpecialMoveConfig
     /// <summary>
     /// Function: CheckFreeJumpSpace
     /// </summary>
-    public unsafe bool CheckFreeJumpSpace(BmSDK.BmGame.RPawnPlayer Player, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe virtual bool CheckFreeJumpSpace(BmSDK.BmGame.RPawnPlayer Player, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveConfig_CwJump.CheckFreeJumpSpace", true);
         byte* paramsPtr = stackalloc byte[380];
@@ -49,7 +49,7 @@ public partial class RSpecialMoveConfig_CwJump : BmSDK.BmGame.RSpecialMoveConfig
     /// <summary>
     /// Function: UpdateLocator
     /// </summary>
-    public unsafe void UpdateLocator(out BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc, BmSDK.BmGame.RPawnPlayer Player)
+    public unsafe virtual void UpdateLocator(out BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc, BmSDK.BmGame.RPawnPlayer Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveConfig_CwJump.UpdateLocator", true);
         byte* paramsPtr = stackalloc byte[164];
@@ -62,7 +62,7 @@ public partial class RSpecialMoveConfig_CwJump : BmSDK.BmGame.RSpecialMoveConfig
     /// <summary>
     /// Function: GetAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetAnimSet(BmSDK.BmGame.RPawnPlayer Player)
+    public unsafe virtual BmSDK.Engine.AnimSet GetAnimSet(BmSDK.BmGame.RPawnPlayer Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveConfig_CwJump.GetAnimSet", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -74,7 +74,7 @@ public partial class RSpecialMoveConfig_CwJump : BmSDK.BmGame.RSpecialMoveConfig
     /// <summary>
     /// Function: GetFreeRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetFreeRotation(BmSDK.BmGame.RPlayerController Controller, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe override BmSDK.Rotator GetFreeRotation(BmSDK.BmGame.RPlayerController Controller, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveConfig_CwJump.GetFreeRotation", true);
         byte* paramsPtr = stackalloc byte[172];

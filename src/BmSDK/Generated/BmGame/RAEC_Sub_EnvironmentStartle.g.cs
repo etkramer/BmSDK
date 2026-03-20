@@ -71,7 +71,7 @@ public partial class RAEC_Sub_EnvironmentStartle : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_EnvironmentStartle.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RAEC_Sub_EnvironmentStartle : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: NotifyEvent
     /// </summary>
-    public unsafe void NotifyEvent(BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
+    public unsafe override void NotifyEvent(BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_EnvironmentStartle.NotifyEvent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -96,7 +96,7 @@ public partial class RAEC_Sub_EnvironmentStartle : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_EnvironmentStartle.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[8];

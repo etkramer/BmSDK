@@ -71,7 +71,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: ResetPredAIState
     /// </summary>
-    public unsafe void ResetPredAIState()
+    public unsafe virtual void ResetPredAIState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.ResetPredAIState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: TriggerThugReactionForSmash
     /// </summary>
-    public unsafe void TriggerThugReactionForSmash(BmSDK.Engine.Actor SmashingPlayer)
+    public unsafe virtual void TriggerThugReactionForSmash(BmSDK.Engine.Actor SmashingPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.TriggerThugReactionForSmash", true);
         byte* paramsPtr = stackalloc byte[300];
@@ -94,7 +94,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: PlayGlideKickSmashNoise
     /// </summary>
-    public unsafe void PlayGlideKickSmashNoise()
+    public unsafe virtual void PlayGlideKickSmashNoise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.PlayGlideKickSmashNoise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: IsExplosiveGelAttached
     /// </summary>
-    public unsafe bool IsExplosiveGelAttached()
+    public unsafe virtual bool IsExplosiveGelAttached()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.IsExplosiveGelAttached", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -116,7 +116,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: SetInXrayMode
     /// </summary>
-    public unsafe void SetInXrayMode(bool On, bool bForceOff)
+    public unsafe virtual void SetInXrayMode(bool On, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.SetInXrayMode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: AlertRoom
     /// </summary>
-    public unsafe void AlertRoom(System.Numerics.Vector3 ExplosionCentre)
+    public unsafe virtual void AlertRoom(System.Numerics.Vector3 ExplosionCentre)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.AlertRoom", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -141,7 +141,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -153,7 +153,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -165,7 +165,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: LinkToGrapplePoint
     /// </summary>
-    public unsafe bool LinkToGrapplePoint(BmSDK.Engine.Actor LinkActor, bool LinkOrUnlink)
+    public unsafe virtual bool LinkToGrapplePoint(BmSDK.Engine.Actor LinkActor, bool LinkOrUnlink)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.LinkToGrapplePoint", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -185,7 +185,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: LinkToCornerPoint
     /// </summary>
-    public unsafe bool LinkToCornerPoint(BmSDK.Engine.Actor LinkActor, bool LinkOrUnlink)
+    public unsafe virtual bool LinkToCornerPoint(BmSDK.Engine.Actor LinkActor, bool LinkOrUnlink)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.LinkToCornerPoint", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -198,7 +198,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: PlayerTouching
     /// </summary>
-    public unsafe void PlayerTouching()
+    public unsafe virtual void PlayerTouching()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.PlayerTouching", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -209,7 +209,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.UnTouch", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -221,7 +221,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.Touch", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -236,7 +236,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: RegisterObstacle
     /// </summary>
-    public unsafe void RegisterObstacle()
+    public unsafe override void RegisterObstacle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.RegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -254,7 +254,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -266,7 +266,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: StopsProjectile
     /// </summary>
-    public unsafe bool StopsProjectile(BmSDK.Engine.Projectile P, BmSDK.Engine.PrimitiveComponent HitComponent = default)
+    public unsafe override bool StopsProjectile(BmSDK.Engine.Projectile P, BmSDK.Engine.PrimitiveComponent HitComponent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.StopsProjectile", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -279,7 +279,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: TriggerPelletExplosion
     /// </summary>
-    public unsafe void TriggerPelletExplosion(System.Numerics.Vector3 ExplosionLocation)
+    public unsafe virtual void TriggerPelletExplosion(System.Numerics.Vector3 ExplosionLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.TriggerPelletExplosion", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -291,7 +291,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: FallOverOnWall
     /// </summary>
-    public unsafe void FallOverOnWall(BmSDK.BmGame.RPawnCharacter PawnIter)
+    public unsafe virtual void FallOverOnWall(BmSDK.BmGame.RPawnCharacter PawnIter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.FallOverOnWall", true);
         byte* paramsPtr = stackalloc byte[264];
@@ -303,7 +303,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: DisableNearbyTempGuardPoints
     /// </summary>
-    public unsafe void DisableNearbyTempGuardPoints(System.Numerics.Vector3 ExplosionCentre)
+    public unsafe virtual void DisableNearbyTempGuardPoints(System.Numerics.Vector3 ExplosionCentre)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.DisableNearbyTempGuardPoints", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -315,7 +315,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: GetAIPointOfInterestExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAIPointOfInterestExtent()
+    public unsafe override System.Numerics.Vector3 GetAIPointOfInterestExtent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.GetAIPointOfInterestExtent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -333,7 +333,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: OnDamagedForTheFirstTime
     /// </summary>
-    public unsafe void OnDamagedForTheFirstTime(System.Numerics.Vector3 ExplosionCentre)
+    public unsafe virtual void OnDamagedForTheFirstTime(System.Numerics.Vector3 ExplosionCentre)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.OnDamagedForTheFirstTime", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -345,7 +345,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: OnDamaged
     /// </summary>
-    public unsafe void OnDamaged(System.Numerics.Vector3 ExplosionCentre)
+    public unsafe virtual void OnDamaged(System.Numerics.Vector3 ExplosionCentre)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.OnDamaged", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -357,7 +357,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: DoFractureWallExplodeAlert
     /// </summary>
-    public unsafe void DoFractureWallExplodeAlert(System.Numerics.Vector3 ExplosionCentre, System.Numerics.Vector3 WallNormal)
+    public unsafe virtual void DoFractureWallExplodeAlert(System.Numerics.Vector3 ExplosionCentre, System.Numerics.Vector3 WallNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.DoFractureWallExplodeAlert", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -370,7 +370,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -381,7 +381,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -392,7 +392,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: InitWithRoomState
     /// </summary>
-    public unsafe void InitWithRoomState(BmSDK.BmGame.RBMRoomAIState NewRoomState)
+    public unsafe virtual void InitWithRoomState(BmSDK.BmGame.RBMRoomAIState NewRoomState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.InitWithRoomState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -404,7 +404,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: PostFractureStateLoaded
     /// </summary>
-    public unsafe void PostFractureStateLoaded(bool bFragmentsRemoved)
+    public unsafe virtual void PostFractureStateLoaded(bool bFragmentsRemoved)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.PostFractureStateLoaded", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -416,7 +416,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: HandlePawnExplosionReactions
     /// </summary>
-    public unsafe void HandlePawnExplosionReactions(System.Numerics.Vector3 ExplosionPosition, float ExplosionRadius)
+    public unsafe virtual void HandlePawnExplosionReactions(System.Numerics.Vector3 ExplosionPosition, float ExplosionRadius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.HandlePawnExplosionReactions", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -429,7 +429,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: BreakOffPartsInRadius
     /// </summary>
-    public unsafe void BreakOffPartsInRadius(System.Numerics.Vector3 Origin, float Radius, float RBStrength, bool bWantPhysChunksAndParticles, BmSDK.Engine.Actor BreakInstigator, bool bAllowDamagedEventFiring = default, System.Numerics.Vector3 BlastOriginOffsetLocalSpace = default)
+    public unsafe virtual void BreakOffPartsInRadius(System.Numerics.Vector3 Origin, float Radius, float RBStrength, bool bWantPhysChunksAndParticles, BmSDK.Engine.Actor BreakInstigator, bool bAllowDamagedEventFiring = default, System.Numerics.Vector3 BlastOriginOffsetLocalSpace = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.BreakOffPartsInRadius", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -447,7 +447,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: SetCanInteract
     /// </summary>
-    public unsafe void SetCanInteract(bool Can, bool bForce = default)
+    public unsafe virtual void SetCanInteract(bool Can, bool bForce = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.SetCanInteract", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -460,7 +460,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: TriggerWallCamera
     /// </summary>
-    public unsafe void TriggerWallCamera(BmSDK.BmGame.RPlayerController PC, float TimeDelay, bool bForceCamera = default, bool bForLineLauncher = default)
+    public unsafe virtual void TriggerWallCamera(BmSDK.BmGame.RPlayerController PC, float TimeDelay, bool bForceCamera = default, bool bForLineLauncher = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.TriggerWallCamera", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -475,7 +475,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: IsGlassFractureMesh
     /// </summary>
-    public unsafe bool IsGlassFractureMesh()
+    public unsafe override bool IsGlassFractureMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.IsGlassFractureMesh", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -486,7 +486,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: IsPathObstacleActive
     /// </summary>
-    public unsafe bool IsPathObstacleActive()
+    public unsafe virtual bool IsPathObstacleActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.IsPathObstacleActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -497,7 +497,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: OnDamagedForTheFirstTimeInCurrentStage
     /// </summary>
-    public unsafe void OnDamagedForTheFirstTimeInCurrentStage(System.Numerics.Vector3 DamageDirection, System.Numerics.Vector3 DamageCauserPointVelocity, BmSDK.Engine.Actor DamageCauser)
+    public unsafe override void OnDamagedForTheFirstTimeInCurrentStage(System.Numerics.Vector3 DamageDirection, System.Numerics.Vector3 DamageCauserPointVelocity, BmSDK.Engine.Actor DamageCauser)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.OnDamagedForTheFirstTimeInCurrentStage", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -518,7 +518,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: SetInvestigateHighlighted
     /// </summary>
-    public unsafe void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
+    public unsafe override void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.SetInvestigateHighlighted", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -538,7 +538,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: GetBoundingBoxForNavMeshObstacleInWorldSpace
     /// </summary>
-    public unsafe void GetBoundingBoxForNavMeshObstacleInWorldSpace(out BmSDK.GameObject.FMatrix OutObstacleBoxWorldTransform, out System.Numerics.Vector3 OutObstacleBoxExtents)
+    public unsafe override void GetBoundingBoxForNavMeshObstacleInWorldSpace(out BmSDK.GameObject.FMatrix OutObstacleBoxWorldTransform, out System.Numerics.Vector3 OutObstacleBoxExtents)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.GetBoundingBoxForNavMeshObstacleInWorldSpace", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -558,7 +558,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: InitialiseInvestigationMesh
     /// </summary>
-    public unsafe void InitialiseInvestigationMesh()
+    public unsafe virtual void InitialiseInvestigationMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.InitialiseInvestigationMesh", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -576,7 +576,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: KnockOverBasedPawns
     /// </summary>
-    public unsafe int KnockOverBasedPawns()
+    public unsafe virtual int KnockOverBasedPawns()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.KnockOverBasedPawns", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -594,7 +594,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: FindNearestPointOnEdge
     /// </summary>
-    public unsafe System.Numerics.Vector3 FindNearestPointOnEdge(System.Numerics.Vector3 TestPoint)
+    public unsafe virtual System.Numerics.Vector3 FindNearestPointOnEdge(System.Numerics.Vector3 TestPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.FindNearestPointOnEdge", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -613,7 +613,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: IsHorizontal
     /// </summary>
-    public unsafe bool IsHorizontal()
+    public unsafe virtual bool IsHorizontal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.IsHorizontal", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -631,7 +631,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: BreakOffPartsInRadiusConstantVel
     /// </summary>
-    public unsafe void BreakOffPartsInRadiusConstantVel(System.Numerics.Vector3 Origin, float Radius, System.Numerics.Vector3 LinearVel, System.Numerics.Vector3 AngularVel, bool bWantPhysChunksAndParticles, BmSDK.Engine.Actor BreakInstigator, bool bAllowDamagedEventFiring = default)
+    public unsafe virtual void BreakOffPartsInRadiusConstantVel(System.Numerics.Vector3 Origin, float Radius, System.Numerics.Vector3 LinearVel, System.Numerics.Vector3 AngularVel, bool bWantPhysChunksAndParticles, BmSDK.Engine.Actor BreakInstigator, bool bAllowDamagedEventFiring = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.BreakOffPartsInRadiusConstantVel", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -656,7 +656,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: GetWallSideForPoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RDestructibleProp_FractureWall.EDestructibleWallSide GetWallSideForPoint(System.Numerics.Vector3 TestPoint)
+    public unsafe virtual BmSDK.BmGame.RDestructibleProp_FractureWall.EDestructibleWallSide GetWallSideForPoint(System.Numerics.Vector3 TestPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.GetWallSideForPoint", true);
         byte* paramsPtr = stackalloc byte[13];
@@ -675,7 +675,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: RegisterWithNavMesh
     /// </summary>
-    public unsafe bool RegisterWithNavMesh(bool bRegister)
+    public unsafe override bool RegisterWithNavMesh(bool bRegister)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.RegisterWithNavMesh", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -694,7 +694,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: SetPathObstacleActive
     /// </summary>
-    public unsafe void SetPathObstacleActive(bool bNewActive)
+    public unsafe virtual void SetPathObstacleActive(bool bNewActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.SetPathObstacleActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -713,7 +713,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: GetSafeLocationOnWallForTakedown
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetSafeLocationOnWallForTakedown(BmSDK.Engine.Pawn Villain, BmSDK.Engine.Pawn Batman)
+    public unsafe virtual System.Numerics.Vector3 GetSafeLocationOnWallForTakedown(BmSDK.Engine.Pawn Villain, BmSDK.Engine.Pawn Batman)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.GetSafeLocationOnWallForTakedown", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -733,7 +733,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: GetWallNormalForSide
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWallNormalForSide(BmSDK.BmGame.RDestructibleProp_FractureWall.EDestructibleWallSide FractureWallSide)
+    public unsafe virtual System.Numerics.Vector3 GetWallNormalForSide(BmSDK.BmGame.RDestructibleProp_FractureWall.EDestructibleWallSide FractureWallSide)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.GetWallNormalForSide", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -752,7 +752,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: GetWallCentreInLocalSpace
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWallCentreInLocalSpace()
+    public unsafe virtual System.Numerics.Vector3 GetWallCentreInLocalSpace()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.GetWallCentreInLocalSpace", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -770,7 +770,7 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// Function: GetWallCentreInWorldSpace
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWallCentreInWorldSpace()
+    public unsafe virtual System.Numerics.Vector3 GetWallCentreInWorldSpace()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDestructibleProp_FractureWall.GetWallCentreInWorldSpace", true);
         byte* paramsPtr = stackalloc byte[12];

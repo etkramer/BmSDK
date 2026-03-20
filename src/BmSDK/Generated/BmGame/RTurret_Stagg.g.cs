@@ -66,7 +66,7 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// Function: CanDamagePlayer
     /// </summary>
-    public unsafe bool CanDamagePlayer()
+    public unsafe override bool CanDamagePlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurret_Stagg.CanDamagePlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -77,7 +77,7 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldForceMissedShot
     /// </summary>
-    public unsafe bool ShouldForceMissedShot(BmSDK.BmGame.RPawnPlayer TargetPlayer)
+    public unsafe virtual bool ShouldForceMissedShot(BmSDK.BmGame.RPawnPlayer TargetPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurret_Stagg.ShouldForceMissedShot", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -89,7 +89,7 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearInvestigateData
     /// </summary>
-    public unsafe void ClearInvestigateData()
+    public unsafe override void ClearInvestigateData()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurret_Stagg.ClearInvestigateData", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -100,7 +100,7 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// Function: DoShotFX
     /// </summary>
-    public unsafe void DoShotFX(System.Numerics.Vector3 TargetLoc, bool bDoImpactFX)
+    public unsafe override void DoShotFX(System.Numerics.Vector3 TargetLoc, bool bDoImpactFX)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurret_Stagg.DoShotFX", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -113,7 +113,7 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// Function: StoppedShooting
     /// </summary>
-    public unsafe void StoppedShooting()
+    public unsafe override void StoppedShooting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurret_Stagg.StoppedShooting", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -124,7 +124,7 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// Function: StartedShooting
     /// </summary>
-    public unsafe void StartedShooting()
+    public unsafe override void StartedShooting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurret_Stagg.StartedShooting", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -135,7 +135,7 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// Function: EnableTurretLights
     /// </summary>
-    public unsafe void EnableTurretLights(bool bEnable)
+    public unsafe override void EnableTurretLights(bool bEnable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurret_Stagg.EnableTurretLights", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -147,7 +147,7 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurret_Stagg.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -158,7 +158,7 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SwitchOffPermanently
     /// </summary>
-    public unsafe void SwitchOffPermanently()
+    public unsafe virtual void SwitchOffPermanently()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurret_Stagg.SwitchOffPermanently", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -169,7 +169,7 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SwitchOff
     /// </summary>
-    public unsafe void SwitchOff()
+    public unsafe override void SwitchOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurret_Stagg.SwitchOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -180,7 +180,7 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDamagedx
     /// </summary>
-    public unsafe void SetDamagedx()
+    public unsafe override void SetDamagedx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurret_Stagg.SetDamagedx", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -191,7 +191,7 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawAimingDebug
     /// </summary>
-    public unsafe void DrawAimingDebug()
+    public unsafe virtual void DrawAimingDebug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurret_Stagg.DrawAimingDebug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -202,7 +202,7 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckLOSToPlayer
     /// </summary>
-    public unsafe bool CheckLOSToPlayer()
+    public unsafe virtual bool CheckLOSToPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurret_Stagg.CheckLOSToPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -220,7 +220,7 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// Function: CanShootAtCurrentTarget
     /// </summary>
-    public unsafe bool CanShootAtCurrentTarget()
+    public unsafe override bool CanShootAtCurrentTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurret_Stagg.CanShootAtCurrentTarget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -238,7 +238,7 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckForBMInVolume
     /// </summary>
-    public unsafe void CheckForBMInVolume()
+    public unsafe override void CheckForBMInVolume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurret_Stagg.CheckForBMInVolume", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -256,7 +256,7 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SetLightScale
     /// </summary>
-    public unsafe void SetLightScale()
+    public unsafe virtual void SetLightScale()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurret_Stagg.SetLightScale", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -274,7 +274,7 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRotationRootOrientation
     /// </summary>
-    public unsafe BmSDK.Rotator GetRotationRootOrientation()
+    public unsafe override BmSDK.Rotator GetRotationRootOrientation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurret_Stagg.GetRotationRootOrientation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -292,7 +292,7 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRotationRootLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetRotationRootLocation()
+    public unsafe override System.Numerics.Vector3 GetRotationRootLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurret_Stagg.GetRotationRootLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -310,7 +310,7 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTrackingOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTrackingOrigin()
+    public unsafe override System.Numerics.Vector3 GetTrackingOrigin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurret_Stagg.GetTrackingOrigin", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -328,7 +328,7 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDesiredRotation
     /// </summary>
-    public unsafe void SetDesiredRotation(BmSDK.Rotator DesiredRot)
+    public unsafe override void SetDesiredRotation(BmSDK.Rotator DesiredRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurret_Stagg.SetDesiredRotation", true);
         byte* paramsPtr = stackalloc byte[12];

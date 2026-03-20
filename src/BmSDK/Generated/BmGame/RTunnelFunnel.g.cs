@@ -71,7 +71,7 @@ public partial class RTunnelFunnel : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMinigunnerTunnelGrenadeStandPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMinigunnerTunnelGrenadeStandPoint()
+    public unsafe virtual System.Numerics.Vector3 GetMinigunnerTunnelGrenadeStandPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelFunnel.GetMinigunnerTunnelGrenadeStandPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RTunnelFunnel : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetGrateRefPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetGrateRefPosition()
+    public unsafe virtual System.Numerics.Vector3 GetGrateRefPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelFunnel.GetGrateRefPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RTunnelFunnel : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPathTargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetPathTargetPos()
+    public unsafe virtual System.Numerics.Vector3 GetPathTargetPos()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelFunnel.GetPathTargetPos", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -104,7 +104,7 @@ public partial class RTunnelFunnel : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateVoiceSynthesiserPermissions
     /// </summary>
-    public unsafe void UpdateVoiceSynthesiserPermissions(bool bVoiceSynthesiserAllowed)
+    public unsafe virtual void UpdateVoiceSynthesiserPermissions(bool bVoiceSynthesiserAllowed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelFunnel.UpdateVoiceSynthesiserPermissions", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RTunnelFunnel : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTunnelFunnel.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

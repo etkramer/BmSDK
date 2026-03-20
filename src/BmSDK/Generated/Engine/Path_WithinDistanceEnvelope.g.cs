@@ -36,7 +36,7 @@ public partial class Path_WithinDistanceEnvelope : BmSDK.Engine.PathConstraint, 
     /// <summary>
     /// Function: Recycle
     /// </summary>
-    public unsafe void Recycle()
+    public unsafe override void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Path_WithinDistanceEnvelope.Recycle", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: OverlayScreenDataCallback
     /// </summary>
-    public unsafe void OverlayScreenDataCallback(BmSDK.BmGame.MWBIDDataMessage Data)
+    public unsafe virtual void OverlayScreenDataCallback(BmSDK.BmGame.MWBIDDataMessage Data)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDOverlayManager.OverlayScreenDataCallback", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -55,7 +55,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNetworkStatus
     /// </summary>
-    public unsafe void GetNetworkStatus()
+    public unsafe virtual void GetNetworkStatus()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDOverlayManager.GetNetworkStatus", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -73,7 +73,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsIneligibleAgeDueToFirstParty
     /// </summary>
-    public unsafe bool IsIneligibleAgeDueToFirstParty()
+    public unsafe virtual bool IsIneligibleAgeDueToFirstParty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDOverlayManager.IsIneligibleAgeDueToFirstParty", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -91,7 +91,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetStatus
     /// </summary>
-    public unsafe BmSDK.BmGame.MWBIDOverlayManager.WBIDStatus GetStatus()
+    public unsafe virtual BmSDK.BmGame.MWBIDOverlayManager.WBIDStatus GetStatus()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDOverlayManager.GetStatus", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -109,7 +109,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetRewardsScreenError
     /// </summary>
-    public unsafe void SetRewardsScreenError()
+    public unsafe virtual void SetRewardsScreenError()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDOverlayManager.SetRewardsScreenError", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -120,7 +120,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateWBIDWidgets
     /// </summary>
-    public unsafe void UpdateWBIDWidgets()
+    public unsafe virtual void UpdateWBIDWidgets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDOverlayManager.UpdateWBIDWidgets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -131,7 +131,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Terminate
     /// </summary>
-    public unsafe void Terminate()
+    public unsafe virtual void Terminate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDOverlayManager.Terminate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -142,7 +142,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowNextOverlay
     /// </summary>
-    public unsafe void ShowNextOverlay(BmSDK.BmGame.MWBIDOverlayManager.E_WBID_Screen_Type Type)
+    public unsafe virtual void ShowNextOverlay(BmSDK.BmGame.MWBIDOverlayManager.E_WBID_Screen_Type Type)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDOverlayManager.ShowNextOverlay", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -154,7 +154,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DeQueue
     /// </summary>
-    public unsafe void DeQueue()
+    public unsafe virtual void DeQueue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDOverlayManager.DeQueue", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -165,7 +165,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Queue
     /// </summary>
-    public unsafe void Queue(BmSDK.BmGame.MWBIDOverlayManager.E_WBID_Screen_Type Type)
+    public unsafe virtual void Queue(BmSDK.BmGame.MWBIDOverlayManager.E_WBID_Screen_Type Type)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDOverlayManager.Queue", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -177,7 +177,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetEmailFormPreData
     /// </summary>
-    public unsafe void SetEmailFormPreData(BmSDK.BmGame.MWBIDOverlayManager.FEmailForm_PreData pData)
+    public unsafe virtual void SetEmailFormPreData(BmSDK.BmGame.MWBIDOverlayManager.FEmailForm_PreData pData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDOverlayManager.SetEmailFormPreData", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -189,7 +189,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetGenericOverlayInfo
     /// </summary>
-    public unsafe void SetGenericOverlayInfo(BmSDK.BmGame.MWBIDOverlayManager.FGenericOverlay_Data pData)
+    public unsafe virtual void SetGenericOverlayInfo(BmSDK.BmGame.MWBIDOverlayManager.FGenericOverlay_Data pData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDOverlayManager.SetGenericOverlayInfo", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -201,7 +201,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetNetworkStatus
     /// </summary>
-    public unsafe void SetNetworkStatus(BmSDK.BmGame.MWBIDOverlayManager.FNetworkStatus_Data pData)
+    public unsafe virtual void SetNetworkStatus(BmSDK.BmGame.MWBIDOverlayManager.FNetworkStatus_Data pData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDOverlayManager.SetNetworkStatus", true);
         byte* paramsPtr = stackalloc byte[100];
@@ -213,7 +213,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DeRegisterDataCallback
     /// </summary>
-    public unsafe void DeRegisterDataCallback()
+    public unsafe virtual void DeRegisterDataCallback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDOverlayManager.DeRegisterDataCallback", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -224,7 +224,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterDataCallback
     /// </summary>
-    public unsafe void RegisterDataCallback(System.IntPtr cb)
+    public unsafe virtual void RegisterDataCallback(System.IntPtr cb)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDOverlayManager.RegisterDataCallback", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -236,7 +236,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroy
     /// </summary>
-    public unsafe void Destroy()
+    public unsafe virtual void Destroy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDOverlayManager.Destroy", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -247,7 +247,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init()
+    public unsafe virtual void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDOverlayManager.Init", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -258,7 +258,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DataCallbackFnc
     /// </summary>
-    public unsafe void DataCallbackFnc(BmSDK.BmGame.MWBIDDataMessage Data)
+    public unsafe virtual void DataCallbackFnc(BmSDK.BmGame.MWBIDDataMessage Data)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDOverlayManager.DataCallbackFnc", true);
         byte* paramsPtr = stackalloc byte[8];

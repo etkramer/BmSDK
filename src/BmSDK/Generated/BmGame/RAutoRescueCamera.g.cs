@@ -71,7 +71,7 @@ public partial class RAutoRescueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameO
     /// <summary>
     /// Function: FreezeCamera
     /// </summary>
-    public unsafe void FreezeCamera()
+    public unsafe virtual void FreezeCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAutoRescueCamera.FreezeCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAutoRescueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameO
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAutoRescueCamera.Tick", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -94,7 +94,7 @@ public partial class RAutoRescueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameO
     /// <summary>
     /// Function: SetUpCamera
     /// </summary>
-    public unsafe void SetUpCamera(System.Numerics.Vector3 Loc)
+    public unsafe virtual void SetUpCamera(System.Numerics.Vector3 Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAutoRescueCamera.SetUpCamera", true);
         byte* paramsPtr = stackalloc byte[12];

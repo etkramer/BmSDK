@@ -66,7 +66,7 @@ public partial class RTitanCrateBase : BmSDK.Engine.InterpActor, BmSDK.IGameObje
     /// <summary>
     /// Function: DestroyProximityCrates
     /// </summary>
-    public unsafe void DestroyProximityCrates()
+    public unsafe virtual void DestroyProximityCrates()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTitanCrateBase.DestroyProximityCrates", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -77,7 +77,7 @@ public partial class RTitanCrateBase : BmSDK.Engine.InterpActor, BmSDK.IGameObje
     /// <summary>
     /// Function: HitByExplosion
     /// </summary>
-    public unsafe void HitByExplosion()
+    public unsafe virtual void HitByExplosion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTitanCrateBase.HitByExplosion", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -88,7 +88,7 @@ public partial class RTitanCrateBase : BmSDK.Engine.InterpActor, BmSDK.IGameObje
     /// <summary>
     /// Function: SpawnExplosionParticle
     /// </summary>
-    public unsafe void SpawnExplosionParticle()
+    public unsafe virtual void SpawnExplosionParticle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTitanCrateBase.SpawnExplosionParticle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -99,7 +99,7 @@ public partial class RTitanCrateBase : BmSDK.Engine.InterpActor, BmSDK.IGameObje
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTitanCrateBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];

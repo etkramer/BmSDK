@@ -71,7 +71,7 @@ public partial class RAEC_FearDart_Sub_Armed : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: StartFinish
     /// </summary>
-    public unsafe void StartFinish()
+    public unsafe virtual void StartFinish()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FearDart_Sub_Armed.StartFinish", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RAEC_FearDart_Sub_Armed : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: NotifyEvent
     /// </summary>
-    public unsafe void NotifyEvent(BmSDK.BmGame.RBMAIAction NotifyAction, BmSDK.FString EventType)
+    public unsafe override void NotifyEvent(BmSDK.BmGame.RBMAIAction NotifyAction, BmSDK.FString EventType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FearDart_Sub_Armed.NotifyEvent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -95,7 +95,7 @@ public partial class RAEC_FearDart_Sub_Armed : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FearDart_Sub_Armed.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -107,7 +107,7 @@ public partial class RAEC_FearDart_Sub_Armed : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FearDart_Sub_Armed.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[8];

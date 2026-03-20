@@ -36,7 +36,7 @@ public partial class RBMBehaviour_VoiceControl : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_VoiceControl.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_VoiceControl : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_VoiceControl.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_VoiceControl : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: KillVFX
     /// </summary>
-    public unsafe void KillVFX()
+    public unsafe virtual void KillVFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_VoiceControl.KillVFX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_VoiceControl : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: UpdateVFX
     /// </summary>
-    public unsafe void UpdateVFX()
+    public unsafe virtual void UpdateVFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_VoiceControl.UpdateVFX", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_VoiceControl : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: InvestigateGunCrate
     /// </summary>
-    public unsafe void InvestigateGunCrate()
+    public unsafe virtual void InvestigateGunCrate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_VoiceControl.InvestigateGunCrate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -91,7 +91,7 @@ public partial class RBMBehaviour_VoiceControl : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: SentryGunGoPhysics
     /// </summary>
-    public unsafe void SentryGunGoPhysics()
+    public unsafe virtual void SentryGunGoPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_VoiceControl.SentryGunGoPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -102,7 +102,7 @@ public partial class RBMBehaviour_VoiceControl : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: SentryGunTakenOut
     /// </summary>
-    public unsafe void SentryGunTakenOut()
+    public unsafe virtual void SentryGunTakenOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_VoiceControl.SentryGunTakenOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -113,7 +113,7 @@ public partial class RBMBehaviour_VoiceControl : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: Attach_Trophy
     /// </summary>
-    public unsafe void Attach_Trophy()
+    public unsafe virtual void Attach_Trophy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_VoiceControl.Attach_Trophy", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -124,7 +124,7 @@ public partial class RBMBehaviour_VoiceControl : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: AtPathGoal
     /// </summary>
-    public unsafe bool AtPathGoal()
+    public unsafe virtual bool AtPathGoal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_VoiceControl.AtPathGoal", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -135,7 +135,7 @@ public partial class RBMBehaviour_VoiceControl : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_VoiceControl.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -147,7 +147,7 @@ public partial class RBMBehaviour_VoiceControl : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: GoToGoalState
     /// </summary>
-    public unsafe void GoToGoalState()
+    public unsafe virtual void GoToGoalState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_VoiceControl.GoToGoalState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -158,7 +158,7 @@ public partial class RBMBehaviour_VoiceControl : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: UpdateAcknowledgement
     /// </summary>
-    public unsafe void UpdateAcknowledgement(float DeltaTime)
+    public unsafe virtual void UpdateAcknowledgement(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_VoiceControl.UpdateAcknowledgement", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -170,7 +170,7 @@ public partial class RBMBehaviour_VoiceControl : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: UpdatePlayerLOS
     /// </summary>
-    public unsafe void UpdatePlayerLOS(float DeltaTime)
+    public unsafe virtual void UpdatePlayerLOS(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_VoiceControl.UpdatePlayerLOS", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -182,7 +182,7 @@ public partial class RBMBehaviour_VoiceControl : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: PathToPoint
     /// </summary>
-    public unsafe void PathToPoint()
+    public unsafe virtual void PathToPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_VoiceControl.PathToPoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -193,7 +193,7 @@ public partial class RBMBehaviour_VoiceControl : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(System.Numerics.Vector3 NewLocation, BmSDK.Engine.Actor NewActor, BmSDK.TArray<BmSDK.BmGame.RPawnVillain> NewThugList, bool bNewUseDestinationTargetMarkerVFX, System.Numerics.Vector3 vNewDestinationTargetMarkerLocation, BmSDK.Engine.ParticleSystem DestinationTargetMarkerTemplate, BmSDK.Engine.ParticleSystem BeamTemplate, BmSDK.Engine.ParticleSystem SelectedEnemyTemplate, System.Numerics.Vector3 vNewImpactedWallNormal, BmSDK.BmGame.RVoiceSynthesiser NewVoiceSynthesiser)
+    public unsafe virtual void Initialise(System.Numerics.Vector3 NewLocation, BmSDK.Engine.Actor NewActor, BmSDK.TArray<BmSDK.BmGame.RPawnVillain> NewThugList, bool bNewUseDestinationTargetMarkerVFX, System.Numerics.Vector3 vNewDestinationTargetMarkerLocation, BmSDK.Engine.ParticleSystem DestinationTargetMarkerTemplate, BmSDK.Engine.ParticleSystem BeamTemplate, BmSDK.Engine.ParticleSystem SelectedEnemyTemplate, System.Numerics.Vector3 vNewImpactedWallNormal, BmSDK.BmGame.RVoiceSynthesiser NewVoiceSynthesiser)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_VoiceControl.Initialise", true);
         byte* paramsPtr = stackalloc byte[108];

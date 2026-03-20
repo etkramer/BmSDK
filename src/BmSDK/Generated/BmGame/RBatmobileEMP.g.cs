@@ -71,7 +71,7 @@ public partial class RBatmobileEMP : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObj
     /// <summary>
     /// Function: IsFiring
     /// </summary>
-    public unsafe bool IsFiring()
+    public unsafe override bool IsFiring()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMP.IsFiring", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBatmobileEMP : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObj
     /// <summary>
     /// Function: CanDisableTick
     /// </summary>
-    public unsafe bool CanDisableTick()
+    public unsafe override bool CanDisableTick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMP.CanDisableTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RBatmobileEMP : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObj
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMP.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RBatmobileEMP : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObj
     /// <summary>
     /// Function: ButtonReleased
     /// </summary>
-    public unsafe void ButtonReleased()
+    public unsafe override void ButtonReleased()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMP.ButtonReleased", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RBatmobileEMP : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObj
     /// <summary>
     /// Function: ReadyToFire
     /// </summary>
-    public unsafe bool ReadyToFire()
+    public unsafe override bool ReadyToFire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMP.ReadyToFire", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class RBatmobileEMP : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObj
     /// <summary>
     /// Function: PlayEMPRumble
     /// </summary>
-    public unsafe void PlayEMPRumble()
+    public unsafe virtual void PlayEMPRumble()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMP.PlayEMPRumble", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -138,7 +138,7 @@ public partial class RBatmobileEMP : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObj
     /// <summary>
     /// Function: DamageNearbyActors
     /// </summary>
-    public unsafe void DamageNearbyActors()
+    public unsafe virtual void DamageNearbyActors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMP.DamageNearbyActors", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -149,7 +149,7 @@ public partial class RBatmobileEMP : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObj
     /// <summary>
     /// Function: FireEMP
     /// </summary>
-    public unsafe void FireEMP()
+    public unsafe virtual void FireEMP()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMP.FireEMP", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -160,7 +160,7 @@ public partial class RBatmobileEMP : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObj
     /// <summary>
     /// Function: CancelChargingEMP
     /// </summary>
-    public unsafe void CancelChargingEMP()
+    public unsafe virtual void CancelChargingEMP()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMP.CancelChargingEMP", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -171,7 +171,7 @@ public partial class RBatmobileEMP : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObj
     /// <summary>
     /// Function: StartChargingEMP
     /// </summary>
-    public unsafe void StartChargingEMP()
+    public unsafe virtual void StartChargingEMP()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMP.StartChargingEMP", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -182,7 +182,7 @@ public partial class RBatmobileEMP : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObj
     /// <summary>
     /// Function: FireWeapon
     /// </summary>
-    public unsafe bool FireWeapon()
+    public unsafe override bool FireWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMP.FireWeapon", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -193,7 +193,7 @@ public partial class RBatmobileEMP : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObj
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileEMP.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];

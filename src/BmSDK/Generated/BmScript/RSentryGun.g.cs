@@ -71,7 +71,7 @@ public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSentryGun.Interact", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -83,7 +83,7 @@ public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SuppressDetectiveModeVisibilityThroughWalls
     /// </summary>
-    public unsafe void SuppressDetectiveModeVisibilityThroughWalls(bool bSuppress)
+    public unsafe virtual void SuppressDetectiveModeVisibilityThroughWalls(bool bSuppress)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSentryGun.SuppressDetectiveModeVisibilityThroughWalls", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UnregisterDMThroughWallsSuppressable
     /// </summary>
-    public unsafe void UnregisterDMThroughWallsSuppressable()
+    public unsafe virtual void UnregisterDMThroughWallsSuppressable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSentryGun.UnregisterDMThroughWallsSuppressable", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterDMThroughWallsSuppressable
     /// </summary>
-    public unsafe void RegisterDMThroughWallsSuppressable()
+    public unsafe virtual void RegisterDMThroughWallsSuppressable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSentryGun.RegisterDMThroughWallsSuppressable", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
     /// <summary>
     /// Function: DetachFiringComponents
     /// </summary>
-    public unsafe void DetachFiringComponents()
+    public unsafe virtual void DetachFiringComponents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSentryGun.DetachFiringComponents", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
     /// <summary>
     /// Function: AttachFiringComponents
     /// </summary>
-    public unsafe void AttachFiringComponents()
+    public unsafe override void AttachFiringComponents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSentryGun.AttachFiringComponents", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -139,7 +139,7 @@ public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSentryGun.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSentryGun.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -161,7 +161,7 @@ public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
     /// <summary>
     /// Function: DestroyPlayerIceRaft
     /// </summary>
-    public unsafe void DestroyPlayerIceRaft(BmSDK.BmGame.RPawnPlayer Player)
+    public unsafe override void DestroyPlayerIceRaft(BmSDK.BmGame.RPawnPlayer Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSentryGun.DestroyPlayerIceRaft", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -173,7 +173,7 @@ public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
     /// <summary>
     /// Function: TriggerShootingSeqEvent
     /// </summary>
-    public unsafe void TriggerShootingSeqEvent(bool bStartedShooting)
+    public unsafe override void TriggerShootingSeqEvent(bool bStartedShooting)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSentryGun.TriggerShootingSeqEvent", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -185,7 +185,7 @@ public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSentryGun.Tick", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -197,7 +197,7 @@ public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PropagateMeshDPGToComponents
     /// </summary>
-    public unsafe void PropagateMeshDPGToComponents()
+    public unsafe virtual void PropagateMeshDPGToComponents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSentryGun.PropagateMeshDPGToComponents", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -208,7 +208,7 @@ public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay_Delayed
     /// </summary>
-    public unsafe void PostBeginPlay_Delayed()
+    public unsafe override void PostBeginPlay_Delayed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSentryGun.PostBeginPlay_Delayed", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -219,7 +219,7 @@ public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSentryGun.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

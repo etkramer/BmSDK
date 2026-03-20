@@ -80,7 +80,7 @@ void Printer::PrintInterface(class UClass* _class, ostream& out)
             }
             else if (fieldLink->IsA(UFunction::StaticClass()))
             {
-                Printer::PrintFunction((UFunction*)fieldLink, false, out);
+                Printer::PrintFunction((UFunction*)fieldLink, true, out);
 
                 if (fieldLink->Next)
                 {
@@ -240,7 +240,7 @@ void Printer::PrintClass(UClass* _class, ostream& out)
             }
             else if (fieldLink->IsA(UFunction::StaticClass()))
             {
-                Printer::PrintFunction((UFunction*)fieldLink, true, out);
+                Printer::PrintFunction((UFunction*)fieldLink, false, out);
 
                 if (fieldLink->Next)
                 {
@@ -471,7 +471,7 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
     }
 }
 
-void Printer::PrintFunction(class UFunction* func, bool shouldPrintBody, ostream& out)
+void Printer::PrintFunction(class UFunction* func, bool isInInterface, ostream& out)
 {
     vector<UProperty*> params = {};
     UProperty* returnParam = nullptr;
@@ -487,6 +487,7 @@ void Printer::PrintFunction(class UFunction* func, bool shouldPrintBody, ostream
     bool funcIsStatic = (DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Static;
     bool funcIsNative = (DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Native;
     bool funcIsEvent = (DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Event;
+    bool funcIsPrivate = (DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Private;
 
     // Gather func params
     UField* fieldLink = func->Children;
@@ -535,6 +536,20 @@ void Printer::PrintFunction(class UFunction* func, bool shouldPrintBody, ostream
     {
         out << "static ";
     }
+    else
+    {
+        if (!funcIsPrivate && !isInInterface)
+        {
+            if (func->SuperStruct && func->SuperStruct->IsA(UFunction::StaticClass()))
+            {
+                out << "override ";
+            }
+            else
+            {
+                out << "virtual ";
+            }
+        }
+    }
     out << (returnParam ? returnParam->GetInnerTypeNameManaged() : "void") << " ";
     out << func->GetNameManaged() << "(";
     for (auto i = 0u; i < params.size(); i++)
@@ -562,7 +577,7 @@ void Printer::PrintFunction(class UFunction* func, bool shouldPrintBody, ostream
     }
     out << ")";
 
-    if (!shouldPrintBody) {
+    if (isInInterface) {
         out << ";" << endl;
         return;
     }

@@ -66,7 +66,7 @@ public partial class RAEC_Search_Formation : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: RegisterSplit
     /// </summary>
-    public unsafe void RegisterSplit(BmSDK.BmGame.RBMAIController SplitCon)
+    public unsafe virtual void RegisterSplit(BmSDK.BmGame.RBMAIController SplitCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation.RegisterSplit", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -78,7 +78,7 @@ public partial class RAEC_Search_Formation : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: NotifyChildStolen
     /// </summary>
-    public unsafe void NotifyChildStolen(BmSDK.BmGame.RAlertEventCoordinatorSolo StoleFromAEC, BmSDK.BmGame.RAlertEventCoordinatorSolo StealingAEC)
+    public unsafe override void NotifyChildStolen(BmSDK.BmGame.RAlertEventCoordinatorSolo StoleFromAEC, BmSDK.BmGame.RAlertEventCoordinatorSolo StealingAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation.NotifyChildStolen", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -91,7 +91,7 @@ public partial class RAEC_Search_Formation : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: FollowerWantsLeaderToSlow
     /// </summary>
-    public unsafe bool FollowerWantsLeaderToSlow()
+    public unsafe virtual bool FollowerWantsLeaderToSlow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation.FollowerWantsLeaderToSlow", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -102,7 +102,7 @@ public partial class RAEC_Search_Formation : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: GetBestFollowersForBranchOff
     /// </summary>
-    public unsafe void GetBestFollowersForBranchOff(out BmSDK.BmGame.RBMAIController SplitGroupLeader, out BmSDK.TArray<BmSDK.BmGame.RBMAIController> SplitFollowers)
+    public unsafe virtual void GetBestFollowersForBranchOff(out BmSDK.BmGame.RBMAIController SplitGroupLeader, out BmSDK.TArray<BmSDK.BmGame.RBMAIController> SplitFollowers)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation.GetBestFollowersForBranchOff", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -115,7 +115,7 @@ public partial class RAEC_Search_Formation : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: GroupShouldSplit
     /// </summary>
-    public unsafe bool GroupShouldSplit()
+    public unsafe virtual bool GroupShouldSplit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation.GroupShouldSplit", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -126,7 +126,7 @@ public partial class RAEC_Search_Formation : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: GetSplitCap
     /// </summary>
-    public unsafe int GetSplitCap()
+    public unsafe virtual int GetSplitCap()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation.GetSplitCap", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -137,7 +137,7 @@ public partial class RAEC_Search_Formation : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: RefuseBuddy
     /// </summary>
-    public unsafe bool RefuseBuddy()
+    public unsafe virtual bool RefuseBuddy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation.RefuseBuddy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -148,7 +148,7 @@ public partial class RAEC_Search_Formation : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: InitSplitThugs
     /// </summary>
-    public unsafe void InitSplitThugs()
+    public unsafe virtual void InitSplitThugs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation.InitSplitThugs", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -159,7 +159,7 @@ public partial class RAEC_Search_Formation : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: AssessPotentialSplit
     /// </summary>
-    public unsafe void AssessPotentialSplit()
+    public unsafe virtual void AssessPotentialSplit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation.AssessPotentialSplit", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -170,7 +170,7 @@ public partial class RAEC_Search_Formation : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: AddFollower
     /// </summary>
-    public unsafe void AddFollower(BmSDK.BmGame.RBMAIController FollowCon)
+    public unsafe virtual void AddFollower(BmSDK.BmGame.RBMAIController FollowCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation.AddFollower", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -182,7 +182,7 @@ public partial class RAEC_Search_Formation : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: SetLeader
     /// </summary>
-    public unsafe void SetLeader(BmSDK.BmGame.RBMAIController LeaderCon)
+    public unsafe virtual void SetLeader(BmSDK.BmGame.RBMAIController LeaderCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation.SetLeader", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -194,7 +194,7 @@ public partial class RAEC_Search_Formation : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: OnRemoveSoloChild
     /// </summary>
-    public unsafe void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
+    public unsafe override void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation.OnRemoveSoloChild", true);
         byte* paramsPtr = stackalloc byte[8];

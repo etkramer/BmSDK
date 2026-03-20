@@ -71,7 +71,7 @@ public partial class RAEC_Casualty_Sub_TerrorCas : BmSDK.BmGame.RAEC_Casualty_Su
     /// <summary>
     /// Function: AssignCasualty
     /// </summary>
-    public unsafe void AssignCasualty(BmSDK.BmGame.RPawnVillain NewCas)
+    public unsafe override void AssignCasualty(BmSDK.BmGame.RPawnVillain NewCas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_TerrorCas.AssignCasualty", true);
         byte* paramsPtr = stackalloc byte[16];

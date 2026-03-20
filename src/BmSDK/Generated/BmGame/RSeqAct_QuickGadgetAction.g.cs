@@ -31,7 +31,7 @@ public partial class RSeqAct_QuickGadgetAction : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: AddHelpPrompt
     /// </summary>
-    public unsafe void AddHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt)
+    public unsafe virtual void AddHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_QuickGadgetAction.AddHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -43,7 +43,7 @@ public partial class RSeqAct_QuickGadgetAction : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: GadgetFireNotify
     /// </summary>
-    public unsafe void GadgetFireNotify()
+    public unsafe virtual void GadgetFireNotify()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_QuickGadgetAction.GadgetFireNotify", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class RSeqAct_QuickGadgetAction : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: FireQuickGadget
     /// </summary>
-    public unsafe void FireQuickGadget()
+    public unsafe virtual void FireQuickGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_QuickGadgetAction.FireQuickGadget", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class RSeqAct_ArkhamKnightClash : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: LastFearTakedownEnded
     /// </summary>
-    public unsafe void LastFearTakedownEnded()
+    public unsafe virtual void LastFearTakedownEnded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ArkhamKnightClash.LastFearTakedownEnded", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RSeqAct_ArkhamKnightClash : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: FearTakedownStarted
     /// </summary>
-    public unsafe void FearTakedownStarted()
+    public unsafe virtual void FearTakedownStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ArkhamKnightClash.FearTakedownStarted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_ArkhamKnightClash : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ArkhamKnightClash.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -70,7 +70,7 @@ public partial class RSeqAct_ArkhamKnightClash : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ArkhamKnightClash.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

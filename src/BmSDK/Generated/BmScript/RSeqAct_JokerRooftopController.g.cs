@@ -47,7 +47,7 @@ public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_Joker
     /// <summary>
     /// Function: FindSpawnPoint
     /// </summary>
-    public unsafe BmSDK.BmScript.RJokerRooftopPoint FindSpawnPoint(bool bHightLightSpheres = default)
+    public unsafe virtual BmSDK.BmScript.RJokerRooftopPoint FindSpawnPoint(bool bHightLightSpheres = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_JokerRooftopController.FindSpawnPoint", true);
         byte* paramsPtr = stackalloc byte[128];
@@ -59,7 +59,7 @@ public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_Joker
     /// <summary>
     /// Function: SpawnRooftopJoker
     /// </summary>
-    public unsafe void SpawnRooftopJoker()
+    public unsafe override void SpawnRooftopJoker()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_JokerRooftopController.SpawnRooftopJoker", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -70,7 +70,7 @@ public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_Joker
     /// <summary>
     /// Function: GetSideStoryDialogue
     /// </summary>
-    public unsafe bool GetSideStoryDialogue()
+    public unsafe virtual bool GetSideStoryDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_JokerRooftopController.GetSideStoryDialogue", true);
         byte* paramsPtr = stackalloc byte[144];
@@ -81,7 +81,7 @@ public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_Joker
     /// <summary>
     /// Function: IsMissionFinished
     /// </summary>
-    public unsafe bool IsMissionFinished(BmSDK.BmGame.RPersistentData pData, int missionIndex)
+    public unsafe virtual bool IsMissionFinished(BmSDK.BmGame.RPersistentData pData, int missionIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_JokerRooftopController.IsMissionFinished", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -94,7 +94,7 @@ public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_Joker
     /// <summary>
     /// Function: GetNumConvForSideStory
     /// </summary>
-    public unsafe int GetNumConvForSideStory(int SideIdx)
+    public unsafe virtual int GetNumConvForSideStory(int SideIdx)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_JokerRooftopController.GetNumConvForSideStory", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -106,7 +106,7 @@ public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_Joker
     /// <summary>
     /// Function: GetSideStoryNameForIndex
     /// </summary>
-    public unsafe BmSDK.FString GetSideStoryNameForIndex(int SideIdx)
+    public unsafe virtual BmSDK.FString GetSideStoryNameForIndex(int SideIdx)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_JokerRooftopController.GetSideStoryNameForIndex", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -118,7 +118,7 @@ public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_Joker
     /// <summary>
     /// Function: GetTimeSinceUpdate
     /// </summary>
-    public unsafe float GetTimeSinceUpdate(BmSDK.BmGame.RPersistentData pData, int missionIndex)
+    public unsafe virtual float GetTimeSinceUpdate(BmSDK.BmGame.RPersistentData pData, int missionIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_JokerRooftopController.GetTimeSinceUpdate", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -131,7 +131,7 @@ public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_Joker
     /// <summary>
     /// Function: IsMissionEligibleForUpdateMovie
     /// </summary>
-    public unsafe bool IsMissionEligibleForUpdateMovie(BmSDK.BmGame.RPersistentData pData, int missionIndex)
+    public unsafe virtual bool IsMissionEligibleForUpdateMovie(BmSDK.BmGame.RPersistentData pData, int missionIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_JokerRooftopController.IsMissionEligibleForUpdateMovie", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -144,7 +144,7 @@ public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_Joker
     /// <summary>
     /// Function: GetNumValidSideStoryLines
     /// </summary>
-    public unsafe int GetNumValidSideStoryLines(float Perc, int StoryId)
+    public unsafe virtual int GetNumValidSideStoryLines(float Perc, int StoryId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_JokerRooftopController.GetNumValidSideStoryLines", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -157,7 +157,7 @@ public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_Joker
     /// <summary>
     /// Function: GetCh7Dialogue
     /// </summary>
-    public unsafe bool GetCh7Dialogue()
+    public unsafe virtual bool GetCh7Dialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_JokerRooftopController.GetCh7Dialogue", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -168,7 +168,7 @@ public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_Joker
     /// <summary>
     /// Function: GetChapterDialogue
     /// </summary>
-    public unsafe bool GetChapterDialogue()
+    public unsafe virtual bool GetChapterDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_JokerRooftopController.GetChapterDialogue", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -179,7 +179,7 @@ public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_Joker
     /// <summary>
     /// Function: GetNumConvForChapter
     /// </summary>
-    public unsafe int GetNumConvForChapter(int ChIdx)
+    public unsafe virtual int GetNumConvForChapter(int ChIdx)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_JokerRooftopController.GetNumConvForChapter", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -191,7 +191,7 @@ public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_Joker
     /// <summary>
     /// Function: GetAdjustedChapterNumber
     /// </summary>
-    public unsafe int GetAdjustedChapterNumber()
+    public unsafe virtual int GetAdjustedChapterNumber()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_JokerRooftopController.GetAdjustedChapterNumber", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -202,7 +202,7 @@ public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_Joker
     /// <summary>
     /// Function: NextDialogueIsChapter
     /// </summary>
-    public unsafe bool NextDialogueIsChapter()
+    public unsafe virtual bool NextDialogueIsChapter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_JokerRooftopController.NextDialogueIsChapter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -213,7 +213,7 @@ public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_Joker
     /// <summary>
     /// Function: PlayDialogue
     /// </summary>
-    public unsafe void PlayDialogue()
+    public unsafe override void PlayDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_JokerRooftopController.PlayDialogue", true);
         byte* paramsPtr = stackalloc byte[136];
@@ -224,7 +224,7 @@ public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_Joker
     /// <summary>
     /// Function: StartNextDialogue
     /// </summary>
-    public unsafe void StartNextDialogue()
+    public unsafe override void StartNextDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_JokerRooftopController.StartNextDialogue", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -235,7 +235,7 @@ public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_Joker
     /// <summary>
     /// Function: SpawnAllJokers
     /// </summary>
-    public unsafe void SpawnAllJokers()
+    public unsafe override void SpawnAllJokers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_JokerRooftopController.SpawnAllJokers", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -246,7 +246,7 @@ public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_Joker
     /// <summary>
     /// Function: GetJokerPointFromBehaviour
     /// </summary>
-    public unsafe BmSDK.BmGame.RJokerRooftopPointBase GetJokerPointFromBehaviour(BmSDK.BmGame.RBMBehaviour JokerBehav)
+    public unsafe override BmSDK.BmGame.RJokerRooftopPointBase GetJokerPointFromBehaviour(BmSDK.BmGame.RBMBehaviour JokerBehav)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_JokerRooftopController.GetJokerPointFromBehaviour", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -258,7 +258,7 @@ public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_Joker
     /// <summary>
     /// Function: DrawTestingSpheres
     /// </summary>
-    public unsafe void DrawTestingSpheres()
+    public unsafe override void DrawTestingSpheres()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_JokerRooftopController.DrawTestingSpheres", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -269,7 +269,7 @@ public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_Joker
     /// <summary>
     /// Function: JokerInView
     /// </summary>
-    public unsafe bool JokerInView(float DeltaTime)
+    public unsafe override bool JokerInView(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_JokerRooftopController.JokerInView", true);
         byte* paramsPtr = stackalloc byte[44];

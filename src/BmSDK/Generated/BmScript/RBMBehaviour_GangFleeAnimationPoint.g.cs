@@ -47,7 +47,7 @@ public partial class RBMBehaviour_GangFleeAnimationPoint : BmSDK.BmScript.RBMBeh
     /// <summary>
     /// Function: SetRunVariants
     /// </summary>
-    public unsafe void SetRunVariants(BmSDK.BmGame.RBMAIAction_RiotRunBase MoveAction)
+    public unsafe override void SetRunVariants(BmSDK.BmGame.RBMAIAction_RiotRunBase MoveAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangFleeAnimationPoint.SetRunVariants", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_GangFleeAnimationPoint : BmSDK.BmScript.RBMBeh
     /// <summary>
     /// Function: FleePointStillValid
     /// </summary>
-    public unsafe bool FleePointStillValid()
+    public unsafe virtual bool FleePointStillValid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangFleeAnimationPoint.FleePointStillValid", true);
         byte* paramsPtr = stackalloc byte[16];

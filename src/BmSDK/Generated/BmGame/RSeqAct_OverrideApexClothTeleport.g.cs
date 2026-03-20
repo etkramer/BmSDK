@@ -47,7 +47,7 @@ public partial class RSeqAct_OverrideApexClothTeleport : BmSDK.Engine.SequenceAc
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_OverrideApexClothTeleport.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

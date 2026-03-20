@@ -71,7 +71,7 @@ public partial class RPawnCrowd : BmSDK.BmGame.RBMPawnAI, BmSDK.IGameObject
     /// <summary>
     /// Function: CreateWeaponConfigUnarmed
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfigUnarmed(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfigUnarmed(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnCrowd.CreateWeaponConfigUnarmed", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -83,7 +83,7 @@ public partial class RPawnCrowd : BmSDK.BmGame.RBMPawnAI, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnCrowd.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RPawnCrowd : BmSDK.BmGame.RBMPawnAI, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnCrowd.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RPawnCrowd : BmSDK.BmGame.RBMPawnAI, BmSDK.IGameObject
     /// <summary>
     /// Function: CreateWeapon
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMWeapon CreateWeapon()
+    public unsafe override BmSDK.BmGame.RBMWeapon CreateWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnCrowd.CreateWeapon", true);
         byte* paramsPtr = stackalloc byte[8];

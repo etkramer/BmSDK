@@ -71,7 +71,7 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// Function: SuppressDetectiveModeVisibilityThroughWalls
     /// </summary>
-    public unsafe void SuppressDetectiveModeVisibilityThroughWalls(bool bSuppress)
+    public unsafe virtual void SuppressDetectiveModeVisibilityThroughWalls(bool bSuppress)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainMilitiaCaptain.SuppressDetectiveModeVisibilityThroughWalls", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// Function: UnregisterDMThroughWallsSuppressable
     /// </summary>
-    public unsafe void UnregisterDMThroughWallsSuppressable()
+    public unsafe virtual void UnregisterDMThroughWallsSuppressable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainMilitiaCaptain.UnregisterDMThroughWallsSuppressable", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// Function: RegisterDMThroughWallsSuppressable
     /// </summary>
-    public unsafe void RegisterDMThroughWallsSuppressable()
+    public unsafe virtual void RegisterDMThroughWallsSuppressable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainMilitiaCaptain.RegisterDMThroughWallsSuppressable", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainMilitiaCaptain.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainMilitiaCaptain.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainMilitiaCaptain.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// Function: PostInitCharacter
     /// </summary>
-    public unsafe void PostInitCharacter()
+    public unsafe override void PostInitCharacter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainMilitiaCaptain.PostInitCharacter", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -149,7 +149,7 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// Function: Died
     /// </summary>
-    public unsafe bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe override bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainMilitiaCaptain.Died", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -163,7 +163,7 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// Function: Mine_Controller_Crushed
     /// </summary>
-    public unsafe void Mine_Controller_Crushed()
+    public unsafe virtual void Mine_Controller_Crushed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainMilitiaCaptain.Mine_Controller_Crushed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -174,7 +174,7 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// Function: HideMineController
     /// </summary>
-    public unsafe void HideMineController()
+    public unsafe virtual void HideMineController()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainMilitiaCaptain.HideMineController", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -185,7 +185,7 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// Function: AttachProps
     /// </summary>
-    public unsafe void AttachProps()
+    public unsafe override void AttachProps()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainMilitiaCaptain.AttachProps", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -196,7 +196,7 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// Function: AddPawnProps
     /// </summary>
-    public unsafe void AddPawnProps()
+    public unsafe override void AddPawnProps()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainMilitiaCaptain.AddPawnProps", true);
         byte* paramsPtr = stackalloc byte[184];
@@ -207,7 +207,7 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe override BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainMilitiaCaptain.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -219,7 +219,7 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// Function: GetRange
     /// </summary>
-    public unsafe float GetRange()
+    public unsafe override float GetRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainMilitiaCaptain.GetRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -230,7 +230,7 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainMilitiaCaptain.Interact", true);
         byte* paramsPtr = stackalloc byte[172];
@@ -242,7 +242,7 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainMilitiaCaptain.IsActive", true);
         byte* paramsPtr = stackalloc byte[21];
@@ -254,7 +254,7 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// Function: ActiveCombatantsIncludesSpawnedThug
     /// </summary>
-    public unsafe bool ActiveCombatantsIncludesSpawnedThug()
+    public unsafe virtual bool ActiveCombatantsIncludesSpawnedThug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainMilitiaCaptain.ActiveCombatantsIncludesSpawnedThug", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -265,7 +265,7 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// Function: GetLocationOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLocationOffset()
+    public unsafe override System.Numerics.Vector3 GetLocationOffset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainMilitiaCaptain.GetLocationOffset", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -276,7 +276,7 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// Function: StopScreenBeep
     /// </summary>
-    public unsafe void StopScreenBeep()
+    public unsafe virtual void StopScreenBeep()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainMilitiaCaptain.StopScreenBeep", true);
         byte* paramsPtr = stackalloc byte[0];

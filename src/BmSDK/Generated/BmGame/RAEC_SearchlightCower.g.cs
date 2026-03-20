@@ -71,7 +71,7 @@ public partial class RAEC_SearchlightCower : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: ThugIsUnderLight
     /// </summary>
-    public unsafe void ThugIsUnderLight(BmSDK.BmGame.RBMAIController C)
+    public unsafe virtual void ThugIsUnderLight(BmSDK.BmGame.RBMAIController C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchlightCower.ThugIsUnderLight", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RAEC_SearchlightCower : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchlightCower.Tick", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -95,7 +95,7 @@ public partial class RAEC_SearchlightCower : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchlightCower.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -107,7 +107,7 @@ public partial class RAEC_SearchlightCower : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: OnAssign
     /// </summary>
-    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewMember)
+    public unsafe override void OnAssign(BmSDK.BmGame.RBMAIController NewMember)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchlightCower.OnAssign", true);
         byte* paramsPtr = stackalloc byte[16];

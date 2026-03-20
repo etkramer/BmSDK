@@ -71,7 +71,7 @@ public partial class RBatmobileScrewBase : BmSDK.Engine.InterpActor, BmSDK.IGame
     /// <summary>
     /// Function: TickWheelAnim
     /// </summary>
-    public unsafe void TickWheelAnim(float DeltaTime)
+    public unsafe virtual void TickWheelAnim(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileScrewBase.TickWheelAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RBatmobileScrewBase : BmSDK.Engine.InterpActor, BmSDK.IGame
     /// <summary>
     /// Function: TriggerSuccessfullyInteracted
     /// </summary>
-    public unsafe void TriggerSuccessfullyInteracted(BmSDK.Engine.Actor _Instigator)
+    public unsafe virtual void TriggerSuccessfullyInteracted(BmSDK.Engine.Actor _Instigator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileScrewBase.TriggerSuccessfullyInteracted", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RBatmobileScrewBase : BmSDK.Engine.InterpActor, BmSDK.IGame
     /// <summary>
     /// Function: TriggerFailedToInteract
     /// </summary>
-    public unsafe void TriggerFailedToInteract(BmSDK.Engine.Actor _Instigator)
+    public unsafe virtual void TriggerFailedToInteract(BmSDK.Engine.Actor _Instigator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileScrewBase.TriggerFailedToInteract", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -107,7 +107,7 @@ public partial class RBatmobileScrewBase : BmSDK.Engine.InterpActor, BmSDK.IGame
     /// <summary>
     /// Function: TriggerUsed
     /// </summary>
-    public unsafe void TriggerUsed(BmSDK.Engine.Actor _Instigator)
+    public unsafe virtual void TriggerUsed(BmSDK.Engine.Actor _Instigator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileScrewBase.TriggerUsed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -119,7 +119,7 @@ public partial class RBatmobileScrewBase : BmSDK.Engine.InterpActor, BmSDK.IGame
     /// <summary>
     /// Function: StopRingSpin
     /// </summary>
-    public unsafe void StopRingSpin()
+    public unsafe virtual void StopRingSpin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileScrewBase.StopRingSpin", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class RBatmobileScrewBase : BmSDK.Engine.InterpActor, BmSDK.IGame
     /// <summary>
     /// Function: OnStopped
     /// </summary>
-    public unsafe void OnStopped()
+    public unsafe virtual void OnStopped()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileScrewBase.OnStopped", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -141,7 +141,7 @@ public partial class RBatmobileScrewBase : BmSDK.Engine.InterpActor, BmSDK.IGame
     /// <summary>
     /// Function: GetRingSpinSpeed
     /// </summary>
-    public unsafe float GetRingSpinSpeed()
+    public unsafe virtual float GetRingSpinSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileScrewBase.GetRingSpinSpeed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -152,7 +152,7 @@ public partial class RBatmobileScrewBase : BmSDK.Engine.InterpActor, BmSDK.IGame
     /// <summary>
     /// Function: GetRingSurfaceSpeed
     /// </summary>
-    public unsafe float GetRingSurfaceSpeed()
+    public unsafe virtual float GetRingSurfaceSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileScrewBase.GetRingSurfaceSpeed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -163,7 +163,7 @@ public partial class RBatmobileScrewBase : BmSDK.Engine.InterpActor, BmSDK.IGame
     /// <summary>
     /// Function: GetRingSurfaceVelocityAtPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetRingSurfaceVelocityAtPos(System.Numerics.Vector3 pos)
+    public unsafe virtual System.Numerics.Vector3 GetRingSurfaceVelocityAtPos(System.Numerics.Vector3 pos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileScrewBase.GetRingSurfaceVelocityAtPos", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -175,7 +175,7 @@ public partial class RBatmobileScrewBase : BmSDK.Engine.InterpActor, BmSDK.IGame
     /// <summary>
     /// Function: RestoreSavedYaw
     /// </summary>
-    public unsafe void RestoreSavedYaw()
+    public unsafe virtual void RestoreSavedYaw()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileScrewBase.RestoreSavedYaw", true);
         byte* paramsPtr = stackalloc byte[20];

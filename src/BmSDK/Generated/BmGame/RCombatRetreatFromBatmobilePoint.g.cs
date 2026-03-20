@@ -71,7 +71,7 @@ public partial class RCombatRetreatFromBatmobilePoint : BmSDK.BmGame.RDummyTarge
     /// <summary>
     /// Function: UnlockForPawn
     /// </summary>
-    public unsafe void UnlockForPawn(BmSDK.BmGame.RPawnVillain Thug)
+    public unsafe virtual void UnlockForPawn(BmSDK.BmGame.RPawnVillain Thug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatRetreatFromBatmobilePoint.UnlockForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RCombatRetreatFromBatmobilePoint : BmSDK.BmGame.RDummyTarge
     /// <summary>
     /// Function: LockForPawn
     /// </summary>
-    public unsafe void LockForPawn(BmSDK.BmGame.RPawnVillain Thug)
+    public unsafe virtual void LockForPawn(BmSDK.BmGame.RPawnVillain Thug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatRetreatFromBatmobilePoint.LockForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RCombatRetreatFromBatmobilePoint : BmSDK.BmGame.RDummyTarge
     /// <summary>
     /// Function: GetPylon
     /// </summary>
-    public unsafe BmSDK.Engine.Pylon GetPylon()
+    public unsafe virtual BmSDK.Engine.Pylon GetPylon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatRetreatFromBatmobilePoint.GetPylon", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RCombatRetreatFromBatmobilePoint : BmSDK.BmGame.RDummyTarge
     /// <summary>
     /// Function: SetPylon
     /// </summary>
-    public unsafe void SetPylon()
+    public unsafe virtual void SetPylon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatRetreatFromBatmobilePoint.SetPylon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RCombatRetreatFromBatmobilePoint : BmSDK.BmGame.RDummyTarge
     /// <summary>
     /// Function: CanBeUsedBy
     /// </summary>
-    public unsafe bool CanBeUsedBy(BmSDK.BmGame.RPawnVillain Thug)
+    public unsafe virtual bool CanBeUsedBy(BmSDK.BmGame.RPawnVillain Thug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatRetreatFromBatmobilePoint.CanBeUsedBy", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -129,7 +129,7 @@ public partial class RCombatRetreatFromBatmobilePoint : BmSDK.BmGame.RDummyTarge
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatRetreatFromBatmobilePoint.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class RCombatRetreatFromBatmobilePoint : BmSDK.BmGame.RDummyTarge
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatRetreatFromBatmobilePoint.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -151,7 +151,7 @@ public partial class RCombatRetreatFromBatmobilePoint : BmSDK.BmGame.RDummyTarge
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatRetreatFromBatmobilePoint.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

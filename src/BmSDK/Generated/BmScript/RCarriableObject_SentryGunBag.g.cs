@@ -71,7 +71,7 @@ public partial class RCarriableObject_SentryGunBag : BmSDK.BmGame.RCarriableObje
     /// <summary>
     /// Function: RemoveDisruptorInteraction
     /// </summary>
-    public unsafe void RemoveDisruptorInteraction()
+    public unsafe override void RemoveDisruptorInteraction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCarriableObject_SentryGunBag.RemoveDisruptorInteraction", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCarriableObject_SentryGunBag : BmSDK.BmGame.RCarriableObje
     /// <summary>
     /// Function: SetXrayMaterials
     /// </summary>
-    public unsafe void SetXrayMaterials()
+    public unsafe virtual void SetXrayMaterials()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCarriableObject_SentryGunBag.SetXrayMaterials", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RCarriableObject_SentryGunBag : BmSDK.BmGame.RCarriableObje
     /// <summary>
     /// Function: HitByDisruptorGadgetCharge
     /// </summary>
-    public unsafe bool HitByDisruptorGadgetCharge()
+    public unsafe override bool HitByDisruptorGadgetCharge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCarriableObject_SentryGunBag.HitByDisruptorGadgetCharge", true);
         byte* paramsPtr = stackalloc byte[8];

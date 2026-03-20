@@ -31,7 +31,7 @@ public partial class AnimNodeBlendBase : BmSDK.Engine.AnimNode, BmSDK.IGameObjec
     /// <summary>
     /// Function: ReplayAnim
     /// </summary>
-    public unsafe void ReplayAnim()
+    public unsafe override void ReplayAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeBlendBase.ReplayAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -49,7 +49,7 @@ public partial class AnimNodeBlendBase : BmSDK.Engine.AnimNode, BmSDK.IGameObjec
     /// <summary>
     /// Function: StopAnim
     /// </summary>
-    public unsafe void StopAnim()
+    public unsafe override void StopAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeBlendBase.StopAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -67,7 +67,7 @@ public partial class AnimNodeBlendBase : BmSDK.Engine.AnimNode, BmSDK.IGameObjec
     /// <summary>
     /// Function: PlayAnim
     /// </summary>
-    public unsafe void PlayAnim(bool bLoop = default, float Rate = default, float StartTime = default)
+    public unsafe override void PlayAnim(bool bLoop = default, float Rate = default, float StartTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeBlendBase.PlayAnim", true);
         byte* paramsPtr = stackalloc byte[12];

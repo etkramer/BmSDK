@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_DoubleHead : BmSDK.BmGame.RStealthTak
     /// <summary>
     /// Function: FinishAttackAttacker
     /// </summary>
-    public unsafe void FinishAttackAttacker()
+    public unsafe override void FinishAttackAttacker()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleHead.FinishAttackAttacker", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RStealthTakeDownStage_DoubleHead : BmSDK.BmGame.RStealthTak
     /// <summary>
     /// Function: End
     /// </summary>
-    public unsafe void End(bool bLastStage = default)
+    public unsafe override void End(bool bLastStage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleHead.End", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RStealthTakeDownStage_DoubleHead : BmSDK.BmGame.RStealthTak
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleHead.Begin", true);
         byte* paramsPtr = stackalloc byte[160];
@@ -105,7 +105,7 @@ public partial class RStealthTakeDownStage_DoubleHead : BmSDK.BmGame.RStealthTak
     /// <summary>
     /// Function: OverrideChosenAnim
     /// </summary>
-    public unsafe void OverrideChosenAnim(out int Anim)
+    public unsafe override void OverrideChosenAnim(out int Anim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleHead.OverrideChosenAnim", true);
         byte* paramsPtr = stackalloc byte[104];
@@ -117,7 +117,7 @@ public partial class RStealthTakeDownStage_DoubleHead : BmSDK.BmGame.RStealthTak
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleHead.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[48];

@@ -71,7 +71,7 @@ public partial class RVantagePointMovementCamera : BmSDK.BmGame.RCameraActor, Bm
     /// <summary>
     /// Function: CalculateControlPoints
     /// </summary>
-    public unsafe void CalculateControlPoints()
+    public unsafe virtual void CalculateControlPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantagePointMovementCamera.CalculateControlPoints", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -82,7 +82,7 @@ public partial class RVantagePointMovementCamera : BmSDK.BmGame.RCameraActor, Bm
     /// <summary>
     /// Function: GetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetPosition(float Proportion)
+    public unsafe virtual System.Numerics.Vector3 GetPosition(float Proportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantagePointMovementCamera.GetPosition", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -94,7 +94,7 @@ public partial class RVantagePointMovementCamera : BmSDK.BmGame.RCameraActor, Bm
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantagePointMovementCamera.Tick", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -106,7 +106,7 @@ public partial class RVantagePointMovementCamera : BmSDK.BmGame.RCameraActor, Bm
     /// <summary>
     /// Function: BeginMovement
     /// </summary>
-    public unsafe void BeginMovement()
+    public unsafe virtual void BeginMovement()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantagePointMovementCamera.BeginMovement", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RVantagePointMovementCamera : BmSDK.BmGame.RCameraActor, Bm
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.BmGame.RPlayerController PC, BmSDK.BmGame.RHidePoint DestHidePoint)
+    public unsafe virtual void Init(BmSDK.BmGame.RPlayerController PC, BmSDK.BmGame.RHidePoint DestHidePoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantagePointMovementCamera.Init", true);
         byte* paramsPtr = stackalloc byte[24];

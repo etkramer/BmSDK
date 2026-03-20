@@ -36,7 +36,7 @@ public partial class RHudModuleForensicBeaconTracking : BmSDK.BmGame.RHudModule,
     /// <summary>
     /// Function: DoOutro
     /// </summary>
-    public unsafe void DoOutro()
+    public unsafe virtual void DoOutro()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleForensicBeaconTracking.DoOutro", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RHudModuleForensicBeaconTracking : BmSDK.BmGame.RHudModule,
     /// <summary>
     /// Function: SetLockon
     /// </summary>
-    public unsafe void SetLockon(int DistanceMeters, float AngleLockonProportion)
+    public unsafe virtual void SetLockon(int DistanceMeters, float AngleLockonProportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleForensicBeaconTracking.SetLockon", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -60,7 +60,7 @@ public partial class RHudModuleForensicBeaconTracking : BmSDK.BmGame.RHudModule,
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleForensicBeaconTracking.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -71,7 +71,7 @@ public partial class RHudModuleForensicBeaconTracking : BmSDK.BmGame.RHudModule,
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleForensicBeaconTracking.Init", true);
         byte* paramsPtr = stackalloc byte[44];

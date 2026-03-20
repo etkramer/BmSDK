@@ -36,7 +36,7 @@ public partial class RVehicleBehaviour_ChasingCop : BmSDK.BmGame.RVehicleBehavio
     /// <summary>
     /// Function: NotifyBumpedVehicleNPC
     /// </summary>
-    public unsafe void NotifyBumpedVehicleNPC(BmSDK.BmGame.RVehicleNPC Other, System.Numerics.Vector3 ContactPos, float Speed)
+    public unsafe override void NotifyBumpedVehicleNPC(BmSDK.BmGame.RVehicleNPC Other, System.Numerics.Vector3 ContactPos, float Speed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_ChasingCop.NotifyBumpedVehicleNPC", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -50,7 +50,7 @@ public partial class RVehicleBehaviour_ChasingCop : BmSDK.BmGame.RVehicleBehavio
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_ChasingCop.Tick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -62,7 +62,7 @@ public partial class RVehicleBehaviour_ChasingCop : BmSDK.BmGame.RVehicleBehavio
     /// <summary>
     /// Function: OnFollowGiveUp
     /// </summary>
-    public unsafe void OnFollowGiveUp()
+    public unsafe override void OnFollowGiveUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_ChasingCop.OnFollowGiveUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -73,7 +73,7 @@ public partial class RVehicleBehaviour_ChasingCop : BmSDK.BmGame.RVehicleBehavio
     /// <summary>
     /// Function: OnFollowVehicleDied
     /// </summary>
-    public unsafe void OnFollowVehicleDied()
+    public unsafe override void OnFollowVehicleDied()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_ChasingCop.OnFollowVehicleDied", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -84,7 +84,7 @@ public partial class RVehicleBehaviour_ChasingCop : BmSDK.BmGame.RVehicleBehavio
     /// <summary>
     /// Function: GetDesiredFollowOffsetBehind
     /// </summary>
-    public unsafe float GetDesiredFollowOffsetBehind(int FollowerIndex)
+    public unsafe override float GetDesiredFollowOffsetBehind(int FollowerIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_ChasingCop.GetDesiredFollowOffsetBehind", true);
         byte* paramsPtr = stackalloc byte[8];

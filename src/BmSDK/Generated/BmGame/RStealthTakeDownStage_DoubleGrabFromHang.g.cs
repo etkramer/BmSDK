@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_DoubleGrabFromHang : BmSDK.BmGame.RSt
     /// <summary>
     /// Function: GetStageAnimEx
     /// </summary>
-    public unsafe int GetStageAnimEx()
+    public unsafe virtual int GetStageAnimEx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleGrabFromHang.GetStageAnimEx", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class RStealthTakeDownStage_DoubleGrabFromHang : BmSDK.BmGame.RSt
     /// <summary>
     /// Function: PlaySpecialCameraAnim
     /// </summary>
-    public unsafe bool PlaySpecialCameraAnim(BmSDK.FName AnimName, bool bCamMirrored, bool CameraCollision = default, float FOV = default, BmSDK.Engine.AnimSet CustomAnimSet = default, float BlendTime = default, bool bBlendCameraBackToPlayerCameraWhenFinished = default, bool bUseBatmanAsCameraCollisionTargetInsteadOfVictim = default)
+    public unsafe override bool PlaySpecialCameraAnim(BmSDK.FName AnimName, bool bCamMirrored, bool CameraCollision = default, float FOV = default, BmSDK.Engine.AnimSet CustomAnimSet = default, float BlendTime = default, bool bBlendCameraBackToPlayerCameraWhenFinished = default, bool bUseBatmanAsCameraCollisionTargetInsteadOfVictim = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleGrabFromHang.PlaySpecialCameraAnim", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -101,7 +101,7 @@ public partial class RStealthTakeDownStage_DoubleGrabFromHang : BmSDK.BmGame.RSt
     /// <summary>
     /// Function: AttackerDamaged
     /// </summary>
-    public unsafe void AttackerDamaged()
+    public unsafe override void AttackerDamaged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleGrabFromHang.AttackerDamaged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -112,7 +112,7 @@ public partial class RStealthTakeDownStage_DoubleGrabFromHang : BmSDK.BmGame.RSt
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleGrabFromHang.Begin", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -123,7 +123,7 @@ public partial class RStealthTakeDownStage_DoubleGrabFromHang : BmSDK.BmGame.RSt
     /// <summary>
     /// Function: CalcRopeLength
     /// </summary>
-    public unsafe void CalcRopeLength()
+    public unsafe virtual void CalcRopeLength()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleGrabFromHang.CalcRopeLength", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -134,7 +134,7 @@ public partial class RStealthTakeDownStage_DoubleGrabFromHang : BmSDK.BmGame.RSt
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleGrabFromHang.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[32];

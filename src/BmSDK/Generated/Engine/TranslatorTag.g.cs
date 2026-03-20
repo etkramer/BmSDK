@@ -36,7 +36,7 @@ public partial class TranslatorTag : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Translate
     /// </summary>
-    public unsafe BmSDK.FString Translate(BmSDK.FString InArgument)
+    public unsafe virtual BmSDK.FString Translate(BmSDK.FString InArgument)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TranslatorTag.Translate", true);
         byte* paramsPtr = stackalloc byte[32];

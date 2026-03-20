@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_StorySynopsis : BmSDK.BmGame.RGFxMovieUI, BmSDK
     /// <summary>
     /// Function: OnLoadedTexture
     /// </summary>
-    public unsafe void OnLoadedTexture(BmSDK.FString sCallback, BmSDK.FString sPackage, BmSDK.Engine.Texture2D pTexture)
+    public unsafe override void OnLoadedTexture(BmSDK.FString sCallback, BmSDK.FString sPackage, BmSDK.Engine.Texture2D pTexture)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_StorySynopsis.OnLoadedTexture", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -50,7 +50,7 @@ public partial class RGFxMovieUI_StorySynopsis : BmSDK.BmGame.RGFxMovieUI, BmSDK
     /// <summary>
     /// Function: XI_LoadSynopsisPackageSF
     /// </summary>
-    public unsafe bool XI_LoadSynopsisPackageSF(BmSDK.FString sPackage, BmSDK.FString sCallback)
+    public unsafe virtual bool XI_LoadSynopsisPackageSF(BmSDK.FString sPackage, BmSDK.FString sCallback)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_StorySynopsis.XI_LoadSynopsisPackageSF", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -70,7 +70,7 @@ public partial class RGFxMovieUI_StorySynopsis : BmSDK.BmGame.RGFxMovieUI, BmSDK
     /// <summary>
     /// Function: CancelSynopsisPackagesSF
     /// </summary>
-    public unsafe void CancelSynopsisPackagesSF()
+    public unsafe virtual void CancelSynopsisPackagesSF()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_StorySynopsis.CancelSynopsisPackagesSF", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -88,7 +88,7 @@ public partial class RGFxMovieUI_StorySynopsis : BmSDK.BmGame.RGFxMovieUI, BmSDK
     /// <summary>
     /// Function: XI_OnOut
     /// </summary>
-    public unsafe void XI_OnOut()
+    public unsafe override void XI_OnOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_StorySynopsis.XI_OnOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -99,7 +99,7 @@ public partial class RGFxMovieUI_StorySynopsis : BmSDK.BmGame.RGFxMovieUI, BmSDK
     /// <summary>
     /// Function: XI_OnBack
     /// </summary>
-    public unsafe void XI_OnBack()
+    public unsafe override void XI_OnBack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_StorySynopsis.XI_OnBack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -110,7 +110,7 @@ public partial class RGFxMovieUI_StorySynopsis : BmSDK.BmGame.RGFxMovieUI, BmSDK
     /// <summary>
     /// Function: XI_RequestData
     /// </summary>
-    public unsafe void XI_RequestData(BmSDK.FString TargetPath)
+    public unsafe virtual void XI_RequestData(BmSDK.FString TargetPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_StorySynopsis.XI_RequestData", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -122,7 +122,7 @@ public partial class RGFxMovieUI_StorySynopsis : BmSDK.BmGame.RGFxMovieUI, BmSDK
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_StorySynopsis.Init", true);
         byte* paramsPtr = stackalloc byte[8];

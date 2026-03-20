@@ -71,7 +71,7 @@ public partial class RBMAIAction_AbandonDroneRemote : BmSDK.BmGame.RBMAIAction, 
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_AbandonDroneRemote.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_AbandonDroneRemote : BmSDK.BmGame.RBMAIAction, 
     /// <summary>
     /// Function: CreateThrownRemote
     /// </summary>
-    public unsafe void CreateThrownRemote()
+    public unsafe virtual void CreateThrownRemote()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_AbandonDroneRemote.CreateThrownRemote", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_AbandonDroneRemote : BmSDK.BmGame.RBMAIAction, 
     /// <summary>
     /// Function: StartAnim
     /// </summary>
-    public unsafe void StartAnim()
+    public unsafe virtual void StartAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_AbandonDroneRemote.StartAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_AbandonDroneRemote : BmSDK.BmGame.RBMAIAction, 
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_AbandonDroneRemote.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RBMAIAction_AbandonDroneRemote : BmSDK.BmGame.RBMAIAction, 
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_AbandonDroneRemote.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

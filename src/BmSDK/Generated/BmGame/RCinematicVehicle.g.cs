@@ -71,7 +71,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: GetAkAudible
     /// </summary>
-    public unsafe BmSDK.Engine.RAkAudible GetAkAudible(bool allowCreate = default)
+    public unsafe override BmSDK.Engine.RAkAudible GetAkAudible(bool allowCreate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicVehicle.GetAkAudible", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -90,7 +90,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: InterpolationFinished
     /// </summary>
-    public unsafe void InterpolationFinished(BmSDK.Engine.SeqAct_Interp InterpAction)
+    public unsafe override void InterpolationFinished(BmSDK.Engine.SeqAct_Interp InterpAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicVehicle.InterpolationFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -102,7 +102,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: InterpolationStarted
     /// </summary>
-    public unsafe void InterpolationStarted(BmSDK.Engine.SeqAct_Interp InterpAction, BmSDK.Engine.InterpGroupInst GroupInst)
+    public unsafe override void InterpolationStarted(BmSDK.Engine.SeqAct_Interp InterpAction, BmSDK.Engine.InterpGroupInst GroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicVehicle.InterpolationStarted", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -115,7 +115,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: FinishAnimControl
     /// </summary>
-    public unsafe void FinishAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void FinishAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicVehicle.FinishAnimControl", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -128,7 +128,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: BlendOutAnimControl
     /// </summary>
-    public unsafe void BlendOutAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst, float BlendOutDuration)
+    public unsafe override void BlendOutAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst, float BlendOutDuration)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicVehicle.BlendOutAnimControl", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -142,7 +142,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: SetAnimPosition
     /// </summary>
-    public unsafe void SetAnimPosition(BmSDK.Engine.InterpGroupInst InterpGroupInst, BmSDK.FName SlotName, int ChannelIndex, BmSDK.FName InAnimSeqName, float InPosition, bool bFireNotifies, bool bLooping, bool bEnableRootMotion)
+    public unsafe override void SetAnimPosition(BmSDK.Engine.InterpGroupInst InterpGroupInst, BmSDK.FName SlotName, int ChannelIndex, BmSDK.FName InAnimSeqName, float InPosition, bool bFireNotifies, bool bLooping, bool bEnableRootMotion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicVehicle.SetAnimPosition", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -161,7 +161,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: BeginAnimControl
     /// </summary>
-    public unsafe void BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicVehicle.BeginAnimControl", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -174,7 +174,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: BeginAnimControlOnProxy
     /// </summary>
-    public unsafe void BeginAnimControlOnProxy()
+    public unsafe virtual void BeginAnimControlOnProxy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicVehicle.BeginAnimControlOnProxy", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -185,7 +185,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: SetupCustomPhysics
     /// </summary>
-    public unsafe void SetupCustomPhysics()
+    public unsafe virtual void SetupCustomPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicVehicle.SetupCustomPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -196,7 +196,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: EndMatineeControl
     /// </summary>
-    public unsafe void EndMatineeControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void EndMatineeControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicVehicle.EndMatineeControl", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -209,7 +209,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: BeginMatineeControl
     /// </summary>
-    public unsafe void BeginMatineeControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void BeginMatineeControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicVehicle.BeginMatineeControl", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -222,7 +222,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicVehicle.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -233,7 +233,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: SetHidden
     /// </summary>
-    public unsafe void SetHidden(bool bNewHidden)
+    public unsafe override void SetHidden(bool bNewHidden)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicVehicle.SetHidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -252,7 +252,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: SetNoProxyActor
     /// </summary>
-    public unsafe void SetNoProxyActor()
+    public unsafe virtual void SetNoProxyActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicVehicle.SetNoProxyActor", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -263,7 +263,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: SetProxyingActor
     /// </summary>
-    public unsafe void SetProxyingActor(BmSDK.Engine.Actor Other)
+    public unsafe virtual void SetProxyingActor(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicVehicle.SetProxyingActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -275,7 +275,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: HasProxyErrors
     /// </summary>
-    public unsafe bool HasProxyErrors()
+    public unsafe virtual bool HasProxyErrors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicVehicle.HasProxyErrors", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -286,7 +286,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: SetMyComponentsHidden
     /// </summary>
-    public unsafe void SetMyComponentsHidden(bool bHide)
+    public unsafe virtual void SetMyComponentsHidden(bool bHide)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicVehicle.SetMyComponentsHidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -298,7 +298,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: UpdateFakeWheelRotation
     /// </summary>
-    public unsafe void UpdateFakeWheelRotation()
+    public unsafe virtual void UpdateFakeWheelRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicVehicle.UpdateFakeWheelRotation", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -316,7 +316,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: Teleport
     /// </summary>
-    public unsafe void Teleport()
+    public unsafe virtual void Teleport()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicVehicle.Teleport", true);
         byte* paramsPtr = stackalloc byte[0];

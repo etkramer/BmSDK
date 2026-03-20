@@ -71,7 +71,7 @@ public partial class RAEC_RedHood_Base : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: HandleBarkEventPlayed
     /// </summary>
-    public unsafe void HandleBarkEventPlayed(BmSDK.FName EventVal)
+    public unsafe virtual void HandleBarkEventPlayed(BmSDK.FName EventVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_RedHood_Base.HandleBarkEventPlayed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RAEC_RedHood_Base : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: GetSearchChatBark
     /// </summary>
-    public unsafe void GetSearchChatBark(out BmSDK.BmGame.RBarkConvo SearchConvo, out float Score)
+    public unsafe virtual void GetSearchChatBark(out BmSDK.BmGame.RBarkConvo SearchConvo, out float Score)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_RedHood_Base.GetSearchChatBark", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -96,7 +96,7 @@ public partial class RAEC_RedHood_Base : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: IsDownToLastThugsAndRedHoodIsGone
     /// </summary>
-    public unsafe bool IsDownToLastThugsAndRedHoodIsGone()
+    public unsafe virtual bool IsDownToLastThugsAndRedHoodIsGone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_RedHood_Base.IsDownToLastThugsAndRedHoodIsGone", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -107,7 +107,7 @@ public partial class RAEC_RedHood_Base : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: PlayerKickIsIncoming
     /// </summary>
-    public unsafe bool PlayerKickIsIncoming()
+    public unsafe virtual bool PlayerKickIsIncoming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_RedHood_Base.PlayerKickIsIncoming", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -118,7 +118,7 @@ public partial class RAEC_RedHood_Base : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: IsInPlay
     /// </summary>
-    public unsafe bool IsInPlay()
+    public unsafe virtual bool IsInPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_RedHood_Base.IsInPlay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -129,7 +129,7 @@ public partial class RAEC_RedHood_Base : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: DrawVolState
     /// </summary>
-    public unsafe void DrawVolState()
+    public unsafe virtual void DrawVolState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_RedHood_Base.DrawVolState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class RAEC_RedHood_Base : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: KickedOffVantageToFloor
     /// </summary>
-    public unsafe void KickedOffVantageToFloor()
+    public unsafe virtual void KickedOffVantageToFloor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_RedHood_Base.KickedOffVantageToFloor", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -151,7 +151,7 @@ public partial class RAEC_RedHood_Base : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: KickedOffVantage
     /// </summary>
-    public unsafe void KickedOffVantage()
+    public unsafe virtual void KickedOffVantage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_RedHood_Base.KickedOffVantage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -162,7 +162,7 @@ public partial class RAEC_RedHood_Base : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: NotifyPlayerGrapplingUp
     /// </summary>
-    public unsafe void NotifyPlayerGrapplingUp()
+    public unsafe virtual void NotifyPlayerGrapplingUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_RedHood_Base.NotifyPlayerGrapplingUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -173,7 +173,7 @@ public partial class RAEC_RedHood_Base : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: MoveRedhoodToSafety
     /// </summary>
-    public unsafe void MoveRedhoodToSafety()
+    public unsafe virtual void MoveRedhoodToSafety()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_RedHood_Base.MoveRedhoodToSafety", true);
         byte* paramsPtr = stackalloc byte[0];

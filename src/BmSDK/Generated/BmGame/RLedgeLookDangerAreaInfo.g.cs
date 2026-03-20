@@ -71,7 +71,7 @@ public partial class RLedgeLookDangerAreaInfo : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: DrawDebugVis
     /// </summary>
-    public unsafe void DrawDebugVis()
+    public unsafe virtual void DrawDebugVis()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLedgeLookDangerAreaInfo.DrawDebugVis", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RLedgeLookDangerAreaInfo : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: GetClosestPointOnLineSegToLedge
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetClosestPointOnLineSegToLedge(System.Numerics.Vector3 LineStart, System.Numerics.Vector3 LineEnd, out float bestDist)
+    public unsafe virtual System.Numerics.Vector3 GetClosestPointOnLineSegToLedge(System.Numerics.Vector3 LineStart, System.Numerics.Vector3 LineEnd, out float bestDist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLedgeLookDangerAreaInfo.GetClosestPointOnLineSegToLedge", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -96,7 +96,7 @@ public partial class RLedgeLookDangerAreaInfo : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: GetClosestPointOnLedgeToPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetClosestPointOnLedgeToPoint(System.Numerics.Vector3 Point)
+    public unsafe virtual System.Numerics.Vector3 GetClosestPointOnLedgeToPoint(System.Numerics.Vector3 Point)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLedgeLookDangerAreaInfo.GetClosestPointOnLedgeToPoint", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -108,7 +108,7 @@ public partial class RLedgeLookDangerAreaInfo : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: IsPlaceableLedgeArea
     /// </summary>
-    public unsafe bool IsPlaceableLedgeArea()
+    public unsafe virtual bool IsPlaceableLedgeArea()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLedgeLookDangerAreaInfo.IsPlaceableLedgeArea", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -119,7 +119,7 @@ public partial class RLedgeLookDangerAreaInfo : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: GetAIPointOfInterestExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAIPointOfInterestExtent()
+    public unsafe override System.Numerics.Vector3 GetAIPointOfInterestExtent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLedgeLookDangerAreaInfo.GetAIPointOfInterestExtent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -137,7 +137,7 @@ public partial class RLedgeLookDangerAreaInfo : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLedgeLookDangerAreaInfo.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -149,7 +149,7 @@ public partial class RLedgeLookDangerAreaInfo : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLedgeLookDangerAreaInfo.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -161,7 +161,7 @@ public partial class RLedgeLookDangerAreaInfo : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLedgeLookDangerAreaInfo.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -172,7 +172,7 @@ public partial class RLedgeLookDangerAreaInfo : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLedgeLookDangerAreaInfo.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -183,7 +183,7 @@ public partial class RLedgeLookDangerAreaInfo : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLedgeLookDangerAreaInfo.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -194,7 +194,7 @@ public partial class RLedgeLookDangerAreaInfo : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: UpdateDisplayLines
     /// </summary>
-    public unsafe void UpdateDisplayLines()
+    public unsafe virtual void UpdateDisplayLines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLedgeLookDangerAreaInfo.UpdateDisplayLines", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -212,7 +212,7 @@ public partial class RLedgeLookDangerAreaInfo : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: RegisterWithNavMesh
     /// </summary>
-    public unsafe void RegisterWithNavMesh(bool bRegister)
+    public unsafe virtual void RegisterWithNavMesh(bool bRegister)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLedgeLookDangerAreaInfo.RegisterWithNavMesh", true);
         byte* paramsPtr = stackalloc byte[4];

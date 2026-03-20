@@ -71,7 +71,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: ResetStateForARChallenge
     /// </summary>
-    public unsafe void ResetStateForARChallenge()
+    public unsafe virtual void ResetStateForARChallenge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.ResetStateForARChallenge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: TriggerRemoteSwitchSwitchedOffEvent
     /// </summary>
-    public unsafe void TriggerRemoteSwitchSwitchedOffEvent()
+    public unsafe virtual void TriggerRemoteSwitchSwitchedOffEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.TriggerRemoteSwitchSwitchedOffEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: TriggerRemoteSwitchSwitchedOnEvent
     /// </summary>
-    public unsafe void TriggerRemoteSwitchSwitchedOnEvent()
+    public unsafe virtual void TriggerRemoteSwitchSwitchedOnEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.TriggerRemoteSwitchSwitchedOnEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: RequiresBlindDroneUpgrade
     /// </summary>
-    public unsafe bool RequiresBlindDroneUpgrade()
+    public unsafe virtual bool RequiresBlindDroneUpgrade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.RequiresBlindDroneUpgrade", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -115,7 +115,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: TriggerSecondary
     /// </summary>
-    public unsafe bool TriggerSecondary(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool TriggerSecondary(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.TriggerSecondary", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -127,7 +127,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: TriggerRight
     /// </summary>
-    public unsafe void TriggerRight(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void TriggerRight(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.TriggerRight", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -139,7 +139,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: TriggerLeft
     /// </summary>
-    public unsafe void TriggerLeft(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void TriggerLeft(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.TriggerLeft", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -151,7 +151,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: Trigger
     /// </summary>
-    public unsafe bool Trigger(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool Trigger(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.Trigger", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -163,7 +163,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: CanTrigger
     /// </summary>
-    public unsafe bool CanTrigger(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool CanTrigger(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.CanTrigger", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -175,7 +175,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: GetMiniGameHelpPrompt
     /// </summary>
-    public unsafe void GetMiniGameHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe virtual void GetMiniGameHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.GetMiniGameHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -188,7 +188,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: CanTargetTroughWalls
     /// </summary>
-    public unsafe bool CanTargetTroughWalls()
+    public unsafe virtual bool CanTargetTroughWalls()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.CanTargetTroughWalls", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -199,7 +199,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: GetInteractionType
     /// </summary>
-    public unsafe BmSDK.BmGame.RRemoteControlLowSecurityInterface.EOmnitronInteractionType GetInteractionType()
+    public unsafe virtual BmSDK.BmGame.RRemoteControlLowSecurityInterface.EOmnitronInteractionType GetInteractionType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.GetInteractionType", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -210,7 +210,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: GetInteractionPromptSecondary
     /// </summary>
-    public unsafe BmSDK.FString GetInteractionPromptSecondary()
+    public unsafe virtual BmSDK.FString GetInteractionPromptSecondary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.GetInteractionPromptSecondary", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -221,7 +221,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: ShouldInteractionPromptBeDisplayedInCentreOfScreen
     /// </summary>
-    public unsafe bool ShouldInteractionPromptBeDisplayedInCentreOfScreen()
+    public unsafe virtual bool ShouldInteractionPromptBeDisplayedInCentreOfScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.ShouldInteractionPromptBeDisplayedInCentreOfScreen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -232,7 +232,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: CanBeTargettedByRHD
     /// </summary>
-    public unsafe bool CanBeTargettedByRHD(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool CanBeTargettedByRHD(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.CanBeTargettedByRHD", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -244,7 +244,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: NeedDisplayRefresh
     /// </summary>
-    public unsafe bool NeedDisplayRefresh()
+    public unsafe virtual bool NeedDisplayRefresh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.NeedDisplayRefresh", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -255,7 +255,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: GetInteractionPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetInteractionPrompt()
+    public unsafe virtual BmSDK.FString GetInteractionPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.GetInteractionPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -266,7 +266,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: GetDisplayIconName
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayIconName()
+    public unsafe virtual BmSDK.FString GetDisplayIconName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.GetDisplayIconName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -277,7 +277,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: GetDisplayDescription
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayDescription()
+    public unsafe virtual BmSDK.FString GetDisplayDescription()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.GetDisplayDescription", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -288,7 +288,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: GetDisplayTitle
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayTitle()
+    public unsafe virtual BmSDK.FString GetDisplayTitle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.GetDisplayTitle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -299,7 +299,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: GetDisplayLockOnState
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayLockOnState()
+    public unsafe virtual BmSDK.FString GetDisplayLockOnState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.GetDisplayLockOnState", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -310,7 +310,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: GetDisplayTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDisplayTargetLocation()
+    public unsafe virtual System.Numerics.Vector3 GetDisplayTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.GetDisplayTargetLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -321,7 +321,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode(bool bSilent = default)
+    public unsafe virtual void Explode(bool bSilent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.Explode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -333,7 +333,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: SpecialExplode
     /// </summary>
-    public unsafe void SpecialExplode(bool bSetTimerToTriggerOn)
+    public unsafe virtual void SpecialExplode(bool bSetTimerToTriggerOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.SpecialExplode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -345,7 +345,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -357,7 +357,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -368,7 +368,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: IsTargetable
     /// </summary>
-    public unsafe bool IsTargetable()
+    public unsafe virtual bool IsTargetable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.IsTargetable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -379,7 +379,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.IsActive", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -391,7 +391,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: EnableSwitchAfterInactivePeriod
     /// </summary>
-    public unsafe void EnableSwitchAfterInactivePeriod()
+    public unsafe virtual void EnableSwitchAfterInactivePeriod()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.EnableSwitchAfterInactivePeriod", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -402,7 +402,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: DisableTickIfNecessary
     /// </summary>
-    public unsafe void DisableTickIfNecessary()
+    public unsafe virtual void DisableTickIfNecessary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.DisableTickIfNecessary", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -413,7 +413,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: IsAnyTimerActive
     /// </summary>
-    public unsafe bool IsAnyTimerActive()
+    public unsafe virtual bool IsAnyTimerActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.IsAnyTimerActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -424,7 +424,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: OnToggleRemoteSwitchUsable
     /// </summary>
-    public unsafe void OnToggleRemoteSwitchUsable(BmSDK.BmGame.RSeqAct_ToggleRemoteSwitchUsable Action)
+    public unsafe virtual void OnToggleRemoteSwitchUsable(BmSDK.BmGame.RSeqAct_ToggleRemoteSwitchUsable Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.OnToggleRemoteSwitchUsable", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -436,7 +436,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: SetMaterialUnusable
     /// </summary>
-    public unsafe void SetMaterialUnusable()
+    public unsafe virtual void SetMaterialUnusable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.SetMaterialUnusable", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -447,7 +447,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: SetMaterialOff
     /// </summary>
-    public unsafe void SetMaterialOff()
+    public unsafe virtual void SetMaterialOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.SetMaterialOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -458,7 +458,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: SetMaterialOn
     /// </summary>
-    public unsafe void SetMaterialOn()
+    public unsafe virtual void SetMaterialOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.SetMaterialOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -469,7 +469,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.OnToggle", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -481,7 +481,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: ChangeLight
     /// </summary>
-    public unsafe void ChangeLight(bool bNewState, bool bInitialSetting = default)
+    public unsafe virtual void ChangeLight(bool bNewState, bool bInitialSetting = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.ChangeLight", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -494,7 +494,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: TurnOn
     /// </summary>
-    public unsafe void TurnOn()
+    public unsafe virtual void TurnOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.TurnOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -505,7 +505,7 @@ public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// Function: TurnOff
     /// </summary>
-    public unsafe void TurnOff()
+    public unsafe virtual void TurnOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteSwitchBase.TurnOff", true);
         byte* paramsPtr = stackalloc byte[0];

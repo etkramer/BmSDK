@@ -71,7 +71,7 @@ public partial class RSentryGunPlacementPoint : BmSDK.BmGame.RLootDestinationBas
     /// <summary>
     /// Function: IsNearAnAssignedSentryGun
     /// </summary>
-    public unsafe bool IsNearAnAssignedSentryGun(BmSDK.BmGame.RBMRoomAIState RoomState)
+    public unsafe virtual bool IsNearAnAssignedSentryGun(BmSDK.BmGame.RBMRoomAIState RoomState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunPlacementPoint.IsNearAnAssignedSentryGun", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -83,7 +83,7 @@ public partial class RSentryGunPlacementPoint : BmSDK.BmGame.RLootDestinationBas
     /// <summary>
     /// Function: TrySpawnGun
     /// </summary>
-    public unsafe void TrySpawnGun(BmSDK.BmGame.RPawnVillain pawnDroppingOff)
+    public unsafe virtual void TrySpawnGun(BmSDK.BmGame.RPawnVillain pawnDroppingOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunPlacementPoint.TrySpawnGun", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -95,7 +95,7 @@ public partial class RSentryGunPlacementPoint : BmSDK.BmGame.RLootDestinationBas
     /// <summary>
     /// Function: OnDropOff
     /// </summary>
-    public unsafe bool OnDropOff(BmSDK.BmGame.RPawnVillain pawnDroppingOff)
+    public unsafe override bool OnDropOff(BmSDK.BmGame.RPawnVillain pawnDroppingOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunPlacementPoint.OnDropOff", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -107,7 +107,7 @@ public partial class RSentryGunPlacementPoint : BmSDK.BmGame.RLootDestinationBas
     /// <summary>
     /// Function: TryStateChange
     /// </summary>
-    public unsafe void TryStateChange(BmSDK.BmGame.RPawnVillain pawnDroppingOff)
+    public unsafe override void TryStateChange(BmSDK.BmGame.RPawnVillain pawnDroppingOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunPlacementPoint.TryStateChange", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -119,7 +119,7 @@ public partial class RSentryGunPlacementPoint : BmSDK.BmGame.RLootDestinationBas
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunPlacementPoint.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

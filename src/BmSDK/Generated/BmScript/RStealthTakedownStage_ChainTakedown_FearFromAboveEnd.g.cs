@@ -71,7 +71,7 @@ public partial class RStealthTakedownStage_ChainTakedown_FearFromAboveEnd : BmSD
     /// <summary>
     /// Function: FinishGrapple
     /// </summary>
-    public unsafe void FinishGrapple()
+    public unsafe virtual void FinishGrapple()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_ChainTakedown_FearFromAboveEnd.FinishGrapple", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RStealthTakedownStage_ChainTakedown_FearFromAboveEnd : BmSD
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_ChainTakedown_FearFromAboveEnd.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[24];

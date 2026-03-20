@@ -71,7 +71,7 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Terrain.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: CalcLayerBounds
     /// </summary>
-    public unsafe void CalcLayerBounds()
+    public unsafe virtual void CalcLayerBounds()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Terrain.CalcLayerBounds", true);
         byte* paramsPtr = stackalloc byte[0];

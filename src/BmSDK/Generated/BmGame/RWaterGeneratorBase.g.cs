@@ -71,7 +71,7 @@ public partial class RWaterGeneratorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BmTriedToUseWhenInvalid
     /// </summary>
-    public unsafe void BmTriedToUseWhenInvalid()
+    public unsafe virtual void BmTriedToUseWhenInvalid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterGeneratorBase.BmTriedToUseWhenInvalid", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RWaterGeneratorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CantShoot
     /// </summary>
-    public unsafe bool CantShoot()
+    public unsafe virtual bool CantShoot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterGeneratorBase.CantShoot", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RWaterGeneratorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterGeneratorBase.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RWaterGeneratorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsOverloaded
     /// </summary>
-    public unsafe bool IsOverloaded()
+    public unsafe virtual bool IsOverloaded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterGeneratorBase.IsOverloaded", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RWaterGeneratorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterGeneratorBase.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RWaterGeneratorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanTurnOn
     /// </summary>
-    public unsafe bool CanTurnOn()
+    public unsafe virtual bool CanTurnOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterGeneratorBase.CanTurnOn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -139,7 +139,7 @@ public partial class RWaterGeneratorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanTurnOff
     /// </summary>
-    public unsafe bool CanTurnOff()
+    public unsafe virtual bool CanTurnOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterGeneratorBase.CanTurnOff", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -150,7 +150,7 @@ public partial class RWaterGeneratorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DangerPreventsUse
     /// </summary>
-    public unsafe bool DangerPreventsUse(BmSDK.Engine.Controller InstigatedBy, BmSDK.BmGame.RMagneticBlast.MBImpulseType ImpulseType)
+    public unsafe virtual bool DangerPreventsUse(BmSDK.Engine.Controller InstigatedBy, BmSDK.BmGame.RMagneticBlast.MBImpulseType ImpulseType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterGeneratorBase.DangerPreventsUse", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -163,7 +163,7 @@ public partial class RWaterGeneratorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetQuickFireType
     /// </summary>
-    public unsafe BmSDK.BmGame.RMagneticBlast.MBImpulseType GetQuickFireType()
+    public unsafe virtual BmSDK.BmGame.RMagneticBlast.MBImpulseType GetQuickFireType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterGeneratorBase.GetQuickFireType", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -174,7 +174,7 @@ public partial class RWaterGeneratorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BmTriedToUseInWater
     /// </summary>
-    public unsafe void BmTriedToUseInWater()
+    public unsafe virtual void BmTriedToUseInWater()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterGeneratorBase.BmTriedToUseInWater", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -185,7 +185,7 @@ public partial class RWaterGeneratorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HitByREC
     /// </summary>
-    public unsafe void HitByREC(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.BmGame.RMagneticBlast.MBImpulseType HitType, BmSDK.Engine.Controller InstigatedBy)
+    public unsafe virtual void HitByREC(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.BmGame.RMagneticBlast.MBImpulseType HitType, BmSDK.Engine.Controller InstigatedBy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterGeneratorBase.HitByREC", true);
         byte* paramsPtr = stackalloc byte[36];

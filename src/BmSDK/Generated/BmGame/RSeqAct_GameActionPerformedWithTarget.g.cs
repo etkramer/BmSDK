@@ -36,7 +36,7 @@ public partial class RSeqAct_GameActionPerformedWithTarget : BmSDK.BmGame.RSeqAc
     /// <summary>
     /// Function: GameActionPerformed
     /// </summary>
-    public unsafe void GameActionPerformed(BmSDK.BmGame.RGameInfo.EGameAction ActionPerformed, BmSDK.Engine.Actor Target)
+    public unsafe override void GameActionPerformed(BmSDK.BmGame.RGameInfo.EGameAction ActionPerformed, BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GameActionPerformedWithTarget.GameActionPerformed", true);
         byte* paramsPtr = stackalloc byte[12];

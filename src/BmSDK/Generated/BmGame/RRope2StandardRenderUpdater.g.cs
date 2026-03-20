@@ -36,7 +36,7 @@ public partial class RRope2StandardRenderUpdater : BmSDK.BmGame.RRope2RenderUpda
     /// <summary>
     /// Function: SetRopeRenderInterpolationScaleTarget
     /// </summary>
-    public unsafe void SetRopeRenderInterpolationScaleTarget(float NewInterpolationScaleTarget)
+    public unsafe virtual void SetRopeRenderInterpolationScaleTarget(float NewInterpolationScaleTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2StandardRenderUpdater.SetRopeRenderInterpolationScaleTarget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -55,7 +55,7 @@ public partial class RRope2StandardRenderUpdater : BmSDK.BmGame.RRope2RenderUpda
     /// <summary>
     /// Function: SetRopeRenderInterpolationScale
     /// </summary>
-    public unsafe void SetRopeRenderInterpolationScale(float NewInterpolationScale)
+    public unsafe virtual void SetRopeRenderInterpolationScale(float NewInterpolationScale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2StandardRenderUpdater.SetRopeRenderInterpolationScale", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -74,7 +74,7 @@ public partial class RRope2StandardRenderUpdater : BmSDK.BmGame.RRope2RenderUpda
     /// <summary>
     /// Function: SetMaterialOverride
     /// </summary>
-    public unsafe void SetMaterialOverride(BmSDK.Engine.MaterialInstanceConstant OverrideMat)
+    public unsafe override void SetMaterialOverride(BmSDK.Engine.MaterialInstanceConstant OverrideMat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRope2StandardRenderUpdater.SetMaterialOverride", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -36,7 +36,7 @@ public partial class RSpecialMoveConfig_Jump : BmSDK.BmGame.RSpecialMoveConfig_R
     /// <summary>
     /// Function: GetFreeRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetFreeRotation(BmSDK.BmGame.RPlayerController Controller, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe override BmSDK.Rotator GetFreeRotation(BmSDK.BmGame.RPlayerController Controller, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveConfig_Jump.GetFreeRotation", true);
         byte* paramsPtr = stackalloc byte[232];

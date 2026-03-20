@@ -36,7 +36,7 @@ public partial class RBMBehaviour_CityJogAway : BmSDK.BmScript.RBMBehaviour_City
     /// <summary>
     /// Function: SpookedBy
     /// </summary>
-    public unsafe void SpookedBy()
+    public unsafe virtual void SpookedBy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CityJogAway.SpookedBy", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_CityJogAway : BmSDK.BmScript.RBMBehaviour_City
     /// <summary>
     /// Function: UpdateThreatAndDestroyCheck
     /// </summary>
-    public unsafe bool UpdateThreatAndDestroyCheck(float DeltaTime)
+    public unsafe override bool UpdateThreatAndDestroyCheck(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CityJogAway.UpdateThreatAndDestroyCheck", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_CityJogAway : BmSDK.BmScript.RBMBehaviour_City
     /// <summary>
     /// Function: PlayerBumped
     /// </summary>
-    public unsafe void PlayerBumped(bool bFriendly)
+    public unsafe override void PlayerBumped(bool bFriendly)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CityJogAway.PlayerBumped", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -71,7 +71,7 @@ public partial class RBMBehaviour_CityJogAway : BmSDK.BmScript.RBMBehaviour_City
     /// <summary>
     /// Function: HandleNoise
     /// </summary>
-    public unsafe void HandleNoise(BmSDK.BmGame.RPawnPlayer PlayerInstigator)
+    public unsafe override void HandleNoise(BmSDK.BmGame.RPawnPlayer PlayerInstigator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CityJogAway.HandleNoise", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RBMBehaviour_CityJogAway : BmSDK.BmScript.RBMBehaviour_City
     /// <summary>
     /// Function: OverrideGetupStances
     /// </summary>
-    public unsafe bool OverrideGetupStances(out BmSDK.FName MovementStance, out BmSDK.FName WeaponStance)
+    public unsafe override bool OverrideGetupStances(out BmSDK.FName MovementStance, out BmSDK.FName WeaponStance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CityJogAway.OverrideGetupStances", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -96,7 +96,7 @@ public partial class RBMBehaviour_CityJogAway : BmSDK.BmScript.RBMBehaviour_City
     /// <summary>
     /// Function: PlayFleeReaction
     /// </summary>
-    public unsafe void PlayFleeReaction()
+    public unsafe override void PlayFleeReaction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CityJogAway.PlayFleeReaction", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class RBMBehaviour_CityJogAway : BmSDK.BmScript.RBMBehaviour_City
     /// <summary>
     /// Function: SetRunVariants
     /// </summary>
-    public unsafe void SetRunVariants(BmSDK.BmGame.RBMAIAction_RiotRunBase MoveAction)
+    public unsafe override void SetRunVariants(BmSDK.BmGame.RBMAIAction_RiotRunBase MoveAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CityJogAway.SetRunVariants", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -119,7 +119,7 @@ public partial class RBMBehaviour_CityJogAway : BmSDK.BmScript.RBMBehaviour_City
     /// <summary>
     /// Function: SetMovementSpeed
     /// </summary>
-    public unsafe bool SetMovementSpeed()
+    public unsafe override bool SetMovementSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CityJogAway.SetMovementSpeed", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -130,7 +130,7 @@ public partial class RBMBehaviour_CityJogAway : BmSDK.BmScript.RBMBehaviour_City
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CityJogAway.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

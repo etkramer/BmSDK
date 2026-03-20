@@ -71,7 +71,7 @@ public partial class RPollenVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPollenVolume.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RPollenVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK
     /// <summary>
     /// Function: CreateResources
     /// </summary>
-    public unsafe void CreateResources()
+    public unsafe virtual void CreateResources()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPollenVolume.CreateResources", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -94,7 +94,7 @@ public partial class RPollenVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPollenVolume.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RPollenVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK
     /// <summary>
     /// Function: GetPollenDensity
     /// </summary>
-    public unsafe float GetPollenDensity()
+    public unsafe override float GetPollenDensity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPollenVolume.GetPollenDensity", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -123,7 +123,7 @@ public partial class RPollenVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK
     /// <summary>
     /// Function: IsInsidePollenVolume
     /// </summary>
-    public unsafe bool IsInsidePollenVolume(System.Numerics.Vector3 TestLocation)
+    public unsafe override bool IsInsidePollenVolume(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPollenVolume.IsInsidePollenVolume", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -142,7 +142,7 @@ public partial class RPollenVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK
     /// <summary>
     /// Function: GetLocationPollenDepth
     /// </summary>
-    public unsafe float GetLocationPollenDepth(System.Numerics.Vector3 TestLocation)
+    public unsafe override float GetLocationPollenDepth(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPollenVolume.GetLocationPollenDepth", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -161,7 +161,7 @@ public partial class RPollenVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK
     /// <summary>
     /// Function: SignedDistanceToPollenZ
     /// </summary>
-    public unsafe float SignedDistanceToPollenZ(System.Numerics.Vector3 TestLocation)
+    public unsafe override float SignedDistanceToPollenZ(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPollenVolume.SignedDistanceToPollenZ", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -180,7 +180,7 @@ public partial class RPollenVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK
     /// <summary>
     /// Function: IsLocationPollen
     /// </summary>
-    public unsafe bool IsLocationPollen(System.Numerics.Vector3 TestLocation)
+    public unsafe override bool IsLocationPollen(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPollenVolume.IsLocationPollen", true);
         byte* paramsPtr = stackalloc byte[16];

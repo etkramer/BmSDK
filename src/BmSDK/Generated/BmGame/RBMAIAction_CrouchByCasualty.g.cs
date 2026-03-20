@@ -71,7 +71,7 @@ public partial class RBMAIAction_CrouchByCasualty : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// Function: PlayHangingGuyBark
     /// </summary>
-    public unsafe void PlayHangingGuyBark()
+    public unsafe virtual void PlayHangingGuyBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_CrouchByCasualty.PlayHangingGuyBark", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_CrouchByCasualty : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// Function: GetAnimForGesture
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimConfig.FCustomAdditiveAnimConfig GetAnimForGesture(BmSDK.FString Gesture)
+    public unsafe virtual BmSDK.BmGame.RAnimConfig.FCustomAdditiveAnimConfig GetAnimForGesture(BmSDK.FString Gesture)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_CrouchByCasualty.GetAnimForGesture", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_CrouchByCasualty : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// Function: GetStateFromDialogueTag
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_CrouchByCasualty.CheckManDown_OverlayState GetStateFromDialogueTag(BmSDK.FString Gesture)
+    public unsafe virtual BmSDK.BmGame.RBMAIAction_CrouchByCasualty.CheckManDown_OverlayState GetStateFromDialogueTag(BmSDK.FString Gesture)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_CrouchByCasualty.GetStateFromDialogueTag", true);
         byte* paramsPtr = stackalloc byte[17];
@@ -106,7 +106,7 @@ public partial class RBMAIAction_CrouchByCasualty : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// Function: HandleDialogueAnimation
     /// </summary>
-    public unsafe void HandleDialogueAnimation(BmSDK.FString Gesture)
+    public unsafe override void HandleDialogueAnimation(BmSDK.FString Gesture)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_CrouchByCasualty.HandleDialogueAnimation", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -118,7 +118,7 @@ public partial class RBMAIAction_CrouchByCasualty : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// Function: GetAdditiveAnimForIndex
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimConfig.FCustomAdditiveAnimConfig GetAdditiveAnimForIndex(int Index)
+    public unsafe virtual BmSDK.BmGame.RAnimConfig.FCustomAdditiveAnimConfig GetAdditiveAnimForIndex(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_CrouchByCasualty.GetAdditiveAnimForIndex", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -130,7 +130,7 @@ public partial class RBMAIAction_CrouchByCasualty : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// Function: GetRandomAdditiveAnimIndex
     /// </summary>
-    public unsafe int GetRandomAdditiveAnimIndex()
+    public unsafe virtual int GetRandomAdditiveAnimIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_CrouchByCasualty.GetRandomAdditiveAnimIndex", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -141,7 +141,7 @@ public partial class RBMAIAction_CrouchByCasualty : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_CrouchByCasualty.ActionTick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -153,7 +153,7 @@ public partial class RBMAIAction_CrouchByCasualty : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// Function: InitManUpPose
     /// </summary>
-    public unsafe void InitManUpPose()
+    public unsafe virtual void InitManUpPose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_CrouchByCasualty.InitManUpPose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -164,7 +164,7 @@ public partial class RBMAIAction_CrouchByCasualty : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// Function: StartCrouch
     /// </summary>
-    public unsafe void StartCrouch(BmSDK.FName AnimName)
+    public unsafe virtual void StartCrouch(BmSDK.FName AnimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_CrouchByCasualty.StartCrouch", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -176,7 +176,7 @@ public partial class RBMAIAction_CrouchByCasualty : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_CrouchByCasualty.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -187,7 +187,7 @@ public partial class RBMAIAction_CrouchByCasualty : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_CrouchByCasualty.OnActivate", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -198,7 +198,7 @@ public partial class RBMAIAction_CrouchByCasualty : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// Function: SetCasualty
     /// </summary>
-    public unsafe void SetCasualty(BmSDK.BmGame.RPawnVillain NewCas)
+    public unsafe virtual void SetCasualty(BmSDK.BmGame.RPawnVillain NewCas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_CrouchByCasualty.SetCasualty", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -210,7 +210,7 @@ public partial class RBMAIAction_CrouchByCasualty : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// Function: EndJokerHallucination
     /// </summary>
-    public unsafe void EndJokerHallucination()
+    public unsafe virtual void EndJokerHallucination()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_CrouchByCasualty.EndJokerHallucination", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -221,7 +221,7 @@ public partial class RBMAIAction_CrouchByCasualty : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// Function: DoJokerOverlay
     /// </summary>
-    public unsafe void DoJokerOverlay()
+    public unsafe virtual void DoJokerOverlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_CrouchByCasualty.DoJokerOverlay", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -232,7 +232,7 @@ public partial class RBMAIAction_CrouchByCasualty : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// Function: DoSlavedJokerHallucination
     /// </summary>
-    public unsafe void DoSlavedJokerHallucination(bool bIgnoreCollisionCheck, float AngleOffset, System.Numerics.Vector3 refLoc, BmSDK.FName AnimName)
+    public unsafe virtual void DoSlavedJokerHallucination(bool bIgnoreCollisionCheck, float AngleOffset, System.Numerics.Vector3 refLoc, BmSDK.FName AnimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_CrouchByCasualty.DoSlavedJokerHallucination", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -247,7 +247,7 @@ public partial class RBMAIAction_CrouchByCasualty : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// Function: GetJokerHallucinationFadeMultiplier
     /// </summary>
-    public unsafe int GetJokerHallucinationFadeMultiplier()
+    public unsafe virtual int GetJokerHallucinationFadeMultiplier()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_CrouchByCasualty.GetJokerHallucinationFadeMultiplier", true);
         byte* paramsPtr = stackalloc byte[4];

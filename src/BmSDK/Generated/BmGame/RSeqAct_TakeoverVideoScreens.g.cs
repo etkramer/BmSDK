@@ -47,7 +47,7 @@ public partial class RSeqAct_TakeoverVideoScreens : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: StopTakeover
     /// </summary>
-    public unsafe void StopTakeover()
+    public unsafe virtual void StopTakeover()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_TakeoverVideoScreens.StopTakeover", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -58,7 +58,7 @@ public partial class RSeqAct_TakeoverVideoScreens : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: StartTakeover
     /// </summary>
-    public unsafe void StartTakeover()
+    public unsafe virtual void StartTakeover()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_TakeoverVideoScreens.StartTakeover", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -69,7 +69,7 @@ public partial class RSeqAct_TakeoverVideoScreens : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: SetTransitionValOnScreens
     /// </summary>
-    public unsafe void SetTransitionValOnScreens(float val)
+    public unsafe virtual void SetTransitionValOnScreens(float val)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_TakeoverVideoScreens.SetTransitionValOnScreens", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -81,7 +81,7 @@ public partial class RSeqAct_TakeoverVideoScreens : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: UpdateTransition
     /// </summary>
-    public unsafe void UpdateTransition(float DeltaTime)
+    public unsafe virtual void UpdateTransition(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_TakeoverVideoScreens.UpdateTransition", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RSeqAct_TakeoverVideoScreens : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: CheckInputLinks
     /// </summary>
-    public unsafe void CheckInputLinks()
+    public unsafe virtual void CheckInputLinks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_TakeoverVideoScreens.CheckInputLinks", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RSeqAct_TakeoverVideoScreens : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_TakeoverVideoScreens.Update", true);
         byte* paramsPtr = stackalloc byte[8];

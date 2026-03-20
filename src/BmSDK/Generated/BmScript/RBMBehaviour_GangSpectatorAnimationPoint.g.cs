@@ -47,7 +47,7 @@ public partial class RBMBehaviour_GangSpectatorAnimationPoint : BmSDK.BmScript.R
     /// <summary>
     /// Function: Cheer
     /// </summary>
-    public unsafe void Cheer()
+    public unsafe virtual void Cheer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangSpectatorAnimationPoint.Cheer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_GangSpectatorAnimationPoint : BmSDK.BmScript.R
     /// <summary>
     /// Function: StartAnimationInAnyDirection
     /// </summary>
-    public unsafe bool StartAnimationInAnyDirection()
+    public unsafe override bool StartAnimationInAnyDirection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangSpectatorAnimationPoint.StartAnimationInAnyDirection", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_GangSpectatorAnimationPoint : BmSDK.BmScript.R
     /// <summary>
     /// Function: SetCustomAnyDirectionAnimSettings
     /// </summary>
-    public unsafe void SetCustomAnyDirectionAnimSettings(BmSDK.FName PrevState)
+    public unsafe override void SetCustomAnyDirectionAnimSettings(BmSDK.FName PrevState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangSpectatorAnimationPoint.SetCustomAnyDirectionAnimSettings", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_GangSpectatorAnimationPoint : BmSDK.BmScript.R
     /// <summary>
     /// Function: GetWatchingPOILocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWatchingPOILocation()
+    public unsafe virtual System.Numerics.Vector3 GetWatchingPOILocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangSpectatorAnimationPoint.GetWatchingPOILocation", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -92,7 +92,7 @@ public partial class RBMBehaviour_GangSpectatorAnimationPoint : BmSDK.BmScript.R
     /// <summary>
     /// Function: SuggestPOI
     /// </summary>
-    public unsafe bool SuggestPOI(BmSDK.BmGame.RGangInteractPointBase SuggestedPOI)
+    public unsafe virtual bool SuggestPOI(BmSDK.BmGame.RGangInteractPointBase SuggestedPOI)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangSpectatorAnimationPoint.SuggestPOI", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -104,7 +104,7 @@ public partial class RBMBehaviour_GangSpectatorAnimationPoint : BmSDK.BmScript.R
     /// <summary>
     /// Function: POIStillValid
     /// </summary>
-    public unsafe bool POIStillValid()
+    public unsafe virtual bool POIStillValid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangSpectatorAnimationPoint.POIStillValid", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -115,7 +115,7 @@ public partial class RBMBehaviour_GangSpectatorAnimationPoint : BmSDK.BmScript.R
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangSpectatorAnimationPoint.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

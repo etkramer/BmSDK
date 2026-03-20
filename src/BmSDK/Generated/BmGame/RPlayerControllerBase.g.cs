@@ -82,7 +82,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: LoadingNearlyFinished
     /// </summary>
-    public unsafe void LoadingNearlyFinished()
+    public unsafe virtual void LoadingNearlyFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.LoadingNearlyFinished", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: CheatDown
     /// </summary>
-    public unsafe void CheatDown()
+    public unsafe virtual void CheatDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.CheatDown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: CheatUp
     /// </summary>
-    public unsafe void CheatUp()
+    public unsafe virtual void CheatUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.CheatUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: CheatRight
     /// </summary>
-    public unsafe void CheatRight()
+    public unsafe virtual void CheatRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.CheatRight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: CheatLeft
     /// </summary>
-    public unsafe void CheatLeft()
+    public unsafe virtual void CheatLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.CheatLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -137,7 +137,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -148,7 +148,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: OnDynamicPostProcess
     /// </summary>
-    public unsafe void OnDynamicPostProcess(BmSDK.BmGame.RSeqAct_DynamicPostProcess inAction)
+    public unsafe virtual void OnDynamicPostProcess(BmSDK.BmGame.RSeqAct_DynamicPostProcess inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.OnDynamicPostProcess", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -160,7 +160,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.HUD H)
+    public unsafe override void DrawHUD(BmSDK.Engine.HUD H)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -172,7 +172,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: PlayerTick
     /// </summary>
-    public unsafe void PlayerTick(float DeltaTime)
+    public unsafe override void PlayerTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.PlayerTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -184,7 +184,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DisableCinematicMode
     /// </summary>
-    public unsafe void DisableCinematicMode()
+    public unsafe virtual void DisableCinematicMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DisableCinematicMode", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -195,7 +195,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: OnSkippedCutscene
     /// </summary>
-    public unsafe void OnSkippedCutscene()
+    public unsafe virtual void OnSkippedCutscene()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.OnSkippedCutscene", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -206,7 +206,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: SkipCutscene
     /// </summary>
-    public unsafe void SkipCutscene(bool bForce = default)
+    public unsafe virtual void SkipCutscene(bool bForce = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.SkipCutscene", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -218,7 +218,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: InCinematicMode
     /// </summary>
-    public unsafe bool InCinematicMode()
+    public unsafe virtual bool InCinematicMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.InCinematicMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -236,7 +236,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: ServerCauseEvent
     /// </summary>
-    public unsafe void ServerCauseEvent(BmSDK.FName EventName)
+    public unsafe override void ServerCauseEvent(BmSDK.FName EventName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.ServerCauseEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -248,7 +248,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: ToggleLookInvertControls
     /// </summary>
-    public unsafe void ToggleLookInvertControls()
+    public unsafe virtual void ToggleLookInvertControls()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.ToggleLookInvertControls", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -259,7 +259,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugCamNormalSpeed
     /// </summary>
-    public unsafe void DebugCamNormalSpeed()
+    public unsafe virtual void DebugCamNormalSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugCamNormalSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -270,7 +270,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugCamMoreSpeed
     /// </summary>
-    public unsafe void DebugCamMoreSpeed()
+    public unsafe virtual void DebugCamMoreSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugCamMoreSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -281,7 +281,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugCamSingleFrameStep
     /// </summary>
-    public unsafe void DebugCamSingleFrameStep()
+    public unsafe virtual void DebugCamSingleFrameStep()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugCamSingleFrameStep", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -292,7 +292,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: ToggleSpeed
     /// </summary>
-    public unsafe void ToggleSpeed(float Value)
+    public unsafe virtual void ToggleSpeed(float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.ToggleSpeed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -304,7 +304,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: QuickLoad
     /// </summary>
-    public unsafe void QuickLoad()
+    public unsafe virtual void QuickLoad()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.QuickLoad", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -315,7 +315,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: TTOffset
     /// </summary>
-    public unsafe void TTOffset(float O)
+    public unsafe virtual void TTOffset(float O)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.TTOffset", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -334,7 +334,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: ToggleGfx
     /// </summary>
-    public unsafe void ToggleGfx()
+    public unsafe virtual void ToggleGfx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.ToggleGfx", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -352,7 +352,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: GPU
     /// </summary>
-    public unsafe void GPU()
+    public unsafe virtual void GPU()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.GPU", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -370,7 +370,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: FlushPressedKeys
     /// </summary>
-    public unsafe void FlushPressedKeys()
+    public unsafe virtual void FlushPressedKeys()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.FlushPressedKeys", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -388,7 +388,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: ResetPlayerMovementInput
     /// </summary>
-    public unsafe void ResetPlayerMovementInput()
+    public unsafe override void ResetPlayerMovementInput()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.ResetPlayerMovementInput", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -399,7 +399,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugLevelLoad
     /// </summary>
-    public unsafe void DebugLevelLoad(BmSDK.FString LevelName)
+    public unsafe virtual void DebugLevelLoad(BmSDK.FString LevelName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugLevelLoad", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -411,7 +411,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuNumber
     /// </summary>
-    public unsafe void DebugMenuNumber(int Num)
+    public unsafe virtual void DebugMenuNumber(int Num)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuNumber", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -423,7 +423,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuStepDown
     /// </summary>
-    public unsafe void DebugMenuStepDown()
+    public unsafe virtual void DebugMenuStepDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuStepDown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -434,7 +434,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuStepUp
     /// </summary>
-    public unsafe void DebugMenuStepUp()
+    public unsafe virtual void DebugMenuStepUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuStepUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -445,7 +445,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuDownReleased
     /// </summary>
-    public unsafe void DebugMenuDownReleased()
+    public unsafe virtual void DebugMenuDownReleased()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuDownReleased", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -456,7 +456,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuDownPressed
     /// </summary>
-    public unsafe void DebugMenuDownPressed()
+    public unsafe virtual void DebugMenuDownPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuDownPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -467,7 +467,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuUpReleased
     /// </summary>
-    public unsafe void DebugMenuUpReleased()
+    public unsafe virtual void DebugMenuUpReleased()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuUpReleased", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -478,7 +478,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuUpPressed
     /// </summary>
-    public unsafe void DebugMenuUpPressed()
+    public unsafe virtual void DebugMenuUpPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuUpPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -489,7 +489,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuRightReleased
     /// </summary>
-    public unsafe void DebugMenuRightReleased()
+    public unsafe virtual void DebugMenuRightReleased()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuRightReleased", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -500,7 +500,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuRightPressed
     /// </summary>
-    public unsafe void DebugMenuRightPressed()
+    public unsafe virtual void DebugMenuRightPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuRightPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -511,7 +511,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuLeftReleased
     /// </summary>
-    public unsafe void DebugMenuLeftReleased()
+    public unsafe virtual void DebugMenuLeftReleased()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuLeftReleased", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -522,7 +522,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuLeftPressed
     /// </summary>
-    public unsafe void DebugMenuLeftPressed()
+    public unsafe virtual void DebugMenuLeftPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuLeftPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -533,7 +533,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuSelectY
     /// </summary>
-    public unsafe void DebugMenuSelectY()
+    public unsafe virtual void DebugMenuSelectY()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuSelectY", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -544,7 +544,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuSelectX
     /// </summary>
-    public unsafe void DebugMenuSelectX()
+    public unsafe virtual void DebugMenuSelectX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuSelectX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -555,7 +555,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuSelectB
     /// </summary>
-    public unsafe void DebugMenuSelectB()
+    public unsafe virtual void DebugMenuSelectB()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuSelectB", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -566,7 +566,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuSelectA
     /// </summary>
-    public unsafe void DebugMenuSelectA()
+    public unsafe virtual void DebugMenuSelectA()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuSelectA", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -577,7 +577,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuNextPage
     /// </summary>
-    public unsafe void DebugMenuNextPage()
+    public unsafe virtual void DebugMenuNextPage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuNextPage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -588,7 +588,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuPrevPage
     /// </summary>
-    public unsafe void DebugMenuPrevPage()
+    public unsafe virtual void DebugMenuPrevPage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuPrevPage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -599,7 +599,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: ToggleDebugMenu
     /// </summary>
-    public unsafe void ToggleDebugMenu()
+    public unsafe virtual void ToggleDebugMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.ToggleDebugMenu", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -610,7 +610,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuOff
     /// </summary>
-    public unsafe void DebugMenuOff()
+    public unsafe virtual void DebugMenuOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -621,7 +621,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuOn
     /// </summary>
-    public unsafe void DebugMenuOn()
+    public unsafe virtual void DebugMenuOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -632,7 +632,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuQualifyOffB
     /// </summary>
-    public unsafe void DebugMenuQualifyOffB()
+    public unsafe virtual void DebugMenuQualifyOffB()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuQualifyOffB", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -643,7 +643,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuQualifyOnB
     /// </summary>
-    public unsafe void DebugMenuQualifyOnB()
+    public unsafe virtual void DebugMenuQualifyOnB()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuQualifyOnB", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -654,7 +654,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuQualifyOffT
     /// </summary>
-    public unsafe void DebugMenuQualifyOffT()
+    public unsafe virtual void DebugMenuQualifyOffT()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuQualifyOffT", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -665,7 +665,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: DebugMenuQualifyOnT
     /// </summary>
-    public unsafe void DebugMenuQualifyOnT()
+    public unsafe virtual void DebugMenuQualifyOnT()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.DebugMenuQualifyOnT", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -676,7 +676,7 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
     /// <summary>
     /// Function: IsDebugQualifier
     /// </summary>
-    public unsafe bool IsDebugQualifier()
+    public unsafe virtual bool IsDebugQualifier()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerControllerBase.IsDebugQualifier", true);
         byte* paramsPtr = stackalloc byte[4];

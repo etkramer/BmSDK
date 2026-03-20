@@ -71,7 +71,7 @@ public partial class RStealthTakedownStage_IceSmash : BmSDK.BmGame.RStealthTakeD
     /// <summary>
     /// Function: FinishAttackVictim
     /// </summary>
-    public unsafe bool FinishAttackVictim(int iVictimNumber)
+    public unsafe override bool FinishAttackVictim(int iVictimNumber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_IceSmash.FinishAttackVictim", true);
         byte* paramsPtr = stackalloc byte[16];

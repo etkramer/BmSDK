@@ -71,7 +71,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: AllowLongRangeInteraction
     /// </summary>
-    public unsafe bool AllowLongRangeInteraction(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool AllowLongRangeInteraction(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.AllowLongRangeInteraction", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: DetachVisibleComponents
     /// </summary>
-    public unsafe void DetachVisibleComponents()
+    public unsafe override void DetachVisibleComponents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.DetachVisibleComponents", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: AttachVisibleComponents
     /// </summary>
-    public unsafe void AttachVisibleComponents()
+    public unsafe override void AttachVisibleComponents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.AttachVisibleComponents", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: ExitPlayerFromTransition
     /// </summary>
-    public unsafe void ExitPlayerFromTransition()
+    public unsafe override void ExitPlayerFromTransition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.ExitPlayerFromTransition", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -127,7 +127,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: HandleKismetAction
     /// </summary>
-    public unsafe void HandleKismetAction(int Index, BmSDK.BmGame.RSeqAct_ModifyDoor Action)
+    public unsafe override void HandleKismetAction(int Index, BmSDK.BmGame.RSeqAct_ModifyDoor Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.HandleKismetAction", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -140,7 +140,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: PassedThroughDoor
     /// </summary>
-    public unsafe void PassedThroughDoor(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void PassedThroughDoor(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.PassedThroughDoor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -152,7 +152,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: FinishedClosingDoor
     /// </summary>
-    public unsafe void FinishedClosingDoor()
+    public unsafe override void FinishedClosingDoor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.FinishedClosingDoor", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -163,7 +163,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: AttemptToCloseDoor
     /// </summary>
-    public unsafe bool AttemptToCloseDoor(bool Instantly = default)
+    public unsafe override bool AttemptToCloseDoor(bool Instantly = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.AttemptToCloseDoor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -175,7 +175,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: AttemptToOpenDoor
     /// </summary>
-    public unsafe void AttemptToOpenDoor(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void AttemptToOpenDoor(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.AttemptToOpenDoor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -187,7 +187,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: AttemptingToUseWhenSideStoriesDisabled
     /// </summary>
-    public unsafe void AttemptingToUseWhenSideStoriesDisabled()
+    public unsafe override void AttemptingToUseWhenSideStoriesDisabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.AttemptingToUseWhenSideStoriesDisabled", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -198,7 +198,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: UsedWhenLocked
     /// </summary>
-    public unsafe bool UsedWhenLocked()
+    public unsafe override bool UsedWhenLocked()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.UsedWhenLocked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -209,7 +209,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: DoorsClosed
     /// </summary>
-    public unsafe void DoorsClosed()
+    public unsafe virtual void DoorsClosed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.DoorsClosed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -220,7 +220,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: DoorOpen
     /// </summary>
-    public unsafe void DoorOpen()
+    public unsafe virtual void DoorOpen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.DoorOpen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -231,7 +231,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: DoorClosing
     /// </summary>
-    public unsafe void DoorClosing()
+    public unsafe virtual void DoorClosing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.DoorClosing", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -242,7 +242,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: DoorOpening
     /// </summary>
-    public unsafe void DoorOpening()
+    public unsafe virtual void DoorOpening()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.DoorOpening", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -253,7 +253,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: UpdateLockedLight
     /// </summary>
-    public unsafe void UpdateLockedLight()
+    public unsafe virtual void UpdateLockedLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.UpdateLockedLight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -264,7 +264,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: SetInvestigateHighlighted
     /// </summary>
-    public unsafe void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
+    public unsafe override void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.SetInvestigateHighlighted", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -277,7 +277,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: StartLevelFromHere
     /// </summary>
-    public unsafe void StartLevelFromHere(bool LevelStart = default)
+    public unsafe override void StartLevelFromHere(bool LevelStart = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.StartLevelFromHere", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -289,7 +289,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: MovePlayerHere
     /// </summary>
-    public unsafe void MovePlayerHere()
+    public unsafe override void MovePlayerHere()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.MovePlayerHere", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -300,7 +300,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: AllowedToBeOpen
     /// </summary>
-    public unsafe bool AllowedToBeOpen(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool AllowedToBeOpen(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.AllowedToBeOpen", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -312,7 +312,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: CanReachItem
     /// </summary>
-    public unsafe bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
+    public unsafe virtual bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.CanReachItem", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -324,7 +324,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: OverridesRun
     /// </summary>
-    public unsafe float OverridesRun(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual float OverridesRun(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.OverridesRun", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -336,7 +336,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: CanUseInCinematicMode
     /// </summary>
-    public unsafe bool CanUseInCinematicMode()
+    public unsafe virtual bool CanUseInCinematicMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.CanUseInCinematicMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -347,7 +347,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: MustBeCrouched
     /// </summary>
-    public unsafe bool MustBeCrouched(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool MustBeCrouched(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.MustBeCrouched", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -359,7 +359,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: IsButtonPrompt
     /// </summary>
-    public unsafe bool IsButtonPrompt()
+    public unsafe virtual bool IsButtonPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.IsButtonPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -370,7 +370,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: GetPriority
     /// </summary>
-    public unsafe float GetPriority()
+    public unsafe virtual float GetPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.GetPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -381,7 +381,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: GetFOVDegrees
     /// </summary>
-    public unsafe float GetFOVDegrees(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual float GetFOVDegrees(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.GetFOVDegrees", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -393,7 +393,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: GetHeightRange
     /// </summary>
-    public unsafe float GetHeightRange()
+    public unsafe virtual float GetHeightRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.GetHeightRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -404,7 +404,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: GetRange
     /// </summary>
-    public unsafe float GetRange()
+    public unsafe virtual float GetRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.GetRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -415,7 +415,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: GetLocationOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLocationOffset()
+    public unsafe virtual System.Numerics.Vector3 GetLocationOffset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.GetLocationOffset", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -426,7 +426,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.Interact", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -438,7 +438,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.IsActive", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -450,7 +450,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: GetUpperPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetUpperPrompt()
+    public unsafe virtual BmSDK.FString GetUpperPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.GetUpperPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -461,7 +461,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: OverridePreviousLines
     /// </summary>
-    public unsafe bool OverridePreviousLines()
+    public unsafe virtual bool OverridePreviousLines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.OverridePreviousLines", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -472,7 +472,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: GetInteractButton
     /// </summary>
-    public unsafe BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton GetInteractButton(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton GetInteractButton(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.GetInteractButton", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -484,7 +484,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe virtual BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[41];
@@ -496,7 +496,7 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// Function: ShouldLockDoors
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.ECombatLockType ShouldLockDoors()
+    public unsafe virtual BmSDK.BmGame.RGameInfo.ECombatLockType ShouldLockDoors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerBase.ShouldLockDoors", true);
         byte* paramsPtr = stackalloc byte[1];

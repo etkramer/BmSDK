@@ -71,7 +71,7 @@ public partial class RAEC_SearchLite : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGame
     /// <summary>
     /// Function: GetCurrentPatrolIDs
     /// </summary>
-    public unsafe BmSDK.TArray<int> GetCurrentPatrolIDs()
+    public unsafe virtual BmSDK.TArray<int> GetCurrentPatrolIDs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchLite.GetCurrentPatrolIDs", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -82,7 +82,7 @@ public partial class RAEC_SearchLite : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGame
     /// <summary>
     /// Function: OnAssign
     /// </summary>
-    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewMember)
+    public unsafe override void OnAssign(BmSDK.BmGame.RBMAIController NewMember)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchLite.OnAssign", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -94,7 +94,7 @@ public partial class RAEC_SearchLite : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGame
     /// <summary>
     /// Function: SetNewFearLevel
     /// </summary>
-    public unsafe void SetNewFearLevel(BmSDK.BmGame.RBMRoomAIState.VillainFearLevel FearLevel)
+    public unsafe override void SetNewFearLevel(BmSDK.BmGame.RBMRoomAIState.VillainFearLevel FearLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchLite.SetNewFearLevel", true);
         byte* paramsPtr = stackalloc byte[1];

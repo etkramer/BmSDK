@@ -36,7 +36,7 @@ public partial class AnimNodeBlendMultiBone : BmSDK.Engine.AnimNodeBlendBase, Bm
     /// <summary>
     /// Function: SetTargetStartBone
     /// </summary>
-    public unsafe void SetTargetStartBone(int TargetIdx, BmSDK.FName StartBoneName, float PerBoneIncrease = default)
+    public unsafe virtual void SetTargetStartBone(int TargetIdx, BmSDK.FName StartBoneName, float PerBoneIncrease = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeBlendMultiBone.SetTargetStartBone", true);
         byte* paramsPtr = stackalloc byte[16];

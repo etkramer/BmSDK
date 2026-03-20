@@ -47,7 +47,7 @@ public partial class RSeqAct_WaitForLevelLoadComplete : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_WaitForLevelLoadComplete.Update", true);
         byte* paramsPtr = stackalloc byte[16];

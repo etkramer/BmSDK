@@ -66,7 +66,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     /// <summary>
     /// Function: AllowForSpawning
     /// </summary>
-    public unsafe bool AllowForSpawning()
+    public unsafe override bool AllowForSpawning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointAbandonedVehicleBase.AllowForSpawning", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -84,7 +84,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     /// <summary>
     /// Function: UpdateTimeOut
     /// </summary>
-    public unsafe bool UpdateTimeOut(float DeltaTime)
+    public unsafe override bool UpdateTimeOut(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointAbandonedVehicleBase.UpdateTimeOut", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -96,7 +96,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     /// <summary>
     /// Function: ActivateBuddies
     /// </summary>
-    public unsafe void ActivateBuddies()
+    public unsafe override void ActivateBuddies()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointAbandonedVehicleBase.ActivateBuddies", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -107,7 +107,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     /// <summary>
     /// Function: DeactivateBuddies
     /// </summary>
-    public unsafe void DeactivateBuddies()
+    public unsafe override void DeactivateBuddies()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointAbandonedVehicleBase.DeactivateBuddies", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -118,7 +118,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     /// <summary>
     /// Function: GetNumPairedToCheck
     /// </summary>
-    public unsafe int GetNumPairedToCheck()
+    public unsafe override int GetNumPairedToCheck()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointAbandonedVehicleBase.GetNumPairedToCheck", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -129,7 +129,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     /// <summary>
     /// Function: IsLeader
     /// </summary>
-    public unsafe bool IsLeader()
+    public unsafe override bool IsLeader()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointAbandonedVehicleBase.IsLeader", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -140,7 +140,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     /// <summary>
     /// Function: AllowSpectators
     /// </summary>
-    public unsafe bool AllowSpectators()
+    public unsafe override bool AllowSpectators()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointAbandonedVehicleBase.AllowSpectators", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -151,7 +151,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     /// <summary>
     /// Function: RebuildTranstionInPoints
     /// </summary>
-    public unsafe void RebuildTranstionInPoints()
+    public unsafe virtual void RebuildTranstionInPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointAbandonedVehicleBase.RebuildTranstionInPoints", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -169,7 +169,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     /// <summary>
     /// Function: GetEntryPointAndRotation
     /// </summary>
-    public unsafe void GetEntryPointAndRotation(BmSDK.BmGame.RPawnCharacter TestPawn, out System.Numerics.Vector3 Loc, out BmSDK.Rotator Rot, int Index, bool bSecondTry = default)
+    public unsafe override void GetEntryPointAndRotation(BmSDK.BmGame.RPawnCharacter TestPawn, out System.Numerics.Vector3 Loc, out BmSDK.Rotator Rot, int Index, bool bSecondTry = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointAbandonedVehicleBase.GetEntryPointAndRotation", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -192,7 +192,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     /// <summary>
     /// Function: IsValidForPawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RGangInteractPointBase IsValidForPawn(BmSDK.BmGame.RBMPawnAI TestPawn, bool bSkipSpeedTest = default, bool bSkipAngleCheck = default, bool bSkipVolCheck = default)
+    public unsafe override BmSDK.BmGame.RGangInteractPointBase IsValidForPawn(BmSDK.BmGame.RBMPawnAI TestPawn, bool bSkipSpeedTest = default, bool bSkipAngleCheck = default, bool bSkipVolCheck = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointAbandonedVehicleBase.IsValidForPawn", true);
         byte* paramsPtr = stackalloc byte[28];

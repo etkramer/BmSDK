@@ -71,7 +71,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TriedToGrappleToUnusableHidePoint
     /// </summary>
-    public unsafe void TriedToGrappleToUnusableHidePoint()
+    public unsafe virtual void TriedToGrappleToUnusableHidePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.TriedToGrappleToUnusableHidePoint", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -82,7 +82,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: MoveHidePoint
     /// </summary>
-    public unsafe void MoveHidePoint(System.Numerics.Vector3 InputDir)
+    public unsafe virtual void MoveHidePoint(System.Numerics.Vector3 InputDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.MoveHidePoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -94,7 +94,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsActorTiedTo
     /// </summary>
-    public unsafe bool IsActorTiedTo(BmSDK.Engine.Actor TestActor)
+    public unsafe virtual bool IsActorTiedTo(BmSDK.Engine.Actor TestActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.IsActorTiedTo", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -106,7 +106,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddAttachedRope
     /// </summary>
-    public unsafe void AddAttachedRope(BmSDK.BmGame.RRopeBase Rope)
+    public unsafe virtual void AddAttachedRope(BmSDK.BmGame.RRopeBase Rope)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.AddAttachedRope", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveAttachedRopes
     /// </summary>
-    public unsafe void RemoveAttachedRopes()
+    public unsafe virtual void RemoveAttachedRopes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.RemoveAttachedRopes", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -129,7 +129,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsValidVantageMineTarget
     /// </summary>
-    public unsafe bool IsValidVantageMineTarget()
+    public unsafe virtual bool IsValidVantageMineTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.IsValidVantageMineTarget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -140,7 +140,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: WillSmashIfShot
     /// </summary>
-    public unsafe bool WillSmashIfShot()
+    public unsafe virtual bool WillSmashIfShot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.WillSmashIfShot", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -151,7 +151,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -163,7 +163,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TriggerScanFX
     /// </summary>
-    public unsafe void TriggerScanFX(BmSDK.Engine.ParticleSystem ScanFX)
+    public unsafe virtual void TriggerScanFX(BmSDK.Engine.ParticleSystem ScanFX)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.TriggerScanFX", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -175,7 +175,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HasThermalCheckFloorPos
     /// </summary>
-    public unsafe bool HasThermalCheckFloorPos(out System.Numerics.Vector3 FloorPos)
+    public unsafe virtual bool HasThermalCheckFloorPos(out System.Numerics.Vector3 FloorPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.HasThermalCheckFloorPos", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -187,7 +187,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsHidePointLinked
     /// </summary>
-    public unsafe bool IsHidePointLinked(BmSDK.BmGame.RHidePoint TestPoint)
+    public unsafe virtual bool IsHidePointLinked(BmSDK.BmGame.RHidePoint TestPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.IsHidePointLinked", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -206,7 +206,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TriggerGrappledToEvents
     /// </summary>
-    public unsafe void TriggerGrappledToEvents()
+    public unsafe virtual void TriggerGrappledToEvents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.TriggerGrappledToEvents", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -217,7 +217,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsSmashed
     /// </summary>
-    public unsafe bool IsSmashed()
+    public unsafe virtual bool IsSmashed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.IsSmashed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -228,7 +228,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TakeGunDamage
     /// </summary>
-    public unsafe void TakeGunDamage(float DamageAmount, BmSDK.BmGame.RBMPawnAI AttackingPawn, BmSDK.Class dmgType)
+    public unsafe virtual void TakeGunDamage(float DamageAmount, BmSDK.BmGame.RBMPawnAI AttackingPawn, BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.TakeGunDamage", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -242,7 +242,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnhidePlayers
     /// </summary>
-    public unsafe void UnhidePlayers()
+    public unsafe virtual void UnhidePlayers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.UnhidePlayers", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -253,7 +253,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPlayers
     /// </summary>
-    public unsafe bool GetPlayers(out BmSDK.TArray<BmSDK.BmGame.RPlayerController> PlayersOnVantagePoint)
+    public unsafe virtual bool GetPlayers(out BmSDK.TArray<BmSDK.BmGame.RPlayerController> PlayersOnVantagePoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.GetPlayers", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -265,7 +265,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetGrappleCameraRoot
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetGrappleCameraRoot(BmSDK.BmGame.RPawnPlayer Pawn)
+    public unsafe virtual System.Numerics.Vector3 GetGrappleCameraRoot(BmSDK.BmGame.RPawnPlayer Pawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.GetGrappleCameraRoot", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -277,7 +277,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: MountGargoyle
     /// </summary>
-    public unsafe void MountGargoyle(BmSDK.Engine.Actor Other)
+    public unsafe virtual void MountGargoyle(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.MountGargoyle", true);
         byte* paramsPtr = stackalloc byte[164];
@@ -289,7 +289,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Bump
     /// </summary>
-    public unsafe void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.Bump", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -303,7 +303,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.Touch", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -318,7 +318,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetGrappleSound
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetGrappleSound()
+    public unsafe virtual BmSDK.Engine.AkEvent GetGrappleSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.GetGrappleSound", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -329,7 +329,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyRopeCut
     /// </summary>
-    public unsafe void NotifyRopeCut(BmSDK.BmGame.RBatarangProjectile Brang)
+    public unsafe virtual void NotifyRopeCut(BmSDK.BmGame.RBatarangProjectile Brang)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.NotifyRopeCut", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -341,7 +341,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: LoadDestroyedState
     /// </summary>
-    public unsafe void LoadDestroyedState()
+    public unsafe virtual void LoadDestroyedState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.LoadDestroyedState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -359,7 +359,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SaveDestroyedState
     /// </summary>
-    public unsafe void SaveDestroyedState()
+    public unsafe virtual void SaveDestroyedState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.SaveDestroyedState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -377,7 +377,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDestroyedHelpText
     /// </summary>
-    public unsafe void SetDestroyedHelpText()
+    public unsafe virtual void SetDestroyedHelpText()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.SetDestroyedHelpText", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -388,7 +388,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DamagedByBomb
     /// </summary>
-    public unsafe void DamagedByBomb()
+    public unsafe virtual void DamagedByBomb()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.DamagedByBomb", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -399,7 +399,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ToggleCanJumpOff
     /// </summary>
-    public unsafe void ToggleCanJumpOff(BmSDK.BmGame.RSeqAct_ToggleCanJumpOffVantagePoint Action)
+    public unsafe virtual void ToggleCanJumpOff(BmSDK.BmGame.RSeqAct_ToggleCanJumpOffVantagePoint Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.ToggleCanJumpOff", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -411,7 +411,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -422,7 +422,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -433,7 +433,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -445,7 +445,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ShutDown
     /// </summary>
-    public unsafe void ShutDown()
+    public unsafe override void ShutDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.ShutDown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -456,7 +456,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveMine
     /// </summary>
-    public unsafe void RemoveMine()
+    public unsafe virtual void RemoveMine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.RemoveMine", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -467,7 +467,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RequestMineAttachPoint
     /// </summary>
-    public unsafe bool RequestMineAttachPoint(System.Numerics.Vector3 TargetHintLoc, BmSDK.Rotator ThrowDir, out System.Numerics.Vector3 mineLoc, out BmSDK.Rotator MineRot)
+    public unsafe virtual bool RequestMineAttachPoint(System.Numerics.Vector3 TargetHintLoc, BmSDK.Rotator ThrowDir, out System.Numerics.Vector3 mineLoc, out BmSDK.Rotator MineRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.RequestMineAttachPoint", true);
         byte* paramsPtr = stackalloc byte[116];
@@ -482,7 +482,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMineAttachSocketWorldLocationAndRotation
     /// </summary>
-    public unsafe bool GetMineAttachSocketWorldLocationAndRotation(BmSDK.FName InSocketName, out System.Numerics.Vector3 OutLocation, out BmSDK.Rotator OutRotation)
+    public unsafe virtual bool GetMineAttachSocketWorldLocationAndRotation(BmSDK.FName InSocketName, out System.Numerics.Vector3 OutLocation, out BmSDK.Rotator OutRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.GetMineAttachSocketWorldLocationAndRotation", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -496,7 +496,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPlayerPerchPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetPlayerPerchPosition(BmSDK.BmGame.RPawnPlayer Player)
+    public unsafe virtual System.Numerics.Vector3 GetPlayerPerchPosition(BmSDK.BmGame.RPawnPlayer Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.GetPlayerPerchPosition", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -515,7 +515,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRedHoodPerchPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetRedHoodPerchPosition()
+    public unsafe virtual System.Numerics.Vector3 GetRedHoodPerchPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.GetRedHoodPerchPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -533,7 +533,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCatwomanPerchPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCatwomanPerchPosition()
+    public unsafe virtual System.Numerics.Vector3 GetCatwomanPerchPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.GetCatwomanPerchPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -551,7 +551,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBatmanPerchPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatmanPerchPosition()
+    public unsafe virtual System.Numerics.Vector3 GetBatmanPerchPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.GetBatmanPerchPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -569,7 +569,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetGrapplePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetGrapplePosition(System.Numerics.Vector3 CheckLocation, System.Numerics.Vector3 CheckDirection)
+    public unsafe virtual System.Numerics.Vector3 GetGrapplePosition(System.Numerics.Vector3 CheckLocation, System.Numerics.Vector3 CheckDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.GetGrapplePosition", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -589,7 +589,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DeactivateForGrapple
     /// </summary>
-    public unsafe void DeactivateForGrapple()
+    public unsafe virtual void DeactivateForGrapple()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.DeactivateForGrapple", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -607,7 +607,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ActivateForGrapple
     /// </summary>
-    public unsafe void ActivateForGrapple()
+    public unsafe virtual void ActivateForGrapple()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.ActivateForGrapple", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -625,7 +625,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DisableHidePoint
     /// </summary>
-    public unsafe void DisableHidePoint()
+    public unsafe virtual void DisableHidePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.DisableHidePoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -636,7 +636,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanUseInCinematicMode
     /// </summary>
-    public unsafe bool CanUseInCinematicMode()
+    public unsafe virtual bool CanUseInCinematicMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.CanUseInCinematicMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -647,7 +647,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FindClosestPawnRotation
     /// </summary>
-    public unsafe BmSDK.Rotator FindClosestPawnRotation(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual BmSDK.Rotator FindClosestPawnRotation(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.FindClosestPawnRotation", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -659,7 +659,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: InstantMovePawnTo
     /// </summary>
-    public unsafe void InstantMovePawnTo(BmSDK.BmGame.RPlayerController lPC, BmSDK.BmGame.RPawnPlayer PlayerPawn)
+    public unsafe virtual void InstantMovePawnTo(BmSDK.BmGame.RPlayerController lPC, BmSDK.BmGame.RPawnPlayer PlayerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.InstantMovePawnTo", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -672,7 +672,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: MovePawnTo
     /// </summary>
-    public unsafe void MovePawnTo(BmSDK.Engine.Pawn PawnToMove)
+    public unsafe virtual void MovePawnTo(BmSDK.Engine.Pawn PawnToMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.MovePawnTo", true);
         byte* paramsPtr = stackalloc byte[200];
@@ -684,7 +684,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StartedMountMove
     /// </summary>
-    public unsafe void StartedMountMove()
+    public unsafe virtual void StartedMountMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.StartedMountMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -695,7 +695,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetInvestigateHighlighted
     /// </summary>
-    public unsafe void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
+    public unsafe override void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.SetInvestigateHighlighted", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -708,7 +708,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetLinkedHidePointsHighlight
     /// </summary>
-    public unsafe void SetLinkedHidePointsHighlight(bool bHighlight)
+    public unsafe virtual void SetLinkedHidePointsHighlight(bool bHighlight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.SetLinkedHidePointsHighlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -720,7 +720,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ReassessCanGrapple
     /// </summary>
-    public unsafe void ReassessCanGrapple()
+    public unsafe virtual void ReassessCanGrapple()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.ReassessCanGrapple", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -731,7 +731,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RedHoodLeft
     /// </summary>
-    public unsafe void RedHoodLeft(BmSDK.BmGame.RSpecialMoveConfig NewBatmanSwingMove = default)
+    public unsafe virtual void RedHoodLeft(BmSDK.BmGame.RSpecialMoveConfig NewBatmanSwingMove = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.RedHoodLeft", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -743,7 +743,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RedHoodEntered
     /// </summary>
-    public unsafe void RedHoodEntered(BmSDK.BmGame.RPawnVillain Redhood, BmSDK.BmGame.RSpecialMoveConfig NewBatmanSwingMove = default)
+    public unsafe virtual void RedHoodEntered(BmSDK.BmGame.RPawnVillain Redhood, BmSDK.BmGame.RSpecialMoveConfig NewBatmanSwingMove = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.RedHoodEntered", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -756,7 +756,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: KickVillainOffVantagePoint
     /// </summary>
-    public unsafe void KickVillainOffVantagePoint()
+    public unsafe virtual void KickVillainOffVantagePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.KickVillainOffVantagePoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -767,7 +767,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanKickVillainOff
     /// </summary>
-    public unsafe bool CanKickVillainOff()
+    public unsafe virtual bool CanKickVillainOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.CanKickVillainOff", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -778,7 +778,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetMine
     /// </summary>
-    public unsafe void SetMine(BmSDK.BmGame.RVantageMineBase NewMine)
+    public unsafe virtual void SetMine(BmSDK.BmGame.RVantageMineBase NewMine)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.SetMine", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -790,7 +790,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMine
     /// </summary>
-    public unsafe BmSDK.BmGame.RVantageMineBase GetMine()
+    public unsafe virtual BmSDK.BmGame.RVantageMineBase GetMine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.GetMine", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -801,7 +801,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BMLeft
     /// </summary>
-    public unsafe void BMLeft()
+    public unsafe virtual void BMLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.BMLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -812,7 +812,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BMEntered
     /// </summary>
-    public unsafe void BMEntered()
+    public unsafe virtual void BMEntered()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.BMEntered", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -823,7 +823,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPlayerOnVantagePoint
     /// </summary>
-    public unsafe bool IsPlayerOnVantagePoint()
+    public unsafe virtual bool IsPlayerOnVantagePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.IsPlayerOnVantagePoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -834,7 +834,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPerfectConcealment
     /// </summary>
-    public unsafe bool GetPerfectConcealment()
+    public unsafe virtual bool GetPerfectConcealment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.GetPerfectConcealment", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -845,7 +845,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPerfectConcealment
     /// </summary>
-    public unsafe void SetPerfectConcealment(bool bNewPerfectConcealment)
+    public unsafe virtual void SetPerfectConcealment(bool bNewPerfectConcealment)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.SetPerfectConcealment", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -857,7 +857,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetInThermalMode
     /// </summary>
-    public unsafe void SetInThermalMode(bool On, bool bForceOff)
+    public unsafe virtual void SetInThermalMode(bool On, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.SetInThermalMode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -870,7 +870,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAIPointOfInterestPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAIPointOfInterestPosition()
+    public unsafe override System.Numerics.Vector3 GetAIPointOfInterestPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.GetAIPointOfInterestPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -888,7 +888,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BMInverting
     /// </summary>
-    public unsafe void BMInverting()
+    public unsafe virtual void BMInverting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.BMInverting", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -899,7 +899,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFOVCheckLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetFOVCheckLocation()
+    public unsafe override System.Numerics.Vector3 GetFOVCheckLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.GetFOVCheckLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -917,7 +917,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLinkedHidePoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RHidePoint GetLinkedHidePoint(int I)
+    public unsafe virtual BmSDK.BmGame.RHidePoint GetLinkedHidePoint(int I)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint.GetLinkedHidePoint", true);
         byte* paramsPtr = stackalloc byte[12];

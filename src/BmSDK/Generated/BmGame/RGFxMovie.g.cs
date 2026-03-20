@@ -36,7 +36,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: IsLocationInFearGasXYZ
     /// </summary>
-    public unsafe bool IsLocationInFearGasXYZ(float X, float Y, float Z)
+    public unsafe virtual bool IsLocationInFearGasXYZ(float X, float Y, float Z)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.IsLocationInFearGasXYZ", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -57,7 +57,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: IsLocationInFearGas
     /// </summary>
-    public unsafe bool IsLocationInFearGas(System.Numerics.Vector3 vTestLocation)
+    public unsafe virtual bool IsLocationInFearGas(System.Numerics.Vector3 vTestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.IsLocationInFearGas", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -76,7 +76,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: OnLoadedTexture
     /// </summary>
-    public unsafe void OnLoadedTexture(BmSDK.FString sCallback, BmSDK.FString sPackage, BmSDK.Engine.Texture2D pTexture)
+    public unsafe virtual void OnLoadedTexture(BmSDK.FString sCallback, BmSDK.FString sPackage, BmSDK.Engine.Texture2D pTexture)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.OnLoadedTexture", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -90,7 +90,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: OnLoadedPackage
     /// </summary>
-    public unsafe void OnLoadedPackage(BmSDK.FString sCallback)
+    public unsafe virtual void OnLoadedPackage(BmSDK.FString sCallback)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.OnLoadedPackage", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -102,7 +102,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: XI_LoadPackageSF
     /// </summary>
-    public unsafe bool XI_LoadPackageSF(BmSDK.FString sPackage, BmSDK.FString sCallback, BmSDK.FString sAsset = default)
+    public unsafe virtual bool XI_LoadPackageSF(BmSDK.FString sPackage, BmSDK.FString sCallback, BmSDK.FString sAsset = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.XI_LoadPackageSF", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -123,7 +123,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: XI_CancelPackageSF
     /// </summary>
-    public unsafe void XI_CancelPackageSF(BmSDK.FString sPackage = default)
+    public unsafe virtual void XI_CancelPackageSF(BmSDK.FString sPackage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.XI_CancelPackageSF", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -142,7 +142,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyFriendBeatYou
     /// </summary>
-    public unsafe void NotifyFriendBeatYou()
+    public unsafe virtual void NotifyFriendBeatYou()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.NotifyFriendBeatYou", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -153,7 +153,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayAnim
     /// </summary>
-    public unsafe void PlayAnim(BmSDK.FString AnimName)
+    public unsafe virtual void PlayAnim(BmSDK.FString AnimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.PlayAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -165,7 +165,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: VS_FakeNetID
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId VS_FakeNetID(int IconId)
+    public unsafe virtual BmSDK.Engine.OnlineSubsystem.FUniqueNetId VS_FakeNetID(int IconId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.VS_FakeNetID", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -184,7 +184,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: HandleVoiceRec
     /// </summary>
-    public unsafe bool HandleVoiceRec(BmSDK.FString VoiceRecCommand)
+    public unsafe virtual bool HandleVoiceRec(BmSDK.FString VoiceRecCommand)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.HandleVoiceRec", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -196,7 +196,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: ProcessVoiceCommand
     /// </summary>
-    public unsafe bool ProcessVoiceCommand(BmSDK.FString VoiceRecCommand)
+    public unsafe virtual bool ProcessVoiceCommand(BmSDK.FString VoiceRecCommand)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.ProcessVoiceCommand", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -208,7 +208,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: PreRender
     /// </summary>
-    public unsafe void PreRender(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void PreRender(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.PreRender", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -220,7 +220,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: ManualAdvance
     /// </summary>
-    public unsafe void ManualAdvance()
+    public unsafe virtual void ManualAdvance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.ManualAdvance", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -238,7 +238,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: PrepareManualAdvance
     /// </summary>
-    public unsafe void PrepareManualAdvance()
+    public unsafe virtual void PrepareManualAdvance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.PrepareManualAdvance", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -256,7 +256,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: ManualAdvanceTick
     /// </summary>
-    public unsafe void ManualAdvanceTick(float DeltaT)
+    public unsafe virtual void ManualAdvanceTick(float DeltaT)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.ManualAdvanceTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -268,7 +268,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: SetSubtitle
     /// </summary>
-    public unsafe void SetSubtitle(BmSDK.FString TheText)
+    public unsafe virtual void SetSubtitle(BmSDK.FString TheText)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.SetSubtitle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -280,7 +280,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveSubtitle
     /// </summary>
-    public unsafe void RemoveSubtitle()
+    public unsafe virtual void RemoveSubtitle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.RemoveSubtitle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -298,7 +298,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: AddSubtitle
     /// </summary>
-    public unsafe void AddSubtitle(int SubtitlePriority, float SubtitleDuration, BmSDK.FString SubtitleText, bool bBackScreen, bool bMovie)
+    public unsafe virtual void AddSubtitle(int SubtitlePriority, float SubtitleDuration, BmSDK.FString SubtitleText, bool bBackScreen, bool bMovie)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.AddSubtitle", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -321,7 +321,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAudioTrackIds
     /// </summary>
-    public unsafe void GetAudioTrackIds(out int EffectsAudioTrack, out int DialogueAudioTrack, out int SubtitleTrackId)
+    public unsafe virtual void GetAudioTrackIds(out int EffectsAudioTrack, out int DialogueAudioTrack, out int SubtitleTrackId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.GetAudioTrackIds", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -342,7 +342,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPlayerId
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId GetPlayerId()
+    public unsafe virtual BmSDK.Engine.OnlineSubsystem.FUniqueNetId GetPlayerId()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.GetPlayerId", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -353,7 +353,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: XI_IsTimeBasedChallenge
     /// </summary>
-    public unsafe bool XI_IsTimeBasedChallenge(int nId)
+    public unsafe virtual bool XI_IsTimeBasedChallenge(int nId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.XI_IsTimeBasedChallenge", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -365,7 +365,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: XI_IsSignedInOnline
     /// </summary>
-    public unsafe bool XI_IsSignedInOnline()
+    public unsafe virtual bool XI_IsSignedInOnline()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.XI_IsSignedInOnline", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -376,7 +376,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: XI_CanPlayOnline
     /// </summary>
-    public unsafe bool XI_CanPlayOnline()
+    public unsafe virtual bool XI_CanPlayOnline()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.XI_CanPlayOnline", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -387,7 +387,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: XI_GetNPAvailState
     /// </summary>
-    public unsafe int XI_GetNPAvailState()
+    public unsafe virtual int XI_GetNPAvailState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.XI_GetNPAvailState", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -398,7 +398,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: XI_GetDisplayName
     /// </summary>
-    public unsafe BmSDK.FString XI_GetDisplayName()
+    public unsafe virtual BmSDK.FString XI_GetDisplayName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.XI_GetDisplayName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -409,7 +409,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: XI_GetNickName
     /// </summary>
-    public unsafe BmSDK.FString XI_GetNickName()
+    public unsafe virtual BmSDK.FString XI_GetNickName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.XI_GetNickName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -420,7 +420,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveBank
     /// </summary>
-    public unsafe void RemoveBank(BmSDK.Engine.AkBank wwise_bank)
+    public unsafe virtual void RemoveBank(BmSDK.Engine.AkBank wwise_bank)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.RemoveBank", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -432,7 +432,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: PushBank
     /// </summary>
-    public unsafe void PushBank(BmSDK.Engine.AkBank wwise_bank)
+    public unsafe virtual void PushBank(BmSDK.Engine.AkBank wwise_bank)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.PushBank", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -444,7 +444,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBankIndex
     /// </summary>
-    public unsafe int GetBankIndex(BmSDK.Engine.AkBank wwise_bank)
+    public unsafe virtual int GetBankIndex(BmSDK.Engine.AkBank wwise_bank)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.GetBankIndex", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -456,7 +456,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: XI_SetToolTip
     /// </summary>
-    public unsafe void XI_SetToolTip(BmSDK.FString Text, BmSDK.FString Option = default)
+    public unsafe virtual void XI_SetToolTip(BmSDK.FString Text, BmSDK.FString Option = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.XI_SetToolTip", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -469,7 +469,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: XI_LayoutPrompts
     /// </summary>
-    public unsafe void XI_LayoutPrompts()
+    public unsafe virtual void XI_LayoutPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.XI_LayoutPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -480,7 +480,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: XI_SetPrompt
     /// </summary>
-    public unsafe void XI_SetPrompt(int PromptId, BmSDK.FString PromptTag, float Alpha)
+    public unsafe virtual void XI_SetPrompt(int PromptId, BmSDK.FString PromptTag, float Alpha)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.XI_SetPrompt", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -494,7 +494,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: XI_ClearPrompts
     /// </summary>
-    public unsafe void XI_ClearPrompts()
+    public unsafe virtual void XI_ClearPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.XI_ClearPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -505,7 +505,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: XI_GetPromptStr2
     /// </summary>
-    public unsafe BmSDK.FString XI_GetPromptStr2(int Id, bool bAsPad)
+    public unsafe virtual BmSDK.FString XI_GetPromptStr2(int Id, bool bAsPad)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.XI_GetPromptStr2", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -518,7 +518,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: XI_GetPromptStr
     /// </summary>
-    public unsafe BmSDK.FString XI_GetPromptStr(int Id, bool bAsPad)
+    public unsafe virtual BmSDK.FString XI_GetPromptStr(int Id, bool bAsPad)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.XI_GetPromptStr", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -531,7 +531,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: LookupLocTags
     /// </summary>
-    public unsafe void LookupLocTags(BmSDK.FString BaseStr, out BmSDK.FString PadStr, out BmSDK.FString KeyStr)
+    public unsafe virtual void LookupLocTags(BmSDK.FString BaseStr, out BmSDK.FString PadStr, out BmSDK.FString KeyStr)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.LookupLocTags", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -552,7 +552,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: LookupLocTag
     /// </summary>
-    public unsafe BmSDK.FString LookupLocTag(BmSDK.FString BaseStr, bool bAsPad, bool bNoExpand = default, bool bIsKey2 = default)
+    public unsafe virtual BmSDK.FString LookupLocTag(BmSDK.FString BaseStr, bool bAsPad, bool bNoExpand = default, bool bIsKey2 = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.LookupLocTag", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -574,7 +574,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: IsCircleToAccept
     /// </summary>
-    public unsafe bool IsCircleToAccept()
+    public unsafe virtual bool IsCircleToAccept()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.IsCircleToAccept", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -585,7 +585,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: xGetGlobalFlag
     /// </summary>
-    public unsafe int xGetGlobalFlag(BmSDK.FString FlagName)
+    public unsafe virtual int xGetGlobalFlag(BmSDK.FString FlagName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.xGetGlobalFlag", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -597,7 +597,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: xSetGlobalFlag
     /// </summary>
-    public unsafe void xSetGlobalFlag(BmSDK.FString FlagName, bool bValue)
+    public unsafe virtual void xSetGlobalFlag(BmSDK.FString FlagName, bool bValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.xSetGlobalFlag", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -610,7 +610,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPS3_480i
     /// </summary>
-    public unsafe bool IsPS3_480i()
+    public unsafe virtual bool IsPS3_480i()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.IsPS3_480i", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -628,7 +628,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPS3_4x3
     /// </summary>
-    public unsafe bool IsPS3_4x3()
+    public unsafe virtual bool IsPS3_4x3()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.IsPS3_4x3", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -646,7 +646,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: SetAudioSuppressed
     /// </summary>
-    public unsafe void SetAudioSuppressed(bool should_suppress)
+    public unsafe virtual void SetAudioSuppressed(bool should_suppress)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.SetAudioSuppressed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -658,7 +658,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLanguageExt
     /// </summary>
-    public unsafe BmSDK.FString GetLanguageExt()
+    public unsafe virtual BmSDK.FString GetLanguageExt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.GetLanguageExt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -676,7 +676,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPointerValid
     /// </summary>
-    public unsafe bool IsPointerValid()
+    public unsafe virtual bool IsPointerValid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.IsPointerValid", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -694,7 +694,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: SetAudioState
     /// </summary>
-    public unsafe void SetAudioState(BmSDK.FString StateName, BmSDK.FString StateValue)
+    public unsafe virtual void SetAudioState(BmSDK.FString StateName, BmSDK.FString StateValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.SetAudioState", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -714,7 +714,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: SetAudioParameter
     /// </summary>
-    public unsafe void SetAudioParameter(BmSDK.FString ParamName, float ParamValue)
+    public unsafe virtual void SetAudioParameter(BmSDK.FString ParamName, float ParamValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.SetAudioParameter", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -734,7 +734,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: KillEventInstance
     /// </summary>
-    public unsafe void KillEventInstance(int InstanceID)
+    public unsafe virtual void KillEventInstance(int InstanceID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.KillEventInstance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -753,7 +753,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: TriggerAudioEventsQueue
     /// </summary>
-    public unsafe void TriggerAudioEventsQueue(int ChannelID, BmSDK.FString Source_Event_Thing__PipeSeparated, int NumEvents)
+    public unsafe virtual void TriggerAudioEventsQueue(int ChannelID, BmSDK.FString Source_Event_Thing__PipeSeparated, int NumEvents)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.TriggerAudioEventsQueue", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -774,7 +774,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: TriggerAudioEvent
     /// </summary>
-    public unsafe void TriggerAudioEvent(int ChannelID, BmSDK.FString Source, BmSDK.FString Event, BmSDK.FString Thing)
+    public unsafe virtual void TriggerAudioEvent(int ChannelID, BmSDK.FString Source, BmSDK.FString Event, BmSDK.FString Thing)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.TriggerAudioEvent", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -796,7 +796,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: LocalisedExists
     /// </summary>
-    public unsafe bool LocalisedExists(BmSDK.FString Str)
+    public unsafe virtual bool LocalisedExists(BmSDK.FString Str)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.LocalisedExists", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -808,7 +808,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: LocaliseCaps
     /// </summary>
-    public unsafe BmSDK.FString LocaliseCaps(BmSDK.FString Str)
+    public unsafe virtual BmSDK.FString LocaliseCaps(BmSDK.FString Str)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.LocaliseCaps", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -827,7 +827,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: Localise
     /// </summary>
-    public unsafe BmSDK.FString Localise(BmSDK.FString Str)
+    public unsafe virtual BmSDK.FString Localise(BmSDK.FString Str)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.Localise", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -846,7 +846,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: UC_TriggerPromptClicked
     /// </summary>
-    public unsafe void UC_TriggerPromptClicked(int PromptId)
+    public unsafe virtual void UC_TriggerPromptClicked(int PromptId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.UC_TriggerPromptClicked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -858,7 +858,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateHudVisibility
     /// </summary>
-    public unsafe void UpdateHudVisibility(bool bVisible)
+    public unsafe virtual void UpdateHudVisibility(bool bVisible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.UpdateHudVisibility", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -870,7 +870,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: IsGenericErrorOpen
     /// </summary>
-    public unsafe bool IsGenericErrorOpen()
+    public unsafe virtual bool IsGenericErrorOpen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.IsGenericErrorOpen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -881,7 +881,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: OnFadeCompleted_Callback
     /// </summary>
-    public unsafe void OnFadeCompleted_Callback()
+    public unsafe virtual void OnFadeCompleted_Callback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.OnFadeCompleted_Callback", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -892,7 +892,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: PopupRequester_Callback
     /// </summary>
-    public unsafe void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
+    public unsafe virtual void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.PopupRequester_Callback", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -905,7 +905,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: OpenPopupMessage4
     /// </summary>
-    public unsafe BmSDK.BmGame.RGFxMoviePopupRequester OpenPopupMessage4(BmSDK.FString Prompt1, BmSDK.FString Prompt2, BmSDK.FString Prompt3, BmSDK.FString Prompt4, BmSDK.FString Message, int DefaultSelected = default, bool bAllowBack = default, BmSDK.GFxUI.SwfMovie iMovie = default)
+    public unsafe virtual BmSDK.BmGame.RGFxMoviePopupRequester OpenPopupMessage4(BmSDK.FString Prompt1, BmSDK.FString Prompt2, BmSDK.FString Prompt3, BmSDK.FString Prompt4, BmSDK.FString Message, int DefaultSelected = default, bool bAllowBack = default, BmSDK.GFxUI.SwfMovie iMovie = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.OpenPopupMessage4", true);
         byte* paramsPtr = stackalloc byte[120];
@@ -924,7 +924,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: OpenPopupMessage3
     /// </summary>
-    public unsafe BmSDK.BmGame.RGFxMoviePopupRequester OpenPopupMessage3(BmSDK.FString Prompt1, BmSDK.FString Prompt2, BmSDK.FString Prompt3, BmSDK.FString Message, int DefaultSelected = default, bool bAllowBack = default, BmSDK.GFxUI.SwfMovie iMovie = default)
+    public unsafe virtual BmSDK.BmGame.RGFxMoviePopupRequester OpenPopupMessage3(BmSDK.FString Prompt1, BmSDK.FString Prompt2, BmSDK.FString Prompt3, BmSDK.FString Message, int DefaultSelected = default, bool bAllowBack = default, BmSDK.GFxUI.SwfMovie iMovie = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.OpenPopupMessage3", true);
         byte* paramsPtr = stackalloc byte[104];
@@ -942,7 +942,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: OpenPopupMessage2
     /// </summary>
-    public unsafe BmSDK.BmGame.RGFxMoviePopupRequester OpenPopupMessage2(BmSDK.FString Prompt1, BmSDK.FString Prompt2, BmSDK.FString Message, int DefaultSelected = default, bool bAllowBack = default, BmSDK.GFxUI.SwfMovie iMovie = default)
+    public unsafe virtual BmSDK.BmGame.RGFxMoviePopupRequester OpenPopupMessage2(BmSDK.FString Prompt1, BmSDK.FString Prompt2, BmSDK.FString Message, int DefaultSelected = default, bool bAllowBack = default, BmSDK.GFxUI.SwfMovie iMovie = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.OpenPopupMessage2", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -959,7 +959,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: OpenPopupMessage1
     /// </summary>
-    public unsafe BmSDK.BmGame.RGFxMoviePopupRequester OpenPopupMessage1(BmSDK.FString Prompt1, BmSDK.FString Message, bool bAllowBack = default, BmSDK.GFxUI.SwfMovie iMovie = default)
+    public unsafe virtual BmSDK.BmGame.RGFxMoviePopupRequester OpenPopupMessage1(BmSDK.FString Prompt1, BmSDK.FString Message, bool bAllowBack = default, BmSDK.GFxUI.SwfMovie iMovie = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.OpenPopupMessage1", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -974,7 +974,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: OnAspectRatioChanged
     /// </summary>
-    public unsafe void OnAspectRatioChanged(float aspect_ratio)
+    public unsafe override void OnAspectRatioChanged(float aspect_ratio)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.OnAspectRatioChanged", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -986,7 +986,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: XI_GetUsingGamepad
     /// </summary>
-    public unsafe bool XI_GetUsingGamepad()
+    public unsafe virtual bool XI_GetUsingGamepad()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.XI_GetUsingGamepad", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -997,7 +997,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: SetAspectRatioAuto
     /// </summary>
-    public unsafe void SetAspectRatioAuto()
+    public unsafe virtual void SetAspectRatioAuto()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.SetAspectRatioAuto", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1008,7 +1008,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: KismetEvent
     /// </summary>
-    public unsafe void KismetEvent(BmSDK.FString EventName)
+    public unsafe virtual void KismetEvent(BmSDK.FString EventName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.KismetEvent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1020,7 +1020,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTheClassName
     /// </summary>
-    public unsafe BmSDK.FString GetTheClassName()
+    public unsafe virtual BmSDK.FString GetTheClassName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.GetTheClassName", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -1031,7 +1031,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: GetGameStatus
     /// </summary>
-    public unsafe int GetGameStatus()
+    public unsafe virtual int GetGameStatus()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.GetGameStatus", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1042,7 +1042,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: SetGameStatus
     /// </summary>
-    public unsafe void SetGameStatus(BmSDK.BmGame.RGameRI.EGameStatus Status)
+    public unsafe virtual void SetGameStatus(BmSDK.BmGame.RGameRI.EGameStatus Status)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.SetGameStatus", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -1054,7 +1054,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: XI_ReturnToChallengeMenu
     /// </summary>
-    public unsafe void XI_ReturnToChallengeMenu()
+    public unsafe virtual void XI_ReturnToChallengeMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.XI_ReturnToChallengeMenu", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1065,7 +1065,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: XI_IsFrontEndChallenge
     /// </summary>
-    public unsafe bool XI_IsFrontEndChallenge()
+    public unsafe virtual bool XI_IsFrontEndChallenge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.XI_IsFrontEndChallenge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1076,7 +1076,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPlatformTag
     /// </summary>
-    public unsafe BmSDK.FString GetPlatformTag()
+    public unsafe virtual BmSDK.FString GetPlatformTag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.GetPlatformTag", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1087,7 +1087,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPlatformStr
     /// </summary>
-    public unsafe BmSDK.FString GetPlatformStr()
+    public unsafe virtual BmSDK.FString GetPlatformStr()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.GetPlatformStr", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1098,7 +1098,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: XI_IsDemo
     /// </summary>
-    public unsafe bool XI_IsDemo()
+    public unsafe virtual bool XI_IsDemo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.XI_IsDemo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1109,7 +1109,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: GetGRI
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI GetGRI()
+    public unsafe virtual BmSDK.BmGame.RGameRI GetGRI()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.GetGRI", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1120,7 +1120,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRGI
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo GetRGI()
+    public unsafe virtual BmSDK.BmGame.RGameInfo GetRGI()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.GetRGI", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1131,7 +1131,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: GetWI
     /// </summary>
-    public unsafe BmSDK.Engine.WorldInfo GetWI()
+    public unsafe virtual BmSDK.Engine.WorldInfo GetWI()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.GetWI", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1142,7 +1142,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: OnMWLeaderboardRead
     /// </summary>
-    public unsafe void OnMWLeaderboardRead(bool bWasSuccessful, BmSDK.BmGame.ROnlineStatsReadMostWanted MWStats)
+    public unsafe virtual void OnMWLeaderboardRead(bool bWasSuccessful, BmSDK.BmGame.ROnlineStatsReadMostWanted MWStats)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.OnMWLeaderboardRead", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1155,7 +1155,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: SendLeaderBoardToFlash
     /// </summary>
-    public unsafe void SendLeaderBoardToFlash(int Id, int total, BmSDK.TArray<int> FriendIndex, BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId> NetIDs, BmSDK.TArray<int> Ranks, BmSDK.TArray<BmSDK.FString> NickNames, BmSDK.TArray<int> Stars, BmSDK.TArray<float> Scores, BmSDK.TArray<int> RivalPoints, BmSDK.TArray<float> Story, BmSDK.TArray<float> MW, BmSDK.TArray<float> AR)
+    public unsafe virtual void SendLeaderBoardToFlash(int Id, int total, BmSDK.TArray<int> FriendIndex, BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId> NetIDs, BmSDK.TArray<int> Ranks, BmSDK.TArray<BmSDK.FString> NickNames, BmSDK.TArray<int> Stars, BmSDK.TArray<float> Scores, BmSDK.TArray<int> RivalPoints, BmSDK.TArray<float> Story, BmSDK.TArray<float> MW, BmSDK.TArray<float> AR)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.SendLeaderBoardToFlash", true);
         byte* paramsPtr = stackalloc byte[168];
@@ -1178,7 +1178,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.Init", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1190,7 +1190,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPC
     /// </summary>
-    public unsafe BmSDK.Engine.PlayerController GetPC()
+    public unsafe override BmSDK.Engine.PlayerController GetPC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.GetPC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1201,7 +1201,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLP
     /// </summary>
-    public unsafe BmSDK.Engine.LocalPlayer GetLP()
+    public unsafe override BmSDK.Engine.LocalPlayer GetLP()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovie.GetLP", true);
         byte* paramsPtr = stackalloc byte[8];

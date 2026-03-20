@@ -66,7 +66,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: Nuke
     /// </summary>
-    public unsafe void Nuke(bool bSilent)
+    public unsafe virtual void Nuke(bool bSilent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.Nuke", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -78,7 +78,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: Detonated
     /// </summary>
-    public unsafe void Detonated()
+    public unsafe virtual void Detonated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.Detonated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: GetAnimRefPoint
     /// </summary>
-    public unsafe void GetAnimRefPoint(System.Numerics.Vector3 pawnLoc, out System.Numerics.Vector3 animRefLoc, out BmSDK.Rotator animRefRot)
+    public unsafe virtual void GetAnimRefPoint(System.Numerics.Vector3 pawnLoc, out System.Numerics.Vector3 animRefLoc, out BmSDK.Rotator animRefRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.GetAnimRefPoint", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -103,7 +103,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -114,7 +114,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -125,7 +125,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: GetExtraTranslation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetExtraTranslation()
+    public unsafe virtual System.Numerics.Vector3 GetExtraTranslation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.GetExtraTranslation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -143,7 +143,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: UpdateMeshPos
     /// </summary>
-    public unsafe void UpdateMeshPos()
+    public unsafe virtual void UpdateMeshPos()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.UpdateMeshPos", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -154,7 +154,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: DoorFinishedClosing
     /// </summary>
-    public unsafe void DoorFinishedClosing()
+    public unsafe virtual void DoorFinishedClosing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.DoorFinishedClosing", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -165,7 +165,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: DoorFinishedOpening
     /// </summary>
-    public unsafe void DoorFinishedOpening()
+    public unsafe virtual void DoorFinishedOpening()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.DoorFinishedOpening", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -176,7 +176,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -188,7 +188,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: CloseDoor
     /// </summary>
-    public unsafe void CloseDoor()
+    public unsafe virtual void CloseDoor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.CloseDoor", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -199,7 +199,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: OpenDoor
     /// </summary>
-    public unsafe void OpenDoor()
+    public unsafe virtual void OpenDoor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.OpenDoor", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -210,7 +210,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: RemoveDetectiveModeHighlight
     /// </summary>
-    public unsafe void RemoveDetectiveModeHighlight()
+    public unsafe virtual void RemoveDetectiveModeHighlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.RemoveDetectiveModeHighlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -221,7 +221,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: UpdateInvestigateOffset
     /// </summary>
-    public unsafe void UpdateInvestigateOffset()
+    public unsafe virtual void UpdateInvestigateOffset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.UpdateInvestigateOffset", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -232,7 +232,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: PawnHasLOSToDoor
     /// </summary>
-    public unsafe bool PawnHasLOSToDoor(BmSDK.BmGame.RPawn Pawn)
+    public unsafe virtual bool PawnHasLOSToDoor(BmSDK.BmGame.RPawn Pawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.PawnHasLOSToDoor", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -244,7 +244,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: StopNearbyThugs
     /// </summary>
-    public unsafe void StopNearbyThugs()
+    public unsafe virtual void StopNearbyThugs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.StopNearbyThugs", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -255,7 +255,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: SetEnabled
     /// </summary>
-    public unsafe void SetEnabled(bool bInEnabled)
+    public unsafe override void SetEnabled(bool bInEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.SetEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -267,7 +267,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -278,7 +278,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: GetTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTargetLocation(BmSDK.Engine.Actor RequestedBy = default, bool bRequestAlternateLoc = default)
+    public unsafe override System.Numerics.Vector3 GetTargetLocation(BmSDK.Engine.Actor RequestedBy = default, bool bRequestAlternateLoc = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.GetTargetLocation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -298,7 +298,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: UnRegisterObstacle
     /// </summary>
-    public unsafe void UnRegisterObstacle(bool bInstant = default)
+    public unsafe override void UnRegisterObstacle(bool bInstant = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.UnRegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -317,7 +317,7 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     /// <summary>
     /// Function: RegisterObstacle
     /// </summary>
-    public unsafe void RegisterObstacle()
+    public unsafe override void RegisterObstacle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBankDoorBase.RegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[0];

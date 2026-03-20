@@ -74,7 +74,7 @@ public partial class AkHash : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetHashString
     /// </summary>
-    public unsafe BmSDK.FString GetHashString()
+    public unsafe virtual BmSDK.FString GetHashString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkHash.GetHashString", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -92,7 +92,7 @@ public partial class AkHash : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetHashValue
     /// </summary>
-    public unsafe int GetHashValue()
+    public unsafe virtual int GetHashValue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkHash.GetHashValue", true);
         byte* paramsPtr = stackalloc byte[4];

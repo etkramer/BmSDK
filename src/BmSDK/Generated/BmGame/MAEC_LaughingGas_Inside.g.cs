@@ -71,7 +71,7 @@ public partial class MAEC_LaughingGas_Inside : BmSDK.BmGame.RAEC_Smoke_Inside, B
     /// <summary>
     /// Function: OnAssign
     /// </summary>
-    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe override void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_LaughingGas_Inside.OnAssign", true);
         byte* paramsPtr = stackalloc byte[24];

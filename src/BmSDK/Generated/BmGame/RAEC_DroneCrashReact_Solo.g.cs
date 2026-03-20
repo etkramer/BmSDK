@@ -71,7 +71,7 @@ public partial class RAEC_DroneCrashReact_Solo : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DroneCrashReact_Solo.Tick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RAEC_DroneCrashReact_Solo : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: WantsToGlanceAt
     /// </summary>
-    public unsafe bool WantsToGlanceAt(BmSDK.Engine.Actor TestTarget)
+    public unsafe override bool WantsToGlanceAt(BmSDK.Engine.Actor TestTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DroneCrashReact_Solo.WantsToGlanceAt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -95,7 +95,7 @@ public partial class RAEC_DroneCrashReact_Solo : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DroneCrashReact_Solo.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[8];

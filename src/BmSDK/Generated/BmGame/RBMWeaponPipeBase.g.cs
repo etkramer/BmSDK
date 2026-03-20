@@ -66,7 +66,7 @@ public partial class RBMWeaponPipeBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IGam
     /// <summary>
     /// Function: InitialisePlayerSpecificAnimsets
     /// </summary>
-    public unsafe void InitialisePlayerSpecificAnimsets(BmSDK.BmGame.RPawnPlayerCombat NewPlayer, int PlayerIndex)
+    public unsafe override void InitialisePlayerSpecificAnimsets(BmSDK.BmGame.RPawnPlayerCombat NewPlayer, int PlayerIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponPipeBase.InitialisePlayerSpecificAnimsets", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -79,7 +79,7 @@ public partial class RBMWeaponPipeBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IGam
     /// <summary>
     /// Function: GetFearTakedownReactionAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetFearTakedownReactionAnimset()
+    public unsafe override BmSDK.Engine.AnimSet GetFearTakedownReactionAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponPipeBase.GetFearTakedownReactionAnimset", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -90,7 +90,7 @@ public partial class RBMWeaponPipeBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IGam
     /// <summary>
     /// Function: GetRECHitReactionAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetRECHitReactionAnimName()
+    public unsafe override BmSDK.FName GetRECHitReactionAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponPipeBase.GetRECHitReactionAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -101,7 +101,7 @@ public partial class RBMWeaponPipeBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IGam
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponPipeBase.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -113,7 +113,7 @@ public partial class RBMWeaponPipeBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IGam
     /// <summary>
     /// Function: CreateCombatWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateCombatWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2, BmSDK.Engine.AnimSet AnimSet3, BmSDK.Engine.AnimSet AnimSet4, BmSDK.Engine.AnimSet AnimSet5 = default, BmSDK.Engine.AnimSet AnimSet6 = default)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateCombatWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2, BmSDK.Engine.AnimSet AnimSet3, BmSDK.Engine.AnimSet AnimSet4, BmSDK.Engine.AnimSet AnimSet5 = default, BmSDK.Engine.AnimSet AnimSet6 = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponPipeBase.CreateCombatWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[72];

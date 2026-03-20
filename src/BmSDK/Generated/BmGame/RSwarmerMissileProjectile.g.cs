@@ -71,7 +71,7 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, bool bPlayExplosionSound = default)
+    public unsafe override void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, bool bPlayExplosionSound = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSwarmerMissileProjectile.Explode", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -85,7 +85,7 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
     /// <summary>
     /// Function: ExplodeSingleRocket
     /// </summary>
-    public unsafe void ExplodeSingleRocket(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, bool bPlayExplosionSound = default)
+    public unsafe virtual void ExplodeSingleRocket(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, bool bPlayExplosionSound = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSwarmerMissileProjectile.ExplodeSingleRocket", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -99,7 +99,7 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSwarmerMissileProjectile.Tick", true);
         byte* paramsPtr = stackalloc byte[140];
@@ -111,7 +111,7 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(System.Numerics.Vector3 Target)
+    public unsafe override void Init(System.Numerics.Vector3 Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSwarmerMissileProjectile.Init", true);
         byte* paramsPtr = stackalloc byte[16];

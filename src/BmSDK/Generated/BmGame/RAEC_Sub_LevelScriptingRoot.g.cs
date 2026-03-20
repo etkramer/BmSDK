@@ -71,7 +71,7 @@ public partial class RAEC_Sub_LevelScriptingRoot : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: NotifyGunEmpty
     /// </summary>
-    public unsafe void NotifyGunEmpty()
+    public unsafe override void NotifyGunEmpty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_LevelScriptingRoot.NotifyGunEmpty", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Sub_LevelScriptingRoot : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_LevelScriptingRoot.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RAEC_Sub_LevelScriptingRoot : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: NotifyBehaviourOfLevelScripting
     /// </summary>
-    public unsafe void NotifyBehaviourOfLevelScripting()
+    public unsafe virtual void NotifyBehaviourOfLevelScripting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_LevelScriptingRoot.NotifyBehaviourOfLevelScripting", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -105,7 +105,7 @@ public partial class RAEC_Sub_LevelScriptingRoot : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: BehaviourActivatedByHostCon
     /// </summary>
-    public unsafe bool BehaviourActivatedByHostCon()
+    public unsafe virtual bool BehaviourActivatedByHostCon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_LevelScriptingRoot.BehaviourActivatedByHostCon", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -116,7 +116,7 @@ public partial class RAEC_Sub_LevelScriptingRoot : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_LevelScriptingRoot.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[0];

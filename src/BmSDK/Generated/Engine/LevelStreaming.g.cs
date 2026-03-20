@@ -31,7 +31,7 @@ public partial class LevelStreaming : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: RequestUnloadAndRemoval
     /// </summary>
-    public unsafe void RequestUnloadAndRemoval()
+    public unsafe virtual void RequestUnloadAndRemoval()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LevelStreaming.RequestUnloadAndRemoval", true);
         byte* paramsPtr = stackalloc byte[0];

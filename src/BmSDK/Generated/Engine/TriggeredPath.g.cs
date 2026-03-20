@@ -71,7 +71,7 @@ public partial class TriggeredPath : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: SuggestMovePreparation
     /// </summary>
-    public unsafe bool SuggestMovePreparation(BmSDK.Engine.Pawn Other)
+    public unsafe override bool SuggestMovePreparation(BmSDK.Engine.Pawn Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TriggeredPath.SuggestMovePreparation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class TriggeredPath : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: SpecialHandling
     /// </summary>
-    public unsafe BmSDK.Engine.Actor SpecialHandling(BmSDK.Engine.Pawn Other)
+    public unsafe override BmSDK.Engine.Actor SpecialHandling(BmSDK.Engine.Pawn Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TriggeredPath.SpecialHandling", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -95,7 +95,7 @@ public partial class TriggeredPath : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TriggeredPath.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];

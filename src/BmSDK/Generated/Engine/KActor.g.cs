@@ -71,7 +71,7 @@ public partial class KActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
     /// <summary>
     /// Function: Reset
     /// </summary>
-    public unsafe void Reset()
+    public unsafe override void Reset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActor.Reset", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class KActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnTeleport
     /// </summary>
-    public unsafe void OnTeleport(BmSDK.Engine.SeqAct_Teleport inAction)
+    public unsafe override void OnTeleport(BmSDK.Engine.SeqAct_Teleport inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActor.OnTeleport", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -94,7 +94,7 @@ public partial class KActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActor.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class KActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
     /// <summary>
     /// Function: TakeRadiusDamage
     /// </summary>
-    public unsafe void TakeRadiusDamage(BmSDK.Engine.Controller InstigatedBy, float BaseDamage, float DamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, bool bFullDamage, BmSDK.Engine.Actor DamageCauser, float DamageFalloffExponent = default)
+    public unsafe override void TakeRadiusDamage(BmSDK.Engine.Controller InstigatedBy, float BaseDamage, float DamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, bool bFullDamage, BmSDK.Engine.Actor DamageCauser, float DamageFalloffExponent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActor.TakeRadiusDamage", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -126,7 +126,7 @@ public partial class KActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActor.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -144,7 +144,7 @@ public partial class KActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
     /// <summary>
     /// Function: ApplyImpulse
     /// </summary>
-    public unsafe void ApplyImpulse(System.Numerics.Vector3 ImpulseDir, float ImpulseMag, System.Numerics.Vector3 HitLocation, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Class DamageType = default)
+    public unsafe virtual void ApplyImpulse(System.Numerics.Vector3 ImpulseDir, float ImpulseMag, System.Numerics.Vector3 HitLocation, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Class DamageType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActor.ApplyImpulse", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -160,7 +160,7 @@ public partial class KActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnedByKismet
     /// </summary>
-    public unsafe void SpawnedByKismet()
+    public unsafe override void SpawnedByKismet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActor.SpawnedByKismet", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -171,7 +171,7 @@ public partial class KActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
     /// <summary>
     /// Function: FellOutOfWorld
     /// </summary>
-    public unsafe void FellOutOfWorld(BmSDK.Class dmgType)
+    public unsafe override void FellOutOfWorld(BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActor.FellOutOfWorld", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -183,7 +183,7 @@ public partial class KActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActor.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -194,7 +194,7 @@ public partial class KActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
     /// <summary>
     /// Function: ResolveRBState
     /// </summary>
-    public unsafe void ResolveRBState()
+    public unsafe virtual void ResolveRBState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActor.ResolveRBState", true);
         byte* paramsPtr = stackalloc byte[0];

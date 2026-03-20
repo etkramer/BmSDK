@@ -47,7 +47,7 @@ public partial class RSeqAct_MostWantedUpdate : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: BlockLevelName
     /// </summary>
-    public unsafe bool BlockLevelName()
+    public unsafe virtual bool BlockLevelName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MostWantedUpdate.BlockLevelName", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RSeqAct_MostWantedUpdate : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: ShutdownHUD
     /// </summary>
-    public unsafe void ShutdownHUD()
+    public unsafe virtual void ShutdownHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MostWantedUpdate.ShutdownHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -69,7 +69,7 @@ public partial class RSeqAct_MostWantedUpdate : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: InitHUD
     /// </summary>
-    public unsafe void InitHUD()
+    public unsafe virtual void InitHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MostWantedUpdate.InitHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -80,7 +80,7 @@ public partial class RSeqAct_MostWantedUpdate : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: PreRender
     /// </summary>
-    public unsafe void PreRender(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void PreRender(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MostWantedUpdate.PreRender", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -92,7 +92,7 @@ public partial class RSeqAct_MostWantedUpdate : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void DrawHUD(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MostWantedUpdate.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -104,7 +104,7 @@ public partial class RSeqAct_MostWantedUpdate : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: TriggerMostWantedUpdate
     /// </summary>
-    public unsafe void TriggerMostWantedUpdate()
+    public unsafe virtual void TriggerMostWantedUpdate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MostWantedUpdate.TriggerMostWantedUpdate", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -115,7 +115,7 @@ public partial class RSeqAct_MostWantedUpdate : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: ChooseMissions
     /// </summary>
-    public unsafe void ChooseMissions()
+    public unsafe virtual void ChooseMissions()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MostWantedUpdate.ChooseMissions", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -126,7 +126,7 @@ public partial class RSeqAct_MostWantedUpdate : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: IsMissionEligibleForUpdateMovie
     /// </summary>
-    public unsafe bool IsMissionEligibleForUpdateMovie(int missionIndex)
+    public unsafe virtual bool IsMissionEligibleForUpdateMovie(int missionIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MostWantedUpdate.IsMissionEligibleForUpdateMovie", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -138,7 +138,7 @@ public partial class RSeqAct_MostWantedUpdate : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: GetTimeSinceUpdate
     /// </summary>
-    public unsafe float GetTimeSinceUpdate(int missionIndex)
+    public unsafe virtual float GetTimeSinceUpdate(int missionIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MostWantedUpdate.GetTimeSinceUpdate", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -150,7 +150,7 @@ public partial class RSeqAct_MostWantedUpdate : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: GetMovieName
     /// </summary>
-    public unsafe bool GetMovieName(int missionIndex, BmSDK.FString movieNameSuffix, out BmSDK.FString MovieName)
+    public unsafe virtual bool GetMovieName(int missionIndex, BmSDK.FString movieNameSuffix, out BmSDK.FString MovieName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MostWantedUpdate.GetMovieName", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -164,7 +164,7 @@ public partial class RSeqAct_MostWantedUpdate : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: Deactivated
     /// </summary>
-    public unsafe void Deactivated()
+    public unsafe override void Deactivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MostWantedUpdate.Deactivated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -175,7 +175,7 @@ public partial class RSeqAct_MostWantedUpdate : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MostWantedUpdate.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -186,7 +186,7 @@ public partial class RSeqAct_MostWantedUpdate : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: CheckInputs
     /// </summary>
-    public unsafe void CheckInputs()
+    public unsafe virtual void CheckInputs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MostWantedUpdate.CheckInputs", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -197,7 +197,7 @@ public partial class RSeqAct_MostWantedUpdate : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MostWantedUpdate.Update", true);
         byte* paramsPtr = stackalloc byte[8];

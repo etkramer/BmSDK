@@ -71,7 +71,7 @@ public partial class RLevelVolumeOW : BmSDK.BmGame.RLevelVolume, BmSDK.IGameObje
     /// <summary>
     /// Function: DeactivateStreaming
     /// </summary>
-    public unsafe void DeactivateStreaming()
+    public unsafe override void DeactivateStreaming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolumeOW.DeactivateStreaming", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class RLevelVolumeOW : BmSDK.BmGame.RLevelVolume, BmSDK.IGameObje
     /// <summary>
     /// Function: ActivateStreaming
     /// </summary>
-    public unsafe void ActivateStreaming(bool LevelStart)
+    public unsafe override void ActivateStreaming(bool LevelStart)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolumeOW.ActivateStreaming", true);
         byte* paramsPtr = stackalloc byte[4];

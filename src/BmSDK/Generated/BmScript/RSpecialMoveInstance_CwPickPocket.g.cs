@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_CwPickPocket : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPickPocket.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_CwPickPocket : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: PickPocket
     /// </summary>
-    public unsafe void PickPocket()
+    public unsafe virtual void PickPocket()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPickPocket.PickPocket", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RSpecialMoveInstance_CwPickPocket : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: HideCard
     /// </summary>
-    public unsafe void HideCard()
+    public unsafe virtual void HideCard()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPickPocket.HideCard", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RSpecialMoveInstance_CwPickPocket : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: ShowCard
     /// </summary>
-    public unsafe void ShowCard()
+    public unsafe virtual void ShowCard()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPickPocket.ShowCard", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RSpecialMoveInstance_CwPickPocket : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPickPocket.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -127,7 +127,7 @@ public partial class RSpecialMoveInstance_CwPickPocket : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPickPocket.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[132];

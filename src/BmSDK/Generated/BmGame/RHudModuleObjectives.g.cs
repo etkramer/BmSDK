@@ -36,7 +36,7 @@ public partial class RHudModuleObjectives : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: XI_ObjectiveBarFilled
     /// </summary>
-    public unsafe void XI_ObjectiveBarFilled()
+    public unsafe virtual void XI_ObjectiveBarFilled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleObjectives.XI_ObjectiveBarFilled", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RHudModuleObjectives : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: XI_ObjectiveItemShown
     /// </summary>
-    public unsafe void XI_ObjectiveItemShown(int arrow_type, BmSDK.FString CustomIconString)
+    public unsafe virtual void XI_ObjectiveItemShown(int arrow_type, BmSDK.FString CustomIconString)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleObjectives.XI_ObjectiveItemShown", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -60,7 +60,7 @@ public partial class RHudModuleObjectives : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: FlushObjectivePrivate
     /// </summary>
-    public unsafe void FlushObjectivePrivate(BmSDK.FString Title)
+    public unsafe virtual void FlushObjectivePrivate(BmSDK.FString Title)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleObjectives.FlushObjectivePrivate", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -72,7 +72,7 @@ public partial class RHudModuleObjectives : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: AddObjectivePrivate
     /// </summary>
-    public unsafe void AddObjectivePrivate(float Time, BmSDK.FString Title, BmSDK.FString Desc, BmSDK.FString OrgDesc, int ArrowType, bool bForceShowMap, BmSDK.FString BackPrompt, bool bNoDuplicates, bool bPulseCompassIndicatorm, BmSDK.FString mostWantedUnlocksString)
+    public unsafe virtual void AddObjectivePrivate(float Time, BmSDK.FString Title, BmSDK.FString Desc, BmSDK.FString OrgDesc, int ArrowType, bool bForceShowMap, BmSDK.FString BackPrompt, bool bNoDuplicates, bool bPulseCompassIndicatorm, BmSDK.FString mostWantedUnlocksString)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleObjectives.AddObjectivePrivate", true);
         byte* paramsPtr = stackalloc byte[100];
@@ -93,7 +93,7 @@ public partial class RHudModuleObjectives : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: ObjectivesPromptCallback
     /// </summary>
-    public unsafe void ObjectivesPromptCallback(BmSDK.FString PadStr, BmSDK.FString KeyStr)
+    public unsafe virtual void ObjectivesPromptCallback(BmSDK.FString PadStr, BmSDK.FString KeyStr)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleObjectives.ObjectivesPromptCallback", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -106,7 +106,7 @@ public partial class RHudModuleObjectives : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: SendQueuedInfo
     /// </summary>
-    public unsafe void SendQueuedInfo()
+    public unsafe virtual void SendQueuedInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleObjectives.SendQueuedInfo", true);
         byte* paramsPtr = stackalloc byte[100];
@@ -117,7 +117,7 @@ public partial class RHudModuleObjectives : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleObjectives.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RHudModuleObjectives : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleObjectives.Init", true);
         byte* paramsPtr = stackalloc byte[44];

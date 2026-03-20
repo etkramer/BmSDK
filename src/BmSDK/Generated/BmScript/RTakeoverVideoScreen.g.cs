@@ -71,7 +71,7 @@ public partial class RTakeoverVideoScreen : BmSDK.BmGame.RTakeoverVideoScreenBas
     /// <summary>
     /// Function: SetOverrideMaterial
     /// </summary>
-    public unsafe void SetOverrideMaterial()
+    public unsafe virtual void SetOverrideMaterial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTakeoverVideoScreen.SetOverrideMaterial", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RTakeoverVideoScreen : BmSDK.BmGame.RTakeoverVideoScreenBas
     /// <summary>
     /// Function: SetStaticTransitionParameter
     /// </summary>
-    public unsafe void SetStaticTransitionParameter(float val)
+    public unsafe override void SetStaticTransitionParameter(float val)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTakeoverVideoScreen.SetStaticTransitionParameter", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -94,7 +94,7 @@ public partial class RTakeoverVideoScreen : BmSDK.BmGame.RTakeoverVideoScreenBas
     /// <summary>
     /// Function: RevertToStandardTexture
     /// </summary>
-    public unsafe void RevertToStandardTexture()
+    public unsafe override void RevertToStandardTexture()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTakeoverVideoScreen.RevertToStandardTexture", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RTakeoverVideoScreen : BmSDK.BmGame.RTakeoverVideoScreenBas
     /// <summary>
     /// Function: SetTakeoverTexture
     /// </summary>
-    public unsafe void SetTakeoverTexture(BmSDK.Engine.TextureRenderTarget2D takeoverTexture)
+    public unsafe override void SetTakeoverTexture(BmSDK.Engine.TextureRenderTarget2D takeoverTexture)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTakeoverVideoScreen.SetTakeoverTexture", true);
         byte* paramsPtr = stackalloc byte[8];

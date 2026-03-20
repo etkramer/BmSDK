@@ -71,7 +71,7 @@ public partial class RRiddlerBoxBase : BmSDK.BmGame.RMagneticDynamicObjectBase, 
     /// <summary>
     /// Function: InitAllPhysics
     /// </summary>
-    public unsafe void InitAllPhysics()
+    public unsafe virtual void InitAllPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlerBoxBase.InitAllPhysics", true);
         byte* paramsPtr = stackalloc byte[0];

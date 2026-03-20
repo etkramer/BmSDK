@@ -36,7 +36,7 @@ public partial class RSeqAct_DownloadProgress : BmSDK.Engine.SequenceAction, BmS
     /// <summary>
     /// Function: OutroComplete
     /// </summary>
-    public unsafe void OutroComplete()
+    public unsafe virtual void OutroComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_DownloadProgress.OutroComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RSeqAct_DownloadProgress : BmSDK.Engine.SequenceAction, BmS
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_DownloadProgress.Activated", true);
         byte* paramsPtr = stackalloc byte[8];

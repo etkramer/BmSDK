@@ -36,7 +36,7 @@ public partial class AkDialogueType : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPersistent
     /// </summary>
-    public unsafe bool IsPersistent()
+    public unsafe virtual bool IsPersistent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueType.IsPersistent", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -54,7 +54,7 @@ public partial class AkDialogueType : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowSubtitles
     /// </summary>
-    public unsafe bool ShowSubtitles()
+    public unsafe virtual bool ShowSubtitles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueType.ShowSubtitles", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -72,7 +72,7 @@ public partial class AkDialogueType : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: IsEmote
     /// </summary>
-    public unsafe bool IsEmote()
+    public unsafe virtual bool IsEmote()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueType.IsEmote", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -90,7 +90,7 @@ public partial class AkDialogueType : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: BasePriority
     /// </summary>
-    public unsafe int BasePriority()
+    public unsafe virtual int BasePriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueType.BasePriority", true);
         byte* paramsPtr = stackalloc byte[4];

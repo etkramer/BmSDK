@@ -71,7 +71,7 @@ public partial class MBMAIAction_JackInBoxAttraction_Stage1 : BmSDK.BmGame.RBMAI
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMAIAction_JackInBoxAttraction_Stage1.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class MBMAIAction_JackInBoxAttraction_Stage1 : BmSDK.BmGame.RBMAI
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMAIAction_JackInBoxAttraction_Stage1.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class MBMAIAction_JackInBoxAttraction_Stage1 : BmSDK.BmGame.RBMAI
     /// <summary>
     /// Function: Setup
     /// </summary>
-    public unsafe void Setup(BmSDK.Engine.Actor NewLookAtActor, float newTimeLimit, BmSDK.Engine.AnimSet NewThugReactionAnimSet)
+    public unsafe virtual void Setup(BmSDK.Engine.Actor NewLookAtActor, float newTimeLimit, BmSDK.Engine.AnimSet NewThugReactionAnimSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMAIAction_JackInBoxAttraction_Stage1.Setup", true);
         byte* paramsPtr = stackalloc byte[20];

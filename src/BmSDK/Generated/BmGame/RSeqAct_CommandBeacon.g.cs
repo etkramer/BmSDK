@@ -47,7 +47,7 @@ public partial class RSeqAct_CommandBeacon : BmSDK.Engine.SeqAct_Latent, BmSDK.I
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CommandBeacon.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RSeqAct_CommandBeacon : BmSDK.Engine.SeqAct_Latent, BmSDK.I
     /// <summary>
     /// Function: HandleInputLinks
     /// </summary>
-    public unsafe void HandleInputLinks()
+    public unsafe virtual void HandleInputLinks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CommandBeacon.HandleInputLinks", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RSeqAct_CommandBeacon : BmSDK.Engine.SeqAct_Latent, BmSDK.I
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CommandBeacon.Activated", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -36,7 +36,7 @@ public partial class RBMBehaviour_BeingEatenByPlant : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: CanHitLaserGrid
     /// </summary>
-    public unsafe bool CanHitLaserGrid()
+    public unsafe override bool CanHitLaserGrid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BeingEatenByPlant.CanHitLaserGrid", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_BeingEatenByPlant : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: CanBlock
     /// </summary>
-    public unsafe bool CanBlock()
+    public unsafe override bool CanBlock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BeingEatenByPlant.CanBlock", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_BeingEatenByPlant : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: SetPlant
     /// </summary>
-    public unsafe void SetPlant(BmSDK.BmGame.RThugEatingPlantBase NewPlant)
+    public unsafe virtual void SetPlant(BmSDK.BmGame.RThugEatingPlantBase NewPlant)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BeingEatenByPlant.SetPlant", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -70,7 +70,7 @@ public partial class RBMBehaviour_BeingEatenByPlant : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BeingEatenByPlant.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_BeingEatenByPlant : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BeingEatenByPlant.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -92,7 +92,7 @@ public partial class RBMBehaviour_BeingEatenByPlant : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: AwareOfPlayer
     /// </summary>
-    public unsafe bool AwareOfPlayer(BmSDK.Engine.Actor Player, BmSDK.Class dmgType = default)
+    public unsafe override bool AwareOfPlayer(BmSDK.Engine.Actor Player, BmSDK.Class dmgType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BeingEatenByPlant.AwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -105,7 +105,7 @@ public partial class RBMBehaviour_BeingEatenByPlant : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: UnAwareOfPlayer
     /// </summary>
-    public unsafe bool UnAwareOfPlayer(BmSDK.Class dmgType = default)
+    public unsafe override bool UnAwareOfPlayer(BmSDK.Class dmgType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BeingEatenByPlant.UnAwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -117,7 +117,7 @@ public partial class RBMBehaviour_BeingEatenByPlant : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BeingEatenByPlant.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

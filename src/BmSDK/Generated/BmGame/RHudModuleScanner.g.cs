@@ -36,7 +36,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: InitDeepScanParams
     /// </summary>
-    public unsafe void InitDeepScanParams(int NumEvidenceFound, int NumPossibilities, BmSDK.FString PossibleMatchString, BmSDK.FString FoundString1, BmSDK.FString FoundString2, int FinalDisplayFrameIndex)
+    public unsafe virtual void InitDeepScanParams(int NumEvidenceFound, int NumPossibilities, BmSDK.FString PossibleMatchString, BmSDK.FString FoundString1, BmSDK.FString FoundString2, int FinalDisplayFrameIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.InitDeepScanParams", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -53,7 +53,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: FindDeepScanEvidence
     /// </summary>
-    public unsafe void FindDeepScanEvidence(BmSDK.FString FoundString, int NumPossibilitiesNow)
+    public unsafe virtual void FindDeepScanEvidence(BmSDK.FString FoundString, int NumPossibilitiesNow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.FindDeepScanEvidence", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -66,7 +66,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: SetDeepScanLevel
     /// </summary>
-    public unsafe void SetDeepScanLevel(int scan_level)
+    public unsafe virtual void SetDeepScanLevel(int scan_level)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.SetDeepScanLevel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -78,7 +78,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: AddTimelineFill
     /// </summary>
-    public unsafe void AddTimelineFill(float prop_start, float prop_finish)
+    public unsafe virtual void AddTimelineFill(float prop_start, float prop_finish)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.AddTimelineFill", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -91,7 +91,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: SetTimelineHighlight
     /// </summary>
-    public unsafe void SetTimelineHighlight(BmSDK.FString Anim, float prop_start, float prop_finish)
+    public unsafe virtual void SetTimelineHighlight(BmSDK.FString Anim, float prop_start, float prop_finish)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.SetTimelineHighlight", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -105,7 +105,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: SetTimelineCursor
     /// </summary>
-    public unsafe void SetTimelineCursor(float cursor_prop)
+    public unsafe virtual void SetTimelineCursor(float cursor_prop)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.SetTimelineCursor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -117,7 +117,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: HideTimeline
     /// </summary>
-    public unsafe void HideTimeline()
+    public unsafe virtual void HideTimeline()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.HideTimeline", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: ShowTimeline
     /// </summary>
-    public unsafe void ShowTimeline()
+    public unsafe virtual void ShowTimeline()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.ShowTimeline", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: StartScanning
     /// </summary>
-    public unsafe void StartScanning(bool isCaseFile, int scanMode)
+    public unsafe virtual void StartScanning(bool isCaseFile, int scanMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.StartScanning", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -152,7 +152,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: DeselectEvidenceSection
     /// </summary>
-    public unsafe void DeselectEvidenceSection(int percentIndex)
+    public unsafe virtual void DeselectEvidenceSection(int percentIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.DeselectEvidenceSection", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -164,7 +164,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: SelectEvidenceSection
     /// </summary>
-    public unsafe void SelectEvidenceSection(int percentIndex, int ScanState)
+    public unsafe virtual void SelectEvidenceSection(int percentIndex, int ScanState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.SelectEvidenceSection", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -177,7 +177,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: RemoveEvidenceSection
     /// </summary>
-    public unsafe void RemoveEvidenceSection(int percentIndex)
+    public unsafe virtual void RemoveEvidenceSection(int percentIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.RemoveEvidenceSection", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -189,7 +189,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: AddEvidenceSection
     /// </summary>
-    public unsafe void AddEvidenceSection(int StartIndex, int endIndex)
+    public unsafe virtual void AddEvidenceSection(int StartIndex, int endIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.AddEvidenceSection", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -202,7 +202,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: AddSimpleEvidenceSection
     /// </summary>
-    public unsafe void AddSimpleEvidenceSection(int percentIndex)
+    public unsafe virtual void AddSimpleEvidenceSection(int percentIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.AddSimpleEvidenceSection", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -214,7 +214,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: SetCameraMode
     /// </summary>
-    public unsafe void SetCameraMode(int Mode)
+    public unsafe virtual void SetCameraMode(int Mode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.SetCameraMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -226,7 +226,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: SetCaseFileMode
     /// </summary>
-    public unsafe void SetCaseFileMode(int ScanState)
+    public unsafe virtual void SetCaseFileMode(int ScanState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.SetCaseFileMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -238,7 +238,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: SetMarkerPositionPercentage
     /// </summary>
-    public unsafe void SetMarkerPositionPercentage(float Value)
+    public unsafe virtual void SetMarkerPositionPercentage(float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.SetMarkerPositionPercentage", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -250,7 +250,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: SetScannerPercentageComplete
     /// </summary>
-    public unsafe void SetScannerPercentageComplete(float Value)
+    public unsafe virtual void SetScannerPercentageComplete(float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.SetScannerPercentageComplete", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -262,7 +262,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: SetScannerPosition
     /// </summary>
-    public unsafe void SetScannerPosition(float X, float Y)
+    public unsafe virtual void SetScannerPosition(float X, float Y)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.SetScannerPosition", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -275,7 +275,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: SetScanAnimProportion
     /// </summary>
-    public unsafe void SetScanAnimProportion(BmSDK.FString anim_name, float Proportion)
+    public unsafe virtual void SetScanAnimProportion(BmSDK.FString anim_name, float Proportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.SetScanAnimProportion", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -288,7 +288,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: PlayScanAnim
     /// </summary>
-    public unsafe void PlayScanAnim(BmSDK.FString anim_name)
+    public unsafe virtual void PlayScanAnim(BmSDK.FString anim_name)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.PlayScanAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -300,7 +300,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: XI_Scanner_ScanComplete
     /// </summary>
-    public unsafe void XI_Scanner_ScanComplete()
+    public unsafe virtual void XI_Scanner_ScanComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.XI_Scanner_ScanComplete", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -311,7 +311,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: XI_Scanner_ScannerAnimComplete
     /// </summary>
-    public unsafe void XI_Scanner_ScannerAnimComplete()
+    public unsafe virtual void XI_Scanner_ScannerAnimComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.XI_Scanner_ScannerAnimComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -322,7 +322,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: AutoChooseDetectedFrame
     /// </summary>
-    public unsafe void AutoChooseDetectedFrame()
+    public unsafe virtual void AutoChooseDetectedFrame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.AutoChooseDetectedFrame", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -333,7 +333,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: XI_Scanner_NotifyOutroComplete
     /// </summary>
-    public unsafe void XI_Scanner_NotifyOutroComplete()
+    public unsafe virtual void XI_Scanner_NotifyOutroComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.XI_Scanner_NotifyOutroComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -344,7 +344,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: XI_Scanner_NotifyIntroComplete
     /// </summary>
-    public unsafe void XI_Scanner_NotifyIntroComplete()
+    public unsafe virtual void XI_Scanner_NotifyIntroComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.XI_Scanner_NotifyIntroComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -355,7 +355,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: InitialiseFlash
     /// </summary>
-    public unsafe void InitialiseFlash()
+    public unsafe override void InitialiseFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.InitialiseFlash", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -366,7 +366,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -377,7 +377,7 @@ public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleScanner.Init", true);
         byte* paramsPtr = stackalloc byte[44];

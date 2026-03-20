@@ -36,7 +36,7 @@ public partial class MHQBehaviour_SnareTrapTripped : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: AwareOfPlayer
     /// </summary>
-    public unsafe bool AwareOfPlayer(BmSDK.Engine.Actor Player, BmSDK.Class dmgType = default)
+    public unsafe override bool AwareOfPlayer(BmSDK.Engine.Actor Player, BmSDK.Class dmgType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHQBehaviour_SnareTrapTripped.AwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -49,7 +49,7 @@ public partial class MHQBehaviour_SnareTrapTripped : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: UnAwareOfPlayer
     /// </summary>
-    public unsafe bool UnAwareOfPlayer(BmSDK.Class DamageType = default)
+    public unsafe override bool UnAwareOfPlayer(BmSDK.Class DamageType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHQBehaviour_SnareTrapTripped.UnAwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -61,7 +61,7 @@ public partial class MHQBehaviour_SnareTrapTripped : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHQBehaviour_SnareTrapTripped.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -72,7 +72,7 @@ public partial class MHQBehaviour_SnareTrapTripped : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: ExitTrap
     /// </summary>
-    public unsafe void ExitTrap(bool bEarlyInterrupt = default)
+    public unsafe virtual void ExitTrap(bool bEarlyInterrupt = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHQBehaviour_SnareTrapTripped.ExitTrap", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -84,7 +84,7 @@ public partial class MHQBehaviour_SnareTrapTripped : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: BreakTrapEarly
     /// </summary>
-    public unsafe void BreakTrapEarly()
+    public unsafe virtual void BreakTrapEarly()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHQBehaviour_SnareTrapTripped.BreakTrapEarly", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class MHQBehaviour_SnareTrapTripped : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: GetAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetAnimName(bool bIdle, bool bBreakout)
+    public unsafe virtual BmSDK.FName GetAnimName(bool bIdle, bool bBreakout)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHQBehaviour_SnareTrapTripped.GetAnimName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -108,7 +108,7 @@ public partial class MHQBehaviour_SnareTrapTripped : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: Initialize
     /// </summary>
-    public unsafe void Initialize(BmSDK.BmGame.RPawnPlayer Instigator, BmSDK.BmGame.MSnareTrapProjectile SnareTrap, BmSDK.Engine.AnimSet NewThugReactionAnimSet)
+    public unsafe virtual void Initialize(BmSDK.BmGame.RPawnPlayer Instigator, BmSDK.BmGame.MSnareTrapProjectile SnareTrap, BmSDK.Engine.AnimSet NewThugReactionAnimSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHQBehaviour_SnareTrapTripped.Initialize", true);
         byte* paramsPtr = stackalloc byte[32];

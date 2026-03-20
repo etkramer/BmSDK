@@ -36,7 +36,7 @@ public partial class RThreatBaseAsset : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldActivate
     /// </summary>
-    public unsafe bool ShouldActivate()
+    public unsafe virtual bool ShouldActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThreatBaseAsset.ShouldActivate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -54,7 +54,7 @@ public partial class RThreatBaseAsset : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Function: GetWorldInfo
     /// </summary>
-    public unsafe BmSDK.Engine.WorldInfo GetWorldInfo()
+    public unsafe virtual BmSDK.Engine.WorldInfo GetWorldInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThreatBaseAsset.GetWorldInfo", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -65,7 +65,7 @@ public partial class RThreatBaseAsset : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Function: IsDestroyed
     /// </summary>
-    public unsafe bool IsDestroyed()
+    public unsafe virtual bool IsDestroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThreatBaseAsset.IsDestroyed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RThreatBaseAsset : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDestroyed
     /// </summary>
-    public unsafe void SetDestroyed()
+    public unsafe virtual void SetDestroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThreatBaseAsset.SetDestroyed", true);
         byte* paramsPtr = stackalloc byte[0];

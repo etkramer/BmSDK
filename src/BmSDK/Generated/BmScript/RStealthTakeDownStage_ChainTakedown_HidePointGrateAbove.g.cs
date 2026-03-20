@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_ChainTakedown_HidePointGrateAbove : B
     /// <summary>
     /// Function: GotoStage
     /// </summary>
-    public unsafe void GotoStage(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages NextStageClass)
+    public unsafe override void GotoStage(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages NextStageClass)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakeDownStage_ChainTakedown_HidePointGrateAbove.GotoStage", true);
         byte* paramsPtr = stackalloc byte[1];

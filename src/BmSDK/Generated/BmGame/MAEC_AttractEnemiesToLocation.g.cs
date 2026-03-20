@@ -71,7 +71,7 @@ public partial class MAEC_AttractEnemiesToLocation : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController AttractedCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController AttractedCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesToLocation.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class MAEC_AttractEnemiesToLocation : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesToLocation.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -94,7 +94,7 @@ public partial class MAEC_AttractEnemiesToLocation : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: ExecuteAEC
     /// </summary>
-    public unsafe void ExecuteAEC(BmSDK.BmGame.RPawnVillain VillainPawn, BmSDK.Engine.Actor AttractPoint)
+    public unsafe virtual void ExecuteAEC(BmSDK.BmGame.RPawnVillain VillainPawn, BmSDK.Engine.Actor AttractPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesToLocation.ExecuteAEC", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -107,7 +107,7 @@ public partial class MAEC_AttractEnemiesToLocation : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: Setup
     /// </summary>
-    public unsafe void Setup(BmSDK.TArray<BmSDK.Engine.Actor> NewThugsAttracted, BmSDK.Engine.Actor NewAttractor, float NewAttractDuration)
+    public unsafe virtual void Setup(BmSDK.TArray<BmSDK.Engine.Actor> NewThugsAttracted, BmSDK.Engine.Actor NewAttractor, float NewAttractDuration)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesToLocation.Setup", true);
         byte* paramsPtr = stackalloc byte[28];

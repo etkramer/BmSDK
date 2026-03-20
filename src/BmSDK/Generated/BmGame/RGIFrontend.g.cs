@@ -71,7 +71,7 @@ public partial class RGIFrontend : BmSDK.BmGame.RGameInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: CustomContentIsFiltered
     /// </summary>
-    public unsafe bool CustomContentIsFiltered(BmSDK.FString sFilter)
+    public unsafe override bool CustomContentIsFiltered(BmSDK.FString sFilter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGIFrontend.CustomContentIsFiltered", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -83,7 +83,7 @@ public partial class RGIFrontend : BmSDK.BmGame.RGameInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: DestroyWBIDOverlayManager
     /// </summary>
-    public unsafe void DestroyWBIDOverlayManager()
+    public unsafe virtual void DestroyWBIDOverlayManager()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGIFrontend.DestroyWBIDOverlayManager", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RGIFrontend : BmSDK.BmGame.RGameInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: CreateWBIDOverlayManager
     /// </summary>
-    public unsafe void CreateWBIDOverlayManager()
+    public unsafe virtual void CreateWBIDOverlayManager()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGIFrontend.CreateWBIDOverlayManager", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RGIFrontend : BmSDK.BmGame.RGameInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGIFrontend.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

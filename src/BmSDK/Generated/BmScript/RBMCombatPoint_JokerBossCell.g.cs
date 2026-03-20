@@ -71,7 +71,7 @@ public partial class RBMCombatPoint_JokerBossCell : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: GetTargetEndStance
     /// </summary>
-    public unsafe BmSDK.FName GetTargetEndStance()
+    public unsafe override BmSDK.FName GetTargetEndStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_JokerBossCell.GetTargetEndStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RBMCombatPoint_JokerBossCell : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: GetPlayerInRange
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayerCombat GetPlayerInRange()
+    public unsafe override BmSDK.BmGame.RPawnPlayerCombat GetPlayerInRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_JokerBossCell.GetPlayerInRange", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RBMCombatPoint_JokerBossCell : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: GetVillainInRange
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnVillain GetVillainInRange()
+    public unsafe override BmSDK.BmGame.RPawnVillain GetVillainInRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_JokerBossCell.GetVillainInRange", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -104,7 +104,7 @@ public partial class RBMCombatPoint_JokerBossCell : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: UsedByPawn
     /// </summary>
-    public unsafe void UsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.Engine.Actor NewTarget = default, bool bUsedDuringTaunt = default)
+    public unsafe override void UsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.Engine.Actor NewTarget = default, bool bUsedDuringTaunt = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_JokerBossCell.UsedByPawn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -118,7 +118,7 @@ public partial class RBMCombatPoint_JokerBossCell : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: ShouldKill
     /// </summary>
-    public unsafe bool ShouldKill()
+    public unsafe override bool ShouldKill()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_JokerBossCell.ShouldKill", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -129,7 +129,7 @@ public partial class RBMCombatPoint_JokerBossCell : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: GetAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetAnimName(BmSDK.BmGame.RPawnVillain TargetPawn, BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
+    public unsafe override BmSDK.FName GetAnimName(BmSDK.BmGame.RPawnVillain TargetPawn, BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_JokerBossCell.GetAnimName", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -142,7 +142,7 @@ public partial class RBMCombatPoint_JokerBossCell : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: SetupHighlightMesh
     /// </summary>
-    public unsafe void SetupHighlightMesh()
+    public unsafe override void SetupHighlightMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_JokerBossCell.SetupHighlightMesh", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -153,7 +153,7 @@ public partial class RBMCombatPoint_JokerBossCell : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: SetMyPylon
     /// </summary>
-    public unsafe void SetMyPylon()
+    public unsafe override void SetMyPylon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_JokerBossCell.SetMyPylon", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -47,7 +47,7 @@ public partial class RInfinitePredatorSpawner : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInfinitePredatorSpawner.Update", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -59,7 +59,7 @@ public partial class RInfinitePredatorSpawner : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: SpawnNextPawn
     /// </summary>
-    public unsafe void SpawnNextPawn()
+    public unsafe virtual void SpawnNextPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInfinitePredatorSpawner.SpawnNextPawn", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -70,7 +70,7 @@ public partial class RInfinitePredatorSpawner : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: PlayTwoFaceDialogue
     /// </summary>
-    public unsafe void PlayTwoFaceDialogue()
+    public unsafe virtual void PlayTwoFaceDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInfinitePredatorSpawner.PlayTwoFaceDialogue", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -81,7 +81,7 @@ public partial class RInfinitePredatorSpawner : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInfinitePredatorSpawner.Activated", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -92,7 +92,7 @@ public partial class RInfinitePredatorSpawner : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: SpawnPawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawn SpawnPawn(BmSDK.Class NewPawnClass, BmSDK.BmGame.RCharacterDefine NewCharacterDefine, BmSDK.Class NewCharacterClass, BmSDK.Class NewWeaponClass, BmSDK.Engine.Actor NewSpawnPoint)
+    public unsafe virtual BmSDK.BmGame.RPawn SpawnPawn(BmSDK.Class NewPawnClass, BmSDK.BmGame.RCharacterDefine NewCharacterDefine, BmSDK.Class NewCharacterClass, BmSDK.Class NewWeaponClass, BmSDK.Engine.Actor NewSpawnPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInfinitePredatorSpawner.SpawnPawn", true);
         byte* paramsPtr = stackalloc byte[48];

@@ -31,7 +31,7 @@ public partial class AkPredicate : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: IsTrue
     /// </summary>
-    public unsafe bool IsTrue()
+    public unsafe virtual bool IsTrue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkPredicate.IsTrue", true);
         byte* paramsPtr = stackalloc byte[4];

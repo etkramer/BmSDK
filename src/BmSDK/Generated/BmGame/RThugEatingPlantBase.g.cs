@@ -66,7 +66,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetObstacleActor
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetObstacleActor()
+    public unsafe virtual BmSDK.Engine.Actor GetObstacleActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.GetObstacleActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -77,7 +77,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: Detonate
     /// </summary>
-    public unsafe void Detonate()
+    public unsafe virtual void Detonate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.Detonate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -88,7 +88,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetDetonatePrompt
     /// </summary>
-    public unsafe BmSDK.FString GetDetonatePrompt()
+    public unsafe virtual BmSDK.FString GetDetonatePrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.GetDetonatePrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -99,7 +99,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: PlayDetonateAnim
     /// </summary>
-    public unsafe bool PlayDetonateAnim()
+    public unsafe virtual bool PlayDetonateAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.PlayDetonateAnim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -110,7 +110,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: ReadyToDetonate
     /// </summary>
-    public unsafe bool ReadyToDetonate()
+    public unsafe virtual bool ReadyToDetonate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.ReadyToDetonate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -121,7 +121,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: EatCancelled
     /// </summary>
-    public unsafe void EatCancelled()
+    public unsafe virtual void EatCancelled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.EatCancelled", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -132,7 +132,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: GrabThug
     /// </summary>
-    public unsafe void GrabThug()
+    public unsafe virtual void GrabThug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.GrabThug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -143,7 +143,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetThugPosFromAnim
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetThugPosFromAnim()
+    public unsafe virtual System.Numerics.Vector3 GetThugPosFromAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.GetThugPosFromAnim", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -154,7 +154,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetBestAttackAnim
     /// </summary>
-    public unsafe BmSDK.FName GetBestAttackAnim()
+    public unsafe virtual BmSDK.FName GetBestAttackAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.GetBestAttackAnim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -165,7 +165,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: IsThugSafeForCollision
     /// </summary>
-    public unsafe bool IsThugSafeForCollision(float TestDist)
+    public unsafe virtual bool IsThugSafeForCollision(float TestDist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.IsThugSafeForCollision", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -177,7 +177,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetTraceStartLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTraceStartLoc()
+    public unsafe virtual System.Numerics.Vector3 GetTraceStartLoc()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.GetTraceStartLoc", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -188,7 +188,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: PickAnimForRangeSq
     /// </summary>
-    public unsafe BmSDK.FName PickAnimForRangeSq(float RangeSq, BmSDK.FName AnimList)
+    public unsafe virtual BmSDK.FName PickAnimForRangeSq(float RangeSq, BmSDK.FName AnimList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.PickAnimForRangeSq", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -201,7 +201,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: TurnTowardsTarget
     /// </summary>
-    public unsafe bool TurnTowardsTarget(float DeltaTime, float UnRotUnitsPerSec)
+    public unsafe virtual bool TurnTowardsTarget(float DeltaTime, float UnRotUnitsPerSec)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.TurnTowardsTarget", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -214,7 +214,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: StopPlantEatingFX
     /// </summary>
-    public unsafe void StopPlantEatingFX(BmSDK.BmGame.RPawnVillain VillainTarget)
+    public unsafe virtual void StopPlantEatingFX(BmSDK.BmGame.RPawnVillain VillainTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.StopPlantEatingFX", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -226,7 +226,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: StartPlantEatingFX
     /// </summary>
-    public unsafe void StartPlantEatingFX(BmSDK.BmGame.RPawnVillain NewTarget)
+    public unsafe virtual void StartPlantEatingFX(BmSDK.BmGame.RPawnVillain NewTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.StartPlantEatingFX", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -238,7 +238,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetTargetHighlight
     /// </summary>
-    public unsafe void SetTargetHighlight(bool bIsHighlightOn)
+    public unsafe virtual void SetTargetHighlight(bool bIsHighlightOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.SetTargetHighlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -250,7 +250,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.Tick", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -262,7 +262,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: ThugFinished
     /// </summary>
-    public unsafe void ThugFinished()
+    public unsafe virtual void ThugFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.ThugFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -273,7 +273,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: FireThugEatenKismetEvent
     /// </summary>
-    public unsafe void FireThugEatenKismetEvent()
+    public unsafe virtual void FireThugEatenKismetEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.FireThugEatenKismetEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -284,7 +284,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetThugAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetThugAnimSet()
+    public unsafe virtual BmSDK.Engine.AnimSet GetThugAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.GetThugAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -295,7 +295,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: StartEatAnim
     /// </summary>
-    public unsafe void StartEatAnim()
+    public unsafe virtual void StartEatAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.StartEatAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -306,7 +306,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: PlayAwareIdle
     /// </summary>
-    public unsafe void PlayAwareIdle()
+    public unsafe virtual void PlayAwareIdle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.PlayAwareIdle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -317,7 +317,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: PlayCalmIdle
     /// </summary>
-    public unsafe void PlayCalmIdle()
+    public unsafe virtual void PlayCalmIdle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.PlayCalmIdle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -328,7 +328,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetVoiceSynthMovePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetVoiceSynthMovePosition()
+    public unsafe virtual System.Numerics.Vector3 GetVoiceSynthMovePosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.GetVoiceSynthMovePosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -339,7 +339,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -350,7 +350,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -361,7 +361,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetInXrayMode
     /// </summary>
-    public unsafe void SetInXrayMode(bool show, bool bForceOff)
+    public unsafe virtual void SetInXrayMode(bool show, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.SetInXrayMode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -374,7 +374,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: UpdateGlow
     /// </summary>
-    public unsafe void UpdateGlow()
+    public unsafe virtual void UpdateGlow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.UpdateGlow", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -385,7 +385,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: CreatePlantGlow
     /// </summary>
-    public unsafe void CreatePlantGlow()
+    public unsafe virtual void CreatePlantGlow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.CreatePlantGlow", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -396,7 +396,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: CreateGlowMesh
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent CreateGlowMesh(BmSDK.Engine.SkeletalMeshComponent Template, BmSDK.Engine.MaterialInterface OverrideMaterial)
+    public unsafe virtual BmSDK.Engine.SkeletalMeshComponent CreateGlowMesh(BmSDK.Engine.SkeletalMeshComponent Template, BmSDK.Engine.MaterialInterface OverrideMaterial)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.CreateGlowMesh", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -409,7 +409,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -420,7 +420,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnRegisterObstacle
     /// </summary>
-    public unsafe void UnRegisterObstacle()
+    public unsafe virtual void UnRegisterObstacle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.UnRegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -438,7 +438,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: RegisterObstacle
     /// </summary>
-    public unsafe void RegisterObstacle()
+    public unsafe virtual void RegisterObstacle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugEatingPlantBase.RegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[0];

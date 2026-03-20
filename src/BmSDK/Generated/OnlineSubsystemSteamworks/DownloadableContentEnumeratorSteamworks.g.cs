@@ -36,7 +36,7 @@ public partial class DownloadableContentEnumeratorSteamworks : BmSDK.Engine.Down
     /// <summary>
     /// Function: DeleteDLC
     /// </summary>
-    public unsafe void DeleteDLC(BmSDK.FString DLCName)
+    public unsafe override void DeleteDLC(BmSDK.FString DLCName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.DownloadableContentEnumeratorSteamworks.DeleteDLC", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -48,7 +48,7 @@ public partial class DownloadableContentEnumeratorSteamworks : BmSDK.Engine.Down
     /// <summary>
     /// Function: AppendDLC
     /// </summary>
-    public unsafe void AppendDLC(out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FOnlineContent> Bundles)
+    public unsafe virtual void AppendDLC(out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FOnlineContent> Bundles)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.DownloadableContentEnumeratorSteamworks.AppendDLC", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -67,7 +67,7 @@ public partial class DownloadableContentEnumeratorSteamworks : BmSDK.Engine.Down
     /// <summary>
     /// Function: OnReadContentComplete
     /// </summary>
-    public unsafe void OnReadContentComplete(bool bWasSuccessful)
+    public unsafe virtual void OnReadContentComplete(bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.DownloadableContentEnumeratorSteamworks.OnReadContentComplete", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -79,7 +79,7 @@ public partial class DownloadableContentEnumeratorSteamworks : BmSDK.Engine.Down
     /// <summary>
     /// Function: ClearAllContent
     /// </summary>
-    public unsafe void ClearAllContent()
+    public unsafe override void ClearAllContent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.DownloadableContentEnumeratorSteamworks.ClearAllContent", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -90,7 +90,7 @@ public partial class DownloadableContentEnumeratorSteamworks : BmSDK.Engine.Down
     /// <summary>
     /// Function: FindDLC
     /// </summary>
-    public unsafe void FindDLC()
+    public unsafe override void FindDLC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.DownloadableContentEnumeratorSteamworks.FindDLC", true);
         byte* paramsPtr = stackalloc byte[44];

@@ -36,7 +36,7 @@ public partial class AlertInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateAlert
     /// </summary>
-    public unsafe void UpdateAlert(System.Numerics.Vector3 NewLocation, float BackDateTime = default)
+    public unsafe virtual void UpdateAlert(System.Numerics.Vector3 NewLocation, float BackDateTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.AlertInstance.UpdateAlert", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -49,7 +49,7 @@ public partial class AlertInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAlertLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAlertLocation()
+    public unsafe virtual System.Numerics.Vector3 GetAlertLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.AlertInstance.GetAlertLocation", true);
         byte* paramsPtr = stackalloc byte[12];

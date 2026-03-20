@@ -36,7 +36,7 @@ public partial class SpotLightComponent : BmSDK.Engine.PointLightComponent, BmSD
     /// <summary>
     /// Function: SetAngleAndRadius
     /// </summary>
-    public unsafe void SetAngleAndRadius(float NewInnerConeAngle, float NewOuterConeAngle, float NewRadius)
+    public unsafe virtual void SetAngleAndRadius(float NewInnerConeAngle, float NewOuterConeAngle, float NewRadius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SpotLightComponent.SetAngleAndRadius", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -57,7 +57,7 @@ public partial class SpotLightComponent : BmSDK.Engine.PointLightComponent, BmSD
     /// <summary>
     /// Function: SetAbsoluteRotation
     /// </summary>
-    public unsafe void SetAbsoluteRotation(bool bNewAbsoluteRotation)
+    public unsafe virtual void SetAbsoluteRotation(bool bNewAbsoluteRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SpotLightComponent.SetAbsoluteRotation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -76,7 +76,7 @@ public partial class SpotLightComponent : BmSDK.Engine.PointLightComponent, BmSD
     /// <summary>
     /// Function: SetRotation
     /// </summary>
-    public unsafe void SetRotation(BmSDK.Rotator NewRotation)
+    public unsafe virtual void SetRotation(BmSDK.Rotator NewRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SpotLightComponent.SetRotation", true);
         byte* paramsPtr = stackalloc byte[12];

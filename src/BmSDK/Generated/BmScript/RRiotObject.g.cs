@@ -71,7 +71,7 @@ public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObje
     /// <summary>
     /// Function: HammerBeatingFx
     /// </summary>
-    public unsafe void HammerBeatingFx()
+    public unsafe virtual void HammerBeatingFx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiotObject.HammerBeatingFx", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObje
     /// <summary>
     /// Function: StopWelding
     /// </summary>
-    public unsafe void StopWelding()
+    public unsafe virtual void StopWelding()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiotObject.StopWelding", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObje
     /// <summary>
     /// Function: StartWelding
     /// </summary>
-    public unsafe void StartWelding()
+    public unsafe virtual void StartWelding()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiotObject.StartWelding", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObje
     /// <summary>
     /// Function: StopGrinding
     /// </summary>
-    public unsafe void StopGrinding()
+    public unsafe virtual void StopGrinding()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiotObject.StopGrinding", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObje
     /// <summary>
     /// Function: StartGrinding
     /// </summary>
-    public unsafe void StartGrinding()
+    public unsafe virtual void StartGrinding()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiotObject.StartGrinding", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObje
     /// <summary>
     /// Function: StopSprayCan
     /// </summary>
-    public unsafe void StopSprayCan()
+    public unsafe virtual void StopSprayCan()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiotObject.StopSprayCan", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -137,7 +137,7 @@ public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObje
     /// <summary>
     /// Function: StartSprayCan
     /// </summary>
-    public unsafe void StartSprayCan()
+    public unsafe virtual void StartSprayCan()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiotObject.StartSprayCan", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -148,7 +148,7 @@ public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObje
     /// <summary>
     /// Function: IgniteFlare
     /// </summary>
-    public unsafe void IgniteFlare(bool bForMilitia)
+    public unsafe virtual void IgniteFlare(bool bForMilitia)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiotObject.IgniteFlare", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -160,7 +160,7 @@ public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObje
     /// <summary>
     /// Function: ExplodeMolotov
     /// </summary>
-    public unsafe void ExplodeMolotov()
+    public unsafe virtual void ExplodeMolotov()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiotObject.ExplodeMolotov", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -171,7 +171,7 @@ public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObje
     /// <summary>
     /// Function: IgniteMolotov
     /// </summary>
-    public unsafe void IgniteMolotov()
+    public unsafe virtual void IgniteMolotov()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiotObject.IgniteMolotov", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -182,7 +182,7 @@ public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObje
     /// <summary>
     /// Function: SetPickup
     /// </summary>
-    public unsafe void SetPickup(BmSDK.BmGame.RAnimNotify_PickupProp PickType)
+    public unsafe override void SetPickup(BmSDK.BmGame.RAnimNotify_PickupProp PickType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiotObject.SetPickup", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -194,7 +194,7 @@ public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObje
     /// <summary>
     /// Function: SetFlare
     /// </summary>
-    public unsafe void SetFlare()
+    public unsafe virtual void SetFlare()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiotObject.SetFlare", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -205,7 +205,7 @@ public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObje
     /// <summary>
     /// Function: SetMolotov
     /// </summary>
-    public unsafe void SetMolotov()
+    public unsafe virtual void SetMolotov()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiotObject.SetMolotov", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -216,7 +216,7 @@ public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObje
     /// <summary>
     /// Function: SetStone
     /// </summary>
-    public unsafe void SetStone()
+    public unsafe virtual void SetStone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiotObject.SetStone", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -227,7 +227,7 @@ public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObje
     /// <summary>
     /// Function: SetBrick
     /// </summary>
-    public unsafe void SetBrick()
+    public unsafe virtual void SetBrick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiotObject.SetBrick", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -238,7 +238,7 @@ public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObje
     /// <summary>
     /// Function: SetSpraycan
     /// </summary>
-    public unsafe void SetSpraycan()
+    public unsafe virtual void SetSpraycan()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiotObject.SetSpraycan", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -249,7 +249,7 @@ public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObje
     /// <summary>
     /// Function: SetPipe
     /// </summary>
-    public unsafe void SetPipe()
+    public unsafe virtual void SetPipe()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiotObject.SetPipe", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -260,7 +260,7 @@ public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObje
     /// <summary>
     /// Function: canDestroy
     /// </summary>
-    public unsafe bool canDestroy()
+    public unsafe override bool canDestroy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiotObject.canDestroy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -271,7 +271,7 @@ public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObje
     /// <summary>
     /// Function: DropObject
     /// </summary>
-    public unsafe void DropObject(BmSDK.BmGame.RAnimNotify_PickupProp DropNotify)
+    public unsafe override void DropObject(BmSDK.BmGame.RAnimNotify_PickupProp DropNotify)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiotObject.DropObject", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -283,7 +283,7 @@ public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObje
     /// <summary>
     /// Function: StopAllFx
     /// </summary>
-    public unsafe void StopAllFx()
+    public unsafe override void StopAllFx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiotObject.StopAllFx", true);
         byte* paramsPtr = stackalloc byte[0];

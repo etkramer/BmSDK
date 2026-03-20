@@ -71,7 +71,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateController
     /// </summary>
-    public unsafe void UpdateController()
+    public unsafe virtual void UpdateController()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.UpdateController", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ClientWeaponSet
     /// </summary>
-    public unsafe void ClientWeaponSet(BmSDK.Engine.Weapon NewWeapon, bool bOptionalSet, bool bDoNotActivate = default)
+    public unsafe virtual void ClientWeaponSet(BmSDK.Engine.Weapon NewWeapon, bool bOptionalSet, bool bDoNotActivate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.ClientWeaponSet", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -96,7 +96,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ChangedWeapon
     /// </summary>
-    public unsafe void ChangedWeapon()
+    public unsafe virtual void ChangedWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.ChangedWeapon", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -107,7 +107,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearPendingWeapon
     /// </summary>
-    public unsafe void ClearPendingWeapon()
+    public unsafe virtual void ClearPendingWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.ClearPendingWeapon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CancelWeaponChange
     /// </summary>
-    public unsafe bool CancelWeaponChange()
+    public unsafe virtual bool CancelWeaponChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.CancelWeaponChange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -129,7 +129,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPendingWeapon
     /// </summary>
-    public unsafe void SetPendingWeapon(BmSDK.Engine.Weapon DesiredWeapon, BmSDK.FName MovementStance, BmSDK.FName WeaponStance)
+    public unsafe virtual void SetPendingWeapon(BmSDK.Engine.Weapon DesiredWeapon, BmSDK.FName MovementStance, BmSDK.FName WeaponStance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.SetPendingWeapon", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -157,7 +157,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ServerSetCurrentWeapon
     /// </summary>
-    public unsafe void ServerSetCurrentWeapon(BmSDK.Engine.Weapon DesiredWeapon, BmSDK.FName MovementStance = default, BmSDK.FName WeaponStance = default)
+    public unsafe virtual void ServerSetCurrentWeapon(BmSDK.Engine.Weapon DesiredWeapon, BmSDK.FName MovementStance = default, BmSDK.FName WeaponStance = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.ServerSetCurrentWeapon", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -171,7 +171,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetCurrentWeapon
     /// </summary>
-    public unsafe void SetCurrentWeapon(BmSDK.Engine.Weapon DesiredWeapon, BmSDK.FName MovementStance = default, BmSDK.FName WeaponStance = default)
+    public unsafe virtual void SetCurrentWeapon(BmSDK.Engine.Weapon DesiredWeapon, BmSDK.FName MovementStance = default, BmSDK.FName WeaponStance = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.SetCurrentWeapon", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -185,7 +185,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: NextWeapon
     /// </summary>
-    public unsafe void NextWeapon()
+    public unsafe virtual void NextWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.NextWeapon", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -196,7 +196,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PrevWeapon
     /// </summary>
-    public unsafe void PrevWeapon()
+    public unsafe virtual void PrevWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.PrevWeapon", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -207,7 +207,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SwitchToBestWeapon
     /// </summary>
-    public unsafe void SwitchToBestWeapon(bool bForceADifferentWeapon = default)
+    public unsafe virtual void SwitchToBestWeapon(bool bForceADifferentWeapon = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.SwitchToBestWeapon", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -219,7 +219,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBestWeapon
     /// </summary>
-    public unsafe BmSDK.Engine.Weapon GetBestWeapon(bool bForceADifferentWeapon = default)
+    public unsafe virtual BmSDK.Engine.Weapon GetBestWeapon(bool bForceADifferentWeapon = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.GetBestWeapon", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -231,7 +231,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetWeaponRatingFor
     /// </summary>
-    public unsafe float GetWeaponRatingFor(BmSDK.Engine.Weapon W)
+    public unsafe virtual float GetWeaponRatingFor(BmSDK.Engine.Weapon W)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.GetWeaponRatingFor", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -243,7 +243,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.HUD H)
+    public unsafe virtual void DrawHUD(BmSDK.Engine.HUD H)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -255,7 +255,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OwnerDied
     /// </summary>
-    public unsafe void OwnerDied()
+    public unsafe virtual void OwnerDied()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.OwnerDied", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -266,7 +266,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DiscardInventory
     /// </summary>
-    public unsafe void DiscardInventory()
+    public unsafe virtual void DiscardInventory()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.DiscardInventory", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -277,7 +277,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveFromInventory
     /// </summary>
-    public unsafe void RemoveFromInventory(BmSDK.Engine.Inventory ItemToRemove)
+    public unsafe virtual void RemoveFromInventory(BmSDK.Engine.Inventory ItemToRemove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.RemoveFromInventory", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -289,7 +289,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddInventory
     /// </summary>
-    public unsafe bool AddInventory(BmSDK.Engine.Inventory NewItem, bool bDoNotActivate = default)
+    public unsafe virtual bool AddInventory(BmSDK.Engine.Inventory NewItem, bool bDoNotActivate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.AddInventory", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -302,7 +302,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CreateInventory
     /// </summary>
-    public unsafe BmSDK.Engine.Inventory CreateInventory(BmSDK.Class NewInventoryItemClass, bool bDoNotActivate = default, BmSDK.Engine.Actor NewArchetype = default)
+    public unsafe virtual BmSDK.Engine.Inventory CreateInventory(BmSDK.Class NewInventoryItemClass, bool bDoNotActivate = default, BmSDK.Engine.Actor NewArchetype = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.CreateInventory", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -316,7 +316,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FindInventoryType
     /// </summary>
-    public unsafe BmSDK.Engine.Inventory FindInventoryType(BmSDK.Class DesiredClass, bool bAllowSubclass = default)
+    public unsafe virtual BmSDK.Engine.Inventory FindInventoryType(BmSDK.Class DesiredClass, bool bAllowSubclass = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.FindInventoryType", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -329,7 +329,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HandlePickupQuery
     /// </summary>
-    public unsafe bool HandlePickupQuery(BmSDK.Class ItemClass, BmSDK.Engine.Actor Pickup)
+    public unsafe virtual bool HandlePickupQuery(BmSDK.Class ItemClass, BmSDK.Engine.Actor Pickup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.HandlePickupQuery", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -342,7 +342,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -353,7 +353,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetupFor
     /// </summary>
-    public unsafe void SetupFor(BmSDK.Engine.Pawn P)
+    public unsafe virtual void SetupFor(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.SetupFor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -366,7 +366,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearAllPendingFire
     /// </summary>
-    public unsafe void ClearAllPendingFire(BmSDK.Engine.Weapon InWeapon)
+    public unsafe virtual void ClearAllPendingFire(BmSDK.Engine.Weapon InWeapon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.ClearAllPendingFire", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -378,7 +378,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPendingFire
     /// </summary>
-    public unsafe bool IsPendingFire(BmSDK.Engine.Weapon InWeapon, int InFiringMode)
+    public unsafe virtual bool IsPendingFire(BmSDK.Engine.Weapon InWeapon, int InFiringMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.IsPendingFire", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -391,7 +391,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearPendingFire
     /// </summary>
-    public unsafe void ClearPendingFire(BmSDK.Engine.Weapon InWeapon, int InFiringMode)
+    public unsafe virtual void ClearPendingFire(BmSDK.Engine.Weapon InWeapon, int InFiringMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.ClearPendingFire", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -404,7 +404,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPendingFire
     /// </summary>
-    public unsafe void SetPendingFire(BmSDK.Engine.Weapon InWeapon, int InFiringMode)
+    public unsafe virtual void SetPendingFire(BmSDK.Engine.Weapon InWeapon, int InFiringMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.SetPendingFire", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -417,7 +417,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPendingFireLength
     /// </summary>
-    public unsafe int GetPendingFireLength(BmSDK.Engine.Weapon InWeapon)
+    public unsafe virtual int GetPendingFireLength(BmSDK.Engine.Weapon InWeapon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.GetPendingFireLength", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -429,7 +429,7 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InventoryManager.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

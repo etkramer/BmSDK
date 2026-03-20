@@ -71,7 +71,7 @@ public partial class RDynamicBlockingVolume : BmSDK.BmGame.RBlockingVolume, BmSD
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicBlockingVolume.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RDynamicBlockingVolume : BmSDK.BmGame.RBlockingVolume, BmSD
     /// <summary>
     /// Function: ApplyCheckpointRecord
     /// </summary>
-    public unsafe void ApplyCheckpointRecord(out BmSDK.BmGame.RDynamicBlockingVolume.FCheckpointRecord Record)
+    public unsafe virtual void ApplyCheckpointRecord(out BmSDK.BmGame.RDynamicBlockingVolume.FCheckpointRecord Record)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicBlockingVolume.ApplyCheckpointRecord", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -94,7 +94,7 @@ public partial class RDynamicBlockingVolume : BmSDK.BmGame.RBlockingVolume, BmSD
     /// <summary>
     /// Function: CreateCheckpointRecord
     /// </summary>
-    public unsafe void CreateCheckpointRecord(out BmSDK.BmGame.RDynamicBlockingVolume.FCheckpointRecord Record)
+    public unsafe virtual void CreateCheckpointRecord(out BmSDK.BmGame.RDynamicBlockingVolume.FCheckpointRecord Record)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDynamicBlockingVolume.CreateCheckpointRecord", true);
         byte* paramsPtr = stackalloc byte[28];

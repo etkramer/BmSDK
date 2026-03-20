@@ -71,7 +71,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: FireDestroyedEvent
     /// </summary>
-    public unsafe void FireDestroyedEvent()
+    public unsafe virtual void FireDestroyedEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.FireDestroyedEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.Tick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -94,7 +94,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: SetHighlightMeshesHidden
     /// </summary>
-    public unsafe void SetHighlightMeshesHidden(bool bHide)
+    public unsafe virtual void SetHighlightMeshesHidden(bool bHide)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.SetHighlightMeshesHidden", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: SetHighlightPlayerInRange
     /// </summary>
-    public unsafe void SetHighlightPlayerInRange()
+    public unsafe virtual void SetHighlightPlayerInRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.SetHighlightPlayerInRange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: SetHighlightBothInRange
     /// </summary>
-    public unsafe void SetHighlightBothInRange()
+    public unsafe virtual void SetHighlightBothInRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.SetHighlightBothInRange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: IsValidPlayer
     /// </summary>
-    public unsafe bool IsValidPlayer(BmSDK.BmGame.RPawnPlayer PlayerPawn)
+    public unsafe virtual bool IsValidPlayer(BmSDK.BmGame.RPawnPlayer PlayerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.IsValidPlayer", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -140,7 +140,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: GetPlayerInRange
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayerCombat GetPlayerInRange()
+    public unsafe virtual BmSDK.BmGame.RPawnPlayerCombat GetPlayerInRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.GetPlayerInRange", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -151,7 +151,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: IsValidLoc
     /// </summary>
-    public unsafe bool IsValidLoc(BmSDK.BmGame.RPawnPlayerCombat TestPlayer, BmSDK.BmGame.RPawnVillain TestPawn)
+    public unsafe virtual bool IsValidLoc(BmSDK.BmGame.RPawnPlayerCombat TestPlayer, BmSDK.BmGame.RPawnVillain TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.IsValidLoc", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -164,7 +164,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: GetPriority
     /// </summary>
-    public unsafe float GetPriority(BmSDK.BmGame.RPawnVillain TestVillain, float DistToPlayerSq, float MaxDistToPlayerSq)
+    public unsafe virtual float GetPriority(BmSDK.BmGame.RPawnVillain TestVillain, float DistToPlayerSq, float MaxDistToPlayerSq)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.GetPriority", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -178,7 +178,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: GetTargetEndStance
     /// </summary>
-    public unsafe BmSDK.FName GetTargetEndStance()
+    public unsafe virtual BmSDK.FName GetTargetEndStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.GetTargetEndStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -189,7 +189,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: ShouldKill
     /// </summary>
-    public unsafe bool ShouldKill()
+    public unsafe virtual bool ShouldKill()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.ShouldKill", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -200,7 +200,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: SetCurrentVillainHighlight
     /// </summary>
-    public unsafe void SetCurrentVillainHighlight(bool bOn)
+    public unsafe virtual void SetCurrentVillainHighlight(bool bOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.SetCurrentVillainHighlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -212,7 +212,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: UsedByPawn
     /// </summary>
-    public unsafe void UsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.Engine.Actor NewTarget = default, bool bUsedDuringTaunt = default)
+    public unsafe override void UsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.Engine.Actor NewTarget = default, bool bUsedDuringTaunt = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.UsedByPawn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -226,7 +226,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: CanBeUsedByPlayer
     /// </summary>
-    public unsafe bool CanBeUsedByPlayer()
+    public unsafe override bool CanBeUsedByPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.CanBeUsedByPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -237,7 +237,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: CanBeUsedByPawn
     /// </summary>
-    public unsafe bool CanBeUsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.Engine.Actor TargetActor, bool bTaunting)
+    public unsafe override bool CanBeUsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.Engine.Actor TargetActor, bool bTaunting)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.CanBeUsedByPawn", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -251,7 +251,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: SetupHighlightMaterial
     /// </summary>
-    public unsafe void SetupHighlightMaterial()
+    public unsafe virtual void SetupHighlightMaterial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.SetupHighlightMaterial", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -262,7 +262,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: ClearLights
     /// </summary>
-    public unsafe void ClearLights()
+    public unsafe virtual void ClearLights()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.ClearLights", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -273,7 +273,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: DebugReset
     /// </summary>
-    public unsafe void DebugReset(BmSDK.BmGame.RBMCombatManager CM)
+    public unsafe virtual void DebugReset(BmSDK.BmGame.RBMCombatManager CM)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.DebugReset", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -285,7 +285,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: GetMeshYawOffset
     /// </summary>
-    public unsafe float GetMeshYawOffset()
+    public unsafe virtual float GetMeshYawOffset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.GetMeshYawOffset", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -296,7 +296,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: GetObjectLocation_UC
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetObjectLocation_UC()
+    public unsafe virtual System.Numerics.Vector3 GetObjectLocation_UC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.GetObjectLocation_UC", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -307,7 +307,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: GetObjectLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetObjectLocation()
+    public unsafe virtual System.Numerics.Vector3 GetObjectLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.GetObjectLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -318,7 +318,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: GetAnimYaw_UC
     /// </summary>
-    public unsafe int GetAnimYaw_UC()
+    public unsafe virtual int GetAnimYaw_UC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.GetAnimYaw_UC", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -329,7 +329,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: GetAnimYaw
     /// </summary>
-    public unsafe float GetAnimYaw()
+    public unsafe virtual float GetAnimYaw()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.GetAnimYaw", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -340,7 +340,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: SetMyPylon
     /// </summary>
-    public unsafe void SetMyPylon()
+    public unsafe virtual void SetMyPylon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.SetMyPylon", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -351,7 +351,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -362,7 +362,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: RegisterStasisCheckMesh
     /// </summary>
-    public unsafe void RegisterStasisCheckMesh()
+    public unsafe virtual void RegisterStasisCheckMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.RegisterStasisCheckMesh", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -373,7 +373,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: PlayDestroyAnim
     /// </summary>
-    public unsafe bool PlayDestroyAnim(BmSDK.FName AnimName)
+    public unsafe virtual bool PlayDestroyAnim(BmSDK.FName AnimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.PlayDestroyAnim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -385,7 +385,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: SetupHighlightMesh
     /// </summary>
-    public unsafe void SetupHighlightMesh()
+    public unsafe virtual void SetupHighlightMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.SetupHighlightMesh", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -396,7 +396,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: GetAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetAnimName(BmSDK.BmGame.RPawnVillain TargetPawn, BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
+    public unsafe virtual BmSDK.FName GetAnimName(BmSDK.BmGame.RPawnVillain TargetPawn, BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.GetAnimName", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -409,7 +409,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: OnSwapMesh
     /// </summary>
-    public unsafe void OnSwapMesh()
+    public unsafe virtual void OnSwapMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.OnSwapMesh", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -420,7 +420,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: OnFxEvent
     /// </summary>
-    public unsafe void OnFxEvent()
+    public unsafe virtual void OnFxEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.OnFxEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -431,7 +431,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: OnDroppedObject
     /// </summary>
-    public unsafe void OnDroppedObject(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
+    public unsafe virtual void OnDroppedObject(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.OnDroppedObject", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -443,7 +443,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: OnGrabbedObject
     /// </summary>
-    public unsafe void OnGrabbedObject(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
+    public unsafe virtual void OnGrabbedObject(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.OnGrabbedObject", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -455,7 +455,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: ClearHighlight
     /// </summary>
-    public unsafe void ClearHighlight()
+    public unsafe virtual void ClearHighlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.ClearHighlight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -466,7 +466,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: UpdateHighlight
     /// </summary>
-    public unsafe void UpdateHighlight()
+    public unsafe virtual void UpdateHighlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.UpdateHighlight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -477,7 +477,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: DoRangeCheck
     /// </summary>
-    public unsafe void DoRangeCheck()
+    public unsafe virtual void DoRangeCheck()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.DoRangeCheck", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -488,7 +488,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: IsValidInCombat
     /// </summary>
-    public unsafe bool IsValidInCombat()
+    public unsafe virtual bool IsValidInCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.IsValidInCombat", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -499,7 +499,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: IsValidVillain
     /// </summary>
-    public unsafe bool IsValidVillain(BmSDK.BmGame.RPawnVillain TestPawn)
+    public unsafe virtual bool IsValidVillain(BmSDK.BmGame.RPawnVillain TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.IsValidVillain", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -518,7 +518,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: GetRotatedVectorOnAxis
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetRotatedVectorOnAxis(System.Numerics.Vector3 vec, int Angle, System.Numerics.Vector3 Axis)
+    public unsafe virtual System.Numerics.Vector3 GetRotatedVectorOnAxis(System.Numerics.Vector3 vec, int Angle, System.Numerics.Vector3 Axis)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.GetRotatedVectorOnAxis", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -539,7 +539,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: SetLight
     /// </summary>
-    public unsafe void SetLight(BmSDK.Engine.PointLightComponent LightComp, BmSDK.FName LightSocket, bool Enable)
+    public unsafe virtual void SetLight(BmSDK.Engine.PointLightComponent LightComp, BmSDK.FName LightSocket, bool Enable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.SetLight", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -560,7 +560,7 @@ public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.R
     /// <summary>
     /// Function: SetupLights
     /// </summary>
-    public unsafe void SetupLights()
+    public unsafe virtual void SetupLights()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_EnvironmentAttackObjectBase.SetupLights", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RBMWeaponRiflePredThug : BmSDK.BmGame.RBMWeaponRiflePredBas
     /// <summary>
     /// Function: GetCustomEyeLocation
     /// </summary>
-    public unsafe void GetCustomEyeLocation(out System.Numerics.Vector3 EyeLocation)
+    public unsafe virtual void GetCustomEyeLocation(out System.Numerics.Vector3 EyeLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponRiflePredThug.GetCustomEyeLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RBMWeaponRiflePredThug : BmSDK.BmGame.RBMWeaponRiflePredBas
     /// <summary>
     /// Function: WideBeam
     /// </summary>
-    public unsafe void WideBeam(float BlendSpeed)
+    public unsafe virtual void WideBeam(float BlendSpeed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponRiflePredThug.WideBeam", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RBMWeaponRiflePredThug : BmSDK.BmGame.RBMWeaponRiflePredBas
     /// <summary>
     /// Function: NarrowBeam
     /// </summary>
-    public unsafe void NarrowBeam(float BlendSpeed)
+    public unsafe virtual void NarrowBeam(float BlendSpeed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponRiflePredThug.NarrowBeam", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -107,7 +107,7 @@ public partial class RBMWeaponRiflePredThug : BmSDK.BmGame.RBMWeaponRiflePredBas
     /// <summary>
     /// Function: CreateBasicGunWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateBasicGunWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2, BmSDK.Engine.AnimSet AnimSet3 = default, BmSDK.Engine.AnimSet AnimSet4 = default)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateBasicGunWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2, BmSDK.Engine.AnimSet AnimSet3 = default, BmSDK.Engine.AnimSet AnimSet4 = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponRiflePredThug.CreateBasicGunWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[8208];

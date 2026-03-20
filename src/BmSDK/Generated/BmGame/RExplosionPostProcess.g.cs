@@ -36,7 +36,7 @@ public partial class RExplosionPostProcess : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Deactivate
     /// </summary>
-    public unsafe void Deactivate()
+    public unsafe virtual void Deactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosionPostProcess.Deactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RExplosionPostProcess : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetStrength
     /// </summary>
-    public unsafe void SetStrength(float Str)
+    public unsafe virtual void SetStrength(float Str)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosionPostProcess.SetStrength", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RExplosionPostProcess : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Activate
     /// </summary>
-    public unsafe void Activate(BmSDK.BmGame.RPlayerController Controller, BmSDK.Engine.Actor ItemThatSpawnedMe)
+    public unsafe virtual void Activate(BmSDK.BmGame.RPlayerController Controller, BmSDK.Engine.Actor ItemThatSpawnedMe)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosionPostProcess.Activate", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -72,7 +72,7 @@ public partial class RExplosionPostProcess : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawUpdate
     /// </summary>
-    public unsafe void DrawUpdate(BmSDK.Engine.HUD H)
+    public unsafe virtual void DrawUpdate(BmSDK.Engine.HUD H)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosionPostProcess.DrawUpdate", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -84,7 +84,7 @@ public partial class RExplosionPostProcess : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe void Update(float DeltaTime)
+    public unsafe virtual void Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosionPostProcess.Update", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: GetHeartBeatType
     /// </summary>
-    public unsafe int GetHeartBeatType()
+    public unsafe override int GetHeartBeatType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.GetHeartBeatType", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: ImpactEffect
     /// </summary>
-    public unsafe void ImpactEffect()
+    public unsafe virtual void ImpactEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.ImpactEffect", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -93,7 +93,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: CreateRagdollWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateRagdollWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2, BmSDK.Engine.AnimSet AnimSet3 = default)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateRagdollWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2, BmSDK.Engine.AnimSet AnimSet3 = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.CreateRagdollWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[476];
@@ -108,7 +108,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: CreateWeaponConfigUnarmed
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfigUnarmed(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfigUnarmed(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.CreateWeaponConfigUnarmed", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -120,7 +120,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: CreateLieutenantWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateLieutenantWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateLieutenantWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.CreateLieutenantWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[1892];
@@ -132,7 +132,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: FinishAnimControl
     /// </summary>
-    public unsafe void FinishAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void FinishAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.FinishAnimControl", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -145,7 +145,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: BlendOutAnimControl
     /// </summary>
-    public unsafe void BlendOutAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst, float BlendOutDuration)
+    public unsafe override void BlendOutAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst, float BlendOutDuration)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.BlendOutAnimControl", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -159,7 +159,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: GroupAttackHit
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult GroupAttackHit()
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult GroupAttackHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.GroupAttackHit", true);
         byte* paramsPtr = stackalloc byte[260];
@@ -170,7 +170,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: GetAerialAttackCameraAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetAerialAttackCameraAnimSet()
+    public unsafe override BmSDK.Engine.AnimSet GetAerialAttackCameraAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.GetAerialAttackCameraAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -181,7 +181,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: GetAerialAttackAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetAerialAttackAnimName(bool bFinisher, BmSDK.BmGame.RPawnPlayerCombat Attacker)
+    public unsafe override BmSDK.FName GetAerialAttackAnimName(bool bFinisher, BmSDK.BmGame.RPawnPlayerCombat Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.GetAerialAttackAnimName", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -194,7 +194,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: GetOverrideStrikeInfo
     /// </summary>
-    public unsafe void GetOverrideStrikeInfo(BmSDK.BmGame.RPawnVillain PrevTarget, float StrikeDamage, out BmSDK.BmGame.RGameInfo.StrikeRange CurrRange, out BmSDK.BmGame.RGameInfo.StrikeStrength CurrStrength)
+    public unsafe override void GetOverrideStrikeInfo(BmSDK.BmGame.RPawnVillain PrevTarget, float StrikeDamage, out BmSDK.BmGame.RGameInfo.StrikeRange CurrRange, out BmSDK.BmGame.RGameInfo.StrikeStrength CurrStrength)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.GetOverrideStrikeInfo", true);
         byte* paramsPtr = stackalloc byte[14];
@@ -209,7 +209,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: OverrideHarpoonHit
     /// </summary>
-    public unsafe bool OverrideHarpoonHit(BmSDK.BmGame.RPawnPlayer PlayerPawn)
+    public unsafe override bool OverrideHarpoonHit(BmSDK.BmGame.RPawnPlayer PlayerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.OverrideHarpoonHit", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -221,7 +221,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: CanMagBlastAttach
     /// </summary>
-    public unsafe bool CanMagBlastAttach()
+    public unsafe override bool CanMagBlastAttach()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.CanMagBlastAttach", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -232,7 +232,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: ShouldMagBlastLockOn
     /// </summary>
-    public unsafe bool ShouldMagBlastLockOn()
+    public unsafe override bool ShouldMagBlastLockOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.ShouldMagBlastLockOn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -243,7 +243,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: InflictedDamageOnPawn
     /// </summary>
-    public unsafe void InflictedDamageOnPawn(BmSDK.BmGame.RPawnCombat DamageReceiver, BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
+    public unsafe override void InflictedDamageOnPawn(BmSDK.BmGame.RPawnCombat DamageReceiver, BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.InflictedDamageOnPawn", true);
         byte* paramsPtr = stackalloc byte[256];
@@ -256,7 +256,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: PlayHitReaction
     /// </summary>
-    public unsafe void PlayHitReaction(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
+    public unsafe override void PlayHitReaction(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.PlayHitReaction", true);
         byte* paramsPtr = stackalloc byte[280];
@@ -268,7 +268,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: ShouldGoRagdoll
     /// </summary>
-    public unsafe bool ShouldGoRagdoll(BmSDK.Class dmgType, float DamageAmount)
+    public unsafe override bool ShouldGoRagdoll(BmSDK.Class dmgType, float DamageAmount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.ShouldGoRagdoll", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -281,7 +281,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: HitByBatarang
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult HitByBatarang(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult HitByBatarang(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.HitByBatarang", true);
         byte* paramsPtr = stackalloc byte[344];
@@ -299,7 +299,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: OverrideRECMagnetReaction
     /// </summary>
-    public unsafe bool OverrideRECMagnetReaction(BmSDK.Engine.Actor MagnetSource)
+    public unsafe override bool OverrideRECMagnetReaction(BmSDK.Engine.Actor MagnetSource)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.OverrideRECMagnetReaction", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -311,7 +311,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: ReactingToCaltrops
     /// </summary>
-    public unsafe bool ReactingToCaltrops()
+    public unsafe override bool ReactingToCaltrops()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.ReactingToCaltrops", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -322,7 +322,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: PrepareToBlockAttack
     /// </summary>
-    public unsafe void PrepareToBlockAttack(BmSDK.BmGame.RPawnCombat NewAttacker)
+    public unsafe override void PrepareToBlockAttack(BmSDK.BmGame.RPawnCombat NewAttacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.PrepareToBlockAttack", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -334,7 +334,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: SpawnSpecialAttack
     /// </summary>
-    public unsafe bool SpawnSpecialAttack(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn, BmSDK.Class dmgType)
+    public unsafe override bool SpawnSpecialAttack(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn, BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.SpawnSpecialAttack", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -347,7 +347,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: GetFreezeBlastPriority
     /// </summary>
-    public unsafe float GetFreezeBlastPriority()
+    public unsafe override float GetFreezeBlastPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.GetFreezeBlastPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -358,7 +358,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: GetBatClawPriority
     /// </summary>
-    public unsafe float GetBatClawPriority()
+    public unsafe override float GetBatClawPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.GetBatClawPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -369,7 +369,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: GetTargetPriority
     /// </summary>
-    public unsafe float GetTargetPriority(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.Class dmgType)
+    public unsafe override float GetTargetPriority(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.GetTargetPriority", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -382,7 +382,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: GetSmokeBombReactionClass
     /// </summary>
-    public unsafe BmSDK.Class GetSmokeBombReactionClass()
+    public unsafe override BmSDK.Class GetSmokeBombReactionClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.GetSmokeBombReactionClass", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -393,7 +393,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: ModifyDamageAmount
     /// </summary>
-    public unsafe void ModifyDamageAmount(BmSDK.Class dmgType, out float DmgAmount)
+    public unsafe override void ModifyDamageAmount(BmSDK.Class dmgType, out float DmgAmount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.ModifyDamageAmount", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -406,7 +406,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: ShouldDisplayStrikeHelp
     /// </summary>
-    public unsafe bool ShouldDisplayStrikeHelp()
+    public unsafe virtual bool ShouldDisplayStrikeHelp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.ShouldDisplayStrikeHelp", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -417,7 +417,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: DamagedBy
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.DamagedBy", true);
         byte* paramsPtr = stackalloc byte[250];
@@ -429,7 +429,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: DropWeapon
     /// </summary>
-    public unsafe void DropWeapon()
+    public unsafe override void DropWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.DropWeapon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -440,7 +440,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: HitByGadget
     /// </summary>
-    public unsafe void HitByGadget()
+    public unsafe virtual void HitByGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.HitByGadget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -451,7 +451,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: TickInCombatTime
     /// </summary>
-    public unsafe void TickInCombatTime(float DeltaTime)
+    public unsafe override void TickInCombatTime(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.TickInCombatTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -463,7 +463,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: SetHealth
     /// </summary>
-    public unsafe void SetHealth()
+    public unsafe override void SetHealth()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.SetHealth", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -474,7 +474,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: CanPlayBark
     /// </summary>
-    public unsafe bool CanPlayBark()
+    public unsafe override bool CanPlayBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.CanPlayBark", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -485,7 +485,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: SetCombatMirrored
     /// </summary>
-    public unsafe void SetCombatMirrored()
+    public unsafe virtual void SetCombatMirrored()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.SetCombatMirrored", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -496,7 +496,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: CreateWeapon
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMWeapon CreateWeapon()
+    public unsafe override BmSDK.BmGame.RBMWeapon CreateWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.CreateWeapon", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -507,7 +507,7 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// Function: PostInitCharacter
     /// </summary>
-    public unsafe void PostInitCharacter()
+    public unsafe override void PostInitCharacter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLieutenant.PostInitCharacter", true);
         byte* paramsPtr = stackalloc byte[0];

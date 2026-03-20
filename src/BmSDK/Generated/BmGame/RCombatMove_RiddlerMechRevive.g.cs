@@ -71,7 +71,7 @@ public partial class RCombatMove_RiddlerMechRevive : BmSDK.BmGame.RCombatMove, B
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechRevive.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_RiddlerMechRevive : BmSDK.BmGame.RCombatMove, B
     /// <summary>
     /// Function: MoveOverridenForPawn
     /// </summary>
-    public unsafe void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
+    public unsafe override void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechRevive.MoveOverridenForPawn", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -95,7 +95,7 @@ public partial class RCombatMove_RiddlerMechRevive : BmSDK.BmGame.RCombatMove, B
     /// <summary>
     /// Function: SetRevive
     /// </summary>
-    public unsafe void SetRevive(BmSDK.BmGame.RPawnVillain Robot, BmSDK.BmGame.RPawnVillainRiddlerMechSuitBase ReviveMech)
+    public unsafe virtual void SetRevive(BmSDK.BmGame.RPawnVillain Robot, BmSDK.BmGame.RPawnVillainRiddlerMechSuitBase ReviveMech)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechRevive.SetRevive", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -108,7 +108,7 @@ public partial class RCombatMove_RiddlerMechRevive : BmSDK.BmGame.RCombatMove, B
     /// <summary>
     /// Function: UpdatePreRevive
     /// </summary>
-    public unsafe void UpdatePreRevive(float DeltaTime)
+    public unsafe virtual void UpdatePreRevive(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechRevive.UpdatePreRevive", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -120,7 +120,7 @@ public partial class RCombatMove_RiddlerMechRevive : BmSDK.BmGame.RCombatMove, B
     /// <summary>
     /// Function: AddCasualty
     /// </summary>
-    public unsafe void AddCasualty(BmSDK.BmGame.RPawnVillain DeadRobot)
+    public unsafe virtual void AddCasualty(BmSDK.BmGame.RPawnVillain DeadRobot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechRevive.AddCasualty", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -132,7 +132,7 @@ public partial class RCombatMove_RiddlerMechRevive : BmSDK.BmGame.RCombatMove, B
     /// <summary>
     /// Function: ReviveAll
     /// </summary>
-    public unsafe void ReviveAll()
+    public unsafe virtual void ReviveAll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechRevive.ReviveAll", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -143,7 +143,7 @@ public partial class RCombatMove_RiddlerMechRevive : BmSDK.BmGame.RCombatMove, B
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechRevive.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -154,7 +154,7 @@ public partial class RCombatMove_RiddlerMechRevive : BmSDK.BmGame.RCombatMove, B
     /// <summary>
     /// Function: WakeCasualty
     /// </summary>
-    public unsafe void WakeCasualty()
+    public unsafe virtual void WakeCasualty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RiddlerMechRevive.WakeCasualty", true);
         byte* paramsPtr = stackalloc byte[0];

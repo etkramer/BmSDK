@@ -36,7 +36,7 @@ public partial class LensFlareComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: CreateAndSetMaterialInstanceConstant
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInstanceConstant CreateAndSetMaterialInstanceConstant(int ElementIndex)
+    public unsafe virtual BmSDK.Engine.MaterialInstanceConstant CreateAndSetMaterialInstanceConstant(int ElementIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareComponent.CreateAndSetMaterialInstanceConstant", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -48,7 +48,7 @@ public partial class LensFlareComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: SetMaterial
     /// </summary>
-    public unsafe void SetMaterial(int ElementIndex, BmSDK.Engine.MaterialInterface Material)
+    public unsafe virtual void SetMaterial(int ElementIndex, BmSDK.Engine.MaterialInterface Material)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareComponent.SetMaterial", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -68,7 +68,7 @@ public partial class LensFlareComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: GetMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface GetMaterial(int ElementIndex)
+    public unsafe virtual BmSDK.Engine.MaterialInterface GetMaterial(int ElementIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareComponent.GetMaterial", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -87,7 +87,7 @@ public partial class LensFlareComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: SetIsActive
     /// </summary>
-    public unsafe void SetIsActive(bool bInIsActive)
+    public unsafe virtual void SetIsActive(bool bInIsActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareComponent.SetIsActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class LensFlareComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: SetSourceColor
     /// </summary>
-    public unsafe void SetSourceColor(BmSDK.GameObject.FLinearColor InSourceColor)
+    public unsafe virtual void SetSourceColor(BmSDK.GameObject.FLinearColor InSourceColor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareComponent.SetSourceColor", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -125,7 +125,7 @@ public partial class LensFlareComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: SetTemplate
     /// </summary>
-    public unsafe void SetTemplate(BmSDK.Engine.LensFlare NewTemplate, bool bForceSet = default)
+    public unsafe virtual void SetTemplate(BmSDK.Engine.LensFlare NewTemplate, bool bForceSet = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareComponent.SetTemplate", true);
         byte* paramsPtr = stackalloc byte[12];

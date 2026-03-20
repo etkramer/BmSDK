@@ -36,7 +36,7 @@ public partial class SpeedTreeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: SetMaterial
     /// </summary>
-    public unsafe void SetMaterial(BmSDK.Engine.SpeedTreeComponent.ESpeedTreeMeshType MeshType, BmSDK.Engine.MaterialInterface Material)
+    public unsafe virtual void SetMaterial(BmSDK.Engine.SpeedTreeComponent.ESpeedTreeMeshType MeshType, BmSDK.Engine.MaterialInterface Material)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SpeedTreeComponent.SetMaterial", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -56,7 +56,7 @@ public partial class SpeedTreeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: GetMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface GetMaterial(BmSDK.Engine.SpeedTreeComponent.ESpeedTreeMeshType MeshType)
+    public unsafe virtual BmSDK.Engine.MaterialInterface GetMaterial(BmSDK.Engine.SpeedTreeComponent.ESpeedTreeMeshType MeshType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SpeedTreeComponent.GetMaterial", true);
         byte* paramsPtr = stackalloc byte[12];

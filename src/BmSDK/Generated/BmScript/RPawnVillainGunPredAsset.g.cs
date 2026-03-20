@@ -71,7 +71,7 @@ public partial class RPawnVillainGunPredAsset : BmSDK.BmGame.RPawnVillainGunPred
     /// <summary>
     /// Function: InitialisePlayerSpecificAnimsets
     /// </summary>
-    public unsafe void InitialisePlayerSpecificAnimsets(BmSDK.BmGame.RPawnPlayerCombat NewPlayer, int PlayerIndex)
+    public unsafe override void InitialisePlayerSpecificAnimsets(BmSDK.BmGame.RPawnPlayerCombat NewPlayer, int PlayerIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredAsset.InitialisePlayerSpecificAnimsets", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -84,7 +84,7 @@ public partial class RPawnVillainGunPredAsset : BmSDK.BmGame.RPawnVillainGunPred
     /// <summary>
     /// Function: AddPawnProps
     /// </summary>
-    public unsafe void AddPawnProps()
+    public unsafe override void AddPawnProps()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredAsset.AddPawnProps", true);
         byte* paramsPtr = stackalloc byte[184];

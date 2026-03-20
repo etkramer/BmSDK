@@ -47,7 +47,7 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// Function: SkipToNextDialogueLine
     /// </summary>
-    public unsafe bool SkipToNextDialogueLine()
+    public unsafe virtual bool SkipToNextDialogueLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_Interp.SkipToNextDialogueLine", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -65,7 +65,7 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// Function: Reset
     /// </summary>
-    public unsafe void Reset()
+    public unsafe override void Reset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_Interp.Reset", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -76,7 +76,7 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// Function: AddPlayerToDirectorTracks
     /// </summary>
-    public unsafe void AddPlayerToDirectorTracks(BmSDK.Engine.PlayerController PC)
+    public unsafe virtual void AddPlayerToDirectorTracks(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_Interp.AddPlayerToDirectorTracks", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// Function: Stop
     /// </summary>
-    public unsafe void Stop(bool AlwaysTriggerStoppedOutput)
+    public unsafe virtual void Stop(bool AlwaysTriggerStoppedOutput)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_Interp.Stop", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -114,7 +114,7 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// Function: SetPosition
     /// </summary>
-    public unsafe void SetPosition(float NewPosition, bool bJump = default)
+    public unsafe virtual void SetPosition(float NewPosition, bool bJump = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_Interp.SetPosition", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -134,7 +134,7 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// Function: NotifyActorsOfChange
     /// </summary>
-    public unsafe void NotifyActorsOfChange()
+    public unsafe virtual void NotifyActorsOfChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_Interp.NotifyActorsOfChange", true);
         byte* paramsPtr = stackalloc byte[0];

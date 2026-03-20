@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanRunningStrike : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: ShouldStartFinalBlowCam
     /// </summary>
-    public unsafe bool ShouldStartFinalBlowCam()
+    public unsafe override bool ShouldStartFinalBlowCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanRunningStrike.ShouldStartFinalBlowCam", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RCombatMove_BatmanRunningStrike : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: SetDamageInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.FDamageInfo SetDamageInfo(BmSDK.BmGame.RPawnCombat DamageReceiver, float DmgAmount)
+    public unsafe override BmSDK.BmGame.RPawnCombat.FDamageInfo SetDamageInfo(BmSDK.BmGame.RPawnCombat DamageReceiver, float DmgAmount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanRunningStrike.SetDamageInfo", true);
         byte* paramsPtr = stackalloc byte[508];
@@ -95,7 +95,7 @@ public partial class RCombatMove_BatmanRunningStrike : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: GetValidTargetStrikeRange
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.StrikeRange GetValidTargetStrikeRange()
+    public unsafe override BmSDK.BmGame.RGameInfo.StrikeRange GetValidTargetStrikeRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanRunningStrike.GetValidTargetStrikeRange", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -106,7 +106,7 @@ public partial class RCombatMove_BatmanRunningStrike : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanRunningStrike.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RCombatMove_BatmanRunningStrike : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: RegisterHit
     /// </summary>
-    public unsafe void RegisterHit()
+    public unsafe virtual void RegisterHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanRunningStrike.RegisterHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RCombatMove_BatmanRunningStrike : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: ProcessDamageResult
     /// </summary>
-    public unsafe void ProcessDamageResult(BmSDK.BmGame.RPawnCombat.DamageResult DmgResult, BmSDK.BmGame.RPawnCombat DamageReceiver)
+    public unsafe override void ProcessDamageResult(BmSDK.BmGame.RPawnCombat.DamageResult DmgResult, BmSDK.BmGame.RPawnCombat DamageReceiver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanRunningStrike.ProcessDamageResult", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -141,7 +141,7 @@ public partial class RCombatMove_BatmanRunningStrike : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: GetDamagePower
     /// </summary>
-    public unsafe float GetDamagePower()
+    public unsafe override float GetDamagePower()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanRunningStrike.GetDamagePower", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -152,7 +152,7 @@ public partial class RCombatMove_BatmanRunningStrike : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: GetComboIncrease
     /// </summary>
-    public unsafe void GetComboIncrease(out int ComboIncrease, out int SpecialMoveCountIncrease)
+    public unsafe override void GetComboIncrease(out int ComboIncrease, out int SpecialMoveCountIncrease)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanRunningStrike.GetComboIncrease", true);
         byte* paramsPtr = stackalloc byte[8];

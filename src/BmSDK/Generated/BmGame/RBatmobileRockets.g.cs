@@ -71,7 +71,7 @@ public partial class RBatmobileRockets : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGam
     /// <summary>
     /// Function: ReloadRockets
     /// </summary>
-    public unsafe void ReloadRockets()
+    public unsafe virtual void ReloadRockets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileRockets.ReloadRockets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RBatmobileRockets : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGam
     /// <summary>
     /// Function: FireWeapon
     /// </summary>
-    public unsafe bool FireWeapon()
+    public unsafe override bool FireWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileRockets.FireWeapon", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -93,7 +93,7 @@ public partial class RBatmobileRockets : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGam
     /// <summary>
     /// Function: GetAutoTargetOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAutoTargetOrigin(BmSDK.Rotator AimDirection)
+    public unsafe override System.Numerics.Vector3 GetAutoTargetOrigin(BmSDK.Rotator AimDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileRockets.GetAutoTargetOrigin", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -105,7 +105,7 @@ public partial class RBatmobileRockets : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGam
     /// <summary>
     /// Function: GetAutoTargetRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetAutoTargetRotation()
+    public unsafe override BmSDK.Rotator GetAutoTargetRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileRockets.GetAutoTargetRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -116,7 +116,7 @@ public partial class RBatmobileRockets : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGam
     /// <summary>
     /// Function: GetGadgetCamera
     /// </summary>
-    public unsafe BmSDK.FName GetGadgetCamera(bool InSoftCover = default, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType = default)
+    public unsafe override BmSDK.FName GetGadgetCamera(bool InSoftCover = default, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileRockets.GetGadgetCamera", true);
         byte* paramsPtr = stackalloc byte[16];

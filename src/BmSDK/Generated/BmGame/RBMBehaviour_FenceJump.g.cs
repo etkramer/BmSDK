@@ -36,7 +36,7 @@ public partial class RBMBehaviour_FenceJump : BmSDK.BmGame.RBMBehaviour, BmSDK.I
     /// <summary>
     /// Function: GetThoughts
     /// </summary>
-    public unsafe void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FenceJump.GetThoughts", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -48,7 +48,7 @@ public partial class RBMBehaviour_FenceJump : BmSDK.BmGame.RBMBehaviour, BmSDK.I
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FenceJump.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_FenceJump : BmSDK.BmGame.RBMBehaviour, BmSDK.I
     /// <summary>
     /// Function: JumpLocationLooksABitInsane
     /// </summary>
-    public unsafe bool JumpLocationLooksABitInsane()
+    public unsafe virtual bool JumpLocationLooksABitInsane()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FenceJump.JumpLocationLooksABitInsane", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -70,7 +70,7 @@ public partial class RBMBehaviour_FenceJump : BmSDK.BmGame.RBMBehaviour, BmSDK.I
     /// <summary>
     /// Function: PlayFenceJumpAnim
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PlayFenceJumpAnim()
+    public unsafe virtual BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PlayFenceJumpAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FenceJump.PlayFenceJumpAnim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_FenceJump : BmSDK.BmGame.RBMBehaviour, BmSDK.I
     /// <summary>
     /// Function: MirrorJumpCarAnim
     /// </summary>
-    public unsafe bool MirrorJumpCarAnim()
+    public unsafe virtual bool MirrorJumpCarAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FenceJump.MirrorJumpCarAnim", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -92,7 +92,7 @@ public partial class RBMBehaviour_FenceJump : BmSDK.BmGame.RBMBehaviour, BmSDK.I
     /// <summary>
     /// Function: CheckPawnsBelow
     /// </summary>
-    public unsafe void CheckPawnsBelow()
+    public unsafe virtual void CheckPawnsBelow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FenceJump.CheckPawnsBelow", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -103,7 +103,7 @@ public partial class RBMBehaviour_FenceJump : BmSDK.BmGame.RBMBehaviour, BmSDK.I
     /// <summary>
     /// Function: KnockBackPawn
     /// </summary>
-    public unsafe void KnockBackPawn(BmSDK.BmGame.RPawnCombat TestPawn)
+    public unsafe virtual void KnockBackPawn(BmSDK.BmGame.RPawnCombat TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FenceJump.KnockBackPawn", true);
         byte* paramsPtr = stackalloc byte[256];
@@ -115,7 +115,7 @@ public partial class RBMBehaviour_FenceJump : BmSDK.BmGame.RBMBehaviour, BmSDK.I
     /// <summary>
     /// Function: WillLandOnPawn
     /// </summary>
-    public unsafe bool WillLandOnPawn(BmSDK.BmGame.RPawn TestPawn)
+    public unsafe virtual bool WillLandOnPawn(BmSDK.BmGame.RPawn TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FenceJump.WillLandOnPawn", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -127,7 +127,7 @@ public partial class RBMBehaviour_FenceJump : BmSDK.BmGame.RBMBehaviour, BmSDK.I
     /// <summary>
     /// Function: StartTraversal
     /// </summary>
-    public unsafe void StartTraversal(int NewJumpType, System.Numerics.Vector3 NewJumpDirection, System.Numerics.Vector3 NewJumpLocation)
+    public unsafe virtual void StartTraversal(int NewJumpType, System.Numerics.Vector3 NewJumpDirection, System.Numerics.Vector3 NewJumpLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FenceJump.StartTraversal", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -141,7 +141,7 @@ public partial class RBMBehaviour_FenceJump : BmSDK.BmGame.RBMBehaviour, BmSDK.I
     /// <summary>
     /// Function: GetJumpType
     /// </summary>
-    public unsafe BmSDK.FName GetJumpType()
+    public unsafe virtual BmSDK.FName GetJumpType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FenceJump.GetJumpType", true);
         byte* paramsPtr = stackalloc byte[8];

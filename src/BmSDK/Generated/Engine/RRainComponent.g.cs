@@ -36,7 +36,7 @@ public partial class RRainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// Function: DisableRainSound
     /// </summary>
-    public unsafe void DisableRainSound()
+    public unsafe virtual void DisableRainSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RRainComponent.DisableRainSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class RRainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// Function: EnableRainSound
     /// </summary>
-    public unsafe void EnableRainSound()
+    public unsafe virtual void EnableRainSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RRainComponent.EnableRainSound", true);
         byte* paramsPtr = stackalloc byte[0];

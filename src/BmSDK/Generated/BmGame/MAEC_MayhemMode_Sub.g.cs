@@ -71,7 +71,7 @@ public partial class MAEC_MayhemMode_Sub : BmSDK.BmGame.RAlertEventCoordinatorSo
     /// <summary>
     /// Function: SetStartleLoc
     /// </summary>
-    public unsafe void SetStartleLoc(System.Numerics.Vector3 NewPos)
+    public unsafe virtual void SetStartleLoc(System.Numerics.Vector3 NewPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_MayhemMode_Sub.SetStartleLoc", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -83,7 +83,7 @@ public partial class MAEC_MayhemMode_Sub : BmSDK.BmGame.RAlertEventCoordinatorSo
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_MayhemMode_Sub.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];

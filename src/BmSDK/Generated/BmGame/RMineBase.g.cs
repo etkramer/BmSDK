@@ -66,7 +66,7 @@ public partial class RMineBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDangerEffects
     /// </summary>
-    public unsafe void SetDangerEffects(float NewSpeed)
+    public unsafe virtual void SetDangerEffects(float NewSpeed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMineBase.SetDangerEffects", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -78,7 +78,7 @@ public partial class RMineBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDangerEffectsNative
     /// </summary>
-    public unsafe void SetDangerEffectsNative(float NewSpeed)
+    public unsafe virtual void SetDangerEffectsNative(float NewSpeed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMineBase.SetDangerEffectsNative", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -97,7 +97,7 @@ public partial class RMineBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPrimedEffects
     /// </summary>
-    public unsafe void SetPrimedEffects()
+    public unsafe virtual void SetPrimedEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMineBase.SetPrimedEffects", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RMineBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDisarmedEffects
     /// </summary>
-    public unsafe void SetDisarmedEffects()
+    public unsafe virtual void SetDisarmedEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMineBase.SetDisarmedEffects", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -133,7 +133,7 @@ public partial class RMineBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Disarm
     /// </summary>
-    public unsafe void Disarm()
+    public unsafe virtual void Disarm()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMineBase.Disarm", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -144,7 +144,7 @@ public partial class RMineBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ExplodeFX
     /// </summary>
-    public unsafe void ExplodeFX()
+    public unsafe virtual void ExplodeFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMineBase.ExplodeFX", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -155,7 +155,7 @@ public partial class RMineBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DoDamage
     /// </summary>
-    public unsafe void DoDamage()
+    public unsafe virtual void DoDamage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMineBase.DoDamage", true);
         byte* paramsPtr = stackalloc byte[260];
@@ -166,7 +166,7 @@ public partial class RMineBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BlowUp
     /// </summary>
-    public unsafe void BlowUp()
+    public unsafe virtual void BlowUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMineBase.BlowUp", true);
         byte* paramsPtr = stackalloc byte[0];

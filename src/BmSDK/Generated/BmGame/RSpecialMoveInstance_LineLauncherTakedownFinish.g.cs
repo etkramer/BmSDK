@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_LineLauncherTakedownFinish : BmSDK.BmG
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_LineLauncherTakedownFinish.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_LineLauncherTakedownFinish : BmSDK.BmG
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_LineLauncherTakedownFinish.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RSpecialMoveInstance_LineLauncherTakedownFinish : BmSDK.BmG
     /// <summary>
     /// Function: FinishGrabbedVictim
     /// </summary>
-    public unsafe void FinishGrabbedVictim()
+    public unsafe virtual void FinishGrabbedVictim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_LineLauncherTakedownFinish.FinishGrabbedVictim", true);
         byte* paramsPtr = stackalloc byte[248];
@@ -105,7 +105,7 @@ public partial class RSpecialMoveInstance_LineLauncherTakedownFinish : BmSDK.BmG
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_LineLauncherTakedownFinish.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[148];

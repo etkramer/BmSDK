@@ -71,7 +71,7 @@ public partial class RStringUpRope : BmSDK.BmGame.RRopeBaseSpawnable, BmSDK.IGam
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStringUpRope.Tick", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -83,7 +83,7 @@ public partial class RStringUpRope : BmSDK.BmGame.RRopeBaseSpawnable, BmSDK.IGam
     /// <summary>
     /// Function: MulticastSetupRailingAttackRope
     /// </summary>
-    public unsafe void MulticastSetupRailingAttackRope(BmSDK.BmGame.RStringUpRope.FRailingAttackRopeSetupParams SetupParams)
+    public unsafe virtual void MulticastSetupRailingAttackRope(BmSDK.BmGame.RStringUpRope.FRailingAttackRopeSetupParams SetupParams)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStringUpRope.MulticastSetupRailingAttackRope", true);
         byte* paramsPtr = stackalloc byte[200];

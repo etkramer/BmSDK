@@ -71,7 +71,7 @@ public partial class ROverrideGrappleVolume : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: OverrideGrapple
     /// </summary>
-    public unsafe bool OverrideGrapple(BmSDK.BmGame.RPawnPlayer GrapplingPlayer, BmSDK.BmGame.RGrappleGun GrappleGun)
+    public unsafe virtual bool OverrideGrapple(BmSDK.BmGame.RPawnPlayer GrapplingPlayer, BmSDK.BmGame.RGrappleGun GrappleGun)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverrideGrappleVolume.OverrideGrapple", true);
         byte* paramsPtr = stackalloc byte[20];

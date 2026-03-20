@@ -71,7 +71,7 @@ public partial class RAEC_Attack_Sub_CheckGarg : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: AssignGarg
     /// </summary>
-    public unsafe void AssignGarg(System.Numerics.Vector3 NewMovePos, System.Numerics.Vector3 NewAimPos)
+    public unsafe virtual void AssignGarg(System.Numerics.Vector3 NewMovePos, System.Numerics.Vector3 NewAimPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_CheckGarg.AssignGarg", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -84,7 +84,7 @@ public partial class RAEC_Attack_Sub_CheckGarg : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_CheckGarg.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RExplosionDetector : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HitByExplosion
     /// </summary>
-    public unsafe void HitByExplosion(System.Numerics.Vector3 ExplosionLoc = default, System.Numerics.Vector3 ExplosionDir = default)
+    public unsafe virtual void HitByExplosion(System.Numerics.Vector3 ExplosionLoc = default, System.Numerics.Vector3 ExplosionDir = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosionDetector.HitByExplosion", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -84,7 +84,7 @@ public partial class RExplosionDetector : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosionDetector.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class RExplosionDetector : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosionDetector.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

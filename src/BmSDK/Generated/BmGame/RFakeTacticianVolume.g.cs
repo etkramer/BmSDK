@@ -71,7 +71,7 @@ public partial class RFakeTacticianVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
     /// <summary>
     /// Function: DebugDrawVolume
     /// </summary>
-    public unsafe void DebugDrawVolume(int Red, int Green, int Blue, bool bDrawPersistent)
+    public unsafe virtual void DebugDrawVolume(int Red, int Green, int Blue, bool bDrawPersistent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFakeTacticianVolume.DebugDrawVolume", true);
         byte* paramsPtr = stackalloc byte[16];

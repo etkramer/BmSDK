@@ -66,7 +66,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -78,7 +78,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -90,7 +90,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -101,7 +101,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TriggerCompleteEvent
     /// </summary>
-    public unsafe bool TriggerCompleteEvent(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType)
+    public unsafe virtual bool TriggerCompleteEvent(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.TriggerCompleteEvent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -113,7 +113,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CreateHackMaskMesh
     /// </summary>
-    public unsafe BmSDK.Engine.StaticMeshComponent CreateHackMaskMesh()
+    public unsafe virtual BmSDK.Engine.StaticMeshComponent CreateHackMaskMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.CreateHackMaskMesh", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -124,7 +124,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ChangeHighlightType
     /// </summary>
-    public unsafe void ChangeHighlightType(BmSDK.BmGame.MHackableInterface.EHackableObjectState newHighlightType, bool bForce = default)
+    public unsafe virtual void ChangeHighlightType(BmSDK.BmGame.MHackableInterface.EHackableObjectState newHighlightType, bool bForce = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.ChangeHighlightType", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -137,7 +137,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSubroutineDescription
     /// </summary>
-    public unsafe BmSDK.FString GetSubroutineDescription(BmSDK.BmGame.MHackableInterface.FSubroutineDefinition Definition)
+    public unsafe virtual BmSDK.FString GetSubroutineDescription(BmSDK.BmGame.MHackableInterface.FSubroutineDefinition Definition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.GetSubroutineDescription", true);
         byte* paramsPtr = stackalloc byte[104];
@@ -149,7 +149,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSubroutineName
     /// </summary>
-    public unsafe BmSDK.FString GetSubroutineName(BmSDK.BmGame.MHackableInterface.FSubroutineDefinition Definition)
+    public unsafe virtual BmSDK.FString GetSubroutineName(BmSDK.BmGame.MHackableInterface.FSubroutineDefinition Definition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.GetSubroutineName", true);
         byte* paramsPtr = stackalloc byte[104];
@@ -161,7 +161,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsSubroutineTypeDisable
     /// </summary>
-    public unsafe bool IsSubroutineTypeDisable(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType)
+    public unsafe virtual bool IsSubroutineTypeDisable(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.IsSubroutineTypeDisable", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -173,7 +173,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetSubroutineNameAndDescriptionModifiedByKismet
     /// </summary>
-    public unsafe void SetSubroutineNameAndDescriptionModifiedByKismet(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType, BmSDK.FString NewSubroutineName, BmSDK.FString NewSubroutineDescription)
+    public unsafe virtual void SetSubroutineNameAndDescriptionModifiedByKismet(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType, BmSDK.FString NewSubroutineName, BmSDK.FString NewSubroutineDescription)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.SetSubroutineNameAndDescriptionModifiedByKismet", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -187,7 +187,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DisableSubroutineType
     /// </summary>
-    public unsafe void DisableSubroutineType(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType, bool NewIsDisable)
+    public unsafe virtual void DisableSubroutineType(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType, bool NewIsDisable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.DisableSubroutineType", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -200,7 +200,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsObjectEnable
     /// </summary>
-    public unsafe bool IsObjectEnable()
+    public unsafe virtual bool IsObjectEnable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.IsObjectEnable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -211,7 +211,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetInHackableMode
     /// </summary>
-    public unsafe void SetInHackableMode(bool On, bool bForce)
+    public unsafe virtual void SetInHackableMode(bool On, bool bForce)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.SetInHackableMode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -224,7 +224,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetHackableState
     /// </summary>
-    public unsafe BmSDK.BmGame.MHackableInterface.EHackableObjectState GetHackableState()
+    public unsafe virtual BmSDK.BmGame.MHackableInterface.EHackableObjectState GetHackableState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.GetHackableState", true);
         byte* paramsPtr = stackalloc byte[2];
@@ -235,7 +235,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDisplayTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDisplayTargetLocation()
+    public unsafe virtual System.Numerics.Vector3 GetDisplayTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.GetDisplayTargetLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -246,7 +246,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSubroutineDefinitionForType
     /// </summary>
-    public unsafe BmSDK.BmGame.MHackableInterface.FSubroutineDefinition GetSubroutineDefinitionForType(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType)
+    public unsafe virtual BmSDK.BmGame.MHackableInterface.FSubroutineDefinition GetSubroutineDefinitionForType(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.GetSubroutineDefinitionForType", true);
         byte* paramsPtr = stackalloc byte[152];
@@ -258,7 +258,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNumberOfSubroutineTypes
     /// </summary>
-    public unsafe int GetNumberOfSubroutineTypes()
+    public unsafe virtual int GetNumberOfSubroutineTypes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.GetNumberOfSubroutineTypes", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -269,7 +269,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyOnHack
     /// </summary>
-    public unsafe void NotifyOnHack(BmSDK.Engine.Actor HackedObject, BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType)
+    public unsafe virtual void NotifyOnHack(BmSDK.Engine.Actor HackedObject, BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.NotifyOnHack", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -282,7 +282,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TriggerCancelEvent
     /// </summary>
-    public unsafe bool TriggerCancelEvent(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType)
+    public unsafe virtual bool TriggerCancelEvent(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.TriggerCancelEvent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -294,7 +294,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TriggerEvent
     /// </summary>
-    public unsafe bool TriggerEvent(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType)
+    public unsafe virtual bool TriggerEvent(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.TriggerEvent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -306,7 +306,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetOutputIndexForEvent
     /// </summary>
-    public unsafe int GetOutputIndexForEvent(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType)
+    public unsafe virtual int GetOutputIndexForEvent(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.GetOutputIndexForEvent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -318,7 +318,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: NeedToDisplayNumberOfTargets
     /// </summary>
-    public unsafe bool NeedToDisplayNumberOfTargets()
+    public unsafe virtual bool NeedToDisplayNumberOfTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.NeedToDisplayNumberOfTargets", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -329,7 +329,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanBeExecuted
     /// </summary>
-    public unsafe bool CanBeExecuted()
+    public unsafe virtual bool CanBeExecuted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.CanBeExecuted", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -340,7 +340,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanInterrupt
     /// </summary>
-    public unsafe bool CanInterrupt(BmSDK.BmGame.MHackableInterface.EHackSubroutineType HackType)
+    public unsafe virtual bool CanInterrupt(BmSDK.BmGame.MHackableInterface.EHackSubroutineType HackType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.CanInterrupt", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -352,7 +352,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ExecuteSubroutine
     /// </summary>
-    public unsafe bool ExecuteSubroutine(BmSDK.BmGame.MHackableInterface.EHackSubroutineType HackType, BmSDK.Class SubroutineClass)
+    public unsafe virtual bool ExecuteSubroutine(BmSDK.BmGame.MHackableInterface.EHackSubroutineType HackType, BmSDK.Class SubroutineClass)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.ExecuteSubroutine", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -365,7 +365,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnSubroutine
     /// </summary>
-    public unsafe void SpawnSubroutine(BmSDK.BmGame.MHackableInterface.EHackSubroutineType HackType, BmSDK.Class SubroutineClass)
+    public unsafe virtual void SpawnSubroutine(BmSDK.BmGame.MHackableInterface.EHackSubroutineType HackType, BmSDK.Class SubroutineClass)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.SpawnSubroutine", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -378,7 +378,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnPreviewSubroutine
     /// </summary>
-    public unsafe void SpawnPreviewSubroutine(BmSDK.BmGame.MHackableInterface.EHackSubroutineType HackType, BmSDK.Class SubroutineClass)
+    public unsafe virtual void SpawnPreviewSubroutine(BmSDK.BmGame.MHackableInterface.EHackSubroutineType HackType, BmSDK.Class SubroutineClass)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.SpawnPreviewSubroutine", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -391,7 +391,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAffectedActors
     /// </summary>
-    public unsafe void GetAffectedActors(BmSDK.BmGame.MHackableInterface.EHackSubroutineType HackType, BmSDK.Class SubroutineClass, out BmSDK.TArray<BmSDK.Engine.Actor> AffectedActors)
+    public unsafe virtual void GetAffectedActors(BmSDK.BmGame.MHackableInterface.EHackSubroutineType HackType, BmSDK.Class SubroutineClass, out BmSDK.TArray<BmSDK.Engine.Actor> AffectedActors)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.GetAffectedActors", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -405,7 +405,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPossibleSubroutineTypes
     /// </summary>
-    public unsafe void GetPossibleSubroutineTypes(out BmSDK.TArray<BmSDK.BmGame.MHackableInterface.EHackSubroutineType> PossibleTypes)
+    public unsafe virtual void GetPossibleSubroutineTypes(out BmSDK.TArray<BmSDK.BmGame.MHackableInterface.EHackSubroutineType> PossibleTypes)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.GetPossibleSubroutineTypes", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -417,7 +417,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCurrentSubroutineType
     /// </summary>
-    public unsafe BmSDK.BmGame.MHackableInterface.EHackSubroutineType GetCurrentSubroutineType()
+    public unsafe virtual BmSDK.BmGame.MHackableInterface.EHackSubroutineType GetCurrentSubroutineType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.GetCurrentSubroutineType", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -428,7 +428,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPreviewSubroutine
     /// </summary>
-    public unsafe BmSDK.BmGame.MHackSubroutine GetPreviewSubroutine()
+    public unsafe virtual BmSDK.BmGame.MHackSubroutine GetPreviewSubroutine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.GetPreviewSubroutine", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -439,7 +439,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCurrentSubroutine
     /// </summary>
-    public unsafe BmSDK.BmGame.MHackSubroutine GetCurrentSubroutine()
+    public unsafe virtual BmSDK.BmGame.MHackSubroutine GetCurrentSubroutine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.GetCurrentSubroutine", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -450,7 +450,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetInXrayMode
     /// </summary>
-    public unsafe void SetInXrayMode(bool On, bool bForceOff)
+    public unsafe virtual void SetInXrayMode(bool On, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.SetInXrayMode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -463,7 +463,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CreateXrayMaskMesh
     /// </summary>
-    public unsafe BmSDK.Engine.StaticMeshComponent CreateXrayMaskMesh()
+    public unsafe virtual BmSDK.Engine.StaticMeshComponent CreateXrayMaskMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.CreateXrayMaskMesh", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -474,7 +474,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateStateMesh
     /// </summary>
-    public unsafe void UpdateStateMesh()
+    public unsafe virtual void UpdateStateMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.UpdateStateMesh", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -485,7 +485,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CreateHighlightMesh
     /// </summary>
-    public unsafe BmSDK.Engine.StaticMeshComponent CreateHighlightMesh()
+    public unsafe virtual BmSDK.Engine.StaticMeshComponent CreateHighlightMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.CreateHighlightMesh", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -496,7 +496,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetupHighlightMaterial
     /// </summary>
-    public unsafe void SetupHighlightMaterial()
+    public unsafe virtual void SetupHighlightMaterial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableObjectBase.SetupHighlightMaterial", true);
         byte* paramsPtr = stackalloc byte[4];

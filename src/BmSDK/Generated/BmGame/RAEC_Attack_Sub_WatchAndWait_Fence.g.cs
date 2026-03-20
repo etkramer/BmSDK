@@ -71,7 +71,7 @@ public partial class RAEC_Attack_Sub_WatchAndWait_Fence : BmSDK.BmGame.RAlertEve
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_WatchAndWait_Fence.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Attack_Sub_WatchAndWait_Fence : BmSDK.BmGame.RAlertEve
     /// <summary>
     /// Function: HandOverFenceLock
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMPathNode_FenceJumpProxy HandOverFenceLock()
+    public unsafe virtual BmSDK.BmGame.RBMPathNode_FenceJumpProxy HandOverFenceLock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_WatchAndWait_Fence.HandOverFenceLock", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -93,7 +93,7 @@ public partial class RAEC_Attack_Sub_WatchAndWait_Fence : BmSDK.BmGame.RAlertEve
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.BmGame.RBMPathNode_FenceJumpProxy NewDestFence)
+    public unsafe virtual void Init(BmSDK.BmGame.RBMPathNode_FenceJumpProxy NewDestFence)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_WatchAndWait_Fence.Init", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -105,7 +105,7 @@ public partial class RAEC_Attack_Sub_WatchAndWait_Fence : BmSDK.BmGame.RAlertEve
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_WatchAndWait_Fence.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RAEC_Attack_Sub_WatchAndWait_Fence : BmSDK.BmGame.RAlertEve
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_WatchAndWait_Fence.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RAEC_Attack_Sub_WatchAndWait_Fence : BmSDK.BmGame.RAlertEve
     /// <summary>
     /// Function: OnVillainStolen
     /// </summary>
-    public unsafe void OnVillainStolen()
+    public unsafe override void OnVillainStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_WatchAndWait_Fence.OnVillainStolen", true);
         byte* paramsPtr = stackalloc byte[0];

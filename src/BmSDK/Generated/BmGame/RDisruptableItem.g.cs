@@ -71,7 +71,7 @@ public partial class RDisruptableItem : BmSDK.BmGame.RDisruptableObjectBase, BmS
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableItem.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RDisruptableItem : BmSDK.BmGame.RDisruptableObjectBase, BmS
     /// <summary>
     /// Function: Recharged
     /// </summary>
-    public unsafe void Recharged()
+    public unsafe virtual void Recharged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableItem.Recharged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RDisruptableItem : BmSDK.BmGame.RDisruptableObjectBase, BmS
     /// <summary>
     /// Function: SuccessfullyDisrupted
     /// </summary>
-    public unsafe void SuccessfullyDisrupted()
+    public unsafe override void SuccessfullyDisrupted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableItem.SuccessfullyDisrupted", true);
         byte* paramsPtr = stackalloc byte[0];

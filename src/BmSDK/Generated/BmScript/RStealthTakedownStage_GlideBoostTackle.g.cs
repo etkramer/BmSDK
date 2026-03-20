@@ -71,7 +71,7 @@ public partial class RStealthTakedownStage_GlideBoostTackle : BmSDK.BmGame.RStea
     /// <summary>
     /// Function: GetWritheAnim
     /// </summary>
-    public unsafe BmSDK.FName GetWritheAnim()
+    public unsafe override BmSDK.FName GetWritheAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GlideBoostTackle.GetWritheAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RStealthTakedownStage_GlideBoostTackle : BmSDK.BmGame.RStea
     /// <summary>
     /// Function: FinishAttackVictim
     /// </summary>
-    public unsafe bool FinishAttackVictim(int iVictimNumber)
+    public unsafe override bool FinishAttackVictim(int iVictimNumber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GlideBoostTackle.FinishAttackVictim", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -94,7 +94,7 @@ public partial class RStealthTakedownStage_GlideBoostTackle : BmSDK.BmGame.RStea
     /// <summary>
     /// Function: NotifyBump
     /// </summary>
-    public unsafe void NotifyBump(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitNormal)
+    public unsafe override void NotifyBump(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GlideBoostTackle.NotifyBump", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -107,7 +107,7 @@ public partial class RStealthTakedownStage_GlideBoostTackle : BmSDK.BmGame.RStea
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GlideBoostTackle.Tick", true);
         byte* paramsPtr = stackalloc byte[304];
@@ -119,7 +119,7 @@ public partial class RStealthTakedownStage_GlideBoostTackle : BmSDK.BmGame.RStea
     /// <summary>
     /// Function: Cancel
     /// </summary>
-    public unsafe void Cancel(bool SetState = default, bool bAbandonVictims = default, bool bResetPlayerPose = default)
+    public unsafe override void Cancel(bool SetState = default, bool bAbandonVictims = default, bool bResetPlayerPose = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GlideBoostTackle.Cancel", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -133,7 +133,7 @@ public partial class RStealthTakedownStage_GlideBoostTackle : BmSDK.BmGame.RStea
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GlideBoostTackle.Begin", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -144,7 +144,7 @@ public partial class RStealthTakedownStage_GlideBoostTackle : BmSDK.BmGame.RStea
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GlideBoostTackle.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -157,7 +157,7 @@ public partial class RStealthTakedownStage_GlideBoostTackle : BmSDK.BmGame.RStea
     /// <summary>
     /// Function: GetStageAnim
     /// </summary>
-    public unsafe int GetStageAnim()
+    public unsafe override int GetStageAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_GlideBoostTackle.GetStageAnim", true);
         byte* paramsPtr = stackalloc byte[4];

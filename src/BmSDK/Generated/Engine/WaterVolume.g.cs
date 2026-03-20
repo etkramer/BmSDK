@@ -71,7 +71,7 @@ public partial class WaterVolume : BmSDK.Engine.PhysicsVolume, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayExitSplash
     /// </summary>
-    public unsafe void PlayExitSplash(BmSDK.Engine.Actor Other)
+    public unsafe virtual void PlayExitSplash(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WaterVolume.PlayExitSplash", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class WaterVolume : BmSDK.Engine.PhysicsVolume, BmSDK.IGameObject
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WaterVolume.UnTouch", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class WaterVolume : BmSDK.Engine.PhysicsVolume, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayEntrySplash
     /// </summary>
-    public unsafe void PlayEntrySplash(BmSDK.Engine.Actor Other)
+    public unsafe virtual void PlayEntrySplash(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WaterVolume.PlayEntrySplash", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -107,7 +107,7 @@ public partial class WaterVolume : BmSDK.Engine.PhysicsVolume, BmSDK.IGameObject
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WaterVolume.Touch", true);
         byte* paramsPtr = stackalloc byte[40];

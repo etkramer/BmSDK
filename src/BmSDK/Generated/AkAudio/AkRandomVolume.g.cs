@@ -71,7 +71,7 @@ public partial class AkRandomVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: DisableRandomVolume
     /// </summary>
-    public unsafe void DisableRandomVolume()
+    public unsafe virtual void DisableRandomVolume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkRandomVolume.DisableRandomVolume", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class AkRandomVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: EnableRandomVolume
     /// </summary>
-    public unsafe void EnableRandomVolume()
+    public unsafe virtual void EnableRandomVolume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkRandomVolume.EnableRandomVolume", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class AkRandomVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle ToggleAction)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle ToggleAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkRandomVolume.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];

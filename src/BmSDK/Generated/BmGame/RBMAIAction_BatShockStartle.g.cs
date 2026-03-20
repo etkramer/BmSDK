@@ -71,7 +71,7 @@ public partial class RBMAIAction_BatShockStartle : BmSDK.BmGame.RBMAIAction, BmS
     /// <summary>
     /// Function: UnAwareOfPlayer
     /// </summary>
-    public unsafe bool UnAwareOfPlayer(BmSDK.BmGame.RPawnPlayer PlayerPawn)
+    public unsafe override bool UnAwareOfPlayer(BmSDK.BmGame.RPawnPlayer PlayerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_BatShockStartle.UnAwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_BatShockStartle : BmSDK.BmGame.RBMAIAction, BmS
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_BatShockStartle.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -95,7 +95,7 @@ public partial class RBMAIAction_BatShockStartle : BmSDK.BmGame.RBMAIAction, BmS
     /// <summary>
     /// Function: PlayStartleAnim
     /// </summary>
-    public unsafe void PlayStartleAnim()
+    public unsafe virtual void PlayStartleAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_BatShockStartle.PlayStartleAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -106,7 +106,7 @@ public partial class RBMAIAction_BatShockStartle : BmSDK.BmGame.RBMAIAction, BmS
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_BatShockStartle.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RBMAIAction_BatShockStartle : BmSDK.BmGame.RBMAIAction, BmS
     /// <summary>
     /// Function: SetStartleLoc
     /// </summary>
-    public unsafe void SetStartleLoc(System.Numerics.Vector3 NewLoc, BmSDK.Engine.Actor TargetActor = default)
+    public unsafe virtual void SetStartleLoc(System.Numerics.Vector3 NewLoc, BmSDK.Engine.Actor TargetActor = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_BatShockStartle.SetStartleLoc", true);
         byte* paramsPtr = stackalloc byte[20];

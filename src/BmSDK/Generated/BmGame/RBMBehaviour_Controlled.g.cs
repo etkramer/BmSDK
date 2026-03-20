@@ -36,7 +36,7 @@ public partial class RBMBehaviour_Controlled : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: GetEvadeVehicleType
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.EEvadeVehicleType GetEvadeVehicleType(BmSDK.Engine.Actor V, float CarSpeed, bool bZap)
+    public unsafe override BmSDK.BmGame.RGameInfo.EEvadeVehicleType GetEvadeVehicleType(BmSDK.Engine.Actor V, float CarSpeed, bool bZap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Controlled.GetEvadeVehicleType", true);
         byte* paramsPtr = stackalloc byte[17];
@@ -50,7 +50,7 @@ public partial class RBMBehaviour_Controlled : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: CanHitLaserGrid
     /// </summary>
-    public unsafe bool CanHitLaserGrid()
+    public unsafe override bool CanHitLaserGrid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Controlled.CanHitLaserGrid", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -61,7 +61,7 @@ public partial class RBMBehaviour_Controlled : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: CanBlock
     /// </summary>
-    public unsafe bool CanBlock()
+    public unsafe override bool CanBlock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Controlled.CanBlock", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -72,7 +72,7 @@ public partial class RBMBehaviour_Controlled : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Controlled.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -83,7 +83,7 @@ public partial class RBMBehaviour_Controlled : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: ShouldStopDialogue
     /// </summary>
-    public unsafe bool ShouldStopDialogue()
+    public unsafe virtual bool ShouldStopDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Controlled.ShouldStopDialogue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RBMBehaviour_Controlled : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Controlled.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

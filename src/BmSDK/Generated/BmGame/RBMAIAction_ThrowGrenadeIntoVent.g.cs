@@ -71,7 +71,7 @@ public partial class RBMAIAction_ThrowGrenadeIntoVent : BmSDK.BmGame.RBMAIAction
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThrowGrenadeIntoVent.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_ThrowGrenadeIntoVent : BmSDK.BmGame.RBMAIAction
     /// <summary>
     /// Function: SpawnGrenade
     /// </summary>
-    public unsafe void SpawnGrenade()
+    public unsafe virtual void SpawnGrenade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThrowGrenadeIntoVent.SpawnGrenade", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_ThrowGrenadeIntoVent : BmSDK.BmGame.RBMAIAction
     /// <summary>
     /// Function: GrabGrenade
     /// </summary>
-    public unsafe void GrabGrenade()
+    public unsafe virtual void GrabGrenade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThrowGrenadeIntoVent.GrabGrenade", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_ThrowGrenadeIntoVent : BmSDK.BmGame.RBMAIAction
     /// <summary>
     /// Function: StartAnim
     /// </summary>
-    public unsafe void StartAnim()
+    public unsafe virtual void StartAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThrowGrenadeIntoVent.StartAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RBMAIAction_ThrowGrenadeIntoVent : BmSDK.BmGame.RBMAIAction
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThrowGrenadeIntoVent.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RBMAIAction_ThrowGrenadeIntoVent : BmSDK.BmGame.RBMAIAction
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThrowGrenadeIntoVent.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RBMAIAction_ThrowGrenadeIntoVent : BmSDK.BmGame.RBMAIAction
     /// <summary>
     /// Function: SetHoleLoc
     /// </summary>
-    public unsafe void SetHoleLoc(System.Numerics.Vector3 NewVentPoint, System.Numerics.Vector3 NewLandTarget)
+    public unsafe virtual void SetHoleLoc(System.Numerics.Vector3 NewVentPoint, System.Numerics.Vector3 NewLandTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThrowGrenadeIntoVent.SetHoleLoc", true);
         byte* paramsPtr = stackalloc byte[24];

@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_Hostage : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Hostage.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Sub_Hostage : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: ThugHitByStrike
     /// </summary>
-    public unsafe void ThugHitByStrike()
+    public unsafe override void ThugHitByStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Hostage.ThugHitByStrike", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RAEC_Search_Sub_Hostage : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: ThugIsBeingTakenDown
     /// </summary>
-    public unsafe void ThugIsBeingTakenDown()
+    public unsafe virtual void ThugIsBeingTakenDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Hostage.ThugIsBeingTakenDown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RAEC_Search_Sub_Hostage : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: PlayerSeen
     /// </summary>
-    public unsafe void PlayerSeen(BmSDK.BmGame.RPlayerController PC, bool AllowSeenInVantage = default)
+    public unsafe virtual void PlayerSeen(BmSDK.BmGame.RPlayerController PC, bool AllowSeenInVantage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Hostage.PlayerSeen", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -117,7 +117,7 @@ public partial class RAEC_Search_Sub_Hostage : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: WillGlanceAtLowPriorityTarget
     /// </summary>
-    public unsafe bool WillGlanceAtLowPriorityTarget(BmSDK.Engine.Actor PotentialGlanceTarget)
+    public unsafe virtual bool WillGlanceAtLowPriorityTarget(BmSDK.Engine.Actor PotentialGlanceTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Hostage.WillGlanceAtLowPriorityTarget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -129,7 +129,7 @@ public partial class RAEC_Search_Sub_Hostage : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: NotifyEvent
     /// </summary>
-    public unsafe void NotifyEvent(BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
+    public unsafe override void NotifyEvent(BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Hostage.NotifyEvent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -142,7 +142,7 @@ public partial class RAEC_Search_Sub_Hostage : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Hostage.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -154,7 +154,7 @@ public partial class RAEC_Search_Sub_Hostage : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Hostage.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -166,7 +166,7 @@ public partial class RAEC_Search_Sub_Hostage : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: Cleanup
     /// </summary>
-    public unsafe void Cleanup()
+    public unsafe virtual void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Hostage.Cleanup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -177,7 +177,7 @@ public partial class RAEC_Search_Sub_Hostage : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: SetHostage
     /// </summary>
-    public unsafe void SetHostage(BmSDK.BmGame.RPawnFriendly NewHostage)
+    public unsafe virtual void SetHostage(BmSDK.BmGame.RPawnFriendly NewHostage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Hostage.SetHostage", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -189,7 +189,7 @@ public partial class RAEC_Search_Sub_Hostage : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: GetAIThoughts
     /// </summary>
-    public unsafe void GetAIThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetAIThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Hostage.GetAIThoughts", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -201,7 +201,7 @@ public partial class RAEC_Search_Sub_Hostage : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Hostage.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -213,7 +213,7 @@ public partial class RAEC_Search_Sub_Hostage : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: OnVillainStolen
     /// </summary>
-    public unsafe void OnVillainStolen()
+    public unsafe override void OnVillainStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Hostage.OnVillainStolen", true);
         byte* paramsPtr = stackalloc byte[0];

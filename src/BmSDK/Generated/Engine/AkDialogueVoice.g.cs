@@ -36,7 +36,7 @@ public partial class AkDialogueVoice : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: VoiceId
     /// </summary>
-    public unsafe int VoiceId()
+    public unsafe virtual int VoiceId()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueVoice.VoiceId", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class AkDialogueVoice : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPortrait
     /// </summary>
-    public unsafe BmSDK.FString GetPortrait()
+    public unsafe virtual BmSDK.FString GetPortrait()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueVoice.GetPortrait", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -65,7 +65,7 @@ public partial class AkDialogueVoice : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSubtitle
     /// </summary>
-    public unsafe BmSDK.FString GetSubtitle(BmSDK.FString langExt = default)
+    public unsafe virtual BmSDK.FString GetSubtitle(BmSDK.FString langExt = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueVoice.GetSubtitle", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -84,7 +84,7 @@ public partial class AkDialogueVoice : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: IsWildcardVoice
     /// </summary>
-    public unsafe bool IsWildcardVoice()
+    public unsafe virtual bool IsWildcardVoice()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueVoice.IsWildcardVoice", true);
         byte* paramsPtr = stackalloc byte[4];

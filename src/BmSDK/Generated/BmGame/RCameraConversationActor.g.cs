@@ -71,7 +71,7 @@ public partial class RCameraConversationActor : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Function: NotifyCameraDeleted
     /// </summary>
-    public unsafe void NotifyCameraDeleted(BmSDK.BmGame.RCameraActor_Conversation Camera)
+    public unsafe virtual void NotifyCameraDeleted(BmSDK.BmGame.RCameraActor_Conversation Camera)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCameraConversationActor.NotifyCameraDeleted", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -36,7 +36,7 @@ public partial class NavMeshPath_WithinDistanceEnvelope : BmSDK.Engine.NavMeshPa
     /// <summary>
     /// Function: Recycle
     /// </summary>
-    public unsafe void Recycle()
+    public unsafe override void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPath_WithinDistanceEnvelope.Recycle", true);
         byte* paramsPtr = stackalloc byte[0];

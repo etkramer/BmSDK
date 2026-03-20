@@ -47,7 +47,7 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: BlockLevelName
     /// </summary>
-    public unsafe bool BlockLevelName()
+    public unsafe virtual bool BlockLevelName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PenguinCarChase.BlockLevelName", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: ShutdownHUD
     /// </summary>
-    public unsafe void ShutdownHUD()
+    public unsafe virtual void ShutdownHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PenguinCarChase.ShutdownHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -69,7 +69,7 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: InitHUD
     /// </summary>
-    public unsafe void InitHUD()
+    public unsafe virtual void InitHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PenguinCarChase.InitHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -80,7 +80,7 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void DrawHUD(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PenguinCarChase.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -92,7 +92,7 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: PreRender
     /// </summary>
-    public unsafe void PreRender(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void PreRender(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PenguinCarChase.PreRender", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -104,7 +104,7 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: DrawDebug
     /// </summary>
-    public unsafe void DrawDebug()
+    public unsafe virtual void DrawDebug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PenguinCarChase.DrawDebug", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -115,7 +115,7 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: Deactivated
     /// </summary>
-    public unsafe void Deactivated()
+    public unsafe override void Deactivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PenguinCarChase.Deactivated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PenguinCarChase.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -137,7 +137,7 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: CheckInputs
     /// </summary>
-    public unsafe void CheckInputs()
+    public unsafe virtual void CheckInputs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PenguinCarChase.CheckInputs", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -148,7 +148,7 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: CheckForBMBL
     /// </summary>
-    public unsafe void CheckForBMBL()
+    public unsafe virtual void CheckForBMBL()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PenguinCarChase.CheckForBMBL", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -159,7 +159,7 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: CheckDistances
     /// </summary>
-    public unsafe void CheckDistances()
+    public unsafe virtual void CheckDistances()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PenguinCarChase.CheckDistances", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -170,7 +170,7 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: SetCarSpeedScale
     /// </summary>
-    public unsafe void SetCarSpeedScale(float interpolant)
+    public unsafe virtual void SetCarSpeedScale(float interpolant)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PenguinCarChase.SetCarSpeedScale", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -182,7 +182,7 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: DestroyAllBoxes
     /// </summary>
-    public unsafe void DestroyAllBoxes()
+    public unsafe virtual void DestroyAllBoxes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PenguinCarChase.DestroyAllBoxes", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -193,7 +193,7 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: CheckLOSOutputs
     /// </summary>
-    public unsafe void CheckLOSOutputs()
+    public unsafe virtual void CheckLOSOutputs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PenguinCarChase.CheckLOSOutputs", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -204,7 +204,7 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PenguinCarChase.Update", true);
         byte* paramsPtr = stackalloc byte[8];

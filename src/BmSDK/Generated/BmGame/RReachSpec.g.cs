@@ -36,7 +36,7 @@ public partial class RReachSpec : BmSDK.Engine.ReachSpec, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveBlocker
     /// </summary>
-    public unsafe void RemoveBlocker(BmSDK.GameObject NewUnblocker)
+    public unsafe virtual void RemoveBlocker(BmSDK.GameObject NewUnblocker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RReachSpec.RemoveBlocker", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -55,7 +55,7 @@ public partial class RReachSpec : BmSDK.Engine.ReachSpec, BmSDK.IGameObject
     /// <summary>
     /// Function: AddBlocker
     /// </summary>
-    public unsafe void AddBlocker(BmSDK.GameObject NewBlocker)
+    public unsafe virtual void AddBlocker(BmSDK.GameObject NewBlocker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RReachSpec.AddBlocker", true);
         byte* paramsPtr = stackalloc byte[8];

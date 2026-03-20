@@ -71,7 +71,7 @@ public partial class RNoDeleteCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     /// <summary>
     /// Function: DestroyMe
     /// </summary>
-    public unsafe void DestroyMe()
+    public unsafe virtual void DestroyMe()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNoDeleteCameraActor.DestroyMe", true);
         byte* paramsPtr = stackalloc byte[0];

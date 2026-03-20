@@ -71,7 +71,7 @@ public partial class RBMPathNode_FenceJumpProxy : BmSDK.BmGame.RBMPathNode_Varia
     /// <summary>
     /// Function: GetLockedPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLockedPoint(BmSDK.BmGame.RPawn PeekingPawn)
+    public unsafe virtual System.Numerics.Vector3 GetLockedPoint(BmSDK.BmGame.RPawn PeekingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_FenceJumpProxy.GetLockedPoint", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -83,7 +83,7 @@ public partial class RBMPathNode_FenceJumpProxy : BmSDK.BmGame.RBMPathNode_Varia
     /// <summary>
     /// Function: UnLock
     /// </summary>
-    public unsafe void UnLock(BmSDK.BmGame.RBMAIController Unlocker)
+    public unsafe virtual void UnLock(BmSDK.BmGame.RBMAIController Unlocker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_FenceJumpProxy.UnLock", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RBMPathNode_FenceJumpProxy : BmSDK.BmGame.RBMPathNode_Varia
     /// <summary>
     /// Function: Lock
     /// </summary>
-    public unsafe void Lock(BmSDK.BmGame.RBMAIController NewLockee)
+    public unsafe virtual void Lock(BmSDK.BmGame.RBMAIController NewLockee)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_FenceJumpProxy.Lock", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -107,7 +107,7 @@ public partial class RBMPathNode_FenceJumpProxy : BmSDK.BmGame.RBMPathNode_Varia
     /// <summary>
     /// Function: CanLock
     /// </summary>
-    public unsafe bool CanLock(BmSDK.BmGame.RBMAIController TestLockedBy, out System.Numerics.Vector3 PredictedLockPoint)
+    public unsafe virtual bool CanLock(BmSDK.BmGame.RBMAIController TestLockedBy, out System.Numerics.Vector3 PredictedLockPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_FenceJumpProxy.CanLock", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -120,7 +120,7 @@ public partial class RBMPathNode_FenceJumpProxy : BmSDK.BmGame.RBMPathNode_Varia
     /// <summary>
     /// Function: CanPeek
     /// </summary>
-    public unsafe bool CanPeek()
+    public unsafe virtual bool CanPeek()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_FenceJumpProxy.CanPeek", true);
         byte* paramsPtr = stackalloc byte[4];

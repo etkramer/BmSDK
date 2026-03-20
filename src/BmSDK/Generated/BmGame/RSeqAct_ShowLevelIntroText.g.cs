@@ -47,7 +47,7 @@ public partial class RSeqAct_ShowLevelIntroText : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: ShutdownHUD
     /// </summary>
-    public unsafe void ShutdownHUD()
+    public unsafe virtual void ShutdownHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ShowLevelIntroText.ShutdownHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -58,7 +58,7 @@ public partial class RSeqAct_ShowLevelIntroText : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: TickHUD
     /// </summary>
-    public unsafe bool TickHUD(float DeltaTime)
+    public unsafe virtual bool TickHUD(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ShowLevelIntroText.TickHUD", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -70,7 +70,7 @@ public partial class RSeqAct_ShowLevelIntroText : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: InitHUD
     /// </summary>
-    public unsafe void InitHUD()
+    public unsafe virtual void InitHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ShowLevelIntroText.InitHUD", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -81,7 +81,7 @@ public partial class RSeqAct_ShowLevelIntroText : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: GetCurrentCharacter
     /// </summary>
-    public unsafe BmSDK.FString GetCurrentCharacter()
+    public unsafe virtual BmSDK.FString GetCurrentCharacter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ShowLevelIntroText.GetCurrentCharacter", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -92,7 +92,7 @@ public partial class RSeqAct_ShowLevelIntroText : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void DrawHUD(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ShowLevelIntroText.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -104,7 +104,7 @@ public partial class RSeqAct_ShowLevelIntroText : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: PreRender
     /// </summary>
-    public unsafe void PreRender(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void PreRender(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ShowLevelIntroText.PreRender", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -116,7 +116,7 @@ public partial class RSeqAct_ShowLevelIntroText : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: BlockLevelName
     /// </summary>
-    public unsafe bool BlockLevelName()
+    public unsafe virtual bool BlockLevelName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ShowLevelIntroText.BlockLevelName", true);
         byte* paramsPtr = stackalloc byte[4];

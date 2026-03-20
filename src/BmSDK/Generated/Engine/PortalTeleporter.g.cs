@@ -66,7 +66,7 @@ public partial class PortalTeleporter : BmSDK.Engine.SceneCapturePortalActor, Bm
     /// <summary>
     /// Function: StopsProjectile
     /// </summary>
-    public unsafe bool StopsProjectile(BmSDK.Engine.Projectile P, BmSDK.Engine.PrimitiveComponent HitComponent = default)
+    public unsafe override bool StopsProjectile(BmSDK.Engine.Projectile P, BmSDK.Engine.PrimitiveComponent HitComponent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PortalTeleporter.StopsProjectile", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -79,7 +79,7 @@ public partial class PortalTeleporter : BmSDK.Engine.SceneCapturePortalActor, Bm
     /// <summary>
     /// Function: CreatePortalTexture
     /// </summary>
-    public unsafe BmSDK.Engine.TextureRenderTarget2D CreatePortalTexture()
+    public unsafe virtual BmSDK.Engine.TextureRenderTarget2D CreatePortalTexture()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PortalTeleporter.CreatePortalTexture", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -97,7 +97,7 @@ public partial class PortalTeleporter : BmSDK.Engine.SceneCapturePortalActor, Bm
     /// <summary>
     /// Function: TransformHitLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TransformHitLocation(System.Numerics.Vector3 HitLocation)
+    public unsafe virtual System.Numerics.Vector3 TransformHitLocation(System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PortalTeleporter.TransformHitLocation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -116,7 +116,7 @@ public partial class PortalTeleporter : BmSDK.Engine.SceneCapturePortalActor, Bm
     /// <summary>
     /// Function: TransformVectorDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 TransformVectorDir(System.Numerics.Vector3 V)
+    public unsafe virtual System.Numerics.Vector3 TransformVectorDir(System.Numerics.Vector3 V)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PortalTeleporter.TransformVectorDir", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -135,7 +135,7 @@ public partial class PortalTeleporter : BmSDK.Engine.SceneCapturePortalActor, Bm
     /// <summary>
     /// Function: TransformActor
     /// </summary>
-    public unsafe bool TransformActor(BmSDK.Engine.Actor A)
+    public unsafe virtual bool TransformActor(BmSDK.Engine.Actor A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PortalTeleporter.TransformActor", true);
         byte* paramsPtr = stackalloc byte[12];

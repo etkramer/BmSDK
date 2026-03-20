@@ -36,7 +36,7 @@ public partial class RBMExitCondition_MatineeEnded : BmSDK.BmGame.RBMExitConditi
     /// <summary>
     /// Function: MatineeBlendOutStarted
     /// </summary>
-    public unsafe void MatineeBlendOutStarted()
+    public unsafe virtual void MatineeBlendOutStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitCondition_MatineeEnded.MatineeBlendOutStarted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMExitCondition_MatineeEnded : BmSDK.BmGame.RBMExitConditi
     /// <summary>
     /// Function: MatineeControlFinished
     /// </summary>
-    public unsafe void MatineeControlFinished()
+    public unsafe virtual void MatineeControlFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitCondition_MatineeEnded.MatineeControlFinished", true);
         byte* paramsPtr = stackalloc byte[0];

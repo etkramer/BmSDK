@@ -71,7 +71,7 @@ public partial class RFreezeClusterGrenadeProjectileBm : BmSDK.BmGame.RFreezeClu
     /// <summary>
     /// Function: DestroyProjectile
     /// </summary>
-    public unsafe void DestroyProjectile()
+    public unsafe override void DestroyProjectile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeClusterGrenadeProjectileBm.DestroyProjectile", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RFreezeClusterGrenadeProjectileBm : BmSDK.BmGame.RFreezeClu
     /// <summary>
     /// Function: Detonate
     /// </summary>
-    public unsafe void Detonate(bool noGroundParticles = default, bool ProximityDetonate = default)
+    public unsafe override void Detonate(bool noGroundParticles = default, bool ProximityDetonate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeClusterGrenadeProjectileBm.Detonate", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -95,7 +95,7 @@ public partial class RFreezeClusterGrenadeProjectileBm : BmSDK.BmGame.RFreezeClu
     /// <summary>
     /// Function: SpawnSmallIceSphere
     /// </summary>
-    public unsafe BmSDK.Engine.Actor SpawnSmallIceSphere(System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation)
+    public unsafe override BmSDK.Engine.Actor SpawnSmallIceSphere(System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeClusterGrenadeProjectileBm.SpawnSmallIceSphere", true);
         byte* paramsPtr = stackalloc byte[40];

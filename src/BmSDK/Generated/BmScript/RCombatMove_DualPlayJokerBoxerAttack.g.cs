@@ -71,7 +71,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: MoveOverridenForPawn
     /// </summary>
-    public unsafe void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
+    public unsafe override void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.MoveOverridenForPawn", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -107,7 +107,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: QueueAttackAnim
     /// </summary>
-    public unsafe void QueueAttackAnim(int StageToQueue)
+    public unsafe virtual void QueueAttackAnim(int StageToQueue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.QueueAttackAnim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -119,7 +119,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: TurnOffHighlight
     /// </summary>
-    public unsafe void TurnOffHighlight(bool bSuccess)
+    public unsafe virtual void TurnOffHighlight(bool bSuccess)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.TurnOffHighlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -131,7 +131,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: TurnOnHighlight
     /// </summary>
-    public unsafe void TurnOnHighlight()
+    public unsafe virtual void TurnOnHighlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.TurnOnHighlight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -142,7 +142,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: GotoJBAttackState
     /// </summary>
-    public unsafe void GotoJBAttackState(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedAnimID, float TimeLeftOver)
+    public unsafe virtual void GotoJBAttackState(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedAnimID, float TimeLeftOver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.GotoJBAttackState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -155,7 +155,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: GotoPlayersGetInState
     /// </summary>
-    public unsafe void GotoPlayersGetInState(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedAnimID, float TimeLeftOver)
+    public unsafe virtual void GotoPlayersGetInState(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedAnimID, float TimeLeftOver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.GotoPlayersGetInState", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -168,7 +168,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: GetPreStrikeAnim
     /// </summary>
-    public unsafe BmSDK.FName GetPreStrikeAnim(System.Numerics.Vector3 PreStrikeHeading)
+    public unsafe virtual BmSDK.FName GetPreStrikeAnim(System.Numerics.Vector3 PreStrikeHeading)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.GetPreStrikeAnim", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -180,7 +180,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: PlayClashStrike
     /// </summary>
-    public unsafe void PlayClashStrike()
+    public unsafe virtual void PlayClashStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.PlayClashStrike", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -191,7 +191,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: PlayCounter
     /// </summary>
-    public unsafe void PlayCounter()
+    public unsafe virtual void PlayCounter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.PlayCounter", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -202,7 +202,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: SetRemainingThugsOneHitKill
     /// </summary>
-    public unsafe void SetRemainingThugsOneHitKill()
+    public unsafe virtual void SetRemainingThugsOneHitKill()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.SetRemainingThugsOneHitKill", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -213,7 +213,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: TriggerCounterAttempted
     /// </summary>
-    public unsafe void TriggerCounterAttempted()
+    public unsafe override void TriggerCounterAttempted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.TriggerCounterAttempted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -224,7 +224,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: GetForceToGiveToPawn
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetForceToGiveToPawn(BmSDK.BmGame.RPawnCombat Receiver, float MaxForce, float MinRange = default, float MaxRange = default)
+    public unsafe override System.Numerics.Vector3 GetForceToGiveToPawn(BmSDK.BmGame.RPawnCombat Receiver, float MaxForce, float MinRange = default, float MaxRange = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.GetForceToGiveToPawn", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -239,7 +239,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: OverrideForceToGiveToPawn
     /// </summary>
-    public unsafe bool OverrideForceToGiveToPawn()
+    public unsafe override bool OverrideForceToGiveToPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.OverrideForceToGiveToPawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -250,7 +250,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: CanBeTargettedByPlayer
     /// </summary>
-    public unsafe bool CanBeTargettedByPlayer(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType, BmSDK.BmGame.RPawnPlayerCombat NewPlayer)
+    public unsafe override bool CanBeTargettedByPlayer(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType, BmSDK.BmGame.RPawnPlayerCombat NewPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.CanBeTargettedByPlayer", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -264,7 +264,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: CanReceiveAttackFromPawn
     /// </summary>
-    public unsafe bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
+    public unsafe override bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.CanReceiveAttackFromPawn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -277,7 +277,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: CanBotPerformNextComboMove
     /// </summary>
-    public unsafe bool CanBotPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
+    public unsafe override bool CanBotPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.CanBotPerformNextComboMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -290,7 +290,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: CanPerformNextComboMove
     /// </summary>
-    public unsafe bool CanPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
+    public unsafe override bool CanPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.CanPerformNextComboMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -303,7 +303,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: DamagedBy
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat DamageReceiver, BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat DamageReceiver, BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.DamagedBy", true);
         byte* paramsPtr = stackalloc byte[284];
@@ -316,7 +316,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: OverrideHitReaction
     /// </summary>
-    public unsafe bool OverrideHitReaction(BmSDK.BmGame.RPawnCombat HitPawn)
+    public unsafe override bool OverrideHitReaction(BmSDK.BmGame.RPawnCombat HitPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.OverrideHitReaction", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -328,7 +328,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: DamagePlayer
     /// </summary>
-    public unsafe void DamagePlayer()
+    public unsafe virtual void DamagePlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.DamagePlayer", true);
         byte* paramsPtr = stackalloc byte[248];
@@ -339,7 +339,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: PlayPlayerHitRight
     /// </summary>
-    public unsafe void PlayPlayerHitRight()
+    public unsafe virtual void PlayPlayerHitRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.PlayPlayerHitRight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -350,7 +350,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: PlayPlayerHitLeft
     /// </summary>
-    public unsafe void PlayPlayerHitLeft()
+    public unsafe virtual void PlayPlayerHitLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.PlayPlayerHitLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -361,7 +361,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: CanBeTracked
     /// </summary>
-    public unsafe bool CanBeTracked()
+    public unsafe override bool CanBeTracked()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.CanBeTracked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -372,7 +372,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: SetAnimSets
     /// </summary>
-    public unsafe void SetAnimSets()
+    public unsafe virtual void SetAnimSets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.SetAnimSets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -383,7 +383,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: GetImpactPS
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem GetImpactPS()
+    public unsafe virtual BmSDK.Engine.ParticleSystem GetImpactPS()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.GetImpactPS", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -394,7 +394,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: ClearThugs
     /// </summary>
-    public unsafe void ClearThugs()
+    public unsafe virtual void ClearThugs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.ClearThugs", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -405,7 +405,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: CanNewAttackBeStarted
     /// </summary>
-    public unsafe bool CanNewAttackBeStarted()
+    public unsafe override bool CanNewAttackBeStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.CanNewAttackBeStarted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -416,7 +416,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: IsAttacking
     /// </summary>
-    public unsafe bool IsAttacking()
+    public unsafe override bool IsAttacking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.IsAttacking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -427,7 +427,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: GetInitiatorToTargetDistInAnim
     /// </summary>
-    public unsafe float GetInitiatorToTargetDistInAnim(BmSDK.FName TestAnimName)
+    public unsafe virtual float GetInitiatorToTargetDistInAnim(BmSDK.FName TestAnimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.GetInitiatorToTargetDistInAnim", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -439,7 +439,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: GetBestAnimYaw
     /// </summary>
-    public unsafe bool GetBestAnimYaw(BmSDK.FName TestAnimName, BmSDK.BmGame.RPawnPlayerCombat InitiatorPawn, BmSDK.BmGame.RPawnPlayerCombat BuddyPawn, BmSDK.BmGame.RPawnVillain TargetPawn, BmSDK.Engine.AnimSet IAnimSet, BmSDK.Engine.AnimSet BAnimset, BmSDK.Engine.AnimSet TAnimSet, BmSDK.Engine.AnimSet CamAnimset, System.Numerics.Vector3 refLoc, BmSDK.Rotator RefRot, out int OutYaw)
+    public unsafe virtual bool GetBestAnimYaw(BmSDK.FName TestAnimName, BmSDK.BmGame.RPawnPlayerCombat InitiatorPawn, BmSDK.BmGame.RPawnPlayerCombat BuddyPawn, BmSDK.BmGame.RPawnVillain TargetPawn, BmSDK.Engine.AnimSet IAnimSet, BmSDK.Engine.AnimSet BAnimset, BmSDK.Engine.AnimSet TAnimSet, BmSDK.Engine.AnimSet CamAnimset, System.Numerics.Vector3 refLoc, BmSDK.Rotator RefRot, out int OutYaw)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.GetBestAnimYaw", true);
         byte* paramsPtr = stackalloc byte[128];
@@ -461,7 +461,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.Initialise", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -472,7 +472,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: GetCombatThoughts
     /// </summary>
-    public unsafe void GetCombatThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetCombatThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.GetCombatThoughts", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -484,7 +484,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: ShowStaffIfBuddyIsRobin
     /// </summary>
-    public unsafe void ShowStaffIfBuddyIsRobin()
+    public unsafe virtual void ShowStaffIfBuddyIsRobin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.ShowStaffIfBuddyIsRobin", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -495,7 +495,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: BoxerStrikeable
     /// </summary>
-    public unsafe void BoxerStrikeable()
+    public unsafe virtual void BoxerStrikeable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.BoxerStrikeable", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -506,7 +506,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: SlowmoSfxOff
     /// </summary>
-    public unsafe void SlowmoSfxOff()
+    public unsafe virtual void SlowmoSfxOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.SlowmoSfxOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -517,7 +517,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: SlomoSfxOn
     /// </summary>
-    public unsafe void SlomoSfxOn()
+    public unsafe virtual void SlomoSfxOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.SlomoSfxOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -528,7 +528,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: SpeedUp
     /// </summary>
-    public unsafe void SpeedUp()
+    public unsafe virtual void SpeedUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.SpeedUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -539,7 +539,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: SlowDown
     /// </summary>
-    public unsafe void SlowDown()
+    public unsafe virtual void SlowDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.SlowDown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -550,7 +550,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: UpdateMoveYaw
     /// </summary>
-    public unsafe void UpdateMoveYaw()
+    public unsafe virtual void UpdateMoveYaw()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.UpdateMoveYaw", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -561,7 +561,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: ThugsReactCheer
     /// </summary>
-    public unsafe void ThugsReactCheer()
+    public unsafe virtual void ThugsReactCheer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.ThugsReactCheer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -572,7 +572,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: ThugsReactPain
     /// </summary>
-    public unsafe void ThugsReactPain()
+    public unsafe virtual void ThugsReactPain()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.ThugsReactPain", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -583,7 +583,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: BuddyHitKillJB
     /// </summary>
-    public unsafe void BuddyHitKillJB()
+    public unsafe virtual void BuddyHitKillJB()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.BuddyHitKillJB", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -594,7 +594,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: FinalHit
     /// </summary>
-    public unsafe void FinalHit()
+    public unsafe virtual void FinalHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.FinalHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -605,7 +605,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: UnSlaveAll
     /// </summary>
-    public unsafe void UnSlaveAll()
+    public unsafe virtual void UnSlaveAll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.UnSlaveAll", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -616,7 +616,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: PlayerBeatdownHitJB
     /// </summary>
-    public unsafe void PlayerBeatdownHitJB()
+    public unsafe virtual void PlayerBeatdownHitJB()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.PlayerBeatdownHitJB", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -627,7 +627,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: BuddyHitJBRightElbow
     /// </summary>
-    public unsafe void BuddyHitJBRightElbow()
+    public unsafe virtual void BuddyHitJBRightElbow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.BuddyHitJBRightElbow", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -638,7 +638,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: BuddyHitJBLeftElbow
     /// </summary>
-    public unsafe void BuddyHitJBLeftElbow()
+    public unsafe virtual void BuddyHitJBLeftElbow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.BuddyHitJBLeftElbow", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -649,7 +649,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: BuddyHitJBRightFoot
     /// </summary>
-    public unsafe void BuddyHitJBRightFoot()
+    public unsafe virtual void BuddyHitJBRightFoot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.BuddyHitJBRightFoot", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -660,7 +660,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: BuddyHitJBLeftFoot
     /// </summary>
-    public unsafe void BuddyHitJBLeftFoot()
+    public unsafe virtual void BuddyHitJBLeftFoot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.BuddyHitJBLeftFoot", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -671,7 +671,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: BuddyHitJBHead
     /// </summary>
-    public unsafe void BuddyHitJBHead()
+    public unsafe virtual void BuddyHitJBHead()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.BuddyHitJBHead", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -682,7 +682,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: BuddyHitJBRightKnee
     /// </summary>
-    public unsafe void BuddyHitJBRightKnee()
+    public unsafe virtual void BuddyHitJBRightKnee()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.BuddyHitJBRightKnee", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -693,7 +693,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: BuddyHitJBLeftKnee
     /// </summary>
-    public unsafe void BuddyHitJBLeftKnee()
+    public unsafe virtual void BuddyHitJBLeftKnee()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.BuddyHitJBLeftKnee", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -704,7 +704,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: BuddyBeatdownHitJBRight
     /// </summary>
-    public unsafe void BuddyBeatdownHitJBRight()
+    public unsafe virtual void BuddyBeatdownHitJBRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.BuddyBeatdownHitJBRight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -715,7 +715,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: BuddyBeatdownHitJBLeft
     /// </summary>
-    public unsafe void BuddyBeatdownHitJBLeft()
+    public unsafe virtual void BuddyBeatdownHitJBLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.BuddyBeatdownHitJBLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -726,7 +726,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: BuddyHitJBRight
     /// </summary>
-    public unsafe void BuddyHitJBRight()
+    public unsafe virtual void BuddyHitJBRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.BuddyHitJBRight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -737,7 +737,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: BuddyCounterHitJBLeft
     /// </summary>
-    public unsafe void BuddyCounterHitJBLeft()
+    public unsafe virtual void BuddyCounterHitJBLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.BuddyCounterHitJBLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -748,7 +748,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: BuddyHitJBLeft
     /// </summary>
-    public unsafe void BuddyHitJBLeft()
+    public unsafe virtual void BuddyHitJBLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.BuddyHitJBLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -759,7 +759,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: InitiatorHitJBRightElbow
     /// </summary>
-    public unsafe void InitiatorHitJBRightElbow()
+    public unsafe virtual void InitiatorHitJBRightElbow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.InitiatorHitJBRightElbow", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -770,7 +770,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: InitiatorHitJBLeftElbow
     /// </summary>
-    public unsafe void InitiatorHitJBLeftElbow()
+    public unsafe virtual void InitiatorHitJBLeftElbow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.InitiatorHitJBLeftElbow", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -781,7 +781,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: InitiatorHitJBRightFoot
     /// </summary>
-    public unsafe void InitiatorHitJBRightFoot()
+    public unsafe virtual void InitiatorHitJBRightFoot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.InitiatorHitJBRightFoot", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -792,7 +792,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: InitiatorHitJBLeftFoot
     /// </summary>
-    public unsafe void InitiatorHitJBLeftFoot()
+    public unsafe virtual void InitiatorHitJBLeftFoot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.InitiatorHitJBLeftFoot", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -803,7 +803,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: InitiatorHitJBHead
     /// </summary>
-    public unsafe void InitiatorHitJBHead()
+    public unsafe virtual void InitiatorHitJBHead()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.InitiatorHitJBHead", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -814,7 +814,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: InitiatorHitJBRightKnee
     /// </summary>
-    public unsafe void InitiatorHitJBRightKnee()
+    public unsafe virtual void InitiatorHitJBRightKnee()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.InitiatorHitJBRightKnee", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -825,7 +825,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: InitiatorHitJBLeftKnee
     /// </summary>
-    public unsafe void InitiatorHitJBLeftKnee()
+    public unsafe virtual void InitiatorHitJBLeftKnee()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.InitiatorHitJBLeftKnee", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -836,7 +836,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: InitiatorBeatdownHitJBRight
     /// </summary>
-    public unsafe void InitiatorBeatdownHitJBRight()
+    public unsafe virtual void InitiatorBeatdownHitJBRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.InitiatorBeatdownHitJBRight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -847,7 +847,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: InitiatorBeatdownHitJBLeft
     /// </summary>
-    public unsafe void InitiatorBeatdownHitJBLeft()
+    public unsafe virtual void InitiatorBeatdownHitJBLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.InitiatorBeatdownHitJBLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -858,7 +858,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: PlayerStrikeTargetHandR
     /// </summary>
-    public unsafe void PlayerStrikeTargetHandR()
+    public unsafe virtual void PlayerStrikeTargetHandR()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.PlayerStrikeTargetHandR", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -869,7 +869,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: InitiatorHitJBRight
     /// </summary>
-    public unsafe void InitiatorHitJBRight()
+    public unsafe virtual void InitiatorHitJBRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.InitiatorHitJBRight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -880,7 +880,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: InitiatorCounterHitJBLeft
     /// </summary>
-    public unsafe void InitiatorCounterHitJBLeft()
+    public unsafe virtual void InitiatorCounterHitJBLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.InitiatorCounterHitJBLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -891,7 +891,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: InitiatorHitJBLeft
     /// </summary>
-    public unsafe void InitiatorHitJBLeft()
+    public unsafe virtual void InitiatorHitJBLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.InitiatorHitJBLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -902,7 +902,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: PlayerHitJB
     /// </summary>
-    public unsafe void PlayerHitJB(bool bCounterHit = default)
+    public unsafe virtual void PlayerHitJB(bool bCounterHit = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.PlayerHitJB", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -914,7 +914,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: PlayRumbleFx
     /// </summary>
-    public unsafe void PlayRumbleFx()
+    public unsafe virtual void PlayRumbleFx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.PlayRumbleFx", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -925,7 +925,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: DamageProxyOff
     /// </summary>
-    public unsafe void DamageProxyOff()
+    public unsafe virtual void DamageProxyOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.DamageProxyOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -936,7 +936,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: DamageProxyOnRight
     /// </summary>
-    public unsafe void DamageProxyOnRight()
+    public unsafe virtual void DamageProxyOnRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.DamageProxyOnRight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -947,7 +947,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: DamageProxyOnLeft
     /// </summary>
-    public unsafe void DamageProxyOnLeft()
+    public unsafe virtual void DamageProxyOnLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.DamageProxyOnLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -958,7 +958,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: CanStrike
     /// </summary>
-    public unsafe void CanStrike()
+    public unsafe virtual void CanStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.CanStrike", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -969,7 +969,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: AllowMovementExit
     /// </summary>
-    public unsafe void AllowMovementExit()
+    public unsafe virtual void AllowMovementExit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.AllowMovementExit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -980,7 +980,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: AllowNextStrike
     /// </summary>
-    public unsafe void AllowNextStrike()
+    public unsafe virtual void AllowNextStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.AllowNextStrike", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -991,7 +991,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: CanCounterStop
     /// </summary>
-    public unsafe void CanCounterStop()
+    public unsafe virtual void CanCounterStop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.CanCounterStop", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1002,7 +1002,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: CanCounterStart
     /// </summary>
-    public unsafe void CanCounterStart()
+    public unsafe virtual void CanCounterStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.CanCounterStart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1013,7 +1013,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: FocusJokerBoxer
     /// </summary>
-    public unsafe void FocusJokerBoxer()
+    public unsafe virtual void FocusJokerBoxer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.FocusJokerBoxer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1024,7 +1024,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: FocusBuddy
     /// </summary>
-    public unsafe void FocusBuddy()
+    public unsafe virtual void FocusBuddy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.FocusBuddy", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1035,7 +1035,7 @@ public partial class RCombatMove_DualPlayJokerBoxerAttack : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: FocusInitiator
     /// </summary>
-    public unsafe void FocusInitiator()
+    public unsafe virtual void FocusInitiator()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_DualPlayJokerBoxerAttack.FocusInitiator", true);
         byte* paramsPtr = stackalloc byte[0];

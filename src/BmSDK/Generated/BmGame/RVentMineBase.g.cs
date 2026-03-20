@@ -66,7 +66,7 @@ public partial class RVentMineBase : BmSDK.BmGame.RMine_StaticMesh, BmSDK.IGameO
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVentMineBase.Tick", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -78,7 +78,7 @@ public partial class RVentMineBase : BmSDK.BmGame.RMine_StaticMesh, BmSDK.IGameO
     /// <summary>
     /// Function: PlayerIsMovingFastInVent
     /// </summary>
-    public unsafe bool PlayerIsMovingFastInVent(BmSDK.BmGame.RPawnPlayer TestPlayer)
+    public unsafe virtual bool PlayerIsMovingFastInVent(BmSDK.BmGame.RPawnPlayer TestPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVentMineBase.PlayerIsMovingFastInVent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -90,7 +90,7 @@ public partial class RVentMineBase : BmSDK.BmGame.RMine_StaticMesh, BmSDK.IGameO
     /// <summary>
     /// Function: ClearFromGrates
     /// </summary>
-    public unsafe void ClearFromGrates()
+    public unsafe virtual void ClearFromGrates()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVentMineBase.ClearFromGrates", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -101,7 +101,7 @@ public partial class RVentMineBase : BmSDK.BmGame.RMine_StaticMesh, BmSDK.IGameO
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVentMineBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -112,7 +112,7 @@ public partial class RVentMineBase : BmSDK.BmGame.RMine_StaticMesh, BmSDK.IGameO
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVentMineBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -123,7 +123,7 @@ public partial class RVentMineBase : BmSDK.BmGame.RMine_StaticMesh, BmSDK.IGameO
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVentMineBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];

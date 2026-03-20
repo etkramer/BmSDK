@@ -47,7 +47,7 @@ public partial class RSeqAct_PlayCameraEmitter : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// Function: PlayEmitter
     /// </summary>
-    public unsafe void PlayEmitter()
+    public unsafe virtual void PlayEmitter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraEmitter.PlayEmitter", true);
         byte* paramsPtr = stackalloc byte[40];

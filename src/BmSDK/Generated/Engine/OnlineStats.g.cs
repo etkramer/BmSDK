@@ -31,7 +31,7 @@ public partial class OnlineStats : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetViewName
     /// </summary>
-    public unsafe BmSDK.FName GetViewName(int ViewId)
+    public unsafe virtual BmSDK.FName GetViewName(int ViewId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineStats.GetViewName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -50,7 +50,7 @@ public partial class OnlineStats : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetViewId
     /// </summary>
-    public unsafe bool GetViewId(BmSDK.FName ViewName, out int ViewId)
+    public unsafe virtual bool GetViewId(BmSDK.FName ViewName, out int ViewId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineStats.GetViewId", true);
         byte* paramsPtr = stackalloc byte[16];

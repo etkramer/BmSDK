@@ -71,7 +71,7 @@ public partial class RStealthTakedownStage_ChainTakedown_FearFromAbove : BmSDK.B
     /// <summary>
     /// Function: GotoStage
     /// </summary>
-    public unsafe void GotoStage(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages NextStageClass)
+    public unsafe override void GotoStage(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages NextStageClass)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_ChainTakedown_FearFromAbove.GotoStage", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -83,7 +83,7 @@ public partial class RStealthTakedownStage_ChainTakedown_FearFromAbove : BmSDK.B
     /// <summary>
     /// Function: FireGrapple
     /// </summary>
-    public unsafe void FireGrapple()
+    public unsafe virtual void FireGrapple()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_ChainTakedown_FearFromAbove.FireGrapple", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RStealthTakedownStage_ChainTakedown_FearFromAbove : BmSDK.B
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_ChainTakedown_FearFromAbove.Begin", true);
         byte* paramsPtr = stackalloc byte[188];
@@ -105,7 +105,7 @@ public partial class RStealthTakedownStage_ChainTakedown_FearFromAbove : BmSDK.B
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_ChainTakedown_FearFromAbove.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[24];

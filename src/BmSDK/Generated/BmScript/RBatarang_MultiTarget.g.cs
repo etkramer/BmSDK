@@ -71,7 +71,7 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
     /// <summary>
     /// Function: CheckAutoTarget
     /// </summary>
-    public unsafe bool CheckAutoTarget(BmSDK.Engine.Actor BatarangTarget, out System.Numerics.Vector3 BatarangTargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
+    public unsafe override bool CheckAutoTarget(BmSDK.Engine.Actor BatarangTarget, out System.Numerics.Vector3 BatarangTargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarang_MultiTarget.CheckAutoTarget", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -87,7 +87,7 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
     /// <summary>
     /// Function: ToggleMultiBatararang
     /// </summary>
-    public unsafe bool ToggleMultiBatararang()
+    public unsafe override bool ToggleMultiBatararang()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarang_MultiTarget.ToggleMultiBatararang", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -98,7 +98,7 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
     /// <summary>
     /// Function: AttachToHand
     /// </summary>
-    public unsafe void AttachToHand(BmSDK.FName CustomBone = default)
+    public unsafe override void AttachToHand(BmSDK.FName CustomBone = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarang_MultiTarget.AttachToHand", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -110,7 +110,7 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
     /// <summary>
     /// Function: CalculateLaunchOrder
     /// </summary>
-    public unsafe void CalculateLaunchOrder(BmSDK.FName LaunchBone)
+    public unsafe virtual void CalculateLaunchOrder(BmSDK.FName LaunchBone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarang_MultiTarget.CalculateLaunchOrder", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -122,7 +122,7 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
     /// <summary>
     /// Function: ThrowNextBatarang
     /// </summary>
-    public unsafe void ThrowNextBatarang()
+    public unsafe virtual void ThrowNextBatarang()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarang_MultiTarget.ThrowNextBatarang", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -144,7 +144,7 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
     /// <summary>
     /// Function: ThrowBatarangHand
     /// </summary>
-    public unsafe void ThrowBatarangHand(BmSDK.FName LaunchBone)
+    public unsafe override void ThrowBatarangHand(BmSDK.FName LaunchBone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarang_MultiTarget.ThrowBatarangHand", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -156,7 +156,7 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
     /// <summary>
     /// Function: ThrowBatarangIndex
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarangProjectile ThrowBatarangIndex(int BatarangIndex, int Order)
+    public unsafe virtual BmSDK.BmGame.RBatarangProjectile ThrowBatarangIndex(int BatarangIndex, int Order)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarang_MultiTarget.ThrowBatarangIndex", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -169,7 +169,7 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
     /// <summary>
     /// Function: InformTargetOfMultiThrow
     /// </summary>
-    public unsafe bool InformTargetOfMultiThrow(BmSDK.Engine.Actor MultiThrowTarget)
+    public unsafe virtual bool InformTargetOfMultiThrow(BmSDK.Engine.Actor MultiThrowTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarang_MultiTarget.InformTargetOfMultiThrow", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -181,7 +181,7 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
     /// <summary>
     /// Function: DrawAimingHUD
     /// </summary>
-    public unsafe void DrawAimingHUD()
+    public unsafe override void DrawAimingHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarang_MultiTarget.DrawAimingHUD", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -192,7 +192,7 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
     /// <summary>
     /// Function: GetBatarangThrowAnim
     /// </summary>
-    public unsafe BmSDK.FName GetBatarangThrowAnim(BmSDK.Rotator ThrowDirection, out BmSDK.BmGame.RPawnPlayerAnim.AimingConfigDesc AimingConfig, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess)
+    public unsafe override BmSDK.FName GetBatarangThrowAnim(BmSDK.Rotator ThrowDirection, out BmSDK.BmGame.RPawnPlayerAnim.AimingConfigDesc AimingConfig, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarang_MultiTarget.GetBatarangThrowAnim", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -206,7 +206,7 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
     /// <summary>
     /// Function: FireGadgetCombat
     /// </summary>
-    public unsafe bool FireGadgetCombat()
+    public unsafe override bool FireGadgetCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarang_MultiTarget.FireGadgetCombat", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -217,7 +217,7 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
     /// <summary>
     /// Function: UpdateTarget
     /// </summary>
-    public unsafe void UpdateTarget()
+    public unsafe override void UpdateTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarang_MultiTarget.UpdateTarget", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -228,7 +228,7 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
     /// <summary>
     /// Function: MaxNumTargetsChanged
     /// </summary>
-    public unsafe void MaxNumTargetsChanged()
+    public unsafe virtual void MaxNumTargetsChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarang_MultiTarget.MaxNumTargetsChanged", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -239,7 +239,7 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
     /// <summary>
     /// Function: UpdateTargetsFromUnlocks
     /// </summary>
-    public unsafe void UpdateTargetsFromUnlocks(bool bQuickfire)
+    public unsafe virtual void UpdateTargetsFromUnlocks(bool bQuickfire)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarang_MultiTarget.UpdateTargetsFromUnlocks", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -251,7 +251,7 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
     /// <summary>
     /// Function: quickFire
     /// </summary>
-    public unsafe void quickFire(bool OverridesCombatMove = default)
+    public unsafe override void quickFire(bool OverridesCombatMove = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarang_MultiTarget.quickFire", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RBatmobileMineLauncher : BmSDK.BmGame.RVehicleWeapon, BmSDK
     /// <summary>
     /// Function: ReadyToFire
     /// </summary>
-    public unsafe bool ReadyToFire()
+    public unsafe override bool ReadyToFire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileMineLauncher.ReadyToFire", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBatmobileMineLauncher : BmSDK.BmGame.RVehicleWeapon, BmSDK
     /// <summary>
     /// Function: GetMineLaunchPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMineLaunchPosition()
+    public unsafe virtual System.Numerics.Vector3 GetMineLaunchPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileMineLauncher.GetMineLaunchPosition", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -93,7 +93,7 @@ public partial class RBatmobileMineLauncher : BmSDK.BmGame.RVehicleWeapon, BmSDK
     /// <summary>
     /// Function: FireMines
     /// </summary>
-    public unsafe void FireMines()
+    public unsafe virtual void FireMines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileMineLauncher.FireMines", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RBatmobileMineLauncher : BmSDK.BmGame.RVehicleWeapon, BmSDK
     /// <summary>
     /// Function: DetonateMines
     /// </summary>
-    public unsafe void DetonateMines()
+    public unsafe virtual void DetonateMines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileMineLauncher.DetonateMines", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -115,7 +115,7 @@ public partial class RBatmobileMineLauncher : BmSDK.BmGame.RVehicleWeapon, BmSDK
     /// <summary>
     /// Function: FireWeapon
     /// </summary>
-    public unsafe bool FireWeapon()
+    public unsafe override bool FireWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileMineLauncher.FireWeapon", true);
         byte* paramsPtr = stackalloc byte[4];

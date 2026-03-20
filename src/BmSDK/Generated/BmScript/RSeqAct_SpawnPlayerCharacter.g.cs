@@ -36,7 +36,7 @@ public partial class RSeqAct_SpawnPlayerCharacter : BmSDK.BmGame.RSeqAct_Spawner
     /// <summary>
     /// Function: DestroySpawnedActor
     /// </summary>
-    public unsafe void DestroySpawnedActor()
+    public unsafe virtual void DestroySpawnedActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SpawnPlayerCharacter.DestroySpawnedActor", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -47,7 +47,7 @@ public partial class RSeqAct_SpawnPlayerCharacter : BmSDK.BmGame.RSeqAct_Spawner
     /// <summary>
     /// Function: OnDataLoaded
     /// </summary>
-    public unsafe void OnDataLoaded()
+    public unsafe override void OnDataLoaded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SpawnPlayerCharacter.OnDataLoaded", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -58,7 +58,7 @@ public partial class RSeqAct_SpawnPlayerCharacter : BmSDK.BmGame.RSeqAct_Spawner
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SpawnPlayerCharacter.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

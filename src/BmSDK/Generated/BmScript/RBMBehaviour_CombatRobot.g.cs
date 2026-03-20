@@ -36,7 +36,7 @@ public partial class RBMBehaviour_CombatRobot : BmSDK.BmGame.RBMBehaviour_Combat
     /// <summary>
     /// Function: PlayStepInDirection
     /// </summary>
-    public unsafe void PlayStepInDirection(System.Numerics.Vector3 MoveDir, System.Numerics.Vector3 FrontDir, float MoveSize, float ForceSize, float MoveAmnt)
+    public unsafe override void PlayStepInDirection(System.Numerics.Vector3 MoveDir, System.Numerics.Vector3 FrontDir, float MoveSize, float ForceSize, float MoveAmnt)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CombatRobot.PlayStepInDirection", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -52,7 +52,7 @@ public partial class RBMBehaviour_CombatRobot : BmSDK.BmGame.RBMBehaviour_Combat
     /// <summary>
     /// Function: ShouldUseEnvironment
     /// </summary>
-    public unsafe bool ShouldUseEnvironment(float DeltaTime, bool bForceCheck)
+    public unsafe override bool ShouldUseEnvironment(float DeltaTime, bool bForceCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CombatRobot.ShouldUseEnvironment", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -65,7 +65,7 @@ public partial class RBMBehaviour_CombatRobot : BmSDK.BmGame.RBMBehaviour_Combat
     /// <summary>
     /// Function: ProcessTauntAnims
     /// </summary>
-    public unsafe void ProcessTauntAnims(float DeltaTime)
+    public unsafe override void ProcessTauntAnims(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CombatRobot.ProcessTauntAnims", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -77,7 +77,7 @@ public partial class RBMBehaviour_CombatRobot : BmSDK.BmGame.RBMBehaviour_Combat
     /// <summary>
     /// Function: GetTauntMoveStance
     /// </summary>
-    public unsafe BmSDK.FName GetTauntMoveStance()
+    public unsafe override BmSDK.FName GetTauntMoveStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CombatRobot.GetTauntMoveStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -88,7 +88,7 @@ public partial class RBMBehaviour_CombatRobot : BmSDK.BmGame.RBMBehaviour_Combat
     /// <summary>
     /// Function: GetPossibleMoves
     /// </summary>
-    public unsafe void GetPossibleMoves(out BmSDK.TArray<BmSDK.Class> PossibleMoves)
+    public unsafe override void GetPossibleMoves(out BmSDK.TArray<BmSDK.Class> PossibleMoves)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CombatRobot.GetPossibleMoves", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -100,7 +100,7 @@ public partial class RBMBehaviour_CombatRobot : BmSDK.BmGame.RBMBehaviour_Combat
     /// <summary>
     /// Function: CanRepel
     /// </summary>
-    public unsafe bool CanRepel()
+    public unsafe override bool CanRepel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CombatRobot.CanRepel", true);
         byte* paramsPtr = stackalloc byte[4];

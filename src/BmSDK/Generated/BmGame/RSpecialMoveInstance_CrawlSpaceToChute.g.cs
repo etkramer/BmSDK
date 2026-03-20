@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_CrawlSpaceToChute : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: CantSwitchPlayer
     /// </summary>
-    public unsafe bool CantSwitchPlayer()
+    public unsafe override bool CantSwitchPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_CrawlSpaceToChute.CantSwitchPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_CrawlSpaceToChute : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: PlayGrateOutAnim
     /// </summary>
-    public unsafe void PlayGrateOutAnim()
+    public unsafe virtual void PlayGrateOutAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_CrawlSpaceToChute.PlayGrateOutAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RSpecialMoveInstance_CrawlSpaceToChute : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: PlayGrateInAnim
     /// </summary>
-    public unsafe void PlayGrateInAnim()
+    public unsafe virtual void PlayGrateInAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_CrawlSpaceToChute.PlayGrateInAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RSpecialMoveInstance_CrawlSpaceToChute : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: GrappleStopSound
     /// </summary>
-    public unsafe void GrappleStopSound()
+    public unsafe virtual void GrappleStopSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_CrawlSpaceToChute.GrappleStopSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RSpecialMoveInstance_CrawlSpaceToChute : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: GrappleStartSound
     /// </summary>
-    public unsafe void GrappleStartSound()
+    public unsafe virtual void GrappleStartSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_CrawlSpaceToChute.GrappleStartSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RSpecialMoveInstance_CrawlSpaceToChute : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: FinishGrapple
     /// </summary>
-    public unsafe void FinishGrapple()
+    public unsafe virtual void FinishGrapple()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_CrawlSpaceToChute.FinishGrapple", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -137,7 +137,7 @@ public partial class RSpecialMoveInstance_CrawlSpaceToChute : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: FireGrapple
     /// </summary>
-    public unsafe void FireGrapple()
+    public unsafe virtual void FireGrapple()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_CrawlSpaceToChute.FireGrapple", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -148,7 +148,7 @@ public partial class RSpecialMoveInstance_CrawlSpaceToChute : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_CrawlSpaceToChute.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -160,7 +160,7 @@ public partial class RSpecialMoveInstance_CrawlSpaceToChute : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_CrawlSpaceToChute.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -171,7 +171,7 @@ public partial class RSpecialMoveInstance_CrawlSpaceToChute : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_CrawlSpaceToChute.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[172];

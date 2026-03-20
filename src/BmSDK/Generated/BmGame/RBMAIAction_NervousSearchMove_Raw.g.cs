@@ -71,7 +71,7 @@ public partial class RBMAIAction_NervousSearchMove_Raw : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: BuildHandle
     /// </summary>
-    public unsafe BmSDK.BmGame.RNavigationHandle BuildHandle()
+    public unsafe override BmSDK.BmGame.RNavigationHandle BuildHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousSearchMove_Raw.BuildHandle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_NervousSearchMove_Raw : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: SetupGoal
     /// </summary>
-    public unsafe void SetupGoal(System.Numerics.Vector3 NewGoalPosFirst, bool bNewUseAdditionalPoint, System.Numerics.Vector3 NewGoalPosSecond)
+    public unsafe virtual void SetupGoal(System.Numerics.Vector3 NewGoalPosFirst, bool bNewUseAdditionalPoint, System.Numerics.Vector3 NewGoalPosSecond)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousSearchMove_Raw.SetupGoal", true);
         byte* paramsPtr = stackalloc byte[28];

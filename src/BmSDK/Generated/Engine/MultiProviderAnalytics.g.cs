@@ -36,7 +36,7 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     /// <summary>
     /// Function: LogErrorMessage
     /// </summary>
-    public unsafe void LogErrorMessage(BmSDK.FString ErrorName, BmSDK.FString ErrorMessage)
+    public unsafe override void LogErrorMessage(BmSDK.FString ErrorName, BmSDK.FString ErrorMessage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiProviderAnalytics.LogErrorMessage", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -56,7 +56,7 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     /// <summary>
     /// Function: EndStringEventParamArray
     /// </summary>
-    public unsafe void EndStringEventParamArray(BmSDK.FString EventName, BmSDK.TArray<BmSDK.Engine.AnalyticEventsBase.FEventStringParam> ParamArray)
+    public unsafe override void EndStringEventParamArray(BmSDK.FString EventName, BmSDK.TArray<BmSDK.Engine.AnalyticEventsBase.FEventStringParam> ParamArray)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiProviderAnalytics.EndStringEventParamArray", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -76,7 +76,7 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     /// <summary>
     /// Function: LogStringEventParamArray
     /// </summary>
-    public unsafe void LogStringEventParamArray(BmSDK.FString EventName, BmSDK.TArray<BmSDK.Engine.AnalyticEventsBase.FEventStringParam> ParamArray, bool bTimed)
+    public unsafe override void LogStringEventParamArray(BmSDK.FString EventName, BmSDK.TArray<BmSDK.Engine.AnalyticEventsBase.FEventStringParam> ParamArray, bool bTimed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiProviderAnalytics.LogStringEventParamArray", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -97,7 +97,7 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     /// <summary>
     /// Function: EndStringEventParam
     /// </summary>
-    public unsafe void EndStringEventParam(BmSDK.FString EventName, BmSDK.FString ParamName, BmSDK.FString ParamValue)
+    public unsafe override void EndStringEventParam(BmSDK.FString EventName, BmSDK.FString ParamName, BmSDK.FString ParamValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiProviderAnalytics.EndStringEventParam", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -118,7 +118,7 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     /// <summary>
     /// Function: LogStringEventParam
     /// </summary>
-    public unsafe void LogStringEventParam(BmSDK.FString EventName, BmSDK.FString ParamName, BmSDK.FString ParamValue, bool bTimed)
+    public unsafe override void LogStringEventParam(BmSDK.FString EventName, BmSDK.FString ParamName, BmSDK.FString ParamValue, bool bTimed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiProviderAnalytics.LogStringEventParam", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -140,7 +140,7 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     /// <summary>
     /// Function: EndStringEvent
     /// </summary>
-    public unsafe void EndStringEvent(BmSDK.FString EventName)
+    public unsafe override void EndStringEvent(BmSDK.FString EventName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiProviderAnalytics.EndStringEvent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -159,7 +159,7 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     /// <summary>
     /// Function: LogStringEvent
     /// </summary>
-    public unsafe void LogStringEvent(BmSDK.FString EventName, bool bTimed)
+    public unsafe override void LogStringEvent(BmSDK.FString EventName, bool bTimed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiProviderAnalytics.LogStringEvent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -179,7 +179,7 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     /// <summary>
     /// Function: EndSession
     /// </summary>
-    public unsafe void EndSession()
+    public unsafe override void EndSession()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiProviderAnalytics.EndSession", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -197,7 +197,7 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     /// <summary>
     /// Function: StartSession
     /// </summary>
-    public unsafe void StartSession()
+    public unsafe override void StartSession()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiProviderAnalytics.StartSession", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -215,7 +215,7 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init()
+    public unsafe override void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiProviderAnalytics.Init", true);
         byte* paramsPtr = stackalloc byte[32];

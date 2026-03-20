@@ -36,7 +36,7 @@ public partial class InGameAdManager : BmSDK.Engine.PlatformInterfaceBase, BmSDK
     /// <summary>
     /// Function: SetPauseWhileAdOpen
     /// </summary>
-    public unsafe void SetPauseWhileAdOpen(bool bShouldPause)
+    public unsafe virtual void SetPauseWhileAdOpen(bool bShouldPause)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InGameAdManager.SetPauseWhileAdOpen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class InGameAdManager : BmSDK.Engine.PlatformInterfaceBase, BmSDK
     /// <summary>
     /// Function: ForceCloseAd
     /// </summary>
-    public unsafe void ForceCloseAd()
+    public unsafe virtual void ForceCloseAd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InGameAdManager.ForceCloseAd", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -66,7 +66,7 @@ public partial class InGameAdManager : BmSDK.Engine.PlatformInterfaceBase, BmSDK
     /// <summary>
     /// Function: HideBanner
     /// </summary>
-    public unsafe void HideBanner()
+    public unsafe virtual void HideBanner()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InGameAdManager.HideBanner", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -84,7 +84,7 @@ public partial class InGameAdManager : BmSDK.Engine.PlatformInterfaceBase, BmSDK
     /// <summary>
     /// Function: ShowBanner
     /// </summary>
-    public unsafe void ShowBanner(bool bShowBottomOfScreen)
+    public unsafe virtual void ShowBanner(bool bShowBottomOfScreen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InGameAdManager.ShowBanner", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -103,7 +103,7 @@ public partial class InGameAdManager : BmSDK.Engine.PlatformInterfaceBase, BmSDK
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init()
+    public unsafe virtual void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InGameAdManager.Init", true);
         byte* paramsPtr = stackalloc byte[0];

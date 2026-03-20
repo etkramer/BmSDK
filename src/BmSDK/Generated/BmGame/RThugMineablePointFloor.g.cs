@@ -71,7 +71,7 @@ public partial class RThugMineablePointFloor : BmSDK.BmGame.RThugMineablePointBa
     /// <summary>
     /// Function: IsReadyForMinePlacement
     /// </summary>
-    public unsafe bool IsReadyForMinePlacement()
+    public unsafe override bool IsReadyForMinePlacement()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineablePointFloor.IsReadyForMinePlacement", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RThugMineablePointFloor : BmSDK.BmGame.RThugMineablePointBa
     /// <summary>
     /// Function: GetStandPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetStandPoint()
+    public unsafe override System.Numerics.Vector3 GetStandPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineablePointFloor.GetStandPoint", true);
         byte* paramsPtr = stackalloc byte[12];

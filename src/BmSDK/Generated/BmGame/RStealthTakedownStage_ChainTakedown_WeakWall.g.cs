@@ -71,7 +71,7 @@ public partial class RStealthTakedownStage_ChainTakedown_WeakWall : BmSDK.BmGame
     /// <summary>
     /// Function: End
     /// </summary>
-    public unsafe void End(bool bLastStage = default)
+    public unsafe override void End(bool bLastStage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ChainTakedown_WeakWall.End", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RStealthTakedownStage_ChainTakedown_WeakWall : BmSDK.BmGame
     /// <summary>
     /// Function: HandleBreakWall
     /// </summary>
-    public unsafe void HandleBreakWall(BmSDK.BmGame.RDestructibleProp_FractureWall DestructibleWindow, System.Numerics.Vector3 Loc, System.Numerics.Vector3 Direction)
+    public unsafe virtual void HandleBreakWall(BmSDK.BmGame.RDestructibleProp_FractureWall DestructibleWindow, System.Numerics.Vector3 Loc, System.Numerics.Vector3 Direction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ChainTakedown_WeakWall.HandleBreakWall", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -97,7 +97,7 @@ public partial class RStealthTakedownStage_ChainTakedown_WeakWall : BmSDK.BmGame
     /// <summary>
     /// Function: BreakWall
     /// </summary>
-    public unsafe void BreakWall()
+    public unsafe virtual void BreakWall()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ChainTakedown_WeakWall.BreakWall", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -108,7 +108,7 @@ public partial class RStealthTakedownStage_ChainTakedown_WeakWall : BmSDK.BmGame
     /// <summary>
     /// Function: GetStageAnim
     /// </summary>
-    public unsafe int GetStageAnim()
+    public unsafe override int GetStageAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ChainTakedown_WeakWall.GetStageAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -119,7 +119,7 @@ public partial class RStealthTakedownStage_ChainTakedown_WeakWall : BmSDK.BmGame
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ChainTakedown_WeakWall.Begin", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class RStealthTakedownStage_ChainTakedown_WeakWall : BmSDK.BmGame
     /// <summary>
     /// Function: StopXray
     /// </summary>
-    public unsafe void StopXray(BmSDK.BmGame.RPlayerController lPC)
+    public unsafe virtual void StopXray(BmSDK.BmGame.RPlayerController lPC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ChainTakedown_WeakWall.StopXray", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -142,7 +142,7 @@ public partial class RStealthTakedownStage_ChainTakedown_WeakWall : BmSDK.BmGame
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ChainTakedown_WeakWall.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[36];

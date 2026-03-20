@@ -36,7 +36,7 @@ public partial class RSpecialMoveConfig_CalibrateVoiceSynthesiser : BmSDK.BmGame
     /// <summary>
     /// Function: UnloadAudio
     /// </summary>
-    public unsafe void UnloadAudio()
+    public unsafe virtual void UnloadAudio()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveConfig_CalibrateVoiceSynthesiser.UnloadAudio", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RSpecialMoveConfig_CalibrateVoiceSynthesiser : BmSDK.BmGame
     /// <summary>
     /// Function: IsAudioLoaded
     /// </summary>
-    public unsafe bool IsAudioLoaded()
+    public unsafe virtual bool IsAudioLoaded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveConfig_CalibrateVoiceSynthesiser.IsAudioLoaded", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RSpecialMoveConfig_CalibrateVoiceSynthesiser : BmSDK.BmGame
     /// <summary>
     /// Function: LoadAudio
     /// </summary>
-    public unsafe void LoadAudio()
+    public unsafe virtual void LoadAudio()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveConfig_CalibrateVoiceSynthesiser.LoadAudio", true);
         byte* paramsPtr = stackalloc byte[0];

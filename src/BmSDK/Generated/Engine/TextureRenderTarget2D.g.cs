@@ -36,7 +36,7 @@ public partial class TextureRenderTarget2D : BmSDK.Engine.TextureRenderTarget, B
     /// <summary>
     /// Function: Clear
     /// </summary>
-    public unsafe void Clear()
+    public unsafe virtual void Clear()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TextureRenderTarget2D.Clear", true);
         byte* paramsPtr = stackalloc byte[0];

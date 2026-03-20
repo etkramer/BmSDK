@@ -47,7 +47,7 @@ public partial class RSeqAct_SetWindVolumeProperties : BmSDK.Engine.SequenceActi
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetWindVolumeProperties.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_SetWindVolumeProperties : BmSDK.Engine.SequenceActi
     /// <summary>
     /// Function: SetWindVolumeProperties
     /// </summary>
-    public unsafe void SetWindVolumeProperties()
+    public unsafe virtual void SetWindVolumeProperties()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetWindVolumeProperties.SetWindVolumeProperties", true);
         byte* paramsPtr = stackalloc byte[0];

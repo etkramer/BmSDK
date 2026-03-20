@@ -71,7 +71,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: SetMeshOwner
     /// </summary>
-    public unsafe void SetMeshOwner(BmSDK.Engine.Actor NewOwner, BmSDK.Engine.ActorComponent MeshComp)
+    public unsafe virtual void SetMeshOwner(BmSDK.Engine.Actor NewOwner, BmSDK.Engine.ActorComponent MeshComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.SetMeshOwner", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -91,7 +91,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: UpdateScannedMeshes
     /// </summary>
-    public unsafe void UpdateScannedMeshes(float DeltaTime)
+    public unsafe virtual void UpdateScannedMeshes(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.UpdateScannedMeshes", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -103,7 +103,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: ReadyToFire
     /// </summary>
-    public unsafe bool ReadyToFire()
+    public unsafe override bool ReadyToFire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.ReadyToFire", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -114,7 +114,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: FireForensicPulseSideStory
     /// </summary>
-    public unsafe void FireForensicPulseSideStory(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void FireForensicPulseSideStory(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.FireForensicPulseSideStory", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -126,7 +126,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: FireForensicPulse
     /// </summary>
-    public unsafe void FireForensicPulse(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void FireForensicPulse(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.FireForensicPulse", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -138,7 +138,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: CanDisableTick
     /// </summary>
-    public unsafe bool CanDisableTick()
+    public unsafe override bool CanDisableTick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.CanDisableTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -149,7 +149,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: AlertNearbyVehicles
     /// </summary>
-    public unsafe void AlertNearbyVehicles(System.Numerics.Vector3 pos, float Range)
+    public unsafe virtual void AlertNearbyVehicles(System.Numerics.Vector3 pos, float Range)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.AlertNearbyVehicles", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -162,7 +162,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: StunNearbyVillains
     /// </summary>
-    public unsafe void StunNearbyVillains(System.Numerics.Vector3 pos, float knockDownRange, float stunRange, float AlertRange, float StunTime)
+    public unsafe virtual void StunNearbyVillains(System.Numerics.Vector3 pos, float knockDownRange, float stunRange, float AlertRange, float StunTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.StunNearbyVillains", true);
         byte* paramsPtr = stackalloc byte[324];
@@ -178,7 +178,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: StopBatmobileMoving
     /// </summary>
-    public unsafe void StopBatmobileMoving()
+    public unsafe virtual void StopBatmobileMoving()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.StopBatmobileMoving", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -189,7 +189,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: CanBattleDodge
     /// </summary>
-    public unsafe bool CanBattleDodge()
+    public unsafe override bool CanBattleDodge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.CanBattleDodge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -200,7 +200,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: UnequipSelf
     /// </summary>
-    public unsafe bool UnequipSelf()
+    public unsafe override bool UnequipSelf()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.UnequipSelf", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -211,7 +211,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: StopCameraShake
     /// </summary>
-    public unsafe void StopCameraShake()
+    public unsafe virtual void StopCameraShake()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.StopCameraShake", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -222,7 +222,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: ButtonReleased
     /// </summary>
-    public unsafe void ButtonReleased()
+    public unsafe override void ButtonReleased()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.ButtonReleased", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -233,7 +233,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: OwnerDied
     /// </summary>
-    public unsafe void OwnerDied()
+    public unsafe override void OwnerDied()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.OwnerDied", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -244,7 +244,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: ScannedVehiclesOff
     /// </summary>
-    public unsafe void ScannedVehiclesOff()
+    public unsafe virtual void ScannedVehiclesOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.ScannedVehiclesOff", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -255,7 +255,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: CreateScannedMesh
     /// </summary>
-    public unsafe void CreateScannedMesh(BmSDK.Engine.Actor Target, BmSDK.Engine.SkeletalMeshComponent MeshToHighlight, out int NumScannedVehicles, BmSDK.Engine.MaterialInterface MaterialToUse)
+    public unsafe virtual void CreateScannedMesh(BmSDK.Engine.Actor Target, BmSDK.Engine.SkeletalMeshComponent MeshToHighlight, out int NumScannedVehicles, BmSDK.Engine.MaterialInterface MaterialToUse)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.CreateScannedMesh", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -270,7 +270,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: PerformVehicleScan
     /// </summary>
-    public unsafe void PerformVehicleScan()
+    public unsafe virtual void PerformVehicleScan()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.PerformVehicleScan", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -281,7 +281,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: FirePulse
     /// </summary>
-    public unsafe bool FirePulse()
+    public unsafe virtual bool FirePulse()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.FirePulse", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -292,7 +292,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: NotifyOwnerDamaged
     /// </summary>
-    public unsafe void NotifyOwnerDamaged()
+    public unsafe override void NotifyOwnerDamaged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.NotifyOwnerDamaged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -303,7 +303,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: DriverLeft
     /// </summary>
-    public unsafe void DriverLeft()
+    public unsafe override void DriverLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.DriverLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -314,7 +314,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: BattleModeExitted
     /// </summary>
-    public unsafe void BattleModeExitted()
+    public unsafe override void BattleModeExitted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.BattleModeExitted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -325,7 +325,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: NoScannerOffSound
     /// </summary>
-    public unsafe void NoScannerOffSound()
+    public unsafe virtual void NoScannerOffSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.NoScannerOffSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -336,7 +336,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: NoScannerOnSound
     /// </summary>
-    public unsafe void NoScannerOnSound()
+    public unsafe virtual void NoScannerOnSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.NoScannerOnSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -347,7 +347,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: FireWeapon
     /// </summary>
-    public unsafe bool FireWeapon()
+    public unsafe override bool FireWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.FireWeapon", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -358,7 +358,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: SonarReleased
     /// </summary>
-    public unsafe void SonarReleased()
+    public unsafe virtual void SonarReleased()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.SonarReleased", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -369,7 +369,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: SonarPressed
     /// </summary>
-    public unsafe void SonarPressed()
+    public unsafe virtual void SonarPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.SonarPressed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -380,7 +380,7 @@ public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileSonar.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];

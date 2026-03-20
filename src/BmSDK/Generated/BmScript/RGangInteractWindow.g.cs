@@ -71,7 +71,7 @@ public partial class RGangInteractWindow : BmSDK.BmGame.RGangInteractWindowBase,
     /// <summary>
     /// Function: SetFinished
     /// </summary>
-    public unsafe void SetFinished(BmSDK.BmGame.RBMPawnAI P)
+    public unsafe override void SetFinished(BmSDK.BmGame.RBMPawnAI P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangInteractWindow.SetFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RGangInteractWindow : BmSDK.BmGame.RGangInteractWindowBase,
     /// <summary>
     /// Function: SetInUse
     /// </summary>
-    public unsafe void SetInUse(BmSDK.BmGame.RBMPawnAI UsagePawn)
+    public unsafe override void SetInUse(BmSDK.BmGame.RBMPawnAI UsagePawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangInteractWindow.SetInUse", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RGangInteractWindow : BmSDK.BmGame.RGangInteractWindowBase,
     /// <summary>
     /// Function: GetBehaviourClass
     /// </summary>
-    public unsafe BmSDK.Class GetBehaviourClass()
+    public unsafe override BmSDK.Class GetBehaviourClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangInteractWindow.GetBehaviourClass", true);
         byte* paramsPtr = stackalloc byte[8];

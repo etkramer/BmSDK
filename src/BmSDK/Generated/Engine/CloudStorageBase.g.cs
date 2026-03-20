@@ -36,7 +36,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: UpgradeLocalStorageToCloud
     /// </summary>
-    public unsafe bool UpgradeLocalStorageToCloud(BmSDK.Engine.CloudStorageUpgradeHelper UpgradeHelper, bool bForceSearchAgain = default)
+    public unsafe virtual bool UpgradeLocalStorageToCloud(BmSDK.Engine.CloudStorageUpgradeHelper UpgradeHelper, bool bForceSearchAgain = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.UpgradeLocalStorageToCloud", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -56,7 +56,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: ResolveConflictWithVersionIndex
     /// </summary>
-    public unsafe bool ResolveConflictWithVersionIndex(int Index)
+    public unsafe virtual bool ResolveConflictWithVersionIndex(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.ResolveConflictWithVersionIndex", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -75,7 +75,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: ResolveConflictWithNewestDocument
     /// </summary>
-    public unsafe bool ResolveConflictWithNewestDocument()
+    public unsafe virtual bool ResolveConflictWithNewestDocument()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.ResolveConflictWithNewestDocument", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: WaitForWritesToFinish
     /// </summary>
-    public unsafe bool WaitForWritesToFinish(float MaxTimeSeconds = default)
+    public unsafe virtual bool WaitForWritesToFinish(float MaxTimeSeconds = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.WaitForWritesToFinish", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -112,7 +112,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: IsStillWritingFiles
     /// </summary>
-    public unsafe bool IsStillWritingFiles()
+    public unsafe virtual bool IsStillWritingFiles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.IsStillWritingFiles", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -130,7 +130,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: SaveDocumentWithObject
     /// </summary>
-    public unsafe bool SaveDocumentWithObject(int Index, BmSDK.GameObject ObjectData, int SaveVersion)
+    public unsafe virtual bool SaveDocumentWithObject(int Index, BmSDK.GameObject ObjectData, int SaveVersion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.SaveDocumentWithObject", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -151,7 +151,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: SaveDocumentWithBytes
     /// </summary>
-    public unsafe bool SaveDocumentWithBytes(int Index, BmSDK.TArray<byte> ByteData)
+    public unsafe virtual bool SaveDocumentWithBytes(int Index, BmSDK.TArray<byte> ByteData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.SaveDocumentWithBytes", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -171,7 +171,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: SaveDocumentWithString
     /// </summary>
-    public unsafe bool SaveDocumentWithString(int Index, BmSDK.FString StringData)
+    public unsafe virtual bool SaveDocumentWithString(int Index, BmSDK.FString StringData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.SaveDocumentWithString", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -191,7 +191,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: WriteCloudDocument
     /// </summary>
-    public unsafe bool WriteCloudDocument(int Index)
+    public unsafe virtual bool WriteCloudDocument(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.WriteCloudDocument", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -210,7 +210,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: ParseDocumentAsObject
     /// </summary>
-    public unsafe BmSDK.GameObject ParseDocumentAsObject(int Index, BmSDK.Class ObjectClass, int ExpectedVersion, bool bIsForConflict = default)
+    public unsafe virtual BmSDK.GameObject ParseDocumentAsObject(int Index, BmSDK.Class ObjectClass, int ExpectedVersion, bool bIsForConflict = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.ParseDocumentAsObject", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -232,7 +232,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: ParseDocumentAsBytes
     /// </summary>
-    public unsafe void ParseDocumentAsBytes(int Index, out BmSDK.TArray<byte> ByteData, bool bIsForConflict = default)
+    public unsafe virtual void ParseDocumentAsBytes(int Index, out BmSDK.TArray<byte> ByteData, bool bIsForConflict = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.ParseDocumentAsBytes", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -253,7 +253,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: ParseDocumentAsString
     /// </summary>
-    public unsafe BmSDK.FString ParseDocumentAsString(int Index, bool bIsForConflict = default)
+    public unsafe virtual BmSDK.FString ParseDocumentAsString(int Index, bool bIsForConflict = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.ParseDocumentAsString", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -273,7 +273,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: ReadCloudDocument
     /// </summary>
-    public unsafe bool ReadCloudDocument(int Index, bool bIsForConflict = default)
+    public unsafe virtual bool ReadCloudDocument(int Index, bool bIsForConflict = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.ReadCloudDocument", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -293,7 +293,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: CreateCloudDocument
     /// </summary>
-    public unsafe int CreateCloudDocument(BmSDK.FString Filename)
+    public unsafe virtual int CreateCloudDocument(BmSDK.FString Filename)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.CreateCloudDocument", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -312,7 +312,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: GetCloudDocumentName
     /// </summary>
-    public unsafe BmSDK.FString GetCloudDocumentName(int Index)
+    public unsafe virtual BmSDK.FString GetCloudDocumentName(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.GetCloudDocumentName", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -331,7 +331,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: GetNumCloudDocuments
     /// </summary>
-    public unsafe int GetNumCloudDocuments(bool bIsForConflict = default)
+    public unsafe virtual int GetNumCloudDocuments(bool bIsForConflict = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.GetNumCloudDocuments", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -350,7 +350,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: QueryForCloudDocuments
     /// </summary>
-    public unsafe bool QueryForCloudDocuments()
+    public unsafe virtual bool QueryForCloudDocuments()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.QueryForCloudDocuments", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -368,7 +368,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: WriteKeyValue
     /// </summary>
-    public unsafe bool WriteKeyValue(BmSDK.FString KeyName, out BmSDK.Engine.PlatformInterfaceBase.FPlatformInterfaceData Value)
+    public unsafe virtual bool WriteKeyValue(BmSDK.FString KeyName, out BmSDK.Engine.PlatformInterfaceBase.FPlatformInterfaceData Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.WriteKeyValue", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -388,7 +388,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: ReadKeyValue
     /// </summary>
-    public unsafe bool ReadKeyValue(BmSDK.FString KeyName, BmSDK.Engine.PlatformInterfaceBase.EPlatformInterfaceDataType Type, out BmSDK.Engine.PlatformInterfaceBase.FPlatformInterfaceDelegateResult Value)
+    public unsafe virtual bool ReadKeyValue(BmSDK.FString KeyName, BmSDK.Engine.PlatformInterfaceBase.EPlatformInterfaceDataType Type, out BmSDK.Engine.PlatformInterfaceBase.FPlatformInterfaceDelegateResult Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.ReadKeyValue", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -409,7 +409,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: IsUsingLocalStorage
     /// </summary>
-    public unsafe bool IsUsingLocalStorage()
+    public unsafe virtual bool IsUsingLocalStorage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.IsUsingLocalStorage", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -427,7 +427,7 @@ public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init()
+    public unsafe virtual void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageBase.Init", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiser : BmSDK.BmGa
     /// <summary>
     /// Function: SetRumble
     /// </summary>
-    public unsafe void SetRumble(float Rumble)
+    public unsafe virtual void SetRumble(float Rumble)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiser.SetRumble", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiser : BmSDK.BmGa
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiser.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiser : BmSDK.BmGa
     /// <summary>
     /// Function: HackingMiniGameWon
     /// </summary>
-    public unsafe void HackingMiniGameWon()
+    public unsafe virtual void HackingMiniGameWon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiser.HackingMiniGameWon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiser : BmSDK.BmGa
     /// <summary>
     /// Function: PlayCalibrationComplete
     /// </summary>
-    public unsafe void PlayCalibrationComplete()
+    public unsafe override void PlayCalibrationComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiser.PlayCalibrationComplete", true);
         byte* paramsPtr = stackalloc byte[116];
@@ -116,7 +116,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiser : BmSDK.BmGa
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiser.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -128,7 +128,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiser : BmSDK.BmGa
     /// <summary>
     /// Function: PushControllerToFlash
     /// </summary>
-    public unsafe void PushControllerToFlash(float left_y, float right_y)
+    public unsafe virtual void PushControllerToFlash(float left_y, float right_y)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiser.PushControllerToFlash", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -141,7 +141,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiser : BmSDK.BmGa
     /// <summary>
     /// Function: AudioParams
     /// </summary>
-    public unsafe void AudioParams(float _PitchValue, float _FilterValue)
+    public unsafe override void AudioParams(float _PitchValue, float _FilterValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiser.AudioParams", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -154,7 +154,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiser : BmSDK.BmGa
     /// <summary>
     /// Function: PlayAudio
     /// </summary>
-    public unsafe void PlayAudio()
+    public unsafe override void PlayAudio()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiser.PlayAudio", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -165,7 +165,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiser : BmSDK.BmGa
     /// <summary>
     /// Function: StopVoicePlayback
     /// </summary>
-    public unsafe void StopVoicePlayback()
+    public unsafe override void StopVoicePlayback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiser.StopVoicePlayback", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -176,7 +176,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiser : BmSDK.BmGa
     /// <summary>
     /// Function: StartVoicePlayback
     /// </summary>
-    public unsafe void StartVoicePlayback()
+    public unsafe override void StartVoicePlayback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiser.StartVoicePlayback", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -187,7 +187,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiser : BmSDK.BmGa
     /// <summary>
     /// Function: PlayVoiceNormal
     /// </summary>
-    public unsafe void PlayVoiceNormal()
+    public unsafe override void PlayVoiceNormal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiser.PlayVoiceNormal", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -198,7 +198,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiser : BmSDK.BmGa
     /// <summary>
     /// Function: ClosingDialogueBoxAfterOutro
     /// </summary>
-    public unsafe void ClosingDialogueBoxAfterOutro()
+    public unsafe override void ClosingDialogueBoxAfterOutro()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiser.ClosingDialogueBoxAfterOutro", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -209,7 +209,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiser : BmSDK.BmGa
     /// <summary>
     /// Function: ClosingDialogueBoxAfterScan
     /// </summary>
-    public unsafe void ClosingDialogueBoxAfterScan()
+    public unsafe override void ClosingDialogueBoxAfterScan()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiser.ClosingDialogueBoxAfterScan", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -220,7 +220,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiser : BmSDK.BmGa
     /// <summary>
     /// Function: ClosingDialogueBoxAfterIntro
     /// </summary>
-    public unsafe void ClosingDialogueBoxAfterIntro()
+    public unsafe override void ClosingDialogueBoxAfterIntro()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiser.ClosingDialogueBoxAfterIntro", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -231,7 +231,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiser : BmSDK.BmGa
     /// <summary>
     /// Function: WinClearPrompts
     /// </summary>
-    public unsafe void WinClearPrompts()
+    public unsafe override void WinClearPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiser.WinClearPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -242,7 +242,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiser : BmSDK.BmGa
     /// <summary>
     /// Function: UpdatePrompts
     /// </summary>
-    public unsafe void UpdatePrompts()
+    public unsafe virtual void UpdatePrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiser.UpdatePrompts", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -253,7 +253,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiser : BmSDK.BmGa
     /// <summary>
     /// Function: StartDOFChange
     /// </summary>
-    public unsafe void StartDOFChange()
+    public unsafe virtual void StartDOFChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiser.StartDOFChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -264,7 +264,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiser : BmSDK.BmGa
     /// <summary>
     /// Function: InitialSetupVoiceSynthMinigame
     /// </summary>
-    public unsafe void InitialSetupVoiceSynthMinigame()
+    public unsafe virtual void InitialSetupVoiceSynthMinigame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiser.InitialSetupVoiceSynthMinigame", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -275,7 +275,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiser : BmSDK.BmGa
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiser.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[132];
@@ -287,7 +287,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiser : BmSDK.BmGa
     /// <summary>
     /// Function: VoiceSampleCallback
     /// </summary>
-    public unsafe void VoiceSampleCallback(int CallbackFlags, BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle, int MarkerID, int MarkerTypeID, float Duration)
+    public unsafe virtual void VoiceSampleCallback(int CallbackFlags, BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle, int MarkerID, int MarkerTypeID, float Duration)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiser.VoiceSampleCallback", true);
         byte* paramsPtr = stackalloc byte[40];

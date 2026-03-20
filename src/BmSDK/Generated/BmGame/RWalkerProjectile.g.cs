@@ -71,7 +71,7 @@ public partial class RWalkerProjectile : BmSDK.BmGame.RBasicProjectile, BmSDK.IG
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWalkerProjectile.Tick", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -83,7 +83,7 @@ public partial class RWalkerProjectile : BmSDK.BmGame.RBasicProjectile, BmSDK.IG
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(System.Numerics.Vector3 Direction)
+    public unsafe override void Init(System.Numerics.Vector3 Direction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWalkerProjectile.Init", true);
         byte* paramsPtr = stackalloc byte[12];

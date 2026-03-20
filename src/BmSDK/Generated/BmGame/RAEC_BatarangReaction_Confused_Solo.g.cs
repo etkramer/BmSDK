@@ -71,7 +71,7 @@ public partial class RAEC_BatarangReaction_Confused_Solo : BmSDK.BmGame.RAlertEv
     /// <summary>
     /// Function: PointIsValidForSearchingTo
     /// </summary>
-    public unsafe bool PointIsValidForSearchingTo(System.Numerics.Vector3 SearchMovePoint)
+    public unsafe virtual bool PointIsValidForSearchingTo(System.Numerics.Vector3 SearchMovePoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction_Confused_Solo.PointIsValidForSearchingTo", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -83,7 +83,7 @@ public partial class RAEC_BatarangReaction_Confused_Solo : BmSDK.BmGame.RAlertEv
     /// <summary>
     /// Function: AdjustWatchPointForSearchMove
     /// </summary>
-    public unsafe System.Numerics.Vector3 AdjustWatchPointForSearchMove(System.Numerics.Vector3 CurrentPoint)
+    public unsafe virtual System.Numerics.Vector3 AdjustWatchPointForSearchMove(System.Numerics.Vector3 CurrentPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction_Confused_Solo.AdjustWatchPointForSearchMove", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -95,7 +95,7 @@ public partial class RAEC_BatarangReaction_Confused_Solo : BmSDK.BmGame.RAlertEv
     /// <summary>
     /// Function: AdjustWatchPointForFloor
     /// </summary>
-    public unsafe System.Numerics.Vector3 AdjustWatchPointForFloor(System.Numerics.Vector3 CurrentPoint)
+    public unsafe virtual System.Numerics.Vector3 AdjustWatchPointForFloor(System.Numerics.Vector3 CurrentPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction_Confused_Solo.AdjustWatchPointForFloor", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -107,7 +107,7 @@ public partial class RAEC_BatarangReaction_Confused_Solo : BmSDK.BmGame.RAlertEv
     /// <summary>
     /// Function: SetWatchPoint
     /// </summary>
-    public unsafe void SetWatchPoint(System.Numerics.Vector3 NewWatchPoint)
+    public unsafe virtual void SetWatchPoint(System.Numerics.Vector3 NewWatchPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction_Confused_Solo.SetWatchPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -119,7 +119,7 @@ public partial class RAEC_BatarangReaction_Confused_Solo : BmSDK.BmGame.RAlertEv
     /// <summary>
     /// Function: StartleForImpact
     /// </summary>
-    public unsafe void StartleForImpact(System.Numerics.Vector3 NewPos, bool bTerrorShootStartle)
+    public unsafe virtual void StartleForImpact(System.Numerics.Vector3 NewPos, bool bTerrorShootStartle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction_Confused_Solo.StartleForImpact", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -132,7 +132,7 @@ public partial class RAEC_BatarangReaction_Confused_Solo : BmSDK.BmGame.RAlertEv
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction_Confused_Solo.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];

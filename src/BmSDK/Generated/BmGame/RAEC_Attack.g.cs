@@ -71,7 +71,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: PlayExclaim
     /// </summary>
-    public unsafe void PlayExclaim(System.Numerics.Vector3 EventCentre)
+    public unsafe virtual void PlayExclaim(System.Numerics.Vector3 EventCentre)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.PlayExclaim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: PlayerDead
     /// </summary>
-    public unsafe void PlayerDead()
+    public unsafe override void PlayerDead()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.PlayerDead", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: ForceAllAttackersOutOfAttack
     /// </summary>
-    public unsafe void ForceAllAttackersOutOfAttack()
+    public unsafe virtual void ForceAllAttackersOutOfAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.ForceAllAttackersOutOfAttack", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: BatmanSpecialEscape
     /// </summary>
-    public unsafe void BatmanSpecialEscape(BmSDK.BmGame.RAEC_Attack_Base.SpecialEscapeType EscapeType)
+    public unsafe override void BatmanSpecialEscape(BmSDK.BmGame.RAEC_Attack_Base.SpecialEscapeType EscapeType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.BatmanSpecialEscape", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -117,7 +117,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: SpecialEscapeBark
     /// </summary>
-    public unsafe void SpecialEscapeBark(BmSDK.BmGame.RAEC_Attack_Base.SpecialEscapeType EscapeType)
+    public unsafe virtual void SpecialEscapeBark(BmSDK.BmGame.RAEC_Attack_Base.SpecialEscapeType EscapeType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.SpecialEscapeBark", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -129,7 +129,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: UnregisterSniperAEC
     /// </summary>
-    public unsafe void UnregisterSniperAEC(BmSDK.BmGame.RAEC_Search_Sub_Sniper ExSniperAEC)
+    public unsafe virtual void UnregisterSniperAEC(BmSDK.BmGame.RAEC_Search_Sub_Sniper ExSniperAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.UnregisterSniperAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -141,7 +141,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: RegisterSniperAEC
     /// </summary>
-    public unsafe void RegisterSniperAEC(BmSDK.BmGame.RAEC_Search_Sub_Sniper NewSniperAEC)
+    public unsafe virtual void RegisterSniperAEC(BmSDK.BmGame.RAEC_Search_Sub_Sniper NewSniperAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.RegisterSniperAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -153,7 +153,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: HasActiveGuardPerim
     /// </summary>
-    public unsafe bool HasActiveGuardPerim()
+    public unsafe virtual bool HasActiveGuardPerim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.HasActiveGuardPerim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -164,7 +164,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: HasThugTryingToFire
     /// </summary>
-    public unsafe bool HasThugTryingToFire()
+    public unsafe virtual bool HasThugTryingToFire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.HasThugTryingToFire", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -175,7 +175,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: ThugsAttacking
     /// </summary>
-    public unsafe bool ThugsAttacking()
+    public unsafe virtual bool ThugsAttacking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.ThugsAttacking", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -186,7 +186,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: AreAttackersActive
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.EPredAttackState AreAttackersActive()
+    public unsafe override BmSDK.BmGame.RGameRI.EPredAttackState AreAttackersActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.AreAttackersActive", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -197,7 +197,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: AttackEventFinished
     /// </summary>
-    public unsafe void AttackEventFinished()
+    public unsafe virtual void AttackEventFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.AttackEventFinished", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -208,7 +208,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: CancelChase
     /// </summary>
-    public unsafe void CancelChase()
+    public unsafe virtual void CancelChase()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.CancelChase", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -219,7 +219,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: CanUseGrenadeGrate
     /// </summary>
-    public unsafe bool CanUseGrenadeGrate()
+    public unsafe virtual bool CanUseGrenadeGrate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.CanUseGrenadeGrate", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -230,7 +230,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: PrepChase
     /// </summary>
-    public unsafe void PrepChase()
+    public unsafe override void PrepChase()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.PrepChase", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -241,7 +241,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: PlayerSeenSinceFreeFireStart
     /// </summary>
-    public unsafe bool PlayerSeenSinceFreeFireStart()
+    public unsafe virtual bool PlayerSeenSinceFreeFireStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.PlayerSeenSinceFreeFireStart", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -252,7 +252,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: HandlePossibleGrateGrenade
     /// </summary>
-    public unsafe void HandlePossibleGrateGrenade()
+    public unsafe virtual void HandlePossibleGrateGrenade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.HandlePossibleGrateGrenade", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -263,7 +263,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: InitFreeFire
     /// </summary>
-    public unsafe void InitFreeFire()
+    public unsafe override void InitFreeFire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.InitFreeFire", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -274,7 +274,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: TryInstantEscalate
     /// </summary>
-    public unsafe void TryInstantEscalate()
+    public unsafe virtual void TryInstantEscalate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.TryInstantEscalate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -285,7 +285,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: GetNearestThugToPosition
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMPawnAI GetNearestThugToPosition(System.Numerics.Vector3 TestPos, bool bIgnoreMinigunners = default)
+    public unsafe virtual BmSDK.BmGame.RBMPawnAI GetNearestThugToPosition(System.Numerics.Vector3 TestPos, bool bIgnoreMinigunners = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.GetNearestThugToPosition", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -298,7 +298,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: GetNearestGrateToPosition
     /// </summary>
-    public unsafe BmSDK.BmGame.RTunnelGrateBase GetNearestGrateToPosition(System.Numerics.Vector3 TestPos)
+    public unsafe virtual BmSDK.BmGame.RTunnelGrateBase GetNearestGrateToPosition(System.Numerics.Vector3 TestPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.GetNearestGrateToPosition", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -310,7 +310,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: SpecialBarkAvailable
     /// </summary>
-    public unsafe void SpecialBarkAvailable(BmSDK.FName SpecialBarkEventValue)
+    public unsafe virtual void SpecialBarkAvailable(BmSDK.FName SpecialBarkEventValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.SpecialBarkAvailable", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -322,7 +322,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: AddGuardPerimWatcherWithPosition
     /// </summary>
-    public unsafe void AddGuardPerimWatcherWithPosition(BmSDK.BmGame.RBMAIController NewWatcher, System.Numerics.Vector3 StandPos, System.Numerics.Vector3 AimPos)
+    public unsafe virtual void AddGuardPerimWatcherWithPosition(BmSDK.BmGame.RBMAIController NewWatcher, System.Numerics.Vector3 StandPos, System.Numerics.Vector3 AimPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.AddGuardPerimWatcherWithPosition", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -336,7 +336,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: AddGuardPerimWatcherWithPathPos
     /// </summary>
-    public unsafe void AddGuardPerimWatcherWithPathPos(BmSDK.BmGame.RBMAIController NewWatcher, System.Numerics.Vector3 pathPos)
+    public unsafe virtual void AddGuardPerimWatcherWithPathPos(BmSDK.BmGame.RBMAIController NewWatcher, System.Numerics.Vector3 pathPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.AddGuardPerimWatcherWithPathPos", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -349,7 +349,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: HandleNoisyGadget
     /// </summary>
-    public unsafe void HandleNoisyGadget(System.Numerics.Vector3 ThrownFromPos, float ReactRange)
+    public unsafe override void HandleNoisyGadget(System.Numerics.Vector3 ThrownFromPos, float ReactRange)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.HandleNoisyGadget", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -362,7 +362,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: HandleGadgetImpactNoise
     /// </summary>
-    public unsafe bool HandleGadgetImpactNoise(System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 ThrownFromPos, float ReactRange)
+    public unsafe override bool HandleGadgetImpactNoise(System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 ThrownFromPos, float ReactRange)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.HandleGadgetImpactNoise", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -376,7 +376,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: ThugEscapedTakedown
     /// </summary>
-    public unsafe void ThugEscapedTakedown(BmSDK.BmGame.RBMAIController NewMember)
+    public unsafe override void ThugEscapedTakedown(BmSDK.BmGame.RBMAIController NewMember)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.ThugEscapedTakedown", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -388,7 +388,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: ThugIsInterruptingFearTakedown
     /// </summary>
-    public unsafe void ThugIsInterruptingFearTakedown(BmSDK.BmGame.RBMAIController NewMember, float PoseChangeDeadline)
+    public unsafe override void ThugIsInterruptingFearTakedown(BmSDK.BmGame.RBMAIController NewMember, float PoseChangeDeadline)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.ThugIsInterruptingFearTakedown", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -401,7 +401,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: PropagateWhitelistToNearbyThugs
     /// </summary>
-    public unsafe void PropagateWhitelistToNearbyThugs(BmSDK.BmGame.RPawnVillain AlertedVillain)
+    public unsafe virtual void PropagateWhitelistToNearbyThugs(BmSDK.BmGame.RPawnVillain AlertedVillain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.PropagateWhitelistToNearbyThugs", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -413,7 +413,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: InitDistStartle
     /// </summary>
-    public unsafe void InitDistStartle(BmSDK.BmGame.RBMAIController NewMember)
+    public unsafe virtual void InitDistStartle(BmSDK.BmGame.RBMAIController NewMember)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.InitDistStartle", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -425,7 +425,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: AddAttacker
     /// </summary>
-    public unsafe void AddAttacker(BmSDK.BmGame.RBMAIController NewMember, bool bPlaySpottedLine = default)
+    public unsafe override void AddAttacker(BmSDK.BmGame.RBMAIController NewMember, bool bPlaySpottedLine = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.AddAttacker", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -438,7 +438,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: ThugSawPlayer
     /// </summary>
-    public unsafe void ThugSawPlayer(BmSDK.BmGame.RBMAIController NewMember)
+    public unsafe override void ThugSawPlayer(BmSDK.BmGame.RBMAIController NewMember)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.ThugSawPlayer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -450,7 +450,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: HasActiveSurprisedThugs
     /// </summary>
-    public unsafe bool HasActiveSurprisedThugs()
+    public unsafe override bool HasActiveSurprisedThugs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.HasActiveSurprisedThugs", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -461,7 +461,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: CreateHarleyMayhemModeChild
     /// </summary>
-    public unsafe void CreateHarleyMayhemModeChild()
+    public unsafe virtual void CreateHarleyMayhemModeChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.CreateHarleyMayhemModeChild", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -472,7 +472,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: ForceNearbyAttackLook
     /// </summary>
-    public unsafe void ForceNearbyAttackLook()
+    public unsafe override void ForceNearbyAttackLook()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.ForceNearbyAttackLook", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -483,7 +483,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: PlaySpottedBark
     /// </summary>
-    public unsafe void PlaySpottedBark(BmSDK.BmGame.RPawnVillain SpotterThug, bool bInitialAttackStarted, bool bInitialChasing, bool bInitialChasingFromSighting)
+    public unsafe virtual void PlaySpottedBark(BmSDK.BmGame.RPawnVillain SpotterThug, bool bInitialAttackStarted, bool bInitialChasing, bool bInitialChasingFromSighting)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.PlaySpottedBark", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -498,7 +498,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: PlayRespondToNoiseBarks
     /// </summary>
-    public unsafe void PlayRespondToNoiseBarks(BmSDK.BmGame.RAEC_Attack_Base.AttackStartTrigger StartCause)
+    public unsafe virtual void PlayRespondToNoiseBarks(BmSDK.BmGame.RAEC_Attack_Base.AttackStartTrigger StartCause)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.PlayRespondToNoiseBarks", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -510,7 +510,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: IsInterruptingFearTakedown
     /// </summary>
-    public unsafe bool IsInterruptingFearTakedown(BmSDK.BmGame.RBMAIController TestCon)
+    public unsafe virtual bool IsInterruptingFearTakedown(BmSDK.BmGame.RBMAIController TestCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.IsInterruptingFearTakedown", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -522,7 +522,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: FearTakedownStartle
     /// </summary>
-    public unsafe void FearTakedownStartle(BmSDK.BmGame.RPawnVillain Screamer)
+    public unsafe virtual void FearTakedownStartle(BmSDK.BmGame.RPawnVillain Screamer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.FearTakedownStartle", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -534,7 +534,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: InternalStartAttack
     /// </summary>
-    public unsafe void InternalStartAttack(bool bForceRestart = default, BmSDK.BmGame.RAEC_Attack_Base.AttackStartTrigger StartCause = default, BmSDK.BmGame.RPawnVillain TriggeringVillain = default)
+    public unsafe override void InternalStartAttack(bool bForceRestart = default, BmSDK.BmGame.RAEC_Attack_Base.AttackStartTrigger StartCause = default, BmSDK.BmGame.RPawnVillain TriggeringVillain = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.InternalStartAttack", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -548,7 +548,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: SpecialCaseThugStartedAttack
     /// </summary>
-    public unsafe void SpecialCaseThugStartedAttack(BmSDK.BmGame.RBMAIController SpotterCon)
+    public unsafe override void SpecialCaseThugStartedAttack(BmSDK.BmGame.RBMAIController SpotterCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.SpecialCaseThugStartedAttack", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -560,7 +560,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: OnRemoveGroupChild
     /// </summary>
-    public unsafe void OnRemoveGroupChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
+    public unsafe override void OnRemoveGroupChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.OnRemoveGroupChild", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -572,7 +572,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: TargetPlayerUpdated
     /// </summary>
-    public unsafe void TargetPlayerUpdated()
+    public unsafe override void TargetPlayerUpdated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.TargetPlayerUpdated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -583,7 +583,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: CreateChildren
     /// </summary>
-    public unsafe void CreateChildren()
+    public unsafe override void CreateChildren()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.CreateChildren", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -594,7 +594,7 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack.Tick", true);
         byte* paramsPtr = stackalloc byte[44];

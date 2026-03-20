@@ -71,7 +71,7 @@ public partial class RCrowdSpawner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSpawner.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RCrowdSpawner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnAgent
     /// </summary>
-    public unsafe BmSDK.BmGame.RCrowdAgent SpawnAgent()
+    public unsafe virtual BmSDK.BmGame.RCrowdAgent SpawnAgent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSpawner.SpawnAgent", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -94,7 +94,7 @@ public partial class RCrowdSpawner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSpawnLocationVariation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetSpawnLocationVariation()
+    public unsafe virtual System.Numerics.Vector3 GetSpawnLocationVariation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSpawner.GetSpawnLocationVariation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -105,7 +105,7 @@ public partial class RCrowdSpawner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnCrowd
     /// </summary>
-    public unsafe void SpawnCrowd(int NumToSpawn, int NewFlockID = default, BmSDK.BmGame.RCrowdSequence NewCrowdSequence = default)
+    public unsafe virtual void SpawnCrowd(int NumToSpawn, int NewFlockID = default, BmSDK.BmGame.RCrowdSequence NewCrowdSequence = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSpawner.SpawnCrowd", true);
         byte* paramsPtr = stackalloc byte[16];

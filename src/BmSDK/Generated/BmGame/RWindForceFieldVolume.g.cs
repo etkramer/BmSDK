@@ -71,7 +71,7 @@ public partial class RWindForceFieldVolume : BmSDK.BmGame.RForceFieldVolume, BmS
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWindForceFieldVolume.UnTouch", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RWindForceFieldVolume : BmSDK.BmGame.RForceFieldVolume, BmS
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWindForceFieldVolume.Touch", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -98,7 +98,7 @@ public partial class RWindForceFieldVolume : BmSDK.BmGame.RForceFieldVolume, BmS
     /// <summary>
     /// Function: OnUntouchActor
     /// </summary>
-    public unsafe void OnUntouchActor(BmSDK.Engine.Actor Other)
+    public unsafe virtual void OnUntouchActor(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWindForceFieldVolume.OnUntouchActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RWindForceFieldVolume : BmSDK.BmGame.RForceFieldVolume, BmS
     /// <summary>
     /// Function: OnTouchActor
     /// </summary>
-    public unsafe void OnTouchActor(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual void OnTouchActor(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWindForceFieldVolume.OnTouchActor", true);
         byte* paramsPtr = stackalloc byte[40];

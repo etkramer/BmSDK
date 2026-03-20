@@ -36,7 +36,7 @@ public partial class RBMBehaviour_JoinCombat : BmSDK.BmGame.RBMBehaviour_Control
     /// <summary>
     /// Function: CanBlock
     /// </summary>
-    public unsafe bool CanBlock()
+    public unsafe override bool CanBlock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_JoinCombat.CanBlock", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_JoinCombat : BmSDK.BmGame.RBMBehaviour_Control
     /// <summary>
     /// Function: EnterCombat
     /// </summary>
-    public unsafe void EnterCombat()
+    public unsafe virtual void EnterCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_JoinCombat.EnterCombat", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_JoinCombat : BmSDK.BmGame.RBMBehaviour_Control
     /// <summary>
     /// Function: AlertNearbyThugs
     /// </summary>
-    public unsafe void AlertNearbyThugs()
+    public unsafe virtual void AlertNearbyThugs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_JoinCombat.AlertNearbyThugs", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_JoinCombat : BmSDK.BmGame.RBMBehaviour_Control
     /// <summary>
     /// Function: CanRepel
     /// </summary>
-    public unsafe bool CanRepel()
+    public unsafe override bool CanRepel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_JoinCombat.CanRepel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_JoinCombat : BmSDK.BmGame.RBMBehaviour_Control
     /// <summary>
     /// Function: AwareOfPlayer
     /// </summary>
-    public unsafe bool AwareOfPlayer(BmSDK.Engine.Actor Player, BmSDK.Class dmgType = default)
+    public unsafe override bool AwareOfPlayer(BmSDK.Engine.Actor Player, BmSDK.Class dmgType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_JoinCombat.AwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -93,7 +93,7 @@ public partial class RBMBehaviour_JoinCombat : BmSDK.BmGame.RBMBehaviour_Control
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_JoinCombat.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RBMBehaviour_JoinCombat : BmSDK.BmGame.RBMBehaviour_Control
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_JoinCombat.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RBMBehaviour_JoinCombat : BmSDK.BmGame.RBMBehaviour_Control
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(bool bFearReaction)
+    public unsafe virtual void Initialise(bool bFearReaction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_JoinCombat.Initialise", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class RBMBehaviour_JoinCombat : BmSDK.BmGame.RBMBehaviour_Control
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_JoinCombat.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

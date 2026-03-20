@@ -42,7 +42,7 @@ public partial class RBMExitCondition : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameO
     /// <summary>
     /// Function: Deactivated
     /// </summary>
-    public unsafe void Deactivated()
+    public unsafe override void Deactivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitCondition.Deactivated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -53,7 +53,7 @@ public partial class RBMExitCondition : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameO
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe virtual void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitCondition.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -64,7 +64,7 @@ public partial class RBMExitCondition : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameO
     /// <summary>
     /// Function: TriggerCondition
     /// </summary>
-    public unsafe void TriggerCondition(bool bIgnoreSync = default)
+    public unsafe virtual void TriggerCondition(bool bIgnoreSync = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitCondition.TriggerCondition", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -76,7 +76,7 @@ public partial class RBMExitCondition : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameO
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe virtual void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitCondition.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -88,7 +88,7 @@ public partial class RBMExitCondition : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameO
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe virtual void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitCondition.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -99,7 +99,7 @@ public partial class RBMExitCondition : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameO
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitCondition.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -110,7 +110,7 @@ public partial class RBMExitCondition : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameO
     /// <summary>
     /// Function: ActivateSyncExitConditions
     /// </summary>
-    public unsafe void ActivateSyncExitConditions()
+    public unsafe virtual void ActivateSyncExitConditions()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitCondition.ActivateSyncExitConditions", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RBMExitCondition : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameO
     /// <summary>
     /// Function: ShouldShowExitConditionDebug
     /// </summary>
-    public unsafe bool ShouldShowExitConditionDebug()
+    public unsafe virtual bool ShouldShowExitConditionDebug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitCondition.ShouldShowExitConditionDebug", true);
         byte* paramsPtr = stackalloc byte[4];

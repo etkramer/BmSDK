@@ -71,7 +71,7 @@ public partial class RPawnVillainThugMedic : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// <summary>
     /// Function: SetInterrogatable
     /// </summary>
-    public unsafe void SetInterrogatable(bool bNewValue)
+    public unsafe override void SetInterrogatable(bool bNewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugMedic.SetInterrogatable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RPawnVillainThugMedic : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// <summary>
     /// Function: ChangeXrayColour
     /// </summary>
-    public unsafe void ChangeXrayColour(bool bBlue, bool bForced = default)
+    public unsafe override void ChangeXrayColour(bool bBlue, bool bForced = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugMedic.ChangeXrayColour", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -96,7 +96,7 @@ public partial class RPawnVillainThugMedic : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// <summary>
     /// Function: SetUpXrayMaterials
     /// </summary>
-    public unsafe void SetUpXrayMaterials(bool bPutInForeground)
+    public unsafe override void SetUpXrayMaterials(bool bPutInForeground)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugMedic.SetUpXrayMaterials", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -108,7 +108,7 @@ public partial class RPawnVillainThugMedic : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// <summary>
     /// Function: CanChargeUpOtherThug
     /// </summary>
-    public unsafe bool CanChargeUpOtherThug()
+    public unsafe override bool CanChargeUpOtherThug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugMedic.CanChargeUpOtherThug", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -119,7 +119,7 @@ public partial class RPawnVillainThugMedic : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// <summary>
     /// Function: GetEquipmentPropSkeletalsIndex
     /// </summary>
-    public unsafe int GetEquipmentPropSkeletalsIndex()
+    public unsafe override int GetEquipmentPropSkeletalsIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugMedic.GetEquipmentPropSkeletalsIndex", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -130,7 +130,7 @@ public partial class RPawnVillainThugMedic : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// <summary>
     /// Function: WakeFromDead
     /// </summary>
-    public unsafe void WakeFromDead(BmSDK.BmGame.RPawnCharacter NewGetUpMaster = default, BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId NewGetUpMasterAnimID = default, BmSDK.Engine.AnimSet NewGetUpAnimset = default, BmSDK.FName NewGetUpAnimName = default, BmSDK.FName GetUpMovementStance = default, bool bDoAnim = default, bool bAnimImmediate = default)
+    public unsafe override void WakeFromDead(BmSDK.BmGame.RPawnCharacter NewGetUpMaster = default, BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId NewGetUpMasterAnimID = default, BmSDK.Engine.AnimSet NewGetUpAnimset = default, BmSDK.FName NewGetUpAnimName = default, BmSDK.FName GetUpMovementStance = default, bool bDoAnim = default, bool bAnimImmediate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugMedic.WakeFromDead", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -148,7 +148,7 @@ public partial class RPawnVillainThugMedic : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// <summary>
     /// Function: Died
     /// </summary>
-    public unsafe bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe override bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugMedic.Died", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -162,7 +162,7 @@ public partial class RPawnVillainThugMedic : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugMedic.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -174,7 +174,7 @@ public partial class RPawnVillainThugMedic : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// <summary>
     /// Function: IsLastMedicActionRevive
     /// </summary>
-    public unsafe bool IsLastMedicActionRevive()
+    public unsafe override bool IsLastMedicActionRevive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugMedic.IsLastMedicActionRevive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -185,7 +185,7 @@ public partial class RPawnVillainThugMedic : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// <summary>
     /// Function: GetDisruptedEquipmentLocationAndRotation
     /// </summary>
-    public unsafe void GetDisruptedEquipmentLocationAndRotation(out System.Numerics.Vector3 vLocation, out BmSDK.Rotator rRotation)
+    public unsafe override void GetDisruptedEquipmentLocationAndRotation(out System.Numerics.Vector3 vLocation, out BmSDK.Rotator rRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugMedic.GetDisruptedEquipmentLocationAndRotation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -198,7 +198,7 @@ public partial class RPawnVillainThugMedic : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// <summary>
     /// Function: DisruptedExplosion
     /// </summary>
-    public unsafe void DisruptedExplosion()
+    public unsafe virtual void DisruptedExplosion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugMedic.DisruptedExplosion", true);
         byte* paramsPtr = stackalloc byte[256];
@@ -209,7 +209,7 @@ public partial class RPawnVillainThugMedic : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// <summary>
     /// Function: DisruptorDisableEquipment
     /// </summary>
-    public unsafe void DisruptorDisableEquipment()
+    public unsafe override void DisruptorDisableEquipment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugMedic.DisruptorDisableEquipment", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -220,7 +220,7 @@ public partial class RPawnVillainThugMedic : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// <summary>
     /// Function: AddPawnProps
     /// </summary>
-    public unsafe void AddPawnProps()
+    public unsafe override void AddPawnProps()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugMedic.AddPawnProps", true);
         byte* paramsPtr = stackalloc byte[184];

@@ -47,7 +47,7 @@ public partial class RCheckpointWaveController : BmSDK.BmGame.RBMWaveController,
     /// <summary>
     /// Function: BreakPawn
     /// </summary>
-    public unsafe void BreakPawn(BmSDK.BmGame.RPawnCombat TestPawn)
+    public unsafe virtual void BreakPawn(BmSDK.BmGame.RPawnCombat TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheckpointWaveController.BreakPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RCheckpointWaveController : BmSDK.BmGame.RBMWaveController,
     /// <summary>
     /// Function: CheckForTankSpook
     /// </summary>
-    public unsafe void CheckForTankSpook(BmSDK.BmGame.RPawnCombat TestPawn)
+    public unsafe virtual void CheckForTankSpook(BmSDK.BmGame.RPawnCombat TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheckpointWaveController.CheckForTankSpook", true);
         byte* paramsPtr = stackalloc byte[9];

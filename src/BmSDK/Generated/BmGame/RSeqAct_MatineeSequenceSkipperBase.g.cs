@@ -31,7 +31,7 @@ public partial class RSeqAct_MatineeSequenceSkipperBase : BmSDK.Engine.SequenceA
     /// <summary>
     /// Function: ForwardMatineeToPosition
     /// </summary>
-    public unsafe void ForwardMatineeToPosition(BmSDK.Engine.SeqAct_Interp Matinee, float NewPosition)
+    public unsafe virtual void ForwardMatineeToPosition(BmSDK.Engine.SeqAct_Interp Matinee, float NewPosition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MatineeSequenceSkipperBase.ForwardMatineeToPosition", true);
         byte* paramsPtr = stackalloc byte[12];

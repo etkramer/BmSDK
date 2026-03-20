@@ -71,7 +71,7 @@ public partial class RLineLauncherBm : BmSDK.BmGame.RLineLauncher, BmSDK.IGameOb
     /// <summary>
     /// Function: FireDualProjectiles
     /// </summary>
-    public unsafe void FireDualProjectiles()
+    public unsafe override void FireDualProjectiles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLineLauncherBm.FireDualProjectiles", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RLineLauncherBm : BmSDK.BmGame.RLineLauncher, BmSDK.IGameOb
     /// <summary>
     /// Function: GetImpactAudioEvent
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetImpactAudioEvent(BmSDK.Engine.AkWwise.EAkWorldMaterial Mat)
+    public unsafe override BmSDK.Engine.AkEvent GetImpactAudioEvent(BmSDK.Engine.AkWwise.EAkWorldMaterial Mat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLineLauncherBm.GetImpactAudioEvent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -94,7 +94,7 @@ public partial class RLineLauncherBm : BmSDK.BmGame.RLineLauncher, BmSDK.IGameOb
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLineLauncherBm.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];

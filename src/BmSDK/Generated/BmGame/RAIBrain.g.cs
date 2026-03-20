@@ -36,7 +36,7 @@ public partial class RAIBrain : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FireSpawnerBehaviourRoot
     /// </summary>
-    public unsafe void FireSpawnerBehaviourRoot(int BrainIndex)
+    public unsafe virtual void FireSpawnerBehaviourRoot(int BrainIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain.FireSpawnerBehaviourRoot", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -48,7 +48,7 @@ public partial class RAIBrain : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetTopLevelAEC
     /// </summary>
-    public unsafe void SetTopLevelAEC(BmSDK.BmGame.RAlertEventCoordinatorBase NewTopLevelAEC)
+    public unsafe virtual void SetTopLevelAEC(BmSDK.BmGame.RAlertEventCoordinatorBase NewTopLevelAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain.SetTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -60,7 +60,7 @@ public partial class RAIBrain : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearAssignment
     /// </summary>
-    public unsafe void ClearAssignment()
+    public unsafe virtual void ClearAssignment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain.ClearAssignment", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -71,7 +71,7 @@ public partial class RAIBrain : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: HandleNonAECState
     /// </summary>
-    public unsafe void HandleNonAECState()
+    public unsafe virtual void HandleNonAECState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain.HandleNonAECState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAIBrain : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ApplyBrainState
     /// </summary>
-    public unsafe void ApplyBrainState(BmSDK.FName NewBrainState, BmSDK.BmGame.RAlertEventCoordinatorBase PendingTLAEC)
+    public unsafe virtual void ApplyBrainState(BmSDK.FName NewBrainState, BmSDK.BmGame.RAlertEventCoordinatorBase PendingTLAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain.ApplyBrainState", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -95,7 +95,7 @@ public partial class RAIBrain : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: EvaluateState
     /// </summary>
-    public unsafe void EvaluateState(out BmSDK.FName NewName, out BmSDK.BmGame.RAlertEventCoordinatorBase NewAEC)
+    public unsafe virtual void EvaluateState(out BmSDK.FName NewName, out BmSDK.BmGame.RAlertEventCoordinatorBase NewAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain.EvaluateState", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -108,7 +108,7 @@ public partial class RAIBrain : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DoAssignment
     /// </summary>
-    public unsafe void DoAssignment()
+    public unsafe virtual void DoAssignment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain.DoAssignment", true);
         byte* paramsPtr = stackalloc byte[16];

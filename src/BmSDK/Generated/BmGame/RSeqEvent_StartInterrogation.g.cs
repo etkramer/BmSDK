@@ -47,7 +47,7 @@ public partial class RSeqEvent_StartInterrogation : BmSDK.Engine.SequenceEvent, 
     /// <summary>
     /// Function: CanStartCameraConversation
     /// </summary>
-    public unsafe bool CanStartCameraConversation()
+    public unsafe virtual bool CanStartCameraConversation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_StartInterrogation.CanStartCameraConversation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RSeqEvent_StartInterrogation : BmSDK.Engine.SequenceEvent, 
     /// <summary>
     /// Function: EventAttachedToPawn
     /// </summary>
-    public unsafe bool EventAttachedToPawn(BmSDK.BmGame.RPawnVillain Villain)
+    public unsafe virtual bool EventAttachedToPawn(BmSDK.BmGame.RPawnVillain Villain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_StartInterrogation.EventAttachedToPawn", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -70,7 +70,7 @@ public partial class RSeqEvent_StartInterrogation : BmSDK.Engine.SequenceEvent, 
     /// <summary>
     /// Function: RevealSecrets
     /// </summary>
-    public unsafe void RevealSecrets()
+    public unsafe virtual void RevealSecrets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_StartInterrogation.RevealSecrets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RSeqEvent_StartInterrogation : BmSDK.Engine.SequenceEvent, 
     /// <summary>
     /// Function: GetPMapName
     /// </summary>
-    public unsafe BmSDK.FString GetPMapName()
+    public unsafe virtual BmSDK.FString GetPMapName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_StartInterrogation.GetPMapName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -92,7 +92,7 @@ public partial class RSeqEvent_StartInterrogation : BmSDK.Engine.SequenceEvent, 
     /// <summary>
     /// Function: CancelInterrogationMovesLoading
     /// </summary>
-    public unsafe void CancelInterrogationMovesLoading()
+    public unsafe virtual void CancelInterrogationMovesLoading()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_StartInterrogation.CancelInterrogationMovesLoading", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -110,7 +110,7 @@ public partial class RSeqEvent_StartInterrogation : BmSDK.Engine.SequenceEvent, 
     /// <summary>
     /// Function: InitInterrogationMoves
     /// </summary>
-    public unsafe bool InitInterrogationMoves()
+    public unsafe virtual bool InitInterrogationMoves()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_StartInterrogation.InitInterrogationMoves", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RSeqEvent_StartInterrogation : BmSDK.Engine.SequenceEvent, 
     /// <summary>
     /// Function: LoadInterrogationMoves
     /// </summary>
-    public unsafe bool LoadInterrogationMoves()
+    public unsafe virtual bool LoadInterrogationMoves()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_StartInterrogation.LoadInterrogationMoves", true);
         byte* paramsPtr = stackalloc byte[4];

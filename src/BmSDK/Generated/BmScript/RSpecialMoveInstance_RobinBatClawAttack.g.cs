@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_RobinBatClawAttack : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: TakeDownVillain
     /// </summary>
-    public unsafe void TakeDownVillain()
+    public unsafe virtual void TakeDownVillain()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinBatClawAttack.TakeDownVillain", true);
         byte* paramsPtr = stackalloc byte[257];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_RobinBatClawAttack : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: SpecificVillainBlocks
     /// </summary>
-    public unsafe bool SpecificVillainBlocks(BmSDK.BmGame.RPawnVillain Villain, bool FromRear, bool AlwaysBlockIfShield)
+    public unsafe virtual bool SpecificVillainBlocks(BmSDK.BmGame.RPawnVillain Villain, bool FromRear, bool AlwaysBlockIfShield)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinBatClawAttack.SpecificVillainBlocks", true);
         byte* paramsPtr = stackalloc byte[268];
@@ -96,7 +96,7 @@ public partial class RSpecialMoveInstance_RobinBatClawAttack : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: VillainBlocks
     /// </summary>
-    public unsafe void VillainBlocks()
+    public unsafe virtual void VillainBlocks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinBatClawAttack.VillainBlocks", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class RSpecialMoveInstance_RobinBatClawAttack : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: MakeVillainStumble
     /// </summary>
-    public unsafe void MakeVillainStumble()
+    public unsafe virtual void MakeVillainStumble()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinBatClawAttack.MakeVillainStumble", true);
         byte* paramsPtr = stackalloc byte[264];
@@ -118,7 +118,7 @@ public partial class RSpecialMoveInstance_RobinBatClawAttack : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: MakeVillainStumbleShortRange
     /// </summary>
-    public unsafe void MakeVillainStumbleShortRange()
+    public unsafe virtual void MakeVillainStumbleShortRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinBatClawAttack.MakeVillainStumbleShortRange", true);
         byte* paramsPtr = stackalloc byte[256];
@@ -129,7 +129,7 @@ public partial class RSpecialMoveInstance_RobinBatClawAttack : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: NotifyBump
     /// </summary>
-    public unsafe void NotifyBump(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitNormal)
+    public unsafe override void NotifyBump(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinBatClawAttack.NotifyBump", true);
         byte* paramsPtr = stackalloc byte[280];
@@ -142,7 +142,7 @@ public partial class RSpecialMoveInstance_RobinBatClawAttack : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinBatClawAttack.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[268];
@@ -154,7 +154,7 @@ public partial class RSpecialMoveInstance_RobinBatClawAttack : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinBatClawAttack.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -165,7 +165,7 @@ public partial class RSpecialMoveInstance_RobinBatClawAttack : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinBatClawAttack.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[132];

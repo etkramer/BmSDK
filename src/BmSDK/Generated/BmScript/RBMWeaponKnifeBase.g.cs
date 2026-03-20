@@ -66,7 +66,7 @@ public partial class RBMWeaponKnifeBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IGa
     /// <summary>
     /// Function: InitialisePlayerSpecificAnimsets
     /// </summary>
-    public unsafe void InitialisePlayerSpecificAnimsets(BmSDK.BmGame.RPawnPlayerCombat NewPlayer, int PlayerIndex)
+    public unsafe override void InitialisePlayerSpecificAnimsets(BmSDK.BmGame.RPawnPlayerCombat NewPlayer, int PlayerIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponKnifeBase.InitialisePlayerSpecificAnimsets", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -79,7 +79,7 @@ public partial class RBMWeaponKnifeBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IGa
     /// <summary>
     /// Function: GetMultiAttackAnimNames
     /// </summary>
-    public unsafe void GetMultiAttackAnimNames(out BmSDK.FName IntroName, out BmSDK.FName AttackName, out BmSDK.FName FailName, out BmSDK.FName CounterName, BmSDK.BmGame.RPawnPlayerCombat Player)
+    public unsafe override void GetMultiAttackAnimNames(out BmSDK.FName IntroName, out BmSDK.FName AttackName, out BmSDK.FName FailName, out BmSDK.FName CounterName, BmSDK.BmGame.RPawnPlayerCombat Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponKnifeBase.GetMultiAttackAnimNames", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -95,7 +95,7 @@ public partial class RBMWeaponKnifeBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IGa
     /// <summary>
     /// Function: GetAttackMoveClass
     /// </summary>
-    public unsafe BmSDK.Class GetAttackMoveClass()
+    public unsafe override BmSDK.Class GetAttackMoveClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponKnifeBase.GetAttackMoveClass", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RBMWeaponKnifeBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IGa
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponKnifeBase.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[40];

@@ -71,7 +71,7 @@ public partial class RAEC_Smoke_Sub_Disarmed : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init()
+    public unsafe virtual void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Smoke_Sub_Disarmed.Init", true);
         byte* paramsPtr = stackalloc byte[8];

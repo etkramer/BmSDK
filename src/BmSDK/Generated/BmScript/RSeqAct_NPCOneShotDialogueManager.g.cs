@@ -47,7 +47,7 @@ public partial class RSeqAct_NPCOneShotDialogueManager : BmSDK.Engine.SeqAct_Lat
     /// <summary>
     /// Function: TriggerConnectedSpeechAction
     /// </summary>
-    public unsafe void TriggerConnectedSpeechAction()
+    public unsafe virtual void TriggerConnectedSpeechAction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NPCOneShotDialogueManager.TriggerConnectedSpeechAction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -58,7 +58,7 @@ public partial class RSeqAct_NPCOneShotDialogueManager : BmSDK.Engine.SeqAct_Lat
     /// <summary>
     /// Function: ChooseNextLine
     /// </summary>
-    public unsafe void ChooseNextLine()
+    public unsafe virtual void ChooseNextLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NPCOneShotDialogueManager.ChooseNextLine", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -69,7 +69,7 @@ public partial class RSeqAct_NPCOneShotDialogueManager : BmSDK.Engine.SeqAct_Lat
     /// <summary>
     /// Function: ResetUnplayedLines
     /// </summary>
-    public unsafe void ResetUnplayedLines()
+    public unsafe virtual void ResetUnplayedLines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NPCOneShotDialogueManager.ResetUnplayedLines", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -80,7 +80,7 @@ public partial class RSeqAct_NPCOneShotDialogueManager : BmSDK.Engine.SeqAct_Lat
     /// <summary>
     /// Function: ResetTimer
     /// </summary>
-    public unsafe void ResetTimer()
+    public unsafe virtual void ResetTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NPCOneShotDialogueManager.ResetTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -91,7 +91,7 @@ public partial class RSeqAct_NPCOneShotDialogueManager : BmSDK.Engine.SeqAct_Lat
     /// <summary>
     /// Function: HandleInputLinks
     /// </summary>
-    public unsafe void HandleInputLinks()
+    public unsafe virtual void HandleInputLinks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NPCOneShotDialogueManager.HandleInputLinks", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -102,7 +102,7 @@ public partial class RSeqAct_NPCOneShotDialogueManager : BmSDK.Engine.SeqAct_Lat
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NPCOneShotDialogueManager.Update", true);
         byte* paramsPtr = stackalloc byte[8];

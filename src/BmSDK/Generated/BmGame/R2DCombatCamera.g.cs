@@ -71,7 +71,7 @@ public partial class R2DCombatCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.R2DCombatCamera.Tick", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -83,7 +83,7 @@ public partial class R2DCombatCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetLookAtLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLookAtLocation()
+    public unsafe virtual System.Numerics.Vector3 GetLookAtLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.R2DCombatCamera.GetLookAtLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -94,7 +94,7 @@ public partial class R2DCombatCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetLookFromLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLookFromLocation()
+    public unsafe virtual System.Numerics.Vector3 GetLookFromLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.R2DCombatCamera.GetLookFromLocation", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -105,7 +105,7 @@ public partial class R2DCombatCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: StopCamera
     /// </summary>
-    public unsafe void StopCamera()
+    public unsafe virtual void StopCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.R2DCombatCamera.StopCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class R2DCombatCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: StartCamera
     /// </summary>
-    public unsafe void StartCamera(BmSDK.BmGame.RPawnPlayer NewPlayerPawn, BmSDK.BmGame.RPawnVillain NewVillainPawn)
+    public unsafe virtual void StartCamera(BmSDK.BmGame.RPawnPlayer NewPlayerPawn, BmSDK.BmGame.RPawnVillain NewVillainPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.R2DCombatCamera.StartCamera", true);
         byte* paramsPtr = stackalloc byte[16];

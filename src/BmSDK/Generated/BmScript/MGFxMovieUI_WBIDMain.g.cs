@@ -36,7 +36,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: PlaySoundEffect
     /// </summary>
-    public unsafe void PlaySoundEffect(BmSDK.BmScript.MGFxMovieUI_WBIDMain.WBPlay_UI_SFX sfx)
+    public unsafe virtual void PlaySoundEffect(BmSDK.BmScript.MGFxMovieUI_WBIDMain.WBPlay_UI_SFX sfx)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.PlaySoundEffect", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -48,7 +48,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: SetRewardsScreenError
     /// </summary>
-    public unsafe void SetRewardsScreenError()
+    public unsafe override void SetRewardsScreenError()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.SetRewardsScreenError", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -59,7 +59,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: XI_PasteFromClipboard
     /// </summary>
-    public unsafe void XI_PasteFromClipboard(BmSDK.FString TargetPath, BmSDK.FString VariableName)
+    public unsafe virtual void XI_PasteFromClipboard(BmSDK.FString TargetPath, BmSDK.FString VariableName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.XI_PasteFromClipboard", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -72,7 +72,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: XI_GetMinYForScrolling
     /// </summary>
-    public unsafe void XI_GetMinYForScrolling(BmSDK.FString TargetPath, BmSDK.FString VariableName)
+    public unsafe virtual void XI_GetMinYForScrolling(BmSDK.FString TargetPath, BmSDK.FString VariableName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.XI_GetMinYForScrolling", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -85,7 +85,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: XI_GetMaxYForScrolling
     /// </summary>
-    public unsafe void XI_GetMaxYForScrolling(BmSDK.FString TargetPath, BmSDK.FString VariableName)
+    public unsafe virtual void XI_GetMaxYForScrolling(BmSDK.FString TargetPath, BmSDK.FString VariableName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.XI_GetMaxYForScrolling", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -98,7 +98,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: XI_ScrollToPosition
     /// </summary>
-    public unsafe void XI_ScrollToPosition(float ScrollBlockY)
+    public unsafe virtual void XI_ScrollToPosition(float ScrollBlockY)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.XI_ScrollToPosition", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -110,7 +110,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: XI_GetViewportHeight
     /// </summary>
-    public unsafe void XI_GetViewportHeight(BmSDK.FString TargetPath, BmSDK.FString VariableName)
+    public unsafe override void XI_GetViewportHeight(BmSDK.FString TargetPath, BmSDK.FString VariableName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.XI_GetViewportHeight", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -123,7 +123,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: XI_GetMouseY
     /// </summary>
-    public unsafe void XI_GetMouseY(BmSDK.FString TargetPath, BmSDK.FString VariableName)
+    public unsafe virtual void XI_GetMouseY(BmSDK.FString TargetPath, BmSDK.FString VariableName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.XI_GetMouseY", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -136,7 +136,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: UpdateWBIDWidgets
     /// </summary>
-    public unsafe void UpdateWBIDWidgets()
+    public unsafe override void UpdateWBIDWidgets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.UpdateWBIDWidgets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -147,7 +147,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: ProcessVoiceCommand
     /// </summary>
-    public unsafe bool ProcessVoiceCommand(BmSDK.FString VoiceRecCommand)
+    public unsafe override bool ProcessVoiceCommand(BmSDK.FString VoiceRecCommand)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.ProcessVoiceCommand", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -159,7 +159,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: OnScreenLoaded
     /// </summary>
-    public unsafe void OnScreenLoaded(BmSDK.GFxUI.GFxObject screenRef)
+    public unsafe virtual void OnScreenLoaded(BmSDK.GFxUI.GFxObject screenRef)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.OnScreenLoaded", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -171,7 +171,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: OnClose
     /// </summary>
-    public unsafe void OnClose()
+    public unsafe override void OnClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.OnClose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -182,7 +182,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: XI_onOverlayAnimationComplete
     /// </summary>
-    public unsafe void XI_onOverlayAnimationComplete()
+    public unsafe virtual void XI_onOverlayAnimationComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.XI_onOverlayAnimationComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -193,7 +193,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: onTransistionCompleteCallback
     /// </summary>
-    public unsafe void onTransistionCompleteCallback(bool bIsActive)
+    public unsafe virtual void onTransistionCompleteCallback(bool bIsActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.onTransistionCompleteCallback", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -205,7 +205,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: HandlePromptInput
     /// </summary>
-    public unsafe void HandlePromptInput(int btnIdx)
+    public unsafe virtual void HandlePromptInput(int btnIdx)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.HandlePromptInput", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -217,7 +217,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: HandleMouseWheel
     /// </summary>
-    public unsafe void HandleMouseWheel(int btnIdx, bool directionUp)
+    public unsafe virtual void HandleMouseWheel(int btnIdx, bool directionUp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.HandleMouseWheel", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -230,7 +230,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: HandleMouseRollOut
     /// </summary>
-    public unsafe void HandleMouseRollOut(int btnIdx)
+    public unsafe virtual void HandleMouseRollOut(int btnIdx)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.HandleMouseRollOut", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -242,7 +242,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: HandleMouseRollOver
     /// </summary>
-    public unsafe void HandleMouseRollOver(int btnIdx)
+    public unsafe virtual void HandleMouseRollOver(int btnIdx)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.HandleMouseRollOver", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -254,7 +254,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: HandleMouseInput
     /// </summary>
-    public unsafe void HandleMouseInput(int btnIdx)
+    public unsafe virtual void HandleMouseInput(int btnIdx)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.HandleMouseInput", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -266,7 +266,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: OnImageLoadComplete
     /// </summary>
-    public unsafe void OnImageLoadComplete(BmSDK.GFxUI.GFxObject pRef)
+    public unsafe virtual void OnImageLoadComplete(BmSDK.GFxUI.GFxObject pRef)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.OnImageLoadComplete", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -278,7 +278,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: KeyUpInput
     /// </summary>
-    public unsafe void KeyUpInput(int Key)
+    public unsafe virtual void KeyUpInput(int Key)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.KeyUpInput", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -290,7 +290,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: HandleInput
     /// </summary>
-    public unsafe void HandleInput(int Key, bool bIsRepeat)
+    public unsafe virtual void HandleInput(int Key, bool bIsRepeat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.HandleInput", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -303,7 +303,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: TransitionOut
     /// </summary>
-    public unsafe void TransitionOut()
+    public unsafe virtual void TransitionOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.TransitionOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -314,7 +314,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: TransitionIn
     /// </summary>
-    public unsafe void TransitionIn()
+    public unsafe virtual void TransitionIn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.TransitionIn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -325,7 +325,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: Terminate
     /// </summary>
-    public unsafe void Terminate()
+    public unsafe override void Terminate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.Terminate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -336,7 +336,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: LoadNext
     /// </summary>
-    public unsafe void LoadNext(BmSDK.BmGame.MWBIDOverlayManager.E_WBID_Screen_Type nextOverlay)
+    public unsafe virtual void LoadNext(BmSDK.BmGame.MWBIDOverlayManager.E_WBID_Screen_Type nextOverlay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.LoadNext", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -348,7 +348,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe void Update()
+    public unsafe virtual void Update()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.Update", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -359,7 +359,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.Init", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -371,7 +371,7 @@ public partial class MGFxMovieUI_WBIDMain : BmSDK.BmGame.MGFxMovieUI_WBIDMainBas
     /// <summary>
     /// Function: WidgetInitialized
     /// </summary>
-    public unsafe bool WidgetInitialized(BmSDK.FName WidgetName, BmSDK.FName WidgetPath, BmSDK.GFxUI.GFxObject Widget)
+    public unsafe override bool WidgetInitialized(BmSDK.FName WidgetName, BmSDK.FName WidgetPath, BmSDK.GFxUI.GFxObject Widget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxMovieUI_WBIDMain.WidgetInitialized", true);
         byte* paramsPtr = stackalloc byte[28];

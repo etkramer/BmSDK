@@ -36,7 +36,7 @@ public partial class RSpecialMoveConfigConfigurable : BmSDK.BmGame.RSpecialMoveC
     /// <summary>
     /// Function: GetEndControllerState
     /// </summary>
-    public unsafe BmSDK.FName GetEndControllerState()
+    public unsafe override BmSDK.FName GetEndControllerState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveConfigConfigurable.GetEndControllerState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -47,7 +47,7 @@ public partial class RSpecialMoveConfigConfigurable : BmSDK.BmGame.RSpecialMoveC
     /// <summary>
     /// Function: IsCurrentSpecialMove
     /// </summary>
-    public unsafe bool IsCurrentSpecialMove(BmSDK.BmGame.RPawnPlayer Player)
+    public unsafe override bool IsCurrentSpecialMove(BmSDK.BmGame.RPawnPlayer Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveConfigConfigurable.IsCurrentSpecialMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -59,7 +59,7 @@ public partial class RSpecialMoveConfigConfigurable : BmSDK.BmGame.RSpecialMoveC
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt()
+    public unsafe override BmSDK.FString GetPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveConfigConfigurable.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -70,7 +70,7 @@ public partial class RSpecialMoveConfigConfigurable : BmSDK.BmGame.RSpecialMoveC
     /// <summary>
     /// Function: GetPredictedEndLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetPredictedEndLocation(BmSDK.BmGame.RPlayerController Controller, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override System.Numerics.Vector3 GetPredictedEndLocation(BmSDK.BmGame.RPlayerController Controller, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveConfigConfigurable.GetPredictedEndLocation", true);
         byte* paramsPtr = stackalloc byte[152];
@@ -83,7 +83,7 @@ public partial class RSpecialMoveConfigConfigurable : BmSDK.BmGame.RSpecialMoveC
     /// <summary>
     /// Function: GetSpecialMoveIdealStartLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetSpecialMoveIdealStartLoc(BmSDK.BmGame.RPlayerController Controller, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override System.Numerics.Vector3 GetSpecialMoveIdealStartLoc(BmSDK.BmGame.RPlayerController Controller, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveConfigConfigurable.GetSpecialMoveIdealStartLoc", true);
         byte* paramsPtr = stackalloc byte[152];
@@ -96,7 +96,7 @@ public partial class RSpecialMoveConfigConfigurable : BmSDK.BmGame.RSpecialMoveC
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.RPlayerController Controller, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation, bool ForceReplicateToClient = default)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.RPlayerController Controller, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation, bool ForceReplicateToClient = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveConfigConfigurable.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[144];

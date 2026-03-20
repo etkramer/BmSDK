@@ -71,7 +71,7 @@ public partial class RBMAIAction_PlaceMineVent : BmSDK.BmGame.RBMAIAction_MoveAn
     /// <summary>
     /// Function: PlaceMine
     /// </summary>
-    public unsafe void PlaceMine()
+    public unsafe virtual void PlaceMine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PlaceMineVent.PlaceMine", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_PlaceMineVent : BmSDK.BmGame.RBMAIAction_MoveAn
     /// <summary>
     /// Function: MineInHand
     /// </summary>
-    public unsafe void MineInHand()
+    public unsafe virtual void MineInHand()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PlaceMineVent.MineInHand", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RBMAIAction_PlaceMineVent : BmSDK.BmGame.RBMAIAction_MoveAn
     /// <summary>
     /// Function: StartInAnim
     /// </summary>
-    public unsafe void StartInAnim()
+    public unsafe override void StartInAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PlaceMineVent.StartInAnim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -104,7 +104,7 @@ public partial class RBMAIAction_PlaceMineVent : BmSDK.BmGame.RBMAIAction_MoveAn
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PlaceMineVent.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RBMAIAction_PlaceMineVent : BmSDK.BmGame.RBMAIAction_MoveAn
     /// <summary>
     /// Function: SetupMinePoint
     /// </summary>
-    public unsafe void SetupMinePoint(BmSDK.BmGame.RThugMineablePointVent NewMinePoint)
+    public unsafe virtual void SetupMinePoint(BmSDK.BmGame.RThugMineablePointVent NewMinePoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PlaceMineVent.SetupMinePoint", true);
         byte* paramsPtr = stackalloc byte[8];

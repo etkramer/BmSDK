@@ -71,7 +71,7 @@ public partial class RCombatMove_CatwomanGroupTrip : BmSDK.BmGame.RCombatMove_Pl
     /// <summary>
     /// Function: TripStart
     /// </summary>
-    public unsafe void TripStart()
+    public unsafe virtual void TripStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CatwomanGroupTrip.TripStart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_CatwomanGroupTrip : BmSDK.BmGame.RCombatMove_Pl
     /// <summary>
     /// Function: TripEnemy
     /// </summary>
-    public unsafe void TripEnemy(BmSDK.BmGame.RPawnVillain Victim, System.Numerics.Vector3 Impulse)
+    public unsafe virtual void TripEnemy(BmSDK.BmGame.RPawnVillain Victim, System.Numerics.Vector3 Impulse)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CatwomanGroupTrip.TripEnemy", true);
         byte* paramsPtr = stackalloc byte[284];
@@ -95,7 +95,7 @@ public partial class RCombatMove_CatwomanGroupTrip : BmSDK.BmGame.RCombatMove_Pl
     /// <summary>
     /// Function: GetRadiusForAngle
     /// </summary>
-    public unsafe float GetRadiusForAngle(float TestAngle)
+    public unsafe virtual float GetRadiusForAngle(float TestAngle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CatwomanGroupTrip.GetRadiusForAngle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -107,7 +107,7 @@ public partial class RCombatMove_CatwomanGroupTrip : BmSDK.BmGame.RCombatMove_Pl
     /// <summary>
     /// Function: IsValidTarget
     /// </summary>
-    public unsafe bool IsValidTarget(BmSDK.BmGame.RPawnCombat Enemy)
+    public unsafe virtual bool IsValidTarget(BmSDK.BmGame.RPawnCombat Enemy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CatwomanGroupTrip.IsValidTarget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -119,7 +119,7 @@ public partial class RCombatMove_CatwomanGroupTrip : BmSDK.BmGame.RCombatMove_Pl
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CatwomanGroupTrip.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class RCombatMove_CatwomanGroupTrip : BmSDK.BmGame.RCombatMove_Pl
     /// <summary>
     /// Function: MoveOverridenForPawn
     /// </summary>
-    public unsafe void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
+    public unsafe override void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CatwomanGroupTrip.MoveOverridenForPawn", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -143,7 +143,7 @@ public partial class RCombatMove_CatwomanGroupTrip : BmSDK.BmGame.RCombatMove_Pl
     /// <summary>
     /// Function: CanBeTargettedByPlayer
     /// </summary>
-    public unsafe bool CanBeTargettedByPlayer(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType, BmSDK.BmGame.RPawnPlayerCombat NewPlayer)
+    public unsafe override bool CanBeTargettedByPlayer(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType, BmSDK.BmGame.RPawnPlayerCombat NewPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CatwomanGroupTrip.CanBeTargettedByPlayer", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -157,7 +157,7 @@ public partial class RCombatMove_CatwomanGroupTrip : BmSDK.BmGame.RCombatMove_Pl
     /// <summary>
     /// Function: CanReceiveAttackFromPawn
     /// </summary>
-    public unsafe bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
+    public unsafe override bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CatwomanGroupTrip.CanReceiveAttackFromPawn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -170,7 +170,7 @@ public partial class RCombatMove_CatwomanGroupTrip : BmSDK.BmGame.RCombatMove_Pl
     /// <summary>
     /// Function: AllowNextStrike
     /// </summary>
-    public unsafe void AllowNextStrike()
+    public unsafe override void AllowNextStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CatwomanGroupTrip.AllowNextStrike", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -181,7 +181,7 @@ public partial class RCombatMove_CatwomanGroupTrip : BmSDK.BmGame.RCombatMove_Pl
     /// <summary>
     /// Function: InitialiseSimulated
     /// </summary>
-    public unsafe void InitialiseSimulated()
+    public unsafe override void InitialiseSimulated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CatwomanGroupTrip.InitialiseSimulated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -192,7 +192,7 @@ public partial class RCombatMove_CatwomanGroupTrip : BmSDK.BmGame.RCombatMove_Pl
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CatwomanGroupTrip.Initialise", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -216,7 +216,7 @@ public partial class RCombatMove_CatwomanGroupTrip : BmSDK.BmGame.RCombatMove_Pl
     /// <summary>
     /// Function: UpdateTrip
     /// </summary>
-    public unsafe void UpdateTrip(float DeltaTime)
+    public unsafe virtual void UpdateTrip(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CatwomanGroupTrip.UpdateTrip", true);
         byte* paramsPtr = stackalloc byte[4];

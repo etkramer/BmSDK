@@ -36,7 +36,7 @@ public partial class SeqAct_WaitForLevelsVisible : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_WaitForLevelsVisible.Activated", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -47,7 +47,7 @@ public partial class SeqAct_WaitForLevelsVisible : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: CheckLevelsVisible
     /// </summary>
-    public unsafe bool CheckLevelsVisible()
+    public unsafe virtual bool CheckLevelsVisible()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_WaitForLevelsVisible.CheckLevelsVisible", true);
         byte* paramsPtr = stackalloc byte[4];

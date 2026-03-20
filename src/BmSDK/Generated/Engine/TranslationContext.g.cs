@@ -36,7 +36,7 @@ public partial class TranslationContext : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterTranslatorTag
     /// </summary>
-    public unsafe bool RegisterTranslatorTag(BmSDK.Engine.TranslatorTag InTagHandler)
+    public unsafe virtual bool RegisterTranslatorTag(BmSDK.Engine.TranslatorTag InTagHandler)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TranslationContext.RegisterTranslatorTag", true);
         byte* paramsPtr = stackalloc byte[12];

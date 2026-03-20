@@ -36,7 +36,7 @@ public partial class UIManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FindLocalPlayerIndex
     /// </summary>
-    public unsafe int FindLocalPlayerIndex(BmSDK.Engine.Player P)
+    public unsafe virtual int FindLocalPlayerIndex(BmSDK.Engine.Player P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIManager.FindLocalPlayerIndex", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -48,7 +48,7 @@ public partial class UIManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyPlayerRemoved
     /// </summary>
-    public unsafe void NotifyPlayerRemoved(int PlayerIndex, BmSDK.Engine.LocalPlayer RemovedPlayer)
+    public unsafe virtual void NotifyPlayerRemoved(int PlayerIndex, BmSDK.Engine.LocalPlayer RemovedPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIManager.NotifyPlayerRemoved", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -61,7 +61,7 @@ public partial class UIManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyPlayerAdded
     /// </summary>
-    public unsafe void NotifyPlayerAdded(int PlayerIndex, BmSDK.Engine.LocalPlayer AddedPlayer)
+    public unsafe virtual void NotifyPlayerAdded(int PlayerIndex, BmSDK.Engine.LocalPlayer AddedPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIManager.NotifyPlayerAdded", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -74,7 +74,7 @@ public partial class UIManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PauseGame
     /// </summary>
-    public unsafe void PauseGame(bool bDesiredPauseState, int PlayerIndex = default)
+    public unsafe virtual void PauseGame(bool bDesiredPauseState, int PlayerIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIManager.PauseGame", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -87,7 +87,7 @@ public partial class UIManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CanUnpauseInternalUI
     /// </summary>
-    public unsafe bool CanUnpauseInternalUI()
+    public unsafe virtual bool CanUnpauseInternalUI()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIManager.CanUnpauseInternalUI", true);
         byte* paramsPtr = stackalloc byte[4];

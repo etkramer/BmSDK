@@ -66,7 +66,7 @@ public partial class RGangFleePressPointBase : BmSDK.BmGame.RDummyTarget, BmSDK.
     /// <summary>
     /// Function: HasAtleastOneFreePressSlot
     /// </summary>
-    public unsafe bool HasAtleastOneFreePressSlot(BmSDK.BmGame.RBMPawnAI TestPawn)
+    public unsafe virtual bool HasAtleastOneFreePressSlot(BmSDK.BmGame.RBMPawnAI TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangFleePressPointBase.HasAtleastOneFreePressSlot", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -78,7 +78,7 @@ public partial class RGangFleePressPointBase : BmSDK.BmGame.RDummyTarget, BmSDK.
     /// <summary>
     /// Function: FreePressSlot
     /// </summary>
-    public unsafe void FreePressSlot(BmSDK.BmGame.RPawnVillain TestPawn)
+    public unsafe virtual void FreePressSlot(BmSDK.BmGame.RPawnVillain TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangFleePressPointBase.FreePressSlot", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -90,7 +90,7 @@ public partial class RGangFleePressPointBase : BmSDK.BmGame.RDummyTarget, BmSDK.
     /// <summary>
     /// Function: GetPressSlot
     /// </summary>
-    public unsafe bool GetPressSlot(BmSDK.BmGame.RPawnVillain TestPawn, out System.Numerics.Vector3 PressPoint)
+    public unsafe virtual bool GetPressSlot(BmSDK.BmGame.RPawnVillain TestPawn, out System.Numerics.Vector3 PressPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangFleePressPointBase.GetPressSlot", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -103,7 +103,7 @@ public partial class RGangFleePressPointBase : BmSDK.BmGame.RDummyTarget, BmSDK.
     /// <summary>
     /// Function: GetBehaviourClass
     /// </summary>
-    public unsafe BmSDK.Class GetBehaviourClass()
+    public unsafe virtual BmSDK.Class GetBehaviourClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangFleePressPointBase.GetBehaviourClass", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -114,7 +114,7 @@ public partial class RGangFleePressPointBase : BmSDK.BmGame.RDummyTarget, BmSDK.
     /// <summary>
     /// Function: IsValidForPawn
     /// </summary>
-    public unsafe bool IsValidForPawn(BmSDK.BmGame.RBMPawnAI TestPawn, BmSDK.Engine.Actor ThreatActor)
+    public unsafe virtual bool IsValidForPawn(BmSDK.BmGame.RBMPawnAI TestPawn, BmSDK.Engine.Actor ThreatActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangFleePressPointBase.IsValidForPawn", true);
         byte* paramsPtr = stackalloc byte[20];

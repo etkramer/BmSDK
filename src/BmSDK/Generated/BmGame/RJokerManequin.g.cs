@@ -71,7 +71,7 @@ public partial class RJokerManequin : BmSDK.BmGame.RDestructibleProp, BmSDK.IGam
     /// <summary>
     /// Function: TakeRadiusDamage
     /// </summary>
-    public unsafe void TakeRadiusDamage(BmSDK.Engine.Controller InstigatedBy, float BaseDamage, float DamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, bool bFullDamage, BmSDK.Engine.Actor DamageCauser, float DamageFalloffExponent = default)
+    public unsafe override void TakeRadiusDamage(BmSDK.Engine.Controller InstigatedBy, float BaseDamage, float DamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, bool bFullDamage, BmSDK.Engine.Actor DamageCauser, float DamageFalloffExponent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerManequin.TakeRadiusDamage", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -91,7 +91,7 @@ public partial class RJokerManequin : BmSDK.BmGame.RDestructibleProp, BmSDK.IGam
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerManequin.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -109,7 +109,7 @@ public partial class RJokerManequin : BmSDK.BmGame.RDestructibleProp, BmSDK.IGam
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerManequin.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -121,7 +121,7 @@ public partial class RJokerManequin : BmSDK.BmGame.RDestructibleProp, BmSDK.IGam
     /// <summary>
     /// Function: FullyDestroy
     /// </summary>
-    public unsafe void FullyDestroy()
+    public unsafe virtual void FullyDestroy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerManequin.FullyDestroy", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -132,7 +132,7 @@ public partial class RJokerManequin : BmSDK.BmGame.RDestructibleProp, BmSDK.IGam
     /// <summary>
     /// Function: QueueDamage
     /// </summary>
-    public unsafe void QueueDamage()
+    public unsafe virtual void QueueDamage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerManequin.QueueDamage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -143,7 +143,7 @@ public partial class RJokerManequin : BmSDK.BmGame.RDestructibleProp, BmSDK.IGam
     /// <summary>
     /// Function: RebuildManequin
     /// </summary>
-    public unsafe void RebuildManequin()
+    public unsafe virtual void RebuildManequin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerManequin.RebuildManequin", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -154,7 +154,7 @@ public partial class RJokerManequin : BmSDK.BmGame.RDestructibleProp, BmSDK.IGam
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerManequin.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

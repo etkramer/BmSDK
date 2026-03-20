@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanBeginCombat : BmSDK.BmGame.RCombatMove, B
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBeginCombat.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_BatmanBeginCombat : BmSDK.BmGame.RCombatMove, B
     /// <summary>
     /// Function: CanPerformNextComboMove
     /// </summary>
-    public unsafe bool CanPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
+    public unsafe override bool CanPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBeginCombat.CanPerformNextComboMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -95,7 +95,7 @@ public partial class RCombatMove_BatmanBeginCombat : BmSDK.BmGame.RCombatMove, B
     /// <summary>
     /// Function: FindClosestAttackingEnemy
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat FindClosestAttackingEnemy()
+    public unsafe virtual BmSDK.BmGame.RPawnCombat FindClosestAttackingEnemy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBeginCombat.FindClosestAttackingEnemy", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -106,7 +106,7 @@ public partial class RCombatMove_BatmanBeginCombat : BmSDK.BmGame.RCombatMove, B
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBeginCombat.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RCombatMove_BatmanBeginCombat : BmSDK.BmGame.RCombatMove, B
     /// <summary>
     /// Function: ReadyToAttack
     /// </summary>
-    public unsafe void ReadyToAttack()
+    public unsafe virtual void ReadyToAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanBeginCombat.ReadyToAttack", true);
         byte* paramsPtr = stackalloc byte[0];

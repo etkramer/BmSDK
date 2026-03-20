@@ -36,7 +36,7 @@ public partial class MRHBehaviour_StickyConcussionGrenadeHitReaction : BmSDK.BmG
     /// <summary>
     /// Function: ExitStickyConcussionGrenadeHitReaction
     /// </summary>
-    public unsafe void ExitStickyConcussionGrenadeHitReaction()
+    public unsafe virtual void ExitStickyConcussionGrenadeHitReaction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MRHBehaviour_StickyConcussionGrenadeHitReaction.ExitStickyConcussionGrenadeHitReaction", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class MRHBehaviour_StickyConcussionGrenadeHitReaction : BmSDK.BmG
     /// <summary>
     /// Function: ResetStunDuration
     /// </summary>
-    public unsafe void ResetStunDuration()
+    public unsafe virtual void ResetStunDuration()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MRHBehaviour_StickyConcussionGrenadeHitReaction.ResetStunDuration", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class MRHBehaviour_StickyConcussionGrenadeHitReaction : BmSDK.BmG
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmGame.RPawnCombat.FDamageInfo NewDmgInfo, bool bNewInterruptedHitReaction = default)
+    public unsafe override void Initialise(BmSDK.BmGame.RPawnCombat.FDamageInfo NewDmgInfo, bool bNewInterruptedHitReaction = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MRHBehaviour_StickyConcussionGrenadeHitReaction.Initialise", true);
         byte* paramsPtr = stackalloc byte[252];
@@ -71,7 +71,7 @@ public partial class MRHBehaviour_StickyConcussionGrenadeHitReaction : BmSDK.BmG
     /// <summary>
     /// Function: AwareOfPlayer
     /// </summary>
-    public unsafe bool AwareOfPlayer(BmSDK.Engine.Actor Player, BmSDK.Class dmgType = default)
+    public unsafe override bool AwareOfPlayer(BmSDK.Engine.Actor Player, BmSDK.Class dmgType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MRHBehaviour_StickyConcussionGrenadeHitReaction.AwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[20];

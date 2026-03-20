@@ -36,7 +36,7 @@ public partial class RFreezeBlastEffectComponent : BmSDK.BmGame.RPawnEffectCompo
     /// <summary>
     /// Function: CheckAllBodyPartStatus
     /// </summary>
-    public unsafe void CheckAllBodyPartStatus()
+    public unsafe virtual void CheckAllBodyPartStatus()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeBlastEffectComponent.CheckAllBodyPartStatus", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class RFreezeBlastEffectComponent : BmSDK.BmGame.RPawnEffectCompo
     /// <summary>
     /// Function: UpdateTorsoEffectPosition
     /// </summary>
-    public unsafe void UpdateTorsoEffectPosition()
+    public unsafe virtual void UpdateTorsoEffectPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeBlastEffectComponent.UpdateTorsoEffectPosition", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -65,7 +65,7 @@ public partial class RFreezeBlastEffectComponent : BmSDK.BmGame.RPawnEffectCompo
     /// <summary>
     /// Function: UpdateRightLegEffectPosition
     /// </summary>
-    public unsafe void UpdateRightLegEffectPosition()
+    public unsafe virtual void UpdateRightLegEffectPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeBlastEffectComponent.UpdateRightLegEffectPosition", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -76,7 +76,7 @@ public partial class RFreezeBlastEffectComponent : BmSDK.BmGame.RPawnEffectCompo
     /// <summary>
     /// Function: UpdateLeftLegEffectPosition
     /// </summary>
-    public unsafe void UpdateLeftLegEffectPosition()
+    public unsafe virtual void UpdateLeftLegEffectPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeBlastEffectComponent.UpdateLeftLegEffectPosition", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -87,7 +87,7 @@ public partial class RFreezeBlastEffectComponent : BmSDK.BmGame.RPawnEffectCompo
     /// <summary>
     /// Function: StopBodyPart
     /// </summary>
-    public unsafe void StopBodyPart(BmSDK.BmGame.RParticleEffectComponent BodyPart, bool bPlayBreakEffect, float Delay, bool bPlayIceExplodeEffect = default, float fDrawScale = default)
+    public unsafe virtual void StopBodyPart(BmSDK.BmGame.RParticleEffectComponent BodyPart, bool bPlayBreakEffect, float Delay, bool bPlayIceExplodeEffect = default, float fDrawScale = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeBlastEffectComponent.StopBodyPart", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -103,7 +103,7 @@ public partial class RFreezeBlastEffectComponent : BmSDK.BmGame.RPawnEffectCompo
     /// <summary>
     /// Function: StopTorso
     /// </summary>
-    public unsafe void StopTorso(bool bPlayBreakEffect = default, float Delay = default, bool bPlayIceExplodeEffect = default)
+    public unsafe override void StopTorso(bool bPlayBreakEffect = default, float Delay = default, bool bPlayIceExplodeEffect = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeBlastEffectComponent.StopTorso", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -117,7 +117,7 @@ public partial class RFreezeBlastEffectComponent : BmSDK.BmGame.RPawnEffectCompo
     /// <summary>
     /// Function: StopRightLeg
     /// </summary>
-    public unsafe void StopRightLeg(bool bPlayBreakEffect = default, float Delay = default, bool bPlayIceExplodeEffect = default)
+    public unsafe override void StopRightLeg(bool bPlayBreakEffect = default, float Delay = default, bool bPlayIceExplodeEffect = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeBlastEffectComponent.StopRightLeg", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -131,7 +131,7 @@ public partial class RFreezeBlastEffectComponent : BmSDK.BmGame.RPawnEffectCompo
     /// <summary>
     /// Function: StopLeftLeg
     /// </summary>
-    public unsafe void StopLeftLeg(bool bPlayBreakEffect = default, float Delay = default, bool bPlayIceExplodeEffect = default)
+    public unsafe override void StopLeftLeg(bool bPlayBreakEffect = default, float Delay = default, bool bPlayIceExplodeEffect = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeBlastEffectComponent.StopLeftLeg", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -145,7 +145,7 @@ public partial class RFreezeBlastEffectComponent : BmSDK.BmGame.RPawnEffectCompo
     /// <summary>
     /// Function: Stop
     /// </summary>
-    public unsafe void Stop(bool bPlayBreakEffect = default, float Delay = default)
+    public unsafe override void Stop(bool bPlayBreakEffect = default, float Delay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeBlastEffectComponent.Stop", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -158,7 +158,7 @@ public partial class RFreezeBlastEffectComponent : BmSDK.BmGame.RPawnEffectCompo
     /// <summary>
     /// Function: Start
     /// </summary>
-    public unsafe void Start(float fDrawScale = default)
+    public unsafe override void Start(float fDrawScale = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeBlastEffectComponent.Start", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -170,7 +170,7 @@ public partial class RFreezeBlastEffectComponent : BmSDK.BmGame.RPawnEffectCompo
     /// <summary>
     /// Function: GetFreezeTime
     /// </summary>
-    public unsafe float GetFreezeTime()
+    public unsafe override float GetFreezeTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeBlastEffectComponent.GetFreezeTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -181,7 +181,7 @@ public partial class RFreezeBlastEffectComponent : BmSDK.BmGame.RPawnEffectCompo
     /// <summary>
     /// Function: GetFloorFreezeTime
     /// </summary>
-    public unsafe float GetFloorFreezeTime()
+    public unsafe override float GetFloorFreezeTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeBlastEffectComponent.GetFloorFreezeTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -192,7 +192,7 @@ public partial class RFreezeBlastEffectComponent : BmSDK.BmGame.RPawnEffectCompo
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeBlastEffectComponent.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -204,7 +204,7 @@ public partial class RFreezeBlastEffectComponent : BmSDK.BmGame.RPawnEffectCompo
     /// <summary>
     /// Function: NativeTick
     /// </summary>
-    public unsafe void NativeTick(float DeltaTime)
+    public unsafe override void NativeTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeBlastEffectComponent.NativeTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -223,7 +223,7 @@ public partial class RFreezeBlastEffectComponent : BmSDK.BmGame.RPawnEffectCompo
     /// <summary>
     /// Function: Deactivate
     /// </summary>
-    public unsafe void Deactivate(bool bIsEarlyInterrupt)
+    public unsafe override void Deactivate(bool bIsEarlyInterrupt)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeBlastEffectComponent.Deactivate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -235,7 +235,7 @@ public partial class RFreezeBlastEffectComponent : BmSDK.BmGame.RPawnEffectCompo
     /// <summary>
     /// Function: Initialize
     /// </summary>
-    public unsafe void Initialize(BmSDK.BmGame.RPawnVillain Owner)
+    public unsafe override void Initialize(BmSDK.BmGame.RPawnVillain Owner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeBlastEffectComponent.Initialize", true);
         byte* paramsPtr = stackalloc byte[8];

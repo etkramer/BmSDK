@@ -71,7 +71,7 @@ public partial class AkWhooshVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkWhooshVolume.UnTouch", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class AkWhooshVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkWhooshVolume.Touch", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -98,7 +98,7 @@ public partial class AkWhooshVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: HandleTouchInOut
     /// </summary>
-    public unsafe void HandleTouchInOut(BmSDK.Engine.Actor Other, bool otherIsTouching)
+    public unsafe virtual void HandleTouchInOut(BmSDK.Engine.Actor Other, bool otherIsTouching)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkWhooshVolume.HandleTouchInOut", true);
         byte* paramsPtr = stackalloc byte[12];

@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_BotUseFilmDoor : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: GetAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetAnimSet()
+    public unsafe override BmSDK.Engine.AnimSet GetAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_BotUseFilmDoor.GetAnimSet", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_BotUseFilmDoor : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_BotUseFilmDoor.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[132];

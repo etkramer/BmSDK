@@ -31,7 +31,7 @@ public partial class ParticleEmitter : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMaxLifespan
     /// </summary>
-    public unsafe float GetMaxLifespan(float InComponentDelay)
+    public unsafe virtual float GetMaxLifespan(float InComponentDelay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleEmitter.GetMaxLifespan", true);
         byte* paramsPtr = stackalloc byte[8];

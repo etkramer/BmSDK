@@ -31,7 +31,7 @@ public partial class ParticleModuleFieldSamplerBase : BmSDK.Engine.ParticleModul
     /// <summary>
     /// Function: GetApexFieldSamplerInstance
     /// </summary>
-    public unsafe BmSDK.Engine.ApexFieldSamplerComponent GetApexFieldSamplerInstance(System.Numerics.Vector3 Location)
+    public unsafe virtual BmSDK.Engine.ApexFieldSamplerComponent GetApexFieldSamplerInstance(System.Numerics.Vector3 Location)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleModuleFieldSamplerBase.GetApexFieldSamplerInstance", true);
         byte* paramsPtr = stackalloc byte[28];

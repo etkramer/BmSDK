@@ -47,7 +47,7 @@ public partial class RSeqAct_SlowMo : BmSDK.Engine.SequenceAction, BmSDK.IGameOb
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SlowMo.Activated", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -58,7 +58,7 @@ public partial class RSeqAct_SlowMo : BmSDK.Engine.SequenceAction, BmSDK.IGameOb
     /// <summary>
     /// Function: TimerAfterCancelTransition
     /// </summary>
-    public unsafe void TimerAfterCancelTransition()
+    public unsafe virtual void TimerAfterCancelTransition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SlowMo.TimerAfterCancelTransition", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RSeqAct_SlowMo : BmSDK.Engine.SequenceAction, BmSDK.IGameOb
     /// <summary>
     /// Function: TimerAfterDuration
     /// </summary>
-    public unsafe void TimerAfterDuration()
+    public unsafe virtual void TimerAfterDuration()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SlowMo.TimerAfterDuration", true);
         byte* paramsPtr = stackalloc byte[0];

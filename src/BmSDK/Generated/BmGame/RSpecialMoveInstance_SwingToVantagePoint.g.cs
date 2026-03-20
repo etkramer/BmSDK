@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: CanCancelSwing
     /// </summary>
-    public unsafe bool CanCancelSwing()
+    public unsafe virtual bool CanCancelSwing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.CanCancelSwing", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -89,7 +89,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: NextSwing
     /// </summary>
-    public unsafe void NextSwing()
+    public unsafe virtual void NextSwing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.NextSwing", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -100,7 +100,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: GetNextHidePoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RHidePoint GetNextHidePoint()
+    public unsafe virtual BmSDK.BmGame.RHidePoint GetNextHidePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.GetNextHidePoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -111,7 +111,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: GetTargetHidePoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RHidePoint GetTargetHidePoint()
+    public unsafe virtual BmSDK.BmGame.RHidePoint GetTargetHidePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.GetTargetHidePoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -122,7 +122,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: CanUpdateGrapple
     /// </summary>
-    public unsafe bool CanUpdateGrapple()
+    public unsafe virtual bool CanUpdateGrapple()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.CanUpdateGrapple", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -133,7 +133,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: SetNextHidePoint
     /// </summary>
-    public unsafe void SetNextHidePoint(BmSDK.BmGame.RHidePoint NextPoint, System.Numerics.Vector3 NextPos)
+    public unsafe virtual void SetNextHidePoint(BmSDK.BmGame.RHidePoint NextPoint, System.Numerics.Vector3 NextPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.SetNextHidePoint", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -146,7 +146,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: ShouldCorrectForClientError
     /// </summary>
-    public unsafe bool ShouldCorrectForClientError()
+    public unsafe override bool ShouldCorrectForClientError()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.ShouldCorrectForClientError", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -157,7 +157,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: TriggerSwingCamera
     /// </summary>
-    public unsafe void TriggerSwingCamera()
+    public unsafe virtual void TriggerSwingCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.TriggerSwingCamera", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -168,7 +168,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: ReleaseSwingRope
     /// </summary>
-    public unsafe void ReleaseSwingRope()
+    public unsafe virtual void ReleaseSwingRope()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.ReleaseSwingRope", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -179,7 +179,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: SwingFireGrapple
     /// </summary>
-    public unsafe void SwingFireGrapple()
+    public unsafe virtual void SwingFireGrapple()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.SwingFireGrapple", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -190,7 +190,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[140];
@@ -201,7 +201,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -213,7 +213,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: ApplyLandingCapeState
     /// </summary>
-    public unsafe void ApplyLandingCapeState()
+    public unsafe virtual void ApplyLandingCapeState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.ApplyLandingCapeState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -224,7 +224,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: GetLandDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLandDirection(BmSDK.FName AnimName)
+    public unsafe virtual System.Numerics.Vector3 GetLandDirection(BmSDK.FName AnimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.GetLandDirection", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -236,7 +236,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: DrawTrajectory
     /// </summary>
-    public unsafe void DrawTrajectory()
+    public unsafe virtual void DrawTrajectory()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.DrawTrajectory", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -247,7 +247,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: GetSwingEndLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetSwingEndLocation(System.Numerics.Vector3 Direction)
+    public unsafe virtual System.Numerics.Vector3 GetSwingEndLocation(System.Numerics.Vector3 Direction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.GetSwingEndLocation", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -259,7 +259,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: SetGrappleSwingState
     /// </summary>
-    public unsafe void SetGrappleSwingState()
+    public unsafe virtual void SetGrappleSwingState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.SetGrappleSwingState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -270,7 +270,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[460];
@@ -282,7 +282,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: UpdateTrajectory
     /// </summary>
-    public unsafe float UpdateTrajectory(float DeltaTime, out System.Numerics.Vector3 Position, out BmSDK.Rotator PlayerRotation)
+    public unsafe virtual float UpdateTrajectory(float DeltaTime, out System.Numerics.Vector3 Position, out BmSDK.Rotator PlayerRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.UpdateTrajectory", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -303,7 +303,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: SetupTrajectory
     /// </summary>
-    public unsafe void SetupTrajectory(System.Numerics.Vector3 StartLocation, System.Numerics.Vector3 EndLocation, float DefaultDistance, float DefaultRadius, float AnimationDuration, float DurationPower, bool SwingFromPointAboveTarget)
+    public unsafe virtual void SetupTrajectory(System.Numerics.Vector3 StartLocation, System.Numerics.Vector3 EndLocation, float DefaultDistance, float DefaultRadius, float AnimationDuration, float DurationPower, bool SwingFromPointAboveTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.SetupTrajectory", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -328,7 +328,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: CalculateFireToPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 CalculateFireToPoint(System.Numerics.Vector3 StartLocation, System.Numerics.Vector3 EndLocation, float DefaultDistance, float DefaultRadius)
+    public unsafe virtual System.Numerics.Vector3 CalculateFireToPoint(System.Numerics.Vector3 StartLocation, System.Numerics.Vector3 EndLocation, float DefaultDistance, float DefaultRadius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToVantagePoint.CalculateFireToPoint", true);
         byte* paramsPtr = stackalloc byte[44];

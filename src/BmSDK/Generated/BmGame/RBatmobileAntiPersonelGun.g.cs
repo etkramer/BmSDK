@@ -71,7 +71,7 @@ public partial class RBatmobileAntiPersonelGun : BmSDK.BmGame.RVehicleWeapon, Bm
     /// <summary>
     /// Function: DrawTargetsHUD
     /// </summary>
-    public unsafe void DrawTargetsHUD(BmSDK.Engine.HUD H)
+    public unsafe virtual void DrawTargetsHUD(BmSDK.Engine.HUD H)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileAntiPersonelGun.DrawTargetsHUD", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -83,7 +83,7 @@ public partial class RBatmobileAntiPersonelGun : BmSDK.BmGame.RVehicleWeapon, Bm
     /// <summary>
     /// Function: CheckAutoTarget
     /// </summary>
-    public unsafe bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
+    public unsafe override bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileAntiPersonelGun.CheckAutoTarget", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -99,7 +99,7 @@ public partial class RBatmobileAntiPersonelGun : BmSDK.BmGame.RVehicleWeapon, Bm
     /// <summary>
     /// Function: IsHeavyWeaponValid
     /// </summary>
-    public unsafe bool IsHeavyWeaponValid()
+    public unsafe override bool IsHeavyWeaponValid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileAntiPersonelGun.IsHeavyWeaponValid", true);
         byte* paramsPtr = stackalloc byte[4];

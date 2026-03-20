@@ -71,7 +71,7 @@ public partial class RCombatMove_VillainShoved : BmSDK.BmGame.RCombatMove, BmSDK
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainShoved.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_VillainShoved : BmSDK.BmGame.RCombatMove, BmSDK
     /// <summary>
     /// Function: PlayShovedAnim
     /// </summary>
-    public unsafe void PlayShovedAnim()
+    public unsafe virtual void PlayShovedAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainShoved.PlayShovedAnim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RCombatMove_VillainShoved : BmSDK.BmGame.RCombatMove, BmSDK
     /// <summary>
     /// Function: SetShovedAnim
     /// </summary>
-    public unsafe void SetShovedAnim()
+    public unsafe virtual void SetShovedAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainShoved.SetShovedAnim", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -104,7 +104,7 @@ public partial class RCombatMove_VillainShoved : BmSDK.BmGame.RCombatMove, BmSDK
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainShoved.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

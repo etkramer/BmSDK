@@ -71,7 +71,7 @@ public partial class RAEC_HideFromBatmobile_Solo : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: GetHideAnimOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetHideAnimOffset(BmSDK.BmGame.RPredHideFromBatmobilePoint NewPoint, BmSDK.Class HideType, out float MeetingPointTravelDist)
+    public unsafe virtual System.Numerics.Vector3 GetHideAnimOffset(BmSDK.BmGame.RPredHideFromBatmobilePoint NewPoint, BmSDK.Class HideType, out float MeetingPointTravelDist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_HideFromBatmobile_Solo.GetHideAnimOffset", true);
         byte* paramsPtr = stackalloc byte[112];
@@ -85,7 +85,7 @@ public partial class RAEC_HideFromBatmobile_Solo : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// Function: SetHidePoint
     /// </summary>
-    public unsafe void SetHidePoint(BmSDK.BmGame.RPredHideFromBatmobilePoint NewPoint)
+    public unsafe virtual void SetHidePoint(BmSDK.BmGame.RPredHideFromBatmobilePoint NewPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_HideFromBatmobile_Solo.SetHidePoint", true);
         byte* paramsPtr = stackalloc byte[48];

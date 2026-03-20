@@ -36,7 +36,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: IsInOvercharge
     /// </summary>
-    public unsafe bool IsInOvercharge()
+    public unsafe virtual bool IsInOvercharge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.IsInOvercharge", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -47,7 +47,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: AmIInATunnel
     /// </summary>
-    public unsafe bool AmIInATunnel()
+    public unsafe virtual bool AmIInATunnel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.AmIInATunnel", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -58,7 +58,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: TurnOnTunnelRestrictions
     /// </summary>
-    public unsafe void TurnOnTunnelRestrictions()
+    public unsafe virtual void TurnOnTunnelRestrictions()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.TurnOnTunnelRestrictions", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: WeakPointDestroyed
     /// </summary>
-    public unsafe void WeakPointDestroyed(int WP)
+    public unsafe virtual void WeakPointDestroyed(int WP)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.WeakPointDestroyed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -81,7 +81,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: GetPostEngagePhase
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleBehaviour_HeavyTankSearch.ETankSearchPhase GetPostEngagePhase()
+    public unsafe override BmSDK.BmGame.RVehicleBehaviour_HeavyTankSearch.ETankSearchPhase GetPostEngagePhase()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.GetPostEngagePhase", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -92,7 +92,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: HeatLevelUpdated
     /// </summary>
-    public unsafe void HeatLevelUpdated(float HeatLevel)
+    public unsafe virtual void HeatLevelUpdated(float HeatLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.HeatLevelUpdated", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: PoweredUp
     /// </summary>
-    public unsafe void PoweredUp()
+    public unsafe virtual void PoweredUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.PoweredUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: PoweredDown
     /// </summary>
-    public unsafe void PoweredDown()
+    public unsafe virtual void PoweredDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.PoweredDown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: InitHealthBar
     /// </summary>
-    public unsafe void InitHealthBar()
+    public unsafe virtual void InitHealthBar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.InitHealthBar", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -137,7 +137,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -159,7 +159,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: GotoPhase
     /// </summary>
-    public unsafe void GotoPhase(BmSDK.BmGame.RVehicleBehaviour_HeavyTankSearch.ETankSearchPhase NewPhase)
+    public unsafe override void GotoPhase(BmSDK.BmGame.RVehicleBehaviour_HeavyTankSearch.ETankSearchPhase NewPhase)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.GotoPhase", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -171,7 +171,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: CanLoseTargetWhenEngaging
     /// </summary>
-    public unsafe bool CanLoseTargetWhenEngaging()
+    public unsafe override bool CanLoseTargetWhenEngaging()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.CanLoseTargetWhenEngaging", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -182,7 +182,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: GetEngageTargetThrottleScale
     /// </summary>
-    public unsafe float GetEngageTargetThrottleScale()
+    public unsafe override float GetEngageTargetThrottleScale()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.GetEngageTargetThrottleScale", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -193,7 +193,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: GetSearchThrottleScale
     /// </summary>
-    public unsafe float GetSearchThrottleScale()
+    public unsafe override float GetSearchThrottleScale()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.GetSearchThrottleScale", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -204,7 +204,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: GetInitialSearchLink
     /// </summary>
-    public unsafe int GetInitialSearchLink(BmSDK.BmGame.RRoadNetwork Roads, int StartLink, System.Numerics.Vector3 Direction, out float LinkT, out System.Numerics.Vector3 EndLoc)
+    public unsafe override int GetInitialSearchLink(BmSDK.BmGame.RRoadNetwork Roads, int StartLink, System.Numerics.Vector3 Direction, out float LinkT, out System.Numerics.Vector3 EndLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.GetInitialSearchLink", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -220,7 +220,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: CalculateSearchTarget
     /// </summary>
-    public unsafe void CalculateSearchTarget()
+    public unsafe virtual void CalculateSearchTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.CalculateSearchTarget", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -231,7 +231,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: PickNewSearchTarget
     /// </summary>
-    public unsafe void PickNewSearchTarget()
+    public unsafe virtual void PickNewSearchTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.PickNewSearchTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -242,7 +242,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: GetSearchRadius
     /// </summary>
-    public unsafe float GetSearchRadius()
+    public unsafe override float GetSearchRadius()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.GetSearchRadius", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -253,7 +253,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: GetSearchCentre
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetSearchCentre()
+    public unsafe override System.Numerics.Vector3 GetSearchCentre()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.GetSearchCentre", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -264,7 +264,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -276,7 +276,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: TickEngageTarget
     /// </summary>
-    public unsafe void TickEngageTarget(float DeltaTime)
+    public unsafe override void TickEngageTarget(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.TickEngageTarget", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -288,7 +288,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: OnHostVehicleDied
     /// </summary>
-    public unsafe void OnHostVehicleDied(BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe override void OnHostVehicleDied(BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.OnHostVehicleDied", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -301,7 +301,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: NotifyTakeDamage
     /// </summary>
-    public unsafe void NotifyTakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void NotifyTakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.NotifyTakeDamage", true);
         byte* paramsPtr = stackalloc byte[108];
@@ -319,7 +319,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: InitOneShotTimer
     /// </summary>
-    public unsafe void InitOneShotTimer()
+    public unsafe virtual void InitOneShotTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.InitOneShotTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -330,7 +330,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: ExitBehaviour
     /// </summary>
-    public unsafe void ExitBehaviour(BmSDK.BmGame.RVehicleBehaviour NextBehaviour)
+    public unsafe override void ExitBehaviour(BmSDK.BmGame.RVehicleBehaviour NextBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.ExitBehaviour", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -342,7 +342,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: EnterBehaviour
     /// </summary>
-    public unsafe void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
+    public unsafe override void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.EnterBehaviour", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -354,7 +354,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: StartAttack
     /// </summary>
-    public unsafe bool StartAttack(BmSDK.Engine.Actor Target, float WarningTime, System.Numerics.Vector3 AttackLoc = default)
+    public unsafe override bool StartAttack(BmSDK.Engine.Actor Target, float WarningTime, System.Numerics.Vector3 AttackLoc = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.StartAttack", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -368,7 +368,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: GetScanColour
     /// </summary>
-    public unsafe void GetScanColour(out int R, out int G, out int B)
+    public unsafe override void GetScanColour(out int R, out int G, out int B)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.GetScanColour", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -382,7 +382,7 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// Function: SuperHighPriority
     /// </summary>
-    public unsafe bool SuperHighPriority()
+    public unsafe override bool SuperHighPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CommandTankSearch.SuperHighPriority", true);
         byte* paramsPtr = stackalloc byte[4];

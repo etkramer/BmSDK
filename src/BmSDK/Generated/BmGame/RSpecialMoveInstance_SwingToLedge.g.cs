@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_SwingToLedge : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: GetLandDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLandDirection(BmSDK.FName LandAnimName)
+    public unsafe override System.Numerics.Vector3 GetLandDirection(BmSDK.FName LandAnimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToLedge.GetLandDirection", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -83,7 +83,7 @@ public partial class RSpecialMoveInstance_SwingToLedge : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToLedge.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RSpecialMoveInstance_SwingToLedge : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: GetSwingEndLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetSwingEndLocation(System.Numerics.Vector3 Direction)
+    public unsafe override System.Numerics.Vector3 GetSwingEndLocation(System.Numerics.Vector3 Direction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToLedge.GetSwingEndLocation", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -106,7 +106,7 @@ public partial class RSpecialMoveInstance_SwingToLedge : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToLedge.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[132];

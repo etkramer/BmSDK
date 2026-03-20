@@ -71,7 +71,7 @@ public partial class RNavMeshObstacleForLockinVol : BmSDK.Engine.NavMeshObstacle
     /// <summary>
     /// Function: SetupEncompassCheck
     /// </summary>
-    public unsafe void SetupEncompassCheck()
+    public unsafe virtual void SetupEncompassCheck()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshObstacleForLockinVol.SetupEncompassCheck", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RNavMeshObstacleForLockinVol : BmSDK.Engine.NavMeshObstacle
     /// <summary>
     /// Function: StaggerPawn
     /// </summary>
-    public unsafe void StaggerPawn(BmSDK.BmGame.RPawnVillain PawnToDamage)
+    public unsafe virtual void StaggerPawn(BmSDK.BmGame.RPawnVillain PawnToDamage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshObstacleForLockinVol.StaggerPawn", true);
         byte* paramsPtr = stackalloc byte[280];
@@ -94,7 +94,7 @@ public partial class RNavMeshObstacleForLockinVol : BmSDK.Engine.NavMeshObstacle
     /// <summary>
     /// Function: StaggerNearbyThugs
     /// </summary>
-    public unsafe void StaggerNearbyThugs()
+    public unsafe virtual void StaggerNearbyThugs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshObstacleForLockinVol.StaggerNearbyThugs", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -105,7 +105,7 @@ public partial class RNavMeshObstacleForLockinVol : BmSDK.Engine.NavMeshObstacle
     /// <summary>
     /// Function: SetEnabled
     /// </summary>
-    public unsafe void SetEnabled(bool bInEnabled)
+    public unsafe override void SetEnabled(bool bInEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshObstacleForLockinVol.SetEnabled", true);
         byte* paramsPtr = stackalloc byte[4];

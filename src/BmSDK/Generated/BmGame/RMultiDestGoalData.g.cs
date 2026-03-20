@@ -36,7 +36,7 @@ public partial class RMultiDestGoalData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DisplayGoalData
     /// </summary>
-    public unsafe void DisplayGoalData()
+    public unsafe virtual void DisplayGoalData()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiDestGoalData.DisplayGoalData", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RMultiDestGoalData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AllNotFound
     /// </summary>
-    public unsafe bool AllNotFound()
+    public unsafe virtual bool AllNotFound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiDestGoalData.AllNotFound", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -58,7 +58,7 @@ public partial class RMultiDestGoalData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetShortestPathFromIndex
     /// </summary>
-    public unsafe bool GetShortestPathFromIndex(int StartIndex, out float bestDist, out int BestPath)
+    public unsafe virtual bool GetShortestPathFromIndex(int StartIndex, out float bestDist, out int BestPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiDestGoalData.GetShortestPathFromIndex", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -72,7 +72,7 @@ public partial class RMultiDestGoalData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetShortestPath
     /// </summary>
-    public unsafe bool GetShortestPath(out float bestDist, out int BestPath)
+    public unsafe virtual bool GetShortestPath(out float bestDist, out int BestPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiDestGoalData.GetShortestPath", true);
         byte* paramsPtr = stackalloc byte[12];

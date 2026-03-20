@@ -71,7 +71,7 @@ public partial class RAEC_DestroyedSentry : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DestroyedSentry.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_DestroyedSentry : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: HandleSpotted
     /// </summary>
-    public unsafe bool HandleSpotted(BmSDK.BmGame.RBMAIController Spotter)
+    public unsafe virtual bool HandleSpotted(BmSDK.BmGame.RBMAIController Spotter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DestroyedSentry.HandleSpotted", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -94,7 +94,7 @@ public partial class RAEC_DestroyedSentry : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: SetDestroyedSentry
     /// </summary>
-    public unsafe void SetDestroyedSentry(BmSDK.BmGame.RSentryGunBase NewDestroyedSentry)
+    public unsafe virtual void SetDestroyedSentry(BmSDK.BmGame.RSentryGunBase NewDestroyedSentry)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DestroyedSentry.SetDestroyedSentry", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RAEC_DestroyedSentry : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: GetBarkPriority
     /// </summary>
-    public unsafe int GetBarkPriority()
+    public unsafe override int GetBarkPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DestroyedSentry.GetBarkPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -117,7 +117,7 @@ public partial class RAEC_DestroyedSentry : BmSDK.BmGame.RAlertEventCoordinatorB
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DestroyedSentry.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];

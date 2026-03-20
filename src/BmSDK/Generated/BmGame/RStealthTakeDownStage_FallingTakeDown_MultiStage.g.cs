@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_FallingTakeDown_MultiStage : BmSDK.Bm
     /// <summary>
     /// Function: GetPlayerAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetPlayerAnimset(BmSDK.BmGame.RPawnPlayer Attacker)
+    public unsafe override BmSDK.Engine.AnimSet GetPlayerAnimset(BmSDK.BmGame.RPawnPlayer Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_FallingTakeDown_MultiStage.GetPlayerAnimset", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RStealthTakeDownStage_FallingTakeDown_MultiStage : BmSDK.Bm
     /// <summary>
     /// Function: ChooseVictimAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet ChooseVictimAnimSet(BmSDK.BmGame.RPawnPlayer Attacker)
+    public unsafe override BmSDK.Engine.AnimSet ChooseVictimAnimSet(BmSDK.BmGame.RPawnPlayer Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_FallingTakeDown_MultiStage.ChooseVictimAnimSet", true);
         byte* paramsPtr = stackalloc byte[16];

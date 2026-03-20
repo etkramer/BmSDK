@@ -36,7 +36,7 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     /// <summary>
     /// Function: ClearEnvironmentFeatures
     /// </summary>
-    public unsafe void ClearEnvironmentFeatures()
+    public unsafe virtual void ClearEnvironmentFeatures()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REnvironmentCheckTicker.ClearEnvironmentFeatures", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     /// <summary>
     /// Function: FrontBarrierIsEdge
     /// </summary>
-    public unsafe bool FrontBarrierIsEdge()
+    public unsafe virtual bool FrontBarrierIsEdge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REnvironmentCheckTicker.FrontBarrierIsEdge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -65,7 +65,7 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     /// <summary>
     /// Function: UpdateShimmyEnv
     /// </summary>
-    public unsafe void UpdateShimmyEnv(float CollisionHeight, float CollisionRadius, float DeltaTime, bool bForClimbingDown = default)
+    public unsafe virtual void UpdateShimmyEnv(float CollisionHeight, float CollisionRadius, float DeltaTime, bool bForClimbingDown = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REnvironmentCheckTicker.UpdateShimmyEnv", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -87,7 +87,7 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     /// <summary>
     /// Function: CheckSurroundingEnvironment
     /// </summary>
-    public unsafe void CheckSurroundingEnvironment(float CollisionHeight, float CollisionRadius, float DeltaTime, BmSDK.Engine.PrimitiveComponent HintPrimitive = default)
+    public unsafe virtual void CheckSurroundingEnvironment(float CollisionHeight, float CollisionRadius, float DeltaTime, BmSDK.Engine.PrimitiveComponent HintPrimitive = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REnvironmentCheckTicker.CheckSurroundingEnvironment", true);
         byte* paramsPtr = stackalloc byte[20];

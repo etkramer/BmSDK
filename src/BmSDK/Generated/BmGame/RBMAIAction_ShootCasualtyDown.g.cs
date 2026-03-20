@@ -71,7 +71,7 @@ public partial class RBMAIAction_ShootCasualtyDown : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// Function: SpotPlayers
     /// </summary>
-    public unsafe void SpotPlayers()
+    public unsafe virtual void SpotPlayers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ShootCasualtyDown.SpotPlayers", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_ShootCasualtyDown : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ShootCasualtyDown.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_ShootCasualtyDown : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// Function: RespondToRopeCut
     /// </summary>
-    public unsafe void RespondToRopeCut()
+    public unsafe virtual void RespondToRopeCut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ShootCasualtyDown.RespondToRopeCut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_ShootCasualtyDown : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// Function: NotifyRopeCut
     /// </summary>
-    public unsafe void NotifyRopeCut()
+    public unsafe virtual void NotifyRopeCut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ShootCasualtyDown.NotifyRopeCut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RBMAIAction_ShootCasualtyDown : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ShootCasualtyDown.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RBMAIAction_ShootCasualtyDown : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ShootCasualtyDown.OnActivate", true);
         byte* paramsPtr = stackalloc byte[16];

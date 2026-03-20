@@ -71,7 +71,7 @@ public partial class SplineLoftActor : BmSDK.Engine.SplineActor, BmSDK.IGameObje
     /// <summary>
     /// Function: UpdateSplineParams
     /// </summary>
-    public unsafe void UpdateSplineParams()
+    public unsafe virtual void UpdateSplineParams()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineLoftActor.UpdateSplineParams", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class SplineLoftActor : BmSDK.Engine.SplineActor, BmSDK.IGameObje
     /// <summary>
     /// Function: ClearLoftMesh
     /// </summary>
-    public unsafe void ClearLoftMesh()
+    public unsafe virtual void ClearLoftMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SplineLoftActor.ClearLoftMesh", true);
         byte* paramsPtr = stackalloc byte[0];

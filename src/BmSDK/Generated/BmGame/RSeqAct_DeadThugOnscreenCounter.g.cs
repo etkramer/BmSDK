@@ -36,7 +36,7 @@ public partial class RSeqAct_DeadThugOnscreenCounter : BmSDK.Engine.SeqAct_Laten
     /// <summary>
     /// Function: Deactivated
     /// </summary>
-    public unsafe void Deactivated()
+    public unsafe override void Deactivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_DeadThugOnscreenCounter.Deactivated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RSeqAct_DeadThugOnscreenCounter : BmSDK.Engine.SeqAct_Laten
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_DeadThugOnscreenCounter.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_DeadThugOnscreenCounter : BmSDK.Engine.SeqAct_Laten
     /// <summary>
     /// Function: NotifyThugTakenOut
     /// </summary>
-    public unsafe void NotifyThugTakenOut(BmSDK.BmGame.RBMPawnAI PawnTakenOut)
+    public unsafe virtual void NotifyThugTakenOut(BmSDK.BmGame.RBMPawnAI PawnTakenOut)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_DeadThugOnscreenCounter.NotifyThugTakenOut", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -70,7 +70,7 @@ public partial class RSeqAct_DeadThugOnscreenCounter : BmSDK.Engine.SeqAct_Laten
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_DeadThugOnscreenCounter.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RSeqAct_DeadThugOnscreenCounter : BmSDK.Engine.SeqAct_Laten
     /// <summary>
     /// Function: BlockLevelName
     /// </summary>
-    public unsafe bool BlockLevelName()
+    public unsafe virtual bool BlockLevelName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_DeadThugOnscreenCounter.BlockLevelName", true);
         byte* paramsPtr = stackalloc byte[4];

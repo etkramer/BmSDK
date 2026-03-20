@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_GlideKick : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: TriggerWindowThugInitialReaction
     /// </summary>
-    public unsafe void TriggerWindowThugInitialReaction()
+    public unsafe virtual void TriggerWindowThugInitialReaction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideKick.TriggerWindowThugInitialReaction", true);
         byte* paramsPtr = stackalloc byte[260];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_GlideKick : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: CanDoCombat
     /// </summary>
-    public unsafe bool CanDoCombat(bool CheckForEvade = default)
+    public unsafe override bool CanDoCombat(bool CheckForEvade = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideKick.CanDoCombat", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RSpecialMoveInstance_GlideKick : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideKick.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[140];
@@ -106,7 +106,7 @@ public partial class RSpecialMoveInstance_GlideKick : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideKick.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -118,7 +118,7 @@ public partial class RSpecialMoveInstance_GlideKick : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: IsInteruptable
     /// </summary>
-    public unsafe bool IsInteruptable()
+    public unsafe override bool IsInteruptable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideKick.IsInteruptable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -129,7 +129,7 @@ public partial class RSpecialMoveInstance_GlideKick : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: NotifyTouch
     /// </summary>
-    public unsafe void NotifyTouch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void NotifyTouch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideKick.NotifyTouch", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -144,7 +144,7 @@ public partial class RSpecialMoveInstance_GlideKick : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: GlideKickWindowRumble
     /// </summary>
-    public unsafe void GlideKickWindowRumble()
+    public unsafe virtual void GlideKickWindowRumble()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideKick.GlideKickWindowRumble", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -155,7 +155,7 @@ public partial class RSpecialMoveInstance_GlideKick : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: NotifyBump
     /// </summary>
-    public unsafe void NotifyBump(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitNormal)
+    public unsafe override void NotifyBump(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideKick.NotifyBump", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -168,7 +168,7 @@ public partial class RSpecialMoveInstance_GlideKick : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: GlideKickDone
     /// </summary>
-    public unsafe void GlideKickDone()
+    public unsafe virtual void GlideKickDone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideKick.GlideKickDone", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -179,7 +179,7 @@ public partial class RSpecialMoveInstance_GlideKick : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: PlaySpecialCameraAnim
     /// </summary>
-    public unsafe bool PlaySpecialCameraAnim(BmSDK.BmGame.RPlayerController InController, BmSDK.FName AnimName, bool bPlaying, bool bCamMirrored, float FOV = default, bool bLoop = default, float AnimStartTime = default, bool bProportionalMotion = default, float fBlendInTime = default, BmSDK.Engine.SkeletalMeshComponent SlavedToSkelComponent = default, BmSDK.Engine.AnimSequence SlavedToAnim = default, bool bIgnoreBlend = default, bool bBlendEvenIfInactive = default)
+    public unsafe override bool PlaySpecialCameraAnim(BmSDK.BmGame.RPlayerController InController, BmSDK.FName AnimName, bool bPlaying, bool bCamMirrored, float FOV = default, bool bLoop = default, float AnimStartTime = default, bool bProportionalMotion = default, float fBlendInTime = default, BmSDK.Engine.SkeletalMeshComponent SlavedToSkelComponent = default, BmSDK.Engine.AnimSequence SlavedToAnim = default, bool bIgnoreBlend = default, bool bBlendEvenIfInactive = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideKick.PlaySpecialCameraAnim", true);
         byte* paramsPtr = stackalloc byte[108];
@@ -203,7 +203,7 @@ public partial class RSpecialMoveInstance_GlideKick : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: TriggerGlideKick
     /// </summary>
-    public unsafe void TriggerGlideKick()
+    public unsafe virtual void TriggerGlideKick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideKick.TriggerGlideKick", true);
         byte* paramsPtr = stackalloc byte[336];

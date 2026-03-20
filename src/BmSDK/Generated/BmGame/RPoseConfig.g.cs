@@ -36,7 +36,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Function: ToString
     /// </summary>
-    public unsafe BmSDK.FString ToString()
+    public unsafe virtual BmSDK.FString ToString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPoseConfig.ToString", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -54,7 +54,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Function: AddTransitionRelaxed
     /// </summary>
-    public unsafe void AddTransitionRelaxed(BmSDK.FName MovementStanceA, BmSDK.FName MovementStanceB, BmSDK.FName FullBodyAnim, BmSDK.FName TransitionName = default)
+    public unsafe virtual void AddTransitionRelaxed(BmSDK.FName MovementStanceA, BmSDK.FName MovementStanceB, BmSDK.FName FullBodyAnim, BmSDK.FName TransitionName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPoseConfig.AddTransitionRelaxed", true);
         byte* paramsPtr = stackalloc byte[192];
@@ -69,7 +69,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Function: AddPoseRelaxed
     /// </summary>
-    public unsafe void AddPoseRelaxed(BmSDK.FName MovementStance, BmSDK.FName IdleFullBodyAnim, BmSDK.Engine.RAimingConfig AimingConfig = default)
+    public unsafe virtual void AddPoseRelaxed(BmSDK.FName MovementStance, BmSDK.FName IdleFullBodyAnim, BmSDK.Engine.RAimingConfig AimingConfig = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPoseConfig.AddPoseRelaxed", true);
         byte* paramsPtr = stackalloc byte[444];
@@ -83,7 +83,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Function: AddPose
     /// </summary>
-    public unsafe void AddPose(BmSDK.FName MovementStance, BmSDK.FName WeaponStance, BmSDK.FName IdleFullBodyAnim, BmSDK.Engine.RAimingConfig AimingConfig = default, bool AllowTurningToAim = default)
+    public unsafe virtual void AddPose(BmSDK.FName MovementStance, BmSDK.FName WeaponStance, BmSDK.FName IdleFullBodyAnim, BmSDK.Engine.RAimingConfig AimingConfig = default, bool AllowTurningToAim = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPoseConfig.AddPose", true);
         byte* paramsPtr = stackalloc byte[456];

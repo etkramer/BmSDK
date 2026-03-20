@@ -71,7 +71,7 @@ public partial class RCombatMove_NinjaDodgeStrike : BmSDK.BmGame.RCombatMove, Bm
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaDodgeStrike.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_NinjaDodgeStrike : BmSDK.BmGame.RCombatMove, Bm
     /// <summary>
     /// Function: SpawnDodgeBackMove
     /// </summary>
-    public unsafe bool SpawnDodgeBackMove()
+    public unsafe virtual bool SpawnDodgeBackMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaDodgeStrike.SpawnDodgeBackMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RCombatMove_NinjaDodgeStrike : BmSDK.BmGame.RCombatMove, Bm
     /// <summary>
     /// Function: SpawnCounterStrike
     /// </summary>
-    public unsafe bool SpawnCounterStrike()
+    public unsafe virtual bool SpawnCounterStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaDodgeStrike.SpawnCounterStrike", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RCombatMove_NinjaDodgeStrike : BmSDK.BmGame.RCombatMove, Bm
     /// <summary>
     /// Function: PawnCanDodgeStrike
     /// </summary>
-    public unsafe bool PawnCanDodgeStrike(BmSDK.BmGame.RPawnCombat TestDodger, BmSDK.BmGame.RPawnCombat TestAttacker, BmSDK.Class TestDmgType)
+    public unsafe override bool PawnCanDodgeStrike(BmSDK.BmGame.RPawnCombat TestDodger, BmSDK.BmGame.RPawnCombat TestAttacker, BmSDK.Class TestDmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaDodgeStrike.PawnCanDodgeStrike", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -118,7 +118,7 @@ public partial class RCombatMove_NinjaDodgeStrike : BmSDK.BmGame.RCombatMove, Bm
     /// <summary>
     /// Function: IsAttacking
     /// </summary>
-    public unsafe bool IsAttacking()
+    public unsafe override bool IsAttacking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaDodgeStrike.IsAttacking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -129,7 +129,7 @@ public partial class RCombatMove_NinjaDodgeStrike : BmSDK.BmGame.RCombatMove, Bm
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_NinjaDodgeStrike.Initialise", true);
         byte* paramsPtr = stackalloc byte[16];

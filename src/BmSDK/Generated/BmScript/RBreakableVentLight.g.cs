@@ -71,7 +71,7 @@ public partial class RBreakableVentLight : BmSDK.BmGame.RBreakableVentLightBase,
     /// <summary>
     /// Function: HitByGrenade
     /// </summary>
-    public unsafe void HitByGrenade()
+    public unsafe override void HitByGrenade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableVentLight.HitByGrenade", true);
         byte* paramsPtr = stackalloc byte[0];

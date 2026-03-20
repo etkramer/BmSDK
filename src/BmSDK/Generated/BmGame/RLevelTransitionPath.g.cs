@@ -71,7 +71,7 @@ public partial class RLevelTransitionPath : BmSDK.BmGame.RLevelTransition, BmSDK
     /// <summary>
     /// Function: IsPlayerPassingThrough
     /// </summary>
-    public unsafe bool IsPlayerPassingThrough(System.Numerics.Vector3 PlayerLocation)
+    public unsafe override bool IsPlayerPassingThrough(System.Numerics.Vector3 PlayerLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionPath.IsPlayerPassingThrough", true);
         byte* paramsPtr = stackalloc byte[16];

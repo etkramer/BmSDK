@@ -71,7 +71,7 @@ public partial class RRiotPointHolder : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotPointHolder.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RRiotPointHolder : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifySpawnVolume
     /// </summary>
-    public unsafe bool NotifySpawnVolume()
+    public unsafe virtual bool NotifySpawnVolume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiotPointHolder.NotifySpawnVolume", true);
         byte* paramsPtr = stackalloc byte[4];

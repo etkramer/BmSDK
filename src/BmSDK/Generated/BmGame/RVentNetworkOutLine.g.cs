@@ -71,7 +71,7 @@ public partial class RVentNetworkOutLine : BmSDK.Engine.StaticMeshActor, BmSDK.I
     /// <summary>
     /// Function: HighlightTunnelNetwork
     /// </summary>
-    public unsafe void HighlightTunnelNetwork(bool bHighlight)
+    public unsafe virtual void HighlightTunnelNetwork(bool bHighlight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVentNetworkOutLine.HighlightTunnelNetwork", true);
         byte* paramsPtr = stackalloc byte[4];

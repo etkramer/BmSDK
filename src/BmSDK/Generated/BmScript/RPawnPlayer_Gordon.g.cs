@@ -71,7 +71,7 @@ public partial class RPawnPlayer_Gordon : BmSDK.BmScript.RPawnPlayer_BruceWayne,
     /// <summary>
     /// Function: GordonGoFP
     /// </summary>
-    public unsafe void GordonGoFP()
+    public unsafe virtual void GordonGoFP()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayer_Gordon.GordonGoFP", true);
         byte* paramsPtr = stackalloc byte[4];

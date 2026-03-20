@@ -71,7 +71,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnDifficultyChanged
     /// </summary>
-    public unsafe void OnDifficultyChanged()
+    public unsafe virtual void OnDifficultyChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.OnDifficultyChanged", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnPlayerUnZoom
     /// </summary>
-    public unsafe void OnPlayerUnZoom()
+    public unsafe virtual void OnPlayerUnZoom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.OnPlayerUnZoom", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -100,7 +100,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnPlayerZoom
     /// </summary>
-    public unsafe void OnPlayerZoom()
+    public unsafe virtual void OnPlayerZoom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.OnPlayerZoom", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -111,7 +111,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldDisableDivingForPawn
     /// </summary>
-    public unsafe bool ShouldDisableDivingForPawn(BmSDK.BmGame.RBMPawnAI TestPawn)
+    public unsafe virtual bool ShouldDisableDivingForPawn(BmSDK.BmGame.RBMPawnAI TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.ShouldDisableDivingForPawn", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -123,7 +123,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateShouldLoadPredVolBarks_Gang
     /// </summary>
-    public unsafe void UpdateShouldLoadPredVolBarks_Gang(bool bNewVal)
+    public unsafe virtual void UpdateShouldLoadPredVolBarks_Gang(bool bNewVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UpdateShouldLoadPredVolBarks_Gang", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -135,7 +135,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateShouldLoadPredVolBarks_Militia
     /// </summary>
-    public unsafe void UpdateShouldLoadPredVolBarks_Militia(bool bNewVal)
+    public unsafe virtual void UpdateShouldLoadPredVolBarks_Militia(bool bNewVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UpdateShouldLoadPredVolBarks_Militia", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -147,7 +147,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateBarks_RemovePlayer
     /// </summary>
-    public unsafe void UpdateBarks_RemovePlayer(BmSDK.BmGame.RPawnPlayerCombat ExPlayer)
+    public unsafe virtual void UpdateBarks_RemovePlayer(BmSDK.BmGame.RPawnPlayerCombat ExPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UpdateBarks_RemovePlayer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -159,7 +159,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateBarks_AddPlayer
     /// </summary>
-    public unsafe void UpdateBarks_AddPlayer(BmSDK.BmGame.RPawnPlayerCombat NewPlayer)
+    public unsafe virtual void UpdateBarks_AddPlayer(BmSDK.BmGame.RPawnPlayerCombat NewPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UpdateBarks_AddPlayer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -171,7 +171,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FilterValList
     /// </summary>
-    public unsafe void FilterValList(BmSDK.TArray<BmSDK.BmGame.RBarkPillarLookup.FFlagValAndFileName> InList, BmSDK.BmGame.RBarkValDef.FlagTypeEnum TestType, out BmSDK.TArray<BmSDK.FString> OutList)
+    public unsafe virtual void FilterValList(BmSDK.TArray<BmSDK.BmGame.RBarkPillarLookup.FFlagValAndFileName> InList, BmSDK.BmGame.RBarkValDef.FlagTypeEnum TestType, out BmSDK.TArray<BmSDK.FString> OutList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.FilterValList", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -192,7 +192,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GenerateCurrentSuffixList
     /// </summary>
-    public unsafe void GenerateCurrentSuffixList(out BmSDK.TArray<BmSDK.FString> SuffixList)
+    public unsafe virtual void GenerateCurrentSuffixList(out BmSDK.TArray<BmSDK.FString> SuffixList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.GenerateCurrentSuffixList", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -211,7 +211,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RefreshBarkData
     /// </summary>
-    public unsafe void RefreshBarkData()
+    public unsafe virtual void RefreshBarkData()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.RefreshBarkData", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -222,7 +222,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnregisterBarkCharDef
     /// </summary>
-    public unsafe void UnregisterBarkCharDef(BmSDK.BmGame.RBarkCharacterDefInstance OldDef)
+    public unsafe virtual void UnregisterBarkCharDef(BmSDK.BmGame.RBarkCharacterDefInstance OldDef)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UnregisterBarkCharDef", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -234,7 +234,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ValidateChaptersOnBarks
     /// </summary>
-    public unsafe void ValidateChaptersOnBarks(BmSDK.BmGame.RBarkSet TestSet)
+    public unsafe virtual void ValidateChaptersOnBarks(BmSDK.BmGame.RBarkSet TestSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.ValidateChaptersOnBarks", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -253,7 +253,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ApplyPlayerNameHackForMultiStageEnemyType
     /// </summary>
-    public unsafe void ApplyPlayerNameHackForMultiStageEnemyType(BmSDK.BmGame.RBarkSet LoadedSetToHack)
+    public unsafe virtual void ApplyPlayerNameHackForMultiStageEnemyType(BmSDK.BmGame.RBarkSet LoadedSetToHack)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.ApplyPlayerNameHackForMultiStageEnemyType", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -265,7 +265,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AsyncLoadDone
     /// </summary>
-    public unsafe void AsyncLoadDone(BmSDK.FString ObjectFinished)
+    public unsafe override void AsyncLoadDone(BmSDK.FString ObjectFinished)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.AsyncLoadDone", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -277,7 +277,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StartBarkLoadingRequests
     /// </summary>
-    public unsafe void StartBarkLoadingRequests(BmSDK.BmGame.RBarkCharacterDefInstance NewDef)
+    public unsafe virtual void StartBarkLoadingRequests(BmSDK.BmGame.RBarkCharacterDefInstance NewDef)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.StartBarkLoadingRequests", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -289,7 +289,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterBarkCharDef
     /// </summary>
-    public unsafe BmSDK.BmGame.RBarkCharacterDefInstance RegisterBarkCharDef(BmSDK.BmGame.RBarkCharacterDef NewDef)
+    public unsafe virtual BmSDK.BmGame.RBarkCharacterDefInstance RegisterBarkCharDef(BmSDK.BmGame.RBarkCharacterDef NewDef)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.RegisterBarkCharDef", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -301,7 +301,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TrackPawnAIList
     /// </summary>
-    public unsafe void TrackPawnAIList()
+    public unsafe virtual void TrackPawnAIList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.TrackPawnAIList", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -312,7 +312,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateRebuildSpecialEdgeActorList
     /// </summary>
-    public unsafe void UpdateRebuildSpecialEdgeActorList()
+    public unsafe virtual void UpdateRebuildSpecialEdgeActorList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UpdateRebuildSpecialEdgeActorList", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -330,7 +330,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterRebuildSpecialEdgeActor
     /// </summary>
-    public unsafe void RegisterRebuildSpecialEdgeActor(BmSDK.Engine.Actor NewActor)
+    public unsafe virtual void RegisterRebuildSpecialEdgeActor(BmSDK.Engine.Actor NewActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.RegisterRebuildSpecialEdgeActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -342,7 +342,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TeleportStasisPawn
     /// </summary>
-    public unsafe void TeleportStasisPawn(BmSDK.BmGame.RBMPawnAI PawnAI)
+    public unsafe virtual void TeleportStasisPawn(BmSDK.BmGame.RBMPawnAI PawnAI)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.TeleportStasisPawn", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -354,7 +354,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemovePawnToTeleportInStasis
     /// </summary>
-    public unsafe void RemovePawnToTeleportInStasis(BmSDK.BmGame.RBMPawnAI PawnAI)
+    public unsafe virtual void RemovePawnToTeleportInStasis(BmSDK.BmGame.RBMPawnAI PawnAI)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.RemovePawnToTeleportInStasis", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -366,7 +366,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddPawnToTeleportInStasis
     /// </summary>
-    public unsafe void AddPawnToTeleportInStasis(BmSDK.BmGame.RBMPawnAI PawnAI, float TimeUntilTeleport)
+    public unsafe virtual void AddPawnToTeleportInStasis(BmSDK.BmGame.RBMPawnAI PawnAI, float TimeUntilTeleport)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.AddPawnToTeleportInStasis", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -379,7 +379,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DestroyAllPawnsThatWouldDestroyInStasis
     /// </summary>
-    public unsafe void DestroyAllPawnsThatWouldDestroyInStasis()
+    public unsafe virtual void DestroyAllPawnsThatWouldDestroyInStasis()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.DestroyAllPawnsThatWouldDestroyInStasis", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -390,7 +390,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemovePawnToDestroyInStasis
     /// </summary>
-    public unsafe void RemovePawnToDestroyInStasis(BmSDK.BmGame.RBMPawnAI PawnAI)
+    public unsafe virtual void RemovePawnToDestroyInStasis(BmSDK.BmGame.RBMPawnAI PawnAI)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.RemovePawnToDestroyInStasis", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -402,7 +402,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddPawnToDestroyInStasis
     /// </summary>
-    public unsafe void AddPawnToDestroyInStasis(BmSDK.BmGame.RBMPawnAI PawnAI, float TimeUntilDestroy)
+    public unsafe virtual void AddPawnToDestroyInStasis(BmSDK.BmGame.RBMPawnAI PawnAI, float TimeUntilDestroy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.AddPawnToDestroyInStasis", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -415,7 +415,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateJokerInCombat
     /// </summary>
-    public unsafe void UpdateJokerInCombat(float DeltaTime)
+    public unsafe virtual void UpdateJokerInCombat(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UpdateJokerInCombat", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -427,7 +427,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StartleThugsAtLocation
     /// </summary>
-    public unsafe void StartleThugsAtLocation(System.Numerics.Vector3 StartleLocation)
+    public unsafe virtual void StartleThugsAtLocation(System.Numerics.Vector3 StartleLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.StartleThugsAtLocation", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -439,7 +439,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanRocketLauncherFire
     /// </summary>
-    public unsafe bool CanRocketLauncherFire()
+    public unsafe virtual bool CanRocketLauncherFire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.CanRocketLauncherFire", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -450,7 +450,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAntiDodgeFactor
     /// </summary>
-    public unsafe float GetAntiDodgeFactor()
+    public unsafe virtual float GetAntiDodgeFactor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.GetAntiDodgeFactor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -468,7 +468,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetInstantHitIfNotRunningRange
     /// </summary>
-    public unsafe float GetInstantHitIfNotRunningRange()
+    public unsafe virtual float GetInstantHitIfNotRunningRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.GetInstantHitIfNotRunningRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -486,7 +486,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAlwaysHitRange
     /// </summary>
-    public unsafe float GetAlwaysHitRange()
+    public unsafe virtual float GetAlwaysHitRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.GetAlwaysHitRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -504,7 +504,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetInaccuracyRange
     /// </summary>
-    public unsafe float GetInaccuracyRange()
+    public unsafe virtual float GetInaccuracyRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.GetInaccuracyRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -515,7 +515,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetHitRatio
     /// </summary>
-    public unsafe float GetHitRatio(float TestDist)
+    public unsafe virtual float GetHitRatio(float TestDist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.GetHitRatio", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -527,7 +527,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDamageMultiplier
     /// </summary>
-    public unsafe float GetDamageMultiplier()
+    public unsafe virtual float GetDamageMultiplier()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.GetDamageMultiplier", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -538,7 +538,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetGrenadeDamage
     /// </summary>
-    public unsafe float GetGrenadeDamage()
+    public unsafe virtual float GetGrenadeDamage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.GetGrenadeDamage", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -549,7 +549,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSniperDamage
     /// </summary>
-    public unsafe float GetSniperDamage()
+    public unsafe virtual float GetSniperDamage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.GetSniperDamage", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -560,7 +560,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetShotgunDamage
     /// </summary>
-    public unsafe float GetShotgunDamage(BmSDK.Engine.Actor User, BmSDK.Engine.Actor Target)
+    public unsafe virtual float GetShotgunDamage(BmSDK.Engine.Actor User, BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.GetShotgunDamage", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -573,7 +573,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRifleDamage
     /// </summary>
-    public unsafe float GetRifleDamage()
+    public unsafe virtual float GetRifleDamage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.GetRifleDamage", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -584,7 +584,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDDAValue
     /// </summary>
-    public unsafe float GetDDAValue(float NormalValue, float EasyValue)
+    public unsafe virtual float GetDDAValue(float NormalValue, float EasyValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.GetDDAValue", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -597,7 +597,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DumpBehaviourHistory
     /// </summary>
-    public unsafe void DumpBehaviourHistory()
+    public unsafe virtual void DumpBehaviourHistory()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.DumpBehaviourHistory", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -608,7 +608,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RespawnAllThrowable
     /// </summary>
-    public unsafe void RespawnAllThrowable()
+    public unsafe virtual void RespawnAllThrowable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.RespawnAllThrowable", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -619,7 +619,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DestroyAllWeapons
     /// </summary>
-    public unsafe void DestroyAllWeapons()
+    public unsafe virtual void DestroyAllWeapons()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.DestroyAllWeapons", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -630,7 +630,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: KillAllButOneEnemyInRoom
     /// </summary>
-    public unsafe void KillAllButOneEnemyInRoom(BmSDK.Engine.Controller PC)
+    public unsafe virtual void KillAllButOneEnemyInRoom(BmSDK.Engine.Controller PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.KillAllButOneEnemyInRoom", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -642,7 +642,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: KillAllEnemies
     /// </summary>
-    public unsafe void KillAllEnemies(BmSDK.Engine.Controller PC)
+    public unsafe virtual void KillAllEnemies(BmSDK.Engine.Controller PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.KillAllEnemies", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -654,7 +654,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BroadcastBatmanSpottedToSnipers
     /// </summary>
-    public unsafe void BroadcastBatmanSpottedToSnipers(BmSDK.Engine.Actor PlayerActor)
+    public unsafe virtual void BroadcastBatmanSpottedToSnipers(BmSDK.Engine.Actor PlayerActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.BroadcastBatmanSpottedToSnipers", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -673,7 +673,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: QueueBroadcastBatmanSpottedToSnipers
     /// </summary>
-    public unsafe void QueueBroadcastBatmanSpottedToSnipers(BmSDK.Engine.Actor PlayerActor)
+    public unsafe virtual void QueueBroadcastBatmanSpottedToSnipers(BmSDK.Engine.Actor PlayerActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.QueueBroadcastBatmanSpottedToSnipers", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -692,7 +692,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TriggerSniperEvent
     /// </summary>
-    public unsafe void TriggerSniperEvent(System.Numerics.Vector3 NoiseLocation, float NoiseRadius)
+    public unsafe virtual void TriggerSniperEvent(System.Numerics.Vector3 NoiseLocation, float NoiseRadius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.TriggerSniperEvent", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -705,7 +705,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CreatePlayerNoise
     /// </summary>
-    public unsafe void CreatePlayerNoise(BmSDK.BmGame.RPawnPlayer NoiseMaker, float NoiseRadius)
+    public unsafe virtual void CreatePlayerNoise(BmSDK.BmGame.RPawnPlayer NoiseMaker, float NoiseRadius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.CreatePlayerNoise", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -718,7 +718,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PrioritiseControllerForWorldAvoidance
     /// </summary>
-    public unsafe bool PrioritiseControllerForWorldAvoidance(BmSDK.BmGame.RBMAIController PriorityController)
+    public unsafe virtual bool PrioritiseControllerForWorldAvoidance(BmSDK.BmGame.RBMAIController PriorityController)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.PrioritiseControllerForWorldAvoidance", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -730,7 +730,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanDoWorldAvoidanceCheck
     /// </summary>
-    public unsafe bool CanDoWorldAvoidanceCheck(BmSDK.BmGame.RBMAIController TestController)
+    public unsafe virtual bool CanDoWorldAvoidanceCheck(BmSDK.BmGame.RBMAIController TestController)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.CanDoWorldAvoidanceCheck", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -742,7 +742,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ScanModeDeactivated
     /// </summary>
-    public unsafe void ScanModeDeactivated()
+    public unsafe virtual void ScanModeDeactivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.ScanModeDeactivated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -753,7 +753,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ScanModeActivated
     /// </summary>
-    public unsafe void ScanModeActivated()
+    public unsafe virtual void ScanModeActivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.ScanModeActivated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -764,7 +764,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ForceTick
     /// </summary>
-    public unsafe void ForceTick(BmSDK.BmGame.RBMAIController ForceController)
+    public unsafe virtual void ForceTick(BmSDK.BmGame.RBMAIController ForceController)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.ForceTick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -776,7 +776,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetChatterDefForGangType
     /// </summary>
-    public unsafe BmSDK.BmGame.RBarkCharacterDef GetChatterDefForGangType(BmSDK.BmGame.RCharacterDefine.GangTypeDefineEnum TestGang)
+    public unsafe virtual BmSDK.BmGame.RBarkCharacterDef GetChatterDefForGangType(BmSDK.BmGame.RCharacterDefine.GangTypeDefineEnum TestGang)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.GetChatterDefForGangType", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -788,7 +788,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayedBark
     /// </summary>
-    public unsafe void PlayedBark(BmSDK.BmGame.RBMAIController BarkController)
+    public unsafe virtual void PlayedBark(BmSDK.BmGame.RBMAIController BarkController)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.PlayedBark", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -800,7 +800,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanPlayBark
     /// </summary>
-    public unsafe bool CanPlayBark(BmSDK.BmGame.RBMAIController BarkController)
+    public unsafe virtual bool CanPlayBark(BmSDK.BmGame.RBMAIController BarkController)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.CanPlayBark", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -812,7 +812,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPSC
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMPawnSpawnerController GetPSC(int Index)
+    public unsafe virtual BmSDK.BmGame.RBMPawnSpawnerController GetPSC(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.GetPSC", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -824,7 +824,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNumPSC
     /// </summary>
-    public unsafe int GetNumPSC()
+    public unsafe virtual int GetNumPSC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.GetNumPSC", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -835,7 +835,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemovePSC
     /// </summary>
-    public unsafe void RemovePSC(BmSDK.BmGame.RBMPawnSpawnerController _RemovePSC)
+    public unsafe virtual void RemovePSC(BmSDK.BmGame.RBMPawnSpawnerController _RemovePSC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.RemovePSC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -847,7 +847,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddPSC
     /// </summary>
-    public unsafe void AddPSC(BmSDK.BmGame.RBMPawnSpawnerController NewPSC)
+    public unsafe virtual void AddPSC(BmSDK.BmGame.RBMPawnSpawnerController NewPSC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.AddPSC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -859,7 +859,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddDamage
     /// </summary>
-    public unsafe void AddDamage(BmSDK.BmGame.RBMAIController Attacked, float DamageCaused)
+    public unsafe virtual void AddDamage(BmSDK.BmGame.RBMAIController Attacked, float DamageCaused)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.AddDamage", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -872,7 +872,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BatmanSeenEvent
     /// </summary>
-    public unsafe void BatmanSeenEvent()
+    public unsafe virtual void BatmanSeenEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.BatmanSeenEvent", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -883,7 +883,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BatmanSeenEventUpdateVal
     /// </summary>
-    public unsafe void BatmanSeenEventUpdateVal(bool Seen)
+    public unsafe virtual void BatmanSeenEventUpdateVal(bool Seen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.BatmanSeenEventUpdateVal", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -895,7 +895,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetClosestPawnDist
     /// </summary>
-    public unsafe float GetClosestPawnDist(System.Numerics.Vector3 TestLoc)
+    public unsafe virtual float GetClosestPawnDist(System.Numerics.Vector3 TestLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.GetClosestPawnDist", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -907,7 +907,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PawnsCloseTogether
     /// </summary>
-    public unsafe bool PawnsCloseTogether(BmSDK.BmGame.RPawn Pawn1, BmSDK.BmGame.RPawn Pawn2)
+    public unsafe virtual bool PawnsCloseTogether(BmSDK.BmGame.RPawn Pawn1, BmSDK.BmGame.RPawn Pawn2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.PawnsCloseTogether", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -920,7 +920,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnregisterPredatorSpecialMovePoint
     /// </summary>
-    public unsafe void UnregisterPredatorSpecialMovePoint(BmSDK.BmGame.RPredatorSpecialMovePointBase MovePoint)
+    public unsafe virtual void UnregisterPredatorSpecialMovePoint(BmSDK.BmGame.RPredatorSpecialMovePointBase MovePoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UnregisterPredatorSpecialMovePoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -932,7 +932,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterPredatorSpecialMovePoint
     /// </summary>
-    public unsafe void RegisterPredatorSpecialMovePoint(BmSDK.BmGame.RPredatorSpecialMovePointBase MovePoint)
+    public unsafe virtual void RegisterPredatorSpecialMovePoint(BmSDK.BmGame.RPredatorSpecialMovePointBase MovePoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.RegisterPredatorSpecialMovePoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -944,7 +944,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnregisterPredGunLocker
     /// </summary>
-    public unsafe void UnregisterPredGunLocker(BmSDK.BmGame.RPredatorGunLockerBase OldGunLocker)
+    public unsafe virtual void UnregisterPredGunLocker(BmSDK.BmGame.RPredatorGunLockerBase OldGunLocker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UnregisterPredGunLocker", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -956,7 +956,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterPredGunLocker
     /// </summary>
-    public unsafe void RegisterPredGunLocker(BmSDK.BmGame.RPredatorGunLockerBase NewGunLocker)
+    public unsafe virtual void RegisterPredGunLocker(BmSDK.BmGame.RPredatorGunLockerBase NewGunLocker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.RegisterPredGunLocker", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -968,7 +968,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetStateForNewRoom
     /// </summary>
-    public unsafe void SetStateForNewRoom(BmSDK.BmGame.RLevelVolume CurrentVol)
+    public unsafe virtual void SetStateForNewRoom(BmSDK.BmGame.RLevelVolume CurrentVol)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.SetStateForNewRoom", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -980,7 +980,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveController
     /// </summary>
-    public unsafe void RemoveController(BmSDK.BmGame.RBMAIController ToRemove)
+    public unsafe virtual void RemoveController(BmSDK.BmGame.RBMAIController ToRemove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.RemoveController", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -999,7 +999,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldForceTickForController
     /// </summary>
-    public unsafe bool ShouldForceTickForController(BmSDK.BmGame.RBMAIController C, int Idx = default)
+    public unsafe virtual bool ShouldForceTickForController(BmSDK.BmGame.RBMAIController C, int Idx = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.ShouldForceTickForController", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1019,7 +1019,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetForceTickIfCloseController
     /// </summary>
-    public unsafe void SetForceTickIfCloseController(BmSDK.BmGame.RBMAIController ControllerToForce, bool bNewValue)
+    public unsafe virtual void SetForceTickIfCloseController(BmSDK.BmGame.RBMAIController ControllerToForce, bool bNewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.SetForceTickIfCloseController", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1032,7 +1032,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetForceTickController
     /// </summary>
-    public unsafe void SetForceTickController(BmSDK.BmGame.RBMAIController ControllerToForce, bool bNewValue)
+    public unsafe virtual void SetForceTickController(BmSDK.BmGame.RBMAIController ControllerToForce, bool bNewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.SetForceTickController", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1045,7 +1045,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterController
     /// </summary>
-    public unsafe void RegisterController(BmSDK.BmGame.RBMAIController NewAIController, bool bForceTick)
+    public unsafe virtual void RegisterController(BmSDK.BmGame.RBMAIController NewAIController, bool bForceTick)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.RegisterController", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1065,7 +1065,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TellBehavioursOfGadgetNoise
     /// </summary>
-    public unsafe void TellBehavioursOfGadgetNoise(System.Numerics.Vector3 SafeNoiseLocation)
+    public unsafe virtual void TellBehavioursOfGadgetNoise(System.Numerics.Vector3 SafeNoiseLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.TellBehavioursOfGadgetNoise", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1077,7 +1077,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearWaveRespawnTimers
     /// </summary>
-    public unsafe void ClearWaveRespawnTimers()
+    public unsafe virtual void ClearWaveRespawnTimers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.ClearWaveRespawnTimers", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1088,7 +1088,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1099,7 +1099,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveObstacle
     /// </summary>
-    public unsafe void RemoveObstacle(BmSDK.BmGame.RNavMeshObstacle_Queue Prop)
+    public unsafe virtual void RemoveObstacle(BmSDK.BmGame.RNavMeshObstacle_Queue Prop)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.RemoveObstacle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1118,7 +1118,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddObstacle
     /// </summary>
-    public unsafe void AddObstacle(BmSDK.BmGame.RNavMeshObstacle_Queue Prop)
+    public unsafe virtual void AddObstacle(BmSDK.BmGame.RNavMeshObstacle_Queue Prop)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.AddObstacle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1137,7 +1137,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveBlockade
     /// </summary>
-    public unsafe void RemoveBlockade(BmSDK.BmGame.RCheckpointBlockadeBase Prop)
+    public unsafe virtual void RemoveBlockade(BmSDK.BmGame.RCheckpointBlockadeBase Prop)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.RemoveBlockade", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1156,7 +1156,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddBlockade
     /// </summary>
-    public unsafe void AddBlockade(BmSDK.BmGame.RCheckpointBlockadeBase Prop)
+    public unsafe virtual void AddBlockade(BmSDK.BmGame.RCheckpointBlockadeBase Prop)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.AddBlockade", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1175,7 +1175,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveDestructibleProp
     /// </summary>
-    public unsafe void RemoveDestructibleProp(BmSDK.BmGame.RDestructibleProp Prop)
+    public unsafe virtual void RemoveDestructibleProp(BmSDK.BmGame.RDestructibleProp Prop)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.RemoveDestructibleProp", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1194,7 +1194,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddDestructibleProp
     /// </summary>
-    public unsafe void AddDestructibleProp(BmSDK.BmGame.RDestructibleProp Prop)
+    public unsafe virtual void AddDestructibleProp(BmSDK.BmGame.RDestructibleProp Prop)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.AddDestructibleProp", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1213,7 +1213,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PylonLoaded
     /// </summary>
-    public unsafe void PylonLoaded(BmSDK.Engine.Pylon NewPylon)
+    public unsafe virtual void PylonLoaded(BmSDK.Engine.Pylon NewPylon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.PylonLoaded", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1232,7 +1232,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UmbraVisibilityCheck
     /// </summary>
-    public unsafe bool UmbraVisibilityCheck(System.Numerics.Vector3 TestLocation, float BoundsXY, float BoundsZ)
+    public unsafe virtual bool UmbraVisibilityCheck(System.Numerics.Vector3 TestLocation, float BoundsXY, float BoundsZ)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UmbraVisibilityCheck", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1253,7 +1253,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HasActiveChasePoint
     /// </summary>
-    public unsafe bool HasActiveChasePoint(BmSDK.BmGame.RChasePoint ToTest)
+    public unsafe virtual bool HasActiveChasePoint(BmSDK.BmGame.RChasePoint ToTest)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.HasActiveChasePoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1272,7 +1272,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveActiveChasePoint
     /// </summary>
-    public unsafe void RemoveActiveChasePoint(BmSDK.BmGame.RChasePoint ToRemove)
+    public unsafe virtual void RemoveActiveChasePoint(BmSDK.BmGame.RChasePoint ToRemove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.RemoveActiveChasePoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1291,7 +1291,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddActiveChasePoint
     /// </summary>
-    public unsafe void AddActiveChasePoint(BmSDK.BmGame.RChasePoint ToAdd)
+    public unsafe virtual void AddActiveChasePoint(BmSDK.BmGame.RChasePoint ToAdd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.AddActiveChasePoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1310,7 +1310,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: NavMeshObstacleUnregistered
     /// </summary>
-    public unsafe void NavMeshObstacleUnregistered(BmSDK.Engine.Actor A)
+    public unsafe virtual void NavMeshObstacleUnregistered(BmSDK.Engine.Actor A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.NavMeshObstacleUnregistered", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1329,7 +1329,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: NavMeshObstacleRegistered
     /// </summary>
-    public unsafe void NavMeshObstacleRegistered(BmSDK.Engine.Actor A)
+    public unsafe virtual void NavMeshObstacleRegistered(BmSDK.Engine.Actor A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.NavMeshObstacleRegistered", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1348,7 +1348,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanSpawnPawnObject
     /// </summary>
-    public unsafe bool CanSpawnPawnObject()
+    public unsafe virtual bool CanSpawnPawnObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.CanSpawnPawnObject", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1366,7 +1366,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PawnObjectSpawned
     /// </summary>
-    public unsafe void PawnObjectSpawned()
+    public unsafe virtual void PawnObjectSpawned()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.PawnObjectSpawned", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1384,7 +1384,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanUnpoolPawn
     /// </summary>
-    public unsafe bool CanUnpoolPawn(bool bSpawningPassenger = default)
+    public unsafe virtual bool CanUnpoolPawn(bool bSpawningPassenger = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.CanUnpoolPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1403,7 +1403,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanSpawnPawn
     /// </summary>
-    public unsafe bool CanSpawnPawn()
+    public unsafe virtual bool CanSpawnPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.CanSpawnPawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1421,7 +1421,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PawnUnpooled
     /// </summary>
-    public unsafe void PawnUnpooled()
+    public unsafe virtual void PawnUnpooled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.PawnUnpooled", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1439,7 +1439,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PawnSpawned
     /// </summary>
-    public unsafe void PawnSpawned()
+    public unsafe virtual void PawnSpawned()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.PawnSpawned", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1457,7 +1457,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateStasisTeleportPawns
     /// </summary>
-    public unsafe bool UpdateStasisTeleportPawns(float DeltaTime)
+    public unsafe virtual bool UpdateStasisTeleportPawns(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UpdateStasisTeleportPawns", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1476,7 +1476,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateStasisDestroyPawns
     /// </summary>
-    public unsafe bool UpdateStasisDestroyPawns(float DeltaTime)
+    public unsafe virtual bool UpdateStasisDestroyPawns(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UpdateStasisDestroyPawns", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1495,7 +1495,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdatePawnToCameraDistances
     /// </summary>
-    public unsafe void UpdatePawnToCameraDistances(float DeltaTime)
+    public unsafe virtual void UpdatePawnToCameraDistances(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UpdatePawnToCameraDistances", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1514,7 +1514,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdatePredatorGunLockers
     /// </summary>
-    public unsafe void UpdatePredatorGunLockers(float DeltaTime)
+    public unsafe virtual void UpdatePredatorGunLockers(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UpdatePredatorGunLockers", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1533,7 +1533,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateNavMeshObstacleQueue
     /// </summary>
-    public unsafe void UpdateNavMeshObstacleQueue()
+    public unsafe virtual void UpdateNavMeshObstacleQueue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UpdateNavMeshObstacleQueue", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1551,7 +1551,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ObstacleIsInQueue
     /// </summary>
-    public unsafe bool ObstacleIsInQueue(BmSDK.Engine.Interface_NavMeshPathObstacle ObstacleToRemove, out int bAddObstacle)
+    public unsafe virtual bool ObstacleIsInQueue(BmSDK.Engine.Interface_NavMeshPathObstacle ObstacleToRemove, out int bAddObstacle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.ObstacleIsInQueue", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1571,7 +1571,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveNavMeshPathObstacleFromQueue
     /// </summary>
-    public unsafe void RemoveNavMeshPathObstacleFromQueue(BmSDK.Engine.Interface_NavMeshPathObstacle ObstacleToRemove)
+    public unsafe virtual void RemoveNavMeshPathObstacleFromQueue(BmSDK.Engine.Interface_NavMeshPathObstacle ObstacleToRemove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.RemoveNavMeshPathObstacleFromQueue", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1590,7 +1590,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: QueueNavMeshPathObstacleToRemove
     /// </summary>
-    public unsafe void QueueNavMeshPathObstacleToRemove(BmSDK.Engine.Interface_NavMeshPathObstacle ObstacleToQueue)
+    public unsafe virtual void QueueNavMeshPathObstacleToRemove(BmSDK.Engine.Interface_NavMeshPathObstacle ObstacleToQueue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.QueueNavMeshPathObstacleToRemove", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1609,7 +1609,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: QueueNavMeshPathObstacleToAdd
     /// </summary>
-    public unsafe void QueueNavMeshPathObstacleToAdd(BmSDK.Engine.Interface_NavMeshPathObstacle ObstacleToQueue)
+    public unsafe virtual void QueueNavMeshPathObstacleToAdd(BmSDK.Engine.Interface_NavMeshPathObstacle ObstacleToQueue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.QueueNavMeshPathObstacleToAdd", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1628,7 +1628,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetClosestPointOnVolume
     /// </summary>
-    public unsafe bool GetClosestPointOnVolume(BmSDK.Engine.Volume TestVolume, System.Numerics.Vector3 TestPoint, out System.Numerics.Vector3 out_ClosestPoint)
+    public unsafe virtual bool GetClosestPointOnVolume(BmSDK.Engine.Volume TestVolume, System.Numerics.Vector3 TestPoint, out System.Numerics.Vector3 out_ClosestPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.GetClosestPointOnVolume", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -1649,7 +1649,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnRegisterBatmanCloseCheckBehaviour
     /// </summary>
-    public unsafe void UnRegisterBatmanCloseCheckBehaviour(BmSDK.BmGame.RBM2Behaviour_IdleConfig BehaviourToRemove)
+    public unsafe virtual void UnRegisterBatmanCloseCheckBehaviour(BmSDK.BmGame.RBM2Behaviour_IdleConfig BehaviourToRemove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UnRegisterBatmanCloseCheckBehaviour", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1668,7 +1668,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterBatmanCloseCheckBehaviour
     /// </summary>
-    public unsafe void RegisterBatmanCloseCheckBehaviour(BmSDK.BmGame.RBM2Behaviour_IdleConfig BehaviourToAdd)
+    public unsafe virtual void RegisterBatmanCloseCheckBehaviour(BmSDK.BmGame.RBM2Behaviour_IdleConfig BehaviourToAdd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.RegisterBatmanCloseCheckBehaviour", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1687,7 +1687,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateBatmanCloseCheckBehaviours
     /// </summary>
-    public unsafe void UpdateBatmanCloseCheckBehaviours(float DeltaTime)
+    public unsafe virtual void UpdateBatmanCloseCheckBehaviours(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UpdateBatmanCloseCheckBehaviours", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1706,7 +1706,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanDoIdleConfigLOSCheck
     /// </summary>
-    public unsafe bool CanDoIdleConfigLOSCheck(BmSDK.BmGame.RBMAIController TestController)
+    public unsafe virtual bool CanDoIdleConfigLOSCheck(BmSDK.BmGame.RBMAIController TestController)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.CanDoIdleConfigLOSCheck", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1725,7 +1725,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFiringCount
     /// </summary>
-    public unsafe int GetFiringCount()
+    public unsafe virtual int GetFiringCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.GetFiringCount", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1743,7 +1743,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldLockDoors
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.ECombatLockType ShouldLockDoors()
+    public unsafe virtual BmSDK.BmGame.RGameInfo.ECombatLockType ShouldLockDoors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.ShouldLockDoors", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -1761,7 +1761,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateTimeSlicers
     /// </summary>
-    public unsafe void UpdateTimeSlicers()
+    public unsafe virtual void UpdateTimeSlicers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UpdateTimeSlicers", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1779,7 +1779,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateAIState
     /// </summary>
-    public unsafe void UpdateAIState()
+    public unsafe virtual void UpdateAIState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UpdateAIState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1797,7 +1797,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateBehaviours
     /// </summary>
-    public unsafe void UpdateBehaviours()
+    public unsafe virtual void UpdateBehaviours()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UpdateBehaviours", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1815,7 +1815,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateBehaviourDeltas
     /// </summary>
-    public unsafe void UpdateBehaviourDeltas(float DeltaTime)
+    public unsafe virtual void UpdateBehaviourDeltas(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.UpdateBehaviourDeltas", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1834,7 +1834,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearNoneControllers
     /// </summary>
-    public unsafe void ClearNoneControllers()
+    public unsafe virtual void ClearNoneControllers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.ClearNoneControllers", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1852,7 +1852,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanDoNavMeshCollisionFloorCheck
     /// </summary>
-    public unsafe bool CanDoNavMeshCollisionFloorCheck(BmSDK.BmGame.RPawn TestPawn)
+    public unsafe virtual bool CanDoNavMeshCollisionFloorCheck(BmSDK.BmGame.RPawn TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.CanDoNavMeshCollisionFloorCheck", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1871,7 +1871,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanUpdateCombatCollision
     /// </summary>
-    public unsafe bool CanUpdateCombatCollision(BmSDK.BmGame.RPawn TestPawn)
+    public unsafe virtual bool CanUpdateCombatCollision(BmSDK.BmGame.RPawn TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.CanUpdateCombatCollision", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1890,7 +1890,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PawnSpawnerActivated
     /// </summary>
-    public unsafe void PawnSpawnerActivated(BmSDK.GameObject Spawner, float SpawnDelay)
+    public unsafe virtual void PawnSpawnerActivated(BmSDK.GameObject Spawner, float SpawnDelay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.PawnSpawnerActivated", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1910,7 +1910,7 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanPawnSpawnerActivate
     /// </summary>
-    public unsafe bool CanPawnSpawnerActivate(BmSDK.GameObject Spawner)
+    public unsafe virtual bool CanPawnSpawnerActivate(BmSDK.GameObject Spawner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIManager.CanPawnSpawnerActivate", true);
         byte* paramsPtr = stackalloc byte[12];

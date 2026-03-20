@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanFloorPickupThug : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanFloorPickupThug.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_BatmanFloorPickupThug : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanFloorPickupThug.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RCombatMove_BatmanFloorPickupThug : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: MoveOverridenForPawn
     /// </summary>
-    public unsafe void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
+    public unsafe override void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanFloorPickupThug.MoveOverridenForPawn", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -107,7 +107,7 @@ public partial class RCombatMove_BatmanFloorPickupThug : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: PlayTargetOut
     /// </summary>
-    public unsafe void PlayTargetOut(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId transID, float TimeLeftOver)
+    public unsafe virtual void PlayTargetOut(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId transID, float TimeLeftOver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanFloorPickupThug.PlayTargetOut", true);
         byte* paramsPtr = stackalloc byte[256];
@@ -120,7 +120,7 @@ public partial class RCombatMove_BatmanFloorPickupThug : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: GetThrowDirection
     /// </summary>
-    public unsafe int GetThrowDirection()
+    public unsafe virtual int GetThrowDirection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanFloorPickupThug.GetThrowDirection", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -131,7 +131,7 @@ public partial class RCombatMove_BatmanFloorPickupThug : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: GetHitReactionLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetHitReactionLocation()
+    public unsafe override System.Numerics.Vector3 GetHitReactionLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanFloorPickupThug.GetHitReactionLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -142,7 +142,7 @@ public partial class RCombatMove_BatmanFloorPickupThug : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: GetHitReactionDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetHitReactionDirection(BmSDK.BmGame.RPawnVillain HitPawn)
+    public unsafe override System.Numerics.Vector3 GetHitReactionDirection(BmSDK.BmGame.RPawnVillain HitPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanFloorPickupThug.GetHitReactionDirection", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -154,7 +154,7 @@ public partial class RCombatMove_BatmanFloorPickupThug : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: GetCloseRangeAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetCloseRangeAnimName()
+    public unsafe virtual BmSDK.FName GetCloseRangeAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanFloorPickupThug.GetCloseRangeAnimName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -165,7 +165,7 @@ public partial class RCombatMove_BatmanFloorPickupThug : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanFloorPickupThug.Initialise", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -176,7 +176,7 @@ public partial class RCombatMove_BatmanFloorPickupThug : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: HitFloor
     /// </summary>
-    public unsafe void HitFloor()
+    public unsafe virtual void HitFloor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanFloorPickupThug.HitFloor", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -187,7 +187,7 @@ public partial class RCombatMove_BatmanFloorPickupThug : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: ReRagdoll
     /// </summary>
-    public unsafe void ReRagdoll()
+    public unsafe virtual void ReRagdoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanFloorPickupThug.ReRagdoll", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -198,7 +198,7 @@ public partial class RCombatMove_BatmanFloorPickupThug : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: PickupWall
     /// </summary>
-    public unsafe void PickupWall()
+    public unsafe virtual void PickupWall()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanFloorPickupThug.PickupWall", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -209,7 +209,7 @@ public partial class RCombatMove_BatmanFloorPickupThug : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: PickupKO
     /// </summary>
-    public unsafe void PickupKO()
+    public unsafe virtual void PickupKO()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanFloorPickupThug.PickupKO", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -220,7 +220,7 @@ public partial class RCombatMove_BatmanFloorPickupThug : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: Pickup
     /// </summary>
-    public unsafe void Pickup()
+    public unsafe virtual void Pickup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanFloorPickupThug.Pickup", true);
         byte* paramsPtr = stackalloc byte[256];

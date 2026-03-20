@@ -36,7 +36,7 @@ public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetThoughtString
     /// </summary>
-    public unsafe BmSDK.FString GetThoughtString()
+    public unsafe virtual BmSDK.FString GetThoughtString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAttackPointSearch.GetThoughtString", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -47,7 +47,7 @@ public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Release
     /// </summary>
-    public unsafe void Release()
+    public unsafe virtual void Release()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAttackPointSearch.Release", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: StartSearch
     /// </summary>
-    public unsafe void StartSearch(System.Numerics.Vector3 NewTargetLocation, float NewAttackRadius, BmSDK.FName NewClaimName, BmSDK.BmGame.RAttackPointSearch.StanceVisType NewStanceToCheck, BmSDK.TArray<BmSDK.Engine.Pylon> NewPylonList, float NewSubDivideSizeTarget, bool bNewAutoAdjustToFloor, bool bNewAdjustHeightForHumanTargetSize)
+    public unsafe virtual void StartSearch(System.Numerics.Vector3 NewTargetLocation, float NewAttackRadius, BmSDK.FName NewClaimName, BmSDK.BmGame.RAttackPointSearch.StanceVisType NewStanceToCheck, BmSDK.TArray<BmSDK.Engine.Pylon> NewPylonList, float NewSubDivideSizeTarget, bool bNewAutoAdjustToFloor, bool bNewAdjustHeightForHumanTargetSize)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAttackPointSearch.StartSearch", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -77,7 +77,7 @@ public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowDebug
     /// </summary>
-    public unsafe void ShowDebug(bool bPermanent = default, BmSDK.FName DrawIDName = default)
+    public unsafe virtual void ShowDebug(bool bPermanent = default, BmSDK.FName DrawIDName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAttackPointSearch.ShowDebug", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -97,7 +97,7 @@ public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SearchFinished
     /// </summary>
-    public unsafe bool SearchFinished()
+    public unsafe virtual bool SearchFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAttackPointSearch.SearchFinished", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -115,7 +115,7 @@ public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsAvailable
     /// </summary>
-    public unsafe bool IsAvailable()
+    public unsafe virtual bool IsAvailable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAttackPointSearch.IsAvailable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -133,7 +133,7 @@ public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Search
     /// </summary>
-    public unsafe void Search(float DeltaTime)
+    public unsafe virtual void Search(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAttackPointSearch.Search", true);
         byte* paramsPtr = stackalloc byte[4];

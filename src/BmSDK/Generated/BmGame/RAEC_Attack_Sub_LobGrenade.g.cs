@@ -71,7 +71,7 @@ public partial class RAEC_Attack_Sub_LobGrenade : BmSDK.BmGame.RAlertEventCoordi
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_LobGrenade.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -83,7 +83,7 @@ public partial class RAEC_Attack_Sub_LobGrenade : BmSDK.BmGame.RAlertEventCoordi
     /// <summary>
     /// Function: InitThrow
     /// </summary>
-    public unsafe void InitThrow(System.Numerics.Vector3 BestThrowVel, System.Numerics.Vector3 ThrowTarget)
+    public unsafe virtual void InitThrow(System.Numerics.Vector3 BestThrowVel, System.Numerics.Vector3 ThrowTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_LobGrenade.InitThrow", true);
         byte* paramsPtr = stackalloc byte[32];

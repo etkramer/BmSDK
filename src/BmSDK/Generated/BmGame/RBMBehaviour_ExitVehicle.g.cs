@@ -36,7 +36,7 @@ public partial class RBMBehaviour_ExitVehicle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: AwareOfPlayer
     /// </summary>
-    public unsafe bool AwareOfPlayer(BmSDK.Engine.Actor Player, BmSDK.Class dmgType = default)
+    public unsafe override bool AwareOfPlayer(BmSDK.Engine.Actor Player, BmSDK.Class dmgType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.AwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -49,7 +49,7 @@ public partial class RBMBehaviour_ExitVehicle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: GetEvadeVehicleType
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.EEvadeVehicleType GetEvadeVehicleType(BmSDK.Engine.Actor V, float Speed, bool bZap)
+    public unsafe override BmSDK.BmGame.RGameInfo.EEvadeVehicleType GetEvadeVehicleType(BmSDK.Engine.Actor V, float Speed, bool bZap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.GetEvadeVehicleType", true);
         byte* paramsPtr = stackalloc byte[17];
@@ -63,7 +63,7 @@ public partial class RBMBehaviour_ExitVehicle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: TeleportToSafeLocation
     /// </summary>
-    public unsafe void TeleportToSafeLocation()
+    public unsafe virtual void TeleportToSafeLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.TeleportToSafeLocation", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -74,7 +74,7 @@ public partial class RBMBehaviour_ExitVehicle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: GiveWeapon
     /// </summary>
-    public unsafe void GiveWeapon()
+    public unsafe virtual void GiveWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.GiveWeapon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -85,7 +85,7 @@ public partial class RBMBehaviour_ExitVehicle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: ExitRagdoll
     /// </summary>
-    public unsafe void ExitRagdoll()
+    public unsafe virtual void ExitRagdoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.ExitRagdoll", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -96,7 +96,7 @@ public partial class RBMBehaviour_ExitVehicle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: PlayExitAnim
     /// </summary>
-    public unsafe void PlayExitAnim()
+    public unsafe virtual void PlayExitAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.PlayExitAnim", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -107,7 +107,7 @@ public partial class RBMBehaviour_ExitVehicle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: ChooseExitAnim
     /// </summary>
-    public unsafe void ChooseExitAnim(bool BypassNavMeshCheck = default)
+    public unsafe virtual void ChooseExitAnim(bool BypassNavMeshCheck = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.ChooseExitAnim", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -119,7 +119,7 @@ public partial class RBMBehaviour_ExitVehicle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: GetExitAnimDirectionScore
     /// </summary>
-    public unsafe float GetExitAnimDirectionScore(BmSDK.FName AnimName, BmSDK.Engine.AnimSet TestAnimSet, float Priority, System.Numerics.Vector3 AnimLocation, bool bMirrored, bool BypassNavMeshCheck, out System.Numerics.Vector3 SafeLocation)
+    public unsafe virtual float GetExitAnimDirectionScore(BmSDK.FName AnimName, BmSDK.Engine.AnimSet TestAnimSet, float Priority, System.Numerics.Vector3 AnimLocation, bool bMirrored, bool BypassNavMeshCheck, out System.Numerics.Vector3 SafeLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.GetExitAnimDirectionScore", true);
         byte* paramsPtr = stackalloc byte[136];
@@ -137,7 +137,7 @@ public partial class RBMBehaviour_ExitVehicle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: GetAnimEndLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAnimEndLocation(System.Numerics.Vector3 SocketLocation, BmSDK.FName TestAnimName, BmSDK.Engine.AnimSet TestAnimSet, bool bTestMirrored)
+    public unsafe virtual System.Numerics.Vector3 GetAnimEndLocation(System.Numerics.Vector3 SocketLocation, BmSDK.FName TestAnimName, BmSDK.Engine.AnimSet TestAnimSet, bool bTestMirrored)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.GetAnimEndLocation", true);
         byte* paramsPtr = stackalloc byte[108];
@@ -152,7 +152,7 @@ public partial class RBMBehaviour_ExitVehicle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: GetAnimRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetAnimRotation()
+    public unsafe virtual BmSDK.Rotator GetAnimRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.GetAnimRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -163,7 +163,7 @@ public partial class RBMBehaviour_ExitVehicle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: GetAnimLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAnimLocation()
+    public unsafe virtual System.Numerics.Vector3 GetAnimLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.GetAnimLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -174,7 +174,7 @@ public partial class RBMBehaviour_ExitVehicle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: GotoFinalState
     /// </summary>
-    public unsafe void GotoFinalState()
+    public unsafe virtual void GotoFinalState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.GotoFinalState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -185,7 +185,7 @@ public partial class RBMBehaviour_ExitVehicle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: BreakOffCarDoor
     /// </summary>
-    public unsafe void BreakOffCarDoor()
+    public unsafe virtual void BreakOffCarDoor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.BreakOffCarDoor", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -196,7 +196,7 @@ public partial class RBMBehaviour_ExitVehicle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: BecomeHostile
     /// </summary>
-    public unsafe void BecomeHostile()
+    public unsafe virtual void BecomeHostile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.BecomeHostile", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -207,7 +207,7 @@ public partial class RBMBehaviour_ExitVehicle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmGame.RVehicleNPC VehicleToExit, int SlotID, BmSDK.TArray<BmSDK.BmGame.RGameInfo.FExitVehicleSlotInfo> NewExitInfos, bool CalmExit, bool bEnterCombat = default, bool bRunAway = default, BmSDK.Class NewWeaponClass = default, bool bNewExitTowardsPlayer = default, bool BypassNavMeshCheck = default, bool ForcePlayDoorAnim = default)
+    public unsafe virtual void Initialise(BmSDK.BmGame.RVehicleNPC VehicleToExit, int SlotID, BmSDK.TArray<BmSDK.BmGame.RGameInfo.FExitVehicleSlotInfo> NewExitInfos, bool CalmExit, bool bEnterCombat = default, bool bRunAway = default, BmSDK.Class NewWeaponClass = default, bool bNewExitTowardsPlayer = default, bool BypassNavMeshCheck = default, bool ForcePlayDoorAnim = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.Initialise", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -228,7 +228,7 @@ public partial class RBMBehaviour_ExitVehicle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -239,7 +239,7 @@ public partial class RBMBehaviour_ExitVehicle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

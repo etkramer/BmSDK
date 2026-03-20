@@ -71,7 +71,7 @@ public partial class RPawnJokerHallucinationThug : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: ForceSlaveToRef
     /// </summary>
-    public unsafe void ForceSlaveToRef()
+    public unsafe virtual void ForceSlaveToRef()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnJokerHallucinationThug.ForceSlaveToRef", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RPawnJokerHallucinationThug : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: InterceptNewJokerCall
     /// </summary>
-    public unsafe bool InterceptNewJokerCall(BmSDK.BmGame.RPawnJokerHallucination.TypesOfHallucination AppearanceType)
+    public unsafe virtual bool InterceptNewJokerCall(BmSDK.BmGame.RPawnJokerHallucination.TypesOfHallucination AppearanceType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnJokerHallucinationThug.InterceptNewJokerCall", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RPawnJokerHallucinationThug : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: StopAimAtBatman
     /// </summary>
-    public unsafe void StopAimAtBatman()
+    public unsafe virtual void StopAimAtBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnJokerHallucinationThug.StopAimAtBatman", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RPawnJokerHallucinationThug : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: AimAtBatman
     /// </summary>
-    public unsafe void AimAtBatman()
+    public unsafe virtual void AimAtBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnJokerHallucinationThug.AimAtBatman", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RPawnJokerHallucinationThug : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: JokerHallucinationFadeNotify
     /// </summary>
-    public unsafe void JokerHallucinationFadeNotify(BmSDK.BmGame.RAnimNotify_JokerHallucination.EFadeType FadeType)
+    public unsafe virtual void JokerHallucinationFadeNotify(BmSDK.BmGame.RAnimNotify_JokerHallucination.EFadeType FadeType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnJokerHallucinationThug.JokerHallucinationFadeNotify", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -128,7 +128,7 @@ public partial class RPawnJokerHallucinationThug : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: TellControllerAboutCollisionWarning
     /// </summary>
-    public unsafe void TellControllerAboutCollisionWarning(BmSDK.Engine.Actor V, float Speed, BmSDK.BmGame.RGameInfo.EEvadeVehicleType EvadeType)
+    public unsafe override void TellControllerAboutCollisionWarning(BmSDK.Engine.Actor V, float Speed, BmSDK.BmGame.RGameInfo.EEvadeVehicleType EvadeType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnJokerHallucinationThug.TellControllerAboutCollisionWarning", true);
         byte* paramsPtr = stackalloc byte[13];
@@ -142,7 +142,7 @@ public partial class RPawnJokerHallucinationThug : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: IsFadedOut
     /// </summary>
-    public unsafe bool IsFadedOut()
+    public unsafe virtual bool IsFadedOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnJokerHallucinationThug.IsFadedOut", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -153,7 +153,7 @@ public partial class RPawnJokerHallucinationThug : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: DestroyMe
     /// </summary>
-    public unsafe void DestroyMe()
+    public unsafe virtual void DestroyMe()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnJokerHallucinationThug.DestroyMe", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -164,7 +164,7 @@ public partial class RPawnJokerHallucinationThug : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: CanBeSeenByBatmanForFadeIn
     /// </summary>
-    public unsafe bool CanBeSeenByBatmanForFadeIn()
+    public unsafe virtual bool CanBeSeenByBatmanForFadeIn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnJokerHallucinationThug.CanBeSeenByBatmanForFadeIn", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -175,7 +175,7 @@ public partial class RPawnJokerHallucinationThug : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: CanBeSeenByBatman
     /// </summary>
-    public unsafe bool CanBeSeenByBatman()
+    public unsafe virtual bool CanBeSeenByBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnJokerHallucinationThug.CanBeSeenByBatman", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -186,7 +186,7 @@ public partial class RPawnJokerHallucinationThug : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: FireDestroyEvent
     /// </summary>
-    public unsafe void FireDestroyEvent()
+    public unsafe virtual void FireDestroyEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnJokerHallucinationThug.FireDestroyEvent", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -197,7 +197,7 @@ public partial class RPawnJokerHallucinationThug : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnJokerHallucinationThug.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -209,7 +209,7 @@ public partial class RPawnJokerHallucinationThug : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: UpdateJoker
     /// </summary>
-    public unsafe void UpdateJoker(float DeltaTime)
+    public unsafe virtual void UpdateJoker(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnJokerHallucinationThug.UpdateJoker", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -240,7 +240,7 @@ public partial class RPawnJokerHallucinationThug : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: PostInitCharacter
     /// </summary>
-    public unsafe void PostInitCharacter()
+    public unsafe override void PostInitCharacter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnJokerHallucinationThug.PostInitCharacter", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -251,7 +251,7 @@ public partial class RPawnJokerHallucinationThug : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: OnDestroy
     /// </summary>
-    public unsafe void OnDestroy(BmSDK.Engine.SeqAct_Destroy Action)
+    public unsafe override void OnDestroy(BmSDK.Engine.SeqAct_Destroy Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnJokerHallucinationThug.OnDestroy", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -263,7 +263,7 @@ public partial class RPawnJokerHallucinationThug : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnJokerHallucinationThug.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];

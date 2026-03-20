@@ -71,7 +71,7 @@ public partial class RBasicProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGameObj
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBasicProjectile.Tick", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -83,7 +83,7 @@ public partial class RBasicProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGameObj
     /// <summary>
     /// Function: SpawnEffectsPreExplode
     /// </summary>
-    public unsafe void SpawnEffectsPreExplode(System.Numerics.Vector3 Position, BmSDK.BmGame.RDestructibleProp HitDestructible, BmSDK.Engine.Actor Other)
+    public unsafe override void SpawnEffectsPreExplode(System.Numerics.Vector3 Position, BmSDK.BmGame.RDestructibleProp HitDestructible, BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBasicProjectile.SpawnEffectsPreExplode", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -97,7 +97,7 @@ public partial class RBasicProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGameObj
     /// <summary>
     /// Function: HurtRadius
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.EWeaponDamageResult HurtRadius(float DamageAmount, float InDamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, BmSDK.Engine.Actor IgnoredActor = default, BmSDK.Engine.Controller InstigatedByController = default, bool bDoFullDamage = default)
+    public unsafe override BmSDK.Engine.Actor.EWeaponDamageResult HurtRadius(float DamageAmount, float InDamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, BmSDK.Engine.Actor IgnoredActor = default, BmSDK.Engine.Controller InstigatedByController = default, bool bDoFullDamage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBasicProjectile.HurtRadius", true);
         byte* paramsPtr = stackalloc byte[54];
@@ -116,7 +116,7 @@ public partial class RBasicProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGameObj
     /// <summary>
     /// Function: ProcessNewTouch
     /// </summary>
-    public unsafe void ProcessNewTouch(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, BmSDK.Engine.PrimitiveComponent HitComponent)
+    public unsafe override void ProcessNewTouch(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, BmSDK.Engine.PrimitiveComponent HitComponent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBasicProjectile.ProcessNewTouch", true);
         byte* paramsPtr = stackalloc byte[144];
@@ -131,7 +131,7 @@ public partial class RBasicProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGameObj
     /// <summary>
     /// Function: OverrideHitWall
     /// </summary>
-    public unsafe void OverrideHitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
+    public unsafe override void OverrideHitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBasicProjectile.OverrideHitWall", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -145,7 +145,7 @@ public partial class RBasicProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGameObj
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, bool bPlayExplosionSound = default)
+    public unsafe override void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, bool bPlayExplosionSound = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBasicProjectile.Explode", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -159,7 +159,7 @@ public partial class RBasicProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGameObj
     /// <summary>
     /// Function: GadgetNoiseEvent
     /// </summary>
-    public unsafe void GadgetNoiseEvent()
+    public unsafe virtual void GadgetNoiseEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBasicProjectile.GadgetNoiseEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -170,7 +170,7 @@ public partial class RBasicProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGameObj
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBasicProjectile.Destroyed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -181,7 +181,7 @@ public partial class RBasicProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGameObj
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(System.Numerics.Vector3 Direction)
+    public unsafe override void Init(System.Numerics.Vector3 Direction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBasicProjectile.Init", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -193,7 +193,7 @@ public partial class RBasicProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGameObj
     /// <summary>
     /// Function: SetTarget
     /// </summary>
-    public unsafe void SetTarget(BmSDK.Engine.Actor Target)
+    public unsafe override void SetTarget(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBasicProjectile.SetTarget", true);
         byte* paramsPtr = stackalloc byte[8];

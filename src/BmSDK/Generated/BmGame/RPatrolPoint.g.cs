@@ -71,7 +71,7 @@ public partial class RPatrolPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldPauseAtPoint
     /// </summary>
-    public unsafe bool ShouldPauseAtPoint()
+    public unsafe virtual bool ShouldPauseAtPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPatrolPoint.ShouldPauseAtPoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RPatrolPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPauseTime
     /// </summary>
-    public unsafe float GetPauseTime()
+    public unsafe virtual float GetPauseTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPatrolPoint.GetPauseTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RPatrolPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPatrolPoint.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -105,7 +105,7 @@ public partial class RPatrolPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPatrolPoint.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -117,7 +117,7 @@ public partial class RPatrolPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnPawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnVillain SpawnPawn(BmSDK.BmGame.ROverworldPopulationVolume PVolume)
+    public unsafe virtual BmSDK.BmGame.RPawnVillain SpawnPawn(BmSDK.BmGame.ROverworldPopulationVolume PVolume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPatrolPoint.SpawnPawn", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -129,7 +129,7 @@ public partial class RPatrolPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateDisplayLines
     /// </summary>
-    public unsafe void UpdateDisplayLines()
+    public unsafe virtual void UpdateDisplayLines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPatrolPoint.UpdateDisplayLines", true);
         byte* paramsPtr = stackalloc byte[0];

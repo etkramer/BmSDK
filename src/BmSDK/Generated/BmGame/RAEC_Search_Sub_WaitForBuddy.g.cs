@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_WaitForBuddy : BmSDK.BmGame.RAEC_Search_Sub
     /// <summary>
     /// Function: PrepareForJoinAnim
     /// </summary>
-    public unsafe bool PrepareForJoinAnim()
+    public unsafe virtual bool PrepareForJoinAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_WaitForBuddy.PrepareForJoinAnim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Sub_WaitForBuddy : BmSDK.BmGame.RAEC_Search_Sub
     /// <summary>
     /// Function: PreventNextLegStarting
     /// </summary>
-    public unsafe bool PreventNextLegStarting()
+    public unsafe override bool PreventNextLegStarting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_WaitForBuddy.PreventNextLegStarting", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RAEC_Search_Sub_WaitForBuddy : BmSDK.BmGame.RAEC_Search_Sub
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_WaitForBuddy.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -104,7 +104,7 @@ public partial class RAEC_Search_Sub_WaitForBuddy : BmSDK.BmGame.RAEC_Search_Sub
     /// <summary>
     /// Function: GetCurrentPathHandle
     /// </summary>
-    public unsafe BmSDK.BmGame.RNavigationHandle GetCurrentPathHandle()
+    public unsafe override BmSDK.BmGame.RNavigationHandle GetCurrentPathHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_WaitForBuddy.GetCurrentPathHandle", true);
         byte* paramsPtr = stackalloc byte[8];

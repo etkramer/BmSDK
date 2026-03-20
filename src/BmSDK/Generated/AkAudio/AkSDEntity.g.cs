@@ -31,7 +31,7 @@ public partial class AkSDEntity : BmSDK.AkAudio.AkSDNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetVariableName
     /// </summary>
-    public unsafe BmSDK.FString GetVariableName()
+    public unsafe virtual BmSDK.FString GetVariableName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkSDEntity.GetVariableName", true);
         byte* paramsPtr = stackalloc byte[16];

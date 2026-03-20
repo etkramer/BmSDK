@@ -71,7 +71,7 @@ public partial class RAEC_Casualty_Sub_MedicBusyQuickDismiss : BmSDK.BmGame.RAEC
     /// <summary>
     /// Function: AssignCasualty
     /// </summary>
-    public unsafe void AssignCasualty(BmSDK.BmGame.RPawnVillain NewCas)
+    public unsafe override void AssignCasualty(BmSDK.BmGame.RPawnVillain NewCas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_MedicBusyQuickDismiss.AssignCasualty", true);
         byte* paramsPtr = stackalloc byte[16];

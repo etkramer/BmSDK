@@ -71,7 +71,7 @@ public partial class RDestructibleProp_TakeoverVideoScreen : BmSDK.BmGame.RDestr
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDestructibleProp_TakeoverVideoScreen.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RDestructibleProp_TakeoverVideoScreen : BmSDK.BmGame.RDestr
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDestructibleProp_TakeoverVideoScreen.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RDestructibleProp_TakeoverVideoScreen : BmSDK.BmGame.RDestr
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDestructibleProp_TakeoverVideoScreen.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -104,7 +104,7 @@ public partial class RDestructibleProp_TakeoverVideoScreen : BmSDK.BmGame.RDestr
     /// <summary>
     /// Function: SetOverrideMaterial
     /// </summary>
-    public unsafe void SetOverrideMaterial()
+    public unsafe virtual void SetOverrideMaterial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDestructibleProp_TakeoverVideoScreen.SetOverrideMaterial", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RDestructibleProp_TakeoverVideoScreen : BmSDK.BmGame.RDestr
     /// <summary>
     /// Function: SetStaticTransitionParameter
     /// </summary>
-    public unsafe void SetStaticTransitionParameter(float val)
+    public unsafe virtual void SetStaticTransitionParameter(float val)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDestructibleProp_TakeoverVideoScreen.SetStaticTransitionParameter", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -127,7 +127,7 @@ public partial class RDestructibleProp_TakeoverVideoScreen : BmSDK.BmGame.RDestr
     /// <summary>
     /// Function: RevertToStandardTexture
     /// </summary>
-    public unsafe void RevertToStandardTexture()
+    public unsafe virtual void RevertToStandardTexture()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDestructibleProp_TakeoverVideoScreen.RevertToStandardTexture", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RDestructibleProp_TakeoverVideoScreen : BmSDK.BmGame.RDestr
     /// <summary>
     /// Function: SetTakeoverTexture
     /// </summary>
-    public unsafe void SetTakeoverTexture(BmSDK.Engine.TextureRenderTarget2D takeoverTexture)
+    public unsafe virtual void SetTakeoverTexture(BmSDK.Engine.TextureRenderTarget2D takeoverTexture)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDestructibleProp_TakeoverVideoScreen.SetTakeoverTexture", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -150,7 +150,7 @@ public partial class RDestructibleProp_TakeoverVideoScreen : BmSDK.BmGame.RDestr
     /// <summary>
     /// Function: CanBeTakenOverByScarecrow
     /// </summary>
-    public unsafe bool CanBeTakenOverByScarecrow()
+    public unsafe virtual bool CanBeTakenOverByScarecrow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDestructibleProp_TakeoverVideoScreen.CanBeTakenOverByScarecrow", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -161,7 +161,7 @@ public partial class RDestructibleProp_TakeoverVideoScreen : BmSDK.BmGame.RDestr
     /// <summary>
     /// Function: CanBeTakenOverByRiddler
     /// </summary>
-    public unsafe bool CanBeTakenOverByRiddler()
+    public unsafe virtual bool CanBeTakenOverByRiddler()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDestructibleProp_TakeoverVideoScreen.CanBeTakenOverByRiddler", true);
         byte* paramsPtr = stackalloc byte[4];

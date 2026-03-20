@@ -47,7 +47,7 @@ public partial class RSeqEvent_MadHatterChaseFinished : BmSDK.Engine.SequenceEve
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_MadHatterChaseFinished.Activated", true);
         byte* paramsPtr = stackalloc byte[112];

@@ -47,7 +47,7 @@ public partial class RSeqAct_SideStory_UIMessage : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SideStory_UIMessage.Activated", true);
         byte* paramsPtr = stackalloc byte[52];

@@ -66,7 +66,7 @@ public partial class RLadder : BmSDK.BmGame.RSpecialMoveEnvironmentObject, BmSDK
     /// <summary>
     /// Function: IsLadderInuseByAI
     /// </summary>
-    public unsafe bool IsLadderInuseByAI()
+    public unsafe virtual bool IsLadderInuseByAI()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLadder.IsLadderInuseByAI", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -77,7 +77,7 @@ public partial class RLadder : BmSDK.BmGame.RSpecialMoveEnvironmentObject, BmSDK
     /// <summary>
     /// Function: OverridesRun
     /// </summary>
-    public unsafe float OverridesRun(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override float OverridesRun(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLadder.OverridesRun", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -89,7 +89,7 @@ public partial class RLadder : BmSDK.BmGame.RSpecialMoveEnvironmentObject, BmSDK
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLadder.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -100,7 +100,7 @@ public partial class RLadder : BmSDK.BmGame.RSpecialMoveEnvironmentObject, BmSDK
     /// <summary>
     /// Function: CanReachItem
     /// </summary>
-    public unsafe bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
+    public unsafe override bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLadder.CanReachItem", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -112,7 +112,7 @@ public partial class RLadder : BmSDK.BmGame.RSpecialMoveEnvironmentObject, BmSDK
     /// <summary>
     /// Function: GetFOVDegrees
     /// </summary>
-    public unsafe float GetFOVDegrees(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override float GetFOVDegrees(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLadder.GetFOVDegrees", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -124,7 +124,7 @@ public partial class RLadder : BmSDK.BmGame.RSpecialMoveEnvironmentObject, BmSDK
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLadder.IsActive", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -136,7 +136,7 @@ public partial class RLadder : BmSDK.BmGame.RSpecialMoveEnvironmentObject, BmSDK
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLadder.Interact", true);
         byte* paramsPtr = stackalloc byte[164];
@@ -148,7 +148,7 @@ public partial class RLadder : BmSDK.BmGame.RSpecialMoveEnvironmentObject, BmSDK
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe override BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLadder.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -160,7 +160,7 @@ public partial class RLadder : BmSDK.BmGame.RSpecialMoveEnvironmentObject, BmSDK
     /// <summary>
     /// Function: UseLadder
     /// </summary>
-    public unsafe void UseLadder(BmSDK.BmGame.RBMPawnAI User, int Direction)
+    public unsafe virtual void UseLadder(BmSDK.BmGame.RBMPawnAI User, int Direction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLadder.UseLadder", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -173,7 +173,7 @@ public partial class RLadder : BmSDK.BmGame.RSpecialMoveEnvironmentObject, BmSDK
     /// <summary>
     /// Function: DrawLadderDebug
     /// </summary>
-    public unsafe void DrawLadderDebug()
+    public unsafe virtual void DrawLadderDebug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLadder.DrawLadderDebug", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_VantageResponse : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: Cleanup
     /// </summary>
-    public unsafe void Cleanup()
+    public unsafe virtual void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_VantageResponse.Cleanup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Sub_VantageResponse : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: OnVillainStolen
     /// </summary>
-    public unsafe void OnVillainStolen()
+    public unsafe override void OnVillainStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_VantageResponse.OnVillainStolen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RAEC_Search_Sub_VantageResponse : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_VantageResponse.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RAEC_Search_Sub_VantageResponse : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: AddVantageResponseAction
     /// </summary>
-    public unsafe void AddVantageResponseAction(BmSDK.FString actionlabel)
+    public unsafe virtual void AddVantageResponseAction(BmSDK.FString actionlabel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_VantageResponse.AddVantageResponseAction", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -116,7 +116,7 @@ public partial class RAEC_Search_Sub_VantageResponse : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: GetBestDestroyVantagePointsFromAPS
     /// </summary>
-    public unsafe void GetBestDestroyVantagePointsFromAPS(System.Numerics.Vector3 VantageRefPoint, BmSDK.BmGame.RAttackPointSearch APS, out BmSDK.TArray<System.Numerics.Vector3> BestPoints)
+    public unsafe virtual void GetBestDestroyVantagePointsFromAPS(System.Numerics.Vector3 VantageRefPoint, BmSDK.BmGame.RAttackPointSearch APS, out BmSDK.TArray<System.Numerics.Vector3> BestPoints)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_VantageResponse.GetBestDestroyVantagePointsFromAPS", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -130,7 +130,7 @@ public partial class RAEC_Search_Sub_VantageResponse : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: BuildGargSearch
     /// </summary>
-    public unsafe void BuildGargSearch()
+    public unsafe virtual void BuildGargSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_VantageResponse.BuildGargSearch", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -141,7 +141,7 @@ public partial class RAEC_Search_Sub_VantageResponse : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: StartAPS
     /// </summary>
-    public unsafe void StartAPS()
+    public unsafe virtual void StartAPS()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_VantageResponse.StartAPS", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -152,7 +152,7 @@ public partial class RAEC_Search_Sub_VantageResponse : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: ClearGargSearch
     /// </summary>
-    public unsafe void ClearGargSearch()
+    public unsafe virtual void ClearGargSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_VantageResponse.ClearGargSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -163,7 +163,7 @@ public partial class RAEC_Search_Sub_VantageResponse : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: AtUltimateDest
     /// </summary>
-    public unsafe void AtUltimateDest()
+    public unsafe virtual void AtUltimateDest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_VantageResponse.AtUltimateDest", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -174,7 +174,7 @@ public partial class RAEC_Search_Sub_VantageResponse : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_VantageResponse.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -185,7 +185,7 @@ public partial class RAEC_Search_Sub_VantageResponse : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_VantageResponse.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];

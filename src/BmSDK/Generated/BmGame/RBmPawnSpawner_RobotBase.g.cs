@@ -31,7 +31,7 @@ public partial class RBmPawnSpawner_RobotBase : BmSDK.BmGame.RBmPawnSpawner, BmS
     /// <summary>
     /// Function: PostSpawnPawn
     /// </summary>
-    public unsafe void PostSpawnPawn()
+    public unsafe virtual void PostSpawnPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBmPawnSpawner_RobotBase.PostSpawnPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -42,7 +42,7 @@ public partial class RBmPawnSpawner_RobotBase : BmSDK.BmGame.RBmPawnSpawner, BmS
     /// <summary>
     /// Function: PreSpawnPawn
     /// </summary>
-    public unsafe void PreSpawnPawn()
+    public unsafe virtual void PreSpawnPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBmPawnSpawner_RobotBase.PreSpawnPawn", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -53,7 +53,7 @@ public partial class RBmPawnSpawner_RobotBase : BmSDK.BmGame.RBmPawnSpawner, BmS
     /// <summary>
     /// Function: FindBestRandomSpawnPoint
     /// </summary>
-    public unsafe BmSDK.Engine.Actor FindBestRandomSpawnPoint()
+    public unsafe virtual BmSDK.Engine.Actor FindBestRandomSpawnPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBmPawnSpawner_RobotBase.FindBestRandomSpawnPoint", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -64,7 +64,7 @@ public partial class RBmPawnSpawner_RobotBase : BmSDK.BmGame.RBmPawnSpawner, BmS
     /// <summary>
     /// Function: IsPlayingAnim
     /// </summary>
-    public unsafe bool IsPlayingAnim(BmSDK.BmGame.RElectrifiedFloorPanel_RobotSpawnerBase floorPanel)
+    public unsafe virtual bool IsPlayingAnim(BmSDK.BmGame.RElectrifiedFloorPanel_RobotSpawnerBase floorPanel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBmPawnSpawner_RobotBase.IsPlayingAnim", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -76,7 +76,7 @@ public partial class RBmPawnSpawner_RobotBase : BmSDK.BmGame.RBmPawnSpawner, BmS
     /// <summary>
     /// Function: CheckSpawnLocationDistances
     /// </summary>
-    public unsafe void CheckSpawnLocationDistances(BmSDK.Engine.Actor TestActor, System.Numerics.Vector3 TestLocation, out float PlayerDistSq, out float closestRobotDistSq)
+    public unsafe virtual void CheckSpawnLocationDistances(BmSDK.Engine.Actor TestActor, System.Numerics.Vector3 TestLocation, out float PlayerDistSq, out float closestRobotDistSq)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBmPawnSpawner_RobotBase.CheckSpawnLocationDistances", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -91,7 +91,7 @@ public partial class RBmPawnSpawner_RobotBase : BmSDK.BmGame.RBmPawnSpawner, BmS
     /// <summary>
     /// Function: SpawnPawn
     /// </summary>
-    public unsafe bool SpawnPawn()
+    public unsafe override bool SpawnPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBmPawnSpawner_RobotBase.SpawnPawn", true);
         byte* paramsPtr = stackalloc byte[4];

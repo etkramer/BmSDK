@@ -47,7 +47,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: GetMovieTime
     /// </summary>
-    public unsafe float GetMovieTime()
+    public unsafe virtual float GetMovieTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.GetMovieTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: SetMovieTime
     /// </summary>
-    public unsafe bool SetMovieTime(float Time)
+    public unsafe virtual bool SetMovieTime(float Time)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.SetMovieTime", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -70,7 +70,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: SkipMovie
     /// </summary>
-    public unsafe void SkipMovie()
+    public unsafe override void SkipMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.SkipMovie", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -81,7 +81,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: IsDialogueSkippable
     /// </summary>
-    public unsafe bool IsDialogueSkippable()
+    public unsafe override bool IsDialogueSkippable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.IsDialogueSkippable", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -92,7 +92,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: DialogueOverCUEFromMovie
     /// </summary>
-    public unsafe void DialogueOverCUEFromMovie()
+    public unsafe override void DialogueOverCUEFromMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.DialogueOverCUEFromMovie", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -103,7 +103,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: TriggerLineFromMovieNotify
     /// </summary>
-    public unsafe void TriggerLineFromMovieNotify()
+    public unsafe virtual void TriggerLineFromMovieNotify()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.TriggerLineFromMovieNotify", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -121,7 +121,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: DialogueTapGauntletCUEFromMovie
     /// </summary>
-    public unsafe void DialogueTapGauntletCUEFromMovie()
+    public unsafe override void DialogueTapGauntletCUEFromMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.DialogueTapGauntletCUEFromMovie", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -132,7 +132,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: LineCUEFromMovie
     /// </summary>
-    public unsafe void LineCUEFromMovie()
+    public unsafe override void LineCUEFromMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.LineCUEFromMovie", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -143,7 +143,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: DialogueTOCFromMovie
     /// </summary>
-    public unsafe void DialogueTOCFromMovie(BmSDK.FString TOC)
+    public unsafe override void DialogueTOCFromMovie(BmSDK.FString TOC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.DialogueTOCFromMovie", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -155,7 +155,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: SkipMovie_FromCue
     /// </summary>
-    public unsafe void SkipMovie_FromCue()
+    public unsafe override void SkipMovie_FromCue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.SkipMovie_FromCue", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -166,7 +166,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: NotifyMovieAboutToEnd
     /// </summary>
-    public unsafe void NotifyMovieAboutToEnd()
+    public unsafe override void NotifyMovieAboutToEnd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.NotifyMovieAboutToEnd", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -177,7 +177,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: SpeechAndMovieEnded
     /// </summary>
-    public unsafe void SpeechAndMovieEnded()
+    public unsafe virtual void SpeechAndMovieEnded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.SpeechAndMovieEnded", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -188,7 +188,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: NotifyMovieFinished
     /// </summary>
-    public unsafe void NotifyMovieFinished(BmSDK.FString VideoResource)
+    public unsafe override void NotifyMovieFinished(BmSDK.FString VideoResource)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.NotifyMovieFinished", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -200,7 +200,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: FetchTVAudioSources
     /// </summary>
-    public unsafe void FetchTVAudioSources(out BmSDK.TArray<float> pos, out BmSDK.TArray<float> Rot)
+    public unsafe virtual void FetchTVAudioSources(out BmSDK.TArray<float> pos, out BmSDK.TArray<float> Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.FetchTVAudioSources", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -213,7 +213,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: TryStartMovie
     /// </summary>
-    public unsafe void TryStartMovie()
+    public unsafe virtual void TryStartMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.TryStartMovie", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -224,7 +224,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: MovieStopTriggeredByAnim
     /// </summary>
-    public unsafe void MovieStopTriggeredByAnim()
+    public unsafe virtual void MovieStopTriggeredByAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.MovieStopTriggeredByAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -235,7 +235,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: MovieStopTriggeredBySpeechInterruption
     /// </summary>
-    public unsafe void MovieStopTriggeredBySpeechInterruption()
+    public unsafe virtual void MovieStopTriggeredBySpeechInterruption()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.MovieStopTriggeredBySpeechInterruption", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -246,7 +246,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: RadioConvStartAllowedByAnim
     /// </summary>
-    public unsafe void RadioConvStartAllowedByAnim()
+    public unsafe virtual void RadioConvStartAllowedByAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.RadioConvStartAllowedByAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -257,7 +257,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: StartNextQueuedMovie
     /// </summary>
-    public unsafe void StartNextQueuedMovie()
+    public unsafe virtual void StartNextQueuedMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.StartNextQueuedMovie", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -268,7 +268,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: StartNextQueuedSpeech
     /// </summary>
-    public unsafe void StartNextQueuedSpeech()
+    public unsafe virtual void StartNextQueuedSpeech()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.StartNextQueuedSpeech", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -279,7 +279,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: TrySetRadioState
     /// </summary>
-    public unsafe void TrySetRadioState(bool bOn)
+    public unsafe virtual void TrySetRadioState(bool bOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.TrySetRadioState", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -291,7 +291,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: IsInOrCanSetRadioMode
     /// </summary>
-    public unsafe bool IsInOrCanSetRadioMode()
+    public unsafe virtual bool IsInOrCanSetRadioMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.IsInOrCanSetRadioMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -302,7 +302,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: NeedsRadioMode
     /// </summary>
-    public unsafe bool NeedsRadioMode()
+    public unsafe override bool NeedsRadioMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.NeedsRadioMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -313,7 +313,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: ShouldPlayMovie
     /// </summary>
-    public unsafe bool ShouldPlayMovie()
+    public unsafe override bool ShouldPlayMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.ShouldPlayMovie", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -324,7 +324,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: GetFirstPortraitName
     /// </summary>
-    public unsafe BmSDK.FString GetFirstPortraitName()
+    public unsafe virtual BmSDK.FString GetFirstPortraitName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.GetFirstPortraitName", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -335,7 +335,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: LineStarted
     /// </summary>
-    public unsafe bool LineStarted(BmSDK.GameObject Speaker, BmSDK.Engine.AkDialogueLine Line)
+    public unsafe override bool LineStarted(BmSDK.GameObject Speaker, BmSDK.Engine.AkDialogueLine Line)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.LineStarted", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -348,7 +348,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: SpeechStopped
     /// </summary>
-    public unsafe void SpeechStopped(bool bInterrupted)
+    public unsafe override void SpeechStopped(bool bInterrupted)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.SpeechStopped", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -360,7 +360,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: SpeechStarted
     /// </summary>
-    public unsafe void SpeechStarted()
+    public unsafe override void SpeechStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.SpeechStarted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -371,7 +371,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: WaitingForAnim
     /// </summary>
-    public unsafe bool WaitingForAnim()
+    public unsafe virtual bool WaitingForAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.WaitingForAnim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -382,7 +382,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: DoPlayerSpeechCleanup
     /// </summary>
-    public unsafe void DoPlayerSpeechCleanup()
+    public unsafe override void DoPlayerSpeechCleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.DoPlayerSpeechCleanup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -393,7 +393,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: OnStopSpeechTriggered
     /// </summary>
-    public unsafe void OnStopSpeechTriggered()
+    public unsafe override void OnStopSpeechTriggered()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.OnStopSpeechTriggered", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -404,7 +404,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: GetLineStartTimeFromMovieTOC
     /// </summary>
-    public unsafe float GetLineStartTimeFromMovieTOC(int lineNumber)
+    public unsafe virtual float GetLineStartTimeFromMovieTOC(int lineNumber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.GetLineStartTimeFromMovieTOC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -416,7 +416,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: GetLineNumberFromMovieTime
     /// </summary>
-    public unsafe int GetLineNumberFromMovieTime()
+    public unsafe virtual int GetLineNumberFromMovieTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.GetLineNumberFromMovieTime", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -427,7 +427,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: UndoAutoWaitForNotifies
     /// </summary>
-    public unsafe void UndoAutoWaitForNotifies()
+    public unsafe virtual void UndoAutoWaitForNotifies()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.UndoAutoWaitForNotifies", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -445,7 +445,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.Update", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -457,7 +457,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: InitialiseVariables
     /// </summary>
-    public unsafe void InitialiseVariables()
+    public unsafe override void InitialiseVariables()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.InitialiseVariables", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -468,7 +468,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: IsMovieTypeConvo
     /// </summary>
-    public unsafe bool IsMovieTypeConvo()
+    public unsafe override bool IsMovieTypeConvo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.IsMovieTypeConvo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -486,7 +486,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: IsMoviePlaying
     /// </summary>
-    public unsafe bool IsMoviePlaying()
+    public unsafe override bool IsMoviePlaying()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.IsMoviePlaying", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -523,7 +523,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: SearchForMovie
     /// </summary>
-    public unsafe bool SearchForMovie(BmSDK.FString MovieName)
+    public unsafe override bool SearchForMovie(BmSDK.FString MovieName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.SearchForMovie", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -542,7 +542,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: StartSpeechNative
     /// </summary>
-    public unsafe bool StartSpeechNative()
+    public unsafe override bool StartSpeechNative()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.StartSpeechNative", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -560,7 +560,7 @@ public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_P
     /// <summary>
     /// Function: TryStartSpeech
     /// </summary>
-    public unsafe bool TryStartSpeech()
+    public unsafe override bool TryStartSpeech()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRadioOrThoughtDialogue.TryStartSpeech", true);
         byte* paramsPtr = stackalloc byte[4];

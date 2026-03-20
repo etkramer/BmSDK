@@ -71,7 +71,7 @@ public partial class RStartlePoint_TwoFaceDLC : BmSDK.BmGame.RStartlePoint_Bank,
     /// <summary>
     /// Function: SetupDroneStartleAEC
     /// </summary>
-    public unsafe void SetupDroneStartleAEC()
+    public unsafe override void SetupDroneStartleAEC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePoint_TwoFaceDLC.SetupDroneStartleAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RStartlePoint_TwoFaceDLC : BmSDK.BmGame.RStartlePoint_Bank,
     /// <summary>
     /// Function: FindStartleThugsFromPoint
     /// </summary>
-    public unsafe void FindStartleThugsFromPoint(out BmSDK.TArray<BmSDK.BmGame.RPawnVillain> ThugList, bool bFindAllThugs)
+    public unsafe override void FindStartleThugsFromPoint(out BmSDK.TArray<BmSDK.BmGame.RPawnVillain> ThugList, bool bFindAllThugs)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePoint_TwoFaceDLC.FindStartleThugsFromPoint", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -95,7 +95,7 @@ public partial class RStartlePoint_TwoFaceDLC : BmSDK.BmGame.RStartlePoint_Bank,
     /// <summary>
     /// Function: StartleThug
     /// </summary>
-    public unsafe void StartleThug()
+    public unsafe override void StartleThug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePoint_TwoFaceDLC.StartleThug", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class MCombatMove_BlackMaskGunShot : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: IsAttacking
     /// </summary>
-    public unsafe bool IsAttacking()
+    public unsafe override bool IsAttacking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_BlackMaskGunShot.IsAttacking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class MCombatMove_BlackMaskGunShot : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_BlackMaskGunShot.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class MCombatMove_BlackMaskGunShot : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_BlackMaskGunShot.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class MCombatMove_BlackMaskGunShot : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: ShouldInterruptAttack
     /// </summary>
-    public unsafe bool ShouldInterruptAttack()
+    public unsafe virtual bool ShouldInterruptAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_BlackMaskGunShot.ShouldInterruptAttack", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class MCombatMove_BlackMaskGunShot : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: TrackPawn
     /// </summary>
-    public unsafe void TrackPawn()
+    public unsafe virtual void TrackPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_BlackMaskGunShot.TrackPawn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class MCombatMove_BlackMaskGunShot : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: GetDamageAmount
     /// </summary>
-    public unsafe float GetDamageAmount()
+    public unsafe override float GetDamageAmount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_BlackMaskGunShot.GetDamageAmount", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -138,7 +138,7 @@ public partial class MCombatMove_BlackMaskGunShot : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: DamagePawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagePawn(BmSDK.BmGame.RPawnCombat DamageReceiver)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult DamagePawn(BmSDK.BmGame.RPawnCombat DamageReceiver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_BlackMaskGunShot.DamagePawn", true);
         byte* paramsPtr = stackalloc byte[260];
@@ -150,7 +150,7 @@ public partial class MCombatMove_BlackMaskGunShot : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: CanCounterStop
     /// </summary>
-    public unsafe void CanCounterStop()
+    public unsafe override void CanCounterStop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_BlackMaskGunShot.CanCounterStop", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -161,7 +161,7 @@ public partial class MCombatMove_BlackMaskGunShot : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: VillainAttack
     /// </summary>
-    public unsafe void VillainAttack()
+    public unsafe virtual void VillainAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_BlackMaskGunShot.VillainAttack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -172,7 +172,7 @@ public partial class MCombatMove_BlackMaskGunShot : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: NearThugEvade
     /// </summary>
-    public unsafe void NearThugEvade()
+    public unsafe virtual void NearThugEvade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_BlackMaskGunShot.NearThugEvade", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -183,7 +183,7 @@ public partial class MCombatMove_BlackMaskGunShot : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: CheckVillainInTheWay
     /// </summary>
-    public unsafe bool CheckVillainInTheWay(BmSDK.Engine.Actor BlackMask, BmSDK.BmGame.RPawnVillain Thug, BmSDK.Engine.Actor Redhood)
+    public unsafe virtual bool CheckVillainInTheWay(BmSDK.Engine.Actor BlackMask, BmSDK.BmGame.RPawnVillain Thug, BmSDK.Engine.Actor Redhood)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_BlackMaskGunShot.CheckVillainInTheWay", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -197,7 +197,7 @@ public partial class MCombatMove_BlackMaskGunShot : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_BlackMaskGunShot.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -210,7 +210,7 @@ public partial class MCombatMove_BlackMaskGunShot : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: CanCounterStart
     /// </summary>
-    public unsafe void CanCounterStart()
+    public unsafe override void CanCounterStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_BlackMaskGunShot.CanCounterStart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -221,7 +221,7 @@ public partial class MCombatMove_BlackMaskGunShot : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: SetAttackInfoFromNotify
     /// </summary>
-    public unsafe bool SetAttackInfoFromNotify(BmSDK.BmGame.RAnimNotify_VillainAttack AttackNotify)
+    public unsafe override bool SetAttackInfoFromNotify(BmSDK.BmGame.RAnimNotify_VillainAttack AttackNotify)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_BlackMaskGunShot.SetAttackInfoFromNotify", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -233,7 +233,7 @@ public partial class MCombatMove_BlackMaskGunShot : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: FindAndUseAnimAttackInfo
     /// </summary>
-    public unsafe bool FindAndUseAnimAttackInfo()
+    public unsafe override bool FindAndUseAnimAttackInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_BlackMaskGunShot.FindAndUseAnimAttackInfo", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -244,7 +244,7 @@ public partial class MCombatMove_BlackMaskGunShot : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: StartCustomCounter
     /// </summary>
-    public unsafe bool StartCustomCounter(BmSDK.BmGame.RPawnPlayerCombat Counterer)
+    public unsafe override bool StartCustomCounter(BmSDK.BmGame.RPawnPlayerCombat Counterer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_BlackMaskGunShot.StartCustomCounter", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -256,7 +256,7 @@ public partial class MCombatMove_BlackMaskGunShot : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: SpawnCounter
     /// </summary>
-    public unsafe void SpawnCounter(BmSDK.BmGame.RPawnPlayer Redhood, BmSDK.BmGame.RPawnVillain TargetPawn, float TimeInitiatedByPlayer)
+    public unsafe virtual void SpawnCounter(BmSDK.BmGame.RPawnPlayer Redhood, BmSDK.BmGame.RPawnVillain TargetPawn, float TimeInitiatedByPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_BlackMaskGunShot.SpawnCounter", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -270,7 +270,7 @@ public partial class MCombatMove_BlackMaskGunShot : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: GetCounterLimb
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.CounterLimb GetCounterLimb(BmSDK.BmGame.RPawnCombat TestPawn)
+    public unsafe override BmSDK.BmGame.RGameInfo.CounterLimb GetCounterLimb(BmSDK.BmGame.RPawnCombat TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_BlackMaskGunShot.GetCounterLimb", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -282,7 +282,7 @@ public partial class MCombatMove_BlackMaskGunShot : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_BlackMaskGunShot.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

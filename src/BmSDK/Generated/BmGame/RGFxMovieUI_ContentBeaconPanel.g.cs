@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_ContentBeaconPanel : BmSDK.BmGame.RGFxMovieUI, 
     /// <summary>
     /// Function: ContentBeaconContentLoaded
     /// </summary>
-    public unsafe void ContentBeaconContentLoaded(bool bWasSuccessful, BmSDK.FString sCustomId)
+    public unsafe virtual void ContentBeaconContentLoaded(bool bWasSuccessful, BmSDK.FString sCustomId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ContentBeaconPanel.ContentBeaconContentLoaded", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -49,7 +49,7 @@ public partial class RGFxMovieUI_ContentBeaconPanel : BmSDK.BmGame.RGFxMovieUI, 
     /// <summary>
     /// Function: OnFadeCompleted_Callback
     /// </summary>
-    public unsafe void OnFadeCompleted_Callback()
+    public unsafe override void OnFadeCompleted_Callback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ContentBeaconPanel.OnFadeCompleted_Callback", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -60,7 +60,7 @@ public partial class RGFxMovieUI_ContentBeaconPanel : BmSDK.BmGame.RGFxMovieUI, 
     /// <summary>
     /// Function: PopupRequester_Callback
     /// </summary>
-    public unsafe void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester iPopup, int nButtonId)
+    public unsafe override void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester iPopup, int nButtonId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ContentBeaconPanel.PopupRequester_Callback", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -73,7 +73,7 @@ public partial class RGFxMovieUI_ContentBeaconPanel : BmSDK.BmGame.RGFxMovieUI, 
     /// <summary>
     /// Function: XI_HandleModeChange
     /// </summary>
-    public unsafe void XI_HandleModeChange(BmSDK.FString sMode)
+    public unsafe virtual void XI_HandleModeChange(BmSDK.FString sMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ContentBeaconPanel.XI_HandleModeChange", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -85,7 +85,7 @@ public partial class RGFxMovieUI_ContentBeaconPanel : BmSDK.BmGame.RGFxMovieUI, 
     /// <summary>
     /// Function: XI_HandleAction
     /// </summary>
-    public unsafe void XI_HandleAction(BmSDK.FString sAction)
+    public unsafe virtual void XI_HandleAction(BmSDK.FString sAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ContentBeaconPanel.XI_HandleAction", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -97,7 +97,7 @@ public partial class RGFxMovieUI_ContentBeaconPanel : BmSDK.BmGame.RGFxMovieUI, 
     /// <summary>
     /// Function: XI_ReadyForSetup
     /// </summary>
-    public unsafe void XI_ReadyForSetup()
+    public unsafe virtual void XI_ReadyForSetup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ContentBeaconPanel.XI_ReadyForSetup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -108,7 +108,7 @@ public partial class RGFxMovieUI_ContentBeaconPanel : BmSDK.BmGame.RGFxMovieUI, 
     /// <summary>
     /// Function: UC_ClearKeyDowns
     /// </summary>
-    public unsafe void UC_ClearKeyDowns()
+    public unsafe virtual void UC_ClearKeyDowns()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ContentBeaconPanel.UC_ClearKeyDowns", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -119,7 +119,7 @@ public partial class RGFxMovieUI_ContentBeaconPanel : BmSDK.BmGame.RGFxMovieUI, 
     /// <summary>
     /// Function: UC_SetImageFromPackage
     /// </summary>
-    public unsafe void UC_SetImageFromPackage(BmSDK.FString sPackage)
+    public unsafe virtual void UC_SetImageFromPackage(BmSDK.FString sPackage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ContentBeaconPanel.UC_SetImageFromPackage", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -131,7 +131,7 @@ public partial class RGFxMovieUI_ContentBeaconPanel : BmSDK.BmGame.RGFxMovieUI, 
     /// <summary>
     /// Function: UC_SetImageError
     /// </summary>
-    public unsafe void UC_SetImageError()
+    public unsafe virtual void UC_SetImageError()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ContentBeaconPanel.UC_SetImageError", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -142,7 +142,7 @@ public partial class RGFxMovieUI_ContentBeaconPanel : BmSDK.BmGame.RGFxMovieUI, 
     /// <summary>
     /// Function: UC_SetImage
     /// </summary>
-    public unsafe void UC_SetImage(BmSDK.GFxUI.GFxObject iImage)
+    public unsafe virtual void UC_SetImage(BmSDK.GFxUI.GFxObject iImage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ContentBeaconPanel.UC_SetImage", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -154,7 +154,7 @@ public partial class RGFxMovieUI_ContentBeaconPanel : BmSDK.BmGame.RGFxMovieUI, 
     /// <summary>
     /// Function: UC_SetAction
     /// </summary>
-    public unsafe void UC_SetAction(BmSDK.FString sAction, BmSDK.FString sText)
+    public unsafe virtual void UC_SetAction(BmSDK.FString sAction, BmSDK.FString sText)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ContentBeaconPanel.UC_SetAction", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -167,7 +167,7 @@ public partial class RGFxMovieUI_ContentBeaconPanel : BmSDK.BmGame.RGFxMovieUI, 
     /// <summary>
     /// Function: UC_SetText
     /// </summary>
-    public unsafe void UC_SetText(BmSDK.FString sComponent, BmSDK.FString sText)
+    public unsafe virtual void UC_SetText(BmSDK.FString sComponent, BmSDK.FString sText)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ContentBeaconPanel.UC_SetText", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -180,7 +180,7 @@ public partial class RGFxMovieUI_ContentBeaconPanel : BmSDK.BmGame.RGFxMovieUI, 
     /// <summary>
     /// Function: UC_SetMode
     /// </summary>
-    public unsafe void UC_SetMode(BmSDK.FString sMode)
+    public unsafe virtual void UC_SetMode(BmSDK.FString sMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ContentBeaconPanel.UC_SetMode", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -192,7 +192,7 @@ public partial class RGFxMovieUI_ContentBeaconPanel : BmSDK.BmGame.RGFxMovieUI, 
     /// <summary>
     /// Function: ForceFocus
     /// </summary>
-    public unsafe void ForceFocus(bool bFocus)
+    public unsafe virtual void ForceFocus(bool bFocus)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ContentBeaconPanel.ForceFocus", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -204,7 +204,7 @@ public partial class RGFxMovieUI_ContentBeaconPanel : BmSDK.BmGame.RGFxMovieUI, 
     /// <summary>
     /// Function: OnAspectRatioChanged
     /// </summary>
-    public unsafe void OnAspectRatioChanged(float fAspect)
+    public unsafe override void OnAspectRatioChanged(float fAspect)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ContentBeaconPanel.OnAspectRatioChanged", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -216,7 +216,7 @@ public partial class RGFxMovieUI_ContentBeaconPanel : BmSDK.BmGame.RGFxMovieUI, 
     /// <summary>
     /// Function: Setup
     /// </summary>
-    public unsafe void Setup(BmSDK.BmGame.RGameInfo.EContentBeaconDisplayMode eDisplayMode, int nBeaconIndex)
+    public unsafe virtual void Setup(BmSDK.BmGame.RGameInfo.EContentBeaconDisplayMode eDisplayMode, int nBeaconIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ContentBeaconPanel.Setup", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -229,7 +229,7 @@ public partial class RGFxMovieUI_ContentBeaconPanel : BmSDK.BmGame.RGFxMovieUI, 
     /// <summary>
     /// Function: Initialize
     /// </summary>
-    public unsafe void Initialize(BmSDK.Engine.LocalPlayer iPlayer, BmSDK.BmGame.RGameInfo.EContentBeaconDisplayMode eDisplayMode, int nBeaconIndex)
+    public unsafe virtual void Initialize(BmSDK.Engine.LocalPlayer iPlayer, BmSDK.BmGame.RGameInfo.EContentBeaconDisplayMode eDisplayMode, int nBeaconIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ContentBeaconPanel.Initialize", true);
         byte* paramsPtr = stackalloc byte[16];

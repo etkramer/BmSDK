@@ -71,7 +71,7 @@ public partial class RAEC_DisruptedJammerReaction_Solo : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DisruptedJammerReaction_Solo.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_DisruptedJammerReaction_Solo : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// Function: JammerThugStartShutdown
     /// </summary>
-    public unsafe void JammerThugStartShutdown()
+    public unsafe virtual void JammerThugStartShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DisruptedJammerReaction_Solo.JammerThugStartShutdown", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RAEC_DisruptedJammerReaction_Solo : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// Function: NotifyEvent
     /// </summary>
-    public unsafe void NotifyEvent(BmSDK.BmGame.RBMAIAction NotifyAction, BmSDK.FString EventType)
+    public unsafe override void NotifyEvent(BmSDK.BmGame.RBMAIAction NotifyAction, BmSDK.FString EventType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DisruptedJammerReaction_Solo.NotifyEvent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -106,7 +106,7 @@ public partial class RAEC_DisruptedJammerReaction_Solo : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// Function: NotifyStopped
     /// </summary>
-    public unsafe void NotifyStopped(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyStopped(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DisruptedJammerReaction_Solo.NotifyStopped", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RAEC_DisruptedJammerReaction_Solo : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DisruptedJammerReaction_Solo.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -130,7 +130,7 @@ public partial class RAEC_DisruptedJammerReaction_Solo : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DisruptedJammerReaction_Solo.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[264];

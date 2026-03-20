@@ -71,7 +71,7 @@ public partial class RBatmobileRemote : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: NotifyReachedHardRemoteLimit
     /// </summary>
-    public unsafe void NotifyReachedHardRemoteLimit()
+    public unsafe virtual void NotifyReachedHardRemoteLimit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileRemote.NotifyReachedHardRemoteLimit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RBatmobileRemote : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetAutoTargetRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetAutoTargetRotation()
+    public unsafe override BmSDK.Rotator GetAutoTargetRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileRemote.GetAutoTargetRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -100,7 +100,7 @@ public partial class RBatmobileRemote : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: NotifyRemoteDriveCancelled
     /// </summary>
-    public unsafe void NotifyRemoteDriveCancelled()
+    public unsafe virtual void NotifyRemoteDriveCancelled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileRemote.NotifyRemoteDriveCancelled", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -111,7 +111,7 @@ public partial class RBatmobileRemote : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: NotifyCallBatmobileToMe
     /// </summary>
-    public unsafe void NotifyCallBatmobileToMe()
+    public unsafe virtual void NotifyCallBatmobileToMe()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileRemote.NotifyCallBatmobileToMe", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -122,7 +122,7 @@ public partial class RBatmobileRemote : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: NotifyBatmanPickedUp
     /// </summary>
-    public unsafe void NotifyBatmanPickedUp()
+    public unsafe virtual void NotifyBatmanPickedUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileRemote.NotifyBatmanPickedUp", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -66,7 +66,7 @@ public partial class ApexFieldSamplerActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ApexFieldSamplerActor.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];

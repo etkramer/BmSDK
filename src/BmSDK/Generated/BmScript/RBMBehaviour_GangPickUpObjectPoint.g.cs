@@ -36,7 +36,7 @@ public partial class RBMBehaviour_GangPickUpObjectPoint : BmSDK.BmScript.RBMBeha
     /// <summary>
     /// Function: CreateRunVariantWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateRunVariantWeaponConfig()
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateRunVariantWeaponConfig()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangPickUpObjectPoint.CreateRunVariantWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[868];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_GangPickUpObjectPoint : BmSDK.BmScript.RBMBeha
     /// <summary>
     /// Function: SmashWindow
     /// </summary>
-    public unsafe void SmashWindow()
+    public unsafe override void SmashWindow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangPickUpObjectPoint.SmashWindow", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_GangPickUpObjectPoint : BmSDK.BmScript.RBMBeha
     /// <summary>
     /// Function: CrackOrSmashWindow
     /// </summary>
-    public unsafe void CrackOrSmashWindow()
+    public unsafe override void CrackOrSmashWindow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangPickUpObjectPoint.CrackOrSmashWindow", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_GangPickUpObjectPoint : BmSDK.BmScript.RBMBeha
     /// <summary>
     /// Function: CrackWindow
     /// </summary>
-    public unsafe void CrackWindow()
+    public unsafe override void CrackWindow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangPickUpObjectPoint.CrackWindow", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_GangPickUpObjectPoint : BmSDK.BmScript.RBMBeha
     /// <summary>
     /// Function: GetBreakVars
     /// </summary>
-    public unsafe void GetBreakVars(out System.Numerics.Vector3 HitLoc, out System.Numerics.Vector3 HitNorm, out System.Numerics.Vector3 HitSpeed, out BmSDK.Engine.Actor ThrownActor)
+    public unsafe override void GetBreakVars(out System.Numerics.Vector3 HitLoc, out System.Numerics.Vector3 HitNorm, out System.Numerics.Vector3 HitSpeed, out BmSDK.Engine.Actor ThrownActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangPickUpObjectPoint.GetBreakVars", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -95,7 +95,7 @@ public partial class RBMBehaviour_GangPickUpObjectPoint : BmSDK.BmScript.RBMBeha
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangPickUpObjectPoint.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RBMBehaviour_GangPickUpObjectPoint : BmSDK.BmScript.RBMBeha
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangPickUpObjectPoint.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RBMBehaviour_GangPickUpObjectPoint : BmSDK.BmScript.RBMBeha
     /// <summary>
     /// Function: ThrowObject
     /// </summary>
-    public unsafe void ThrowObject()
+    public unsafe virtual void ThrowObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangPickUpObjectPoint.ThrowObject", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -128,7 +128,7 @@ public partial class RBMBehaviour_GangPickUpObjectPoint : BmSDK.BmScript.RBMBeha
     /// <summary>
     /// Function: DropPickupObjectNoPhys
     /// </summary>
-    public unsafe void DropPickupObjectNoPhys()
+    public unsafe virtual void DropPickupObjectNoPhys()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangPickUpObjectPoint.DropPickupObjectNoPhys", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -139,7 +139,7 @@ public partial class RBMBehaviour_GangPickUpObjectPoint : BmSDK.BmScript.RBMBeha
     /// <summary>
     /// Function: DropPickupObject
     /// </summary>
-    public unsafe void DropPickupObject()
+    public unsafe virtual void DropPickupObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangPickUpObjectPoint.DropPickupObject", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -150,7 +150,7 @@ public partial class RBMBehaviour_GangPickUpObjectPoint : BmSDK.BmScript.RBMBeha
     /// <summary>
     /// Function: PickupObjectLeftHand
     /// </summary>
-    public unsafe void PickupObjectLeftHand()
+    public unsafe virtual void PickupObjectLeftHand()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangPickUpObjectPoint.PickupObjectLeftHand", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -161,7 +161,7 @@ public partial class RBMBehaviour_GangPickUpObjectPoint : BmSDK.BmScript.RBMBeha
     /// <summary>
     /// Function: PickupObject
     /// </summary>
-    public unsafe void PickupObject()
+    public unsafe virtual void PickupObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangPickUpObjectPoint.PickupObject", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -172,7 +172,7 @@ public partial class RBMBehaviour_GangPickUpObjectPoint : BmSDK.BmScript.RBMBeha
     /// <summary>
     /// Function: OnEndInterrupt
     /// </summary>
-    public unsafe void OnEndInterrupt()
+    public unsafe override void OnEndInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangPickUpObjectPoint.OnEndInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -183,7 +183,7 @@ public partial class RBMBehaviour_GangPickUpObjectPoint : BmSDK.BmScript.RBMBeha
     /// <summary>
     /// Function: SetRunVariants
     /// </summary>
-    public unsafe void SetRunVariants(BmSDK.BmGame.RBMAIAction_RiotRunBase MoveAction)
+    public unsafe override void SetRunVariants(BmSDK.BmGame.RBMAIAction_RiotRunBase MoveAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangPickUpObjectPoint.SetRunVariants", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -195,7 +195,7 @@ public partial class RBMBehaviour_GangPickUpObjectPoint : BmSDK.BmScript.RBMBeha
     /// <summary>
     /// Function: GenerateMoveToPoint
     /// </summary>
-    public unsafe void GenerateMoveToPoint()
+    public unsafe override void GenerateMoveToPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangPickUpObjectPoint.GenerateMoveToPoint", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -206,7 +206,7 @@ public partial class RBMBehaviour_GangPickUpObjectPoint : BmSDK.BmScript.RBMBeha
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangPickUpObjectPoint.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

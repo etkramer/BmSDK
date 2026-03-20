@@ -71,7 +71,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: GetLostPlayerAndDoOtherThingEventValFor
     /// </summary>
-    public unsafe BmSDK.FName GetLostPlayerAndDoOtherThingEventValFor(BmSDK.BmGame.RBMAIController TestCon)
+    public unsafe virtual BmSDK.FName GetLostPlayerAndDoOtherThingEventValFor(BmSDK.BmGame.RBMAIController TestCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.GetLostPlayerAndDoOtherThingEventValFor", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: GetFlagsForEndChase
     /// </summary>
-    public unsafe BmSDK.BmGame.RBarkFlagBase GetFlagsForEndChase()
+    public unsafe virtual BmSDK.BmGame.RBarkFlagBase GetFlagsForEndChase()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.GetFlagsForEndChase", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -94,7 +94,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: DoPostAssignmentBark
     /// </summary>
-    public unsafe void DoPostAssignmentBark()
+    public unsafe virtual void DoPostAssignmentBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.DoPostAssignmentBark", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -105,7 +105,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: ClearDestSearch
     /// </summary>
-    public unsafe void ClearDestSearch()
+    public unsafe virtual void ClearDestSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.ClearDestSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: InitGoalDataInstance
     /// </summary>
-    public unsafe BmSDK.BmGame.RMultiDestGoalData InitGoalDataInstance()
+    public unsafe virtual BmSDK.BmGame.RMultiDestGoalData InitGoalDataInstance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.InitGoalDataInstance", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -127,7 +127,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: IsAlreadyDoingJob
     /// </summary>
-    public unsafe bool IsAlreadyDoingJob(BmSDK.BmGame.RBMAIController TestCon)
+    public unsafe virtual bool IsAlreadyDoingJob(BmSDK.BmGame.RBMAIController TestCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.IsAlreadyDoingJob", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -139,7 +139,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: InitMultiGoalSearch
     /// </summary>
-    public unsafe void InitMultiGoalSearch()
+    public unsafe virtual void InitMultiGoalSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.InitMultiGoalSearch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -150,7 +150,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: BuildDestList
     /// </summary>
-    public unsafe void BuildDestList()
+    public unsafe virtual void BuildDestList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.BuildDestList", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -161,7 +161,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: ResetSearch
     /// </summary>
-    public unsafe void ResetSearch()
+    public unsafe virtual void ResetSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.ResetSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -172,7 +172,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.Tick", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -184,7 +184,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: QueueEndChaseBark
     /// </summary>
-    public unsafe void QueueEndChaseBark(BmSDK.BmGame.RPawnVillain NewEndChaseBarkPawn, bool bNewChasingFromSighting)
+    public unsafe virtual void QueueEndChaseBark(BmSDK.BmGame.RPawnVillain NewEndChaseBarkPawn, bool bNewChasingFromSighting)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.QueueEndChaseBark", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -197,7 +197,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: InitChildAECFor
     /// </summary>
-    public unsafe void InitChildAECFor(BmSDK.BmGame.RSeqEvent_LevelScripting NewRoot)
+    public unsafe virtual void InitChildAECFor(BmSDK.BmGame.RSeqEvent_LevelScripting NewRoot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.InitChildAECFor", true);
         byte* paramsPtr = stackalloc byte[8];

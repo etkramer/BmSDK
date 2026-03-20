@@ -66,7 +66,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: RemoveDisruptorInteraction
     /// </summary>
-    public unsafe void RemoveDisruptorInteraction()
+    public unsafe virtual void RemoveDisruptorInteraction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.RemoveDisruptorInteraction", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: SpawnJammedExplosion
     /// </summary>
-    public unsafe void SpawnJammedExplosion()
+    public unsafe virtual void SpawnJammedExplosion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.SpawnJammedExplosion", true);
         byte* paramsPtr = stackalloc byte[292];
@@ -88,7 +88,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: IsDisrupted
     /// </summary>
-    public unsafe bool IsDisrupted()
+    public unsafe virtual bool IsDisrupted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.IsDisrupted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -99,7 +99,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: GetDisruptorDescriptionParameters
     /// </summary>
-    public unsafe BmSDK.FString GetDisruptorDescriptionParameters()
+    public unsafe virtual BmSDK.FString GetDisruptorDescriptionParameters()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.GetDisruptorDescriptionParameters", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -110,7 +110,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: RequiresDisruptorUpgrade
     /// </summary>
-    public unsafe bool RequiresDisruptorUpgrade()
+    public unsafe virtual bool RequiresDisruptorUpgrade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.RequiresDisruptorUpgrade", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -121,7 +121,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: RequiresDroneDisruptor
     /// </summary>
-    public unsafe bool RequiresDroneDisruptor()
+    public unsafe virtual bool RequiresDroneDisruptor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.RequiresDroneDisruptor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -132,7 +132,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: GetDisruptorTargetMesh
     /// </summary>
-    public unsafe BmSDK.Engine.MeshComponent GetDisruptorTargetMesh()
+    public unsafe virtual BmSDK.Engine.MeshComponent GetDisruptorTargetMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.GetDisruptorTargetMesh", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -143,7 +143,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: HitByDisruptorGadgetSecondary
     /// </summary>
-    public unsafe bool HitByDisruptorGadgetSecondary()
+    public unsafe virtual bool HitByDisruptorGadgetSecondary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.HitByDisruptorGadgetSecondary", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -154,7 +154,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: CanBeDisruptedSecondary
     /// </summary>
-    public unsafe bool CanBeDisruptedSecondary()
+    public unsafe virtual bool CanBeDisruptedSecondary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.CanBeDisruptedSecondary", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -165,7 +165,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: GetDisruptorOverridePriority
     /// </summary>
-    public unsafe float GetDisruptorOverridePriority()
+    public unsafe virtual float GetDisruptorOverridePriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.GetDisruptorOverridePriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -176,7 +176,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: CanBeDisrupted
     /// </summary>
-    public unsafe bool CanBeDisrupted()
+    public unsafe virtual bool CanBeDisrupted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.CanBeDisrupted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -187,7 +187,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: HitByDisruptorGadgetCharge
     /// </summary>
-    public unsafe bool HitByDisruptorGadgetCharge()
+    public unsafe virtual bool HitByDisruptorGadgetCharge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.HitByDisruptorGadgetCharge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -198,7 +198,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: GetDisruptorTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDisruptorTargetPosition()
+    public unsafe virtual System.Numerics.Vector3 GetDisruptorTargetPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.GetDisruptorTargetPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -209,7 +209,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -221,7 +221,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: GetDoorWaitIdleAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetDoorWaitIdleAnimName(bool bCocky)
+    public unsafe virtual BmSDK.FName GetDoorWaitIdleAnimName(bool bCocky)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.GetDoorWaitIdleAnimName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -233,7 +233,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: GetBombReactAnim
     /// </summary>
-    public unsafe void GetBombReactAnim(bool bFront, out BmSDK.FName AnimName)
+    public unsafe virtual void GetBombReactAnim(bool bFront, out BmSDK.FName AnimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.GetBombReactAnim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -246,7 +246,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: SetBagCollision
     /// </summary>
-    public unsafe void SetBagCollision(bool bEnabled)
+    public unsafe virtual void SetBagCollision(bool bEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.SetBagCollision", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -258,7 +258,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: SetXrayMatsEnabled
     /// </summary>
-    public unsafe void SetXrayMatsEnabled(bool bEnabled)
+    public unsafe virtual void SetXrayMatsEnabled(bool bEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.SetXrayMatsEnabled", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -270,7 +270,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.BmGame.RPawnVillain Thug)
+    public unsafe override void Init(BmSDK.BmGame.RPawnVillain Thug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.Init", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -282,7 +282,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: GetPickupAnimStartLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetPickupAnimStartLoc(BmSDK.BmGame.RBMPawnAI Pawn)
+    public unsafe virtual System.Numerics.Vector3 GetPickupAnimStartLoc(BmSDK.BmGame.RBMPawnAI Pawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.GetPickupAnimStartLoc", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -294,7 +294,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: GetPickupFromFloorRot
     /// </summary>
-    public unsafe BmSDK.Rotator GetPickupFromFloorRot(System.Numerics.Vector3 pawnLoc)
+    public unsafe virtual BmSDK.Rotator GetPickupFromFloorRot(System.Numerics.Vector3 pawnLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.GetPickupFromFloorRot", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -306,7 +306,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: GetBagCentre
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBagCentre()
+    public unsafe virtual System.Numerics.Vector3 GetBagCentre()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.GetBagCentre", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -317,7 +317,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: ApplyImpulseAwayFromCarrier
     /// </summary>
-    public unsafe void ApplyImpulseAwayFromCarrier(BmSDK.Engine.Pawn carrier)
+    public unsafe virtual void ApplyImpulseAwayFromCarrier(BmSDK.Engine.Pawn carrier)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.ApplyImpulseAwayFromCarrier", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -329,7 +329,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// Function: CanBePickedUpFromAnyDirection
     /// </summary>
-    public unsafe bool CanBePickedUpFromAnyDirection()
+    public unsafe virtual bool CanBePickedUpFromAnyDirection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBagBase.CanBePickedUpFromAnyDirection", true);
         byte* paramsPtr = stackalloc byte[4];

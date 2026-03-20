@@ -71,7 +71,7 @@ public partial class SnowVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.IG
     /// <summary>
     /// Function: SetSnowSettings
     /// </summary>
-    public unsafe void SetSnowSettings()
+    public unsafe virtual void SetSnowSettings()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SnowVolume.SetSnowSettings", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class SnowVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.IG
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SnowVolume.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class SnowVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.IG
     /// <summary>
     /// Function: GetSnowDensity
     /// </summary>
-    public unsafe float GetSnowDensity()
+    public unsafe virtual float GetSnowDensity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SnowVolume.GetSnowDensity", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -112,7 +112,7 @@ public partial class SnowVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.IG
     /// <summary>
     /// Function: LocationSnowHeight
     /// </summary>
-    public unsafe float LocationSnowHeight(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual float LocationSnowHeight(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SnowVolume.LocationSnowHeight", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -131,7 +131,7 @@ public partial class SnowVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.IG
     /// <summary>
     /// Function: DistanceToSnowZ
     /// </summary>
-    public unsafe float DistanceToSnowZ(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual float DistanceToSnowZ(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SnowVolume.DistanceToSnowZ", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -150,7 +150,7 @@ public partial class SnowVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.IG
     /// <summary>
     /// Function: GetLocationPuddleDepth
     /// </summary>
-    public unsafe float GetLocationPuddleDepth(System.Numerics.Vector3 TestLocation)
+    public unsafe override float GetLocationPuddleDepth(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SnowVolume.GetLocationPuddleDepth", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -169,7 +169,7 @@ public partial class SnowVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.IG
     /// <summary>
     /// Function: IsLocationSnowing
     /// </summary>
-    public unsafe bool IsLocationSnowing(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual bool IsLocationSnowing(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SnowVolume.IsLocationSnowing", true);
         byte* paramsPtr = stackalloc byte[16];

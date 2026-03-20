@@ -71,7 +71,7 @@ public partial class RAEC_EscapeFromVolumes : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: OnAssign
     /// </summary>
-    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewMember)
+    public unsafe override void OnAssign(BmSDK.BmGame.RBMAIController NewMember)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_EscapeFromVolumes.OnAssign", true);
         byte* paramsPtr = stackalloc byte[16];

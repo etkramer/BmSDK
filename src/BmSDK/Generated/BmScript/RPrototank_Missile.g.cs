@@ -71,7 +71,7 @@ public partial class RPrototank_Missile : BmSDK.BmGame.RProjectile, BmSDK.IGameO
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPrototank_Missile.Tick", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -83,7 +83,7 @@ public partial class RPrototank_Missile : BmSDK.BmGame.RProjectile, BmSDK.IGameO
     /// <summary>
     /// Function: DamagePlayersInRange
     /// </summary>
-    public unsafe void DamagePlayersInRange()
+    public unsafe virtual void DamagePlayersInRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPrototank_Missile.DamagePlayersInRange", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -94,7 +94,7 @@ public partial class RPrototank_Missile : BmSDK.BmGame.RProjectile, BmSDK.IGameO
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, bool bPlayExplosionSound = default)
+    public unsafe override void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, bool bPlayExplosionSound = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPrototank_Missile.Explode", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -108,7 +108,7 @@ public partial class RPrototank_Missile : BmSDK.BmGame.RProjectile, BmSDK.IGameO
     /// <summary>
     /// Function: ExplodeSound
     /// </summary>
-    public unsafe void ExplodeSound()
+    public unsafe override void ExplodeSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPrototank_Missile.ExplodeSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -119,7 +119,7 @@ public partial class RPrototank_Missile : BmSDK.BmGame.RProjectile, BmSDK.IGameO
     /// <summary>
     /// Function: StopActualSoundEffect
     /// </summary>
-    public unsafe void StopActualSoundEffect()
+    public unsafe override void StopActualSoundEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPrototank_Missile.StopActualSoundEffect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class RPrototank_Missile : BmSDK.BmGame.RProjectile, BmSDK.IGameO
     /// <summary>
     /// Function: StartActualSoundEffect
     /// </summary>
-    public unsafe void StartActualSoundEffect()
+    public unsafe override void StartActualSoundEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPrototank_Missile.StartActualSoundEffect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RPrototank_Missile : BmSDK.BmGame.RProjectile, BmSDK.IGameO
     /// <summary>
     /// Function: SetTargetBone
     /// </summary>
-    public unsafe void SetTargetBone(BmSDK.FName tgtBone)
+    public unsafe virtual void SetTargetBone(BmSDK.FName tgtBone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPrototank_Missile.SetTargetBone", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -153,7 +153,7 @@ public partial class RPrototank_Missile : BmSDK.BmGame.RProjectile, BmSDK.IGameO
     /// <summary>
     /// Function: SetTarget
     /// </summary>
-    public unsafe void SetTarget(BmSDK.Engine.Actor tgt)
+    public unsafe override void SetTarget(BmSDK.Engine.Actor tgt)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPrototank_Missile.SetTarget", true);
         byte* paramsPtr = stackalloc byte[8];

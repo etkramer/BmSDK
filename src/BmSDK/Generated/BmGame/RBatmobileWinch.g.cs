@@ -71,7 +71,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: CanBasePawn
     /// </summary>
-    public unsafe bool CanBasePawn(BmSDK.Engine.Pawn P)
+    public unsafe override bool CanBasePawn(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.CanBasePawn", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: SetActuallyAbseiling
     /// </summary>
-    public unsafe void SetActuallyAbseiling(bool NewAbseiling)
+    public unsafe virtual void SetActuallyAbseiling(bool NewAbseiling)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.SetActuallyAbseiling", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: GivenTo
     /// </summary>
-    public unsafe void GivenTo(BmSDK.Engine.Pawn thisPawn, bool bDoNotActivate = default)
+    public unsafe override void GivenTo(BmSDK.Engine.Pawn thisPawn, bool bDoNotActivate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.GivenTo", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -108,7 +108,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: GetWinchRotation
     /// </summary>
-    public unsafe bool GetWinchRotation(out BmSDK.Rotator FacingRotation)
+    public unsafe virtual bool GetWinchRotation(out BmSDK.Rotator FacingRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.GetWinchRotation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -120,7 +120,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: WinchCameraTimer
     /// </summary>
-    public unsafe void WinchCameraTimer()
+    public unsafe virtual void WinchCameraTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.WinchCameraTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -131,7 +131,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: GetOverrideCamera
     /// </summary>
-    public unsafe BmSDK.FName GetOverrideCamera()
+    public unsafe override BmSDK.FName GetOverrideCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.GetOverrideCamera", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -142,7 +142,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: RestoreOldRopeLengthIfShorter
     /// </summary>
-    public unsafe bool RestoreOldRopeLengthIfShorter()
+    public unsafe virtual bool RestoreOldRopeLengthIfShorter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.RestoreOldRopeLengthIfShorter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -153,7 +153,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: StopElectricityEffects
     /// </summary>
-    public unsafe void StopElectricityEffects()
+    public unsafe virtual void StopElectricityEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.StopElectricityEffects", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -164,7 +164,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: StartElectricityEffects
     /// </summary>
-    public unsafe void StartElectricityEffects()
+    public unsafe virtual void StartElectricityEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.StartElectricityEffects", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -175,7 +175,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: AdjustTargetPositionForProjectileSize
     /// </summary>
-    public unsafe System.Numerics.Vector3 AdjustTargetPositionForProjectileSize(BmSDK.Engine.Actor Target, System.Numerics.Vector3 TargetLoc, out BmSDK.Rotator ProjRot)
+    public unsafe virtual System.Numerics.Vector3 AdjustTargetPositionForProjectileSize(BmSDK.Engine.Actor Target, System.Numerics.Vector3 TargetLoc, out BmSDK.Rotator ProjRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.AdjustTargetPositionForProjectileSize", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -189,7 +189,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: GetTargetActiveSubTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTargetActiveSubTargetPosition(BmSDK.Engine.Actor Target)
+    public unsafe virtual System.Numerics.Vector3 GetTargetActiveSubTargetPosition(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.GetTargetActiveSubTargetPosition", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -201,7 +201,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: CheckAutoTarget
     /// </summary>
-    public unsafe bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
+    public unsafe override bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.CheckAutoTarget", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -217,7 +217,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: IsBatmobileInWinchSecondaryTargetLimits
     /// </summary>
-    public unsafe bool IsBatmobileInWinchSecondaryTargetLimits(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 LimitVec)
+    public unsafe virtual bool IsBatmobileInWinchSecondaryTargetLimits(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 LimitVec)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.IsBatmobileInWinchSecondaryTargetLimits", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -230,7 +230,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: IsBatmobileInWinchTargetLimits
     /// </summary>
-    public unsafe bool IsBatmobileInWinchTargetLimits(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 LimitVec, out int FailReason)
+    public unsafe virtual bool IsBatmobileInWinchTargetLimits(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 LimitVec, out int FailReason)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.IsBatmobileInWinchTargetLimits", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -244,7 +244,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: GetExtraTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetExtraTargetPosition(BmSDK.Engine.Actor TargetActor, int Index)
+    public unsafe virtual System.Numerics.Vector3 GetExtraTargetPosition(BmSDK.Engine.Actor TargetActor, int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.GetExtraTargetPosition", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -257,7 +257,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: GetNumExtraTargetPositions
     /// </summary>
-    public unsafe int GetNumExtraTargetPositions(BmSDK.Engine.Actor TargetActor)
+    public unsafe virtual int GetNumExtraTargetPositions(BmSDK.Engine.Actor TargetActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.GetNumExtraTargetPositions", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -269,7 +269,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: GetTargetSecondaryPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTargetSecondaryPosition(BmSDK.Engine.Actor TargetActor)
+    public unsafe virtual System.Numerics.Vector3 GetTargetSecondaryPosition(BmSDK.Engine.Actor TargetActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.GetTargetSecondaryPosition", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -281,7 +281,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: GetTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTargetPosition(BmSDK.Engine.Actor TargetActor)
+    public unsafe virtual System.Numerics.Vector3 GetTargetPosition(BmSDK.Engine.Actor TargetActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.GetTargetPosition", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -293,7 +293,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: GetWinchTargetComponent
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent GetWinchTargetComponent()
+    public unsafe virtual BmSDK.Engine.PrimitiveComponent GetWinchTargetComponent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.GetWinchTargetComponent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -304,7 +304,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: CanTargetInEncounter
     /// </summary>
-    public unsafe bool CanTargetInEncounter(BmSDK.Engine.Actor TargetActor)
+    public unsafe virtual bool CanTargetInEncounter(BmSDK.Engine.Actor TargetActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.CanTargetInEncounter", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -316,7 +316,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: DriverEntered
     /// </summary>
-    public unsafe void DriverEntered(BmSDK.BmGame.RVehicleBatmobileBase Batmobile)
+    public unsafe virtual void DriverEntered(BmSDK.BmGame.RVehicleBatmobileBase Batmobile)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.DriverEntered", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -328,7 +328,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: DriverLeft
     /// </summary>
-    public unsafe void DriverLeft()
+    public unsafe override void DriverLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.DriverLeft", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -339,7 +339,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: OverridesHeavyCannon
     /// </summary>
-    public unsafe bool OverridesHeavyCannon()
+    public unsafe virtual bool OverridesHeavyCannon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.OverridesHeavyCannon", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -350,7 +350,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: UpdateOnGround
     /// </summary>
-    public unsafe void UpdateOnGround()
+    public unsafe virtual void UpdateOnGround()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.UpdateOnGround", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -361,7 +361,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: AttachToSpecificThing
     /// </summary>
-    public unsafe void AttachToSpecificThing(BmSDK.BmGame.RBatmobileWinch.EWinchPullType PullType, BmSDK.Engine.Actor Thing)
+    public unsafe virtual void AttachToSpecificThing(BmSDK.BmGame.RBatmobileWinch.EWinchPullType PullType, BmSDK.Engine.Actor Thing)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.AttachToSpecificThing", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -374,7 +374,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: AttachToNearestThing
     /// </summary>
-    public unsafe void AttachToNearestThing(BmSDK.BmGame.RBatmobileWinch.EWinchPullType PullType, BmSDK.Class ClassOfThing, float MaxRangeToThing = default)
+    public unsafe virtual void AttachToNearestThing(BmSDK.BmGame.RBatmobileWinch.EWinchPullType PullType, BmSDK.Class ClassOfThing, float MaxRangeToThing = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.AttachToNearestThing", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -388,7 +388,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: GetSaveState
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatmobileWinch.EWinchPullType GetSaveState()
+    public unsafe virtual BmSDK.BmGame.RBatmobileWinch.EWinchPullType GetSaveState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.GetSaveState", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -406,7 +406,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: IsHeavyWeaponValid
     /// </summary>
-    public unsafe bool IsHeavyWeaponValid()
+    public unsafe override bool IsHeavyWeaponValid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.IsHeavyWeaponValid", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -417,7 +417,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: StopRevRumble
     /// </summary>
-    public unsafe void StopRevRumble()
+    public unsafe virtual void StopRevRumble()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.StopRevRumble", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -428,7 +428,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: UpdateRevRumble
     /// </summary>
-    public unsafe void UpdateRevRumble(float RevPct, float PowerPct)
+    public unsafe virtual void UpdateRevRumble(float RevPct, float PowerPct)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.UpdateRevRumble", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -441,7 +441,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: DrawElectrify
     /// </summary>
-    public unsafe void DrawElectrify()
+    public unsafe virtual void DrawElectrify()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.DrawElectrify", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -452,7 +452,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: HideElectrify
     /// </summary>
-    public unsafe void HideElectrify()
+    public unsafe virtual void HideElectrify()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.HideElectrify", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -463,7 +463,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: DrawLockedTarget
     /// </summary>
-    public unsafe void DrawLockedTarget()
+    public unsafe virtual void DrawLockedTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.DrawLockedTarget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -474,7 +474,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: DrawHomingTarget
     /// </summary>
-    public unsafe void DrawHomingTarget()
+    public unsafe virtual void DrawHomingTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.DrawHomingTarget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -485,7 +485,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: DrawTargets
     /// </summary>
-    public unsafe void DrawTargets()
+    public unsafe virtual void DrawTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.DrawTargets", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -496,7 +496,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: UpdateValidTargets
     /// </summary>
-    public unsafe void UpdateValidTargets()
+    public unsafe virtual void UpdateValidTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.UpdateValidTargets", true);
         byte* paramsPtr = stackalloc byte[124];
@@ -507,7 +507,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: IsBatmanInTheWay
     /// </summary>
-    public unsafe bool IsBatmanInTheWay(BmSDK.BmGame.RVehicleBatmobileBase Batmobile, BmSDK.Engine.Actor Target, System.Numerics.Vector3 End, System.Numerics.Vector3 Start)
+    public unsafe virtual bool IsBatmanInTheWay(BmSDK.BmGame.RVehicleBatmobileBase Batmobile, BmSDK.Engine.Actor Target, System.Numerics.Vector3 End, System.Numerics.Vector3 Start)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.IsBatmanInTheWay", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -522,7 +522,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: GetPointDistanceToLineSeg
     /// </summary>
-    public unsafe float GetPointDistanceToLineSeg(System.Numerics.Vector3 Point, System.Numerics.Vector3 Start, System.Numerics.Vector3 End)
+    public unsafe virtual float GetPointDistanceToLineSeg(System.Numerics.Vector3 Point, System.Numerics.Vector3 Start, System.Numerics.Vector3 End)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.GetPointDistanceToLineSeg", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -543,7 +543,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: AddInvalidTarget
     /// </summary>
-    public unsafe void AddInvalidTarget(BmSDK.Engine.Actor Target, int InvalidReason, BmSDK.Engine.Actor Blocker = default, BmSDK.BmGame.RVehicleNPC.EVehicleCombatEncounterType EncounterType = default)
+    public unsafe virtual void AddInvalidTarget(BmSDK.Engine.Actor Target, int InvalidReason, BmSDK.Engine.Actor Blocker = default, BmSDK.BmGame.RVehicleNPC.EVehicleCombatEncounterType EncounterType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.AddInvalidTarget", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -558,7 +558,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: ShouldShowBattleModeHelpText
     /// </summary>
-    public unsafe bool ShouldShowBattleModeHelpText()
+    public unsafe virtual bool ShouldShowBattleModeHelpText()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.ShouldShowBattleModeHelpText", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -569,7 +569,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: IsTargetBlockInteraction
     /// </summary>
-    public unsafe bool IsTargetBlockInteraction(BmSDK.Engine.Actor Target)
+    public unsafe virtual bool IsTargetBlockInteraction(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.IsTargetBlockInteraction", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -581,7 +581,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: ShowFailedWeapon
     /// </summary>
-    public unsafe void ShowFailedWeapon()
+    public unsafe override void ShowFailedWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.ShowFailedWeapon", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -592,7 +592,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: IsHelpTextSuppressed
     /// </summary>
-    public unsafe bool IsHelpTextSuppressed()
+    public unsafe virtual bool IsHelpTextSuppressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.IsHelpTextSuppressed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -603,7 +603,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: SetSuppressHelpText
     /// </summary>
-    public unsafe void SetSuppressHelpText(bool Suppress)
+    public unsafe virtual void SetSuppressHelpText(bool Suppress)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.SetSuppressHelpText", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -615,7 +615,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: SetRopeCanOnlyShorten
     /// </summary>
-    public unsafe void SetRopeCanOnlyShorten()
+    public unsafe virtual void SetRopeCanOnlyShorten()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.SetRopeCanOnlyShorten", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -626,7 +626,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: ProjectileReachedDest
     /// </summary>
-    public unsafe void ProjectileReachedDest()
+    public unsafe virtual void ProjectileReachedDest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.ProjectileReachedDest", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -637,7 +637,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: DoStopWinch
     /// </summary>
-    public unsafe void DoStopWinch(bool Holstering)
+    public unsafe virtual void DoStopWinch(bool Holstering)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.DoStopWinch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -649,7 +649,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: ReleaseWinch
     /// </summary>
-    public unsafe bool ReleaseWinch(bool SpawnEffects = default, BmSDK.BmGame.RPlayerController ManualRelease = default)
+    public unsafe virtual bool ReleaseWinch(bool SpawnEffects = default, BmSDK.BmGame.RPlayerController ManualRelease = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.ReleaseWinch", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -662,7 +662,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: CanReleaseWinchInteractive
     /// </summary>
-    public unsafe bool CanReleaseWinchInteractive(BmSDK.BmGame.RPlayerController ManualRelease, bool CallingBatmobile = default)
+    public unsafe virtual bool CanReleaseWinchInteractive(BmSDK.BmGame.RPlayerController ManualRelease, bool CallingBatmobile = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.CanReleaseWinchInteractive", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -675,7 +675,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: IsBatmanStandingInTheLift
     /// </summary>
-    public unsafe bool IsBatmanStandingInTheLift(BmSDK.BmGame.RPlayerController Controller)
+    public unsafe virtual bool IsBatmanStandingInTheLift(BmSDK.BmGame.RPlayerController Controller)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.IsBatmanStandingInTheLift", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -687,7 +687,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: CanReleaseWinch
     /// </summary>
-    public unsafe bool CanReleaseWinch()
+    public unsafe virtual bool CanReleaseWinch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.CanReleaseWinch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -698,7 +698,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: HolsterWinch
     /// </summary>
-    public unsafe void HolsterWinch()
+    public unsafe virtual void HolsterWinch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.HolsterWinch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -709,7 +709,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: ShouldAnimateRetractingWinch
     /// </summary>
-    public unsafe bool ShouldAnimateRetractingWinch()
+    public unsafe virtual bool ShouldAnimateRetractingWinch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.ShouldAnimateRetractingWinch", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -720,7 +720,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: FireWeapon
     /// </summary>
-    public unsafe bool FireWeapon()
+    public unsafe override bool FireWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.FireWeapon", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -731,7 +731,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: FireWeaponInternal
     /// </summary>
-    public unsafe bool FireWeaponInternal()
+    public unsafe virtual bool FireWeaponInternal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.FireWeaponInternal", true);
         byte* paramsPtr = stackalloc byte[29];
@@ -742,7 +742,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: IsInteractionBlocked
     /// </summary>
-    public unsafe bool IsInteractionBlocked()
+    public unsafe virtual bool IsInteractionBlocked()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.IsInteractionBlocked", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -753,7 +753,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: GetImpactAudioEvent
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetImpactAudioEvent(BmSDK.Engine.AkWwise.EAkWorldMaterial Mat)
+    public unsafe override BmSDK.Engine.AkEvent GetImpactAudioEvent(BmSDK.Engine.AkWwise.EAkWorldMaterial Mat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.GetImpactAudioEvent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -765,7 +765,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: GetAdditionalHelpPrompt
     /// </summary>
-    public unsafe void GetAdditionalHelpPrompt(BmSDK.BmGame.RHUDPrompt HUDPrompt)
+    public unsafe override void GetAdditionalHelpPrompt(BmSDK.BmGame.RHUDPrompt HUDPrompt)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.GetAdditionalHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -777,7 +777,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -788,7 +788,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -799,7 +799,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: CanBattleDodge
     /// </summary>
-    public unsafe bool CanBattleDodge()
+    public unsafe override bool CanBattleDodge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.CanBattleDodge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -810,7 +810,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: SetForceInEncounter
     /// </summary>
-    public unsafe void SetForceInEncounter(bool InEncounter)
+    public unsafe virtual void SetForceInEncounter(bool InEncounter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.SetForceInEncounter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -822,7 +822,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Function: WinchTrace
     /// </summary>
-    public unsafe BmSDK.Engine.Actor WinchTrace(System.Numerics.Vector3 End, System.Numerics.Vector3 Start, out BmSDK.Engine.Actor.FTraceHitInfo HitInfo)
+    public unsafe virtual BmSDK.Engine.Actor WinchTrace(System.Numerics.Vector3 End, System.Numerics.Vector3 Start, out BmSDK.Engine.Actor.FTraceHitInfo HitInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileWinch.WinchTrace", true);
         byte* paramsPtr = stackalloc byte[72];

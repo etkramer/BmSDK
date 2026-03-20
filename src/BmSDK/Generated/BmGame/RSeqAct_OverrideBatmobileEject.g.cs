@@ -36,7 +36,7 @@ public partial class RSeqAct_OverrideBatmobileEject : BmSDK.Engine.SequenceActio
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_OverrideBatmobileEject.Activated", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -47,7 +47,7 @@ public partial class RSeqAct_OverrideBatmobileEject : BmSDK.Engine.SequenceActio
     /// <summary>
     /// Function: EjectToSpot
     /// </summary>
-    public unsafe void EjectToSpot(BmSDK.BmGame.RVehicleBatmobileBase Batmobile)
+    public unsafe virtual void EjectToSpot(BmSDK.BmGame.RVehicleBatmobileBase Batmobile)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_OverrideBatmobileEject.EjectToSpot", true);
         byte* paramsPtr = stackalloc byte[64];

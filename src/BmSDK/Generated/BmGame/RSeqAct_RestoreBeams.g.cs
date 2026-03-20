@@ -36,7 +36,7 @@ public partial class RSeqAct_RestoreBeams : BmSDK.Engine.SequenceAction, BmSDK.I
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RestoreBeams.Activated", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -47,7 +47,7 @@ public partial class RSeqAct_RestoreBeams : BmSDK.Engine.SequenceAction, BmSDK.I
     /// <summary>
     /// Function: RestoreBeam
     /// </summary>
-    public unsafe void RestoreBeam(BmSDK.Engine.RStaticClimbableActor Breakable, int CollectionIndex, int RailingIndex)
+    public unsafe virtual void RestoreBeam(BmSDK.Engine.RStaticClimbableActor Breakable, int CollectionIndex, int RailingIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RestoreBeams.RestoreBeam", true);
         byte* paramsPtr = stackalloc byte[16];

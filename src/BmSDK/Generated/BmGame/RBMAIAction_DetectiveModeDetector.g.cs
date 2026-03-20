@@ -71,7 +71,7 @@ public partial class RBMAIAction_DetectiveModeDetector : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: IsInRightBehindMeTransition
     /// </summary>
-    public unsafe bool IsInRightBehindMeTransition()
+    public unsafe virtual bool IsInRightBehindMeTransition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DetectiveModeDetector.IsInRightBehindMeTransition", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_DetectiveModeDetector : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DetectiveModeDetector.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RBMAIAction_DetectiveModeDetector : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DetectiveModeDetector.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_DetectiveModeDetector : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: DoIntroBark
     /// </summary>
-    public unsafe void DoIntroBark()
+    public unsafe virtual void DoIntroBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DetectiveModeDetector.DoIntroBark", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -116,7 +116,7 @@ public partial class RBMAIAction_DetectiveModeDetector : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: DetectionStarted
     /// </summary>
-    public unsafe void DetectionStarted()
+    public unsafe virtual void DetectionStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DetectiveModeDetector.DetectionStarted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RBMAIAction_DetectiveModeDetector : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: TryRestartDetection
     /// </summary>
-    public unsafe void TryRestartDetection()
+    public unsafe virtual void TryRestartDetection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DetectiveModeDetector.TryRestartDetection", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RBMAIAction_DetectiveModeDetector : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: StopDetection
     /// </summary>
-    public unsafe void StopDetection(bool bDetectiveModeOn)
+    public unsafe virtual void StopDetection(bool bDetectiveModeOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DetectiveModeDetector.StopDetection", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -150,7 +150,7 @@ public partial class RBMAIAction_DetectiveModeDetector : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: TriggerInAnim
     /// </summary>
-    public unsafe void TriggerInAnim(bool bRestarting)
+    public unsafe virtual void TriggerInAnim(bool bRestarting)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DetectiveModeDetector.TriggerInAnim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -162,7 +162,7 @@ public partial class RBMAIAction_DetectiveModeDetector : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DetectiveModeDetector.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -173,7 +173,7 @@ public partial class RBMAIAction_DetectiveModeDetector : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DetectiveModeDetector.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -184,7 +184,7 @@ public partial class RBMAIAction_DetectiveModeDetector : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: FreeBarkLock
     /// </summary>
-    public unsafe void FreeBarkLock()
+    public unsafe virtual void FreeBarkLock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DetectiveModeDetector.FreeBarkLock", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -195,7 +195,7 @@ public partial class RBMAIAction_DetectiveModeDetector : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// Function: SetBarkLock
     /// </summary>
-    public unsafe void SetBarkLock()
+    public unsafe virtual void SetBarkLock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_DetectiveModeDetector.SetBarkLock", true);
         byte* paramsPtr = stackalloc byte[0];

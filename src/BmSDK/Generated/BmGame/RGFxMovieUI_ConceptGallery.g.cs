@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_ConceptGallery : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: XI_SetViewed
     /// </summary>
-    public unsafe void XI_SetViewed(BmSDK.FString ItemName)
+    public unsafe virtual void XI_SetViewed(BmSDK.FString ItemName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ConceptGallery.XI_SetViewed", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -48,7 +48,7 @@ public partial class RGFxMovieUI_ConceptGallery : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: XI_ConceptGalleyEnumerate
     /// </summary>
-    public unsafe void XI_ConceptGalleyEnumerate(BmSDK.FString sTargetPath)
+    public unsafe virtual void XI_ConceptGalleyEnumerate(BmSDK.FString sTargetPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ConceptGallery.XI_ConceptGalleyEnumerate", true);
         byte* paramsPtr = stackalloc byte[104];
@@ -60,7 +60,7 @@ public partial class RGFxMovieUI_ConceptGallery : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: UC_CloseInspectMode
     /// </summary>
-    public unsafe void UC_CloseInspectMode()
+    public unsafe virtual void UC_CloseInspectMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ConceptGallery.UC_CloseInspectMode", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -71,7 +71,7 @@ public partial class RGFxMovieUI_ConceptGallery : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: UC_AddConcept
     /// </summary>
-    public unsafe void UC_AddConcept(BmSDK.FString sName, BmSDK.FString sPackage, BmSDK.FString sStatus)
+    public unsafe virtual void UC_AddConcept(BmSDK.FString sName, BmSDK.FString sPackage, BmSDK.FString sStatus)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ConceptGallery.UC_AddConcept", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -85,7 +85,7 @@ public partial class RGFxMovieUI_ConceptGallery : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: ProcessVoiceCommand
     /// </summary>
-    public unsafe bool ProcessVoiceCommand(BmSDK.FString sCommand)
+    public unsafe override bool ProcessVoiceCommand(BmSDK.FString sCommand)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ConceptGallery.ProcessVoiceCommand", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -97,7 +97,7 @@ public partial class RGFxMovieUI_ConceptGallery : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: CloseScreen
     /// </summary>
-    public unsafe void CloseScreen()
+    public unsafe override void CloseScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_ConceptGallery.CloseScreen", true);
         byte* paramsPtr = stackalloc byte[0];

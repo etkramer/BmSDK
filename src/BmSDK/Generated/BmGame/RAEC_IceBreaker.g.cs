@@ -71,7 +71,7 @@ public partial class RAEC_IceBreaker : BmSDK.BmGame.RAlertEventCoordinatorBase, 
     /// <summary>
     /// Function: HandleSpotted
     /// </summary>
-    public unsafe void HandleSpotted(BmSDK.BmGame.RBMAIController Spotter)
+    public unsafe virtual void HandleSpotted(BmSDK.BmGame.RBMAIController Spotter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_IceBreaker.HandleSpotted", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RAEC_IceBreaker : BmSDK.BmGame.RAlertEventCoordinatorBase, 
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_IceBreaker.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];

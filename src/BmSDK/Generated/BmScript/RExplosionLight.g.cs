@@ -71,7 +71,7 @@ public partial class RExplosionLight : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FastStartSlowEnd
     /// </summary>
-    public unsafe void FastStartSlowEnd()
+    public unsafe virtual void FastStartSlowEnd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RExplosionLight.FastStartSlowEnd", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RExplosionLight : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateLight
     /// </summary>
-    public unsafe void UpdateLight(float DeltaTime, System.Numerics.Vector3 Loc)
+    public unsafe virtual void UpdateLight(float DeltaTime, System.Numerics.Vector3 Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RExplosionLight.UpdateLight", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -95,7 +95,7 @@ public partial class RExplosionLight : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StartLight
     /// </summary>
-    public unsafe void StartLight()
+    public unsafe virtual void StartLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RExplosionLight.StartLight", true);
         byte* paramsPtr = stackalloc byte[0];

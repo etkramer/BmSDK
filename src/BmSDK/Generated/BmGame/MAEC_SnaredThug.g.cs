@@ -71,7 +71,7 @@ public partial class MAEC_SnaredThug : BmSDK.BmGame.RAEC_FrozenThug, BmSDK.IGame
     /// <summary>
     /// Function: OnAssign
     /// </summary>
-    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController FrozenCon)
+    public unsafe override void OnAssign(BmSDK.BmGame.RBMAIController FrozenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_SnaredThug.OnAssign", true);
         byte* paramsPtr = stackalloc byte[8];

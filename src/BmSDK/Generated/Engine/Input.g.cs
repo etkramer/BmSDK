@@ -36,7 +36,7 @@ public partial class Input : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: IsThumbMouseButton2Pressed
     /// </summary>
-    public unsafe bool IsThumbMouseButton2Pressed()
+    public unsafe virtual bool IsThumbMouseButton2Pressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Input.IsThumbMouseButton2Pressed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -54,7 +54,7 @@ public partial class Input : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: IsThumbMouseButtonPressed
     /// </summary>
-    public unsafe bool IsThumbMouseButtonPressed()
+    public unsafe virtual bool IsThumbMouseButtonPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Input.IsThumbMouseButtonPressed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -72,7 +72,7 @@ public partial class Input : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: IsLeftShiftPressed
     /// </summary>
-    public unsafe bool IsLeftShiftPressed()
+    public unsafe virtual bool IsLeftShiftPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Input.IsLeftShiftPressed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -90,7 +90,7 @@ public partial class Input : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: IsLeftCtrlPressed
     /// </summary>
-    public unsafe bool IsLeftCtrlPressed()
+    public unsafe virtual bool IsLeftCtrlPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Input.IsLeftCtrlPressed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -108,7 +108,7 @@ public partial class Input : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: SetBind
     /// </summary>
-    public unsafe void SetBind(BmSDK.FName BindName, BmSDK.FString Command)
+    public unsafe virtual void SetBind(BmSDK.FName BindName, BmSDK.FString Command)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Input.SetBind", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -121,7 +121,7 @@ public partial class Input : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetInput
     /// </summary>
-    public unsafe void ResetInput()
+    public unsafe virtual void ResetInput()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Input.ResetInput", true);
         byte* paramsPtr = stackalloc byte[0];

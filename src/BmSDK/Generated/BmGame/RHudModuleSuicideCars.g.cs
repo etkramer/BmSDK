@@ -36,7 +36,7 @@ public partial class RHudModuleSuicideCars : BmSDK.BmGame.RHudModule, BmSDK.IGam
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleSuicideCars.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RHudModuleSuicideCars : BmSDK.BmGame.RHudModule, BmSDK.IGam
     /// <summary>
     /// Function: DoOutro
     /// </summary>
-    public unsafe void DoOutro()
+    public unsafe virtual void DoOutro()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleSuicideCars.DoOutro", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RHudModuleSuicideCars : BmSDK.BmGame.RHudModule, BmSDK.IGam
     /// <summary>
     /// Function: CloseSuicideCarsHud
     /// </summary>
-    public unsafe void CloseSuicideCarsHud()
+    public unsafe virtual void CloseSuicideCarsHud()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleSuicideCars.CloseSuicideCarsHud", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RHudModuleSuicideCars : BmSDK.BmGame.RHudModule, BmSDK.IGam
     /// <summary>
     /// Function: SetSuicideCarsLevel
     /// </summary>
-    public unsafe void SetSuicideCarsLevel(float _CurrentSuicideCarsLevel)
+    public unsafe virtual void SetSuicideCarsLevel(float _CurrentSuicideCarsLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleSuicideCars.SetSuicideCarsLevel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -81,7 +81,7 @@ public partial class RHudModuleSuicideCars : BmSDK.BmGame.RHudModule, BmSDK.IGam
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleSuicideCars.Init", true);
         byte* paramsPtr = stackalloc byte[44];

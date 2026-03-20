@@ -36,7 +36,7 @@ public partial class AnimNodeBlendPerBone : BmSDK.Engine.AnimNodeBlend, BmSDK.IG
     /// <summary>
     /// Function: SetBlendTarget
     /// </summary>
-    public unsafe void SetBlendTarget(float BlendTarget, float BlendTime)
+    public unsafe override void SetBlendTarget(float BlendTarget, float BlendTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeBlendPerBone.SetBlendTarget", true);
         byte* paramsPtr = stackalloc byte[8];

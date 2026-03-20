@@ -66,7 +66,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: GetDisruptorTargetMesh
     /// </summary>
-    public unsafe BmSDK.Engine.MeshComponent GetDisruptorTargetMesh()
+    public unsafe virtual BmSDK.Engine.MeshComponent GetDisruptorTargetMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.GetDisruptorTargetMesh", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -77,7 +77,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: IsDisrupted
     /// </summary>
-    public unsafe bool IsDisrupted()
+    public unsafe virtual bool IsDisrupted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.IsDisrupted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -88,7 +88,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: GetDisruptorDescriptionParameters
     /// </summary>
-    public unsafe BmSDK.FString GetDisruptorDescriptionParameters()
+    public unsafe virtual BmSDK.FString GetDisruptorDescriptionParameters()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.GetDisruptorDescriptionParameters", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -99,7 +99,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: RequiresDisruptorUpgrade
     /// </summary>
-    public unsafe bool RequiresDisruptorUpgrade()
+    public unsafe virtual bool RequiresDisruptorUpgrade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.RequiresDisruptorUpgrade", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -110,7 +110,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: RequiresDroneDisruptor
     /// </summary>
-    public unsafe bool RequiresDroneDisruptor()
+    public unsafe virtual bool RequiresDroneDisruptor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.RequiresDroneDisruptor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -121,7 +121,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: HitByDisruptorGadgetSecondary
     /// </summary>
-    public unsafe bool HitByDisruptorGadgetSecondary()
+    public unsafe virtual bool HitByDisruptorGadgetSecondary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.HitByDisruptorGadgetSecondary", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -132,7 +132,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: CanBeDisruptedSecondary
     /// </summary>
-    public unsafe bool CanBeDisruptedSecondary()
+    public unsafe virtual bool CanBeDisruptedSecondary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.CanBeDisruptedSecondary", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -143,7 +143,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: GetDisruptorOverridePriority
     /// </summary>
-    public unsafe float GetDisruptorOverridePriority()
+    public unsafe virtual float GetDisruptorOverridePriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.GetDisruptorOverridePriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -154,7 +154,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: CanBeDisrupted
     /// </summary>
-    public unsafe bool CanBeDisrupted()
+    public unsafe virtual bool CanBeDisrupted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.CanBeDisrupted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -165,7 +165,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: HitByDisruptorGadgetCharge
     /// </summary>
-    public unsafe bool HitByDisruptorGadgetCharge()
+    public unsafe virtual bool HitByDisruptorGadgetCharge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.HitByDisruptorGadgetCharge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -176,7 +176,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: GetDisruptorTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDisruptorTargetPosition()
+    public unsafe virtual System.Numerics.Vector3 GetDisruptorTargetPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.GetDisruptorTargetPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -187,7 +187,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: AlarmOff
     /// </summary>
-    public unsafe void AlarmOff()
+    public unsafe virtual void AlarmOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.AlarmOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -198,7 +198,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: AlarmOn
     /// </summary>
-    public unsafe void AlarmOn()
+    public unsafe virtual void AlarmOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.AlarmOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -209,7 +209,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: GetPylon
     /// </summary>
-    public unsafe BmSDK.Engine.Pylon GetPylon()
+    public unsafe override BmSDK.Engine.Pylon GetPylon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.GetPylon", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -220,7 +220,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: GetVoiceSynthLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetVoiceSynthLocation()
+    public unsafe virtual System.Numerics.Vector3 GetVoiceSynthLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.GetVoiceSynthLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -231,7 +231,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: GetMoveToPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMoveToPoint()
+    public unsafe virtual System.Numerics.Vector3 GetMoveToPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.GetMoveToPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -242,7 +242,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: GetObstacleActor
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetObstacleActor()
+    public unsafe virtual BmSDK.Engine.Actor GetObstacleActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.GetObstacleActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -253,7 +253,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -264,7 +264,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -275,7 +275,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: CheckForWeaponLoad
     /// </summary>
-    public unsafe void CheckForWeaponLoad()
+    public unsafe virtual void CheckForWeaponLoad()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.CheckForWeaponLoad", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -286,7 +286,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -297,7 +297,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: UnRegisterObstacle
     /// </summary>
-    public unsafe void UnRegisterObstacle()
+    public unsafe virtual void UnRegisterObstacle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.UnRegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -315,7 +315,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: RegisterObstacle
     /// </summary>
-    public unsafe void RegisterObstacle()
+    public unsafe virtual void RegisterObstacle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.RegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -333,7 +333,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: CancelWeaponLoading
     /// </summary>
-    public unsafe void CancelWeaponLoading()
+    public unsafe virtual void CancelWeaponLoading()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.CancelWeaponLoading", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -351,7 +351,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: LoadWeapon
     /// </summary>
-    public unsafe bool LoadWeapon(BmSDK.FString WeaponPackageString)
+    public unsafe virtual bool LoadWeapon(BmSDK.FString WeaponPackageString)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.LoadWeapon", true);
         byte* paramsPtr = stackalloc byte[20];

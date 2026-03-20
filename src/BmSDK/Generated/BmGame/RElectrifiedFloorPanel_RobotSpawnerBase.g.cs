@@ -66,7 +66,7 @@ public partial class RElectrifiedFloorPanel_RobotSpawnerBase : BmSDK.BmGame.REle
     /// <summary>
     /// Function: GetMeshCentre
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMeshCentre()
+    public unsafe virtual System.Numerics.Vector3 GetMeshCentre()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RElectrifiedFloorPanel_RobotSpawnerBase.GetMeshCentre", true);
         byte* paramsPtr = stackalloc byte[12];

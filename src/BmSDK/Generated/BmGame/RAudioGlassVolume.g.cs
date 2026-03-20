@@ -71,7 +71,7 @@ public partial class RAudioGlassVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: SetWindow
     /// </summary>
-    public unsafe void SetWindow(BmSDK.BmGame.RDestructibleProp_FractureWall win)
+    public unsafe virtual void SetWindow(BmSDK.BmGame.RDestructibleProp_FractureWall win)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAudioGlassVolume.SetWindow", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RAudioGlassVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAudioGlassVolume.UnTouch", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RAudioGlassVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAudioGlassVolume.Touch", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -110,7 +110,7 @@ public partial class RAudioGlassVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: HandleTouch
     /// </summary>
-    public unsafe void HandleTouch(BmSDK.BmGame.RAudioGlassVolume Volume, bool bEnabled)
+    public unsafe virtual void HandleTouch(BmSDK.BmGame.RAudioGlassVolume Volume, bool bEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAudioGlassVolume.HandleTouch", true);
         byte* paramsPtr = stackalloc byte[12];

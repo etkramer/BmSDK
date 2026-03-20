@@ -36,7 +36,7 @@ public partial class MSeqAct_SetSharedFlag : BmSDK.Engine.SeqAct_SetSequenceVari
     /// <summary>
     /// Function: Deactivated
     /// </summary>
-    public unsafe void Deactivated()
+    public unsafe override void Deactivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSeqAct_SetSharedFlag.Deactivated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class MSeqAct_SetSharedFlag : BmSDK.Engine.SeqAct_SetSequenceVari
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSeqAct_SetSharedFlag.Activated", true);
         byte* paramsPtr = stackalloc byte[12];

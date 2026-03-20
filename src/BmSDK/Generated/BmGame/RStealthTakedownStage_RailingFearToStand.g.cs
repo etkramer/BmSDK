@@ -71,7 +71,7 @@ public partial class RStealthTakedownStage_RailingFearToStand : BmSDK.BmGame.RSt
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_RailingFearToStand.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -84,7 +84,7 @@ public partial class RStealthTakedownStage_RailingFearToStand : BmSDK.BmGame.RSt
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_RailingFearToStand.Begin", true);
         byte* paramsPtr = stackalloc byte[8];

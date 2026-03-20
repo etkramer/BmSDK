@@ -71,7 +71,7 @@ public partial class RBatmobileRemoteVolume : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileRemoteVolume.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RBatmobileRemoteVolume : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileRemoteVolume.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RBatmobileRemoteVolume : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileRemoteVolume.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RBatmobileRemoteVolume : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileRemoteVolume.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RBatmobileRemoteVolume : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: GetIsActive
     /// </summary>
-    public unsafe int GetIsActive(BmSDK.BmGame.RGameInfo RGI)
+    public unsafe virtual int GetIsActive(BmSDK.BmGame.RGameInfo RGI)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileRemoteVolume.GetIsActive", true);
         byte* paramsPtr = stackalloc byte[12];

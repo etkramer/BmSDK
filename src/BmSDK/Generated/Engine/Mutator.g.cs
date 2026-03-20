@@ -66,7 +66,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: NetDamage
     /// </summary>
-    public unsafe void NetDamage(int OriginalDamage, out int Damage, BmSDK.Engine.Pawn injured, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, out System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor DamageCauser)
+    public unsafe virtual void NetDamage(int OriginalDamage, out int Damage, BmSDK.Engine.Pawn injured, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, out System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor DamageCauser)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.NetDamage", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -85,7 +85,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: ScoreKill
     /// </summary>
-    public unsafe void ScoreKill(BmSDK.Engine.Controller Killer, BmSDK.Engine.Controller Killed)
+    public unsafe virtual void ScoreKill(BmSDK.Engine.Controller Killer, BmSDK.Engine.Controller Killed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.ScoreKill", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -98,7 +98,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: ScoreObjective
     /// </summary>
-    public unsafe void ScoreObjective(BmSDK.Engine.PlayerReplicationInfo Scorer, int Score)
+    public unsafe virtual void ScoreObjective(BmSDK.Engine.PlayerReplicationInfo Scorer, int Score)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.ScoreObjective", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -111,7 +111,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: PreventDeath
     /// </summary>
-    public unsafe bool PreventDeath(BmSDK.Engine.Pawn Killed, BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe virtual bool PreventDeath(BmSDK.Engine.Pawn Killed, BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.PreventDeath", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -126,7 +126,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: OverridePickupQuery
     /// </summary>
-    public unsafe bool OverridePickupQuery(BmSDK.Engine.Pawn Other, BmSDK.Class ItemClass, BmSDK.Engine.Actor Pickup, out byte bAllowPickup)
+    public unsafe virtual bool OverridePickupQuery(BmSDK.Engine.Pawn Other, BmSDK.Class ItemClass, BmSDK.Engine.Actor Pickup, out byte bAllowPickup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.OverridePickupQuery", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -141,7 +141,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckEndGame
     /// </summary>
-    public unsafe bool CheckEndGame(BmSDK.Engine.PlayerReplicationInfo Winner, BmSDK.FString Reason)
+    public unsafe virtual bool CheckEndGame(BmSDK.Engine.PlayerReplicationInfo Winner, BmSDK.FString Reason)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.CheckEndGame", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -154,7 +154,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: HandleRestartGame
     /// </summary>
-    public unsafe bool HandleRestartGame()
+    public unsafe virtual bool HandleRestartGame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.HandleRestartGame", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -165,7 +165,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: FindPlayerStart
     /// </summary>
-    public unsafe BmSDK.Engine.NavigationPoint FindPlayerStart(BmSDK.Engine.Controller Player, byte InTeam = default, BmSDK.FString IncomingName = default)
+    public unsafe virtual BmSDK.Engine.NavigationPoint FindPlayerStart(BmSDK.Engine.Controller Player, byte InTeam = default, BmSDK.FString IncomingName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.FindPlayerStart", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -179,7 +179,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSeamlessTravelActorList
     /// </summary>
-    public unsafe void GetSeamlessTravelActorList(bool bToEntry, out BmSDK.TArray<BmSDK.Engine.Actor> ActorList)
+    public unsafe virtual void GetSeamlessTravelActorList(bool bToEntry, out BmSDK.TArray<BmSDK.Engine.Actor> ActorList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.GetSeamlessTravelActorList", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -192,7 +192,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: InitMutator
     /// </summary>
-    public unsafe void InitMutator(BmSDK.FString Options, out BmSDK.FString ErrorMessage)
+    public unsafe virtual void InitMutator(BmSDK.FString Options, out BmSDK.FString ErrorMessage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.InitMutator", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -205,7 +205,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: DriverLeftVehicle
     /// </summary>
-    public unsafe void DriverLeftVehicle(BmSDK.Engine.Vehicle V, BmSDK.Engine.Pawn P)
+    public unsafe virtual void DriverLeftVehicle(BmSDK.Engine.Vehicle V, BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.DriverLeftVehicle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -218,7 +218,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: CanLeaveVehicle
     /// </summary>
-    public unsafe bool CanLeaveVehicle(BmSDK.Engine.Vehicle V, BmSDK.Engine.Pawn P)
+    public unsafe virtual bool CanLeaveVehicle(BmSDK.Engine.Vehicle V, BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.CanLeaveVehicle", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -231,7 +231,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: DriverEnteredVehicle
     /// </summary>
-    public unsafe void DriverEnteredVehicle(BmSDK.Engine.Vehicle V, BmSDK.Engine.Pawn P)
+    public unsafe virtual void DriverEnteredVehicle(BmSDK.Engine.Vehicle V, BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.DriverEnteredVehicle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -244,7 +244,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyLogin
     /// </summary>
-    public unsafe void NotifyLogin(BmSDK.Engine.Controller NewPlayer)
+    public unsafe virtual void NotifyLogin(BmSDK.Engine.Controller NewPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.NotifyLogin", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -256,7 +256,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyLogout
     /// </summary>
-    public unsafe void NotifyLogout(BmSDK.Engine.Controller Exiting)
+    public unsafe virtual void NotifyLogout(BmSDK.Engine.Controller Exiting)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.NotifyLogout", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -268,7 +268,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckReplacement
     /// </summary>
-    public unsafe bool CheckReplacement(BmSDK.Engine.Actor Other)
+    public unsafe virtual bool CheckReplacement(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.CheckReplacement", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -280,7 +280,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckRelevance
     /// </summary>
-    public unsafe bool CheckRelevance(BmSDK.Engine.Actor Other)
+    public unsafe virtual bool CheckRelevance(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.CheckRelevance", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -292,7 +292,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: IsRelevant
     /// </summary>
-    public unsafe bool IsRelevant(BmSDK.Engine.Actor Other)
+    public unsafe virtual bool IsRelevant(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.IsRelevant", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -304,7 +304,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: AlwaysKeep
     /// </summary>
-    public unsafe bool AlwaysKeep(BmSDK.Engine.Actor Other)
+    public unsafe virtual bool AlwaysKeep(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.AlwaysKeep", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -316,7 +316,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: AddMutator
     /// </summary>
-    public unsafe void AddMutator(BmSDK.Engine.Mutator M)
+    public unsafe virtual void AddMutator(BmSDK.Engine.Mutator M)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.AddMutator", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -328,7 +328,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: ModifyPlayer
     /// </summary>
-    public unsafe void ModifyPlayer(BmSDK.Engine.Pawn Other)
+    public unsafe virtual void ModifyPlayer(BmSDK.Engine.Pawn Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.ModifyPlayer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -340,7 +340,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: ModifyLogin
     /// </summary>
-    public unsafe void ModifyLogin(out BmSDK.FString Portal, out BmSDK.FString Options)
+    public unsafe virtual void ModifyLogin(out BmSDK.FString Portal, out BmSDK.FString Options)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.ModifyLogin", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -353,7 +353,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: Mutate
     /// </summary>
-    public unsafe void Mutate(BmSDK.FString MutateString, BmSDK.Engine.PlayerController Sender)
+    public unsafe virtual void Mutate(BmSDK.FString MutateString, BmSDK.Engine.PlayerController Sender)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.Mutate", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -366,7 +366,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -377,7 +377,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: MutatorIsAllowed
     /// </summary>
-    public unsafe bool MutatorIsAllowed()
+    public unsafe virtual bool MutatorIsAllowed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.MutatorIsAllowed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -388,7 +388,7 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Mutator.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

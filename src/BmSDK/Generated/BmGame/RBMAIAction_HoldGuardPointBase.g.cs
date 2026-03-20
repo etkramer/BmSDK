@@ -66,7 +66,7 @@ public partial class RBMAIAction_HoldGuardPointBase : BmSDK.BmGame.RBMAIAction, 
     /// <summary>
     /// Function: SetWatchAim
     /// </summary>
-    public unsafe void SetWatchAim()
+    public unsafe virtual void SetWatchAim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_HoldGuardPointBase.SetWatchAim", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -77,7 +77,7 @@ public partial class RBMAIAction_HoldGuardPointBase : BmSDK.BmGame.RBMAIAction, 
     /// <summary>
     /// Function: GetNewWatchActor
     /// </summary>
-    public unsafe void GetNewWatchActor()
+    public unsafe virtual void GetNewWatchActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_HoldGuardPointBase.GetNewWatchActor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -88,7 +88,7 @@ public partial class RBMAIAction_HoldGuardPointBase : BmSDK.BmGame.RBMAIAction, 
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_HoldGuardPointBase.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -99,7 +99,7 @@ public partial class RBMAIAction_HoldGuardPointBase : BmSDK.BmGame.RBMAIAction, 
     /// <summary>
     /// Function: SetGuardPoint
     /// </summary>
-    public unsafe void SetGuardPoint(BmSDK.BmGame.RGuardPoint NewGuardPoint)
+    public unsafe virtual void SetGuardPoint(BmSDK.BmGame.RGuardPoint NewGuardPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_HoldGuardPointBase.SetGuardPoint", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -66,7 +66,7 @@ public partial class RPredatorGunLockerMesh : BmSDK.BmGame.RPredatorGunLockerBas
     /// <summary>
     /// Function: GetDisruptorTargetMesh
     /// </summary>
-    public unsafe BmSDK.Engine.MeshComponent GetDisruptorTargetMesh()
+    public unsafe override BmSDK.Engine.MeshComponent GetDisruptorTargetMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPredatorGunLockerMesh.GetDisruptorTargetMesh", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -77,7 +77,7 @@ public partial class RPredatorGunLockerMesh : BmSDK.BmGame.RPredatorGunLockerBas
     /// <summary>
     /// Function: GetAnimRefYaw
     /// </summary>
-    public unsafe int GetAnimRefYaw()
+    public unsafe override int GetAnimRefYaw()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPredatorGunLockerMesh.GetAnimRefYaw", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -88,7 +88,7 @@ public partial class RPredatorGunLockerMesh : BmSDK.BmGame.RPredatorGunLockerBas
     /// <summary>
     /// Function: GetAnimRefPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAnimRefPoint()
+    public unsafe override System.Numerics.Vector3 GetAnimRefPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPredatorGunLockerMesh.GetAnimRefPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -99,7 +99,7 @@ public partial class RPredatorGunLockerMesh : BmSDK.BmGame.RPredatorGunLockerBas
     /// <summary>
     /// Function: GetMoveLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMoveLoc()
+    public unsafe override System.Numerics.Vector3 GetMoveLoc()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPredatorGunLockerMesh.GetMoveLoc", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -110,7 +110,7 @@ public partial class RPredatorGunLockerMesh : BmSDK.BmGame.RPredatorGunLockerBas
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPredatorGunLockerMesh.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -86,7 +86,7 @@ public partial class FacebookWindows : BmSDK.Engine.FacebookIntegration, BmSDK.I
     /// <summary>
     /// Function: FacebookRequestCallback
     /// </summary>
-    public unsafe void FacebookRequestCallback(BmSDK.Engine.HttpRequestInterface OriginalRequest, BmSDK.Engine.HttpResponseInterface Response, bool bDidSucceed)
+    public unsafe virtual void FacebookRequestCallback(BmSDK.Engine.HttpRequestInterface OriginalRequest, BmSDK.Engine.HttpResponseInterface Response, bool bDidSucceed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "WinDrv.FacebookWindows.FacebookRequestCallback", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -100,7 +100,7 @@ public partial class FacebookWindows : BmSDK.Engine.FacebookIntegration, BmSDK.I
     /// <summary>
     /// Function: ProcessFacebookRequest
     /// </summary>
-    public unsafe void ProcessFacebookRequest(BmSDK.FString Payload, int ResponseCode)
+    public unsafe virtual void ProcessFacebookRequest(BmSDK.FString Payload, int ResponseCode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "WinDrv.FacebookWindows.ProcessFacebookRequest", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -120,7 +120,7 @@ public partial class FacebookWindows : BmSDK.Engine.FacebookIntegration, BmSDK.I
     /// <summary>
     /// Function: FacebookRequest
     /// </summary>
-    public unsafe void FacebookRequest(BmSDK.FString GraphRequest)
+    public unsafe override void FacebookRequest(BmSDK.FString GraphRequest)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "WinDrv.FacebookWindows.FacebookRequest", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -132,7 +132,7 @@ public partial class FacebookWindows : BmSDK.Engine.FacebookIntegration, BmSDK.I
     /// <summary>
     /// Function: Disconnect
     /// </summary>
-    public unsafe void Disconnect()
+    public unsafe override void Disconnect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "WinDrv.FacebookWindows.Disconnect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class FacebookWindows : BmSDK.Engine.FacebookIntegration, BmSDK.I
     /// <summary>
     /// Function: IsAuthorized
     /// </summary>
-    public unsafe bool IsAuthorized()
+    public unsafe override bool IsAuthorized()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "WinDrv.FacebookWindows.IsAuthorized", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -168,7 +168,7 @@ public partial class FacebookWindows : BmSDK.Engine.FacebookIntegration, BmSDK.I
     /// <summary>
     /// Function: Authorize
     /// </summary>
-    public unsafe bool Authorize()
+    public unsafe override bool Authorize()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "WinDrv.FacebookWindows.Authorize", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -186,7 +186,7 @@ public partial class FacebookWindows : BmSDK.Engine.FacebookIntegration, BmSDK.I
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init()
+    public unsafe override bool Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "WinDrv.FacebookWindows.Init", true);
         byte* paramsPtr = stackalloc byte[4];

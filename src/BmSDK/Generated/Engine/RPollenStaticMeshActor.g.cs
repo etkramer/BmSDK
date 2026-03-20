@@ -71,7 +71,7 @@ public partial class RPollenStaticMeshActor : BmSDK.Engine.DynamicSMActor, BmSDK
     /// <summary>
     /// Function: CreateResources
     /// </summary>
-    public unsafe void CreateResources()
+    public unsafe virtual void CreateResources()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPollenStaticMeshActor.CreateResources", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RPollenStaticMeshActor : BmSDK.Engine.DynamicSMActor, BmSDK
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPollenStaticMeshActor.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

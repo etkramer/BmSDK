@@ -71,7 +71,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: TriggerAllEventsOfClass
     /// </summary>
-    public unsafe void TriggerAllEventsOfClass(BmSDK.Class EventClass, BmSDK.Engine.Actor InInstigator = default)
+    public unsafe virtual void TriggerAllEventsOfClass(BmSDK.Class EventClass, BmSDK.Engine.Actor InInstigator = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.TriggerAllEventsOfClass", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -84,7 +84,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Hack_FixupMissingBundleNames
     /// </summary>
-    public unsafe void Hack_FixupMissingBundleNames()
+    public unsafe virtual void Hack_FixupMissingBundleNames()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.Hack_FixupMissingBundleNames", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -102,7 +102,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: HydraSyncWBRewards
     /// </summary>
-    public unsafe void HydraSyncWBRewards()
+    public unsafe virtual void HydraSyncWBRewards()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.HydraSyncWBRewards", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -120,7 +120,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAvailableBAKRewards
     /// </summary>
-    public unsafe void GetAvailableBAKRewards(out BmSDK.TArray<BmSDK.FString> Rewards)
+    public unsafe virtual void GetAvailableBAKRewards(out BmSDK.TArray<BmSDK.FString> Rewards)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetAvailableBAKRewards", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -139,7 +139,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPawnRunningTowards
     /// </summary>
-    public unsafe bool IsPawnRunningTowards(BmSDK.Engine.Pawn TestPawn, System.Numerics.Vector3 Loc)
+    public unsafe virtual bool IsPawnRunningTowards(BmSDK.Engine.Pawn TestPawn, System.Numerics.Vector3 Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsPawnRunningTowards", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -159,7 +159,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: OnDifficultyChanged
     /// </summary>
-    public unsafe void OnDifficultyChanged(int NewDifficulty)
+    public unsafe virtual void OnDifficultyChanged(int NewDifficulty)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.OnDifficultyChanged", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -171,7 +171,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetEnvironmentObjectsForChallengeMode
     /// </summary>
-    public unsafe void ResetEnvironmentObjectsForChallengeMode(bool bChallengeMode)
+    public unsafe virtual void ResetEnvironmentObjectsForChallengeMode(bool bChallengeMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ResetEnvironmentObjectsForChallengeMode", true);
         byte* paramsPtr = stackalloc byte[164];
@@ -183,7 +183,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PreMapSwitchResetEnvironmentObjectsForChallengeMode
     /// </summary>
-    public unsafe void PreMapSwitchResetEnvironmentObjectsForChallengeMode()
+    public unsafe virtual void PreMapSwitchResetEnvironmentObjectsForChallengeMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.PreMapSwitchResetEnvironmentObjectsForChallengeMode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -194,7 +194,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPlatformTag
     /// </summary>
-    public unsafe BmSDK.FString GetPlatformTag()
+    public unsafe virtual BmSDK.FString GetPlatformTag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetPlatformTag", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -205,7 +205,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPlatformStr
     /// </summary>
-    public unsafe BmSDK.FString GetPlatformStr()
+    public unsafe virtual BmSDK.FString GetPlatformStr()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetPlatformStr", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -216,7 +216,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLanguageCode
     /// </summary>
-    public unsafe BmSDK.FString GetLanguageCode()
+    public unsafe virtual BmSDK.FString GetLanguageCode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetLanguageCode", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -234,7 +234,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRegionCode
     /// </summary>
-    public unsafe BmSDK.FString GetRegionCode()
+    public unsafe virtual BmSDK.FString GetRegionCode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetRegionCode", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -252,7 +252,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsBMBLInRange
     /// </summary>
-    public unsafe bool IsBMBLInRange(System.Numerics.Vector3 InLoc, float Range)
+    public unsafe virtual bool IsBMBLInRange(System.Numerics.Vector3 InLoc, float Range)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsBMBLInRange", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -272,7 +272,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckObjectiveActive
     /// </summary>
-    public unsafe bool CheckObjectiveActive(BmSDK.FString StringToCheck)
+    public unsafe virtual bool CheckObjectiveActive(BmSDK.FString StringToCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.CheckObjectiveActive", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -291,7 +291,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SetCurrentObjectiveString
     /// </summary>
-    public unsafe void SetCurrentObjectiveString(BmSDK.FString NewObjective)
+    public unsafe virtual void SetCurrentObjectiveString(BmSDK.FString NewObjective)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SetCurrentObjectiveString", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -310,7 +310,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PylonLoaded
     /// </summary>
-    public unsafe void PylonLoaded(BmSDK.Engine.Pylon NewPylon)
+    public unsafe override void PylonLoaded(BmSDK.Engine.Pylon NewPylon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.PylonLoaded", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -322,7 +322,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SetCheatCodeValue
     /// </summary>
-    public unsafe void SetCheatCodeValue(BmSDK.BmGame.RGameInfo.ECheatCode Id, int Value)
+    public unsafe virtual void SetCheatCodeValue(BmSDK.BmGame.RGameInfo.ECheatCode Id, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SetCheatCodeValue", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -342,7 +342,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCheatCodeValue
     /// </summary>
-    public unsafe int GetCheatCodeValue(BmSDK.BmGame.RGameInfo.ECheatCode Id)
+    public unsafe virtual int GetCheatCodeValue(BmSDK.BmGame.RGameInfo.ECheatCode Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetCheatCodeValue", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -361,7 +361,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveDeadVehiclesForExittingCity
     /// </summary>
-    public unsafe void RemoveDeadVehiclesForExittingCity()
+    public unsafe virtual void RemoveDeadVehiclesForExittingCity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RemoveDeadVehiclesForExittingCity", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -372,7 +372,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveAllDeadVehicles
     /// </summary>
-    public unsafe void RemoveAllDeadVehicles()
+    public unsafe virtual void RemoveAllDeadVehicles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RemoveAllDeadVehicles", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -383,7 +383,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveDeadVehicle
     /// </summary>
-    public unsafe void RemoveDeadVehicle(BmSDK.BmGame.RDeadVehicle Vehicle)
+    public unsafe virtual void RemoveDeadVehicle(BmSDK.BmGame.RDeadVehicle Vehicle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RemoveDeadVehicle", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -395,7 +395,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: AddDeadVehicle
     /// </summary>
-    public unsafe void AddDeadVehicle(BmSDK.BmGame.RDeadVehicle Vehicle)
+    public unsafe virtual void AddDeadVehicle(BmSDK.BmGame.RDeadVehicle Vehicle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.AddDeadVehicle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -407,7 +407,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveVehicle
     /// </summary>
-    public unsafe void RemoveVehicle(BmSDK.BmGame.RVehicle Vehicle)
+    public unsafe virtual void RemoveVehicle(BmSDK.BmGame.RVehicle Vehicle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RemoveVehicle", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -419,7 +419,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: AddVehicle
     /// </summary>
-    public unsafe void AddVehicle(BmSDK.BmGame.RVehicle Vehicle)
+    public unsafe virtual void AddVehicle(BmSDK.BmGame.RVehicle Vehicle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.AddVehicle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -431,7 +431,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: AlertAllNearbyThugsToBM
     /// </summary>
-    public unsafe void AlertAllNearbyThugsToBM(System.Numerics.Vector3 alertLoc)
+    public unsafe virtual void AlertAllNearbyThugsToBM(System.Numerics.Vector3 alertLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.AlertAllNearbyThugsToBM", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -443,7 +443,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: TickInitVehiclesDeferred
     /// </summary>
-    public unsafe void TickInitVehiclesDeferred()
+    public unsafe virtual void TickInitVehiclesDeferred()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.TickInitVehiclesDeferred", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -454,7 +454,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveAbandonedVehicleFromDeferredInitList
     /// </summary>
-    public unsafe void RemoveAbandonedVehicleFromDeferredInitList(BmSDK.BmGame.RAbandonedVehicle Abandoned)
+    public unsafe virtual void RemoveAbandonedVehicleFromDeferredInitList(BmSDK.BmGame.RAbandonedVehicle Abandoned)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RemoveAbandonedVehicleFromDeferredInitList", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -466,7 +466,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: AddAbandonedVehicleToDeferredInitList
     /// </summary>
-    public unsafe void AddAbandonedVehicleToDeferredInitList(BmSDK.BmGame.RAbandonedVehicle Abandoned)
+    public unsafe virtual void AddAbandonedVehicleToDeferredInitList(BmSDK.BmGame.RAbandonedVehicle Abandoned)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.AddAbandonedVehicleToDeferredInitList", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -478,7 +478,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: TickSpawnVehiclePassengerDeferred
     /// </summary>
-    public unsafe void TickSpawnVehiclePassengerDeferred()
+    public unsafe virtual void TickSpawnVehiclePassengerDeferred()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.TickSpawnVehiclePassengerDeferred", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -489,7 +489,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: HasAnyVehiclePassengersToSpawn
     /// </summary>
-    public unsafe bool HasAnyVehiclePassengersToSpawn()
+    public unsafe virtual bool HasAnyVehiclePassengersToSpawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.HasAnyVehiclePassengersToSpawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -500,7 +500,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: HasAnyVehiclesToSpawn
     /// </summary>
-    public unsafe bool HasAnyVehiclesToSpawn()
+    public unsafe virtual bool HasAnyVehiclesToSpawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.HasAnyVehiclesToSpawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -511,7 +511,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnVehiclePassengerDeferred
     /// </summary>
-    public unsafe void SpawnVehiclePassengerDeferred(BmSDK.BmGame.RVehicleNPC Vehicle, int PassengerIndex, BmSDK.BmGame.RBmPawnSpawner Spawner, BmSDK.BmGame.RVehicleScenario Scenario = default, int ScenarioVehicleIndex = default)
+    public unsafe virtual void SpawnVehiclePassengerDeferred(BmSDK.BmGame.RVehicleNPC Vehicle, int PassengerIndex, BmSDK.BmGame.RBmPawnSpawner Spawner, BmSDK.BmGame.RVehicleScenario Scenario = default, int ScenarioVehicleIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SpawnVehiclePassengerDeferred", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -527,7 +527,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnVehicleScenarioDeferred
     /// </summary>
-    public unsafe void SpawnVehicleScenarioDeferred(BmSDK.BmGame.RVehicleScenario Scenario, System.Numerics.Vector3 SpawnLoc, BmSDK.Rotator SpawnRot, float RoadWidth, BmSDK.TArray<BmSDK.Engine.Volume> BehaviourVolumes, BmSDK.BmGame.RPatrolPoint PatrolRoute, bool ObeyExclusionZones, byte SpawnType, BmSDK.BmGame.RVehicleNPC AlreadySpawned0thVehicle = default)
+    public unsafe virtual void SpawnVehicleScenarioDeferred(BmSDK.BmGame.RVehicleScenario Scenario, System.Numerics.Vector3 SpawnLoc, BmSDK.Rotator SpawnRot, float RoadWidth, BmSDK.TArray<BmSDK.Engine.Volume> BehaviourVolumes, BmSDK.BmGame.RPatrolPoint PatrolRoute, bool ObeyExclusionZones, byte SpawnType, BmSDK.BmGame.RVehicleNPC AlreadySpawned0thVehicle = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SpawnVehicleScenarioDeferred", true);
         byte* paramsPtr = stackalloc byte[164];
@@ -547,7 +547,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: FindAAITakedownTypeFromGameAction
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.AAITakedownType FindAAITakedownTypeFromGameAction(BmSDK.BmGame.RGameInfo.EGameAction Action)
+    public unsafe virtual BmSDK.BmGame.RGameInfo.AAITakedownType FindAAITakedownTypeFromGameAction(BmSDK.BmGame.RGameInfo.EGameAction Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.FindAAITakedownTypeFromGameAction", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -559,7 +559,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: FlushStats
     /// </summary>
-    public unsafe void FlushStats()
+    public unsafe virtual void FlushStats()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.FlushStats", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -570,7 +570,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: WriteOnlineStats
     /// </summary>
-    public unsafe void WriteOnlineStats()
+    public unsafe override void WriteOnlineStats()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.WriteOnlineStats", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -581,7 +581,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Is3DTVPresent
     /// </summary>
-    public unsafe bool Is3DTVPresent()
+    public unsafe virtual bool Is3DTVPresent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.Is3DTVPresent", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -674,7 +674,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLevelTransitionOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLevelTransitionOffset(BmSDK.FName CurrentLevel, BmSDK.FString TargetLevel)
+    public unsafe virtual System.Numerics.Vector3 GetLevelTransitionOffset(BmSDK.FName CurrentLevel, BmSDK.FString TargetLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetLevelTransitionOffset", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -694,7 +694,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMapElementItemListIndex
     /// </summary>
-    public unsafe int GetMapElementItemListIndex(BmSDK.FString marker_name)
+    public unsafe virtual int GetMapElementItemListIndex(BmSDK.FString marker_name)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetMapElementItemListIndex", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -706,7 +706,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateMapElementList
     /// </summary>
-    public unsafe void UpdateMapElementList()
+    public unsafe virtual void UpdateMapElementList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.UpdateMapElementList", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -717,7 +717,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMostProminentSwappableBillboard
     /// </summary>
-    public unsafe BmSDK.BmGame.RJokerSwappableBase GetMostProminentSwappableBillboard(float DeltaTime)
+    public unsafe virtual BmSDK.BmGame.RJokerSwappableBase GetMostProminentSwappableBillboard(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetMostProminentSwappableBillboard", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -736,7 +736,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UndoLightningSwap
     /// </summary>
-    public unsafe void UndoLightningSwap()
+    public unsafe virtual void UndoLightningSwap()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.UndoLightningSwap", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -747,7 +747,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateJokerBillboards
     /// </summary>
-    public unsafe void UpdateJokerBillboards(float DeltaTime)
+    public unsafe virtual void UpdateJokerBillboards(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.UpdateJokerBillboards", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -766,7 +766,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateOWLightFade
     /// </summary>
-    public unsafe void UpdateOWLightFade(float DeltaTime, BmSDK.Engine.PlayerController PC)
+    public unsafe virtual void UpdateOWLightFade(float DeltaTime, BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.UpdateOWLightFade", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -786,7 +786,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawJokerBillboardDebug
     /// </summary>
-    public unsafe void DrawJokerBillboardDebug(int currChapter)
+    public unsafe virtual void DrawJokerBillboardDebug(int currChapter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.DrawJokerBillboardDebug", true);
         byte* paramsPtr = stackalloc byte[43];
@@ -798,7 +798,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyJokerBillboardSwapped
     /// </summary>
-    public unsafe void NotifyJokerBillboardSwapped(BmSDK.BmGame.RJokerSwappableBase billboard, bool bSwappedToJokerVersion)
+    public unsafe virtual void NotifyJokerBillboardSwapped(BmSDK.BmGame.RJokerSwappableBase billboard, bool bSwappedToJokerVersion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.NotifyJokerBillboardSwapped", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -811,7 +811,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UnRegisterJokerBillboard
     /// </summary>
-    public unsafe void UnRegisterJokerBillboard(BmSDK.BmGame.RJokerSwappableBase billboard)
+    public unsafe virtual void UnRegisterJokerBillboard(BmSDK.BmGame.RJokerSwappableBase billboard)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.UnRegisterJokerBillboard", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -823,7 +823,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterJokerBillboard
     /// </summary>
-    public unsafe void RegisterJokerBillboard(BmSDK.BmGame.RJokerSwappableBase billboard)
+    public unsafe virtual void RegisterJokerBillboard(BmSDK.BmGame.RJokerSwappableBase billboard)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RegisterJokerBillboard", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -835,7 +835,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: AddInformantInterrogated
     /// </summary>
-    public unsafe void AddInformantInterrogated(System.Numerics.Vector3 InformantLoc)
+    public unsafe virtual void AddInformantInterrogated(System.Numerics.Vector3 InformantLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.AddInformantInterrogated", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -847,7 +847,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: CanSpawnInformant
     /// </summary>
-    public unsafe bool CanSpawnInformant(BmSDK.BmGame.RGameInfo.EDistrict CityDistrict)
+    public unsafe virtual bool CanSpawnInformant(BmSDK.BmGame.RGameInfo.EDistrict CityDistrict)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.CanSpawnInformant", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -859,7 +859,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: NumInformantsForZone
     /// </summary>
-    public unsafe int NumInformantsForZone(BmSDK.BmGame.RGameInfo.EDistrict CityD)
+    public unsafe virtual int NumInformantsForZone(BmSDK.BmGame.RGameInfo.EDistrict CityD)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.NumInformantsForZone", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -871,7 +871,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateSharedRiddlerMapIcons
     /// </summary>
-    public unsafe void UpdateSharedRiddlerMapIcons()
+    public unsafe virtual void UpdateSharedRiddlerMapIcons()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.UpdateSharedRiddlerMapIcons", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -882,7 +882,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RiddlerIcons_GetIndexListOfClosest
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RGameInfo.FIndexDistItem> RiddlerIcons_GetIndexListOfClosest(BmSDK.FString MapName, int atX, int atY, int atZ, int MaxWanted)
+    public unsafe virtual BmSDK.TArray<BmSDK.BmGame.RGameInfo.FIndexDistItem> RiddlerIcons_GetIndexListOfClosest(BmSDK.FString MapName, int atX, int atY, int atZ, int MaxWanted)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RiddlerIcons_GetIndexListOfClosest", true);
         byte* paramsPtr = stackalloc byte[156];
@@ -898,7 +898,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetParentSubName
     /// </summary>
-    public unsafe BmSDK.FString GetParentSubName(BmSDK.FString MapName)
+    public unsafe virtual BmSDK.FString GetParentSubName(BmSDK.FString MapName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetParentSubName", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -910,7 +910,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSubIndexFromMapName
     /// </summary>
-    public unsafe int GetSubIndexFromMapName(BmSDK.FString MapName)
+    public unsafe virtual int GetSubIndexFromMapName(BmSDK.FString MapName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetSubIndexFromMapName", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -922,7 +922,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSubMapLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetSubMapLoc(BmSDK.FString MapName, bool bInternalEntranceLocation)
+    public unsafe virtual System.Numerics.Vector3 GetSubMapLoc(BmSDK.FString MapName, bool bInternalEntranceLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetSubMapLoc", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -935,7 +935,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsMapOverworld
     /// </summary>
-    public unsafe bool IsMapOverworld(BmSDK.FString MapName)
+    public unsafe virtual bool IsMapOverworld(BmSDK.FString MapName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsMapOverworld", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -947,7 +947,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RiddlerIcons_GetIndexListForNearestToLoc
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RGameInfo.FIndexDistItem> RiddlerIcons_GetIndexListForNearestToLoc(BmSDK.FString MapName, int atX, int atY, int atZ, int MaxWanted, bool bHiddenOnly)
+    public unsafe virtual BmSDK.TArray<BmSDK.BmGame.RGameInfo.FIndexDistItem> RiddlerIcons_GetIndexListForNearestToLoc(BmSDK.FString MapName, int atX, int atY, int atZ, int MaxWanted, bool bHiddenOnly)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RiddlerIcons_GetIndexListForNearestToLoc", true);
         byte* paramsPtr = stackalloc byte[140];
@@ -964,7 +964,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RiddlerIcons_GetSecretsLeftIncTypeForMap
     /// </summary>
-    public unsafe int RiddlerIcons_GetSecretsLeftIncTypeForMap(BmSDK.FString MapName, out int Trophys, out int Cameos, out int Breakables, out int Bombs)
+    public unsafe virtual int RiddlerIcons_GetSecretsLeftIncTypeForMap(BmSDK.FString MapName, out int Trophys, out int Cameos, out int Breakables, out int Bombs)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RiddlerIcons_GetSecretsLeftIncTypeForMap", true);
         byte* paramsPtr = stackalloc byte[112];
@@ -980,7 +980,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTrueMapName
     /// </summary>
-    public unsafe BmSDK.FString GetTrueMapName(BmSDK.FString MapName)
+    public unsafe virtual BmSDK.FString GetTrueMapName(BmSDK.FString MapName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetTrueMapName", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -992,7 +992,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ContentBeaconManifestLoaded
     /// </summary>
-    public unsafe void ContentBeaconManifestLoaded(bool bWasSuccessful, BmSDK.FString sCustomId)
+    public unsafe virtual void ContentBeaconManifestLoaded(bool bWasSuccessful, BmSDK.FString sCustomId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ContentBeaconManifestLoaded", true);
         byte* paramsPtr = stackalloc byte[348];
@@ -1005,7 +1005,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ContentBeaconInitiateHydraQuery
     /// </summary>
-    public unsafe void ContentBeaconInitiateHydraQuery()
+    public unsafe virtual void ContentBeaconInitiateHydraQuery()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ContentBeaconInitiateHydraQuery", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1016,7 +1016,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ContentBeaconShouldHideHud
     /// </summary>
-    public unsafe bool ContentBeaconShouldHideHud()
+    public unsafe virtual bool ContentBeaconShouldHideHud()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ContentBeaconShouldHideHud", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1027,7 +1027,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ContentBeaconPanelEnable
     /// </summary>
-    public unsafe void ContentBeaconPanelEnable(BmSDK.BmGame.RGameInfo.EContentBeaconDisplayMode eDisplayMode, int nBeacon)
+    public unsafe virtual void ContentBeaconPanelEnable(BmSDK.BmGame.RGameInfo.EContentBeaconDisplayMode eDisplayMode, int nBeacon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ContentBeaconPanelEnable", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1040,7 +1040,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ContentBeaconsEnableEmitter
     /// </summary>
-    public unsafe BmSDK.Engine.REmitter ContentBeaconsEnableEmitter(BmSDK.Engine.REmitter E, BmSDK.Engine.ParticleSystem Template, System.Numerics.Vector3 Position = default, float YawRotation = default)
+    public unsafe virtual BmSDK.Engine.REmitter ContentBeaconsEnableEmitter(BmSDK.Engine.REmitter E, BmSDK.Engine.ParticleSystem Template, System.Numerics.Vector3 Position = default, float YawRotation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ContentBeaconsEnableEmitter", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -1055,7 +1055,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ContentBeaconsInteract
     /// </summary>
-    public unsafe bool ContentBeaconsInteract(int nBeacon)
+    public unsafe virtual bool ContentBeaconsInteract(int nBeacon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ContentBeaconsInteract", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1067,7 +1067,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ContentBeaconsUpdateNearby
     /// </summary>
-    public unsafe void ContentBeaconsUpdateNearby(System.Numerics.Vector3 vPosition)
+    public unsafe virtual void ContentBeaconsUpdateNearby(System.Numerics.Vector3 vPosition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ContentBeaconsUpdateNearby", true);
         byte* paramsPtr = stackalloc byte[90];
@@ -1079,7 +1079,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PositionBeaconUpdateSpring
     /// </summary>
-    public unsafe bool PositionBeaconUpdateSpring(out System.Numerics.Vector3 vSpring, out System.Numerics.Vector3 vOutput, float fDistance, float fMaxRange, float fMinRange, float fFrameTime)
+    public unsafe virtual bool PositionBeaconUpdateSpring(out System.Numerics.Vector3 vSpring, out System.Numerics.Vector3 vOutput, float fDistance, float fMaxRange, float fMinRange, float fFrameTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.PositionBeaconUpdateSpring", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -1096,7 +1096,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PositionBeaconUIAllowed
     /// </summary>
-    public unsafe bool PositionBeaconUIAllowed()
+    public unsafe virtual bool PositionBeaconUIAllowed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.PositionBeaconUIAllowed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1107,7 +1107,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PositionBeaconDisabledByGameState
     /// </summary>
-    public unsafe bool PositionBeaconDisabledByGameState(out BmSDK.FString sError, int nId)
+    public unsafe virtual bool PositionBeaconDisabledByGameState(out BmSDK.FString sError, int nId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.PositionBeaconDisabledByGameState", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -1120,7 +1120,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PositionBeaconShouldBeHidden
     /// </summary>
-    public unsafe bool PositionBeaconShouldBeHidden()
+    public unsafe virtual bool PositionBeaconShouldBeHidden()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.PositionBeaconShouldBeHidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1131,7 +1131,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PositionBeaconGetBest
     /// </summary>
-    public unsafe bool PositionBeaconGetBest(out BmSDK.FString sType, out int nId)
+    public unsafe virtual bool PositionBeaconGetBest(out BmSDK.FString sType, out int nId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.PositionBeaconGetBest", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1144,7 +1144,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PositionBeaconUpdateCenterMostAndClosest
     /// </summary>
-    public unsafe void PositionBeaconUpdateCenterMostAndClosest(System.Numerics.Vector3 vInteractPosition, System.Numerics.Vector3 vLookPosition, System.Numerics.Vector3 vLookDirection)
+    public unsafe virtual void PositionBeaconUpdateCenterMostAndClosest(System.Numerics.Vector3 vInteractPosition, System.Numerics.Vector3 vLookPosition, System.Numerics.Vector3 vLookDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.PositionBeaconUpdateCenterMostAndClosest", true);
         byte* paramsPtr = stackalloc byte[128];
@@ -1158,7 +1158,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PositionBeaconRegister
     /// </summary>
-    public unsafe void PositionBeaconRegister(System.Numerics.Vector3 vPosition, BmSDK.FString sType, int nId, float fInteractRadius = default, float fRadius = default)
+    public unsafe virtual void PositionBeaconRegister(System.Numerics.Vector3 vPosition, BmSDK.FString sType, int nId, float fInteractRadius = default, float fRadius = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.PositionBeaconRegister", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -1174,7 +1174,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RiddlerPuzzleAutoBackscreen
     /// </summary>
-    public unsafe void RiddlerPuzzleAutoBackscreen()
+    public unsafe virtual void RiddlerPuzzleAutoBackscreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RiddlerPuzzleAutoBackscreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1185,7 +1185,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RiddlerPuzzleGetPieceStateCount
     /// </summary>
-    public unsafe int RiddlerPuzzleGetPieceStateCount(BmSDK.BmGame.RGameInfo.ERiddlerState eMinState, BmSDK.BmGame.RGameInfo.ERiddlerState eMaxState, BmSDK.BmGame.RGameInfo.ERiddlerCategory eCategory = default, BmSDK.BmGame.RGameInfo.ERiddlerPiece ePiece = default, byte nPuzzleId = default)
+    public unsafe virtual int RiddlerPuzzleGetPieceStateCount(BmSDK.BmGame.RGameInfo.ERiddlerState eMinState, BmSDK.BmGame.RGameInfo.ERiddlerState eMaxState, BmSDK.BmGame.RGameInfo.ERiddlerCategory eCategory = default, BmSDK.BmGame.RGameInfo.ERiddlerPiece ePiece = default, byte nPuzzleId = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RiddlerPuzzleGetPieceStateCount", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -1201,7 +1201,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RiddlerPuzzleGetIndexById
     /// </summary>
-    public unsafe int RiddlerPuzzleGetIndexById(int nId)
+    public unsafe virtual int RiddlerPuzzleGetIndexById(int nId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RiddlerPuzzleGetIndexById", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1213,7 +1213,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RiddlerPuzzleSetPieceStateByIndex
     /// </summary>
-    public unsafe void RiddlerPuzzleSetPieceStateByIndex(byte nPuzzleIndex, byte nPieceIndex = default, BmSDK.BmGame.RGameInfo.ERiddlerState eState = default, bool bImprovedStateOnly = default)
+    public unsafe virtual void RiddlerPuzzleSetPieceStateByIndex(byte nPuzzleIndex, byte nPieceIndex = default, BmSDK.BmGame.RGameInfo.ERiddlerState eState = default, bool bImprovedStateOnly = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RiddlerPuzzleSetPieceStateByIndex", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -1228,7 +1228,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RiddlerPuzzleSetPieceState
     /// </summary>
-    public unsafe bool RiddlerPuzzleSetPieceState(BmSDK.BmGame.RGameInfo.ERiddlerCategory eCategory, BmSDK.BmGame.RGameInfo.ERiddlerPiece ePiece, byte nPieceId, BmSDK.BmGame.RGameInfo.ERiddlerState eState = default, bool bImprovedStateOnly = default)
+    public unsafe virtual bool RiddlerPuzzleSetPieceState(BmSDK.BmGame.RGameInfo.ERiddlerCategory eCategory, BmSDK.BmGame.RGameInfo.ERiddlerPiece ePiece, byte nPieceId, BmSDK.BmGame.RGameInfo.ERiddlerState eState = default, bool bImprovedStateOnly = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RiddlerPuzzleSetPieceState", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -1244,7 +1244,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RiddlerPuzzleSolve
     /// </summary>
-    public unsafe int RiddlerPuzzleSolve(BmSDK.BmGame.RGameInfo.ERiddlerCategory eCategory, BmSDK.BmGame.RGameInfo.ERiddlerPiece ePiece, byte nPieceId, BmSDK.BmGame.RGameInfo.ERiddlerCollection eCollection = default)
+    public unsafe virtual int RiddlerPuzzleSolve(BmSDK.BmGame.RGameInfo.ERiddlerCategory eCategory, BmSDK.BmGame.RGameInfo.ERiddlerPiece ePiece, byte nPieceId, BmSDK.BmGame.RGameInfo.ERiddlerCollection eCollection = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RiddlerPuzzleSolve", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1259,7 +1259,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RiddlerPuzzleUnlockCategory
     /// </summary>
-    public unsafe void RiddlerPuzzleUnlockCategory(BmSDK.BmGame.RGameInfo.ERiddlerCategory eCategory)
+    public unsafe virtual void RiddlerPuzzleUnlockCategory(BmSDK.BmGame.RGameInfo.ERiddlerCategory eCategory)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RiddlerPuzzleUnlockCategory", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1271,7 +1271,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RiddlerPuzzleCollect
     /// </summary>
-    public unsafe int RiddlerPuzzleCollect(BmSDK.BmGame.RGameInfo.ERiddlerCategory eCategory, BmSDK.BmGame.RGameInfo.ERiddlerCollection eCollection, int nAmount = default)
+    public unsafe virtual int RiddlerPuzzleCollect(BmSDK.BmGame.RGameInfo.ERiddlerCategory eCategory, BmSDK.BmGame.RGameInfo.ERiddlerCollection eCollection, int nAmount = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RiddlerPuzzleCollect", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -1285,7 +1285,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RiddlerZoneToCategory
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.ERiddlerCategory RiddlerZoneToCategory(BmSDK.BmGame.RGameInfo.ERiddlerLocationName eLocation)
+    public unsafe virtual BmSDK.BmGame.RGameInfo.ERiddlerCategory RiddlerZoneToCategory(BmSDK.BmGame.RGameInfo.ERiddlerLocationName eLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RiddlerZoneToCategory", true);
         byte* paramsPtr = stackalloc byte[2];
@@ -1297,7 +1297,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: StoreContentPopulateWithDebugInformation
     /// </summary>
-    public unsafe void StoreContentPopulateWithDebugInformation()
+    public unsafe virtual void StoreContentPopulateWithDebugInformation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.StoreContentPopulateWithDebugInformation", true);
         byte* paramsPtr = stackalloc byte[180];
@@ -1308,7 +1308,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: StoreContentProductIdExists
     /// </summary>
-    public unsafe bool StoreContentProductIdExists(BmSDK.FString sId)
+    public unsafe virtual bool StoreContentProductIdExists(BmSDK.FString sId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.StoreContentProductIdExists", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1320,7 +1320,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: StoreContentCancelCallback
     /// </summary>
-    public unsafe void StoreContentCancelCallback()
+    public unsafe virtual void StoreContentCancelCallback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.StoreContentCancelCallback", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1331,7 +1331,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: StoreContentQueryComplete
     /// </summary>
-    public unsafe void StoreContentQueryComplete(bool bWasSuccessful, bool bTimeout = default)
+    public unsafe virtual void StoreContentQueryComplete(bool bWasSuccessful, bool bTimeout = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.StoreContentQueryComplete", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1344,7 +1344,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: StoreContentQueryCompleteStandard
     /// </summary>
-    public unsafe void StoreContentQueryCompleteStandard(bool bWasSuccessful)
+    public unsafe virtual void StoreContentQueryCompleteStandard(bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.StoreContentQueryCompleteStandard", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1356,7 +1356,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: StoreContentQueryTimeout
     /// </summary>
-    public unsafe void StoreContentQueryTimeout()
+    public unsafe virtual void StoreContentQueryTimeout()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.StoreContentQueryTimeout", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1367,7 +1367,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: StoreContentClearDelegates
     /// </summary>
-    public unsafe void StoreContentClearDelegates()
+    public unsafe virtual void StoreContentClearDelegates()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.StoreContentClearDelegates", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1378,7 +1378,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: StoreContentStatusChanged
     /// </summary>
-    public unsafe void StoreContentStatusChanged()
+    public unsafe virtual void StoreContentStatusChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.StoreContentStatusChanged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1389,7 +1389,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: StoreContentInitiateQuery
     /// </summary>
-    public unsafe bool StoreContentInitiateQuery(int nControllerId, System.IntPtr fnCallback = default, bool bForceUpdate = default, bool bDebugData = default)
+    public unsafe virtual bool StoreContentInitiateQuery(int nControllerId, System.IntPtr fnCallback = default, bool bForceUpdate = default, bool bDebugData = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.StoreContentInitiateQuery", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -1404,7 +1404,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: OnStoreContentQueryComplete
     /// </summary>
-    public unsafe void OnStoreContentQueryComplete(bool bSuccess, bool bTimeout)
+    public unsafe virtual void OnStoreContentQueryComplete(bool bSuccess, bool bTimeout)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.OnStoreContentQueryComplete", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1417,7 +1417,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UpgradeValidateBoosters
     /// </summary>
-    public unsafe bool UpgradeValidateBoosters(out BmSDK.FString sMessage)
+    public unsafe virtual bool UpgradeValidateBoosters(out BmSDK.FString sMessage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.UpgradeValidateBoosters", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -1429,7 +1429,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UpgradeApplyBooster
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.UpgradeBoostAction UpgradeApplyBooster(BmSDK.FString sUpgrade, out int nPoints)
+    public unsafe virtual BmSDK.BmGame.RGameInfo.UpgradeBoostAction UpgradeApplyBooster(BmSDK.FString sUpgrade, out int nPoints)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.UpgradeApplyBooster", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -1442,7 +1442,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UpgradesBuildHierarchy
     /// </summary>
-    public unsafe void UpgradesBuildHierarchy()
+    public unsafe virtual void UpgradesBuildHierarchy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.UpgradesBuildHierarchy", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1453,7 +1453,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UpgradesUnlockAll
     /// </summary>
-    public unsafe int UpgradesUnlockAll(out int nPoints)
+    public unsafe virtual int UpgradesUnlockAll(out int nPoints)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.UpgradesUnlockAll", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -1465,7 +1465,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UpgradesGetPageCounts
     /// </summary>
-    public unsafe void UpgradesGetPageCounts(out int nTotal, out int nPurchasable, out int nOwned, out int nPrerequisites, out int nNew, BmSDK.FString sPage)
+    public unsafe virtual void UpgradesGetPageCounts(out int nTotal, out int nPurchasable, out int nOwned, out int nPrerequisites, out int nNew, BmSDK.FString sPage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.UpgradesGetPageCounts", true);
         byte* paramsPtr = stackalloc byte[216];
@@ -1482,7 +1482,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNumPurchaseableUpgrades
     /// </summary>
-    public unsafe int GetNumPurchaseableUpgrades()
+    public unsafe virtual int GetNumPurchaseableUpgrades()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetNumPurchaseableUpgrades", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1493,7 +1493,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UpgradesGetTotalNeededPoints
     /// </summary>
-    public unsafe int UpgradesGetTotalNeededPoints(BmSDK.FString sItem = default)
+    public unsafe virtual int UpgradesGetTotalNeededPoints(BmSDK.FString sItem = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.UpgradesGetTotalNeededPoints", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -1505,7 +1505,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowcaseGetItemWithSkin
     /// </summary>
-    public unsafe int ShowcaseGetItemWithSkin(BmSDK.FString sSkin, BmSDK.FString sPage = default)
+    public unsafe virtual int ShowcaseGetItemWithSkin(BmSDK.FString sSkin, BmSDK.FString sPage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ShowcaseGetItemWithSkin", true);
         byte* paramsPtr = stackalloc byte[180];
@@ -1518,7 +1518,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowcaseGetTotalCollected
     /// </summary>
-    public unsafe int ShowcaseGetTotalCollected(out int nTotalPossible, out int nNewCollected)
+    public unsafe virtual int ShowcaseGetTotalCollected(out int nTotalPossible, out int nNewCollected)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ShowcaseGetTotalCollected", true);
         byte* paramsPtr = stackalloc byte[192];
@@ -1531,7 +1531,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowcaseValidateSorting
     /// </summary>
-    public unsafe void ShowcaseValidateSorting()
+    public unsafe virtual void ShowcaseValidateSorting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ShowcaseValidateSorting", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1542,7 +1542,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: _ShowcaseItemsSort
     /// </summary>
-    public unsafe int _ShowcaseItemsSort(BmSDK.BmGame.RGameInfo.FShowcaseItem A, BmSDK.BmGame.RGameInfo.FShowcaseItem B)
+    public unsafe virtual int _ShowcaseItemsSort(BmSDK.BmGame.RGameInfo.FShowcaseItem A, BmSDK.BmGame.RGameInfo.FShowcaseItem B)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo._ShowcaseItemsSort", true);
         byte* paramsPtr = stackalloc byte[276];
@@ -1555,7 +1555,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ChallengeCharacterGetActiveBatmobile
     /// </summary>
-    public unsafe int ChallengeCharacterGetActiveBatmobile(bool bStandardIsDefault = default)
+    public unsafe virtual int ChallengeCharacterGetActiveBatmobile(bool bStandardIsDefault = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ChallengeCharacterGetActiveBatmobile", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -1567,7 +1567,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: AddDLCChallengeCharacterIds
     /// </summary>
-    public unsafe void AddDLCChallengeCharacterIds()
+    public unsafe virtual void AddDLCChallengeCharacterIds()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.AddDLCChallengeCharacterIds", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1585,7 +1585,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ChallengeCharacterNameById
     /// </summary>
-    public unsafe BmSDK.FString ChallengeCharacterNameById(int nId)
+    public unsafe virtual BmSDK.FString ChallengeCharacterNameById(int nId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ChallengeCharacterNameById", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1597,7 +1597,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ChallengeCharacterOverrideByName
     /// </summary>
-    public unsafe BmSDK.FString ChallengeCharacterOverrideByName(BmSDK.FString sName)
+    public unsafe virtual BmSDK.FString ChallengeCharacterOverrideByName(BmSDK.FString sName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ChallengeCharacterOverrideByName", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -1609,7 +1609,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ChallengeCharacterIdByName
     /// </summary>
-    public unsafe int ChallengeCharacterIdByName(BmSDK.FString sName)
+    public unsafe virtual int ChallengeCharacterIdByName(BmSDK.FString sName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ChallengeCharacterIdByName", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1621,7 +1621,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ConceptGetTotalCollected
     /// </summary>
-    public unsafe int ConceptGetTotalCollected(out int nTotalPossible, out int nNewCollected)
+    public unsafe virtual int ConceptGetTotalCollected(out int nTotalPossible, out int nNewCollected)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ConceptGetTotalCollected", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -1634,7 +1634,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: CustomContentIsFiltered
     /// </summary>
-    public unsafe bool CustomContentIsFiltered(BmSDK.FString sFilter)
+    public unsafe virtual bool CustomContentIsFiltered(BmSDK.FString sFilter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.CustomContentIsFiltered", true);
         byte* paramsPtr = stackalloc byte[116];
@@ -1646,7 +1646,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: CustomContentHandleAction
     /// </summary>
-    public unsafe bool CustomContentHandleAction(BmSDK.FString sAction, out BmSDK.FString sName, out BmSDK.FString sData)
+    public unsafe virtual bool CustomContentHandleAction(BmSDK.FString sAction, out BmSDK.FString sName, out BmSDK.FString sData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.CustomContentHandleAction", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -1660,7 +1660,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsCoreStory
     /// </summary>
-    public unsafe bool IsCoreStory()
+    public unsafe virtual bool IsCoreStory()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsCoreStory", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1671,7 +1671,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsGasActive
     /// </summary>
-    public unsafe bool IsGasActive()
+    public unsafe virtual bool IsGasActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsGasActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1682,7 +1682,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsBatmobileAvailableForChallenge
     /// </summary>
-    public unsafe bool IsBatmobileAvailableForChallenge()
+    public unsafe virtual bool IsBatmobileAvailableForChallenge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsBatmobileAvailableForChallenge", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1693,7 +1693,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SortByIndexDist
     /// </summary>
-    public unsafe int SortByIndexDist(BmSDK.BmGame.RGameInfo.FIndexDistItem A, BmSDK.BmGame.RGameInfo.FIndexDistItem B)
+    public unsafe virtual int SortByIndexDist(BmSDK.BmGame.RGameInfo.FIndexDistItem A, BmSDK.BmGame.RGameInfo.FIndexDistItem B)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SortByIndexDist", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -1706,7 +1706,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ToggleDebugCamera
     /// </summary>
-    public unsafe void ToggleDebugCamera()
+    public unsafe virtual void ToggleDebugCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ToggleDebugCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1717,7 +1717,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowPointOfInterestDebug
     /// </summary>
-    public unsafe void ShowPointOfInterestDebug()
+    public unsafe virtual void ShowPointOfInterestDebug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ShowPointOfInterestDebug", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1728,7 +1728,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPointOfInterestIndex
     /// </summary>
-    public unsafe int GetPointOfInterestIndex(BmSDK.Engine.Actor TheActor)
+    public unsafe virtual int GetPointOfInterestIndex(BmSDK.Engine.Actor TheActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetPointOfInterestIndex", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1740,7 +1740,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: DeRegisterHelicopterPointOfInterest
     /// </summary>
-    public unsafe void DeRegisterHelicopterPointOfInterest(BmSDK.Engine.Actor TheActor)
+    public unsafe virtual void DeRegisterHelicopterPointOfInterest(BmSDK.Engine.Actor TheActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.DeRegisterHelicopterPointOfInterest", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1752,7 +1752,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterHelicopterPointOfInterest
     /// </summary>
-    public unsafe void RegisterHelicopterPointOfInterest(BmSDK.Engine.Actor TheActor, BmSDK.BmGame.RGameInfo.HelicopterPointOfInterestTypes PoiType)
+    public unsafe virtual void RegisterHelicopterPointOfInterest(BmSDK.Engine.Actor TheActor, BmSDK.BmGame.RGameInfo.HelicopterPointOfInterestTypes PoiType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RegisterHelicopterPointOfInterest", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -1765,7 +1765,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UnregisterHelicopter
     /// </summary>
-    public unsafe void UnregisterHelicopter(BmSDK.BmGame.RHelicopterBase OldHeli)
+    public unsafe virtual void UnregisterHelicopter(BmSDK.BmGame.RHelicopterBase OldHeli)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.UnregisterHelicopter", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1777,7 +1777,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterHelicopter
     /// </summary>
-    public unsafe void RegisterHelicopter(BmSDK.BmGame.RHelicopterBase NewHeli)
+    public unsafe virtual void RegisterHelicopter(BmSDK.BmGame.RHelicopterBase NewHeli)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RegisterHelicopter", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1789,7 +1789,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsSmokeScreenBlockingTakedown
     /// </summary>
-    public unsafe bool IsSmokeScreenBlockingTakedown(System.Numerics.Vector3 WorldPos)
+    public unsafe virtual bool IsSmokeScreenBlockingTakedown(System.Numerics.Vector3 WorldPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsSmokeScreenBlockingTakedown", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -1801,7 +1801,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSmokeScreenCoverValue
     /// </summary>
-    public unsafe float GetSmokeScreenCoverValue(System.Numerics.Vector3 WorldPos, out byte bFireExtinguisher, out BmSDK.BmGame.RSmokeScreen MainSmokeScreen)
+    public unsafe virtual float GetSmokeScreenCoverValue(System.Numerics.Vector3 WorldPos, out byte bFireExtinguisher, out BmSDK.BmGame.RSmokeScreen MainSmokeScreen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetSmokeScreenCoverValue", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -1815,7 +1815,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateObjectiveMarkerVisibility
     /// </summary>
-    public unsafe void UpdateObjectiveMarkerVisibility(bool ForcePlayerWaypoint = default)
+    public unsafe virtual void UpdateObjectiveMarkerVisibility(bool ForcePlayerWaypoint = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.UpdateObjectiveMarkerVisibility", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -1827,7 +1827,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: QueueUpdateObjectiveMarker
     /// </summary>
-    public unsafe void QueueUpdateObjectiveMarker()
+    public unsafe virtual void QueueUpdateObjectiveMarker()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.QueueUpdateObjectiveMarker", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1838,7 +1838,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SetObjectiveSystemSuppressed
     /// </summary>
-    public unsafe void SetObjectiveSystemSuppressed(bool is_suppressed)
+    public unsafe virtual void SetObjectiveSystemSuppressed(bool is_suppressed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SetObjectiveSystemSuppressed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1850,7 +1850,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ActivateObjectiveMarker
     /// </summary>
-    public unsafe void ActivateObjectiveMarker(BmSDK.FName roomName, bool show)
+    public unsafe virtual void ActivateObjectiveMarker(BmSDK.FName roomName, bool show)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ActivateObjectiveMarker", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1863,7 +1863,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldSpawnAtStartSpot
     /// </summary>
-    public unsafe bool ShouldSpawnAtStartSpot(BmSDK.Engine.Controller Player)
+    public unsafe override bool ShouldSpawnAtStartSpot(BmSDK.Engine.Controller Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ShouldSpawnAtStartSpot", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1875,7 +1875,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: EndGame
     /// </summary>
-    public unsafe void EndGame(BmSDK.Engine.PlayerReplicationInfo Winner, BmSDK.FString Reason)
+    public unsafe override void EndGame(BmSDK.Engine.PlayerReplicationInfo Winner, BmSDK.FString Reason)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.EndGame", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -1888,7 +1888,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RoundEnded
     /// </summary>
-    public unsafe void RoundEnded()
+    public unsafe virtual void RoundEnded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RoundEnded", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1899,7 +1899,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RatePlayerStart
     /// </summary>
-    public unsafe float RatePlayerStart(BmSDK.Engine.PlayerStart P, byte Team, BmSDK.Engine.Controller Player)
+    public unsafe override float RatePlayerStart(BmSDK.Engine.PlayerStart P, byte Team, BmSDK.Engine.Controller Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RatePlayerStart", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -1913,7 +1913,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GameOver
     /// </summary>
-    public unsafe void GameOver(float TimeTillFade = default, bool PlayerDied = default)
+    public unsafe virtual void GameOver(float TimeTillFade = default, bool PlayerDied = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GameOver", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -1926,7 +1926,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayerDied
     /// </summary>
-    public unsafe void PlayerDied(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void PlayerDied(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.PlayerDied", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -1938,7 +1938,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PostLogin
     /// </summary>
-    public unsafe void PostLogin(BmSDK.Engine.PlayerController NewPlayer)
+    public unsafe override void PostLogin(BmSDK.Engine.PlayerController NewPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.PostLogin", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1950,7 +1950,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: HandleSeamlessTravelPlayer
     /// </summary>
-    public unsafe void HandleSeamlessTravelPlayer(out BmSDK.Engine.Controller C)
+    public unsafe override void HandleSeamlessTravelPlayer(out BmSDK.Engine.Controller C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.HandleSeamlessTravelPlayer", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1962,7 +1962,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: HandleLobby
     /// </summary>
-    public unsafe void HandleLobby(BmSDK.BmGame.RPlayerController LobbyPC)
+    public unsafe virtual void HandleLobby(BmSDK.BmGame.RPlayerController LobbyPC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.HandleLobby", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1974,7 +1974,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowLobby
     /// </summary>
-    public unsafe bool ShowLobby(BmSDK.BmGame.RPlayerController LobbyTarget)
+    public unsafe virtual bool ShowLobby(BmSDK.BmGame.RPlayerController LobbyTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ShowLobby", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1986,7 +1986,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GoFrontend
     /// </summary>
-    public unsafe void GoFrontend(BmSDK.FString ExtraParams = default)
+    public unsafe virtual void GoFrontend(BmSDK.FString ExtraParams = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GoFrontend", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1998,7 +1998,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Game_ExitToFrontend
     /// </summary>
-    public unsafe void Game_ExitToFrontend()
+    public unsafe virtual void Game_ExitToFrontend()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.Game_ExitToFrontend", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2009,7 +2009,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Game_PauseExitToFrontend
     /// </summary>
-    public unsafe void Game_PauseExitToFrontend()
+    public unsafe virtual void Game_PauseExitToFrontend()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.Game_PauseExitToFrontend", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2020,7 +2020,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Game_Retry
     /// </summary>
-    public unsafe void Game_Retry()
+    public unsafe virtual void Game_Retry()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.Game_Retry", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2031,7 +2031,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPCBinds
     /// </summary>
-    public unsafe void SetPCBinds()
+    public unsafe virtual void SetPCBinds()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SetPCBinds", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2042,7 +2042,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Game_Restart
     /// </summary>
-    public unsafe void Game_Restart()
+    public unsafe virtual void Game_Restart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.Game_Restart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2053,7 +2053,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SetGameRestartOneshot
     /// </summary>
-    public unsafe void SetGameRestartOneshot()
+    public unsafe virtual void SetGameRestartOneshot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SetGameRestartOneshot", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2071,7 +2071,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Game_EndChallenge
     /// </summary>
-    public unsafe void Game_EndChallenge()
+    public unsafe virtual void Game_EndChallenge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.Game_EndChallenge", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2082,7 +2082,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Game_ExitGame
     /// </summary>
-    public unsafe void Game_ExitGame()
+    public unsafe virtual void Game_ExitGame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.Game_ExitGame", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2093,7 +2093,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Game_Continue
     /// </summary>
-    public unsafe void Game_Continue()
+    public unsafe virtual void Game_Continue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.Game_Continue", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2104,7 +2104,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Game_StartGameAt
     /// </summary>
-    public unsafe void Game_StartGameAt(BmSDK.FString AtName)
+    public unsafe virtual void Game_StartGameAt(BmSDK.FString AtName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.Game_StartGameAt", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -2116,7 +2116,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultPlayerClass
     /// </summary>
-    public unsafe BmSDK.Class GetDefaultPlayerClass(BmSDK.Engine.Controller C)
+    public unsafe override BmSDK.Class GetDefaultPlayerClass(BmSDK.Engine.Controller C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetDefaultPlayerClass", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -2128,7 +2128,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPlayerCharacterIndex
     /// </summary>
-    public unsafe int GetPlayerCharacterIndex(BmSDK.Engine.Controller C)
+    public unsafe virtual int GetPlayerCharacterIndex(BmSDK.Engine.Controller C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetPlayerCharacterIndex", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2140,7 +2140,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnBatmobile
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleBatmobileBase SpawnBatmobile(System.Numerics.Vector3 Loc, BmSDK.Rotator Rot)
+    public unsafe virtual BmSDK.BmGame.RVehicleBatmobileBase SpawnBatmobile(System.Numerics.Vector3 Loc, BmSDK.Rotator Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SpawnBatmobile", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -2153,7 +2153,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBatmobileArchetype
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleBatmobileBase GetBatmobileArchetype()
+    public unsafe virtual BmSDK.BmGame.RVehicleBatmobileBase GetBatmobileArchetype()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetBatmobileArchetype", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2164,7 +2164,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: FixupGadgetsPC
     /// </summary>
-    public unsafe void FixupGadgetsPC(BmSDK.BmGame.RPawnPlayer Pawn)
+    public unsafe virtual void FixupGadgetsPC(BmSDK.BmGame.RPawnPlayer Pawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.FixupGadgetsPC", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2176,7 +2176,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnDefaultPawnFor
     /// </summary>
-    public unsafe BmSDK.Engine.Pawn SpawnDefaultPawnFor(BmSDK.Engine.Controller NewPlayer, BmSDK.Engine.NavigationPoint StartSpot)
+    public unsafe override BmSDK.Engine.Pawn SpawnDefaultPawnFor(BmSDK.Engine.Controller NewPlayer, BmSDK.Engine.NavigationPoint StartSpot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SpawnDefaultPawnFor", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -2189,7 +2189,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ProcessServerLogin
     /// </summary>
-    public unsafe bool ProcessServerLogin()
+    public unsafe override bool ProcessServerLogin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ProcessServerLogin", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2200,7 +2200,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetURLParam
     /// </summary>
-    public unsafe BmSDK.FString GetURLParam(BmSDK.FString Named)
+    public unsafe virtual BmSDK.FString GetURLParam(BmSDK.FString Named)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetURLParam", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -2212,7 +2212,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: HasURLParam
     /// </summary>
-    public unsafe bool HasURLParam(BmSDK.FString Named)
+    public unsafe virtual bool HasURLParam(BmSDK.FString Named)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.HasURLParam", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -2224,7 +2224,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetGameTimePlayedString
     /// </summary>
-    public unsafe BmSDK.FString GetGameTimePlayedString()
+    public unsafe override BmSDK.FString GetGameTimePlayedString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetGameTimePlayedString", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2242,7 +2242,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetGameTimePlayed
     /// </summary>
-    public unsafe float GetGameTimePlayed()
+    public unsafe override float GetGameTimePlayed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetGameTimePlayed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2273,7 +2273,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsFrontend
     /// </summary>
-    public unsafe bool IsFrontend()
+    public unsafe virtual bool IsFrontend()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsFrontend", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2291,7 +2291,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsChallengeMode
     /// </summary>
-    public unsafe bool IsChallengeMode()
+    public unsafe virtual bool IsChallengeMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsChallengeMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2309,7 +2309,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsStoryMode
     /// </summary>
-    public unsafe bool IsStoryMode()
+    public unsafe virtual bool IsStoryMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsStoryMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2327,7 +2327,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetGameMode
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.EGameModes GetGameMode()
+    public unsafe virtual BmSDK.BmGame.RGameInfo.EGameModes GetGameMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetGameMode", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -2338,7 +2338,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: FindPredatorVolumeForPoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RPredatorVolume FindPredatorVolumeForPoint(System.Numerics.Vector3 TestPoint, BmSDK.Engine.Level L = default)
+    public unsafe virtual BmSDK.BmGame.RPredatorVolume FindPredatorVolumeForPoint(System.Numerics.Vector3 TestPoint, BmSDK.Engine.Level L = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.FindPredatorVolumeForPoint", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -2358,7 +2358,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: FindPredatorVolumeFor
     /// </summary>
-    public unsafe BmSDK.BmGame.RPredatorVolume FindPredatorVolumeFor(BmSDK.Engine.Actor TestActor, bool bMustBeSameLevel = default)
+    public unsafe virtual BmSDK.BmGame.RPredatorVolume FindPredatorVolumeFor(BmSDK.Engine.Actor TestActor, bool bMustBeSameLevel = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.FindPredatorVolumeFor", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -2378,7 +2378,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetRoom
     /// </summary>
-    public unsafe void ResetRoom()
+    public unsafe virtual void ResetRoom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ResetRoom", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2389,7 +2389,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UnhookRoomState
     /// </summary>
-    public unsafe void UnhookRoomState()
+    public unsafe virtual void UnhookRoomState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.UnhookRoomState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2400,7 +2400,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SetNewRoomAIState
     /// </summary>
-    public unsafe void SetNewRoomAIState(BmSDK.BmGame.RBMRoomAIState NewState)
+    public unsafe virtual void SetNewRoomAIState(BmSDK.BmGame.RBMRoomAIState NewState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SetNewRoomAIState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2412,7 +2412,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPredatorChaseTime
     /// </summary>
-    public unsafe float GetPredatorChaseTime()
+    public unsafe virtual float GetPredatorChaseTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetPredatorChaseTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2423,7 +2423,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateGameWindConfig
     /// </summary>
-    public unsafe void UpdateGameWindConfig(BmSDK.BmGame.RGameInfo.FRBasicWindConfig NewWind)
+    public unsafe virtual void UpdateGameWindConfig(BmSDK.BmGame.RGameInfo.FRBasicWindConfig NewWind)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.UpdateGameWindConfig", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -2435,7 +2435,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: DumpPawnLevelVol
     /// </summary>
-    public unsafe void DumpPawnLevelVol()
+    public unsafe virtual void DumpPawnLevelVol()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.DumpPawnLevelVol", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2446,7 +2446,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: DumpRoomState
     /// </summary>
-    public unsafe void DumpRoomState()
+    public unsafe virtual void DumpRoomState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.DumpRoomState", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2457,7 +2457,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: DumpBarkCoord
     /// </summary>
-    public unsafe void DumpBarkCoord()
+    public unsafe virtual void DumpBarkCoord()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.DumpBarkCoord", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -2468,7 +2468,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: DumpAllNav
     /// </summary>
-    public unsafe void DumpAllNav()
+    public unsafe virtual void DumpAllNav()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.DumpAllNav", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2479,7 +2479,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: MakeNervous
     /// </summary>
-    public unsafe void MakeNervous()
+    public unsafe virtual void MakeNervous()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.MakeNervous", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2490,7 +2490,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: MakeTerrified
     /// </summary>
-    public unsafe void MakeTerrified()
+    public unsafe virtual void MakeTerrified()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.MakeTerrified", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2501,7 +2501,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: BarkDewedge
     /// </summary>
-    public unsafe void BarkDewedge()
+    public unsafe virtual void BarkDewedge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.BarkDewedge", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2512,7 +2512,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: BarkWTF
     /// </summary>
-    public unsafe void BarkWTF()
+    public unsafe virtual void BarkWTF()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.BarkWTF", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2523,7 +2523,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: InformVillainsOfFlipGrateEntry
     /// </summary>
-    public unsafe bool InformVillainsOfFlipGrateEntry(BmSDK.Engine.Pawn VentPlayer)
+    public unsafe virtual bool InformVillainsOfFlipGrateEntry(BmSDK.Engine.Pawn VentPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.InformVillainsOfFlipGrateEntry", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -2535,7 +2535,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: InformVillainsOfVentEntry
     /// </summary>
-    public unsafe bool InformVillainsOfVentEntry(BmSDK.Engine.Pawn VentPlayer, BmSDK.BmGame.RTunnelGrateBase EntryGrate)
+    public unsafe virtual bool InformVillainsOfVentEntry(BmSDK.Engine.Pawn VentPlayer, BmSDK.BmGame.RTunnelGrateBase EntryGrate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.InformVillainsOfVentEntry", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -2548,7 +2548,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: DisableAnyChases
     /// </summary>
-    public unsafe void DisableAnyChases(bool bDisableAnyActiveAPCChases = default, bool bDisableAnyActivePenguinVanChases = default, bool bDisableAnyActiveRiddlerTrophyChases = default, bool bDisableAnyActiveFireflyChases = default)
+    public unsafe virtual void DisableAnyChases(bool bDisableAnyActiveAPCChases = default, bool bDisableAnyActivePenguinVanChases = default, bool bDisableAnyActiveRiddlerTrophyChases = default, bool bDisableAnyActiveFireflyChases = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.DisableAnyChases", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -2563,7 +2563,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ProcessPlayerEscape
     /// </summary>
-    public unsafe void ProcessPlayerEscape(BmSDK.BmGame.RPawnPlayer EscapePlayer, bool bSniperBossSpecial = default)
+    public unsafe virtual void ProcessPlayerEscape(BmSDK.BmGame.RPawnPlayer EscapePlayer, bool bSniperBossSpecial = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ProcessPlayerEscape", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -2576,7 +2576,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: InformVillainsPostGrapple
     /// </summary>
-    public unsafe bool InformVillainsPostGrapple(BmSDK.Engine.Pawn GrapplePlayer)
+    public unsafe virtual bool InformVillainsPostGrapple(BmSDK.Engine.Pawn GrapplePlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.InformVillainsPostGrapple", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -2588,7 +2588,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyAIOfGrapple
     /// </summary>
-    public unsafe void NotifyAIOfGrapple(BmSDK.Engine.Pawn GrapplePlayer, System.Numerics.Vector3 TargetHidePointLocation, bool bPlayerEscaped, bool CanAISeePlayer, bool bSniperBossSpecial = default)
+    public unsafe virtual void NotifyAIOfGrapple(BmSDK.Engine.Pawn GrapplePlayer, System.Numerics.Vector3 TargetHidePointLocation, bool bPlayerEscaped, bool CanAISeePlayer, bool bSniperBossSpecial = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.NotifyAIOfGrapple", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -2604,7 +2604,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: CanAISeePlayerForGrapple
     /// </summary>
-    public unsafe void CanAISeePlayerForGrapple(BmSDK.Engine.Pawn GrapplePlayer, System.Numerics.Vector3 TargetHidePointLocation, bool bForcingBatmanHidden, out int bVillainHasSeen, out int bAllowPlayerToHide)
+    public unsafe virtual void CanAISeePlayerForGrapple(BmSDK.Engine.Pawn GrapplePlayer, System.Numerics.Vector3 TargetHidePointLocation, bool bForcingBatmanHidden, out int bVillainHasSeen, out int bAllowPlayerToHide)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.CanAISeePlayerForGrapple", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -2620,7 +2620,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsShootingSourceGarg
     /// </summary>
-    public unsafe bool IsShootingSourceGarg(BmSDK.Engine.Pawn GrapplePlayer, BmSDK.BmGame.RBMAIController AIC)
+    public unsafe virtual bool IsShootingSourceGarg(BmSDK.Engine.Pawn GrapplePlayer, BmSDK.BmGame.RBMAIController AIC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsShootingSourceGarg", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -2633,7 +2633,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayerIsOnVantageBeingShotByThug
     /// </summary>
-    public unsafe bool PlayerIsOnVantageBeingShotByThug(BmSDK.BmGame.RPawnPlayer GrapplePlayer)
+    public unsafe virtual bool PlayerIsOnVantageBeingShotByThug(BmSDK.BmGame.RPawnPlayer GrapplePlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.PlayerIsOnVantageBeingShotByThug", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -2645,7 +2645,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ThugCanSeeOtherThugToInterruptAttack
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnVillain ThugCanSeeOtherThugToInterruptAttack(BmSDK.BmGame.RPawnVillain ThugBeingAttacked)
+    public unsafe virtual BmSDK.BmGame.RPawnVillain ThugCanSeeOtherThugToInterruptAttack(BmSDK.BmGame.RPawnVillain ThugBeingAttacked)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ThugCanSeeOtherThugToInterruptAttack", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -2657,7 +2657,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: FireFailsafeSeenEvents
     /// </summary>
-    public unsafe void FireFailsafeSeenEvents()
+    public unsafe virtual void FireFailsafeSeenEvents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.FireFailsafeSeenEvents", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -2668,7 +2668,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: CopyViewStateParamsForRenderThread
     /// </summary>
-    public unsafe void CopyViewStateParamsForRenderThread()
+    public unsafe virtual void CopyViewStateParamsForRenderThread()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.CopyViewStateParamsForRenderThread", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2686,7 +2686,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetWindAtPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWindAtPoint(System.Numerics.Vector3 ObjectPosition, System.Numerics.Vector3 ObjectVelocity)
+    public unsafe virtual System.Numerics.Vector3 GetWindAtPoint(System.Numerics.Vector3 ObjectPosition, System.Numerics.Vector3 ObjectVelocity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetWindAtPoint", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -2706,7 +2706,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateGlobalWind
     /// </summary>
-    public unsafe void UpdateGlobalWind(float DeltaTime)
+    public unsafe virtual void UpdateGlobalWind(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.UpdateGlobalWind", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2725,7 +2725,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: TickPostUpdate
     /// </summary>
-    public unsafe void TickPostUpdate()
+    public unsafe virtual void TickPostUpdate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.TickPostUpdate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2743,7 +2743,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: TickDuringAsync
     /// </summary>
-    public unsafe void TickDuringAsync(float DeltaTime)
+    public unsafe virtual void TickDuringAsync(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.TickDuringAsync", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -2755,7 +2755,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2767,7 +2767,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveExclusionVolume
     /// </summary>
-    public unsafe void RemoveExclusionVolume(BmSDK.BmGame.RVehicleExclusionVolume Volume)
+    public unsafe virtual void RemoveExclusionVolume(BmSDK.BmGame.RVehicleExclusionVolume Volume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RemoveExclusionVolume", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2779,7 +2779,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: AddExclusionVolume
     /// </summary>
-    public unsafe void AddExclusionVolume(BmSDK.BmGame.RVehicleExclusionVolume Volume)
+    public unsafe virtual void AddExclusionVolume(BmSDK.BmGame.RVehicleExclusionVolume Volume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.AddExclusionVolume", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2791,7 +2791,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Killed
     /// </summary>
-    public unsafe void Killed(BmSDK.Engine.Controller Killer, BmSDK.Engine.Controller KilledPlayer, BmSDK.Engine.Pawn KilledPawn, BmSDK.Class DamageType)
+    public unsafe override void Killed(BmSDK.Engine.Controller Killer, BmSDK.Engine.Controller KilledPlayer, BmSDK.Engine.Pawn KilledPawn, BmSDK.Class DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.Killed", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -2806,7 +2806,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: LoadPB
     /// </summary>
-    public unsafe void LoadPB(BmSDK.FName PBName = default, int DamageLevel = default)
+    public unsafe virtual void LoadPB(BmSDK.FName PBName = default, int DamageLevel = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.LoadPB", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2819,7 +2819,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: LoadPC
     /// </summary>
-    public unsafe void LoadPC(BmSDK.FName PCName = default, int DamageLevel = default)
+    public unsafe virtual void LoadPC(BmSDK.FName PCName = default, int DamageLevel = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.LoadPC", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2832,7 +2832,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GoStartMatch
     /// </summary>
-    public unsafe void GoStartMatch()
+    public unsafe virtual void GoStartMatch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GoStartMatch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2843,7 +2843,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDualPlayPawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer GetDualPlayPawn()
+    public unsafe virtual BmSDK.BmGame.RPawnPlayer GetDualPlayPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetDualPlayPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2854,7 +2854,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPlayerPawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer GetPlayerPawn()
+    public unsafe virtual BmSDK.BmGame.RPawnPlayer GetPlayerPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetPlayerPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2865,7 +2865,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetPlayerStartPoints
     /// </summary>
-    public unsafe void ResetPlayerStartPoints()
+    public unsafe virtual void ResetPlayerStartPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.ResetPlayerStartPoints", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2876,7 +2876,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckToStartMatch
     /// </summary>
-    public unsafe void CheckToStartMatch()
+    public unsafe virtual void CheckToStartMatch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.CheckToStartMatch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2887,7 +2887,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: TimedStartGame
     /// </summary>
-    public unsafe void TimedStartGame()
+    public unsafe virtual void TimedStartGame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.TimedStartGame", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2898,7 +2898,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RestartPlayer
     /// </summary>
-    public unsafe void RestartPlayer(BmSDK.Engine.Controller NewPlayer, bool bForPlayerSwitch = default)
+    public unsafe override void RestartPlayer(BmSDK.Engine.Controller NewPlayer, bool bForPlayerSwitch = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RestartPlayer", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2911,7 +2911,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: OnLevelChange
     /// </summary>
-    public unsafe void OnLevelChange()
+    public unsafe virtual void OnLevelChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.OnLevelChange", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2922,7 +2922,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PreCommitMapChange
     /// </summary>
-    public unsafe void PreCommitMapChange(BmSDK.FString PreviousMapName, BmSDK.FString NextMapName)
+    public unsafe override void PreCommitMapChange(BmSDK.FString PreviousMapName, BmSDK.FString NextMapName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.PreCommitMapChange", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -2935,7 +2935,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: CreateStatsLogging
     /// </summary>
-    public unsafe void CreateStatsLogging()
+    public unsafe virtual void CreateStatsLogging()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.CreateStatsLogging", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2946,7 +2946,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PostCommitMapChange
     /// </summary>
-    public unsafe void PostCommitMapChange()
+    public unsafe override void PostCommitMapChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.PostCommitMapChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2957,7 +2957,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -2968,7 +2968,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateLevelVolumeList
     /// </summary>
-    public unsafe void UpdateLevelVolumeList()
+    public unsafe virtual void UpdateLevelVolumeList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.UpdateLevelVolumeList", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2986,7 +2986,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SendHydraBeginGameplayEvent
     /// </summary>
-    public unsafe void SendHydraBeginGameplayEvent()
+    public unsafe virtual void SendHydraBeginGameplayEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SendHydraBeginGameplayEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -3004,7 +3004,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PredicateUturnBark
     /// </summary>
-    public unsafe bool PredicateUturnBark()
+    public unsafe virtual bool PredicateUturnBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.PredicateUturnBark", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3015,7 +3015,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SetupModeStuff
     /// </summary>
-    public unsafe void SetupModeStuff(BmSDK.BmGame.RGameInfo.EGameModes eDesiredGameMode = default)
+    public unsafe virtual void SetupModeStuff(BmSDK.BmGame.RGameInfo.EGameModes eDesiredGameMode = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SetupModeStuff", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -3027,7 +3027,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateDisableSlowStuff
     /// </summary>
-    public unsafe void UpdateDisableSlowStuff()
+    public unsafe virtual void UpdateDisableSlowStuff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.UpdateDisableSlowStuff", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -3038,7 +3038,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Dump
     /// </summary>
-    public unsafe void Dump()
+    public unsafe virtual void Dump()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.Dump", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -3049,7 +3049,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsDemoBuild
     /// </summary>
-    public unsafe bool IsDemoBuild()
+    public unsafe virtual bool IsDemoBuild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsDemoBuild", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3060,7 +3060,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: AllowCheats
     /// </summary>
-    public unsafe bool AllowCheats(BmSDK.Engine.PlayerController P)
+    public unsafe override bool AllowCheats(BmSDK.Engine.PlayerController P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.AllowCheats", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -3072,7 +3072,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDifficulty
     /// </summary>
-    public unsafe int GetDifficulty()
+    public unsafe virtual int GetDifficulty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetDifficulty", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3083,7 +3083,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsGadgetAction
     /// </summary>
-    public unsafe bool IsGadgetAction(BmSDK.BmGame.RGameInfo.EGameAction Action)
+    public unsafe virtual bool IsGadgetAction(BmSDK.BmGame.RGameInfo.EGameAction Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsGadgetAction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -3095,7 +3095,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsStunAction
     /// </summary>
-    public unsafe bool IsStunAction(BmSDK.BmGame.RGameInfo.EGameAction Action)
+    public unsafe virtual bool IsStunAction(BmSDK.BmGame.RGameInfo.EGameAction Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsStunAction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -3107,7 +3107,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsSpecialAction
     /// </summary>
-    public unsafe bool IsSpecialAction(BmSDK.BmGame.RGameInfo.EGameAction Action)
+    public unsafe virtual bool IsSpecialAction(BmSDK.BmGame.RGameInfo.EGameAction Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsSpecialAction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -3119,7 +3119,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsRepeatedAction
     /// </summary>
-    public unsafe bool IsRepeatedAction(BmSDK.BmGame.RGameInfo.EGameAction Action)
+    public unsafe virtual bool IsRepeatedAction(BmSDK.BmGame.RGameInfo.EGameAction Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsRepeatedAction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -3131,7 +3131,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsTakedownAction
     /// </summary>
-    public unsafe bool IsTakedownAction(BmSDK.BmGame.RGameInfo.EGameAction Action)
+    public unsafe virtual bool IsTakedownAction(BmSDK.BmGame.RGameInfo.EGameAction Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsTakedownAction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -3143,7 +3143,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsCombatKOAction
     /// </summary>
-    public unsafe bool IsCombatKOAction(BmSDK.BmGame.RGameInfo.EGameAction Action)
+    public unsafe virtual bool IsCombatKOAction(BmSDK.BmGame.RGameInfo.EGameAction Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsCombatKOAction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -3155,7 +3155,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: WaitToBankXP
     /// </summary>
-    public unsafe bool WaitToBankXP()
+    public unsafe virtual bool WaitToBankXP()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.WaitToBankXP", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -3166,7 +3166,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: WaitToBankVehicleXP
     /// </summary>
-    public unsafe bool WaitToBankVehicleXP()
+    public unsafe virtual bool WaitToBankVehicleXP()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.WaitToBankVehicleXP", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3199,7 +3199,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsCurrentPredZoneAlerted
     /// </summary>
-    public unsafe bool IsCurrentPredZoneAlerted()
+    public unsafe virtual bool IsCurrentPredZoneAlerted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsCurrentPredZoneAlerted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3217,7 +3217,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: FindProjectileArc
     /// </summary>
-    public unsafe bool FindProjectileArc(BmSDK.Engine.Actor TraceActor, out System.Numerics.Vector3 ThrowVelocity, out float FlightTime, System.Numerics.Vector3 StartPoint, System.Numerics.Vector3 Target)
+    public unsafe virtual bool FindProjectileArc(BmSDK.Engine.Actor TraceActor, out System.Numerics.Vector3 ThrowVelocity, out float FlightTime, System.Numerics.Vector3 StartPoint, System.Numerics.Vector3 Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.FindProjectileArc", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -3240,7 +3240,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SecuROMProtectionCheck4
     /// </summary>
-    public unsafe int SecuROMProtectionCheck4(int A, int B)
+    public unsafe virtual int SecuROMProtectionCheck4(int A, int B)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SecuROMProtectionCheck4", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -3260,7 +3260,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SecuROMProtectionCheck3
     /// </summary>
-    public unsafe int SecuROMProtectionCheck3()
+    public unsafe virtual int SecuROMProtectionCheck3()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SecuROMProtectionCheck3", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3278,7 +3278,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SecuROMProtectionCheck2
     /// </summary>
-    public unsafe bool SecuROMProtectionCheck2()
+    public unsafe virtual bool SecuROMProtectionCheck2()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SecuROMProtectionCheck2", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3296,7 +3296,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SecuROMProtectionCheck1
     /// </summary>
-    public unsafe bool SecuROMProtectionCheck1()
+    public unsafe virtual bool SecuROMProtectionCheck1()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SecuROMProtectionCheck1", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3314,7 +3314,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLanguageForScriptCode
     /// </summary>
-    public unsafe BmSDK.FString GetLanguageForScriptCode()
+    public unsafe virtual BmSDK.FString GetLanguageForScriptCode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetLanguageForScriptCode", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -3332,7 +3332,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBatmobile
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleBatmobileBase GetBatmobile()
+    public unsafe virtual BmSDK.BmGame.RVehicleBatmobileBase GetBatmobile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetBatmobile", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -3350,7 +3350,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPlyrPawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer GetPlyrPawn()
+    public unsafe virtual BmSDK.BmGame.RPawnPlayer GetPlyrPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetPlyrPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -3368,7 +3368,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPC
     /// </summary>
-    public unsafe BmSDK.BmGame.RPlayerControllerCombat GetPC()
+    public unsafe virtual BmSDK.BmGame.RPlayerControllerCombat GetPC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetPC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -3386,7 +3386,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNumLocalPlayers
     /// </summary>
-    public unsafe int GetNumLocalPlayers()
+    public unsafe virtual int GetNumLocalPlayers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetNumLocalPlayers", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3404,7 +3404,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLevelVolumeFor
     /// </summary>
-    public unsafe BmSDK.BmGame.RLevelVolume GetLevelVolumeFor(BmSDK.GameObject Obj)
+    public unsafe virtual BmSDK.BmGame.RLevelVolume GetLevelVolumeFor(BmSDK.GameObject Obj)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetLevelVolumeFor", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -3423,7 +3423,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetXrayFadeValueForItem
     /// </summary>
-    public unsafe float GetXrayFadeValueForItem(BmSDK.Engine.Actor TestActor, BmSDK.Engine.MeshComponent MainMesh = default)
+    public unsafe virtual float GetXrayFadeValueForItem(BmSDK.Engine.Actor TestActor, BmSDK.Engine.MeshComponent MainMesh = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetXrayFadeValueForItem", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -3443,7 +3443,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetEpisodeIndexByName
     /// </summary>
-    public unsafe int GetEpisodeIndexByName(BmSDK.FString sName)
+    public unsafe virtual int GetEpisodeIndexByName(BmSDK.FString sName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetEpisodeIndexByName", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -3455,7 +3455,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetEpisodeIndexBySortId
     /// </summary>
-    public unsafe int GetEpisodeIndexBySortId(int Uid)
+    public unsafe virtual int GetEpisodeIndexBySortId(int Uid)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetEpisodeIndexBySortId", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -3467,7 +3467,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsEpisodePresent
     /// </summary>
-    public unsafe bool IsEpisodePresent(int Uid)
+    public unsafe virtual bool IsEpisodePresent(int Uid)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsEpisodePresent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -3479,7 +3479,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsAnEpisodeAvailable
     /// </summary>
-    public unsafe bool IsAnEpisodeAvailable(out int Count)
+    public unsafe virtual bool IsAnEpisodeAvailable(out int Count)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsAnEpisodeAvailable", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -3491,7 +3491,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetEpisodeCount
     /// </summary>
-    public unsafe int GetEpisodeCount()
+    public unsafe virtual int GetEpisodeCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetEpisodeCount", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3502,7 +3502,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UnregisterBatmobileForensicsSideStory
     /// </summary>
-    public unsafe void UnregisterBatmobileForensicsSideStory(BmSDK.BmGame.RSeqAct_BatmobileForensicsSideStory the_seqact)
+    public unsafe virtual void UnregisterBatmobileForensicsSideStory(BmSDK.BmGame.RSeqAct_BatmobileForensicsSideStory the_seqact)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.UnregisterBatmobileForensicsSideStory", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -3521,7 +3521,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterBatmobileForensicsSideStory
     /// </summary>
-    public unsafe void RegisterBatmobileForensicsSideStory(BmSDK.BmGame.RSeqAct_BatmobileForensicsSideStory the_seqact)
+    public unsafe virtual void RegisterBatmobileForensicsSideStory(BmSDK.BmGame.RSeqAct_BatmobileForensicsSideStory the_seqact)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RegisterBatmobileForensicsSideStory", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -3540,7 +3540,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTimeSinceAnySpeech
     /// </summary>
-    public unsafe float GetTimeSinceAnySpeech()
+    public unsafe virtual float GetTimeSinceAnySpeech()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetTimeSinceAnySpeech", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3558,7 +3558,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsLocationInPlayerCameraFrustum
     /// </summary>
-    public unsafe bool IsLocationInPlayerCameraFrustum(System.Numerics.Vector3 InLoc)
+    public unsafe virtual bool IsLocationInPlayerCameraFrustum(System.Numerics.Vector3 InLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsLocationInPlayerCameraFrustum", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -3577,7 +3577,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetIsSaveInProgress
     /// </summary>
-    public unsafe bool GetIsSaveInProgress()
+    public unsafe virtual bool GetIsSaveInProgress()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetIsSaveInProgress", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3595,7 +3595,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSaveGameSize
     /// </summary>
-    public unsafe int GetSaveGameSize()
+    public unsafe virtual int GetSaveGameSize()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetSaveGameSize", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3613,7 +3613,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsDLCInstalled
     /// </summary>
-    public unsafe bool IsDLCInstalled(BmSDK.FString DLCBundleName)
+    public unsafe virtual bool IsDLCInstalled(BmSDK.FString DLCBundleName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsDLCInstalled", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -3632,7 +3632,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLevelLoadedAndVisible
     /// </summary>
-    public unsafe bool GetLevelLoadedAndVisible(BmSDK.FName LevelName)
+    public unsafe virtual bool GetLevelLoadedAndVisible(BmSDK.FName LevelName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetLevelLoadedAndVisible", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -3651,7 +3651,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SetLevelVisible
     /// </summary>
-    public unsafe void SetLevelVisible(BmSDK.FName LevelName, bool Visible)
+    public unsafe virtual void SetLevelVisible(BmSDK.FName LevelName, bool Visible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SetLevelVisible", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -3671,7 +3671,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SetLevelLoaded
     /// </summary>
-    public unsafe void SetLevelLoaded(BmSDK.FName LevelName, bool Loaded)
+    public unsafe virtual void SetLevelLoaded(BmSDK.FName LevelName, bool Loaded)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SetLevelLoaded", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -3691,7 +3691,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPackageLevelLoaded
     /// </summary>
-    public unsafe void SetPackageLevelLoaded(BmSDK.FString PackageName, bool Loaded)
+    public unsafe virtual void SetPackageLevelLoaded(BmSDK.FString PackageName, bool Loaded)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SetPackageLevelLoaded", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -3711,7 +3711,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: AnyChatterSuppressingObjectsOfClass
     /// </summary>
-    public unsafe bool AnyChatterSuppressingObjectsOfClass(BmSDK.Class ClassType)
+    public unsafe virtual bool AnyChatterSuppressingObjectsOfClass(BmSDK.Class ClassType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.AnyChatterSuppressingObjectsOfClass", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -3730,7 +3730,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PrintObjectsSuppressingChatter
     /// </summary>
-    public unsafe void PrintObjectsSuppressingChatter()
+    public unsafe virtual void PrintObjectsSuppressingChatter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.PrintObjectsSuppressingChatter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3741,7 +3741,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetObjectsSuppressingChatter
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.GameObject> GetObjectsSuppressingChatter()
+    public unsafe virtual BmSDK.TArray<BmSDK.GameObject> GetObjectsSuppressingChatter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetObjectsSuppressingChatter", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -3752,7 +3752,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SetChatterSuppression
     /// </summary>
-    public unsafe void SetChatterSuppression(bool bSuppress, BmSDK.GameObject settingObject)
+    public unsafe virtual void SetChatterSuppression(bool bSuppress, BmSDK.GameObject settingObject)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SetChatterSuppression", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -3765,7 +3765,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsChatterSuppressed
     /// </summary>
-    public unsafe bool IsChatterSuppressed()
+    public unsafe virtual bool IsChatterSuppressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsChatterSuppressed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -3776,7 +3776,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PrintObjectsSettingChaseInProgress
     /// </summary>
-    public unsafe void PrintObjectsSettingChaseInProgress()
+    public unsafe virtual void PrintObjectsSettingChaseInProgress()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.PrintObjectsSettingChaseInProgress", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3787,7 +3787,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetObjectsSettingChaseInProgress
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.GameObject> GetObjectsSettingChaseInProgress()
+    public unsafe virtual BmSDK.TArray<BmSDK.GameObject> GetObjectsSettingChaseInProgress()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetObjectsSettingChaseInProgress", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -3798,7 +3798,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SetChaseInProgress
     /// </summary>
-    public unsafe void SetChaseInProgress(bool bInProgress, BmSDK.GameObject settingObject)
+    public unsafe virtual void SetChaseInProgress(bool bInProgress, BmSDK.GameObject settingObject)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SetChaseInProgress", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -3811,7 +3811,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetChaseInProgressObject
     /// </summary>
-    public unsafe BmSDK.GameObject GetChaseInProgressObject()
+    public unsafe virtual BmSDK.GameObject GetChaseInProgressObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetChaseInProgressObject", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -3822,7 +3822,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsChaseInProgress
     /// </summary>
-    public unsafe bool IsChaseInProgress()
+    public unsafe virtual bool IsChaseInProgress()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsChaseInProgress", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -3833,7 +3833,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyBMBLTeleported
     /// </summary>
-    public unsafe void NotifyBMBLTeleported()
+    public unsafe virtual void NotifyBMBLTeleported()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.NotifyBMBLTeleported", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3844,7 +3844,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: WBPlayRewardsFlowEnabled
     /// </summary>
-    public unsafe bool WBPlayRewardsFlowEnabled()
+    public unsafe virtual bool WBPlayRewardsFlowEnabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.WBPlayRewardsFlowEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3862,7 +3862,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: WBIDEnabled
     /// </summary>
-    public unsafe bool WBIDEnabled()
+    public unsafe virtual bool WBIDEnabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.WBIDEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3880,7 +3880,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetWBPlayEmail
     /// </summary>
-    public unsafe BmSDK.FString GetWBPlayEmail()
+    public unsafe virtual BmSDK.FString GetWBPlayEmail()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.GetWBPlayEmail", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -3898,7 +3898,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SignedInToWBPlay
     /// </summary>
-    public unsafe bool SignedInToWBPlay()
+    public unsafe virtual bool SignedInToWBPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.SignedInToWBPlay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3916,7 +3916,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsFrontendChallengeMode
     /// </summary>
-    public unsafe bool IsFrontendChallengeMode()
+    public unsafe virtual bool IsFrontendChallengeMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.IsFrontendChallengeMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3927,7 +3927,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveOldConversationActivations
     /// </summary>
-    public unsafe void RemoveOldConversationActivations()
+    public unsafe virtual void RemoveOldConversationActivations()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RemoveOldConversationActivations", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3938,7 +3938,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: HasConversationActivatedRecently
     /// </summary>
-    public unsafe bool HasConversationActivatedRecently(BmSDK.FName inSpeechAssetName)
+    public unsafe virtual bool HasConversationActivatedRecently(BmSDK.FName inSpeechAssetName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.HasConversationActivatedRecently", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -3950,7 +3950,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterConversationActivation
     /// </summary>
-    public unsafe void RegisterConversationActivation(BmSDK.FName inSpeechAssetName)
+    public unsafe virtual void RegisterConversationActivation(BmSDK.FName inSpeechAssetName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.RegisterConversationActivation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -3962,7 +3962,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Function: FreezeAttackDestroyTarget
     /// </summary>
-    public unsafe void FreezeAttackDestroyTarget(BmSDK.BmGame.RVehicleNPC InTarget)
+    public unsafe virtual void FreezeAttackDestroyTarget(BmSDK.BmGame.RVehicleNPC InTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameInfo.FreezeAttackDestroyTarget", true);
         byte* paramsPtr = stackalloc byte[12];

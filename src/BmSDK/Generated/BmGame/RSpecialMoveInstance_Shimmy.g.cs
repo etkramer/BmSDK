@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_Shimmy : BmSDK.BmGame.RSpecialMoveInst
     /// <summary>
     /// Function: CantSwitchPlayer
     /// </summary>
-    public unsafe bool CantSwitchPlayer()
+    public unsafe override bool CantSwitchPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Shimmy.CantSwitchPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_Shimmy : BmSDK.BmGame.RSpecialMoveInst
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Shimmy.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RSpecialMoveInstance_Shimmy : BmSDK.BmGame.RSpecialMoveInst
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Shimmy.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RSpecialMoveInstance_Shimmy : BmSDK.BmGame.RSpecialMoveInst
     /// <summary>
     /// Function: FinishOnLadder
     /// </summary>
-    public unsafe void FinishOnLadder()
+    public unsafe virtual void FinishOnLadder()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Shimmy.FinishOnLadder", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -116,7 +116,7 @@ public partial class RSpecialMoveInstance_Shimmy : BmSDK.BmGame.RSpecialMoveInst
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Shimmy.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[196];
@@ -128,7 +128,7 @@ public partial class RSpecialMoveInstance_Shimmy : BmSDK.BmGame.RSpecialMoveInst
     /// <summary>
     /// Function: MoveInDirection
     /// </summary>
-    public unsafe void MoveInDirection(float X, float Y)
+    public unsafe override void MoveInDirection(float X, float Y)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Shimmy.MoveInDirection", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -141,7 +141,7 @@ public partial class RSpecialMoveInstance_Shimmy : BmSDK.BmGame.RSpecialMoveInst
     /// <summary>
     /// Function: FirstShimmyAnimFinished
     /// </summary>
-    public unsafe void FirstShimmyAnimFinished(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id, float TimeLeftOver)
+    public unsafe virtual void FirstShimmyAnimFinished(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id, float TimeLeftOver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Shimmy.FirstShimmyAnimFinished", true);
         byte* paramsPtr = stackalloc byte[196];
@@ -154,7 +154,7 @@ public partial class RSpecialMoveInstance_Shimmy : BmSDK.BmGame.RSpecialMoveInst
     /// <summary>
     /// Function: FindCornerPoint
     /// </summary>
-    public unsafe bool FindCornerPoint(out BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc, BmSDK.FName StartAnimName, out System.Numerics.Vector3 CornerLoc, out BmSDK.Rotator CornerRot)
+    public unsafe virtual bool FindCornerPoint(out BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc, BmSDK.FName StartAnimName, out System.Numerics.Vector3 CornerLoc, out BmSDK.Rotator CornerRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Shimmy.FindCornerPoint", true);
         byte* paramsPtr = stackalloc byte[168];
@@ -176,7 +176,7 @@ public partial class RSpecialMoveInstance_Shimmy : BmSDK.BmGame.RSpecialMoveInst
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocator)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Shimmy.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[168];

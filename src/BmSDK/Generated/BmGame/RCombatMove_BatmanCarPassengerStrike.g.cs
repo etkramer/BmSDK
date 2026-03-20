@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanCarPassengerStrike : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanCarPassengerStrike.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_BatmanCarPassengerStrike : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: CanBeTargettedByPlayer
     /// </summary>
-    public unsafe bool CanBeTargettedByPlayer(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType, BmSDK.BmGame.RPawnPlayerCombat NewPlayer)
+    public unsafe override bool CanBeTargettedByPlayer(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType, BmSDK.BmGame.RPawnPlayerCombat NewPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanCarPassengerStrike.CanBeTargettedByPlayer", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -96,7 +96,7 @@ public partial class RCombatMove_BatmanCarPassengerStrike : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: CanReceiveAttackFromPawn
     /// </summary>
-    public unsafe bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
+    public unsafe override bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanCarPassengerStrike.CanReceiveAttackFromPawn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -109,7 +109,7 @@ public partial class RCombatMove_BatmanCarPassengerStrike : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: CanNewAttackBeStarted
     /// </summary>
-    public unsafe bool CanNewAttackBeStarted()
+    public unsafe override bool CanNewAttackBeStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanCarPassengerStrike.CanNewAttackBeStarted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -120,7 +120,7 @@ public partial class RCombatMove_BatmanCarPassengerStrike : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: Impact
     /// </summary>
-    public unsafe void Impact()
+    public unsafe virtual void Impact()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanCarPassengerStrike.Impact", true);
         byte* paramsPtr = stackalloc byte[248];
@@ -131,7 +131,7 @@ public partial class RCombatMove_BatmanCarPassengerStrike : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: PlayTargetCarStrikeAnim
     /// </summary>
-    public unsafe void PlayTargetCarStrikeAnim()
+    public unsafe virtual void PlayTargetCarStrikeAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanCarPassengerStrike.PlayTargetCarStrikeAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -142,7 +142,7 @@ public partial class RCombatMove_BatmanCarPassengerStrike : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: PlayBatmanCarStrikeAnim
     /// </summary>
-    public unsafe void PlayBatmanCarStrikeAnim()
+    public unsafe virtual void PlayBatmanCarStrikeAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanCarPassengerStrike.PlayBatmanCarStrikeAnim", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -153,7 +153,7 @@ public partial class RCombatMove_BatmanCarPassengerStrike : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanCarPassengerStrike.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RAEC_SearchLite_Sub_Perim : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: ForceWaitForPingPong
     /// </summary>
-    public unsafe bool ForceWaitForPingPong()
+    public unsafe virtual bool ForceWaitForPingPong()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchLite_Sub_Perim.ForceWaitForPingPong", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RAEC_SearchLite_Sub_Perim : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: GetNextPoint
     /// </summary>
-    public unsafe void GetNextPoint()
+    public unsafe virtual void GetNextPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchLite_Sub_Perim.GetNextPoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RAEC_SearchLite_Sub_Perim : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: StartUninformedSearch
     /// </summary>
-    public unsafe void StartUninformedSearch()
+    public unsafe virtual void StartUninformedSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchLite_Sub_Perim.StartUninformedSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RAEC_SearchLite_Sub_Perim : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: StartPatrol
     /// </summary>
-    public unsafe void StartPatrol()
+    public unsafe virtual void StartPatrol()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchLite_Sub_Perim.StartPatrol", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RAEC_SearchLite_Sub_Perim : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchLite_Sub_Perim.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[0];

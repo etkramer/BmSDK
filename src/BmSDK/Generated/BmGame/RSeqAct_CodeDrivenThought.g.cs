@@ -47,7 +47,7 @@ public partial class RSeqAct_CodeDrivenThought : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// Function: TriggerConnectedSpeechAction
     /// </summary>
-    public unsafe void TriggerConnectedSpeechAction()
+    public unsafe virtual void TriggerConnectedSpeechAction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CodeDrivenThought.TriggerConnectedSpeechAction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -58,7 +58,7 @@ public partial class RSeqAct_CodeDrivenThought : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// Function: CheckInputs
     /// </summary>
-    public unsafe void CheckInputs()
+    public unsafe virtual void CheckInputs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CodeDrivenThought.CheckInputs", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -69,7 +69,7 @@ public partial class RSeqAct_CodeDrivenThought : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CodeDrivenThought.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

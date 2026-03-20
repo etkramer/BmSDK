@@ -66,7 +66,7 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLea
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLea
     /// <summary>
     /// Function: PrepareForJoinAnim
     /// </summary>
-    public unsafe bool PrepareForJoinAnim()
+    public unsafe virtual bool PrepareForJoinAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub.PrepareForJoinAnim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -88,7 +88,7 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLea
     /// <summary>
     /// Function: DoPassingGesture
     /// </summary>
-    public unsafe void DoPassingGesture(BmSDK.BmGame.RAEC_Search_Sub_FormationLeader OtherGroupLeadAEC)
+    public unsafe override void DoPassingGesture(BmSDK.BmGame.RAEC_Search_Sub_FormationLeader OtherGroupLeadAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub.DoPassingGesture", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -100,7 +100,7 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLea
     /// <summary>
     /// Function: CanDoPassingGesture
     /// </summary>
-    public unsafe bool CanDoPassingGesture()
+    public unsafe override bool CanDoPassingGesture()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub.CanDoPassingGesture", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -111,7 +111,7 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLea
     /// <summary>
     /// Function: PointIsBehind
     /// </summary>
-    public unsafe bool PointIsBehind(System.Numerics.Vector3 ForwardDir, System.Numerics.Vector3 TestPos)
+    public unsafe virtual bool PointIsBehind(System.Numerics.Vector3 ForwardDir, System.Numerics.Vector3 TestPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub.PointIsBehind", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -124,7 +124,7 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLea
     /// <summary>
     /// Function: StartNextLegFullPathed
     /// </summary>
-    public unsafe void StartNextLegFullPathed(BmSDK.TArray<BmSDK.BmGame.RChasePoint> NewCPPath, System.Numerics.Vector3 NewFaceTarget)
+    public unsafe virtual void StartNextLegFullPathed(BmSDK.TArray<BmSDK.BmGame.RChasePoint> NewCPPath, System.Numerics.Vector3 NewFaceTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub.StartNextLegFullPathed", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -137,7 +137,7 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLea
     /// <summary>
     /// Function: StartNextLeg
     /// </summary>
-    public unsafe void StartNextLeg(System.Numerics.Vector3 NewNextMovePoint, System.Numerics.Vector3 NewFaceTarget)
+    public unsafe virtual void StartNextLeg(System.Numerics.Vector3 NewNextMovePoint, System.Numerics.Vector3 NewFaceTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub.StartNextLeg", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -150,7 +150,7 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLea
     /// <summary>
     /// Function: NotifyPathEdgeReached
     /// </summary>
-    public unsafe void NotifyPathEdgeReached(BmSDK.BmGame.RBMAIAction NotifyAction, BmSDK.BmGame.RNavigationHandle NotifyHandle, int EdgeID)
+    public unsafe override void NotifyPathEdgeReached(BmSDK.BmGame.RBMAIAction NotifyAction, BmSDK.BmGame.RNavigationHandle NotifyHandle, int EdgeID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub.NotifyPathEdgeReached", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -164,7 +164,7 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLea
     /// <summary>
     /// Function: GetCurrentPathHandle
     /// </summary>
-    public unsafe BmSDK.BmGame.RNavigationHandle GetCurrentPathHandle()
+    public unsafe override BmSDK.BmGame.RNavigationHandle GetCurrentPathHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub.GetCurrentPathHandle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -175,7 +175,7 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLea
     /// <summary>
     /// Function: ShouldTryBump
     /// </summary>
-    public unsafe bool ShouldTryBump()
+    public unsafe virtual bool ShouldTryBump()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub.ShouldTryBump", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -186,7 +186,7 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLea
     /// <summary>
     /// Function: ShouldTryBanter
     /// </summary>
-    public unsafe bool ShouldTryBanter()
+    public unsafe virtual bool ShouldTryBanter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub.ShouldTryBanter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -197,7 +197,7 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLea
     /// <summary>
     /// Function: FollowerCurrentlyFacingBackwards
     /// </summary>
-    public unsafe bool FollowerCurrentlyFacingBackwards()
+    public unsafe virtual bool FollowerCurrentlyFacingBackwards()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub.FollowerCurrentlyFacingBackwards", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -208,7 +208,7 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLea
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -220,7 +220,7 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLea
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -232,7 +232,7 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLea
     /// <summary>
     /// Function: SetHasBackwardsFollower
     /// </summary>
-    public unsafe void SetHasBackwardsFollower(bool bNewVal)
+    public unsafe override void SetHasBackwardsFollower(bool bNewVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub.SetHasBackwardsFollower", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -244,7 +244,7 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLea
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -255,7 +255,7 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLea
     /// <summary>
     /// Function: OnVillainStolen
     /// </summary>
-    public unsafe void OnVillainStolen()
+    public unsafe override void OnVillainStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub.OnVillainStolen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -266,7 +266,7 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLea
     /// <summary>
     /// Function: CheckHandleForSpecialMoves
     /// </summary>
-    public unsafe void CheckHandleForSpecialMoves(BmSDK.BmGame.RNavigationHandle ActiveHandle)
+    public unsafe virtual void CheckHandleForSpecialMoves(BmSDK.BmGame.RNavigationHandle ActiveHandle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub.CheckHandleForSpecialMoves", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -278,7 +278,7 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLea
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub.Tick", true);
         byte* paramsPtr = stackalloc byte[12];

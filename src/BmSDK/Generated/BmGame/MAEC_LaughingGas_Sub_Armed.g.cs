@@ -71,7 +71,7 @@ public partial class MAEC_LaughingGas_Sub_Armed : BmSDK.BmGame.RAlertEventCoordi
     /// <summary>
     /// Function: DisarmedDuringSmoke
     /// </summary>
-    public unsafe void DisarmedDuringSmoke()
+    public unsafe virtual void DisarmedDuringSmoke()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_LaughingGas_Sub_Armed.DisarmedDuringSmoke", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class MAEC_LaughingGas_Sub_Armed : BmSDK.BmGame.RAlertEventCoordi
     /// <summary>
     /// Function: GetShootTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetShootTarget(System.Numerics.Vector3 SmokeCentre)
+    public unsafe virtual System.Numerics.Vector3 GetShootTarget(System.Numerics.Vector3 SmokeCentre)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_LaughingGas_Sub_Armed.GetShootTarget", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -94,7 +94,7 @@ public partial class MAEC_LaughingGas_Sub_Armed : BmSDK.BmGame.RAlertEventCoordi
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.BmGame.MLaughingGasScreenBase NewLaughingGas)
+    public unsafe virtual void Init(BmSDK.BmGame.MLaughingGasScreenBase NewLaughingGas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_LaughingGas_Sub_Armed.Init", true);
         byte* paramsPtr = stackalloc byte[24];

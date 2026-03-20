@@ -71,7 +71,7 @@ public partial class RAEC_BatarangReaction_Master : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: DoJumpReaction
     /// </summary>
-    public unsafe void DoJumpReaction(System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 ThrownFromPos, bool bThrownFromGarg, float JumpRange, int NewBRangID = default, bool bDueToBodyDrop = default, BmSDK.BmGame.RBMAIController BodyDodger = default, bool bTerrorShootStartle = default, bool bAwardRECScareMedal = default)
+    public unsafe virtual void DoJumpReaction(System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 ThrownFromPos, bool bThrownFromGarg, float JumpRange, int NewBRangID = default, bool bDueToBodyDrop = default, BmSDK.BmGame.RBMAIController BodyDodger = default, bool bTerrorShootStartle = default, bool bAwardRECScareMedal = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction_Master.DoJumpReaction", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -91,7 +91,7 @@ public partial class RAEC_BatarangReaction_Master : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: ThugGotUpFromBatarang
     /// </summary>
-    public unsafe void ThugGotUpFromBatarang(BmSDK.BmGame.RPawnVillain TestThug)
+    public unsafe virtual void ThugGotUpFromBatarang(BmSDK.BmGame.RPawnVillain TestThug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction_Master.ThugGotUpFromBatarang", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -103,7 +103,7 @@ public partial class RAEC_BatarangReaction_Master : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: ManDownBodyDodge
     /// </summary>
-    public unsafe void ManDownBodyDodge(BmSDK.BmGame.RBMAIController Dodger, System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 ThrownFromPos, bool bThrownFromGarg, int LaunchID)
+    public unsafe virtual void ManDownBodyDodge(BmSDK.BmGame.RBMAIController Dodger, System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 ThrownFromPos, bool bThrownFromGarg, int LaunchID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction_Master.ManDownBodyDodge", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -119,7 +119,7 @@ public partial class RAEC_BatarangReaction_Master : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: ThugHit
     /// </summary>
-    public unsafe void ThugHit(BmSDK.BmGame.RPawnVillain NewVictim, System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 ThrownFromPos, bool bThrownFromGarg, BmSDK.BmGame.RBMAIController.BRAECReactionType Type, int NewLaunchID, bool bAwardRECScareMedal = default)
+    public unsafe virtual void ThugHit(BmSDK.BmGame.RPawnVillain NewVictim, System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 ThrownFromPos, bool bThrownFromGarg, BmSDK.BmGame.RBMAIController.BRAECReactionType Type, int NewLaunchID, bool bAwardRECScareMedal = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction_Master.ThugHit", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -137,7 +137,7 @@ public partial class RAEC_BatarangReaction_Master : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: MakeRicochetNoise
     /// </summary>
-    public unsafe void MakeRicochetNoise(System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 ThrownFromPos, bool bThrownFromGarg, BmSDK.BmGame.RBMAIController.BRAECReactionType Type, int LaunchID, bool bTerrorShootStartle = default, bool HasPrecalculatedTargets = default, BmSDK.TArray<BmSDK.BmGame.RPawnVillain> PrecalulatedTargets = default, bool bIsActuallyPlayer = default)
+    public unsafe virtual void MakeRicochetNoise(System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 ThrownFromPos, bool bThrownFromGarg, BmSDK.BmGame.RBMAIController.BRAECReactionType Type, int LaunchID, bool bTerrorShootStartle = default, bool HasPrecalculatedTargets = default, BmSDK.TArray<BmSDK.BmGame.RPawnVillain> PrecalulatedTargets = default, bool bIsActuallyPlayer = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction_Master.MakeRicochetNoise", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -157,7 +157,7 @@ public partial class RAEC_BatarangReaction_Master : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: CheckForThrowReaction
     /// </summary>
-    public unsafe void CheckForThrowReaction(System.Numerics.Vector3 ThrownFromPos, BmSDK.BmGame.RBMAIController.BRAECReactionType Type, int LaunchID)
+    public unsafe virtual void CheckForThrowReaction(System.Numerics.Vector3 ThrownFromPos, BmSDK.BmGame.RBMAIController.BRAECReactionType Type, int LaunchID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction_Master.CheckForThrowReaction", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -171,7 +171,7 @@ public partial class RAEC_BatarangReaction_Master : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: WantsToGlanceAt
     /// </summary>
-    public unsafe bool WantsToGlanceAt(BmSDK.Engine.Actor TestTarget)
+    public unsafe override bool WantsToGlanceAt(BmSDK.Engine.Actor TestTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction_Master.WantsToGlanceAt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -183,7 +183,7 @@ public partial class RAEC_BatarangReaction_Master : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction_Master.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -195,7 +195,7 @@ public partial class RAEC_BatarangReaction_Master : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: CreateChildren
     /// </summary>
-    public unsafe void CreateChildren()
+    public unsafe virtual void CreateChildren()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction_Master.CreateChildren", true);
         byte* paramsPtr = stackalloc byte[0];

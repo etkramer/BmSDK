@@ -71,7 +71,7 @@ public partial class MCombatMove_RedhoodCounterBlackMask : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: NearThugEvade
     /// </summary>
-    public unsafe void NearThugEvade()
+    public unsafe virtual void NearThugEvade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodCounterBlackMask.NearThugEvade", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class MCombatMove_RedhoodCounterBlackMask : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: CheckVillainInTheWay
     /// </summary>
-    public unsafe bool CheckVillainInTheWay(BmSDK.Engine.Actor BlackMask, BmSDK.BmGame.RPawnVillain Thug, BmSDK.Engine.Actor Redhood)
+    public unsafe virtual bool CheckVillainInTheWay(BmSDK.Engine.Actor BlackMask, BmSDK.BmGame.RPawnVillain Thug, BmSDK.Engine.Actor Redhood)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodCounterBlackMask.CheckVillainInTheWay", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -96,7 +96,7 @@ public partial class MCombatMove_RedhoodCounterBlackMask : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodCounterBlackMask.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class MCombatMove_RedhoodCounterBlackMask : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: DamagePawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagePawn(BmSDK.BmGame.RPawnCombat DamageReceiver)
+    public unsafe virtual BmSDK.BmGame.RPawnCombat.DamageResult DamagePawn(BmSDK.BmGame.RPawnCombat DamageReceiver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodCounterBlackMask.DamagePawn", true);
         byte* paramsPtr = stackalloc byte[260];
@@ -119,7 +119,7 @@ public partial class MCombatMove_RedhoodCounterBlackMask : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: DamageTarget
     /// </summary>
-    public unsafe void DamageTarget()
+    public unsafe override void DamageTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodCounterBlackMask.DamageTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class MCombatMove_RedhoodCounterBlackMask : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: FakeDamageTaken
     /// </summary>
-    public unsafe void FakeDamageTaken()
+    public unsafe virtual void FakeDamageTaken()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodCounterBlackMask.FakeDamageTaken", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -141,7 +141,7 @@ public partial class MCombatMove_RedhoodCounterBlackMask : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: CanQuikFireLT
     /// </summary>
-    public unsafe void CanQuikFireLT()
+    public unsafe virtual void CanQuikFireLT()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodCounterBlackMask.CanQuikFireLT", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -152,7 +152,7 @@ public partial class MCombatMove_RedhoodCounterBlackMask : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodCounterBlackMask.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -165,7 +165,7 @@ public partial class MCombatMove_RedhoodCounterBlackMask : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: StartCustomFinalBlowCam
     /// </summary>
-    public unsafe void StartCustomFinalBlowCam()
+    public unsafe virtual void StartCustomFinalBlowCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodCounterBlackMask.StartCustomFinalBlowCam", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -176,7 +176,7 @@ public partial class MCombatMove_RedhoodCounterBlackMask : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: DisableSlomo
     /// </summary>
-    public unsafe void DisableSlomo()
+    public unsafe virtual void DisableSlomo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodCounterBlackMask.DisableSlomo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -187,7 +187,7 @@ public partial class MCombatMove_RedhoodCounterBlackMask : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: CanPerformTakedownWithStun
     /// </summary>
-    public unsafe bool CanPerformTakedownWithStun()
+    public unsafe override bool CanPerformTakedownWithStun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodCounterBlackMask.CanPerformTakedownWithStun", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -198,7 +198,7 @@ public partial class MCombatMove_RedhoodCounterBlackMask : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: EnableSlomo
     /// </summary>
-    public unsafe void EnableSlomo()
+    public unsafe virtual void EnableSlomo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodCounterBlackMask.EnableSlomo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -209,7 +209,7 @@ public partial class MCombatMove_RedhoodCounterBlackMask : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: IsAttacking
     /// </summary>
-    public unsafe bool IsAttacking()
+    public unsafe override bool IsAttacking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodCounterBlackMask.IsAttacking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -220,7 +220,7 @@ public partial class MCombatMove_RedhoodCounterBlackMask : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: CanReceiveAttackFromPawn
     /// </summary>
-    public unsafe bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
+    public unsafe override bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodCounterBlackMask.CanReceiveAttackFromPawn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -233,7 +233,7 @@ public partial class MCombatMove_RedhoodCounterBlackMask : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodCounterBlackMask.Initialise", true);
         byte* paramsPtr = stackalloc byte[12];

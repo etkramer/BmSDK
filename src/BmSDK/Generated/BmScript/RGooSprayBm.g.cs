@@ -71,7 +71,7 @@ public partial class RGooSprayBm : BmSDK.BmGame.RGooSpray, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayedHostageInDangerLine
     /// </summary>
-    public unsafe void PlayedHostageInDangerLine()
+    public unsafe virtual void PlayedHostageInDangerLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGooSprayBm.PlayedHostageInDangerLine", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RGooSprayBm : BmSDK.BmGame.RGooSpray, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayHostageInDangerLine
     /// </summary>
-    public unsafe void PlayHostageInDangerLine()
+    public unsafe override void PlayHostageInDangerLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGooSprayBm.PlayHostageInDangerLine", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RGooSprayBm : BmSDK.BmGame.RGooSpray, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayDetonateAudio
     /// </summary>
-    public unsafe void PlayDetonateAudio()
+    public unsafe override void PlayDetonateAudio()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGooSprayBm.PlayDetonateAudio", true);
         byte* paramsPtr = stackalloc byte[0];

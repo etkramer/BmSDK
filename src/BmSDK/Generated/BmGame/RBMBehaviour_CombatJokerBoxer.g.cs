@@ -36,7 +36,7 @@ public partial class RBMBehaviour_CombatJokerBoxer : BmSDK.BmGame.RBMBehaviour_C
     /// <summary>
     /// Function: OnSpawnMove
     /// </summary>
-    public unsafe void OnSpawnMove()
+    public unsafe override void OnSpawnMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatJokerBoxer.OnSpawnMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_CombatJokerBoxer : BmSDK.BmGame.RBMBehaviour_C
     /// <summary>
     /// Function: GetAttackPriority
     /// </summary>
-    public unsafe int GetAttackPriority(bool bForceAttack)
+    public unsafe override int GetAttackPriority(bool bForceAttack)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatJokerBoxer.GetAttackPriority", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_CombatJokerBoxer : BmSDK.BmGame.RBMBehaviour_C
     /// <summary>
     /// Function: SpawnReviveMove
     /// </summary>
-    public unsafe void SpawnReviveMove(BmSDK.BmGame.RPawnVillain BestCasualty)
+    public unsafe override void SpawnReviveMove(BmSDK.BmGame.RPawnVillain BestCasualty)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatJokerBoxer.SpawnReviveMove", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -71,7 +71,7 @@ public partial class RBMBehaviour_CombatJokerBoxer : BmSDK.BmGame.RBMBehaviour_C
     /// <summary>
     /// Function: ShouldUseEnvironment
     /// </summary>
-    public unsafe bool ShouldUseEnvironment(float DeltaTime, bool bForceCheck)
+    public unsafe override bool ShouldUseEnvironment(float DeltaTime, bool bForceCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatJokerBoxer.ShouldUseEnvironment", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -84,7 +84,7 @@ public partial class RBMBehaviour_CombatJokerBoxer : BmSDK.BmGame.RBMBehaviour_C
     /// <summary>
     /// Function: GetPossibleMoves
     /// </summary>
-    public unsafe void GetPossibleMoves(out BmSDK.TArray<BmSDK.Class> PossibleMoves)
+    public unsafe override void GetPossibleMoves(out BmSDK.TArray<BmSDK.Class> PossibleMoves)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatJokerBoxer.GetPossibleMoves", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -96,7 +96,7 @@ public partial class RBMBehaviour_CombatJokerBoxer : BmSDK.BmGame.RBMBehaviour_C
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatJokerBoxer.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class RBMBehaviour_CombatJokerBoxer : BmSDK.BmGame.RBMBehaviour_C
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatJokerBoxer.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class RBMBehaviour_CombatJokerBoxer : BmSDK.BmGame.RBMBehaviour_C
     /// <summary>
     /// Function: GetForceToGiveToPawn
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetForceToGiveToPawn(BmSDK.BmGame.RPawnCombat ForceReceiver, float MaxForce, float MinRange = default, float MaxRange = default)
+    public unsafe override System.Numerics.Vector3 GetForceToGiveToPawn(BmSDK.BmGame.RPawnCombat ForceReceiver, float MaxForce, float MinRange = default, float MaxRange = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatJokerBoxer.GetForceToGiveToPawn", true);
         byte* paramsPtr = stackalloc byte[32];

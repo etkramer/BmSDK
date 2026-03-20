@@ -36,7 +36,7 @@ public partial class RSeqAct_ToggleRoadLinkAlt : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ToggleRoadLinkAlt.Activated", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RSeqAct_ToggleRoadLinkAlt : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// Function: UpdateLink
     /// </summary>
-    public unsafe void UpdateLink(BmSDK.BmGame.RRoadLink Link, bool UseAltLanes)
+    public unsafe virtual void UpdateLink(BmSDK.BmGame.RRoadLink Link, bool UseAltLanes)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ToggleRoadLinkAlt.UpdateLink", true);
         byte* paramsPtr = stackalloc byte[32];

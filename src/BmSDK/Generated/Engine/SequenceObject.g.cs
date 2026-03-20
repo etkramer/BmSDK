@@ -42,7 +42,7 @@ public partial class SequenceObject : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPastingIntoLevelSequenceAllowed
     /// </summary>
-    public unsafe bool IsPastingIntoLevelSequenceAllowed()
+    public unsafe virtual bool IsPastingIntoLevelSequenceAllowed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SequenceObject.IsPastingIntoLevelSequenceAllowed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -53,7 +53,7 @@ public partial class SequenceObject : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsValidLevelSequenceObject
     /// </summary>
-    public unsafe bool IsValidLevelSequenceObject()
+    public unsafe virtual bool IsValidLevelSequenceObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SequenceObject.IsValidLevelSequenceObject", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -64,7 +64,7 @@ public partial class SequenceObject : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetWorldInfo
     /// </summary>
-    public unsafe BmSDK.Engine.WorldInfo GetWorldInfo()
+    public unsafe virtual BmSDK.Engine.WorldInfo GetWorldInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SequenceObject.GetWorldInfo", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class SequenceObject : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ScriptLog
     /// </summary>
-    public unsafe void ScriptLog(BmSDK.FString LogText, bool bWarning = default)
+    public unsafe virtual void ScriptLog(BmSDK.FString LogText, bool bWarning = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SequenceObject.ScriptLog", true);
         byte* paramsPtr = stackalloc byte[20];

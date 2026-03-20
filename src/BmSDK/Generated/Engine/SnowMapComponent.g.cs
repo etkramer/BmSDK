@@ -36,7 +36,7 @@ public partial class SnowMapComponent : BmSDK.Engine.ActorComponent, BmSDK.IGame
     /// <summary>
     /// Function: SetHidden
     /// </summary>
-    public unsafe void SetHidden(bool bInHidden)
+    public unsafe virtual void SetHidden(bool bInHidden)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SnowMapComponent.SetHidden", true);
         byte* paramsPtr = stackalloc byte[4];

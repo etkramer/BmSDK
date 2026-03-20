@@ -47,7 +47,7 @@ public partial class RSeqAct_FullScreenPlayer : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: IsStreamingInstallStillRunning
     /// </summary>
-    public unsafe bool IsStreamingInstallStillRunning()
+    public unsafe virtual bool IsStreamingInstallStillRunning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FullScreenPlayer.IsStreamingInstallStillRunning", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RSeqAct_FullScreenPlayer : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: MovieEnded
     /// </summary>
-    public unsafe void MovieEnded(bool bCheckMovieFinishedForPause)
+    public unsafe virtual void MovieEnded(bool bCheckMovieFinishedForPause)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FullScreenPlayer.MovieEnded", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -70,7 +70,7 @@ public partial class RSeqAct_FullScreenPlayer : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: MovieAboutToFinish
     /// </summary>
-    public unsafe void MovieAboutToFinish()
+    public unsafe virtual void MovieAboutToFinish()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FullScreenPlayer.MovieAboutToFinish", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RSeqAct_FullScreenPlayer : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: EndCinematicMode
     /// </summary>
-    public unsafe void EndCinematicMode()
+    public unsafe virtual void EndCinematicMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FullScreenPlayer.EndCinematicMode", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -92,7 +92,7 @@ public partial class RSeqAct_FullScreenPlayer : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: PreStartMovie
     /// </summary>
-    public unsafe void PreStartMovie()
+    public unsafe virtual void PreStartMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FullScreenPlayer.PreStartMovie", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -103,7 +103,7 @@ public partial class RSeqAct_FullScreenPlayer : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: MovieFinished
     /// </summary>
-    public unsafe void MovieFinished()
+    public unsafe virtual void MovieFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FullScreenPlayer.MovieFinished", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -114,7 +114,7 @@ public partial class RSeqAct_FullScreenPlayer : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: InputStop
     /// </summary>
-    public unsafe void InputStop()
+    public unsafe virtual void InputStop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FullScreenPlayer.InputStop", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -125,7 +125,7 @@ public partial class RSeqAct_FullScreenPlayer : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: InputPlay
     /// </summary>
-    public unsafe void InputPlay()
+    public unsafe virtual void InputPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FullScreenPlayer.InputPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -136,7 +136,7 @@ public partial class RSeqAct_FullScreenPlayer : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: StopAudio
     /// </summary>
-    public unsafe void StopAudio()
+    public unsafe virtual void StopAudio()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FullScreenPlayer.StopAudio", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -154,7 +154,7 @@ public partial class RSeqAct_FullScreenPlayer : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: CheckForFinish
     /// </summary>
-    public unsafe bool CheckForFinish()
+    public unsafe virtual bool CheckForFinish()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FullScreenPlayer.CheckForFinish", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -172,7 +172,7 @@ public partial class RSeqAct_FullScreenPlayer : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: IsPaused
     /// </summary>
-    public unsafe bool IsPaused()
+    public unsafe virtual bool IsPaused()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FullScreenPlayer.IsPaused", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -190,7 +190,7 @@ public partial class RSeqAct_FullScreenPlayer : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: WasSkipped
     /// </summary>
-    public unsafe bool WasSkipped()
+    public unsafe virtual bool WasSkipped()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FullScreenPlayer.WasSkipped", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -208,7 +208,7 @@ public partial class RSeqAct_FullScreenPlayer : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: StopMovie
     /// </summary>
-    public unsafe void StopMovie()
+    public unsafe virtual void StopMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FullScreenPlayer.StopMovie", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -226,7 +226,7 @@ public partial class RSeqAct_FullScreenPlayer : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: PlayMovie
     /// </summary>
-    public unsafe void PlayMovie()
+    public unsafe virtual void PlayMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FullScreenPlayer.PlayMovie", true);
         byte* paramsPtr = stackalloc byte[0];

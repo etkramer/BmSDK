@@ -71,7 +71,7 @@ public partial class RBMAIAction_GoggleBlind : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_GoggleBlind.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_GoggleBlind : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// Function: StartOutAnim
     /// </summary>
-    public unsafe void StartOutAnim()
+    public unsafe virtual void StartOutAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_GoggleBlind.StartOutAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_GoggleBlind : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// Function: StartInAnim
     /// </summary>
-    public unsafe void StartInAnim()
+    public unsafe virtual void StartInAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_GoggleBlind.StartInAnim", true);
         byte* paramsPtr = stackalloc byte[0];

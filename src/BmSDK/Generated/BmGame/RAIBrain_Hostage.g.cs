@@ -36,7 +36,7 @@ public partial class RAIBrain_Hostage : BmSDK.BmGame.RAIBrain, BmSDK.IGameObject
     /// <summary>
     /// Function: SetEscaped
     /// </summary>
-    public unsafe void SetEscaped(bool bNewVal)
+    public unsafe virtual void SetEscaped(bool bNewVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain_Hostage.SetEscaped", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RAIBrain_Hostage : BmSDK.BmGame.RAIBrain, BmSDK.IGameObject
     /// <summary>
     /// Function: SetEndOfWave
     /// </summary>
-    public unsafe void SetEndOfWave(bool bNewVal)
+    public unsafe virtual void SetEndOfWave(bool bNewVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain_Hostage.SetEndOfWave", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -60,7 +60,7 @@ public partial class RAIBrain_Hostage : BmSDK.BmGame.RAIBrain, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPlayerSeenEscapeType
     /// </summary>
-    public unsafe void SetPlayerSeenEscapeType(BmSDK.BmGame.RAIBrain_Hostage.PlayerSeenEscapeTypeEnum NewVal)
+    public unsafe virtual void SetPlayerSeenEscapeType(BmSDK.BmGame.RAIBrain_Hostage.PlayerSeenEscapeTypeEnum NewVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain_Hostage.SetPlayerSeenEscapeType", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -72,7 +72,7 @@ public partial class RAIBrain_Hostage : BmSDK.BmGame.RAIBrain, BmSDK.IGameObject
     /// <summary>
     /// Function: HandleNonAECState
     /// </summary>
-    public unsafe void HandleNonAECState()
+    public unsafe override void HandleNonAECState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain_Hostage.HandleNonAECState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -83,7 +83,7 @@ public partial class RAIBrain_Hostage : BmSDK.BmGame.RAIBrain, BmSDK.IGameObject
     /// <summary>
     /// Function: EvaluateState
     /// </summary>
-    public unsafe void EvaluateState(out BmSDK.FName NewName, out BmSDK.BmGame.RAlertEventCoordinatorBase NewAEC)
+    public unsafe override void EvaluateState(out BmSDK.FName NewName, out BmSDK.BmGame.RAlertEventCoordinatorBase NewAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain_Hostage.EvaluateState", true);
         byte* paramsPtr = stackalloc byte[16];

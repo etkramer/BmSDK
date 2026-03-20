@@ -71,7 +71,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: RestorePoweredUpState
     /// </summary>
-    public unsafe bool RestorePoweredUpState()
+    public unsafe virtual bool RestorePoweredUpState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.RestorePoweredUpState", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: AllowLongRangeTargeting
     /// </summary>
-    public unsafe bool AllowLongRangeTargeting()
+    public unsafe virtual bool AllowLongRangeTargeting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.AllowLongRangeTargeting", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: IsGenerator
     /// </summary>
-    public unsafe bool IsGenerator()
+    public unsafe virtual bool IsGenerator()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.IsGenerator", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: GetAudioLoad
     /// </summary>
-    public unsafe float GetAudioLoad()
+    public unsafe virtual float GetAudioLoad()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.GetAudioLoad", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -122,7 +122,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: ApplyRevs
     /// </summary>
-    public unsafe void ApplyRevs(float Revs, BmSDK.BmGame.RPlayerController Controller)
+    public unsafe virtual void ApplyRevs(float Revs, BmSDK.BmGame.RPlayerController Controller)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.ApplyRevs", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -135,7 +135,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: GetRevsMaxDelta
     /// </summary>
-    public unsafe float GetRevsMaxDelta()
+    public unsafe virtual float GetRevsMaxDelta()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.GetRevsMaxDelta", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -146,7 +146,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: GetRevs
     /// </summary>
-    public unsafe float GetRevs()
+    public unsafe virtual float GetRevs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.GetRevs", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -157,7 +157,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: ShowRevPrompt
     /// </summary>
-    public unsafe bool ShowRevPrompt()
+    public unsafe virtual bool ShowRevPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.ShowRevPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -168,7 +168,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: CustomPromptButtonPressed
     /// </summary>
-    public unsafe void CustomPromptButtonPressed()
+    public unsafe virtual void CustomPromptButtonPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.CustomPromptButtonPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -179,7 +179,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: ShowCustomPrompt
     /// </summary>
-    public unsafe bool ShowCustomPrompt()
+    public unsafe virtual bool ShowCustomPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.ShowCustomPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -190,7 +190,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: AlwaysShowElectricEffectsOnCable
     /// </summary>
-    public unsafe bool AlwaysShowElectricEffectsOnCable()
+    public unsafe virtual bool AlwaysShowElectricEffectsOnCable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.AlwaysShowElectricEffectsOnCable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -201,7 +201,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: AllowElectrifyHUD
     /// </summary>
-    public unsafe bool AllowElectrifyHUD()
+    public unsafe virtual bool AllowElectrifyHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.AllowElectrifyHUD", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -212,7 +212,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: IsPoweredUp
     /// </summary>
-    public unsafe bool IsPoweredUp()
+    public unsafe virtual bool IsPoweredUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.IsPoweredUp", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -223,7 +223,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: BlocksInteraction
     /// </summary>
-    public unsafe bool BlocksInteraction()
+    public unsafe virtual bool BlocksInteraction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.BlocksInteraction", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -234,7 +234,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: StopElectricityEffects
     /// </summary>
-    public unsafe void StopElectricityEffects()
+    public unsafe virtual void StopElectricityEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.StopElectricityEffects", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -245,7 +245,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: StartElectricityEffects
     /// </summary>
-    public unsafe void StartElectricityEffects()
+    public unsafe virtual void StartElectricityEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.StartElectricityEffects", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -256,7 +256,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: WinchAborted
     /// </summary>
-    public unsafe void WinchAborted(int Reason)
+    public unsafe virtual void WinchAborted(int Reason)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.WinchAborted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -268,7 +268,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: WinchReleased
     /// </summary>
-    public unsafe void WinchReleased(BmSDK.BmGame.RBatmobileWinch Winch)
+    public unsafe virtual void WinchReleased(BmSDK.BmGame.RBatmobileWinch Winch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.WinchReleased", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -280,7 +280,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: WinchAttached
     /// </summary>
-    public unsafe void WinchAttached(BmSDK.BmGame.RBatmobileWinch Winch)
+    public unsafe virtual void WinchAttached(BmSDK.BmGame.RBatmobileWinch Winch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.WinchAttached", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -292,7 +292,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: GetWinchTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWinchTargetLocation()
+    public unsafe virtual System.Numerics.Vector3 GetWinchTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.GetWinchTargetLocation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -303,7 +303,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: IsSideStory
     /// </summary>
-    public unsafe bool IsSideStory()
+    public unsafe virtual bool IsSideStory()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.IsSideStory", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -314,7 +314,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: IsBatmobileInAngleLimits
     /// </summary>
-    public unsafe bool IsBatmobileInAngleLimits(BmSDK.Engine.Actor Batmobile, BmSDK.BmGame.RBatmobileWinch Winch, out System.Numerics.Vector3 LimitVec)
+    public unsafe virtual bool IsBatmobileInAngleLimits(BmSDK.Engine.Actor Batmobile, BmSDK.BmGame.RBatmobileWinch Winch, out System.Numerics.Vector3 LimitVec)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.IsBatmobileInAngleLimits", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -328,7 +328,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -340,7 +340,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: ShouldPreventManualWinchRelease
     /// </summary>
-    public unsafe bool ShouldPreventManualWinchRelease()
+    public unsafe virtual bool ShouldPreventManualWinchRelease()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.ShouldPreventManualWinchRelease", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -351,7 +351,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -362,7 +362,7 @@ public partial class RWinchableJunctionBoxBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWinchableJunctionBoxBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];

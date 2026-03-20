@@ -71,7 +71,7 @@ public partial class RAEC_TriggerManDownCountResponse : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// Function: TryTriggerResponse
     /// </summary>
-    public unsafe void TryTriggerResponse()
+    public unsafe virtual void TryTriggerResponse()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_TriggerManDownCountResponse.TryTriggerResponse", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_TriggerManDownCountResponse : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_TriggerManDownCountResponse.Tick", true);
         byte* paramsPtr = stackalloc byte[4];

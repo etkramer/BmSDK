@@ -71,7 +71,7 @@ public partial class RCombatMove_VillainEvade : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: TargetGoRagdoll
     /// </summary>
-    public unsafe void TargetGoRagdoll()
+    public unsafe virtual void TargetGoRagdoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainEvade.TargetGoRagdoll", true);
         byte* paramsPtr = stackalloc byte[248];
@@ -82,7 +82,7 @@ public partial class RCombatMove_VillainEvade : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainEvade.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RCombatMove_VillainEvade : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: GetEvadeDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetEvadeDirection()
+    public unsafe virtual System.Numerics.Vector3 GetEvadeDirection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainEvade.GetEvadeDirection", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -104,7 +104,7 @@ public partial class RCombatMove_VillainEvade : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainEvade.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

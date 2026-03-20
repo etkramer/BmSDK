@@ -71,7 +71,7 @@ public partial class MBMAIAction_PauseAndLookAroundForLimitedTime : BmSDK.BmGame
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMAIAction_PauseAndLookAroundForLimitedTime.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class MBMAIAction_PauseAndLookAroundForLimitedTime : BmSDK.BmGame
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMAIAction_PauseAndLookAroundForLimitedTime.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class MBMAIAction_PauseAndLookAroundForLimitedTime : BmSDK.BmGame
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMAIAction_PauseAndLookAroundForLimitedTime.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class MBMAIAction_PauseAndLookAroundForLimitedTime : BmSDK.BmGame
     /// <summary>
     /// Function: SetTimeLimit
     /// </summary>
-    public unsafe void SetTimeLimit(float newTimeLimit)
+    public unsafe virtual void SetTimeLimit(float newTimeLimit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMAIAction_PauseAndLookAroundForLimitedTime.SetTimeLimit", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -117,7 +117,7 @@ public partial class MBMAIAction_PauseAndLookAroundForLimitedTime : BmSDK.BmGame
     /// <summary>
     /// Function: SetLookLocation
     /// </summary>
-    public unsafe void SetLookLocation(System.Numerics.Vector3 NewLoc)
+    public unsafe virtual void SetLookLocation(System.Numerics.Vector3 NewLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMAIAction_PauseAndLookAroundForLimitedTime.SetLookLocation", true);
         byte* paramsPtr = stackalloc byte[12];

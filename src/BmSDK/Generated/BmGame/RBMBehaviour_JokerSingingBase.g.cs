@@ -36,7 +36,7 @@ public partial class RBMBehaviour_JokerSingingBase : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: GetSongTime
     /// </summary>
-    public unsafe float GetSongTime(float songLength)
+    public unsafe virtual float GetSongTime(float songLength)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_JokerSingingBase.GetSongTime", true);
         byte* paramsPtr = stackalloc byte[8];

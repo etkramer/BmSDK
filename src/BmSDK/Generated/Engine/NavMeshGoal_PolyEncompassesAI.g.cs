@@ -36,7 +36,7 @@ public partial class NavMeshGoal_PolyEncompassesAI : BmSDK.Engine.NavMeshPathGoa
     /// <summary>
     /// Function: Recycle
     /// </summary>
-    public unsafe void Recycle()
+    public unsafe override void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshGoal_PolyEncompassesAI.Recycle", true);
         byte* paramsPtr = stackalloc byte[0];

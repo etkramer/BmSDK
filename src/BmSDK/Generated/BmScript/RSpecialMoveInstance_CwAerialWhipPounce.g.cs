@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_CwAerialWhipPounce : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: NotifyHitWall
     /// </summary>
-    public unsafe void NotifyHitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall)
+    public unsafe override void NotifyHitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwAerialWhipPounce.NotifyHitWall", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -84,7 +84,7 @@ public partial class RSpecialMoveInstance_CwAerialWhipPounce : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwAerialWhipPounce.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -96,7 +96,7 @@ public partial class RSpecialMoveInstance_CwAerialWhipPounce : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwAerialWhipPounce.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -108,7 +108,7 @@ public partial class RSpecialMoveInstance_CwAerialWhipPounce : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwAerialWhipPounce.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -119,7 +119,7 @@ public partial class RSpecialMoveInstance_CwAerialWhipPounce : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: PickRandomAnim
     /// </summary>
-    public unsafe void PickRandomAnim()
+    public unsafe override void PickRandomAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwAerialWhipPounce.PickRandomAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class RSpecialMoveInstance_CwAerialWhipPounce : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: StartNonRelativeAnimation
     /// </summary>
-    public unsafe void StartNonRelativeAnimation()
+    public unsafe virtual void StartNonRelativeAnimation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwAerialWhipPounce.StartNonRelativeAnimation", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -141,7 +141,7 @@ public partial class RSpecialMoveInstance_CwAerialWhipPounce : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: GetEndMovementStance
     /// </summary>
-    public unsafe BmSDK.FName GetEndMovementStance()
+    public unsafe override BmSDK.FName GetEndMovementStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwAerialWhipPounce.GetEndMovementStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -152,7 +152,7 @@ public partial class RSpecialMoveInstance_CwAerialWhipPounce : BmSDK.BmGame.RSpe
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwAerialWhipPounce.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[168];

@@ -71,7 +71,7 @@ public partial class RB_CylindricalForceActor : BmSDK.Engine.RigidBodyBase, BmSD
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_CylindricalForceActor.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];

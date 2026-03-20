@@ -71,7 +71,7 @@ public partial class RCombatMove_MinigunThugClash : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: PlayCounter
     /// </summary>
-    public unsafe void PlayCounter()
+    public unsafe override void PlayCounter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MinigunThugClash.PlayCounter", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_MinigunThugClash : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: DetectRun
     /// </summary>
-    public unsafe bool DetectRun()
+    public unsafe virtual bool DetectRun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MinigunThugClash.DetectRun", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -93,7 +93,7 @@ public partial class RCombatMove_MinigunThugClash : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: UpdateFOV
     /// </summary>
-    public unsafe void UpdateFOV(float DeltaTime)
+    public unsafe virtual void UpdateFOV(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MinigunThugClash.UpdateFOV", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RCombatMove_MinigunThugClash : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: ExitMinigunTgBehaviour
     /// </summary>
-    public unsafe void ExitMinigunTgBehaviour()
+    public unsafe virtual void ExitMinigunTgBehaviour()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MinigunThugClash.ExitMinigunTgBehaviour", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -116,7 +116,7 @@ public partial class RCombatMove_MinigunThugClash : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat ExitingPawn)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat ExitingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MinigunThugClash.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -128,7 +128,7 @@ public partial class RCombatMove_MinigunThugClash : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: GetCameraAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetCameraAnimset()
+    public unsafe override BmSDK.Engine.AnimSet GetCameraAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MinigunThugClash.GetCameraAnimset", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -139,7 +139,7 @@ public partial class RCombatMove_MinigunThugClash : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: IncrementClash
     /// </summary>
-    public unsafe void IncrementClash()
+    public unsafe override void IncrementClash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MinigunThugClash.IncrementClash", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class RCombatMove_MinigunThugClash : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: GetCurrClash
     /// </summary>
-    public unsafe int GetCurrClash()
+    public unsafe override int GetCurrClash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MinigunThugClash.GetCurrClash", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -161,7 +161,7 @@ public partial class RCombatMove_MinigunThugClash : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MinigunThugClash.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -172,7 +172,7 @@ public partial class RCombatMove_MinigunThugClash : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: FinalHit
     /// </summary>
-    public unsafe void FinalHit()
+    public unsafe override void FinalHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MinigunThugClash.FinalHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -183,7 +183,7 @@ public partial class RCombatMove_MinigunThugClash : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: IntoClashHit
     /// </summary>
-    public unsafe void IntoClashHit()
+    public unsafe override void IntoClashHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MinigunThugClash.IntoClashHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -194,7 +194,7 @@ public partial class RCombatMove_MinigunThugClash : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: Hit
     /// </summary>
-    public unsafe void Hit()
+    public unsafe override void Hit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MinigunThugClash.Hit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -205,7 +205,7 @@ public partial class RCombatMove_MinigunThugClash : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: HitLight
     /// </summary>
-    public unsafe void HitLight()
+    public unsafe override void HitLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MinigunThugClash.HitLight", true);
         byte* paramsPtr = stackalloc byte[0];

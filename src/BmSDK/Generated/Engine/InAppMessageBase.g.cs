@@ -36,7 +36,7 @@ public partial class InAppMessageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: ShowInAppEmailUI
     /// </summary>
-    public unsafe bool ShowInAppEmailUI(BmSDK.FString InitialSubject = default, BmSDK.FString InitialMessage = default)
+    public unsafe virtual bool ShowInAppEmailUI(BmSDK.FString InitialSubject = default, BmSDK.FString InitialMessage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InAppMessageBase.ShowInAppEmailUI", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -56,7 +56,7 @@ public partial class InAppMessageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: ShowInAppSMSUI
     /// </summary>
-    public unsafe bool ShowInAppSMSUI(BmSDK.FString InitialMessage = default)
+    public unsafe virtual bool ShowInAppSMSUI(BmSDK.FString InitialMessage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InAppMessageBase.ShowInAppSMSUI", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -75,7 +75,7 @@ public partial class InAppMessageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init()
+    public unsafe virtual void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InAppMessageBase.Init", true);
         byte* paramsPtr = stackalloc byte[0];

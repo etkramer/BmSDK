@@ -71,7 +71,7 @@ public partial class MAEC_MayhemTransitionAlert : BmSDK.BmGame.RAEC_GelMineExplo
     /// <summary>
     /// Function: TriggerReaction
     /// </summary>
-    public unsafe void TriggerReaction(System.Numerics.Vector3 ReactionCentre)
+    public unsafe override void TriggerReaction(System.Numerics.Vector3 ReactionCentre)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_MayhemTransitionAlert.TriggerReaction", true);
         byte* paramsPtr = stackalloc byte[60];

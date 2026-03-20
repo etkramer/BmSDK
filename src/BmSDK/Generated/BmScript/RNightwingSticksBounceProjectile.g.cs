@@ -71,7 +71,7 @@ public partial class RNightwingSticksBounceProjectile : BmSDK.BmGame.RBatarangPr
     /// <summary>
     /// Function: VillainHit
     /// </summary>
-    public unsafe void VillainHit(BmSDK.BmGame.RPawnVillain Target)
+    public unsafe override void VillainHit(BmSDK.BmGame.RPawnVillain Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceProjectile.VillainHit", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RNightwingSticksBounceProjectile : BmSDK.BmGame.RBatarangPr
     /// <summary>
     /// Function: SpawnWallRicochetFX
     /// </summary>
-    public unsafe void SpawnWallRicochetFX(BmSDK.Engine.Pawn HitPawn, System.Numerics.Vector3 NewLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual void SpawnWallRicochetFX(BmSDK.Engine.Pawn HitPawn, System.Numerics.Vector3 NewLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceProjectile.SpawnWallRicochetFX", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -97,7 +97,7 @@ public partial class RNightwingSticksBounceProjectile : BmSDK.BmGame.RBatarangPr
     /// <summary>
     /// Function: CollideRicochetStick
     /// </summary>
-    public unsafe void CollideRicochetStick(float DeltaTime)
+    public unsafe virtual void CollideRicochetStick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceProjectile.CollideRicochetStick", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -109,7 +109,7 @@ public partial class RNightwingSticksBounceProjectile : BmSDK.BmGame.RBatarangPr
     /// <summary>
     /// Function: OrientAlongVelocity
     /// </summary>
-    public unsafe void OrientAlongVelocity(float DeltaTime)
+    public unsafe virtual void OrientAlongVelocity(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceProjectile.OrientAlongVelocity", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -121,7 +121,7 @@ public partial class RNightwingSticksBounceProjectile : BmSDK.BmGame.RBatarangPr
     /// <summary>
     /// Function: DoSticksRicochet
     /// </summary>
-    public unsafe void DoSticksRicochet(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor HitActor)
+    public unsafe virtual void DoSticksRicochet(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor HitActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceProjectile.DoSticksRicochet", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -134,7 +134,7 @@ public partial class RNightwingSticksBounceProjectile : BmSDK.BmGame.RBatarangPr
     /// <summary>
     /// Function: DeactivateTrail
     /// </summary>
-    public unsafe void DeactivateTrail()
+    public unsafe virtual void DeactivateTrail()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceProjectile.DeactivateTrail", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -145,7 +145,7 @@ public partial class RNightwingSticksBounceProjectile : BmSDK.BmGame.RBatarangPr
     /// <summary>
     /// Function: EnablePhysics
     /// </summary>
-    public unsafe void EnablePhysics()
+    public unsafe virtual void EnablePhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceProjectile.EnablePhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -156,7 +156,7 @@ public partial class RNightwingSticksBounceProjectile : BmSDK.BmGame.RBatarangPr
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingSticksBounceProjectile.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];

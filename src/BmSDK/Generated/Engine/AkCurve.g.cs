@@ -36,7 +36,7 @@ public partial class AkCurve : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: Map
     /// </summary>
-    public unsafe float Map(float Input)
+    public unsafe virtual float Map(float Input)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkCurve.Map", true);
         byte* paramsPtr = stackalloc byte[8];

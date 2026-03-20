@@ -36,7 +36,7 @@ public partial class RGroupAssignmentPicker : BmSDK.StateObject, BmSDK.IGameObje
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update()
+    public unsafe virtual bool Update()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGroupAssignmentPicker.Update", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RGroupAssignmentPicker : BmSDK.StateObject, BmSDK.IGameObje
     /// <summary>
     /// Function: ScriptInitExecution
     /// </summary>
-    public unsafe void ScriptInitExecution()
+    public unsafe virtual void ScriptInitExecution()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGroupAssignmentPicker.ScriptInitExecution", true);
         byte* paramsPtr = stackalloc byte[0];

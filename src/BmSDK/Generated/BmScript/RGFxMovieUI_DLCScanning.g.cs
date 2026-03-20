@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_DLCScanning : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Function: DLC_IsScanActive
     /// </summary>
-    public unsafe bool DLC_IsScanActive()
+    public unsafe virtual bool DLC_IsScanActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DLCScanning.DLC_IsScanActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RGFxMovieUI_DLCScanning : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Function: DLC_RemoveScanNotifyComplete
     /// </summary>
-    public unsafe void DLC_RemoveScanNotifyComplete()
+    public unsafe virtual void DLC_RemoveScanNotifyComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DLCScanning.DLC_RemoveScanNotifyComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RGFxMovieUI_DLCScanning : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Function: DLC_AddScanNotifyComplete
     /// </summary>
-    public unsafe void DLC_AddScanNotifyComplete()
+    public unsafe virtual void DLC_AddScanNotifyComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DLCScanning.DLC_AddScanNotifyComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RGFxMovieUI_DLCScanning : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Function: XI_Tick
     /// </summary>
-    public unsafe void XI_Tick()
+    public unsafe override void XI_Tick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DLCScanning.XI_Tick", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RGFxMovieUI_DLCScanning : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Function: XI_OnOut
     /// </summary>
-    public unsafe void XI_OnOut()
+    public unsafe override void XI_OnOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DLCScanning.XI_OnOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -91,7 +91,7 @@ public partial class RGFxMovieUI_DLCScanning : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Function: XI_OnIn
     /// </summary>
-    public unsafe void XI_OnIn()
+    public unsafe override void XI_OnIn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DLCScanning.XI_OnIn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -102,7 +102,7 @@ public partial class RGFxMovieUI_DLCScanning : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Function: RefreshDLCEnumComplete
     /// </summary>
-    public unsafe void RefreshDLCEnumComplete()
+    public unsafe virtual void RefreshDLCEnumComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DLCScanning.RefreshDLCEnumComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -113,7 +113,7 @@ public partial class RGFxMovieUI_DLCScanning : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Function: CloseDown
     /// </summary>
-    public unsafe void CloseDown()
+    public unsafe virtual void CloseDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DLCScanning.CloseDown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -124,7 +124,7 @@ public partial class RGFxMovieUI_DLCScanning : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DLCScanning.Init", true);
         byte* paramsPtr = stackalloc byte[8];

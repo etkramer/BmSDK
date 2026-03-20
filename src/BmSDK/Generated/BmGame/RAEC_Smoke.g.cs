@@ -71,7 +71,7 @@ public partial class RAEC_Smoke : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK
     /// <summary>
     /// Function: SmokeCleared
     /// </summary>
-    public unsafe void SmokeCleared()
+    public unsafe virtual void SmokeCleared()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Smoke.SmokeCleared", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RAEC_Smoke : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK
     /// <summary>
     /// Function: NeedToWaitForSmokedThugs
     /// </summary>
-    public unsafe bool NeedToWaitForSmokedThugs()
+    public unsafe virtual bool NeedToWaitForSmokedThugs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Smoke.NeedToWaitForSmokedThugs", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RAEC_Smoke : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK
     /// <summary>
     /// Function: AddThug_PathCutBySmoke
     /// </summary>
-    public unsafe bool AddThug_PathCutBySmoke(BmSDK.BmGame.RBMAIController C)
+    public unsafe virtual bool AddThug_PathCutBySmoke(BmSDK.BmGame.RBMAIController C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Smoke.AddThug_PathCutBySmoke", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -105,7 +105,7 @@ public partial class RAEC_Smoke : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK
     /// <summary>
     /// Function: AddSmokeSpotter
     /// </summary>
-    public unsafe bool AddSmokeSpotter(BmSDK.BmGame.RBMAIController C)
+    public unsafe virtual bool AddSmokeSpotter(BmSDK.BmGame.RBMAIController C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Smoke.AddSmokeSpotter", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -117,7 +117,7 @@ public partial class RAEC_Smoke : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK
     /// <summary>
     /// Function: InitOutsideThugs
     /// </summary>
-    public unsafe void InitOutsideThugs(bool bIsExtinguisher)
+    public unsafe virtual void InitOutsideThugs(bool bIsExtinguisher)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Smoke.InitOutsideThugs", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -129,7 +129,7 @@ public partial class RAEC_Smoke : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK
     /// <summary>
     /// Function: AddThugCaughtInSmoke
     /// </summary>
-    public unsafe void AddThugCaughtInSmoke(BmSDK.BmGame.RBMAIController CaughtCon)
+    public unsafe virtual void AddThugCaughtInSmoke(BmSDK.BmGame.RBMAIController CaughtCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Smoke.AddThugCaughtInSmoke", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -141,7 +141,7 @@ public partial class RAEC_Smoke : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Smoke.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -153,7 +153,7 @@ public partial class RAEC_Smoke : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK
     /// <summary>
     /// Function: OnRemoveGroupChild
     /// </summary>
-    public unsafe void OnRemoveGroupChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
+    public unsafe override void OnRemoveGroupChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Smoke.OnRemoveGroupChild", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -165,7 +165,7 @@ public partial class RAEC_Smoke : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK
     /// <summary>
     /// Function: SetSmokeScreen
     /// </summary>
-    public unsafe void SetSmokeScreen(BmSDK.BmGame.RSmokeScreen NewSmokeScreen)
+    public unsafe virtual void SetSmokeScreen(BmSDK.BmGame.RSmokeScreen NewSmokeScreen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Smoke.SetSmokeScreen", true);
         byte* paramsPtr = stackalloc byte[8];

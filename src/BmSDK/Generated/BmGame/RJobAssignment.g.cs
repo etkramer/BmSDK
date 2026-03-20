@@ -31,7 +31,7 @@ public partial class RJobAssignment : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Function: DoAssignment
     /// </summary>
-    public unsafe void DoAssignment(BmSDK.BmGame.RBMRoomAIState RoomState, BmSDK.BmGame.RBMAIController ThugCon, BmSDK.GameObject AssignTarget)
+    public unsafe virtual void DoAssignment(BmSDK.BmGame.RBMRoomAIState RoomState, BmSDK.BmGame.RBMAIController ThugCon, BmSDK.GameObject AssignTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJobAssignment.DoAssignment", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -45,7 +45,7 @@ public partial class RJobAssignment : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Function: CanBeAssigned
     /// </summary>
-    public unsafe bool CanBeAssigned(BmSDK.BmGame.RBMRoomAIState RoomState, BmSDK.BmGame.RBMAIController ThugCon, BmSDK.GameObject AssignTarget)
+    public unsafe virtual bool CanBeAssigned(BmSDK.BmGame.RBMRoomAIState RoomState, BmSDK.BmGame.RBMAIController ThugCon, BmSDK.GameObject AssignTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJobAssignment.CanBeAssigned", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -59,7 +59,7 @@ public partial class RJobAssignment : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Function: IsAlreadyDoingJob
     /// </summary>
-    public unsafe bool IsAlreadyDoingJob(BmSDK.BmGame.RBMAIController TestCon)
+    public unsafe virtual bool IsAlreadyDoingJob(BmSDK.BmGame.RBMAIController TestCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJobAssignment.IsAlreadyDoingJob", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -71,7 +71,7 @@ public partial class RJobAssignment : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Function: AddToDestList
     /// </summary>
-    public unsafe void AddToDestList(BmSDK.BmGame.RBMRoomAIState RoomState, out BmSDK.TArray<BmSDK.BmGame.RAEC_LevelScripting.FSearchTarget> OutList)
+    public unsafe virtual void AddToDestList(BmSDK.BmGame.RBMRoomAIState RoomState, out BmSDK.TArray<BmSDK.BmGame.RAEC_LevelScripting.FSearchTarget> OutList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJobAssignment.AddToDestList", true);
         byte* paramsPtr = stackalloc byte[24];

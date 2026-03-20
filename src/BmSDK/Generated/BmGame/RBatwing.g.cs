@@ -71,7 +71,7 @@ public partial class RBatwing : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatwing.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RBatwing : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DropBatmobile
     /// </summary>
-    public unsafe void DropBatmobile()
+    public unsafe virtual void DropBatmobile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatwing.DropBatmobile", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RBatwing : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckDropBatmobile
     /// </summary>
-    public unsafe void CheckDropBatmobile()
+    public unsafe virtual void CheckDropBatmobile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatwing.CheckDropBatmobile", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RBatwing : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AttachBatmobile
     /// </summary>
-    public unsafe void AttachBatmobile()
+    public unsafe virtual void AttachBatmobile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatwing.AttachBatmobile", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RBatwing : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DeactivateHovering
     /// </summary>
-    public unsafe void DeactivateHovering()
+    public unsafe virtual void DeactivateHovering()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatwing.DeactivateHovering", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RBatwing : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ActivateHovering
     /// </summary>
-    public unsafe void ActivateHovering()
+    public unsafe virtual void ActivateHovering()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatwing.ActivateHovering", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -138,7 +138,7 @@ public partial class RBatwing : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ActivateBoosters
     /// </summary>
-    public unsafe void ActivateBoosters()
+    public unsafe virtual void ActivateBoosters()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatwing.ActivateBoosters", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -149,7 +149,7 @@ public partial class RBatwing : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DeactivateExhaust
     /// </summary>
-    public unsafe void DeactivateExhaust()
+    public unsafe virtual void DeactivateExhaust()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatwing.DeactivateExhaust", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -160,7 +160,7 @@ public partial class RBatwing : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ActivateExhaust
     /// </summary>
-    public unsafe void ActivateExhaust()
+    public unsafe virtual void ActivateExhaust()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatwing.ActivateExhaust", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -171,7 +171,7 @@ public partial class RBatwing : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DestroyMe
     /// </summary>
-    public unsafe void DestroyMe()
+    public unsafe virtual void DestroyMe()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatwing.DestroyMe", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -182,7 +182,7 @@ public partial class RBatwing : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BeginBatmobileRescue
     /// </summary>
-    public unsafe void BeginBatmobileRescue(BmSDK.BmGame.RVehicleBatmobileBase Bmb)
+    public unsafe virtual void BeginBatmobileRescue(BmSDK.BmGame.RVehicleBatmobileBase Bmb)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatwing.BeginBatmobileRescue", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -194,7 +194,7 @@ public partial class RBatwing : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatwing.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RPredatorStartleControlBase : BmSDK.BmGame.RRemoteControlBa
     /// <summary>
     /// Function: GetLocationForVoiceSynthesiserCheckAutoTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLocationForVoiceSynthesiserCheckAutoTarget(System.Numerics.Vector3 vBatmanLocation)
+    public unsafe virtual System.Numerics.Vector3 GetLocationForVoiceSynthesiserCheckAutoTarget(System.Numerics.Vector3 vBatmanLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorStartleControlBase.GetLocationForVoiceSynthesiserCheckAutoTarget", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -83,7 +83,7 @@ public partial class RPredatorStartleControlBase : BmSDK.BmGame.RRemoteControlBa
     /// <summary>
     /// Function: SetActiveTarget
     /// </summary>
-    public unsafe void SetActiveTarget(bool bActive)
+    public unsafe virtual void SetActiveTarget(bool bActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorStartleControlBase.SetActiveTarget", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -95,7 +95,7 @@ public partial class RPredatorStartleControlBase : BmSDK.BmGame.RRemoteControlBa
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorStartleControlBase.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -107,7 +107,7 @@ public partial class RPredatorStartleControlBase : BmSDK.BmGame.RRemoteControlBa
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorStartleControlBase.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -119,7 +119,7 @@ public partial class RPredatorStartleControlBase : BmSDK.BmGame.RRemoteControlBa
     /// <summary>
     /// Function: StartlePointDisabled
     /// </summary>
-    public unsafe void StartlePointDisabled()
+    public unsafe virtual void StartlePointDisabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorStartleControlBase.StartlePointDisabled", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class RPredatorStartleControlBase : BmSDK.BmGame.RRemoteControlBa
     /// <summary>
     /// Function: ReEnable
     /// </summary>
-    public unsafe void ReEnable()
+    public unsafe virtual void ReEnable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorStartleControlBase.ReEnable", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RPredatorStartleControlBase : BmSDK.BmGame.RRemoteControlBa
     /// <summary>
     /// Function: TriggerSecondary
     /// </summary>
-    public unsafe bool TriggerSecondary(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool TriggerSecondary(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorStartleControlBase.TriggerSecondary", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -153,7 +153,7 @@ public partial class RPredatorStartleControlBase : BmSDK.BmGame.RRemoteControlBa
     /// <summary>
     /// Function: Trigger
     /// </summary>
-    public unsafe bool Trigger(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool Trigger(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorStartleControlBase.Trigger", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -165,7 +165,7 @@ public partial class RPredatorStartleControlBase : BmSDK.BmGame.RRemoteControlBa
     /// <summary>
     /// Function: GetMiniGameHelpPrompt
     /// </summary>
-    public unsafe void GetMiniGameHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override void GetMiniGameHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorStartleControlBase.GetMiniGameHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -178,7 +178,7 @@ public partial class RPredatorStartleControlBase : BmSDK.BmGame.RRemoteControlBa
     /// <summary>
     /// Function: GetInteractionPromptSecondary
     /// </summary>
-    public unsafe BmSDK.FString GetInteractionPromptSecondary()
+    public unsafe override BmSDK.FString GetInteractionPromptSecondary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorStartleControlBase.GetInteractionPromptSecondary", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -189,7 +189,7 @@ public partial class RPredatorStartleControlBase : BmSDK.BmGame.RRemoteControlBa
     /// <summary>
     /// Function: GetInteractionPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetInteractionPrompt()
+    public unsafe override BmSDK.FString GetInteractionPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorStartleControlBase.GetInteractionPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -200,7 +200,7 @@ public partial class RPredatorStartleControlBase : BmSDK.BmGame.RRemoteControlBa
     /// <summary>
     /// Function: GetDescription
     /// </summary>
-    public unsafe BmSDK.FString GetDescription()
+    public unsafe virtual BmSDK.FString GetDescription()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorStartleControlBase.GetDescription", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -211,7 +211,7 @@ public partial class RPredatorStartleControlBase : BmSDK.BmGame.RRemoteControlBa
     /// <summary>
     /// Function: GetDisplayTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDisplayTargetLocation()
+    public unsafe override System.Numerics.Vector3 GetDisplayTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorStartleControlBase.GetDisplayTargetLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -222,7 +222,7 @@ public partial class RPredatorStartleControlBase : BmSDK.BmGame.RRemoteControlBa
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorStartleControlBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PairedCorner.ActionTick", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: StartCornerOutAnim
     /// </summary>
-    public unsafe void StartCornerOutAnim()
+    public unsafe virtual void StartCornerOutAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PairedCorner.StartCornerOutAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: StartCornerInAnim
     /// </summary>
-    public unsafe void StartCornerInAnim()
+    public unsafe virtual void StartCornerInAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PairedCorner.StartCornerInAnim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: MoveToStart
     /// </summary>
-    public unsafe void MoveToStart()
+    public unsafe virtual void MoveToStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PairedCorner.MoveToStart", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -116,7 +116,7 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PairedCorner.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PairedCorner.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: AnimInit
     /// </summary>
-    public unsafe void AnimInit(System.Numerics.Vector3 pos, float Yaw, bool bLeft, bool inBFollower, int variant)
+    public unsafe virtual void AnimInit(System.Numerics.Vector3 pos, float Yaw, bool bLeft, bool inBFollower, int variant)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PairedCorner.AnimInit", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -154,7 +154,7 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: EndJokerHallucination
     /// </summary>
-    public unsafe void EndJokerHallucination()
+    public unsafe virtual void EndJokerHallucination()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PairedCorner.EndJokerHallucination", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -165,7 +165,7 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: Joker_Out
     /// </summary>
-    public unsafe void Joker_Out()
+    public unsafe virtual void Joker_Out()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PairedCorner.Joker_Out", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -176,7 +176,7 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: DoSlavedJokerHallucination
     /// </summary>
-    public unsafe void DoSlavedJokerHallucination(bool bIgnoreCollisionCheck, float AngleOffset, System.Numerics.Vector3 refLoc, bool LeftCorner)
+    public unsafe virtual void DoSlavedJokerHallucination(bool bIgnoreCollisionCheck, float AngleOffset, System.Numerics.Vector3 refLoc, bool LeftCorner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PairedCorner.DoSlavedJokerHallucination", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -191,7 +191,7 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: GetJokerHallucinationFadeMultiplier
     /// </summary>
-    public unsafe int GetJokerHallucinationFadeMultiplier()
+    public unsafe virtual int GetJokerHallucinationFadeMultiplier()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PairedCorner.GetJokerHallucinationFadeMultiplier", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RRedHoodExcavatorBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: UpdateAnimSetList
     /// </summary>
-    public unsafe void UpdateAnimSetList()
+    public unsafe virtual void UpdateAnimSetList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRedHoodExcavatorBase.UpdateAnimSetList", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class RRedHoodExcavatorBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: MAT_FinishAnimControl
     /// </summary>
-    public unsafe void MAT_FinishAnimControl(BmSDK.Engine.InterpGroup InInterpGroup)
+    public unsafe virtual void MAT_FinishAnimControl(BmSDK.Engine.InterpGroup InInterpGroup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRedHoodExcavatorBase.MAT_FinishAnimControl", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -108,7 +108,7 @@ public partial class RRedHoodExcavatorBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: FinishAnimControl
     /// </summary>
-    public unsafe void FinishAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void FinishAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRedHoodExcavatorBase.FinishAnimControl", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -121,7 +121,7 @@ public partial class RRedHoodExcavatorBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: SetAnimPosition
     /// </summary>
-    public unsafe void SetAnimPosition(BmSDK.Engine.InterpGroupInst InterpGroupInst, BmSDK.FName SlotName, int ChannelIndex, BmSDK.FName InAnimSeqName, float InPosition, bool bFireNotifies, bool bLooping, bool bEnableRootMotion)
+    public unsafe override void SetAnimPosition(BmSDK.Engine.InterpGroupInst InterpGroupInst, BmSDK.FName SlotName, int ChannelIndex, BmSDK.FName InAnimSeqName, float InPosition, bool bFireNotifies, bool bLooping, bool bEnableRootMotion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRedHoodExcavatorBase.SetAnimPosition", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -140,7 +140,7 @@ public partial class RRedHoodExcavatorBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: MAT_BeginAnimControl
     /// </summary>
-    public unsafe void MAT_BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup)
+    public unsafe virtual void MAT_BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRedHoodExcavatorBase.MAT_BeginAnimControl", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -159,7 +159,7 @@ public partial class RRedHoodExcavatorBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: BeginAnimControl
     /// </summary>
-    public unsafe void BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRedHoodExcavatorBase.BeginAnimControl", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -172,7 +172,7 @@ public partial class RRedHoodExcavatorBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: ShowExcavatorHull
     /// </summary>
-    public unsafe void ShowExcavatorHull()
+    public unsafe virtual void ShowExcavatorHull()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRedHoodExcavatorBase.ShowExcavatorHull", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -183,7 +183,7 @@ public partial class RRedHoodExcavatorBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: GetClosestNodeToLocation
     /// </summary>
-    public unsafe int GetClosestNodeToLocation(System.Numerics.Vector3 Loc)
+    public unsafe virtual int GetClosestNodeToLocation(System.Numerics.Vector3 Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRedHoodExcavatorBase.GetClosestNodeToLocation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -202,7 +202,7 @@ public partial class RRedHoodExcavatorBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: GetSeismicLevel
     /// </summary>
-    public unsafe float GetSeismicLevel()
+    public unsafe virtual float GetSeismicLevel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRedHoodExcavatorBase.GetSeismicLevel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -213,7 +213,7 @@ public partial class RRedHoodExcavatorBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: IsVisibleOnRadar
     /// </summary>
-    public unsafe bool IsVisibleOnRadar(float DeltaTime)
+    public unsafe virtual bool IsVisibleOnRadar(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRedHoodExcavatorBase.IsVisibleOnRadar", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -225,7 +225,7 @@ public partial class RRedHoodExcavatorBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: SetAutoDebugs
     /// </summary>
-    public unsafe void SetAutoDebugs()
+    public unsafe virtual void SetAutoDebugs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRedHoodExcavatorBase.SetAutoDebugs", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -243,7 +243,7 @@ public partial class RRedHoodExcavatorBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: CreateThroughWallsViewMesh
     /// </summary>
-    public unsafe void CreateThroughWallsViewMesh()
+    public unsafe virtual void CreateThroughWallsViewMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRedHoodExcavatorBase.CreateThroughWallsViewMesh", true);
         byte* paramsPtr = stackalloc byte[0];

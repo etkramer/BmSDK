@@ -36,7 +36,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: CallQueueReattach
     /// </summary>
-    public unsafe void CallQueueReattach()
+    public unsafe virtual void CallQueueReattach()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.CallQueueReattach", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: SetNoCollisions
     /// </summary>
-    public unsafe void SetNoCollisions()
+    public unsafe virtual void SetNoCollisions()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.SetNoCollisions", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -65,7 +65,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: CalculateDistanceBetweenRopeEnds
     /// </summary>
-    public unsafe float CalculateDistanceBetweenRopeEnds()
+    public unsafe virtual float CalculateDistanceBetweenRopeEnds()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.CalculateDistanceBetweenRopeEnds", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: SetCollidesWithChannel
     /// </summary>
-    public unsafe void SetCollidesWithChannel(BmSDK.Engine.PrimitiveComponent.ERBCollisionChannel CollisionChannel, bool Value)
+    public unsafe virtual void SetCollidesWithChannel(BmSDK.Engine.PrimitiveComponent.ERBCollisionChannel CollisionChannel, bool Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.SetCollidesWithChannel", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -103,7 +103,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: FinaliseRope
     /// </summary>
-    public unsafe void FinaliseRope()
+    public unsafe virtual void FinaliseRope()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.FinaliseRope", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -121,7 +121,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: InitialiseRope
     /// </summary>
-    public unsafe void InitialiseRope()
+    public unsafe virtual void InitialiseRope()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.InitialiseRope", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: GetIsRopeInitialised
     /// </summary>
-    public unsafe bool GetIsRopeInitialised()
+    public unsafe virtual bool GetIsRopeInitialised()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.GetIsRopeInitialised", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -157,7 +157,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: GetMinRopeLength
     /// </summary>
-    public unsafe float GetMinRopeLength()
+    public unsafe virtual float GetMinRopeLength()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.GetMinRopeLength", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -175,7 +175,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: StopCurrentRopeLengthChange
     /// </summary>
-    public unsafe void StopCurrentRopeLengthChange()
+    public unsafe virtual void StopCurrentRopeLengthChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.StopCurrentRopeLengthChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -193,7 +193,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: SetGradualRopeLengthChange
     /// </summary>
-    public unsafe void SetGradualRopeLengthChange(float NewRopeLength, BmSDK.BmGame.RRopeComponentBase.ERopeLengthChangeType LengthChangeType, float ChangeDuration)
+    public unsafe virtual void SetGradualRopeLengthChange(float NewRopeLength, BmSDK.BmGame.RRopeComponentBase.ERopeLengthChangeType LengthChangeType, float ChangeDuration)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.SetGradualRopeLengthChange", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -214,7 +214,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: SetContinuousAutoLength
     /// </summary>
-    public unsafe void SetContinuousAutoLength(BmSDK.BmGame.RRopeComponentBase.ERopeLengthChangeType LengthChangeType)
+    public unsafe virtual void SetContinuousAutoLength(BmSDK.BmGame.RRopeComponentBase.ERopeLengthChangeType LengthChangeType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.SetContinuousAutoLength", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -233,7 +233,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: SetAutoLength
     /// </summary>
-    public unsafe void SetAutoLength(BmSDK.BmGame.RRopeComponentBase.ERopeLengthChangeType LengthChangeType)
+    public unsafe virtual void SetAutoLength(BmSDK.BmGame.RRopeComponentBase.ERopeLengthChangeType LengthChangeType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.SetAutoLength", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -252,7 +252,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: SetRopeLength
     /// </summary>
-    public unsafe void SetRopeLength(float NewRopeLength, BmSDK.BmGame.RRopeComponentBase.ERopeLengthChangeType LengthChangeType)
+    public unsafe virtual void SetRopeLength(float NewRopeLength, BmSDK.BmGame.RRopeComponentBase.ERopeLengthChangeType LengthChangeType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.SetRopeLength", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -272,7 +272,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: DetachRopeEnd2
     /// </summary>
-    public unsafe void DetachRopeEnd2()
+    public unsafe virtual void DetachRopeEnd2()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.DetachRopeEnd2", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -290,7 +290,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: DetachRopeEnd1
     /// </summary>
-    public unsafe void DetachRopeEnd1()
+    public unsafe virtual void DetachRopeEnd1()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.DetachRopeEnd1", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -308,7 +308,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: AttachRopeEnd2ToSocket
     /// </summary>
-    public unsafe void AttachRopeEnd2ToSocket(BmSDK.Engine.Actor AttachActor, BmSDK.FName SocketName, BmSDK.Engine.SkeletalMeshComponent AttachComponent = default, float AttachMaxDistance = default)
+    public unsafe virtual void AttachRopeEnd2ToSocket(BmSDK.Engine.Actor AttachActor, BmSDK.FName SocketName, BmSDK.Engine.SkeletalMeshComponent AttachComponent = default, float AttachMaxDistance = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.AttachRopeEnd2ToSocket", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -330,7 +330,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: AttachRopeEnd1ToSocket
     /// </summary>
-    public unsafe void AttachRopeEnd1ToSocket(BmSDK.Engine.Actor AttachActor, BmSDK.FName SocketName, BmSDK.Engine.SkeletalMeshComponent AttachComponent = default, float AttachMaxDistance = default)
+    public unsafe virtual void AttachRopeEnd1ToSocket(BmSDK.Engine.Actor AttachActor, BmSDK.FName SocketName, BmSDK.Engine.SkeletalMeshComponent AttachComponent = default, float AttachMaxDistance = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.AttachRopeEnd1ToSocket", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -352,7 +352,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: AttachRopeEnd2WorldSpace
     /// </summary>
-    public unsafe void AttachRopeEnd2WorldSpace(BmSDK.Engine.Actor AttachActor, System.Numerics.Vector3 AttachPosWorld, BmSDK.FName AttachBone = default, BmSDK.Engine.PrimitiveComponent AttachComponent = default, float AttachMaxDistance = default)
+    public unsafe virtual void AttachRopeEnd2WorldSpace(BmSDK.Engine.Actor AttachActor, System.Numerics.Vector3 AttachPosWorld, BmSDK.FName AttachBone = default, BmSDK.Engine.PrimitiveComponent AttachComponent = default, float AttachMaxDistance = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.AttachRopeEnd2WorldSpace", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -375,7 +375,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: AttachRopeEnd1WorldSpace
     /// </summary>
-    public unsafe void AttachRopeEnd1WorldSpace(BmSDK.Engine.Actor AttachActor, System.Numerics.Vector3 AttachPosWorld, BmSDK.FName AttachBone = default, BmSDK.Engine.PrimitiveComponent AttachComponent = default, float AttachMaxDistance = default)
+    public unsafe virtual void AttachRopeEnd1WorldSpace(BmSDK.Engine.Actor AttachActor, System.Numerics.Vector3 AttachPosWorld, BmSDK.FName AttachBone = default, BmSDK.Engine.PrimitiveComponent AttachComponent = default, float AttachMaxDistance = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.AttachRopeEnd1WorldSpace", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -398,7 +398,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: AttachRopeEnd2
     /// </summary>
-    public unsafe void AttachRopeEnd2(BmSDK.Engine.Actor AttachActor, System.Numerics.Vector3 AttachPos, BmSDK.FName AttachBone = default, BmSDK.Engine.PrimitiveComponent AttachComponent = default, float AttachMaxDistance = default)
+    public unsafe virtual void AttachRopeEnd2(BmSDK.Engine.Actor AttachActor, System.Numerics.Vector3 AttachPos, BmSDK.FName AttachBone = default, BmSDK.Engine.PrimitiveComponent AttachComponent = default, float AttachMaxDistance = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.AttachRopeEnd2", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -421,7 +421,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: AttachRopeEnd1
     /// </summary>
-    public unsafe void AttachRopeEnd1(BmSDK.Engine.Actor AttachActor, System.Numerics.Vector3 AttachPos, BmSDK.FName AttachBone = default, BmSDK.Engine.PrimitiveComponent AttachComponent = default, float AttachMaxDistance = default)
+    public unsafe virtual void AttachRopeEnd1(BmSDK.Engine.Actor AttachActor, System.Numerics.Vector3 AttachPos, BmSDK.FName AttachBone = default, BmSDK.Engine.PrimitiveComponent AttachComponent = default, float AttachMaxDistance = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.AttachRopeEnd1", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -444,7 +444,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: GetWorldSpaceEnd2AttachPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWorldSpaceEnd2AttachPos()
+    public unsafe virtual System.Numerics.Vector3 GetWorldSpaceEnd2AttachPos()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.GetWorldSpaceEnd2AttachPos", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -462,7 +462,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: GetWorldSpaceEnd1AttachPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWorldSpaceEnd1AttachPos()
+    public unsafe virtual System.Numerics.Vector3 GetWorldSpaceEnd1AttachPos()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.GetWorldSpaceEnd1AttachPos", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -480,7 +480,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: GetPositionOfRopePos
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetPositionOfRopePos(float RopePos, BmSDK.BmGame.RRopeComponentBase.ERopeEndType MeasurementRopeEnd)
+    public unsafe virtual System.Numerics.Vector3 GetPositionOfRopePos(float RopePos, BmSDK.BmGame.RRopeComponentBase.ERopeEndType MeasurementRopeEnd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.GetPositionOfRopePos", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -500,7 +500,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: GetNearestPointOnRopeToPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetNearestPointOnRopeToPoint(System.Numerics.Vector3 WorldSpacePos, BmSDK.BmGame.RRopeComponentBase.ERopeEndType MeasurementRopeEnd, out float RopePos)
+    public unsafe virtual System.Numerics.Vector3 GetNearestPointOnRopeToPoint(System.Numerics.Vector3 WorldSpacePos, BmSDK.BmGame.RRopeComponentBase.ERopeEndType MeasurementRopeEnd, out float RopePos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.GetNearestPointOnRopeToPoint", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -521,7 +521,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: GetNearestPointOnRopeToRay
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetNearestPointOnRopeToRay(System.Numerics.Vector3 RayStartPos, System.Numerics.Vector3 RayDirection, BmSDK.BmGame.RRopeComponentBase.ERopeEndType MeasurementRopeEnd, out float RopePos, out float RayPos, float BufferLength = default)
+    public unsafe virtual System.Numerics.Vector3 GetNearestPointOnRopeToRay(System.Numerics.Vector3 RayStartPos, System.Numerics.Vector3 RayDirection, BmSDK.BmGame.RRopeComponentBase.ERopeEndType MeasurementRopeEnd, out float RopePos, out float RayPos, float BufferLength = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.GetNearestPointOnRopeToRay", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -545,7 +545,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: GetNearestPointOnRopeToLineSegment
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetNearestPointOnRopeToLineSegment(System.Numerics.Vector3 LineSegmentStartPos, System.Numerics.Vector3 LineSegmentEndPos, BmSDK.BmGame.RRopeComponentBase.ERopeEndType MeasurementRopeEnd, out float RopePos, out float LineSegmentPos)
+    public unsafe virtual System.Numerics.Vector3 GetNearestPointOnRopeToLineSegment(System.Numerics.Vector3 LineSegmentStartPos, System.Numerics.Vector3 LineSegmentEndPos, BmSDK.BmGame.RRopeComponentBase.ERopeEndType MeasurementRopeEnd, out float RopePos, out float LineSegmentPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.GetNearestPointOnRopeToLineSegment", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -568,7 +568,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: UpdateRope
     /// </summary>
-    public unsafe void UpdateRope()
+    public unsafe virtual void UpdateRope()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.UpdateRope", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -586,7 +586,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Function: RequestUpdateRope
     /// </summary>
-    public unsafe void RequestUpdateRope()
+    public unsafe virtual void RequestUpdateRope()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeComponentBase.RequestUpdateRope", true);
         byte* paramsPtr = stackalloc byte[0];

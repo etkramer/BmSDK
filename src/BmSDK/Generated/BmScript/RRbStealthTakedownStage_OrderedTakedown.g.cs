@@ -71,7 +71,7 @@ public partial class RRbStealthTakedownStage_OrderedTakedown : BmSDK.BmGame.RSte
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRbStealthTakedownStage_OrderedTakedown.Tick", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -83,7 +83,7 @@ public partial class RRbStealthTakedownStage_OrderedTakedown : BmSDK.BmGame.RSte
     /// <summary>
     /// Function: FinishAttackVictim
     /// </summary>
-    public unsafe bool FinishAttackVictim(int iVictimNumber)
+    public unsafe override bool FinishAttackVictim(int iVictimNumber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRbStealthTakedownStage_OrderedTakedown.FinishAttackVictim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RRbStealthTakedownStage_OrderedTakedown : BmSDK.BmGame.RSte
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRbStealthTakedownStage_OrderedTakedown.Begin", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -106,7 +106,7 @@ public partial class RRbStealthTakedownStage_OrderedTakedown : BmSDK.BmGame.RSte
     /// <summary>
     /// Function: EquipGrappleGun
     /// </summary>
-    public unsafe void EquipGrappleGun()
+    public unsafe virtual void EquipGrappleGun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRbStealthTakedownStage_OrderedTakedown.EquipGrappleGun", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RRbStealthTakedownStage_OrderedTakedown : BmSDK.BmGame.RSte
     /// <summary>
     /// Function: TakedownFireGrappleGun
     /// </summary>
-    public unsafe void TakedownFireGrappleGun()
+    public unsafe virtual void TakedownFireGrappleGun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRbStealthTakedownStage_OrderedTakedown.TakedownFireGrappleGun", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RRbStealthTakedownStage_OrderedTakedown : BmSDK.BmGame.RSte
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRbStealthTakedownStage_OrderedTakedown.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -141,7 +141,7 @@ public partial class RRbStealthTakedownStage_OrderedTakedown : BmSDK.BmGame.RSte
     /// <summary>
     /// Function: OverrideChosenAnim
     /// </summary>
-    public unsafe void OverrideChosenAnim(out int Anim)
+    public unsafe override void OverrideChosenAnim(out int Anim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRbStealthTakedownStage_OrderedTakedown.OverrideChosenAnim", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -153,7 +153,7 @@ public partial class RRbStealthTakedownStage_OrderedTakedown : BmSDK.BmGame.RSte
     /// <summary>
     /// Function: FillInAnimNames
     /// </summary>
-    public unsafe void FillInAnimNames()
+    public unsafe override void FillInAnimNames()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRbStealthTakedownStage_OrderedTakedown.FillInAnimNames", true);
         byte* paramsPtr = stackalloc byte[4];

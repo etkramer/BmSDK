@@ -36,7 +36,7 @@ public partial class RVehicleSimBatmobile : BmSDK.BmGame.RVehicleSimCar, BmSDK.I
     /// <summary>
     /// Function: RestoreStopThreshold
     /// </summary>
-    public unsafe void RestoreStopThreshold()
+    public unsafe virtual void RestoreStopThreshold()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleSimBatmobile.RestoreStopThreshold", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RVehicleSimBatmobile : BmSDK.BmGame.RVehicleSimCar, BmSDK.I
     /// <summary>
     /// Function: SkidToStop
     /// </summary>
-    public unsafe void SkidToStop(bool OverrideYaw, int YawAngle, bool OverrideEndLocation, System.Numerics.Vector3 EndLocation)
+    public unsafe virtual void SkidToStop(bool OverrideYaw, int YawAngle, bool OverrideEndLocation, System.Numerics.Vector3 EndLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleSimBatmobile.SkidToStop", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -69,7 +69,7 @@ public partial class RVehicleSimBatmobile : BmSDK.BmGame.RVehicleSimCar, BmSDK.I
     /// <summary>
     /// Function: ForceUpdateTyreFriction
     /// </summary>
-    public unsafe void ForceUpdateTyreFriction(BmSDK.Engine.SVehicle Vehicle)
+    public unsafe virtual void ForceUpdateTyreFriction(BmSDK.Engine.SVehicle Vehicle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleSimBatmobile.ForceUpdateTyreFriction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -88,7 +88,7 @@ public partial class RVehicleSimBatmobile : BmSDK.BmGame.RVehicleSimCar, BmSDK.I
     /// <summary>
     /// Function: SetSuspensionForDriveMode
     /// </summary>
-    public unsafe void SetSuspensionForDriveMode(float BattleModeFactor)
+    public unsafe virtual void SetSuspensionForDriveMode(float BattleModeFactor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleSimBatmobile.SetSuspensionForDriveMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -107,7 +107,7 @@ public partial class RVehicleSimBatmobile : BmSDK.BmGame.RVehicleSimCar, BmSDK.I
     /// <summary>
     /// Function: SetDriveMode
     /// </summary>
-    public unsafe void SetDriveMode(BmSDK.BmGame.RVehicleSimBatmobile.EBatmobileDriveMode NewDriveMode)
+    public unsafe virtual void SetDriveMode(BmSDK.BmGame.RVehicleSimBatmobile.EBatmobileDriveMode NewDriveMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleSimBatmobile.SetDriveMode", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -126,7 +126,7 @@ public partial class RVehicleSimBatmobile : BmSDK.BmGame.RVehicleSimCar, BmSDK.I
     /// <summary>
     /// Function: Boost
     /// </summary>
-    public unsafe bool Boost()
+    public unsafe virtual bool Boost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleSimBatmobile.Boost", true);
         byte* paramsPtr = stackalloc byte[4];

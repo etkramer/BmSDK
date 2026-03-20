@@ -36,7 +36,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// <summary>
     /// Function: GetAggregateMappingIDs
     /// </summary>
-    public unsafe bool GetAggregateMappingIDs(int EventID, out int AggregateID, out int TargetAggregateID)
+    public unsafe virtual bool GetAggregateMappingIDs(int EventID, out int AggregateID, out int TargetAggregateID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameStatsAggregator.GetAggregateMappingIDs", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -57,7 +57,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// <summary>
     /// Function: Reset
     /// </summary>
-    public unsafe void Reset()
+    public unsafe virtual void Reset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameStatsAggregator.Reset", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -75,7 +75,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// <summary>
     /// Function: PostProcessStream
     /// </summary>
-    public unsafe void PostProcessStream()
+    public unsafe override void PostProcessStream()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameStatsAggregator.PostProcessStream", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// <summary>
     /// Function: PreProcessStream
     /// </summary>
-    public unsafe void PreProcessStream()
+    public unsafe override void PreProcessStream()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameStatsAggregator.PreProcessStream", true);
         byte* paramsPtr = stackalloc byte[0];

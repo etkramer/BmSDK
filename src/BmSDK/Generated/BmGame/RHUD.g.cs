@@ -71,7 +71,7 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldDrawHUD
     /// </summary>
-    public unsafe bool ShouldDrawHUD()
+    public unsafe override bool ShouldDrawHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUD.ShouldDrawHUD", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SavedGame
     /// </summary>
-    public unsafe void SavedGame(BmSDK.FString Filename)
+    public unsafe virtual void SavedGame(BmSDK.FString Filename)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUD.SavedGame", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -94,7 +94,7 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD()
+    public unsafe override void DrawHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUD.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[100];
@@ -105,7 +105,7 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PreRender
     /// </summary>
-    public unsafe void PreRender()
+    public unsafe override void PreRender()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUD.PreRender", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawEventVisualisation
     /// </summary>
-    public unsafe void DrawEventVisualisation()
+    public unsafe virtual void DrawEventVisualisation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUD.DrawEventVisualisation", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -127,7 +127,7 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawRouterDebug
     /// </summary>
-    public unsafe void DrawRouterDebug(BmSDK.Engine.Canvas C)
+    public unsafe virtual void DrawRouterDebug(BmSDK.Engine.Canvas C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUD.DrawRouterDebug", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -139,7 +139,7 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawThoughts
     /// </summary>
-    public unsafe void DrawThoughts()
+    public unsafe virtual void DrawThoughts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUD.DrawThoughts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawThoughtList
     /// </summary>
-    public unsafe void DrawThoughtList(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList, System.Numerics.Vector3 WorldPos)
+    public unsafe virtual void DrawThoughtList(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList, System.Numerics.Vector3 WorldPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUD.DrawThoughtList", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -163,7 +163,7 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawShadowedText
     /// </summary>
-    public unsafe void DrawShadowedText(float TX, float TY, BmSDK.FString Text, float Scale = default)
+    public unsafe virtual void DrawShadowedText(float TX, float TY, BmSDK.FString Text, float Scale = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUD.DrawShadowedText", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -178,7 +178,7 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveOverlay
     /// </summary>
-    public unsafe void RemoveOverlay(BmSDK.BmGame.RHUDInterface hInterface)
+    public unsafe virtual void RemoveOverlay(BmSDK.BmGame.RHUDInterface hInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUD.RemoveOverlay", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -190,7 +190,7 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SetNewOverlay
     /// </summary>
-    public unsafe void SetNewOverlay(BmSDK.BmGame.RHUD.ECinematicPriorities Priority, BmSDK.BmGame.RHUDInterface hInterface)
+    public unsafe virtual void SetNewOverlay(BmSDK.BmGame.RHUD.ECinematicPriorities Priority, BmSDK.BmGame.RHUDInterface hInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUD.SetNewOverlay", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -203,7 +203,7 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
     /// <summary>
     /// Function: BlockLevelName
     /// </summary>
-    public unsafe bool BlockLevelName()
+    public unsafe virtual bool BlockLevelName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUD.BlockLevelName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -214,7 +214,7 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawCinematicOverlay
     /// </summary>
-    public unsafe void DrawCinematicOverlay()
+    public unsafe virtual void DrawCinematicOverlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUD.DrawCinematicOverlay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -225,7 +225,7 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PreRenderCinematicOverlay
     /// </summary>
-    public unsafe void PreRenderCinematicOverlay()
+    public unsafe virtual void PreRenderCinematicOverlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUD.PreRenderCinematicOverlay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -236,7 +236,7 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowLoadingPrompt
     /// </summary>
-    public unsafe void ShowLoadingPrompt()
+    public unsafe virtual void ShowLoadingPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUD.ShowLoadingPrompt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -247,7 +247,7 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearSkipPrompt
     /// </summary>
-    public unsafe void ClearSkipPrompt()
+    public unsafe virtual void ClearSkipPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUD.ClearSkipPrompt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -258,7 +258,7 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowSkipPrompt
     /// </summary>
-    public unsafe void ShowSkipPrompt(bool bAButtonToSkip)
+    public unsafe virtual void ShowSkipPrompt(bool bAButtonToSkip)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUD.ShowSkipPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -270,7 +270,7 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsShowingSkipPrompt
     /// </summary>
-    public unsafe bool IsShowingSkipPrompt()
+    public unsafe virtual bool IsShowingSkipPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUD.IsShowingSkipPrompt", true);
         byte* paramsPtr = stackalloc byte[4];

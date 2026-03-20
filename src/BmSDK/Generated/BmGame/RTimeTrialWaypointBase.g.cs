@@ -71,7 +71,7 @@ public partial class RTimeTrialWaypointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: UpdateSatNavForwardRouteLink
     /// </summary>
-    public unsafe void UpdateSatNavForwardRouteLink(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void UpdateSatNavForwardRouteLink(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTimeTrialWaypointBase.UpdateSatNavForwardRouteLink", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -83,7 +83,7 @@ public partial class RTimeTrialWaypointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTimeTrialWaypointBase.Touch", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -98,7 +98,7 @@ public partial class RTimeTrialWaypointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTimeTrialWaypointBase.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -110,7 +110,7 @@ public partial class RTimeTrialWaypointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTimeTrialWaypointBase.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -122,7 +122,7 @@ public partial class RTimeTrialWaypointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTimeTrialWaypointBase.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -134,7 +134,7 @@ public partial class RTimeTrialWaypointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: EnableEmitter
     /// </summary>
-    public unsafe BmSDK.Engine.REmitter EnableEmitter(BmSDK.Engine.REmitter E, BmSDK.Engine.ParticleSystem Template, BmSDK.Rotator RotationOffset)
+    public unsafe virtual BmSDK.Engine.REmitter EnableEmitter(BmSDK.Engine.REmitter E, BmSDK.Engine.ParticleSystem Template, BmSDK.Rotator RotationOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTimeTrialWaypointBase.EnableEmitter", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -148,7 +148,7 @@ public partial class RTimeTrialWaypointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: Deactivate
     /// </summary>
-    public unsafe void Deactivate()
+    public unsafe virtual void Deactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTimeTrialWaypointBase.Deactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -159,7 +159,7 @@ public partial class RTimeTrialWaypointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: Activate
     /// </summary>
-    public unsafe void Activate()
+    public unsafe virtual void Activate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTimeTrialWaypointBase.Activate", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -170,7 +170,7 @@ public partial class RTimeTrialWaypointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTimeTrialWaypointBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -181,7 +181,7 @@ public partial class RTimeTrialWaypointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTimeTrialWaypointBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -192,7 +192,7 @@ public partial class RTimeTrialWaypointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: UpdateDisplayLines
     /// </summary>
-    public unsafe void UpdateDisplayLines()
+    public unsafe virtual void UpdateDisplayLines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTimeTrialWaypointBase.UpdateDisplayLines", true);
         byte* paramsPtr = stackalloc byte[0];

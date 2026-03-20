@@ -66,7 +66,7 @@ public partial class RPawnPlayerJokerBase : BmSDK.BmGame.RPawnPlayer, BmSDK.IGam
     /// <summary>
     /// Function: PlayShotReaction
     /// </summary>
-    public unsafe void PlayShotReaction(System.Numerics.Vector3 HitDir)
+    public unsafe virtual void PlayShotReaction(System.Numerics.Vector3 HitDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerJokerBase.PlayShotReaction", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -78,7 +78,7 @@ public partial class RPawnPlayerJokerBase : BmSDK.BmGame.RPawnPlayer, BmSDK.IGam
     /// <summary>
     /// Function: BeginBatmanSurprise
     /// </summary>
-    public unsafe void BeginBatmanSurprise(BmSDK.Engine.Volume Vol)
+    public unsafe virtual void BeginBatmanSurprise(BmSDK.Engine.Volume Vol)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerJokerBase.BeginBatmanSurprise", true);
         byte* paramsPtr = stackalloc byte[8];

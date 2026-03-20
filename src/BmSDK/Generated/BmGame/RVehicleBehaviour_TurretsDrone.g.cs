@@ -36,7 +36,7 @@ public partial class RVehicleBehaviour_TurretsDrone : BmSDK.BmGame.RVehicleBehav
     /// <summary>
     /// Function: HandlesTurretAndShooting
     /// </summary>
-    public unsafe bool HandlesTurretAndShooting()
+    public unsafe override bool HandlesTurretAndShooting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_TurretsDrone.HandlesTurretAndShooting", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RVehicleBehaviour_TurretsDrone : BmSDK.BmGame.RVehicleBehav
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_TurretsDrone.Tick", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -59,7 +59,7 @@ public partial class RVehicleBehaviour_TurretsDrone : BmSDK.BmGame.RVehicleBehav
     /// <summary>
     /// Function: AlertHeavyTanks
     /// </summary>
-    public unsafe void AlertHeavyTanks(System.Numerics.Vector3 SearchLocation)
+    public unsafe virtual void AlertHeavyTanks(System.Numerics.Vector3 SearchLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_TurretsDrone.AlertHeavyTanks", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -71,7 +71,7 @@ public partial class RVehicleBehaviour_TurretsDrone : BmSDK.BmGame.RVehicleBehav
     /// <summary>
     /// Function: OnHostVehicleDied
     /// </summary>
-    public unsafe void OnHostVehicleDied(BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe override void OnHostVehicleDied(BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_TurretsDrone.OnHostVehicleDied", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -84,7 +84,7 @@ public partial class RVehicleBehaviour_TurretsDrone : BmSDK.BmGame.RVehicleBehav
     /// <summary>
     /// Function: StartAttack
     /// </summary>
-    public unsafe bool StartAttack(BmSDK.Engine.Actor Target, float WarningTime, System.Numerics.Vector3 AttackLoc = default)
+    public unsafe override bool StartAttack(BmSDK.Engine.Actor Target, float WarningTime, System.Numerics.Vector3 AttackLoc = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_TurretsDrone.StartAttack", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -98,7 +98,7 @@ public partial class RVehicleBehaviour_TurretsDrone : BmSDK.BmGame.RVehicleBehav
     /// <summary>
     /// Function: EnterBehaviour
     /// </summary>
-    public unsafe void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
+    public unsafe override void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_TurretsDrone.EnterBehaviour", true);
         byte* paramsPtr = stackalloc byte[8];

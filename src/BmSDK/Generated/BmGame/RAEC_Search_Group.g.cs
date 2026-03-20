@@ -71,7 +71,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: MoveFailed
     /// </summary>
-    public unsafe void MoveFailed(System.Numerics.Vector3 StartPos, System.Numerics.Vector3 StartDir)
+    public unsafe virtual void MoveFailed(System.Numerics.Vector3 StartPos, System.Numerics.Vector3 StartDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.MoveFailed", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -95,7 +95,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: StartProcessingNextLeg
     /// </summary>
-    public unsafe void StartProcessingNextLeg(System.Numerics.Vector3 StartPos, System.Numerics.Vector3 StartDir)
+    public unsafe virtual void StartProcessingNextLeg(System.Numerics.Vector3 StartPos, System.Numerics.Vector3 StartDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.StartProcessingNextLeg", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -108,7 +108,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: StartSearchForNextLeg
     /// </summary>
-    public unsafe void StartSearchForNextLeg()
+    public unsafe virtual void StartSearchForNextLeg()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.StartSearchForNextLeg", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -119,7 +119,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: HasMinigunnerInFormation
     /// </summary>
-    public unsafe bool HasMinigunnerInFormation()
+    public unsafe virtual bool HasMinigunnerInFormation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.HasMinigunnerInFormation", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -130,7 +130,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: ShouldCheckSideRooms
     /// </summary>
-    public unsafe bool ShouldCheckSideRooms()
+    public unsafe virtual bool ShouldCheckSideRooms()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.ShouldCheckSideRooms", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -141,7 +141,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: ShouldTryCorners
     /// </summary>
-    public unsafe bool ShouldTryCorners()
+    public unsafe virtual bool ShouldTryCorners()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.ShouldTryCorners", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -152,7 +152,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: HasSpecialDestination
     /// </summary>
-    public unsafe bool HasSpecialDestination()
+    public unsafe virtual bool HasSpecialDestination()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.HasSpecialDestination", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -163,7 +163,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: ShouldForceDirect
     /// </summary>
-    public unsafe bool ShouldForceDirect()
+    public unsafe virtual bool ShouldForceDirect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.ShouldForceDirect", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -174,7 +174,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: ShouldAvoidBacktracking
     /// </summary>
-    public unsafe bool ShouldAvoidBacktracking()
+    public unsafe virtual bool ShouldAvoidBacktracking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.ShouldAvoidBacktracking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -185,7 +185,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: AddJoiningBuddy
     /// </summary>
-    public unsafe bool AddJoiningBuddy(BmSDK.BmGame.RBMAIController FollowCon)
+    public unsafe virtual bool AddJoiningBuddy(BmSDK.BmGame.RBMAIController FollowCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.AddJoiningBuddy", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -197,7 +197,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: ReassignBuddyJoin
     /// </summary>
-    public unsafe void ReassignBuddyJoin()
+    public unsafe virtual void ReassignBuddyJoin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.ReassignBuddyJoin", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -208,7 +208,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: ReassignStandard
     /// </summary>
-    public unsafe void ReassignStandard()
+    public unsafe virtual void ReassignStandard()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.ReassignStandard", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -219,7 +219,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: ReassignToSideRoom
     /// </summary>
-    public unsafe void ReassignToSideRoom(System.Numerics.Vector3 LeaderLoc, System.Numerics.Vector3 SearchLoc, BmSDK.BmGame.RSideRoomVolume SideVol)
+    public unsafe virtual void ReassignToSideRoom(System.Numerics.Vector3 LeaderLoc, System.Numerics.Vector3 SearchLoc, BmSDK.BmGame.RSideRoomVolume SideVol)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.ReassignToSideRoom", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -233,7 +233,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: ReassignToWallShoot
     /// </summary>
-    public unsafe void ReassignToWallShoot(BmSDK.BmGame.RDestructibleProp_FractureWall WeakWall, System.Numerics.Vector3 WallLoc)
+    public unsafe virtual void ReassignToWallShoot(BmSDK.BmGame.RDestructibleProp_FractureWall WeakWall, System.Numerics.Vector3 WallLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.ReassignToWallShoot", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -246,7 +246,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: ReassignToLedgeLook
     /// </summary>
-    public unsafe void ReassignToLedgeLook(BmSDK.BmGame.RLedgeLookDangerAreaInfo LedgeDangerInfo, System.Numerics.Vector3 LedgeLookStart, System.Numerics.Vector3 LedgeLookEnd)
+    public unsafe virtual void ReassignToLedgeLook(BmSDK.BmGame.RLedgeLookDangerAreaInfo LedgeDangerInfo, System.Numerics.Vector3 LedgeLookStart, System.Numerics.Vector3 LedgeLookEnd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.ReassignToLedgeLook", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -260,7 +260,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: ReassignToGrate
     /// </summary>
-    public unsafe void ReassignToGrate(BmSDK.BmGame.RTunnelGrateBase FirstGrate, BmSDK.BmGame.RTunnelGrateBase LastGrate, System.Numerics.Vector3 StandAtEndPoint)
+    public unsafe virtual void ReassignToGrate(BmSDK.BmGame.RTunnelGrateBase FirstGrate, BmSDK.BmGame.RTunnelGrateBase LastGrate, System.Numerics.Vector3 StandAtEndPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.ReassignToGrate", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -274,7 +274,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: ReassignToPredatorPoint
     /// </summary>
-    public unsafe void ReassignToPredatorPoint(BmSDK.BmGame.RPredatorSpecialMovePointBase PredatorPoint)
+    public unsafe virtual void ReassignToPredatorPoint(BmSDK.BmGame.RPredatorSpecialMovePointBase PredatorPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.ReassignToPredatorPoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -286,7 +286,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: ReassignToCorner
     /// </summary>
-    public unsafe void ReassignToCorner(BmSDK.BmGame.RCornerWallMarker StartCorner, BmSDK.BmGame.RCornerWallMarker EndCorner)
+    public unsafe virtual void ReassignToCorner(BmSDK.BmGame.RCornerWallMarker StartCorner, BmSDK.BmGame.RCornerWallMarker EndCorner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.ReassignToCorner", true);
         byte* paramsPtr = stackalloc byte[25];
@@ -299,7 +299,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: ReassignToSplitGroup
     /// </summary>
-    public unsafe void ReassignToSplitGroup(BmSDK.BmGame.RSearchRoutingWrapper.FSideBranchStruct SplitPoint)
+    public unsafe virtual void ReassignToSplitGroup(BmSDK.BmGame.RSearchRoutingWrapper.FSideBranchStruct SplitPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.ReassignToSplitGroup", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -311,7 +311,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: AssignFromSpecial
     /// </summary>
-    public unsafe void AssignFromSpecial(BmSDK.BmGame.RBMAIController NewLeader = default, bool useAlternateRotation = default, BmSDK.Rotator alternateRotation = default)
+    public unsafe virtual void AssignFromSpecial(BmSDK.BmGame.RBMAIController NewLeader = default, bool useAlternateRotation = default, BmSDK.Rotator alternateRotation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.AssignFromSpecial", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -325,7 +325,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: LeaderChangeIsAllowed
     /// </summary>
-    public unsafe bool LeaderChangeIsAllowed()
+    public unsafe virtual bool LeaderChangeIsAllowed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.LeaderChangeIsAllowed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -336,7 +336,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: TransferMembersBetween
     /// </summary>
-    public unsafe void TransferMembersBetween(BmSDK.BmGame.RAEC_Search_Formation OldFormation, BmSDK.BmGame.RAEC_Search_Formation NewFormation, BmSDK.BmGame.RBMAIController NewLeader = default)
+    public unsafe virtual void TransferMembersBetween(BmSDK.BmGame.RAEC_Search_Formation OldFormation, BmSDK.BmGame.RAEC_Search_Formation NewFormation, BmSDK.BmGame.RBMAIController NewLeader = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.TransferMembersBetween", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -350,7 +350,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: RefuseBuddy
     /// </summary>
-    public unsafe bool RefuseBuddy()
+    public unsafe virtual bool RefuseBuddy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.RefuseBuddy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -361,7 +361,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: AbsorbFollowers
     /// </summary>
-    public unsafe void AbsorbFollowers(BmSDK.BmGame.RAEC_Search_Group AbsorbedGroup)
+    public unsafe virtual void AbsorbFollowers(BmSDK.BmGame.RAEC_Search_Group AbsorbedGroup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.AbsorbFollowers", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -373,7 +373,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: SetLeaderFromChase
     /// </summary>
-    public unsafe void SetLeaderFromChase(BmSDK.BmGame.RBMAIController NewLeader, System.Numerics.Vector3 NewUDestFromChase)
+    public unsafe virtual void SetLeaderFromChase(BmSDK.BmGame.RBMAIController NewLeader, System.Numerics.Vector3 NewUDestFromChase)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.SetLeaderFromChase", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -386,7 +386,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: SetLeader
     /// </summary>
-    public unsafe void SetLeader(BmSDK.BmGame.RBMAIController NewLeader)
+    public unsafe virtual void SetLeader(BmSDK.BmGame.RBMAIController NewLeader)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.SetLeader", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -398,7 +398,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: DrawVis
     /// </summary>
-    public unsafe void DrawVis()
+    public unsafe override void DrawVis()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.DrawVis", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -409,7 +409,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: OnRemoveGroupChild
     /// </summary>
-    public unsafe void OnRemoveGroupChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
+    public unsafe override void OnRemoveGroupChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.OnRemoveGroupChild", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -421,7 +421,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -432,7 +432,7 @@ public partial class RAEC_Search_Group : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Group.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class RSkelControlTankTrack : BmSDK.Engine.SkelControlBase, BmSDK
     /// <summary>
     /// Function: SetSuspensionPositions
     /// </summary>
-    public unsafe void SetSuspensionPositions(float Stride, float Front, float Rear)
+    public unsafe virtual void SetSuspensionPositions(float Stride, float Front, float Rear)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSkelControlTankTrack.SetSuspensionPositions", true);
         byte* paramsPtr = stackalloc byte[12];

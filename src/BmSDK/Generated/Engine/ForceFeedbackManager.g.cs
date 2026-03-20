@@ -31,7 +31,7 @@ public partial class ForceFeedbackManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayForceFeedbackWaveform
     /// </summary>
-    public unsafe void PlayForceFeedbackWaveform(BmSDK.Engine.ForceFeedbackWaveform WaveForm, BmSDK.Engine.Actor WaveInstigator)
+    public unsafe virtual void PlayForceFeedbackWaveform(BmSDK.Engine.ForceFeedbackWaveform WaveForm, BmSDK.Engine.Actor WaveInstigator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ForceFeedbackManager.PlayForceFeedbackWaveform", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -51,7 +51,7 @@ public partial class ForceFeedbackManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PauseWaveform
     /// </summary>
-    public unsafe void PauseWaveform(bool bPause = default)
+    public unsafe virtual void PauseWaveform(bool bPause = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ForceFeedbackManager.PauseWaveform", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -63,7 +63,7 @@ public partial class ForceFeedbackManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: StopForceFeedbackWaveform
     /// </summary>
-    public unsafe void StopForceFeedbackWaveform(BmSDK.Engine.ForceFeedbackWaveform WaveForm = default)
+    public unsafe virtual void StopForceFeedbackWaveform(BmSDK.Engine.ForceFeedbackWaveform WaveForm = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ForceFeedbackManager.StopForceFeedbackWaveform", true);
         byte* paramsPtr = stackalloc byte[8];

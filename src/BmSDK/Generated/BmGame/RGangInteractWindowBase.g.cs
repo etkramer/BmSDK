@@ -71,7 +71,7 @@ public partial class RGangInteractWindowBase : BmSDK.BmGame.RGangInteractPointBr
     /// <summary>
     /// Function: CrackObject
     /// </summary>
-    public unsafe void CrackObject(System.Numerics.Vector3 SmashLocation, System.Numerics.Vector3 SmashNormal, System.Numerics.Vector3 SmashSpeed, bool bCanSmash, bool bForceSmash, BmSDK.Engine.Actor SmashActor = default)
+    public unsafe override void CrackObject(System.Numerics.Vector3 SmashLocation, System.Numerics.Vector3 SmashNormal, System.Numerics.Vector3 SmashSpeed, bool bCanSmash, bool bForceSmash, BmSDK.Engine.Actor SmashActor = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractWindowBase.CrackObject", true);
         byte* paramsPtr = stackalloc byte[116];
@@ -88,7 +88,7 @@ public partial class RGangInteractWindowBase : BmSDK.BmGame.RGangInteractPointBr
     /// <summary>
     /// Function: HitByMolotov
     /// </summary>
-    public unsafe void HitByMolotov(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, System.Numerics.Vector3 SmashSpeed, BmSDK.Engine.Actor SmashActor)
+    public unsafe override void HitByMolotov(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, System.Numerics.Vector3 SmashSpeed, BmSDK.Engine.Actor SmashActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractWindowBase.HitByMolotov", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -103,7 +103,7 @@ public partial class RGangInteractWindowBase : BmSDK.BmGame.RGangInteractPointBr
     /// <summary>
     /// Function: GetSelectionScore
     /// </summary>
-    public unsafe float GetSelectionScore()
+    public unsafe override float GetSelectionScore()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractWindowBase.GetSelectionScore", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -114,7 +114,7 @@ public partial class RGangInteractWindowBase : BmSDK.BmGame.RGangInteractPointBr
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractWindowBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -125,7 +125,7 @@ public partial class RGangInteractWindowBase : BmSDK.BmGame.RGangInteractPointBr
     /// <summary>
     /// Function: GetEntryPointAndRotation
     /// </summary>
-    public unsafe void GetEntryPointAndRotation(BmSDK.BmGame.RPawnCharacter TestPawn, out System.Numerics.Vector3 Loc, out BmSDK.Rotator Rot, int Index, bool bSecondTry = default)
+    public unsafe override void GetEntryPointAndRotation(BmSDK.BmGame.RPawnCharacter TestPawn, out System.Numerics.Vector3 Loc, out BmSDK.Rotator Rot, int Index, bool bSecondTry = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractWindowBase.GetEntryPointAndRotation", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -148,7 +148,7 @@ public partial class RGangInteractWindowBase : BmSDK.BmGame.RGangInteractPointBr
     /// <summary>
     /// Function: IsValidForPawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RGangInteractPointBase IsValidForPawn(BmSDK.BmGame.RBMPawnAI TestPawn, bool bSkipSpeedTest = default, bool bSkipAngleCheck = default, bool bSkipVolCheck = default)
+    public unsafe override BmSDK.BmGame.RGangInteractPointBase IsValidForPawn(BmSDK.BmGame.RBMPawnAI TestPawn, bool bSkipSpeedTest = default, bool bSkipAngleCheck = default, bool bSkipVolCheck = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractWindowBase.IsValidForPawn", true);
         byte* paramsPtr = stackalloc byte[28];

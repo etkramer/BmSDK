@@ -31,7 +31,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, Bm
     /// <summary>
     /// Function: GetThoughtString
     /// </summary>
-    public unsafe BmSDK.FString GetThoughtString()
+    public unsafe virtual BmSDK.FString GetThoughtString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.GetThoughtString", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -42,7 +42,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, Bm
     /// <summary>
     /// Function: CleanAndRestart
     /// </summary>
-    public unsafe void CleanAndRestart()
+    public unsafe virtual void CleanAndRestart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.CleanAndRestart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -53,7 +53,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, Bm
     /// <summary>
     /// Function: Cleanup
     /// </summary>
-    public unsafe void Cleanup()
+    public unsafe virtual void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.Cleanup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -71,7 +71,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, Bm
     /// <summary>
     /// Function: HandleInvalidatedState
     /// </summary>
-    public unsafe void HandleInvalidatedState()
+    public unsafe override void HandleInvalidatedState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.HandleInvalidatedState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -108,7 +108,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, Bm
     /// <summary>
     /// Function: FindCornerPointOnPath
     /// </summary>
-    public unsafe bool FindCornerPointOnPath(BmSDK.TArray<BmSDK.BmGame.RChasePoint> CPPath, BmSDK.BmGame.RBMAIController TestLockCon, out BmSDK.BmGame.RCornerWallMarker StartPoint, out BmSDK.BmGame.RCornerWallMarker EndPoint, out float DistAlongPath)
+    public unsafe virtual bool FindCornerPointOnPath(BmSDK.TArray<BmSDK.BmGame.RChasePoint> CPPath, BmSDK.BmGame.RBMAIController TestLockCon, out BmSDK.BmGame.RCornerWallMarker StartPoint, out BmSDK.BmGame.RCornerWallMarker EndPoint, out float DistAlongPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.FindCornerPointOnPath", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -131,7 +131,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, Bm
     /// <summary>
     /// Function: FindWeakWallOnPath
     /// </summary>
-    public unsafe bool FindWeakWallOnPath(BmSDK.TArray<BmSDK.BmGame.RChasePoint> CPPath, out BmSDK.BmGame.RDestructibleProp_FractureWall WeakWall, out System.Numerics.Vector3 StartPoint, out float DistAlongPath)
+    public unsafe virtual bool FindWeakWallOnPath(BmSDK.TArray<BmSDK.BmGame.RChasePoint> CPPath, out BmSDK.BmGame.RDestructibleProp_FractureWall WeakWall, out System.Numerics.Vector3 StartPoint, out float DistAlongPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.FindWeakWallOnPath", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -153,7 +153,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, Bm
     /// <summary>
     /// Function: FindRailingOnPath
     /// </summary>
-    public unsafe bool FindRailingOnPath(BmSDK.TArray<BmSDK.BmGame.RChasePoint> CPPath, BmSDK.TArray<BmSDK.BmGame.RLedgeLookDangerAreaInfo> DoNotUseLedgeList, out BmSDK.BmGame.RLedgeLookDangerAreaInfo DangerInfo, out System.Numerics.Vector3 WalkStart, out System.Numerics.Vector3 WalkEnd, out float DistAlongPath, out byte bExitsZone)
+    public unsafe virtual bool FindRailingOnPath(BmSDK.TArray<BmSDK.BmGame.RChasePoint> CPPath, BmSDK.TArray<BmSDK.BmGame.RLedgeLookDangerAreaInfo> DoNotUseLedgeList, out BmSDK.BmGame.RLedgeLookDangerAreaInfo DangerInfo, out System.Numerics.Vector3 WalkStart, out System.Numerics.Vector3 WalkEnd, out float DistAlongPath, out byte bExitsZone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.FindRailingOnPath", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -178,7 +178,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, Bm
     /// <summary>
     /// Function: FindLastGrateOnPath
     /// </summary>
-    public unsafe bool FindLastGrateOnPath(BmSDK.TArray<BmSDK.BmGame.RChasePoint> CPPath, byte TunnelID, BmSDK.BmGame.RTunnelGrateBase StartGrate, out BmSDK.BmGame.RTunnelGrateBase EndGrate, out System.Numerics.Vector3 StandAtEndPoint)
+    public unsafe virtual bool FindLastGrateOnPath(BmSDK.TArray<BmSDK.BmGame.RChasePoint> CPPath, byte TunnelID, BmSDK.BmGame.RTunnelGrateBase StartGrate, out BmSDK.BmGame.RTunnelGrateBase EndGrate, out System.Numerics.Vector3 StandAtEndPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.FindLastGrateOnPath", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -201,7 +201,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, Bm
     /// <summary>
     /// Function: FindFirstGrateOnPath
     /// </summary>
-    public unsafe bool FindFirstGrateOnPath(BmSDK.TArray<BmSDK.BmGame.RChasePoint> CPPath, out BmSDK.BmGame.RTunnelGrateBase Grate, out float DistAlongPath)
+    public unsafe virtual bool FindFirstGrateOnPath(BmSDK.TArray<BmSDK.BmGame.RChasePoint> CPPath, out BmSDK.BmGame.RTunnelGrateBase Grate, out float DistAlongPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.FindFirstGrateOnPath", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -222,7 +222,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, Bm
     /// <summary>
     /// Function: RemoveDuplicateUnseenVerts
     /// </summary>
-    public unsafe void RemoveDuplicateUnseenVerts()
+    public unsafe virtual void RemoveDuplicateUnseenVerts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.RemoveDuplicateUnseenVerts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -240,7 +240,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, Bm
     /// <summary>
     /// Function: CalculateBranchLengths
     /// </summary>
-    public unsafe void CalculateBranchLengths()
+    public unsafe virtual void CalculateBranchLengths()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.CalculateBranchLengths", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -258,7 +258,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, Bm
     /// <summary>
     /// Function: CountBranchPoints
     /// </summary>
-    public unsafe void CountBranchPoints()
+    public unsafe virtual void CountBranchPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.CountBranchPoints", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -276,7 +276,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, Bm
     /// <summary>
     /// Function: BuildSearchPaths
     /// </summary>
-    public unsafe void BuildSearchPaths()
+    public unsafe virtual void BuildSearchPaths()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.BuildSearchPaths", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -294,7 +294,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, Bm
     /// <summary>
     /// Function: AddUnseenVerts
     /// </summary>
-    public unsafe void AddUnseenVerts()
+    public unsafe virtual void AddUnseenVerts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.AddUnseenVerts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -312,7 +312,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, Bm
     /// <summary>
     /// Function: ReduceBranches
     /// </summary>
-    public unsafe void ReduceBranches()
+    public unsafe virtual void ReduceBranches()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.ReduceBranches", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -330,7 +330,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, Bm
     /// <summary>
     /// Function: ProcessAntiBackTracking
     /// </summary>
-    public unsafe void ProcessAntiBackTracking()
+    public unsafe virtual void ProcessAntiBackTracking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.ProcessAntiBackTracking", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -348,7 +348,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, Bm
     /// <summary>
     /// Function: ConnectVisitedEdges
     /// </summary>
-    public unsafe void ConnectVisitedEdges()
+    public unsafe virtual void ConnectVisitedEdges()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.ConnectVisitedEdges", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -366,7 +366,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, Bm
     /// <summary>
     /// Function: DebugShowPaths
     /// </summary>
-    public unsafe void DebugShowPaths(bool bPersistent)
+    public unsafe virtual void DebugShowPaths(bool bPersistent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.DebugShowPaths", true);
         byte* paramsPtr = stackalloc byte[4];

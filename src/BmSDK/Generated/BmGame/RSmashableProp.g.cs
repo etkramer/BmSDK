@@ -71,7 +71,7 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGame
     /// <summary>
     /// Function: SetupDecalMaterialInstances
     /// </summary>
-    public unsafe void SetupDecalMaterialInstances()
+    public unsafe virtual void SetupDecalMaterialInstances()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmashableProp.SetupDecalMaterialInstances", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGame
     /// <summary>
     /// Function: GetDecalMaterialInstance
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInstance GetDecalMaterialInstance(BmSDK.FName DecalTypeName)
+    public unsafe virtual BmSDK.Engine.MaterialInstance GetDecalMaterialInstance(BmSDK.FName DecalTypeName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmashableProp.GetDecalMaterialInstance", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -101,7 +101,7 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGame
     /// <summary>
     /// Function: GetDecalData
     /// </summary>
-    public unsafe BmSDK.BmGame.RSmashablePropConfig.FRSmashablePropDecalData GetDecalData(BmSDK.FName DecalTypeName)
+    public unsafe virtual BmSDK.BmGame.RSmashablePropConfig.FRSmashablePropDecalData GetDecalData(BmSDK.FName DecalTypeName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmashableProp.GetDecalData", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -120,7 +120,7 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGame
     /// <summary>
     /// Function: StopsProjectile
     /// </summary>
-    public unsafe bool StopsProjectile(BmSDK.Engine.Projectile P, BmSDK.Engine.PrimitiveComponent HitComponent = default)
+    public unsafe override bool StopsProjectile(BmSDK.Engine.Projectile P, BmSDK.Engine.PrimitiveComponent HitComponent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmashableProp.StopsProjectile", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -133,7 +133,7 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGame
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmashableProp.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -151,7 +151,7 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGame
     /// <summary>
     /// Function: DoRBSmashAlert
     /// </summary>
-    public unsafe void DoRBSmashAlert()
+    public unsafe virtual void DoRBSmashAlert()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmashableProp.DoRBSmashAlert", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -162,7 +162,7 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGame
     /// <summary>
     /// Function: GetSaveSmashedState
     /// </summary>
-    public unsafe bool GetSaveSmashedState()
+    public unsafe virtual bool GetSaveSmashedState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmashableProp.GetSaveSmashedState", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -173,7 +173,7 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGame
     /// <summary>
     /// Function: SetSaveSmashedState
     /// </summary>
-    public unsafe void SetSaveSmashedState(bool Removed)
+    public unsafe virtual void SetSaveSmashedState(bool Removed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmashableProp.SetSaveSmashedState", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -185,7 +185,7 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGame
     /// <summary>
     /// Function: BreakProp
     /// </summary>
-    public unsafe void BreakProp()
+    public unsafe virtual void BreakProp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmashableProp.BreakProp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -244,7 +244,7 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGame
     /// <summary>
     /// Function: SpawnEmitter
     /// </summary>
-    public unsafe BmSDK.Engine.Emitter SpawnEmitter(BmSDK.Engine.ParticleSystem ParticleSystem)
+    public unsafe virtual BmSDK.Engine.Emitter SpawnEmitter(BmSDK.Engine.ParticleSystem ParticleSystem)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmashableProp.SpawnEmitter", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -256,7 +256,7 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGame
     /// <summary>
     /// Function: TriggerSmashablePropDestroyEvent
     /// </summary>
-    public unsafe void TriggerSmashablePropDestroyEvent()
+    public unsafe virtual void TriggerSmashablePropDestroyEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmashableProp.TriggerSmashablePropDestroyEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -267,7 +267,7 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGame
     /// <summary>
     /// Function: Detach
     /// </summary>
-    public unsafe void Detach(BmSDK.Engine.Actor Other)
+    public unsafe override void Detach(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmashableProp.Detach", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -279,7 +279,7 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGame
     /// <summary>
     /// Function: DestroyProp
     /// </summary>
-    public unsafe void DestroyProp(BmSDK.BmGame.RSmashableProp _DestroyProp)
+    public unsafe virtual void DestroyProp(BmSDK.BmGame.RSmashableProp _DestroyProp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmashableProp.DestroyProp", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -291,7 +291,7 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGame
     /// <summary>
     /// Function: SpawnProp
     /// </summary>
-    public unsafe BmSDK.BmGame.RSmashableProp SpawnProp(BmSDK.Engine.Actor spawnedObjectOwner, System.Numerics.Vector3 brickPos, BmSDK.Rotator brickRot, BmSDK.BmGame.RSmashablePropConfig brickPropConfig)
+    public unsafe virtual BmSDK.BmGame.RSmashableProp SpawnProp(BmSDK.Engine.Actor spawnedObjectOwner, System.Numerics.Vector3 brickPos, BmSDK.Rotator brickRot, BmSDK.BmGame.RSmashablePropConfig brickPropConfig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmashableProp.SpawnProp", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -306,7 +306,7 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGame
     /// <summary>
     /// Function: GetHasSubParts
     /// </summary>
-    public unsafe bool GetHasSubParts()
+    public unsafe virtual bool GetHasSubParts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmashableProp.GetHasSubParts", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -324,7 +324,7 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGame
     /// <summary>
     /// Function: TriggerBreakProp
     /// </summary>
-    public unsafe void TriggerBreakProp(System.Numerics.Vector3 BreakNormalForce, float breakTimerVal = default, BmSDK.Engine.Actor CollideActor0 = default, BmSDK.Engine.Actor CollideActor1 = default)
+    public unsafe virtual void TriggerBreakProp(System.Numerics.Vector3 BreakNormalForce, float breakTimerVal = default, BmSDK.Engine.Actor CollideActor0 = default, BmSDK.Engine.Actor CollideActor1 = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmashableProp.TriggerBreakProp", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -346,7 +346,7 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGame
     /// <summary>
     /// Function: SetIsStatic
     /// </summary>
-    public unsafe void SetIsStatic(bool isStatic)
+    public unsafe virtual void SetIsStatic(bool isStatic)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmashableProp.SetIsStatic", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -365,7 +365,7 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGame
     /// <summary>
     /// Function: SetBreakableType
     /// </summary>
-    public unsafe void SetBreakableType(BmSDK.BmGame.RSmashablePropConfig.EBreakableType breakableType)
+    public unsafe virtual void SetBreakableType(BmSDK.BmGame.RSmashablePropConfig.EBreakableType breakableType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmashableProp.SetBreakableType", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -384,7 +384,7 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGame
     /// <summary>
     /// Function: GetHasSubMeshes
     /// </summary>
-    public unsafe bool GetHasSubMeshes()
+    public unsafe virtual bool GetHasSubMeshes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmashableProp.GetHasSubMeshes", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -66,7 +66,7 @@ public partial class RBMWeaponRiflePredBase : BmSDK.BmGame.RBMWeaponRanged, BmSD
     /// <summary>
     /// Function: GetDamage
     /// </summary>
-    public unsafe float GetDamage(BmSDK.Engine.Actor Target)
+    public unsafe override float GetDamage(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponRiflePredBase.GetDamage", true);
         byte* paramsPtr = stackalloc byte[12];

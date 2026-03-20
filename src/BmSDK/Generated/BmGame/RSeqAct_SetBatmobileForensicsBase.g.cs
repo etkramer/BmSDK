@@ -31,7 +31,7 @@ public partial class RSeqAct_SetBatmobileForensicsBase : BmSDK.Engine.SeqAct_Lat
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.HUD H)
+    public unsafe virtual void DrawHUD(BmSDK.Engine.HUD H)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetBatmobileForensicsBase.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -43,7 +43,7 @@ public partial class RSeqAct_SetBatmobileForensicsBase : BmSDK.Engine.SeqAct_Lat
     /// <summary>
     /// Function: DoPulse
     /// </summary>
-    public unsafe bool DoPulse(bool bFirstPulse)
+    public unsafe virtual bool DoPulse(bool bFirstPulse)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetBatmobileForensicsBase.DoPulse", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -66,7 +66,7 @@ public partial class RSeqAct_SetBatmobileForensicsBase : BmSDK.Engine.SeqAct_Lat
     /// <summary>
     /// Function: SetForensicParametersOnActors
     /// </summary>
-    public unsafe void SetForensicParametersOnActors(BmSDK.GameObject.FLinearColor lightParams, BmSDK.GameObject.FLinearColor lightWorldPos, BmSDK.GameObject.FLinearColor LightDir)
+    public unsafe virtual void SetForensicParametersOnActors(BmSDK.GameObject.FLinearColor lightParams, BmSDK.GameObject.FLinearColor lightWorldPos, BmSDK.GameObject.FLinearColor LightDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetBatmobileForensicsBase.SetForensicParametersOnActors", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -80,7 +80,7 @@ public partial class RSeqAct_SetBatmobileForensicsBase : BmSDK.Engine.SeqAct_Lat
     /// <summary>
     /// Function: SetTrailVisible
     /// </summary>
-    public unsafe void SetTrailVisible(bool is_visible)
+    public unsafe virtual void SetTrailVisible(bool is_visible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetBatmobileForensicsBase.SetTrailVisible", true);
         byte* paramsPtr = stackalloc byte[4];

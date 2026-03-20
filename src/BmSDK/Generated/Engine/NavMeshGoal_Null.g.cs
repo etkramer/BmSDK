@@ -36,7 +36,7 @@ public partial class NavMeshGoal_Null : BmSDK.Engine.NavMeshPathGoalEvaluator, B
     /// <summary>
     /// Function: Recycle
     /// </summary>
-    public unsafe void Recycle()
+    public unsafe override void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshGoal_Null.Recycle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class NavMeshGoal_Null : BmSDK.Engine.NavMeshPathGoalEvaluator, B
     /// <summary>
     /// Function: RecycleNative
     /// </summary>
-    public unsafe void RecycleNative()
+    public unsafe virtual void RecycleNative()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshGoal_Null.RecycleNative", true);
         byte* paramsPtr = stackalloc byte[0];

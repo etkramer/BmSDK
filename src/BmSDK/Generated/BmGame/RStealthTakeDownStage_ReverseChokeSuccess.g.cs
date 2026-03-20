@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_ReverseChokeSuccess : BmSDK.BmGame.RS
     /// <summary>
     /// Function: End
     /// </summary>
-    public unsafe void End(bool bLastStage = default)
+    public unsafe override void End(bool bLastStage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ReverseChokeSuccess.End", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RStealthTakeDownStage_ReverseChokeSuccess : BmSDK.BmGame.RS
     /// <summary>
     /// Function: ResetCamera
     /// </summary>
-    public unsafe void ResetCamera()
+    public unsafe virtual void ResetCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ReverseChokeSuccess.ResetCamera", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RStealthTakeDownStage_ReverseChokeSuccess : BmSDK.BmGame.RS
     /// <summary>
     /// Function: LookAtCeiling
     /// </summary>
-    public unsafe void LookAtCeiling()
+    public unsafe virtual void LookAtCeiling()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ReverseChokeSuccess.LookAtCeiling", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -105,7 +105,7 @@ public partial class RStealthTakeDownStage_ReverseChokeSuccess : BmSDK.BmGame.RS
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ReverseChokeSuccess.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[24];

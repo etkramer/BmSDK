@@ -36,7 +36,7 @@ public partial class RSeqAct_SpawnDrone : BmSDK.BmGame.RSeqAct_SpawnDroneBase, B
     /// <summary>
     /// Function: NotifyDestroyed
     /// </summary>
-    public unsafe void NotifyDestroyed()
+    public unsafe virtual void NotifyDestroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SpawnDrone.NotifyDestroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RSeqAct_SpawnDrone : BmSDK.BmGame.RSeqAct_SpawnDroneBase, B
     /// <summary>
     /// Function: NotifyBlinded
     /// </summary>
-    public unsafe void NotifyBlinded()
+    public unsafe virtual void NotifyBlinded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SpawnDrone.NotifyBlinded", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_SpawnDrone : BmSDK.BmGame.RSeqAct_SpawnDroneBase, B
     /// <summary>
     /// Function: NotifyHitByDisruptor
     /// </summary>
-    public unsafe void NotifyHitByDisruptor()
+    public unsafe virtual void NotifyHitByDisruptor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SpawnDrone.NotifyHitByDisruptor", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RSeqAct_SpawnDrone : BmSDK.BmGame.RSeqAct_SpawnDroneBase, B
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SpawnDrone.Activated", true);
         byte* paramsPtr = stackalloc byte[1];

@@ -71,7 +71,7 @@ public partial class RPawnJohnnyCharisma : BmSDK.BmGame.RPawnVillainThug, BmSDK.
     /// <summary>
     /// Function: ChangeDS
     /// </summary>
-    public unsafe void ChangeDS()
+    public unsafe virtual void ChangeDS()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnJohnnyCharisma.ChangeDS", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RPawnJohnnyCharisma : BmSDK.BmGame.RPawnVillainThug, BmSDK.
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe override BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnJohnnyCharisma.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -94,7 +94,7 @@ public partial class RPawnJohnnyCharisma : BmSDK.BmGame.RPawnVillainThug, BmSDK.
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnJohnnyCharisma.Interact", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RPawnJohnnyCharisma : BmSDK.BmGame.RPawnVillainThug, BmSDK.
     /// <summary>
     /// Function: OverridePreviousLines
     /// </summary>
-    public unsafe bool OverridePreviousLines()
+    public unsafe override bool OverridePreviousLines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnJohnnyCharisma.OverridePreviousLines", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -117,7 +117,7 @@ public partial class RPawnJohnnyCharisma : BmSDK.BmGame.RPawnVillainThug, BmSDK.
     /// <summary>
     /// Function: GetInteractButton
     /// </summary>
-    public unsafe BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton GetInteractButton(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton GetInteractButton(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnJohnnyCharisma.GetInteractButton", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -129,7 +129,7 @@ public partial class RPawnJohnnyCharisma : BmSDK.BmGame.RPawnVillainThug, BmSDK.
     /// <summary>
     /// Function: Died
     /// </summary>
-    public unsafe bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe override bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnJohnnyCharisma.Died", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -143,7 +143,7 @@ public partial class RPawnJohnnyCharisma : BmSDK.BmGame.RPawnVillainThug, BmSDK.
     /// <summary>
     /// Function: GetRange
     /// </summary>
-    public unsafe float GetRange()
+    public unsafe override float GetRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnJohnnyCharisma.GetRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -154,7 +154,7 @@ public partial class RPawnJohnnyCharisma : BmSDK.BmGame.RPawnVillainThug, BmSDK.
     /// <summary>
     /// Function: CanBeHitInCombat
     /// </summary>
-    public unsafe bool CanBeHitInCombat(BmSDK.BmGame.RDamageType DamageType)
+    public unsafe override bool CanBeHitInCombat(BmSDK.BmGame.RDamageType DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnJohnnyCharisma.CanBeHitInCombat", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -166,7 +166,7 @@ public partial class RPawnJohnnyCharisma : BmSDK.BmGame.RPawnVillainThug, BmSDK.
     /// <summary>
     /// Function: HideBombPack
     /// </summary>
-    public unsafe void HideBombPack()
+    public unsafe virtual void HideBombPack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnJohnnyCharisma.HideBombPack", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -177,7 +177,7 @@ public partial class RPawnJohnnyCharisma : BmSDK.BmGame.RPawnVillainThug, BmSDK.
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnJohnnyCharisma.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -189,7 +189,7 @@ public partial class RPawnJohnnyCharisma : BmSDK.BmGame.RPawnVillainThug, BmSDK.
     /// <summary>
     /// Function: CanDebugKill
     /// </summary>
-    public unsafe bool CanDebugKill()
+    public unsafe override bool CanDebugKill()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnJohnnyCharisma.CanDebugKill", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -200,7 +200,7 @@ public partial class RPawnJohnnyCharisma : BmSDK.BmGame.RPawnVillainThug, BmSDK.
     /// <summary>
     /// Function: isJoker
     /// </summary>
-    public unsafe bool isJoker()
+    public unsafe virtual bool isJoker()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnJohnnyCharisma.isJoker", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -211,7 +211,7 @@ public partial class RPawnJohnnyCharisma : BmSDK.BmGame.RPawnVillainThug, BmSDK.
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnJohnnyCharisma.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

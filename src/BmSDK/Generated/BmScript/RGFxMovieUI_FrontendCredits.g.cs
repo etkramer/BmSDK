@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_FrontendCredits : BmSDK.BmGame.RGFxMovieUI, BmS
     /// <summary>
     /// Function: XI_CreditsTrigger
     /// </summary>
-    public unsafe void XI_CreditsTrigger(int TriggerId)
+    public unsafe virtual void XI_CreditsTrigger(int TriggerId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_FrontendCredits.XI_CreditsTrigger", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -48,7 +48,7 @@ public partial class RGFxMovieUI_FrontendCredits : BmSDK.BmGame.RGFxMovieUI, BmS
     /// <summary>
     /// Function: XI_ShowB
     /// </summary>
-    public unsafe void XI_ShowB(bool bShow)
+    public unsafe virtual void XI_ShowB(bool bShow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_FrontendCredits.XI_ShowB", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -60,7 +60,7 @@ public partial class RGFxMovieUI_FrontendCredits : BmSDK.BmGame.RGFxMovieUI, BmS
     /// <summary>
     /// Function: XI_CanShowB
     /// </summary>
-    public unsafe bool XI_CanShowB()
+    public unsafe virtual bool XI_CanShowB()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_FrontendCredits.XI_CanShowB", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -71,7 +71,7 @@ public partial class RGFxMovieUI_FrontendCredits : BmSDK.BmGame.RGFxMovieUI, BmS
     /// <summary>
     /// Function: XI_SkipCredits
     /// </summary>
-    public unsafe void XI_SkipCredits()
+    public unsafe virtual void XI_SkipCredits()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_FrontendCredits.XI_SkipCredits", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RGFxMovieUI_FrontendCredits : BmSDK.BmGame.RGFxMovieUI, BmS
     /// <summary>
     /// Function: XI_CreditsDone
     /// </summary>
-    public unsafe void XI_CreditsDone()
+    public unsafe virtual void XI_CreditsDone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_FrontendCredits.XI_CreditsDone", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RGFxMovieUI_FrontendCredits : BmSDK.BmGame.RGFxMovieUI, BmS
     /// <summary>
     /// Function: FirstSkip
     /// </summary>
-    public unsafe void FirstSkip()
+    public unsafe virtual void FirstSkip()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_FrontendCredits.FirstSkip", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RGFxMovieUI_FrontendCredits : BmSDK.BmGame.RGFxMovieUI, BmS
     /// <summary>
     /// Function: XI_Tick
     /// </summary>
-    public unsafe void XI_Tick()
+    public unsafe override void XI_Tick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_FrontendCredits.XI_Tick", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RGFxMovieUI_FrontendCredits : BmSDK.BmGame.RGFxMovieUI, BmS
     /// <summary>
     /// Function: XI_RequestCredits
     /// </summary>
-    public unsafe void XI_RequestCredits(BmSDK.FString TargetPath)
+    public unsafe virtual void XI_RequestCredits(BmSDK.FString TargetPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_FrontendCredits.XI_RequestCredits", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -127,7 +127,7 @@ public partial class RGFxMovieUI_FrontendCredits : BmSDK.BmGame.RGFxMovieUI, BmS
     /// <summary>
     /// Function: OnBackReal
     /// </summary>
-    public unsafe void OnBackReal()
+    public unsafe virtual void OnBackReal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_FrontendCredits.OnBackReal", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RGFxMovieUI_FrontendCredits : BmSDK.BmGame.RGFxMovieUI, BmS
     /// <summary>
     /// Function: XI_OnBack
     /// </summary>
-    public unsafe void XI_OnBack()
+    public unsafe override void XI_OnBack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_FrontendCredits.XI_OnBack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -149,7 +149,7 @@ public partial class RGFxMovieUI_FrontendCredits : BmSDK.BmGame.RGFxMovieUI, BmS
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_FrontendCredits.Init", true);
         byte* paramsPtr = stackalloc byte[8];

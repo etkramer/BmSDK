@@ -71,7 +71,7 @@ public partial class RNavMeshObstacle_Queue : BmSDK.Engine.NavMeshObstacle, BmSD
     /// <summary>
     /// Function: SetEnabled
     /// </summary>
-    public unsafe void SetEnabled(bool bInEnabled)
+    public unsafe override void SetEnabled(bool bInEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshObstacle_Queue.SetEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RNavMeshObstacle_Queue : BmSDK.Engine.NavMeshObstacle, BmSD
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshObstacle_Queue.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RNavMeshObstacle_Queue : BmSDK.Engine.NavMeshObstacle, BmSD
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshObstacle_Queue.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RNavMeshObstacle_Queue : BmSDK.Engine.NavMeshObstacle, BmSD
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshObstacle_Queue.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RNavMeshObstacle_Queue : BmSDK.Engine.NavMeshObstacle, BmSD
     /// <summary>
     /// Function: ForceObstaclePolysOff
     /// </summary>
-    public unsafe void ForceObstaclePolysOff()
+    public unsafe virtual void ForceObstaclePolysOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshObstacle_Queue.ForceObstaclePolysOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -134,7 +134,7 @@ public partial class RNavMeshObstacle_Queue : BmSDK.Engine.NavMeshObstacle, BmSD
     /// <summary>
     /// Function: ForceObstaclePolysOn
     /// </summary>
-    public unsafe void ForceObstaclePolysOn()
+    public unsafe virtual void ForceObstaclePolysOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshObstacle_Queue.ForceObstaclePolysOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -152,7 +152,7 @@ public partial class RNavMeshObstacle_Queue : BmSDK.Engine.NavMeshObstacle, BmSD
     /// <summary>
     /// Function: ClearNavMeshEdgeCosts
     /// </summary>
-    public unsafe void ClearNavMeshEdgeCosts()
+    public unsafe virtual void ClearNavMeshEdgeCosts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshObstacle_Queue.ClearNavMeshEdgeCosts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -170,7 +170,7 @@ public partial class RNavMeshObstacle_Queue : BmSDK.Engine.NavMeshObstacle, BmSD
     /// <summary>
     /// Function: SetNavMeshEdgeCosts
     /// </summary>
-    public unsafe void SetNavMeshEdgeCosts()
+    public unsafe virtual void SetNavMeshEdgeCosts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshObstacle_Queue.SetNavMeshEdgeCosts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -188,7 +188,7 @@ public partial class RNavMeshObstacle_Queue : BmSDK.Engine.NavMeshObstacle, BmSD
     /// <summary>
     /// Function: EnableObstaclePolysFromLoadedPylons
     /// </summary>
-    public unsafe void EnableObstaclePolysFromLoadedPylons()
+    public unsafe virtual void EnableObstaclePolysFromLoadedPylons()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshObstacle_Queue.EnableObstaclePolysFromLoadedPylons", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -206,7 +206,7 @@ public partial class RNavMeshObstacle_Queue : BmSDK.Engine.NavMeshObstacle, BmSD
     /// <summary>
     /// Function: RemoveObstaclePolysFromLoadedPylons
     /// </summary>
-    public unsafe void RemoveObstaclePolysFromLoadedPylons()
+    public unsafe virtual void RemoveObstaclePolysFromLoadedPylons()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshObstacle_Queue.RemoveObstaclePolysFromLoadedPylons", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -224,7 +224,7 @@ public partial class RNavMeshObstacle_Queue : BmSDK.Engine.NavMeshObstacle, BmSD
     /// <summary>
     /// Function: UnRegisterObstacle
     /// </summary>
-    public unsafe void UnRegisterObstacle(bool bInstant = default)
+    public unsafe override void UnRegisterObstacle(bool bInstant = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshObstacle_Queue.UnRegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -243,7 +243,7 @@ public partial class RNavMeshObstacle_Queue : BmSDK.Engine.NavMeshObstacle, BmSD
     /// <summary>
     /// Function: RegisterObstacle
     /// </summary>
-    public unsafe void RegisterObstacle()
+    public unsafe override void RegisterObstacle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshObstacle_Queue.RegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[0];

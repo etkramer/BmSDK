@@ -71,7 +71,7 @@ public partial class RCombatMove_MultiStageThrowThugAttack : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageThrowThugAttack.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_MultiStageThrowThugAttack : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: StartPickup
     /// </summary>
-    public unsafe void StartPickup()
+    public unsafe virtual void StartPickup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageThrowThugAttack.StartPickup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RCombatMove_MultiStageThrowThugAttack : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: IsBatmanInteruptable
     /// </summary>
-    public unsafe bool IsBatmanInteruptable()
+    public unsafe virtual bool IsBatmanInteruptable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageThrowThugAttack.IsBatmanInteruptable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RCombatMove_MultiStageThrowThugAttack : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: IsBatmanTooClose
     /// </summary>
-    public unsafe bool IsBatmanTooClose()
+    public unsafe virtual bool IsBatmanTooClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageThrowThugAttack.IsBatmanTooClose", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -115,7 +115,7 @@ public partial class RCombatMove_MultiStageThrowThugAttack : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: DamageCollisionWithObject
     /// </summary>
-    public unsafe void DamageCollisionWithObject(BmSDK.Engine.Actor Object)
+    public unsafe override void DamageCollisionWithObject(BmSDK.Engine.Actor Object)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageThrowThugAttack.DamageCollisionWithObject", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -127,7 +127,7 @@ public partial class RCombatMove_MultiStageThrowThugAttack : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: DamageOtherThug
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamageOtherThug(BmSDK.BmGame.RPawnCombat DamageReceiver)
+    public unsafe virtual BmSDK.BmGame.RPawnCombat.DamageResult DamageOtherThug(BmSDK.BmGame.RPawnCombat DamageReceiver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageThrowThugAttack.DamageOtherThug", true);
         byte* paramsPtr = stackalloc byte[260];
@@ -139,7 +139,7 @@ public partial class RCombatMove_MultiStageThrowThugAttack : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: DamagePlayer
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagePlayer(BmSDK.BmGame.RPawnCombat DamageReceiver)
+    public unsafe virtual BmSDK.BmGame.RPawnCombat.DamageResult DamagePlayer(BmSDK.BmGame.RPawnCombat DamageReceiver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageThrowThugAttack.DamagePlayer", true);
         byte* paramsPtr = stackalloc byte[260];
@@ -151,7 +151,7 @@ public partial class RCombatMove_MultiStageThrowThugAttack : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: IsAttacking
     /// </summary>
-    public unsafe bool IsAttacking()
+    public unsafe override bool IsAttacking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageThrowThugAttack.IsAttacking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -162,7 +162,7 @@ public partial class RCombatMove_MultiStageThrowThugAttack : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: EnableRedirect
     /// </summary>
-    public unsafe void EnableRedirect()
+    public unsafe virtual void EnableRedirect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageThrowThugAttack.EnableRedirect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -173,7 +173,7 @@ public partial class RCombatMove_MultiStageThrowThugAttack : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: GetClampedThrowDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetClampedThrowDirection(System.Numerics.Vector3 ThrowPos, System.Numerics.Vector3 Heading, System.Numerics.Vector3 TargetPos)
+    public unsafe virtual System.Numerics.Vector3 GetClampedThrowDirection(System.Numerics.Vector3 ThrowPos, System.Numerics.Vector3 Heading, System.Numerics.Vector3 TargetPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageThrowThugAttack.GetClampedThrowDirection", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -187,7 +187,7 @@ public partial class RCombatMove_MultiStageThrowThugAttack : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: SetAimingOff
     /// </summary>
-    public unsafe void SetAimingOff()
+    public unsafe virtual void SetAimingOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageThrowThugAttack.SetAimingOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -198,7 +198,7 @@ public partial class RCombatMove_MultiStageThrowThugAttack : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: SetAimingOn
     /// </summary>
-    public unsafe void SetAimingOn()
+    public unsafe virtual void SetAimingOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageThrowThugAttack.SetAimingOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -209,7 +209,7 @@ public partial class RCombatMove_MultiStageThrowThugAttack : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: CheckExtendShield
     /// </summary>
-    public unsafe void CheckExtendShield()
+    public unsafe virtual void CheckExtendShield()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageThrowThugAttack.CheckExtendShield", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -220,7 +220,7 @@ public partial class RCombatMove_MultiStageThrowThugAttack : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: CheckChargeUpThug
     /// </summary>
-    public unsafe void CheckChargeUpThug()
+    public unsafe virtual void CheckChargeUpThug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageThrowThugAttack.CheckChargeUpThug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -231,7 +231,7 @@ public partial class RCombatMove_MultiStageThrowThugAttack : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: LetGoThug
     /// </summary>
-    public unsafe void LetGoThug()
+    public unsafe virtual void LetGoThug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageThrowThugAttack.LetGoThug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -242,7 +242,7 @@ public partial class RCombatMove_MultiStageThrowThugAttack : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: OnAbortRelease
     /// </summary>
-    public unsafe void OnAbortRelease()
+    public unsafe virtual void OnAbortRelease()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageThrowThugAttack.OnAbortRelease", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -253,7 +253,7 @@ public partial class RCombatMove_MultiStageThrowThugAttack : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: OnThrowRelease
     /// </summary>
-    public unsafe void OnThrowRelease()
+    public unsafe virtual void OnThrowRelease()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageThrowThugAttack.OnThrowRelease", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -264,7 +264,7 @@ public partial class RCombatMove_MultiStageThrowThugAttack : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageThrowThugAttack.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

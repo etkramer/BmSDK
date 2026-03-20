@@ -71,7 +71,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: NotifyReachedHardRemoteLimit
     /// </summary>
-    public unsafe void NotifyReachedHardRemoteLimit()
+    public unsafe override void NotifyReachedHardRemoteLimit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.NotifyReachedHardRemoteLimit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: OnGadgetWheelSelected
     /// </summary>
-    public unsafe void OnGadgetWheelSelected()
+    public unsafe override void OnGadgetWheelSelected()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.OnGadgetWheelSelected", true);
         byte* paramsPtr = stackalloc byte[156];
@@ -93,7 +93,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: GetPC
     /// </summary>
-    public unsafe BmSDK.BmGame.RPlayerController GetPC()
+    public unsafe override BmSDK.BmGame.RPlayerController GetPC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.GetPC", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -104,7 +104,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: GetFiringAnimationOverlay
     /// </summary>
-    public unsafe BmSDK.FName GetFiringAnimationOverlay()
+    public unsafe virtual BmSDK.FName GetFiringAnimationOverlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.GetFiringAnimationOverlay", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -115,7 +115,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: StartChargingJammer
     /// </summary>
-    public unsafe void StartChargingJammer()
+    public unsafe virtual void StartChargingJammer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.StartChargingJammer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: NotifyBatmanPickedUp
     /// </summary>
-    public unsafe void NotifyBatmanPickedUp()
+    public unsafe override void NotifyBatmanPickedUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.NotifyBatmanPickedUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -137,7 +137,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: NotifyRemoteDriveCancelled
     /// </summary>
-    public unsafe void NotifyRemoteDriveCancelled()
+    public unsafe override void NotifyRemoteDriveCancelled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.NotifyRemoteDriveCancelled", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -148,7 +148,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: NotifyCallBatmobileToMe
     /// </summary>
-    public unsafe void NotifyCallBatmobileToMe()
+    public unsafe override void NotifyCallBatmobileToMe()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.NotifyCallBatmobileToMe", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -159,7 +159,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: PowerOffScreen
     /// </summary>
-    public unsafe void PowerOffScreen()
+    public unsafe virtual void PowerOffScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.PowerOffScreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -170,7 +170,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: PowerOnScreen
     /// </summary>
-    public unsafe void PowerOnScreen()
+    public unsafe virtual void PowerOnScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.PowerOnScreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -181,7 +181,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: DontMoveCursor
     /// </summary>
-    public unsafe void DontMoveCursor()
+    public unsafe virtual void DontMoveCursor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.DontMoveCursor", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -192,7 +192,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: GetAimAtRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetAimAtRotation()
+    public unsafe override BmSDK.Rotator GetAimAtRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.GetAimAtRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -203,7 +203,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: ClearTarget
     /// </summary>
-    public unsafe void ClearTarget()
+    public unsafe virtual void ClearTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.ClearTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -214,7 +214,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: ShowFailIcon
     /// </summary>
-    public unsafe void ShowFailIcon()
+    public unsafe virtual void ShowFailIcon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.ShowFailIcon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -225,7 +225,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: DrawTarget
     /// </summary>
-    public unsafe void DrawTarget()
+    public unsafe virtual void DrawTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.DrawTarget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -236,7 +236,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: CancelCallBatmobile
     /// </summary>
-    public unsafe void CancelCallBatmobile()
+    public unsafe virtual void CancelCallBatmobile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.CancelCallBatmobile", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -247,7 +247,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: CallBatmobile
     /// </summary>
-    public unsafe void CallBatmobile()
+    public unsafe virtual void CallBatmobile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.CallBatmobile", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -258,7 +258,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: PlayerTick
     /// </summary>
-    public unsafe void PlayerTick(float DeltaTime)
+    public unsafe override void PlayerTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.PlayerTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -270,7 +270,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: GetFireAnim
     /// </summary>
-    public unsafe BmSDK.FName GetFireAnim(BmSDK.Rotator ThrowDirection, out BmSDK.BmGame.RPawnPlayerAnim.AimingConfigDesc AimingConfig, bool Mirrored)
+    public unsafe virtual BmSDK.FName GetFireAnim(BmSDK.Rotator ThrowDirection, out BmSDK.BmGame.RPawnPlayerAnim.AimingConfigDesc AimingConfig, bool Mirrored)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.GetFireAnim", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -284,7 +284,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: GetPrimedPose
     /// </summary>
-    public unsafe BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
+    public unsafe override BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.GetPrimedPose", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -301,7 +301,7 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatmobileRemoteBm.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[16];

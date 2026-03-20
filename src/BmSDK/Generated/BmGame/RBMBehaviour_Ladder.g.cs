@@ -36,7 +36,7 @@ public partial class RBMBehaviour_Ladder : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: CanThugBeFrozen
     /// </summary>
-    public unsafe bool CanThugBeFrozen()
+    public unsafe override bool CanThugBeFrozen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Ladder.CanThugBeFrozen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_Ladder : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: PlayJumpDownLadderAnim
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PlayJumpDownLadderAnim()
+    public unsafe virtual BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PlayJumpDownLadderAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Ladder.PlayJumpDownLadderAnim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_Ladder : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: PawnWantsToJump
     /// </summary>
-    public unsafe bool PawnWantsToJump()
+    public unsafe virtual bool PawnWantsToJump()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Ladder.PawnWantsToJump", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_Ladder : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: PlayFullClimbLadderAnim
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PlayFullClimbLadderAnim()
+    public unsafe virtual BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PlayFullClimbLadderAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Ladder.PlayFullClimbLadderAnim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_Ladder : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: PlayedQueuedClimbAnim
     /// </summary>
-    public unsafe void PlayedQueuedClimbAnim(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedTransition, float TimeLeftOver)
+    public unsafe virtual void PlayedQueuedClimbAnim(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedTransition, float TimeLeftOver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Ladder.PlayedQueuedClimbAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RBMBehaviour_Ladder : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: PlayClimbLadderAnim
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PlayClimbLadderAnim(BmSDK.FName LadderTransName, bool bQueue = default, bool bCompensateForLadderHeight = default)
+    public unsafe virtual BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PlayClimbLadderAnim(BmSDK.FName LadderTransName, bool bQueue = default, bool bCompensateForLadderHeight = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Ladder.PlayClimbLadderAnim", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -107,7 +107,7 @@ public partial class RBMBehaviour_Ladder : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetClimbLadderAnimName_Out
     /// </summary>
-    public unsafe BmSDK.FName GetClimbLadderAnimName_Out()
+    public unsafe virtual BmSDK.FName GetClimbLadderAnimName_Out()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Ladder.GetClimbLadderAnimName_Out", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RBMBehaviour_Ladder : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetClimbLadderAnimName_Middle
     /// </summary>
-    public unsafe BmSDK.FName GetClimbLadderAnimName_Middle()
+    public unsafe virtual BmSDK.FName GetClimbLadderAnimName_Middle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Ladder.GetClimbLadderAnimName_Middle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RBMBehaviour_Ladder : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetClimbLadderAnimName_In
     /// </summary>
-    public unsafe BmSDK.FName GetClimbLadderAnimName_In()
+    public unsafe virtual BmSDK.FName GetClimbLadderAnimName_In()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Ladder.GetClimbLadderAnimName_In", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -140,7 +140,7 @@ public partial class RBMBehaviour_Ladder : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: AllowNextClimber
     /// </summary>
-    public unsafe void AllowNextClimber()
+    public unsafe virtual void AllowNextClimber()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Ladder.AllowNextClimber", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -151,7 +151,7 @@ public partial class RBMBehaviour_Ladder : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: EnableRagdollOnHit
     /// </summary>
-    public unsafe void EnableRagdollOnHit()
+    public unsafe virtual void EnableRagdollOnHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Ladder.EnableRagdollOnHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -162,7 +162,7 @@ public partial class RBMBehaviour_Ladder : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: DisableRagdollOnHit
     /// </summary>
-    public unsafe void DisableRagdollOnHit()
+    public unsafe virtual void DisableRagdollOnHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Ladder.DisableRagdollOnHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -173,7 +173,7 @@ public partial class RBMBehaviour_Ladder : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: NotifyChase
     /// </summary>
-    public unsafe void NotifyChase(System.Numerics.Vector3 LadderForward)
+    public unsafe virtual void NotifyChase(System.Numerics.Vector3 LadderForward)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Ladder.NotifyChase", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -185,7 +185,7 @@ public partial class RBMBehaviour_Ladder : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: CheckPawnsBelow
     /// </summary>
-    public unsafe void CheckPawnsBelow()
+    public unsafe virtual void CheckPawnsBelow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Ladder.CheckPawnsBelow", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -196,7 +196,7 @@ public partial class RBMBehaviour_Ladder : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: KnockBackPawn
     /// </summary>
-    public unsafe void KnockBackPawn(BmSDK.BmGame.RPawnCombat TestPawn)
+    public unsafe virtual void KnockBackPawn(BmSDK.BmGame.RPawnCombat TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Ladder.KnockBackPawn", true);
         byte* paramsPtr = stackalloc byte[256];
@@ -208,7 +208,7 @@ public partial class RBMBehaviour_Ladder : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: WillLandOnPawn
     /// </summary>
-    public unsafe bool WillLandOnPawn(BmSDK.BmGame.RPawn TestPawn)
+    public unsafe virtual bool WillLandOnPawn(BmSDK.BmGame.RPawn TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Ladder.WillLandOnPawn", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -220,7 +220,7 @@ public partial class RBMBehaviour_Ladder : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Ladder.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -231,7 +231,7 @@ public partial class RBMBehaviour_Ladder : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Ladder.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -242,7 +242,7 @@ public partial class RBMBehaviour_Ladder : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: StartTraversal
     /// </summary>
-    public unsafe void StartTraversal(BmSDK.BmGame.RLadder NewLadder, bool bClimbing)
+    public unsafe virtual void StartTraversal(BmSDK.BmGame.RLadder NewLadder, bool bClimbing)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Ladder.StartTraversal", true);
         byte* paramsPtr = stackalloc byte[12];

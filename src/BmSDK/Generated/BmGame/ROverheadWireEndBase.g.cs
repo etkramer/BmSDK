@@ -71,7 +71,7 @@ public partial class ROverheadWireEndBase : BmSDK.BmGame.RSnapToPositionActor, B
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverheadWireEndBase.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class ROverheadWireEndBase : BmSDK.BmGame.RSnapToPositionActor, B
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverheadWireEndBase.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -95,7 +95,7 @@ public partial class ROverheadWireEndBase : BmSDK.BmGame.RSnapToPositionActor, B
     /// <summary>
     /// Function: LinkToOtherEnd
     /// </summary>
-    public unsafe void LinkToOtherEnd(BmSDK.BmGame.ROverheadWireEndBase OtherEnd)
+    public unsafe virtual void LinkToOtherEnd(BmSDK.BmGame.ROverheadWireEndBase OtherEnd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverheadWireEndBase.LinkToOtherEnd", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -114,7 +114,7 @@ public partial class ROverheadWireEndBase : BmSDK.BmGame.RSnapToPositionActor, B
     /// <summary>
     /// Function: AdjustWire
     /// </summary>
-    public unsafe void AdjustWire()
+    public unsafe virtual void AdjustWire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverheadWireEndBase.AdjustWire", true);
         byte* paramsPtr = stackalloc byte[0];

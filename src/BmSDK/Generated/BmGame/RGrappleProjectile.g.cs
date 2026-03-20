@@ -66,7 +66,7 @@ public partial class RGrappleProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     /// <summary>
     /// Function: Hide
     /// </summary>
-    public unsafe void Hide(bool NewHidden)
+    public unsafe override void Hide(bool NewHidden)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleProjectile.Hide", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -78,7 +78,7 @@ public partial class RGrappleProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     /// <summary>
     /// Function: ReachedDest
     /// </summary>
-    public unsafe void ReachedDest()
+    public unsafe override void ReachedDest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleProjectile.ReachedDest", true);
         byte* paramsPtr = stackalloc byte[148];
@@ -89,7 +89,7 @@ public partial class RGrappleProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     /// <summary>
     /// Function: Fire
     /// </summary>
-    public unsafe void Fire(System.Numerics.Vector3 To)
+    public unsafe override void Fire(System.Numerics.Vector3 To)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleProjectile.Fire", true);
         byte* paramsPtr = stackalloc byte[72];

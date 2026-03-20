@@ -36,7 +36,7 @@ public partial class PointLightComponent : BmSDK.Engine.LightComponent, BmSDK.IG
     /// <summary>
     /// Function: OnUpdatePropertyBrightness
     /// </summary>
-    public unsafe void OnUpdatePropertyBrightness()
+    public unsafe override void OnUpdatePropertyBrightness()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PointLightComponent.OnUpdatePropertyBrightness", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class PointLightComponent : BmSDK.Engine.LightComponent, BmSDK.IG
     /// <summary>
     /// Function: OnUpdatePropertyLightColor
     /// </summary>
-    public unsafe void OnUpdatePropertyLightColor()
+    public unsafe override void OnUpdatePropertyLightColor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PointLightComponent.OnUpdatePropertyLightColor", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class PointLightComponent : BmSDK.Engine.LightComponent, BmSDK.IG
     /// <summary>
     /// Function: SetTranslation
     /// </summary>
-    public unsafe void SetTranslation(System.Numerics.Vector3 NewTranslation)
+    public unsafe virtual void SetTranslation(System.Numerics.Vector3 NewTranslation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PointLightComponent.SetTranslation", true);
         byte* paramsPtr = stackalloc byte[12];

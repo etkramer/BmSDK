@@ -71,7 +71,7 @@ public partial class AkProximityTracker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle ToggleAction)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle ToggleAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkProximityTracker.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];

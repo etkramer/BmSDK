@@ -36,7 +36,7 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Function: GetCurrentPlayersListCount
     /// </summary>
-    public unsafe int GetCurrentPlayersListCount()
+    public unsafe virtual int GetCurrentPlayersListCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineRecentPlayersList.GetCurrentPlayersListCount", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Function: SetCurrentPlayersList
     /// </summary>
-    public unsafe void SetCurrentPlayersList(BmSDK.TArray<BmSDK.Engine.OnlineRecentPlayersList.FCurrentPlayerMet> Players)
+    public unsafe virtual void SetCurrentPlayersList(BmSDK.TArray<BmSDK.Engine.OnlineRecentPlayersList.FCurrentPlayerMet> Players)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineRecentPlayersList.SetCurrentPlayersList", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -59,7 +59,7 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Function: ShowCurrentPlayersList
     /// </summary>
-    public unsafe bool ShowCurrentPlayersList(byte LocalUserNum, BmSDK.FString Title, BmSDK.FString Description)
+    public unsafe virtual bool ShowCurrentPlayersList(byte LocalUserNum, BmSDK.FString Title, BmSDK.FString Description)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineRecentPlayersList.ShowCurrentPlayersList", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -73,7 +73,7 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Function: ShowLastPartyPlayerList
     /// </summary>
-    public unsafe bool ShowLastPartyPlayerList(byte LocalUserNum, BmSDK.FString Title, BmSDK.FString Description)
+    public unsafe virtual bool ShowLastPartyPlayerList(byte LocalUserNum, BmSDK.FString Title, BmSDK.FString Description)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineRecentPlayersList.ShowLastPartyPlayerList", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -87,7 +87,7 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Function: ShowRecentPartiesPlayerList
     /// </summary>
-    public unsafe bool ShowRecentPartiesPlayerList(byte LocalUserNum, BmSDK.FString Title, BmSDK.FString Description)
+    public unsafe virtual bool ShowRecentPartiesPlayerList(byte LocalUserNum, BmSDK.FString Title, BmSDK.FString Description)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineRecentPlayersList.ShowRecentPartiesPlayerList", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -101,7 +101,7 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Function: ShowRecentPlayerList
     /// </summary>
-    public unsafe bool ShowRecentPlayerList(byte LocalUserNum, BmSDK.FString Title, BmSDK.FString Description)
+    public unsafe virtual bool ShowRecentPlayerList(byte LocalUserNum, BmSDK.FString Title, BmSDK.FString Description)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineRecentPlayersList.ShowRecentPlayerList", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -115,7 +115,7 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Function: SetLastParty
     /// </summary>
-    public unsafe void SetLastParty(BmSDK.Engine.OnlineSubsystem.FUniqueNetId PartyLeader, out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId> PartyMembers)
+    public unsafe virtual void SetLastParty(BmSDK.Engine.OnlineSubsystem.FUniqueNetId PartyLeader, out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId> PartyMembers)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineRecentPlayersList.SetLastParty", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -128,7 +128,7 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Function: GetTeamForCurrentPlayer
     /// </summary>
-    public unsafe int GetTeamForCurrentPlayer(BmSDK.Engine.OnlineSubsystem.FUniqueNetId Player)
+    public unsafe virtual int GetTeamForCurrentPlayer(BmSDK.Engine.OnlineSubsystem.FUniqueNetId Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineRecentPlayersList.GetTeamForCurrentPlayer", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -140,7 +140,7 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Function: GetSkillForCurrentPlayer
     /// </summary>
-    public unsafe int GetSkillForCurrentPlayer(BmSDK.Engine.OnlineSubsystem.FUniqueNetId Player)
+    public unsafe virtual int GetSkillForCurrentPlayer(BmSDK.Engine.OnlineSubsystem.FUniqueNetId Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineRecentPlayersList.GetSkillForCurrentPlayer", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -152,7 +152,7 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Function: GetPlayersFromCurrentPlayers
     /// </summary>
-    public unsafe void GetPlayersFromCurrentPlayers(out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId> Players)
+    public unsafe virtual void GetPlayersFromCurrentPlayers(out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId> Players)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineRecentPlayersList.GetPlayersFromCurrentPlayers", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -164,7 +164,7 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Function: GetPlayersFromRecentParties
     /// </summary>
-    public unsafe void GetPlayersFromRecentParties(out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId> Players)
+    public unsafe virtual void GetPlayersFromRecentParties(out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId> Players)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineRecentPlayersList.GetPlayersFromRecentParties", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -176,7 +176,7 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Function: ClearRecentParties
     /// </summary>
-    public unsafe void ClearRecentParties()
+    public unsafe virtual void ClearRecentParties()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineRecentPlayersList.ClearRecentParties", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -187,7 +187,7 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Function: AddPartyToRecentParties
     /// </summary>
-    public unsafe void AddPartyToRecentParties(BmSDK.Engine.OnlineSubsystem.FUniqueNetId PartyLeader, out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId> PartyMembers)
+    public unsafe virtual void AddPartyToRecentParties(BmSDK.Engine.OnlineSubsystem.FUniqueNetId PartyLeader, out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId> PartyMembers)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineRecentPlayersList.AddPartyToRecentParties", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -200,7 +200,7 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Function: ClearRecentPlayers
     /// </summary>
-    public unsafe void ClearRecentPlayers()
+    public unsafe virtual void ClearRecentPlayers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineRecentPlayersList.ClearRecentPlayers", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -211,7 +211,7 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Function: AddPlayerToRecentPlayers
     /// </summary>
-    public unsafe void AddPlayerToRecentPlayers(BmSDK.Engine.OnlineSubsystem.FUniqueNetId NewPlayer)
+    public unsafe virtual void AddPlayerToRecentPlayers(BmSDK.Engine.OnlineSubsystem.FUniqueNetId NewPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineRecentPlayersList.AddPlayerToRecentPlayers", true);
         byte* paramsPtr = stackalloc byte[12];

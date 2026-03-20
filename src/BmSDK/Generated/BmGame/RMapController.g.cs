@@ -71,7 +71,7 @@ public partial class RMapController : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetThreatValue
     /// </summary>
-    public unsafe void SetThreatValue(int XYZ, float threatAmount, bool bImmediate = default)
+    public unsafe virtual void SetThreatValue(int XYZ, float threatAmount, bool bImmediate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMapController.SetThreatValue", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -85,7 +85,7 @@ public partial class RMapController : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe void Update()
+    public unsafe virtual void Update()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMapController.Update", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -96,7 +96,7 @@ public partial class RMapController : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetupMeshMaterials
     /// </summary>
-    public unsafe void SetupMeshMaterials()
+    public unsafe virtual void SetupMeshMaterials()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMapController.SetupMeshMaterials", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class RMapController : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMapController.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -47,7 +47,7 @@ public partial class MSeqAct_HackingUpdate : BmSDK.Engine.SeqAct_Latent, BmSDK.I
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSeqAct_HackingUpdate.Update", true);
         byte* paramsPtr = stackalloc byte[8];

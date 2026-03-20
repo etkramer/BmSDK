@@ -71,7 +71,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: AllowLongRangeInteraction
     /// </summary>
-    public unsafe bool AllowLongRangeInteraction(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool AllowLongRangeInteraction(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.AllowLongRangeInteraction", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: PulledByBatclaw
     /// </summary>
-    public unsafe void PulledByBatclaw(BmSDK.BmGame.RHarpoonGun Puller, float TimeOut = default)
+    public unsafe virtual void PulledByBatclaw(BmSDK.BmGame.RHarpoonGun Puller, float TimeOut = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.PulledByBatclaw", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -96,7 +96,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: CanReachItem
     /// </summary>
-    public unsafe bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
+    public unsafe virtual bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.CanReachItem", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -108,7 +108,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: OverridesRun
     /// </summary>
-    public unsafe float OverridesRun(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual float OverridesRun(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.OverridesRun", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -120,7 +120,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: OverridePreviousLines
     /// </summary>
-    public unsafe bool OverridePreviousLines()
+    public unsafe virtual bool OverridePreviousLines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.OverridePreviousLines", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -131,7 +131,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: GetInteractButton
     /// </summary>
-    public unsafe BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton GetInteractButton(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton GetInteractButton(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.GetInteractButton", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -143,7 +143,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: GetForceOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetForceOrigin()
+    public unsafe virtual System.Numerics.Vector3 GetForceOrigin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.GetForceOrigin", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -154,7 +154,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: StopForce
     /// </summary>
-    public unsafe void StopForce()
+    public unsafe virtual void StopForce()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.StopForce", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -165,7 +165,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -177,7 +177,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.Interact", true);
         byte* paramsPtr = stackalloc byte[152];
@@ -189,7 +189,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: CanUseInCinematicMode
     /// </summary>
-    public unsafe bool CanUseInCinematicMode()
+    public unsafe virtual bool CanUseInCinematicMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.CanUseInCinematicMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -200,7 +200,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: MustBeCrouched
     /// </summary>
-    public unsafe bool MustBeCrouched(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool MustBeCrouched(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.MustBeCrouched", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -212,7 +212,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: IsButtonPrompt
     /// </summary>
-    public unsafe bool IsButtonPrompt()
+    public unsafe virtual bool IsButtonPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.IsButtonPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -223,7 +223,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: GetUpperPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetUpperPrompt()
+    public unsafe virtual BmSDK.FString GetUpperPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.GetUpperPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -234,7 +234,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.IsActive", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -246,7 +246,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: GetPriority
     /// </summary>
-    public unsafe float GetPriority()
+    public unsafe virtual float GetPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.GetPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -257,7 +257,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: GetFOVDegrees
     /// </summary>
-    public unsafe float GetFOVDegrees(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual float GetFOVDegrees(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.GetFOVDegrees", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -269,7 +269,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: GetLocationOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLocationOffset()
+    public unsafe virtual System.Numerics.Vector3 GetLocationOffset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.GetLocationOffset", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -280,7 +280,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: GetHeightRange
     /// </summary>
-    public unsafe float GetHeightRange()
+    public unsafe virtual float GetHeightRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.GetHeightRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -291,7 +291,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: GetRange
     /// </summary>
-    public unsafe float GetRange()
+    public unsafe virtual float GetRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.GetRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -302,7 +302,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe virtual BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -314,7 +314,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: GetClosestAnchorPoint
     /// </summary>
-    public unsafe int GetClosestAnchorPoint(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual int GetClosestAnchorPoint(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.GetClosestAnchorPoint", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -326,7 +326,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: GetAnchorPointPositionAndRotation
     /// </summary>
-    public unsafe bool GetAnchorPointPositionAndRotation(int I, out System.Numerics.Vector3 Out_Position, out BmSDK.Rotator out_Rotation)
+    public unsafe virtual bool GetAnchorPointPositionAndRotation(int I, out System.Numerics.Vector3 Out_Position, out BmSDK.Rotator out_Rotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.GetAnchorPointPositionAndRotation", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -347,7 +347,7 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// Function: GetEstimatedMaxHarpoonDragFriction
     /// </summary>
-    public unsafe float GetEstimatedMaxHarpoonDragFriction()
+    public unsafe virtual float GetEstimatedMaxHarpoonDragFriction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragPhysicsBase.GetEstimatedMaxHarpoonDragFriction", true);
         byte* paramsPtr = stackalloc byte[4];

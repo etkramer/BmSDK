@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_GeneratorSmash : BmSDK.BmGame.RAlertEventCo
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_GeneratorSmash.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Sub_GeneratorSmash : BmSDK.BmGame.RAlertEventCo
     /// <summary>
     /// Function: PawnCanShootFromCurrentPos
     /// </summary>
-    public unsafe bool PawnCanShootFromCurrentPos()
+    public unsafe virtual bool PawnCanShootFromCurrentPos()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_GeneratorSmash.PawnCanShootFromCurrentPos", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RAEC_Search_Sub_GeneratorSmash : BmSDK.BmGame.RAlertEventCo
     /// <summary>
     /// Function: BuildGenSearch
     /// </summary>
-    public unsafe void BuildGenSearch()
+    public unsafe virtual void BuildGenSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_GeneratorSmash.BuildGenSearch", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -104,7 +104,7 @@ public partial class RAEC_Search_Sub_GeneratorSmash : BmSDK.BmGame.RAlertEventCo
     /// <summary>
     /// Function: ClearGenSearch
     /// </summary>
-    public unsafe void ClearGenSearch()
+    public unsafe virtual void ClearGenSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_GeneratorSmash.ClearGenSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RAEC_Search_Sub_GeneratorSmash : BmSDK.BmGame.RAlertEventCo
     /// <summary>
     /// Function: AtUltimateDest
     /// </summary>
-    public unsafe void AtUltimateDest()
+    public unsafe virtual void AtUltimateDest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_GeneratorSmash.AtUltimateDest", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RAEC_Search_Sub_GeneratorSmash : BmSDK.BmGame.RAlertEventCo
     /// <summary>
     /// Function: NotifyGunEmpty
     /// </summary>
-    public unsafe void NotifyGunEmpty()
+    public unsafe override void NotifyGunEmpty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_GeneratorSmash.NotifyGunEmpty", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -137,7 +137,7 @@ public partial class RAEC_Search_Sub_GeneratorSmash : BmSDK.BmGame.RAlertEventCo
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_GeneratorSmash.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -148,7 +148,7 @@ public partial class RAEC_Search_Sub_GeneratorSmash : BmSDK.BmGame.RAlertEventCo
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_GeneratorSmash.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];

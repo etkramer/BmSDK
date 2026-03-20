@@ -71,7 +71,7 @@ public partial class MAEC_ShootStickyConcussionGrenade : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// Function: StartNavSearch
     /// </summary>
-    public unsafe void StartNavSearch()
+    public unsafe virtual void StartNavSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_ShootStickyConcussionGrenade.StartNavSearch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class MAEC_ShootStickyConcussionGrenade : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// Function: GatherPointsFromCenter
     /// </summary>
-    public unsafe void GatherPointsFromCenter(System.Numerics.Vector3 TargetLoc, BmSDK.Rotator rotator1, float Radius)
+    public unsafe virtual void GatherPointsFromCenter(System.Numerics.Vector3 TargetLoc, BmSDK.Rotator rotator1, float Radius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_ShootStickyConcussionGrenade.GatherPointsFromCenter", true);
         byte* paramsPtr = stackalloc byte[116];
@@ -96,7 +96,7 @@ public partial class MAEC_ShootStickyConcussionGrenade : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// Function: StartGatherPointsFromCenter
     /// </summary>
-    public unsafe void StartGatherPointsFromCenter()
+    public unsafe virtual void StartGatherPointsFromCenter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_ShootStickyConcussionGrenade.StartGatherPointsFromCenter", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -107,7 +107,7 @@ public partial class MAEC_ShootStickyConcussionGrenade : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// Function: InitSubGoal
     /// </summary>
-    public unsafe void InitSubGoal(BmSDK.BmGame.RNavigationHandle NavHandle = default)
+    public unsafe virtual void InitSubGoal(BmSDK.BmGame.RNavigationHandle NavHandle = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_ShootStickyConcussionGrenade.InitSubGoal", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -119,7 +119,7 @@ public partial class MAEC_ShootStickyConcussionGrenade : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_ShootStickyConcussionGrenade.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class MAEC_ShootStickyConcussionGrenade : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// Function: ClearNavHandles
     /// </summary>
-    public unsafe void ClearNavHandles()
+    public unsafe virtual void ClearNavHandles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_ShootStickyConcussionGrenade.ClearNavHandles", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class MAEC_ShootStickyConcussionGrenade : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// Function: OnAssign
     /// </summary>
-    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe override void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_ShootStickyConcussionGrenade.OnAssign", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -153,7 +153,7 @@ public partial class MAEC_ShootStickyConcussionGrenade : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// Function: GetBarkPriority
     /// </summary>
-    public unsafe int GetBarkPriority()
+    public unsafe override int GetBarkPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_ShootStickyConcussionGrenade.GetBarkPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -164,7 +164,7 @@ public partial class MAEC_ShootStickyConcussionGrenade : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// Function: OnRemoveSoloChild
     /// </summary>
-    public unsafe void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
+    public unsafe override void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_ShootStickyConcussionGrenade.OnRemoveSoloChild", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -176,7 +176,7 @@ public partial class MAEC_ShootStickyConcussionGrenade : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_ShootStickyConcussionGrenade.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: XI_SetZoom
     /// </summary>
-    public unsafe void XI_SetZoom(float InZoom)
+    public unsafe virtual void XI_SetZoom(float InZoom)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.XI_SetZoom", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: PopupRequester_Callback
     /// </summary>
-    public unsafe void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
+    public unsafe override void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.PopupRequester_Callback", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -61,7 +61,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: XI_BatCaveCustomContentAction
     /// </summary>
-    public unsafe void XI_BatCaveCustomContentAction(BmSDK.FString sAction)
+    public unsafe virtual void XI_BatCaveCustomContentAction(BmSDK.FString sAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.XI_BatCaveCustomContentAction", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -73,7 +73,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: XI_BatCaveAnimate
     /// </summary>
-    public unsafe void XI_BatCaveAnimate()
+    public unsafe virtual void XI_BatCaveAnimate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.XI_BatCaveAnimate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -84,7 +84,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: XI_BatCaveNoir
     /// </summary>
-    public unsafe void XI_BatCaveNoir()
+    public unsafe virtual void XI_BatCaveNoir()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.XI_BatCaveNoir", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: XI_BatCaveLights
     /// </summary>
-    public unsafe void XI_BatCaveLights()
+    public unsafe virtual void XI_BatCaveLights()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.XI_BatCaveLights", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: XI_BatCaveInspect
     /// </summary>
-    public unsafe void XI_BatCaveInspect(bool bInspectMode)
+    public unsafe virtual void XI_BatCaveInspect(bool bInspectMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.XI_BatCaveInspect", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -118,7 +118,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: XI_BatCaveViewedItem
     /// </summary>
-    public unsafe void XI_BatCaveViewedItem(BmSDK.FString sItem)
+    public unsafe virtual void XI_BatCaveViewedItem(BmSDK.FString sItem)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.XI_BatCaveViewedItem", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -130,7 +130,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: XI_BatCaveLoadLevels
     /// </summary>
-    public unsafe void XI_BatCaveLoadLevels(BmSDK.FString sLevels, BmSDK.FString sFilter)
+    public unsafe virtual void XI_BatCaveLoadLevels(BmSDK.FString sLevels, BmSDK.FString sFilter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.XI_BatCaveLoadLevels", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -143,7 +143,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: XI_BatCaveSelectSkin
     /// </summary>
-    public unsafe void XI_BatCaveSelectSkin(BmSDK.FString sSkin)
+    public unsafe virtual void XI_BatCaveSelectSkin(BmSDK.FString sSkin)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.XI_BatCaveSelectSkin", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -155,7 +155,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: XI_BatCaveSelectCamera
     /// </summary>
-    public unsafe void XI_BatCaveSelectCamera(BmSDK.FString sCamera)
+    public unsafe virtual void XI_BatCaveSelectCamera(BmSDK.FString sCamera)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.XI_BatCaveSelectCamera", true);
         byte* paramsPtr = stackalloc byte[136];
@@ -167,7 +167,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: XI_BatCaveEnumerate
     /// </summary>
-    public unsafe void XI_BatCaveEnumerate(BmSDK.FString sTargetPath)
+    public unsafe virtual void XI_BatCaveEnumerate(BmSDK.FString sTargetPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.XI_BatCaveEnumerate", true);
         byte* paramsPtr = stackalloc byte[248];
@@ -179,7 +179,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: UC_LevelsLoaded
     /// </summary>
-    public unsafe void UC_LevelsLoaded()
+    public unsafe virtual void UC_LevelsLoaded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.UC_LevelsLoaded", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -190,7 +190,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: UC_SetInspectMode
     /// </summary>
-    public unsafe void UC_SetInspectMode(bool bInspect)
+    public unsafe virtual void UC_SetInspectMode(bool bInspect)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.UC_SetInspectMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -202,7 +202,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: UC_SetActiveSkin
     /// </summary>
-    public unsafe void UC_SetActiveSkin(BmSDK.FString sSkinPackage, bool bActive)
+    public unsafe virtual void UC_SetActiveSkin(BmSDK.FString sSkinPackage, bool bActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.UC_SetActiveSkin", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -215,7 +215,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: UC_SetItemImage
     /// </summary>
-    public unsafe void UC_SetItemImage(BmSDK.FString Stab, BmSDK.FString sItem, BmSDK.FString sImage, BmSDK.GFxUI.GFxObject iImage)
+    public unsafe virtual void UC_SetItemImage(BmSDK.FString Stab, BmSDK.FString sItem, BmSDK.FString sImage, BmSDK.GFxUI.GFxObject iImage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.UC_SetItemImage", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -230,7 +230,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: UC_AddItem
     /// </summary>
-    public unsafe void UC_AddItem(BmSDK.FString sPage, BmSDK.FString sName, BmSDK.FString sLevels, BmSDK.FString sParameters)
+    public unsafe virtual void UC_AddItem(BmSDK.FString sPage, BmSDK.FString sName, BmSDK.FString sLevels, BmSDK.FString sParameters)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.UC_AddItem", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -245,7 +245,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: CustomContentLoadedSC
     /// </summary>
-    public unsafe void CustomContentLoadedSC(bool bWasSuccessful, BmSDK.FString sCustomId)
+    public unsafe virtual void CustomContentLoadedSC(bool bWasSuccessful, BmSDK.FString sCustomId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.CustomContentLoadedSC", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -258,7 +258,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: CustomManifestLoadedSC
     /// </summary>
-    public unsafe void CustomManifestLoadedSC(bool bWasSuccessful, BmSDK.FString sCustomId)
+    public unsafe virtual void CustomManifestLoadedSC(bool bWasSuccessful, BmSDK.FString sCustomId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.CustomManifestLoadedSC", true);
         byte* paramsPtr = stackalloc byte[256];
@@ -271,7 +271,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: LevelStreamShowActive
     /// </summary>
-    public unsafe void LevelStreamShowActive(bool bShow)
+    public unsafe virtual void LevelStreamShowActive(bool bShow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.LevelStreamShowActive", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -283,7 +283,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: LevelStreamLoadReferences
     /// </summary>
-    public unsafe int LevelStreamLoadReferences(BmSDK.FString sLevels, BmSDK.FString sFilter)
+    public unsafe virtual int LevelStreamLoadReferences(BmSDK.FString sLevels, BmSDK.FString sFilter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.LevelStreamLoadReferences", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -296,7 +296,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: LevelStreamLoaded
     /// </summary>
-    public unsafe bool LevelStreamLoaded()
+    public unsafe virtual bool LevelStreamLoaded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.LevelStreamLoaded", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -307,7 +307,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: LevelStreamStoreOriginals
     /// </summary>
-    public unsafe void LevelStreamStoreOriginals()
+    public unsafe virtual void LevelStreamStoreOriginals()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.LevelStreamStoreOriginals", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -318,7 +318,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: LevelStreamInArray
     /// </summary>
-    public unsafe bool LevelStreamInArray(BmSDK.TArray<BmSDK.FString> aArray, BmSDK.FString sName)
+    public unsafe virtual bool LevelStreamInArray(BmSDK.TArray<BmSDK.FString> aArray, BmSDK.FString sName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.LevelStreamInArray", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -331,7 +331,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: ForceLoadTexturesRequestMultiLevel
     /// </summary>
-    public unsafe void ForceLoadTexturesRequestMultiLevel(BmSDK.TArray<BmSDK.FString> Levels)
+    public unsafe virtual void ForceLoadTexturesRequestMultiLevel(BmSDK.TArray<BmSDK.FString> Levels)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.ForceLoadTexturesRequestMultiLevel", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -343,7 +343,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: TimerLoadingLevels
     /// </summary>
-    public unsafe void TimerLoadingLevels()
+    public unsafe virtual void TimerLoadingLevels()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.TimerLoadingLevels", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -354,7 +354,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: TimerStreamingTextures
     /// </summary>
-    public unsafe void TimerStreamingTextures()
+    public unsafe virtual void TimerStreamingTextures()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.TimerStreamingTextures", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -365,7 +365,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: LightsOnDelay
     /// </summary>
-    public unsafe void LightsOnDelay()
+    public unsafe virtual void LightsOnDelay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.LightsOnDelay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -376,7 +376,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: XI_OnOut
     /// </summary>
-    public unsafe void XI_OnOut()
+    public unsafe override void XI_OnOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.XI_OnOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -387,7 +387,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: CloseScreen
     /// </summary>
-    public unsafe void CloseScreen()
+    public unsafe override void CloseScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.CloseScreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -398,7 +398,7 @@ public partial class RGFxMovieUI_BatCave : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer iPlayer = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer iPlayer = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_BatCave.Init", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -66,7 +66,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe virtual void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: DrawVis
     /// </summary>
-    public unsafe void DrawVis()
+    public unsafe virtual void DrawVis()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.DrawVis", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -88,7 +88,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: GetAIThoughts
     /// </summary>
-    public unsafe void GetAIThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe virtual void GetAIThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.GetAIThoughts", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -100,7 +100,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: BeginShutdown
     /// </summary>
-    public unsafe void BeginShutdown()
+    public unsafe virtual void BeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.BeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -111,7 +111,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: ThugHitByStrike
     /// </summary>
-    public unsafe void ThugHitByStrike()
+    public unsafe virtual void ThugHitByStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.ThugHitByStrike", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -122,7 +122,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: CanDodgeProjectile
     /// </summary>
-    public unsafe bool CanDodgeProjectile(System.Numerics.Vector3 ThrownFromPos, int CheckBatarangID)
+    public unsafe virtual bool CanDodgeProjectile(System.Numerics.Vector3 ThrownFromPos, int CheckBatarangID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.CanDodgeProjectile", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -135,7 +135,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: WantsToGlanceAt
     /// </summary>
-    public unsafe bool WantsToGlanceAt(BmSDK.Engine.Actor TestTarget)
+    public unsafe virtual bool WantsToGlanceAt(BmSDK.Engine.Actor TestTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.WantsToGlanceAt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -147,7 +147,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: NotifyGunEmpty
     /// </summary>
-    public unsafe void NotifyGunEmpty()
+    public unsafe virtual void NotifyGunEmpty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.NotifyGunEmpty", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -158,7 +158,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: NotifyPathEdgeReached
     /// </summary>
-    public unsafe void NotifyPathEdgeReached(BmSDK.BmGame.RBMAIAction NotifyAction, BmSDK.BmGame.RNavigationHandle NotifyHandle, int EdgeID)
+    public unsafe virtual void NotifyPathEdgeReached(BmSDK.BmGame.RBMAIAction NotifyAction, BmSDK.BmGame.RNavigationHandle NotifyHandle, int EdgeID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.NotifyPathEdgeReached", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -172,7 +172,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: NotifyPathFound
     /// </summary>
-    public unsafe void NotifyPathFound(BmSDK.BmGame.RBMAIAction NotifyAction, BmSDK.BmGame.RNavigationHandle NotifyHandle)
+    public unsafe virtual void NotifyPathFound(BmSDK.BmGame.RBMAIAction NotifyAction, BmSDK.BmGame.RNavigationHandle NotifyHandle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.NotifyPathFound", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -185,7 +185,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: NotifyEvent
     /// </summary>
-    public unsafe void NotifyEvent(BmSDK.BmGame.RBMAIAction NotifyAction, BmSDK.FString EventType)
+    public unsafe virtual void NotifyEvent(BmSDK.BmGame.RBMAIAction NotifyAction, BmSDK.FString EventType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.NotifyEvent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -198,7 +198,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe virtual void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -210,7 +210,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: NotifyStopped
     /// </summary>
-    public unsafe void NotifyStopped(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe virtual void NotifyStopped(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.NotifyStopped", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -222,7 +222,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe virtual void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -234,7 +234,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: OnVillainStolen
     /// </summary>
-    public unsafe void OnVillainStolen()
+    public unsafe virtual void OnVillainStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.OnVillainStolen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -245,7 +245,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: VillainStolen
     /// </summary>
-    public unsafe void VillainStolen(BmSDK.BmGame.RBMAIController Stolen, BmSDK.BmGame.RAlertEventCoordinatorSolo StealingAEC)
+    public unsafe virtual void VillainStolen(BmSDK.BmGame.RBMAIController Stolen, BmSDK.BmGame.RAlertEventCoordinatorSolo StealingAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.VillainStolen", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -258,7 +258,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: AssignToEvent
     /// </summary>
-    public unsafe void AssignToEvent(BmSDK.BmGame.RBMAIController Con)
+    public unsafe virtual void AssignToEvent(BmSDK.BmGame.RBMAIController Con)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.AssignToEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -270,7 +270,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe virtual void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -281,7 +281,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: StartChild
     /// </summary>
-    public unsafe bool StartChild(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe virtual bool StartChild(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.StartChild", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -293,7 +293,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: SetParent
     /// </summary>
-    public unsafe void SetParent(BmSDK.BmGame.RAlertEventCoordinatorBase NewParent)
+    public unsafe virtual void SetParent(BmSDK.BmGame.RAlertEventCoordinatorBase NewParent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.SetParent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -305,7 +305,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: ProjectPointOntoPlane
     /// </summary>
-    public unsafe System.Numerics.Vector3 ProjectPointOntoPlane(out System.Numerics.Vector3 rPlaneNormal, out System.Numerics.Vector3 rPointOnPlane, out System.Numerics.Vector3 rPoint)
+    public unsafe virtual System.Numerics.Vector3 ProjectPointOntoPlane(out System.Numerics.Vector3 rPlaneNormal, out System.Numerics.Vector3 rPointOnPlane, out System.Numerics.Vector3 rPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.ProjectPointOntoPlane", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -326,7 +326,7 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: GetParentOfClass
     /// </summary>
-    public unsafe BmSDK.BmGame.RAlertEventCoordinatorBase GetParentOfClass(BmSDK.Class TestClass)
+    public unsafe virtual BmSDK.BmGame.RAlertEventCoordinatorBase GetParentOfClass(BmSDK.Class TestClass)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlertEventCoordinatorSolo.GetParentOfClass", true);
         byte* paramsPtr = stackalloc byte[16];

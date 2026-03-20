@@ -36,7 +36,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: ShowRiddle
     /// </summary>
-    public unsafe void ShowRiddle(bool bShow, BmSDK.FString RiddleText)
+    public unsafe virtual void ShowRiddle(bool bShow, BmSDK.FString RiddleText)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.ShowRiddle", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -49,7 +49,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: ShowCredits
     /// </summary>
-    public unsafe void ShowCredits(float Delay, BmSDK.TArray<BmSDK.FString> CreditList)
+    public unsafe virtual void ShowCredits(float Delay, BmSDK.TArray<BmSDK.FString> CreditList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.ShowCredits", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -62,7 +62,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: ShowCreditsAS
     /// </summary>
-    public unsafe void ShowCreditsAS(float Delay)
+    public unsafe virtual void ShowCreditsAS(float Delay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.ShowCreditsAS", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -74,7 +74,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetZoomMode
     /// </summary>
-    public unsafe void SetZoomMode(bool bEnabled)
+    public unsafe virtual void SetZoomMode(bool bEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetZoomMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -86,7 +86,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetInfoText
     /// </summary>
-    public unsafe void SetInfoText(BmSDK.FString PadText, BmSDK.FString AltPcText, int Justification = default)
+    public unsafe virtual void SetInfoText(BmSDK.FString PadText, BmSDK.FString AltPcText, int Justification = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetInfoText", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -100,7 +100,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: ClockTimerExpired
     /// </summary>
-    public unsafe void ClockTimerExpired()
+    public unsafe virtual void ClockTimerExpired()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.ClockTimerExpired", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -111,7 +111,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: OffsetClockTimer
     /// </summary>
-    public unsafe void OffsetClockTimer(int nHundredthsOfSeconds, bool bBonus)
+    public unsafe virtual void OffsetClockTimer(int nHundredthsOfSeconds, bool bBonus)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.OffsetClockTimer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -124,7 +124,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: PauseClockTimer
     /// </summary>
-    public unsafe void PauseClockTimer(bool bPause)
+    public unsafe virtual void PauseClockTimer(bool bPause)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.PauseClockTimer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -136,7 +136,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetClockTimer
     /// </summary>
-    public unsafe void SetClockTimer(int nHundredthsOfSeconds, bool bVisible, bool bWarning)
+    public unsafe virtual void SetClockTimer(int nHundredthsOfSeconds, bool bVisible, bool bWarning)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetClockTimer", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -150,7 +150,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: ClearPromptsPrivate
     /// </summary>
-    public unsafe void ClearPromptsPrivate()
+    public unsafe virtual void ClearPromptsPrivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.ClearPromptsPrivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -161,7 +161,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SendBatchPromptsPrivate
     /// </summary>
-    public unsafe void SendBatchPromptsPrivate(BmSDK.FString BatchPromptsString)
+    public unsafe virtual void SendBatchPromptsPrivate(BmSDK.FString BatchPromptsString)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SendBatchPromptsPrivate", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -173,7 +173,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: FlushBatchPrompts
     /// </summary>
-    public unsafe void FlushBatchPrompts()
+    public unsafe virtual void FlushBatchPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.FlushBatchPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -184,7 +184,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetPromptPrivate
     /// </summary>
-    public unsafe void SetPromptPrivate(int Id, bool bMain, BmSDK.FString PadText, BmSDK.FString PCText, BmSDK.FString Label, float Alpha)
+    public unsafe virtual void SetPromptPrivate(int Id, bool bMain, BmSDK.FString PadText, BmSDK.FString PCText, BmSDK.FString Label, float Alpha)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetPromptPrivate", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -201,7 +201,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetMainPrompt
     /// </summary>
-    public unsafe void SetMainPrompt(int Id, BmSDK.FString Label, float Alpha = default)
+    public unsafe virtual void SetMainPrompt(int Id, BmSDK.FString Label, float Alpha = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetMainPrompt", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -215,7 +215,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetPrompt
     /// </summary>
-    public unsafe void SetPrompt(int Id, BmSDK.FString Label, float Alpha = default, bool bAsMain = default)
+    public unsafe virtual void SetPrompt(int Id, BmSDK.FString Label, float Alpha = default, bool bAsMain = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetPrompt", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -230,7 +230,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: ReLayoutPrompts
     /// </summary>
-    public unsafe void ReLayoutPrompts()
+    public unsafe virtual void ReLayoutPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.ReLayoutPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -241,7 +241,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: ClearPrompts
     /// </summary>
-    public unsafe void ClearPrompts()
+    public unsafe virtual void ClearPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.ClearPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -252,7 +252,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetOneShotWarningMessage
     /// </summary>
-    public unsafe void SetOneShotWarningMessage(BmSDK.FString NewWarningMessage, bool HighPriority)
+    public unsafe virtual void SetOneShotWarningMessage(BmSDK.FString NewWarningMessage, bool HighPriority)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetOneShotWarningMessage", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -265,7 +265,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetCommandBeaconCharge
     /// </summary>
-    public unsafe void SetCommandBeaconCharge(float Percentage)
+    public unsafe virtual void SetCommandBeaconCharge(float Percentage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetCommandBeaconCharge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -277,7 +277,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetWarningBar
     /// </summary>
-    public unsafe void SetWarningBar(float BarValue)
+    public unsafe virtual void SetWarningBar(float BarValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetWarningBar", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -289,7 +289,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetWarningMessage
     /// </summary>
-    public unsafe void SetWarningMessage(BmSDK.FString NewWarningMessage)
+    public unsafe virtual void SetWarningMessage(BmSDK.FString NewWarningMessage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetWarningMessage", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -301,7 +301,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetGenericHudMessage
     /// </summary>
-    public unsafe void SetGenericHudMessage(BmSDK.FString the_message, bool centre_message)
+    public unsafe virtual void SetGenericHudMessage(BmSDK.FString the_message, bool centre_message)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetGenericHudMessage", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -314,7 +314,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: DXI_ThreatLevelOutroComplete
     /// </summary>
-    public unsafe void DXI_ThreatLevelOutroComplete()
+    public unsafe virtual void DXI_ThreatLevelOutroComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.DXI_ThreatLevelOutroComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -325,7 +325,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetThreatLevel
     /// </summary>
-    public unsafe void SetThreatLevel(BmSDK.FString sCityName, BmSDK.FString sThreats, bool bBatmobileAvailable, bool bTutorialMode, int _ThreatLevelNumIcons)
+    public unsafe virtual void SetThreatLevel(BmSDK.FString sCityName, BmSDK.FString sThreats, bool bBatmobileAvailable, bool bTutorialMode, int _ThreatLevelNumIcons)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetThreatLevel", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -341,7 +341,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetThreatLevelPrivate
     /// </summary>
-    public unsafe void SetThreatLevelPrivate(BmSDK.FString sCityName, BmSDK.FString sThreats, bool bBatmobileAvailable, bool bFullIntroAnimation)
+    public unsafe virtual void SetThreatLevelPrivate(BmSDK.FString sCityName, BmSDK.FString sThreats, bool bBatmobileAvailable, bool bFullIntroAnimation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetThreatLevelPrivate", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -356,7 +356,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: ThreatLevelSuppressesSurveillance
     /// </summary>
-    public unsafe void ThreatLevelSuppressesSurveillance(bool do_suppress)
+    public unsafe virtual void ThreatLevelSuppressesSurveillance(bool do_suppress)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.ThreatLevelSuppressesSurveillance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -368,7 +368,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: FlushThreatLevel
     /// </summary>
-    public unsafe void FlushThreatLevel()
+    public unsafe virtual void FlushThreatLevel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.FlushThreatLevel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -379,7 +379,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: HideThreatLevel
     /// </summary>
-    public unsafe void HideThreatLevel()
+    public unsafe virtual void HideThreatLevel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.HideThreatLevel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -390,7 +390,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: DXI_Story_OpenWheelOnCached
     /// </summary>
-    public unsafe void DXI_Story_OpenWheelOnCached()
+    public unsafe virtual void DXI_Story_OpenWheelOnCached()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.DXI_Story_OpenWheelOnCached", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -401,7 +401,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: DXI_Story_OpenWheelOn
     /// </summary>
-    public unsafe void DXI_Story_OpenWheelOn(BmSDK.FString sType, BmSDK.FString sMission)
+    public unsafe virtual void DXI_Story_OpenWheelOn(BmSDK.FString sType, BmSDK.FString sMission)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.DXI_Story_OpenWheelOn", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -414,7 +414,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: DXI_Story_ShowDiscovery
     /// </summary>
-    public unsafe void DXI_Story_ShowDiscovery(BmSDK.FString IconName)
+    public unsafe virtual void DXI_Story_ShowDiscovery(BmSDK.FString IconName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.DXI_Story_ShowDiscovery", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -426,7 +426,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: QueueDiscoveryPrivate
     /// </summary>
-    public unsafe void QueueDiscoveryPrivate(BmSDK.FString discovery_string)
+    public unsafe virtual void QueueDiscoveryPrivate(BmSDK.FString discovery_string)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.QueueDiscoveryPrivate", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -438,7 +438,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: QueueDiscoveryChallengeRevealed
     /// </summary>
-    public unsafe void QueueDiscoveryChallengeRevealed(int NumReveals, float SecondsDuration = default)
+    public unsafe virtual void QueueDiscoveryChallengeRevealed(int NumReveals, float SecondsDuration = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.QueueDiscoveryChallengeRevealed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -451,7 +451,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: QueueDiscoveryChallenge
     /// </summary>
-    public unsafe void QueueDiscoveryChallenge(BmSDK.FString ItemName, int nId = default, float SecondsDuration = default)
+    public unsafe virtual void QueueDiscoveryChallenge(BmSDK.FString ItemName, int nId = default, float SecondsDuration = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.QueueDiscoveryChallenge", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -465,7 +465,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: QueueDiscoverySideStory
     /// </summary>
-    public unsafe void QueueDiscoverySideStory(BmSDK.FString SideStoryName, BmSDK.FString ItemName, float SecondsDuration = default)
+    public unsafe virtual void QueueDiscoverySideStory(BmSDK.FString SideStoryName, BmSDK.FString ItemName, float SecondsDuration = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.QueueDiscoverySideStory", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -479,7 +479,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetIntelVisiblePrivate
     /// </summary>
-    public unsafe void SetIntelVisiblePrivate(bool Visible, bool show_quietly)
+    public unsafe virtual void SetIntelVisiblePrivate(bool Visible, bool show_quietly)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetIntelVisiblePrivate", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -492,7 +492,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: UpdateIntelVisible
     /// </summary>
-    public unsafe void UpdateIntelVisible(bool quietly)
+    public unsafe virtual void UpdateIntelVisible(bool quietly)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.UpdateIntelVisible", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -504,7 +504,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetIntelSystemVisuallySuppressed
     /// </summary>
-    public unsafe void SetIntelSystemVisuallySuppressed(bool suppressed)
+    public unsafe virtual void SetIntelSystemVisuallySuppressed(bool suppressed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetIntelSystemVisuallySuppressed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -516,7 +516,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: UpdateIntelRequestStatus
     /// </summary>
-    public unsafe void UpdateIntelRequestStatus()
+    public unsafe virtual void UpdateIntelRequestStatus()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.UpdateIntelRequestStatus", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -527,7 +527,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: TurnOffIntel
     /// </summary>
-    public unsafe void TurnOffIntel()
+    public unsafe virtual void TurnOffIntel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.TurnOffIntel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -538,7 +538,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: ResetIntelRequestCountdown
     /// </summary>
-    public unsafe void ResetIntelRequestCountdown()
+    public unsafe virtual void ResetIntelRequestCountdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.ResetIntelRequestCountdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -549,7 +549,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetIntelSystemSuppressed
     /// </summary>
-    public unsafe void SetIntelSystemSuppressed(bool suppressed)
+    public unsafe virtual void SetIntelSystemSuppressed(bool suppressed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetIntelSystemSuppressed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -561,7 +561,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetApcIntelVisible
     /// </summary>
-    public unsafe void SetApcIntelVisible(bool Visible)
+    public unsafe virtual void SetApcIntelVisible(bool Visible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetApcIntelVisible", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -573,7 +573,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetPenguinIntelVisible
     /// </summary>
-    public unsafe void SetPenguinIntelVisible(bool Visible)
+    public unsafe virtual void SetPenguinIntelVisible(bool Visible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetPenguinIntelVisible", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -585,7 +585,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetIntelVisible
     /// </summary>
-    public unsafe void SetIntelVisible(bool Visible)
+    public unsafe virtual void SetIntelVisible(bool Visible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetIntelVisible", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -597,7 +597,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetExclusivePromptsMode
     /// </summary>
-    public unsafe void SetExclusivePromptsMode(bool exclusive_prompts)
+    public unsafe virtual void SetExclusivePromptsMode(bool exclusive_prompts)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetExclusivePromptsMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -609,7 +609,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetLapCount
     /// </summary>
-    public unsafe void SetLapCount(int lap, int maxLap)
+    public unsafe virtual void SetLapCount(int lap, int maxLap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.SetLapCount", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -622,7 +622,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: ToggleLapCount
     /// </summary>
-    public unsafe void ToggleLapCount(bool _lapCountOn)
+    public unsafe virtual void ToggleLapCount(bool _lapCountOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.ToggleLapCount", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -634,7 +634,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: DetonateExplosiveGel
     /// </summary>
-    public unsafe void DetonateExplosiveGel()
+    public unsafe virtual void DetonateExplosiveGel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.DetonateExplosiveGel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -645,7 +645,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: ShowExplosiveGelCount
     /// </summary>
-    public unsafe void ShowExplosiveGelCount(int NumVictims, bool WillKnockdown)
+    public unsafe virtual void ShowExplosiveGelCount(int NumVictims, bool WillKnockdown)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.ShowExplosiveGelCount", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -658,7 +658,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -669,7 +669,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: InitialiseFlash
     /// </summary>
-    public unsafe void InitialiseFlash()
+    public unsafe override void InitialiseFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.InitialiseFlash", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -680,7 +680,7 @@ public partial class RHudModuleStoryMode : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleStoryMode.Init", true);
         byte* paramsPtr = stackalloc byte[44];

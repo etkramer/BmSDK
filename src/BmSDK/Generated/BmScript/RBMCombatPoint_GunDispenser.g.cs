@@ -66,7 +66,7 @@ public partial class RBMCombatPoint_GunDispenser : BmSDK.BmGame.RBMCombatPoint_G
     /// <summary>
     /// Function: AlarmOff
     /// </summary>
-    public unsafe void AlarmOff()
+    public unsafe override void AlarmOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_GunDispenser.AlarmOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class RBMCombatPoint_GunDispenser : BmSDK.BmGame.RBMCombatPoint_G
     /// <summary>
     /// Function: AlarmOn
     /// </summary>
-    public unsafe void AlarmOn()
+    public unsafe override void AlarmOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_GunDispenser.AlarmOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -88,7 +88,7 @@ public partial class RBMCombatPoint_GunDispenser : BmSDK.BmGame.RBMCombatPoint_G
     /// <summary>
     /// Function: HideGun
     /// </summary>
-    public unsafe void HideGun()
+    public unsafe virtual void HideGun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_GunDispenser.HideGun", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -99,7 +99,7 @@ public partial class RBMCombatPoint_GunDispenser : BmSDK.BmGame.RBMCombatPoint_G
     /// <summary>
     /// Function: SwapGun
     /// </summary>
-    public unsafe void SwapGun()
+    public unsafe virtual void SwapGun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_GunDispenser.SwapGun", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -110,7 +110,7 @@ public partial class RBMCombatPoint_GunDispenser : BmSDK.BmGame.RBMCombatPoint_G
     /// <summary>
     /// Function: RemoveDoor
     /// </summary>
-    public unsafe void RemoveDoor(BmSDK.BmGame.RPawnVillain DoorRemover)
+    public unsafe virtual void RemoveDoor(BmSDK.BmGame.RPawnVillain DoorRemover)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_GunDispenser.RemoveDoor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -122,7 +122,7 @@ public partial class RBMCombatPoint_GunDispenser : BmSDK.BmGame.RBMCombatPoint_G
     /// <summary>
     /// Function: UsedByPawn
     /// </summary>
-    public unsafe void UsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.Engine.Actor NewTarget = default, bool bUsedDuringTaunt = default)
+    public unsafe override void UsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.Engine.Actor NewTarget = default, bool bUsedDuringTaunt = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_GunDispenser.UsedByPawn", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -136,7 +136,7 @@ public partial class RBMCombatPoint_GunDispenser : BmSDK.BmGame.RBMCombatPoint_G
     /// <summary>
     /// Function: CanBeUsedByPawn
     /// </summary>
-    public unsafe bool CanBeUsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.Engine.Actor TargetActor, bool bTaunting)
+    public unsafe override bool CanBeUsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.Engine.Actor TargetActor, bool bTaunting)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_GunDispenser.CanBeUsedByPawn", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -150,7 +150,7 @@ public partial class RBMCombatPoint_GunDispenser : BmSDK.BmGame.RBMCombatPoint_G
     /// <summary>
     /// Function: GetMoveToPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMoveToPoint()
+    public unsafe override System.Numerics.Vector3 GetMoveToPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_GunDispenser.GetMoveToPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -161,7 +161,7 @@ public partial class RBMCombatPoint_GunDispenser : BmSDK.BmGame.RBMCombatPoint_G
     /// <summary>
     /// Function: GetAnimRefYaw
     /// </summary>
-    public unsafe int GetAnimRefYaw()
+    public unsafe virtual int GetAnimRefYaw()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_GunDispenser.GetAnimRefYaw", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -172,7 +172,7 @@ public partial class RBMCombatPoint_GunDispenser : BmSDK.BmGame.RBMCombatPoint_G
     /// <summary>
     /// Function: GetAnimRefPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAnimRefPoint()
+    public unsafe virtual System.Numerics.Vector3 GetAnimRefPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_GunDispenser.GetAnimRefPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -183,7 +183,7 @@ public partial class RBMCombatPoint_GunDispenser : BmSDK.BmGame.RBMCombatPoint_G
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_GunDispenser.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -47,7 +47,7 @@ public partial class RBMBehaviour_HideoutAmbushThug : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HideoutAmbushThug.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_HideoutAmbushThug : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: ManuallyDodgeProjectile
     /// </summary>
-    public unsafe bool ManuallyDodgeProjectile()
+    public unsafe override bool ManuallyDodgeProjectile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HideoutAmbushThug.ManuallyDodgeProjectile", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_HideoutAmbushThug : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: CanDodgeProjectile
     /// </summary>
-    public unsafe bool CanDodgeProjectile(System.Numerics.Vector3 ThrownFromPos, int CheckBatarangID)
+    public unsafe override bool CanDodgeProjectile(System.Numerics.Vector3 ThrownFromPos, int CheckBatarangID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HideoutAmbushThug.CanDodgeProjectile", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -82,7 +82,7 @@ public partial class RBMBehaviour_HideoutAmbushThug : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: SpawnAttack
     /// </summary>
-    public unsafe void SpawnAttack()
+    public unsafe virtual void SpawnAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HideoutAmbushThug.SpawnAttack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RBMBehaviour_HideoutAmbushThug : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HideoutAmbushThug.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RBMBehaviour_HideoutAmbushThug : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: OnEndInterrupt
     /// </summary>
-    public unsafe void OnEndInterrupt()
+    public unsafe override void OnEndInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HideoutAmbushThug.OnEndInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RBMBehaviour_HideoutAmbushThug : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HideoutAmbushThug.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RBMBehaviour_HideoutAmbushThug : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: GetReady
     /// </summary>
-    public unsafe void GetReady()
+    public unsafe virtual void GetReady()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HideoutAmbushThug.GetReady", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RBMBehaviour_HideoutAmbushThug : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HideoutAmbushThug.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -150,7 +150,7 @@ public partial class RBMBehaviour_HideoutAmbushThug : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: DropWeaponHere
     /// </summary>
-    public unsafe void DropWeaponHere()
+    public unsafe virtual void DropWeaponHere()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HideoutAmbushThug.DropWeaponHere", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -161,7 +161,7 @@ public partial class RBMBehaviour_HideoutAmbushThug : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: CanSeeBatman
     /// </summary>
-    public unsafe bool CanSeeBatman()
+    public unsafe virtual bool CanSeeBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HideoutAmbushThug.CanSeeBatman", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -172,7 +172,7 @@ public partial class RBMBehaviour_HideoutAmbushThug : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: CanSeeBatmobile
     /// </summary>
-    public unsafe bool CanSeeBatmobile()
+    public unsafe virtual bool CanSeeBatmobile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HideoutAmbushThug.CanSeeBatmobile", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -183,7 +183,7 @@ public partial class RBMBehaviour_HideoutAmbushThug : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: CanBatmanGrab
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIController.BatmanGrabType CanBatmanGrab()
+    public unsafe override BmSDK.BmGame.RBMAIController.BatmanGrabType CanBatmanGrab()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HideoutAmbushThug.CanBatmanGrab", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -194,7 +194,7 @@ public partial class RBMBehaviour_HideoutAmbushThug : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HideoutAmbushThug.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

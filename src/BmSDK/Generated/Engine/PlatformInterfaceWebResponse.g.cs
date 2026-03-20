@@ -36,7 +36,7 @@ public partial class PlatformInterfaceWebResponse : BmSDK.GameObject, BmSDK.IGam
     /// <summary>
     /// Function: GetHeaderValue
     /// </summary>
-    public unsafe BmSDK.FString GetHeaderValue(BmSDK.FString HeaderName)
+    public unsafe virtual BmSDK.FString GetHeaderValue(BmSDK.FString HeaderName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlatformInterfaceWebResponse.GetHeaderValue", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -55,7 +55,7 @@ public partial class PlatformInterfaceWebResponse : BmSDK.GameObject, BmSDK.IGam
     /// <summary>
     /// Function: GetHeader
     /// </summary>
-    public unsafe void GetHeader(int HeaderIndex, out BmSDK.FString Header, out BmSDK.FString Value)
+    public unsafe virtual void GetHeader(int HeaderIndex, out BmSDK.FString Header, out BmSDK.FString Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlatformInterfaceWebResponse.GetHeader", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -76,7 +76,7 @@ public partial class PlatformInterfaceWebResponse : BmSDK.GameObject, BmSDK.IGam
     /// <summary>
     /// Function: GetNumHeaders
     /// </summary>
-    public unsafe int GetNumHeaders()
+    public unsafe virtual int GetNumHeaders()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlatformInterfaceWebResponse.GetNumHeaders", true);
         byte* paramsPtr = stackalloc byte[4];

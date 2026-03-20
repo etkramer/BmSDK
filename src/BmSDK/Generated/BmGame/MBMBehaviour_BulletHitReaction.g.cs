@@ -36,7 +36,7 @@ public partial class MBMBehaviour_BulletHitReaction : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMBehaviour_BulletHitReaction.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class MBMBehaviour_BulletHitReaction : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: TargetGoRagdoll
     /// </summary>
-    public unsafe void TargetGoRagdoll()
+    public unsafe override void TargetGoRagdoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMBehaviour_BulletHitReaction.TargetGoRagdoll", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class MBMBehaviour_BulletHitReaction : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmGame.RPawnCombat.FDamageInfo NewDmgInfo, bool bNewInterruptedHitReaction = default)
+    public unsafe override void Initialise(BmSDK.BmGame.RPawnCombat.FDamageInfo NewDmgInfo, bool bNewInterruptedHitReaction = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMBehaviour_BulletHitReaction.Initialise", true);
         byte* paramsPtr = stackalloc byte[252];

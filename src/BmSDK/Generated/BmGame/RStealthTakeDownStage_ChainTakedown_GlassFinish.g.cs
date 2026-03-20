@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_ChainTakedown_GlassFinish : BmSDK.BmG
     /// <summary>
     /// Function: DoGlassTakedownChallengeGoalEvent
     /// </summary>
-    public unsafe void DoGlassTakedownChallengeGoalEvent(BmSDK.BmGame.RPawnVillain TheVictim)
+    public unsafe virtual void DoGlassTakedownChallengeGoalEvent(BmSDK.BmGame.RPawnVillain TheVictim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ChainTakedown_GlassFinish.DoGlassTakedownChallengeGoalEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RStealthTakeDownStage_ChainTakedown_GlassFinish : BmSDK.BmG
     /// <summary>
     /// Function: FinishAttackVictim
     /// </summary>
-    public unsafe bool FinishAttackVictim(int iVictimNumber)
+    public unsafe override bool FinishAttackVictim(int iVictimNumber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ChainTakedown_GlassFinish.FinishAttackVictim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -95,7 +95,7 @@ public partial class RStealthTakeDownStage_ChainTakedown_GlassFinish : BmSDK.BmG
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ChainTakedown_GlassFinish.Begin", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RStealthTakeDownStage_ChainTakedown_GlassFinish : BmSDK.BmG
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ChainTakedown_GlassFinish.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -119,7 +119,7 @@ public partial class RStealthTakeDownStage_ChainTakedown_GlassFinish : BmSDK.BmG
     /// <summary>
     /// Function: GlassFinishSmash
     /// </summary>
-    public unsafe void GlassFinishSmash()
+    public unsafe virtual void GlassFinishSmash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ChainTakedown_GlassFinish.GlassFinishSmash", true);
         byte* paramsPtr = stackalloc byte[0];

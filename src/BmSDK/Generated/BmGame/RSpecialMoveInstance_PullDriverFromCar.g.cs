@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_PullDriverFromCar : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: StopAnimFollowingCar
     /// </summary>
-    public unsafe void StopAnimFollowingCar()
+    public unsafe virtual void StopAnimFollowingCar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PullDriverFromCar.StopAnimFollowingCar", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_PullDriverFromCar : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: WatchCar
     /// </summary>
-    public unsafe void WatchCar()
+    public unsafe virtual void WatchCar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PullDriverFromCar.WatchCar", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RSpecialMoveInstance_PullDriverFromCar : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: ExplodeBonnet
     /// </summary>
-    public unsafe void ExplodeBonnet()
+    public unsafe virtual void ExplodeBonnet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PullDriverFromCar.ExplodeBonnet", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -104,7 +104,7 @@ public partial class RSpecialMoveInstance_PullDriverFromCar : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: PunchWindowRHand
     /// </summary>
-    public unsafe void PunchWindowRHand()
+    public unsafe virtual void PunchWindowRHand()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PullDriverFromCar.PunchWindowRHand", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RSpecialMoveInstance_PullDriverFromCar : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: PunchWindowLHand
     /// </summary>
-    public unsafe void PunchWindowLHand()
+    public unsafe virtual void PunchWindowLHand()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PullDriverFromCar.PunchWindowLHand", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RSpecialMoveInstance_PullDriverFromCar : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: AboutToJumpOff
     /// </summary>
-    public unsafe void AboutToJumpOff()
+    public unsafe virtual void AboutToJumpOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PullDriverFromCar.AboutToJumpOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -137,7 +137,7 @@ public partial class RSpecialMoveInstance_PullDriverFromCar : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: TargetGoRagdoll
     /// </summary>
-    public unsafe void TargetGoRagdoll()
+    public unsafe virtual void TargetGoRagdoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PullDriverFromCar.TargetGoRagdoll", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -148,7 +148,7 @@ public partial class RSpecialMoveInstance_PullDriverFromCar : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: FlipCar
     /// </summary>
-    public unsafe void FlipCar()
+    public unsafe virtual void FlipCar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PullDriverFromCar.FlipCar", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -159,7 +159,7 @@ public partial class RSpecialMoveInstance_PullDriverFromCar : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: DriverRescued
     /// </summary>
-    public unsafe void DriverRescued()
+    public unsafe virtual void DriverRescued()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PullDriverFromCar.DriverRescued", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -170,7 +170,7 @@ public partial class RSpecialMoveInstance_PullDriverFromCar : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PullDriverFromCar.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -182,7 +182,7 @@ public partial class RSpecialMoveInstance_PullDriverFromCar : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: PunchWindow
     /// </summary>
-    public unsafe void PunchWindow(BmSDK.FName BoneName)
+    public unsafe virtual void PunchWindow(BmSDK.FName BoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PullDriverFromCar.PunchWindow", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -194,7 +194,7 @@ public partial class RSpecialMoveInstance_PullDriverFromCar : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PullDriverFromCar.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -205,7 +205,7 @@ public partial class RSpecialMoveInstance_PullDriverFromCar : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PullDriverFromCar.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[148];
@@ -217,7 +217,7 @@ public partial class RSpecialMoveInstance_PullDriverFromCar : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: PickRandomAnim
     /// </summary>
-    public unsafe void PickRandomAnim()
+    public unsafe override void PickRandomAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PullDriverFromCar.PickRandomAnim", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -36,7 +36,7 @@ public partial class RBMBehaviour_DefaultIdle : BmSDK.BmGame.RBMBehaviour_Idle, 
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DefaultIdle.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_DefaultIdle : BmSDK.BmGame.RBMBehaviour_Idle, 
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DefaultIdle.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_DefaultIdle : BmSDK.BmGame.RBMBehaviour_Idle, 
     /// <summary>
     /// Function: CanLookAtPlayer
     /// </summary>
-    public unsafe bool CanLookAtPlayer()
+    public unsafe override bool CanLookAtPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DefaultIdle.CanLookAtPlayer", true);
         byte* paramsPtr = stackalloc byte[4];

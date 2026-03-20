@@ -71,7 +71,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ForceTraceOff
     /// </summary>
-    public unsafe void ForceTraceOff(BmSDK.Engine.Actor A)
+    public unsafe virtual void ForceTraceOff(BmSDK.Engine.Actor A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.ForceTraceOff", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -90,7 +90,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ForceTraceOn
     /// </summary>
-    public unsafe void ForceTraceOn(BmSDK.Engine.Actor A, float timeForTrace = default)
+    public unsafe virtual void ForceTraceOn(BmSDK.Engine.Actor A, float timeForTrace = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.ForceTraceOn", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -110,7 +110,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ReassignWeapon
     /// </summary>
-    public unsafe void ReassignWeapon(BmSDK.Engine.Actor Weapon, BmSDK.Engine.Actor A)
+    public unsafe virtual void ReassignWeapon(BmSDK.Engine.Actor Weapon, BmSDK.Engine.Actor A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.ReassignWeapon", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -130,7 +130,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StartFireAudio
     /// </summary>
-    public unsafe void StartFireAudio(BmSDK.Engine.Actor Weapon, BmSDK.Engine.Actor A, bool doLoop, BmSDK.Engine.AkEvent loopingFireSound, BmSDK.Engine.AkEvent FireSound)
+    public unsafe virtual void StartFireAudio(BmSDK.Engine.Actor Weapon, BmSDK.Engine.Actor A, bool doLoop, BmSDK.Engine.AkEvent loopingFireSound, BmSDK.Engine.AkEvent FireSound)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.StartFireAudio", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -153,7 +153,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsEnemyFiring
     /// </summary>
-    public unsafe bool IsEnemyFiring(BmSDK.Engine.Actor A)
+    public unsafe virtual bool IsEnemyFiring(BmSDK.Engine.Actor A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.IsEnemyFiring", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -172,7 +172,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnregisterEnemy
     /// </summary>
-    public unsafe void UnregisterEnemy(BmSDK.Engine.Actor A)
+    public unsafe virtual void UnregisterEnemy(BmSDK.Engine.Actor A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.UnregisterEnemy", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -191,7 +191,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterEnemy
     /// </summary>
-    public unsafe void RegisterEnemy(BmSDK.Engine.Actor A, BmSDK.Engine.ParticleSystemComponent bulletTrace, bool IsFiring = default, BmSDK.BmGame.RGunShotManager.EGunType Gun = default, int GunIndex = default)
+    public unsafe virtual void RegisterEnemy(BmSDK.Engine.Actor A, BmSDK.Engine.ParticleSystemComponent bulletTrace, bool IsFiring = default, BmSDK.BmGame.RGunShotManager.EGunType Gun = default, int GunIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.RegisterEnemy", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -214,7 +214,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveFlyingVehicle
     /// </summary>
-    public unsafe void RemoveFlyingVehicle(BmSDK.Engine.Actor A)
+    public unsafe virtual void RemoveFlyingVehicle(BmSDK.Engine.Actor A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.RemoveFlyingVehicle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -233,7 +233,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddFlyingVehicle
     /// </summary>
-    public unsafe void AddFlyingVehicle(BmSDK.Engine.Actor A)
+    public unsafe virtual void AddFlyingVehicle(BmSDK.Engine.Actor A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.AddFlyingVehicle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -252,7 +252,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveVehicle
     /// </summary>
-    public unsafe void RemoveVehicle(BmSDK.Engine.Actor A)
+    public unsafe virtual void RemoveVehicle(BmSDK.Engine.Actor A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.RemoveVehicle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -271,7 +271,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddVehicle
     /// </summary>
-    public unsafe void AddVehicle(BmSDK.Engine.Actor A)
+    public unsafe virtual void AddVehicle(BmSDK.Engine.Actor A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.AddVehicle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -290,7 +290,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveVehicleFiring
     /// </summary>
-    public unsafe void RemoveVehicleFiring(BmSDK.Engine.Actor A)
+    public unsafe virtual void RemoveVehicleFiring(BmSDK.Engine.Actor A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.RemoveVehicleFiring", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -309,7 +309,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AllowVehicleAudio
     /// </summary>
-    public unsafe bool AllowVehicleAudio(BmSDK.Engine.Actor A)
+    public unsafe virtual bool AllowVehicleAudio(BmSDK.Engine.Actor A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.AllowVehicleAudio", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -328,7 +328,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddVehicleFiring
     /// </summary>
-    public unsafe void AddVehicleFiring(BmSDK.Engine.Actor A, float DecayTime)
+    public unsafe virtual void AddVehicleFiring(BmSDK.Engine.Actor A, float DecayTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.AddVehicleFiring", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -348,7 +348,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AllowEnemyAudio
     /// </summary>
-    public unsafe bool AllowEnemyAudio(BmSDK.Engine.Actor A)
+    public unsafe virtual bool AllowEnemyAudio(BmSDK.Engine.Actor A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.AllowEnemyAudio", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -367,7 +367,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveEnemyFiring
     /// </summary>
-    public unsafe void RemoveEnemyFiring(BmSDK.Engine.Actor A, BmSDK.Engine.Actor Weapon)
+    public unsafe virtual void RemoveEnemyFiring(BmSDK.Engine.Actor A, BmSDK.Engine.Actor Weapon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.RemoveEnemyFiring", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -387,7 +387,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddEnemyFiring
     /// </summary>
-    public unsafe void AddEnemyFiring(BmSDK.Engine.Actor A)
+    public unsafe virtual void AddEnemyFiring(BmSDK.Engine.Actor A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.AddEnemyFiring", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -406,7 +406,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TickDuringPostUpdate
     /// </summary>
-    public unsafe void TickDuringPostUpdate(float dt)
+    public unsafe virtual void TickDuringPostUpdate(float dt)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.TickDuringPostUpdate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -425,7 +425,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TickSpecial
     /// </summary>
-    public unsafe void TickSpecial(float dt)
+    public unsafe virtual void TickSpecial(float dt)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.TickSpecial", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -444,7 +444,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddGunShot
     /// </summary>
-    public unsafe void AddGunShot(BmSDK.Engine.Actor weaponOwner, System.Numerics.Vector3 StartPos, System.Numerics.Vector3 EndPos, BmSDK.Rotator trajectory, BmSDK.Engine.Actor.FImpactInfo Impact, BmSDK.Engine.RPhysicalMaterialProperty ImpactMaterial, BmSDK.Engine.AkEvent BulletBy, bool hasHitPlayer, BmSDK.Engine.RPhysicalMaterialProperty.EPhysMaterialImpactTypes FireType = default)
+    public unsafe virtual void AddGunShot(BmSDK.Engine.Actor weaponOwner, System.Numerics.Vector3 StartPos, System.Numerics.Vector3 EndPos, BmSDK.Rotator trajectory, BmSDK.Engine.Actor.FImpactInfo Impact, BmSDK.Engine.RPhysicalMaterialProperty ImpactMaterial, BmSDK.Engine.AkEvent BulletBy, bool hasHitPlayer, BmSDK.Engine.RPhysicalMaterialProperty.EPhysMaterialImpactTypes FireType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.AddGunShot", true);
         byte* paramsPtr = stackalloc byte[161];
@@ -471,7 +471,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveRocket
     /// </summary>
-    public unsafe void RemoveRocket(BmSDK.Engine.Actor trackingRocket)
+    public unsafe virtual void RemoveRocket(BmSDK.Engine.Actor trackingRocket)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.RemoveRocket", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -490,7 +490,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddRocket
     /// </summary>
-    public unsafe void AddRocket(BmSDK.Engine.Actor trackingRocket, BmSDK.Engine.AkEvent rocketByEvent, float timeAwayToTrigger = default)
+    public unsafe virtual void AddRocket(BmSDK.Engine.Actor trackingRocket, BmSDK.Engine.AkEvent rocketByEvent, float timeAwayToTrigger = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.AddRocket", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -511,7 +511,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SlowMotion
     /// </summary>
-    public unsafe void SlowMotion(bool IsEnabled)
+    public unsafe virtual void SlowMotion(bool IsEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.SlowMotion", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -523,7 +523,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnBulletFX
     /// </summary>
-    public unsafe void SpawnBulletFX(BmSDK.BmGame.RBMWeaponRanged Weapon, BmSDK.Engine.Actor weaponOwner, System.Numerics.Vector3 StartLoc, BmSDK.Engine.Actor.FImpactInfo Impact, bool hasHitPlayer, BmSDK.Engine.RPhysicalMaterialProperty.EPhysMaterialImpactTypes FireType = default, bool shotGunBy = default)
+    public unsafe virtual void SpawnBulletFX(BmSDK.BmGame.RBMWeaponRanged Weapon, BmSDK.Engine.Actor weaponOwner, System.Numerics.Vector3 StartLoc, BmSDK.Engine.Actor.FImpactInfo Impact, bool hasHitPlayer, BmSDK.Engine.RPhysicalMaterialProperty.EPhysMaterialImpactTypes FireType = default, bool shotGunBy = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.SpawnBulletFX", true);
         byte* paramsPtr = stackalloc byte[172];
@@ -541,7 +541,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetImpactMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.RPhysicalMaterialProperty GetImpactMaterial(BmSDK.Engine.Actor.FImpactInfo Impact)
+    public unsafe virtual BmSDK.Engine.RPhysicalMaterialProperty GetImpactMaterial(BmSDK.Engine.Actor.FImpactInfo Impact)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.GetImpactMaterial", true);
         byte* paramsPtr = stackalloc byte[104];
@@ -553,7 +553,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddBulletBy
     /// </summary>
-    public unsafe void AddBulletBy(BmSDK.BmGame.RBMWeapon Weapon, System.Numerics.Vector3 StartLoc, BmSDK.Engine.Actor.FImpactInfo Impact, BmSDK.Engine.AkEvent eventToUse = default)
+    public unsafe virtual void AddBulletBy(BmSDK.BmGame.RBMWeapon Weapon, System.Numerics.Vector3 StartLoc, BmSDK.Engine.Actor.FImpactInfo Impact, BmSDK.Engine.AkEvent eventToUse = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.AddBulletBy", true);
         byte* paramsPtr = stackalloc byte[124];
@@ -568,7 +568,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FillInAudio
     /// </summary>
-    public unsafe void FillInAudio(BmSDK.Engine.Actor A, BmSDK.Engine.Actor GunWeapon, BmSDK.Engine.Actor GunInstigator, BmSDK.BmGame.RGunShotManager.EGunType WeaponDefine, out BmSDK.Engine.AkEvent WeaponLoop, out BmSDK.Engine.AkEvent WeaponSingle, out float SecondsBetweenShots, BmSDK.Engine.ParticleSystemComponent bulletTrace)
+    public unsafe virtual void FillInAudio(BmSDK.Engine.Actor A, BmSDK.Engine.Actor GunWeapon, BmSDK.Engine.Actor GunInstigator, BmSDK.BmGame.RGunShotManager.EGunType WeaponDefine, out BmSDK.Engine.AkEvent WeaponLoop, out BmSDK.Engine.AkEvent WeaponSingle, out float SecondsBetweenShots, BmSDK.Engine.ParticleSystemComponent bulletTrace)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.FillInAudio", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -587,7 +587,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetUpAudio
     /// </summary>
-    public unsafe void SetUpAudio(BmSDK.Engine.Actor A, BmSDK.BmGame.RBMWeaponRanged Weapon, BmSDK.Engine.ParticleSystemComponent bulletTrace)
+    public unsafe virtual void SetUpAudio(BmSDK.Engine.Actor A, BmSDK.BmGame.RBMWeaponRanged Weapon, BmSDK.Engine.ParticleSystemComponent bulletTrace)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.SetUpAudio", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -601,7 +601,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Shuffle
     /// </summary>
-    public unsafe void Shuffle()
+    public unsafe virtual void Shuffle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.Shuffle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -612,7 +612,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGunShotManager.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class RSeqAct_VehicleEnemySpawner : BmSDK.BmGame.RSeqAct_SpawnVeh
     /// <summary>
     /// Function: GetClosestVehicle
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle GetClosestVehicle(System.Numerics.Vector3 ToLocation)
+    public unsafe virtual BmSDK.BmGame.RVehicle GetClosestVehicle(System.Numerics.Vector3 ToLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.GetClosestVehicle", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -48,7 +48,7 @@ public partial class RSeqAct_VehicleEnemySpawner : BmSDK.BmGame.RSeqAct_SpawnVeh
     /// <summary>
     /// Function: GetThreatToAdd
     /// </summary>
-    public unsafe int GetThreatToAdd()
+    public unsafe virtual int GetThreatToAdd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.GetThreatToAdd", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RSeqAct_VehicleEnemySpawner : BmSDK.BmGame.RSeqAct_SpawnVeh
     /// <summary>
     /// Function: GetProportionRemaining
     /// </summary>
-    public unsafe float GetProportionRemaining()
+    public unsafe virtual float GetProportionRemaining()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.GetProportionRemaining", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -70,7 +70,7 @@ public partial class RSeqAct_VehicleEnemySpawner : BmSDK.BmGame.RSeqAct_SpawnVeh
     /// <summary>
     /// Function: SpawnedActorsDebugKilled
     /// </summary>
-    public unsafe void SpawnedActorsDebugKilled()
+    public unsafe virtual void SpawnedActorsDebugKilled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.SpawnedActorsDebugKilled", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RSeqAct_VehicleEnemySpawner : BmSDK.BmGame.RSeqAct_SpawnVeh
     /// <summary>
     /// Function: SpawnedActorCriticalHit
     /// </summary>
-    public unsafe void SpawnedActorCriticalHit(BmSDK.Engine.Actor ExActor, bool KillingHit)
+    public unsafe virtual void SpawnedActorCriticalHit(BmSDK.Engine.Actor ExActor, bool KillingHit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.SpawnedActorCriticalHit", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -94,7 +94,7 @@ public partial class RSeqAct_VehicleEnemySpawner : BmSDK.BmGame.RSeqAct_SpawnVeh
     /// <summary>
     /// Function: SpawnedActorDied
     /// </summary>
-    public unsafe void SpawnedActorDied(BmSDK.Engine.Actor ExActor)
+    public unsafe override void SpawnedActorDied(BmSDK.Engine.Actor ExActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.SpawnedActorDied", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RSeqAct_VehicleEnemySpawner : BmSDK.BmGame.RSeqAct_SpawnVeh
     /// <summary>
     /// Function: SpawnedActorBatmanSeen
     /// </summary>
-    public unsafe void SpawnedActorBatmanSeen(BmSDK.Engine.Actor ExActor)
+    public unsafe override void SpawnedActorBatmanSeen(BmSDK.Engine.Actor ExActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.SpawnedActorBatmanSeen", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RSeqAct_VehicleEnemySpawner : BmSDK.BmGame.RSeqAct_SpawnVeh
     /// <summary>
     /// Function: ForceUpdateAliveEnemies
     /// </summary>
-    public unsafe void ForceUpdateAliveEnemies()
+    public unsafe virtual void ForceUpdateAliveEnemies()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.ForceUpdateAliveEnemies", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -168,7 +168,7 @@ public partial class RSeqAct_VehicleEnemySpawner : BmSDK.BmGame.RSeqAct_SpawnVeh
     /// <summary>
     /// Function: ActorDied
     /// </summary>
-    public unsafe void ActorDied()
+    public unsafe virtual void ActorDied()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.ActorDied", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -216,7 +216,7 @@ public partial class RSeqAct_VehicleEnemySpawner : BmSDK.BmGame.RSeqAct_SpawnVeh
     /// <summary>
     /// Function: GetNearestAvailableSpawnPoint
     /// </summary>
-    public unsafe bool GetNearestAvailableSpawnPoint(out System.Numerics.Vector3 SpawnLoc, out BmSDK.Rotator SpawnRot, BmSDK.Engine.Actor TestPlayer, System.Numerics.Vector3 CameraLoc, BmSDK.Engine.Actor TemplateActor, float MinimumRange, float MinimumSpacing, BmSDK.BmGame.RVehicleNPC leader, bool SpawnOnScreen = default, bool _SpawnInLineOfSight = default, BmSDK.BmGame.RRoadNetwork.FRoadRouteRestriction Restriction = default, System.Numerics.Vector3 TestPlayerLoc = default)
+    public unsafe virtual bool GetNearestAvailableSpawnPoint(out System.Numerics.Vector3 SpawnLoc, out BmSDK.Rotator SpawnRot, BmSDK.Engine.Actor TestPlayer, System.Numerics.Vector3 CameraLoc, BmSDK.Engine.Actor TemplateActor, float MinimumRange, float MinimumSpacing, BmSDK.BmGame.RVehicleNPC leader, bool SpawnOnScreen = default, bool _SpawnInLineOfSight = default, BmSDK.BmGame.RRoadNetwork.FRoadRouteRestriction Restriction = default, System.Numerics.Vector3 TestPlayerLoc = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.GetNearestAvailableSpawnPoint", true);
         byte* paramsPtr = stackalloc byte[260];
@@ -246,7 +246,7 @@ public partial class RSeqAct_VehicleEnemySpawner : BmSDK.BmGame.RSeqAct_SpawnVeh
     /// <summary>
     /// Function: ChooseRandomTurretLocation
     /// </summary>
-    public unsafe bool ChooseRandomTurretLocation(out System.Numerics.Vector3 SpawnLoc, out BmSDK.Rotator SpawnRot, BmSDK.Engine.Actor TestPlayer, System.Numerics.Vector3 CameraLoc, BmSDK.Engine.Actor TemplateActor, float MinimumRange, float MinimumSpacing, bool _SpawnInLineOfSight = default)
+    public unsafe virtual bool ChooseRandomTurretLocation(out System.Numerics.Vector3 SpawnLoc, out BmSDK.Rotator SpawnRot, BmSDK.Engine.Actor TestPlayer, System.Numerics.Vector3 CameraLoc, BmSDK.Engine.Actor TemplateActor, float MinimumRange, float MinimumSpacing, bool _SpawnInLineOfSight = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.ChooseRandomTurretLocation", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -272,7 +272,7 @@ public partial class RSeqAct_VehicleEnemySpawner : BmSDK.BmGame.RSeqAct_SpawnVeh
     /// <summary>
     /// Function: ChangeNumActiveEnemies
     /// </summary>
-    public unsafe void ChangeNumActiveEnemies(int Type, int NewEnemyCount, bool UpdateDesired = default)
+    public unsafe virtual void ChangeNumActiveEnemies(int Type, int NewEnemyCount, bool UpdateDesired = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.ChangeNumActiveEnemies", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -293,7 +293,7 @@ public partial class RSeqAct_VehicleEnemySpawner : BmSDK.BmGame.RSeqAct_SpawnVeh
     /// <summary>
     /// Function: GetNumActiveEnemies
     /// </summary>
-    public unsafe int GetNumActiveEnemies(int Type)
+    public unsafe virtual int GetNumActiveEnemies(int Type)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.GetNumActiveEnemies", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -312,7 +312,7 @@ public partial class RSeqAct_VehicleEnemySpawner : BmSDK.BmGame.RSeqAct_SpawnVeh
     /// <summary>
     /// Function: DebugRenderBehaviourVolumes
     /// </summary>
-    public unsafe void DebugRenderBehaviourVolumes()
+    public unsafe virtual void DebugRenderBehaviourVolumes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.DebugRenderBehaviourVolumes", true);
         byte* paramsPtr = stackalloc byte[0];

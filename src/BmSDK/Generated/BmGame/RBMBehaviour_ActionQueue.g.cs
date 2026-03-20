@@ -36,7 +36,7 @@ public partial class RBMBehaviour_ActionQueue : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: PlayRandomBark
     /// </summary>
-    public unsafe bool PlayRandomBark()
+    public unsafe override bool PlayRandomBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ActionQueue.PlayRandomBark", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_ActionQueue : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: NotifyPathFound
     /// </summary>
-    public unsafe void NotifyPathFound(BmSDK.BmGame.RBMAIAction NotifyAction)
+    public unsafe virtual void NotifyPathFound(BmSDK.BmGame.RBMAIAction NotifyAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ActionQueue.NotifyPathFound", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_ActionQueue : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: NotifyEvent
     /// </summary>
-    public unsafe void NotifyEvent(BmSDK.BmGame.RBMAIAction NotifyAction, BmSDK.FString EventType)
+    public unsafe virtual void NotifyEvent(BmSDK.BmGame.RBMAIAction NotifyAction, BmSDK.FString EventType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ActionQueue.NotifyEvent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -72,7 +72,7 @@ public partial class RBMBehaviour_ActionQueue : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe virtual void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ActionQueue.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -84,7 +84,7 @@ public partial class RBMBehaviour_ActionQueue : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: NotifyStopped
     /// </summary>
-    public unsafe void NotifyStopped(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe virtual void NotifyStopped(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ActionQueue.NotifyStopped", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -96,7 +96,7 @@ public partial class RBMBehaviour_ActionQueue : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe virtual void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ActionQueue.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -108,7 +108,7 @@ public partial class RBMBehaviour_ActionQueue : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: GunFired
     /// </summary>
-    public unsafe void GunFired()
+    public unsafe override void GunFired()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ActionQueue.GunFired", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -119,7 +119,7 @@ public partial class RBMBehaviour_ActionQueue : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: OnEndInterrupt
     /// </summary>
-    public unsafe void OnEndInterrupt()
+    public unsafe override void OnEndInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ActionQueue.OnEndInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class RBMBehaviour_ActionQueue : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ActionQueue.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RBMBehaviour_ActionQueue : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ActionQueue.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -152,7 +152,7 @@ public partial class RBMBehaviour_ActionQueue : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ActionQueue.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

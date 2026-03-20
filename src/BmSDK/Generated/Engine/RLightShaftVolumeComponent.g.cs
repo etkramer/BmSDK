@@ -36,7 +36,7 @@ public partial class RLightShaftVolumeComponent : BmSDK.Engine.PrimitiveComponen
     /// <summary>
     /// Function: SetEnabled
     /// </summary>
-    public unsafe void SetEnabled(bool NewEnabled)
+    public unsafe virtual void SetEnabled(bool NewEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RLightShaftVolumeComponent.SetEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -55,7 +55,7 @@ public partial class RLightShaftVolumeComponent : BmSDK.Engine.PrimitiveComponen
     /// <summary>
     /// Function: UpdateBrightness
     /// </summary>
-    public unsafe bool UpdateBrightness(float NewBrightness)
+    public unsafe virtual bool UpdateBrightness(float NewBrightness)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RLightShaftVolumeComponent.UpdateBrightness", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -74,7 +74,7 @@ public partial class RLightShaftVolumeComponent : BmSDK.Engine.PrimitiveComponen
     /// <summary>
     /// Function: SetConeAngleAndRadius
     /// </summary>
-    public unsafe bool SetConeAngleAndRadius(float NewConeAngle, float NewRadius)
+    public unsafe virtual bool SetConeAngleAndRadius(float NewConeAngle, float NewRadius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RLightShaftVolumeComponent.SetConeAngleAndRadius", true);
         byte* paramsPtr = stackalloc byte[12];

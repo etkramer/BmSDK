@@ -36,7 +36,7 @@ public partial class RGFxMovieModularHud_TargetsEtc : BmSDK.BmGame.RGFxMovieModu
     /// <summary>
     /// Function: ManualAdvanceTick
     /// </summary>
-    public unsafe void ManualAdvanceTick(float DeltaT)
+    public unsafe override void ManualAdvanceTick(float DeltaT)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud_TargetsEtc.ManualAdvanceTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RGFxMovieModularHud_TargetsEtc : BmSDK.BmGame.RGFxMovieModu
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud_TargetsEtc.Init", true);
         byte* paramsPtr = stackalloc byte[8];

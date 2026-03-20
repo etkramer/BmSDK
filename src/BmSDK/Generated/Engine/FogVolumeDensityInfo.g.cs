@@ -66,7 +66,7 @@ public partial class FogVolumeDensityInfo : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: ApplyCheckpointRecord
     /// </summary>
-    public unsafe void ApplyCheckpointRecord(out BmSDK.Engine.FogVolumeDensityInfo.FCheckpointRecord Record)
+    public unsafe virtual void ApplyCheckpointRecord(out BmSDK.Engine.FogVolumeDensityInfo.FCheckpointRecord Record)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FogVolumeDensityInfo.ApplyCheckpointRecord", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -78,7 +78,7 @@ public partial class FogVolumeDensityInfo : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: CreateCheckpointRecord
     /// </summary>
-    public unsafe void CreateCheckpointRecord(out BmSDK.Engine.FogVolumeDensityInfo.FCheckpointRecord Record)
+    public unsafe virtual void CreateCheckpointRecord(out BmSDK.Engine.FogVolumeDensityInfo.FCheckpointRecord Record)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FogVolumeDensityInfo.CreateCheckpointRecord", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -90,7 +90,7 @@ public partial class FogVolumeDensityInfo : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldSaveForCheckpoint
     /// </summary>
-    public unsafe bool ShouldSaveForCheckpoint()
+    public unsafe virtual bool ShouldSaveForCheckpoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FogVolumeDensityInfo.ShouldSaveForCheckpoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -101,7 +101,7 @@ public partial class FogVolumeDensityInfo : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FogVolumeDensityInfo.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -113,7 +113,7 @@ public partial class FogVolumeDensityInfo : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: ReplicatedEvent
     /// </summary>
-    public unsafe void ReplicatedEvent(BmSDK.FName VarName)
+    public unsafe override void ReplicatedEvent(BmSDK.FName VarName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FogVolumeDensityInfo.ReplicatedEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -125,7 +125,7 @@ public partial class FogVolumeDensityInfo : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FogVolumeDensityInfo.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

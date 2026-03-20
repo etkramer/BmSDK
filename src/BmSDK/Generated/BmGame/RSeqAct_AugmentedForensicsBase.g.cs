@@ -42,7 +42,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: ChangeIntoOrOutOfScanMode
     /// </summary>
-    public unsafe void ChangeIntoOrOutOfScanMode(bool bInScanMode)
+    public unsafe virtual void ChangeIntoOrOutOfScanMode(bool bInScanMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.ChangeIntoOrOutOfScanMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -54,7 +54,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: AutoFillTimelineWhenScannerModeEntered
     /// </summary>
-    public unsafe void AutoFillTimelineWhenScannerModeEntered()
+    public unsafe virtual void AutoFillTimelineWhenScannerModeEntered()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.AutoFillTimelineWhenScannerModeEntered", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -65,7 +65,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: SendCursorToFlash
     /// </summary>
-    public unsafe void SendCursorToFlash()
+    public unsafe virtual void SendCursorToFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.SendCursorToFlash", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -76,7 +76,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: FillTimelineWithDirectorTrack
     /// </summary>
-    public unsafe void FillTimelineWithDirectorTrack()
+    public unsafe virtual void FillTimelineWithDirectorTrack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.FillTimelineWithDirectorTrack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -87,7 +87,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: SendTimelineToFlash
     /// </summary>
-    public unsafe void SendTimelineToFlash(BmSDK.FString timeline_anim, float director_start_prop)
+    public unsafe virtual void SendTimelineToFlash(BmSDK.FString timeline_anim, float director_start_prop)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.SendTimelineToFlash", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -100,7 +100,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: OverrideReconstructionRate
     /// </summary>
-    public unsafe void OverrideReconstructionRate(float recon_rate)
+    public unsafe virtual void OverrideReconstructionRate(float recon_rate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.OverrideReconstructionRate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -112,7 +112,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: ChangeToPlaybackDirectorTrack
     /// </summary>
-    public unsafe void ChangeToPlaybackDirectorTrack()
+    public unsafe virtual void ChangeToPlaybackDirectorTrack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.ChangeToPlaybackDirectorTrack", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -123,7 +123,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: SetDirectorAndSlomo
     /// </summary>
-    public unsafe void SetDirectorAndSlomo(int director_index, int slomo_index, int playback_director_index = default, int playback_slomo_index = default)
+    public unsafe virtual void SetDirectorAndSlomo(int director_index, int slomo_index, int playback_director_index = default, int playback_slomo_index = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.SetDirectorAndSlomo", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -138,7 +138,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: AutoPlayBack
     /// </summary>
-    public unsafe void AutoPlayBack(float start_time, float end_time, float reconstruction_end_time)
+    public unsafe virtual void AutoPlayBack(float start_time, float end_time, float reconstruction_end_time)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.AutoPlayBack", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -152,7 +152,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: SetScrubbingDirectionAudio
     /// </summary>
-    public unsafe void SetScrubbingDirectionAudio(int NewScrubbingAudioDirection)
+    public unsafe virtual void SetScrubbingDirectionAudio(int NewScrubbingAudioDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.SetScrubbingDirectionAudio", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -164,7 +164,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: SetTimeProportion
     /// </summary>
-    public unsafe void SetTimeProportion(float Proportion)
+    public unsafe virtual void SetTimeProportion(float Proportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.SetTimeProportion", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -176,7 +176,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: SetMatineeTime
     /// </summary>
-    public unsafe void SetMatineeTime(float new_time)
+    public unsafe virtual void SetMatineeTime(float new_time)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.SetMatineeTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -188,7 +188,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: SetMatineePlaypack
     /// </summary>
-    public unsafe void SetMatineePlaypack(float playback_speed)
+    public unsafe virtual void SetMatineePlaypack(float playback_speed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.SetMatineePlaypack", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -207,7 +207,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: SetActorHidden
     /// </summary>
-    public unsafe void SetActorHidden(BmSDK.Engine.Actor the_actor, bool is_hidden)
+    public unsafe virtual void SetActorHidden(BmSDK.Engine.Actor the_actor, bool is_hidden)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.SetActorHidden", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -227,7 +227,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: SetDirectorAndSloMoGroup
     /// </summary>
-    public unsafe void SetDirectorAndSloMoGroup(int director_index, int slomo_index)
+    public unsafe virtual void SetDirectorAndSloMoGroup(int director_index, int slomo_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.SetDirectorAndSloMoGroup", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -247,7 +247,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: InitialiseMatinee
     /// </summary>
-    public unsafe void InitialiseMatinee()
+    public unsafe virtual void InitialiseMatinee()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.InitialiseMatinee", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RAEC_Casualty_Sub_PointAtCas : BmSDK.BmGame.RAEC_Casualty_S
     /// <summary>
     /// Function: IsAtCasualty
     /// </summary>
-    public unsafe bool IsAtCasualty()
+    public unsafe override bool IsAtCasualty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_PointAtCas.IsAtCasualty", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RAEC_Casualty_Sub_PointAtCas : BmSDK.BmGame.RAEC_Casualty_S
     /// <summary>
     /// Function: HasDoneDiscoverGesture
     /// </summary>
-    public unsafe bool HasDoneDiscoverGesture()
+    public unsafe override bool HasDoneDiscoverGesture()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_PointAtCas.HasDoneDiscoverGesture", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RAEC_Casualty_Sub_PointAtCas : BmSDK.BmGame.RAEC_Casualty_S
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_PointAtCas.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -105,7 +105,7 @@ public partial class RAEC_Casualty_Sub_PointAtCas : BmSDK.BmGame.RAEC_Casualty_S
     /// <summary>
     /// Function: AssignCasualty
     /// </summary>
-    public unsafe void AssignCasualty(BmSDK.BmGame.RPawnVillain NewCas)
+    public unsafe override void AssignCasualty(BmSDK.BmGame.RPawnVillain NewCas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_PointAtCas.AssignCasualty", true);
         byte* paramsPtr = stackalloc byte[24];

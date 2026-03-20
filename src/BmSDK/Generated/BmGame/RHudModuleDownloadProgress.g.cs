@@ -36,7 +36,7 @@ public partial class RHudModuleDownloadProgress : BmSDK.BmGame.RHudModule, BmSDK
     /// <summary>
     /// Function: ShowOutro
     /// </summary>
-    public unsafe void ShowOutro()
+    public unsafe virtual void ShowOutro()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDownloadProgress.ShowOutro", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RHudModuleDownloadProgress : BmSDK.BmGame.RHudModule, BmSDK
     /// <summary>
     /// Function: SetDisplayMessage
     /// </summary>
-    public unsafe void SetDisplayMessage(BmSDK.FString message_text, BmSDK.FString message_animation)
+    public unsafe virtual void SetDisplayMessage(BmSDK.FString message_text, BmSDK.FString message_animation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDownloadProgress.SetDisplayMessage", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -60,7 +60,7 @@ public partial class RHudModuleDownloadProgress : BmSDK.BmGame.RHudModule, BmSDK
     /// <summary>
     /// Function: SetProgressLevel
     /// </summary>
-    public unsafe void SetProgressLevel(float Proportion)
+    public unsafe virtual void SetProgressLevel(float Proportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDownloadProgress.SetProgressLevel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -72,7 +72,7 @@ public partial class RHudModuleDownloadProgress : BmSDK.BmGame.RHudModule, BmSDK
     /// <summary>
     /// Function: XI_DownloadProgress_NotifyOutroComplete
     /// </summary>
-    public unsafe void XI_DownloadProgress_NotifyOutroComplete()
+    public unsafe virtual void XI_DownloadProgress_NotifyOutroComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDownloadProgress.XI_DownloadProgress_NotifyOutroComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -83,7 +83,7 @@ public partial class RHudModuleDownloadProgress : BmSDK.BmGame.RHudModule, BmSDK
     /// <summary>
     /// Function: XI_DownloadProgress_NotifyIntroComplete
     /// </summary>
-    public unsafe void XI_DownloadProgress_NotifyIntroComplete()
+    public unsafe virtual void XI_DownloadProgress_NotifyIntroComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDownloadProgress.XI_DownloadProgress_NotifyIntroComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RHudModuleDownloadProgress : BmSDK.BmGame.RHudModule, BmSDK
     /// <summary>
     /// Function: ShowIntro
     /// </summary>
-    public unsafe void ShowIntro(float initial_proportion)
+    public unsafe virtual void ShowIntro(float initial_proportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDownloadProgress.ShowIntro", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RHudModuleDownloadProgress : BmSDK.BmGame.RHudModule, BmSDK
     /// <summary>
     /// Function: ChangeToFailureMessage
     /// </summary>
-    public unsafe void ChangeToFailureMessage(BmSDK.FString FailureMessageText, BmSDK.FString FailureMessageAnimation = default)
+    public unsafe virtual void ChangeToFailureMessage(BmSDK.FString FailureMessageText, BmSDK.FString FailureMessageAnimation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDownloadProgress.ChangeToFailureMessage", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -119,7 +119,7 @@ public partial class RHudModuleDownloadProgress : BmSDK.BmGame.RHudModule, BmSDK
     /// <summary>
     /// Function: ChangeToCompleteMessage
     /// </summary>
-    public unsafe void ChangeToCompleteMessage(BmSDK.FString MessageText = default, BmSDK.FString MessageAnimation = default)
+    public unsafe virtual void ChangeToCompleteMessage(BmSDK.FString MessageText = default, BmSDK.FString MessageAnimation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDownloadProgress.ChangeToCompleteMessage", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -132,7 +132,7 @@ public partial class RHudModuleDownloadProgress : BmSDK.BmGame.RHudModule, BmSDK
     /// <summary>
     /// Function: TickDownloadProgress
     /// </summary>
-    public unsafe void TickDownloadProgress(float delta_t)
+    public unsafe virtual void TickDownloadProgress(float delta_t)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDownloadProgress.TickDownloadProgress", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -144,7 +144,7 @@ public partial class RHudModuleDownloadProgress : BmSDK.BmGame.RHudModule, BmSDK
     /// <summary>
     /// Function: DownloadSoundPlaying
     /// </summary>
-    public unsafe void DownloadSoundPlaying(bool Playing)
+    public unsafe virtual void DownloadSoundPlaying(bool Playing)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDownloadProgress.DownloadSoundPlaying", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -156,7 +156,7 @@ public partial class RHudModuleDownloadProgress : BmSDK.BmGame.RHudModule, BmSDK
     /// <summary>
     /// Function: InitialiseFlash
     /// </summary>
-    public unsafe void InitialiseFlash()
+    public unsafe override void InitialiseFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDownloadProgress.InitialiseFlash", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -167,7 +167,7 @@ public partial class RHudModuleDownloadProgress : BmSDK.BmGame.RHudModule, BmSDK
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDownloadProgress.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -178,7 +178,7 @@ public partial class RHudModuleDownloadProgress : BmSDK.BmGame.RHudModule, BmSDK
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDownloadProgress.Init", true);
         byte* paramsPtr = stackalloc byte[44];

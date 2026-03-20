@@ -71,7 +71,7 @@ public partial class RHidePoint_Batmobile : BmSDK.BmGame.RHidePoint, BmSDK.IGame
     /// <summary>
     /// Function: MovePawnTo
     /// </summary>
-    public unsafe void MovePawnTo(BmSDK.Engine.Pawn PawnToMove)
+    public unsafe override void MovePawnTo(BmSDK.Engine.Pawn PawnToMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHidePoint_Batmobile.MovePawnTo", true);
         byte* paramsPtr = stackalloc byte[148];

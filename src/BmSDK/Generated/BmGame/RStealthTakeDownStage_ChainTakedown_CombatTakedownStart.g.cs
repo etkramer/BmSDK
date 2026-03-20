@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_ChainTakedown_CombatTakedownStart : B
     /// <summary>
     /// Function: End
     /// </summary>
-    public unsafe void End(bool bLastStage = default)
+    public unsafe override void End(bool bLastStage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ChainTakedown_CombatTakedownStart.End", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RStealthTakeDownStage_ChainTakedown_CombatTakedownStart : B
     /// <summary>
     /// Function: OverrideChosenAnim
     /// </summary>
-    public unsafe void OverrideChosenAnim(out int Anim)
+    public unsafe override void OverrideChosenAnim(out int Anim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ChainTakedown_CombatTakedownStart.OverrideChosenAnim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -95,7 +95,7 @@ public partial class RStealthTakeDownStage_ChainTakedown_CombatTakedownStart : B
     /// <summary>
     /// Function: FillInAnimNames
     /// </summary>
-    public unsafe void FillInAnimNames()
+    public unsafe override void FillInAnimNames()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ChainTakedown_CombatTakedownStart.FillInAnimNames", true);
         byte* paramsPtr = stackalloc byte[208];
@@ -106,7 +106,7 @@ public partial class RStealthTakeDownStage_ChainTakedown_CombatTakedownStart : B
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ChainTakedown_CombatTakedownStart.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -119,7 +119,7 @@ public partial class RStealthTakeDownStage_ChainTakedown_CombatTakedownStart : B
     /// <summary>
     /// Function: GetStageAnim
     /// </summary>
-    public unsafe int GetStageAnim()
+    public unsafe override int GetStageAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ChainTakedown_CombatTakedownStart.GetStageAnim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -130,7 +130,7 @@ public partial class RStealthTakeDownStage_ChainTakedown_CombatTakedownStart : B
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ChainTakedown_CombatTakedownStart.Begin", true);
         byte* paramsPtr = stackalloc byte[8];

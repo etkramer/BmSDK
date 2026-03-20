@@ -66,7 +66,7 @@ public partial class RPredBombablePlantBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: CanHaveBombPlanted
     /// </summary>
-    public unsafe bool CanHaveBombPlanted()
+    public unsafe virtual bool CanHaveBombPlanted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredBombablePlantBase.CanHaveBombPlanted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -77,7 +77,7 @@ public partial class RPredBombablePlantBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetGlanceScore
     /// </summary>
-    public unsafe int GetGlanceScore()
+    public unsafe virtual int GetGlanceScore()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredBombablePlantBase.GetGlanceScore", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -88,7 +88,7 @@ public partial class RPredBombablePlantBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: FirePlantBombedKismetEvent
     /// </summary>
-    public unsafe void FirePlantBombedKismetEvent()
+    public unsafe virtual void FirePlantBombedKismetEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredBombablePlantBase.FirePlantBombedKismetEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -99,7 +99,7 @@ public partial class RPredBombablePlantBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetThugAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetThugAnimSet()
+    public unsafe virtual BmSDK.Engine.AnimSet GetThugAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredBombablePlantBase.GetThugAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -110,7 +110,7 @@ public partial class RPredBombablePlantBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: BombBoom
     /// </summary>
-    public unsafe void BombBoom()
+    public unsafe virtual void BombBoom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredBombablePlantBase.BombBoom", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -121,7 +121,7 @@ public partial class RPredBombablePlantBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: StartCountdown
     /// </summary>
-    public unsafe void StartCountdown()
+    public unsafe virtual void StartCountdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredBombablePlantBase.StartCountdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -132,7 +132,7 @@ public partial class RPredBombablePlantBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: SeenByThug
     /// </summary>
-    public unsafe void SeenByThug(BmSDK.BmGame.RBMAIController SpottingThug)
+    public unsafe virtual void SeenByThug(BmSDK.BmGame.RBMAIController SpottingThug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredBombablePlantBase.SeenByThug", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -144,7 +144,7 @@ public partial class RPredBombablePlantBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredBombablePlantBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -155,7 +155,7 @@ public partial class RPredBombablePlantBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredBombablePlantBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -166,7 +166,7 @@ public partial class RPredBombablePlantBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredBombablePlantBase.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -178,7 +178,7 @@ public partial class RPredBombablePlantBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredBombablePlantBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -189,7 +189,7 @@ public partial class RPredBombablePlantBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTargetLocation(BmSDK.Engine.Actor RequestedBy = default, bool bRequestAlternateLoc = default)
+    public unsafe override System.Numerics.Vector3 GetTargetLocation(BmSDK.Engine.Actor RequestedBy = default, bool bRequestAlternateLoc = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredBombablePlantBase.GetTargetLocation", true);
         byte* paramsPtr = stackalloc byte[24];

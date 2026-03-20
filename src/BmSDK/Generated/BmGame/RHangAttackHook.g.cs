@@ -71,7 +71,7 @@ public partial class RHangAttackHook : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: LeaveHangPoint
     /// </summary>
-    public unsafe void LeaveHangPoint()
+    public unsafe virtual void LeaveHangPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHangAttackHook.LeaveHangPoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RHangAttackHook : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: MovePawnTo
     /// </summary>
-    public unsafe void MovePawnTo(BmSDK.Engine.Pawn PawnToMove)
+    public unsafe override void MovePawnTo(BmSDK.Engine.Pawn PawnToMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHangAttackHook.MovePawnTo", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -94,7 +94,7 @@ public partial class RHangAttackHook : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: Deactivate
     /// </summary>
-    public unsafe void Deactivate()
+    public unsafe virtual void Deactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHangAttackHook.Deactivate", true);
         byte* paramsPtr = stackalloc byte[0];

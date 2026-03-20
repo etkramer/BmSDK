@@ -36,7 +36,7 @@ public partial class RBMBehaviour_DoorHandler : BmSDK.BmGame.RBMBehaviour_Action
     /// <summary>
     /// Function: HandlePathFail
     /// </summary>
-    public unsafe void HandlePathFail()
+    public unsafe virtual void HandlePathFail()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DoorHandler.HandlePathFail", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_DoorHandler : BmSDK.BmGame.RBMBehaviour_Action
     /// <summary>
     /// Function: FollowPath_DoorAware
     /// </summary>
-    public unsafe void FollowPath_DoorAware(float DeltaTime)
+    public unsafe virtual void FollowPath_DoorAware(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DoorHandler.FollowPath_DoorAware", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_DoorHandler : BmSDK.BmGame.RBMBehaviour_Action
     /// <summary>
     /// Function: GotLOSToFirstDoorOnPath
     /// </summary>
-    public unsafe bool GotLOSToFirstDoorOnPath()
+    public unsafe virtual bool GotLOSToFirstDoorOnPath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DoorHandler.GotLOSToFirstDoorOnPath", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -70,7 +70,7 @@ public partial class RBMBehaviour_DoorHandler : BmSDK.BmGame.RBMBehaviour_Action
     /// <summary>
     /// Function: CheckNavHandleForDoors
     /// </summary>
-    public unsafe void CheckNavHandleForDoors()
+    public unsafe virtual void CheckNavHandleForDoors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DoorHandler.CheckNavHandleForDoors", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_DoorHandler : BmSDK.BmGame.RBMBehaviour_Action
     /// <summary>
     /// Function: HandleBankDoorDiscovery
     /// </summary>
-    public unsafe void HandleBankDoorDiscovery(BmSDK.BmGame.RBankDoorBase DiscoveredDoor)
+    public unsafe override void HandleBankDoorDiscovery(BmSDK.BmGame.RBankDoorBase DiscoveredDoor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DoorHandler.HandleBankDoorDiscovery", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RBMBehaviour_DoorHandler : BmSDK.BmGame.RBMBehaviour_Action
     /// <summary>
     /// Function: TriggerGrateResponse
     /// </summary>
-    public unsafe void TriggerGrateResponse(BmSDK.BmGame.RTunnelGrateBase Grate, bool canDestroy = default)
+    public unsafe virtual void TriggerGrateResponse(BmSDK.BmGame.RTunnelGrateBase Grate, bool canDestroy = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DoorHandler.TriggerGrateResponse", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -106,7 +106,7 @@ public partial class RBMBehaviour_DoorHandler : BmSDK.BmGame.RBMBehaviour_Action
     /// <summary>
     /// Function: StartNavMeshSearch
     /// </summary>
-    public unsafe void StartNavMeshSearch(System.Numerics.Vector3 Destination, bool IgnoreKnownPathObstacles = default)
+    public unsafe virtual void StartNavMeshSearch(System.Numerics.Vector3 Destination, bool IgnoreKnownPathObstacles = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DoorHandler.StartNavMeshSearch", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -119,7 +119,7 @@ public partial class RBMBehaviour_DoorHandler : BmSDK.BmGame.RBMBehaviour_Action
     /// <summary>
     /// Function: DoBankEventBark
     /// </summary>
-    public unsafe void DoBankEventBark(BmSDK.FName bark, bool bLowPriority = default, bool bNeedToOpenGate = default)
+    public unsafe virtual void DoBankEventBark(BmSDK.FName bark, bool bLowPriority = default, bool bNeedToOpenGate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DoorHandler.DoBankEventBark", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -133,7 +133,7 @@ public partial class RBMBehaviour_DoorHandler : BmSDK.BmGame.RBMBehaviour_Action
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DoorHandler.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -144,7 +144,7 @@ public partial class RBMBehaviour_DoorHandler : BmSDK.BmGame.RBMBehaviour_Action
     /// <summary>
     /// Function: OnExitBehaviourCalled
     /// </summary>
-    public unsafe void OnExitBehaviourCalled()
+    public unsafe override void OnExitBehaviourCalled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DoorHandler.OnExitBehaviourCalled", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -155,7 +155,7 @@ public partial class RBMBehaviour_DoorHandler : BmSDK.BmGame.RBMBehaviour_Action
     /// <summary>
     /// Function: OnExitConditionTriggered
     /// </summary>
-    public unsafe void OnExitConditionTriggered()
+    public unsafe override void OnExitConditionTriggered()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DoorHandler.OnExitConditionTriggered", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -166,7 +166,7 @@ public partial class RBMBehaviour_DoorHandler : BmSDK.BmGame.RBMBehaviour_Action
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DoorHandler.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];

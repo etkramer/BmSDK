@@ -36,7 +36,7 @@ public partial class RSeqCond_InLevel : BmSDK.Engine.SequenceCondition, BmSDK.IG
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqCond_InLevel.Activated", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -47,7 +47,7 @@ public partial class RSeqCond_InLevel : BmSDK.Engine.SequenceCondition, BmSDK.IG
     /// <summary>
     /// Function: IsInLevel
     /// </summary>
-    public unsafe bool IsInLevel(BmSDK.FName Level)
+    public unsafe virtual bool IsInLevel(BmSDK.FName Level)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqCond_InLevel.IsInLevel", true);
         byte* paramsPtr = stackalloc byte[12];

@@ -31,7 +31,7 @@ public partial class RSeqAct_BankMoneyControllerBase : BmSDK.Engine.SeqAct_Laten
     /// <summary>
     /// Function: NotifyCashPlacedInBag
     /// </summary>
-    public unsafe void NotifyCashPlacedInBag(int Amount)
+    public unsafe virtual void NotifyCashPlacedInBag(int Amount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BankMoneyControllerBase.NotifyCashPlacedInBag", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -43,7 +43,7 @@ public partial class RSeqAct_BankMoneyControllerBase : BmSDK.Engine.SeqAct_Laten
     /// <summary>
     /// Function: NotifyCashRemovedFromBank
     /// </summary>
-    public unsafe void NotifyCashRemovedFromBank(int Amount)
+    public unsafe virtual void NotifyCashRemovedFromBank(int Amount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BankMoneyControllerBase.NotifyCashRemovedFromBank", true);
         byte* paramsPtr = stackalloc byte[4];

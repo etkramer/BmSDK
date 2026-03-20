@@ -71,7 +71,7 @@ public partial class RAEC_LockedIn : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: IsInUse
     /// </summary>
-    public unsafe bool IsInUse(BmSDK.BmGame.RLockedInReactionPoint TestPoint)
+    public unsafe virtual bool IsInUse(BmSDK.BmGame.RLockedInReactionPoint TestPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LockedIn.IsInUse", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -83,7 +83,7 @@ public partial class RAEC_LockedIn : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: GetBestThugAndReactPoint
     /// </summary>
-    public unsafe void GetBestThugAndReactPoint(BmSDK.TArray<BmSDK.BmGame.RAEC_LockedIn.FThugPointDist> ThugPointDistList, out int ThugIndex, out BmSDK.BmGame.RLockedInReactionPoint UsablePoint)
+    public unsafe virtual void GetBestThugAndReactPoint(BmSDK.TArray<BmSDK.BmGame.RAEC_LockedIn.FThugPointDist> ThugPointDistList, out int ThugIndex, out BmSDK.BmGame.RLockedInReactionPoint UsablePoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LockedIn.GetBestThugAndReactPoint", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -97,7 +97,7 @@ public partial class RAEC_LockedIn : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: BuildThugPointDistList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RAEC_LockedIn.FThugPointDist> BuildThugPointDistList(BmSDK.TArray<BmSDK.BmGame.RBMAIController> ConList)
+    public unsafe virtual BmSDK.TArray<BmSDK.BmGame.RAEC_LockedIn.FThugPointDist> BuildThugPointDistList(BmSDK.TArray<BmSDK.BmGame.RBMAIController> ConList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LockedIn.BuildThugPointDistList", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -109,7 +109,7 @@ public partial class RAEC_LockedIn : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: ReleaseAllThugs
     /// </summary>
-    public unsafe void ReleaseAllThugs()
+    public unsafe virtual void ReleaseAllThugs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LockedIn.ReleaseAllThugs", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -120,7 +120,7 @@ public partial class RAEC_LockedIn : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: TryReactBarkFor
     /// </summary>
-    public unsafe void TryReactBarkFor(BmSDK.BmGame.RPawnVillain ReactBarkPawn)
+    public unsafe virtual void TryReactBarkFor(BmSDK.BmGame.RPawnVillain ReactBarkPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LockedIn.TryReactBarkFor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -132,7 +132,7 @@ public partial class RAEC_LockedIn : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: HandleLockedInThugs
     /// </summary>
-    public unsafe void HandleLockedInThugs(BmSDK.TArray<BmSDK.BmGame.RBMAIController> LockinConList)
+    public unsafe virtual void HandleLockedInThugs(BmSDK.TArray<BmSDK.BmGame.RBMAIController> LockinConList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LockedIn.HandleLockedInThugs", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -144,7 +144,7 @@ public partial class RAEC_LockedIn : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: PrepReactPoint
     /// </summary>
-    public unsafe void PrepReactPoint(BmSDK.BmGame.RLockedInReactionPoint NewLockinReactpoint)
+    public unsafe virtual void PrepReactPoint(BmSDK.BmGame.RLockedInReactionPoint NewLockinReactpoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LockedIn.PrepReactPoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -156,7 +156,7 @@ public partial class RAEC_LockedIn : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LockedIn.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

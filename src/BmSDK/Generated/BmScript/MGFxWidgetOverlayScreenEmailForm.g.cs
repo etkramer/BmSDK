@@ -36,7 +36,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: ThreadSafeInvalidate
     /// </summary>
-    public unsafe void ThreadSafeInvalidate()
+    public unsafe override void ThreadSafeInvalidate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.ThreadSafeInvalidate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: OnBladeKeyboardFinished
     /// </summary>
-    public unsafe void OnBladeKeyboardFinished(bool bWasSuccessful)
+    public unsafe virtual void OnBladeKeyboardFinished(bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.OnBladeKeyboardFinished", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -59,7 +59,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: ShowSystemBlade
     /// </summary>
-    public unsafe void ShowSystemBlade()
+    public unsafe virtual void ShowSystemBlade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.ShowSystemBlade", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -70,7 +70,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: CloseAgeDropDown
     /// </summary>
-    public unsafe void CloseAgeDropDown()
+    public unsafe virtual void CloseAgeDropDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.CloseAgeDropDown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: OpenAgeDropDown
     /// </summary>
-    public unsafe void OpenAgeDropDown()
+    public unsafe virtual void OpenAgeDropDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.OpenAgeDropDown", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -92,7 +92,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: PushAgeDropDownData
     /// </summary>
-    public unsafe void PushAgeDropDownData(BmSDK.TArray<int> ages)
+    public unsafe virtual void PushAgeDropDownData(BmSDK.TArray<int> ages)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.PushAgeDropDownData", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -104,7 +104,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: SetHidePassword
     /// </summary>
-    public unsafe void SetHidePassword(bool checkVal)
+    public unsafe virtual void SetHidePassword(bool checkVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.SetHidePassword", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -116,7 +116,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: SetReceiveEmails
     /// </summary>
-    public unsafe void SetReceiveEmails(bool checkVal)
+    public unsafe virtual void SetReceiveEmails(bool checkVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.SetReceiveEmails", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -128,7 +128,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: GetFormData
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> GetFormData()
+    public unsafe virtual BmSDK.TArray<BmSDK.FString> GetFormData()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.GetFormData", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -139,7 +139,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: SendData
     /// </summary>
-    public unsafe void SendData()
+    public unsafe override void SendData()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.SendData", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -150,7 +150,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: ClearFormErrors
     /// </summary>
-    public unsafe void ClearFormErrors()
+    public unsafe virtual void ClearFormErrors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.ClearFormErrors", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -161,7 +161,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: PushFormErrors
     /// </summary>
-    public unsafe void PushFormErrors(BmSDK.TArray<BmSDK.FString> Errors)
+    public unsafe virtual void PushFormErrors(BmSDK.TArray<BmSDK.FString> Errors)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.PushFormErrors", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -173,7 +173,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: QuickVerify
     /// </summary>
-    public unsafe bool QuickVerify(BmSDK.TArray<BmSDK.FString> Data, out BmSDK.BmGame.MWBIDEmailFormScreenMessage Message, bool bOnlyEmail = default)
+    public unsafe virtual bool QuickVerify(BmSDK.TArray<BmSDK.FString> Data, out BmSDK.BmGame.MWBIDEmailFormScreenMessage Message, bool bOnlyEmail = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.QuickVerify", true);
         byte* paramsPtr = stackalloc byte[108];
@@ -187,7 +187,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: ScrollList
     /// </summary>
-    public unsafe void ScrollList(bool bIsDown)
+    public unsafe virtual void ScrollList(bool bIsDown)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.ScrollList", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -199,7 +199,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: NavDown
     /// </summary>
-    public unsafe void NavDown()
+    public unsafe override void NavDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.NavDown", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -210,7 +210,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: NavUp
     /// </summary>
-    public unsafe void NavUp()
+    public unsafe override void NavUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.NavUp", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -221,7 +221,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: NavRight
     /// </summary>
-    public unsafe void NavRight()
+    public unsafe override void NavRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.NavRight", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -232,7 +232,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: NavLeft
     /// </summary>
-    public unsafe void NavLeft()
+    public unsafe override void NavLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.NavLeft", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -243,7 +243,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: OnMouseWheel
     /// </summary>
-    public unsafe void OnMouseWheel(int btnIdx, bool directionUp)
+    public unsafe override void OnMouseWheel(int btnIdx, bool directionUp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.OnMouseWheel", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -256,7 +256,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: OnMouseDown
     /// </summary>
-    public unsafe void OnMouseDown(int btnIdx)
+    public unsafe override void OnMouseDown(int btnIdx)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.OnMouseDown", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -268,7 +268,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: OnPressTab
     /// </summary>
-    public unsafe void OnPressTab()
+    public unsafe override void OnPressTab()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.OnPressTab", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -279,7 +279,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: OnPressB
     /// </summary>
-    public unsafe void OnPressB()
+    public unsafe override void OnPressB()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.OnPressB", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -290,7 +290,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: OnPressA
     /// </summary>
-    public unsafe void OnPressA()
+    public unsafe override void OnPressA()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.OnPressA", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -301,7 +301,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: OnKeyUp
     /// </summary>
-    public unsafe void OnKeyUp(int Key)
+    public unsafe override void OnKeyUp(int Key)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.OnKeyUp", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -313,7 +313,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: SetFocussed
     /// </summary>
-    public unsafe void SetFocussed(int Id)
+    public unsafe virtual void SetFocussed(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.SetFocussed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -325,7 +325,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: SetButtonID
     /// </summary>
-    public unsafe void SetButtonID(int Id)
+    public unsafe virtual void SetButtonID(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.SetButtonID", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -337,7 +337,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: SetButtonLabel
     /// </summary>
-    public unsafe void SetButtonLabel(int Id, BmSDK.FString Label)
+    public unsafe virtual void SetButtonLabel(int Id, BmSDK.FString Label)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.SetButtonLabel", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -350,7 +350,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: SetupTextBox
     /// </summary>
-    public unsafe void SetupTextBox(int Id, BmSDK.FString Text, bool isPassword)
+    public unsafe virtual void SetupTextBox(int Id, BmSDK.FString Text, bool isPassword)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.SetupTextBox", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -364,7 +364,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: SetTitle
     /// </summary>
-    public unsafe void SetTitle(BmSDK.FString Title)
+    public unsafe virtual void SetTitle(BmSDK.FString Title)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.SetTitle", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -376,7 +376,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: WidgetInitialized
     /// </summary>
-    public unsafe bool WidgetInitialized(BmSDK.FName WidgetName, BmSDK.FName WidgetPath, BmSDK.GFxUI.GFxObject Widget)
+    public unsafe override bool WidgetInitialized(BmSDK.FName WidgetName, BmSDK.FName WidgetPath, BmSDK.GFxUI.GFxObject Widget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.WidgetInitialized", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -390,7 +390,7 @@ public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidge
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init()
+    public unsafe override void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenEmailForm.Init", true);
         byte* paramsPtr = stackalloc byte[8];

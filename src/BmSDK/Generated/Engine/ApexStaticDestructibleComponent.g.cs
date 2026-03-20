@@ -36,7 +36,7 @@ public partial class ApexStaticDestructibleComponent : BmSDK.Engine.ApexStaticCo
     /// <summary>
     /// Function: RigidBodyIsAwake
     /// </summary>
-    public unsafe bool RigidBodyIsAwake(BmSDK.FName BoneName = default)
+    public unsafe override bool RigidBodyIsAwake(BmSDK.FName BoneName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ApexStaticDestructibleComponent.RigidBodyIsAwake", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -55,7 +55,7 @@ public partial class ApexStaticDestructibleComponent : BmSDK.Engine.ApexStaticCo
     /// <summary>
     /// Function: TakeRadiusDamage
     /// </summary>
-    public unsafe void TakeRadiusDamage(BmSDK.Engine.Controller InstigatedBy, float BaseDamage, float DamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, bool bFullDamage, BmSDK.Engine.Actor DamageCauser, float DamageFalloffExponent = default, bool bDamageEventCanBeDeferred = default, int OnlyDamageIslandOfThisChunk = default)
+    public unsafe virtual void TakeRadiusDamage(BmSDK.Engine.Controller InstigatedBy, float BaseDamage, float DamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, bool bFullDamage, BmSDK.Engine.Actor DamageCauser, float DamageFalloffExponent = default, bool bDamageEventCanBeDeferred = default, int OnlyDamageIslandOfThisChunk = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ApexStaticDestructibleComponent.TakeRadiusDamage", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -84,7 +84,7 @@ public partial class ApexStaticDestructibleComponent : BmSDK.Engine.ApexStaticCo
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe virtual void TakeDamage(int Damage, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ApexStaticDestructibleComponent.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[92];

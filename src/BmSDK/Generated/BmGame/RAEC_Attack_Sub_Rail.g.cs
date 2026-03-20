@@ -71,7 +71,7 @@ public partial class RAEC_Attack_Sub_Rail : BmSDK.BmGame.RAEC_Attack_Sub_Converg
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_Rail.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Attack_Sub_Rail : BmSDK.BmGame.RAEC_Attack_Sub_Converg
     /// <summary>
     /// Function: GetMoveToPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMoveToPoint()
+    public unsafe override System.Numerics.Vector3 GetMoveToPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_Rail.GetMoveToPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RAEC_Attack_Sub_Rail : BmSDK.BmGame.RAEC_Attack_Sub_Converg
     /// <summary>
     /// Function: GetMoveDestForCurrentFence
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMoveDestForCurrentFence()
+    public unsafe virtual System.Numerics.Vector3 GetMoveDestForCurrentFence()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_Rail.GetMoveDestForCurrentFence", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -104,7 +104,7 @@ public partial class RAEC_Attack_Sub_Rail : BmSDK.BmGame.RAEC_Attack_Sub_Converg
     /// <summary>
     /// Function: NeedsToRunToFence
     /// </summary>
-    public unsafe bool NeedsToRunToFence(System.Numerics.Vector3 MoveDest)
+    public unsafe virtual bool NeedsToRunToFence(System.Numerics.Vector3 MoveDest)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_Rail.NeedsToRunToFence", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -116,7 +116,7 @@ public partial class RAEC_Attack_Sub_Rail : BmSDK.BmGame.RAEC_Attack_Sub_Converg
     /// <summary>
     /// Function: IsAlreadyOnFence
     /// </summary>
-    public unsafe bool IsAlreadyOnFence()
+    public unsafe virtual bool IsAlreadyOnFence()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_Rail.IsAlreadyOnFence", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class RAEC_Attack_Sub_Rail : BmSDK.BmGame.RAEC_Attack_Sub_Converg
     /// <summary>
     /// Function: HandOverFenceLock
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMPathNode_FenceJumpProxy HandOverFenceLock()
+    public unsafe virtual BmSDK.BmGame.RBMPathNode_FenceJumpProxy HandOverFenceLock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_Rail.HandOverFenceLock", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -138,7 +138,7 @@ public partial class RAEC_Attack_Sub_Rail : BmSDK.BmGame.RAEC_Attack_Sub_Converg
     /// <summary>
     /// Function: IsAtRail
     /// </summary>
-    public unsafe bool IsAtRail()
+    public unsafe virtual bool IsAtRail()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_Rail.IsAtRail", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -149,7 +149,7 @@ public partial class RAEC_Attack_Sub_Rail : BmSDK.BmGame.RAEC_Attack_Sub_Converg
     /// <summary>
     /// Function: InitOnFence
     /// </summary>
-    public unsafe void InitOnFence(BmSDK.BmGame.RPawnPlayer TargetPlayer, BmSDK.BmGame.RBMPathNode_FenceJumpProxy NewDestFence)
+    public unsafe virtual void InitOnFence(BmSDK.BmGame.RPawnPlayer TargetPlayer, BmSDK.BmGame.RBMPathNode_FenceJumpProxy NewDestFence)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_Rail.InitOnFence", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -162,7 +162,7 @@ public partial class RAEC_Attack_Sub_Rail : BmSDK.BmGame.RAEC_Attack_Sub_Converg
     /// <summary>
     /// Function: OnVillainStolen
     /// </summary>
-    public unsafe void OnVillainStolen()
+    public unsafe override void OnVillainStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_Rail.OnVillainStolen", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RStartlePoint_Bank : BmSDK.BmGame.RStartlePoint, BmSDK.IGam
     /// <summary>
     /// Function: CanISkipTheFastTraceForTheValidTakedownThugCheck
     /// </summary>
-    public unsafe bool CanISkipTheFastTraceForTheValidTakedownThugCheck()
+    public unsafe override bool CanISkipTheFastTraceForTheValidTakedownThugCheck()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePoint_Bank.CanISkipTheFastTraceForTheValidTakedownThugCheck", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RStartlePoint_Bank : BmSDK.BmGame.RStartlePoint, BmSDK.IGam
     /// <summary>
     /// Function: ShouldTriggerBeBlockedByDangerVolume
     /// </summary>
-    public unsafe bool ShouldTriggerBeBlockedByDangerVolume()
+    public unsafe override bool ShouldTriggerBeBlockedByDangerVolume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePoint_Bank.ShouldTriggerBeBlockedByDangerVolume", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RStartlePoint_Bank : BmSDK.BmGame.RStartlePoint, BmSDK.IGam
     /// <summary>
     /// Function: Trigger
     /// </summary>
-    public unsafe bool Trigger(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool Trigger(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePoint_Bank.Trigger", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -105,7 +105,7 @@ public partial class RStartlePoint_Bank : BmSDK.BmGame.RStartlePoint, BmSDK.IGam
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePoint_Bank.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RStartlePoint_Bank : BmSDK.BmGame.RStartlePoint, BmSDK.IGam
     /// <summary>
     /// Function: StartlePointDisabled
     /// </summary>
-    public unsafe void StartlePointDisabled()
+    public unsafe override void StartlePointDisabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePoint_Bank.StartlePointDisabled", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RStartlePoint_Bank : BmSDK.BmGame.RStartlePoint, BmSDK.IGam
     /// <summary>
     /// Function: StartleAllThugsInTargetVolume
     /// </summary>
-    public unsafe void StartleAllThugsInTargetVolume()
+    public unsafe virtual void StartleAllThugsInTargetVolume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePoint_Bank.StartleAllThugsInTargetVolume", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -139,7 +139,7 @@ public partial class RStartlePoint_Bank : BmSDK.BmGame.RStartlePoint, BmSDK.IGam
     /// <summary>
     /// Function: SetupDroneStartleAEC
     /// </summary>
-    public unsafe void SetupDroneStartleAEC()
+    public unsafe virtual void SetupDroneStartleAEC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePoint_Bank.SetupDroneStartleAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -150,7 +150,7 @@ public partial class RStartlePoint_Bank : BmSDK.BmGame.RStartlePoint, BmSDK.IGam
     /// <summary>
     /// Function: FindStartleThugsFromPoint
     /// </summary>
-    public unsafe void FindStartleThugsFromPoint(out BmSDK.TArray<BmSDK.BmGame.RPawnVillain> ThugList, bool bFindAllThugs)
+    public unsafe override void FindStartleThugsFromPoint(out BmSDK.TArray<BmSDK.BmGame.RPawnVillain> ThugList, bool bFindAllThugs)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePoint_Bank.FindStartleThugsFromPoint", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -163,7 +163,7 @@ public partial class RStartlePoint_Bank : BmSDK.BmGame.RStartlePoint, BmSDK.IGam
     /// <summary>
     /// Function: GetPotentialTargetPositions
     /// </summary>
-    public unsafe void GetPotentialTargetPositions(out BmSDK.TArray<System.Numerics.Vector3> TargetPositions, out BmSDK.Engine.Actor LineCheckActor)
+    public unsafe override void GetPotentialTargetPositions(out BmSDK.TArray<System.Numerics.Vector3> TargetPositions, out BmSDK.Engine.Actor LineCheckActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePoint_Bank.GetPotentialTargetPositions", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -176,7 +176,7 @@ public partial class RStartlePoint_Bank : BmSDK.BmGame.RStartlePoint, BmSDK.IGam
     /// <summary>
     /// Function: GetDisplayIconName
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayIconName()
+    public unsafe override BmSDK.FString GetDisplayIconName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePoint_Bank.GetDisplayIconName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -187,7 +187,7 @@ public partial class RStartlePoint_Bank : BmSDK.BmGame.RStartlePoint, BmSDK.IGam
     /// <summary>
     /// Function: GetDisplayDescription
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayDescription()
+    public unsafe override BmSDK.FString GetDisplayDescription()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePoint_Bank.GetDisplayDescription", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -198,7 +198,7 @@ public partial class RStartlePoint_Bank : BmSDK.BmGame.RStartlePoint, BmSDK.IGam
     /// <summary>
     /// Function: GetDisplayTitle
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayTitle()
+    public unsafe override BmSDK.FString GetDisplayTitle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePoint_Bank.GetDisplayTitle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -209,7 +209,7 @@ public partial class RStartlePoint_Bank : BmSDK.BmGame.RStartlePoint, BmSDK.IGam
     /// <summary>
     /// Function: GetDisplayTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDisplayTargetLocation()
+    public unsafe override System.Numerics.Vector3 GetDisplayTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePoint_Bank.GetDisplayTargetLocation", true);
         byte* paramsPtr = stackalloc byte[12];

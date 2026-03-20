@@ -66,7 +66,7 @@ public partial class RHidePoint_Walkable : BmSDK.BmGame.RHidePoint, BmSDK.IGameO
     /// <summary>
     /// Function: PlayerWalkedOn
     /// </summary>
-    public unsafe void PlayerWalkedOn(BmSDK.BmGame.RPawnPlayer Player)
+    public unsafe virtual void PlayerWalkedOn(BmSDK.BmGame.RPawnPlayer Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Walkable.PlayerWalkedOn", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -78,7 +78,7 @@ public partial class RHidePoint_Walkable : BmSDK.BmGame.RHidePoint, BmSDK.IGameO
     /// <summary>
     /// Function: CanAISeePlayerForGrapple
     /// </summary>
-    public unsafe void CanAISeePlayerForGrapple(BmSDK.Engine.Pawn GrapplePlayer, System.Numerics.Vector3 TargetHidePointLocation, bool bForcingBatmanHidden, out int bVillainHasSeen, out int bAllowPlayerToHide)
+    public unsafe virtual void CanAISeePlayerForGrapple(BmSDK.Engine.Pawn GrapplePlayer, System.Numerics.Vector3 TargetHidePointLocation, bool bForcingBatmanHidden, out int bVillainHasSeen, out int bAllowPlayerToHide)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Walkable.CanAISeePlayerForGrapple", true);
         byte* paramsPtr = stackalloc byte[32];

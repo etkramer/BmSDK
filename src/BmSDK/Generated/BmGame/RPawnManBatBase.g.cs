@@ -66,7 +66,7 @@ public partial class RPawnManBatBase : BmSDK.BmGame.RPawnFriendly, BmSDK.IGameOb
     /// <summary>
     /// Function: PostInitCharacter
     /// </summary>
-    public unsafe void PostInitCharacter()
+    public unsafe override void PostInitCharacter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnManBatBase.PostInitCharacter", true);
         byte* paramsPtr = stackalloc byte[0];

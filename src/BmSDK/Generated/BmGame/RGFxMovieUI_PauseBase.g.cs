@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_PauseBase : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_OnOut
     /// </summary>
-    public unsafe void XI_OnOut()
+    public unsafe override void XI_OnOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseBase.XI_OnOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RGFxMovieUI_PauseBase : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: XI_OnBack
     /// </summary>
-    public unsafe void XI_OnBack()
+    public unsafe override void XI_OnBack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseBase.XI_OnBack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RGFxMovieUI_PauseBase : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: BackOut
     /// </summary>
-    public unsafe void BackOut()
+    public unsafe override void BackOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseBase.BackOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RGFxMovieUI_PauseBase : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: SetRPCPauseMenuMovieRef
     /// </summary>
-    public unsafe void SetRPCPauseMenuMovieRef(BmSDK.BmGame.RGFxMovieUI_PauseBase MovieUI)
+    public unsafe virtual void SetRPCPauseMenuMovieRef(BmSDK.BmGame.RGFxMovieUI_PauseBase MovieUI)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseBase.SetRPCPauseMenuMovieRef", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -81,7 +81,7 @@ public partial class RGFxMovieUI_PauseBase : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: GotoPauseScreen
     /// </summary>
-    public unsafe void GotoPauseScreen(int ScreenId)
+    public unsafe virtual void GotoPauseScreen(int ScreenId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseBase.GotoPauseScreen", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RGFxMovieUI_PauseBase : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// Function: CloseScreen
     /// </summary>
-    public unsafe void CloseScreen()
+    public unsafe override void CloseScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseBase.CloseScreen", true);
         byte* paramsPtr = stackalloc byte[0];

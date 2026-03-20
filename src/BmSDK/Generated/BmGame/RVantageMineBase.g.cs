@@ -71,7 +71,7 @@ public partial class RVantageMineBase : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetDepthPriorityGroup
     /// </summary>
-    public unsafe void SetDepthPriorityGroup(BmSDK.Engine.Scene.ESceneDepthPriorityGroup NewGroup)
+    public unsafe virtual void SetDepthPriorityGroup(BmSDK.Engine.Scene.ESceneDepthPriorityGroup NewGroup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantageMineBase.SetDepthPriorityGroup", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -83,7 +83,7 @@ public partial class RVantageMineBase : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: IsDisrupted
     /// </summary>
-    public unsafe bool IsDisrupted()
+    public unsafe virtual bool IsDisrupted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantageMineBase.IsDisrupted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RVantageMineBase : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetDisruptorDescriptionParameters
     /// </summary>
-    public unsafe BmSDK.FString GetDisruptorDescriptionParameters()
+    public unsafe virtual BmSDK.FString GetDisruptorDescriptionParameters()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantageMineBase.GetDisruptorDescriptionParameters", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -105,7 +105,7 @@ public partial class RVantageMineBase : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: RequiresDisruptorUpgrade
     /// </summary>
-    public unsafe bool RequiresDisruptorUpgrade()
+    public unsafe virtual bool RequiresDisruptorUpgrade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantageMineBase.RequiresDisruptorUpgrade", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RVantageMineBase : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: RequiresDroneDisruptor
     /// </summary>
-    public unsafe bool RequiresDroneDisruptor()
+    public unsafe virtual bool RequiresDroneDisruptor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantageMineBase.RequiresDroneDisruptor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class RVantageMineBase : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetDisruptorTargetMesh
     /// </summary>
-    public unsafe BmSDK.Engine.MeshComponent GetDisruptorTargetMesh()
+    public unsafe virtual BmSDK.Engine.MeshComponent GetDisruptorTargetMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantageMineBase.GetDisruptorTargetMesh", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -138,7 +138,7 @@ public partial class RVantageMineBase : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetDisruptorOverridePriority
     /// </summary>
-    public unsafe float GetDisruptorOverridePriority()
+    public unsafe virtual float GetDisruptorOverridePriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantageMineBase.GetDisruptorOverridePriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -149,7 +149,7 @@ public partial class RVantageMineBase : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: HitByDisruptorGadgetSecondary
     /// </summary>
-    public unsafe bool HitByDisruptorGadgetSecondary()
+    public unsafe virtual bool HitByDisruptorGadgetSecondary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantageMineBase.HitByDisruptorGadgetSecondary", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -160,7 +160,7 @@ public partial class RVantageMineBase : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: CanBeDisruptedSecondary
     /// </summary>
-    public unsafe bool CanBeDisruptedSecondary()
+    public unsafe virtual bool CanBeDisruptedSecondary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantageMineBase.CanBeDisruptedSecondary", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -171,7 +171,7 @@ public partial class RVantageMineBase : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: HitByDisruptorGadgetCharge
     /// </summary>
-    public unsafe bool HitByDisruptorGadgetCharge()
+    public unsafe virtual bool HitByDisruptorGadgetCharge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantageMineBase.HitByDisruptorGadgetCharge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -182,7 +182,7 @@ public partial class RVantageMineBase : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: CanBeDisrupted
     /// </summary>
-    public unsafe bool CanBeDisrupted()
+    public unsafe virtual bool CanBeDisrupted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantageMineBase.CanBeDisrupted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -193,7 +193,7 @@ public partial class RVantageMineBase : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: DestroyAfterJam
     /// </summary>
-    public unsafe void DestroyAfterJam()
+    public unsafe virtual void DestroyAfterJam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantageMineBase.DestroyAfterJam", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -204,7 +204,7 @@ public partial class RVantageMineBase : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetDisruptorTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDisruptorTargetPosition()
+    public unsafe virtual System.Numerics.Vector3 GetDisruptorTargetPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantageMineBase.GetDisruptorTargetPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -215,7 +215,7 @@ public partial class RVantageMineBase : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: BlowUp
     /// </summary>
-    public unsafe void BlowUp()
+    public unsafe override void BlowUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantageMineBase.BlowUp", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -226,7 +226,7 @@ public partial class RVantageMineBase : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantageMineBase.Tick", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -238,7 +238,7 @@ public partial class RVantageMineBase : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: IsPlayerNearMine
     /// </summary>
-    public unsafe bool IsPlayerNearMine(BmSDK.BmGame.RPawnPlayer PawnPlayer, out float Dist)
+    public unsafe virtual bool IsPlayerNearMine(BmSDK.BmGame.RPawnPlayer PawnPlayer, out float Dist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantageMineBase.IsPlayerNearMine", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -251,7 +251,7 @@ public partial class RVantageMineBase : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetDangerEffects
     /// </summary>
-    public unsafe void SetDangerEffects(float NewSpeed)
+    public unsafe override void SetDangerEffects(float NewSpeed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantageMineBase.SetDangerEffects", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -263,7 +263,7 @@ public partial class RVantageMineBase : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetHidePointAttached
     /// </summary>
-    public unsafe void SetHidePointAttached(BmSDK.BmGame.RHidePoint NewVantage)
+    public unsafe virtual void SetHidePointAttached(BmSDK.BmGame.RHidePoint NewVantage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantageMineBase.SetHidePointAttached", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -275,7 +275,7 @@ public partial class RVantageMineBase : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantageMineBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

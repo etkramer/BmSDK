@@ -71,7 +71,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: DoKismetAttachment
     /// </summary>
-    public unsafe void DoKismetAttachment(BmSDK.Engine.Actor Attachment, BmSDK.Engine.SeqAct_AttachToActor Action)
+    public unsafe override void DoKismetAttachment(BmSDK.Engine.Actor Attachment, BmSDK.Engine.SeqAct_AttachToActor Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.DoKismetAttachment", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -84,7 +84,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: HideHead
     /// </summary>
-    public unsafe void HideHead()
+    public unsafe virtual void HideHead()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.HideHead", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: ShowHead
     /// </summary>
-    public unsafe void ShowHead()
+    public unsafe virtual void ShowHead()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.ShowHead", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: CauseMuzzleFlash
     /// </summary>
-    public unsafe void CauseMuzzleFlash()
+    public unsafe virtual void CauseMuzzleFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.CauseMuzzleFlash", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: DoShotFX
     /// </summary>
-    public unsafe void DoShotFX(System.Numerics.Vector3 HitTarget, BmSDK.Engine.Actor HitActor, System.Numerics.Vector3 HitNormal, System.Numerics.Vector3 OriginalShotOrig, System.Numerics.Vector3 OriginalShotDir)
+    public unsafe virtual void DoShotFX(System.Numerics.Vector3 HitTarget, BmSDK.Engine.Actor HitActor, System.Numerics.Vector3 HitNormal, System.Numerics.Vector3 OriginalShotOrig, System.Numerics.Vector3 OriginalShotDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.DoShotFX", true);
         byte* paramsPtr = stackalloc byte[188];
@@ -144,7 +144,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: CalcImpact
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.FImpactInfo CalcImpact(System.Numerics.Vector3 StartTrace, System.Numerics.Vector3 EndTrace, BmSDK.Engine.Actor HitTarget)
+    public unsafe virtual BmSDK.Engine.Actor.FImpactInfo CalcImpact(System.Numerics.Vector3 StartTrace, System.Numerics.Vector3 EndTrace, BmSDK.Engine.Actor HitTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.CalcImpact", true);
         byte* paramsPtr = stackalloc byte[304];
@@ -158,7 +158,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: DoHitDecal
     /// </summary>
-    public unsafe bool DoHitDecal(BmSDK.Engine.Actor.FImpactInfo HitImpactInfo, System.Numerics.Vector3 HitTarget, BmSDK.Engine.Actor HitActor, System.Numerics.Vector3 GunMuzzle, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual bool DoHitDecal(BmSDK.Engine.Actor.FImpactInfo HitImpactInfo, System.Numerics.Vector3 HitTarget, BmSDK.Engine.Actor HitActor, System.Numerics.Vector3 GunMuzzle, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.DoHitDecal", true);
         byte* paramsPtr = stackalloc byte[200];
@@ -174,7 +174,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -192,7 +192,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: CheckRDPForLowBounds
     /// </summary>
-    public unsafe void CheckRDPForLowBounds()
+    public unsafe virtual void CheckRDPForLowBounds()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.CheckRDPForLowBounds", true);
         byte* paramsPtr = stackalloc byte[124];
@@ -203,7 +203,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: Bump
     /// </summary>
-    public unsafe void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.Bump", true);
         byte* paramsPtr = stackalloc byte[156];
@@ -217,7 +217,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: FireGunNow
     /// </summary>
-    public unsafe bool FireGunNow(bool bGunAnimOnly = default)
+    public unsafe override bool FireGunNow(bool bGunAnimOnly = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.FireGunNow", true);
         byte* paramsPtr = stackalloc byte[156];
@@ -229,7 +229,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: Reload
     /// </summary>
-    public unsafe void Reload()
+    public unsafe override void Reload()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.Reload", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -240,7 +240,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: PutGunInRightHand
     /// </summary>
-    public unsafe void PutGunInRightHand()
+    public unsafe virtual void PutGunInRightHand()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.PutGunInRightHand", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -251,7 +251,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: PutGunInLeftHand
     /// </summary>
-    public unsafe void PutGunInLeftHand()
+    public unsafe virtual void PutGunInLeftHand()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.PutGunInLeftHand", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -262,7 +262,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: TurnOnLight
     /// </summary>
-    public unsafe void TurnOnLight()
+    public unsafe override void TurnOnLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.TurnOnLight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -273,7 +273,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: CalculateBulletTrajectory
     /// </summary>
-    public unsafe void CalculateBulletTrajectory()
+    public unsafe virtual void CalculateBulletTrajectory()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.CalculateBulletTrajectory", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -284,7 +284,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: AdditiveArmAvoidance
     /// </summary>
-    public unsafe void AdditiveArmAvoidance()
+    public unsafe override void AdditiveArmAvoidance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.AdditiveArmAvoidance", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -295,7 +295,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: PreRender
     /// </summary>
-    public unsafe void PreRender(BmSDK.Engine.Canvas HudCanvas)
+    public unsafe override void PreRender(BmSDK.Engine.Canvas HudCanvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.PreRender", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -307,7 +307,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: ShowCrossHair
     /// </summary>
-    public unsafe bool ShowCrossHair()
+    public unsafe virtual bool ShowCrossHair()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.ShowCrossHair", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -318,7 +318,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: Zoom
     /// </summary>
-    public unsafe void Zoom(bool bZoom)
+    public unsafe override void Zoom(bool bZoom)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.Zoom", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -330,7 +330,7 @@ public partial class RPawnPlayerFPS_Joker : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.I
     /// <summary>
     /// Function: ToggleZoom
     /// </summary>
-    public unsafe void ToggleZoom()
+    public unsafe override void ToggleZoom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Joker.ToggleZoom", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -36,7 +36,7 @@ public partial class RSeqAct_MultipleMobileObjectives : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: GetDistance
     /// </summary>
-    public unsafe float GetDistance()
+    public unsafe virtual float GetDistance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MultipleMobileObjectives.GetDistance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RSeqAct_MultipleMobileObjectives : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: GetRecordTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetRecordTargetLocation(int nIndex)
+    public unsafe virtual System.Numerics.Vector3 GetRecordTargetLocation(int nIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MultipleMobileObjectives.GetRecordTargetLocation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -59,7 +59,7 @@ public partial class RSeqAct_MultipleMobileObjectives : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: GetRecordCount
     /// </summary>
-    public unsafe int GetRecordCount()
+    public unsafe virtual int GetRecordCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MultipleMobileObjectives.GetRecordCount", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -70,7 +70,7 @@ public partial class RSeqAct_MultipleMobileObjectives : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: GetArrayIndexForWave
     /// </summary>
-    public unsafe int GetArrayIndexForWave(BmSDK.BmGame.RSeqAct_VehicleEnemySpawner ObjectiveWave)
+    public unsafe virtual int GetArrayIndexForWave(BmSDK.BmGame.RSeqAct_VehicleEnemySpawner ObjectiveWave)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MultipleMobileObjectives.GetArrayIndexForWave", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class RSeqAct_MultipleMobileObjectives : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: GetArrayIndexForActor
     /// </summary>
-    public unsafe int GetArrayIndexForActor(BmSDK.Engine.Actor ObjectiveActor)
+    public unsafe virtual int GetArrayIndexForActor(BmSDK.Engine.Actor ObjectiveActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MultipleMobileObjectives.GetArrayIndexForActor", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -94,7 +94,7 @@ public partial class RSeqAct_MultipleMobileObjectives : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: RemoveObjectiveCommon
     /// </summary>
-    public unsafe void RemoveObjectiveCommon(int arr_index)
+    public unsafe virtual void RemoveObjectiveCommon(int arr_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MultipleMobileObjectives.RemoveObjectiveCommon", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RSeqAct_MultipleMobileObjectives : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: RemoveObjectiveWave
     /// </summary>
-    public unsafe void RemoveObjectiveWave(BmSDK.BmGame.RSeqAct_VehicleEnemySpawner ObjectiveWave)
+    public unsafe virtual void RemoveObjectiveWave(BmSDK.BmGame.RSeqAct_VehicleEnemySpawner ObjectiveWave)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MultipleMobileObjectives.RemoveObjectiveWave", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -118,7 +118,7 @@ public partial class RSeqAct_MultipleMobileObjectives : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: AddObjectiveWave
     /// </summary>
-    public unsafe void AddObjectiveWave(BmSDK.BmGame.RSeqAct_VehicleEnemySpawner ObjectiveWave, BmSDK.FString FocusDetailText, BmSDK.TArray<BmSDK.FString> AssociatedObjectives)
+    public unsafe virtual void AddObjectiveWave(BmSDK.BmGame.RSeqAct_VehicleEnemySpawner ObjectiveWave, BmSDK.FString FocusDetailText, BmSDK.TArray<BmSDK.FString> AssociatedObjectives)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MultipleMobileObjectives.AddObjectiveWave", true);
         byte* paramsPtr = stackalloc byte[124];
@@ -132,7 +132,7 @@ public partial class RSeqAct_MultipleMobileObjectives : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: RemoveObjective
     /// </summary>
-    public unsafe void RemoveObjective(BmSDK.Engine.Actor ObjectiveActor)
+    public unsafe virtual void RemoveObjective(BmSDK.Engine.Actor ObjectiveActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MultipleMobileObjectives.RemoveObjective", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -144,7 +144,7 @@ public partial class RSeqAct_MultipleMobileObjectives : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: AddObjective
     /// </summary>
-    public unsafe void AddObjective(BmSDK.Engine.Actor ObjectiveActor, BmSDK.FString FlagToSetWhenFound, BmSDK.FString FocusDetailText, BmSDK.TArray<BmSDK.FString> AssociatedObjectives)
+    public unsafe virtual void AddObjective(BmSDK.Engine.Actor ObjectiveActor, BmSDK.FString FlagToSetWhenFound, BmSDK.FString FocusDetailText, BmSDK.TArray<BmSDK.FString> AssociatedObjectives)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MultipleMobileObjectives.AddObjective", true);
         byte* paramsPtr = stackalloc byte[140];
@@ -159,7 +159,7 @@ public partial class RSeqAct_MultipleMobileObjectives : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: AbortAndCleanUp
     /// </summary>
-    public unsafe void AbortAndCleanUp()
+    public unsafe virtual void AbortAndCleanUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MultipleMobileObjectives.AbortAndCleanUp", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -170,7 +170,7 @@ public partial class RSeqAct_MultipleMobileObjectives : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: InitObjectives
     /// </summary>
-    public unsafe void InitObjectives()
+    public unsafe virtual void InitObjectives()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MultipleMobileObjectives.InitObjectives", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -181,7 +181,7 @@ public partial class RSeqAct_MultipleMobileObjectives : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: SetHudMarkersActive
     /// </summary>
-    public unsafe void SetHudMarkersActive(bool are_active)
+    public unsafe virtual void SetHudMarkersActive(bool are_active)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MultipleMobileObjectives.SetHudMarkersActive", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -193,7 +193,7 @@ public partial class RSeqAct_MultipleMobileObjectives : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: IsRecordOnscreen
     /// </summary>
-    public unsafe bool IsRecordOnscreen(int record_index)
+    public unsafe virtual bool IsRecordOnscreen(int record_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MultipleMobileObjectives.IsRecordOnscreen", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -205,7 +205,7 @@ public partial class RSeqAct_MultipleMobileObjectives : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: TickLogic
     /// </summary>
-    public unsafe void TickLogic(float DeltaTime)
+    public unsafe virtual void TickLogic(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MultipleMobileObjectives.TickLogic", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -217,7 +217,7 @@ public partial class RSeqAct_MultipleMobileObjectives : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MultipleMobileObjectives.Update", true);
         byte* paramsPtr = stackalloc byte[8];

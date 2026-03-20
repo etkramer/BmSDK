@@ -36,7 +36,7 @@ public partial class RSeqVar_SpecificPlayerChar : BmSDK.Engine.SeqVar_Object, Bm
     /// <summary>
     /// Function: GetObjectValue
     /// </summary>
-    public unsafe BmSDK.GameObject GetObjectValue()
+    public unsafe override BmSDK.GameObject GetObjectValue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqVar_SpecificPlayerChar.GetObjectValue", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -47,7 +47,7 @@ public partial class RSeqVar_SpecificPlayerChar : BmSDK.Engine.SeqVar_Object, Bm
     /// <summary>
     /// Function: SetObjValue
     /// </summary>
-    public unsafe void SetObjValue()
+    public unsafe virtual void SetObjValue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqVar_SpecificPlayerChar.SetObjValue", true);
         byte* paramsPtr = stackalloc byte[0];

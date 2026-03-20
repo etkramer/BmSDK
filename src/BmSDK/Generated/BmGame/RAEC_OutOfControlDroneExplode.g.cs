@@ -71,7 +71,7 @@ public partial class RAEC_OutOfControlDroneExplode : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_OutOfControlDroneExplode.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_OutOfControlDroneExplode : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: DiscoverControllerDown
     /// </summary>
-    public unsafe void DiscoverControllerDown()
+    public unsafe virtual void DiscoverControllerDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_OutOfControlDroneExplode.DiscoverControllerDown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RAEC_OutOfControlDroneExplode : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: GlanceEnd
     /// </summary>
-    public unsafe void GlanceEnd()
+    public unsafe virtual void GlanceEnd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_OutOfControlDroneExplode.GlanceEnd", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RAEC_OutOfControlDroneExplode : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: StartExplodeReaction
     /// </summary>
-    public unsafe void StartExplodeReaction(BmSDK.BmGame.RPawnVillain NewDroneConPawn, System.Numerics.Vector3 ExplodeLocation)
+    public unsafe virtual void StartExplodeReaction(BmSDK.BmGame.RPawnVillain NewDroneConPawn, System.Numerics.Vector3 ExplodeLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_OutOfControlDroneExplode.StartExplodeReaction", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -117,7 +117,7 @@ public partial class RAEC_OutOfControlDroneExplode : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_OutOfControlDroneExplode.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RAEC_OutOfControlDroneExplode : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: OnRemoveSoloChild
     /// </summary>
-    public unsafe void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
+    public unsafe override void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_OutOfControlDroneExplode.OnRemoveSoloChild", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -141,7 +141,7 @@ public partial class RAEC_OutOfControlDroneExplode : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: OnRemoveGroupChild
     /// </summary>
-    public unsafe void OnRemoveGroupChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
+    public unsafe override void OnRemoveGroupChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_OutOfControlDroneExplode.OnRemoveGroupChild", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -153,7 +153,7 @@ public partial class RAEC_OutOfControlDroneExplode : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// Function: GetBarkPriority
     /// </summary>
-    public unsafe int GetBarkPriority()
+    public unsafe override int GetBarkPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_OutOfControlDroneExplode.GetBarkPriority", true);
         byte* paramsPtr = stackalloc byte[4];

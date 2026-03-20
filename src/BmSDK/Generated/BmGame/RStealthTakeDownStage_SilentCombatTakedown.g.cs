@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_SilentCombatTakedown : BmSDK.BmGame.R
     /// <summary>
     /// Function: FillInAnimNames
     /// </summary>
-    public unsafe void FillInAnimNames()
+    public unsafe override void FillInAnimNames()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_SilentCombatTakedown.FillInAnimNames", true);
         byte* paramsPtr = stackalloc byte[208];
@@ -82,7 +82,7 @@ public partial class RStealthTakeDownStage_SilentCombatTakedown : BmSDK.BmGame.R
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_SilentCombatTakedown.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -95,7 +95,7 @@ public partial class RStealthTakeDownStage_SilentCombatTakedown : BmSDK.BmGame.R
     /// <summary>
     /// Function: GetStageAnim
     /// </summary>
-    public unsafe int GetStageAnim()
+    public unsafe override int GetStageAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_SilentCombatTakedown.GetStageAnim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RStealthTakeDownStage_SilentCombatTakedown : BmSDK.BmGame.R
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_SilentCombatTakedown.Begin", true);
         byte* paramsPtr = stackalloc byte[8];

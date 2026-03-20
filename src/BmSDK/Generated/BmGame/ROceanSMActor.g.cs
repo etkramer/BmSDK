@@ -71,7 +71,7 @@ public partial class ROceanSMActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObj
     /// <summary>
     /// Function: UpdateEditorComponents
     /// </summary>
-    public unsafe void UpdateEditorComponents()
+    public unsafe virtual void UpdateEditorComponents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROceanSMActor.UpdateEditorComponents", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class ROceanSMActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObj
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROceanSMActor.UnTouch", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -101,7 +101,7 @@ public partial class ROceanSMActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObj
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROceanSMActor.Touch", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -116,7 +116,7 @@ public partial class ROceanSMActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObj
     /// <summary>
     /// Function: OnUntouchWaterVolume
     /// </summary>
-    public unsafe void OnUntouchWaterVolume(BmSDK.BmGame.RWaterVolumeBase WaterVolume)
+    public unsafe virtual void OnUntouchWaterVolume(BmSDK.BmGame.RWaterVolumeBase WaterVolume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROceanSMActor.OnUntouchWaterVolume", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -135,7 +135,7 @@ public partial class ROceanSMActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObj
     /// <summary>
     /// Function: OnTouchWaterVolume
     /// </summary>
-    public unsafe void OnTouchWaterVolume(BmSDK.BmGame.RWaterVolumeBase WaterVolume, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual void OnTouchWaterVolume(BmSDK.BmGame.RWaterVolumeBase WaterVolume, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROceanSMActor.OnTouchWaterVolume", true);
         byte* paramsPtr = stackalloc byte[40];

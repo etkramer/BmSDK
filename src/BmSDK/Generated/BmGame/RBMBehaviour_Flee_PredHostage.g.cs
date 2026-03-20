@@ -36,7 +36,7 @@ public partial class RBMBehaviour_Flee_PredHostage : BmSDK.BmGame.RBMBehaviour_A
     /// <summary>
     /// Function: FailedToFlee
     /// </summary>
-    public unsafe void FailedToFlee()
+    public unsafe virtual void FailedToFlee()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Flee_PredHostage.FailedToFlee", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_Flee_PredHostage : BmSDK.BmGame.RBMBehaviour_A
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Flee_PredHostage.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_Flee_PredHostage : BmSDK.BmGame.RBMBehaviour_A
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Flee_PredHostage.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -71,7 +71,7 @@ public partial class RBMBehaviour_Flee_PredHostage : BmSDK.BmGame.RBMBehaviour_A
     /// <summary>
     /// Function: SetFleePoint
     /// </summary>
-    public unsafe bool SetFleePoint()
+    public unsafe virtual bool SetFleePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Flee_PredHostage.SetFleePoint", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class RBMBehaviour_Flee_PredHostage : BmSDK.BmGame.RBMBehaviour_A
     /// <summary>
     /// Function: SetupMultiNavHandleWrapper
     /// </summary>
-    public unsafe void SetupMultiNavHandleWrapper()
+    public unsafe virtual void SetupMultiNavHandleWrapper()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Flee_PredHostage.SetupMultiNavHandleWrapper", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RBMBehaviour_Flee_PredHostage : BmSDK.BmGame.RBMBehaviour_A
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Flee_PredHostage.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RBMBehaviour_Flee_PredHostage : BmSDK.BmGame.RBMBehaviour_A
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Flee_PredHostage.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

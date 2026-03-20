@@ -71,7 +71,7 @@ public partial class RCinematicJoker : BmSDK.BmGame.RCinematicCharacter, BmSDK.I
     /// <summary>
     /// Function: BeginAnimControl
     /// </summary>
-    public unsafe void BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCinematicJoker.BeginAnimControl", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -84,7 +84,7 @@ public partial class RCinematicJoker : BmSDK.BmGame.RCinematicCharacter, BmSDK.I
     /// <summary>
     /// Function: SetJokerSickState
     /// </summary>
-    public unsafe void SetJokerSickState()
+    public unsafe virtual void SetJokerSickState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCinematicJoker.SetJokerSickState", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -95,7 +95,7 @@ public partial class RCinematicJoker : BmSDK.BmGame.RCinematicCharacter, BmSDK.I
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCinematicJoker.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

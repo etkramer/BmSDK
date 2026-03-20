@@ -71,7 +71,7 @@ public partial class RAEC_DetectiveModeDetector_Group : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DetectiveModeDetector_Group.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RAEC_DetectiveModeDetector_Group : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// Function: NotifyChildStolen
     /// </summary>
-    public unsafe void NotifyChildStolen(BmSDK.BmGame.RAlertEventCoordinatorSolo StoleFromAEC, BmSDK.BmGame.RAlertEventCoordinatorSolo StealingAEC)
+    public unsafe override void NotifyChildStolen(BmSDK.BmGame.RAlertEventCoordinatorSolo StoleFromAEC, BmSDK.BmGame.RAlertEventCoordinatorSolo StealingAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DetectiveModeDetector_Group.NotifyChildStolen", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -96,7 +96,7 @@ public partial class RAEC_DetectiveModeDetector_Group : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// Function: TryRestartDetection
     /// </summary>
-    public unsafe void TryRestartDetection()
+    public unsafe virtual void TryRestartDetection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DetectiveModeDetector_Group.TryRestartDetection", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class RAEC_DetectiveModeDetector_Group : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// Function: StopDetection
     /// </summary>
-    public unsafe void StopDetection(bool bDetectiveModeOn)
+    public unsafe virtual void StopDetection(bool bDetectiveModeOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DetectiveModeDetector_Group.StopDetection", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -119,7 +119,7 @@ public partial class RAEC_DetectiveModeDetector_Group : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// Function: GetBarkPriority
     /// </summary>
-    public unsafe int GetBarkPriority()
+    public unsafe override int GetBarkPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DetectiveModeDetector_Group.GetBarkPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -130,7 +130,7 @@ public partial class RAEC_DetectiveModeDetector_Group : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// Function: OnAssign
     /// </summary>
-    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe override void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DetectiveModeDetector_Group.OnAssign", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class MCrowdSequence_CrowTrail : BmSDK.BmGame.RCrowdSequence, BmS
     /// <summary>
     /// Function: UpdateAttractors
     /// </summary>
-    public unsafe void UpdateAttractors(float DeltaTime)
+    public unsafe override void UpdateAttractors(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCrowdSequence_CrowTrail.UpdateAttractors", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -83,7 +83,7 @@ public partial class MCrowdSequence_CrowTrail : BmSDK.BmGame.RCrowdSequence, BmS
     /// <summary>
     /// Function: EndSequence
     /// </summary>
-    public unsafe void EndSequence()
+    public unsafe override void EndSequence()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCrowdSequence_CrowTrail.EndSequence", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class MCrowdSequence_CrowTrail : BmSDK.BmGame.RCrowdSequence, BmS
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCrowdSequence_CrowTrail.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class MCrowdSequence_CrowTrail : BmSDK.BmGame.RCrowdSequence, BmS
     /// <summary>
     /// Function: UpdateVelocityFactor
     /// </summary>
-    public unsafe void UpdateVelocityFactor()
+    public unsafe virtual void UpdateVelocityFactor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCrowdSequence_CrowTrail.UpdateVelocityFactor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class MCrowdSequence_CrowTrail : BmSDK.BmGame.RCrowdSequence, BmS
     /// <summary>
     /// Function: StartFxOnBatmobile
     /// </summary>
-    public unsafe void StartFxOnBatmobile(bool Value)
+    public unsafe virtual void StartFxOnBatmobile(bool Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCrowdSequence_CrowTrail.StartFxOnBatmobile", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -129,7 +129,7 @@ public partial class MCrowdSequence_CrowTrail : BmSDK.BmGame.RCrowdSequence, BmS
     /// <summary>
     /// Function: StartSequence
     /// </summary>
-    public unsafe void StartSequence()
+    public unsafe override void StartSequence()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCrowdSequence_CrowTrail.StartSequence", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -140,7 +140,7 @@ public partial class MCrowdSequence_CrowTrail : BmSDK.BmGame.RCrowdSequence, BmS
     /// <summary>
     /// Function: CreateAttractor
     /// </summary>
-    public unsafe void CreateAttractor(int Index)
+    public unsafe virtual void CreateAttractor(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCrowdSequence_CrowTrail.CreateAttractor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -152,7 +152,7 @@ public partial class MCrowdSequence_CrowTrail : BmSDK.BmGame.RCrowdSequence, BmS
     /// <summary>
     /// Function: GetSpawnLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetSpawnLocation()
+    public unsafe override System.Numerics.Vector3 GetSpawnLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCrowdSequence_CrowTrail.GetSpawnLocation", true);
         byte* paramsPtr = stackalloc byte[12];

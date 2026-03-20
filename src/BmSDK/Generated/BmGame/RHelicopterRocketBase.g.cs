@@ -66,7 +66,7 @@ public partial class RHelicopterRocketBase : BmSDK.Engine.DynamicSMActor, BmSDK.
     /// <summary>
     /// Function: HitLevel
     /// </summary>
-    public unsafe void HitLevel(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual void HitLevel(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterRocketBase.HitLevel", true);
         byte* paramsPtr = stackalloc byte[24];

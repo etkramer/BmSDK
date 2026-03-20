@@ -71,7 +71,7 @@ public partial class RGlideKickCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     /// <summary>
     /// Function: UpdateCamera
     /// </summary>
-    public unsafe void UpdateCamera(float DeltaTime)
+    public unsafe virtual void UpdateCamera(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGlideKickCamera.UpdateCamera", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -90,7 +90,7 @@ public partial class RGlideKickCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.Actor Target, float BlendTime, bool bMirrored = default)
+    public unsafe virtual void Init(BmSDK.Engine.Actor Target, float BlendTime, bool bMirrored = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGlideKickCamera.Init", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -104,7 +104,7 @@ public partial class RGlideKickCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGlideKickCamera.Tick", true);
         byte* paramsPtr = stackalloc byte[12];

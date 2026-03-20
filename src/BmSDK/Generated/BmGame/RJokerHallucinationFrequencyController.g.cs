@@ -36,7 +36,7 @@ public partial class RJokerHallucinationFrequencyController : BmSDK.GameObject, 
     /// <summary>
     /// Function: ShouldJokerHelpUpThug
     /// </summary>
-    public unsafe bool ShouldJokerHelpUpThug(BmSDK.BmGame.RPawnVillain Thug, BmSDK.FName TargetStance)
+    public unsafe virtual bool ShouldJokerHelpUpThug(BmSDK.BmGame.RPawnVillain Thug, BmSDK.FName TargetStance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerHallucinationFrequencyController.ShouldJokerHelpUpThug", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -49,7 +49,7 @@ public partial class RJokerHallucinationFrequencyController : BmSDK.GameObject, 
     /// <summary>
     /// Function: HelpUpThug
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId HelpUpThug(BmSDK.BmGame.RPawnVillain Thug)
+    public unsafe virtual BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId HelpUpThug(BmSDK.BmGame.RPawnVillain Thug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerHallucinationFrequencyController.HelpUpThug", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -61,7 +61,7 @@ public partial class RJokerHallucinationFrequencyController : BmSDK.GameObject, 
     /// <summary>
     /// Function: DoGenericSlavedJokerHallucination
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnJokerHallucination DoGenericSlavedJokerHallucination(BmSDK.BmGame.RPawnCharacter HostPawn, bool bIgnoreCollisionCheck, BmSDK.Rotator AngleOffset, System.Numerics.Vector3 refLoc, BmSDK.FName TransAnimName, BmSDK.FName idleAnimName, BmSDK.BmGame.RPawnJokerHallucination.TypesOfHallucination HallucinationType)
+    public unsafe virtual BmSDK.BmGame.RPawnJokerHallucination DoGenericSlavedJokerHallucination(BmSDK.BmGame.RPawnCharacter HostPawn, bool bIgnoreCollisionCheck, BmSDK.Rotator AngleOffset, System.Numerics.Vector3 refLoc, BmSDK.FName TransAnimName, BmSDK.FName idleAnimName, BmSDK.BmGame.RPawnJokerHallucination.TypesOfHallucination HallucinationType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerHallucinationFrequencyController.DoGenericSlavedJokerHallucination", true);
         byte* paramsPtr = stackalloc byte[200];
@@ -79,7 +79,7 @@ public partial class RJokerHallucinationFrequencyController : BmSDK.GameObject, 
     /// <summary>
     /// Function: SpawnJokerHallucination
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnJokerHallucination SpawnJokerHallucination(BmSDK.BmGame.RCharacterDefine CustomDefine = default)
+    public unsafe virtual BmSDK.BmGame.RPawnJokerHallucination SpawnJokerHallucination(BmSDK.BmGame.RCharacterDefine CustomDefine = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerHallucinationFrequencyController.SpawnJokerHallucination", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -98,7 +98,7 @@ public partial class RJokerHallucinationFrequencyController : BmSDK.GameObject, 
     /// <summary>
     /// Function: IsSpaceForJokerAnimationCheckWholeAnim
     /// </summary>
-    public unsafe bool IsSpaceForJokerAnimationCheckWholeAnim(BmSDK.BmGame.RAnimConfig.FCustomAnimConfig AnimConf, BmSDK.BmGame.RPawnCharacter TestPawn, float CheckDistance, System.Numerics.Vector3 refLoc, BmSDK.Rotator RefRot)
+    public unsafe virtual bool IsSpaceForJokerAnimationCheckWholeAnim(BmSDK.BmGame.RAnimConfig.FCustomAnimConfig AnimConf, BmSDK.BmGame.RPawnCharacter TestPawn, float CheckDistance, System.Numerics.Vector3 refLoc, BmSDK.Rotator RefRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerHallucinationFrequencyController.IsSpaceForJokerAnimationCheckWholeAnim", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -121,7 +121,7 @@ public partial class RJokerHallucinationFrequencyController : BmSDK.GameObject, 
     /// <summary>
     /// Function: IsSpaceForJokerAnimation
     /// </summary>
-    public unsafe bool IsSpaceForJokerAnimation(BmSDK.FName AnimName, BmSDK.Engine.Actor TestActor, float CheckDistance, System.Numerics.Vector3 TestLoc = default)
+    public unsafe virtual bool IsSpaceForJokerAnimation(BmSDK.FName AnimName, BmSDK.Engine.Actor TestActor, float CheckDistance, System.Numerics.Vector3 TestLoc = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerHallucinationFrequencyController.IsSpaceForJokerAnimation", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -143,7 +143,7 @@ public partial class RJokerHallucinationFrequencyController : BmSDK.GameObject, 
     /// <summary>
     /// Function: GetJokerHallucinationAnimSet
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> GetJokerHallucinationAnimSet()
+    public unsafe virtual BmSDK.TArray<BmSDK.Engine.AnimSet> GetJokerHallucinationAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerHallucinationFrequencyController.GetJokerHallucinationAnimSet", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -154,7 +154,7 @@ public partial class RJokerHallucinationFrequencyController : BmSDK.GameObject, 
     /// <summary>
     /// Function: IsJokerAnimationLoaded
     /// </summary>
-    public unsafe bool IsJokerAnimationLoaded(BmSDK.FName AnimName)
+    public unsafe virtual bool IsJokerAnimationLoaded(BmSDK.FName AnimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerHallucinationFrequencyController.IsJokerAnimationLoaded", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -166,7 +166,7 @@ public partial class RJokerHallucinationFrequencyController : BmSDK.GameObject, 
     /// <summary>
     /// Function: JokerHallucinationsAllowed
     /// </summary>
-    public unsafe bool JokerHallucinationsAllowed()
+    public unsafe virtual bool JokerHallucinationsAllowed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerHallucinationFrequencyController.JokerHallucinationsAllowed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -177,7 +177,7 @@ public partial class RJokerHallucinationFrequencyController : BmSDK.GameObject, 
     /// <summary>
     /// Function: GetWorldInfo
     /// </summary>
-    public unsafe BmSDK.Engine.WorldInfo GetWorldInfo()
+    public unsafe virtual BmSDK.Engine.WorldInfo GetWorldInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerHallucinationFrequencyController.GetWorldInfo", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -188,7 +188,7 @@ public partial class RJokerHallucinationFrequencyController : BmSDK.GameObject, 
     /// <summary>
     /// Function: HasAnimBeenUsedRecently
     /// </summary>
-    public unsafe bool HasAnimBeenUsedRecently(BmSDK.BmGame.RPawnJokerHallucination.TypesOfHallucination AppearanceType, BmSDK.FName AnimationName, int NumHistoryToCheck)
+    public unsafe virtual bool HasAnimBeenUsedRecently(BmSDK.BmGame.RPawnJokerHallucination.TypesOfHallucination AppearanceType, BmSDK.FName AnimationName, int NumHistoryToCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerHallucinationFrequencyController.HasAnimBeenUsedRecently", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -202,7 +202,7 @@ public partial class RJokerHallucinationFrequencyController : BmSDK.GameObject, 
     /// <summary>
     /// Function: RegisterJokerAppearance
     /// </summary>
-    public unsafe void RegisterJokerAppearance(BmSDK.BmGame.RPawnJokerHallucination.TypesOfHallucination AppearanceType, BmSDK.FName AnimationName)
+    public unsafe virtual void RegisterJokerAppearance(BmSDK.BmGame.RPawnJokerHallucination.TypesOfHallucination AppearanceType, BmSDK.FName AnimationName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerHallucinationFrequencyController.RegisterJokerAppearance", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -215,7 +215,7 @@ public partial class RJokerHallucinationFrequencyController : BmSDK.GameObject, 
     /// <summary>
     /// Function: SetIntialValues
     /// </summary>
-    public unsafe void SetIntialValues()
+    public unsafe virtual void SetIntialValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerHallucinationFrequencyController.SetIntialValues", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -226,7 +226,7 @@ public partial class RJokerHallucinationFrequencyController : BmSDK.GameObject, 
     /// <summary>
     /// Function: ShouldSpawnJokerThisTime
     /// </summary>
-    public unsafe bool ShouldSpawnJokerThisTime(BmSDK.BmGame.RPawnJokerHallucination.TypesOfHallucination AppearanceType)
+    public unsafe virtual bool ShouldSpawnJokerThisTime(BmSDK.BmGame.RPawnJokerHallucination.TypesOfHallucination AppearanceType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerHallucinationFrequencyController.ShouldSpawnJokerThisTime", true);
         byte* paramsPtr = stackalloc byte[12];

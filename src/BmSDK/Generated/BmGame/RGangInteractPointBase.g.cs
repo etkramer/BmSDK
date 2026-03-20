@@ -66,7 +66,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: SetSpecCanTakeOver
     /// </summary>
-    public unsafe void SetSpecCanTakeOver()
+    public unsafe virtual void SetSpecCanTakeOver()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.SetSpecCanTakeOver", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: AllowSpectators
     /// </summary>
-    public unsafe bool AllowSpectators()
+    public unsafe virtual bool AllowSpectators()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.AllowSpectators", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -88,7 +88,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: DisplayDebugInfo
     /// </summary>
-    public unsafe void DisplayDebugInfo()
+    public unsafe virtual void DisplayDebugInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.DisplayDebugInfo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -99,7 +99,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: DettachFromCar
     /// </summary>
-    public unsafe void DettachFromCar()
+    public unsafe virtual void DettachFromCar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.DettachFromCar", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -110,7 +110,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: AttachToCar
     /// </summary>
-    public unsafe void AttachToCar(int Seat)
+    public unsafe virtual void AttachToCar(int Seat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.AttachToCar", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -122,7 +122,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: UpdateTimeOut
     /// </summary>
-    public unsafe bool UpdateTimeOut(float DeltaTime)
+    public unsafe virtual bool UpdateTimeOut(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.UpdateTimeOut", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -134,7 +134,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: GetNumPairedToCheck
     /// </summary>
-    public unsafe int GetNumPairedToCheck()
+    public unsafe virtual int GetNumPairedToCheck()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.GetNumPairedToCheck", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -145,7 +145,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: AdvanceAnimation
     /// </summary>
-    public unsafe void AdvanceAnimation(float DeltaTime)
+    public unsafe virtual void AdvanceAnimation(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.AdvanceAnimation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -157,7 +157,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: ActivateBuddies
     /// </summary>
-    public unsafe void ActivateBuddies()
+    public unsafe virtual void ActivateBuddies()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.ActivateBuddies", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -168,7 +168,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: DeactivateBuddies
     /// </summary>
-    public unsafe void DeactivateBuddies()
+    public unsafe virtual void DeactivateBuddies()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.DeactivateBuddies", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -179,7 +179,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: IsLeader
     /// </summary>
-    public unsafe bool IsLeader()
+    public unsafe virtual bool IsLeader()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.IsLeader", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -190,7 +190,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: AllowForSpawning
     /// </summary>
-    public unsafe bool AllowForSpawning()
+    public unsafe virtual bool AllowForSpawning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.AllowForSpawning", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -208,7 +208,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: SetFinished
     /// </summary>
-    public unsafe void SetFinished(BmSDK.BmGame.RBMPawnAI P)
+    public unsafe virtual void SetFinished(BmSDK.BmGame.RBMPawnAI P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.SetFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -220,7 +220,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: SetInUse
     /// </summary>
-    public unsafe void SetInUse(BmSDK.BmGame.RBMPawnAI UsagePawn)
+    public unsafe virtual void SetInUse(BmSDK.BmGame.RBMPawnAI UsagePawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.SetInUse", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -232,7 +232,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: IsValidForPawnSpec
     /// </summary>
-    public unsafe BmSDK.BmGame.RGangInteractPointBase IsValidForPawnSpec(BmSDK.BmGame.RBMPawnAI TestPawn, bool bSkipSpeedTest = default, bool bSkipAngleCheck = default)
+    public unsafe virtual BmSDK.BmGame.RGangInteractPointBase IsValidForPawnSpec(BmSDK.BmGame.RBMPawnAI TestPawn, bool bSkipSpeedTest = default, bool bSkipAngleCheck = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.IsValidForPawnSpec", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -246,7 +246,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: GetEntryPointAndRotation
     /// </summary>
-    public unsafe void GetEntryPointAndRotation(BmSDK.BmGame.RPawnCharacter TestPawn, out System.Numerics.Vector3 Loc, out BmSDK.Rotator Rot, int Index, bool bSecondTry = default)
+    public unsafe virtual void GetEntryPointAndRotation(BmSDK.BmGame.RPawnCharacter TestPawn, out System.Numerics.Vector3 Loc, out BmSDK.Rotator Rot, int Index, bool bSecondTry = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.GetEntryPointAndRotation", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -269,7 +269,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: IsValidForPawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RGangInteractPointBase IsValidForPawn(BmSDK.BmGame.RBMPawnAI TestPawn, bool bSkipSpeedTest = default, bool bSkipAngleCheck = default, bool bSkipVolCheck = default)
+    public unsafe virtual BmSDK.BmGame.RGangInteractPointBase IsValidForPawn(BmSDK.BmGame.RBMPawnAI TestPawn, bool bSkipSpeedTest = default, bool bSkipAngleCheck = default, bool bSkipVolCheck = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.IsValidForPawn", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -291,7 +291,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: GetGid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid GetGid()
+    public unsafe virtual BmSDK.GameObject.FGuid GetGid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.GetGid", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -309,7 +309,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: GetBehaviourClass
     /// </summary>
-    public unsafe BmSDK.Class GetBehaviourClass()
+    public unsafe virtual BmSDK.Class GetBehaviourClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.GetBehaviourClass", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -320,7 +320,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: GetPOILocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetPOILocation()
+    public unsafe virtual System.Numerics.Vector3 GetPOILocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.GetPOILocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -331,7 +331,7 @@ public partial class RGangInteractPointBase : BmSDK.Engine.RGangInteractPointEng
     /// <summary>
     /// Function: GetSelectionScore
     /// </summary>
-    public unsafe float GetSelectionScore()
+    public unsafe virtual float GetSelectionScore()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointBase.GetSelectionScore", true);
         byte* paramsPtr = stackalloc byte[4];

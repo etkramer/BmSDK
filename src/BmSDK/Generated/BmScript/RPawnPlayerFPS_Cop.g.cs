@@ -71,7 +71,7 @@ public partial class RPawnPlayerFPS_Cop : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.IGa
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Cop.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RPawnPlayerFPS_Cop : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.IGa
     /// <summary>
     /// Function: CauseMuzzleFlash
     /// </summary>
-    public unsafe void CauseMuzzleFlash()
+    public unsafe virtual void CauseMuzzleFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Cop.CauseMuzzleFlash", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RPawnPlayerFPS_Cop : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.IGa
     /// <summary>
     /// Function: DoShotFX
     /// </summary>
-    public unsafe void DoShotFX(System.Numerics.Vector3 HitTarget, BmSDK.Engine.Actor HitActor, System.Numerics.Vector3 OriginalShotOrig, System.Numerics.Vector3 OriginalShotDir)
+    public unsafe virtual void DoShotFX(System.Numerics.Vector3 HitTarget, BmSDK.Engine.Actor HitActor, System.Numerics.Vector3 OriginalShotOrig, System.Numerics.Vector3 OriginalShotDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Cop.DoShotFX", true);
         byte* paramsPtr = stackalloc byte[176];
@@ -108,7 +108,7 @@ public partial class RPawnPlayerFPS_Cop : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.IGa
     /// <summary>
     /// Function: CalcImpact
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.FImpactInfo CalcImpact(System.Numerics.Vector3 StartTrace, System.Numerics.Vector3 EndTrace, BmSDK.Engine.Actor HitTarget)
+    public unsafe virtual BmSDK.Engine.Actor.FImpactInfo CalcImpact(System.Numerics.Vector3 StartTrace, System.Numerics.Vector3 EndTrace, BmSDK.Engine.Actor HitTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Cop.CalcImpact", true);
         byte* paramsPtr = stackalloc byte[304];
@@ -122,7 +122,7 @@ public partial class RPawnPlayerFPS_Cop : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.IGa
     /// <summary>
     /// Function: DoHitDecal
     /// </summary>
-    public unsafe bool DoHitDecal(BmSDK.Engine.Actor.FImpactInfo HitImpactInfo, System.Numerics.Vector3 HitTarget, BmSDK.Engine.Actor HitActor, System.Numerics.Vector3 GunMuzzle)
+    public unsafe virtual bool DoHitDecal(BmSDK.Engine.Actor.FImpactInfo HitImpactInfo, System.Numerics.Vector3 HitTarget, BmSDK.Engine.Actor HitActor, System.Numerics.Vector3 GunMuzzle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Cop.DoHitDecal", true);
         byte* paramsPtr = stackalloc byte[188];
@@ -137,7 +137,7 @@ public partial class RPawnPlayerFPS_Cop : BmSDK.BmGame.RPawnPlayerFPS, BmSDK.IGa
     /// <summary>
     /// Function: FireGunNow
     /// </summary>
-    public unsafe bool FireGunNow(bool bGunAnimOnly = default)
+    public unsafe override bool FireGunNow(bool bGunAnimOnly = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerFPS_Cop.FireGunNow", true);
         byte* paramsPtr = stackalloc byte[388];

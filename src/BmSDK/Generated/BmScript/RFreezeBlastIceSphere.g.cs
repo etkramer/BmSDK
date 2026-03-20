@@ -71,7 +71,7 @@ public partial class RFreezeBlastIceSphere : BmSDK.Engine.FogVolumeSphericalDens
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeBlastIceSphere.Tick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RFreezeBlastIceSphere : BmSDK.Engine.FogVolumeSphericalDens
     /// <summary>
     /// Function: Deactivate
     /// </summary>
-    public unsafe void Deactivate()
+    public unsafe virtual void Deactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeBlastIceSphere.Deactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RFreezeBlastIceSphere : BmSDK.Engine.FogVolumeSphericalDens
     /// <summary>
     /// Function: Activate
     /// </summary>
-    public unsafe void Activate()
+    public unsafe virtual void Activate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeBlastIceSphere.Activate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RFreezeBlastIceSphere : BmSDK.Engine.FogVolumeSphericalDens
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeBlastIceSphere.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

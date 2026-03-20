@@ -36,7 +36,7 @@ public partial class RBMBehaviour_HitReactionMultiWeaponREC : BmSDK.BmGame.RBMBe
     /// <summary>
     /// Function: BumpedIntoPlayer
     /// </summary>
-    public unsafe void BumpedIntoPlayer()
+    public unsafe virtual void BumpedIntoPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReactionMultiWeaponREC.BumpedIntoPlayer", true);
         byte* paramsPtr = stackalloc byte[248];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_HitReactionMultiWeaponREC : BmSDK.BmGame.RBMBe
     /// <summary>
     /// Function: UpdateHitThugs
     /// </summary>
-    public unsafe void UpdateHitThugs()
+    public unsafe virtual void UpdateHitThugs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReactionMultiWeaponREC.UpdateHitThugs", true);
         byte* paramsPtr = stackalloc byte[260];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_HitReactionMultiWeaponREC : BmSDK.BmGame.RBMBe
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmGame.RPawnCombat.FDamageInfo NewDmgInfo, bool bNewInterruptedHitReaction = default)
+    public unsafe override void Initialise(BmSDK.BmGame.RPawnCombat.FDamageInfo NewDmgInfo, bool bNewInterruptedHitReaction = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReactionMultiWeaponREC.Initialise", true);
         byte* paramsPtr = stackalloc byte[252];

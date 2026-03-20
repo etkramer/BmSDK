@@ -47,7 +47,7 @@ public partial class RSeqAct_Player2DDistanceCheck : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: IsInRange
     /// </summary>
-    public unsafe bool IsInRange()
+    public unsafe virtual bool IsInRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_Player2DDistanceCheck.IsInRange", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -58,7 +58,7 @@ public partial class RSeqAct_Player2DDistanceCheck : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: CheckForCloseProximity
     /// </summary>
-    public unsafe void CheckForCloseProximity()
+    public unsafe virtual void CheckForCloseProximity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_Player2DDistanceCheck.CheckForCloseProximity", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RSeqAct_Player2DDistanceCheck : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_Player2DDistanceCheck.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -81,7 +81,7 @@ public partial class RSeqAct_Player2DDistanceCheck : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_Player2DDistanceCheck.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

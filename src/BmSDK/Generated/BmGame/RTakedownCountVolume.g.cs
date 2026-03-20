@@ -71,7 +71,7 @@ public partial class RTakedownCountVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
     /// <summary>
     /// Function: ThresholdMet
     /// </summary>
-    public unsafe bool ThresholdMet()
+    public unsafe virtual bool ThresholdMet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTakedownCountVolume.ThresholdMet", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RTakedownCountVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTakedownCountVolume.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RTakedownCountVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTakedownCountVolume.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RTakedownCountVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTakedownCountVolume.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

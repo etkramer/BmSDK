@@ -36,7 +36,7 @@ public partial class RSeqAct_IsChallengeActive : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// Function: InChallengeMode
     /// </summary>
-    public unsafe bool InChallengeMode()
+    public unsafe virtual bool InChallengeMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IsChallengeActive.InChallengeMode", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -47,7 +47,7 @@ public partial class RSeqAct_IsChallengeActive : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IsChallengeActive.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_DoubleLedgeAttack : BmSDK.BmGame.RSte
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleLedgeAttack.Begin", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RStealthTakeDownStage_DoubleLedgeAttack : BmSDK.BmGame.RSte
     /// <summary>
     /// Function: SetupRopeNeeded
     /// </summary>
-    public unsafe void SetupRopeNeeded(int Index)
+    public unsafe virtual void SetupRopeNeeded(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleLedgeAttack.SetupRopeNeeded", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RStealthTakeDownStage_DoubleLedgeAttack : BmSDK.BmGame.RSte
     /// <summary>
     /// Function: CreateRopeN
     /// </summary>
-    public unsafe void CreateRopeN(int Index)
+    public unsafe virtual void CreateRopeN(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleLedgeAttack.CreateRopeN", true);
         byte* paramsPtr = stackalloc byte[204];
@@ -106,7 +106,7 @@ public partial class RStealthTakeDownStage_DoubleLedgeAttack : BmSDK.BmGame.RSte
     /// <summary>
     /// Function: GetFinishState
     /// </summary>
-    public unsafe BmSDK.FName GetFinishState()
+    public unsafe override BmSDK.FName GetFinishState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleLedgeAttack.GetFinishState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RStealthTakeDownStage_DoubleLedgeAttack : BmSDK.BmGame.RSte
     /// <summary>
     /// Function: FindRopeAttachPoints
     /// </summary>
-    public unsafe void FindRopeAttachPoints()
+    public unsafe virtual void FindRopeAttachPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleLedgeAttack.FindRopeAttachPoints", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -128,7 +128,7 @@ public partial class RStealthTakeDownStage_DoubleLedgeAttack : BmSDK.BmGame.RSte
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleLedgeAttack.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[32];

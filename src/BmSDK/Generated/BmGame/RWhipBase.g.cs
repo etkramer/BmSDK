@@ -66,7 +66,7 @@ public partial class RWhipBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetCurrentWhipTarget
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetCurrentWhipTarget()
+    public unsafe virtual BmSDK.Engine.Actor GetCurrentWhipTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWhipBase.GetCurrentWhipTarget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -77,7 +77,7 @@ public partial class RWhipBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObjec
     /// <summary>
     /// Function: UpdateTarget
     /// </summary>
-    public unsafe void UpdateTarget()
+    public unsafe virtual void UpdateTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWhipBase.UpdateTarget", true);
         byte* paramsPtr = stackalloc byte[0];

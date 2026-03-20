@@ -36,7 +36,7 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: WakeUp
     /// </summary>
-    public unsafe void WakeUp()
+    public unsafe virtual void WakeUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlapsAssetInstance.WakeUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PutToSleep
     /// </summary>
-    public unsafe void PutToSleep(bool bDeepSleep)
+    public unsafe virtual void PutToSleep(bool bDeepSleep)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlapsAssetInstance.PutToSleep", true);
         byte* paramsPtr = stackalloc byte[4];

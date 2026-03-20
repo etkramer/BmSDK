@@ -36,7 +36,7 @@ public partial class RBMBehaviour_FearGasPanic : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: CanHitLaserGrid
     /// </summary>
-    public unsafe bool CanHitLaserGrid()
+    public unsafe override bool CanHitLaserGrid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FearGasPanic.CanHitLaserGrid", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_FearGasPanic : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: KillCheck
     /// </summary>
-    public unsafe bool KillCheck()
+    public unsafe virtual bool KillCheck()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FearGasPanic.KillCheck", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_FearGasPanic : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FearGasPanic.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_FearGasPanic : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: ResetRagdoll
     /// </summary>
-    public unsafe void ResetRagdoll()
+    public unsafe virtual void ResetRagdoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FearGasPanic.ResetRagdoll", true);
         byte* paramsPtr = stackalloc byte[248];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_FearGasPanic : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FearGasPanic.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -91,7 +91,7 @@ public partial class RBMBehaviour_FearGasPanic : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: PlayFearAnimation
     /// </summary>
-    public unsafe void PlayFearAnimation(float StartTime = default)
+    public unsafe virtual void PlayFearAnimation(float StartTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FearGasPanic.PlayFearAnimation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -103,7 +103,7 @@ public partial class RBMBehaviour_FearGasPanic : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: HitAgain
     /// </summary>
-    public unsafe void HitAgain()
+    public unsafe virtual void HitAgain()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FearGasPanic.HitAgain", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -114,7 +114,7 @@ public partial class RBMBehaviour_FearGasPanic : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: GetTime
     /// </summary>
-    public unsafe float GetTime()
+    public unsafe virtual float GetTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FearGasPanic.GetTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -125,7 +125,7 @@ public partial class RBMBehaviour_FearGasPanic : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmGame.RPawnPlayer Instigator, BmSDK.Engine.AnimSet RifleAnimSet)
+    public unsafe virtual void Initialise(BmSDK.BmGame.RPawnPlayer Instigator, BmSDK.Engine.AnimSet RifleAnimSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FearGasPanic.Initialise", true);
         byte* paramsPtr = stackalloc byte[16];

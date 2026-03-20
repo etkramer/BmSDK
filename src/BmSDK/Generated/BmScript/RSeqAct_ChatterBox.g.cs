@@ -47,7 +47,7 @@ public partial class RSeqAct_ChatterBox : BmSDK.BmGame.RSeqAct_ChatterBoxBase, B
     /// <summary>
     /// Function: BlockLevelName
     /// </summary>
-    public unsafe bool BlockLevelName()
+    public unsafe virtual bool BlockLevelName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ChatterBox.BlockLevelName", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RSeqAct_ChatterBox : BmSDK.BmGame.RSeqAct_ChatterBoxBase, B
     /// <summary>
     /// Function: ShutdownHUD
     /// </summary>
-    public unsafe void ShutdownHUD()
+    public unsafe virtual void ShutdownHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ChatterBox.ShutdownHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -69,7 +69,7 @@ public partial class RSeqAct_ChatterBox : BmSDK.BmGame.RSeqAct_ChatterBoxBase, B
     /// <summary>
     /// Function: InitHUD
     /// </summary>
-    public unsafe void InitHUD()
+    public unsafe virtual void InitHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ChatterBox.InitHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -80,7 +80,7 @@ public partial class RSeqAct_ChatterBox : BmSDK.BmGame.RSeqAct_ChatterBoxBase, B
     /// <summary>
     /// Function: PreRender
     /// </summary>
-    public unsafe void PreRender(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void PreRender(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ChatterBox.PreRender", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -92,7 +92,7 @@ public partial class RSeqAct_ChatterBox : BmSDK.BmGame.RSeqAct_ChatterBoxBase, B
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void DrawHUD(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ChatterBox.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[152];
@@ -104,7 +104,7 @@ public partial class RSeqAct_ChatterBox : BmSDK.BmGame.RSeqAct_ChatterBoxBase, B
     /// <summary>
     /// Function: DrawDebug
     /// </summary>
-    public unsafe void DrawDebug()
+    public unsafe override void DrawDebug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ChatterBox.DrawDebug", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -115,7 +115,7 @@ public partial class RSeqAct_ChatterBox : BmSDK.BmGame.RSeqAct_ChatterBoxBase, B
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ChatterBox.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -127,7 +127,7 @@ public partial class RSeqAct_ChatterBox : BmSDK.BmGame.RSeqAct_ChatterBoxBase, B
     /// <summary>
     /// Function: Deactivated
     /// </summary>
-    public unsafe void Deactivated()
+    public unsafe override void Deactivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ChatterBox.Deactivated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RSeqAct_ChatterBox : BmSDK.BmGame.RSeqAct_ChatterBoxBase, B
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ChatterBox.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RCWBolas : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: GetName
     /// </summary>
-    public unsafe BmSDK.FString GetName()
+    public unsafe override BmSDK.FString GetName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCWBolas.GetName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class RCWBolas : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: SetInXrayMode
     /// </summary>
-    public unsafe void SetInXrayMode(bool On, bool bForceOff)
+    public unsafe override void SetInXrayMode(bool On, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCWBolas.SetInXrayMode", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -95,7 +95,7 @@ public partial class RCWBolas : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: AttachToHand
     /// </summary>
-    public unsafe void AttachToHand(BmSDK.FName CustomBone = default)
+    public unsafe override void AttachToHand(BmSDK.FName CustomBone = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCWBolas.AttachToHand", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -107,7 +107,7 @@ public partial class RCWBolas : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: CalculateEquipBoneName
     /// </summary>
-    public unsafe void CalculateEquipBoneName(out BmSDK.FName OutEquipBoneName, out BmSDK.FName OutEquipBoneName2, out BmSDK.Rotator OutRelativeRotation, BmSDK.FName CustomBone = default)
+    public unsafe override void CalculateEquipBoneName(out BmSDK.FName OutEquipBoneName, out BmSDK.FName OutEquipBoneName2, out BmSDK.Rotator OutRelativeRotation, BmSDK.FName CustomBone = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCWBolas.CalculateEquipBoneName", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -122,7 +122,7 @@ public partial class RCWBolas : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: AttachToBelt
     /// </summary>
-    public unsafe void AttachToBelt()
+    public unsafe override void AttachToBelt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCWBolas.AttachToBelt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -133,7 +133,7 @@ public partial class RCWBolas : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: ThrowBatarangHand
     /// </summary>
-    public unsafe void ThrowBatarangHand(BmSDK.FName LaunchBone)
+    public unsafe override void ThrowBatarangHand(BmSDK.FName LaunchBone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCWBolas.ThrowBatarangHand", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -145,7 +145,7 @@ public partial class RCWBolas : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateTarget
     /// </summary>
-    public unsafe void UpdateTarget()
+    public unsafe override void UpdateTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCWBolas.UpdateTarget", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -156,7 +156,7 @@ public partial class RCWBolas : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: GetGadgetCamera
     /// </summary>
-    public unsafe BmSDK.FName GetGadgetCamera(bool InSoftCover = default, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType = default)
+    public unsafe override BmSDK.FName GetGadgetCamera(bool InSoftCover = default, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCWBolas.GetGadgetCamera", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -169,7 +169,7 @@ public partial class RCWBolas : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: GetThrowReferencePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetThrowReferencePoint()
+    public unsafe override System.Numerics.Vector3 GetThrowReferencePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCWBolas.GetThrowReferencePoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -180,7 +180,7 @@ public partial class RCWBolas : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: GetThrowFinishPose
     /// </summary>
-    public unsafe BmSDK.FName GetThrowFinishPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess)
+    public unsafe override BmSDK.FName GetThrowFinishPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCWBolas.GetThrowFinishPose", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -193,7 +193,7 @@ public partial class RCWBolas : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPrimedPose
     /// </summary>
-    public unsafe BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
+    public unsafe override BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCWBolas.GetPrimedPose", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -210,7 +210,7 @@ public partial class RCWBolas : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCWBolas.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -221,7 +221,7 @@ public partial class RCWBolas : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: GetImpactAudioEvent
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetImpactAudioEvent(BmSDK.Engine.AkWwise.EAkWorldMaterial Mat)
+    public unsafe override BmSDK.Engine.AkEvent GetImpactAudioEvent(BmSDK.Engine.AkWwise.EAkWorldMaterial Mat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCWBolas.GetImpactAudioEvent", true);
         byte* paramsPtr = stackalloc byte[12];

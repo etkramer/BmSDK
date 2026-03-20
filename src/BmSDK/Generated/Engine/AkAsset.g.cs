@@ -31,7 +31,7 @@ public partial class AkAsset : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: IsAssetBankLoaded
     /// </summary>
-    public unsafe bool IsAssetBankLoaded()
+    public unsafe virtual bool IsAssetBankLoaded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkAsset.IsAssetBankLoaded", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -49,7 +49,7 @@ public partial class AkAsset : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: RequestAssetBankUnload
     /// </summary>
-    public unsafe void RequestAssetBankUnload()
+    public unsafe virtual void RequestAssetBankUnload()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkAsset.RequestAssetBankUnload", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -67,7 +67,7 @@ public partial class AkAsset : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: RequestAssetBankLoad
     /// </summary>
-    public unsafe bool RequestAssetBankLoad()
+    public unsafe virtual bool RequestAssetBankLoad()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkAsset.RequestAssetBankLoad", true);
         byte* paramsPtr = stackalloc byte[4];

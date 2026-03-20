@@ -71,7 +71,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: GetObstacleActor
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetObstacleActor()
+    public unsafe virtual BmSDK.Engine.Actor GetObstacleActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.GetObstacleActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: AllowObstaclesToRegister
     /// </summary>
-    public unsafe void AllowObstaclesToRegister()
+    public unsafe virtual void AllowObstaclesToRegister()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.AllowObstaclesToRegister", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: ReregisterNavMeshObstacle
     /// </summary>
-    public unsafe void ReregisterNavMeshObstacle()
+    public unsafe virtual void ReregisterNavMeshObstacle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.ReregisterNavMeshObstacle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: UnRegisterObstacle
     /// </summary>
-    public unsafe void UnRegisterObstacle(bool bForceInstant = default)
+    public unsafe virtual void UnRegisterObstacle(bool bForceInstant = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.UnRegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -123,7 +123,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: RegisterObstacle
     /// </summary>
-    public unsafe void RegisterObstacle()
+    public unsafe virtual void RegisterObstacle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.RegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: TickRegisterObstacle
     /// </summary>
-    public unsafe void TickRegisterObstacle()
+    public unsafe virtual void TickRegisterObstacle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.TickRegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -152,7 +152,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: OnSleepRBPhysics
     /// </summary>
-    public unsafe void OnSleepRBPhysics()
+    public unsafe override void OnSleepRBPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.OnSleepRBPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -163,7 +163,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: OnWakeRBPhysics
     /// </summary>
-    public unsafe void OnWakeRBPhysics()
+    public unsafe override void OnWakeRBPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.OnWakeRBPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -174,7 +174,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: ApplyVisualDamage
     /// </summary>
-    public unsafe void ApplyVisualDamage(System.Numerics.Vector3 WorldPos, float Radius, float Amount, System.Numerics.Vector3 ChannelMask, bool bDeformAllowed, float PartBreakOffImpulse)
+    public unsafe virtual void ApplyVisualDamage(System.Numerics.Vector3 WorldPos, float Radius, float Amount, System.Numerics.Vector3 ChannelMask, bool bDeformAllowed, float PartBreakOffImpulse)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.ApplyVisualDamage", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -191,7 +191,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: ApplyVisualDamageFromDamageType
     /// </summary>
-    public unsafe void ApplyVisualDamageFromDamageType(BmSDK.Class dmgType, System.Numerics.Vector3 HitLocation)
+    public unsafe virtual void ApplyVisualDamageFromDamageType(BmSDK.Class dmgType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.ApplyVisualDamageFromDamageType", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -204,7 +204,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -222,7 +222,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: SpawnDeformEffects
     /// </summary>
-    public unsafe void SpawnDeformEffects(System.Numerics.Vector3 WorldPos, float Speed)
+    public unsafe virtual void SpawnDeformEffects(System.Numerics.Vector3 WorldPos, float Speed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.SpawnDeformEffects", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -235,7 +235,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: ConstraintBrokenNotify
     /// </summary>
-    public unsafe void ConstraintBrokenNotify(BmSDK.Engine.Actor ConOwner, BmSDK.Engine.RB_ConstraintSetup ConSetup, BmSDK.Engine.RB_ConstraintInstance ConInstance)
+    public unsafe override void ConstraintBrokenNotify(BmSDK.Engine.Actor ConOwner, BmSDK.Engine.RB_ConstraintSetup ConSetup, BmSDK.Engine.RB_ConstraintInstance ConInstance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.ConstraintBrokenNotify", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -249,7 +249,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -260,7 +260,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -271,7 +271,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: InitVehicleCustomisations
     /// </summary>
-    public unsafe void InitVehicleCustomisations(BmSDK.Engine.SkeletalMeshComponent SourceMeshComp, BmSDK.BmGame.RVehicleCustomisation SourceCustom, bool RemapMaterials)
+    public unsafe virtual void InitVehicleCustomisations(BmSDK.Engine.SkeletalMeshComponent SourceMeshComp, BmSDK.BmGame.RVehicleCustomisation SourceCustom, bool RemapMaterials)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.InitVehicleCustomisations", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -285,7 +285,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: InitHitMask
     /// </summary>
-    public unsafe void InitHitMask(BmSDK.Engine.SceneCapture2DHitMaskComponent SourceHitMask)
+    public unsafe virtual void InitHitMask(BmSDK.Engine.SceneCapture2DHitMaskComponent SourceHitMask)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.InitHitMask", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -297,7 +297,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -308,7 +308,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: HideTurret
     /// </summary>
-    public unsafe void HideTurret(BmSDK.FName TurretBoneName)
+    public unsafe virtual void HideTurret(BmSDK.FName TurretBoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.HideTurret", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -327,7 +327,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: HideAllButTurret
     /// </summary>
-    public unsafe void HideAllButTurret(BmSDK.FName TurretBoneName)
+    public unsafe virtual void HideAllButTurret(BmSDK.FName TurretBoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.HideAllButTurret", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -346,7 +346,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: HideBonesForBrokenOffParts
     /// </summary>
-    public unsafe void HideBonesForBrokenOffParts(BmSDK.BmGame.RVisualDamageComponent VisualDamageComp, BmSDK.Engine.SkeletalMeshComponent SkelMeshComp)
+    public unsafe virtual void HideBonesForBrokenOffParts(BmSDK.BmGame.RVisualDamageComponent VisualDamageComp, BmSDK.Engine.SkeletalMeshComponent SkelMeshComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.HideBonesForBrokenOffParts", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -366,7 +366,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: UpdateConstraintFramesForDeformation
     /// </summary>
-    public unsafe void UpdateConstraintFramesForDeformation()
+    public unsafe virtual void UpdateConstraintFramesForDeformation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.UpdateConstraintFramesForDeformation", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -384,7 +384,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: BreakRandomConstraints
     /// </summary>
-    public unsafe void BreakRandomConstraints(int PercentChanceOfBreak)
+    public unsafe virtual void BreakRandomConstraints(int PercentChanceOfBreak)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.BreakRandomConstraints", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -403,7 +403,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: HideChunksInVolume
     /// </summary>
-    public unsafe void HideChunksInVolume(BmSDK.Engine.Volume InVolume)
+    public unsafe virtual void HideChunksInVolume(BmSDK.Engine.Volume InVolume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.HideChunksInVolume", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -422,7 +422,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// Function: PreventChunksFallingOutOfWorld
     /// </summary>
-    public unsafe void PreventChunksFallingOutOfWorld()
+    public unsafe virtual void PreventChunksFallingOutOfWorld()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadVehicle.PreventChunksFallingOutOfWorld", true);
         byte* paramsPtr = stackalloc byte[0];

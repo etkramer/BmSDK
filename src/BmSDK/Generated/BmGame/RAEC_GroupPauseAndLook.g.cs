@@ -71,7 +71,7 @@ public partial class RAEC_GroupPauseAndLook : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: TryDisperse
     /// </summary>
-    public unsafe void TryDisperse()
+    public unsafe virtual void TryDisperse()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_GroupPauseAndLook.TryDisperse", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_GroupPauseAndLook : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: AddToGroup
     /// </summary>
-    public unsafe void AddToGroup(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe virtual void AddToGroup(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_GroupPauseAndLook.AddToGroup", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -94,7 +94,7 @@ public partial class RAEC_GroupPauseAndLook : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: SetLookPoint
     /// </summary>
-    public unsafe void SetLookPoint(System.Numerics.Vector3 NewLookPoint)
+    public unsafe virtual void SetLookPoint(System.Numerics.Vector3 NewLookPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_GroupPauseAndLook.SetLookPoint", true);
         byte* paramsPtr = stackalloc byte[12];

@@ -71,7 +71,7 @@ public partial class RBMAIAction_RunToWithAvoid : BmSDK.BmGame.RBMAIAction_RunTo
     /// <summary>
     /// Function: BuildHandle
     /// </summary>
-    public unsafe BmSDK.BmGame.RNavigationHandle BuildHandle()
+    public unsafe override BmSDK.BmGame.RNavigationHandle BuildHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunToWithAvoid.BuildHandle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_RunToWithAvoid : BmSDK.BmGame.RBMAIAction_RunTo
     /// <summary>
     /// Function: SetAvoidActor
     /// </summary>
-    public unsafe void SetAvoidActor(BmSDK.Engine.Actor NewAvoidActor)
+    public unsafe virtual void SetAvoidActor(BmSDK.Engine.Actor NewAvoidActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunToWithAvoid.SetAvoidActor", true);
         byte* paramsPtr = stackalloc byte[8];

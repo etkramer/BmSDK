@@ -71,7 +71,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetObstacleActor
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetObstacleActor()
+    public unsafe virtual BmSDK.Engine.Actor GetObstacleActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetObstacleActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[100];
@@ -100,7 +100,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -112,7 +112,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -124,7 +124,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: LinkToGrapplePoint
     /// </summary>
-    public unsafe bool LinkToGrapplePoint(BmSDK.Engine.Actor LinkActor, bool LinkOrUnlink)
+    public unsafe virtual bool LinkToGrapplePoint(BmSDK.Engine.Actor LinkActor, bool LinkOrUnlink)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.LinkToGrapplePoint", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -144,7 +144,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: LoadFragmentRemovedState
     /// </summary>
-    public unsafe bool LoadFragmentRemovedState(int FragmentIndex)
+    public unsafe virtual bool LoadFragmentRemovedState(int FragmentIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.LoadFragmentRemovedState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -156,7 +156,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: DoFractureWallExplodeAlert
     /// </summary>
-    public unsafe void DoFractureWallExplodeAlert(System.Numerics.Vector3 ExplosionCentre, System.Numerics.Vector3 WallNormal)
+    public unsafe virtual void DoFractureWallExplodeAlert(System.Numerics.Vector3 ExplosionCentre, System.Numerics.Vector3 WallNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.DoFractureWallExplodeAlert", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -169,7 +169,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: LoadHasExplodedToSideState
     /// </summary>
-    public unsafe void LoadHasExplodedToSideState()
+    public unsafe virtual void LoadHasExplodedToSideState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.LoadHasExplodedToSideState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -180,7 +180,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: SaveHasExplodedToSideState
     /// </summary>
-    public unsafe void SaveHasExplodedToSideState()
+    public unsafe virtual void SaveHasExplodedToSideState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.SaveHasExplodedToSideState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -191,7 +191,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: SaveFragmentRemovedState
     /// </summary>
-    public unsafe void SaveFragmentRemovedState(int FragmentIndex, bool IsRemoved)
+    public unsafe virtual void SaveFragmentRemovedState(int FragmentIndex, bool IsRemoved)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.SaveFragmentRemovedState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -204,7 +204,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: TemporarilySuppressAIEvent
     /// </summary>
-    public unsafe void TemporarilySuppressAIEvent()
+    public unsafe virtual void TemporarilySuppressAIEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.TemporarilySuppressAIEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -215,7 +215,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: FallOverOnWall
     /// </summary>
-    public unsafe void FallOverOnWall(BmSDK.BmGame.RPawnCharacter PawnIter)
+    public unsafe virtual void FallOverOnWall(BmSDK.BmGame.RPawnCharacter PawnIter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.FallOverOnWall", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -227,7 +227,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: TriggerWallCamera
     /// </summary>
-    public unsafe void TriggerWallCamera(BmSDK.BmGame.RPlayerController PC, float TimeDelay, bool bForceCamera = default, bool bForLineLauncher = default)
+    public unsafe virtual void TriggerWallCamera(BmSDK.BmGame.RPlayerController PC, float TimeDelay, bool bForceCamera = default, bool bForLineLauncher = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.TriggerWallCamera", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -242,7 +242,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: DisableNearbyTempGuardPoints
     /// </summary>
-    public unsafe void DisableNearbyTempGuardPoints(System.Numerics.Vector3 ExplosionCentre)
+    public unsafe virtual void DisableNearbyTempGuardPoints(System.Numerics.Vector3 ExplosionCentre)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.DisableNearbyTempGuardPoints", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -254,7 +254,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: OnWallSmashed
     /// </summary>
-    public unsafe void OnWallSmashed(System.Numerics.Vector3 ExplosionCentre, int NumPiecesRemoved)
+    public unsafe virtual void OnWallSmashed(System.Numerics.Vector3 ExplosionCentre, int NumPiecesRemoved)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.OnWallSmashed", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -267,7 +267,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetAIPointOfInterestExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAIPointOfInterestExtent()
+    public unsafe override System.Numerics.Vector3 GetAIPointOfInterestExtent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetAIPointOfInterestExtent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -285,7 +285,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -296,7 +296,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -307,7 +307,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: PostFractureStateLoaded
     /// </summary>
-    public unsafe void PostFractureStateLoaded(bool bFragmentsRemoved)
+    public unsafe virtual void PostFractureStateLoaded(bool bFragmentsRemoved)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.PostFractureStateLoaded", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -319,7 +319,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -330,7 +330,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: RegisterWithNavMesh
     /// </summary>
-    public unsafe bool RegisterWithNavMesh(bool bRegister)
+    public unsafe virtual bool RegisterWithNavMesh(bool bRegister)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.RegisterWithNavMesh", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -349,7 +349,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: IsHorizontal
     /// </summary>
-    public unsafe bool IsHorizontal()
+    public unsafe virtual bool IsHorizontal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.IsHorizontal", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -367,7 +367,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetNumVisibleFragments
     /// </summary>
-    public unsafe int GetNumVisibleFragments()
+    public unsafe virtual int GetNumVisibleFragments()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetNumVisibleFragments", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -385,7 +385,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetNumFragments
     /// </summary>
-    public unsafe int GetNumFragments()
+    public unsafe virtual int GetNumFragments()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetNumFragments", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -403,7 +403,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: SpawnPartMulti
     /// </summary>
-    public unsafe BmSDK.Engine.FracturedStaticMeshPart SpawnPartMulti(BmSDK.TArray<int> ChunkIndices, System.Numerics.Vector3 InitialVel, System.Numerics.Vector3 InitialAngVel, float RelativeScale, bool bExplosion)
+    public unsafe override BmSDK.Engine.FracturedStaticMeshPart SpawnPartMulti(BmSDK.TArray<int> ChunkIndices, System.Numerics.Vector3 InitialVel, System.Numerics.Vector3 InitialAngVel, float RelativeScale, bool bExplosion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.SpawnPartMulti", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -426,7 +426,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: UpdateWallState
     /// </summary>
-    public unsafe void UpdateWallState()
+    public unsafe virtual void UpdateWallState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.UpdateWallState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -444,7 +444,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: FindNearestPointOnEdge
     /// </summary>
-    public unsafe System.Numerics.Vector3 FindNearestPointOnEdge(System.Numerics.Vector3 TestPoint)
+    public unsafe virtual System.Numerics.Vector3 FindNearestPointOnEdge(System.Numerics.Vector3 TestPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.FindNearestPointOnEdge", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -463,7 +463,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: HandleExplode
     /// </summary>
-    public unsafe void HandleExplode(BmSDK.BmGame.RFractureWallBase.FRFractureWallExplosionTriggerData Explosion)
+    public unsafe virtual void HandleExplode(BmSDK.BmGame.RFractureWallBase.FRFractureWallExplosionTriggerData Explosion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.HandleExplode", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -482,7 +482,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetWallSideForPoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RFractureWallBase.EFractureWallSide GetWallSideForPoint(System.Numerics.Vector3 TestPoint)
+    public unsafe virtual BmSDK.BmGame.RFractureWallBase.EFractureWallSide GetWallSideForPoint(System.Numerics.Vector3 TestPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetWallSideForPoint", true);
         byte* paramsPtr = stackalloc byte[13];
@@ -501,7 +501,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetWallNormalForSide
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWallNormalForSide(BmSDK.BmGame.RFractureWallBase.EFractureWallSide FractureWallSide)
+    public unsafe virtual System.Numerics.Vector3 GetWallNormalForSide(BmSDK.BmGame.RFractureWallBase.EFractureWallSide FractureWallSide)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetWallNormalForSide", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -520,7 +520,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetGlanceScore
     /// </summary>
-    public unsafe int GetGlanceScore()
+    public unsafe virtual int GetGlanceScore()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetGlanceScore", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -531,7 +531,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetCollisionBoundsExtents
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCollisionBoundsExtents()
+    public unsafe virtual System.Numerics.Vector3 GetCollisionBoundsExtents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetCollisionBoundsExtents", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -549,7 +549,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetCollisionBoundsCentreInWorldSpace
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCollisionBoundsCentreInWorldSpace()
+    public unsafe virtual System.Numerics.Vector3 GetCollisionBoundsCentreInWorldSpace()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetCollisionBoundsCentreInWorldSpace", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -567,7 +567,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: SetPathObstacleActive
     /// </summary>
-    public unsafe void SetPathObstacleActive(bool bNewActive)
+    public unsafe virtual void SetPathObstacleActive(bool bNewActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.SetPathObstacleActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -622,7 +622,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: KnockOverBasedPawns
     /// </summary>
-    public unsafe int KnockOverBasedPawns()
+    public unsafe virtual int KnockOverBasedPawns()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.KnockOverBasedPawns", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -640,7 +640,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: RegisterExplodeSide
     /// </summary>
-    public unsafe void RegisterExplodeSide(BmSDK.Engine.FracturedStaticMeshActor.FBreakOffPartsData BreakData)
+    public unsafe virtual void RegisterExplodeSide(BmSDK.Engine.FracturedStaticMeshActor.FBreakOffPartsData BreakData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.RegisterExplodeSide", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -659,7 +659,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: CheckLastSloMoTime
     /// </summary>
-    public unsafe bool CheckLastSloMoTime()
+    public unsafe virtual bool CheckLastSloMoTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.CheckLastSloMoTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -677,7 +677,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetHarpoonTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetHarpoonTargetLocation(int ChunkIndex, System.Numerics.Vector3 PlayerLocation)
+    public unsafe virtual System.Numerics.Vector3 GetHarpoonTargetLocation(int ChunkIndex, System.Numerics.Vector3 PlayerLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetHarpoonTargetLocation", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -697,7 +697,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetChunkLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetChunkLocation(int ChunkIndex)
+    public unsafe virtual System.Numerics.Vector3 GetChunkLocation(int ChunkIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetChunkLocation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -716,7 +716,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetHarpoonChunkIndex
     /// </summary>
-    public unsafe int GetHarpoonChunkIndex(int HarpoonChunk)
+    public unsafe virtual int GetHarpoonChunkIndex(int HarpoonChunk)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetHarpoonChunkIndex", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -735,7 +735,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetWallBasePos
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWallBasePos()
+    public unsafe virtual System.Numerics.Vector3 GetWallBasePos()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetWallBasePos", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -753,7 +753,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetWallBoundsRadius
     /// </summary>
-    public unsafe float GetWallBoundsRadius()
+    public unsafe virtual float GetWallBoundsRadius()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetWallBoundsRadius", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -771,7 +771,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetWallBounds
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWallBounds()
+    public unsafe virtual System.Numerics.Vector3 GetWallBounds()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetWallBounds", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -789,7 +789,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetPosOnWall
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetPosOnWall(System.Numerics.Vector3 LocalPos)
+    public unsafe virtual System.Numerics.Vector3 GetPosOnWall(System.Numerics.Vector3 LocalPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetPosOnWall", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -808,7 +808,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetWallCentreInLocalSpace
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWallCentreInLocalSpace()
+    public unsafe virtual System.Numerics.Vector3 GetWallCentreInLocalSpace()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetWallCentreInLocalSpace", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -826,7 +826,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetWallCentre
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWallCentre()
+    public unsafe virtual System.Numerics.Vector3 GetWallCentre()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetWallCentre", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -844,7 +844,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetFOVCheckLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetFOVCheckLocation()
+    public unsafe override System.Numerics.Vector3 GetFOVCheckLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetFOVCheckLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -862,7 +862,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTargetLocation(BmSDK.Engine.Actor RequestedBy = default, bool bRequestAlternateLoc = default)
+    public unsafe override System.Numerics.Vector3 GetTargetLocation(BmSDK.Engine.Actor RequestedBy = default, bool bRequestAlternateLoc = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetTargetLocation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -882,7 +882,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetFragmentSaveName
     /// </summary>
-    public unsafe BmSDK.FString GetFragmentSaveName(int FragmentIndex)
+    public unsafe virtual BmSDK.FString GetFragmentSaveName(int FragmentIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetFragmentSaveName", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -901,7 +901,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetHasExplodedToSide
     /// </summary>
-    public unsafe bool GetHasExplodedToSide(BmSDK.BmGame.RFractureWallBase.EFractureWallSide TestSide)
+    public unsafe virtual bool GetHasExplodedToSide(BmSDK.BmGame.RFractureWallBase.EFractureWallSide TestSide)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetHasExplodedToSide", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -920,7 +920,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Function: GetHasInvisibleWallParts
     /// </summary>
-    public unsafe bool GetHasInvisibleWallParts()
+    public unsafe virtual bool GetHasInvisibleWallParts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureWallBase.GetHasInvisibleWallParts", true);
         byte* paramsPtr = stackalloc byte[4];

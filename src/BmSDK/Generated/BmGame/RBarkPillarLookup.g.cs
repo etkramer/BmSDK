@@ -36,7 +36,7 @@ public partial class RBarkPillarLookup : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: HasChapterChanged
     /// </summary>
-    public unsafe bool HasChapterChanged()
+    public unsafe virtual bool HasChapterChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkPillarLookup.HasChapterChanged", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -36,7 +36,7 @@ public partial class RUninformedTreeEndPathWrapper : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: DrawPaths
     /// </summary>
-    public unsafe void DrawPaths()
+    public unsafe virtual void DrawPaths()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RUninformedTreeEndPathWrapper.DrawPaths", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RUninformedTreeEndPathWrapper : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: IsEmpty
     /// </summary>
-    public unsafe bool IsEmpty()
+    public unsafe virtual bool IsEmpty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RUninformedTreeEndPathWrapper.IsEmpty", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RUninformedTreeEndPathWrapper : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: IsSearching
     /// </summary>
-    public unsafe bool IsSearching()
+    public unsafe virtual bool IsSearching()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RUninformedTreeEndPathWrapper.IsSearching", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -69,7 +69,7 @@ public partial class RUninformedTreeEndPathWrapper : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: FreeAllHandles
     /// </summary>
-    public unsafe void FreeAllHandles()
+    public unsafe virtual void FreeAllHandles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RUninformedTreeEndPathWrapper.FreeAllHandles", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RUninformedTreeEndPathWrapper : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: GetNumPaths
     /// </summary>
-    public unsafe int GetNumPaths()
+    public unsafe virtual int GetNumPaths()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RUninformedTreeEndPathWrapper.GetNumPaths", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -91,7 +91,7 @@ public partial class RUninformedTreeEndPathWrapper : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: GetAllOpenEnds
     /// </summary>
-    public unsafe void GetAllOpenEnds(out BmSDK.TArray<BmSDK.BmGame.RChasePoint> UsableEnds)
+    public unsafe virtual void GetAllOpenEnds(out BmSDK.TArray<BmSDK.BmGame.RChasePoint> UsableEnds)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RUninformedTreeEndPathWrapper.GetAllOpenEnds", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -103,7 +103,7 @@ public partial class RUninformedTreeEndPathWrapper : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: GetAllUsableTreeEnds
     /// </summary>
-    public unsafe void GetAllUsableTreeEnds(out BmSDK.TArray<BmSDK.BmGame.RChasePoint> UsableEnds)
+    public unsafe virtual void GetAllUsableTreeEnds(out BmSDK.TArray<BmSDK.BmGame.RChasePoint> UsableEnds)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RUninformedTreeEndPathWrapper.GetAllUsableTreeEnds", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -115,7 +115,7 @@ public partial class RUninformedTreeEndPathWrapper : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: GetShortestPath
     /// </summary>
-    public unsafe bool GetShortestPath(out float bestDist, out BmSDK.BmGame.RChasePoint BestTreeEnd)
+    public unsafe virtual bool GetShortestPath(out float bestDist, out BmSDK.BmGame.RChasePoint BestTreeEnd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RUninformedTreeEndPathWrapper.GetShortestPath", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -128,7 +128,7 @@ public partial class RUninformedTreeEndPathWrapper : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: AddRequest
     /// </summary>
-    public unsafe void AddRequest(BmSDK.BmGame.RChasePoint NewTreeEnd)
+    public unsafe virtual void AddRequest(BmSDK.BmGame.RChasePoint NewTreeEnd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RUninformedTreeEndPathWrapper.AddRequest", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -140,7 +140,7 @@ public partial class RUninformedTreeEndPathWrapper : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: SetDestPoint
     /// </summary>
-    public unsafe void SetDestPoint(System.Numerics.Vector3 NewDestPoint, BmSDK.BmGame.RNavigationManager NewNavMan, BmSDK.FName NewClaimName = default, BmSDK.Engine.Pawn NewParamProxy = default)
+    public unsafe virtual void SetDestPoint(System.Numerics.Vector3 NewDestPoint, BmSDK.BmGame.RNavigationManager NewNavMan, BmSDK.FName NewClaimName = default, BmSDK.Engine.Pawn NewParamProxy = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RUninformedTreeEndPathWrapper.SetDestPoint", true);
         byte* paramsPtr = stackalloc byte[36];

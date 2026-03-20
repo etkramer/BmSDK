@@ -36,7 +36,7 @@ public partial class RSeqEvent_ElectroBlastHit : BmSDK.Engine.SequenceEvent, BmS
     /// <summary>
     /// Function: SetDropDist
     /// </summary>
-    public unsafe void SetDropDist(float NewDropDist)
+    public unsafe virtual void SetDropDist(float NewDropDist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_ElectroBlastHit.SetDropDist", true);
         byte* paramsPtr = stackalloc byte[4];

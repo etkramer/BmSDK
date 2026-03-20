@@ -47,7 +47,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPoint : BmSDK.BmScript
     /// <summary>
     /// Function: SpectatorCheer
     /// </summary>
-    public unsafe void SpectatorCheer()
+    public unsafe virtual void SpectatorCheer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPoint.SpectatorCheer", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPoint : BmSDK.BmScript
     /// <summary>
     /// Function: DettachFromCar
     /// </summary>
-    public unsafe void DettachFromCar()
+    public unsafe override void DettachFromCar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPoint.DettachFromCar", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPoint : BmSDK.BmScript
     /// <summary>
     /// Function: AttachToCarSeat1
     /// </summary>
-    public unsafe void AttachToCarSeat1()
+    public unsafe override void AttachToCarSeat1()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPoint.AttachToCarSeat1", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPoint : BmSDK.BmScript
     /// <summary>
     /// Function: TriggerOutputEvent
     /// </summary>
-    public unsafe void TriggerOutputEvent()
+    public unsafe override void TriggerOutputEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPoint.TriggerOutputEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -91,7 +91,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPoint : BmSDK.BmScript
     /// <summary>
     /// Function: CanSpeakInChatter
     /// </summary>
-    public unsafe void CanSpeakInChatter()
+    public unsafe override void CanSpeakInChatter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPoint.CanSpeakInChatter", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -102,7 +102,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPoint : BmSDK.BmScript
     /// <summary>
     /// Function: IsChattering
     /// </summary>
-    public unsafe bool IsChattering()
+    public unsafe virtual bool IsChattering()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPoint.IsChattering", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -113,7 +113,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPoint : BmSDK.BmScript
     /// <summary>
     /// Function: GetAnimationRefRot
     /// </summary>
-    public unsafe BmSDK.Rotator GetAnimationRefRot()
+    public unsafe virtual BmSDK.Rotator GetAnimationRefRot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPoint.GetAnimationRefRot", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -124,7 +124,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPoint : BmSDK.BmScript
     /// <summary>
     /// Function: GetAnimationRefPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAnimationRefPos()
+    public unsafe virtual System.Numerics.Vector3 GetAnimationRefPos()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPoint.GetAnimationRefPos", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -135,7 +135,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPoint : BmSDK.BmScript
     /// <summary>
     /// Function: StartAnimationInAnyDirection
     /// </summary>
-    public unsafe bool StartAnimationInAnyDirection()
+    public unsafe virtual bool StartAnimationInAnyDirection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPoint.StartAnimationInAnyDirection", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -146,7 +146,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPoint : BmSDK.BmScript
     /// <summary>
     /// Function: SetCustomAnyDirectionAnimSettings
     /// </summary>
-    public unsafe void SetCustomAnyDirectionAnimSettings(BmSDK.FName PrevState)
+    public unsafe virtual void SetCustomAnyDirectionAnimSettings(BmSDK.FName PrevState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPoint.SetCustomAnyDirectionAnimSettings", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -158,7 +158,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPoint : BmSDK.BmScript
     /// <summary>
     /// Function: GetAnimationForPaired
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetAnimationForPaired(BmSDK.FName AnimationName, int Index)
+    public unsafe virtual BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetAnimationForPaired(BmSDK.FName AnimationName, int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPoint.GetAnimationForPaired", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -171,7 +171,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPoint : BmSDK.BmScript
     /// <summary>
     /// Function: GetAnimation
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetAnimation(BmSDK.FName AnimationName)
+    public unsafe virtual BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetAnimation(BmSDK.FName AnimationName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPoint.GetAnimation", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -183,7 +183,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPoint : BmSDK.BmScript
     /// <summary>
     /// Function: GetRandomAnimationFromArrayForPaired
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetRandomAnimationFromArrayForPaired(BmSDK.TArray<BmSDK.FName> AnimationArray, int Index)
+    public unsafe virtual BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetRandomAnimationFromArrayForPaired(BmSDK.TArray<BmSDK.FName> AnimationArray, int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPoint.GetRandomAnimationFromArrayForPaired", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -196,7 +196,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPoint : BmSDK.BmScript
     /// <summary>
     /// Function: GetRandomAnimationFromArray
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetRandomAnimationFromArray(BmSDK.TArray<BmSDK.FName> AnimationArray)
+    public unsafe virtual BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetRandomAnimationFromArray(BmSDK.TArray<BmSDK.FName> AnimationArray)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPoint.GetRandomAnimationFromArray", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -208,7 +208,7 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPoint : BmSDK.BmScript
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_GangIdleOrGroupAnimationPoint.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

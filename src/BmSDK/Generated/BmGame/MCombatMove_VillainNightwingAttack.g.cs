@@ -71,7 +71,7 @@ public partial class MCombatMove_VillainNightwingAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainNightwingAttack.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class MCombatMove_VillainNightwingAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: MoveOverridenForPawn
     /// </summary>
-    public unsafe void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
+    public unsafe override void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainNightwingAttack.MoveOverridenForPawn", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -95,7 +95,7 @@ public partial class MCombatMove_VillainNightwingAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: CanBeStruckBy
     /// </summary>
-    public unsafe bool CanBeStruckBy(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.BmGame.RPawnCombat Defender)
+    public unsafe override bool CanBeStruckBy(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.BmGame.RPawnCombat Defender)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainNightwingAttack.CanBeStruckBy", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -108,7 +108,7 @@ public partial class MCombatMove_VillainNightwingAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: CanPerformNextComboMove
     /// </summary>
-    public unsafe bool CanPerformNextComboMove(bool bSpeOcialMove = default, bool bStrike = default)
+    public unsafe override bool CanPerformNextComboMove(bool bSpeOcialMove = default, bool bStrike = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainNightwingAttack.CanPerformNextComboMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -121,7 +121,7 @@ public partial class MCombatMove_VillainNightwingAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: UpdateSlowMo
     /// </summary>
-    public unsafe bool UpdateSlowMo(float DeltaTime)
+    public unsafe virtual bool UpdateSlowMo(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainNightwingAttack.UpdateSlowMo", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -133,7 +133,7 @@ public partial class MCombatMove_VillainNightwingAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainNightwingAttack.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -146,7 +146,7 @@ public partial class MCombatMove_VillainNightwingAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: DamageCollisionBetween
     /// </summary>
-    public unsafe void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
+    public unsafe override void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainNightwingAttack.DamageCollisionBetween", true);
         byte* paramsPtr = stackalloc byte[284];

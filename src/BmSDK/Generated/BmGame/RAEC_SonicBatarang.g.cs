@@ -71,7 +71,7 @@ public partial class RAEC_SonicBatarang : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// Function: ThugHasArrivedAtTarget
     /// </summary>
-    public unsafe void ThugHasArrivedAtTarget()
+    public unsafe virtual void ThugHasArrivedAtTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang.ThugHasArrivedAtTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_SonicBatarang : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RAEC_SonicBatarang : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// Function: BrangDetonated
     /// </summary>
-    public unsafe void BrangDetonated()
+    public unsafe virtual void BrangDetonated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang.BrangDetonated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RAEC_SonicBatarang : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// Function: OmnitronFakeTargetFailed
     /// </summary>
-    public unsafe void OmnitronFakeTargetFailed()
+    public unsafe virtual void OmnitronFakeTargetFailed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang.OmnitronFakeTargetFailed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RAEC_SonicBatarang : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// Function: IsThugCarryingOutOrder
     /// </summary>
-    public unsafe bool IsThugCarryingOutOrder()
+    public unsafe virtual bool IsThugCarryingOutOrder()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang.IsThugCarryingOutOrder", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -126,7 +126,7 @@ public partial class RAEC_SonicBatarang : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang.Tick", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -138,7 +138,7 @@ public partial class RAEC_SonicBatarang : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// Function: DeviceBeeped
     /// </summary>
-    public unsafe bool DeviceBeeped()
+    public unsafe virtual bool DeviceBeeped()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang.DeviceBeeped", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -149,7 +149,7 @@ public partial class RAEC_SonicBatarang : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// Function: WantsToGlanceAt
     /// </summary>
-    public unsafe bool WantsToGlanceAt(BmSDK.Engine.Actor TestTarget)
+    public unsafe override bool WantsToGlanceAt(BmSDK.Engine.Actor TestTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang.WantsToGlanceAt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -161,7 +161,7 @@ public partial class RAEC_SonicBatarang : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// Function: IsPossibleToClaim
     /// </summary>
-    public unsafe bool IsPossibleToClaim(BmSDK.BmGame.RBMAIController TestCon)
+    public unsafe virtual bool IsPossibleToClaim(BmSDK.BmGame.RBMAIController TestCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang.IsPossibleToClaim", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -173,7 +173,7 @@ public partial class RAEC_SonicBatarang : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// Function: GetBarkPriority
     /// </summary>
-    public unsafe int GetBarkPriority()
+    public unsafe override int GetBarkPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang.GetBarkPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -184,7 +184,7 @@ public partial class RAEC_SonicBatarang : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -196,7 +196,7 @@ public partial class RAEC_SonicBatarang : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// Function: OnRemoveSoloChild
     /// </summary>
-    public unsafe void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
+    public unsafe override void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang.OnRemoveSoloChild", true);
         byte* paramsPtr = stackalloc byte[8];

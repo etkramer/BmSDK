@@ -71,7 +71,7 @@ public partial class RAEC_Attack_WatchAndWait : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: GetRandomThugToSpeak
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIController GetRandomThugToSpeak()
+    public unsafe virtual BmSDK.BmGame.RBMAIController GetRandomThugToSpeak()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_WatchAndWait.GetRandomThugToSpeak", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -82,7 +82,7 @@ public partial class RAEC_Attack_WatchAndWait : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: TryGrenadeThrow
     /// </summary>
-    public unsafe bool TryGrenadeThrow()
+    public unsafe virtual bool TryGrenadeThrow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_WatchAndWait.TryGrenadeThrow", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -93,7 +93,7 @@ public partial class RAEC_Attack_WatchAndWait : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: SecondGrenade
     /// </summary>
-    public unsafe void SecondGrenade()
+    public unsafe virtual void SecondGrenade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_WatchAndWait.SecondGrenade", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RAEC_Attack_WatchAndWait : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: EnoughWatchersAreInPosition
     /// </summary>
-    public unsafe bool EnoughWatchersAreInPosition()
+    public unsafe virtual bool EnoughWatchersAreInPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_WatchAndWait.EnoughWatchersAreInPosition", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -115,7 +115,7 @@ public partial class RAEC_Attack_WatchAndWait : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: FirstGrenadeFinished
     /// </summary>
-    public unsafe void FirstGrenadeFinished()
+    public unsafe virtual void FirstGrenadeFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_WatchAndWait.FirstGrenadeFinished", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RAEC_Attack_WatchAndWait : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: AddVentGrenadier
     /// </summary>
-    public unsafe void AddVentGrenadier(BmSDK.BmGame.RBMAIController VentThrowCon, System.Numerics.Vector3 StandPos, BmSDK.BmGame.RTunnelFunnel VentGrenadeTarget)
+    public unsafe virtual void AddVentGrenadier(BmSDK.BmGame.RBMAIController VentThrowCon, System.Numerics.Vector3 StandPos, BmSDK.BmGame.RTunnelFunnel VentGrenadeTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_WatchAndWait.AddVentGrenadier", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -140,7 +140,7 @@ public partial class RAEC_Attack_WatchAndWait : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: AddWatcherOnFence
     /// </summary>
-    public unsafe void AddWatcherOnFence(BmSDK.BmGame.RBMAIController C, BmSDK.BmGame.RBMPathNode_FenceJumpProxy NewFence)
+    public unsafe virtual void AddWatcherOnFence(BmSDK.BmGame.RBMAIController C, BmSDK.BmGame.RBMPathNode_FenceJumpProxy NewFence)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_WatchAndWait.AddWatcherOnFence", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -153,7 +153,7 @@ public partial class RAEC_Attack_WatchAndWait : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: AddWatcherWithPosition
     /// </summary>
-    public unsafe void AddWatcherWithPosition(BmSDK.BmGame.RBMAIController C, System.Numerics.Vector3 NewPos)
+    public unsafe virtual void AddWatcherWithPosition(BmSDK.BmGame.RBMAIController C, System.Numerics.Vector3 NewPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_WatchAndWait.AddWatcherWithPosition", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -166,7 +166,7 @@ public partial class RAEC_Attack_WatchAndWait : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: AddWatcher
     /// </summary>
-    public unsafe void AddWatcher(BmSDK.BmGame.RBMAIController C)
+    public unsafe virtual void AddWatcher(BmSDK.BmGame.RBMAIController C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_WatchAndWait.AddWatcher", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -178,7 +178,7 @@ public partial class RAEC_Attack_WatchAndWait : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_WatchAndWait.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -190,7 +190,7 @@ public partial class RAEC_Attack_WatchAndWait : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: SetWatchTarget
     /// </summary>
-    public unsafe void SetWatchTarget(System.Numerics.Vector3 NewWatchTarget)
+    public unsafe virtual void SetWatchTarget(System.Numerics.Vector3 NewWatchTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_WatchAndWait.SetWatchTarget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -202,7 +202,7 @@ public partial class RAEC_Attack_WatchAndWait : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: AssignGrenadeLobber
     /// </summary>
-    public unsafe void AssignGrenadeLobber(BmSDK.BmGame.RAEC_Attack_Sub_LobGrenade FinishedGrenAEC)
+    public unsafe virtual void AssignGrenadeLobber(BmSDK.BmGame.RAEC_Attack_Sub_LobGrenade FinishedGrenAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_WatchAndWait.AssignGrenadeLobber", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -214,7 +214,7 @@ public partial class RAEC_Attack_WatchAndWait : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: OnRemoveSoloChild
     /// </summary>
-    public unsafe void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
+    public unsafe override void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_WatchAndWait.OnRemoveSoloChild", true);
         byte* paramsPtr = stackalloc byte[8];

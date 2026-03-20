@@ -71,7 +71,7 @@ public partial class MHackSubroutine : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanBeExecuted
     /// </summary>
-    public unsafe bool CanBeExecuted()
+    public unsafe virtual bool CanBeExecuted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackSubroutine.CanBeExecuted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class MHackSubroutine : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsRunning
     /// </summary>
-    public unsafe bool IsRunning()
+    public unsafe virtual bool IsRunning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackSubroutine.IsRunning", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class MHackSubroutine : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Interrupt
     /// </summary>
-    public unsafe void Interrupt()
+    public unsafe virtual void Interrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackSubroutine.Interrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class MHackSubroutine : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanBeInterrupted
     /// </summary>
-    public unsafe bool CanBeInterrupted()
+    public unsafe virtual bool CanBeInterrupted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackSubroutine.CanBeInterrupted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -115,7 +115,7 @@ public partial class MHackSubroutine : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Execute
     /// </summary>
-    public unsafe bool Execute(float DeltaTime)
+    public unsafe virtual bool Execute(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackSubroutine.Execute", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -127,7 +127,7 @@ public partial class MHackSubroutine : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAffectedActorsFromLocation
     /// </summary>
-    public unsafe void GetAffectedActorsFromLocation(out BmSDK.TArray<BmSDK.Engine.Actor> AffectedActors, System.Numerics.Vector3 ObjectLocation)
+    public unsafe virtual void GetAffectedActorsFromLocation(out BmSDK.TArray<BmSDK.Engine.Actor> AffectedActors, System.Numerics.Vector3 ObjectLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackSubroutine.GetAffectedActorsFromLocation", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -140,7 +140,7 @@ public partial class MHackSubroutine : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: InitializeFor
     /// </summary>
-    public unsafe void InitializeFor(BmSDK.BmGame.MHackableInterface Interface, BmSDK.BmGame.MHackableInterface.FSubroutineDefinition Define)
+    public unsafe virtual void InitializeFor(BmSDK.BmGame.MHackableInterface Interface, BmSDK.BmGame.MHackableInterface.FSubroutineDefinition Define)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackSubroutine.InitializeFor", true);
         byte* paramsPtr = stackalloc byte[88];

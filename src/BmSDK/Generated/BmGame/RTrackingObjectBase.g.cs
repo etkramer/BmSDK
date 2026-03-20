@@ -66,7 +66,7 @@ public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IG
     /// <summary>
     /// Function: SetNewTarget
     /// </summary>
-    public unsafe void SetNewTarget(BmSDK.Engine.Actor targActor, System.Numerics.Vector3 TargetVector)
+    public unsafe virtual void SetNewTarget(BmSDK.Engine.Actor targActor, System.Numerics.Vector3 TargetVector)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingObjectBase.SetNewTarget", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -79,7 +79,7 @@ public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IG
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingObjectBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -90,7 +90,7 @@ public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IG
     /// <summary>
     /// Function: CheckToInit
     /// </summary>
-    public unsafe void CheckToInit()
+    public unsafe virtual void CheckToInit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingObjectBase.CheckToInit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -101,7 +101,7 @@ public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IG
     /// <summary>
     /// Function: GetTrackingOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTrackingOrigin()
+    public unsafe virtual System.Numerics.Vector3 GetTrackingOrigin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingObjectBase.GetTrackingOrigin", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -119,7 +119,7 @@ public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IG
     /// <summary>
     /// Function: InitAlreadyHitByBatarang
     /// </summary>
-    public unsafe void InitAlreadyHitByBatarang()
+    public unsafe virtual void InitAlreadyHitByBatarang()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingObjectBase.InitAlreadyHitByBatarang", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IG
     /// <summary>
     /// Function: CheckTargetRange
     /// </summary>
-    public unsafe void CheckTargetRange()
+    public unsafe virtual void CheckTargetRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingObjectBase.CheckTargetRange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -148,7 +148,7 @@ public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IG
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingObjectBase.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -166,7 +166,7 @@ public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IG
     /// <summary>
     /// Function: GetBatarangSpeedBoost
     /// </summary>
-    public unsafe float GetBatarangSpeedBoost()
+    public unsafe virtual float GetBatarangSpeedBoost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingObjectBase.GetBatarangSpeedBoost", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -177,7 +177,7 @@ public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IG
     /// <summary>
     /// Function: ForceHitAtEndOfFlight
     /// </summary>
-    public unsafe bool ForceHitAtEndOfFlight()
+    public unsafe virtual bool ForceHitAtEndOfFlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingObjectBase.ForceHitAtEndOfFlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -188,7 +188,7 @@ public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IG
     /// <summary>
     /// Function: GetBatarangPriority
     /// </summary>
-    public unsafe float GetBatarangPriority()
+    public unsafe virtual float GetBatarangPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingObjectBase.GetBatarangPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -199,7 +199,7 @@ public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IG
     /// <summary>
     /// Function: IsBatarangable
     /// </summary>
-    public unsafe bool IsBatarangable()
+    public unsafe virtual bool IsBatarangable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingObjectBase.IsBatarangable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -210,7 +210,7 @@ public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IG
     /// <summary>
     /// Function: GetBatarangTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
+    public unsafe virtual System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingObjectBase.GetBatarangTargetPosition", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -224,7 +224,7 @@ public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IG
     /// <summary>
     /// Function: HitByDisruptorGadgetSecondary
     /// </summary>
-    public unsafe bool HitByDisruptorGadgetSecondary()
+    public unsafe virtual bool HitByDisruptorGadgetSecondary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingObjectBase.HitByDisruptorGadgetSecondary", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -235,7 +235,7 @@ public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IG
     /// <summary>
     /// Function: CanBeDisruptedSecondary
     /// </summary>
-    public unsafe bool CanBeDisruptedSecondary()
+    public unsafe virtual bool CanBeDisruptedSecondary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingObjectBase.CanBeDisruptedSecondary", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -246,7 +246,7 @@ public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IG
     /// <summary>
     /// Function: GetDisruptorOverridePriority
     /// </summary>
-    public unsafe float GetDisruptorOverridePriority()
+    public unsafe virtual float GetDisruptorOverridePriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingObjectBase.GetDisruptorOverridePriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -257,7 +257,7 @@ public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IG
     /// <summary>
     /// Function: CanBeDisrupted
     /// </summary>
-    public unsafe bool CanBeDisrupted()
+    public unsafe virtual bool CanBeDisrupted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingObjectBase.CanBeDisrupted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -268,7 +268,7 @@ public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IG
     /// <summary>
     /// Function: HitByDisruptorGadgetCharge
     /// </summary>
-    public unsafe bool HitByDisruptorGadgetCharge()
+    public unsafe virtual bool HitByDisruptorGadgetCharge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingObjectBase.HitByDisruptorGadgetCharge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -279,7 +279,7 @@ public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IG
     /// <summary>
     /// Function: GetDisruptorTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDisruptorTargetPosition()
+    public unsafe virtual System.Numerics.Vector3 GetDisruptorTargetPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingObjectBase.GetDisruptorTargetPosition", true);
         byte* paramsPtr = stackalloc byte[12];

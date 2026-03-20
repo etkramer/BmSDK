@@ -71,7 +71,7 @@ public partial class RAEC_Search_Formation_PairUp : BmSDK.BmGame.RAEC_Search_For
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation_PairUp.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RAEC_Search_Formation_PairUp : BmSDK.BmGame.RAEC_Search_For
     /// <summary>
     /// Function: AddJoiningBuddy
     /// </summary>
-    public unsafe void AddJoiningBuddy(BmSDK.BmGame.RBMAIController FollowCon)
+    public unsafe virtual void AddJoiningBuddy(BmSDK.BmGame.RBMAIController FollowCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation_PairUp.AddJoiningBuddy", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -95,7 +95,7 @@ public partial class RAEC_Search_Formation_PairUp : BmSDK.BmGame.RAEC_Search_For
     /// <summary>
     /// Function: SetLeader
     /// </summary>
-    public unsafe void SetLeader(BmSDK.BmGame.RBMAIController NewLeader)
+    public unsafe override void SetLeader(BmSDK.BmGame.RBMAIController NewLeader)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation_PairUp.SetLeader", true);
         byte* paramsPtr = stackalloc byte[8];

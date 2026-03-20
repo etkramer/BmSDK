@@ -36,7 +36,7 @@ public partial class AnimNodeCrossfader : BmSDK.Engine.AnimNodeBlend, BmSDK.IGam
     /// <summary>
     /// Function: GetActiveChild
     /// </summary>
-    public unsafe BmSDK.Engine.AnimNodeSequence GetActiveChild()
+    public unsafe virtual BmSDK.Engine.AnimNodeSequence GetActiveChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeCrossfader.GetActiveChild", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -54,7 +54,7 @@ public partial class AnimNodeCrossfader : BmSDK.Engine.AnimNodeBlend, BmSDK.IGam
     /// <summary>
     /// Function: GetAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetAnimName()
+    public unsafe virtual BmSDK.FName GetAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeCrossfader.GetAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -72,7 +72,7 @@ public partial class AnimNodeCrossfader : BmSDK.Engine.AnimNodeBlend, BmSDK.IGam
     /// <summary>
     /// Function: BlendToLoopingAnim
     /// </summary>
-    public unsafe void BlendToLoopingAnim(BmSDK.FName AnimSeqName, float BlendInTime = default, float Rate = default)
+    public unsafe virtual void BlendToLoopingAnim(BmSDK.FName AnimSeqName, float BlendInTime = default, float Rate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeCrossfader.BlendToLoopingAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -93,7 +93,7 @@ public partial class AnimNodeCrossfader : BmSDK.Engine.AnimNodeBlend, BmSDK.IGam
     /// <summary>
     /// Function: PlayOneShotAnim
     /// </summary>
-    public unsafe void PlayOneShotAnim(BmSDK.FName AnimSeqName, float BlendInTime = default, float BlendOutTime = default, bool bDontBlendOut = default, float Rate = default)
+    public unsafe virtual void PlayOneShotAnim(BmSDK.FName AnimSeqName, float BlendInTime = default, float BlendOutTime = default, bool bDontBlendOut = default, float Rate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeCrossfader.PlayOneShotAnim", true);
         byte* paramsPtr = stackalloc byte[24];

@@ -71,7 +71,7 @@ public partial class Trigger_LOS : BmSDK.Engine.Trigger, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Trigger_LOS.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class Trigger_LOS : BmSDK.Engine.Trigger, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Trigger_LOS.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class Trigger_LOS : BmSDK.Engine.Trigger, BmSDK.IGameObject
     /// <summary>
     /// Function: SetTickTimer
     /// </summary>
-    public unsafe void SetTickTimer()
+    public unsafe virtual void SetTickTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Trigger_LOS.SetTickTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class Trigger_LOS : BmSDK.Engine.Trigger, BmSDK.IGameObject
     /// <summary>
     /// Function: TickLOS
     /// </summary>
-    public unsafe void TickLOS()
+    public unsafe virtual void TickLOS()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Trigger_LOS.TickLOS", true);
         byte* paramsPtr = stackalloc byte[86];

@@ -42,7 +42,7 @@ public partial class RSeqAct_SetRandomPopulationBase : BmSDK.Engine.SequenceActi
     /// <summary>
     /// Function: SetRandomPopulation
     /// </summary>
-    public unsafe void SetRandomPopulation()
+    public unsafe virtual void SetRandomPopulation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetRandomPopulationBase.SetRandomPopulation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -53,7 +53,7 @@ public partial class RSeqAct_SetRandomPopulationBase : BmSDK.Engine.SequenceActi
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetRandomPopulationBase.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

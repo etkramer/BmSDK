@@ -71,7 +71,7 @@ public partial class RBMWeaponRiflePredFull : BmSDK.BmGame.RBMWeaponRiflePredThu
     /// <summary>
     /// Function: DetachWeapon
     /// </summary>
-    public unsafe void DetachWeapon()
+    public unsafe override void DetachWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponRiflePredFull.DetachWeapon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RBMWeaponRiflePredFull : BmSDK.BmGame.RBMWeaponRiflePredThu
     /// <summary>
     /// Function: AttachWeapon
     /// </summary>
-    public unsafe void AttachWeapon()
+    public unsafe override void AttachWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponRiflePredFull.AttachWeapon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RBMWeaponRiflePredFull : BmSDK.BmGame.RBMWeaponRiflePredThu
     /// <summary>
     /// Function: GetSentryGunWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig GetSentryGunWeaponConfig()
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig GetSentryGunWeaponConfig()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponRiflePredFull.GetSentryGunWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[444];
@@ -104,7 +104,7 @@ public partial class RBMWeaponRiflePredFull : BmSDK.BmGame.RBMWeaponRiflePredThu
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponRiflePredFull.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -116,7 +116,7 @@ public partial class RBMWeaponRiflePredFull : BmSDK.BmGame.RBMWeaponRiflePredThu
     /// <summary>
     /// Function: SetHidden
     /// </summary>
-    public unsafe void SetHidden(bool bNewHidden)
+    public unsafe override void SetHidden(bool bNewHidden)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponRiflePredFull.SetHidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RBMWeaponRiflePredFull : BmSDK.BmGame.RBMWeaponRiflePredThu
     /// <summary>
     /// Function: ShowWeapon
     /// </summary>
-    public unsafe void ShowWeapon()
+    public unsafe override void ShowWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponRiflePredFull.ShowWeapon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RBMWeaponRiflePredFull : BmSDK.BmGame.RBMWeaponRiflePredThu
     /// <summary>
     /// Function: HideWeapon
     /// </summary>
-    public unsafe void HideWeapon()
+    public unsafe override void HideWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponRiflePredFull.HideWeapon", true);
         byte* paramsPtr = stackalloc byte[0];

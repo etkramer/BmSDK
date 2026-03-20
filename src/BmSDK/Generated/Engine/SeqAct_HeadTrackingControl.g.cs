@@ -36,7 +36,7 @@ public partial class SeqAct_HeadTrackingControl : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_HeadTrackingControl.Activated", true);
         byte* paramsPtr = stackalloc byte[272];

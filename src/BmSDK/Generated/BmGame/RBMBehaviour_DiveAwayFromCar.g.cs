@@ -36,7 +36,7 @@ public partial class RBMBehaviour_DiveAwayFromCar : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: AwareOfPlayer
     /// </summary>
-    public unsafe bool AwareOfPlayer(BmSDK.Engine.Actor Player, BmSDK.Class dmgType = default)
+    public unsafe override bool AwareOfPlayer(BmSDK.Engine.Actor Player, BmSDK.Class dmgType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DiveAwayFromCar.AwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -49,7 +49,7 @@ public partial class RBMBehaviour_DiveAwayFromCar : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DiveAwayFromCar.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -60,7 +60,7 @@ public partial class RBMBehaviour_DiveAwayFromCar : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: CanCheckFalling
     /// </summary>
-    public unsafe bool CanCheckFalling()
+    public unsafe override bool CanCheckFalling()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DiveAwayFromCar.CanCheckFalling", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -78,7 +78,7 @@ public partial class RBMBehaviour_DiveAwayFromCar : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: RagdollNotify
     /// </summary>
-    public unsafe void RagdollNotify()
+    public unsafe virtual void RagdollNotify()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DiveAwayFromCar.RagdollNotify", true);
         byte* paramsPtr = stackalloc byte[252];
@@ -89,7 +89,7 @@ public partial class RBMBehaviour_DiveAwayFromCar : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DiveAwayFromCar.Tick", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -101,7 +101,7 @@ public partial class RBMBehaviour_DiveAwayFromCar : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: GetEvadeVehicleType
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.EEvadeVehicleType GetEvadeVehicleType(BmSDK.Engine.Actor V, float TestCarSpeed, bool bZap)
+    public unsafe override BmSDK.BmGame.RGameInfo.EEvadeVehicleType GetEvadeVehicleType(BmSDK.Engine.Actor V, float TestCarSpeed, bool bZap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DiveAwayFromCar.GetEvadeVehicleType", true);
         byte* paramsPtr = stackalloc byte[17];
@@ -115,7 +115,7 @@ public partial class RBMBehaviour_DiveAwayFromCar : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: CanEvadeAgain
     /// </summary>
-    public unsafe void CanEvadeAgain()
+    public unsafe virtual void CanEvadeAgain()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DiveAwayFromCar.CanEvadeAgain", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RBMBehaviour_DiveAwayFromCar : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: GetStumbleAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetStumbleAnimName(System.Numerics.Vector3 Dir)
+    public unsafe virtual BmSDK.FName GetStumbleAnimName(System.Numerics.Vector3 Dir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DiveAwayFromCar.GetStumbleAnimName", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -138,7 +138,7 @@ public partial class RBMBehaviour_DiveAwayFromCar : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: CheckForDiveInDirection
     /// </summary>
-    public unsafe bool CheckForDiveInDirection(System.Numerics.Vector3 TestDirection)
+    public unsafe virtual bool CheckForDiveInDirection(System.Numerics.Vector3 TestDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DiveAwayFromCar.CheckForDiveInDirection", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -150,7 +150,7 @@ public partial class RBMBehaviour_DiveAwayFromCar : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.Engine.Actor NewCar, float NewCarSpeed, BmSDK.BmGame.RGameInfo.EEvadeVehicleType EvadeVehicleType)
+    public unsafe virtual void Initialise(BmSDK.Engine.Actor NewCar, float NewCarSpeed, BmSDK.BmGame.RGameInfo.EEvadeVehicleType EvadeVehicleType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DiveAwayFromCar.Initialise", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -164,7 +164,7 @@ public partial class RBMBehaviour_DiveAwayFromCar : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_DiveAwayFromCar.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

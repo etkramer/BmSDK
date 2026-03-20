@@ -71,7 +71,7 @@ public partial class RAEC_Search_Formation_SideRoom : BmSDK.BmGame.RAEC_Search_F
     /// <summary>
     /// Function: NotifyChildStolen
     /// </summary>
-    public unsafe void NotifyChildStolen(BmSDK.BmGame.RAlertEventCoordinatorSolo StoleFromAEC, BmSDK.BmGame.RAlertEventCoordinatorSolo StealingAEC)
+    public unsafe override void NotifyChildStolen(BmSDK.BmGame.RAlertEventCoordinatorSolo StoleFromAEC, BmSDK.BmGame.RAlertEventCoordinatorSolo StealingAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation_SideRoom.NotifyChildStolen", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -84,7 +84,7 @@ public partial class RAEC_Search_Formation_SideRoom : BmSDK.BmGame.RAEC_Search_F
     /// <summary>
     /// Function: LeaderSignalledStart
     /// </summary>
-    public unsafe void LeaderSignalledStart()
+    public unsafe virtual void LeaderSignalledStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation_SideRoom.LeaderSignalledStart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class RAEC_Search_Formation_SideRoom : BmSDK.BmGame.RAEC_Search_F
     /// <summary>
     /// Function: AddFollower
     /// </summary>
-    public unsafe void AddFollower(BmSDK.BmGame.RBMAIController FollowCon)
+    public unsafe override void AddFollower(BmSDK.BmGame.RBMAIController FollowCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation_SideRoom.AddFollower", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -107,7 +107,7 @@ public partial class RAEC_Search_Formation_SideRoom : BmSDK.BmGame.RAEC_Search_F
     /// <summary>
     /// Function: SetLeader
     /// </summary>
-    public unsafe void SetLeader(BmSDK.BmGame.RBMAIController NewLeader)
+    public unsafe override void SetLeader(BmSDK.BmGame.RBMAIController NewLeader)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation_SideRoom.SetLeader", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -119,7 +119,7 @@ public partial class RAEC_Search_Formation_SideRoom : BmSDK.BmGame.RAEC_Search_F
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(System.Numerics.Vector3 inLeaderLoc, System.Numerics.Vector3 inSearchLoc, BmSDK.BmGame.RSideRoomVolume sideRoomVol)
+    public unsafe virtual void Init(System.Numerics.Vector3 inLeaderLoc, System.Numerics.Vector3 inSearchLoc, BmSDK.BmGame.RSideRoomVolume sideRoomVol)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation_SideRoom.Init", true);
         byte* paramsPtr = stackalloc byte[32];

@@ -47,7 +47,7 @@ public partial class RSeqAct_SetBatmobileState : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// Function: UsedWhenStolen
     /// </summary>
-    public unsafe void UsedWhenStolen()
+    public unsafe virtual void UsedWhenStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SetBatmobileState.UsedWhenStolen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_SetBatmobileState : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SetBatmobileState.Activated", true);
         byte* paramsPtr = stackalloc byte[8];

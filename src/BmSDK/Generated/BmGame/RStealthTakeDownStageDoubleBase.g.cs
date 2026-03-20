@@ -66,7 +66,7 @@ public partial class RStealthTakeDownStageDoubleBase : BmSDK.BmGame.RStealthTake
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStageDoubleBase.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -79,7 +79,7 @@ public partial class RStealthTakeDownStageDoubleBase : BmSDK.BmGame.RStealthTake
     /// <summary>
     /// Function: TriggerVictim2Frozen
     /// </summary>
-    public unsafe void TriggerVictim2Frozen()
+    public unsafe virtual void TriggerVictim2Frozen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStageDoubleBase.TriggerVictim2Frozen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -90,7 +90,7 @@ public partial class RStealthTakeDownStageDoubleBase : BmSDK.BmGame.RStealthTake
     /// <summary>
     /// Function: TriggerVictim2NotFrozen
     /// </summary>
-    public unsafe void TriggerVictim2NotFrozen()
+    public unsafe virtual void TriggerVictim2NotFrozen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStageDoubleBase.TriggerVictim2NotFrozen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -101,7 +101,7 @@ public partial class RStealthTakeDownStageDoubleBase : BmSDK.BmGame.RStealthTake
     /// <summary>
     /// Function: TriggerVictim2
     /// </summary>
-    public unsafe void TriggerVictim2()
+    public unsafe virtual void TriggerVictim2()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStageDoubleBase.TriggerVictim2", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -112,7 +112,7 @@ public partial class RStealthTakeDownStageDoubleBase : BmSDK.BmGame.RStealthTake
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStageDoubleBase.Begin", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -123,7 +123,7 @@ public partial class RStealthTakeDownStageDoubleBase : BmSDK.BmGame.RStealthTake
     /// <summary>
     /// Function: GetStageAnim
     /// </summary>
-    public unsafe int GetStageAnim()
+    public unsafe override int GetStageAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStageDoubleBase.GetStageAnim", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_SwingToGlide : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: TriggerSwingCamera
     /// </summary>
-    public unsafe void TriggerSwingCamera()
+    public unsafe override void TriggerSwingCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToGlide.TriggerSwingCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_SwingToGlide : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: ApplyLandingCapeState
     /// </summary>
-    public unsafe void ApplyLandingCapeState()
+    public unsafe override void ApplyLandingCapeState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToGlide.ApplyLandingCapeState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RSpecialMoveInstance_SwingToGlide : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_SwingToGlide.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];

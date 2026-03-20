@@ -36,7 +36,7 @@ public partial class RSeqAct_AirshipBobbingBase : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: PlayerFinishedTilt
     /// </summary>
-    public unsafe void PlayerFinishedTilt()
+    public unsafe virtual void PlayerFinishedTilt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AirshipBobbingBase.PlayerFinishedTilt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RSeqAct_AirshipBobbingBase : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: PlayerStartedTilt
     /// </summary>
-    public unsafe void PlayerStartedTilt()
+    public unsafe virtual void PlayerStartedTilt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AirshipBobbingBase.PlayerStartedTilt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_AirshipBobbingBase : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: UpdateVistaFromCameraBob
     /// </summary>
-    public unsafe void UpdateVistaFromCameraBob()
+    public unsafe virtual void UpdateVistaFromCameraBob()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AirshipBobbingBase.UpdateVistaFromCameraBob", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -69,7 +69,7 @@ public partial class RSeqAct_AirshipBobbingBase : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: UpdateManualControl
     /// </summary>
-    public unsafe void UpdateManualControl(float DeltaTime)
+    public unsafe virtual void UpdateManualControl(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AirshipBobbingBase.UpdateManualControl", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -88,7 +88,7 @@ public partial class RSeqAct_AirshipBobbingBase : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: UpdateOWBob
     /// </summary>
-    public unsafe BmSDK.Rotator UpdateOWBob(float DeltaTime, out System.Numerics.Vector3 BobEuler)
+    public unsafe virtual BmSDK.Rotator UpdateOWBob(float DeltaTime, out System.Numerics.Vector3 BobEuler)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AirshipBobbingBase.UpdateOWBob", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -119,7 +119,7 @@ public partial class RSeqAct_AirshipBobbingBase : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: SetPlayerInput
     /// </summary>
-    public unsafe void SetPlayerInput(float LeftToRight)
+    public unsafe virtual void SetPlayerInput(float LeftToRight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AirshipBobbingBase.SetPlayerInput", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -131,7 +131,7 @@ public partial class RSeqAct_AirshipBobbingBase : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: PlayerTriedToUseAirshipTiltWhenItsInactive
     /// </summary>
-    public unsafe void PlayerTriedToUseAirshipTiltWhenItsInactive()
+    public unsafe virtual void PlayerTriedToUseAirshipTiltWhenItsInactive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AirshipBobbingBase.PlayerTriedToUseAirshipTiltWhenItsInactive", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -142,7 +142,7 @@ public partial class RSeqAct_AirshipBobbingBase : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AirshipBobbingBase.Update", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -154,7 +154,7 @@ public partial class RSeqAct_AirshipBobbingBase : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AirshipBobbingBase.Activated", true);
         byte* paramsPtr = stackalloc byte[4];

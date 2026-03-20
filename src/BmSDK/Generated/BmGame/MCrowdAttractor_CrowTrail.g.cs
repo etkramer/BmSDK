@@ -71,7 +71,7 @@ public partial class MCrowdAttractor_CrowTrail : BmSDK.BmGame.RCrowdAttractor, B
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCrowdAttractor_CrowTrail.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class MCrowdAttractor_CrowTrail : BmSDK.BmGame.RCrowdAttractor, B
     /// <summary>
     /// Function: DrawDebug
     /// </summary>
-    public unsafe void DrawDebug()
+    public unsafe override void DrawDebug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCrowdAttractor_CrowTrail.DrawDebug", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -94,7 +94,7 @@ public partial class MCrowdAttractor_CrowTrail : BmSDK.BmGame.RCrowdAttractor, B
     /// <summary>
     /// Function: GetAttractionForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAttractionForce(BmSDK.BmGame.RCrowdAgent Agent, float DeltaTime)
+    public unsafe override System.Numerics.Vector3 GetAttractionForce(BmSDK.BmGame.RCrowdAgent Agent, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCrowdAttractor_CrowTrail.GetAttractionForce", true);
         byte* paramsPtr = stackalloc byte[24];

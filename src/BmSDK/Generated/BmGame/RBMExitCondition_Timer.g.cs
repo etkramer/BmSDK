@@ -47,7 +47,7 @@ public partial class RBMExitCondition_Timer : BmSDK.BmGame.RBMExitCondition, BmS
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitCondition_Timer.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RBMExitCondition_Timer : BmSDK.BmGame.RBMExitCondition, BmS
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitCondition_Timer.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RBMExitCondition_Timer : BmSDK.BmGame.RBMExitCondition, BmS
     /// <summary>
     /// Function: ActivateSyncExitConditions
     /// </summary>
-    public unsafe void ActivateSyncExitConditions()
+    public unsafe override void ActivateSyncExitConditions()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitCondition_Timer.ActivateSyncExitConditions", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -88,7 +88,7 @@ public partial class RBMExitCondition_Timer : BmSDK.BmGame.RBMExitCondition, BmS
     /// <summary>
     /// Function: StartAllSyncedTimers
     /// </summary>
-    public unsafe void StartAllSyncedTimers()
+    public unsafe virtual void StartAllSyncedTimers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitCondition_Timer.StartAllSyncedTimers", true);
         byte* paramsPtr = stackalloc byte[0];

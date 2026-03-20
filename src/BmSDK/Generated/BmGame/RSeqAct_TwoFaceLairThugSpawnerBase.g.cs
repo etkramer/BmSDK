@@ -31,7 +31,7 @@ public partial class RSeqAct_TwoFaceLairThugSpawnerBase : BmSDK.BmGame.RSeqAct_C
     /// <summary>
     /// Function: GetThugsOnHigherBalconies
     /// </summary>
-    public unsafe int GetThugsOnHigherBalconies()
+    public unsafe virtual int GetThugsOnHigherBalconies()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_TwoFaceLairThugSpawnerBase.GetThugsOnHigherBalconies", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -49,7 +49,7 @@ public partial class RSeqAct_TwoFaceLairThugSpawnerBase : BmSDK.BmGame.RSeqAct_C
     /// <summary>
     /// Function: UpdateThugs
     /// </summary>
-    public unsafe bool UpdateThugs(float DeltaTime)
+    public unsafe virtual bool UpdateThugs(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_TwoFaceLairThugSpawnerBase.UpdateThugs", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -68,7 +68,7 @@ public partial class RSeqAct_TwoFaceLairThugSpawnerBase : BmSDK.BmGame.RSeqAct_C
     /// <summary>
     /// Function: LookingAtItem
     /// </summary>
-    public unsafe bool LookingAtItem(BmSDK.Engine.Actor TestItem)
+    public unsafe virtual bool LookingAtItem(BmSDK.Engine.Actor TestItem)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_TwoFaceLairThugSpawnerBase.LookingAtItem", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -80,7 +80,7 @@ public partial class RSeqAct_TwoFaceLairThugSpawnerBase : BmSDK.BmGame.RSeqAct_C
     /// <summary>
     /// Function: SpawnThug
     /// </summary>
-    public unsafe void SpawnThug(BmSDK.Engine.Actor SpawnPoint, BmSDK.Engine.Actor GuardPoint, int SpawnIndex)
+    public unsafe virtual void SpawnThug(BmSDK.Engine.Actor SpawnPoint, BmSDK.Engine.Actor GuardPoint, int SpawnIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_TwoFaceLairThugSpawnerBase.SpawnThug", true);
         byte* paramsPtr = stackalloc byte[20];

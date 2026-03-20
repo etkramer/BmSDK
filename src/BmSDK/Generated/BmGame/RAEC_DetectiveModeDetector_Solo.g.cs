@@ -71,7 +71,7 @@ public partial class RAEC_DetectiveModeDetector_Solo : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DetectiveModeDetector_Solo.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RAEC_DetectiveModeDetector_Solo : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: TryRestartDetection
     /// </summary>
-    public unsafe void TryRestartDetection()
+    public unsafe virtual void TryRestartDetection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DetectiveModeDetector_Solo.TryRestartDetection", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RAEC_DetectiveModeDetector_Solo : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: StopDetection
     /// </summary>
-    public unsafe void StopDetection(bool bDetectiveModeOn)
+    public unsafe virtual void StopDetection(bool bDetectiveModeOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DetectiveModeDetector_Solo.StopDetection", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RAEC_DetectiveModeDetector_Solo : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DetectiveModeDetector_Solo.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearDelegate
     /// </summary>
-    public unsafe void ClearDelegate(int DelegateType, System.IntPtr InDelegate)
+    public unsafe virtual void ClearDelegate(int DelegateType, System.IntPtr InDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlatformInterfaceBase.ClearDelegate", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -49,7 +49,7 @@ public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AddDelegate
     /// </summary>
-    public unsafe void AddDelegate(int DelegateType, System.IntPtr InDelegate)
+    public unsafe virtual void AddDelegate(int DelegateType, System.IntPtr InDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlatformInterfaceBase.AddDelegate", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -224,7 +224,7 @@ public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CallDelegates
     /// </summary>
-    public unsafe void CallDelegates(int DelegateType, out BmSDK.Engine.PlatformInterfaceBase.FPlatformInterfaceDelegateResult DelegateResult)
+    public unsafe virtual void CallDelegates(int DelegateType, out BmSDK.Engine.PlatformInterfaceBase.FPlatformInterfaceDelegateResult DelegateResult)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlatformInterfaceBase.CallDelegates", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -244,7 +244,7 @@ public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PlatformInterfaceDelegate
     /// </summary>
-    public unsafe void PlatformInterfaceDelegate(out BmSDK.Engine.PlatformInterfaceBase.FPlatformInterfaceDelegateResult Result)
+    public unsafe virtual void PlatformInterfaceDelegate(out BmSDK.Engine.PlatformInterfaceBase.FPlatformInterfaceDelegateResult Result)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlatformInterfaceBase.PlatformInterfaceDelegate", true);
         byte* paramsPtr = stackalloc byte[48];

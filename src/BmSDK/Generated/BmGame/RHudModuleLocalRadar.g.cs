@@ -36,7 +36,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: SetMaskEnormous
     /// </summary>
-    public unsafe void SetMaskEnormous(bool enormous)
+    public unsafe virtual void SetMaskEnormous(bool enormous)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.SetMaskEnormous", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: SetRootsPermanentlyVisible
     /// </summary>
-    public unsafe void SetRootsPermanentlyVisible(bool make_visible)
+    public unsafe virtual void SetRootsPermanentlyVisible(bool make_visible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.SetRootsPermanentlyVisible", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -60,7 +60,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: DoPulsePrivate
     /// </summary>
-    public unsafe void DoPulsePrivate(float time_extra)
+    public unsafe virtual void DoPulsePrivate(float time_extra)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.DoPulsePrivate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -72,7 +72,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: DoPulse
     /// </summary>
-    public unsafe void DoPulse(float proportion_extra)
+    public unsafe virtual void DoPulse(float proportion_extra)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.DoPulse", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -84,7 +84,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: SetRootNetworkOpacity
     /// </summary>
-    public unsafe void SetRootNetworkOpacity(float _NetworkOpacity)
+    public unsafe virtual void SetRootNetworkOpacity(float _NetworkOpacity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.SetRootNetworkOpacity", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -96,7 +96,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: SetPlayerPosition
     /// </summary>
-    public unsafe void SetPlayerPosition(float PlayerRotationRadians, float LocationX, float LocationY)
+    public unsafe virtual void SetPlayerPosition(float PlayerRotationRadians, float LocationX, float LocationY)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.SetPlayerPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -110,7 +110,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: SetVisualModePrivate
     /// </summary>
-    public unsafe void SetVisualModePrivate(bool RadarVisible, bool HeavyTanksVisible)
+    public unsafe virtual void SetVisualModePrivate(bool RadarVisible, bool HeavyTanksVisible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.SetVisualModePrivate", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -123,7 +123,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: SetVisualModeAuto
     /// </summary>
-    public unsafe void SetVisualModeAuto()
+    public unsafe virtual void SetVisualModeAuto()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.SetVisualModeAuto", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -134,7 +134,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: SetRootNetworkPrivate
     /// </summary>
-    public unsafe void SetRootNetworkPrivate(BmSDK.FString RootNetworkString)
+    public unsafe virtual void SetRootNetworkPrivate(BmSDK.FString RootNetworkString)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.SetRootNetworkPrivate", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -146,7 +146,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: SetRootNetwork
     /// </summary>
-    public unsafe void SetRootNetwork(BmSDK.FString RootNetworkString)
+    public unsafe virtual void SetRootNetwork(BmSDK.FString RootNetworkString)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.SetRootNetwork", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -158,7 +158,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: PushTrackedActorsToFlash
     /// </summary>
-    public unsafe void PushTrackedActorsToFlash(int Num_Array_Actors, bool DisplayNonVehicleActors = default)
+    public unsafe virtual void PushTrackedActorsToFlash(int Num_Array_Actors, bool DisplayNonVehicleActors = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.PushTrackedActorsToFlash", true);
         byte* paramsPtr = stackalloc byte[125];
@@ -171,7 +171,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: SetHeavyTankRadiusPrivate
     /// </summary>
-    public unsafe void SetHeavyTankRadiusPrivate(float pos_angle, float pos_distance, float radius_scale)
+    public unsafe virtual void SetHeavyTankRadiusPrivate(float pos_angle, float pos_distance, float radius_scale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.SetHeavyTankRadiusPrivate", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -185,7 +185,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: SetDetailObjectPrivate
     /// </summary>
-    public unsafe void SetDetailObjectPrivate(int obj_index, float pos_angle, float pos_distance, float bearing_rad, int movie_frame)
+    public unsafe virtual void SetDetailObjectPrivate(int obj_index, float pos_angle, float pos_distance, float bearing_rad, int movie_frame)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.SetDetailObjectPrivate", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -201,7 +201,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: ExtendObjectArray
     /// </summary>
-    public unsafe void ExtendObjectArray()
+    public unsafe virtual void ExtendObjectArray()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.ExtendObjectArray", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -212,7 +212,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: PushConsolidatedArrayToFlash
     /// </summary>
-    public unsafe void PushConsolidatedArrayToFlash()
+    public unsafe virtual void PushConsolidatedArrayToFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.PushConsolidatedArrayToFlash", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -223,7 +223,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: PushActorsToFlashPrivate
     /// </summary>
-    public unsafe void PushActorsToFlashPrivate(int Num_Actors, bool RadarJammed)
+    public unsafe virtual void PushActorsToFlashPrivate(int Num_Actors, bool RadarJammed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.PushActorsToFlashPrivate", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -236,7 +236,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: PushFakeActorsToFlash
     /// </summary>
-    public unsafe void PushFakeActorsToFlash()
+    public unsafe virtual void PushFakeActorsToFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.PushFakeActorsToFlash", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -247,7 +247,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: SetBatmobileRevDisplayActive
     /// </summary>
-    public unsafe void SetBatmobileRevDisplayActive(bool _BatmobileRevDisplayActive)
+    public unsafe virtual void SetBatmobileRevDisplayActive(bool _BatmobileRevDisplayActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.SetBatmobileRevDisplayActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -259,7 +259,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: SetHeavyTankTrackingActive
     /// </summary>
-    public unsafe void SetHeavyTankTrackingActive(bool _HeavyTankTrackingIsActive)
+    public unsafe virtual void SetHeavyTankTrackingActive(bool _HeavyTankTrackingIsActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.SetHeavyTankTrackingActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -271,7 +271,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: SetVehicleTrackingActive
     /// </summary>
-    public unsafe void SetVehicleTrackingActive(bool _VehicleTrackingIsActive)
+    public unsafe virtual void SetVehicleTrackingActive(bool _VehicleTrackingIsActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.SetVehicleTrackingActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -283,7 +283,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: SetInBatmobile
     /// </summary>
-    public unsafe void SetInBatmobile(bool _InBatmobile)
+    public unsafe virtual void SetInBatmobile(bool _InBatmobile)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.SetInBatmobile", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -295,7 +295,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: SetHealthValue
     /// </summary>
-    public unsafe void SetHealthValue(float current_value, bool is_critical = default)
+    public unsafe virtual void SetHealthValue(float current_value, bool is_critical = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.SetHealthValue", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -308,7 +308,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: SetHealthTitle
     /// </summary>
-    public unsafe void SetHealthTitle(BmSDK.FString health_title)
+    public unsafe virtual void SetHealthTitle(BmSDK.FString health_title)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.SetHealthTitle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -320,7 +320,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: SetLockonValue
     /// </summary>
-    public unsafe void SetLockonValue(float current_value, float warning_threshold)
+    public unsafe virtual void SetLockonValue(float current_value, float warning_threshold)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.SetLockonValue", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -333,7 +333,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: SetStationaryLockonValue
     /// </summary>
-    public unsafe void SetStationaryLockonValue(float current_value)
+    public unsafe virtual void SetStationaryLockonValue(float current_value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.SetStationaryLockonValue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -345,7 +345,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: UpdateTargetPositionPrivate
     /// </summary>
-    public unsafe void UpdateTargetPositionPrivate(float target_location_angle, float target_location_distance, float target_bearing, int num_tagged_vehicle_points)
+    public unsafe virtual void UpdateTargetPositionPrivate(float target_location_angle, float target_location_distance, float target_bearing, int num_tagged_vehicle_points)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.UpdateTargetPositionPrivate", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -360,7 +360,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: PushTaggedPoints
     /// </summary>
-    public unsafe void PushTaggedPoints(BmSDK.Engine.Actor TheTarget, float CameraFacingAngle)
+    public unsafe virtual void PushTaggedPoints(BmSDK.Engine.Actor TheTarget, float CameraFacingAngle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.PushTaggedPoints", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -373,7 +373,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: SetTargetLocation
     /// </summary>
-    public unsafe void SetTargetLocation(BmSDK.Engine.Actor the_target)
+    public unsafe virtual void SetTargetLocation(BmSDK.Engine.Actor the_target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.SetTargetLocation", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -385,7 +385,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: XI_LocalRadarOffscreen
     /// </summary>
-    public unsafe void XI_LocalRadarOffscreen()
+    public unsafe virtual void XI_LocalRadarOffscreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.XI_LocalRadarOffscreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -396,7 +396,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: DoOutro
     /// </summary>
-    public unsafe void DoOutro()
+    public unsafe virtual void DoOutro()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.DoOutro", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -407,7 +407,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: DoIntro
     /// </summary>
-    public unsafe void DoIntro()
+    public unsafe virtual void DoIntro()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.DoIntro", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -418,7 +418,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -429,7 +429,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: InitialiseFlash
     /// </summary>
-    public unsafe void InitialiseFlash()
+    public unsafe override void InitialiseFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.InitialiseFlash", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -440,7 +440,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: RadarRangeUpdated
     /// </summary>
-    public unsafe void RadarRangeUpdated()
+    public unsafe virtual void RadarRangeUpdated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.RadarRangeUpdated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -451,7 +451,7 @@ public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleLocalRadar.Init", true);
         byte* paramsPtr = stackalloc byte[44];

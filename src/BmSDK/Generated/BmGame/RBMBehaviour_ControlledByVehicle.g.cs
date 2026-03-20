@@ -36,7 +36,7 @@ public partial class RBMBehaviour_ControlledByVehicle : BmSDK.BmGame.RBMBehaviou
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ControlledByVehicle.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -66,7 +66,7 @@ public partial class RCharacterScaleReferenceBase : BmSDK.Engine.Actor, BmSDK.IG
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterScaleReferenceBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

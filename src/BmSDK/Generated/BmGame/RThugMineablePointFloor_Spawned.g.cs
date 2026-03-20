@@ -71,7 +71,7 @@ public partial class RThugMineablePointFloor_Spawned : BmSDK.BmGame.RThugMineabl
     /// <summary>
     /// Function: SetRoomState
     /// </summary>
-    public unsafe void SetRoomState(BmSDK.BmGame.RBMRoomAIState NewRoomState)
+    public unsafe virtual void SetRoomState(BmSDK.BmGame.RBMRoomAIState NewRoomState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineablePointFloor_Spawned.SetRoomState", true);
         byte* paramsPtr = stackalloc byte[8];

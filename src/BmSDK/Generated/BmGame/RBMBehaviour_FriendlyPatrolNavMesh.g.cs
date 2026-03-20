@@ -47,7 +47,7 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: PlayRandomAnimation
     /// </summary>
-    public unsafe void PlayRandomAnimation()
+    public unsafe virtual void PlayRandomAnimation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FriendlyPatrolNavMesh.PlayRandomAnimation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: SetLookAtTime
     /// </summary>
-    public unsafe void SetLookAtTime(float MinTime = default, float Range = default)
+    public unsafe virtual void SetLookAtTime(float MinTime = default, float Range = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FriendlyPatrolNavMesh.SetLookAtTime", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -71,7 +71,7 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: SetWaitTime
     /// </summary>
-    public unsafe void SetWaitTime(float MinTime = default, float Range = default)
+    public unsafe virtual void SetWaitTime(float MinTime = default, float Range = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FriendlyPatrolNavMesh.SetWaitTime", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -84,7 +84,7 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: AtGoalFinalise
     /// </summary>
-    public unsafe void AtGoalFinalise()
+    public unsafe virtual void AtGoalFinalise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FriendlyPatrolNavMesh.AtGoalFinalise", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -95,7 +95,7 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: GetNextPoint
     /// </summary>
-    public unsafe void GetNextPoint()
+    public unsafe virtual void GetNextPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FriendlyPatrolNavMesh.GetNextPoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: StartPathFinding
     /// </summary>
-    public unsafe void StartPathFinding()
+    public unsafe virtual void StartPathFinding()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FriendlyPatrolNavMesh.StartPathFinding", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: HandlePathNotFound
     /// </summary>
-    public unsafe void HandlePathNotFound()
+    public unsafe virtual void HandlePathNotFound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FriendlyPatrolNavMesh.HandlePathNotFound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: GetDirectionOfFocus
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDirectionOfFocus()
+    public unsafe override System.Numerics.Vector3 GetDirectionOfFocus()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FriendlyPatrolNavMesh.GetDirectionOfFocus", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -139,7 +139,7 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: StopForBatman
     /// </summary>
-    public unsafe void StopForBatman()
+    public unsafe virtual void StopForBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FriendlyPatrolNavMesh.StopForBatman", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: CheckForBatmanClose
     /// </summary>
-    public unsafe bool CheckForBatmanClose()
+    public unsafe virtual bool CheckForBatmanClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FriendlyPatrolNavMesh.CheckForBatmanClose", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -161,7 +161,7 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: TalkingToBats
     /// </summary>
-    public unsafe void TalkingToBats()
+    public unsafe virtual void TalkingToBats()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FriendlyPatrolNavMesh.TalkingToBats", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -172,7 +172,7 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: GetSpecialWalk
     /// </summary>
-    public unsafe BmSDK.FName GetSpecialWalk()
+    public unsafe virtual BmSDK.FName GetSpecialWalk()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FriendlyPatrolNavMesh.GetSpecialWalk", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -183,7 +183,7 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: UpdateNPCLookAt
     /// </summary>
-    public unsafe void UpdateNPCLookAt()
+    public unsafe virtual void UpdateNPCLookAt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FriendlyPatrolNavMesh.UpdateNPCLookAt", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -194,7 +194,7 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: OnEndInterrupt
     /// </summary>
-    public unsafe void OnEndInterrupt()
+    public unsafe override void OnEndInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FriendlyPatrolNavMesh.OnEndInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -205,7 +205,7 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FriendlyPatrolNavMesh.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -216,7 +216,7 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FriendlyPatrolNavMesh.OnActivate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -227,7 +227,7 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: FindStartNode
     /// </summary>
-    public unsafe void FindStartNode()
+    public unsafe virtual void FindStartNode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FriendlyPatrolNavMesh.FindStartNode", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -238,7 +238,7 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: GetMoveLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMoveLocation()
+    public unsafe virtual System.Numerics.Vector3 GetMoveLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FriendlyPatrolNavMesh.GetMoveLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -249,7 +249,7 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: GetNumNodes
     /// </summary>
-    public unsafe int GetNumNodes()
+    public unsafe virtual int GetNumNodes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FriendlyPatrolNavMesh.GetNumNodes", true);
         byte* paramsPtr = stackalloc byte[28];

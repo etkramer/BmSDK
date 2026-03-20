@@ -71,7 +71,7 @@ public partial class RPickup_MilitiaShield : BmSDK.BmGame.RPickup_MilitiaShieldB
     /// <summary>
     /// Function: BreakMe
     /// </summary>
-    public unsafe void BreakMe()
+    public unsafe virtual void BreakMe()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPickup_MilitiaShield.BreakMe", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RPickup_MilitiaShield : BmSDK.BmGame.RPickup_MilitiaShieldB
     /// <summary>
     /// Function: EarlyDestroy
     /// </summary>
-    public unsafe bool EarlyDestroy()
+    public unsafe virtual bool EarlyDestroy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPickup_MilitiaShield.EarlyDestroy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RPickup_MilitiaShield : BmSDK.BmGame.RPickup_MilitiaShieldB
     /// <summary>
     /// Function: InitialFlagCheckHack
     /// </summary>
-    public unsafe void InitialFlagCheckHack()
+    public unsafe virtual void InitialFlagCheckHack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPickup_MilitiaShield.InitialFlagCheckHack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RPickup_MilitiaShield : BmSDK.BmGame.RPickup_MilitiaShieldB
     /// <summary>
     /// Function: InitialFlagCheck
     /// </summary>
-    public unsafe void InitialFlagCheck()
+    public unsafe virtual void InitialFlagCheck()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPickup_MilitiaShield.InitialFlagCheck", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RPickup_MilitiaShield : BmSDK.BmGame.RPickup_MilitiaShieldB
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPickup_MilitiaShield.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RPickup_MilitiaShield : BmSDK.BmGame.RPickup_MilitiaShieldB
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPickup_MilitiaShield.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[92];

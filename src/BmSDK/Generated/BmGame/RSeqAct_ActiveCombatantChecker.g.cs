@@ -36,7 +36,7 @@ public partial class RSeqAct_ActiveCombatantChecker : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActiveCombatantChecker.Update", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -48,7 +48,7 @@ public partial class RSeqAct_ActiveCombatantChecker : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: IsValueInThreshold
     /// </summary>
-    public unsafe bool IsValueInThreshold(int Value, int ThresholdIdx)
+    public unsafe virtual bool IsValueInThreshold(int Value, int ThresholdIdx)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActiveCombatantChecker.IsValueInThreshold", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -61,7 +61,7 @@ public partial class RSeqAct_ActiveCombatantChecker : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActiveCombatantChecker.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

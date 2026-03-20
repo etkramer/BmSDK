@@ -36,7 +36,7 @@ public partial class AkDialogueEvent : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: IsOncePerSession
     /// </summary>
-    public unsafe bool IsOncePerSession()
+    public unsafe virtual bool IsOncePerSession()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueEvent.IsOncePerSession", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class AkDialogueEvent : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: IsOnceEver
     /// </summary>
-    public unsafe bool IsOnceEver()
+    public unsafe virtual bool IsOnceEver()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueEvent.IsOnceEver", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class AkDialogueEvent : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: IsOnceOnly
     /// </summary>
-    public unsafe bool IsOnceOnly()
+    public unsafe virtual bool IsOnceOnly()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueEvent.IsOnceOnly", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -69,7 +69,7 @@ public partial class AkDialogueEvent : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCustomVoiceSubtitle
     /// </summary>
-    public unsafe BmSDK.FString GetCustomVoiceSubtitle(BmSDK.FString langExt = default)
+    public unsafe virtual BmSDK.FString GetCustomVoiceSubtitle(BmSDK.FString langExt = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueEvent.GetCustomVoiceSubtitle", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -88,7 +88,7 @@ public partial class AkDialogueEvent : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSubtitle
     /// </summary>
-    public unsafe BmSDK.FString GetSubtitle()
+    public unsafe virtual BmSDK.FString GetSubtitle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueEvent.GetSubtitle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -106,7 +106,7 @@ public partial class AkDialogueEvent : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: GetId
     /// </summary>
-    public unsafe int GetId()
+    public unsafe virtual int GetId()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueEvent.GetId", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -117,7 +117,7 @@ public partial class AkDialogueEvent : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSoundDuration
     /// </summary>
-    public unsafe float GetSoundDuration()
+    public unsafe virtual float GetSoundDuration()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueEvent.GetSoundDuration", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -135,7 +135,7 @@ public partial class AkDialogueEvent : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSoundEvent
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetSoundEvent()
+    public unsafe virtual BmSDK.Engine.AkEvent GetSoundEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueEvent.GetSoundEvent", true);
         byte* paramsPtr = stackalloc byte[8];

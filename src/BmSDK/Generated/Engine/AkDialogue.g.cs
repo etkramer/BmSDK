@@ -1406,7 +1406,7 @@ public partial class AkDialogue : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AkDialogueCallback_OnStopDialogueLine
     /// </summary>
-    public unsafe BmSDK.Engine.AkDialogue.AkDialogueCallbackResult AkDialogueCallback_OnStopDialogueLine(BmSDK.Engine.AkDialogueLine dlgLine, BmSDK.Engine.AkDialogueEvent dlgEvent, BmSDK.GameObject dlgSpeaker, bool interrupted)
+    public unsafe virtual BmSDK.Engine.AkDialogue.AkDialogueCallbackResult AkDialogueCallback_OnStopDialogueLine(BmSDK.Engine.AkDialogueLine dlgLine, BmSDK.Engine.AkDialogueEvent dlgEvent, BmSDK.GameObject dlgSpeaker, bool interrupted)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogue.AkDialogueCallback_OnStopDialogueLine", true);
         byte* paramsPtr = stackalloc byte[29];
@@ -1421,7 +1421,7 @@ public partial class AkDialogue : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AkDialogueCallback_OnStartDialogueLine
     /// </summary>
-    public unsafe BmSDK.Engine.AkDialogue.AkDialogueCallbackResult AkDialogueCallback_OnStartDialogueLine(BmSDK.Engine.AkDialogueLine dlgLine, BmSDK.Engine.AkDialogueEvent dlgEvent, BmSDK.GameObject dlgSpeaker, bool isBarkSquelch)
+    public unsafe virtual BmSDK.Engine.AkDialogue.AkDialogueCallbackResult AkDialogueCallback_OnStartDialogueLine(BmSDK.Engine.AkDialogueLine dlgLine, BmSDK.Engine.AkDialogueEvent dlgEvent, BmSDK.GameObject dlgSpeaker, bool isBarkSquelch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogue.AkDialogueCallback_OnStartDialogueLine", true);
         byte* paramsPtr = stackalloc byte[29];
@@ -1436,7 +1436,7 @@ public partial class AkDialogue : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AkDialogueCallback_OnStopSpeech
     /// </summary>
-    public unsafe BmSDK.Engine.AkDialogue.AkDialogueCallbackResult AkDialogueCallback_OnStopSpeech(int speechId, bool interrupted)
+    public unsafe virtual BmSDK.Engine.AkDialogue.AkDialogueCallbackResult AkDialogueCallback_OnStopSpeech(int speechId, bool interrupted)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogue.AkDialogueCallback_OnStopSpeech", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -1485,7 +1485,7 @@ public partial class AkDialogue : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AkDialogueCallback_OnStartSpeech
     /// </summary>
-    public unsafe BmSDK.Engine.AkDialogue.AkDialogueCallbackResult AkDialogueCallback_OnStartSpeech(int speechId)
+    public unsafe virtual BmSDK.Engine.AkDialogue.AkDialogueCallbackResult AkDialogueCallback_OnStartSpeech(int speechId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogue.AkDialogueCallback_OnStartSpeech", true);
         byte* paramsPtr = stackalloc byte[5];

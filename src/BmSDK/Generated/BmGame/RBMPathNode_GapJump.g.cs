@@ -71,7 +71,7 @@ public partial class RBMPathNode_GapJump : BmSDK.BmGame.RBMPathNode_VariablePosi
     /// <summary>
     /// Function: GetReferencePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetReferencePoint(BmSDK.BmGame.RBMPawnAI Jumper)
+    public unsafe override System.Numerics.Vector3 GetReferencePoint(BmSDK.BmGame.RBMPawnAI Jumper)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_GapJump.GetReferencePoint", true);
         byte* paramsPtr = stackalloc byte[32];

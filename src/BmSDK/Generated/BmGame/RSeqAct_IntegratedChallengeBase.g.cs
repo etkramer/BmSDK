@@ -31,7 +31,7 @@ public partial class RSeqAct_IntegratedChallengeBase : BmSDK.Engine.SeqAct_Laten
     /// <summary>
     /// Function: TeleportPlayerToStartPoint
     /// </summary>
-    public unsafe void TeleportPlayerToStartPoint()
+    public unsafe virtual void TeleportPlayerToStartPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IntegratedChallengeBase.TeleportPlayerToStartPoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -42,7 +42,7 @@ public partial class RSeqAct_IntegratedChallengeBase : BmSDK.Engine.SeqAct_Laten
     /// <summary>
     /// Function: AdjustTime
     /// </summary>
-    public unsafe void AdjustTime(float fTime, bool bBonus)
+    public unsafe virtual void AdjustTime(float fTime, bool bBonus)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IntegratedChallengeBase.AdjustTime", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -55,7 +55,7 @@ public partial class RSeqAct_IntegratedChallengeBase : BmSDK.Engine.SeqAct_Laten
     /// <summary>
     /// Function: AdjustScore
     /// </summary>
-    public unsafe void AdjustScore(int nScore, bool bCheat = default)
+    public unsafe virtual void AdjustScore(int nScore, bool bCheat = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IntegratedChallengeBase.AdjustScore", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -68,7 +68,7 @@ public partial class RSeqAct_IntegratedChallengeBase : BmSDK.Engine.SeqAct_Laten
     /// <summary>
     /// Function: StopTimer
     /// </summary>
-    public unsafe void StopTimer()
+    public unsafe virtual void StopTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IntegratedChallengeBase.StopTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -79,7 +79,7 @@ public partial class RSeqAct_IntegratedChallengeBase : BmSDK.Engine.SeqAct_Laten
     /// <summary>
     /// Function: StartTimer
     /// </summary>
-    public unsafe void StartTimer()
+    public unsafe virtual void StartTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IntegratedChallengeBase.StartTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -90,7 +90,7 @@ public partial class RSeqAct_IntegratedChallengeBase : BmSDK.Engine.SeqAct_Laten
     /// <summary>
     /// Function: GetState
     /// </summary>
-    public unsafe bool GetState(BmSDK.BmGame.RSeqAct_IntegratedChallengeBase.IntegratedChallengeState eState)
+    public unsafe virtual bool GetState(BmSDK.BmGame.RSeqAct_IntegratedChallengeBase.IntegratedChallengeState eState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IntegratedChallengeBase.GetState", true);
         byte* paramsPtr = stackalloc byte[8];

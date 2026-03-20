@@ -36,7 +36,7 @@ public partial class RBMDeathCutscene_360Spin : BmSDK.BmGame.RBMDeathCutscene_Sh
     /// <summary>
     /// Function: MoveCam_Linear
     /// </summary>
-    public unsafe void MoveCam_Linear(float DeltaTime)
+    public unsafe override void MoveCam_Linear(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene_360Spin.MoveCam_Linear", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -48,7 +48,7 @@ public partial class RBMDeathCutscene_360Spin : BmSDK.BmGame.RBMDeathCutscene_Sh
     /// <summary>
     /// Function: SetSpeed
     /// </summary>
-    public unsafe void SetSpeed(float DeltaTime)
+    public unsafe override void SetSpeed(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene_360Spin.SetSpeed", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -60,7 +60,7 @@ public partial class RBMDeathCutscene_360Spin : BmSDK.BmGame.RBMDeathCutscene_Sh
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe bool OnActivate()
+    public unsafe override bool OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene_360Spin.OnActivate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -71,7 +71,7 @@ public partial class RBMDeathCutscene_360Spin : BmSDK.BmGame.RBMDeathCutscene_Sh
     /// <summary>
     /// Function: SetViewTarget
     /// </summary>
-    public unsafe void SetViewTarget()
+    public unsafe override void SetViewTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene_360Spin.SetViewTarget", true);
         byte* paramsPtr = stackalloc byte[0];

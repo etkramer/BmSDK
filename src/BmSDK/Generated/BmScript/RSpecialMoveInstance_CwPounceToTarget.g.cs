@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_CwPounceToTarget : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: TriggerLaunchCam
     /// </summary>
-    public unsafe void TriggerLaunchCam()
+    public unsafe virtual void TriggerLaunchCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceToTarget.TriggerLaunchCam", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_CwPounceToTarget : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: WallClimbStartCam
     /// </summary>
-    public unsafe void WallClimbStartCam()
+    public unsafe virtual void WallClimbStartCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceToTarget.WallClimbStartCam", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RSpecialMoveInstance_CwPounceToTarget : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: LookAtLandPoint
     /// </summary>
-    public unsafe void LookAtLandPoint()
+    public unsafe virtual void LookAtLandPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceToTarget.LookAtLandPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -104,7 +104,7 @@ public partial class RSpecialMoveInstance_CwPounceToTarget : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: HandleAction
     /// </summary>
-    public unsafe void HandleAction(BmSDK.FName actionName)
+    public unsafe override void HandleAction(BmSDK.FName actionName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceToTarget.HandleAction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -116,7 +116,7 @@ public partial class RSpecialMoveInstance_CwPounceToTarget : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: NotifyTouch
     /// </summary>
-    public unsafe void NotifyTouch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void NotifyTouch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceToTarget.NotifyTouch", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -131,7 +131,7 @@ public partial class RSpecialMoveInstance_CwPounceToTarget : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: NotifyBump
     /// </summary>
-    public unsafe void NotifyBump(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitNormal)
+    public unsafe override void NotifyBump(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceToTarget.NotifyBump", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -144,7 +144,7 @@ public partial class RSpecialMoveInstance_CwPounceToTarget : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: BreakWall
     /// </summary>
-    public unsafe void BreakWall(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual void BreakWall(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceToTarget.BreakWall", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -157,7 +157,7 @@ public partial class RSpecialMoveInstance_CwPounceToTarget : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: GetTargetFeature
     /// </summary>
-    public unsafe void GetTargetFeature(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Locator)
+    public unsafe virtual void GetTargetFeature(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Locator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceToTarget.GetTargetFeature", true);
         byte* paramsPtr = stackalloc byte[156];
@@ -169,7 +169,7 @@ public partial class RSpecialMoveInstance_CwPounceToTarget : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceToTarget.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -180,7 +180,7 @@ public partial class RSpecialMoveInstance_CwPounceToTarget : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: CanClimbFromHere
     /// </summary>
-    public unsafe void CanClimbFromHere()
+    public unsafe virtual void CanClimbFromHere()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceToTarget.CanClimbFromHere", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -191,7 +191,7 @@ public partial class RSpecialMoveInstance_CwPounceToTarget : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceToTarget.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[140];
@@ -203,7 +203,7 @@ public partial class RSpecialMoveInstance_CwPounceToTarget : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: SetEndCameraState
     /// </summary>
-    public unsafe void SetEndCameraState()
+    public unsafe virtual void SetEndCameraState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceToTarget.SetEndCameraState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -214,7 +214,7 @@ public partial class RSpecialMoveInstance_CwPounceToTarget : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: StartNextPounceAnimation
     /// </summary>
-    public unsafe void StartNextPounceAnimation()
+    public unsafe virtual void StartNextPounceAnimation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceToTarget.StartNextPounceAnimation", true);
         byte* paramsPtr = stackalloc byte[216];
@@ -225,7 +225,7 @@ public partial class RSpecialMoveInstance_CwPounceToTarget : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceToTarget.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[132];

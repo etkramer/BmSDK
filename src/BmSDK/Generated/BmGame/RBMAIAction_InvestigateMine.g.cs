@@ -84,7 +84,7 @@ public partial class RBMAIAction_InvestigateMine : BmSDK.BmGame.RBMAIAction, BmS
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_InvestigateMine.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RBMAIAction_InvestigateMine : BmSDK.BmGame.RBMAIAction, BmS
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_InvestigateMine.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -120,7 +120,7 @@ public partial class RBMAIAction_InvestigateMine : BmSDK.BmGame.RBMAIAction, BmS
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_InvestigateMine.OnActivate", true);
         byte* paramsPtr = stackalloc byte[4];

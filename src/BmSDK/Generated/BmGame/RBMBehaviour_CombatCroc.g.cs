@@ -36,7 +36,7 @@ public partial class RBMBehaviour_CombatCroc : BmSDK.BmGame.RBMBehaviour_CombatJ
     /// <summary>
     /// Function: GotoMoveToCombatState
     /// </summary>
-    public unsafe void GotoMoveToCombatState()
+    public unsafe override void GotoMoveToCombatState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatCroc.GotoMoveToCombatState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_CombatCroc : BmSDK.BmGame.RBMBehaviour_CombatJ
     /// <summary>
     /// Function: PlayTurnStep
     /// </summary>
-    public unsafe void PlayTurnStep(System.Numerics.Vector3 TargetHeading, bool bForce = default)
+    public unsafe override void PlayTurnStep(System.Numerics.Vector3 TargetHeading, bool bForce = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatCroc.PlayTurnStep", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -60,7 +60,7 @@ public partial class RBMBehaviour_CombatCroc : BmSDK.BmGame.RBMBehaviour_CombatJ
     /// <summary>
     /// Function: GetAttackPriority
     /// </summary>
-    public unsafe int GetAttackPriority(bool bForceAttack)
+    public unsafe override int GetAttackPriority(bool bForceAttack)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatCroc.GetAttackPriority", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -72,7 +72,7 @@ public partial class RBMBehaviour_CombatCroc : BmSDK.BmGame.RBMBehaviour_CombatJ
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatCroc.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -83,7 +83,7 @@ public partial class RBMBehaviour_CombatCroc : BmSDK.BmGame.RBMBehaviour_CombatJ
     /// <summary>
     /// Function: GetForceToGiveToPawn
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetForceToGiveToPawn(BmSDK.BmGame.RPawnCombat ForceReceiver, float MaxForce, float MinRange = default, float MaxRange = default)
+    public unsafe override System.Numerics.Vector3 GetForceToGiveToPawn(BmSDK.BmGame.RPawnCombat ForceReceiver, float MaxForce, float MinRange = default, float MaxRange = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatCroc.GetForceToGiveToPawn", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -105,7 +105,7 @@ public partial class RBMBehaviour_CombatCroc : BmSDK.BmGame.RBMBehaviour_CombatJ
     /// <summary>
     /// Function: GetMovementForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMovementForce(System.Numerics.Vector3 SourceLocation = default)
+    public unsafe override System.Numerics.Vector3 GetMovementForce(System.Numerics.Vector3 SourceLocation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatCroc.GetMovementForce", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -124,7 +124,7 @@ public partial class RBMBehaviour_CombatCroc : BmSDK.BmGame.RBMBehaviour_CombatJ
     /// <summary>
     /// Function: GatherForcesFromVillains
     /// </summary>
-    public unsafe System.Numerics.Vector3 GatherForcesFromVillains(float MaxForce, float MinRange)
+    public unsafe override System.Numerics.Vector3 GatherForcesFromVillains(float MaxForce, float MinRange)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatCroc.GatherForcesFromVillains", true);
         byte* paramsPtr = stackalloc byte[20];

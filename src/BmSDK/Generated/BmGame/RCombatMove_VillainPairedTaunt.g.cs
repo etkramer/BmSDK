@@ -71,7 +71,7 @@ public partial class RCombatMove_VillainPairedTaunt : BmSDK.BmGame.RCombatMove, 
     /// <summary>
     /// Function: CanReactToCombatEvent
     /// </summary>
-    public unsafe bool CanReactToCombatEvent()
+    public unsafe override bool CanReactToCombatEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainPairedTaunt.CanReactToCombatEvent", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RCombatMove_VillainPairedTaunt : BmSDK.BmGame.RCombatMove, 
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainPairedTaunt.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RCombatMove_VillainPairedTaunt : BmSDK.BmGame.RCombatMove, 
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainPairedTaunt.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RCombatMove_VillainPairedTaunt : BmSDK.BmGame.RCombatMove, 
     /// <summary>
     /// Function: VillainTargetActorChanged
     /// </summary>
-    public unsafe void VillainTargetActorChanged(BmSDK.BmGame.RPawnCombat Villain, BmSDK.Engine.Actor NewTarget)
+    public unsafe override void VillainTargetActorChanged(BmSDK.BmGame.RPawnCombat Villain, BmSDK.Engine.Actor NewTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainPairedTaunt.VillainTargetActorChanged", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -118,7 +118,7 @@ public partial class RCombatMove_VillainPairedTaunt : BmSDK.BmGame.RCombatMove, 
     /// <summary>
     /// Function: PlayPushAnims
     /// </summary>
-    public unsafe void PlayPushAnims()
+    public unsafe virtual void PlayPushAnims()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainPairedTaunt.PlayPushAnims", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RCombatMove_VillainPairedTaunt : BmSDK.BmGame.RCombatMove, 
     /// <summary>
     /// Function: SetTauntPosition
     /// </summary>
-    public unsafe void SetTauntPosition()
+    public unsafe virtual void SetTauntPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainPairedTaunt.SetTauntPosition", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -140,7 +140,7 @@ public partial class RCombatMove_VillainPairedTaunt : BmSDK.BmGame.RCombatMove, 
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainPairedTaunt.Initialise", true);
         byte* paramsPtr = stackalloc byte[24];

@@ -71,7 +71,7 @@ public partial class RExplosiveGelBomb : BmSDK.BmGame.RGadgetProjectileBase, BmS
     /// <summary>
     /// Function: TimeoutInFlight
     /// </summary>
-    public unsafe void TimeoutInFlight()
+    public unsafe virtual void TimeoutInFlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosiveGelBomb.TimeoutInFlight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RExplosiveGelBomb : BmSDK.BmGame.RGadgetProjectileBase, BmS
     /// <summary>
     /// Function: CheckForRedhood
     /// </summary>
-    public unsafe void CheckForRedhood()
+    public unsafe virtual void CheckForRedhood()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosiveGelBomb.CheckForRedhood", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -93,7 +93,7 @@ public partial class RExplosiveGelBomb : BmSDK.BmGame.RGadgetProjectileBase, BmS
     /// <summary>
     /// Function: UpgradeToSuperCombo
     /// </summary>
-    public unsafe void UpgradeToSuperCombo()
+    public unsafe virtual void UpgradeToSuperCombo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosiveGelBomb.UpgradeToSuperCombo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RExplosiveGelBomb : BmSDK.BmGame.RGadgetProjectileBase, BmS
     /// <summary>
     /// Function: SetVillainExplosionVisuals
     /// </summary>
-    public unsafe void SetVillainExplosionVisuals(BmSDK.BmGame.RPawnVillain Victim, float VictimDistance)
+    public unsafe virtual void SetVillainExplosionVisuals(BmSDK.BmGame.RPawnVillain Victim, float VictimDistance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosiveGelBomb.SetVillainExplosionVisuals", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -117,7 +117,7 @@ public partial class RExplosiveGelBomb : BmSDK.BmGame.RGadgetProjectileBase, BmS
     /// <summary>
     /// Function: ShouldDoDamageToThug
     /// </summary>
-    public unsafe bool ShouldDoDamageToThug(BmSDK.BmGame.RPawnVillain TestThug)
+    public unsafe virtual bool ShouldDoDamageToThug(BmSDK.BmGame.RPawnVillain TestThug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosiveGelBomb.ShouldDoDamageToThug", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -129,7 +129,7 @@ public partial class RExplosiveGelBomb : BmSDK.BmGame.RGadgetProjectileBase, BmS
     /// <summary>
     /// Function: KnockDownMainTarget
     /// </summary>
-    public unsafe void KnockDownMainTarget(BmSDK.BmGame.RPawnVillain Victim)
+    public unsafe virtual void KnockDownMainTarget(BmSDK.BmGame.RPawnVillain Victim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosiveGelBomb.KnockDownMainTarget", true);
         byte* paramsPtr = stackalloc byte[280];
@@ -141,7 +141,7 @@ public partial class RExplosiveGelBomb : BmSDK.BmGame.RGadgetProjectileBase, BmS
     /// <summary>
     /// Function: DamageVictim
     /// </summary>
-    public unsafe void DamageVictim(BmSDK.BmGame.RPawnVillain Victim)
+    public unsafe virtual void DamageVictim(BmSDK.BmGame.RPawnVillain Victim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosiveGelBomb.DamageVictim", true);
         byte* paramsPtr = stackalloc byte[324];
@@ -153,7 +153,7 @@ public partial class RExplosiveGelBomb : BmSDK.BmGame.RGadgetProjectileBase, BmS
     /// <summary>
     /// Function: DoExplodeStartle
     /// </summary>
-    public unsafe void DoExplodeStartle()
+    public unsafe virtual void DoExplodeStartle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosiveGelBomb.DoExplodeStartle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -164,7 +164,7 @@ public partial class RExplosiveGelBomb : BmSDK.BmGame.RGadgetProjectileBase, BmS
     /// <summary>
     /// Function: DetonateBomb
     /// </summary>
-    public unsafe void DetonateBomb()
+    public unsafe virtual void DetonateBomb()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosiveGelBomb.DetonateBomb", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -175,7 +175,7 @@ public partial class RExplosiveGelBomb : BmSDK.BmGame.RGadgetProjectileBase, BmS
     /// <summary>
     /// Function: Detonate
     /// </summary>
-    public unsafe void Detonate()
+    public unsafe virtual void Detonate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosiveGelBomb.Detonate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -186,7 +186,7 @@ public partial class RExplosiveGelBomb : BmSDK.BmGame.RGadgetProjectileBase, BmS
     /// <summary>
     /// Function: GetDetonatePrompt
     /// </summary>
-    public unsafe BmSDK.FString GetDetonatePrompt()
+    public unsafe virtual BmSDK.FString GetDetonatePrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosiveGelBomb.GetDetonatePrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -197,7 +197,7 @@ public partial class RExplosiveGelBomb : BmSDK.BmGame.RGadgetProjectileBase, BmS
     /// <summary>
     /// Function: PlayDetonateAnim
     /// </summary>
-    public unsafe bool PlayDetonateAnim()
+    public unsafe virtual bool PlayDetonateAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosiveGelBomb.PlayDetonateAnim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -208,7 +208,7 @@ public partial class RExplosiveGelBomb : BmSDK.BmGame.RGadgetProjectileBase, BmS
     /// <summary>
     /// Function: ReadyToDetonate
     /// </summary>
-    public unsafe bool ReadyToDetonate()
+    public unsafe virtual bool ReadyToDetonate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExplosiveGelBomb.ReadyToDetonate", true);
         byte* paramsPtr = stackalloc byte[4];

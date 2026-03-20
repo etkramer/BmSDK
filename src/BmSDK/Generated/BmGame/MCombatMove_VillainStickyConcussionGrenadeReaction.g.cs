@@ -71,7 +71,7 @@ public partial class MCombatMove_VillainStickyConcussionGrenadeReaction : BmSDK.
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainStickyConcussionGrenadeReaction.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class MCombatMove_VillainStickyConcussionGrenadeReaction : BmSDK.
     /// <summary>
     /// Function: UnAwareOfPlayer
     /// </summary>
-    public unsafe bool UnAwareOfPlayer()
+    public unsafe override bool UnAwareOfPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainStickyConcussionGrenadeReaction.UnAwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class MCombatMove_VillainStickyConcussionGrenadeReaction : BmSDK.
     /// <summary>
     /// Function: AwareOfPlayer
     /// </summary>
-    public unsafe bool AwareOfPlayer()
+    public unsafe virtual bool AwareOfPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainStickyConcussionGrenadeReaction.AwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class MCombatMove_VillainStickyConcussionGrenadeReaction : BmSDK.
     /// <summary>
     /// Function: OverrideDamagedBy
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult OverrideDamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult OverrideDamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainStickyConcussionGrenadeReaction.OverrideDamagedBy", true);
         byte* paramsPtr = stackalloc byte[249];
@@ -116,7 +116,7 @@ public partial class MCombatMove_VillainStickyConcussionGrenadeReaction : BmSDK.
     /// <summary>
     /// Function: SetCounterInfo
     /// </summary>
-    public unsafe void SetCounterInfo(bool bMirrored)
+    public unsafe virtual void SetCounterInfo(bool bMirrored)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainStickyConcussionGrenadeReaction.SetCounterInfo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class MCombatMove_VillainStickyConcussionGrenadeReaction : BmSDK.
     /// <summary>
     /// Function: ShouldMirror
     /// </summary>
-    public unsafe bool ShouldMirror()
+    public unsafe virtual bool ShouldMirror()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainStickyConcussionGrenadeReaction.ShouldMirror", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -139,7 +139,7 @@ public partial class MCombatMove_VillainStickyConcussionGrenadeReaction : BmSDK.
     /// <summary>
     /// Function: CombatAnimHitStop
     /// </summary>
-    public unsafe void CombatAnimHitStop()
+    public unsafe virtual void CombatAnimHitStop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainStickyConcussionGrenadeReaction.CombatAnimHitStop", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class MCombatMove_VillainStickyConcussionGrenadeReaction : BmSDK.
     /// <summary>
     /// Function: CombatAnimHitStart
     /// </summary>
-    public unsafe void CombatAnimHitStart()
+    public unsafe virtual void CombatAnimHitStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainStickyConcussionGrenadeReaction.CombatAnimHitStart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -161,7 +161,7 @@ public partial class MCombatMove_VillainStickyConcussionGrenadeReaction : BmSDK.
     /// <summary>
     /// Function: DamageCollisionBetween
     /// </summary>
-    public unsafe void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
+    public unsafe override void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainStickyConcussionGrenadeReaction.DamageCollisionBetween", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -175,7 +175,7 @@ public partial class MCombatMove_VillainStickyConcussionGrenadeReaction : BmSDK.
     /// <summary>
     /// Function: DamagePawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagePawn(BmSDK.BmGame.RPawnCombat DamageReceiver)
+    public unsafe virtual BmSDK.BmGame.RPawnCombat.DamageResult DamagePawn(BmSDK.BmGame.RPawnCombat DamageReceiver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainStickyConcussionGrenadeReaction.DamagePawn", true);
         byte* paramsPtr = stackalloc byte[260];
@@ -187,7 +187,7 @@ public partial class MCombatMove_VillainStickyConcussionGrenadeReaction : BmSDK.
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainStickyConcussionGrenadeReaction.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -199,7 +199,7 @@ public partial class MCombatMove_VillainStickyConcussionGrenadeReaction : BmSDK.
     /// <summary>
     /// Function: GunStop
     /// </summary>
-    public unsafe void GunStop()
+    public unsafe virtual void GunStop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainStickyConcussionGrenadeReaction.GunStop", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -210,7 +210,7 @@ public partial class MCombatMove_VillainStickyConcussionGrenadeReaction : BmSDK.
     /// <summary>
     /// Function: GunStart
     /// </summary>
-    public unsafe void GunStart()
+    public unsafe virtual void GunStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainStickyConcussionGrenadeReaction.GunStart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -221,7 +221,7 @@ public partial class MCombatMove_VillainStickyConcussionGrenadeReaction : BmSDK.
     /// <summary>
     /// Function: StartTerrifiedAnimWithRangedWeapon
     /// </summary>
-    public unsafe void StartTerrifiedAnimWithRangedWeapon()
+    public unsafe virtual void StartTerrifiedAnimWithRangedWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainStickyConcussionGrenadeReaction.StartTerrifiedAnimWithRangedWeapon", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -232,7 +232,7 @@ public partial class MCombatMove_VillainStickyConcussionGrenadeReaction : BmSDK.
     /// <summary>
     /// Function: StartDazedAnimWithoutWeapon
     /// </summary>
-    public unsafe void StartDazedAnimWithoutWeapon()
+    public unsafe virtual void StartDazedAnimWithoutWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainStickyConcussionGrenadeReaction.StartDazedAnimWithoutWeapon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -243,7 +243,7 @@ public partial class MCombatMove_VillainStickyConcussionGrenadeReaction : BmSDK.
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_VillainStickyConcussionGrenadeReaction.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

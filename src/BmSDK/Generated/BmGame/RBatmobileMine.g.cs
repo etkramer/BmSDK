@@ -71,7 +71,7 @@ public partial class RBatmobileMine : BmSDK.BmGame.RMortarProjectile, BmSDK.IGam
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, bool bPlayExplosionSound = default)
+    public unsafe override void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, bool bPlayExplosionSound = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileMine.Explode", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -85,7 +85,7 @@ public partial class RBatmobileMine : BmSDK.BmGame.RMortarProjectile, BmSDK.IGam
     /// <summary>
     /// Function: TimeOut
     /// </summary>
-    public unsafe void TimeOut()
+    public unsafe virtual void TimeOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileMine.TimeOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -96,7 +96,7 @@ public partial class RBatmobileMine : BmSDK.BmGame.RMortarProjectile, BmSDK.IGam
     /// <summary>
     /// Function: HitWall
     /// </summary>
-    public unsafe void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
+    public unsafe override void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileMine.HitWall", true);
         byte* paramsPtr = stackalloc byte[28];

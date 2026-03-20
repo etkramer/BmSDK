@@ -71,7 +71,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: StopOceanFX
     /// </summary>
-    public unsafe void StopOceanFX()
+    public unsafe virtual void StopOceanFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.StopOceanFX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: StartOceanFX
     /// </summary>
-    public unsafe void StartOceanFX(BmSDK.Engine.ROceanComponent.FRockOceanSettings OceanSettings, BmSDK.Engine.Texture2D OverrideDataMap)
+    public unsafe virtual void StartOceanFX(BmSDK.Engine.ROceanComponent.FRockOceanSettings OceanSettings, BmSDK.Engine.Texture2D OverrideDataMap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.StartOceanFX", true);
         byte* paramsPtr = stackalloc byte[132];
@@ -95,7 +95,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: CacheReferences
     /// </summary>
-    public unsafe void CacheReferences()
+    public unsafe virtual void CacheReferences()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.CacheReferences", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: CreateResources
     /// </summary>
-    public unsafe void CreateResources()
+    public unsafe virtual void CreateResources()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.CreateResources", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -128,7 +128,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: GetLocalMaxWorldHeight
     /// </summary>
-    public unsafe float GetLocalMaxWorldHeight(System.Numerics.Vector3 Position, int xOffset, int yOffset)
+    public unsafe virtual float GetLocalMaxWorldHeight(System.Numerics.Vector3 Position, int xOffset, int yOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.GetLocalMaxWorldHeight", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -160,7 +160,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: GetGlobalMinWorldHeight
     /// </summary>
-    public unsafe float GetGlobalMinWorldHeight()
+    public unsafe virtual float GetGlobalMinWorldHeight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.GetGlobalMinWorldHeight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -178,7 +178,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: GetGlobalMaxWorldHeight
     /// </summary>
-    public unsafe float GetGlobalMaxWorldHeight()
+    public unsafe virtual float GetGlobalMaxWorldHeight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.GetGlobalMaxWorldHeight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -196,7 +196,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: GetOceanAttenuation
     /// </summary>
-    public unsafe float GetOceanAttenuation(System.Numerics.Vector3 Position, int xOffset, int yOffset)
+    public unsafe virtual float GetOceanAttenuation(System.Numerics.Vector3 Position, int xOffset, int yOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.GetOceanAttenuation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -217,7 +217,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: GetDataMapAtPos
     /// </summary>
-    public unsafe System.Numerics.Vector4 GetDataMapAtPos(System.Numerics.Vector3 Position, int xOffset, int yOffset)
+    public unsafe virtual System.Numerics.Vector4 GetDataMapAtPos(System.Numerics.Vector3 Position, int xOffset, int yOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.GetDataMapAtPos", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -238,7 +238,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: GetMagnitudeAtPos
     /// </summary>
-    public unsafe float GetMagnitudeAtPos(System.Numerics.Vector3 Position, int xOffset, int yOffset)
+    public unsafe virtual float GetMagnitudeAtPos(System.Numerics.Vector3 Position, int xOffset, int yOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.GetMagnitudeAtPos", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -259,7 +259,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: IsOceanPosFastCheck
     /// </summary>
-    public unsafe bool IsOceanPosFastCheck(System.Numerics.Vector2 UV, int SizeX, int SizeY)
+    public unsafe virtual bool IsOceanPosFastCheck(System.Numerics.Vector2 UV, int SizeX, int SizeY)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.IsOceanPosFastCheck", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -280,7 +280,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: IsOceanAtUV
     /// </summary>
-    public unsafe bool IsOceanAtUV(System.Numerics.Vector2 UV, int xOffset, int yOffset)
+    public unsafe virtual bool IsOceanAtUV(System.Numerics.Vector2 UV, int xOffset, int yOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.IsOceanAtUV", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -301,7 +301,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: GetOceanShoreDistAtPos
     /// </summary>
-    public unsafe float GetOceanShoreDistAtPos(System.Numerics.Vector3 Position, int xOffset, int yOffset)
+    public unsafe virtual float GetOceanShoreDistAtPos(System.Numerics.Vector3 Position, int xOffset, int yOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.GetOceanShoreDistAtPos", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -322,7 +322,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: IsOceanAtPos
     /// </summary>
-    public unsafe bool IsOceanAtPos(System.Numerics.Vector3 Position, int xOffset, int yOffset)
+    public unsafe virtual bool IsOceanAtPos(System.Numerics.Vector3 Position, int xOffset, int yOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.IsOceanAtPos", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -343,7 +343,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: GetWaveSample
     /// </summary>
-    public unsafe float GetWaveSample(float U, float V)
+    public unsafe virtual float GetWaveSample(float U, float V)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.GetWaveSample", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -363,7 +363,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: GetOceanHeightAtPosition
     /// </summary>
-    public unsafe System.Numerics.Vector2 GetOceanHeightAtPosition(System.Numerics.Vector3 Position)
+    public unsafe virtual System.Numerics.Vector2 GetOceanHeightAtPosition(System.Numerics.Vector3 Position)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.GetOceanHeightAtPosition", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -382,7 +382,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: StopPlayerOceanEffect
     /// </summary>
-    public unsafe void StopPlayerOceanEffect()
+    public unsafe virtual void StopPlayerOceanEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.StopPlayerOceanEffect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -400,7 +400,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: UpdatePlayerOceanEffect
     /// </summary>
-    public unsafe void UpdatePlayerOceanEffect(float DeltaTime)
+    public unsafe virtual void UpdatePlayerOceanEffect(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.UpdatePlayerOceanEffect", true);
         byte* paramsPtr = stackalloc byte[4];

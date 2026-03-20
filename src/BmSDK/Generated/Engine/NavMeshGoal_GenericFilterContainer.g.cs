@@ -36,7 +36,7 @@ public partial class NavMeshGoal_GenericFilterContainer : BmSDK.Engine.NavMeshPa
     /// <summary>
     /// Function: Recycle
     /// </summary>
-    public unsafe void Recycle()
+    public unsafe override void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshGoal_GenericFilterContainer.Recycle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class NavMeshGoal_GenericFilterContainer : BmSDK.Engine.NavMeshPa
     /// <summary>
     /// Function: GetGoalPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetGoalPoint()
+    public unsafe virtual System.Numerics.Vector3 GetGoalPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshGoal_GenericFilterContainer.GetGoalPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -65,7 +65,7 @@ public partial class NavMeshGoal_GenericFilterContainer : BmSDK.Engine.NavMeshPa
     /// <summary>
     /// Function: GetFilterOfType
     /// </summary>
-    public unsafe BmSDK.Engine.NavMeshGoal_Filter GetFilterOfType(BmSDK.Class Filter_Class)
+    public unsafe virtual BmSDK.Engine.NavMeshGoal_Filter GetFilterOfType(BmSDK.Class Filter_Class)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshGoal_GenericFilterContainer.GetFilterOfType", true);
         byte* paramsPtr = stackalloc byte[16];

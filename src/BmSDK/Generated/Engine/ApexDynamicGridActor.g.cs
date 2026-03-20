@@ -71,7 +71,7 @@ public partial class ApexDynamicGridActor : BmSDK.Engine.ApexFieldSamplerActor, 
     /// <summary>
     /// Function: PostRenderFor
     /// </summary>
-    public unsafe void PostRenderFor(BmSDK.Engine.PlayerController PC, BmSDK.Engine.Canvas Canvas, System.Numerics.Vector3 CameraPosition, System.Numerics.Vector3 CameraDir)
+    public unsafe override void PostRenderFor(BmSDK.Engine.PlayerController PC, BmSDK.Engine.Canvas Canvas, System.Numerics.Vector3 CameraPosition, System.Numerics.Vector3 CameraDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ApexDynamicGridActor.PostRenderFor", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -86,7 +86,7 @@ public partial class ApexDynamicGridActor : BmSDK.Engine.ApexFieldSamplerActor, 
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ApexDynamicGridActor.Tick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -98,7 +98,7 @@ public partial class ApexDynamicGridActor : BmSDK.Engine.ApexFieldSamplerActor, 
     /// <summary>
     /// Function: FetchStats
     /// </summary>
-    public unsafe void FetchStats(out int DGfirstLine, out int DGnumLines, out BmSDK.FString DGstr)
+    public unsafe virtual void FetchStats(out int DGfirstLine, out int DGnumLines, out BmSDK.FString DGstr)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ApexDynamicGridActor.FetchStats", true);
         byte* paramsPtr = stackalloc byte[24];

@@ -36,7 +36,7 @@ public partial class RSeqAct_SetHelicopterPointOfInterestActive : BmSDK.Engine.S
     /// <summary>
     /// Function: SetPointsActive
     /// </summary>
-    public unsafe void SetPointsActive(bool _active)
+    public unsafe virtual void SetPointsActive(bool _active)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SetHelicopterPointOfInterestActive.SetPointsActive", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -48,7 +48,7 @@ public partial class RSeqAct_SetHelicopterPointOfInterestActive : BmSDK.Engine.S
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SetHelicopterPointOfInterestActive.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -47,7 +47,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: AdvanceAnim
     /// </summary>
-    public unsafe void AdvanceAnim(BmSDK.BmGame.RSeqAct_PlayCameraConversation.FPawnAndTransition AnimInfo, float advanceAmount)
+    public unsafe virtual void AdvanceAnim(BmSDK.BmGame.RSeqAct_PlayCameraConversation.FPawnAndTransition AnimInfo, float advanceAmount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.AdvanceAnim", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -60,7 +60,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: GetRealTimeUntilNextDialogueNotifyInAnim
     /// </summary>
-    public unsafe float GetRealTimeUntilNextDialogueNotifyInAnim(BmSDK.BmGame.RSeqAct_PlayCameraConversation.FPawnAndTransition AnimInfo)
+    public unsafe virtual float GetRealTimeUntilNextDialogueNotifyInAnim(BmSDK.BmGame.RSeqAct_PlayCameraConversation.FPawnAndTransition AnimInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.GetRealTimeUntilNextDialogueNotifyInAnim", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -72,7 +72,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: SkipToNextLine
     /// </summary>
-    public unsafe void SkipToNextLine()
+    public unsafe virtual void SkipToNextLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.SkipToNextLine", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -83,7 +83,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: TryTriggerCameraMatineeForCurrentLine
     /// </summary>
-    public unsafe void TryTriggerCameraMatineeForCurrentLine()
+    public unsafe virtual void TryTriggerCameraMatineeForCurrentLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.TryTriggerCameraMatineeForCurrentLine", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -94,7 +94,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: GetCustomCameraIndexForCurrentLine
     /// </summary>
-    public unsafe int GetCustomCameraIndexForCurrentLine()
+    public unsafe virtual int GetCustomCameraIndexForCurrentLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.GetCustomCameraIndexForCurrentLine", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: MakePawnsFaceCurrentSpeaker
     /// </summary>
-    public unsafe void MakePawnsFaceCurrentSpeaker()
+    public unsafe virtual void MakePawnsFaceCurrentSpeaker()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.MakePawnsFaceCurrentSpeaker", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -116,7 +116,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: StopCharacterTransitions
     /// </summary>
-    public unsafe void StopCharacterTransitions()
+    public unsafe virtual void StopCharacterTransitions()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.StopCharacterTransitions", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: PlayCharacterAnim
     /// </summary>
-    public unsafe void PlayCharacterAnim(BmSDK.BmGame.RSeqAct_PlayCameraConversation.FCharacterAnim AnimData)
+    public unsafe virtual void PlayCharacterAnim(BmSDK.BmGame.RSeqAct_PlayCameraConversation.FCharacterAnim AnimData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.PlayCharacterAnim", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -139,7 +139,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: CheckForCharacterAnims
     /// </summary>
-    public unsafe void CheckForCharacterAnims()
+    public unsafe virtual void CheckForCharacterAnims()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.CheckForCharacterAnims", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -150,7 +150,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.Update", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -162,7 +162,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: PlaceSpeakers
     /// </summary>
-    public unsafe void PlaceSpeakers()
+    public unsafe virtual void PlaceSpeakers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.PlaceSpeakers", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -173,7 +173,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: PlaceBatman
     /// </summary>
-    public unsafe void PlaceBatman(System.Numerics.Vector3 BadGuyLoc)
+    public unsafe virtual void PlaceBatman(System.Numerics.Vector3 BadGuyLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.PlaceBatman", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -185,7 +185,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: GetIdleStandPosition
     /// </summary>
-    public unsafe void GetIdleStandPosition(out System.Numerics.Vector3 StandPos, out BmSDK.Rotator wantedViewDir, System.Numerics.Vector3 BadGuyLoc)
+    public unsafe virtual void GetIdleStandPosition(out System.Numerics.Vector3 StandPos, out BmSDK.Rotator wantedViewDir, System.Numerics.Vector3 BadGuyLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.GetIdleStandPosition", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -199,7 +199,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: PlaceNPCs
     /// </summary>
-    public unsafe System.Numerics.Vector3 PlaceNPCs()
+    public unsafe virtual System.Numerics.Vector3 PlaceNPCs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.PlaceNPCs", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -210,7 +210,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: InitialiseVariables
     /// </summary>
-    public unsafe void InitialiseVariables()
+    public unsafe override void InitialiseVariables()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.InitialiseVariables", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -221,7 +221,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: LineStarted
     /// </summary>
-    public unsafe bool LineStarted(BmSDK.GameObject Speaker, BmSDK.Engine.AkDialogueLine Line)
+    public unsafe override bool LineStarted(BmSDK.GameObject Speaker, BmSDK.Engine.AkDialogueLine Line)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.LineStarted", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -234,7 +234,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: SpeechStopped
     /// </summary>
-    public unsafe void SpeechStopped(bool bInterrupted)
+    public unsafe override void SpeechStopped(bool bInterrupted)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.SpeechStopped", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -246,7 +246,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: SpeechStarted
     /// </summary>
-    public unsafe void SpeechStarted()
+    public unsafe override void SpeechStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.SpeechStarted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -257,7 +257,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: GetCharacterForVoice
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCharacter GetCharacterForVoice(BmSDK.Engine.AkDialogueVoice Voice)
+    public unsafe virtual BmSDK.BmGame.RPawnCharacter GetCharacterForVoice(BmSDK.Engine.AkDialogueVoice Voice)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.GetCharacterForVoice", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -276,7 +276,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: StartSpeechNative
     /// </summary>
-    public unsafe bool StartSpeechNative()
+    public unsafe override bool StartSpeechNative()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.StartSpeechNative", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -294,7 +294,7 @@ public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: MarkDirty
     /// </summary>
-    public unsafe void MarkDirty()
+    public unsafe virtual void MarkDirty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraConversation.MarkDirty", true);
         byte* paramsPtr = stackalloc byte[0];

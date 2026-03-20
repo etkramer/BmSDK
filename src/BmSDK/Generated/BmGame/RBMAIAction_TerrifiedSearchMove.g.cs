@@ -71,7 +71,7 @@ public partial class RBMAIAction_TerrifiedSearchMove : BmSDK.BmGame.RBMAIAction_
     /// <summary>
     /// Function: DoTerrorTurn
     /// </summary>
-    public unsafe void DoTerrorTurn(bool bBackToFront)
+    public unsafe virtual void DoTerrorTurn(bool bBackToFront)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrifiedSearchMove.DoTerrorTurn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_TerrifiedSearchMove : BmSDK.BmGame.RBMAIAction_
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrifiedSearchMove.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_TerrifiedSearchMove : BmSDK.BmGame.RBMAIAction_
     /// <summary>
     /// Function: CheckForPlayerCollision
     /// </summary>
-    public unsafe void CheckForPlayerCollision()
+    public unsafe virtual void CheckForPlayerCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrifiedSearchMove.CheckForPlayerCollision", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_TerrifiedSearchMove : BmSDK.BmGame.RBMAIAction_
     /// <summary>
     /// Function: PathFound
     /// </summary>
-    public unsafe void PathFound(BmSDK.BmGame.RNavigationHandle NotifyHandle)
+    public unsafe override void PathFound(BmSDK.BmGame.RNavigationHandle NotifyHandle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrifiedSearchMove.PathFound", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -117,7 +117,7 @@ public partial class RBMAIAction_TerrifiedSearchMove : BmSDK.BmGame.RBMAIAction_
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrifiedSearchMove.ActionTick", true);
         byte* paramsPtr = stackalloc byte[6];
@@ -129,7 +129,7 @@ public partial class RBMAIAction_TerrifiedSearchMove : BmSDK.BmGame.RBMAIAction_
     /// <summary>
     /// Function: GetDirectionOfFocus
     /// </summary>
-    public unsafe BmSDK.Rotator GetDirectionOfFocus()
+    public unsafe virtual BmSDK.Rotator GetDirectionOfFocus()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrifiedSearchMove.GetDirectionOfFocus", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -140,7 +140,7 @@ public partial class RBMAIAction_TerrifiedSearchMove : BmSDK.BmGame.RBMAIAction_
     /// <summary>
     /// Function: IsAlignedForTurn
     /// </summary>
-    public unsafe bool IsAlignedForTurn()
+    public unsafe virtual bool IsAlignedForTurn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrifiedSearchMove.IsAlignedForTurn", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -151,7 +151,7 @@ public partial class RBMAIAction_TerrifiedSearchMove : BmSDK.BmGame.RBMAIAction_
     /// <summary>
     /// Function: CanTurn
     /// </summary>
-    public unsafe bool CanTurn()
+    public unsafe virtual bool CanTurn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrifiedSearchMove.CanTurn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -162,7 +162,7 @@ public partial class RBMAIAction_TerrifiedSearchMove : BmSDK.BmGame.RBMAIAction_
     /// <summary>
     /// Function: BuildHandle
     /// </summary>
-    public unsafe BmSDK.BmGame.RNavigationHandle BuildHandle()
+    public unsafe override BmSDK.BmGame.RNavigationHandle BuildHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrifiedSearchMove.BuildHandle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -173,7 +173,7 @@ public partial class RBMAIAction_TerrifiedSearchMove : BmSDK.BmGame.RBMAIAction_
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrifiedSearchMove.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -184,7 +184,7 @@ public partial class RBMAIAction_TerrifiedSearchMove : BmSDK.BmGame.RBMAIAction_
     /// <summary>
     /// Function: SetupGoal
     /// </summary>
-    public unsafe void SetupGoal(System.Numerics.Vector3 NewGoalPos, bool bNewUseAdditionalPoint = default, System.Numerics.Vector3 NewGoalPosSecond = default)
+    public unsafe virtual void SetupGoal(System.Numerics.Vector3 NewGoalPos, bool bNewUseAdditionalPoint = default, System.Numerics.Vector3 NewGoalPosSecond = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrifiedSearchMove.SetupGoal", true);
         byte* paramsPtr = stackalloc byte[28];

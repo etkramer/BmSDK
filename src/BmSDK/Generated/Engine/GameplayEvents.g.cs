@@ -31,7 +31,7 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFilename
     /// </summary>
-    public unsafe BmSDK.FString GetFilename()
+    public unsafe virtual BmSDK.FString GetFilename()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEvents.GetFilename", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -42,7 +42,7 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CloseStatsFile
     /// </summary>
-    public unsafe void CloseStatsFile()
+    public unsafe virtual void CloseStatsFile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEvents.CloseStatsFile", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -53,7 +53,7 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: OpenStatsFile
     /// </summary>
-    public unsafe bool OpenStatsFile(BmSDK.FString Filename)
+    public unsafe virtual bool OpenStatsFile(BmSDK.FString Filename)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEvents.OpenStatsFile", true);
         byte* paramsPtr = stackalloc byte[20];

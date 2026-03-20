@@ -47,7 +47,7 @@ public partial class RAnimationCapture : BmSDK.Engine.SeqAct_Latent, BmSDK.IGame
     /// <summary>
     /// Function: SetupOurPawns
     /// </summary>
-    public unsafe void SetupOurPawns()
+    public unsafe virtual void SetupOurPawns()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimationCapture.SetupOurPawns", true);
         byte* paramsPtr = stackalloc byte[0];

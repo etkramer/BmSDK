@@ -71,7 +71,7 @@ public partial class RAnimatedCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     /// <summary>
     /// Function: GetCameraView
     /// </summary>
-    public unsafe void GetCameraView(float DeltaTime, out BmSDK.GameObject.FTPOV OutPOV)
+    public unsafe override void GetCameraView(float DeltaTime, out BmSDK.GameObject.FTPOV OutPOV)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimatedCameraActor.GetCameraView", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -84,7 +84,7 @@ public partial class RAnimatedCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     /// <summary>
     /// Function: NativeGetCameraView
     /// </summary>
-    public unsafe void NativeGetCameraView(out BmSDK.GameObject.FTPOV OutPOV)
+    public unsafe virtual void NativeGetCameraView(out BmSDK.GameObject.FTPOV OutPOV)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimatedCameraActor.NativeGetCameraView", true);
         byte* paramsPtr = stackalloc byte[28];

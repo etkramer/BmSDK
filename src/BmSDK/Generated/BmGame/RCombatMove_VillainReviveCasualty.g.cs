@@ -71,7 +71,7 @@ public partial class RCombatMove_VillainReviveCasualty : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainReviveCasualty.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_VillainReviveCasualty : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: GetAdditionalTargetPriority
     /// </summary>
-    public unsafe bool GetAdditionalTargetPriority(BmSDK.Class dmgType, BmSDK.BmGame.RPawnCombat TargetPawn, out float AdditionalPriority)
+    public unsafe override bool GetAdditionalTargetPriority(BmSDK.Class dmgType, BmSDK.BmGame.RPawnCombat TargetPawn, out float AdditionalPriority)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainReviveCasualty.GetAdditionalTargetPriority", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -96,7 +96,7 @@ public partial class RCombatMove_VillainReviveCasualty : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: PlayFinishedReviveBark
     /// </summary>
-    public unsafe void PlayFinishedReviveBark()
+    public unsafe virtual void PlayFinishedReviveBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainReviveCasualty.PlayFinishedReviveBark", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class RCombatMove_VillainReviveCasualty : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: PlayReviveBark
     /// </summary>
-    public unsafe void PlayReviveBark()
+    public unsafe virtual void PlayReviveBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainReviveCasualty.PlayReviveBark", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class RCombatMove_VillainReviveCasualty : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: GetForceToGiveToPawn
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetForceToGiveToPawn(BmSDK.BmGame.RPawnCombat Receiver, float MaxForce, float MinRange = default, float MaxRange = default)
+    public unsafe override System.Numerics.Vector3 GetForceToGiveToPawn(BmSDK.BmGame.RPawnCombat Receiver, float MaxForce, float MinRange = default, float MaxRange = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainReviveCasualty.GetForceToGiveToPawn", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -133,7 +133,7 @@ public partial class RCombatMove_VillainReviveCasualty : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: OverrideForceToGiveToPawn
     /// </summary>
-    public unsafe bool OverrideForceToGiveToPawn()
+    public unsafe override bool OverrideForceToGiveToPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainReviveCasualty.OverrideForceToGiveToPawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -144,7 +144,7 @@ public partial class RCombatMove_VillainReviveCasualty : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: PlayStandUpAnim
     /// </summary>
-    public unsafe void PlayStandUpAnim()
+    public unsafe virtual void PlayStandUpAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainReviveCasualty.PlayStandUpAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -155,7 +155,7 @@ public partial class RCombatMove_VillainReviveCasualty : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: PlayRevive
     /// </summary>
-    public unsafe void PlayRevive()
+    public unsafe virtual void PlayRevive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainReviveCasualty.PlayRevive", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -166,7 +166,7 @@ public partial class RCombatMove_VillainReviveCasualty : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: SetReviveAnims
     /// </summary>
-    public unsafe void SetReviveAnims()
+    public unsafe virtual void SetReviveAnims()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainReviveCasualty.SetReviveAnims", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -177,7 +177,7 @@ public partial class RCombatMove_VillainReviveCasualty : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainReviveCasualty.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -188,7 +188,7 @@ public partial class RCombatMove_VillainReviveCasualty : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: StartCasualtyChargeUpVfx
     /// </summary>
-    public unsafe void StartCasualtyChargeUpVfx()
+    public unsafe virtual void StartCasualtyChargeUpVfx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainReviveCasualty.StartCasualtyChargeUpVfx", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -199,7 +199,7 @@ public partial class RCombatMove_VillainReviveCasualty : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: StartReviveGetup
     /// </summary>
-    public unsafe void StartReviveGetup()
+    public unsafe virtual void StartReviveGetup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainReviveCasualty.StartReviveGetup", true);
         byte* paramsPtr = stackalloc byte[0];

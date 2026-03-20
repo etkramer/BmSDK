@@ -71,7 +71,7 @@ public partial class RAEC_Sub_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorSolo
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_Disarmed.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Sub_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorSolo
     /// <summary>
     /// Function: AssignGunLocker
     /// </summary>
-    public unsafe void AssignGunLocker(BmSDK.BmGame.RPredatorGunLockerBase TargetGunLocker)
+    public unsafe virtual void AssignGunLocker(BmSDK.BmGame.RPredatorGunLockerBase TargetGunLocker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_Disarmed.AssignGunLocker", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -94,7 +94,7 @@ public partial class RAEC_Sub_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorSolo
     /// <summary>
     /// Function: AssignGunPickup
     /// </summary>
-    public unsafe void AssignGunPickup(BmSDK.BmGame.RBMCombatThrownObject_Predator TargetGunPickup)
+    public unsafe virtual void AssignGunPickup(BmSDK.BmGame.RBMCombatThrownObject_Predator TargetGunPickup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_Disarmed.AssignGunPickup", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -106,7 +106,7 @@ public partial class RAEC_Sub_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorSolo
     /// <summary>
     /// Function: InitWaitToFindGun
     /// </summary>
-    public unsafe void InitWaitToFindGun(bool bWatchPlayer)
+    public unsafe virtual void InitWaitToFindGun(bool bWatchPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_Disarmed.InitWaitToFindGun", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -118,7 +118,7 @@ public partial class RAEC_Sub_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorSolo
     /// <summary>
     /// Function: InitDisarmed
     /// </summary>
-    public unsafe void InitDisarmed()
+    public unsafe virtual void InitDisarmed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_Disarmed.InitDisarmed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RAEC_Sub_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorSolo
     /// <summary>
     /// Function: ClearWeaponPickup
     /// </summary>
-    public unsafe void ClearWeaponPickup()
+    public unsafe virtual void ClearWeaponPickup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_Disarmed.ClearWeaponPickup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class RAEC_Sub_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorSolo
     /// <summary>
     /// Function: OnVillainStolen
     /// </summary>
-    public unsafe void OnVillainStolen()
+    public unsafe override void OnVillainStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_Disarmed.OnVillainStolen", true);
         byte* paramsPtr = stackalloc byte[0];

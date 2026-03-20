@@ -36,7 +36,7 @@ public partial class RBMBehaviour_JokerBossRiddler : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: ShotJokerDmgOnly
     /// </summary>
-    public unsafe void ShotJokerDmgOnly()
+    public unsafe virtual void ShotJokerDmgOnly()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossRiddler.ShotJokerDmgOnly", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_JokerBossRiddler : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: ShotJokerEnd
     /// </summary>
-    public unsafe void ShotJokerEnd()
+    public unsafe virtual void ShotJokerEnd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossRiddler.ShotJokerEnd", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_JokerBossRiddler : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: ShotJoker
     /// </summary>
-    public unsafe void ShotJoker()
+    public unsafe virtual void ShotJoker()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossRiddler.ShotJoker", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_JokerBossRiddler : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: CanSeeBatman
     /// </summary>
-    public unsafe bool CanSeeBatman()
+    public unsafe virtual bool CanSeeBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossRiddler.CanSeeBatman", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_JokerBossRiddler : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossRiddler.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -92,7 +92,7 @@ public partial class RBMBehaviour_JokerBossRiddler : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: NotifyThugDied
     /// </summary>
-    public unsafe void NotifyThugDied()
+    public unsafe virtual void NotifyThugDied()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossRiddler.NotifyThugDied", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -103,7 +103,7 @@ public partial class RBMBehaviour_JokerBossRiddler : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: ShotByJokerGun
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnVillain ShotByJokerGun()
+    public unsafe virtual BmSDK.BmGame.RPawnVillain ShotByJokerGun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerBossRiddler.ShotByJokerGun", true);
         byte* paramsPtr = stackalloc byte[8];

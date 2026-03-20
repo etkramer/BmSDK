@@ -47,7 +47,7 @@ public partial class RSeqAct_SetAllowedAttacks : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe virtual bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetAllowedAttacks.Update", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -59,7 +59,7 @@ public partial class RSeqAct_SetAllowedAttacks : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetAllowedAttacks.Activated", true);
         byte* paramsPtr = stackalloc byte[16];

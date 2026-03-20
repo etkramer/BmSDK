@@ -36,7 +36,7 @@ public partial class RBarkConvoAction_SpeechBase : BmSDK.BmGame.RBarkConvoAction
     /// <summary>
     /// Function: GetCurrentDialogueType
     /// </summary>
-    public unsafe BmSDK.Engine.AkDialogueType GetCurrentDialogueType()
+    public unsafe virtual BmSDK.Engine.AkDialogueType GetCurrentDialogueType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_SpeechBase.GetCurrentDialogueType", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -47,7 +47,7 @@ public partial class RBarkConvoAction_SpeechBase : BmSDK.BmGame.RBarkConvoAction
     /// <summary>
     /// Function: StopSpeechCallback
     /// </summary>
-    public unsafe BmSDK.Engine.AkDialogue.AkDialogueCallbackResult StopSpeechCallback(int speechId, bool interrupted)
+    public unsafe virtual BmSDK.Engine.AkDialogue.AkDialogueCallbackResult StopSpeechCallback(int speechId, bool interrupted)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_SpeechBase.StopSpeechCallback", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -60,7 +60,7 @@ public partial class RBarkConvoAction_SpeechBase : BmSDK.BmGame.RBarkConvoAction
     /// <summary>
     /// Function: StartLineCallback
     /// </summary>
-    public unsafe BmSDK.Engine.AkDialogue.AkDialogueCallbackResult StartLineCallback(BmSDK.Engine.AkDialogueLine dlgLine, BmSDK.Engine.AkDialogueEvent dlgEvent, BmSDK.GameObject Speaker, bool bBarkSquelch)
+    public unsafe virtual BmSDK.Engine.AkDialogue.AkDialogueCallbackResult StartLineCallback(BmSDK.Engine.AkDialogueLine dlgLine, BmSDK.Engine.AkDialogueEvent dlgEvent, BmSDK.GameObject Speaker, bool bBarkSquelch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_SpeechBase.StartLineCallback", true);
         byte* paramsPtr = stackalloc byte[29];
@@ -75,7 +75,7 @@ public partial class RBarkConvoAction_SpeechBase : BmSDK.BmGame.RBarkConvoAction
     /// <summary>
     /// Function: SetCoreSpeechOptions
     /// </summary>
-    public unsafe void SetCoreSpeechOptions(out BmSDK.Engine.AkDialogue.FAkSpeechOptions Opt)
+    public unsafe virtual void SetCoreSpeechOptions(out BmSDK.Engine.AkDialogue.FAkSpeechOptions Opt)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_SpeechBase.SetCoreSpeechOptions", true);
         byte* paramsPtr = stackalloc byte[116];

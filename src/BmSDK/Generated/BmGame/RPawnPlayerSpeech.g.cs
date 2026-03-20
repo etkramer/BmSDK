@@ -66,7 +66,7 @@ public partial class RPawnPlayerSpeech : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.I
     /// <summary>
     /// Function: GetAkDialogueComponent
     /// </summary>
-    public unsafe BmSDK.Engine.AkDialogueComponent GetAkDialogueComponent(bool allowCreate = default)
+    public unsafe override BmSDK.Engine.AkDialogueComponent GetAkDialogueComponent(bool allowCreate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerSpeech.GetAkDialogueComponent", true);
         byte* paramsPtr = stackalloc byte[12];

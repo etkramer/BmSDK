@@ -47,7 +47,7 @@ public partial class RSeqAct_SetPawnsREvidence : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// Function: Set
     /// </summary>
-    public unsafe void Set()
+    public unsafe virtual void Set()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetPawnsREvidence.Set", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RVentChuteCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVentChuteCamera.Tick", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -83,7 +83,7 @@ public partial class RVentChuteCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(bool GoingUp, BmSDK.BmGame.RSwingChutePointBase ChuteTop, BmSDK.BmGame.RSwingChuteExitBase ChuteBottom)
+    public unsafe virtual void Init(bool GoingUp, BmSDK.BmGame.RSwingChutePointBase ChuteTop, BmSDK.BmGame.RSwingChuteExitBase ChuteBottom)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVentChuteCamera.Init", true);
         byte* paramsPtr = stackalloc byte[20];

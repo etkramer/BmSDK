@@ -71,7 +71,7 @@ public partial class RAEC_AbandonDrone : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: TryAbandonBark
     /// </summary>
-    public unsafe void TryAbandonBark(BmSDK.BmGame.RPawnVillain BarkPawn)
+    public unsafe virtual void TryAbandonBark(BmSDK.BmGame.RPawnVillain BarkPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_AbandonDrone.TryAbandonBark", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RAEC_AbandonDrone : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: OnAssign
     /// </summary>
-    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe override void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_AbandonDrone.OnAssign", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -95,7 +95,7 @@ public partial class RAEC_AbandonDrone : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: StartReaction
     /// </summary>
-    public unsafe void StartReaction()
+    public unsafe virtual void StartReaction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_AbandonDrone.StartReaction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RAEC_AbandonDrone : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: GetBarkPriority
     /// </summary>
-    public unsafe int GetBarkPriority()
+    public unsafe override int GetBarkPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_AbandonDrone.GetBarkPriority", true);
         byte* paramsPtr = stackalloc byte[4];

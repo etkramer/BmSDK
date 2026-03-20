@@ -66,7 +66,7 @@ public partial class RAEC_Attack_Sub_Converge : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: GetMoveToPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMoveToPoint()
+    public unsafe virtual System.Numerics.Vector3 GetMoveToPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_Converge.GetMoveToPoint", true);
         byte* paramsPtr = stackalloc byte[12];

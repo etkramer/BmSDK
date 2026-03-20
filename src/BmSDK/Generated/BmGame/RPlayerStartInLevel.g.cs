@@ -71,7 +71,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: EnableCheckpoints
     /// </summary>
-    public unsafe void EnableCheckpoints()
+    public unsafe virtual void EnableCheckpoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.EnableCheckpoints", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: ActivateCheckpoint
     /// </summary>
-    public unsafe void ActivateCheckpoint()
+    public unsafe virtual void ActivateCheckpoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.ActivateCheckpoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: OnModifyDoor
     /// </summary>
-    public unsafe void OnModifyDoor(BmSDK.BmGame.RSeqAct_ModifyDoor Action)
+    public unsafe virtual void OnModifyDoor(BmSDK.BmGame.RSeqAct_ModifyDoor Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.OnModifyDoor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -116,7 +116,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: HandleKismetAction
     /// </summary>
-    public unsafe void HandleKismetAction(int Index, BmSDK.BmGame.RSeqAct_ModifyDoor Action)
+    public unsafe virtual void HandleKismetAction(int Index, BmSDK.BmGame.RSeqAct_ModifyDoor Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.HandleKismetAction", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -129,7 +129,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: StartLevelFromHere
     /// </summary>
-    public unsafe void StartLevelFromHere(bool LevelStart = default)
+    public unsafe virtual void StartLevelFromHere(bool LevelStart = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.StartLevelFromHere", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -141,7 +141,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: SaveGameHere
     /// </summary>
-    public unsafe void SaveGameHere(BmSDK.FString Filename = default, BmSDK.BmGame.RGameRI.FDebugSaveDescription DebugSaveGameDescription = default, bool bMemoryOnly = default, bool bAllowSaveDuringChase = default)
+    public unsafe virtual void SaveGameHere(BmSDK.FString Filename = default, BmSDK.BmGame.RGameRI.FDebugSaveDescription DebugSaveGameDescription = default, bool bMemoryOnly = default, bool bAllowSaveDuringChase = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.SaveGameHere", true);
         byte* paramsPtr = stackalloc byte[180];
@@ -156,7 +156,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: GetOuterMost
     /// </summary>
-    public unsafe BmSDK.GameObject GetOuterMost(BmSDK.GameObject A)
+    public unsafe virtual BmSDK.GameObject GetOuterMost(BmSDK.GameObject A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.GetOuterMost", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -168,7 +168,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: ExitTransition
     /// </summary>
-    public unsafe void ExitTransition(bool LevelStart = default)
+    public unsafe virtual void ExitTransition(bool LevelStart = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.ExitTransition", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -180,7 +180,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: CheckPlayerStartFromHere
     /// </summary>
-    public unsafe void CheckPlayerStartFromHere()
+    public unsafe virtual void CheckPlayerStartFromHere()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.CheckPlayerStartFromHere", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -191,7 +191,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: CheckPlayerStart
     /// </summary>
-    public unsafe void CheckPlayerStart(BmSDK.Engine.PlayerController PC)
+    public unsafe virtual void CheckPlayerStart(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.CheckPlayerStart", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -203,7 +203,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: SpawnBatmobileForThisStartPoint
     /// </summary>
-    public unsafe void SpawnBatmobileForThisStartPoint()
+    public unsafe virtual void SpawnBatmobileForThisStartPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.SpawnBatmobileForThisStartPoint", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -214,7 +214,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: MovePlayerHere
     /// </summary>
-    public unsafe void MovePlayerHere()
+    public unsafe virtual void MovePlayerHere()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.MovePlayerHere", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -225,7 +225,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: TeleportPlayerToHere
     /// </summary>
-    public unsafe void TeleportPlayerToHere()
+    public unsafe virtual void TeleportPlayerToHere()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.TeleportPlayerToHere", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -236,7 +236,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: FinishPreloadingLevelsForEntering
     /// </summary>
-    public unsafe void FinishPreloadingLevelsForEntering()
+    public unsafe virtual void FinishPreloadingLevelsForEntering()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.FinishPreloadingLevelsForEntering", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -247,7 +247,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: PreloadLevelsForEntering
     /// </summary>
-    public unsafe void PreloadLevelsForEntering()
+    public unsafe virtual void PreloadLevelsForEntering()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.PreloadLevelsForEntering", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -258,7 +258,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: FacingSameDirection
     /// </summary>
-    public unsafe bool FacingSameDirection(BmSDK.Rotator PlayerRot)
+    public unsafe virtual bool FacingSameDirection(BmSDK.Rotator PlayerRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.FacingSameDirection", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -270,7 +270,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: StopLoadingSymbol
     /// </summary>
-    public unsafe void StopLoadingSymbol()
+    public unsafe virtual void StopLoadingSymbol()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.StopLoadingSymbol", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -288,7 +288,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: FlushTexturesStreaming
     /// </summary>
-    public unsafe void FlushTexturesStreaming()
+    public unsafe virtual void FlushTexturesStreaming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.FlushTexturesStreaming", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -306,7 +306,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: GetMyLevelVolume
     /// </summary>
-    public unsafe BmSDK.BmGame.RLevelVolume GetMyLevelVolume()
+    public unsafe virtual BmSDK.BmGame.RLevelVolume GetMyLevelVolume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.GetMyLevelVolume", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -324,7 +324,7 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
     /// <summary>
     /// Function: GetGRI
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI GetGRI()
+    public unsafe virtual BmSDK.BmGame.RGameRI GetGRI()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerStartInLevel.GetGRI", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RCombatMove_MultiStageStunStickAttack : BmSDK.BmScript.RCom
     /// <summary>
     /// Function: DamageCollisionBetween
     /// </summary>
-    public unsafe void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
+    public unsafe override void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageStunStickAttack.DamageCollisionBetween", true);
         byte* paramsPtr = stackalloc byte[276];
@@ -85,7 +85,7 @@ public partial class RCombatMove_MultiStageStunStickAttack : BmSDK.BmScript.RCom
     /// <summary>
     /// Function: CombatAnimHitRight
     /// </summary>
-    public unsafe void CombatAnimHitRight()
+    public unsafe virtual void CombatAnimHitRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageStunStickAttack.CombatAnimHitRight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -96,7 +96,7 @@ public partial class RCombatMove_MultiStageStunStickAttack : BmSDK.BmScript.RCom
     /// <summary>
     /// Function: CombatAnimHitLeft
     /// </summary>
-    public unsafe void CombatAnimHitLeft()
+    public unsafe virtual void CombatAnimHitLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_MultiStageStunStickAttack.CombatAnimHitLeft", true);
         byte* paramsPtr = stackalloc byte[0];

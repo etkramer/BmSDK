@@ -36,7 +36,7 @@ public partial class RInteractionClass : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ContainsActor
     /// </summary>
-    public unsafe bool ContainsActor(BmSDK.Engine.Actor TestActor)
+    public unsafe virtual bool ContainsActor(BmSDK.Engine.Actor TestActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RInteractionClass.ContainsActor", true);
         byte* paramsPtr = stackalloc byte[12];

@@ -71,7 +71,7 @@ public partial class RVantagePointGrappleCamera : BmSDK.BmGame.RCameraActor, BmS
     /// <summary>
     /// Function: FreezeCamera
     /// </summary>
-    public unsafe void FreezeCamera()
+    public unsafe virtual void FreezeCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantagePointGrappleCamera.FreezeCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RVantagePointGrappleCamera : BmSDK.BmGame.RCameraActor, BmS
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantagePointGrappleCamera.Tick", true);
         byte* paramsPtr = stackalloc byte[144];
@@ -94,7 +94,7 @@ public partial class RVantagePointGrappleCamera : BmSDK.BmGame.RCameraActor, BmS
     /// <summary>
     /// Function: SetUpCamera
     /// </summary>
-    public unsafe void SetUpCamera(BmSDK.BmGame.RHidePoint VantagePoint, System.Numerics.Vector3 GrappleLocation)
+    public unsafe virtual void SetUpCamera(BmSDK.BmGame.RHidePoint VantagePoint, System.Numerics.Vector3 GrappleLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVantagePointGrappleCamera.SetUpCamera", true);
         byte* paramsPtr = stackalloc byte[56];

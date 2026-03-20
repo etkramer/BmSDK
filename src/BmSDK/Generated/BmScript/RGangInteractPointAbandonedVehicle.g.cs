@@ -71,7 +71,7 @@ public partial class RGangInteractPointAbandonedVehicle : BmSDK.BmGame.RGangInte
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float UpdateTime)
+    public unsafe override void Tick(float UpdateTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangInteractPointAbandonedVehicle.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RGangInteractPointAbandonedVehicle : BmSDK.BmGame.RGangInte
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangInteractPointAbandonedVehicle.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RGangInteractPointAbandonedVehicle : BmSDK.BmGame.RGangInte
     /// <summary>
     /// Function: SetFinished
     /// </summary>
-    public unsafe void SetFinished(BmSDK.BmGame.RBMPawnAI P)
+    public unsafe override void SetFinished(BmSDK.BmGame.RBMPawnAI P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangInteractPointAbandonedVehicle.SetFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RGangInteractPointAbandonedVehicle : BmSDK.BmGame.RGangInte
     /// <summary>
     /// Function: SetInUse
     /// </summary>
-    public unsafe void SetInUse(BmSDK.BmGame.RBMPawnAI UsagePawn)
+    public unsafe override void SetInUse(BmSDK.BmGame.RBMPawnAI UsagePawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangInteractPointAbandonedVehicle.SetInUse", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RGangInteractPointAbandonedVehicle : BmSDK.BmGame.RGangInte
     /// <summary>
     /// Function: GetPOILocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetPOILocation()
+    public unsafe override System.Numerics.Vector3 GetPOILocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangInteractPointAbandonedVehicle.GetPOILocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -129,7 +129,7 @@ public partial class RGangInteractPointAbandonedVehicle : BmSDK.BmGame.RGangInte
     /// <summary>
     /// Function: GetSelectionScore
     /// </summary>
-    public unsafe float GetSelectionScore()
+    public unsafe override float GetSelectionScore()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangInteractPointAbandonedVehicle.GetSelectionScore", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -140,7 +140,7 @@ public partial class RGangInteractPointAbandonedVehicle : BmSDK.BmGame.RGangInte
     /// <summary>
     /// Function: GetBehaviourClass
     /// </summary>
-    public unsafe BmSDK.Class GetBehaviourClass()
+    public unsafe override BmSDK.Class GetBehaviourClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangInteractPointAbandonedVehicle.GetBehaviourClass", true);
         byte* paramsPtr = stackalloc byte[8];

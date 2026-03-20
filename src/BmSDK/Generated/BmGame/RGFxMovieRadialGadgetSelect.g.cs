@@ -36,7 +36,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: XI_GetScreenSize
     /// </summary>
-    public unsafe void XI_GetScreenSize(BmSDK.FString TargetPath, BmSDK.FString WidthVariableName, BmSDK.FString HeightVariableName)
+    public unsafe virtual void XI_GetScreenSize(BmSDK.FString TargetPath, BmSDK.FString WidthVariableName, BmSDK.FString HeightVariableName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.XI_GetScreenSize", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -50,7 +50,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: HandleVoiceRec
     /// </summary>
-    public unsafe bool HandleVoiceRec(BmSDK.FString VoiceRecCommand)
+    public unsafe override bool HandleVoiceRec(BmSDK.FString VoiceRecCommand)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.HandleVoiceRec", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -62,7 +62,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: ShowTapModePrompts
     /// </summary>
-    public unsafe void ShowTapModePrompts()
+    public unsafe virtual void ShowTapModePrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.ShowTapModePrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -73,7 +73,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: UpdatePrompts
     /// </summary>
-    public unsafe void UpdatePrompts()
+    public unsafe virtual void UpdatePrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.UpdatePrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -84,7 +84,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: SetRequiredGadgetPrompt
     /// </summary>
-    public unsafe void SetRequiredGadgetPrompt()
+    public unsafe virtual void SetRequiredGadgetPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.SetRequiredGadgetPrompt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: SetMoving
     /// </summary>
-    public unsafe void SetMoving(bool Moving)
+    public unsafe virtual void SetMoving(bool Moving)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.SetMoving", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -107,7 +107,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: PlayHighlightAudio
     /// </summary>
-    public unsafe void PlayHighlightAudio()
+    public unsafe virtual void PlayHighlightAudio()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.PlayHighlightAudio", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: UpdateGadgetSelect
     /// </summary>
-    public unsafe void UpdateGadgetSelect()
+    public unsafe virtual void UpdateGadgetSelect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.UpdateGadgetSelect", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -129,7 +129,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: CycleGadgets
     /// </summary>
-    public unsafe void CycleGadgets(int Direction)
+    public unsafe virtual void CycleGadgets(int Direction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.CycleGadgets", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -141,7 +141,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: PrevGadget
     /// </summary>
-    public unsafe void PrevGadget()
+    public unsafe virtual void PrevGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.PrevGadget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -152,7 +152,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: NextGadget
     /// </summary>
-    public unsafe void NextGadget()
+    public unsafe virtual void NextGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.NextGadget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -163,7 +163,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: ManualSelectGadget
     /// </summary>
-    public unsafe void ManualSelectGadget(int gadgetIndex, bool selectedByScroll = default)
+    public unsafe virtual void ManualSelectGadget(int gadgetIndex, bool selectedByScroll = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.ManualSelectGadget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -176,7 +176,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: CheckIndexAndShowQuickfireGadget
     /// </summary>
-    public unsafe void CheckIndexAndShowQuickfireGadget(int gadgetIndex)
+    public unsafe virtual void CheckIndexAndShowQuickfireGadget(int gadgetIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.CheckIndexAndShowQuickfireGadget", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -188,7 +188,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: SyncInventoryGadget
     /// </summary>
-    public unsafe void SyncInventoryGadget()
+    public unsafe virtual void SyncInventoryGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.SyncInventoryGadget", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -199,7 +199,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: PostCloseGadgetAction
     /// </summary>
-    public unsafe void PostCloseGadgetAction()
+    public unsafe virtual void PostCloseGadgetAction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.PostCloseGadgetAction", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -210,7 +210,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: UpdateControlStick
     /// </summary>
-    public unsafe void UpdateControlStick()
+    public unsafe virtual void UpdateControlStick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.UpdateControlStick", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -221,7 +221,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: UpdateControlStickXy
     /// </summary>
-    public unsafe void UpdateControlStickXy()
+    public unsafe virtual void UpdateControlStickXy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.UpdateControlStickXy", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -232,7 +232,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: ShowRequiredGadgetIndex
     /// </summary>
-    public unsafe void ShowRequiredGadgetIndex(int _RequiredGadget_OutOfSixteen)
+    public unsafe virtual void ShowRequiredGadgetIndex(int _RequiredGadget_OutOfSixteen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.ShowRequiredGadgetIndex", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -244,7 +244,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: ShowFailedGadget
     /// </summary>
-    public unsafe void ShowFailedGadget()
+    public unsafe virtual void ShowFailedGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.ShowFailedGadget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -255,7 +255,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: HideCurrentGadget
     /// </summary>
-    public unsafe void HideCurrentGadget()
+    public unsafe virtual void HideCurrentGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.HideCurrentGadget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -266,7 +266,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: ShowCurrentGadget
     /// </summary>
-    public unsafe void ShowCurrentGadget(int gadget_index)
+    public unsafe virtual void ShowCurrentGadget(int gadget_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.ShowCurrentGadget", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -278,7 +278,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: SelectWheelGadgetPrivate
     /// </summary>
-    public unsafe void SelectWheelGadgetPrivate(int gadget_index, bool Snap)
+    public unsafe virtual void SelectWheelGadgetPrivate(int gadget_index, bool Snap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.SelectWheelGadgetPrivate", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -291,7 +291,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: SelectWheelGadget
     /// </summary>
-    public unsafe void SelectWheelGadget(int gadget_index)
+    public unsafe virtual void SelectWheelGadget(int gadget_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.SelectWheelGadget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -303,7 +303,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: CloseWheel
     /// </summary>
-    public unsafe void CloseWheel()
+    public unsafe virtual void CloseWheel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.CloseWheel", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -314,7 +314,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: DXI_UpdateSelectedGadgetIndex
     /// </summary>
-    public unsafe void DXI_UpdateSelectedGadgetIndex(BmSDK.FString InIndex)
+    public unsafe virtual void DXI_UpdateSelectedGadgetIndex(BmSDK.FString InIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.DXI_UpdateSelectedGadgetIndex", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -326,7 +326,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: OpenWheelPrivate_RhdUpg
     /// </summary>
-    public unsafe void OpenWheelPrivate_RhdUpg(int selected_gadget, bool RhdUpgraded)
+    public unsafe virtual void OpenWheelPrivate_RhdUpg(int selected_gadget, bool RhdUpgraded)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.OpenWheelPrivate_RhdUpg", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -339,7 +339,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: OpenWheelPrivate
     /// </summary>
-    public unsafe void OpenWheelPrivate(int selected_gadget)
+    public unsafe virtual void OpenWheelPrivate(int selected_gadget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.OpenWheelPrivate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -351,7 +351,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: OpenWheel
     /// </summary>
-    public unsafe void OpenWheel()
+    public unsafe virtual void OpenWheel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.OpenWheel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -362,7 +362,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: ForceFocus
     /// </summary>
-    public unsafe void ForceFocus(bool GiveFocus)
+    public unsafe virtual void ForceFocus(bool GiveFocus)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.ForceFocus", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -374,7 +374,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: UpdateGadgetParams
     /// </summary>
-    public unsafe void UpdateGadgetParams(int gadget_index, int recharge_percent, int ammo_single_value)
+    public unsafe virtual void UpdateGadgetParams(int gadget_index, int recharge_percent, int ammo_single_value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.UpdateGadgetParams", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -388,7 +388,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: SendGadgetsToFlashPrivate
     /// </summary>
-    public unsafe void SendGadgetsToFlashPrivate(BmSDK.FString character_acronym, int max_slots, BmSDK.FString comma_separated_gadget_list)
+    public unsafe virtual void SendGadgetsToFlashPrivate(BmSDK.FString character_acronym, int max_slots, BmSDK.FString comma_separated_gadget_list)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.SendGadgetsToFlashPrivate", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -402,7 +402,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: SendGadgetsToFlash
     /// </summary>
-    public unsafe void SendGadgetsToFlash()
+    public unsafe virtual void SendGadgetsToFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.SendGadgetsToFlash", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -413,7 +413,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: SetWheelArrowAngle
     /// </summary>
-    public unsafe void SetWheelArrowAngle(float new_angle)
+    public unsafe virtual void SetWheelArrowAngle(float new_angle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.SetWheelArrowAngle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -425,7 +425,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: OnClose
     /// </summary>
-    public unsafe void OnClose()
+    public unsafe override void OnClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.OnClose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -436,7 +436,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: SetPromptPrivate
     /// </summary>
-    public unsafe void SetPromptPrivate(int Id, bool bMain, BmSDK.FString PadText, BmSDK.FString PCText, BmSDK.FString Label, float Alpha)
+    public unsafe virtual void SetPromptPrivate(int Id, bool bMain, BmSDK.FString PadText, BmSDK.FString PCText, BmSDK.FString Label, float Alpha)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.SetPromptPrivate", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -453,7 +453,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: SetPrompt
     /// </summary>
-    public unsafe void SetPrompt(int Id, BmSDK.FString Label, float Alpha = default, bool bAsMain = default)
+    public unsafe virtual void SetPrompt(int Id, BmSDK.FString Label, float Alpha = default, bool bAsMain = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.SetPrompt", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -468,7 +468,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: ReLayoutPrompts
     /// </summary>
-    public unsafe void ReLayoutPrompts()
+    public unsafe virtual void ReLayoutPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.ReLayoutPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -479,7 +479,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: ClearPrompts
     /// </summary>
-    public unsafe void ClearPrompts()
+    public unsafe virtual void ClearPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.ClearPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -490,7 +490,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: OnAspectRatioChanged
     /// </summary>
-    public unsafe void OnAspectRatioChanged(float aspect_ratio)
+    public unsafe override void OnAspectRatioChanged(float aspect_ratio)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.OnAspectRatioChanged", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -502,7 +502,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: UpdateHudVisibility
     /// </summary>
-    public unsafe void UpdateHudVisibility(bool bVisible)
+    public unsafe override void UpdateHudVisibility(bool bVisible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.UpdateHudVisibility", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -514,7 +514,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: SetLeftCornerGadgetVisible
     /// </summary>
-    public unsafe void SetLeftCornerGadgetVisible(bool _bLeftCornerGadgetVisible)
+    public unsafe virtual void SetLeftCornerGadgetVisible(bool _bLeftCornerGadgetVisible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.SetLeftCornerGadgetVisible", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -526,7 +526,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: SetWheelOpen
     /// </summary>
-    public unsafe void SetWheelOpen(bool _bWheelOpen)
+    public unsafe virtual void SetWheelOpen(bool _bWheelOpen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.SetWheelOpen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -538,7 +538,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: RegisterAsManualAdvanceMovie
     /// </summary>
-    public unsafe void RegisterAsManualAdvanceMovie(bool do_register)
+    public unsafe virtual void RegisterAsManualAdvanceMovie(bool do_register)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.RegisterAsManualAdvanceMovie", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -550,7 +550,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: ProcessDeferredInterfaceCalls
     /// </summary>
-    public unsafe void ProcessDeferredInterfaceCalls()
+    public unsafe virtual void ProcessDeferredInterfaceCalls()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.ProcessDeferredInterfaceCalls", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -561,7 +561,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: IndividualDeferredInterfaceCall
     /// </summary>
-    public unsafe void IndividualDeferredInterfaceCall(BmSDK.TArray<BmSDK.FString> param_array)
+    public unsafe virtual void IndividualDeferredInterfaceCall(BmSDK.TArray<BmSDK.FString> param_array)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.IndividualDeferredInterfaceCall", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -573,7 +573,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: ProcessDeferredInterfaceCallsNative
     /// </summary>
-    public unsafe void ProcessDeferredInterfaceCallsNative(BmSDK.FString DeferredExternalInterfaceCalls)
+    public unsafe virtual void ProcessDeferredInterfaceCallsNative(BmSDK.FString DeferredExternalInterfaceCalls)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.ProcessDeferredInterfaceCallsNative", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -592,7 +592,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: CheckGadgetWheel
     /// </summary>
-    public unsafe int CheckGadgetWheel()
+    public unsafe virtual int CheckGadgetWheel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.CheckGadgetWheel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -610,7 +610,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: XI_PushDeferredCallsToGame
     /// </summary>
-    public unsafe void XI_PushDeferredCallsToGame(BmSDK.FString deferred_calls)
+    public unsafe virtual void XI_PushDeferredCallsToGame(BmSDK.FString deferred_calls)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.XI_PushDeferredCallsToGame", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -629,7 +629,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: CheckAndClearDeferredCalls
     /// </summary>
-    public unsafe BmSDK.FString CheckAndClearDeferredCalls()
+    public unsafe virtual BmSDK.FString CheckAndClearDeferredCalls()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.CheckAndClearDeferredCalls", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -647,7 +647,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: ManualAdvanceTick
     /// </summary>
-    public unsafe void ManualAdvanceTick(float DeltaT)
+    public unsafe override void ManualAdvanceTick(float DeltaT)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.ManualAdvanceTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -659,7 +659,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieRadialGadgetSelect.Init", true);
         byte* paramsPtr = stackalloc byte[8];

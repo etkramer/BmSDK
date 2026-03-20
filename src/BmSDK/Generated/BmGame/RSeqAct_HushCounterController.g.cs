@@ -36,7 +36,7 @@ public partial class RSeqAct_HushCounterController : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_HushCounterController.Update", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -48,7 +48,7 @@ public partial class RSeqAct_HushCounterController : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: CounterPressed
     /// </summary>
-    public unsafe void CounterPressed()
+    public unsafe virtual void CounterPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_HushCounterController.CounterPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -59,7 +59,7 @@ public partial class RSeqAct_HushCounterController : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_HushCounterController.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

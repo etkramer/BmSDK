@@ -71,7 +71,7 @@ public partial class RBMAIAction_OpenBankDoor : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: AttachExplosiveToPanel
     /// </summary>
-    public unsafe void AttachExplosiveToPanel()
+    public unsafe virtual void AttachExplosiveToPanel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_OpenBankDoor.AttachExplosiveToPanel", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_OpenBankDoor : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: AttachExplosiveToHand
     /// </summary>
-    public unsafe void AttachExplosiveToHand()
+    public unsafe virtual void AttachExplosiveToHand()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_OpenBankDoor.AttachExplosiveToHand", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RBMAIAction_OpenBankDoor : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: SetDoor
     /// </summary>
-    public unsafe void SetDoor(BmSDK.BmGame.RBankDoorBase Door)
+    public unsafe virtual void SetDoor(BmSDK.BmGame.RBankDoorBase Door)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_OpenBankDoor.SetDoor", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_OpenBankDoor : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_OpenBankDoor.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

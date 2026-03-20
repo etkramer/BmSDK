@@ -47,7 +47,7 @@ public partial class RSeqAct_RestrictDisruptorTargets : BmSDK.Engine.SequenceAct
     /// <summary>
     /// Function: FiredAtWrongTarget
     /// </summary>
-    public unsafe void FiredAtWrongTarget()
+    public unsafe virtual void FiredAtWrongTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RestrictDisruptorTargets.FiredAtWrongTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_RestrictDisruptorTargets : BmSDK.Engine.SequenceAct
     /// <summary>
     /// Function: IsCurrentTargetAllowed
     /// </summary>
-    public unsafe bool IsCurrentTargetAllowed(BmSDK.Engine.Actor CheckTarget, bool bTrackerTarget)
+    public unsafe virtual bool IsCurrentTargetAllowed(BmSDK.Engine.Actor CheckTarget, bool bTrackerTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RestrictDisruptorTargets.IsCurrentTargetAllowed", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -71,7 +71,7 @@ public partial class RSeqAct_RestrictDisruptorTargets : BmSDK.Engine.SequenceAct
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RestrictDisruptorTargets.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: OnAudioFinished
     /// </summary>
-    public unsafe void OnAudioFinished(BmSDK.Engine.AudioComponent AC)
+    public unsafe virtual void OnAudioFinished(BmSDK.Engine.AudioComponent AC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.OnAudioFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -48,7 +48,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: ResetToDefaults
     /// </summary>
-    public unsafe void ResetToDefaults()
+    public unsafe virtual void ResetToDefaults()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.ResetToDefaults", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -66,7 +66,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: SetWaveParameter
     /// </summary>
-    public unsafe void SetWaveParameter(BmSDK.FName InName, BmSDK.Engine.SoundNodeWave InWave)
+    public unsafe virtual void SetWaveParameter(BmSDK.FName InName, BmSDK.Engine.SoundNodeWave InWave)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.SetWaveParameter", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -86,7 +86,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: SetFloatParameter
     /// </summary>
-    public unsafe void SetFloatParameter(BmSDK.FName InName, float InFloat)
+    public unsafe virtual void SetFloatParameter(BmSDK.FName InName, float InFloat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.SetFloatParameter", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -106,7 +106,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: IsFadingOut
     /// </summary>
-    public unsafe bool IsFadingOut()
+    public unsafe virtual bool IsFadingOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.IsFadingOut", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -124,7 +124,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: IsFadingIn
     /// </summary>
-    public unsafe bool IsFadingIn()
+    public unsafe virtual bool IsFadingIn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.IsFadingIn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -142,7 +142,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: IsPlaying
     /// </summary>
-    public unsafe bool IsPlaying()
+    public unsafe virtual bool IsPlaying()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.IsPlaying", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -160,7 +160,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: Stop
     /// </summary>
-    public unsafe void Stop()
+    public unsafe virtual void Stop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.Stop", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -178,7 +178,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Function: Play
     /// </summary>
-    public unsafe void Play()
+    public unsafe virtual void Play()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.Play", true);
         byte* paramsPtr = stackalloc byte[0];

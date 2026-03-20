@@ -71,7 +71,7 @@ public partial class RCombatMove_VillainPushedIntoThug : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainPushedIntoThug.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_VillainPushedIntoThug : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainPushedIntoThug.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RCombatMove_VillainPushedIntoThug : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: PlayPushAnims
     /// </summary>
-    public unsafe void PlayPushAnims()
+    public unsafe virtual void PlayPushAnims()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainPushedIntoThug.PlayPushAnims", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -105,7 +105,7 @@ public partial class RCombatMove_VillainPushedIntoThug : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: SetPushAnims
     /// </summary>
-    public unsafe void SetPushAnims()
+    public unsafe virtual void SetPushAnims()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainPushedIntoThug.SetPushAnims", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RCombatMove_VillainPushedIntoThug : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainPushedIntoThug.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

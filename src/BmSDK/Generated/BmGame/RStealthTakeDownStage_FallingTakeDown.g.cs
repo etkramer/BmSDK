@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_FallingTakeDown : BmSDK.BmGame.RSteal
     /// <summary>
     /// Function: GetStageAnim
     /// </summary>
-    public unsafe int GetStageAnim()
+    public unsafe override int GetStageAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_FallingTakeDown.GetStageAnim", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -82,7 +82,7 @@ public partial class RStealthTakeDownStage_FallingTakeDown : BmSDK.BmGame.RSteal
     /// <summary>
     /// Function: FinishAttackVictim
     /// </summary>
-    public unsafe bool FinishAttackVictim(int iVictimNumber)
+    public unsafe override bool FinishAttackVictim(int iVictimNumber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_FallingTakeDown.FinishAttackVictim", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -94,7 +94,7 @@ public partial class RStealthTakeDownStage_FallingTakeDown : BmSDK.BmGame.RSteal
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_FallingTakeDown.Begin", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -105,7 +105,7 @@ public partial class RStealthTakeDownStage_FallingTakeDown : BmSDK.BmGame.RSteal
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_FallingTakeDown.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[24];

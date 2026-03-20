@@ -36,7 +36,7 @@ public partial class RBMBehaviour_Follow : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SetPathToFollowActor
     /// </summary>
-    public unsafe void SetPathToFollowActor()
+    public unsafe virtual void SetPathToFollowActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Follow.SetPathToFollowActor", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_Follow : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: PathToFollowActorFailed
     /// </summary>
-    public unsafe void PathToFollowActorFailed(BmSDK.BmGame.RNavigationHandle NavH)
+    public unsafe virtual void PathToFollowActorFailed(BmSDK.BmGame.RNavigationHandle NavH)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Follow.PathToFollowActorFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_Follow : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SetMoveToSpeed
     /// </summary>
-    public unsafe void SetMoveToSpeed()
+    public unsafe virtual void SetMoveToSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Follow.SetMoveToSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RBMBehaviour_Follow : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: OnEndInterrupt
     /// </summary>
-    public unsafe void OnEndInterrupt()
+    public unsafe override void OnEndInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Follow.OnEndInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_Follow : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: InRange
     /// </summary>
-    public unsafe bool InRange()
+    public unsafe virtual bool InRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Follow.InRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -92,7 +92,7 @@ public partial class RBMBehaviour_Follow : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: ReleaseNavHandle
     /// </summary>
-    public unsafe void ReleaseNavHandle()
+    public unsafe virtual void ReleaseNavHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Follow.ReleaseNavHandle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -103,7 +103,7 @@ public partial class RBMBehaviour_Follow : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Follow.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -114,7 +114,7 @@ public partial class RBMBehaviour_Follow : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Follow.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

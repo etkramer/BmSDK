@@ -66,7 +66,7 @@ public partial class RPawnVillainPrototype2DBase : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: SpawnSpecialAttack
     /// </summary>
-    public unsafe bool SpawnSpecialAttack(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn, BmSDK.Class dmgType)
+    public unsafe override bool SpawnSpecialAttack(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn, BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainPrototype2DBase.SpawnSpecialAttack", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -79,7 +79,7 @@ public partial class RPawnVillainPrototype2DBase : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: ShouldFightIn2D
     /// </summary>
-    public unsafe bool ShouldFightIn2D()
+    public unsafe override bool ShouldFightIn2D()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainPrototype2DBase.ShouldFightIn2D", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -90,7 +90,7 @@ public partial class RPawnVillainPrototype2DBase : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: BlockPerformed
     /// </summary>
-    public unsafe void BlockPerformed()
+    public unsafe virtual void BlockPerformed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainPrototype2DBase.BlockPerformed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -101,7 +101,7 @@ public partial class RPawnVillainPrototype2DBase : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: GetNextBlockAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetNextBlockAnimName()
+    public unsafe virtual BmSDK.FName GetNextBlockAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainPrototype2DBase.GetNextBlockAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -112,7 +112,7 @@ public partial class RPawnVillainPrototype2DBase : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainPrototype2DBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

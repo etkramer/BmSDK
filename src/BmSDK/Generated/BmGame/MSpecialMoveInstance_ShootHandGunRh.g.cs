@@ -71,7 +71,7 @@ public partial class MSpecialMoveInstance_ShootHandGunRh : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: NotifyTakeDamage
     /// </summary>
-    public unsafe void NotifyTakeDamage(int Damage, BmSDK.Class DamageType)
+    public unsafe override void NotifyTakeDamage(int Damage, BmSDK.Class DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSpecialMoveInstance_ShootHandGunRh.NotifyTakeDamage", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -84,7 +84,7 @@ public partial class MSpecialMoveInstance_ShootHandGunRh : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: CanDoCombat
     /// </summary>
-    public unsafe bool CanDoCombat(bool CheckForEvade = default)
+    public unsafe override bool CanDoCombat(bool CheckForEvade = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSpecialMoveInstance_ShootHandGunRh.CanDoCombat", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -96,7 +96,7 @@ public partial class MSpecialMoveInstance_ShootHandGunRh : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSpecialMoveInstance_ShootHandGunRh.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[16];

@@ -36,7 +36,7 @@ public partial class RBMBehaviour_CombatRifleRobot : BmSDK.BmGame.RBMBehaviour_C
     /// <summary>
     /// Function: IsCurrentCombatantWhileTaunting
     /// </summary>
-    public unsafe bool IsCurrentCombatantWhileTaunting()
+    public unsafe override bool IsCurrentCombatantWhileTaunting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatRifleRobot.IsCurrentCombatantWhileTaunting", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_CombatRifleRobot : BmSDK.BmGame.RBMBehaviour_C
     /// <summary>
     /// Function: GotoMoveToCombatState
     /// </summary>
-    public unsafe void GotoMoveToCombatState()
+    public unsafe override void GotoMoveToCombatState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatRifleRobot.GotoMoveToCombatState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_CombatRifleRobot : BmSDK.BmGame.RBMBehaviour_C
     /// <summary>
     /// Function: GetWaitForCombatMovementForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWaitForCombatMovementForce()
+    public unsafe override System.Numerics.Vector3 GetWaitForCombatMovementForce()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatRifleRobot.GetWaitForCombatMovementForce", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_CombatRifleRobot : BmSDK.BmGame.RBMBehaviour_C
     /// <summary>
     /// Function: GetMovementForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMovementForce(System.Numerics.Vector3 DesiredPosition = default)
+    public unsafe override System.Numerics.Vector3 GetMovementForce(System.Numerics.Vector3 DesiredPosition = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatRifleRobot.GetMovementForce", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_CombatRifleRobot : BmSDK.BmGame.RBMBehaviour_C
     /// <summary>
     /// Function: GetAttackPriority
     /// </summary>
-    public unsafe int GetAttackPriority(bool bForceAttack)
+    public unsafe override int GetAttackPriority(bool bForceAttack)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatRifleRobot.GetAttackPriority", true);
         byte* paramsPtr = stackalloc byte[52];

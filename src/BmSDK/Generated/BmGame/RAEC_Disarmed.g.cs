@@ -71,7 +71,7 @@ public partial class RAEC_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Disarmed.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: PuncherIsActive
     /// </summary>
-    public unsafe bool PuncherIsActive()
+    public unsafe virtual bool PuncherIsActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Disarmed.PuncherIsActive", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RAEC_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: IsAssigningThugs
     /// </summary>
-    public unsafe bool IsAssigningThugs()
+    public unsafe virtual bool IsAssigningThugs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Disarmed.IsAssigningThugs", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RAEC_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: ClearThugSearch
     /// </summary>
-    public unsafe void ClearThugSearch()
+    public unsafe virtual void ClearThugSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Disarmed.ClearThugSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RAEC_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: ThugInterrupted
     /// </summary>
-    public unsafe void ThugInterrupted(BmSDK.BmGame.RBMAIController InterruptedCon)
+    public unsafe virtual void ThugInterrupted(BmSDK.BmGame.RBMAIController InterruptedCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Disarmed.ThugInterrupted", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -127,7 +127,7 @@ public partial class RAEC_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: ClearThugFromSearch
     /// </summary>
-    public unsafe void ClearThugFromSearch(BmSDK.BmGame.RBMAIController AICon)
+    public unsafe virtual void ClearThugFromSearch(BmSDK.BmGame.RBMAIController AICon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Disarmed.ClearThugFromSearch", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -139,7 +139,7 @@ public partial class RAEC_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: Reroute
     /// </summary>
-    public unsafe void Reroute(BmSDK.BmGame.RBMPawnAI SearchPawn)
+    public unsafe virtual void Reroute(BmSDK.BmGame.RBMPawnAI SearchPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Disarmed.Reroute", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -151,7 +151,7 @@ public partial class RAEC_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: InsertThugIntoSearch
     /// </summary>
-    public unsafe void InsertThugIntoSearch(BmSDK.BmGame.RBMPawnAI SearchPawn)
+    public unsafe virtual void InsertThugIntoSearch(BmSDK.BmGame.RBMPawnAI SearchPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Disarmed.InsertThugIntoSearch", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -163,7 +163,7 @@ public partial class RAEC_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: InitPaths
     /// </summary>
-    public unsafe void InitPaths()
+    public unsafe virtual void InitPaths()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Disarmed.InitPaths", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -174,7 +174,7 @@ public partial class RAEC_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: StartThugWaitingToFindGun
     /// </summary>
-    public unsafe void StartThugWaitingToFindGun(BmSDK.BmGame.RBMAIController NewSearcher)
+    public unsafe virtual void StartThugWaitingToFindGun(BmSDK.BmGame.RBMAIController NewSearcher)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Disarmed.StartThugWaitingToFindGun", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -186,7 +186,7 @@ public partial class RAEC_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: StartThugLookingForGun
     /// </summary>
-    public unsafe void StartThugLookingForGun(BmSDK.BmGame.RBMAIController NewSearcher)
+    public unsafe virtual void StartThugLookingForGun(BmSDK.BmGame.RBMAIController NewSearcher)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Disarmed.StartThugLookingForGun", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -198,7 +198,7 @@ public partial class RAEC_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: GetDisarmSub
     /// </summary>
-    public unsafe BmSDK.BmGame.RAEC_Sub_Disarmed GetDisarmSub(BmSDK.BmGame.RBMAIController AICon)
+    public unsafe virtual BmSDK.BmGame.RAEC_Sub_Disarmed GetDisarmSub(BmSDK.BmGame.RBMAIController AICon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Disarmed.GetDisarmSub", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -210,7 +210,7 @@ public partial class RAEC_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: OnAssign
     /// </summary>
-    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewMember)
+    public unsafe override void OnAssign(BmSDK.BmGame.RBMAIController NewMember)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Disarmed.OnAssign", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -222,7 +222,7 @@ public partial class RAEC_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Disarmed.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];

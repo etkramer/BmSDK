@@ -71,7 +71,7 @@ public partial class MAEC_MayhemMode : BmSDK.BmGame.RAlertEventCoordinatorBase, 
     /// <summary>
     /// Function: AssignToEvent
     /// </summary>
-    public unsafe void AssignToEvent(BmSDK.BmGame.RBMAIController Con)
+    public unsafe override void AssignToEvent(BmSDK.BmGame.RBMAIController Con)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_MayhemMode.AssignToEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class MAEC_MayhemMode : BmSDK.BmGame.RAlertEventCoordinatorBase, 
     /// <summary>
     /// Function: IsNewController
     /// </summary>
-    public unsafe bool IsNewController(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe virtual bool IsNewController(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_MayhemMode.IsNewController", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -95,7 +95,7 @@ public partial class MAEC_MayhemMode : BmSDK.BmGame.RAlertEventCoordinatorBase, 
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_MayhemMode.Tick", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -107,7 +107,7 @@ public partial class MAEC_MayhemMode : BmSDK.BmGame.RAlertEventCoordinatorBase, 
     /// <summary>
     /// Function: AddAttacker
     /// </summary>
-    public unsafe void AddAttacker(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe virtual void AddAttacker(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_MayhemMode.AddAttacker", true);
         byte* paramsPtr = stackalloc byte[16];

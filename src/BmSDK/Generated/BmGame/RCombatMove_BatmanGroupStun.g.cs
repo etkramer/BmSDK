@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.ExitMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: PreRender
     /// </summary>
-    public unsafe void PreRender()
+    public unsafe override void PreRender()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.PreRender", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -105,7 +105,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: DrawHudOff
     /// </summary>
-    public unsafe void DrawHudOff()
+    public unsafe virtual void DrawHudOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.DrawHudOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: StunEnemy
     /// </summary>
-    public unsafe void StunEnemy(BmSDK.BmGame.RPawnVillain Victim, float StunTimeOverride = default)
+    public unsafe virtual void StunEnemy(BmSDK.BmGame.RPawnVillain Victim, float StunTimeOverride = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.StunEnemy", true);
         byte* paramsPtr = stackalloc byte[284];
@@ -129,7 +129,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: MoveOverridenForPawn
     /// </summary>
-    public unsafe void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
+    public unsafe override void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.MoveOverridenForPawn", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -142,7 +142,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: UpdateGameSpeed
     /// </summary>
-    public unsafe void UpdateGameSpeed(float DeltaTime)
+    public unsafe virtual void UpdateGameSpeed(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.UpdateGameSpeed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -154,7 +154,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: NormalSpeed
     /// </summary>
-    public unsafe void NormalSpeed()
+    public unsafe virtual void NormalSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.NormalSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -165,7 +165,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: SlowSpeed
     /// </summary>
-    public unsafe void SlowSpeed()
+    public unsafe virtual void SlowSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.SlowSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -176,7 +176,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: StartCamSeq
     /// </summary>
-    public unsafe void StartCamSeq()
+    public unsafe virtual void StartCamSeq()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.StartCamSeq", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -187,7 +187,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: StartSeq
     /// </summary>
-    public unsafe void StartSeq()
+    public unsafe virtual void StartSeq()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.StartSeq", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -198,7 +198,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: CanBeTargettedByPlayer
     /// </summary>
-    public unsafe bool CanBeTargettedByPlayer(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType, BmSDK.BmGame.RPawnPlayerCombat NewPlayer)
+    public unsafe override bool CanBeTargettedByPlayer(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType, BmSDK.BmGame.RPawnPlayerCombat NewPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.CanBeTargettedByPlayer", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -212,7 +212,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: CanReceiveAttackFromPawn
     /// </summary>
-    public unsafe bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
+    public unsafe override bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.CanReceiveAttackFromPawn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -225,7 +225,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: CanNewAttackBeStarted
     /// </summary>
-    public unsafe bool CanNewAttackBeStarted()
+    public unsafe override bool CanNewAttackBeStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.CanNewAttackBeStarted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -236,7 +236,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: IsValidTarget
     /// </summary>
-    public unsafe bool IsValidTarget(BmSDK.BmGame.RPawnVillain Enemy)
+    public unsafe virtual bool IsValidTarget(BmSDK.BmGame.RPawnVillain Enemy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.IsValidTarget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -248,7 +248,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: IsInDamageRadius
     /// </summary>
-    public unsafe bool IsInDamageRadius(BmSDK.BmGame.RPawnVillain Enemy)
+    public unsafe virtual bool IsInDamageRadius(BmSDK.BmGame.RPawnVillain Enemy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.IsInDamageRadius", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -260,7 +260,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: LookForNewTargets
     /// </summary>
-    public unsafe void LookForNewTargets()
+    public unsafe virtual void LookForNewTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.LookForNewTargets", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -271,7 +271,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: ClosestNotInTargetList
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnVillain ClosestNotInTargetList()
+    public unsafe virtual BmSDK.BmGame.RPawnVillain ClosestNotInTargetList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.ClosestNotInTargetList", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -282,7 +282,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: AddToTargetList
     /// </summary>
-    public unsafe void AddToTargetList(BmSDK.BmGame.RPawnVillain NewPawn, float StunDelay = default)
+    public unsafe virtual void AddToTargetList(BmSDK.BmGame.RPawnVillain NewPawn, float StunDelay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.AddToTargetList", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -295,7 +295,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: InitialiseSimulated
     /// </summary>
-    public unsafe void InitialiseSimulated()
+    public unsafe override void InitialiseSimulated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.InitialiseSimulated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -306,7 +306,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanGroupStun.Initialise", true);
         byte* paramsPtr = stackalloc byte[12];

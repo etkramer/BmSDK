@@ -36,7 +36,7 @@ public partial class RBarkConvoAction : BmSDK.BmGame.RBarkConvoNode, BmSDK.IGame
     /// <summary>
     /// Function: CheckLineRepetitionOkay
     /// </summary>
-    public unsafe bool CheckLineRepetitionOkay(int SearchID)
+    public unsafe virtual bool CheckLineRepetitionOkay(int SearchID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction.CheckLineRepetitionOkay", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -55,7 +55,7 @@ public partial class RBarkConvoAction : BmSDK.BmGame.RBarkConvoNode, BmSDK.IGame
     /// <summary>
     /// Function: ContainsOnceEverDialogueEvent
     /// </summary>
-    public unsafe bool ContainsOnceEverDialogueEvent(int SearchID)
+    public unsafe virtual bool ContainsOnceEverDialogueEvent(int SearchID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction.ContainsOnceEverDialogueEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -74,7 +74,7 @@ public partial class RBarkConvoAction : BmSDK.BmGame.RBarkConvoNode, BmSDK.IGame
     /// <summary>
     /// Function: ContainsOnceOnlyDialogueEvent
     /// </summary>
-    public unsafe bool ContainsOnceOnlyDialogueEvent(int SearchID)
+    public unsafe virtual bool ContainsOnceOnlyDialogueEvent(int SearchID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction.ContainsOnceOnlyDialogueEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RBarkConvoAction : BmSDK.BmGame.RBarkConvoNode, BmSDK.IGame
     /// <summary>
     /// Function: GBFSSearchHandlePawnRefList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> GBFSSearchHandlePawnRefList(BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> InList)
+    public unsafe virtual BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> GBFSSearchHandlePawnRefList(BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> InList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction.GBFSSearchHandlePawnRefList", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -105,7 +105,7 @@ public partial class RBarkConvoAction : BmSDK.BmGame.RBarkConvoNode, BmSDK.IGame
     /// <summary>
     /// Function: FindPawnRef
     /// </summary>
-    public unsafe int FindPawnRef(BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> InList, BmSDK.BmGame.RBarkConvoPawnRef TestPawnRef)
+    public unsafe virtual int FindPawnRef(BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> InList, BmSDK.BmGame.RBarkConvoPawnRef TestPawnRef)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction.FindPawnRef", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -118,7 +118,7 @@ public partial class RBarkConvoAction : BmSDK.BmGame.RBarkConvoNode, BmSDK.IGame
     /// <summary>
     /// Function: GetPawnRefList
     /// </summary>
-    public unsafe void GetPawnRefList(int SearchID, out BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> PawnRefList)
+    public unsafe virtual void GetPawnRefList(int SearchID, out BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> PawnRefList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction.GetPawnRefList", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -131,7 +131,7 @@ public partial class RBarkConvoAction : BmSDK.BmGame.RBarkConvoNode, BmSDK.IGame
     /// <summary>
     /// Function: HasTerminatingOutput
     /// </summary>
-    public unsafe bool HasTerminatingOutput()
+    public unsafe virtual bool HasTerminatingOutput()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction.HasTerminatingOutput", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -142,7 +142,7 @@ public partial class RBarkConvoAction : BmSDK.BmGame.RBarkConvoNode, BmSDK.IGame
     /// <summary>
     /// Function: GetLocalPlayedScore
     /// </summary>
-    public unsafe float GetLocalPlayedScore()
+    public unsafe virtual float GetLocalPlayedScore()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction.GetLocalPlayedScore", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -153,7 +153,7 @@ public partial class RBarkConvoAction : BmSDK.BmGame.RBarkConvoNode, BmSDK.IGame
     /// <summary>
     /// Function: ThisPlayedScore
     /// </summary>
-    public unsafe float ThisPlayedScore(BmSDK.BmGame.RBarkFlagBase TestContext)
+    public unsafe virtual float ThisPlayedScore(BmSDK.BmGame.RBarkFlagBase TestContext)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction.ThisPlayedScore", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -165,7 +165,7 @@ public partial class RBarkConvoAction : BmSDK.BmGame.RBarkConvoNode, BmSDK.IGame
     /// <summary>
     /// Function: GetOutputIndex
     /// </summary>
-    public unsafe int GetOutputIndex()
+    public unsafe virtual int GetOutputIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction.GetOutputIndex", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -176,7 +176,7 @@ public partial class RBarkConvoAction : BmSDK.BmGame.RBarkConvoNode, BmSDK.IGame
     /// <summary>
     /// Function: IsFinished
     /// </summary>
-    public unsafe bool IsFinished()
+    public unsafe virtual bool IsFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction.IsFinished", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -187,7 +187,7 @@ public partial class RBarkConvoAction : BmSDK.BmGame.RBarkConvoNode, BmSDK.IGame
     /// <summary>
     /// Function: Stop
     /// </summary>
-    public unsafe void Stop(bool bHardStop, bool bOrphan = default)
+    public unsafe virtual void Stop(bool bHardStop, bool bOrphan = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction.Stop", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -200,7 +200,7 @@ public partial class RBarkConvoAction : BmSDK.BmGame.RBarkConvoNode, BmSDK.IGame
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe virtual void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -211,7 +211,7 @@ public partial class RBarkConvoAction : BmSDK.BmGame.RBarkConvoNode, BmSDK.IGame
     /// <summary>
     /// Function: Activate
     /// </summary>
-    public unsafe void Activate(BmSDK.BmGame.RBarkConvo NewConvoCoord)
+    public unsafe virtual void Activate(BmSDK.BmGame.RBarkConvo NewConvoCoord)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction.Activate", true);
         byte* paramsPtr = stackalloc byte[8];

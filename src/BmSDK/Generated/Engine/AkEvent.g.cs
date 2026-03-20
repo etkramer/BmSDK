@@ -36,7 +36,7 @@ public partial class AkEvent : BmSDK.Engine.AkAsset, BmSDK.IGameObject
     /// <summary>
     /// Function: IsAudibleAt
     /// </summary>
-    public unsafe bool IsAudibleAt(float distanceUU, bool resultIfUnknown)
+    public unsafe virtual bool IsAudibleAt(float distanceUU, bool resultIfUnknown)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkEvent.IsAudibleAt", true);
         byte* paramsPtr = stackalloc byte[12];

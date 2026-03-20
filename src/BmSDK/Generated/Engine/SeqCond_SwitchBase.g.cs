@@ -31,7 +31,7 @@ public partial class SeqCond_SwitchBase : BmSDK.Engine.SequenceCondition, BmSDK.
     /// <summary>
     /// Function: RemoveValueEntry
     /// </summary>
-    public unsafe void RemoveValueEntry(int RemoveIndex)
+    public unsafe virtual void RemoveValueEntry(int RemoveIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqCond_SwitchBase.RemoveValueEntry", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -43,7 +43,7 @@ public partial class SeqCond_SwitchBase : BmSDK.Engine.SequenceCondition, BmSDK.
     /// <summary>
     /// Function: InsertValueEntry
     /// </summary>
-    public unsafe void InsertValueEntry(int InsertIndex)
+    public unsafe virtual void InsertValueEntry(int InsertIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqCond_SwitchBase.InsertValueEntry", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -55,7 +55,7 @@ public partial class SeqCond_SwitchBase : BmSDK.Engine.SequenceCondition, BmSDK.
     /// <summary>
     /// Function: IsFallThruEnabled
     /// </summary>
-    public unsafe bool IsFallThruEnabled(int ValueIndex)
+    public unsafe virtual bool IsFallThruEnabled(int ValueIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqCond_SwitchBase.IsFallThruEnabled", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -67,7 +67,7 @@ public partial class SeqCond_SwitchBase : BmSDK.Engine.SequenceCondition, BmSDK.
     /// <summary>
     /// Function: VerifyDefaultCaseValue
     /// </summary>
-    public unsafe void VerifyDefaultCaseValue()
+    public unsafe virtual void VerifyDefaultCaseValue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqCond_SwitchBase.VerifyDefaultCaseValue", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class SeqAct_AkAudioEvent : BmSDK.Engine.SequenceAction, BmSDK.IG
     /// <summary>
     /// Function: SoundCallback
     /// </summary>
-    public unsafe void SoundCallback(int CallbackFlags, BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle, int MarkerID, float Duration)
+    public unsafe virtual void SoundCallback(int CallbackFlags, BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle, int MarkerID, float Duration)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.SeqAct_AkAudioEvent.SoundCallback", true);
         byte* paramsPtr = stackalloc byte[28];

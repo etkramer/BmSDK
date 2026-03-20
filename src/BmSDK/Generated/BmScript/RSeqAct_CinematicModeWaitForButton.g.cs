@@ -47,7 +47,7 @@ public partial class RSeqAct_CinematicModeWaitForButton : BmSDK.BmGame.RSeqAct_C
     /// <summary>
     /// Function: DualPlayPressed
     /// </summary>
-    public unsafe void DualPlayPressed()
+    public unsafe override void DualPlayPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_CinematicModeWaitForButton.DualPlayPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_CinematicModeWaitForButton : BmSDK.BmGame.RSeqAct_C
     /// <summary>
     /// Function: BattleModeMove
     /// </summary>
-    public unsafe void BattleModeMove()
+    public unsafe override void BattleModeMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_CinematicModeWaitForButton.BattleModeMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RSeqAct_CinematicModeWaitForButton : BmSDK.BmGame.RSeqAct_C
     /// <summary>
     /// Function: BattleModePressed
     /// </summary>
-    public unsafe void BattleModePressed()
+    public unsafe override void BattleModePressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_CinematicModeWaitForButton.BattleModePressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RSeqAct_CinematicModeWaitForButton : BmSDK.BmGame.RSeqAct_C
     /// <summary>
     /// Function: YButtonPressed
     /// </summary>
-    public unsafe void YButtonPressed()
+    public unsafe override void YButtonPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_CinematicModeWaitForButton.YButtonPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -91,7 +91,7 @@ public partial class RSeqAct_CinematicModeWaitForButton : BmSDK.BmGame.RSeqAct_C
     /// <summary>
     /// Function: AButtonPressed
     /// </summary>
-    public unsafe void AButtonPressed()
+    public unsafe override void AButtonPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_CinematicModeWaitForButton.AButtonPressed", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RCombatMove_2DVillainBlock : BmSDK.BmGame.RCombatMove_Batma
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_2DVillainBlock.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_2DVillainBlock : BmSDK.BmGame.RCombatMove_Batma
     /// <summary>
     /// Function: PlayBlockAnim
     /// </summary>
-    public unsafe void PlayBlockAnim()
+    public unsafe virtual void PlayBlockAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_2DVillainBlock.PlayBlockAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RCombatMove_2DVillainBlock : BmSDK.BmGame.RCombatMove_Batma
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_2DVillainBlock.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

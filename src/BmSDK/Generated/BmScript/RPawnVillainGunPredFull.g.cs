@@ -71,7 +71,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: CreateFullPanicWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateFullPanicWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2, BmSDK.Engine.AnimSet AnimSet3, BmSDK.Engine.AnimSet AnimSet4, BmSDK.Engine.AnimSet TurnAnimSet2, BmSDK.Engine.AnimSet TerrorTurnAnims, BmSDK.Engine.AnimSet JammerPackAnims, BmSDK.Engine.AnimSet ManDownAnims, BmSDK.Engine.AnimSet MedicAnims, BmSDK.Engine.AnimSet MineLayerAnims, BmSDK.Engine.AnimSet ThermalAnims, BmSDK.Engine.AnimSet GuardAnims, BmSDK.Engine.AnimSet DroneAnims)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateFullPanicWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2, BmSDK.Engine.AnimSet AnimSet3, BmSDK.Engine.AnimSet AnimSet4, BmSDK.Engine.AnimSet TurnAnimSet2, BmSDK.Engine.AnimSet TerrorTurnAnims, BmSDK.Engine.AnimSet JammerPackAnims, BmSDK.Engine.AnimSet ManDownAnims, BmSDK.Engine.AnimSet MedicAnims, BmSDK.Engine.AnimSet MineLayerAnims, BmSDK.Engine.AnimSet ThermalAnims, BmSDK.Engine.AnimSet GuardAnims, BmSDK.Engine.AnimSet DroneAnims)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.CreateFullPanicWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[22236];
@@ -107,7 +107,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: GetDisruptorReactionAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetDisruptorReactionAnimset()
+    public unsafe override BmSDK.Engine.AnimSet GetDisruptorReactionAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.GetDisruptorReactionAnimset", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: GetVoiceSynthAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetVoiceSynthAnimSet()
+    public unsafe override BmSDK.Engine.AnimSet GetVoiceSynthAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.GetVoiceSynthAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: GetTerrorGuardAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetTerrorGuardAnimSet()
+    public unsafe override BmSDK.Engine.AnimSet GetTerrorGuardAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.GetTerrorGuardAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -140,7 +140,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: GetVaultExplosivesAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetVaultExplosivesAnimSet()
+    public unsafe override BmSDK.Engine.AnimSet GetVaultExplosivesAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.GetVaultExplosivesAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -151,7 +151,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: GetCorePredAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetCorePredAnimSet()
+    public unsafe override BmSDK.Engine.AnimSet GetCorePredAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.GetCorePredAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -162,7 +162,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: GetManDownAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetManDownAnimSet()
+    public unsafe override BmSDK.Engine.AnimSet GetManDownAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.GetManDownAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -173,7 +173,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: GetGrateLookAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetGrateLookAnimSet()
+    public unsafe override BmSDK.Engine.AnimSet GetGrateLookAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.GetGrateLookAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -184,7 +184,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: GetLedgeLookAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetLedgeLookAnimSet()
+    public unsafe override BmSDK.Engine.AnimSet GetLedgeLookAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.GetLedgeLookAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -195,7 +195,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: GetBuddyBumpAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetBuddyBumpAnimset()
+    public unsafe override BmSDK.Engine.AnimSet GetBuddyBumpAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.GetBuddyBumpAnimset", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -206,7 +206,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: GetBuddyJoinAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetBuddyJoinAnimset()
+    public unsafe override BmSDK.Engine.AnimSet GetBuddyJoinAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.GetBuddyJoinAnimset", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -217,7 +217,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: GetSideRoomSearchAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetSideRoomSearchAnimSet()
+    public unsafe override BmSDK.Engine.AnimSet GetSideRoomSearchAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.GetSideRoomSearchAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -228,7 +228,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: GetPairedCornerAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetPairedCornerAnimSet()
+    public unsafe override BmSDK.Engine.AnimSet GetPairedCornerAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.GetPairedCornerAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -239,7 +239,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: GetSoloCornerAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetSoloCornerAnimSet()
+    public unsafe override BmSDK.Engine.AnimSet GetSoloCornerAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.GetSoloCornerAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -250,7 +250,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: MineLayerSpawnedInPredVolume
     /// </summary>
-    public unsafe void MineLayerSpawnedInPredVolume()
+    public unsafe override void MineLayerSpawnedInPredVolume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.MineLayerSpawnedInPredVolume", true);
         byte* paramsPtr = stackalloc byte[140];
@@ -261,7 +261,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: DoGrenadeVentThrow
     /// </summary>
-    public unsafe bool DoGrenadeVentThrow(System.Numerics.Vector3 ThrowVel, BmSDK.Rotator SpawnRot, System.Numerics.Vector3 TargetLoc, out BmSDK.BmGame.RProjectile_GrenadeBase NadeProj)
+    public unsafe override bool DoGrenadeVentThrow(System.Numerics.Vector3 ThrowVel, BmSDK.Rotator SpawnRot, System.Numerics.Vector3 TargetLoc, out BmSDK.BmGame.RProjectile_GrenadeBase NadeProj)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.DoGrenadeVentThrow", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -276,7 +276,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: SetArmBandMineSynced
     /// </summary>
-    public unsafe void SetArmBandMineSynced()
+    public unsafe override void SetArmBandMineSynced()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.SetArmBandMineSynced", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -287,7 +287,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: SetArmBandNormal
     /// </summary>
-    public unsafe void SetArmBandNormal()
+    public unsafe override void SetArmBandNormal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.SetArmBandNormal", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -298,7 +298,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: SurrenderGun
     /// </summary>
-    public unsafe void SurrenderGun()
+    public unsafe virtual void SurrenderGun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.SurrenderGun", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -309,7 +309,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: CreateWeapon
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMWeapon CreateWeapon()
+    public unsafe override BmSDK.BmGame.RBMWeapon CreateWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.CreateWeapon", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -320,7 +320,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: OnFootstepNotify
     /// </summary>
-    public unsafe void OnFootstepNotify(BmSDK.BmGame.RAnimNotify_Footstep.EFoot Foot, BmSDK.BmGame.RAnimNotify_Footstep.EContactType Contact, BmSDK.BmGame.RAnimNotify_Footstep.EFootstepSurfaceFinder SurfaceFinder, System.Numerics.Vector3 FootLocation, float BlendWeight)
+    public unsafe override void OnFootstepNotify(BmSDK.BmGame.RAnimNotify_Footstep.EFoot Foot, BmSDK.BmGame.RAnimNotify_Footstep.EContactType Contact, BmSDK.BmGame.RAnimNotify_Footstep.EFootstepSurfaceFinder SurfaceFinder, System.Numerics.Vector3 FootLocation, float BlendWeight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.OnFootstepNotify", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -336,7 +336,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: SpawnVantageMine
     /// </summary>
-    public unsafe BmSDK.BmGame.RVantageMineBase SpawnVantageMine()
+    public unsafe override BmSDK.BmGame.RVantageMineBase SpawnVantageMine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.SpawnVantageMine", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -347,7 +347,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: GetIncendiaryGrenadeClass
     /// </summary>
-    public unsafe BmSDK.Class GetIncendiaryGrenadeClass()
+    public unsafe override BmSDK.Class GetIncendiaryGrenadeClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.GetIncendiaryGrenadeClass", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -358,7 +358,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: GetSentryGunSpawnClass
     /// </summary>
-    public unsafe BmSDK.Class GetSentryGunSpawnClass()
+    public unsafe override BmSDK.Class GetSentryGunSpawnClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.GetSentryGunSpawnClass", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -369,7 +369,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: GetSentryGunPlacementBehaviourClass
     /// </summary>
-    public unsafe BmSDK.Class GetSentryGunPlacementBehaviourClass()
+    public unsafe override BmSDK.Class GetSentryGunPlacementBehaviourClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.GetSentryGunPlacementBehaviourClass", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -380,7 +380,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: CanPlaceSentryGun
     /// </summary>
-    public unsafe bool CanPlaceSentryGun()
+    public unsafe override bool CanPlaceSentryGun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.CanPlaceSentryGun", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -391,7 +391,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: GetDetectiveModeDetectorAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetDetectiveModeDetectorAnimSet()
+    public unsafe override BmSDK.Engine.AnimSet GetDetectiveModeDetectorAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.GetDetectiveModeDetectorAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -402,7 +402,7 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// Function: GetMedicAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetMedicAnimSet()
+    public unsafe override BmSDK.Engine.AnimSet GetMedicAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredFull.GetMedicAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];

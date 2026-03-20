@@ -47,7 +47,7 @@ public partial class RSeqAct_FilmPredatorJokers : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_FilmPredatorJokers.Update", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -59,7 +59,7 @@ public partial class RSeqAct_FilmPredatorJokers : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: JokerHallucinationsAllowed
     /// </summary>
-    public unsafe bool JokerHallucinationsAllowed()
+    public unsafe virtual bool JokerHallucinationsAllowed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_FilmPredatorJokers.JokerHallucinationsAllowed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -70,7 +70,7 @@ public partial class RSeqAct_FilmPredatorJokers : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: FindSpawnPoint
     /// </summary>
-    public unsafe BmSDK.BmScript.RJokerRooftopPoint FindSpawnPoint(bool bHightLightSpheres = default)
+    public unsafe virtual BmSDK.BmScript.RJokerRooftopPoint FindSpawnPoint(bool bHightLightSpheres = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_FilmPredatorJokers.FindSpawnPoint", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -82,7 +82,7 @@ public partial class RSeqAct_FilmPredatorJokers : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: SpawnRooftopJoker
     /// </summary>
-    public unsafe void SpawnRooftopJoker()
+    public unsafe virtual void SpawnRooftopJoker()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_FilmPredatorJokers.SpawnRooftopJoker", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -93,7 +93,7 @@ public partial class RSeqAct_FilmPredatorJokers : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: JokerInView
     /// </summary>
-    public unsafe bool JokerInView()
+    public unsafe virtual bool JokerInView()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_FilmPredatorJokers.JokerInView", true);
         byte* paramsPtr = stackalloc byte[44];

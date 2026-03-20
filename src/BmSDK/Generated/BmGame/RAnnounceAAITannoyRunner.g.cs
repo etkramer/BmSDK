@@ -36,7 +36,7 @@ public partial class RAnnounceAAITannoyRunner : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Function: FlushQueue
     /// </summary>
-    public unsafe void FlushQueue()
+    public unsafe virtual void FlushQueue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnnounceAAITannoyRunner.FlushQueue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RAnnounceAAITannoyRunner : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Function: TryComboUpWithMines
     /// </summary>
-    public unsafe bool TryComboUpWithMines()
+    public unsafe virtual bool TryComboUpWithMines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnnounceAAITannoyRunner.TryComboUpWithMines", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -58,7 +58,7 @@ public partial class RAnnounceAAITannoyRunner : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe void Update(float DeltaTime)
+    public unsafe virtual void Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnnounceAAITannoyRunner.Update", true);
         byte* paramsPtr = stackalloc byte[4];

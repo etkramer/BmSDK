@@ -36,7 +36,7 @@ public partial class RGFxMovieCustom : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObject
     /// <summary>
     /// Function: XI_OnOut
     /// </summary>
-    public unsafe void XI_OnOut()
+    public unsafe virtual void XI_OnOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCustom.XI_OnOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RGFxMovieCustom : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObject
     /// <summary>
     /// Function: XI_OnTick
     /// </summary>
-    public unsafe void XI_OnTick()
+    public unsafe virtual void XI_OnTick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCustom.XI_OnTick", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RGFxMovieCustom : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObject
     /// <summary>
     /// Function: OnOutroClose
     /// </summary>
-    public unsafe void OnOutroClose()
+    public unsafe override void OnOutroClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCustom.OnOutroClose", true);
         byte* paramsPtr = stackalloc byte[0];

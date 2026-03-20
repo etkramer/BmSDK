@@ -71,7 +71,7 @@ public partial class RBMAIAction_TerrorGuardPoint : BmSDK.BmGame.RBMAIAction_Hol
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrorGuardPoint.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_TerrorGuardPoint : BmSDK.BmGame.RBMAIAction_Hol
     /// <summary>
     /// Function: PlayNextLine
     /// </summary>
-    public unsafe void PlayNextLine()
+    public unsafe virtual void PlayNextLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrorGuardPoint.PlayNextLine", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_TerrorGuardPoint : BmSDK.BmGame.RBMAIAction_Hol
     /// <summary>
     /// Function: PlayIdleAnim
     /// </summary>
-    public unsafe void PlayIdleAnim(BmSDK.FName AnimName, System.Numerics.Vector3 AimLoc)
+    public unsafe virtual void PlayIdleAnim(BmSDK.FName AnimName, System.Numerics.Vector3 AimLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrorGuardPoint.PlayIdleAnim", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -107,7 +107,7 @@ public partial class RBMAIAction_TerrorGuardPoint : BmSDK.BmGame.RBMAIAction_Hol
     /// <summary>
     /// Function: GetGuardIdleAnim
     /// </summary>
-    public unsafe BmSDK.FName GetGuardIdleAnim()
+    public unsafe virtual BmSDK.FName GetGuardIdleAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrorGuardPoint.GetGuardIdleAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RBMAIAction_TerrorGuardPoint : BmSDK.BmGame.RBMAIAction_Hol
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrorGuardPoint.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RBMAIAction_TerrorGuardPoint : BmSDK.BmGame.RBMAIAction_Hol
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrorGuardPoint.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

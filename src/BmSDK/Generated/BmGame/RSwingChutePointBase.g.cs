@@ -71,7 +71,7 @@ public partial class RSwingChutePointBase : BmSDK.BmGame.RHidePoint, BmSDK.IGame
     /// <summary>
     /// Function: PlayGrateAnim
     /// </summary>
-    public unsafe void PlayGrateAnim(BmSDK.FName GrateAnim, float Rate = default)
+    public unsafe virtual void PlayGrateAnim(BmSDK.FName GrateAnim, float Rate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSwingChutePointBase.PlayGrateAnim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -84,7 +84,7 @@ public partial class RSwingChutePointBase : BmSDK.BmGame.RHidePoint, BmSDK.IGame
     /// <summary>
     /// Function: IsValidVantageMineTarget
     /// </summary>
-    public unsafe bool IsValidVantageMineTarget()
+    public unsafe override bool IsValidVantageMineTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSwingChutePointBase.IsValidVantageMineTarget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RSwingChutePointBase : BmSDK.BmGame.RHidePoint, BmSDK.IGame
     /// <summary>
     /// Function: WillSmashIfShot
     /// </summary>
-    public unsafe bool WillSmashIfShot()
+    public unsafe override bool WillSmashIfShot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSwingChutePointBase.WillSmashIfShot", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RSwingChutePointBase : BmSDK.BmGame.RHidePoint, BmSDK.IGame
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSwingChutePointBase.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -118,7 +118,7 @@ public partial class RSwingChutePointBase : BmSDK.BmGame.RHidePoint, BmSDK.IGame
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSwingChutePointBase.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -130,7 +130,7 @@ public partial class RSwingChutePointBase : BmSDK.BmGame.RHidePoint, BmSDK.IGame
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSwingChutePointBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RSwingChutePointBase : BmSDK.BmGame.RHidePoint, BmSDK.IGame
     /// <summary>
     /// Function: GetGrapplePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetGrapplePosition(System.Numerics.Vector3 CheckLocation, System.Numerics.Vector3 CheckDirection)
+    public unsafe override System.Numerics.Vector3 GetGrapplePosition(System.Numerics.Vector3 CheckLocation, System.Numerics.Vector3 CheckDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSwingChutePointBase.GetGrapplePosition", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -161,7 +161,7 @@ public partial class RSwingChutePointBase : BmSDK.BmGame.RHidePoint, BmSDK.IGame
     /// <summary>
     /// Function: GetCatwomanPerchPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCatwomanPerchPosition()
+    public unsafe override System.Numerics.Vector3 GetCatwomanPerchPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSwingChutePointBase.GetCatwomanPerchPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -179,7 +179,7 @@ public partial class RSwingChutePointBase : BmSDK.BmGame.RHidePoint, BmSDK.IGame
     /// <summary>
     /// Function: GetBatmanPerchPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatmanPerchPosition()
+    public unsafe override System.Numerics.Vector3 GetBatmanPerchPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSwingChutePointBase.GetBatmanPerchPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -197,7 +197,7 @@ public partial class RSwingChutePointBase : BmSDK.BmGame.RHidePoint, BmSDK.IGame
     /// <summary>
     /// Function: LinksUpdated
     /// </summary>
-    public unsafe void LinksUpdated()
+    public unsafe virtual void LinksUpdated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSwingChutePointBase.LinksUpdated", true);
         byte* paramsPtr = stackalloc byte[0];

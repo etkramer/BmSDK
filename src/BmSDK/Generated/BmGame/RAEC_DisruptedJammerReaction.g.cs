@@ -71,7 +71,7 @@ public partial class RAEC_DisruptedJammerReaction : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DisruptedJammerReaction.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_DisruptedJammerReaction : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: FreeThugs
     /// </summary>
-    public unsafe void FreeThugs()
+    public unsafe virtual void FreeThugs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DisruptedJammerReaction.FreeThugs", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RAEC_DisruptedJammerReaction : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: DoBark
     /// </summary>
-    public unsafe void DoBark(BmSDK.FName BarkType)
+    public unsafe virtual void DoBark(BmSDK.FName BarkType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DisruptedJammerReaction.DoBark", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -105,7 +105,7 @@ public partial class RAEC_DisruptedJammerReaction : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: DoNoiseHasBeenShutdownResponse
     /// </summary>
-    public unsafe void DoNoiseHasBeenShutdownResponse()
+    public unsafe virtual void DoNoiseHasBeenShutdownResponse()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DisruptedJammerReaction.DoNoiseHasBeenShutdownResponse", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RAEC_DisruptedJammerReaction : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DisruptedJammerReaction.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -128,7 +128,7 @@ public partial class RAEC_DisruptedJammerReaction : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: OnRemoveSoloChild
     /// </summary>
-    public unsafe void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
+    public unsafe override void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DisruptedJammerReaction.OnRemoveSoloChild", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -140,7 +140,7 @@ public partial class RAEC_DisruptedJammerReaction : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: OnAssign
     /// </summary>
-    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewMember)
+    public unsafe override void OnAssign(BmSDK.BmGame.RBMAIController NewMember)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_DisruptedJammerReaction.OnAssign", true);
         byte* paramsPtr = stackalloc byte[16];

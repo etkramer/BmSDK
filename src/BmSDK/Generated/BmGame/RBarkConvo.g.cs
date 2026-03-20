@@ -36,7 +36,7 @@ public partial class RBarkConvo : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckCanSpeak
     /// </summary>
-    public unsafe bool CheckCanSpeak(BmSDK.Engine.Actor Speaker, BmSDK.Engine.AkDialogue.FAkSpeechOptions Opt = default)
+    public unsafe virtual bool CheckCanSpeak(BmSDK.Engine.Actor Speaker, BmSDK.Engine.AkDialogue.FAkSpeechOptions Opt = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvo.CheckCanSpeak", true);
         byte* paramsPtr = stackalloc byte[136];
@@ -49,7 +49,7 @@ public partial class RBarkConvo : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: BindPawnRefs
     /// </summary>
-    public unsafe void BindPawnRefs(BmSDK.TArray<BmSDK.BmGame.RBarkConvoPawnRef> PawnRefsToLock, BmSDK.Engine.AkDialogue.FAkSpeechOptions Opt = default)
+    public unsafe virtual void BindPawnRefs(BmSDK.TArray<BmSDK.BmGame.RBarkConvoPawnRef> PawnRefsToLock, BmSDK.Engine.AkDialogue.FAkSpeechOptions Opt = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvo.BindPawnRefs", true);
         byte* paramsPtr = stackalloc byte[192];
@@ -81,7 +81,7 @@ public partial class RBarkConvo : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: PopulateOpenListFor
     /// </summary>
-    public unsafe void PopulateOpenListFor(BmSDK.BmGame.RBarkConvo.FGBFSNode Parent, out BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FGBFSNode> OpenList)
+    public unsafe virtual void PopulateOpenListFor(BmSDK.BmGame.RBarkConvo.FGBFSNode Parent, out BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FGBFSNode> OpenList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvo.PopulateOpenListFor", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -94,7 +94,7 @@ public partial class RBarkConvo : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMinimalPawnRefList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> GetMinimalPawnRefList()
+    public unsafe virtual BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> GetMinimalPawnRefList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvo.GetMinimalPawnRefList", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -105,7 +105,7 @@ public partial class RBarkConvo : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPawnRefList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> GetPawnRefList()
+    public unsafe virtual BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> GetPawnRefList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvo.GetPawnRefList", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -116,7 +116,7 @@ public partial class RBarkConvo : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: ThisPlayedScore
     /// </summary>
-    public unsafe float ThisPlayedScore(BmSDK.BmGame.RBarkFlagBase TestContext)
+    public unsafe virtual float ThisPlayedScore(BmSDK.BmGame.RBarkFlagBase TestContext)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvo.ThisPlayedScore", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -128,7 +128,7 @@ public partial class RBarkConvo : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: ActivateNextAction
     /// </summary>
-    public unsafe void ActivateNextAction()
+    public unsafe virtual void ActivateNextAction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvo.ActivateNextAction", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -139,7 +139,7 @@ public partial class RBarkConvo : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe virtual void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvo.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -151,7 +151,7 @@ public partial class RBarkConvo : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: Stop
     /// </summary>
-    public unsafe void Stop(bool bHardStop = default)
+    public unsafe virtual void Stop(bool bHardStop = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvo.Stop", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -163,7 +163,7 @@ public partial class RBarkConvo : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: Start
     /// </summary>
-    public unsafe void Start(BmSDK.BmGame.RBarkGroupContext NewGroupContext)
+    public unsafe virtual void Start(BmSDK.BmGame.RBarkGroupContext NewGroupContext)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvo.Start", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -175,7 +175,7 @@ public partial class RBarkConvo : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAkSpeech
     /// </summary>
-    public unsafe BmSDK.Engine.AkDialogueSpeech GetAkSpeech()
+    public unsafe virtual BmSDK.Engine.AkDialogueSpeech GetAkSpeech()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvo.GetAkSpeech", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -230,7 +230,7 @@ public partial class RBarkConvo : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: DoLivePawnAndVoiceAssignment
     /// </summary>
-    public unsafe bool DoLivePawnAndVoiceAssignment(BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> SpeakerSlotStartState, BmSDK.TArray<BmSDK.Engine.Actor> AvailableSpeakers, out BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FLiveAssignEndState> OutList)
+    public unsafe virtual bool DoLivePawnAndVoiceAssignment(BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> SpeakerSlotStartState, BmSDK.TArray<BmSDK.Engine.Actor> AvailableSpeakers, out BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FLiveAssignEndState> OutList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvo.DoLivePawnAndVoiceAssignment", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -251,7 +251,7 @@ public partial class RBarkConvo : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckLineRepetitionOkay
     /// </summary>
-    public unsafe bool CheckLineRepetitionOkay()
+    public unsafe virtual bool CheckLineRepetitionOkay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvo.CheckLineRepetitionOkay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -269,7 +269,7 @@ public partial class RBarkConvo : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: ContainsOnceEverDialogueEvent
     /// </summary>
-    public unsafe bool ContainsOnceEverDialogueEvent()
+    public unsafe virtual bool ContainsOnceEverDialogueEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvo.ContainsOnceEverDialogueEvent", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -287,7 +287,7 @@ public partial class RBarkConvo : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: ContainsOnceOnlyDialogueEvent
     /// </summary>
-    public unsafe bool ContainsOnceOnlyDialogueEvent()
+    public unsafe virtual bool ContainsOnceOnlyDialogueEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvo.ContainsOnceOnlyDialogueEvent", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -305,7 +305,7 @@ public partial class RBarkConvo : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Function: BarkFinished
     /// </summary>
-    public unsafe void BarkFinished(bool bWasInterrupted)
+    public unsafe virtual void BarkFinished(bool bWasInterrupted)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvo.BarkFinished", true);
         byte* paramsPtr = stackalloc byte[4];

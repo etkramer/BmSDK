@@ -71,7 +71,7 @@ public partial class MBMAIAction_BlindAndStaggeredByStickyConcussionGrenadeExplo
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMAIAction_BlindAndStaggeredByStickyConcussionGrenadeExplosion.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];

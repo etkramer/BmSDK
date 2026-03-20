@@ -31,7 +31,7 @@ public partial class ParticleModuleEventSendToGame : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: DoEvent
     /// </summary>
-    public unsafe void DoEvent(out System.Numerics.Vector3 InCollideDirection, out System.Numerics.Vector3 InHitLocation, out System.Numerics.Vector3 InHitNormal, out BmSDK.FName InBoneName)
+    public unsafe virtual void DoEvent(out System.Numerics.Vector3 InCollideDirection, out System.Numerics.Vector3 InHitLocation, out System.Numerics.Vector3 InHitNormal, out BmSDK.FName InBoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleModuleEventSendToGame.DoEvent", true);
         byte* paramsPtr = stackalloc byte[44];

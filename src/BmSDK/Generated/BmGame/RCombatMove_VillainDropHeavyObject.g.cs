@@ -71,7 +71,7 @@ public partial class RCombatMove_VillainDropHeavyObject : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainDropHeavyObject.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_VillainDropHeavyObject : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: WeaponSwitchCallback
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.WeaponSwitchCallbackResult WeaponSwitchCallback(BmSDK.Engine.Inventory NewWeapon, BmSDK.Engine.Inventory OldWeapon)
+    public unsafe override BmSDK.BmGame.RGameRI.WeaponSwitchCallbackResult WeaponSwitchCallback(BmSDK.Engine.Inventory NewWeapon, BmSDK.Engine.Inventory OldWeapon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainDropHeavyObject.WeaponSwitchCallback", true);
         byte* paramsPtr = stackalloc byte[17];
@@ -95,7 +95,7 @@ public partial class RCombatMove_VillainDropHeavyObject : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: SpawnAndThrowObject
     /// </summary>
-    public unsafe void SpawnAndThrowObject()
+    public unsafe virtual void SpawnAndThrowObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainDropHeavyObject.SpawnAndThrowObject", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RCombatMove_VillainDropHeavyObject : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainDropHeavyObject.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

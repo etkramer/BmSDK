@@ -71,7 +71,7 @@ public partial class RBMWeaponBatmanCarryJokerTeacherOrHarley : BmSDK.BmGame.RBM
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponBatmanCarryJokerTeacherOrHarley.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[1512];
@@ -83,7 +83,7 @@ public partial class RBMWeaponBatmanCarryJokerTeacherOrHarley : BmSDK.BmGame.RBM
     /// <summary>
     /// Function: ItemRemovedFromInvManager
     /// </summary>
-    public unsafe void ItemRemovedFromInvManager()
+    public unsafe override void ItemRemovedFromInvManager()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponBatmanCarryJokerTeacherOrHarley.ItemRemovedFromInvManager", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RBMWeaponBatmanCarryJokerTeacherOrHarley : BmSDK.BmGame.RBM
     /// <summary>
     /// Function: GivenTo
     /// </summary>
-    public unsafe void GivenTo(BmSDK.Engine.Pawn thisPawn, bool bDoNotActivate = default)
+    public unsafe override void GivenTo(BmSDK.Engine.Pawn thisPawn, bool bDoNotActivate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponBatmanCarryJokerTeacherOrHarley.GivenTo", true);
         byte* paramsPtr = stackalloc byte[20];

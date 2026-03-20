@@ -31,7 +31,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: IsAVideoBillboardOnScreen
     /// </summary>
-    public unsafe bool IsAVideoBillboardOnScreen()
+    public unsafe virtual bool IsAVideoBillboardOnScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.IsAVideoBillboardOnScreen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -42,7 +42,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: GetEventBarkForActivityType
     /// </summary>
-    public unsafe BmSDK.FName GetEventBarkForActivityType(BmSDK.BmGame.RSeqAct_ChatterBoxBase.PawnChatterActivityType activity, bool bForceWanderersToPlayOneShots = default)
+    public unsafe virtual BmSDK.FName GetEventBarkForActivityType(BmSDK.BmGame.RSeqAct_ChatterBoxBase.PawnChatterActivityType activity, bool bForceWanderersToPlayOneShots = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.GetEventBarkForActivityType", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -55,7 +55,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: GetScarecrowBillboardChatterSpeech
     /// </summary>
-    public unsafe BmSDK.Engine.AkDialogueSpeech GetScarecrowBillboardChatterSpeech()
+    public unsafe virtual BmSDK.Engine.AkDialogueSpeech GetScarecrowBillboardChatterSpeech()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.GetScarecrowBillboardChatterSpeech", true);
         byte* paramsPtr = stackalloc byte[120];
@@ -66,7 +66,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: TriggerHelicopterChatterBark
     /// </summary>
-    public unsafe bool TriggerHelicopterChatterBark(BmSDK.BmGame.RHelicopterBase heliSpeaker)
+    public unsafe virtual bool TriggerHelicopterChatterBark(BmSDK.BmGame.RHelicopterBase heliSpeaker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.TriggerHelicopterChatterBark", true);
         byte* paramsPtr = stackalloc byte[108];
@@ -78,7 +78,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: AreOtherTanksInRange
     /// </summary>
-    public unsafe bool AreOtherTanksInRange(BmSDK.BmGame.RVehicleTank inTank)
+    public unsafe virtual bool AreOtherTanksInRange(BmSDK.BmGame.RVehicleTank inTank)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.AreOtherTanksInRange", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -90,7 +90,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: ShuffleChosenPawns
     /// </summary>
-    public unsafe void ShuffleChosenPawns()
+    public unsafe virtual void ShuffleChosenPawns()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.ShuffleChosenPawns", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -101,7 +101,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: TryTriggerThugChatter
     /// </summary>
-    public unsafe bool TryTriggerThugChatter()
+    public unsafe virtual bool TryTriggerThugChatter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.TryTriggerThugChatter", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -112,7 +112,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: TryTriggerChatter
     /// </summary>
-    public unsafe bool TryTriggerChatter()
+    public unsafe virtual bool TryTriggerChatter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.TryTriggerChatter", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -123,7 +123,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: TryTriggerChopperBMChatter
     /// </summary>
-    public unsafe bool TryTriggerChopperBMChatter()
+    public unsafe virtual bool TryTriggerChopperBMChatter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.TryTriggerChopperBMChatter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -134,7 +134,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: UpdateCachedGameStateVars
     /// </summary>
-    public unsafe void UpdateCachedGameStateVars()
+    public unsafe virtual void UpdateCachedGameStateVars()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.UpdateCachedGameStateVars", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -145,7 +145,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: GetOuterMost
     /// </summary>
-    public unsafe BmSDK.GameObject GetOuterMost(BmSDK.GameObject A)
+    public unsafe virtual BmSDK.GameObject GetOuterMost(BmSDK.GameObject A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.GetOuterMost", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -157,7 +157,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: TriggerThugChatterBark
     /// </summary>
-    public unsafe bool TriggerThugChatterBark(bool bForceWanderersToPlayOneShots = default)
+    public unsafe virtual bool TriggerThugChatterBark(bool bForceWanderersToPlayOneShots = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.TriggerThugChatterBark", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -169,7 +169,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: DrawDebug
     /// </summary>
-    public unsafe void DrawDebug()
+    public unsafe virtual void DrawDebug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.DrawDebug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -180,7 +180,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: OnKismetDialogueSuccess
     /// </summary>
-    public unsafe void OnKismetDialogueSuccess()
+    public unsafe virtual void OnKismetDialogueSuccess()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.OnKismetDialogueSuccess", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -198,7 +198,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: OnKismetDialogueFail
     /// </summary>
-    public unsafe void OnKismetDialogueFail()
+    public unsafe virtual void OnKismetDialogueFail()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.OnKismetDialogueFail", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -216,7 +216,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: GetRiddlerChatterInterval
     /// </summary>
-    public unsafe float GetRiddlerChatterInterval()
+    public unsafe virtual float GetRiddlerChatterInterval()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.GetRiddlerChatterInterval", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -234,7 +234,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: GetScarecrowChatterInterval
     /// </summary>
-    public unsafe float GetScarecrowChatterInterval()
+    public unsafe virtual float GetScarecrowChatterInterval()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.GetScarecrowChatterInterval", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -252,7 +252,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: IsLowUrgencyObjectiveActive
     /// </summary>
-    public unsafe bool IsLowUrgencyObjectiveActive()
+    public unsafe virtual bool IsLowUrgencyObjectiveActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.IsLowUrgencyObjectiveActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -270,7 +270,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: LogNoChatterFound
     /// </summary>
-    public unsafe void LogNoChatterFound(BmSDK.BmGame.RBarkFlagBase BarkFlags, BmSDK.Engine.Actor subjectActor)
+    public unsafe virtual void LogNoChatterFound(BmSDK.BmGame.RBarkFlagBase BarkFlags, BmSDK.Engine.Actor subjectActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.LogNoChatterFound", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -290,7 +290,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: TryTriggerHelicopterChatter
     /// </summary>
-    public unsafe bool TryTriggerHelicopterChatter(bool bBMChatterOnly)
+    public unsafe virtual bool TryTriggerHelicopterChatter(bool bBMChatterOnly)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.TryTriggerHelicopterChatter", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -309,7 +309,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: TryTriggerRiddlerBillboardChatter
     /// </summary>
-    public unsafe bool TryTriggerRiddlerBillboardChatter()
+    public unsafe virtual bool TryTriggerRiddlerBillboardChatter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.TryTriggerRiddlerBillboardChatter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -327,7 +327,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: TryTriggerScarecrowBillboardChatter
     /// </summary>
-    public unsafe bool TryTriggerScarecrowBillboardChatter()
+    public unsafe virtual bool TryTriggerScarecrowBillboardChatter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.TryTriggerScarecrowBillboardChatter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -345,7 +345,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: CanPawnChatter
     /// </summary>
-    public unsafe bool CanPawnChatter(BmSDK.BmGame.RBMPawnAI TestPawn)
+    public unsafe virtual bool CanPawnChatter(BmSDK.BmGame.RBMPawnAI TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.CanPawnChatter", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -364,7 +364,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: ArePawnsInSameGroup
     /// </summary>
-    public unsafe bool ArePawnsInSameGroup(BmSDK.BmGame.RSeqAct_ChatterBoxBase.FPawnChatterInfo PawnInfoA, BmSDK.BmGame.RSeqAct_ChatterBoxBase.FPawnChatterInfo PawnInfoB)
+    public unsafe virtual bool ArePawnsInSameGroup(BmSDK.BmGame.RSeqAct_ChatterBoxBase.FPawnChatterInfo PawnInfoA, BmSDK.BmGame.RSeqAct_ChatterBoxBase.FPawnChatterInfo PawnInfoB)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.ArePawnsInSameGroup", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -384,7 +384,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: GroupPawns
     /// </summary>
-    public unsafe int GroupPawns()
+    public unsafe virtual int GroupPawns()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.GroupPawns", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -421,7 +421,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: GroupAndScorePawns
     /// </summary>
-    public unsafe bool GroupAndScorePawns()
+    public unsafe virtual bool GroupAndScorePawns()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.GroupAndScorePawns", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -439,7 +439,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: GetAllValidPawnsInRange
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RSeqAct_ChatterBoxBase.FPawnChatterInfo> GetAllValidPawnsInRange()
+    public unsafe virtual BmSDK.TArray<BmSDK.BmGame.RSeqAct_ChatterBoxBase.FPawnChatterInfo> GetAllValidPawnsInRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.GetAllValidPawnsInRange", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -457,7 +457,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: UpdateTimers
     /// </summary>
-    public unsafe void UpdateTimers(float DeltaTime, bool bGlobalLock, bool bAnyoneSpeaking, bool bThugTimerPaused, bool bThugTimerPausedByManbatOnly, bool bInActivePredVol)
+    public unsafe virtual void UpdateTimers(float DeltaTime, bool bGlobalLock, bool bAnyoneSpeaking, bool bThugTimerPaused, bool bThugTimerPausedByManbatOnly, bool bInActivePredVol)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.UpdateTimers", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -481,7 +481,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: Update_Native
     /// </summary>
-    public unsafe bool Update_Native(float DeltaTime)
+    public unsafe virtual bool Update_Native(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.Update_Native", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -500,7 +500,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: GetHighestPlayingSpeechPriority_IgnoreManbat
     /// </summary>
-    public unsafe int GetHighestPlayingSpeechPriority_IgnoreManbat()
+    public unsafe virtual int GetHighestPlayingSpeechPriority_IgnoreManbat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.GetHighestPlayingSpeechPriority_IgnoreManbat", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -518,7 +518,7 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: ResetThugChatterTimer
     /// </summary>
-    public unsafe void ResetThugChatterTimer()
+    public unsafe virtual void ResetThugChatterTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ChatterBoxBase.ResetThugChatterTimer", true);
         byte* paramsPtr = stackalloc byte[0];

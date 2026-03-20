@@ -71,7 +71,7 @@ public partial class RBMAIAction_ReactPoint : BmSDK.BmGame.RBMAIAction, BmSDK.IG
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReactPoint.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_ReactPoint : BmSDK.BmGame.RBMAIAction, BmSDK.IG
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReactPoint.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_ReactPoint : BmSDK.BmGame.RBMAIAction, BmSDK.IG
     /// <summary>
     /// Function: SetReactionPoint
     /// </summary>
-    public unsafe void SetReactionPoint(BmSDK.BmGame.RPred_MuseumBoothReactionPointBase NewReactPoint)
+    public unsafe virtual void SetReactionPoint(BmSDK.BmGame.RPred_MuseumBoothReactionPointBase NewReactPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReactPoint.SetReactionPoint", true);
         byte* paramsPtr = stackalloc byte[8];

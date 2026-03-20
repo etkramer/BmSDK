@@ -36,7 +36,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     /// <summary>
     /// Function: LogErrorMessage
     /// </summary>
-    public unsafe void LogErrorMessage(BmSDK.FString ErrorName, BmSDK.FString ErrorMessage)
+    public unsafe virtual void LogErrorMessage(BmSDK.FString ErrorName, BmSDK.FString ErrorMessage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.LogErrorMessage", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -56,7 +56,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     /// <summary>
     /// Function: EndStringEventParamArray
     /// </summary>
-    public unsafe void EndStringEventParamArray(BmSDK.FString EventName, BmSDK.TArray<BmSDK.Engine.AnalyticEventsBase.FEventStringParam> ParamArray)
+    public unsafe virtual void EndStringEventParamArray(BmSDK.FString EventName, BmSDK.TArray<BmSDK.Engine.AnalyticEventsBase.FEventStringParam> ParamArray)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.EndStringEventParamArray", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -76,7 +76,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     /// <summary>
     /// Function: LogStringEventParamArray
     /// </summary>
-    public unsafe void LogStringEventParamArray(BmSDK.FString EventName, BmSDK.TArray<BmSDK.Engine.AnalyticEventsBase.FEventStringParam> ParamArray, bool bTimed)
+    public unsafe virtual void LogStringEventParamArray(BmSDK.FString EventName, BmSDK.TArray<BmSDK.Engine.AnalyticEventsBase.FEventStringParam> ParamArray, bool bTimed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.LogStringEventParamArray", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -97,7 +97,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     /// <summary>
     /// Function: EndStringEventParam
     /// </summary>
-    public unsafe void EndStringEventParam(BmSDK.FString EventName, BmSDK.FString ParamName, BmSDK.FString ParamValue)
+    public unsafe virtual void EndStringEventParam(BmSDK.FString EventName, BmSDK.FString ParamName, BmSDK.FString ParamValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.EndStringEventParam", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -118,7 +118,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     /// <summary>
     /// Function: LogStringEventParam
     /// </summary>
-    public unsafe void LogStringEventParam(BmSDK.FString EventName, BmSDK.FString ParamName, BmSDK.FString ParamValue, bool bTimed)
+    public unsafe virtual void LogStringEventParam(BmSDK.FString EventName, BmSDK.FString ParamName, BmSDK.FString ParamValue, bool bTimed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.LogStringEventParam", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -140,7 +140,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     /// <summary>
     /// Function: EndStringEvent
     /// </summary>
-    public unsafe void EndStringEvent(BmSDK.FString EventName)
+    public unsafe virtual void EndStringEvent(BmSDK.FString EventName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.EndStringEvent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -159,7 +159,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     /// <summary>
     /// Function: LogStringEvent
     /// </summary>
-    public unsafe void LogStringEvent(BmSDK.FString EventName, bool bTimed)
+    public unsafe virtual void LogStringEvent(BmSDK.FString EventName, bool bTimed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.LogStringEvent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -179,7 +179,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     /// <summary>
     /// Function: EndSession
     /// </summary>
-    public unsafe void EndSession()
+    public unsafe virtual void EndSession()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.EndSession", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -197,7 +197,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     /// <summary>
     /// Function: StartSession
     /// </summary>
-    public unsafe void StartSession()
+    public unsafe virtual void StartSession()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.StartSession", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -215,7 +215,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init()
+    public unsafe virtual void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.Init", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -233,7 +233,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     /// <summary>
     /// Function: IsSessionInProgress
     /// </summary>
-    public unsafe bool IsSessionInProgress()
+    public unsafe virtual bool IsSessionInProgress()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.IsSessionInProgress", true);
         byte* paramsPtr = stackalloc byte[4];

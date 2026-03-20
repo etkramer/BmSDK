@@ -71,7 +71,7 @@ public partial class RRbStealthTakeDownStage_WaitForBatmanBase : BmSDK.BmGame.RS
     /// <summary>
     /// Function: End
     /// </summary>
-    public unsafe void End(bool bLastStage = default)
+    public unsafe override void End(bool bLastStage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRbStealthTakeDownStage_WaitForBatmanBase.End", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RRbStealthTakeDownStage_WaitForBatmanBase : BmSDK.BmGame.RS
     /// <summary>
     /// Function: Cancel
     /// </summary>
-    public unsafe void Cancel(bool SetState = default, bool bAbandonVictims = default, bool bResetPlayerPose = default)
+    public unsafe override void Cancel(bool SetState = default, bool bAbandonVictims = default, bool bResetPlayerPose = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRbStealthTakeDownStage_WaitForBatmanBase.Cancel", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -97,7 +97,7 @@ public partial class RRbStealthTakeDownStage_WaitForBatmanBase : BmSDK.BmGame.RS
     /// <summary>
     /// Function: FailedTakedown
     /// </summary>
-    public unsafe void FailedTakedown()
+    public unsafe virtual void FailedTakedown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRbStealthTakeDownStage_WaitForBatmanBase.FailedTakedown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -108,7 +108,7 @@ public partial class RRbStealthTakeDownStage_WaitForBatmanBase : BmSDK.BmGame.RS
     /// <summary>
     /// Function: BatmanStartedGlideKick
     /// </summary>
-    public unsafe void BatmanStartedGlideKick()
+    public unsafe virtual void BatmanStartedGlideKick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRbStealthTakeDownStage_WaitForBatmanBase.BatmanStartedGlideKick", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -119,7 +119,7 @@ public partial class RRbStealthTakeDownStage_WaitForBatmanBase : BmSDK.BmGame.RS
     /// <summary>
     /// Function: TooLateToAttack
     /// </summary>
-    public unsafe void TooLateToAttack()
+    public unsafe virtual void TooLateToAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRbStealthTakeDownStage_WaitForBatmanBase.TooLateToAttack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class RRbStealthTakeDownStage_WaitForBatmanBase : BmSDK.BmGame.RS
     /// <summary>
     /// Function: SwitchToBatman
     /// </summary>
-    public unsafe void SwitchToBatman()
+    public unsafe virtual void SwitchToBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRbStealthTakeDownStage_WaitForBatmanBase.SwitchToBatman", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RRbStealthTakeDownStage_WaitForBatmanBase : BmSDK.BmGame.RS
     /// <summary>
     /// Function: TimeOut
     /// </summary>
-    public unsafe void TimeOut()
+    public unsafe virtual void TimeOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRbStealthTakeDownStage_WaitForBatmanBase.TimeOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -152,7 +152,7 @@ public partial class RRbStealthTakeDownStage_WaitForBatmanBase : BmSDK.BmGame.RS
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRbStealthTakeDownStage_WaitForBatmanBase.Begin", true);
         byte* paramsPtr = stackalloc byte[0];

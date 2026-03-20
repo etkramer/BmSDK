@@ -71,7 +71,7 @@ public partial class RLootDestinationBase : BmSDK.Engine.SkeletalMeshActor, BmSD
     /// <summary>
     /// Function: TryStateChange
     /// </summary>
-    public unsafe void TryStateChange(BmSDK.BmGame.RPawnVillain pawnDroppingOff)
+    public unsafe virtual void TryStateChange(BmSDK.BmGame.RPawnVillain pawnDroppingOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLootDestinationBase.TryStateChange", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RLootDestinationBase : BmSDK.Engine.SkeletalMeshActor, BmSD
     /// <summary>
     /// Function: PlayBagDroppedOffAnim
     /// </summary>
-    public unsafe void PlayBagDroppedOffAnim()
+    public unsafe virtual void PlayBagDroppedOffAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLootDestinationBase.PlayBagDroppedOffAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RLootDestinationBase : BmSDK.Engine.SkeletalMeshActor, BmSD
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLootDestinationBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RLootDestinationBase : BmSDK.Engine.SkeletalMeshActor, BmSD
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLootDestinationBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RLootDestinationBase : BmSDK.Engine.SkeletalMeshActor, BmSD
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLootDestinationBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RLootDestinationBase : BmSDK.Engine.SkeletalMeshActor, BmSD
     /// <summary>
     /// Function: GetMusterLocationAndRotation
     /// </summary>
-    public unsafe void GetMusterLocationAndRotation(BmSDK.Engine.Pawn requestingPawn, out System.Numerics.Vector3 musterLoc, out BmSDK.Rotator musterRot)
+    public unsafe virtual void GetMusterLocationAndRotation(BmSDK.Engine.Pawn requestingPawn, out System.Numerics.Vector3 musterLoc, out BmSDK.Rotator musterRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLootDestinationBase.GetMusterLocationAndRotation", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -141,7 +141,7 @@ public partial class RLootDestinationBase : BmSDK.Engine.SkeletalMeshActor, BmSD
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLootDestinationBase.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -153,7 +153,7 @@ public partial class RLootDestinationBase : BmSDK.Engine.SkeletalMeshActor, BmSD
     /// <summary>
     /// Function: IsLockedByAnyone
     /// </summary>
-    public unsafe bool IsLockedByAnyone()
+    public unsafe virtual bool IsLockedByAnyone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLootDestinationBase.IsLockedByAnyone", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -164,7 +164,7 @@ public partial class RLootDestinationBase : BmSDK.Engine.SkeletalMeshActor, BmSD
     /// <summary>
     /// Function: HasLocationLockedBy
     /// </summary>
-    public unsafe bool HasLocationLockedBy(BmSDK.Engine.Pawn inPawn)
+    public unsafe virtual bool HasLocationLockedBy(BmSDK.Engine.Pawn inPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLootDestinationBase.HasLocationLockedBy", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -176,7 +176,7 @@ public partial class RLootDestinationBase : BmSDK.Engine.SkeletalMeshActor, BmSD
     /// <summary>
     /// Function: HasAvailableLocations
     /// </summary>
-    public unsafe bool HasAvailableLocations()
+    public unsafe virtual bool HasAvailableLocations()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLootDestinationBase.HasAvailableLocations", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -187,7 +187,7 @@ public partial class RLootDestinationBase : BmSDK.Engine.SkeletalMeshActor, BmSD
     /// <summary>
     /// Function: UnlockDropoffPoint
     /// </summary>
-    public unsafe void UnlockDropoffPoint(BmSDK.Engine.Pawn inUnlockingPawn)
+    public unsafe virtual void UnlockDropoffPoint(BmSDK.Engine.Pawn inUnlockingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLootDestinationBase.UnlockDropoffPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -199,7 +199,7 @@ public partial class RLootDestinationBase : BmSDK.Engine.SkeletalMeshActor, BmSD
     /// <summary>
     /// Function: LockDropoffPoint
     /// </summary>
-    public unsafe void LockDropoffPoint(BmSDK.Engine.Pawn inLockingPawn)
+    public unsafe virtual void LockDropoffPoint(BmSDK.Engine.Pawn inLockingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLootDestinationBase.LockDropoffPoint", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -211,7 +211,7 @@ public partial class RLootDestinationBase : BmSDK.Engine.SkeletalMeshActor, BmSD
     /// <summary>
     /// Function: OnDropOff
     /// </summary>
-    public unsafe bool OnDropOff(BmSDK.BmGame.RPawnVillain pawnDroppingOff)
+    public unsafe virtual bool OnDropOff(BmSDK.BmGame.RPawnVillain pawnDroppingOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLootDestinationBase.OnDropOff", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -223,7 +223,7 @@ public partial class RLootDestinationBase : BmSDK.Engine.SkeletalMeshActor, BmSD
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLootDestinationBase.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -235,7 +235,7 @@ public partial class RLootDestinationBase : BmSDK.Engine.SkeletalMeshActor, BmSD
     /// <summary>
     /// Function: IsPlayingAnim
     /// </summary>
-    public unsafe bool IsPlayingAnim(BmSDK.Engine.SkeletalMeshComponent MeshComp)
+    public unsafe virtual bool IsPlayingAnim(BmSDK.Engine.SkeletalMeshComponent MeshComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLootDestinationBase.IsPlayingAnim", true);
         byte* paramsPtr = stackalloc byte[20];

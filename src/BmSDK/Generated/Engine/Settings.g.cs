@@ -31,7 +31,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateFromURL
     /// </summary>
-    public unsafe void UpdateFromURL(out BmSDK.FString URL, BmSDK.Engine.GameInfo Game)
+    public unsafe virtual void UpdateFromURL(out BmSDK.FString URL, BmSDK.Engine.GameInfo Game)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.UpdateFromURL", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -51,7 +51,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: BuildURL
     /// </summary>
-    public unsafe void BuildURL(out BmSDK.FString URL)
+    public unsafe virtual void BuildURL(out BmSDK.FString URL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.BuildURL", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -70,7 +70,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AppendContextsToURL
     /// </summary>
-    public unsafe void AppendContextsToURL(out BmSDK.FString URL)
+    public unsafe virtual void AppendContextsToURL(out BmSDK.FString URL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.AppendContextsToURL", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -89,7 +89,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AppendPropertiesToURL
     /// </summary>
-    public unsafe void AppendPropertiesToURL(out BmSDK.FString URL)
+    public unsafe virtual void AppendPropertiesToURL(out BmSDK.FString URL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.AppendPropertiesToURL", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -108,7 +108,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AppendDataBindingsToURL
     /// </summary>
-    public unsafe void AppendDataBindingsToURL(out BmSDK.FString URL)
+    public unsafe virtual void AppendDataBindingsToURL(out BmSDK.FString URL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.AppendDataBindingsToURL", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -127,7 +127,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetQoSAdvertisedStringSettings
     /// </summary>
-    public unsafe void GetQoSAdvertisedStringSettings(out BmSDK.TArray<BmSDK.Engine.Settings.FLocalizedStringSetting> QoSSettings)
+    public unsafe virtual void GetQoSAdvertisedStringSettings(out BmSDK.TArray<BmSDK.Engine.Settings.FLocalizedStringSetting> QoSSettings)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetQoSAdvertisedStringSettings", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -146,7 +146,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetQoSAdvertisedProperties
     /// </summary>
-    public unsafe void GetQoSAdvertisedProperties(out BmSDK.TArray<BmSDK.Engine.Settings.FSettingsProperty> QoSProps)
+    public unsafe virtual void GetQoSAdvertisedProperties(out BmSDK.TArray<BmSDK.Engine.Settings.FSettingsProperty> QoSProps)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetQoSAdvertisedProperties", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -165,7 +165,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRangedPropertyValue
     /// </summary>
-    public unsafe bool GetRangedPropertyValue(int PropertyId, out float OutValue)
+    public unsafe virtual bool GetRangedPropertyValue(int PropertyId, out float OutValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetRangedPropertyValue", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -185,7 +185,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetRangedPropertyValue
     /// </summary>
-    public unsafe bool SetRangedPropertyValue(int PropertyId, float NewValue)
+    public unsafe virtual bool SetRangedPropertyValue(int PropertyId, float NewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetRangedPropertyValue", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -205,7 +205,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPropertyRange
     /// </summary>
-    public unsafe bool GetPropertyRange(int PropertyId, out float OutMinValue, out float OutMaxValue, out float RangeIncrement, out byte bFormatAsInt)
+    public unsafe virtual bool GetPropertyRange(int PropertyId, out float OutMinValue, out float OutMaxValue, out float RangeIncrement, out byte bFormatAsInt)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetPropertyRange", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -228,7 +228,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPropertyMappingType
     /// </summary>
-    public unsafe bool GetPropertyMappingType(int PropertyId, out BmSDK.Engine.Settings.EPropertyValueMappingType OutType)
+    public unsafe virtual bool GetPropertyMappingType(int PropertyId, out BmSDK.Engine.Settings.EPropertyValueMappingType OutType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetPropertyMappingType", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -248,7 +248,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: HasStringSetting
     /// </summary>
-    public unsafe bool HasStringSetting(int SettingId)
+    public unsafe virtual bool HasStringSetting(int SettingId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.HasStringSetting", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -267,7 +267,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: HasProperty
     /// </summary>
-    public unsafe bool HasProperty(int PropertyId)
+    public unsafe virtual bool HasProperty(int PropertyId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.HasProperty", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -286,7 +286,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateProperties
     /// </summary>
-    public unsafe void UpdateProperties(out BmSDK.TArray<BmSDK.Engine.Settings.FSettingsProperty> Props, bool bShouldAddIfMissing = default)
+    public unsafe virtual void UpdateProperties(out BmSDK.TArray<BmSDK.Engine.Settings.FSettingsProperty> Props, bool bShouldAddIfMissing = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.UpdateProperties", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -306,7 +306,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateStringSettings
     /// </summary>
-    public unsafe void UpdateStringSettings(out BmSDK.TArray<BmSDK.Engine.Settings.FLocalizedStringSetting> Settings, bool bShouldAddIfMissing = default)
+    public unsafe virtual void UpdateStringSettings(out BmSDK.TArray<BmSDK.Engine.Settings.FLocalizedStringSetting> Settings, bool bShouldAddIfMissing = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.UpdateStringSettings", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -326,7 +326,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPropertyType
     /// </summary>
-    public unsafe BmSDK.Engine.Settings.ESettingsDataType GetPropertyType(int PropertyId)
+    public unsafe virtual BmSDK.Engine.Settings.ESettingsDataType GetPropertyType(int PropertyId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetPropertyType", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -345,7 +345,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPropertyValueId
     /// </summary>
-    public unsafe bool GetPropertyValueId(int PropertyId, out int ValueId)
+    public unsafe virtual bool GetPropertyValueId(int PropertyId, out int ValueId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetPropertyValueId", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -365,7 +365,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPropertyValueId
     /// </summary>
-    public unsafe bool SetPropertyValueId(int PropertyId, int ValueId)
+    public unsafe virtual bool SetPropertyValueId(int PropertyId, int ValueId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetPropertyValueId", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -385,7 +385,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetStringProperty
     /// </summary>
-    public unsafe bool GetStringProperty(int PropertyId, out BmSDK.FString Value)
+    public unsafe virtual bool GetStringProperty(int PropertyId, out BmSDK.FString Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetStringProperty", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -405,7 +405,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetStringProperty
     /// </summary>
-    public unsafe void SetStringProperty(int PropertyId, BmSDK.FString Value)
+    public unsafe virtual void SetStringProperty(int PropertyId, BmSDK.FString Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetStringProperty", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -425,7 +425,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetIntProperty
     /// </summary>
-    public unsafe bool GetIntProperty(int PropertyId, out int Value)
+    public unsafe virtual bool GetIntProperty(int PropertyId, out int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetIntProperty", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -445,7 +445,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetIntProperty
     /// </summary>
-    public unsafe void SetIntProperty(int PropertyId, int Value)
+    public unsafe virtual void SetIntProperty(int PropertyId, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetIntProperty", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -465,7 +465,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFloatProperty
     /// </summary>
-    public unsafe bool GetFloatProperty(int PropertyId, out float Value)
+    public unsafe virtual bool GetFloatProperty(int PropertyId, out float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetFloatProperty", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -485,7 +485,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetFloatProperty
     /// </summary>
-    public unsafe void SetFloatProperty(int PropertyId, float Value)
+    public unsafe virtual void SetFloatProperty(int PropertyId, float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetFloatProperty", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -505,7 +505,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPropertyFromStringByName
     /// </summary>
-    public unsafe bool SetPropertyFromStringByName(BmSDK.FName PropertyName, out BmSDK.FString NewValue)
+    public unsafe virtual bool SetPropertyFromStringByName(BmSDK.FName PropertyName, out BmSDK.FString NewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetPropertyFromStringByName", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -525,7 +525,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPropertyAsStringByName
     /// </summary>
-    public unsafe BmSDK.FString GetPropertyAsStringByName(BmSDK.FName PropertyName)
+    public unsafe virtual BmSDK.FString GetPropertyAsStringByName(BmSDK.FName PropertyName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetPropertyAsStringByName", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -544,7 +544,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPropertyAsString
     /// </summary>
-    public unsafe BmSDK.FString GetPropertyAsString(int PropertyId)
+    public unsafe virtual BmSDK.FString GetPropertyAsString(int PropertyId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetPropertyAsString", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -563,7 +563,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPropertyColumnHeader
     /// </summary>
-    public unsafe BmSDK.FString GetPropertyColumnHeader(int PropertyId)
+    public unsafe virtual BmSDK.FString GetPropertyColumnHeader(int PropertyId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetPropertyColumnHeader", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -582,7 +582,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPropertyName
     /// </summary>
-    public unsafe BmSDK.FName GetPropertyName(int PropertyId)
+    public unsafe virtual BmSDK.FName GetPropertyName(int PropertyId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetPropertyName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -601,7 +601,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPropertyId
     /// </summary>
-    public unsafe bool GetPropertyId(BmSDK.FName PropertyName, out int PropertyId)
+    public unsafe virtual bool GetPropertyId(BmSDK.FName PropertyName, out int PropertyId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetPropertyId", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -621,7 +621,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetStringSettingValueFromStringByName
     /// </summary>
-    public unsafe bool SetStringSettingValueFromStringByName(BmSDK.FName StringSettingName, out BmSDK.FString NewValue)
+    public unsafe virtual bool SetStringSettingValueFromStringByName(BmSDK.FName StringSettingName, out BmSDK.FString NewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetStringSettingValueFromStringByName", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -641,7 +641,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetStringSettingValueNameByName
     /// </summary>
-    public unsafe BmSDK.FName GetStringSettingValueNameByName(BmSDK.FName StringSettingName)
+    public unsafe virtual BmSDK.FName GetStringSettingValueNameByName(BmSDK.FName StringSettingName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetStringSettingValueNameByName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -660,7 +660,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetStringSettingValueName
     /// </summary>
-    public unsafe BmSDK.FName GetStringSettingValueName(int StringSettingId, int ValueIndex)
+    public unsafe virtual BmSDK.FName GetStringSettingValueName(int StringSettingId, int ValueIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetStringSettingValueName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -680,7 +680,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsWildcardStringSetting
     /// </summary>
-    public unsafe bool IsWildcardStringSetting(int StringSettingId)
+    public unsafe virtual bool IsWildcardStringSetting(int StringSettingId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.IsWildcardStringSetting", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -699,7 +699,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetStringSettingColumnHeader
     /// </summary>
-    public unsafe BmSDK.FString GetStringSettingColumnHeader(int StringSettingId)
+    public unsafe virtual BmSDK.FString GetStringSettingColumnHeader(int StringSettingId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetStringSettingColumnHeader", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -718,7 +718,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetStringSettingName
     /// </summary>
-    public unsafe BmSDK.FName GetStringSettingName(int StringSettingId)
+    public unsafe virtual BmSDK.FName GetStringSettingName(int StringSettingId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetStringSettingName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -737,7 +737,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetStringSettingId
     /// </summary>
-    public unsafe bool GetStringSettingId(BmSDK.FName StringSettingName, out int StringSettingId)
+    public unsafe virtual bool GetStringSettingId(BmSDK.FName StringSettingName, out int StringSettingId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetStringSettingId", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -757,7 +757,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetStringSettingValueByName
     /// </summary>
-    public unsafe bool GetStringSettingValueByName(BmSDK.FName StringSettingName, out int ValueIndex)
+    public unsafe virtual bool GetStringSettingValueByName(BmSDK.FName StringSettingName, out int ValueIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetStringSettingValueByName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -777,7 +777,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetStringSettingValueByName
     /// </summary>
-    public unsafe void SetStringSettingValueByName(BmSDK.FName StringSettingName, int ValueIndex, bool bShouldAutoAdd)
+    public unsafe virtual void SetStringSettingValueByName(BmSDK.FName StringSettingName, int ValueIndex, bool bShouldAutoAdd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetStringSettingValueByName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -798,7 +798,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetStringSettingValueNames
     /// </summary>
-    public unsafe bool GetStringSettingValueNames(int StringSettingId, out BmSDK.TArray<BmSDK.Engine.Settings.FIdToStringMapping> Values)
+    public unsafe virtual bool GetStringSettingValueNames(int StringSettingId, out BmSDK.TArray<BmSDK.Engine.Settings.FIdToStringMapping> Values)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetStringSettingValueNames", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -818,7 +818,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IncrementStringSettingValue
     /// </summary>
-    public unsafe bool IncrementStringSettingValue(int StringSettingId, int Direction, bool bShouldWrap)
+    public unsafe virtual bool IncrementStringSettingValue(int StringSettingId, int Direction, bool bShouldWrap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.IncrementStringSettingValue", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -839,7 +839,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetStringSettingValue
     /// </summary>
-    public unsafe bool GetStringSettingValue(int StringSettingId, out int ValueIndex)
+    public unsafe virtual bool GetStringSettingValue(int StringSettingId, out int ValueIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetStringSettingValue", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -859,7 +859,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetStringSettingValue
     /// </summary>
-    public unsafe void SetStringSettingValue(int StringSettingId, int ValueIndex, bool bShouldAutoAdd = default)
+    public unsafe virtual void SetStringSettingValue(int StringSettingId, int ValueIndex, bool bShouldAutoAdd = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetStringSettingValue", true);
         byte* paramsPtr = stackalloc byte[12];

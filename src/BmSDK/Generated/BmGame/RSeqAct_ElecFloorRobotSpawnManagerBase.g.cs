@@ -42,7 +42,7 @@ public partial class RSeqAct_ElecFloorRobotSpawnManagerBase : BmSDK.Engine.SeqAc
     /// <summary>
     /// Function: TriggerSpawn
     /// </summary>
-    public unsafe void TriggerSpawn(BmSDK.BmGame.RElectrifiedFloorPanel_RobotSpawnerBase panel, System.Numerics.Vector3 SpawnLoc, System.Numerics.Vector3 spawnDir)
+    public unsafe virtual void TriggerSpawn(BmSDK.BmGame.RElectrifiedFloorPanel_RobotSpawnerBase panel, System.Numerics.Vector3 SpawnLoc, System.Numerics.Vector3 spawnDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ElecFloorRobotSpawnManagerBase.TriggerSpawn", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -56,7 +56,7 @@ public partial class RSeqAct_ElecFloorRobotSpawnManagerBase : BmSDK.Engine.SeqAc
     /// <summary>
     /// Function: CheckSpawn
     /// </summary>
-    public unsafe void CheckSpawn()
+    public unsafe virtual void CheckSpawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ElecFloorRobotSpawnManagerBase.CheckSpawn", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -67,7 +67,7 @@ public partial class RSeqAct_ElecFloorRobotSpawnManagerBase : BmSDK.Engine.SeqAc
     /// <summary>
     /// Function: ResetPanelStates
     /// </summary>
-    public unsafe void ResetPanelStates()
+    public unsafe virtual void ResetPanelStates()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ElecFloorRobotSpawnManagerBase.ResetPanelStates", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -78,7 +78,7 @@ public partial class RSeqAct_ElecFloorRobotSpawnManagerBase : BmSDK.Engine.SeqAc
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ElecFloorRobotSpawnManagerBase.Update", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -90,7 +90,7 @@ public partial class RSeqAct_ElecFloorRobotSpawnManagerBase : BmSDK.Engine.SeqAc
     /// <summary>
     /// Function: SpawnRobot
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnVillain SpawnRobot(System.Numerics.Vector3 Location, BmSDK.Rotator Rotation)
+    public unsafe virtual BmSDK.BmGame.RPawnVillain SpawnRobot(System.Numerics.Vector3 Location, BmSDK.Rotator Rotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ElecFloorRobotSpawnManagerBase.SpawnRobot", true);
         byte* paramsPtr = stackalloc byte[32];

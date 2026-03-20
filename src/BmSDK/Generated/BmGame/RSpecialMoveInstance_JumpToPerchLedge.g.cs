@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_JumpToPerchLedge : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: NextSwing
     /// </summary>
-    public unsafe void NextSwing()
+    public unsafe virtual void NextSwing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_JumpToPerchLedge.NextSwing", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_JumpToPerchLedge : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: GetNextHidePoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RHidePoint GetNextHidePoint()
+    public unsafe virtual BmSDK.BmGame.RHidePoint GetNextHidePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_JumpToPerchLedge.GetNextHidePoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RSpecialMoveInstance_JumpToPerchLedge : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: GetTargetHidePoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RHidePoint GetTargetHidePoint()
+    public unsafe virtual BmSDK.BmGame.RHidePoint GetTargetHidePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_JumpToPerchLedge.GetTargetHidePoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -104,7 +104,7 @@ public partial class RSpecialMoveInstance_JumpToPerchLedge : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: CanUpdateGrapple
     /// </summary>
-    public unsafe bool CanUpdateGrapple()
+    public unsafe virtual bool CanUpdateGrapple()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_JumpToPerchLedge.CanUpdateGrapple", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -115,7 +115,7 @@ public partial class RSpecialMoveInstance_JumpToPerchLedge : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: SetNextHidePoint
     /// </summary>
-    public unsafe void SetNextHidePoint(BmSDK.BmGame.RHidePoint NextPoint, System.Numerics.Vector3 NextPos)
+    public unsafe virtual void SetNextHidePoint(BmSDK.BmGame.RHidePoint NextPoint, System.Numerics.Vector3 NextPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_JumpToPerchLedge.SetNextHidePoint", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -128,7 +128,7 @@ public partial class RSpecialMoveInstance_JumpToPerchLedge : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_JumpToPerchLedge.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -140,7 +140,7 @@ public partial class RSpecialMoveInstance_JumpToPerchLedge : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_JumpToPerchLedge.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[140];
@@ -151,7 +151,7 @@ public partial class RSpecialMoveInstance_JumpToPerchLedge : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_JumpToPerchLedge.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[144];

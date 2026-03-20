@@ -71,7 +71,7 @@ public partial class RCinematicCharacter : BmSDK.BmGame.RCinematicActor, BmSDK.I
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicCharacter.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[56];

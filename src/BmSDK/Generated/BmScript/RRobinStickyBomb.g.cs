@@ -71,7 +71,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: OnLevelChange
     /// </summary>
-    public unsafe void OnLevelChange()
+    public unsafe override void OnLevelChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.OnLevelChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: OnRoomChange
     /// </summary>
-    public unsafe void OnRoomChange()
+    public unsafe override void OnRoomChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.OnRoomChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: DoExplodeStartle
     /// </summary>
-    public unsafe void DoExplodeStartle(BmSDK.Engine.Actor BombOwner)
+    public unsafe virtual void DoExplodeStartle(BmSDK.Engine.Actor BombOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.DoExplodeStartle", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -105,7 +105,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: ExplodeBomb
     /// </summary>
-    public unsafe void ExplodeBomb(BmSDK.Engine.MeshComponent Bomb, BmSDK.BmGame.RPawnVillain bombWasOnDownedEnemy)
+    public unsafe virtual void ExplodeBomb(BmSDK.Engine.MeshComponent Bomb, BmSDK.BmGame.RPawnVillain bombWasOnDownedEnemy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.ExplodeBomb", true);
         byte* paramsPtr = stackalloc byte[348];
@@ -118,7 +118,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: IsValidTarget
     /// </summary>
-    public unsafe bool IsValidTarget(BmSDK.Engine.Actor TestActor)
+    public unsafe virtual bool IsValidTarget(BmSDK.Engine.Actor TestActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.IsValidTarget", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -130,7 +130,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: DetonateAll
     /// </summary>
-    public unsafe void DetonateAll()
+    public unsafe virtual void DetonateAll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.DetonateAll", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -141,7 +141,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: CanIOnlyDetonate
     /// </summary>
-    public unsafe bool CanIOnlyDetonate()
+    public unsafe virtual bool CanIOnlyDetonate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.CanIOnlyDetonate", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -152,7 +152,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: CanQuickFire
     /// </summary>
-    public unsafe bool CanQuickFire()
+    public unsafe override bool CanQuickFire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.CanQuickFire", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -163,7 +163,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: DrawTargets
     /// </summary>
-    public unsafe void DrawTargets()
+    public unsafe virtual void DrawTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.DrawTargets", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -174,7 +174,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: ClearTargets
     /// </summary>
-    public unsafe void ClearTargets()
+    public unsafe virtual void ClearTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.ClearTargets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -185,7 +185,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -198,7 +198,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetAutoTargetAngle
     /// </summary>
-    public unsafe float GetAutoTargetAngle()
+    public unsafe virtual float GetAutoTargetAngle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.GetAutoTargetAngle", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -209,7 +209,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetEnemyTargetAngle
     /// </summary>
-    public unsafe float GetEnemyTargetAngle()
+    public unsafe virtual float GetEnemyTargetAngle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.GetEnemyTargetAngle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -220,7 +220,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: UpdateTarget
     /// </summary>
-    public unsafe void UpdateTarget()
+    public unsafe virtual void UpdateTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.UpdateTarget", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -231,7 +231,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: UpdateTargetCombat
     /// </summary>
-    public unsafe void UpdateTargetCombat()
+    public unsafe virtual void UpdateTargetCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.UpdateTargetCombat", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -242,7 +242,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: IsValidStickyBombTarget
     /// </summary>
-    public unsafe bool IsValidStickyBombTarget(BmSDK.BmGame.RPawnVillain Villain)
+    public unsafe virtual bool IsValidStickyBombTarget(BmSDK.BmGame.RPawnVillain Villain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.IsValidStickyBombTarget", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -254,7 +254,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetPrimedPose
     /// </summary>
-    public unsafe BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
+    public unsafe override BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.GetPrimedPose", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -271,7 +271,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: ExittedPrimedMode
     /// </summary>
-    public unsafe void ExittedPrimedMode()
+    public unsafe override void ExittedPrimedMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.ExittedPrimedMode", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -282,7 +282,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetQuickThrowFailedAnim
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetQuickThrowFailedAnim()
+    public unsafe override BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetQuickThrowFailedAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.GetQuickThrowFailedAnim", true);
         byte* paramsPtr = stackalloc byte[120];
@@ -293,7 +293,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: FireGadgetCombat
     /// </summary>
-    public unsafe bool FireGadgetCombat()
+    public unsafe override bool FireGadgetCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.FireGadgetCombat", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -304,7 +304,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: QuickFireUnblocked
     /// </summary>
-    public unsafe void QuickFireUnblocked()
+    public unsafe virtual void QuickFireUnblocked()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.QuickFireUnblocked", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -315,7 +315,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: CanThrowGadget
     /// </summary>
-    public unsafe bool CanThrowGadget()
+    public unsafe override bool CanThrowGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.CanThrowGadget", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -326,7 +326,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: RestockAmmo
     /// </summary>
-    public unsafe void RestockAmmo()
+    public unsafe override void RestockAmmo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.RestockAmmo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -337,7 +337,7 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: CanPlayerMove
     /// </summary>
-    public unsafe bool CanPlayerMove()
+    public unsafe override bool CanPlayerMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBomb.CanPlayerMove", true);
         byte* paramsPtr = stackalloc byte[4];

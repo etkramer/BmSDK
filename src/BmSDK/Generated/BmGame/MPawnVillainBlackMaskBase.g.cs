@@ -66,7 +66,7 @@ public partial class MPawnVillainBlackMaskBase : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: IsInLOSHack
     /// </summary>
-    public unsafe bool IsInLOSHack(System.Numerics.Vector3 EndLocation, out System.Numerics.Vector3 HitLocation, out System.Numerics.Vector3 MuzzleLoc, out BmSDK.Rotator MuzzleRot)
+    public unsafe virtual bool IsInLOSHack(System.Numerics.Vector3 EndLocation, out System.Numerics.Vector3 HitLocation, out System.Numerics.Vector3 MuzzleLoc, out BmSDK.Rotator MuzzleRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnVillainBlackMaskBase.IsInLOSHack", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -81,7 +81,7 @@ public partial class MPawnVillainBlackMaskBase : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: IsDoingRangeAttack
     /// </summary>
-    public unsafe bool IsDoingRangeAttack()
+    public unsafe virtual bool IsDoingRangeAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnVillainBlackMaskBase.IsDoingRangeAttack", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -92,7 +92,7 @@ public partial class MPawnVillainBlackMaskBase : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: BlackMaskHideGun
     /// </summary>
-    public unsafe void BlackMaskHideGun()
+    public unsafe virtual void BlackMaskHideGun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnVillainBlackMaskBase.BlackMaskHideGun", true);
         byte* paramsPtr = stackalloc byte[0];

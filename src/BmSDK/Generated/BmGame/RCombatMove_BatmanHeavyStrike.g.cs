@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanHeavyStrike : BmSDK.BmGame.RCombatMove_Ba
     /// <summary>
     /// Function: RegisterHit
     /// </summary>
-    public unsafe void RegisterHit()
+    public unsafe virtual void RegisterHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanHeavyStrike.RegisterHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_BatmanHeavyStrike : BmSDK.BmGame.RCombatMove_Ba
     /// <summary>
     /// Function: ProcessDamageResult
     /// </summary>
-    public unsafe void ProcessDamageResult(BmSDK.BmGame.RPawnCombat.DamageResult DmgResult, BmSDK.BmGame.RPawnCombat DamageReceiver)
+    public unsafe override void ProcessDamageResult(BmSDK.BmGame.RPawnCombat.DamageResult DmgResult, BmSDK.BmGame.RPawnCombat DamageReceiver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanHeavyStrike.ProcessDamageResult", true);
         byte* paramsPtr = stackalloc byte[12];

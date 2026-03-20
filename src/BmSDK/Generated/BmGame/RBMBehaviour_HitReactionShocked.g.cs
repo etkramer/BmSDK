@@ -36,7 +36,7 @@ public partial class RBMBehaviour_HitReactionShocked : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// Function: CanHitLaserGrid
     /// </summary>
-    public unsafe bool CanHitLaserGrid()
+    public unsafe override bool CanHitLaserGrid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReactionShocked.CanHitLaserGrid", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_HitReactionShocked : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// Function: KillCheck
     /// </summary>
-    public unsafe bool KillCheck()
+    public unsafe virtual bool KillCheck()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReactionShocked.KillCheck", true);
         byte* paramsPtr = stackalloc byte[252];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_HitReactionShocked : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReactionShocked.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_HitReactionShocked : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 HitNorm, BmSDK.Engine.Actor HitAct, float BlendSpd = default, bool bKill = default, BmSDK.Class NewDmgType = default)
+    public unsafe virtual void Initialise(System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 HitNorm, BmSDK.Engine.Actor HitAct, float BlendSpd = default, bool bKill = default, BmSDK.Class NewDmgType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_HitReactionShocked.Initialise", true);
         byte* paramsPtr = stackalloc byte[48];

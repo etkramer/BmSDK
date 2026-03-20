@@ -36,7 +36,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetCapeToBoneDataReferencePose
     /// </summary>
-    public unsafe void SetCapeToBoneDataReferencePose()
+    public unsafe virtual void SetCapeToBoneDataReferencePose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.SetCapeToBoneDataReferencePose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetCapeToCurrentAnimPose
     /// </summary>
-    public unsafe void SetCapeToCurrentAnimPose(bool IsEvaluateAnim = default)
+    public unsafe virtual void SetCapeToCurrentAnimPose(bool IsEvaluateAnim = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.SetCapeToCurrentAnimPose", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -73,7 +73,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ResumeCape
     /// </summary>
-    public unsafe void ResumeCape()
+    public unsafe virtual void ResumeCape()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.ResumeCape", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -91,7 +91,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PauseCape
     /// </summary>
-    public unsafe void PauseCape()
+    public unsafe virtual void PauseCape()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.PauseCape", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -109,7 +109,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetIsPausedOrPendingPaused
     /// </summary>
-    public unsafe bool GetIsPausedOrPendingPaused()
+    public unsafe virtual bool GetIsPausedOrPendingPaused()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.GetIsPausedOrPendingPaused", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: BeginCinematicState
     /// </summary>
-    public unsafe void BeginCinematicState(BmSDK.FName AnimName, BmSDK.BmGame.RCapeStateConfig TemplateStateConfig, float AnimStartTime, float AnimPlayRate = default, BmSDK.FName SyncAnimName = default, float SyncAnimOffset = default, bool bMirrored = default, bool bClearVelocityOnExit = default, bool bTeleportToInitialPose = default)
+    public unsafe virtual void BeginCinematicState(BmSDK.FName AnimName, BmSDK.BmGame.RCapeStateConfig TemplateStateConfig, float AnimStartTime, float AnimPlayRate = default, BmSDK.FName SyncAnimName = default, float SyncAnimOffset = default, bool bMirrored = default, bool bClearVelocityOnExit = default, bool bTeleportToInitialPose = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.BeginCinematicState", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -154,7 +154,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetCapeStateAndTime
     /// </summary>
-    public unsafe void SetCapeStateAndTime(BmSDK.FName NewCapeStateName, float NewCapeStateTime, float AnimPlayRate = default, bool bMirrored = default, BmSDK.FName AnimName = default, BmSDK.FName SyncAnimNameOverride = default, float SyncAnimOffsetOverride = default)
+    public unsafe virtual void SetCapeStateAndTime(BmSDK.FName NewCapeStateName, float NewCapeStateTime, float AnimPlayRate = default, bool bMirrored = default, BmSDK.FName AnimName = default, BmSDK.FName SyncAnimNameOverride = default, float SyncAnimOffsetOverride = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.SetCapeStateAndTime", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -179,7 +179,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetCapeState
     /// </summary>
-    public unsafe void SetCapeState(BmSDK.FName NewCapeStateName, BmSDK.FName NewCapeAnimName, float AnimStartTime = default, float AnimPlayRate = default, bool ForceRestart = default, bool ForceInitialPose = default, bool bMirrored = default, BmSDK.FName SyncAnimName = default, float SyncAnimOffset = default)
+    public unsafe virtual void SetCapeState(BmSDK.FName NewCapeStateName, BmSDK.FName NewCapeAnimName, float AnimStartTime = default, float AnimPlayRate = default, bool ForceRestart = default, bool ForceInitialPose = default, bool bMirrored = default, BmSDK.FName SyncAnimName = default, float SyncAnimOffset = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.SetCapeState", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -206,7 +206,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe void Update(float DeltaTime)
+    public unsafe virtual void Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.Update", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -225,7 +225,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdatePauseState
     /// </summary>
-    public unsafe void UpdatePauseState()
+    public unsafe virtual void UpdatePauseState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.UpdatePauseState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -243,7 +243,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Finalise
     /// </summary>
-    public unsafe void Finalise()
+    public unsafe virtual void Finalise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.Finalise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -261,7 +261,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.FName InitialCapeStateName)
+    public unsafe virtual void Initialise(BmSDK.FName InitialCapeStateName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.Initialise", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -280,7 +280,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetIsInitialised
     /// </summary>
-    public unsafe bool GetIsInitialised()
+    public unsafe virtual bool GetIsInitialised()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.GetIsInitialised", true);
         byte* paramsPtr = stackalloc byte[4];

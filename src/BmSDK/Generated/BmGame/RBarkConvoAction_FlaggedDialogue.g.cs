@@ -36,7 +36,7 @@ public partial class RBarkConvoAction_FlaggedDialogue : BmSDK.BmGame.RBarkConvoA
     /// <summary>
     /// Function: GetCurrentDialogueType
     /// </summary>
-    public unsafe BmSDK.Engine.AkDialogueType GetCurrentDialogueType()
+    public unsafe override BmSDK.Engine.AkDialogueType GetCurrentDialogueType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_FlaggedDialogue.GetCurrentDialogueType", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -47,7 +47,7 @@ public partial class RBarkConvoAction_FlaggedDialogue : BmSDK.BmGame.RBarkConvoA
     /// <summary>
     /// Function: GetBestDataAndIndex
     /// </summary>
-    public unsafe void GetBestDataAndIndex(BmSDK.BmGame.RBarkFlagBase ContextFlags, out BmSDK.BmGame.RBarkConvoData_FlagNode OutData, out int BestIndex)
+    public unsafe virtual void GetBestDataAndIndex(BmSDK.BmGame.RBarkFlagBase ContextFlags, out BmSDK.BmGame.RBarkConvoData_FlagNode OutData, out int BestIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_FlaggedDialogue.GetBestDataAndIndex", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -61,7 +61,7 @@ public partial class RBarkConvoAction_FlaggedDialogue : BmSDK.BmGame.RBarkConvoA
     /// <summary>
     /// Function: AddIndividualFlagsFor
     /// </summary>
-    public unsafe void AddIndividualFlagsFor(BmSDK.Engine.Actor Speaker, out BmSDK.BmGame.RBarkFlagBase context)
+    public unsafe virtual void AddIndividualFlagsFor(BmSDK.Engine.Actor Speaker, out BmSDK.BmGame.RBarkFlagBase context)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_FlaggedDialogue.AddIndividualFlagsFor", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -74,7 +74,7 @@ public partial class RBarkConvoAction_FlaggedDialogue : BmSDK.BmGame.RBarkConvoA
     /// <summary>
     /// Function: GBFSSearchHandlePawnRefList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> GBFSSearchHandlePawnRefList(BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> InList)
+    public unsafe override BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> GBFSSearchHandlePawnRefList(BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> InList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_FlaggedDialogue.GBFSSearchHandlePawnRefList", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -86,7 +86,7 @@ public partial class RBarkConvoAction_FlaggedDialogue : BmSDK.BmGame.RBarkConvoA
     /// <summary>
     /// Function: GetPawnRefList
     /// </summary>
-    public unsafe void GetPawnRefList(int SearchID, out BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> PawnRefList)
+    public unsafe override void GetPawnRefList(int SearchID, out BmSDK.TArray<BmSDK.BmGame.RBarkConvo.FVoicePawnRef> PawnRefList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_FlaggedDialogue.GetPawnRefList", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -99,7 +99,7 @@ public partial class RBarkConvoAction_FlaggedDialogue : BmSDK.BmGame.RBarkConvoA
     /// <summary>
     /// Function: GetLocalPlayedScore
     /// </summary>
-    public unsafe float GetLocalPlayedScore()
+    public unsafe override float GetLocalPlayedScore()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_FlaggedDialogue.GetLocalPlayedScore", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -110,7 +110,7 @@ public partial class RBarkConvoAction_FlaggedDialogue : BmSDK.BmGame.RBarkConvoA
     /// <summary>
     /// Function: IsFinished
     /// </summary>
-    public unsafe bool IsFinished()
+    public unsafe override bool IsFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_FlaggedDialogue.IsFinished", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -121,7 +121,7 @@ public partial class RBarkConvoAction_FlaggedDialogue : BmSDK.BmGame.RBarkConvoA
     /// <summary>
     /// Function: Stop
     /// </summary>
-    public unsafe void Stop(bool bHardStop, bool bOrphan = default)
+    public unsafe override void Stop(bool bHardStop, bool bOrphan = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_FlaggedDialogue.Stop", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -134,7 +134,7 @@ public partial class RBarkConvoAction_FlaggedDialogue : BmSDK.BmGame.RBarkConvoA
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_FlaggedDialogue.OnActivate", true);
         byte* paramsPtr = stackalloc byte[180];

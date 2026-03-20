@@ -71,7 +71,7 @@ public partial class RCrowdSpawner_BatAttract : BmSDK.BmGame.RCrowdSpawner_XPBat
     /// <summary>
     /// Function: SpawnCrowd
     /// </summary>
-    public unsafe void SpawnCrowd(int NumToSpawn, int NewFlockID = default, BmSDK.BmGame.RCrowdSequence NewCrowdSequence = default)
+    public unsafe override void SpawnCrowd(int NumToSpawn, int NewFlockID = default, BmSDK.BmGame.RCrowdSequence NewCrowdSequence = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSpawner_BatAttract.SpawnCrowd", true);
         byte* paramsPtr = stackalloc byte[16];

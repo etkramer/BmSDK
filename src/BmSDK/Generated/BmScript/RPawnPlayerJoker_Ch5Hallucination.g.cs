@@ -71,7 +71,7 @@ public partial class RPawnPlayerJoker_Ch5Hallucination : BmSDK.BmGame.RPawnPlaye
     /// <summary>
     /// Function: VisibilitySwitchTimer
     /// </summary>
-    public unsafe void VisibilitySwitchTimer()
+    public unsafe virtual void VisibilitySwitchTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerJoker_Ch5Hallucination.VisibilitySwitchTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RPawnPlayerJoker_Ch5Hallucination : BmSDK.BmGame.RPawnPlaye
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerJoker_Ch5Hallucination.Tick", true);
         byte* paramsPtr = stackalloc byte[20];

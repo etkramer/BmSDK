@@ -71,7 +71,7 @@ public partial class RChuteCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChuteCamera.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RChuteCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
     /// <summary>
     /// Function: BlendInDone
     /// </summary>
-    public unsafe void BlendInDone()
+    public unsafe virtual void BlendInDone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChuteCamera.BlendInDone", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RChuteCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.BmGame.RPawnPlayer Player, BmSDK.BmGame.R3rdPersonCamera PlayerCamera, BmSDK.BmGame.RSwingChutePointBase _ChuteStart, BmSDK.BmGame.RSwingChuteExitBase _ChuteExit, float CheckSizeMod)
+    public unsafe virtual void Init(BmSDK.BmGame.RPawnPlayer Player, BmSDK.BmGame.R3rdPersonCamera PlayerCamera, BmSDK.BmGame.RSwingChutePointBase _ChuteStart, BmSDK.BmGame.RSwingChuteExitBase _ChuteExit, float CheckSizeMod)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChuteCamera.Init", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -110,7 +110,7 @@ public partial class RChuteCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCameraPathPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCameraPathPosition(float Proportion)
+    public unsafe virtual System.Numerics.Vector3 GetCameraPathPosition(float Proportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChuteCamera.GetCameraPathPosition", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -129,7 +129,7 @@ public partial class RChuteCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCameraPathDeltaTangent
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCameraPathDeltaTangent(float Proportion)
+    public unsafe virtual System.Numerics.Vector3 GetCameraPathDeltaTangent(float Proportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChuteCamera.GetCameraPathDeltaTangent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -148,7 +148,7 @@ public partial class RChuteCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCameraPathTangent
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCameraPathTangent(float Proportion)
+    public unsafe virtual System.Numerics.Vector3 GetCameraPathTangent(float Proportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChuteCamera.GetCameraPathTangent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -167,7 +167,7 @@ public partial class RChuteCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateCameraPath
     /// </summary>
-    public unsafe void UpdateCameraPath(float DeltaTime)
+    public unsafe virtual void UpdateCameraPath(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChuteCamera.UpdateCameraPath", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -186,7 +186,7 @@ public partial class RChuteCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
     /// <summary>
     /// Function: CalculateCameraPath
     /// </summary>
-    public unsafe void CalculateCameraPath(BmSDK.BmGame.RPawnPlayer Player, BmSDK.BmGame.R3rdPersonCamera PlayerCamera, BmSDK.BmGame.RSwingChutePointBase _ChuteStart, BmSDK.BmGame.RSwingChuteExitBase _ChuteExit, float CheckSizeMod)
+    public unsafe virtual void CalculateCameraPath(BmSDK.BmGame.RPawnPlayer Player, BmSDK.BmGame.R3rdPersonCamera PlayerCamera, BmSDK.BmGame.RSwingChutePointBase _ChuteStart, BmSDK.BmGame.RSwingChuteExitBase _ChuteExit, float CheckSizeMod)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChuteCamera.CalculateCameraPath", true);
         byte* paramsPtr = stackalloc byte[36];

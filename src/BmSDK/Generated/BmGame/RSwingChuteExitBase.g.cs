@@ -71,7 +71,7 @@ public partial class RSwingChuteExitBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSwingChuteExitBase.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RSwingChuteExitBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetBestChutePoint
     /// </summary>
-    public unsafe void SetBestChutePoint(BmSDK.BmGame.RSwingChutePointBase NewChutePoint)
+    public unsafe virtual void SetBestChutePoint(BmSDK.BmGame.RSwingChutePointBase NewChutePoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSwingChuteExitBase.SetBestChutePoint", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -95,7 +95,7 @@ public partial class RSwingChuteExitBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayGrateAnim
     /// </summary>
-    public unsafe void PlayGrateAnim(BmSDK.FName GrateAnim, float Rate = default)
+    public unsafe virtual void PlayGrateAnim(BmSDK.FName GrateAnim, float Rate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSwingChuteExitBase.PlayGrateAnim", true);
         byte* paramsPtr = stackalloc byte[12];

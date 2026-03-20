@@ -36,7 +36,7 @@ public partial class SpriteComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// Function: SetSpriteAndUV
     /// </summary>
-    public unsafe void SetSpriteAndUV(BmSDK.Engine.Texture2D NewSprite, int NewU, int NewUL, int NewV, int NewVL)
+    public unsafe virtual void SetSpriteAndUV(BmSDK.Engine.Texture2D NewSprite, int NewU, int NewUL, int NewV, int NewVL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SpriteComponent.SetSpriteAndUV", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -59,7 +59,7 @@ public partial class SpriteComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// Function: SetUV
     /// </summary>
-    public unsafe void SetUV(int NewU, int NewUL, int NewV, int NewVL)
+    public unsafe virtual void SetUV(int NewU, int NewUL, int NewV, int NewVL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SpriteComponent.SetUV", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -81,7 +81,7 @@ public partial class SpriteComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// Function: SetSprite
     /// </summary>
-    public unsafe void SetSprite(BmSDK.Engine.Texture2D NewSprite)
+    public unsafe virtual void SetSprite(BmSDK.Engine.Texture2D NewSprite)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SpriteComponent.SetSprite", true);
         byte* paramsPtr = stackalloc byte[8];

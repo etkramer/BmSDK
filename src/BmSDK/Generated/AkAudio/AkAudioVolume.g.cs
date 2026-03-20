@@ -71,7 +71,7 @@ public partial class AkAudioVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: HandleUnlink
     /// </summary>
-    public unsafe bool HandleUnlink(BmSDK.Engine.Actor Target)
+    public unsafe virtual bool HandleUnlink(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkAudioVolume.HandleUnlink", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -90,7 +90,7 @@ public partial class AkAudioVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: HandleLink
     /// </summary>
-    public unsafe bool HandleLink(BmSDK.Engine.Actor Target)
+    public unsafe virtual bool HandleLink(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkAudioVolume.HandleLink", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -109,7 +109,7 @@ public partial class AkAudioVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: RefreshTouching
     /// </summary>
-    public unsafe void RefreshTouching()
+    public unsafe virtual void RefreshTouching()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkAudioVolume.RefreshTouching", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class AkAudioVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: HandleTouchInOut
     /// </summary>
-    public unsafe void HandleTouchInOut(BmSDK.Engine.Actor Other, bool otherIsTouching)
+    public unsafe virtual void HandleTouchInOut(BmSDK.Engine.Actor Other, bool otherIsTouching)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkAudioVolume.HandleTouchInOut", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -147,7 +147,7 @@ public partial class AkAudioVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAudioSpatial
     /// </summary>
-    public unsafe void GetAudioSpatial(out System.Numerics.Vector3 sndPosition, out BmSDK.Rotator sndOrientation, BmSDK.GameObject caller = default)
+    public unsafe override void GetAudioSpatial(out System.Numerics.Vector3 sndPosition, out BmSDK.Rotator sndOrientation, BmSDK.GameObject caller = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkAudioVolume.GetAudioSpatial", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -168,7 +168,7 @@ public partial class AkAudioVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkAudioVolume.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -187,7 +187,7 @@ public partial class AkAudioVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkAudioVolume.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -199,7 +199,7 @@ public partial class AkAudioVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: OverrideDefaultAkAudibleSetup
     /// </summary>
-    public unsafe void OverrideDefaultAkAudibleSetup(BmSDK.Engine.RAkAudible akAud)
+    public unsafe override void OverrideDefaultAkAudibleSetup(BmSDK.Engine.RAkAudible akAud)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkAudioVolume.OverrideDefaultAkAudibleSetup", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -211,7 +211,7 @@ public partial class AkAudioVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkAudioVolume.UnTouch", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -223,7 +223,7 @@ public partial class AkAudioVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkAudioVolume.Touch", true);
         byte* paramsPtr = stackalloc byte[40];

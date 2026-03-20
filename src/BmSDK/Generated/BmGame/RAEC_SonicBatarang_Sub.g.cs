@@ -71,7 +71,7 @@ public partial class RAEC_SonicBatarang_Sub : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: StartInvestigate
     /// </summary>
-    public unsafe void StartInvestigate(System.Numerics.Vector3 NewDirectMoveTarget)
+    public unsafe virtual void StartInvestigate(System.Numerics.Vector3 NewDirectMoveTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang_Sub.StartInvestigate", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -83,7 +83,7 @@ public partial class RAEC_SonicBatarang_Sub : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: GetGoalDistForTargetType
     /// </summary>
-    public unsafe float GetGoalDistForTargetType()
+    public unsafe virtual float GetGoalDistForTargetType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang_Sub.GetGoalDistForTargetType", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RAEC_SonicBatarang_Sub : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: DisableGrateVis
     /// </summary>
-    public unsafe void DisableGrateVis()
+    public unsafe virtual void DisableGrateVis()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang_Sub.DisableGrateVis", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RAEC_SonicBatarang_Sub : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: EnableGrateVis
     /// </summary>
-    public unsafe void EnableGrateVis()
+    public unsafe virtual void EnableGrateVis()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang_Sub.EnableGrateVis", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RAEC_SonicBatarang_Sub : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: PlayFinishedBark
     /// </summary>
-    public unsafe void PlayFinishedBark()
+    public unsafe virtual void PlayFinishedBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang_Sub.PlayFinishedBark", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -127,7 +127,7 @@ public partial class RAEC_SonicBatarang_Sub : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: PlayLookAtBark
     /// </summary>
-    public unsafe void PlayLookAtBark()
+    public unsafe virtual void PlayLookAtBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang_Sub.PlayLookAtBark", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RAEC_SonicBatarang_Sub : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: GetSentryKitAnimOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetSentryKitAnimOffset(BmSDK.BmGame.RLootSourceBase TestKit, out float MeetingPointTravelDist)
+    public unsafe virtual System.Numerics.Vector3 GetSentryKitAnimOffset(BmSDK.BmGame.RLootSourceBase TestKit, out float MeetingPointTravelDist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang_Sub.GetSentryKitAnimOffset", true);
         byte* paramsPtr = stackalloc byte[104];
@@ -151,7 +151,7 @@ public partial class RAEC_SonicBatarang_Sub : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: GetWallAnimOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWallAnimOffset(BmSDK.BmGame.RDestructibleProp_FractureWall TestWall, bool bCocky, System.Numerics.Vector3 SideHintPos, out float MeetingPointTravelDist)
+    public unsafe virtual System.Numerics.Vector3 GetWallAnimOffset(BmSDK.BmGame.RDestructibleProp_FractureWall TestWall, bool bCocky, System.Numerics.Vector3 SideHintPos, out float MeetingPointTravelDist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang_Sub.GetWallAnimOffset", true);
         byte* paramsPtr = stackalloc byte[120];
@@ -166,7 +166,7 @@ public partial class RAEC_SonicBatarang_Sub : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: GetStartlePointAnimOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetStartlePointAnimOffset(System.Numerics.Vector3 AnimPos, int AnimYaw, out float MeetingPointTravelDist)
+    public unsafe virtual System.Numerics.Vector3 GetStartlePointAnimOffset(System.Numerics.Vector3 AnimPos, int AnimYaw, out float MeetingPointTravelDist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang_Sub.GetStartlePointAnimOffset", true);
         byte* paramsPtr = stackalloc byte[112];
@@ -180,7 +180,7 @@ public partial class RAEC_SonicBatarang_Sub : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: GetLockerAnimOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLockerAnimOffset(BmSDK.BmGame.RPredatorGunLockerBase TestLocker, bool bCocky, out float MeetingPointTravelDist)
+    public unsafe virtual System.Numerics.Vector3 GetLockerAnimOffset(BmSDK.BmGame.RPredatorGunLockerBase TestLocker, bool bCocky, out float MeetingPointTravelDist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang_Sub.GetLockerAnimOffset", true);
         byte* paramsPtr = stackalloc byte[108];
@@ -194,7 +194,7 @@ public partial class RAEC_SonicBatarang_Sub : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: NotifyEvent
     /// </summary>
-    public unsafe void NotifyEvent(BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
+    public unsafe override void NotifyEvent(BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang_Sub.NotifyEvent", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -207,7 +207,7 @@ public partial class RAEC_SonicBatarang_Sub : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang_Sub.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[236];
@@ -219,7 +219,7 @@ public partial class RAEC_SonicBatarang_Sub : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: GetGrateLookRefPoint
     /// </summary>
-    public unsafe bool GetGrateLookRefPoint(BmSDK.BmGame.RTunnelGrateBase Grate, BmSDK.BmGame.RAEC_Search_Sub_Grate.eLookInGrateType lookType, out System.Numerics.Vector3 outRefLoc, out BmSDK.Rotator outRefRot)
+    public unsafe virtual bool GetGrateLookRefPoint(BmSDK.BmGame.RTunnelGrateBase Grate, BmSDK.BmGame.RAEC_Search_Sub_Grate.eLookInGrateType lookType, out System.Numerics.Vector3 outRefLoc, out BmSDK.Rotator outRefRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang_Sub.GetGrateLookRefPoint", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -234,7 +234,7 @@ public partial class RAEC_SonicBatarang_Sub : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang_Sub.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -246,7 +246,7 @@ public partial class RAEC_SonicBatarang_Sub : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang_Sub.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -257,7 +257,7 @@ public partial class RAEC_SonicBatarang_Sub : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// Function: OnVillainStolen
     /// </summary>
-    public unsafe void OnVillainStolen()
+    public unsafe override void OnVillainStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SonicBatarang_Sub.OnVillainStolen", true);
         byte* paramsPtr = stackalloc byte[0];

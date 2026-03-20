@@ -36,7 +36,7 @@ public partial class RSpecialMoveConfig_RelativeAnimMove : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.RPlayerController Controller, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation, bool ForceReplicateToClient = default)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.RPlayerController Controller, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation, bool ForceReplicateToClient = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveConfig_RelativeAnimMove.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[144];
@@ -50,7 +50,7 @@ public partial class RSpecialMoveConfig_RelativeAnimMove : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: GetFreeRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetFreeRotation(BmSDK.BmGame.RPlayerController Controller, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe virtual BmSDK.Rotator GetFreeRotation(BmSDK.BmGame.RPlayerController Controller, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveConfig_RelativeAnimMove.GetFreeRotation", true);
         byte* paramsPtr = stackalloc byte[152];
@@ -63,7 +63,7 @@ public partial class RSpecialMoveConfig_RelativeAnimMove : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: GetPredictedEndLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetPredictedEndLocation(BmSDK.BmGame.RPlayerController Controller, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override System.Numerics.Vector3 GetPredictedEndLocation(BmSDK.BmGame.RPlayerController Controller, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveConfig_RelativeAnimMove.GetPredictedEndLocation", true);
         byte* paramsPtr = stackalloc byte[172];
@@ -76,7 +76,7 @@ public partial class RSpecialMoveConfig_RelativeAnimMove : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: GetSpecialMoveIdealStartLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetSpecialMoveIdealStartLoc(BmSDK.BmGame.RPlayerController Controller, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override System.Numerics.Vector3 GetSpecialMoveIdealStartLoc(BmSDK.BmGame.RPlayerController Controller, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveConfig_RelativeAnimMove.GetSpecialMoveIdealStartLoc", true);
         byte* paramsPtr = stackalloc byte[172];

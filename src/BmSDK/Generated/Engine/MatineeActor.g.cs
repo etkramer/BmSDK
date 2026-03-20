@@ -71,7 +71,7 @@ public partial class MatineeActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckPriorityRefresh
     /// </summary>
-    public unsafe void CheckPriorityRefresh()
+    public unsafe virtual void CheckPriorityRefresh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MatineeActor.CheckPriorityRefresh", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class MatineeActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe void Update()
+    public unsafe virtual void Update()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MatineeActor.Update", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class MatineeActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddAIGroupActor
     /// </summary>
-    public unsafe void AddAIGroupActor(BmSDK.Engine.InterpGroupInstAI AIGroupInst)
+    public unsafe virtual void AddAIGroupActor(BmSDK.Engine.InterpGroupInstAI AIGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MatineeActor.AddAIGroupActor", true);
         byte* paramsPtr = stackalloc byte[8];

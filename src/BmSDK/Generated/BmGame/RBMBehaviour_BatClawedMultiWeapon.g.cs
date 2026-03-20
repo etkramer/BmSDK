@@ -36,7 +36,7 @@ public partial class RBMBehaviour_BatClawedMultiWeapon : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: UpdateHitThugs
     /// </summary>
-    public unsafe void UpdateHitThugs()
+    public unsafe virtual void UpdateHitThugs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BatClawedMultiWeapon.UpdateHitThugs", true);
         byte* paramsPtr = stackalloc byte[260];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_BatClawedMultiWeapon : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: BumpedIntoPlayer
     /// </summary>
-    public unsafe void BumpedIntoPlayer()
+    public unsafe override void BumpedIntoPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BatClawedMultiWeapon.BumpedIntoPlayer", true);
         byte* paramsPtr = stackalloc byte[248];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_BatClawedMultiWeapon : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: PushOverWithImpulse
     /// </summary>
-    public unsafe void PushOverWithImpulse(System.Numerics.Vector3 PushImpulse, BmSDK.BmGame.RPawnCombat Attacker)
+    public unsafe override void PushOverWithImpulse(System.Numerics.Vector3 PushImpulse, BmSDK.BmGame.RPawnCombat Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BatClawedMultiWeapon.PushOverWithImpulse", true);
         byte* paramsPtr = stackalloc byte[20];

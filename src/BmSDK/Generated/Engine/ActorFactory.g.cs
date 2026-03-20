@@ -31,7 +31,7 @@ public partial class ActorFactory : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PostCreateActor
     /// </summary>
-    public unsafe void PostCreateActor(BmSDK.Engine.Actor NewActor, BmSDK.Engine.SeqAct_ActorFactory ActorFactoryData = default)
+    public unsafe virtual void PostCreateActor(BmSDK.Engine.Actor NewActor, BmSDK.Engine.SeqAct_ActorFactory ActorFactoryData = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ActorFactory.PostCreateActor", true);
         byte* paramsPtr = stackalloc byte[16];

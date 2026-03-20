@@ -36,7 +36,7 @@ public partial class RBMSeqEvent_WanderPointActivated : BmSDK.BmGame.RBMSeqEvent
     /// <summary>
     /// Function: ActivateForPawn
     /// </summary>
-    public unsafe bool ActivateForPawn(BmSDK.BmGame.RBMPawnAI NewUser, BmSDK.BmGame.RWanderPoint WanderPoint)
+    public unsafe virtual bool ActivateForPawn(BmSDK.BmGame.RBMPawnAI NewUser, BmSDK.BmGame.RWanderPoint WanderPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMSeqEvent_WanderPointActivated.ActivateForPawn", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -49,7 +49,7 @@ public partial class RBMSeqEvent_WanderPointActivated : BmSDK.BmGame.RBMSeqEvent
     /// <summary>
     /// Function: HasOutputForPawn
     /// </summary>
-    public unsafe bool HasOutputForPawn(BmSDK.BmGame.RBMPawnAI TestPawn)
+    public unsafe virtual bool HasOutputForPawn(BmSDK.BmGame.RBMPawnAI TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMSeqEvent_WanderPointActivated.HasOutputForPawn", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -61,7 +61,7 @@ public partial class RBMSeqEvent_WanderPointActivated : BmSDK.BmGame.RBMSeqEvent
     /// <summary>
     /// Function: GetOutputsForWeapon
     /// </summary>
-    public unsafe BmSDK.TArray<int> GetOutputsForWeapon(BmSDK.BmGame.RBMWeapon TestWeapon)
+    public unsafe virtual BmSDK.TArray<int> GetOutputsForWeapon(BmSDK.BmGame.RBMWeapon TestWeapon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMSeqEvent_WanderPointActivated.GetOutputsForWeapon", true);
         byte* paramsPtr = stackalloc byte[44];

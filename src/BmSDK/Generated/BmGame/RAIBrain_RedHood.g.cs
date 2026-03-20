@@ -36,7 +36,7 @@ public partial class RAIBrain_RedHood : BmSDK.BmGame.RAIBrain_Pred, BmSDK.IGameO
     /// <summary>
     /// Function: EvaluateState
     /// </summary>
-    public unsafe void EvaluateState(out BmSDK.FName NewName, out BmSDK.BmGame.RAlertEventCoordinatorBase NewAEC)
+    public unsafe override void EvaluateState(out BmSDK.FName NewName, out BmSDK.BmGame.RAlertEventCoordinatorBase NewAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAIBrain_RedHood.EvaluateState", true);
         byte* paramsPtr = stackalloc byte[16];

@@ -36,7 +36,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawDebugGraph
     /// </summary>
-    public unsafe void DrawDebugGraph(BmSDK.FString Title, float ValueX, float ValueY, float UL_X, float UL_Y, float W, float H, System.Numerics.Vector2 RangeX, System.Numerics.Vector2 RangeY)
+    public unsafe virtual void DrawDebugGraph(BmSDK.FString Title, float ValueX, float ValueY, float UL_X, float UL_Y, float W, float H, System.Numerics.Vector2 RangeX, System.Numerics.Vector2 RangeY)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.DrawDebugGraph", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -56,7 +56,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawTextureDoubleLine
     /// </summary>
-    public unsafe void DrawTextureDoubleLine(System.Numerics.Vector3 StartPoint, System.Numerics.Vector3 EndPoint, float Perc, float Spacing, float Width, BmSDK.GameObject.FColor LineColor, BmSDK.GameObject.FColor AltLineColor, BmSDK.Engine.Texture Tex, float U, float V, float UL, float VL)
+    public unsafe virtual void DrawTextureDoubleLine(System.Numerics.Vector3 StartPoint, System.Numerics.Vector3 EndPoint, float Perc, float Spacing, float Width, BmSDK.GameObject.FColor LineColor, BmSDK.GameObject.FColor AltLineColor, BmSDK.Engine.Texture Tex, float U, float V, float UL, float VL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.DrawTextureDoubleLine", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -86,7 +86,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawTextureLine
     /// </summary>
-    public unsafe void DrawTextureLine(System.Numerics.Vector3 StartPoint, System.Numerics.Vector3 EndPoint, float Perc, float Width, BmSDK.GameObject.FColor LineColor, BmSDK.Engine.Texture LineTexture, float U, float V, float UL, float VL)
+    public unsafe virtual void DrawTextureLine(System.Numerics.Vector3 StartPoint, System.Numerics.Vector3 EndPoint, float Perc, float Width, BmSDK.GameObject.FColor LineColor, BmSDK.Engine.Texture LineTexture, float U, float V, float UL, float VL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.DrawTextureLine", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -114,7 +114,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Draw2DLine
     /// </summary>
-    public unsafe void Draw2DLine(float X1, float Y1, float X2, float Y2, BmSDK.GameObject.FColor LineColor)
+    public unsafe virtual void Draw2DLine(float X1, float Y1, float X2, float Y2, BmSDK.GameObject.FColor LineColor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.Draw2DLine", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -137,7 +137,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDrawColorStruct
     /// </summary>
-    public unsafe void SetDrawColorStruct(BmSDK.GameObject.FColor C)
+    public unsafe virtual void SetDrawColorStruct(BmSDK.GameObject.FColor C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.SetDrawColorStruct", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -149,7 +149,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDrawColor
     /// </summary>
-    public unsafe void SetDrawColor(byte R, byte G, byte B, byte A = default)
+    public unsafe virtual void SetDrawColor(byte R, byte G, byte B, byte A = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.SetDrawColor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -171,7 +171,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawBox
     /// </summary>
-    public unsafe void DrawBox(float Width, float Height)
+    public unsafe virtual void DrawBox(float Width, float Height)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.DrawBox", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -184,7 +184,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawRect
     /// </summary>
-    public unsafe void DrawRect(float RectX, float RectY, BmSDK.Engine.Texture Tex = default)
+    public unsafe virtual void DrawRect(float RectX, float RectY, BmSDK.Engine.Texture Tex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.DrawRect", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -198,7 +198,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawIcon
     /// </summary>
-    public unsafe void DrawIcon(BmSDK.Engine.Canvas.FCanvasIcon Icon, float X, float Y, float Scale = default)
+    public unsafe virtual void DrawIcon(BmSDK.Engine.Canvas.FCanvasIcon Icon, float X, float Y, float Scale = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.DrawIcon", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -213,7 +213,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawScaledIcon
     /// </summary>
-    public unsafe void DrawScaledIcon(BmSDK.Engine.Canvas.FCanvasIcon Icon, float X, float Y, System.Numerics.Vector3 Scale)
+    public unsafe virtual void DrawScaledIcon(BmSDK.Engine.Canvas.FCanvasIcon Icon, float X, float Y, System.Numerics.Vector3 Scale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.DrawScaledIcon", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -228,7 +228,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: MakeIcon
     /// </summary>
-    public unsafe BmSDK.Engine.Canvas.FCanvasIcon MakeIcon(BmSDK.Engine.Texture Texture, float U = default, float V = default, float UL = default, float VL = default)
+    public unsafe virtual BmSDK.Engine.Canvas.FCanvasIcon MakeIcon(BmSDK.Engine.Texture Texture, float U = default, float V = default, float UL = default, float VL = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.MakeIcon", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -244,7 +244,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawBlendedTile
     /// </summary>
-    public unsafe void DrawBlendedTile(BmSDK.Engine.Texture Tex, float XL, float YL, float U, float V, float UL, float VL, BmSDK.Engine.Canvas.ECanvasBlendMode Blend)
+    public unsafe virtual void DrawBlendedTile(BmSDK.Engine.Texture Tex, float XL, float YL, float U, float V, float UL, float VL, BmSDK.Engine.Canvas.ECanvasBlendMode Blend)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.DrawBlendedTile", true);
         byte* paramsPtr = stackalloc byte[33];
@@ -270,7 +270,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawTexture
     /// </summary>
-    public unsafe void DrawTexture(BmSDK.Engine.Texture Tex, float Scale)
+    public unsafe virtual void DrawTexture(BmSDK.Engine.Texture Tex, float Scale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.DrawTexture", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -283,7 +283,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PopMaskRegion
     /// </summary>
-    public unsafe void PopMaskRegion()
+    public unsafe virtual void PopMaskRegion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.PopMaskRegion", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -301,7 +301,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PushMaskRegion
     /// </summary>
-    public unsafe void PushMaskRegion(float X, float Y, float XL, float YL)
+    public unsafe virtual void PushMaskRegion(float X, float Y, float XL, float YL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.PushMaskRegion", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -323,7 +323,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetClip
     /// </summary>
-    public unsafe void SetClip(float X, float Y)
+    public unsafe virtual void SetClip(float X, float Y)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.SetClip", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -336,7 +336,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetOrigin
     /// </summary>
-    public unsafe void SetOrigin(float X, float Y)
+    public unsafe virtual void SetOrigin(float X, float Y)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.SetOrigin", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -349,7 +349,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPos
     /// </summary>
-    public unsafe void SetPos(float PosX, float PosY, float PosZ = default)
+    public unsafe virtual void SetPos(float PosX, float PosY, float PosZ = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.SetPos", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -370,7 +370,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultCanvasFont
     /// </summary>
-    public unsafe BmSDK.Engine.Font GetDefaultCanvasFont()
+    public unsafe virtual BmSDK.Engine.Font GetDefaultCanvasFont()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.GetDefaultCanvasFont", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -381,7 +381,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Reset
     /// </summary>
-    public unsafe void Reset(bool bKeepOrigin = default)
+    public unsafe virtual void Reset(bool bKeepOrigin = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.Reset", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -400,7 +400,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PopTransform
     /// </summary>
-    public unsafe void PopTransform()
+    public unsafe virtual void PopTransform()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.PopTransform", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -418,7 +418,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PushTranslationMatrix
     /// </summary>
-    public unsafe void PushTranslationMatrix(System.Numerics.Vector3 TranslationVector)
+    public unsafe virtual void PushTranslationMatrix(System.Numerics.Vector3 TranslationVector)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.PushTranslationMatrix", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -437,7 +437,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ProjectSphereBounds
     /// </summary>
-    public unsafe void ProjectSphereBounds(System.Numerics.Vector3 Center, float Radius, out System.Numerics.Vector2 Min, out System.Numerics.Vector2 Max)
+    public unsafe virtual void ProjectSphereBounds(System.Numerics.Vector3 Center, float Radius, out System.Numerics.Vector2 Min, out System.Numerics.Vector2 Max)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.ProjectSphereBounds", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -459,7 +459,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ProjectStaticMeshBounds
     /// </summary>
-    public unsafe bool ProjectStaticMeshBounds(BmSDK.Engine.StaticMeshComponent MeshComponent, out System.Numerics.Vector2 Min, out System.Numerics.Vector2 Max)
+    public unsafe virtual bool ProjectStaticMeshBounds(BmSDK.Engine.StaticMeshComponent MeshComponent, out System.Numerics.Vector2 Min, out System.Numerics.Vector2 Max)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.ProjectStaticMeshBounds", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -480,7 +480,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: WorldToPixel
     /// </summary>
-    public unsafe bool WorldToPixel(System.Numerics.Vector3 InPosition, out System.Numerics.Vector3 OutPosition)
+    public unsafe virtual bool WorldToPixel(System.Numerics.Vector3 InPosition, out System.Numerics.Vector3 OutPosition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.WorldToPixel", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -500,7 +500,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DeProject
     /// </summary>
-    public unsafe void DeProject(System.Numerics.Vector2 ScreenPos, out System.Numerics.Vector3 WorldOrigin, out System.Numerics.Vector3 WorldDirection)
+    public unsafe virtual void DeProject(System.Numerics.Vector2 ScreenPos, out System.Numerics.Vector3 WorldOrigin, out System.Numerics.Vector3 WorldDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.DeProject", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -521,7 +521,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Project
     /// </summary>
-    public unsafe System.Numerics.Vector3 Project(System.Numerics.Vector3 Location)
+    public unsafe virtual System.Numerics.Vector3 Project(System.Numerics.Vector3 Location)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.Project", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -540,7 +540,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawTextCentred
     /// </summary>
-    public unsafe void DrawTextCentred(BmSDK.FString Text, bool CR = default)
+    public unsafe virtual void DrawTextCentred(BmSDK.FString Text, bool CR = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.DrawTextCentred", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -553,7 +553,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawTextRA
     /// </summary>
-    public unsafe void DrawTextRA(BmSDK.FString Text, bool CR = default)
+    public unsafe virtual void DrawTextRA(BmSDK.FString Text, bool CR = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.DrawTextRA", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -566,7 +566,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Flash_GetTextExtents
     /// </summary>
-    public unsafe void Flash_GetTextExtents(BmSDK.FString TheText, out float outWidth, out float outHeight, float atPointSize = default, float FixedWidth = default)
+    public unsafe virtual void Flash_GetTextExtents(BmSDK.FString TheText, out float outWidth, out float outHeight, float atPointSize = default, float FixedWidth = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.Flash_GetTextExtents", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -589,7 +589,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Flash_DrawText
     /// </summary>
-    public unsafe float Flash_DrawText(float atX, float atY, BmSDK.FString TheText, BmSDK.GameObject.FColor Colour, float atPointSize = default, BmSDK.Engine.Canvas.FlashText_Align Align = default, float FixedWidth = default)
+    public unsafe virtual float Flash_DrawText(float atX, float atY, BmSDK.FString TheText, BmSDK.GameObject.FColor Colour, float atPointSize = default, BmSDK.Engine.Canvas.FlashText_Align Align = default, float FixedWidth = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.Flash_DrawText", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -614,7 +614,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawText
     /// </summary>
-    public unsafe void DrawText(BmSDK.FString Text, bool CR, float XScale, float YScale, out BmSDK.Engine.Canvas.FFontRenderInfo RenderInfo)
+    public unsafe virtual void DrawText(BmSDK.FString Text, bool CR, float XScale, float YScale, out BmSDK.Engine.Canvas.FFontRenderInfo RenderInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.DrawText", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -637,7 +637,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: TextSize
     /// </summary>
-    public unsafe void TextSize(BmSDK.FString String, out float XL, out float YL, float XScale = default, float YScale = default)
+    public unsafe virtual void TextSize(BmSDK.FString String, out float XL, out float YL, float XScale = default, float YScale = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.TextSize", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -660,7 +660,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: StrLen
     /// </summary>
-    public unsafe void StrLen(BmSDK.FString String, out float XL, out float YL)
+    public unsafe virtual void StrLen(BmSDK.FString String, out float XL, out float YL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.StrLen", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -697,7 +697,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawTris
     /// </summary>
-    public unsafe void DrawTris(BmSDK.Engine.Texture Tex, BmSDK.TArray<BmSDK.Engine.Canvas.FCanvasUVTri> Triangles, BmSDK.GameObject.FColor InColor)
+    public unsafe virtual void DrawTris(BmSDK.Engine.Texture Tex, BmSDK.TArray<BmSDK.Engine.Canvas.FCanvasUVTri> Triangles, BmSDK.GameObject.FColor InColor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.DrawTris", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -718,7 +718,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawTileStretched
     /// </summary>
-    public unsafe void DrawTileStretched(BmSDK.Engine.Texture Tex, float XL, float YL, float U, float V, float UL, float VL, BmSDK.GameObject.FLinearColor LColor = default, bool bStretchHorizontally = default, bool bStretchVertically = default, float ScalingFactor = default)
+    public unsafe virtual void DrawTileStretched(BmSDK.Engine.Texture Tex, float XL, float YL, float U, float V, float UL, float VL, BmSDK.GameObject.FLinearColor LColor = default, bool bStretchHorizontally = default, bool bStretchVertically = default, float ScalingFactor = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.DrawTileStretched", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -747,7 +747,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawTimer
     /// </summary>
-    public unsafe void DrawTimer(BmSDK.Engine.Texture Tex, float StartTime, float TotalTime, float XL, float YL, float U, float V, float UL, float VL, BmSDK.GameObject.FLinearColor LColor = default, BmSDK.Engine.EngineTypes.EBlendMode Blend = default)
+    public unsafe virtual void DrawTimer(BmSDK.Engine.Texture Tex, float StartTime, float TotalTime, float XL, float YL, float U, float V, float UL, float VL, BmSDK.GameObject.FLinearColor LColor = default, BmSDK.Engine.EngineTypes.EBlendMode Blend = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.DrawTimer", true);
         byte* paramsPtr = stackalloc byte[57];
@@ -776,7 +776,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawRotatedMaterialTile
     /// </summary>
-    public unsafe void DrawRotatedMaterialTile(BmSDK.Engine.MaterialInterface Mat, BmSDK.Rotator Rotation, float XL, float YL, float U = default, float V = default, float UL = default, float VL = default, float AnchorX = default, float AnchorY = default)
+    public unsafe virtual void DrawRotatedMaterialTile(BmSDK.Engine.MaterialInterface Mat, BmSDK.Rotator Rotation, float XL, float YL, float U = default, float V = default, float UL = default, float VL = default, float AnchorX = default, float AnchorY = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.DrawRotatedMaterialTile", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -804,7 +804,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawRotatedTile
     /// </summary>
-    public unsafe void DrawRotatedTile(BmSDK.Engine.Texture Tex, BmSDK.Rotator Rotation, float XL, float YL, float U, float V, float UL, float VL, float AnchorX = default, float AnchorY = default)
+    public unsafe virtual void DrawRotatedTile(BmSDK.Engine.Texture Tex, BmSDK.Rotator Rotation, float XL, float YL, float U, float V, float UL, float VL, float AnchorX = default, float AnchorY = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.DrawRotatedTile", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -832,7 +832,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawMaterialTile
     /// </summary>
-    public unsafe void DrawMaterialTile(BmSDK.Engine.MaterialInterface Mat, float XL, float YL, float U = default, float V = default, float UL = default, float VL = default, bool bClipTile = default)
+    public unsafe virtual void DrawMaterialTile(BmSDK.Engine.MaterialInterface Mat, float XL, float YL, float U = default, float V = default, float UL = default, float VL = default, bool bClipTile = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.DrawMaterialTile", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -858,7 +858,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PreOptimizeDrawTiles
     /// </summary>
-    public unsafe void PreOptimizeDrawTiles(int Num, BmSDK.Engine.Texture Tex, BmSDK.Engine.EngineTypes.EBlendMode Blend = default)
+    public unsafe virtual void PreOptimizeDrawTiles(int Num, BmSDK.Engine.Texture Tex, BmSDK.Engine.EngineTypes.EBlendMode Blend = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.PreOptimizeDrawTiles", true);
         byte* paramsPtr = stackalloc byte[13];
@@ -879,7 +879,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawTile
     /// </summary>
-    public unsafe void DrawTile(BmSDK.Engine.Texture Tex, float XL, float YL, float U, float V, float UL, float VL, BmSDK.GameObject.FLinearColor LColor = default, bool ClipTile = default, BmSDK.Engine.EngineTypes.EBlendMode Blend = default)
+    public unsafe virtual void DrawTile(BmSDK.Engine.Texture Tex, float XL, float YL, float U, float V, float UL, float VL, BmSDK.GameObject.FLinearColor LColor = default, bool ClipTile = default, BmSDK.Engine.EngineTypes.EBlendMode Blend = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Canvas.DrawTile", true);
         byte* paramsPtr = stackalloc byte[53];

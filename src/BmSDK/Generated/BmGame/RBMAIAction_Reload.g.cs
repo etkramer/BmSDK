@@ -71,7 +71,7 @@ public partial class RBMAIAction_Reload : BmSDK.BmGame.RBMAIAction, BmSDK.IGameO
     /// <summary>
     /// Function: GetReloadAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetReloadAnimName()
+    public unsafe virtual BmSDK.FName GetReloadAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_Reload.GetReloadAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_Reload : BmSDK.BmGame.RBMAIAction, BmSDK.IGameO
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_Reload.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RBMAIAction_Reload : BmSDK.BmGame.RBMAIAction, BmSDK.IGameO
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_Reload.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_Reload : BmSDK.BmGame.RBMAIAction, BmSDK.IGameO
     /// <summary>
     /// Function: OnExitRequested
     /// </summary>
-    public unsafe void OnExitRequested(BmSDK.BmGame.RBMAIAction NextAction = default)
+    public unsafe override void OnExitRequested(BmSDK.BmGame.RBMAIAction NextAction = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_Reload.OnExitRequested", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RBMAIAction_Reload : BmSDK.BmGame.RBMAIAction, BmSDK.IGameO
     /// <summary>
     /// Function: StartReloadAnim
     /// </summary>
-    public unsafe void StartReloadAnim(BmSDK.FName AnimName)
+    public unsafe virtual void StartReloadAnim(BmSDK.FName AnimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_Reload.StartReloadAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RBMAIAction_Reload : BmSDK.BmGame.RBMAIAction, BmSDK.IGameO
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_Reload.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

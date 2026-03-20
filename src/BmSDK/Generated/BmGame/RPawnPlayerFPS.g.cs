@@ -66,7 +66,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: FindContactName
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent FindContactName(BmSDK.BmGame.RAnimNotify_Footstep.EFoot Foot, BmSDK.BmGame.RAnimNotify_Footstep.EContactType Contact)
+    public unsafe override BmSDK.Engine.AkEvent FindContactName(BmSDK.BmGame.RAnimNotify_Footstep.EFoot Foot, BmSDK.BmGame.RAnimNotify_Footstep.EContactType Contact)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.FindContactName", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -79,7 +79,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: FinishMatinee
     /// </summary>
-    public unsafe void FinishMatinee()
+    public unsafe virtual void FinishMatinee()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.FinishMatinee", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -90,7 +90,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: AdjustMeshTranslationToMatchEndOfMat
     /// </summary>
-    public unsafe void AdjustMeshTranslationToMatchEndOfMat(System.Numerics.Vector3 LocationDiff, BmSDK.Rotator RotDiff)
+    public unsafe virtual void AdjustMeshTranslationToMatchEndOfMat(System.Numerics.Vector3 LocationDiff, BmSDK.Rotator RotDiff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.AdjustMeshTranslationToMatchEndOfMat", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -103,7 +103,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: FinishAnimControl
     /// </summary>
-    public unsafe void FinishAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void FinishAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.FinishAnimControl", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -116,7 +116,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: BlendOutAnimControl
     /// </summary>
-    public unsafe void BlendOutAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst, float BlendOutDuration)
+    public unsafe override void BlendOutAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst, float BlendOutDuration)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.BlendOutAnimControl", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -130,7 +130,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: BeginAnimControl
     /// </summary>
-    public unsafe void BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.BeginAnimControl", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -143,7 +143,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: Reload
     /// </summary>
-    public unsafe void Reload()
+    public unsafe virtual void Reload()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.Reload", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -154,7 +154,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: Zoom
     /// </summary>
-    public unsafe void Zoom(bool bZoom)
+    public unsafe virtual void Zoom(bool bZoom)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.Zoom", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -166,7 +166,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: ToggleZoom
     /// </summary>
-    public unsafe void ToggleZoom()
+    public unsafe virtual void ToggleZoom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.ToggleZoom", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -177,7 +177,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: ToggleCameraZoom
     /// </summary>
-    public unsafe void ToggleCameraZoom()
+    public unsafe virtual void ToggleCameraZoom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.ToggleCameraZoom", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -188,7 +188,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: PossessedBy
     /// </summary>
-    public unsafe void PossessedBy(BmSDK.Engine.Controller C, bool bVehicleTransition)
+    public unsafe override void PossessedBy(BmSDK.Engine.Controller C, bool bVehicleTransition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.PossessedBy", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -201,7 +201,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: OnCameraUpdatedNoMeshTranslate
     /// </summary>
-    public unsafe void OnCameraUpdatedNoMeshTranslate()
+    public unsafe virtual void OnCameraUpdatedNoMeshTranslate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.OnCameraUpdatedNoMeshTranslate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -219,7 +219,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: OnCameraUpdated
     /// </summary>
-    public unsafe void OnCameraUpdated()
+    public unsafe virtual void OnCameraUpdated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.OnCameraUpdated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -237,7 +237,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -248,7 +248,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: SetupAnimConfig
     /// </summary>
-    public unsafe void SetupAnimConfig()
+    public unsafe virtual void SetupAnimConfig()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.SetupAnimConfig", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -259,7 +259,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: GetPlayerConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RAddContentPlayerCharacter GetPlayerConfig()
+    public unsafe virtual BmSDK.BmGame.RAddContentPlayerCharacter GetPlayerConfig()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.GetPlayerConfig", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -270,7 +270,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: CheckForNoShootItems
     /// </summary>
-    public unsafe void CheckForNoShootItems()
+    public unsafe virtual void CheckForNoShootItems()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.CheckForNoShootItems", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -281,7 +281,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: AdditiveArmAvoidance
     /// </summary>
-    public unsafe void AdditiveArmAvoidance()
+    public unsafe virtual void AdditiveArmAvoidance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.AdditiveArmAvoidance", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -292,7 +292,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: PlayAdditiveOverlays
     /// </summary>
-    public unsafe void PlayAdditiveOverlays(float DeltaTime)
+    public unsafe virtual void PlayAdditiveOverlays(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.PlayAdditiveOverlays", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -304,7 +304,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -316,7 +316,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: PreRender
     /// </summary>
-    public unsafe void PreRender(BmSDK.Engine.Canvas HudCanvas)
+    public unsafe virtual void PreRender(BmSDK.Engine.Canvas HudCanvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.PreRender", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -328,7 +328,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: TurnOnLight
     /// </summary>
-    public unsafe void TurnOnLight()
+    public unsafe virtual void TurnOnLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.TurnOnLight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -339,7 +339,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: FireGunNow
     /// </summary>
-    public unsafe bool FireGunNow(bool bGunAnimOnly = default)
+    public unsafe virtual bool FireGunNow(bool bGunAnimOnly = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.FireGunNow", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -351,7 +351,7 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// Function: FireWeapon
     /// </summary>
-    public unsafe void FireWeapon()
+    public unsafe virtual void FireWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerFPS.FireWeapon", true);
         byte* paramsPtr = stackalloc byte[0];

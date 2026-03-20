@@ -36,7 +36,7 @@ public partial class RNavMeshGoal_MultiDest : BmSDK.Engine.NavMeshPathGoalEvalua
     /// <summary>
     /// Function: Recycle
     /// </summary>
-    public unsafe void Recycle()
+    public unsafe override void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshGoal_MultiDest.Recycle", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class RGFxMoviePLMResume : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObj
     /// <summary>
     /// Function: XI_OnY
     /// </summary>
-    public unsafe void XI_OnY(int ControllerId)
+    public unsafe virtual void XI_OnY(int ControllerId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMoviePLMResume.XI_OnY", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -48,7 +48,7 @@ public partial class RGFxMoviePLMResume : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObj
     /// <summary>
     /// Function: XI_OnB
     /// </summary>
-    public unsafe void XI_OnB(int ControllerId)
+    public unsafe virtual void XI_OnB(int ControllerId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMoviePLMResume.XI_OnB", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -60,7 +60,7 @@ public partial class RGFxMoviePLMResume : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObj
     /// <summary>
     /// Function: XI_OnA
     /// </summary>
-    public unsafe void XI_OnA(int ControllerId)
+    public unsafe virtual void XI_OnA(int ControllerId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMoviePLMResume.XI_OnA", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -72,7 +72,7 @@ public partial class RGFxMoviePLMResume : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObj
     /// <summary>
     /// Function: XI_GetMessage
     /// </summary>
-    public unsafe BmSDK.FString XI_GetMessage(int Value)
+    public unsafe virtual BmSDK.FString XI_GetMessage(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMoviePLMResume.XI_GetMessage", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -84,7 +84,7 @@ public partial class RGFxMoviePLMResume : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObj
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close(bool Unload = default)
+    public unsafe override void Close(bool Unload = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMoviePLMResume.Close", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -96,7 +96,7 @@ public partial class RGFxMoviePLMResume : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObj
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMoviePLMResume.Init", true);
         byte* paramsPtr = stackalloc byte[8];

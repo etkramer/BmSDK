@@ -36,7 +36,7 @@ public partial class HttpRequestWindowsMcp : BmSDK.WinDrv.HttpRequestWindows, Bm
     /// <summary>
     /// Function: ProcessRequest
     /// </summary>
-    public unsafe bool ProcessRequest()
+    public unsafe override bool ProcessRequest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "WinDrv.HttpRequestWindowsMcp.ProcessRequest", true);
         byte* paramsPtr = stackalloc byte[20];

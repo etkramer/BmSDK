@@ -66,7 +66,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: SeenByThug
     /// </summary>
-    public unsafe void SeenByThug(BmSDK.BmGame.RBMAIController SpotterCon)
+    public unsafe virtual void SeenByThug(BmSDK.BmGame.RBMAIController SpotterCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.SeenByThug", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -78,7 +78,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetGlanceScore
     /// </summary>
-    public unsafe int GetGlanceScore()
+    public unsafe virtual int GetGlanceScore()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetGlanceScore", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -89,7 +89,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetVoiceSynthLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetVoiceSynthLocation()
+    public unsafe virtual System.Numerics.Vector3 GetVoiceSynthLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetVoiceSynthLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -100,7 +100,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: AllowLongRangeInteraction
     /// </summary>
-    public unsafe bool AllowLongRangeInteraction(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool AllowLongRangeInteraction(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.AllowLongRangeInteraction", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -112,7 +112,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode(bool bDoFx = default)
+    public unsafe virtual void Explode(bool bDoFx = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.Explode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -124,7 +124,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: HitByBMBL
     /// </summary>
-    public unsafe void HitByBMBL(System.Numerics.Vector3 HitVelocity)
+    public unsafe virtual void HitByBMBL(System.Numerics.Vector3 HitVelocity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.HitByBMBL", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -136,7 +136,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: TakeDamageFromWeapon
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.EWeaponDamageResult TakeDamageFromWeapon(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default, bool bHeadShot = default)
+    public unsafe override BmSDK.Engine.Actor.EWeaponDamageResult TakeDamageFromWeapon(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default, bool bHeadShot = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.TakeDamageFromWeapon", true);
         byte* paramsPtr = stackalloc byte[109];
@@ -156,7 +156,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: RigidBodyCollision
     /// </summary>
-    public unsafe void RigidBodyCollision(BmSDK.Engine.PrimitiveComponent HitComponent, BmSDK.Engine.PrimitiveComponent OtherComponent, out BmSDK.Engine.Actor.FCollisionImpactData RigidCollisionData, int ContactIndex, float Speed, int Index0, int Index1)
+    public unsafe override void RigidBodyCollision(BmSDK.Engine.PrimitiveComponent HitComponent, BmSDK.Engine.PrimitiveComponent OtherComponent, out BmSDK.Engine.Actor.FCollisionImpactData RigidCollisionData, int ContactIndex, float Speed, int Index0, int Index1)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.RigidBodyCollision", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -174,7 +174,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: TriggerAIAlert
     /// </summary>
-    public unsafe void TriggerAIAlert()
+    public unsafe virtual void TriggerAIAlert()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.TriggerAIAlert", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -185,7 +185,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: SetXrayHighlight
     /// </summary>
-    public unsafe void SetXrayHighlight(bool bHighlightEnabled)
+    public unsafe virtual void SetXrayHighlight(bool bHighlightEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.SetXrayHighlight", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -197,7 +197,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: TriggerDeployedEvent
     /// </summary>
-    public unsafe void TriggerDeployedEvent()
+    public unsafe virtual void TriggerDeployedEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.TriggerDeployedEvent", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -208,7 +208,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: Deploy
     /// </summary>
-    public unsafe void Deploy()
+    public unsafe virtual void Deploy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.Deploy", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -219,7 +219,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: SwitchOffMuzzleFlash2
     /// </summary>
-    public unsafe void SwitchOffMuzzleFlash2()
+    public unsafe virtual void SwitchOffMuzzleFlash2()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.SwitchOffMuzzleFlash2", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -230,7 +230,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: SwitchOffMuzzleFlash1
     /// </summary>
-    public unsafe void SwitchOffMuzzleFlash1()
+    public unsafe virtual void SwitchOffMuzzleFlash1()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.SwitchOffMuzzleFlash1", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -241,7 +241,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: SwitchOffMuzzleFlash0
     /// </summary>
-    public unsafe void SwitchOffMuzzleFlash0()
+    public unsafe virtual void SwitchOffMuzzleFlash0()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.SwitchOffMuzzleFlash0", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -252,7 +252,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: DoShotFX
     /// </summary>
-    public unsafe void DoShotFX(System.Numerics.Vector3 TargetLoc, bool bDoImpactFX, BmSDK.Engine.Actor Target)
+    public unsafe virtual void DoShotFX(System.Numerics.Vector3 TargetLoc, bool bDoImpactFX, BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.DoShotFX", true);
         byte* paramsPtr = stackalloc byte[108];
@@ -266,7 +266,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: AttachFiringComponents
     /// </summary>
-    public unsafe void AttachFiringComponents()
+    public unsafe virtual void AttachFiringComponents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.AttachFiringComponents", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -277,7 +277,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: ShootCustom
     /// </summary>
-    public unsafe void ShootCustom()
+    public unsafe virtual void ShootCustom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.ShootCustom", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -288,7 +288,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: ShootRobot
     /// </summary>
-    public unsafe void ShootRobot(bool bAllowHit = default)
+    public unsafe virtual void ShootRobot(bool bAllowHit = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.ShootRobot", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -300,7 +300,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: TriggerPlayerDamagedEvent
     /// </summary>
-    public unsafe void TriggerPlayerDamagedEvent()
+    public unsafe virtual void TriggerPlayerDamagedEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.TriggerPlayerDamagedEvent", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -311,7 +311,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: ShootPlayer
     /// </summary>
-    public unsafe void ShootPlayer(bool bOnlyBatmobileVisible, bool bAllowHit)
+    public unsafe virtual void ShootPlayer(bool bOnlyBatmobileVisible, bool bAllowHit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.ShootPlayer", true);
         byte* paramsPtr = stackalloc byte[424];
@@ -324,7 +324,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: DrawDebug
     /// </summary>
-    public unsafe void DrawDebug()
+    public unsafe virtual void DrawDebug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.DrawDebug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -335,7 +335,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: TickJammed
     /// </summary>
-    public unsafe void TickJammed()
+    public unsafe virtual void TickJammed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.TickJammed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -346,7 +346,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: TickPoweredDown
     /// </summary>
-    public unsafe void TickPoweredDown()
+    public unsafe virtual void TickPoweredDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.TickPoweredDown", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -357,7 +357,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: TriggerShootingSeqEvent
     /// </summary>
-    public unsafe void TriggerShootingSeqEvent(bool bStartedShooting)
+    public unsafe virtual void TriggerShootingSeqEvent(bool bStartedShooting)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.TriggerShootingSeqEvent", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -369,7 +369,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: OnToggleHidden
     /// </summary>
-    public unsafe void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
+    public unsafe override void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.OnToggleHidden", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -381,7 +381,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: AttachLights
     /// </summary>
-    public unsafe void AttachLights()
+    public unsafe virtual void AttachLights()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.AttachLights", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -392,7 +392,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: FinishDieing
     /// </summary>
-    public unsafe void FinishDieing()
+    public unsafe virtual void FinishDieing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.FinishDieing", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -403,7 +403,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GoPhysics
     /// </summary>
-    public unsafe void GoPhysics(bool bTriggerEvent = default)
+    public unsafe virtual void GoPhysics(bool bTriggerEvent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GoPhysics", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -415,7 +415,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GoPhysicsAndTriggerEvent
     /// </summary>
-    public unsafe void GoPhysicsAndTriggerEvent()
+    public unsafe virtual void GoPhysicsAndTriggerEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GoPhysicsAndTriggerEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -426,7 +426,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: DisableSentryGun
     /// </summary>
-    public unsafe void DisableSentryGun()
+    public unsafe virtual void DisableSentryGun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.DisableSentryGun", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -437,7 +437,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: EndRECReaction
     /// </summary>
-    public unsafe void EndRECReaction()
+    public unsafe virtual void EndRECReaction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.EndRECReaction", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -448,7 +448,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: TickRECReaction
     /// </summary>
-    public unsafe void TickRECReaction()
+    public unsafe virtual void TickRECReaction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.TickRECReaction", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -459,7 +459,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: HitByREC
     /// </summary>
-    public unsafe void HitByREC()
+    public unsafe virtual void HitByREC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.HitByREC", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -470,7 +470,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: Trigger
     /// </summary>
-    public unsafe bool Trigger(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool Trigger(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.Trigger", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -482,7 +482,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: UnBlind
     /// </summary>
-    public unsafe void UnBlind()
+    public unsafe virtual void UnBlind()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.UnBlind", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -493,7 +493,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetInteractButton
     /// </summary>
-    public unsafe BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton GetInteractButton(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton GetInteractButton(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetInteractButton", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -505,7 +505,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: OverridePreviousLines
     /// </summary>
-    public unsafe bool OverridePreviousLines()
+    public unsafe virtual bool OverridePreviousLines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.OverridePreviousLines", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -516,7 +516,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetUpperPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetUpperPrompt()
+    public unsafe virtual BmSDK.FString GetUpperPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetUpperPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -527,7 +527,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: OverridesRun
     /// </summary>
-    public unsafe float OverridesRun(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual float OverridesRun(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.OverridesRun", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -539,7 +539,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: CanReachItem
     /// </summary>
-    public unsafe bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
+    public unsafe virtual bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.CanReachItem", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -551,7 +551,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetLocationOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLocationOffset()
+    public unsafe virtual System.Numerics.Vector3 GetLocationOffset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetLocationOffset", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -562,7 +562,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: CanUseInCinematicMode
     /// </summary>
-    public unsafe bool CanUseInCinematicMode()
+    public unsafe virtual bool CanUseInCinematicMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.CanUseInCinematicMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -573,7 +573,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: SetIdleAudioEnabled
     /// </summary>
-    public unsafe void SetIdleAudioEnabled(bool bAudioEnabled)
+    public unsafe virtual void SetIdleAudioEnabled(bool bAudioEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.SetIdleAudioEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -585,7 +585,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: CancelTakedownAnim
     /// </summary>
-    public unsafe void CancelTakedownAnim()
+    public unsafe virtual void CancelTakedownAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.CancelTakedownAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -596,7 +596,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: SentryGunGoPhysics
     /// </summary>
-    public unsafe void SentryGunGoPhysics()
+    public unsafe virtual void SentryGunGoPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.SentryGunGoPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -607,7 +607,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: SentryGunTakenOut
     /// </summary>
-    public unsafe void SentryGunTakenOut()
+    public unsafe virtual void SentryGunTakenOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.SentryGunTakenOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -618,7 +618,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: StartTakedownAnim
     /// </summary>
-    public unsafe void StartTakedownAnim(bool bBMInFront, BmSDK.Engine.AnimSet OverrideAnimset = default, BmSDK.FName OverrideAnimName = default)
+    public unsafe virtual void StartTakedownAnim(bool bBMInFront, BmSDK.Engine.AnimSet OverrideAnimset = default, BmSDK.FName OverrideAnimName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.StartTakedownAnim", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -632,7 +632,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.Interact", true);
         byte* paramsPtr = stackalloc byte[156];
@@ -644,7 +644,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: MustBeCrouched
     /// </summary>
-    public unsafe bool MustBeCrouched(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool MustBeCrouched(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.MustBeCrouched", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -656,7 +656,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: IsButtonPrompt
     /// </summary>
-    public unsafe bool IsButtonPrompt()
+    public unsafe virtual bool IsButtonPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.IsButtonPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -667,7 +667,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.IsActive", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -679,7 +679,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetPriority
     /// </summary>
-    public unsafe float GetPriority()
+    public unsafe virtual float GetPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -690,7 +690,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetFOVDegrees
     /// </summary>
-    public unsafe float GetFOVDegrees(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual float GetFOVDegrees(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetFOVDegrees", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -702,7 +702,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetHeightRange
     /// </summary>
-    public unsafe float GetHeightRange()
+    public unsafe virtual float GetHeightRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetHeightRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -713,7 +713,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetRange
     /// </summary>
-    public unsafe float GetRange()
+    public unsafe virtual float GetRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -724,7 +724,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe virtual BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -736,7 +736,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: SwitchOff
     /// </summary>
-    public unsafe void SwitchOff()
+    public unsafe virtual void SwitchOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.SwitchOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -747,7 +747,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: SwitchOn
     /// </summary>
-    public unsafe void SwitchOn()
+    public unsafe virtual void SwitchOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.SwitchOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -758,7 +758,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetRECTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetRECTargetLocation()
+    public unsafe virtual System.Numerics.Vector3 GetRECTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetRECTargetLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -769,7 +769,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetDisplayTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDisplayTargetLocation()
+    public unsafe virtual System.Numerics.Vector3 GetDisplayTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetDisplayTargetLocation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -780,7 +780,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: RequiresBlindDroneUpgrade
     /// </summary>
-    public unsafe bool RequiresBlindDroneUpgrade()
+    public unsafe virtual bool RequiresBlindDroneUpgrade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.RequiresBlindDroneUpgrade", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -791,7 +791,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: CanTrigger
     /// </summary>
-    public unsafe bool CanTrigger(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool CanTrigger(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.CanTrigger", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -803,7 +803,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: CanBeTargettedByRHD
     /// </summary>
-    public unsafe bool CanBeTargettedByRHD(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool CanBeTargettedByRHD(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.CanBeTargettedByRHD", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -815,7 +815,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetDisplayLockOnState
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayLockOnState()
+    public unsafe virtual BmSDK.FString GetDisplayLockOnState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetDisplayLockOnState", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -826,7 +826,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetDisplayTitle
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayTitle()
+    public unsafe virtual BmSDK.FString GetDisplayTitle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetDisplayTitle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -837,7 +837,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetDisplayDescription
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayDescription()
+    public unsafe virtual BmSDK.FString GetDisplayDescription()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetDisplayDescription", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -848,7 +848,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetDisplayIconName
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayIconName()
+    public unsafe virtual BmSDK.FString GetDisplayIconName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetDisplayIconName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -859,7 +859,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: NeedDisplayRefresh
     /// </summary>
-    public unsafe bool NeedDisplayRefresh()
+    public unsafe virtual bool NeedDisplayRefresh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.NeedDisplayRefresh", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -870,7 +870,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetInteractionPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetInteractionPrompt()
+    public unsafe virtual BmSDK.FString GetInteractionPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetInteractionPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -881,7 +881,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: ShouldInteractionPromptBeDisplayedInCentreOfScreen
     /// </summary>
-    public unsafe bool ShouldInteractionPromptBeDisplayedInCentreOfScreen()
+    public unsafe virtual bool ShouldInteractionPromptBeDisplayedInCentreOfScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.ShouldInteractionPromptBeDisplayedInCentreOfScreen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -892,7 +892,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetInteractionPromptSecondary
     /// </summary>
-    public unsafe BmSDK.FString GetInteractionPromptSecondary()
+    public unsafe virtual BmSDK.FString GetInteractionPromptSecondary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetInteractionPromptSecondary", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -903,7 +903,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetInteractionType
     /// </summary>
-    public unsafe BmSDK.BmGame.RRemoteControlLowSecurityInterface.EOmnitronInteractionType GetInteractionType()
+    public unsafe virtual BmSDK.BmGame.RRemoteControlLowSecurityInterface.EOmnitronInteractionType GetInteractionType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetInteractionType", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -914,7 +914,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: TriggerSecondary
     /// </summary>
-    public unsafe bool TriggerSecondary(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool TriggerSecondary(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.TriggerSecondary", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -926,7 +926,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: CanTargetTroughWalls
     /// </summary>
-    public unsafe bool CanTargetTroughWalls()
+    public unsafe virtual bool CanTargetTroughWalls()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.CanTargetTroughWalls", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -937,7 +937,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetMiniGameHelpPrompt
     /// </summary>
-    public unsafe void GetMiniGameHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe virtual void GetMiniGameHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetMiniGameHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -950,7 +950,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: TriggerLeft
     /// </summary>
-    public unsafe void TriggerLeft(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void TriggerLeft(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.TriggerLeft", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -962,7 +962,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: TriggerRight
     /// </summary>
-    public unsafe void TriggerRight(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void TriggerRight(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.TriggerRight", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -974,7 +974,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: DestroyPlayerIceRaft
     /// </summary>
-    public unsafe void DestroyPlayerIceRaft(BmSDK.BmGame.RPawnPlayer Player)
+    public unsafe virtual void DestroyPlayerIceRaft(BmSDK.BmGame.RPawnPlayer Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.DestroyPlayerIceRaft", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -986,7 +986,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -997,7 +997,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1008,7 +1008,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: PostBeginPlay_Delayed
     /// </summary>
-    public unsafe void PostBeginPlay_Delayed()
+    public unsafe virtual void PostBeginPlay_Delayed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.PostBeginPlay_Delayed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1019,7 +1019,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetRotationRootOrientation
     /// </summary>
-    public unsafe BmSDK.Rotator GetRotationRootOrientation()
+    public unsafe virtual BmSDK.Rotator GetRotationRootOrientation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetRotationRootOrientation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1037,7 +1037,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetRotationRootLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetRotationRootLocation()
+    public unsafe virtual System.Numerics.Vector3 GetRotationRootLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetRotationRootLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1055,7 +1055,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetNextAimTargetIndex
     /// </summary>
-    public unsafe int GetNextAimTargetIndex()
+    public unsafe virtual int GetNextAimTargetIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetNextAimTargetIndex", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1073,7 +1073,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetClosestAimTarget
     /// </summary>
-    public unsafe int GetClosestAimTarget()
+    public unsafe virtual int GetClosestAimTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetClosestAimTarget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1091,7 +1091,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: UpdatePlayerVis
     /// </summary>
-    public unsafe bool UpdatePlayerVis(BmSDK.Engine.Actor actorToTest)
+    public unsafe virtual bool UpdatePlayerVis(BmSDK.Engine.Actor actorToTest)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.UpdatePlayerVis", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1110,7 +1110,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetAllRobotsInCone
     /// </summary>
-    public unsafe void GetAllRobotsInCone(out BmSDK.TArray<BmSDK.BmGame.RPawnVillainThug> activeRobots)
+    public unsafe virtual void GetAllRobotsInCone(out BmSDK.TArray<BmSDK.BmGame.RPawnVillainThug> activeRobots)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetAllRobotsInCone", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1129,7 +1129,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: UpdateCurrentRotationRate
     /// </summary>
-    public unsafe void UpdateCurrentRotationRate(float DeltaTime)
+    public unsafe virtual void UpdateCurrentRotationRate(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.UpdateCurrentRotationRate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1148,7 +1148,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetTimeTillMaxRotationRate
     /// </summary>
-    public unsafe float GetTimeTillMaxRotationRate()
+    public unsafe virtual float GetTimeTillMaxRotationRate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetTimeTillMaxRotationRate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1166,7 +1166,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: CanShootCustom
     /// </summary>
-    public unsafe bool CanShootCustom()
+    public unsafe virtual bool CanShootCustom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.CanShootCustom", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1184,7 +1184,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: CanShootPlayer
     /// </summary>
-    public unsafe bool CanShootPlayer()
+    public unsafe virtual bool CanShootPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.CanShootPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1202,7 +1202,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: UpdateOrientation
     /// </summary>
-    public unsafe void UpdateOrientation(float DeltaTime)
+    public unsafe virtual void UpdateOrientation(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.UpdateOrientation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1221,7 +1221,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: SetLightMode
     /// </summary>
-    public unsafe void SetLightMode(BmSDK.BmGame.RSentryGunLightsBase.eLightMode lightMode)
+    public unsafe virtual void SetLightMode(BmSDK.BmGame.RSentryGunLightsBase.eLightMode lightMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.SetLightMode", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -1240,7 +1240,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: UpdateLight
     /// </summary>
-    public unsafe void UpdateLight()
+    public unsafe virtual void UpdateLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.UpdateLight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1258,7 +1258,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: StopFiringSound
     /// </summary>
-    public unsafe void StopFiringSound()
+    public unsafe virtual void StopFiringSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.StopFiringSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1276,7 +1276,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: StartFiringSound
     /// </summary>
-    public unsafe void StartFiringSound()
+    public unsafe virtual void StartFiringSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.StartFiringSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1294,7 +1294,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: UpdateRobotAttacking
     /// </summary>
-    public unsafe void UpdateRobotAttacking(float DeltaTime)
+    public unsafe virtual void UpdateRobotAttacking(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.UpdateRobotAttacking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1313,7 +1313,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: IsPoweredDown
     /// </summary>
-    public unsafe bool IsPoweredDown()
+    public unsafe virtual bool IsPoweredDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.IsPoweredDown", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1331,7 +1331,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: IsBlinded
     /// </summary>
-    public unsafe bool IsBlinded()
+    public unsafe virtual bool IsBlinded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.IsBlinded", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1349,7 +1349,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetBlindedTimeRemaining
     /// </summary>
-    public unsafe float GetBlindedTimeRemaining()
+    public unsafe virtual float GetBlindedTimeRemaining()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetBlindedTimeRemaining", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1367,7 +1367,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetFOVCheckLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetFOVCheckLocation()
+    public unsafe override System.Numerics.Vector3 GetFOVCheckLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetFOVCheckLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1385,7 +1385,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: GetTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTargetLocation(BmSDK.Engine.Actor RequestedBy = default, bool bRequestAlternateLoc = default)
+    public unsafe override System.Numerics.Vector3 GetTargetLocation(BmSDK.Engine.Actor RequestedBy = default, bool bRequestAlternateLoc = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.GetTargetLocation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1405,7 +1405,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Function: RaycastForLightRadius
     /// </summary>
-    public unsafe float RaycastForLightRadius()
+    public unsafe virtual float RaycastForLightRadius()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryGunBase.RaycastForLightRadius", true);
         byte* paramsPtr = stackalloc byte[4];

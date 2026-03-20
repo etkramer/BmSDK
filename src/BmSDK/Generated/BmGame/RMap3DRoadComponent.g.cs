@@ -36,7 +36,7 @@ public partial class RMap3DRoadComponent : BmSDK.Engine.PrimitiveComponent, BmSD
     /// <summary>
     /// Function: UpdateRouteMesh
     /// </summary>
-    public unsafe void UpdateRouteMesh(int LinkStart, BmSDK.TArray<int> SatNavRoute)
+    public unsafe virtual void UpdateRouteMesh(int LinkStart, BmSDK.TArray<int> SatNavRoute)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMap3DRoadComponent.UpdateRouteMesh", true);
         byte* paramsPtr = stackalloc byte[20];

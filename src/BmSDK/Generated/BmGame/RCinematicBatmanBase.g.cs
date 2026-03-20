@@ -66,7 +66,7 @@ public partial class RCinematicBatmanBase : BmSDK.BmGame.RCinematicPlayerCharact
     /// <summary>
     /// Function: MatineeTeleport
     /// </summary>
-    public unsafe void MatineeTeleport(BmSDK.Engine.InterpGroupInst InterpGroupInst, BmSDK.FName DebugSource)
+    public unsafe override void MatineeTeleport(BmSDK.Engine.InterpGroupInst InterpGroupInst, BmSDK.FName DebugSource)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicBatmanBase.MatineeTeleport", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -86,7 +86,7 @@ public partial class RCinematicBatmanBase : BmSDK.BmGame.RCinematicPlayerCharact
     /// <summary>
     /// Function: GetCinematicThoughts
     /// </summary>
-    public unsafe void GetCinematicThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList, out System.Numerics.Vector3 thoughtLocation)
+    public unsafe override void GetCinematicThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList, out System.Numerics.Vector3 thoughtLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicBatmanBase.GetCinematicThoughts", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -99,7 +99,7 @@ public partial class RCinematicBatmanBase : BmSDK.BmGame.RCinematicPlayerCharact
     /// <summary>
     /// Function: FinishAnimControl
     /// </summary>
-    public unsafe void FinishAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void FinishAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicBatmanBase.FinishAnimControl", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -112,7 +112,7 @@ public partial class RCinematicBatmanBase : BmSDK.BmGame.RCinematicPlayerCharact
     /// <summary>
     /// Function: BeginAnimControl
     /// </summary>
-    public unsafe void BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
+    public unsafe override void BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup, BmSDK.Engine.InterpGroupInst InInterpGroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicBatmanBase.BeginAnimControl", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -125,7 +125,7 @@ public partial class RCinematicBatmanBase : BmSDK.BmGame.RCinematicPlayerCharact
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicBatmanBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -136,7 +136,7 @@ public partial class RCinematicBatmanBase : BmSDK.BmGame.RCinematicPlayerCharact
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicBatmanBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RAEC_LiteCas : BmSDK.BmGame.RAEC_CasualtyBase, BmSDK.IGameO
     /// <summary>
     /// Function: PostCutNotify
     /// </summary>
-    public unsafe void PostCutNotify(System.Numerics.Vector3 ImpactLoc)
+    public unsafe override void PostCutNotify(System.Numerics.Vector3 ImpactLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LiteCas.PostCutNotify", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RAEC_LiteCas : BmSDK.BmGame.RAEC_CasualtyBase, BmSDK.IGameO
     /// <summary>
     /// Function: NotifyRopeCut
     /// </summary>
-    public unsafe void NotifyRopeCut(BmSDK.BmGame.RBatarangProjectile Brang)
+    public unsafe override void NotifyRopeCut(BmSDK.BmGame.RBatarangProjectile Brang)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LiteCas.NotifyRopeCut", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RAEC_LiteCas : BmSDK.BmGame.RAEC_CasualtyBase, BmSDK.IGameO
     /// <summary>
     /// Function: TryStopKicking
     /// </summary>
-    public unsafe void TryStopKicking()
+    public unsafe virtual void TryStopKicking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LiteCas.TryStopKicking", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RAEC_LiteCas : BmSDK.BmGame.RAEC_CasualtyBase, BmSDK.IGameO
     /// <summary>
     /// Function: CasFound
     /// </summary>
-    public unsafe void CasFound(BmSDK.BmGame.RBMAIController Spotter)
+    public unsafe override void CasFound(BmSDK.BmGame.RBMAIController Spotter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LiteCas.CasFound", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -118,7 +118,7 @@ public partial class RAEC_LiteCas : BmSDK.BmGame.RAEC_CasualtyBase, BmSDK.IGameO
     /// <summary>
     /// Function: SonicBatarangTakedown
     /// </summary>
-    public unsafe void SonicBatarangTakedown()
+    public unsafe override void SonicBatarangTakedown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LiteCas.SonicBatarangTakedown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RAEC_LiteCas : BmSDK.BmGame.RAEC_CasualtyBase, BmSDK.IGameO
     /// <summary>
     /// Function: VillainScreamed
     /// </summary>
-    public unsafe void VillainScreamed()
+    public unsafe override void VillainScreamed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LiteCas.VillainScreamed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class RAEC_LiteCas : BmSDK.BmGame.RAEC_CasualtyBase, BmSDK.IGameO
     /// <summary>
     /// Function: PawnTakenDown
     /// </summary>
-    public unsafe void PawnTakenDown(bool bGlideKicked, bool bDropAttacked, BmSDK.BmGame.RHidePoint inGlideKickOriginHidePoint, System.Numerics.Vector3 GlideKickHidePointPerchPos)
+    public unsafe override void PawnTakenDown(bool bGlideKicked, bool bDropAttacked, BmSDK.BmGame.RHidePoint inGlideKickOriginHidePoint, System.Numerics.Vector3 GlideKickHidePointPerchPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LiteCas.PawnTakenDown", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -155,7 +155,7 @@ public partial class RAEC_LiteCas : BmSDK.BmGame.RAEC_CasualtyBase, BmSDK.IGameO
     /// <summary>
     /// Function: GetAIThoughts
     /// </summary>
-    public unsafe void GetAIThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetAIThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LiteCas.GetAIThoughts", true);
         byte* paramsPtr = stackalloc byte[16];

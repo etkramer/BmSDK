@@ -71,7 +71,7 @@ public partial class RTunnelGrate : BmSDK.BmScript.RTunnelGrateShared, BmSDK.IGa
     /// <summary>
     /// Function: PostBeginPlay_Delayed
     /// </summary>
-    public unsafe void PostBeginPlay_Delayed()
+    public unsafe override void PostBeginPlay_Delayed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTunnelGrate.PostBeginPlay_Delayed", true);
         byte* paramsPtr = stackalloc byte[0];

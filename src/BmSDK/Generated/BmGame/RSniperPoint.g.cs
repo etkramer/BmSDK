@@ -71,7 +71,7 @@ public partial class RSniperPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRandomLinkedSniperPoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RSniperPoint GetRandomLinkedSniperPoint()
+    public unsafe virtual BmSDK.BmGame.RSniperPoint GetRandomLinkedSniperPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSniperPoint.GetRandomLinkedSniperPoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RSniperPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRandNumAimAts
     /// </summary>
-    public unsafe int GetRandNumAimAts()
+    public unsafe virtual int GetRandNumAimAts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSniperPoint.GetRandNumAimAts", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -93,7 +93,7 @@ public partial class RSniperPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor UnLinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor UnLinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSniperPoint.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -105,7 +105,7 @@ public partial class RSniperPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSniperPoint.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -117,7 +117,7 @@ public partial class RSniperPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: MarkAsDirty
     /// </summary>
-    public unsafe void MarkAsDirty()
+    public unsafe virtual void MarkAsDirty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSniperPoint.MarkAsDirty", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RSniperPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddLinkedSniperPoint
     /// </summary>
-    public unsafe void AddLinkedSniperPoint(BmSDK.BmGame.RSniperPoint LinkTarget)
+    public unsafe virtual void AddLinkedSniperPoint(BmSDK.BmGame.RSniperPoint LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSniperPoint.AddLinkedSniperPoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -140,7 +140,7 @@ public partial class RSniperPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnLock
     /// </summary>
-    public unsafe void UnLock(BmSDK.BmGame.RPawnCombat TestPawn, bool bRecursive = default)
+    public unsafe virtual void UnLock(BmSDK.BmGame.RPawnCombat TestPawn, bool bRecursive = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSniperPoint.UnLock", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -153,7 +153,7 @@ public partial class RSniperPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Lock
     /// </summary>
-    public unsafe void Lock(BmSDK.BmGame.RPawnCombat TestPawn, bool bRecursive = default)
+    public unsafe virtual void Lock(BmSDK.BmGame.RPawnCombat TestPawn, bool bRecursive = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSniperPoint.Lock", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -166,7 +166,7 @@ public partial class RSniperPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanBeUsedBy
     /// </summary>
-    public unsafe bool CanBeUsedBy(BmSDK.BmGame.RPawnCombat TestPawn)
+    public unsafe virtual bool CanBeUsedBy(BmSDK.BmGame.RPawnCombat TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSniperPoint.CanBeUsedBy", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -178,7 +178,7 @@ public partial class RSniperPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSniperPoint.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -189,7 +189,7 @@ public partial class RSniperPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSniperPoint.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -200,7 +200,7 @@ public partial class RSniperPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSniperPoint.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];

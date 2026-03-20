@@ -71,7 +71,7 @@ public partial class RCombatMove_CatwomanStunStrike : BmSDK.BmGame.RCombatMove_B
     /// <summary>
     /// Function: SetDamageInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.FDamageInfo SetDamageInfo(BmSDK.BmGame.RPawnCombat DamageReceiver, float DmgAmount)
+    public unsafe override BmSDK.BmGame.RPawnCombat.FDamageInfo SetDamageInfo(BmSDK.BmGame.RPawnCombat DamageReceiver, float DmgAmount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CatwomanStunStrike.SetDamageInfo", true);
         byte* paramsPtr = stackalloc byte[508];
@@ -84,7 +84,7 @@ public partial class RCombatMove_CatwomanStunStrike : BmSDK.BmGame.RCombatMove_B
     /// <summary>
     /// Function: UpdateStunning
     /// </summary>
-    public unsafe void UpdateStunning(float DeltaTime)
+    public unsafe override void UpdateStunning(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CatwomanStunStrike.UpdateStunning", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -96,7 +96,7 @@ public partial class RCombatMove_CatwomanStunStrike : BmSDK.BmGame.RCombatMove_B
     /// <summary>
     /// Function: SecondStrikeContact
     /// </summary>
-    public unsafe void SecondStrikeContact()
+    public unsafe virtual void SecondStrikeContact()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CatwomanStunStrike.SecondStrikeContact", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class RCombatMove_CatwomanStunStrike : BmSDK.BmGame.RCombatMove_B
     /// <summary>
     /// Function: StrikeContact
     /// </summary>
-    public unsafe void StrikeContact(bool bPreStrike)
+    public unsafe override void StrikeContact(bool bPreStrike)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_CatwomanStunStrike.StrikeContact", true);
         byte* paramsPtr = stackalloc byte[4];

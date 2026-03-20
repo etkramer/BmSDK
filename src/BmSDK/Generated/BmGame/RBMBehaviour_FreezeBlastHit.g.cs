@@ -36,7 +36,7 @@ public partial class RBMBehaviour_FreezeBlastHit : BmSDK.BmGame.RBMBehaviour, Bm
     /// <summary>
     /// Function: AwareOfPlayer
     /// </summary>
-    public unsafe bool AwareOfPlayer(BmSDK.Engine.Actor Player, BmSDK.Class TestDmgType = default)
+    public unsafe override bool AwareOfPlayer(BmSDK.Engine.Actor Player, BmSDK.Class TestDmgType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FreezeBlastHit.AwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -49,7 +49,7 @@ public partial class RBMBehaviour_FreezeBlastHit : BmSDK.BmGame.RBMBehaviour, Bm
     /// <summary>
     /// Function: UnAwareOfPlayer
     /// </summary>
-    public unsafe bool UnAwareOfPlayer(BmSDK.Class DamageType = default)
+    public unsafe override bool UnAwareOfPlayer(BmSDK.Class DamageType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FreezeBlastHit.UnAwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -61,7 +61,7 @@ public partial class RBMBehaviour_FreezeBlastHit : BmSDK.BmGame.RBMBehaviour, Bm
     /// <summary>
     /// Function: HasFrozenLegs
     /// </summary>
-    public unsafe bool HasFrozenLegs()
+    public unsafe virtual bool HasFrozenLegs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FreezeBlastHit.HasFrozenLegs", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -72,7 +72,7 @@ public partial class RBMBehaviour_FreezeBlastHit : BmSDK.BmGame.RBMBehaviour, Bm
     /// <summary>
     /// Function: HasFrozenTorso
     /// </summary>
-    public unsafe bool HasFrozenTorso()
+    public unsafe virtual bool HasFrozenTorso()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FreezeBlastHit.HasFrozenTorso", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RBMBehaviour_FreezeBlastHit : BmSDK.BmGame.RBMBehaviour, Bm
     /// <summary>
     /// Function: CanRepel
     /// </summary>
-    public unsafe bool CanRepel()
+    public unsafe override bool CanRepel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FreezeBlastHit.CanRepel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RBMBehaviour_FreezeBlastHit : BmSDK.BmGame.RBMBehaviour, Bm
     /// <summary>
     /// Function: FrozenAgain
     /// </summary>
-    public unsafe void FrozenAgain()
+    public unsafe virtual void FrozenAgain()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FreezeBlastHit.FrozenAgain", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RBMBehaviour_FreezeBlastHit : BmSDK.BmGame.RBMBehaviour, Bm
     /// <summary>
     /// Function: ExitFrozen
     /// </summary>
-    public unsafe void ExitFrozen(bool bCalledInDeactivate = default)
+    public unsafe virtual void ExitFrozen(bool bCalledInDeactivate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FreezeBlastHit.ExitFrozen", true);
         byte* paramsPtr = stackalloc byte[252];
@@ -117,7 +117,7 @@ public partial class RBMBehaviour_FreezeBlastHit : BmSDK.BmGame.RBMBehaviour, Bm
     /// <summary>
     /// Function: CanHitLaserGrid
     /// </summary>
-    public unsafe bool CanHitLaserGrid()
+    public unsafe override bool CanHitLaserGrid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FreezeBlastHit.CanHitLaserGrid", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RBMBehaviour_FreezeBlastHit : BmSDK.BmGame.RBMBehaviour, Bm
     /// <summary>
     /// Function: KillCheck
     /// </summary>
-    public unsafe bool KillCheck()
+    public unsafe virtual bool KillCheck()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FreezeBlastHit.KillCheck", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -139,7 +139,7 @@ public partial class RBMBehaviour_FreezeBlastHit : BmSDK.BmGame.RBMBehaviour, Bm
     /// <summary>
     /// Function: ForceInstantUnFreeze
     /// </summary>
-    public unsafe void ForceInstantUnFreeze()
+    public unsafe virtual void ForceInstantUnFreeze()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FreezeBlastHit.ForceInstantUnFreeze", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class RBMBehaviour_FreezeBlastHit : BmSDK.BmGame.RBMBehaviour, Bm
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FreezeBlastHit.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -161,7 +161,7 @@ public partial class RBMBehaviour_FreezeBlastHit : BmSDK.BmGame.RBMBehaviour, Bm
     /// <summary>
     /// Function: IsEarlyInterruption
     /// </summary>
-    public unsafe bool IsEarlyInterruption()
+    public unsafe virtual bool IsEarlyInterruption()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FreezeBlastHit.IsEarlyInterruption", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -172,7 +172,7 @@ public partial class RBMBehaviour_FreezeBlastHit : BmSDK.BmGame.RBMBehaviour, Bm
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FreezeBlastHit.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -183,7 +183,7 @@ public partial class RBMBehaviour_FreezeBlastHit : BmSDK.BmGame.RBMBehaviour, Bm
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmGame.RPawnPlayer Instigator, System.Numerics.Vector3 HitNorm, bool bInstantFreeze = default, BmSDK.BmGame.RFreezeSprayProjectile Proj = default, bool bShouldAlwaysRagdoll = default)
+    public unsafe virtual void Initialise(BmSDK.BmGame.RPawnPlayer Instigator, System.Numerics.Vector3 HitNorm, bool bInstantFreeze = default, BmSDK.BmGame.RFreezeSprayProjectile Proj = default, bool bShouldAlwaysRagdoll = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FreezeBlastHit.Initialise", true);
         byte* paramsPtr = stackalloc byte[36];

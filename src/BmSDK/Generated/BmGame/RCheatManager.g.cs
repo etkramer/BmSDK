@@ -36,7 +36,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DisplayAllFades
     /// </summary>
-    public unsafe void DisplayAllFades()
+    public unsafe virtual void DisplayAllFades()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DisplayAllFades", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DMThroughWalls_Suppress
     /// </summary>
-    public unsafe void DMThroughWalls_Suppress()
+    public unsafe virtual void DMThroughWalls_Suppress()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DMThroughWalls_Suppress", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DMThroughWalls_Allow
     /// </summary>
-    public unsafe void DMThroughWalls_Allow()
+    public unsafe virtual void DMThroughWalls_Allow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DMThroughWalls_Allow", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: EvaluateBrains
     /// </summary>
-    public unsafe void EvaluateBrains()
+    public unsafe virtual void EvaluateBrains()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.EvaluateBrains", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -80,7 +80,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: InitCheatManager
     /// </summary>
-    public unsafe void InitCheatManager()
+    public unsafe override void InitCheatManager()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.InitCheatManager", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -91,7 +91,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: OverrideWalkCamera
     /// </summary>
-    public unsafe void OverrideWalkCamera(BmSDK.FName CameraName)
+    public unsafe virtual void OverrideWalkCamera(BmSDK.FName CameraName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.OverrideWalkCamera", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -103,7 +103,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ForceBatmanOutOfCar
     /// </summary>
-    public unsafe void ForceBatmanOutOfCar()
+    public unsafe virtual void ForceBatmanOutOfCar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ForceBatmanOutOfCar", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -114,7 +114,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnsuppressXPTake
     /// </summary>
-    public unsafe void UnsuppressXPTake()
+    public unsafe virtual void UnsuppressXPTake()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnsuppressXPTake", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -125,7 +125,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnsuppressXPGive
     /// </summary>
-    public unsafe void UnsuppressXPGive()
+    public unsafe virtual void UnsuppressXPGive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnsuppressXPGive", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -136,7 +136,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SuppressXP
     /// </summary>
-    public unsafe void SuppressXP()
+    public unsafe virtual void SuppressXP()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SuppressXP", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -147,7 +147,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: QueueDeleter
     /// </summary>
-    public unsafe void QueueDeleter()
+    public unsafe virtual void QueueDeleter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.QueueDeleter", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -158,7 +158,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: QueueLoader
     /// </summary>
-    public unsafe void QueueLoader()
+    public unsafe virtual void QueueLoader()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.QueueLoader", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -169,7 +169,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: QueueSaver
     /// </summary>
-    public unsafe void QueueSaver()
+    public unsafe virtual void QueueSaver()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.QueueSaver", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -180,7 +180,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: CacheFolderScanner
     /// </summary>
-    public unsafe void CacheFolderScanner()
+    public unsafe virtual void CacheFolderScanner()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.CacheFolderScanner", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -191,7 +191,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: CacheFileScanner
     /// </summary>
-    public unsafe void CacheFileScanner()
+    public unsafe virtual void CacheFileScanner()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.CacheFileScanner", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -202,7 +202,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: CacheDeleter
     /// </summary>
-    public unsafe void CacheDeleter()
+    public unsafe virtual void CacheDeleter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.CacheDeleter", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -213,7 +213,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: OnCacheLoadComplete
     /// </summary>
-    public unsafe void OnCacheLoadComplete(bool bWasSuccessful, BmSDK.FString Filename, int bytesTransferred, float timeTaken)
+    public unsafe virtual void OnCacheLoadComplete(bool bWasSuccessful, BmSDK.FString Filename, int bytesTransferred, float timeTaken)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.OnCacheLoadComplete", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -228,7 +228,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: CacheLoader
     /// </summary>
-    public unsafe void CacheLoader()
+    public unsafe virtual void CacheLoader()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.CacheLoader", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -239,7 +239,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: OnCacheSaveComplete
     /// </summary>
-    public unsafe void OnCacheSaveComplete(bool bWasSuccessful, BmSDK.FString Filename, int bytesTransferred, float timeTaken)
+    public unsafe virtual void OnCacheSaveComplete(bool bWasSuccessful, BmSDK.FString Filename, int bytesTransferred, float timeTaken)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.OnCacheSaveComplete", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -254,7 +254,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: CacheSaver
     /// </summary>
-    public unsafe void CacheSaver()
+    public unsafe virtual void CacheSaver()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.CacheSaver", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -265,7 +265,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ClearCombatTutorials
     /// </summary>
-    public unsafe void ClearCombatTutorials()
+    public unsafe virtual void ClearCombatTutorials()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ClearCombatTutorials", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -276,7 +276,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: Playtester
     /// </summary>
-    public unsafe void Playtester(BmSDK.FString PlaytesterName)
+    public unsafe virtual void Playtester(BmSDK.FString PlaytesterName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.Playtester", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -288,7 +288,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetCustomContentAccessModeOverride
     /// </summary>
-    public unsafe void SetCustomContentAccessModeOverride(int Id)
+    public unsafe virtual void SetCustomContentAccessModeOverride(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SetCustomContentAccessModeOverride", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -300,7 +300,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: BatmobileSetTireLatStiffYMod
     /// </summary>
-    public unsafe void BatmobileSetTireLatStiffYMod(float NewLatSlipMod)
+    public unsafe virtual void BatmobileSetTireLatStiffYMod(float NewLatSlipMod)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.BatmobileSetTireLatStiffYMod", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -312,7 +312,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: BatmobileSetTireFrictionMod
     /// </summary>
-    public unsafe void BatmobileSetTireFrictionMod(float NewFrictionMod)
+    public unsafe virtual void BatmobileSetTireFrictionMod(float NewFrictionMod)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.BatmobileSetTireFrictionMod", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -324,7 +324,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: BatmobileInfinitePower
     /// </summary>
-    public unsafe void BatmobileInfinitePower()
+    public unsafe virtual void BatmobileInfinitePower()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.BatmobileInfinitePower", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -335,7 +335,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetCommanderTankBossStage
     /// </summary>
-    public unsafe void SetCommanderTankBossStage(int Stage)
+    public unsafe virtual void SetCommanderTankBossStage(int Stage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SetCommanderTankBossStage", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -347,7 +347,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: IsPawnImmuneToDebugKIll
     /// </summary>
-    public unsafe bool IsPawnImmuneToDebugKIll(BmSDK.BmGame.RPawn TestPawn)
+    public unsafe virtual bool IsPawnImmuneToDebugKIll(BmSDK.BmGame.RPawn TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.IsPawnImmuneToDebugKIll", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -359,7 +359,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: MatineeDebugOverlay
     /// </summary>
-    public unsafe void MatineeDebugOverlay()
+    public unsafe virtual void MatineeDebugOverlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.MatineeDebugOverlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -370,7 +370,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ToggleGrapplePointDebug
     /// </summary>
-    public unsafe void ToggleGrapplePointDebug()
+    public unsafe virtual void ToggleGrapplePointDebug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ToggleGrapplePointDebug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -381,7 +381,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: BatmobileCockpitClose
     /// </summary>
-    public unsafe void BatmobileCockpitClose()
+    public unsafe virtual void BatmobileCockpitClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.BatmobileCockpitClose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -392,7 +392,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: BatmobileCockpitOpen
     /// </summary>
-    public unsafe void BatmobileCockpitOpen()
+    public unsafe virtual void BatmobileCockpitOpen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.BatmobileCockpitOpen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -403,7 +403,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TriggerPhysImpact
     /// </summary>
-    public unsafe void TriggerPhysImpact()
+    public unsafe virtual void TriggerPhysImpact()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TriggerPhysImpact", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -414,7 +414,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TogglePhysImpact
     /// </summary>
-    public unsafe void TogglePhysImpact()
+    public unsafe virtual void TogglePhysImpact()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TogglePhysImpact", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -425,7 +425,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: CombatGhost
     /// </summary>
-    public unsafe void CombatGhost()
+    public unsafe virtual void CombatGhost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.CombatGhost", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -436,7 +436,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: NavMeshObstaclesOff
     /// </summary>
-    public unsafe void NavMeshObstaclesOff()
+    public unsafe virtual void NavMeshObstaclesOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.NavMeshObstaclesOff", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -447,7 +447,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: NavMeshObstaclesOn
     /// </summary>
-    public unsafe void NavMeshObstaclesOn()
+    public unsafe virtual void NavMeshObstaclesOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.NavMeshObstaclesOn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -458,7 +458,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SpawnDebugRunAwayThug
     /// </summary>
-    public unsafe void SpawnDebugRunAwayThug()
+    public unsafe virtual void SpawnDebugRunAwayThug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SpawnDebugRunAwayThug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -469,7 +469,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ToggleStreamingMiniMap
     /// </summary>
-    public unsafe void ToggleStreamingMiniMap()
+    public unsafe virtual void ToggleStreamingMiniMap()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ToggleStreamingMiniMap", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -480,7 +480,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ToggleFramerateCheat
     /// </summary>
-    public unsafe void ToggleFramerateCheat()
+    public unsafe virtual void ToggleFramerateCheat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ToggleFramerateCheat", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -491,7 +491,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DisableAlternativeWalk
     /// </summary>
-    public unsafe void DisableAlternativeWalk()
+    public unsafe virtual void DisableAlternativeWalk()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DisableAlternativeWalk", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -502,7 +502,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: EnableAlternativeWalk
     /// </summary>
-    public unsafe void EnableAlternativeWalk(bool AllowCameraTurn = default)
+    public unsafe virtual void EnableAlternativeWalk(bool AllowCameraTurn = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.EnableAlternativeWalk", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -514,7 +514,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DrawRedHoodSniperDebug
     /// </summary>
-    public unsafe void DrawRedHoodSniperDebug()
+    public unsafe virtual void DrawRedHoodSniperDebug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DrawRedHoodSniperDebug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -525,7 +525,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: GiveSkillPoints
     /// </summary>
-    public unsafe void GiveSkillPoints(int Points)
+    public unsafe virtual void GiveSkillPoints(int Points)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.GiveSkillPoints", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -537,7 +537,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DoubleGhostToggleB
     /// </summary>
-    public unsafe void DoubleGhostToggleB()
+    public unsafe virtual void DoubleGhostToggleB()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DoubleGhostToggleB", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -548,7 +548,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DoubleGhostToggleA
     /// </summary>
-    public unsafe void DoubleGhostToggleA()
+    public unsafe virtual void DoubleGhostToggleA()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DoubleGhostToggleA", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -559,7 +559,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: StickToggleGhost
     /// </summary>
-    public unsafe void StickToggleGhost()
+    public unsafe virtual void StickToggleGhost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.StickToggleGhost", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -570,7 +570,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: RealWorldBatman
     /// </summary>
-    public unsafe void RealWorldBatman()
+    public unsafe virtual void RealWorldBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.RealWorldBatman", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -581,7 +581,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SentryGunSpawnAll
     /// </summary>
-    public unsafe void SentryGunSpawnAll()
+    public unsafe virtual void SentryGunSpawnAll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SentryGunSpawnAll", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -592,7 +592,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SentryGunTriggerPlacement
     /// </summary>
-    public unsafe void SentryGunTriggerPlacement()
+    public unsafe virtual void SentryGunTriggerPlacement()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SentryGunTriggerPlacement", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -603,7 +603,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ExplodeCar
     /// </summary>
-    public unsafe void ExplodeCar()
+    public unsafe virtual void ExplodeCar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ExplodeCar", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -614,7 +614,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DrawRoadLink
     /// </summary>
-    public unsafe void DrawRoadLink(int LinkIndex)
+    public unsafe virtual void DrawRoadLink(int LinkIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DrawRoadLink", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -626,7 +626,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ShowSatNav
     /// </summary>
-    public unsafe void ShowSatNav()
+    public unsafe virtual void ShowSatNav()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ShowSatNav", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -637,7 +637,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TankFormationReverse
     /// </summary>
-    public unsafe void TankFormationReverse()
+    public unsafe virtual void TankFormationReverse()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TankFormationReverse", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -648,7 +648,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: KillVehicles
     /// </summary>
-    public unsafe void KillVehicles()
+    public unsafe virtual void KillVehicles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.KillVehicles", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -659,7 +659,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: VehicleRunAway
     /// </summary>
-    public unsafe void VehicleRunAway()
+    public unsafe virtual void VehicleRunAway()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.VehicleRunAway", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -670,7 +670,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ExitPassengersCalm
     /// </summary>
-    public unsafe void ExitPassengersCalm()
+    public unsafe virtual void ExitPassengersCalm()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ExitPassengersCalm", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -681,7 +681,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ExitPassengers
     /// </summary>
-    public unsafe void ExitPassengers()
+    public unsafe virtual void ExitPassengers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ExitPassengers", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -692,7 +692,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SpawnPassengers
     /// </summary>
-    public unsafe void SpawnPassengers()
+    public unsafe virtual void SpawnPassengers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SpawnPassengers", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -703,7 +703,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SpawnVehicleScenario
     /// </summary>
-    public unsafe void SpawnVehicleScenario()
+    public unsafe virtual void SpawnVehicleScenario()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SpawnVehicleScenario", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -714,7 +714,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SpawnChaseCar
     /// </summary>
-    public unsafe void SpawnChaseCar(BmSDK.GameObject Archetype = default)
+    public unsafe virtual void SpawnChaseCar(BmSDK.GameObject Archetype = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SpawnChaseCar", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -726,7 +726,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: BatmobileAway
     /// </summary>
-    public unsafe void BatmobileAway()
+    public unsafe virtual void BatmobileAway()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.BatmobileAway", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -737,7 +737,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: FindBatmobile
     /// </summary>
-    public unsafe void FindBatmobile()
+    public unsafe virtual void FindBatmobile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.FindBatmobile", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -748,7 +748,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: PlayTestDroneBark
     /// </summary>
-    public unsafe void PlayTestDroneBark()
+    public unsafe virtual void PlayTestDroneBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.PlayTestDroneBark", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -759,7 +759,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SlamBatmobile
     /// </summary>
-    public unsafe void SlamBatmobile()
+    public unsafe virtual void SlamBatmobile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SlamBatmobile", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -770,7 +770,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: FlipBatmobile
     /// </summary>
-    public unsafe void FlipBatmobile()
+    public unsafe virtual void FlipBatmobile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.FlipBatmobile", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -781,7 +781,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: FlipCommanderTank
     /// </summary>
-    public unsafe void FlipCommanderTank()
+    public unsafe virtual void FlipCommanderTank()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.FlipCommanderTank", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -792,7 +792,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: FlipGordon
     /// </summary>
-    public unsafe void FlipGordon()
+    public unsafe virtual void FlipGordon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.FlipGordon", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -803,7 +803,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: FlipThugCars
     /// </summary>
-    public unsafe void FlipThugCars()
+    public unsafe virtual void FlipThugCars()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.FlipThugCars", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -814,7 +814,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: KillHeavyTanks
     /// </summary>
-    public unsafe void KillHeavyTanks()
+    public unsafe virtual void KillHeavyTanks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.KillHeavyTanks", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -825,7 +825,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: KillHeavyTank
     /// </summary>
-    public unsafe void KillHeavyTank()
+    public unsafe virtual void KillHeavyTank()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.KillHeavyTank", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -836,7 +836,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: KillAPC
     /// </summary>
-    public unsafe void KillAPC()
+    public unsafe virtual void KillAPC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.KillAPC", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -847,7 +847,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: RescueBatmobile
     /// </summary>
-    public unsafe void RescueBatmobile()
+    public unsafe virtual void RescueBatmobile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.RescueBatmobile", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -858,7 +858,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SpawnPlayerCar
     /// </summary>
-    public unsafe void SpawnPlayerCar()
+    public unsafe virtual void SpawnPlayerCar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SpawnPlayerCar", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -869,7 +869,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TestBlockBankDoors
     /// </summary>
-    public unsafe void TestBlockBankDoors()
+    public unsafe virtual void TestBlockBankDoors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TestBlockBankDoors", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -880,7 +880,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetPredWallTakedownDone
     /// </summary>
-    public unsafe void SetPredWallTakedownDone(bool bNewVal = default)
+    public unsafe virtual void SetPredWallTakedownDone(bool bNewVal = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SetPredWallTakedownDone", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -892,7 +892,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetPredLedgeTakedownDone
     /// </summary>
-    public unsafe void SetPredLedgeTakedownDone(bool bNewVal = default)
+    public unsafe virtual void SetPredLedgeTakedownDone(bool bNewVal = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SetPredLedgeTakedownDone", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -904,7 +904,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetPredSilentTakedownDone
     /// </summary>
-    public unsafe void SetPredSilentTakedownDone(bool bNewVal = default)
+    public unsafe virtual void SetPredSilentTakedownDone(bool bNewVal = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SetPredSilentTakedownDone", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -916,7 +916,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetPredGrateTakedownDone
     /// </summary>
-    public unsafe void SetPredGrateTakedownDone(bool bNewVal = default)
+    public unsafe virtual void SetPredGrateTakedownDone(bool bNewVal = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SetPredGrateTakedownDone", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -928,7 +928,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TestMap3DDebug
     /// </summary>
-    public unsafe void TestMap3DDebug(bool bShowDebug)
+    public unsafe virtual void TestMap3DDebug(bool bShowDebug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TestMap3DDebug", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -940,7 +940,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TestMap3D
     /// </summary>
-    public unsafe void TestMap3D(bool bShowDebug = default)
+    public unsafe virtual void TestMap3D(bool bShowDebug = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TestMap3D", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -952,7 +952,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TestStatsStory
     /// </summary>
-    public unsafe void TestStatsStory(int Percentage)
+    public unsafe virtual void TestStatsStory(int Percentage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TestStatsStory", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -964,7 +964,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: GFxSafeFrame
     /// </summary>
-    public unsafe void GFxSafeFrame(bool bShow)
+    public unsafe virtual void GFxSafeFrame(bool bShow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.GFxSafeFrame", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -976,7 +976,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SpamBatarangs
     /// </summary>
-    public unsafe void SpamBatarangs()
+    public unsafe virtual void SpamBatarangs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SpamBatarangs", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -987,7 +987,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: MassJam
     /// </summary>
-    public unsafe void MassJam()
+    public unsafe virtual void MassJam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.MassJam", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -998,7 +998,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TestBatmanInc
     /// </summary>
-    public unsafe void TestBatmanInc()
+    public unsafe virtual void TestBatmanInc()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TestBatmanInc", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1009,7 +1009,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: RiddlerPickupDebug
     /// </summary>
-    public unsafe void RiddlerPickupDebug()
+    public unsafe virtual void RiddlerPickupDebug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.RiddlerPickupDebug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1020,7 +1020,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DumpStorySynopsis
     /// </summary>
-    public unsafe void DumpStorySynopsis()
+    public unsafe virtual void DumpStorySynopsis()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DumpStorySynopsis", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1031,7 +1031,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DumpObjectives
     /// </summary>
-    public unsafe void DumpObjectives()
+    public unsafe virtual void DumpObjectives()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DumpObjectives", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1042,7 +1042,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DumpPDat
     /// </summary>
-    public unsafe void DumpPDat(BmSDK.FString Mode = default)
+    public unsafe virtual void DumpPDat(BmSDK.FString Mode = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DumpPDat", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1054,7 +1054,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: PoolAllPawns
     /// </summary>
-    public unsafe void PoolAllPawns()
+    public unsafe virtual void PoolAllPawns()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.PoolAllPawns", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1065,7 +1065,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: RiddlerRevealItemsOnlyValid
     /// </summary>
-    public unsafe void RiddlerRevealItemsOnlyValid()
+    public unsafe virtual void RiddlerRevealItemsOnlyValid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.RiddlerRevealItemsOnlyValid", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -1076,7 +1076,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: RiddlerRevealItems
     /// </summary>
-    public unsafe void RiddlerRevealItems(BmSDK.FString MapName = default)
+    public unsafe virtual void RiddlerRevealItems(BmSDK.FString MapName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.RiddlerRevealItems", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -1088,7 +1088,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TriggerHeatConcealEffect
     /// </summary>
-    public unsafe void TriggerHeatConcealEffect()
+    public unsafe virtual void TriggerHeatConcealEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TriggerHeatConcealEffect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1099,7 +1099,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: AddScreenShake
     /// </summary>
-    public unsafe void AddScreenShake(float Strength = default)
+    public unsafe virtual void AddScreenShake(float Strength = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.AddScreenShake", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1111,7 +1111,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: BmRagDoll
     /// </summary>
-    public unsafe void BmRagDoll()
+    public unsafe virtual void BmRagDoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.BmRagDoll", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1122,7 +1122,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetControlType
     /// </summary>
-    public unsafe void SetControlType(int Type)
+    public unsafe virtual void SetControlType(int Type)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SetControlType", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1134,7 +1134,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugLoadGame
     /// </summary>
-    public unsafe void DebugLoadGame()
+    public unsafe virtual void DebugLoadGame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugLoadGame", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1145,7 +1145,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: CycleAIPhysWalking
     /// </summary>
-    public unsafe void CycleAIPhysWalking()
+    public unsafe virtual void CycleAIPhysWalking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.CycleAIPhysWalking", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1156,7 +1156,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DumpPawns
     /// </summary>
-    public unsafe void DumpPawns()
+    public unsafe virtual void DumpPawns()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DumpPawns", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1167,7 +1167,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ShowVPointAttackCache
     /// </summary>
-    public unsafe void ShowVPointAttackCache()
+    public unsafe virtual void ShowVPointAttackCache()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ShowVPointAttackCache", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1178,7 +1178,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ShowProgress
     /// </summary>
-    public unsafe void ShowProgress()
+    public unsafe virtual void ShowProgress()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ShowProgress", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1189,7 +1189,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SplitScreenMovieCapture
     /// </summary>
-    public unsafe void SplitScreenMovieCapture()
+    public unsafe virtual void SplitScreenMovieCapture()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SplitScreenMovieCapture", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1200,7 +1200,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugCamera2Pad
     /// </summary>
-    public unsafe void DebugCamera2Pad()
+    public unsafe virtual void DebugCamera2Pad()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugCamera2Pad", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1211,7 +1211,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: KillMe
     /// </summary>
-    public unsafe void KillMe()
+    public unsafe virtual void KillMe()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.KillMe", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1222,7 +1222,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TestLevelHidden
     /// </summary>
-    public unsafe void TestLevelHidden(BmSDK.FName LevelName, bool Value)
+    public unsafe virtual void TestLevelHidden(BmSDK.FName LevelName, bool Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TestLevelHidden", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1235,7 +1235,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ChallengeSetMedals
     /// </summary>
-    public unsafe void ChallengeSetMedals(int nId, int nMedals, int nCharacterId = default)
+    public unsafe virtual void ChallengeSetMedals(int nId, int nMedals, int nCharacterId = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ChallengeSetMedals", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -1249,7 +1249,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ChallengeSetScore
     /// </summary>
-    public unsafe void ChallengeSetScore(int nId, int nScore, int nCharacterId = default)
+    public unsafe virtual void ChallengeSetScore(int nId, int nScore, int nCharacterId = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ChallengeSetScore", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -1263,7 +1263,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ChallengeAdjustTime
     /// </summary>
-    public unsafe void ChallengeAdjustTime(float fSeconds)
+    public unsafe virtual void ChallengeAdjustTime(float fSeconds)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ChallengeAdjustTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1275,7 +1275,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ChallengeAdjustScore
     /// </summary>
-    public unsafe void ChallengeAdjustScore(int nScore)
+    public unsafe virtual void ChallengeAdjustScore(int nScore)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ChallengeAdjustScore", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1287,7 +1287,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: EraseAllLeaderBoards
     /// </summary>
-    public unsafe void EraseAllLeaderBoards()
+    public unsafe virtual void EraseAllLeaderBoards()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.EraseAllLeaderBoards", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1298,7 +1298,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: EraseLeaderBoard
     /// </summary>
-    public unsafe void EraseLeaderBoard(int BoardID)
+    public unsafe virtual void EraseLeaderBoard(int BoardID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.EraseLeaderBoard", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1310,7 +1310,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: EraseMeFromLeaderBoard
     /// </summary>
-    public unsafe void EraseMeFromLeaderBoard(int BoardID)
+    public unsafe virtual void EraseMeFromLeaderBoard(int BoardID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.EraseMeFromLeaderBoard", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1322,7 +1322,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetHard
     /// </summary>
-    public unsafe void SetHard()
+    public unsafe virtual void SetHard()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SetHard", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1333,7 +1333,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetNormal
     /// </summary>
-    public unsafe void SetNormal()
+    public unsafe virtual void SetNormal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SetNormal", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1344,7 +1344,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetEasy
     /// </summary>
-    public unsafe void SetEasy()
+    public unsafe virtual void SetEasy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SetEasy", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1355,7 +1355,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetHardDifficulty
     /// </summary>
-    public unsafe void SetHardDifficulty()
+    public unsafe virtual void SetHardDifficulty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SetHardDifficulty", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1366,7 +1366,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetNormalDifficulty
     /// </summary>
-    public unsafe void SetNormalDifficulty()
+    public unsafe virtual void SetNormalDifficulty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SetNormalDifficulty", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1377,7 +1377,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetEasyDifficulty
     /// </summary>
-    public unsafe void SetEasyDifficulty()
+    public unsafe virtual void SetEasyDifficulty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SetEasyDifficulty", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1388,7 +1388,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TestTargetCursor
     /// </summary>
-    public unsafe void TestTargetCursor(BmSDK.FString cursorstr, BmSDK.FString Str)
+    public unsafe virtual void TestTargetCursor(BmSDK.FString cursorstr, BmSDK.FString Str)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TestTargetCursor", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -1401,7 +1401,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TestScoreSetHP
     /// </summary>
-    public unsafe void TestScoreSetHP(int InCurrent, int InMaximum)
+    public unsafe virtual void TestScoreSetHP(int InCurrent, int InMaximum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TestScoreSetHP", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1414,7 +1414,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TestScoreSetXP
     /// </summary>
-    public unsafe void TestScoreSetXP(int InCurrent, int InMaximum)
+    public unsafe virtual void TestScoreSetXP(int InCurrent, int InMaximum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TestScoreSetXP", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1427,7 +1427,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TestScoreSetPoints
     /// </summary>
-    public unsafe void TestScoreSetPoints(int InCurrent)
+    public unsafe virtual void TestScoreSetPoints(int InCurrent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TestScoreSetPoints", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1439,7 +1439,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TestScoreShow
     /// </summary>
-    public unsafe void TestScoreShow(BmSDK.FString show)
+    public unsafe virtual void TestScoreShow(BmSDK.FString show)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TestScoreShow", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1451,7 +1451,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TestCombo
     /// </summary>
-    public unsafe void TestCombo(int InValue, int PowerUpValue)
+    public unsafe virtual void TestCombo(int InValue, int PowerUpValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TestCombo", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1464,7 +1464,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TestTakedown
     /// </summary>
-    public unsafe void TestTakedown(int InValue)
+    public unsafe virtual void TestTakedown(int InValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TestTakedown", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1476,7 +1476,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TestZoomMode
     /// </summary>
-    public unsafe void TestZoomMode(BmSDK.FString InString)
+    public unsafe virtual void TestZoomMode(BmSDK.FString InString)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TestZoomMode", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1488,7 +1488,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: GiveRiddlerMap
     /// </summary>
-    public unsafe void GiveRiddlerMap()
+    public unsafe virtual void GiveRiddlerMap()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.GiveRiddlerMap", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1499,7 +1499,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlockCatwomanEpisodes
     /// </summary>
-    public unsafe void UnlockCatwomanEpisodes(bool bJustCharacter = default)
+    public unsafe virtual void UnlockCatwomanEpisodes(bool bJustCharacter = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlockCatwomanEpisodes", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1511,7 +1511,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlockTape
     /// </summary>
-    public unsafe void UnlockTape(BmSDK.BmGame.RGameInfo.ETapeCharacter Id, bool bSilent = default)
+    public unsafe virtual void UnlockTape(BmSDK.BmGame.RGameInfo.ETapeCharacter Id, bool bSilent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlockTape", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1524,7 +1524,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlockTapes
     /// </summary>
-    public unsafe void UnlockTapes(bool bSilent = default)
+    public unsafe virtual void UnlockTapes(bool bSilent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlockTapes", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -1536,7 +1536,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlockBio
     /// </summary>
-    public unsafe void UnlockBio(BmSDK.BmGame.RGameInfo.EBioCharacter Id, bool bSilent = default)
+    public unsafe virtual void UnlockBio(BmSDK.BmGame.RGameInfo.EBioCharacter Id, bool bSilent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlockBio", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1549,7 +1549,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlockBios
     /// </summary>
-    public unsafe void UnlockBios(bool bSilent = default)
+    public unsafe virtual void UnlockBios(bool bSilent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlockBios", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1561,7 +1561,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: AwardDebugIntel
     /// </summary>
-    public unsafe void AwardDebugIntel(int intel_enum)
+    public unsafe virtual void AwardDebugIntel(int intel_enum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.AwardDebugIntel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1573,7 +1573,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: AwardIntelPoint
     /// </summary>
-    public unsafe void AwardIntelPoint()
+    public unsafe virtual void AwardIntelPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.AwardIntelPoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1584,7 +1584,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DiscoverAllCurrentSideStories
     /// </summary>
-    public unsafe void DiscoverAllCurrentSideStories()
+    public unsafe virtual void DiscoverAllCurrentSideStories()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DiscoverAllCurrentSideStories", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1595,7 +1595,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlockConceptGallery
     /// </summary>
-    public unsafe void UnlockConceptGallery(BmSDK.BmGame.RPersistentData.EConceptArt Id)
+    public unsafe virtual void UnlockConceptGallery(BmSDK.BmGame.RPersistentData.EConceptArt Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlockConceptGallery", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -1607,7 +1607,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlockConceptGalleries
     /// </summary>
-    public unsafe void UnlockConceptGalleries()
+    public unsafe virtual void UnlockConceptGalleries()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlockConceptGalleries", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1618,7 +1618,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlockShowcaseVehicle
     /// </summary>
-    public unsafe void UnlockShowcaseVehicle(BmSDK.BmGame.RPersistentData.EShowcaseVehicle Id)
+    public unsafe virtual void UnlockShowcaseVehicle(BmSDK.BmGame.RPersistentData.EShowcaseVehicle Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlockShowcaseVehicle", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -1630,7 +1630,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlockShowcaseCharacter
     /// </summary>
-    public unsafe void UnlockShowcaseCharacter(BmSDK.BmGame.RPersistentData.EShowcaseCharacter Id)
+    public unsafe virtual void UnlockShowcaseCharacter(BmSDK.BmGame.RPersistentData.EShowcaseCharacter Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlockShowcaseCharacter", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -1642,7 +1642,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlockShowcaseItems
     /// </summary>
-    public unsafe void UnlockShowcaseItems()
+    public unsafe virtual void UnlockShowcaseItems()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlockShowcaseItems", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1653,7 +1653,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlockCityStory
     /// </summary>
-    public unsafe void UnlockCityStory(int StoryId = default)
+    public unsafe virtual void UnlockCityStory(int StoryId = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlockCityStory", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1665,7 +1665,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: EnableChallengeTimer
     /// </summary>
-    public unsafe void EnableChallengeTimer(bool bEnabled)
+    public unsafe virtual void EnableChallengeTimer(bool bEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.EnableChallengeTimer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1677,7 +1677,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlockChallengeMode
     /// </summary>
-    public unsafe void UnlockChallengeMode(bool bIgnorePrerequisites = default)
+    public unsafe virtual void UnlockChallengeMode(bool bIgnorePrerequisites = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlockChallengeMode", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1689,7 +1689,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: RevealAndUnlockChallengeID
     /// </summary>
-    public unsafe void RevealAndUnlockChallengeID(int Id)
+    public unsafe virtual void RevealAndUnlockChallengeID(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.RevealAndUnlockChallengeID", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1701,7 +1701,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlockChallengeID
     /// </summary>
-    public unsafe void UnlockChallengeID(int Id)
+    public unsafe virtual void UnlockChallengeID(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlockChallengeID", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1713,7 +1713,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: RevealChallengeID
     /// </summary>
-    public unsafe void RevealChallengeID(int Id)
+    public unsafe virtual void RevealChallengeID(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.RevealChallengeID", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1725,7 +1725,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UCM
     /// </summary>
-    public unsafe void UCM()
+    public unsafe virtual void UCM()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UCM", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1736,7 +1736,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TestAchievement
     /// </summary>
-    public unsafe void TestAchievement(int IDNumber)
+    public unsafe virtual void TestAchievement(int IDNumber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TestAchievement", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1748,7 +1748,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlockAllAchievements
     /// </summary>
-    public unsafe void UnlockAllAchievements()
+    public unsafe virtual void UnlockAllAchievements()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlockAllAchievements", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1759,7 +1759,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlockRiddlerPuzzles
     /// </summary>
-    public unsafe void UnlockRiddlerPuzzles(int eState = default)
+    public unsafe virtual void UnlockRiddlerPuzzles(int eState = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlockRiddlerPuzzles", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1771,7 +1771,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlockRiddlerScreen
     /// </summary>
-    public unsafe void UnlockRiddlerScreen()
+    public unsafe virtual void UnlockRiddlerScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlockRiddlerScreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1782,7 +1782,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlockWayneTech
     /// </summary>
-    public unsafe void UnlockWayneTech()
+    public unsafe virtual void UnlockWayneTech()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlockWayneTech", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1793,7 +1793,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlockAll
     /// </summary>
-    public unsafe void UnlockAll()
+    public unsafe virtual void UnlockAll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlockAll", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1804,7 +1804,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UA
     /// </summary>
-    public unsafe void UA()
+    public unsafe virtual void UA()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UA", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1815,7 +1815,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlockNewGamePlus
     /// </summary>
-    public unsafe void UnlockNewGamePlus()
+    public unsafe virtual void UnlockNewGamePlus()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlockNewGamePlus", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1826,7 +1826,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TestSetGlobalFlag
     /// </summary>
-    public unsafe void TestSetGlobalFlag(BmSDK.FString FlagName, bool bSet = default)
+    public unsafe virtual void TestSetGlobalFlag(BmSDK.FString FlagName, bool bSet = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TestSetGlobalFlag", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -1839,7 +1839,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TestNoSaving
     /// </summary>
-    public unsafe void TestNoSaving()
+    public unsafe virtual void TestNoSaving()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TestNoSaving", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1850,7 +1850,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ResetRoom
     /// </summary>
-    public unsafe void ResetRoom()
+    public unsafe virtual void ResetRoom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ResetRoom", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1861,7 +1861,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DumpPawnLevelVol
     /// </summary>
-    public unsafe void DumpPawnLevelVol()
+    public unsafe virtual void DumpPawnLevelVol()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DumpPawnLevelVol", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1872,7 +1872,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DumpRoomState
     /// </summary>
-    public unsafe void DumpRoomState()
+    public unsafe virtual void DumpRoomState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DumpRoomState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1883,7 +1883,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DumpBarkCoord
     /// </summary>
-    public unsafe void DumpBarkCoord()
+    public unsafe virtual void DumpBarkCoord()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DumpBarkCoord", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1894,7 +1894,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DumpAllNav
     /// </summary>
-    public unsafe void DumpAllNav()
+    public unsafe virtual void DumpAllNav()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DumpAllNav", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1905,7 +1905,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: MakeNervous
     /// </summary>
-    public unsafe void MakeNervous()
+    public unsafe virtual void MakeNervous()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.MakeNervous", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1916,7 +1916,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: MakeTerrified
     /// </summary>
-    public unsafe void MakeTerrified()
+    public unsafe virtual void MakeTerrified()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.MakeTerrified", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1927,7 +1927,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: BarkDewedge
     /// </summary>
-    public unsafe void BarkDewedge()
+    public unsafe virtual void BarkDewedge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.BarkDewedge", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1938,7 +1938,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: BarkWTF
     /// </summary>
-    public unsafe void BarkWTF()
+    public unsafe virtual void BarkWTF()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.BarkWTF", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1949,7 +1949,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: EnableBattleModeToggleOption
     /// </summary>
-    public unsafe void EnableBattleModeToggleOption()
+    public unsafe virtual void EnableBattleModeToggleOption()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.EnableBattleModeToggleOption", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1960,7 +1960,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugInteractableItems
     /// </summary>
-    public unsafe void DebugInteractableItems()
+    public unsafe virtual void DebugInteractableItems()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugInteractableItems", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1971,7 +1971,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugPlayerObstructions
     /// </summary>
-    public unsafe void DebugPlayerObstructions()
+    public unsafe virtual void DebugPlayerObstructions()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugPlayerObstructions", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1982,7 +1982,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: LockGlideButton
     /// </summary>
-    public unsafe void LockGlideButton()
+    public unsafe virtual void LockGlideButton()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.LockGlideButton", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1993,7 +1993,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: InstantCasualty
     /// </summary>
-    public unsafe void InstantCasualty()
+    public unsafe virtual void InstantCasualty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.InstantCasualty", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2004,7 +2004,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugUpgradeEquipment
     /// </summary>
-    public unsafe void DebugUpgradeEquipment()
+    public unsafe virtual void DebugUpgradeEquipment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugUpgradeEquipment", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2015,7 +2015,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: InfiniteGadgets
     /// </summary>
-    public unsafe void InfiniteGadgets()
+    public unsafe virtual void InfiniteGadgets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.InfiniteGadgets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2026,7 +2026,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugRemoveArmour
     /// </summary>
-    public unsafe void DebugRemoveArmour()
+    public unsafe virtual void DebugRemoveArmour()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugRemoveArmour", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2037,7 +2037,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugGiveArmour
     /// </summary>
-    public unsafe void DebugGiveArmour()
+    public unsafe virtual void DebugGiveArmour()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugGiveArmour", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2048,7 +2048,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugGlobalFlagGet
     /// </summary>
-    public unsafe void DebugGlobalFlagGet(BmSDK.FString sFlag)
+    public unsafe virtual void DebugGlobalFlagGet(BmSDK.FString sFlag)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugGlobalFlagGet", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -2060,7 +2060,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugGlobalFlagSet
     /// </summary>
-    public unsafe void DebugGlobalFlagSet(BmSDK.FString sFlag, bool bFlag)
+    public unsafe virtual void DebugGlobalFlagSet(BmSDK.FString sFlag, bool bFlag)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugGlobalFlagSet", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -2073,7 +2073,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugSharedFlagGet
     /// </summary>
-    public unsafe void DebugSharedFlagGet(BmSDK.FString sFlag)
+    public unsafe virtual void DebugSharedFlagGet(BmSDK.FString sFlag)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugSharedFlagGet", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -2085,7 +2085,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugSharedFlagSet
     /// </summary>
-    public unsafe void DebugSharedFlagSet(BmSDK.FString sFlag, bool bFlag)
+    public unsafe virtual void DebugSharedFlagSet(BmSDK.FString sFlag, bool bFlag)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugSharedFlagSet", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -2098,7 +2098,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugRemoteEvent
     /// </summary>
-    public unsafe void DebugRemoteEvent(BmSDK.FString sEvent)
+    public unsafe virtual void DebugRemoteEvent(BmSDK.FString sEvent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugRemoteEvent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2110,7 +2110,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UpgradeEquipmentMenu
     /// </summary>
-    public unsafe void UpgradeEquipmentMenu()
+    public unsafe virtual void UpgradeEquipmentMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UpgradeEquipmentMenu", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2121,7 +2121,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugGiveFreezeBlast
     /// </summary>
-    public unsafe void DebugGiveFreezeBlast()
+    public unsafe virtual void DebugGiveFreezeBlast()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugGiveFreezeBlast", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2132,7 +2132,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlockAllUpgrades
     /// </summary>
-    public unsafe void UnlockAllUpgrades(bool UnLock = default)
+    public unsafe virtual void UnlockAllUpgrades(bool UnLock = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlockAllUpgrades", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2144,7 +2144,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugGiveAllGadgets
     /// </summary>
-    public unsafe void DebugGiveAllGadgets()
+    public unsafe virtual void DebugGiveAllGadgets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugGiveAllGadgets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2155,7 +2155,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: WeaponConfigWTF
     /// </summary>
-    public unsafe void WeaponConfigWTF()
+    public unsafe virtual void WeaponConfigWTF()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.WeaponConfigWTF", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2166,7 +2166,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: PPWTF
     /// </summary>
-    public unsafe void PPWTF()
+    public unsafe virtual void PPWTF()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.PPWTF", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2177,7 +2177,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UnlinkWBID
     /// </summary>
-    public unsafe void UnlinkWBID()
+    public unsafe virtual void UnlinkWBID()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UnlinkWBID", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2188,7 +2188,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: PlayerWTF
     /// </summary>
-    public unsafe void PlayerWTF()
+    public unsafe virtual void PlayerWTF()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.PlayerWTF", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2199,7 +2199,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SpecialActionXP
     /// </summary>
-    public unsafe void SpecialActionXP()
+    public unsafe virtual void SpecialActionXP()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SpecialActionXP", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2210,7 +2210,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: AddXP
     /// </summary>
-    public unsafe void AddXP(int Xp = default)
+    public unsafe virtual void AddXP(int Xp = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.AddXP", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2222,7 +2222,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugForce3rdPersonCamera
     /// </summary>
-    public unsafe void DebugForce3rdPersonCamera()
+    public unsafe virtual void DebugForce3rdPersonCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugForce3rdPersonCamera", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2233,7 +2233,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugCamera
     /// </summary>
-    public unsafe void DebugCamera()
+    public unsafe virtual void DebugCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2244,7 +2244,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ToggleMagicGunStartle
     /// </summary>
-    public unsafe void ToggleMagicGunStartle()
+    public unsafe virtual void ToggleMagicGunStartle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ToggleMagicGunStartle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2255,7 +2255,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ToggleMagicSmasher
     /// </summary>
-    public unsafe void ToggleMagicSmasher()
+    public unsafe virtual void ToggleMagicSmasher()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ToggleMagicSmasher", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2266,7 +2266,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ToggleNavMeshInspector
     /// </summary>
-    public unsafe void ToggleNavMeshInspector()
+    public unsafe virtual void ToggleNavMeshInspector()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ToggleNavMeshInspector", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2277,7 +2277,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ToggleAIPaths
     /// </summary>
-    public unsafe void ToggleAIPaths()
+    public unsafe virtual void ToggleAIPaths()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ToggleAIPaths", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2288,7 +2288,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TogglePaths
     /// </summary>
-    public unsafe void TogglePaths()
+    public unsafe virtual void TogglePaths()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TogglePaths", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2299,7 +2299,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DPropShape
     /// </summary>
-    public unsafe void DPropShape()
+    public unsafe virtual void DPropShape()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DPropShape", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2310,7 +2310,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TogglePhysicsGrabber
     /// </summary>
-    public unsafe void TogglePhysicsGrabber()
+    public unsafe virtual void TogglePhysicsGrabber()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TogglePhysicsGrabber", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2321,7 +2321,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ToggleBot
     /// </summary>
-    public unsafe void ToggleBot()
+    public unsafe virtual void ToggleBot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ToggleBot", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2332,7 +2332,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TurnOffEnemiesCanAttack
     /// </summary>
-    public unsafe void TurnOffEnemiesCanAttack()
+    public unsafe virtual void TurnOffEnemiesCanAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TurnOffEnemiesCanAttack", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2343,7 +2343,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ToggleEnemiesCanAttack
     /// </summary>
-    public unsafe void ToggleEnemiesCanAttack()
+    public unsafe virtual void ToggleEnemiesCanAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ToggleEnemiesCanAttack", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2354,7 +2354,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: AdvanceCurrentThoughtHistoryItem
     /// </summary>
-    public unsafe void AdvanceCurrentThoughtHistoryItem()
+    public unsafe virtual void AdvanceCurrentThoughtHistoryItem()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.AdvanceCurrentThoughtHistoryItem", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2365,7 +2365,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DisplayThoughtsOnAll
     /// </summary>
-    public unsafe void DisplayThoughtsOnAll()
+    public unsafe virtual void DisplayThoughtsOnAll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DisplayThoughtsOnAll", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2376,7 +2376,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: StepPawnDisplayingThoughts
     /// </summary>
-    public unsafe void StepPawnDisplayingThoughts()
+    public unsafe virtual void StepPawnDisplayingThoughts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.StepPawnDisplayingThoughts", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -2387,7 +2387,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DisplayLookAtPawnThoughts
     /// </summary>
-    public unsafe void DisplayLookAtPawnThoughts()
+    public unsafe virtual void DisplayLookAtPawnThoughts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DisplayLookAtPawnThoughts", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -2398,7 +2398,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ToggleErrorThoughts
     /// </summary>
-    public unsafe void ToggleErrorThoughts()
+    public unsafe virtual void ToggleErrorThoughts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ToggleErrorThoughts", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2409,7 +2409,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DumpCurrentPawnThoughtsToLog
     /// </summary>
-    public unsafe void DumpCurrentPawnThoughtsToLog()
+    public unsafe virtual void DumpCurrentPawnThoughtsToLog()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DumpCurrentPawnThoughtsToLog", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2420,7 +2420,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ToggleThoughts
     /// </summary>
-    public unsafe void ToggleThoughts()
+    public unsafe virtual void ToggleThoughts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ToggleThoughts", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2431,7 +2431,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ToggleOnScreenKismetAndWarnings
     /// </summary>
-    public unsafe void ToggleOnScreenKismetAndWarnings()
+    public unsafe virtual void ToggleOnScreenKismetAndWarnings()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ToggleOnScreenKismetAndWarnings", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2442,7 +2442,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugViewDist
     /// </summary>
-    public unsafe void DebugViewDist(float newdist)
+    public unsafe virtual void DebugViewDist(float newdist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugViewDist", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2454,7 +2454,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugFocusViewDist
     /// </summary>
-    public unsafe void DebugFocusViewDist(float newdist)
+    public unsafe virtual void DebugFocusViewDist(float newdist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugFocusViewDist", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2466,7 +2466,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugExtendedViewDist
     /// </summary>
-    public unsafe void DebugExtendedViewDist(float newdist)
+    public unsafe virtual void DebugExtendedViewDist(float newdist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugExtendedViewDist", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2478,7 +2478,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugVertFov
     /// </summary>
-    public unsafe void DebugVertFov(int NewFOV)
+    public unsafe virtual void DebugVertFov(int NewFOV)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugVertFov", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2490,7 +2490,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugFov
     /// </summary>
-    public unsafe void DebugFov(int NewFOV)
+    public unsafe virtual void DebugFov(int NewFOV)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugFov", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2502,7 +2502,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: StopDebugCameraMovement
     /// </summary>
-    public unsafe void StopDebugCameraMovement()
+    public unsafe virtual void StopDebugCameraMovement()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.StopDebugCameraMovement", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2513,7 +2513,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugCameraZoomOut
     /// </summary>
-    public unsafe void DebugCameraZoomOut()
+    public unsafe virtual void DebugCameraZoomOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugCameraZoomOut", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2524,7 +2524,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugCameraZoomIn
     /// </summary>
-    public unsafe void DebugCameraZoomIn()
+    public unsafe virtual void DebugCameraZoomIn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugCameraZoomIn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2535,7 +2535,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugCameraBack
     /// </summary>
-    public unsafe void DebugCameraBack()
+    public unsafe virtual void DebugCameraBack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugCameraBack", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2546,7 +2546,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugCameraForward
     /// </summary>
-    public unsafe void DebugCameraForward()
+    public unsafe virtual void DebugCameraForward()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugCameraForward", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2557,7 +2557,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugCameraRight
     /// </summary>
-    public unsafe void DebugCameraRight()
+    public unsafe virtual void DebugCameraRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugCameraRight", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2568,7 +2568,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugCameraLeft
     /// </summary>
-    public unsafe void DebugCameraLeft()
+    public unsafe virtual void DebugCameraLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugCameraLeft", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2579,7 +2579,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugCameraUp
     /// </summary>
-    public unsafe void DebugCameraUp()
+    public unsafe virtual void DebugCameraUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugCameraUp", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2590,7 +2590,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugCameraDown
     /// </summary>
-    public unsafe void DebugCameraDown()
+    public unsafe virtual void DebugCameraDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugCameraDown", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2601,7 +2601,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: APC
     /// </summary>
-    public unsafe void APC()
+    public unsafe virtual void APC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.APC", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2612,7 +2612,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ForceSpawnAPC
     /// </summary>
-    public unsafe void ForceSpawnAPC()
+    public unsafe virtual void ForceSpawnAPC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ForceSpawnAPC", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2623,7 +2623,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SpawnBatmobileMob
     /// </summary>
-    public unsafe void SpawnBatmobileMob()
+    public unsafe virtual void SpawnBatmobileMob()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SpawnBatmobileMob", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2634,7 +2634,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugRespawnAllThrowable
     /// </summary>
-    public unsafe void DebugRespawnAllThrowable()
+    public unsafe virtual void DebugRespawnAllThrowable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugRespawnAllThrowable", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2645,7 +2645,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugDestroyAllWeapons
     /// </summary>
-    public unsafe void DebugDestroyAllWeapons()
+    public unsafe virtual void DebugDestroyAllWeapons()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugDestroyAllWeapons", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2656,7 +2656,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugKillAllButOneEnemyInRoom
     /// </summary>
-    public unsafe void DebugKillAllButOneEnemyInRoom()
+    public unsafe virtual void DebugKillAllButOneEnemyInRoom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugKillAllButOneEnemyInRoom", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2667,7 +2667,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: DebugKillAllEnemies
     /// </summary>
-    public unsafe void DebugKillAllEnemies()
+    public unsafe virtual void DebugKillAllEnemies()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.DebugKillAllEnemies", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2678,7 +2678,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ResetSpotted
     /// </summary>
-    public unsafe void ResetSpotted()
+    public unsafe virtual void ResetSpotted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ResetSpotted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2689,7 +2689,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SpecialMoveCheat
     /// </summary>
-    public unsafe void SpecialMoveCheat()
+    public unsafe virtual void SpecialMoveCheat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SpecialMoveCheat", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2700,7 +2700,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: RestoreHealth
     /// </summary>
-    public unsafe void RestoreHealth()
+    public unsafe virtual void RestoreHealth()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.RestoreHealth", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2711,7 +2711,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: NearDeath
     /// </summary>
-    public unsafe void NearDeath()
+    public unsafe virtual void NearDeath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.NearDeath", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2722,7 +2722,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: Invisible
     /// </summary>
-    public unsafe void Invisible()
+    public unsafe virtual void Invisible()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.Invisible", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2733,7 +2733,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: UpgradeMag
     /// </summary>
-    public unsafe void UpgradeMag()
+    public unsafe virtual void UpgradeMag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.UpgradeMag", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2744,7 +2744,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: PauseAndPan
     /// </summary>
-    public unsafe void PauseAndPan()
+    public unsafe virtual void PauseAndPan()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.PauseAndPan", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2755,7 +2755,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetWaypoint
     /// </summary>
-    public unsafe void SetWaypoint(float atX, float atY, float atZ)
+    public unsafe virtual void SetWaypoint(float atX, float atY, float atZ)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SetWaypoint", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -2769,7 +2769,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: CopyWaypoint
     /// </summary>
-    public unsafe void CopyWaypoint()
+    public unsafe virtual void CopyWaypoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.CopyWaypoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2780,7 +2780,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ReportBug
     /// </summary>
-    public unsafe void ReportBug()
+    public unsafe virtual void ReportBug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ReportBug", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2791,7 +2791,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetReproSteps
     /// </summary>
-    public unsafe BmSDK.FString GetReproSteps()
+    public unsafe virtual BmSDK.FString GetReproSteps()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.GetReproSteps", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -2802,7 +2802,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetVersionStr
     /// </summary>
-    public unsafe BmSDK.FString GetVersionStr()
+    public unsafe virtual BmSDK.FString GetVersionStr()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.GetVersionStr", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -2813,7 +2813,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetPlatformStr
     /// </summary>
-    public unsafe BmSDK.FString GetPlatformStr()
+    public unsafe virtual BmSDK.FString GetPlatformStr()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.GetPlatformStr", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2824,7 +2824,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetLastSaveGameName
     /// </summary>
-    public unsafe BmSDK.FString GetLastSaveGameName()
+    public unsafe virtual BmSDK.FString GetLastSaveGameName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.GetLastSaveGameName", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -2835,7 +2835,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: AutoSaveGame
     /// </summary>
-    public unsafe void AutoSaveGame()
+    public unsafe virtual void AutoSaveGame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.AutoSaveGame", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2846,7 +2846,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ApplyDebugSetLevel
     /// </summary>
-    public unsafe bool ApplyDebugSetLevel()
+    public unsafe virtual bool ApplyDebugSetLevel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ApplyDebugSetLevel", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2857,7 +2857,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: TeleportTo
     /// </summary>
-    public unsafe void TeleportTo(float X, float Y, float Z, int Yaw, BmSDK.FString LevelName = default)
+    public unsafe virtual void TeleportTo(float X, float Y, float Z, int Yaw, BmSDK.FString LevelName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.TeleportTo", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -2873,7 +2873,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: Teleport
     /// </summary>
-    public unsafe void Teleport()
+    public unsafe override void Teleport()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.Teleport", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2884,7 +2884,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetPlayerLocation
     /// </summary>
-    public unsafe void SetPlayerLocation(BmSDK.Engine.Pawn P, System.Numerics.Vector3 pos, int Yaw)
+    public unsafe virtual void SetPlayerLocation(BmSDK.Engine.Pawn P, System.Numerics.Vector3 pos, int Yaw)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.SetPlayerLocation", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -2898,7 +2898,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: CycleAnimNames
     /// </summary>
-    public unsafe void CycleAnimNames()
+    public unsafe virtual void CycleAnimNames()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.CycleAnimNames", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2909,7 +2909,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: RefreshPaths
     /// </summary>
-    public unsafe void RefreshPaths()
+    public unsafe virtual void RefreshPaths()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.RefreshPaths", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2920,7 +2920,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: IsDefaultCharacterSkinTest
     /// </summary>
-    public unsafe void IsDefaultCharacterSkinTest(BmSDK.FString sCharacter)
+    public unsafe virtual void IsDefaultCharacterSkinTest(BmSDK.FString sCharacter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.IsDefaultCharacterSkinTest", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2932,7 +2932,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: WarningMessageTest
     /// </summary>
-    public unsafe void WarningMessageTest(BmSDK.FString sText = default)
+    public unsafe virtual void WarningMessageTest(BmSDK.FString sText = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.WarningMessageTest", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -2944,7 +2944,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: EnableDebugCamera
     /// </summary>
-    public unsafe void EnableDebugCamera()
+    public unsafe override void EnableDebugCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.EnableDebugCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2955,7 +2955,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ToggleLowSpeed
     /// </summary>
-    public unsafe void ToggleLowSpeed()
+    public unsafe virtual void ToggleLowSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ToggleLowSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2966,7 +2966,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ToggleSuperHighSpeed
     /// </summary>
-    public unsafe void ToggleSuperHighSpeed()
+    public unsafe virtual void ToggleSuperHighSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ToggleSuperHighSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2977,7 +2977,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ToggleHighSpeed
     /// </summary>
-    public unsafe void ToggleHighSpeed()
+    public unsafe virtual void ToggleHighSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ToggleHighSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2988,7 +2988,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: Slomo
     /// </summary>
-    public unsafe void Slomo(float T)
+    public unsafe override void Slomo(float T)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.Slomo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -3000,7 +3000,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ToggleGhost
     /// </summary>
-    public unsafe void ToggleGhost()
+    public unsafe virtual void ToggleGhost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ToggleGhost", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -3011,7 +3011,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ReloadLevel
     /// </summary>
-    public unsafe void ReloadLevel()
+    public unsafe virtual void ReloadLevel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ReloadLevel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -3022,7 +3022,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ToggleScreenshotCamera
     /// </summary>
-    public unsafe void ToggleScreenshotCamera()
+    public unsafe virtual void ToggleScreenshotCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ToggleScreenshotCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -3033,7 +3033,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ToggleLookInvert
     /// </summary>
-    public unsafe void ToggleLookInvert()
+    public unsafe virtual void ToggleLookInvert()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ToggleLookInvert", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -3044,7 +3044,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: GotoName
     /// </summary>
-    public unsafe void GotoName(BmSDK.FString InName)
+    public unsafe virtual void GotoName(BmSDK.FString InName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.GotoName", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -3056,7 +3056,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ListNames
     /// </summary>
-    public unsafe void ListNames(BmSDK.FString InName)
+    public unsafe virtual void ListNames(BmSDK.FString InName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ListNames", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -3068,7 +3068,7 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
     /// <summary>
     /// Function: ListDynamicActors
     /// </summary>
-    public unsafe void ListDynamicActors()
+    public unsafe override void ListDynamicActors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCheatManager.ListDynamicActors", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RHelicopterPathNode : BmSDK.Engine.PathNode, BmSDK.IGameObj
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterPathNode.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -83,7 +83,7 @@ public partial class RHelicopterPathNode : BmSDK.Engine.PathNode, BmSDK.IGameObj
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterPathNode.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -95,7 +95,7 @@ public partial class RHelicopterPathNode : BmSDK.Engine.PathNode, BmSDK.IGameObj
     /// <summary>
     /// Function: UnLinkPath
     /// </summary>
-    public unsafe void UnLinkPath(BmSDK.BmGame.RHelicopterPathNode Target)
+    public unsafe virtual void UnLinkPath(BmSDK.BmGame.RHelicopterPathNode Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterPathNode.UnLinkPath", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -114,7 +114,7 @@ public partial class RHelicopterPathNode : BmSDK.Engine.PathNode, BmSDK.IGameObj
     /// <summary>
     /// Function: LinkPath
     /// </summary>
-    public unsafe void LinkPath(BmSDK.BmGame.RHelicopterPathNode Target)
+    public unsafe virtual void LinkPath(BmSDK.BmGame.RHelicopterPathNode Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterPathNode.LinkPath", true);
         byte* paramsPtr = stackalloc byte[8];

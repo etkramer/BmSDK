@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_ArkhamEpisodes : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: OnStreamingInstall_Callback
     /// </summary>
-    public unsafe void OnStreamingInstall_Callback(bool bWasCancelled)
+    public unsafe override void OnStreamingInstall_Callback(bool bWasCancelled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ArkhamEpisodes.OnStreamingInstall_Callback", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RGFxMovieUI_ArkhamEpisodes : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: ShowInstallerUI
     /// </summary>
-    public unsafe void ShowInstallerUI(int FromId)
+    public unsafe virtual void ShowInstallerUI(int FromId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ArkhamEpisodes.ShowInstallerUI", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -60,7 +60,7 @@ public partial class RGFxMovieUI_ArkhamEpisodes : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: CheckChunksInstalled
     /// </summary>
-    public unsafe bool CheckChunksInstalled(int FromId, int ChunkId)
+    public unsafe virtual bool CheckChunksInstalled(int FromId, int ChunkId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ArkhamEpisodes.CheckChunksInstalled", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -73,7 +73,7 @@ public partial class RGFxMovieUI_ArkhamEpisodes : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: PopupRequester_Callback
     /// </summary>
-    public unsafe void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
+    public unsafe override void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ArkhamEpisodes.PopupRequester_Callback", true);
         byte* paramsPtr = stackalloc byte[13];
@@ -86,7 +86,7 @@ public partial class RGFxMovieUI_ArkhamEpisodes : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: XI_OnBack
     /// </summary>
-    public unsafe void XI_OnBack()
+    public unsafe override void XI_OnBack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ArkhamEpisodes.XI_OnBack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -97,7 +97,7 @@ public partial class RGFxMovieUI_ArkhamEpisodes : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: XI_OnClicked
     /// </summary>
-    public unsafe void XI_OnClicked(int Id)
+    public unsafe override void XI_OnClicked(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ArkhamEpisodes.XI_OnClicked", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -109,7 +109,7 @@ public partial class RGFxMovieUI_ArkhamEpisodes : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: ContinueStory
     /// </summary>
-    public unsafe void ContinueStory()
+    public unsafe virtual void ContinueStory()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ArkhamEpisodes.ContinueStory", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -120,7 +120,7 @@ public partial class RGFxMovieUI_ArkhamEpisodes : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: StartNewStory
     /// </summary>
-    public unsafe void StartNewStory()
+    public unsafe virtual void StartNewStory()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ArkhamEpisodes.StartNewStory", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -131,7 +131,7 @@ public partial class RGFxMovieUI_ArkhamEpisodes : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: OnFadeCompleted_Callback
     /// </summary>
-    public unsafe void OnFadeCompleted_Callback()
+    public unsafe override void OnFadeCompleted_Callback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ArkhamEpisodes.OnFadeCompleted_Callback", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -142,7 +142,7 @@ public partial class RGFxMovieUI_ArkhamEpisodes : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: FadeTrigger
     /// </summary>
-    public unsafe void FadeTrigger(int Mode)
+    public unsafe virtual void FadeTrigger(int Mode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ArkhamEpisodes.FadeTrigger", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -154,7 +154,7 @@ public partial class RGFxMovieUI_ArkhamEpisodes : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: XI_OnOut
     /// </summary>
-    public unsafe void XI_OnOut()
+    public unsafe override void XI_OnOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ArkhamEpisodes.XI_OnOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -165,7 +165,7 @@ public partial class RGFxMovieUI_ArkhamEpisodes : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: XI_OnOutro
     /// </summary>
-    public unsafe void XI_OnOutro()
+    public unsafe override void XI_OnOutro()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ArkhamEpisodes.XI_OnOutro", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -176,7 +176,7 @@ public partial class RGFxMovieUI_ArkhamEpisodes : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: XI_OnIn
     /// </summary>
-    public unsafe void XI_OnIn()
+    public unsafe override void XI_OnIn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ArkhamEpisodes.XI_OnIn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -187,7 +187,7 @@ public partial class RGFxMovieUI_ArkhamEpisodes : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: XI_RequestData
     /// </summary>
-    public unsafe void XI_RequestData(BmSDK.FString TargetPath)
+    public unsafe virtual void XI_RequestData(BmSDK.FString TargetPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ArkhamEpisodes.XI_RequestData", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -199,7 +199,7 @@ public partial class RGFxMovieUI_ArkhamEpisodes : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: SortByUISortId
     /// </summary>
-    public unsafe int SortByUISortId(BmSDK.BmGame.RGameInfo.FStoryDLCItem A, BmSDK.BmGame.RGameInfo.FStoryDLCItem B)
+    public unsafe virtual int SortByUISortId(BmSDK.BmGame.RGameInfo.FStoryDLCItem A, BmSDK.BmGame.RGameInfo.FStoryDLCItem B)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ArkhamEpisodes.SortByUISortId", true);
         byte* paramsPtr = stackalloc byte[116];
@@ -212,7 +212,7 @@ public partial class RGFxMovieUI_ArkhamEpisodes : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: SetupScreenPrompts
     /// </summary>
-    public unsafe void SetupScreenPrompts()
+    public unsafe override void SetupScreenPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ArkhamEpisodes.SetupScreenPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -223,7 +223,7 @@ public partial class RGFxMovieUI_ArkhamEpisodes : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ArkhamEpisodes.Init", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -235,7 +235,7 @@ public partial class RGFxMovieUI_ArkhamEpisodes : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: RetroAchievementUnlocks
     /// </summary>
-    public unsafe void RetroAchievementUnlocks()
+    public unsafe virtual void RetroAchievementUnlocks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_ArkhamEpisodes.RetroAchievementUnlocks", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.HUD H)
+    public unsafe override void DrawHUD(BmSDK.Engine.HUD H)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagicGunStartle.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -83,7 +83,7 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetStartEndTracePoints
     /// </summary>
-    public unsafe void GetStartEndTracePoints(out System.Numerics.Vector3 TraceStart, out System.Numerics.Vector3 TraceEnd)
+    public unsafe virtual void GetStartEndTracePoints(out System.Numerics.Vector3 TraceStart, out System.Numerics.Vector3 TraceEnd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagicGunStartle.GetStartEndTracePoints", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -96,7 +96,7 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: ButtonPressed
     /// </summary>
-    public unsafe void ButtonPressed()
+    public unsafe override void ButtonPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagicGunStartle.ButtonPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Function: GetName
     /// </summary>
-    public unsafe BmSDK.FString GetName()
+    public unsafe override BmSDK.FString GetName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagicGunStartle.GetName", true);
         byte* paramsPtr = stackalloc byte[16];

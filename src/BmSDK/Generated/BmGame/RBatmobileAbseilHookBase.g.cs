@@ -71,7 +71,7 @@ public partial class RBatmobileAbseilHookBase : BmSDK.BmGame.RHarpoonTriggerBase
     /// <summary>
     /// Function: CantPull
     /// </summary>
-    public unsafe void CantPull(BmSDK.BmGame.RPlayerController PC, BmSDK.BmGame.RBatmobileWinch Winch)
+    public unsafe virtual void CantPull(BmSDK.BmGame.RPlayerController PC, BmSDK.BmGame.RBatmobileWinch Winch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileAbseilHookBase.CantPull", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -84,7 +84,7 @@ public partial class RBatmobileAbseilHookBase : BmSDK.BmGame.RHarpoonTriggerBase
     /// <summary>
     /// Function: SetMaxLengthToDefault
     /// </summary>
-    public unsafe void SetMaxLengthToDefault()
+    public unsafe virtual void SetMaxLengthToDefault()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileAbseilHookBase.SetMaxLengthToDefault", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class RBatmobileAbseilHookBase : BmSDK.BmGame.RHarpoonTriggerBase
     /// <summary>
     /// Function: SetMaxLengthToCurrentLength
     /// </summary>
-    public unsafe void SetMaxLengthToCurrentLength()
+    public unsafe virtual void SetMaxLengthToCurrentLength()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileAbseilHookBase.SetMaxLengthToCurrentLength", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RBatmobileAbseilHookBase : BmSDK.BmGame.RHarpoonTriggerBase
     /// <summary>
     /// Function: WinchReleased
     /// </summary>
-    public unsafe void WinchReleased(BmSDK.BmGame.RBatmobileWinch Winch)
+    public unsafe virtual void WinchReleased(BmSDK.BmGame.RBatmobileWinch Winch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileAbseilHookBase.WinchReleased", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RBatmobileAbseilHookBase : BmSDK.BmGame.RHarpoonTriggerBase
     /// <summary>
     /// Function: WinchAttached
     /// </summary>
-    public unsafe void WinchAttached(BmSDK.BmGame.RBatmobileWinch Winch)
+    public unsafe virtual void WinchAttached(BmSDK.BmGame.RBatmobileWinch Winch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileAbseilHookBase.WinchAttached", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -130,7 +130,7 @@ public partial class RBatmobileAbseilHookBase : BmSDK.BmGame.RHarpoonTriggerBase
     /// <summary>
     /// Function: GetHarpoonTriggerTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetHarpoonTriggerTargetLocation(System.Numerics.Vector3 PlayerLocation)
+    public unsafe override System.Numerics.Vector3 GetHarpoonTriggerTargetLocation(System.Numerics.Vector3 PlayerLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileAbseilHookBase.GetHarpoonTriggerTargetLocation", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -142,7 +142,7 @@ public partial class RBatmobileAbseilHookBase : BmSDK.BmGame.RHarpoonTriggerBase
     /// <summary>
     /// Function: IsBatmobileInAngleLimits
     /// </summary>
-    public unsafe bool IsBatmobileInAngleLimits(BmSDK.Engine.Actor Batmobile, BmSDK.BmGame.RBatmobileWinch Winch, out System.Numerics.Vector3 LimitVec)
+    public unsafe virtual bool IsBatmobileInAngleLimits(BmSDK.Engine.Actor Batmobile, BmSDK.BmGame.RBatmobileWinch Winch, out System.Numerics.Vector3 LimitVec)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileAbseilHookBase.IsBatmobileInAngleLimits", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -156,7 +156,7 @@ public partial class RBatmobileAbseilHookBase : BmSDK.BmGame.RHarpoonTriggerBase
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileAbseilHookBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];

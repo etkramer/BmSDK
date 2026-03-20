@@ -47,7 +47,7 @@ public partial class RSeqAct_CameraLookAt : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// <summary>
     /// Function: AdjustCameraRot
     /// </summary>
-    public unsafe bool AdjustCameraRot(float DeltaTime)
+    public unsafe virtual bool AdjustCameraRot(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CameraLookAt.AdjustCameraRot", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -59,7 +59,7 @@ public partial class RSeqAct_CameraLookAt : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CameraLookAt.Update", true);
         byte* paramsPtr = stackalloc byte[16];

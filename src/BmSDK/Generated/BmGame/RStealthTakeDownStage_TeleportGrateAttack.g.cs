@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_TeleportGrateAttack : BmSDK.BmGame.RS
     /// <summary>
     /// Function: GetReferencePositionActor
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetReferencePositionActor()
+    public unsafe virtual BmSDK.Engine.Actor GetReferencePositionActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_TeleportGrateAttack.GetReferencePositionActor", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -82,7 +82,7 @@ public partial class RStealthTakeDownStage_TeleportGrateAttack : BmSDK.BmGame.RS
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_TeleportGrateAttack.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -95,7 +95,7 @@ public partial class RStealthTakeDownStage_TeleportGrateAttack : BmSDK.BmGame.RS
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_TeleportGrateAttack.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -107,7 +107,7 @@ public partial class RStealthTakeDownStage_TeleportGrateAttack : BmSDK.BmGame.RS
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_TeleportGrateAttack.Begin", true);
         byte* paramsPtr = stackalloc byte[16];

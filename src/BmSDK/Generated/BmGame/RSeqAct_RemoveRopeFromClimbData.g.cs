@@ -36,7 +36,7 @@ public partial class RSeqAct_RemoveRopeFromClimbData : BmSDK.Engine.SequenceActi
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RemoveRopeFromClimbData.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RSeqAct_RemoveRopeFromClimbData : BmSDK.Engine.SequenceActi
     /// <summary>
     /// Function: RemoveRope
     /// </summary>
-    public unsafe void RemoveRope(BmSDK.Engine.Actor RopeToRemove, System.Numerics.Vector3 RopeLoc1, System.Numerics.Vector3 RopeLoc2, int CollectionIndex)
+    public unsafe virtual void RemoveRope(BmSDK.Engine.Actor RopeToRemove, System.Numerics.Vector3 RopeLoc1, System.Numerics.Vector3 RopeLoc2, int CollectionIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RemoveRopeFromClimbData.RemoveRope", true);
         byte* paramsPtr = stackalloc byte[36];

@@ -36,7 +36,7 @@ public partial class RBMBehaviour_CheckOutcastFlag : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: GetThoughts
     /// </summary>
-    public unsafe void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CheckOutcastFlag.GetThoughts", true);
         byte* paramsPtr = stackalloc byte[104];
@@ -48,7 +48,7 @@ public partial class RBMBehaviour_CheckOutcastFlag : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CheckOutcastFlag.Tick", true);
         byte* paramsPtr = stackalloc byte[24];

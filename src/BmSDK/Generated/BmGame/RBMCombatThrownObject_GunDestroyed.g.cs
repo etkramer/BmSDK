@@ -71,7 +71,7 @@ public partial class RBMCombatThrownObject_GunDestroyed : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: GetSomewhatRandomDirectionVectorAwayFromThug
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetSomewhatRandomDirectionVectorAwayFromThug()
+    public unsafe virtual System.Numerics.Vector3 GetSomewhatRandomDirectionVectorAwayFromThug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_GunDestroyed.GetSomewhatRandomDirectionVectorAwayFromThug", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -82,7 +82,7 @@ public partial class RBMCombatThrownObject_GunDestroyed : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_GunDestroyed.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RBMCombatThrownObject_GunDestroyed : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_GunDestroyed.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

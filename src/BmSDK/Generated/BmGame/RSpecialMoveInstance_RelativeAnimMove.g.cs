@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: GetCameraAlignRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetCameraAlignRotation()
+    public unsafe override BmSDK.Rotator GetCameraAlignRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.GetCameraAlignRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: GetTransitionId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId GetTransitionId()
+    public unsafe override BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId GetTransitionId()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.GetTransitionId", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: AllowCollisionWithLocator
     /// </summary>
-    public unsafe void AllowCollisionWithLocator()
+    public unsafe virtual void AllowCollisionWithLocator()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.AllowCollisionWithLocator", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: CanAddExtraVelocity
     /// </summary>
-    public unsafe void CanAddExtraVelocity()
+    public unsafe virtual void CanAddExtraVelocity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.CanAddExtraVelocity", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: SetCameraState
     /// </summary>
-    public unsafe void SetCameraState()
+    public unsafe override void SetCameraState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.SetCameraState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: GetCameraAnim
     /// </summary>
-    public unsafe BmSDK.FName GetCameraAnim()
+    public unsafe override BmSDK.FName GetCameraAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.GetCameraAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -137,7 +137,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: FinalAnimStarted
     /// </summary>
-    public unsafe void FinalAnimStarted()
+    public unsafe virtual void FinalAnimStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.FinalAnimStarted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -148,7 +148,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: PlayedQueuedTransition
     /// </summary>
-    public unsafe void PlayedQueuedTransition(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id, float TimeLeftOver)
+    public unsafe virtual void PlayedQueuedTransition(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id, float TimeLeftOver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.PlayedQueuedTransition", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -161,7 +161,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: FallingCamera
     /// </summary>
-    public unsafe void FallingCamera()
+    public unsafe virtual void FallingCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.FallingCamera", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -172,7 +172,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: PlayFloorGrateAnim
     /// </summary>
-    public unsafe void PlayFloorGrateAnim()
+    public unsafe virtual void PlayFloorGrateAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.PlayFloorGrateAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -183,7 +183,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: FootStepNotify
     /// </summary>
-    public unsafe void FootStepNotify()
+    public unsafe override void FootStepNotify()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.FootStepNotify", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -194,7 +194,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: PredictEndLocation
     /// </summary>
-    public unsafe bool PredictEndLocation(out System.Numerics.Vector3 EndLocation)
+    public unsafe override bool PredictEndLocation(out System.Numerics.Vector3 EndLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.PredictEndLocation", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -206,7 +206,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: CanOverride
     /// </summary>
-    public unsafe bool CanOverride()
+    public unsafe virtual bool CanOverride()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.CanOverride", true);
         byte* paramsPtr = stackalloc byte[144];
@@ -217,7 +217,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: DisallowOverride
     /// </summary>
-    public unsafe void DisallowOverride()
+    public unsafe virtual void DisallowOverride()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.DisallowOverride", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -228,7 +228,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: AllowOverride
     /// </summary>
-    public unsafe void AllowOverride()
+    public unsafe virtual void AllowOverride()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.AllowOverride", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -239,7 +239,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: HandleAction
     /// </summary>
-    public unsafe void HandleAction(BmSDK.FName actionName)
+    public unsafe override void HandleAction(BmSDK.FName actionName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.HandleAction", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -251,7 +251,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: PerformOverrideMove
     /// </summary>
-    public unsafe bool PerformOverrideMove(bool FastForward)
+    public unsafe virtual bool PerformOverrideMove(bool FastForward)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.PerformOverrideMove", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -263,7 +263,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: CheckForAOverride
     /// </summary>
-    public unsafe bool CheckForAOverride(bool ForceOverride = default)
+    public unsafe override bool CheckForAOverride(bool ForceOverride = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.CheckForAOverride", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -275,7 +275,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: LandFinished
     /// </summary>
-    public unsafe void LandFinished()
+    public unsafe virtual void LandFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.LandFinished", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -286,7 +286,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: TunnelCamera
     /// </summary>
-    public unsafe void TunnelCamera()
+    public unsafe virtual void TunnelCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.TunnelCamera", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -297,7 +297,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: StopAimAt
     /// </summary>
-    public unsafe void StopAimAt()
+    public unsafe virtual void StopAimAt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.StopAimAt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -308,7 +308,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: StartAimAt
     /// </summary>
-    public unsafe void StartAimAt()
+    public unsafe virtual void StartAimAt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.StartAimAt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -319,7 +319,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: PickRandomAnim
     /// </summary>
-    public unsafe void PickRandomAnim()
+    public unsafe virtual void PickRandomAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.PickRandomAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -337,7 +337,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: StopRelativeTransition
     /// </summary>
-    public unsafe void StopRelativeTransition()
+    public unsafe override void StopRelativeTransition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.StopRelativeTransition", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -348,7 +348,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: FallTimeOut
     /// </summary>
-    public unsafe void FallTimeOut()
+    public unsafe virtual void FallTimeOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.FallTimeOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -359,7 +359,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: OverrideButtonIsBeingHeld
     /// </summary>
-    public unsafe bool OverrideButtonIsBeingHeld()
+    public unsafe virtual bool OverrideButtonIsBeingHeld()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.OverrideButtonIsBeingHeld", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -370,7 +370,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -382,7 +382,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -394,7 +394,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -405,7 +405,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: GetEndControllerState
     /// </summary>
-    public unsafe BmSDK.FName GetEndControllerState()
+    public unsafe override BmSDK.FName GetEndControllerState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.GetEndControllerState", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -416,7 +416,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: StartAnimation
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId StartAnimation(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation, BmSDK.FName AnimName, BmSDK.FName idleAnimName = default, bool bMirror = default, BmSDK.FName EndMovementStance = default, float DurationScale = default, BmSDK.Engine.AnimSet OverrideTransitionAnimSet = default, BmSDK.BmGame.RAnimUtil.EMirrorChoice MirrorIdle = default)
+    public unsafe virtual BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId StartAnimation(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation, BmSDK.FName AnimName, BmSDK.FName idleAnimName = default, bool bMirror = default, BmSDK.FName EndMovementStance = default, float DurationScale = default, BmSDK.Engine.AnimSet OverrideTransitionAnimSet = default, BmSDK.BmGame.RAnimUtil.EMirrorChoice MirrorIdle = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.StartAnimation", true);
         byte* paramsPtr = stackalloc byte[216];
@@ -435,7 +435,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: AllowWallEvade
     /// </summary>
-    public unsafe void AllowWallEvade()
+    public unsafe virtual void AllowWallEvade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.AllowWallEvade", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -446,7 +446,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: GetEndMovementStance
     /// </summary>
-    public unsafe BmSDK.FName GetEndMovementStance()
+    public unsafe virtual BmSDK.FName GetEndMovementStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.GetEndMovementStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -457,7 +457,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: GetCustomIdle
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetCustomIdle()
+    public unsafe virtual BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetCustomIdle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.GetCustomIdle", true);
         byte* paramsPtr = stackalloc byte[104];
@@ -468,7 +468,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: DoSlavedJokerHallucination
     /// </summary>
-    public unsafe void DoSlavedJokerHallucination(bool bIgnoreCollisionCheck, BmSDK.BmGame.RPawnJokerHallucination.TypesOfHallucination HallucinationType)
+    public unsafe override void DoSlavedJokerHallucination(bool bIgnoreCollisionCheck, BmSDK.BmGame.RPawnJokerHallucination.TypesOfHallucination HallucinationType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.DoSlavedJokerHallucination", true);
         byte* paramsPtr = stackalloc byte[49];
@@ -481,7 +481,7 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeAnimMove.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[176];

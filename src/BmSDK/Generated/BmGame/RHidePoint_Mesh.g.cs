@@ -71,7 +71,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: DamagedByBomb
     /// </summary>
-    public unsafe void DamagedByBomb()
+    public unsafe override void DamagedByBomb()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.DamagedByBomb", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: TakeRadiusDamage
     /// </summary>
-    public unsafe void TakeRadiusDamage(BmSDK.Engine.Controller InstigatedBy, float BaseDamage, float DamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, bool bFullDamage, BmSDK.Engine.Actor DamageCauser, float DamageFalloffExponent = default)
+    public unsafe override void TakeRadiusDamage(BmSDK.Engine.Controller InstigatedBy, float BaseDamage, float DamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, bool bFullDamage, BmSDK.Engine.Actor DamageCauser, float DamageFalloffExponent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.TakeRadiusDamage", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -102,7 +102,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: TakeDamageFromWeapon
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.EWeaponDamageResult TakeDamageFromWeapon(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default, bool bHeadShot = default)
+    public unsafe override BmSDK.Engine.Actor.EWeaponDamageResult TakeDamageFromWeapon(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default, bool bHeadShot = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.TakeDamageFromWeapon", true);
         byte* paramsPtr = stackalloc byte[109];
@@ -122,7 +122,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -140,7 +140,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetMineAttachSocketWorldLocationAndRotation
     /// </summary>
-    public unsafe bool GetMineAttachSocketWorldLocationAndRotation(BmSDK.FName InSocketName, out System.Numerics.Vector3 OutLocation, out BmSDK.Rotator OutRotation)
+    public unsafe override bool GetMineAttachSocketWorldLocationAndRotation(BmSDK.FName InSocketName, out System.Numerics.Vector3 OutLocation, out BmSDK.Rotator OutRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.GetMineAttachSocketWorldLocationAndRotation", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -154,7 +154,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetInThermalMode
     /// </summary>
-    public unsafe void SetInThermalMode(bool On, bool bForceOff)
+    public unsafe override void SetInThermalMode(bool On, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.SetInThermalMode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -167,7 +167,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetInvestigateHighlighted
     /// </summary>
-    public unsafe void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
+    public unsafe override void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.SetInvestigateHighlighted", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -180,7 +180,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: ResetXrayAndThermalState
     /// </summary>
-    public unsafe void ResetXrayAndThermalState()
+    public unsafe virtual void ResetXrayAndThermalState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.ResetXrayAndThermalState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -191,7 +191,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetDestroyedHelpText
     /// </summary>
-    public unsafe void SetDestroyedHelpText()
+    public unsafe override void SetDestroyedHelpText()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.SetDestroyedHelpText", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -202,7 +202,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: WillSmashIfShot
     /// </summary>
-    public unsafe bool WillSmashIfShot()
+    public unsafe override bool WillSmashIfShot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.WillSmashIfShot", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -213,7 +213,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: ScanDone
     /// </summary>
-    public unsafe void ScanDone()
+    public unsafe virtual void ScanDone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.ScanDone", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -224,7 +224,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: TriggerScanFX
     /// </summary>
-    public unsafe void TriggerScanFX(BmSDK.Engine.ParticleSystem ScanFX)
+    public unsafe override void TriggerScanFX(BmSDK.Engine.ParticleSystem ScanFX)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.TriggerScanFX", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -236,7 +236,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetStaticMeshForXRayScan
     /// </summary>
-    public unsafe BmSDK.Engine.StaticMesh GetStaticMeshForXRayScan()
+    public unsafe virtual BmSDK.Engine.StaticMesh GetStaticMeshForXRayScan()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.GetStaticMeshForXRayScan", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -247,7 +247,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: PlayerWalkedOn
     /// </summary>
-    public unsafe void PlayerWalkedOn(BmSDK.BmGame.RPawnPlayer Player)
+    public unsafe virtual void PlayerWalkedOn(BmSDK.BmGame.RPawnPlayer Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.PlayerWalkedOn", true);
         byte* paramsPtr = stackalloc byte[148];
@@ -259,7 +259,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -270,7 +270,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: SmashDueToGunDamage
     /// </summary>
-    public unsafe void SmashDueToGunDamage()
+    public unsafe virtual void SmashDueToGunDamage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.SmashDueToGunDamage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -281,7 +281,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: PartSmashDueToGunDamage
     /// </summary>
-    public unsafe void PartSmashDueToGunDamage()
+    public unsafe virtual void PartSmashDueToGunDamage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.PartSmashDueToGunDamage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -292,7 +292,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: TakeGunDamage
     /// </summary>
-    public unsafe void TakeGunDamage(float DamageAmount, BmSDK.BmGame.RBMPawnAI AttackingPawn, BmSDK.Class dmgType)
+    public unsafe override void TakeGunDamage(float DamageAmount, BmSDK.BmGame.RBMPawnAI AttackingPawn, BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.TakeGunDamage", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -306,7 +306,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: IsBreakable
     /// </summary>
-    public unsafe bool IsBreakable()
+    public unsafe virtual bool IsBreakable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.IsBreakable", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -317,7 +317,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetDangerEffects
     /// </summary>
-    public unsafe void SetDangerEffects(float NewSpeed)
+    public unsafe virtual void SetDangerEffects(float NewSpeed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.SetDangerEffects", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -329,7 +329,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetMine
     /// </summary>
-    public unsafe void SetMine(BmSDK.BmGame.RVantageMineBase NewMine)
+    public unsafe override void SetMine(BmSDK.BmGame.RVantageMineBase NewMine)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.SetMine", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -341,7 +341,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: ReformToInitialState
     /// </summary>
-    public unsafe void ReformToInitialState()
+    public unsafe virtual void ReformToInitialState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.ReformToInitialState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -359,7 +359,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: UpdateGargoyleCollisionShortlyAfterTakingDamage
     /// </summary>
-    public unsafe void UpdateGargoyleCollisionShortlyAfterTakingDamage()
+    public unsafe virtual void UpdateGargoyleCollisionShortlyAfterTakingDamage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.UpdateGargoyleCollisionShortlyAfterTakingDamage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -377,7 +377,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetVantagePointMeshComponent
     /// </summary>
-    public unsafe BmSDK.Engine.MeshComponent GetVantagePointMeshComponent()
+    public unsafe virtual BmSDK.Engine.MeshComponent GetVantagePointMeshComponent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.GetVantagePointMeshComponent", true);
         byte* paramsPtr = stackalloc byte[8];

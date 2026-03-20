@@ -47,7 +47,7 @@ public partial class RSeqAct_CanSeePawn : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: ReverseFovCheck
     /// </summary>
-    public unsafe bool ReverseFovCheck()
+    public unsafe virtual bool ReverseFovCheck()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CanSeePawn.ReverseFovCheck", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -58,7 +58,7 @@ public partial class RSeqAct_CanSeePawn : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: CheckForSightChange
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_CanSeePawn.SightCheckResult CheckForSightChange(float DeltaTime)
+    public unsafe virtual BmSDK.BmGame.RSeqAct_CanSeePawn.SightCheckResult CheckForSightChange(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CanSeePawn.CheckForSightChange", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -70,7 +70,7 @@ public partial class RSeqAct_CanSeePawn : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: LOS_Lost
     /// </summary>
-    public unsafe void LOS_Lost()
+    public unsafe virtual void LOS_Lost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CanSeePawn.LOS_Lost", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RSeqAct_CanSeePawn : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: LOS_Gained
     /// </summary>
-    public unsafe void LOS_Gained()
+    public unsafe virtual void LOS_Gained()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CanSeePawn.LOS_Gained", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -92,7 +92,7 @@ public partial class RSeqAct_CanSeePawn : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: LOS_NoChange
     /// </summary>
-    public unsafe void LOS_NoChange(float DeltaTime)
+    public unsafe virtual void LOS_NoChange(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CanSeePawn.LOS_NoChange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RSeqAct_CanSeePawn : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CanSeePawn.Update", true);
         byte* paramsPtr = stackalloc byte[8];

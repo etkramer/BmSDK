@@ -36,7 +36,7 @@ public partial class RVehicleScanLaser : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetSizzleEnabled
     /// </summary>
-    public unsafe void SetSizzleEnabled(bool is_enabled)
+    public unsafe virtual void SetSizzleEnabled(bool is_enabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScanLaser.SetSizzleEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RVehicleScanLaser : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: TickLaser
     /// </summary>
-    public unsafe void TickLaser(float DeltaT, BmSDK.Rotator SocketRotation, bool CheckCollision)
+    public unsafe virtual void TickLaser(float DeltaT, BmSDK.Rotator SocketRotation, bool CheckCollision)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScanLaser.TickLaser", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -62,7 +62,7 @@ public partial class RVehicleScanLaser : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckCollisions
     /// </summary>
-    public unsafe void CheckCollisions()
+    public unsafe virtual void CheckCollisions()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScanLaser.CheckCollisions", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -73,7 +73,7 @@ public partial class RVehicleScanLaser : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetLaserLength
     /// </summary>
-    public unsafe void SetLaserLength(float new_length)
+    public unsafe virtual void SetLaserLength(float new_length)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScanLaser.SetLaserLength", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -85,7 +85,7 @@ public partial class RVehicleScanLaser : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetActive
     /// </summary>
-    public unsafe void SetActive(bool is_active, float Range)
+    public unsafe virtual void SetActive(bool is_active, float Range)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScanLaser.SetActive", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -98,7 +98,7 @@ public partial class RVehicleScanLaser : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmGame.RVehicleHeavyTank Host, BmSDK.Engine.SkeletalMeshComponent parent_mesh, BmSDK.FName parent_socket, float Proportion, BmSDK.Engine.RObjectPool object_pool)
+    public unsafe virtual void Initialise(BmSDK.BmGame.RVehicleHeavyTank Host, BmSDK.Engine.SkeletalMeshComponent parent_mesh, BmSDK.FName parent_socket, float Proportion, BmSDK.Engine.RObjectPool object_pool)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScanLaser.Initialise", true);
         byte* paramsPtr = stackalloc byte[36];

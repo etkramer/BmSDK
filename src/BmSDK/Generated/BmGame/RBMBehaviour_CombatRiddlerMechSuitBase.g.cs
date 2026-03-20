@@ -36,7 +36,7 @@ public partial class RBMBehaviour_CombatRiddlerMechSuitBase : BmSDK.BmGame.RBMBe
     /// <summary>
     /// Function: GetForceToGiveToPawn
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetForceToGiveToPawn(BmSDK.BmGame.RPawnCombat ForceReceiver, float MaxForce, float MinRange = default, float MaxRange = default)
+    public unsafe override System.Numerics.Vector3 GetForceToGiveToPawn(BmSDK.BmGame.RPawnCombat ForceReceiver, float MaxForce, float MinRange = default, float MaxRange = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatRiddlerMechSuitBase.GetForceToGiveToPawn", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_CombatRiddlerMechSuitBase : BmSDK.BmGame.RBMBe
     /// <summary>
     /// Function: GetMovementForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMovementForce(System.Numerics.Vector3 SourceLocation = default)
+    public unsafe override System.Numerics.Vector3 GetMovementForce(System.Numerics.Vector3 SourceLocation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CombatRiddlerMechSuitBase.GetMovementForce", true);
         byte* paramsPtr = stackalloc byte[24];

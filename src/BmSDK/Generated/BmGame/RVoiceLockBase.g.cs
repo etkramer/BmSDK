@@ -71,7 +71,7 @@ public partial class RVoiceLockBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetUsedEvent
     /// </summary>
-    public unsafe BmSDK.Engine.SeqEvent_Used GetUsedEvent()
+    public unsafe virtual BmSDK.Engine.SeqEvent_Used GetUsedEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceLockBase.GetUsedEvent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RVoiceLockBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceLockBase.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RVoiceLockBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsVoiceLockUsable
     /// </summary>
-    public unsafe bool IsVoiceLockUsable()
+    public unsafe virtual bool IsVoiceLockUsable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceLockBase.IsVoiceLockUsable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RVoiceLockBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Use
     /// </summary>
-    public unsafe bool Use(BmSDK.Engine.Controller PC)
+    public unsafe virtual bool Use(BmSDK.Engine.Controller PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceLockBase.Use", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -117,7 +117,7 @@ public partial class RVoiceLockBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateDetectiveModeMaterials
     /// </summary>
-    public unsafe void UpdateDetectiveModeMaterials()
+    public unsafe virtual void UpdateDetectiveModeMaterials()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceLockBase.UpdateDetectiveModeMaterials", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RVoiceLockBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Deactivate
     /// </summary>
-    public unsafe void Deactivate()
+    public unsafe virtual void Deactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceLockBase.Deactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RVoiceLockBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Activate
     /// </summary>
-    public unsafe void Activate()
+    public unsafe virtual void Activate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceLockBase.Activate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class RVoiceLockBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVoiceLockBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

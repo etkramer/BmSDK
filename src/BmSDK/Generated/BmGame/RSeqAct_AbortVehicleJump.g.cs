@@ -47,7 +47,7 @@ public partial class RSeqAct_AbortVehicleJump : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AbortVehicleJump.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RSeqAct_AbortVehicleJump : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: AbortJump
     /// </summary>
-    public unsafe void AbortJump()
+    public unsafe virtual void AbortJump()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AbortVehicleJump.AbortJump", true);
         byte* paramsPtr = stackalloc byte[0];

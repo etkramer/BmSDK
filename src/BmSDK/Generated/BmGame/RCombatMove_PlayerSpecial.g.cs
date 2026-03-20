@@ -71,7 +71,7 @@ public partial class RCombatMove_PlayerSpecial : BmSDK.BmGame.RCombatMove_Batman
     /// <summary>
     /// Function: InitialiseSimulated
     /// </summary>
-    public unsafe void InitialiseSimulated()
+    public unsafe override void InitialiseSimulated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_PlayerSpecial.InitialiseSimulated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class RCombatMove_PlayerSpecial : BmSDK.BmGame.RCombatMove_Batman
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_PlayerSpecial.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

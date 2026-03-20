@@ -71,7 +71,7 @@ public partial class MAEC_Sub_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_Sub_AttractEnemiesWithSound.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class MAEC_Sub_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_Sub_AttractEnemiesWithSound.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class MAEC_Sub_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// Function: AssignTarget
     /// </summary>
-    public unsafe void AssignTarget(System.Numerics.Vector3 MovePos, BmSDK.BmGame.MJackInBoxTrapBase NewTrap, int stageAt, bool WasInIdleBehaviour)
+    public unsafe virtual void AssignTarget(System.Numerics.Vector3 MovePos, BmSDK.BmGame.MJackInBoxTrapBase NewTrap, int stageAt, bool WasInIdleBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_Sub_AttractEnemiesWithSound.AssignTarget", true);
         byte* paramsPtr = stackalloc byte[72];

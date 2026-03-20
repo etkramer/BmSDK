@@ -47,7 +47,7 @@ public partial class RBMBehaviour_JokerEndOfCombat : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: BeginJokerTauntDialogue
     /// </summary>
-    public unsafe void BeginJokerTauntDialogue()
+    public unsafe virtual void BeginJokerTauntDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_JokerEndOfCombat.BeginJokerTauntDialogue", true);
         byte* paramsPtr = stackalloc byte[116];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_JokerEndOfCombat : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: JokerInShot
     /// </summary>
-    public unsafe bool JokerInShot()
+    public unsafe virtual bool JokerInShot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_JokerEndOfCombat.JokerInShot", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_JokerEndOfCombat : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_JokerEndOfCombat.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

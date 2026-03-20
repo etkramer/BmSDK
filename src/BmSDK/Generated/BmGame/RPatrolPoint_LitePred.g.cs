@@ -71,7 +71,7 @@ public partial class RPatrolPoint_LitePred : BmSDK.BmGame.RPatrolPoint, BmSDK.IG
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPatrolPoint_LitePred.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

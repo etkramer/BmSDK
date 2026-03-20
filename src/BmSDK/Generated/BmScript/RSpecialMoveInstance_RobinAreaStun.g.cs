@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_RobinAreaStun : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: StartArcMovement
     /// </summary>
-    public unsafe void StartArcMovement()
+    public unsafe virtual void StartArcMovement()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinAreaStun.StartArcMovement", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_RobinAreaStun : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: StunNearbyVillains
     /// </summary>
-    public unsafe void StunNearbyVillains(System.Numerics.Vector3 pos, float knockDownRange, float stunRange, float AlertRange, float StunTime)
+    public unsafe virtual void StunNearbyVillains(System.Numerics.Vector3 pos, float knockDownRange, float stunRange, float AlertRange, float StunTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinAreaStun.StunNearbyVillains", true);
         byte* paramsPtr = stackalloc byte[352];
@@ -98,7 +98,7 @@ public partial class RSpecialMoveInstance_RobinAreaStun : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: PredictEndLocation
     /// </summary>
-    public unsafe bool PredictEndLocation(out System.Numerics.Vector3 EndLocation)
+    public unsafe override bool PredictEndLocation(out System.Numerics.Vector3 EndLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinAreaStun.PredictEndLocation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -110,7 +110,7 @@ public partial class RSpecialMoveInstance_RobinAreaStun : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: NotifyBump
     /// </summary>
-    public unsafe void NotifyBump(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitNormal)
+    public unsafe override void NotifyBump(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinAreaStun.NotifyBump", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -123,7 +123,7 @@ public partial class RSpecialMoveInstance_RobinAreaStun : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: DoAreaStun
     /// </summary>
-    public unsafe void DoAreaStun()
+    public unsafe virtual void DoAreaStun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinAreaStun.DoAreaStun", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -134,7 +134,7 @@ public partial class RSpecialMoveInstance_RobinAreaStun : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinAreaStun.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -146,7 +146,7 @@ public partial class RSpecialMoveInstance_RobinAreaStun : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinAreaStun.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -157,7 +157,7 @@ public partial class RSpecialMoveInstance_RobinAreaStun : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinAreaStun.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -169,7 +169,7 @@ public partial class RSpecialMoveInstance_RobinAreaStun : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: TriggerCameraLookAt
     /// </summary>
-    public unsafe void TriggerCameraLookAt()
+    public unsafe virtual void TriggerCameraLookAt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinAreaStun.TriggerCameraLookAt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -180,7 +180,7 @@ public partial class RSpecialMoveInstance_RobinAreaStun : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinAreaStun.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[148];

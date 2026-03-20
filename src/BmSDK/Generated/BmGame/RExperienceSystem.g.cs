@@ -71,7 +71,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HideXPBar
     /// </summary>
-    public unsafe void HideXPBar()
+    public unsafe virtual void HideXPBar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.HideXPBar", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowXPBar
     /// </summary>
-    public unsafe void ShowXPBar()
+    public unsafe virtual void ShowXPBar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.ShowXPBar", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpentXP
     /// </summary>
-    public unsafe void SpentXP()
+    public unsafe virtual void SpentXP()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.SpentXP", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsXPCutsceneSuppressed
     /// </summary>
-    public unsafe bool IsXPCutsceneSuppressed()
+    public unsafe virtual bool IsXPCutsceneSuppressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.IsXPCutsceneSuppressed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -115,7 +115,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AllowXPCutscene
     /// </summary>
-    public unsafe void AllowXPCutscene()
+    public unsafe virtual void AllowXPCutscene()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.AllowXPCutscene", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SuppressXPCutscene
     /// </summary>
-    public unsafe void SuppressXPCutscene()
+    public unsafe virtual void SuppressXPCutscene()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.SuppressXPCutscene", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -137,7 +137,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetActualXPBar
     /// </summary>
-    public unsafe void SetActualXPBar(int NewValue)
+    public unsafe virtual void SetActualXPBar(int NewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.SetActualXPBar", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -149,7 +149,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetXpDisplayProportion
     /// </summary>
-    public unsafe float GetXpDisplayProportion()
+    public unsafe virtual float GetXpDisplayProportion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.GetXpDisplayProportion", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -160,7 +160,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearActualXPBar
     /// </summary>
-    public unsafe void ClearActualXPBar()
+    public unsafe virtual void ClearActualXPBar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.ClearActualXPBar", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -171,7 +171,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetFadedXPBar
     /// </summary>
-    public unsafe void SetFadedXPBar(int NewValue)
+    public unsafe virtual void SetFadedXPBar(int NewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.SetFadedXPBar", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -183,7 +183,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EndLevelUp
     /// </summary>
-    public unsafe void EndLevelUp()
+    public unsafe virtual void EndLevelUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.EndLevelUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -194,7 +194,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: LevelUp
     /// </summary>
-    public unsafe void LevelUp()
+    public unsafe virtual void LevelUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.LevelUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -205,7 +205,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckXPAfterLoad
     /// </summary>
-    public unsafe void CheckXPAfterLoad()
+    public unsafe virtual void CheckXPAfterLoad()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.CheckXPAfterLoad", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -216,7 +216,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EndUnbankedXP
     /// </summary>
-    public unsafe void EndUnbankedXP()
+    public unsafe virtual void EndUnbankedXP()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.EndUnbankedXP", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -227,7 +227,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BankXP
     /// </summary>
-    public unsafe void BankXP(bool bForSave = default)
+    public unsafe virtual void BankXP(bool bForSave = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.BankXP", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -239,7 +239,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnRegisterXPSequence
     /// </summary>
-    public unsafe void UnRegisterXPSequence(BmSDK.BmGame.RXPSequence OldSequence)
+    public unsafe virtual void UnRegisterXPSequence(BmSDK.BmGame.RXPSequence OldSequence)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.UnRegisterXPSequence", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -251,7 +251,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterXPSequence
     /// </summary>
-    public unsafe void RegisterXPSequence(BmSDK.BmGame.RXPSequence NewSequence)
+    public unsafe virtual void RegisterXPSequence(BmSDK.BmGame.RXPSequence NewSequence)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.RegisterXPSequence", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -263,7 +263,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FlushPendingLevelUp
     /// </summary>
-    public unsafe void FlushPendingLevelUp()
+    public unsafe virtual void FlushPendingLevelUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.FlushPendingLevelUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -274,7 +274,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BankIfRoomClear
     /// </summary>
-    public unsafe void BankIfRoomClear()
+    public unsafe virtual void BankIfRoomClear()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.BankIfRoomClear", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -285,7 +285,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ForceBankXP
     /// </summary>
-    public unsafe void ForceBankXP()
+    public unsafe virtual void ForceBankXP()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.ForceBankXP", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -296,7 +296,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ForceBankIfRoomClear
     /// </summary>
-    public unsafe void ForceBankIfRoomClear()
+    public unsafe virtual void ForceBankIfRoomClear()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.ForceBankIfRoomClear", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -307,7 +307,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BankIfVehiclesClear
     /// </summary>
-    public unsafe void BankIfVehiclesClear()
+    public unsafe virtual void BankIfVehiclesClear()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.BankIfVehiclesClear", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -318,7 +318,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ForceBankVehicleXPIfRoomClear
     /// </summary>
-    public unsafe void ForceBankVehicleXPIfRoomClear()
+    public unsafe virtual void ForceBankVehicleXPIfRoomClear()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.ForceBankVehicleXPIfRoomClear", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -329,7 +329,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddUnbankedXP
     /// </summary>
-    public unsafe void AddUnbankedXP(int XpAwarded, bool bTeeth)
+    public unsafe virtual void AddUnbankedXP(int XpAwarded, bool bTeeth)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.AddUnbankedXP", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -342,7 +342,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnXPSequence
     /// </summary>
-    public unsafe void SpawnXPSequence(int XpAwarded, BmSDK.Engine.Actor XPTarget, BmSDK.BmGame.RGameInfo.EGameAction Type, float BatMultiplier = default)
+    public unsafe virtual void SpawnXPSequence(int XpAwarded, BmSDK.Engine.Actor XPTarget, BmSDK.BmGame.RGameInfo.EGameAction Type, float BatMultiplier = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.SpawnXPSequence", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -357,7 +357,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowXPBarForUnbanked
     /// </summary>
-    public unsafe void ShowXPBarForUnbanked()
+    public unsafe virtual void ShowXPBarForUnbanked()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.ShowXPBarForUnbanked", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -368,7 +368,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddCombatChallengeBonus
     /// </summary>
-    public unsafe int AddCombatChallengeBonus(out BmSDK.FString SummaryString, out float DelayBankTime)
+    public unsafe virtual int AddCombatChallengeBonus(out BmSDK.FString SummaryString, out float DelayBankTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.AddCombatChallengeBonus", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -381,7 +381,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddToBonusSummaryString
     /// </summary>
-    public unsafe void AddToBonusSummaryString(out BmSDK.FString SummaryString, out int TotalScore, out float DelayTime, BmSDK.FString Desc, int Multi, int Score, bool bMultiXScore, BmSDK.FString OverrideString = default)
+    public unsafe virtual void AddToBonusSummaryString(out BmSDK.FString SummaryString, out int TotalScore, out float DelayTime, BmSDK.FString Desc, int Multi, int Score, bool bMultiXScore, BmSDK.FString OverrideString = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.AddToBonusSummaryString", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -400,7 +400,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMaxComboGadgetVariationBonus
     /// </summary>
-    public unsafe int GetMaxComboGadgetVariationBonus(int Variation)
+    public unsafe virtual int GetMaxComboGadgetVariationBonus(int Variation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.GetMaxComboGadgetVariationBonus", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -412,7 +412,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMaxComboVariationBonus
     /// </summary>
-    public unsafe int GetMaxComboVariationBonus(int Variation)
+    public unsafe virtual int GetMaxComboVariationBonus(int Variation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.GetMaxComboVariationBonus", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -424,7 +424,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddPredatorXPBonus
     /// </summary>
-    public unsafe void AddPredatorXPBonus(BmSDK.BmGame.RGameInfo.FPredatorXPInfo XPInfo)
+    public unsafe virtual void AddPredatorXPBonus(BmSDK.BmGame.RGameInfo.FPredatorXPInfo XPInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.AddPredatorXPBonus", true);
         byte* paramsPtr = stackalloc byte[112];
@@ -436,7 +436,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddCombatXPBonus
     /// </summary>
-    public unsafe void AddCombatXPBonus(BmSDK.BmGame.RGameInfo.FCombatXPInfo XPInfo)
+    public unsafe virtual void AddCombatXPBonus(BmSDK.BmGame.RGameInfo.FCombatXPInfo XPInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.AddCombatXPBonus", true);
         byte* paramsPtr = stackalloc byte[148];
@@ -448,7 +448,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddSummaryTitle
     /// </summary>
-    public unsafe void AddSummaryTitle(out BmSDK.FString SummaryString, out float DelayTime, BmSDK.FString TitleText)
+    public unsafe virtual void AddSummaryTitle(out BmSDK.FString SummaryString, out float DelayTime, BmSDK.FString TitleText)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.AddSummaryTitle", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -462,7 +462,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddToSummaryString
     /// </summary>
-    public unsafe void AddToSummaryString(out BmSDK.FString SummaryString, out int TotalXP, out float DelayTime, BmSDK.FString Desc, int Multi, float XPPer, bool bIndent, bool bAddXP = default)
+    public unsafe virtual void AddToSummaryString(out BmSDK.FString SummaryString, out int TotalXP, out float DelayTime, BmSDK.FString Desc, int Multi, float XPPer, bool bIndent, bool bAddXP = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.AddToSummaryString", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -481,7 +481,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterCombatKO
     /// </summary>
-    public unsafe void RegisterCombatKO(BmSDK.BmGame.RGameInfo.EGameAction Type, BmSDK.Engine.Actor XPTarget, int XPAmount)
+    public unsafe virtual void RegisterCombatKO(BmSDK.BmGame.RGameInfo.EGameAction Type, BmSDK.Engine.Actor XPTarget, int XPAmount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.RegisterCombatKO", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -495,7 +495,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterSpecialAction
     /// </summary>
-    public unsafe void RegisterSpecialAction(BmSDK.BmGame.RGameInfo.EGameAction Type, BmSDK.Engine.Actor XPTarget, int XPAmount = default)
+    public unsafe virtual void RegisterSpecialAction(BmSDK.BmGame.RGameInfo.EGameAction Type, BmSDK.Engine.Actor XPTarget, int XPAmount = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.RegisterSpecialAction", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -509,7 +509,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterRepeatedAction
     /// </summary>
-    public unsafe void RegisterRepeatedAction(BmSDK.BmGame.RGameInfo.EGameAction Type, BmSDK.Engine.Actor XPTarget, int XPAmount = default)
+    public unsafe virtual void RegisterRepeatedAction(BmSDK.BmGame.RGameInfo.EGameAction Type, BmSDK.Engine.Actor XPTarget, int XPAmount = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.RegisterRepeatedAction", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -523,7 +523,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterTakedown
     /// </summary>
-    public unsafe void RegisterTakedown(BmSDK.BmGame.RGameInfo.EGameAction Type, BmSDK.Engine.Actor XPTarget, int XPAmount)
+    public unsafe virtual void RegisterTakedown(BmSDK.BmGame.RGameInfo.EGameAction Type, BmSDK.Engine.Actor XPTarget, int XPAmount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.RegisterTakedown", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -537,7 +537,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldAwardCombatXP
     /// </summary>
-    public unsafe bool ShouldAwardCombatXP()
+    public unsafe virtual bool ShouldAwardCombatXP()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.ShouldAwardCombatXP", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -548,7 +548,7 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExperienceSystem.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RTurnAwayGlidingPlayerCylinder : BmSDK.Engine.Actor, BmSDK.
     /// <summary>
     /// Function: Bump
     /// </summary>
-    public unsafe void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTurnAwayGlidingPlayerCylinder.Bump", true);
         byte* paramsPtr = stackalloc byte[68];

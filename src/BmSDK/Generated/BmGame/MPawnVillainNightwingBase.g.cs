@@ -66,7 +66,7 @@ public partial class MPawnVillainNightwingBase : BmSDK.BmGame.RPawnVillainCombat
     /// <summary>
     /// Function: GetComboTakedownAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetComboTakedownAnimset()
+    public unsafe virtual BmSDK.Engine.AnimSet GetComboTakedownAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnVillainNightwingBase.GetComboTakedownAnimset", true);
         byte* paramsPtr = stackalloc byte[8];

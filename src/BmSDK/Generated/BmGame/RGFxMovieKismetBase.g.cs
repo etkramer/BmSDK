@@ -36,7 +36,7 @@ public partial class RGFxMovieKismetBase : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Function: CloseWindow
     /// </summary>
-    public unsafe void CloseWindow()
+    public unsafe virtual void CloseWindow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieKismetBase.CloseWindow", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class RGFxMovieKismetBase : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Function: XI_SetAspect
     /// </summary>
-    public unsafe void XI_SetAspect()
+    public unsafe virtual void XI_SetAspect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieKismetBase.XI_SetAspect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -65,7 +65,7 @@ public partial class RGFxMovieKismetBase : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Function: OnAspectRatioChanged
     /// </summary>
-    public unsafe void OnAspectRatioChanged(float aspect_ratio)
+    public unsafe override void OnAspectRatioChanged(float aspect_ratio)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieKismetBase.OnAspectRatioChanged", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -77,7 +77,7 @@ public partial class RGFxMovieKismetBase : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Function: Start
     /// </summary>
-    public unsafe bool Start(bool StartPaused = default)
+    public unsafe override bool Start(bool StartPaused = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieKismetBase.Start", true);
         byte* paramsPtr = stackalloc byte[20];

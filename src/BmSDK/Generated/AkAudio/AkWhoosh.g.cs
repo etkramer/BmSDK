@@ -71,7 +71,7 @@ public partial class AkWhoosh : BmSDK.Engine.AkActor, BmSDK.IGameObject
     /// <summary>
     /// Function: DisableWhoosh
     /// </summary>
-    public unsafe void DisableWhoosh()
+    public unsafe virtual void DisableWhoosh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkWhoosh.DisableWhoosh", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class AkWhoosh : BmSDK.Engine.AkActor, BmSDK.IGameObject
     /// <summary>
     /// Function: EnableWhoosh
     /// </summary>
-    public unsafe void EnableWhoosh()
+    public unsafe virtual void EnableWhoosh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkWhoosh.EnableWhoosh", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class AkWhoosh : BmSDK.Engine.AkActor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle ToggleAction)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle ToggleAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkWhoosh.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];

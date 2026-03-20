@@ -71,7 +71,7 @@ public partial class RAEC_ExplodedWall_Sub_CheckWall : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: IsInPosition
     /// </summary>
-    public unsafe bool IsInPosition()
+    public unsafe virtual bool IsInPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall_Sub_CheckWall.IsInPosition", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RAEC_ExplodedWall_Sub_CheckWall : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: AssignWall
     /// </summary>
-    public unsafe void AssignWall(System.Numerics.Vector3 StandPoint, System.Numerics.Vector3 BoomLoc, bool bIsHorizontal)
+    public unsafe virtual void AssignWall(System.Numerics.Vector3 StandPoint, System.Numerics.Vector3 BoomLoc, bool bIsHorizontal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall_Sub_CheckWall.AssignWall", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -96,7 +96,7 @@ public partial class RAEC_ExplodedWall_Sub_CheckWall : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: NotifyEvent
     /// </summary>
-    public unsafe void NotifyEvent(BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
+    public unsafe override void NotifyEvent(BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall_Sub_CheckWall.NotifyEvent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -109,7 +109,7 @@ public partial class RAEC_ExplodedWall_Sub_CheckWall : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall_Sub_CheckWall.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -121,7 +121,7 @@ public partial class RAEC_ExplodedWall_Sub_CheckWall : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall_Sub_CheckWall.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];

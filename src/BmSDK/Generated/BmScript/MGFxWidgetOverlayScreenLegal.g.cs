@@ -36,7 +36,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: onOverlayAnimationComplete
     /// </summary>
-    public unsafe void onOverlayAnimationComplete()
+    public unsafe override void onOverlayAnimationComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.onOverlayAnimationComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: onTransistionCompleteCallback
     /// </summary>
-    public unsafe void onTransistionCompleteCallback(bool bIsActive)
+    public unsafe override void onTransistionCompleteCallback(bool bIsActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.onTransistionCompleteCallback", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: Terminate
     /// </summary>
-    public unsafe void Terminate()
+    public unsafe override void Terminate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.Terminate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: SendData
     /// </summary>
-    public unsafe void SendData()
+    public unsafe override void SendData()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.SendData", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: OnMouseWheel
     /// </summary>
-    public unsafe void OnMouseWheel(int btnIdx, bool directionUp)
+    public unsafe override void OnMouseWheel(int btnIdx, bool directionUp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.OnMouseWheel", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: KeyInput
     /// </summary>
-    public unsafe void KeyInput(int Key)
+    public unsafe override void KeyInput(int Key)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.KeyInput", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: NavUp
     /// </summary>
-    public unsafe void NavUp()
+    public unsafe override void NavUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.NavUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: NavDown
     /// </summary>
-    public unsafe void NavDown()
+    public unsafe override void NavDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.NavDown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: OnPressB
     /// </summary>
-    public unsafe void OnPressB()
+    public unsafe override void OnPressB()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.OnPressB", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: OnPressA
     /// </summary>
-    public unsafe void OnPressA()
+    public unsafe override void OnPressA()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.OnPressA", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: GetMinYForScrolling
     /// </summary>
-    public unsafe float GetMinYForScrolling()
+    public unsafe override float GetMinYForScrolling()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.GetMinYForScrolling", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -161,7 +161,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: GetMaxYForScrolling
     /// </summary>
-    public unsafe float GetMaxYForScrolling()
+    public unsafe override float GetMaxYForScrolling()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.GetMaxYForScrolling", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -172,7 +172,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: ScrollToPosition
     /// </summary>
-    public unsafe void ScrollToPosition(float ScrollBlockY)
+    public unsafe override void ScrollToPosition(float ScrollBlockY)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.ScrollToPosition", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -184,7 +184,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: ScrollImage
     /// </summary>
-    public unsafe void ScrollImage(int directon)
+    public unsafe virtual void ScrollImage(int directon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.ScrollImage", true);
         byte* paramsPtr = stackalloc byte[100];
@@ -196,7 +196,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: SetupScroller
     /// </summary>
-    public unsafe void SetupScroller()
+    public unsafe virtual void SetupScroller()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.SetupScroller", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -207,7 +207,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: UpdateTitle
     /// </summary>
-    public unsafe void UpdateTitle()
+    public unsafe virtual void UpdateTitle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.UpdateTitle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -218,7 +218,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: OnImageLoadComplete
     /// </summary>
-    public unsafe void OnImageLoadComplete(BmSDK.GFxUI.GFxObject pRef)
+    public unsafe override void OnImageLoadComplete(BmSDK.GFxUI.GFxObject pRef)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.OnImageLoadComplete", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -230,7 +230,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: FreeTexture
     /// </summary>
-    public unsafe void FreeTexture()
+    public unsafe virtual void FreeTexture()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.FreeTexture", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -241,7 +241,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: DisplayImage
     /// </summary>
-    public unsafe void DisplayImage()
+    public unsafe virtual void DisplayImage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.DisplayImage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -252,7 +252,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: LoadImage
     /// </summary>
-    public unsafe void LoadImage(BmSDK.TArray<byte> sourceImage)
+    public unsafe virtual void LoadImage(BmSDK.TArray<byte> sourceImage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.LoadImage", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -264,7 +264,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: WidgetInitialized
     /// </summary>
-    public unsafe bool WidgetInitialized(BmSDK.FName WidgetName, BmSDK.FName WidgetPath, BmSDK.GFxUI.GFxObject Widget)
+    public unsafe override bool WidgetInitialized(BmSDK.FName WidgetName, BmSDK.FName WidgetPath, BmSDK.GFxUI.GFxObject Widget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.WidgetInitialized", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -278,7 +278,7 @@ public partial class MGFxWidgetOverlayScreenLegal : BmSDK.BmScript.MGFxWidgetOve
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init()
+    public unsafe override void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MGFxWidgetOverlayScreenLegal.Init", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RNavMeshInspector : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: PhysicsDragRaycast
     /// </summary>
-    public unsafe void PhysicsDragRaycast(out BmSDK.Engine.Actor HitActor, out BmSDK.Engine.PrimitiveComponent HitComponent, out System.Numerics.Vector3 HitLocation, out System.Numerics.Vector3 HitNormal, out float HitDistance, out BmSDK.FName HitBoneName)
+    public unsafe virtual void PhysicsDragRaycast(out BmSDK.Engine.Actor HitActor, out BmSDK.Engine.PrimitiveComponent HitComponent, out System.Numerics.Vector3 HitLocation, out System.Numerics.Vector3 HitNormal, out float HitDistance, out BmSDK.FName HitBoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshInspector.PhysicsDragRaycast", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -88,7 +88,7 @@ public partial class RNavMeshInspector : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: CancelGadget
     /// </summary>
-    public unsafe void CancelGadget()
+    public unsafe override void CancelGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshInspector.CancelGadget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -99,7 +99,7 @@ public partial class RNavMeshInspector : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshInspector.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -112,7 +112,7 @@ public partial class RNavMeshInspector : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.HUD H)
+    public unsafe override void DrawHUD(BmSDK.Engine.HUD H)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshInspector.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -124,7 +124,7 @@ public partial class RNavMeshInspector : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: DrawLines
     /// </summary>
-    public unsafe void DrawLines(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void DrawLines(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshInspector.DrawLines", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -143,7 +143,7 @@ public partial class RNavMeshInspector : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: DrawAllReachablePolysFromPoint
     /// </summary>
-    public unsafe void DrawAllReachablePolysFromPoint(System.Numerics.Vector3 StartLoc)
+    public unsafe virtual void DrawAllReachablePolysFromPoint(System.Numerics.Vector3 StartLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshInspector.DrawAllReachablePolysFromPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -162,7 +162,7 @@ public partial class RNavMeshInspector : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: DoNavMeshSurfaceTypeRender
     /// </summary>
-    public unsafe void DoNavMeshSurfaceTypeRender(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void DoNavMeshSurfaceTypeRender(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshInspector.DoNavMeshSurfaceTypeRender", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -174,7 +174,7 @@ public partial class RNavMeshInspector : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: GetSurfaceType
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetSurfaceType(out BmSDK.Engine.Actor.FTraceHitInfo HitInfo, out float Dist)
+    public unsafe virtual BmSDK.Engine.Actor GetSurfaceType(out BmSDK.Engine.Actor.FTraceHitInfo HitInfo, out float Dist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshInspector.GetSurfaceType", true);
         byte* paramsPtr = stackalloc byte[204];
@@ -187,7 +187,7 @@ public partial class RNavMeshInspector : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: GetStartEndTracePoints
     /// </summary>
-    public unsafe void GetStartEndTracePoints(out System.Numerics.Vector3 TraceStart, out System.Numerics.Vector3 TraceEnd)
+    public unsafe virtual void GetStartEndTracePoints(out System.Numerics.Vector3 TraceStart, out System.Numerics.Vector3 TraceEnd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshInspector.GetStartEndTracePoints", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -212,7 +212,7 @@ public partial class RNavMeshInspector : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: SecondaryButtonPressed
     /// </summary>
-    public unsafe void SecondaryButtonPressed()
+    public unsafe override void SecondaryButtonPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshInspector.SecondaryButtonPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -223,7 +223,7 @@ public partial class RNavMeshInspector : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: ButtonReleased
     /// </summary>
-    public unsafe void ButtonReleased()
+    public unsafe override void ButtonReleased()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshInspector.ButtonReleased", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -234,7 +234,7 @@ public partial class RNavMeshInspector : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: ButtonPressed
     /// </summary>
-    public unsafe void ButtonPressed()
+    public unsafe override void ButtonPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshInspector.ButtonPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -245,7 +245,7 @@ public partial class RNavMeshInspector : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Function: GetName
     /// </summary>
-    public unsafe BmSDK.FString GetName()
+    public unsafe override BmSDK.FString GetName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshInspector.GetName", true);
         byte* paramsPtr = stackalloc byte[16];

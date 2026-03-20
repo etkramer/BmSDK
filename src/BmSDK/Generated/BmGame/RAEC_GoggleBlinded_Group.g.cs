@@ -71,7 +71,7 @@ public partial class RAEC_GoggleBlinded_Group : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_GoggleBlinded_Group.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_GoggleBlinded_Group : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_GoggleBlinded_Group.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RAEC_GoggleBlinded_Group : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// Function: OnAssign
     /// </summary>
-    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController BlindedCon)
+    public unsafe override void OnAssign(BmSDK.BmGame.RBMAIController BlindedCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_GoggleBlinded_Group.OnAssign", true);
         byte* paramsPtr = stackalloc byte[16];

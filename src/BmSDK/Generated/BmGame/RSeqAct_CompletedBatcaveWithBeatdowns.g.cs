@@ -36,7 +36,7 @@ public partial class RSeqAct_CompletedBatcaveWithBeatdowns : BmSDK.Engine.Sequen
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CompletedBatcaveWithBeatdowns.Activated", true);
         byte* paramsPtr = stackalloc byte[32];

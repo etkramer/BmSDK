@@ -71,7 +71,7 @@ public partial class RChallengeWallBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetObstacleActor
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetObstacleActor()
+    public unsafe virtual BmSDK.Engine.Actor GetObstacleActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeWallBase.GetObstacleActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RChallengeWallBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HitByRagdoll
     /// </summary>
-    public unsafe void HitByRagdoll(BmSDK.BmGame.RPawn HitPawn, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, float Speed)
+    public unsafe virtual void HitByRagdoll(BmSDK.BmGame.RPawn HitPawn, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, float Speed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeWallBase.HitByRagdoll", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -97,7 +97,7 @@ public partial class RChallengeWallBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Deactivate
     /// </summary>
-    public unsafe void Deactivate()
+    public unsafe virtual void Deactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeWallBase.Deactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -108,7 +108,7 @@ public partial class RChallengeWallBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Activate
     /// </summary>
-    public unsafe void Activate()
+    public unsafe virtual void Activate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeWallBase.Activate", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -119,7 +119,7 @@ public partial class RChallengeWallBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnRegisterObstacle
     /// </summary>
-    public unsafe void UnRegisterObstacle()
+    public unsafe virtual void UnRegisterObstacle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeWallBase.UnRegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -137,7 +137,7 @@ public partial class RChallengeWallBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterObstacle
     /// </summary>
-    public unsafe void RegisterObstacle()
+    public unsafe virtual void RegisterObstacle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeWallBase.RegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[0];

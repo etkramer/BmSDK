@@ -71,7 +71,7 @@ public partial class RCrowdAttractor_Cylinder : BmSDK.BmGame.RCrowdAttractor, Bm
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAttractor_Cylinder.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RCrowdAttractor_Cylinder : BmSDK.BmGame.RCrowdAttractor, Bm
     /// <summary>
     /// Function: DrawDebug
     /// </summary>
-    public unsafe void DrawDebug()
+    public unsafe override void DrawDebug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAttractor_Cylinder.DrawDebug", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -94,7 +94,7 @@ public partial class RCrowdAttractor_Cylinder : BmSDK.BmGame.RCrowdAttractor, Bm
     /// <summary>
     /// Function: GetAttractionForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAttractionForce(BmSDK.BmGame.RCrowdAgent Agent, float DeltaTime)
+    public unsafe override System.Numerics.Vector3 GetAttractionForce(BmSDK.BmGame.RCrowdAgent Agent, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAttractor_Cylinder.GetAttractionForce", true);
         byte* paramsPtr = stackalloc byte[24];

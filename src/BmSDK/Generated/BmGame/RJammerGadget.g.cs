@@ -66,7 +66,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: CanThrowGadget
     /// </summary>
-    public unsafe bool CanThrowGadget()
+    public unsafe override bool CanThrowGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.CanThrowGadget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -77,7 +77,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: OnLevelChange
     /// </summary>
-    public unsafe void OnLevelChange()
+    public unsafe override void OnLevelChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.OnLevelChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -88,7 +88,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: OnRoomChange
     /// </summary>
-    public unsafe void OnRoomChange()
+    public unsafe override void OnRoomChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.OnRoomChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -99,7 +99,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: ReplenishAmmo
     /// </summary>
-    public unsafe void ReplenishAmmo()
+    public unsafe virtual void ReplenishAmmo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.ReplenishAmmo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -110,7 +110,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: DepleteAmmo
     /// </summary>
-    public unsafe void DepleteAmmo()
+    public unsafe virtual void DepleteAmmo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.DepleteAmmo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -121,7 +121,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: ReduceAmmo
     /// </summary>
-    public unsafe void ReduceAmmo()
+    public unsafe virtual void ReduceAmmo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.ReduceAmmo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -132,7 +132,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: GetPotentialTargetPositions
     /// </summary>
-    public unsafe bool GetPotentialTargetPositions(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 InTargetPosition, out BmSDK.TArray<System.Numerics.Vector3> PotentialTargetPositions, out BmSDK.Engine.Actor LineCheckActor)
+    public unsafe override bool GetPotentialTargetPositions(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 InTargetPosition, out BmSDK.TArray<System.Numerics.Vector3> PotentialTargetPositions, out BmSDK.Engine.Actor LineCheckActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.GetPotentialTargetPositions", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -147,7 +147,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: CheckAutoTarget
     /// </summary>
-    public unsafe bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
+    public unsafe override bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.CheckAutoTarget", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -163,7 +163,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: GetThrowFinishPose
     /// </summary>
-    public unsafe BmSDK.FName GetThrowFinishPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess)
+    public unsafe virtual BmSDK.FName GetThrowFinishPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.GetThrowFinishPose", true);
         byte* paramsPtr = stackalloc byte[21];
@@ -176,7 +176,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: PlayThrowAnim
     /// </summary>
-    public unsafe void PlayThrowAnim()
+    public unsafe virtual void PlayThrowAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.PlayThrowAnim", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -187,7 +187,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: GetFireAnim
     /// </summary>
-    public unsafe BmSDK.FName GetFireAnim(BmSDK.Rotator ThrowDirection, out BmSDK.BmGame.RPawnPlayerAnim.AimingConfigDesc AimingConfig, bool Mirrored)
+    public unsafe virtual BmSDK.FName GetFireAnim(BmSDK.Rotator ThrowDirection, out BmSDK.BmGame.RPawnPlayerAnim.AimingConfigDesc AimingConfig, bool Mirrored)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.GetFireAnim", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -201,7 +201,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: UpdateAutoTarget
     /// </summary>
-    public unsafe void UpdateAutoTarget()
+    public unsafe virtual void UpdateAutoTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.UpdateAutoTarget", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -212,7 +212,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: FinishFiring
     /// </summary>
-    public unsafe void FinishFiring()
+    public unsafe virtual void FinishFiring()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.FinishFiring", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -223,7 +223,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -236,7 +236,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: UpdateTargets
     /// </summary>
-    public unsafe void UpdateTargets()
+    public unsafe virtual void UpdateTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.UpdateTargets", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -247,7 +247,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: FindJammerAutoTarget
     /// </summary>
-    public unsafe BmSDK.Engine.Actor FindJammerAutoTarget(System.Numerics.Vector3 LaunchPosition, BmSDK.Rotator LaunchAngle, float Range, float TargetAngle, out int PositionIndex)
+    public unsafe virtual BmSDK.Engine.Actor FindJammerAutoTarget(System.Numerics.Vector3 LaunchPosition, BmSDK.Rotator LaunchAngle, float Range, float TargetAngle, out int PositionIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.FindJammerAutoTarget", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -263,7 +263,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: DrawTargets
     /// </summary>
-    public unsafe void DrawTargets(BmSDK.Engine.Canvas HudCanvas)
+    public unsafe virtual void DrawTargets(BmSDK.Engine.Canvas HudCanvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.DrawTargets", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -275,7 +275,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: GetStoredTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetStoredTargetLocation()
+    public unsafe virtual System.Numerics.Vector3 GetStoredTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.GetStoredTargetLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -286,7 +286,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: GetFiringAnimationOverlay
     /// </summary>
-    public unsafe BmSDK.FName GetFiringAnimationOverlay()
+    public unsafe virtual BmSDK.FName GetFiringAnimationOverlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.GetFiringAnimationOverlay", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -297,7 +297,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: GetGadgetCamera
     /// </summary>
-    public unsafe BmSDK.FName GetGadgetCamera(bool InSoftCover = default, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType = default)
+    public unsafe override BmSDK.FName GetGadgetCamera(bool InSoftCover = default, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.GetGadgetCamera", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -310,7 +310,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: GetChargingPose
     /// </summary>
-    public unsafe BmSDK.FName GetChargingPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState)
+    public unsafe virtual BmSDK.FName GetChargingPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.GetChargingPose", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -326,7 +326,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: GetPrimedPose
     /// </summary>
-    public unsafe BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
+    public unsafe override BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.GetPrimedPose", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -343,7 +343,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: PlayFireSound
     /// </summary>
-    public unsafe void PlayFireSound()
+    public unsafe virtual void PlayFireSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.PlayFireSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -354,7 +354,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: SuccessTimer
     /// </summary>
-    public unsafe void SuccessTimer()
+    public unsafe virtual void SuccessTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.SuccessTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -365,7 +365,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: FailedTimer
     /// </summary>
-    public unsafe void FailedTimer()
+    public unsafe virtual void FailedTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.FailedTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -376,7 +376,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: FireJammerCharge
     /// </summary>
-    public unsafe void FireJammerCharge(bool bSecondaryFire)
+    public unsafe virtual void FireJammerCharge(bool bSecondaryFire)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.FireJammerCharge", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -388,7 +388,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: FireJammer
     /// </summary>
-    public unsafe void FireJammer(bool bSecondaryFire)
+    public unsafe virtual void FireJammer(bool bSecondaryFire)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.FireJammer", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -400,7 +400,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: EquipResSwapLHand
     /// </summary>
-    public unsafe void EquipResSwapLHand()
+    public unsafe virtual void EquipResSwapLHand()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.EquipResSwapLHand", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -411,7 +411,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: AttachToBelt
     /// </summary>
-    public unsafe void AttachToBelt()
+    public unsafe override void AttachToBelt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.AttachToBelt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -422,7 +422,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: AttachToHand
     /// </summary>
-    public unsafe void AttachToHand(BmSDK.FName CustomBone = default)
+    public unsafe override void AttachToHand(BmSDK.FName CustomBone = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.AttachToHand", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -434,7 +434,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: CheckUpgrades
     /// </summary>
-    public unsafe void CheckUpgrades()
+    public unsafe virtual void CheckUpgrades()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.CheckUpgrades", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -445,7 +445,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: TriggerJammer
     /// </summary>
-    public unsafe void TriggerJammer(bool bSecondaryFire = default)
+    public unsafe virtual void TriggerJammer(bool bSecondaryFire = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.TriggerJammer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -457,7 +457,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: CleanCursors
     /// </summary>
-    public unsafe void CleanCursors(bool bForce = default)
+    public unsafe virtual void CleanCursors(bool bForce = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.CleanCursors", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -469,7 +469,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: TriggerSecondary
     /// </summary>
-    public unsafe void TriggerSecondary()
+    public unsafe virtual void TriggerSecondary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.TriggerSecondary", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -480,7 +480,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: ChargeSecondary
     /// </summary>
-    public unsafe void ChargeSecondary(bool bStartCharging = default)
+    public unsafe virtual void ChargeSecondary(bool bStartCharging = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.ChargeSecondary", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -492,7 +492,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: TriggerPrimary
     /// </summary>
-    public unsafe void TriggerPrimary()
+    public unsafe virtual void TriggerPrimary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.TriggerPrimary", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -503,7 +503,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: ChargePrimary
     /// </summary>
-    public unsafe void ChargePrimary(bool bStartCharging = default)
+    public unsafe virtual void ChargePrimary(bool bStartCharging = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.ChargePrimary", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -515,7 +515,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: GetChargeFactor
     /// </summary>
-    public unsafe float GetChargeFactor()
+    public unsafe virtual float GetChargeFactor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.GetChargeFactor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -526,7 +526,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: IsShowingSuccess
     /// </summary>
-    public unsafe bool IsShowingSuccess()
+    public unsafe virtual bool IsShowingSuccess()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.IsShowingSuccess", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -537,7 +537,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: IsCharging
     /// </summary>
-    public unsafe bool IsCharging()
+    public unsafe override bool IsCharging()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.IsCharging", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -548,7 +548,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: Discharge
     /// </summary>
-    public unsafe void Discharge()
+    public unsafe virtual void Discharge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.Discharge", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -559,7 +559,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: CancelCharging
     /// </summary>
-    public unsafe void CancelCharging()
+    public unsafe virtual void CancelCharging()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.CancelCharging", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -570,7 +570,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: CancelSecondary
     /// </summary>
-    public unsafe void CancelSecondary()
+    public unsafe virtual void CancelSecondary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.CancelSecondary", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -581,7 +581,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: CancelPrimary
     /// </summary>
-    public unsafe void CancelPrimary()
+    public unsafe virtual void CancelPrimary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerGadget.CancelPrimary", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class RVehicleScenario : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNearestAvailableSpawnPoint
     /// </summary>
-    public unsafe bool GetNearestAvailableSpawnPoint(out System.Numerics.Vector3 SpawnLoc, out BmSDK.Rotator SpawnRot, out float RoadWidth, System.Numerics.Vector3 TestLoc, System.Numerics.Vector3 CameraLoc, System.Numerics.Vector3 playerLoc, float MinDistanceFromPlayerLoc, out BmSDK.TArray<System.Numerics.Vector3> AvoidLoc, float MinDistanceFromAvoidLoc, bool ObeyExclusionZones, BmSDK.BmGame.RGameInfo.EDistrict SpawnInDistrict = default)
+    public unsafe virtual bool GetNearestAvailableSpawnPoint(out System.Numerics.Vector3 SpawnLoc, out BmSDK.Rotator SpawnRot, out float RoadWidth, System.Numerics.Vector3 TestLoc, System.Numerics.Vector3 CameraLoc, System.Numerics.Vector3 playerLoc, float MinDistanceFromPlayerLoc, out BmSDK.TArray<System.Numerics.Vector3> AvoidLoc, float MinDistanceFromAvoidLoc, bool ObeyExclusionZones, BmSDK.BmGame.RGameInfo.EDistrict SpawnInDistrict = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScenario.GetNearestAvailableSpawnPoint", true);
         byte* paramsPtr = stackalloc byte[100];
@@ -87,7 +87,7 @@ public partial class RVehicleScenario : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnScenarioVehicle
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleNPC SpawnScenarioVehicle(System.Numerics.Vector3 SpawnLoc, BmSDK.Rotator SpawnRot, float RoadWidth, BmSDK.TArray<BmSDK.Engine.Volume> BehaviourVolumes, BmSDK.BmGame.RPatrolPoint PatrolRoute, bool ObeyExclusionZones, int Index, BmSDK.TArray<BmSDK.BmGame.RVehicleNPC> SpawnedVehicles)
+    public unsafe virtual BmSDK.BmGame.RVehicleNPC SpawnScenarioVehicle(System.Numerics.Vector3 SpawnLoc, BmSDK.Rotator SpawnRot, float RoadWidth, BmSDK.TArray<BmSDK.Engine.Volume> BehaviourVolumes, BmSDK.BmGame.RPatrolPoint PatrolRoute, bool ObeyExclusionZones, int Index, BmSDK.TArray<BmSDK.BmGame.RVehicleNPC> SpawnedVehicles)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScenario.SpawnScenarioVehicle", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -113,7 +113,7 @@ public partial class RVehicleScenario : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnInstanceEx
     /// </summary>
-    public unsafe bool SpawnInstanceEx(System.Numerics.Vector3 SpawnLoc, BmSDK.Rotator SpawnRot, System.Numerics.Vector3 CameraLoc, System.Numerics.Vector3 playerLoc, float MinDistanceFromPlayerLoc, out BmSDK.TArray<System.Numerics.Vector3> AvoidLoc, float MinDistanceFromAvoidLoc, out BmSDK.TArray<BmSDK.BmGame.RVehicleNPC> VehiclesOut, out BmSDK.TArray<BmSDK.Engine.Volume> BehaviourVolumes, BmSDK.BmGame.RPatrolPoint PatrolRoute, bool bForceSpawnLocation, bool ObeyExclusionZones, BmSDK.BmGame.RGameInfo.EDistrict SpawnInDistrict = default, BmSDK.BmGame.RVehicleNPC.EVehicleSpawnType SpawnType = default)
+    public unsafe virtual bool SpawnInstanceEx(System.Numerics.Vector3 SpawnLoc, BmSDK.Rotator SpawnRot, System.Numerics.Vector3 CameraLoc, System.Numerics.Vector3 playerLoc, float MinDistanceFromPlayerLoc, out BmSDK.TArray<System.Numerics.Vector3> AvoidLoc, float MinDistanceFromAvoidLoc, out BmSDK.TArray<BmSDK.BmGame.RVehicleNPC> VehiclesOut, out BmSDK.TArray<BmSDK.Engine.Volume> BehaviourVolumes, BmSDK.BmGame.RPatrolPoint PatrolRoute, bool bForceSpawnLocation, bool ObeyExclusionZones, BmSDK.BmGame.RGameInfo.EDistrict SpawnInDistrict = default, BmSDK.BmGame.RVehicleNPC.EVehicleSpawnType SpawnType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScenario.SpawnInstanceEx", true);
         byte* paramsPtr = stackalloc byte[128];
@@ -145,7 +145,7 @@ public partial class RVehicleScenario : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnInstance
     /// </summary>
-    public unsafe bool SpawnInstance(System.Numerics.Vector3 SpawnLoc, BmSDK.Rotator SpawnRot, System.Numerics.Vector3 CameraLoc, System.Numerics.Vector3 playerLoc, float MinDistanceFromPlayerLoc, out BmSDK.TArray<BmSDK.BmGame.RVehicleNPC> VehiclesOut, bool bForceSpawnLocation = default)
+    public unsafe virtual bool SpawnInstance(System.Numerics.Vector3 SpawnLoc, BmSDK.Rotator SpawnRot, System.Numerics.Vector3 CameraLoc, System.Numerics.Vector3 playerLoc, float MinDistanceFromPlayerLoc, out BmSDK.TArray<BmSDK.BmGame.RVehicleNPC> VehiclesOut, bool bForceSpawnLocation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScenario.SpawnInstance", true);
         byte* paramsPtr = stackalloc byte[108];

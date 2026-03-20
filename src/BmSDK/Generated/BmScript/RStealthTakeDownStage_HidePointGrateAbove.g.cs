@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_HidePointGrateAbove : BmSDK.BmGame.RS
     /// <summary>
     /// Function: PlayGrateAnim
     /// </summary>
-    public unsafe void PlayGrateAnim()
+    public unsafe virtual void PlayGrateAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakeDownStage_HidePointGrateAbove.PlayGrateAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RStealthTakeDownStage_HidePointGrateAbove : BmSDK.BmGame.RS
     /// <summary>
     /// Function: GetStageAnim
     /// </summary>
-    public unsafe int GetStageAnim()
+    public unsafe override int GetStageAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakeDownStage_HidePointGrateAbove.GetStageAnim", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -93,7 +93,7 @@ public partial class RStealthTakeDownStage_HidePointGrateAbove : BmSDK.BmGame.RS
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakeDownStage_HidePointGrateAbove.Begin", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -104,7 +104,7 @@ public partial class RStealthTakeDownStage_HidePointGrateAbove : BmSDK.BmGame.RS
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakeDownStage_HidePointGrateAbove.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[24];

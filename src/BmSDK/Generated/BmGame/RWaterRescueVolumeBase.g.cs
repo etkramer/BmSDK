@@ -71,7 +71,7 @@ public partial class RWaterRescueVolumeBase : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterRescueVolumeBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RWaterRescueVolumeBase : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterRescueVolumeBase.Touch", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -97,7 +97,7 @@ public partial class RWaterRescueVolumeBase : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterRescueVolumeBase.UnTouch", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -109,7 +109,7 @@ public partial class RWaterRescueVolumeBase : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: UpdatePlayerWake
     /// </summary>
-    public unsafe void UpdatePlayerWake()
+    public unsafe virtual void UpdatePlayerWake()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterRescueVolumeBase.UpdatePlayerWake", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RWaterRescueVolumeBase : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterRescueVolumeBase.Tick", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -139,7 +139,7 @@ public partial class RWaterRescueVolumeBase : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: IsPlayerImmuneBecauseOfBatmobile
     /// </summary>
-    public unsafe bool IsPlayerImmuneBecauseOfBatmobile(BmSDK.BmGame.RPawnPlayer PlayerOther)
+    public unsafe virtual bool IsPlayerImmuneBecauseOfBatmobile(BmSDK.BmGame.RPawnPlayer PlayerOther)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterRescueVolumeBase.IsPlayerImmuneBecauseOfBatmobile", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -151,7 +151,7 @@ public partial class RWaterRescueVolumeBase : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: TouchedPawn
     /// </summary>
-    public unsafe void TouchedPawn(BmSDK.BmGame.RPlayerController PC, BmSDK.BmGame.RPawnPlayer Other, bool CauseSplash = default)
+    public unsafe virtual void TouchedPawn(BmSDK.BmGame.RPlayerController PC, BmSDK.BmGame.RPawnPlayer Other, bool CauseSplash = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterRescueVolumeBase.TouchedPawn", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -165,7 +165,7 @@ public partial class RWaterRescueVolumeBase : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: IsGrapplePointValid
     /// </summary>
-    public unsafe bool IsGrapplePointValid(BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo test_point)
+    public unsafe virtual bool IsGrapplePointValid(BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo test_point)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterRescueVolumeBase.IsGrapplePointValid", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -177,7 +177,7 @@ public partial class RWaterRescueVolumeBase : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Function: FindClosestRescuePoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RRescuePoint FindClosestRescuePoint(BmSDK.BmGame.RPlayerController PC, BmSDK.BmGame.RPawnPlayer PlayerPawn)
+    public unsafe virtual BmSDK.BmGame.RRescuePoint FindClosestRescuePoint(BmSDK.BmGame.RPlayerController PC, BmSDK.BmGame.RPawnPlayer PlayerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterRescueVolumeBase.FindClosestRescuePoint", true);
         byte* paramsPtr = stackalloc byte[216];

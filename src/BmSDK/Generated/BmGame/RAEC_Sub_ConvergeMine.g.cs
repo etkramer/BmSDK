@@ -71,7 +71,7 @@ public partial class RAEC_Sub_ConvergeMine : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: GetBarkEventValue
     /// </summary>
-    public unsafe BmSDK.FName GetBarkEventValue()
+    public unsafe virtual BmSDK.FName GetBarkEventValue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_ConvergeMine.GetBarkEventValue", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RAEC_Sub_ConvergeMine : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_ConvergeMine.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RAEC_Sub_ConvergeMine : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_ConvergeMine.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RAEC_Sub_ConvergeMine : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: AssignTarget
     /// </summary>
-    public unsafe void AssignTarget(System.Numerics.Vector3 MovePos)
+    public unsafe virtual void AssignTarget(System.Numerics.Vector3 MovePos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_ConvergeMine.AssignTarget", true);
         byte* paramsPtr = stackalloc byte[20];

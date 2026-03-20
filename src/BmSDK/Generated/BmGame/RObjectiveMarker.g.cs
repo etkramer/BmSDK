@@ -71,7 +71,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFilename
     /// </summary>
-    public unsafe BmSDK.FString GetFilename()
+    public unsafe virtual BmSDK.FString GetFilename()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.GetFilename", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetHidden
     /// </summary>
-    public unsafe void SetHidden(bool Hidden)
+    public unsafe override void SetHidden(bool Hidden)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.SetHidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetVisuallySuppressed
     /// </summary>
-    public unsafe void SetVisuallySuppressed(bool suppressed, bool force_update = default)
+    public unsafe virtual void SetVisuallySuppressed(bool suppressed, bool force_update = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.SetVisuallySuppressed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -107,7 +107,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnBatSignal
     /// </summary>
-    public unsafe void SpawnBatSignal()
+    public unsafe virtual void SpawnBatSignal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.SpawnBatSignal", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -118,7 +118,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetRiddlerObjective
     /// </summary>
-    public unsafe void SetRiddlerObjective(bool _riddlerObjective)
+    public unsafe virtual void SetRiddlerObjective(bool _riddlerObjective)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.SetRiddlerObjective", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -130,7 +130,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetMarker
     /// </summary>
-    public unsafe void ResetMarker()
+    public unsafe virtual void ResetMarker()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.ResetMarker", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetHiddenOff
     /// </summary>
-    public unsafe void SetHiddenOff()
+    public unsafe virtual void SetHiddenOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.SetHiddenOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -152,7 +152,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetHiddenOn
     /// </summary>
-    public unsafe void SetHiddenOn()
+    public unsafe virtual void SetHiddenOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.SetHiddenOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -163,7 +163,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetHiddenDeferred
     /// </summary>
-    public unsafe void SetHiddenDeferred(bool Hidden)
+    public unsafe virtual void SetHiddenDeferred(bool Hidden)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.SetHiddenDeferred", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -175,7 +175,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EnableWaypointVolume
     /// </summary>
-    public unsafe void EnableWaypointVolume(bool do_enable)
+    public unsafe virtual void EnableWaypointVolume(bool do_enable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.EnableWaypointVolume", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -187,7 +187,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetUsingWaypoint
     /// </summary>
-    public unsafe void SetUsingWaypoint(bool should_use_waypoint)
+    public unsafe virtual void SetUsingWaypoint(bool should_use_waypoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.SetUsingWaypoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -199,7 +199,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckWaypointLogic
     /// </summary>
-    public unsafe void CheckWaypointLogic()
+    public unsafe virtual void CheckWaypointLogic()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.CheckWaypointLogic", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -210,7 +210,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetHudTargetActuallyVisible
     /// </summary>
-    public unsafe void SetHudTargetActuallyVisible(bool make_visible)
+    public unsafe virtual void SetHudTargetActuallyVisible(bool make_visible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.SetHudTargetActuallyVisible", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -222,7 +222,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.UnTouch", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -234,7 +234,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.Touch", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -249,7 +249,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetHudTargetVisible
     /// </summary>
-    public unsafe void SetHudTargetVisible(bool make_visible)
+    public unsafe virtual void SetHudTargetVisible(bool make_visible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.SetHudTargetVisible", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -261,7 +261,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetParkingMarkerVisible
     /// </summary>
-    public unsafe void SetParkingMarkerVisible(bool make_visible)
+    public unsafe virtual void SetParkingMarkerVisible(bool make_visible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.SetParkingMarkerVisible", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -273,7 +273,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckHudTargetVisibility
     /// </summary>
-    public unsafe void CheckHudTargetVisibility()
+    public unsafe virtual void CheckHudTargetVisibility()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.CheckHudTargetVisibility", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -284,7 +284,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetMarkerPosition
     /// </summary>
-    public unsafe void SetMarkerPosition(System.Numerics.Vector3 new_pos)
+    public unsafe virtual void SetMarkerPosition(System.Numerics.Vector3 new_pos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.SetMarkerPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -296,7 +296,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckWaypointExists
     /// </summary>
-    public unsafe void CheckWaypointExists()
+    public unsafe virtual void CheckWaypointExists()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.CheckWaypointExists", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -307,7 +307,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -318,7 +318,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -329,7 +329,7 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectiveMarker.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

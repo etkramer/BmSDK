@@ -36,7 +36,7 @@ public partial class RSeqAct_SetJokerStartupOptions : BmSDK.Engine.SequenceActio
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetJokerStartupOptions.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

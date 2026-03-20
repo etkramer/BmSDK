@@ -71,7 +71,7 @@ public partial class RCwCaltropsTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameOb
     /// <summary>
     /// Function: RemoveCollisionCylinders
     /// </summary>
-    public unsafe void RemoveCollisionCylinders()
+    public unsafe virtual void RemoveCollisionCylinders()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCwCaltropsTrapBase.RemoveCollisionCylinders", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RCwCaltropsTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameOb
     /// <summary>
     /// Function: ThugStartsSwiping
     /// </summary>
-    public unsafe void ThugStartsSwiping(BmSDK.BmGame.RPawnVillain Villain)
+    public unsafe virtual void ThugStartsSwiping(BmSDK.BmGame.RPawnVillain Villain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCwCaltropsTrapBase.ThugStartsSwiping", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RCwCaltropsTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameOb
     /// <summary>
     /// Function: AddCollisionCylinder
     /// </summary>
-    public unsafe void AddCollisionCylinder(System.Numerics.Vector3 CylinderPos, float CylinderRadius)
+    public unsafe virtual void AddCollisionCylinder(System.Numerics.Vector3 CylinderPos, float CylinderRadius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCwCaltropsTrapBase.AddCollisionCylinder", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -107,7 +107,7 @@ public partial class RCwCaltropsTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameOb
     /// <summary>
     /// Function: ClearCylinderUpdateTimer
     /// </summary>
-    public unsafe void ClearCylinderUpdateTimer()
+    public unsafe virtual void ClearCylinderUpdateTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCwCaltropsTrapBase.ClearCylinderUpdateTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class RCwCaltropsTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameOb
     /// <summary>
     /// Function: FinishedCylinderUpdates
     /// </summary>
-    public unsafe void FinishedCylinderUpdates()
+    public unsafe virtual void FinishedCylinderUpdates()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCwCaltropsTrapBase.FinishedCylinderUpdates", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RCwCaltropsTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameOb
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCwCaltropsTrapBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class RCwCaltropsTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameOb
     /// <summary>
     /// Function: InformEnemiesOfCaltrops
     /// </summary>
-    public unsafe void InformEnemiesOfCaltrops(bool bCheckCylinders = default, bool bDebugDraw = default)
+    public unsafe virtual void InformEnemiesOfCaltrops(bool bCheckCylinders = default, bool bDebugDraw = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCwCaltropsTrapBase.InformEnemiesOfCaltrops", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -160,7 +160,7 @@ public partial class RCwCaltropsTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameOb
     /// <summary>
     /// Function: UpdateCollisionCylinderComponents
     /// </summary>
-    public unsafe void UpdateCollisionCylinderComponents()
+    public unsafe virtual void UpdateCollisionCylinderComponents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCwCaltropsTrapBase.UpdateCollisionCylinderComponents", true);
         byte* paramsPtr = stackalloc byte[0];

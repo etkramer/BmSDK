@@ -47,7 +47,7 @@ public partial class RBMBehaviourAutoStringUp : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: AttachConstraint
     /// </summary>
-    public unsafe void AttachConstraint()
+    public unsafe virtual void AttachConstraint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviourAutoStringUp.AttachConstraint", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -58,7 +58,7 @@ public partial class RBMBehaviourAutoStringUp : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: SetupRagdoll
     /// </summary>
-    public unsafe void SetupRagdoll()
+    public unsafe virtual void SetupRagdoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviourAutoStringUp.SetupRagdoll", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviourAutoStringUp : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviourAutoStringUp.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -81,7 +81,7 @@ public partial class RBMBehaviourAutoStringUp : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviourAutoStringUp.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -92,7 +92,7 @@ public partial class RBMBehaviourAutoStringUp : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: OnExitConditionTriggered
     /// </summary>
-    public unsafe void OnExitConditionTriggered()
+    public unsafe override void OnExitConditionTriggered()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviourAutoStringUp.OnExitConditionTriggered", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -103,7 +103,7 @@ public partial class RBMBehaviourAutoStringUp : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: UpdateLinks
     /// </summary>
-    public unsafe void UpdateLinks()
+    public unsafe virtual void UpdateLinks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviourAutoStringUp.UpdateLinks", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -114,7 +114,7 @@ public partial class RBMBehaviourAutoStringUp : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: SetRope
     /// </summary>
-    public unsafe void SetRope(BmSDK.BmGame.RRopeBase NewSpawn, BmSDK.FString RopeName)
+    public unsafe virtual void SetRope(BmSDK.BmGame.RRopeBase NewSpawn, BmSDK.FString RopeName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviourAutoStringUp.SetRope", true);
         byte* paramsPtr = stackalloc byte[24];

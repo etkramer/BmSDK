@@ -36,7 +36,7 @@ public partial class RVehicleSimTankNPC : BmSDK.BmGame.RVehicleSimNPC, BmSDK.IGa
     /// <summary>
     /// Function: SetPoweredDown
     /// </summary>
-    public unsafe void SetPoweredDown(bool Down)
+    public unsafe virtual void SetPoweredDown(bool Down)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleSimTankNPC.SetPoweredDown", true);
         byte* paramsPtr = stackalloc byte[4];

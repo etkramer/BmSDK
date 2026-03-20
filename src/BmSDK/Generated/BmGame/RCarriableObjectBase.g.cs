@@ -66,7 +66,7 @@ public partial class RCarriableObjectBase : BmSDK.BmGame.RInvestigateStaticMeshA
     /// <summary>
     /// Function: RigidBodyCollision
     /// </summary>
-    public unsafe void RigidBodyCollision(BmSDK.Engine.PrimitiveComponent HitComponent, BmSDK.Engine.PrimitiveComponent OtherComponent, out BmSDK.Engine.Actor.FCollisionImpactData RigidCollisionData, int ContactIndex, float Speed, int Index0, int Index1)
+    public unsafe override void RigidBodyCollision(BmSDK.Engine.PrimitiveComponent HitComponent, BmSDK.Engine.PrimitiveComponent OtherComponent, out BmSDK.Engine.Actor.FCollisionImpactData RigidCollisionData, int ContactIndex, float Speed, int Index0, int Index1)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBase.RigidBodyCollision", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -84,7 +84,7 @@ public partial class RCarriableObjectBase : BmSDK.BmGame.RInvestigateStaticMeshA
     /// <summary>
     /// Function: HitFloor
     /// </summary>
-    public unsafe void HitFloor(float Speed)
+    public unsafe virtual void HitFloor(float Speed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBase.HitFloor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -96,7 +96,7 @@ public partial class RCarriableObjectBase : BmSDK.BmGame.RInvestigateStaticMeshA
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.BmGame.RPawnVillain Thug)
+    public unsafe virtual void Init(BmSDK.BmGame.RPawnVillain Thug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCarriableObjectBase.Init", true);
         byte* paramsPtr = stackalloc byte[8];

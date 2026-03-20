@@ -71,7 +71,7 @@ public partial class RBMCombatPoint_LoFuseBox : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: IsValidLoc
     /// </summary>
-    public unsafe bool IsValidLoc(BmSDK.BmGame.RPawnPlayerCombat TestPlayer, BmSDK.BmGame.RPawnVillain TestPawn)
+    public unsafe override bool IsValidLoc(BmSDK.BmGame.RPawnPlayerCombat TestPlayer, BmSDK.BmGame.RPawnVillain TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_LoFuseBox.IsValidLoc", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -84,7 +84,7 @@ public partial class RBMCombatPoint_LoFuseBox : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: PlayDestroyAnim
     /// </summary>
-    public unsafe bool PlayDestroyAnim(BmSDK.FName AnimName)
+    public unsafe override bool PlayDestroyAnim(BmSDK.FName AnimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_LoFuseBox.PlayDestroyAnim", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -96,7 +96,7 @@ public partial class RBMCombatPoint_LoFuseBox : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: GetAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetAnimName(BmSDK.BmGame.RPawnVillain TargetPawn, BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
+    public unsafe override BmSDK.FName GetAnimName(BmSDK.BmGame.RPawnVillain TargetPawn, BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_LoFuseBox.GetAnimName", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -109,7 +109,7 @@ public partial class RBMCombatPoint_LoFuseBox : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: GetMeshYawOffset
     /// </summary>
-    public unsafe float GetMeshYawOffset()
+    public unsafe override float GetMeshYawOffset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_LoFuseBox.GetMeshYawOffset", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -120,7 +120,7 @@ public partial class RBMCombatPoint_LoFuseBox : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: StopElectric
     /// </summary>
-    public unsafe void StopElectric()
+    public unsafe virtual void StopElectric()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_LoFuseBox.StopElectric", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -131,7 +131,7 @@ public partial class RBMCombatPoint_LoFuseBox : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: OnFxEvent
     /// </summary>
-    public unsafe void OnFxEvent()
+    public unsafe override void OnFxEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_LoFuseBox.OnFxEvent", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -142,7 +142,7 @@ public partial class RBMCombatPoint_LoFuseBox : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: UsedByPawn
     /// </summary>
-    public unsafe void UsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.Engine.Actor NewTarget = default, bool bUsedDuringTaunt = default)
+    public unsafe override void UsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.Engine.Actor NewTarget = default, bool bUsedDuringTaunt = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_LoFuseBox.UsedByPawn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -156,7 +156,7 @@ public partial class RBMCombatPoint_LoFuseBox : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: DebugReset
     /// </summary>
-    public unsafe void DebugReset(BmSDK.BmGame.RBMCombatManager CM)
+    public unsafe override void DebugReset(BmSDK.BmGame.RBMCombatManager CM)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_LoFuseBox.DebugReset", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -168,7 +168,7 @@ public partial class RBMCombatPoint_LoFuseBox : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: OnSwapMesh
     /// </summary>
-    public unsafe void OnSwapMesh()
+    public unsafe override void OnSwapMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_LoFuseBox.OnSwapMesh", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -179,7 +179,7 @@ public partial class RBMCombatPoint_LoFuseBox : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: SetupHighlightMesh
     /// </summary>
-    public unsafe void SetupHighlightMesh()
+    public unsafe override void SetupHighlightMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_LoFuseBox.SetupHighlightMesh", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -190,7 +190,7 @@ public partial class RBMCombatPoint_LoFuseBox : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: RegisterStasisCheckMesh
     /// </summary>
-    public unsafe void RegisterStasisCheckMesh()
+    public unsafe override void RegisterStasisCheckMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_LoFuseBox.RegisterStasisCheckMesh", true);
         byte* paramsPtr = stackalloc byte[0];

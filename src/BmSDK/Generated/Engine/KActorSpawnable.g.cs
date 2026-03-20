@@ -71,7 +71,7 @@ public partial class KActorSpawnable : BmSDK.Engine.KActor, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetComponents
     /// </summary>
-    public unsafe void ResetComponents()
+    public unsafe virtual void ResetComponents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActorSpawnable.ResetComponents", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class KActorSpawnable : BmSDK.Engine.KActor, BmSDK.IGameObject
     /// <summary>
     /// Function: RecycleInternal
     /// </summary>
-    public unsafe void RecycleInternal()
+    public unsafe virtual void RecycleInternal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActorSpawnable.RecycleInternal", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -100,7 +100,7 @@ public partial class KActorSpawnable : BmSDK.Engine.KActor, BmSDK.IGameObject
     /// <summary>
     /// Function: Recycle
     /// </summary>
-    public unsafe void Recycle()
+    public unsafe virtual void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActorSpawnable.Recycle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -111,7 +111,7 @@ public partial class KActorSpawnable : BmSDK.Engine.KActor, BmSDK.IGameObject
     /// <summary>
     /// Function: Initialize
     /// </summary>
-    public unsafe void Initialize()
+    public unsafe virtual void Initialize()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActorSpawnable.Initialize", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RProjectile_GrenadeBase : BmSDK.Engine.Projectile, BmSDK.IG
     /// <summary>
     /// Function: DoGrenadeScreenShake
     /// </summary>
-    public unsafe void DoGrenadeScreenShake(System.Numerics.Vector3 blastSourceLoc)
+    public unsafe virtual void DoGrenadeScreenShake(System.Numerics.Vector3 blastSourceLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectile_GrenadeBase.DoGrenadeScreenShake", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -83,7 +83,7 @@ public partial class RProjectile_GrenadeBase : BmSDK.Engine.Projectile, BmSDK.IG
     /// <summary>
     /// Function: BreakNearbyVentLights
     /// </summary>
-    public unsafe void BreakNearbyVentLights(System.Numerics.Vector3 Loc)
+    public unsafe virtual void BreakNearbyVentLights(System.Numerics.Vector3 Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectile_GrenadeBase.BreakNearbyVentLights", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -95,7 +95,7 @@ public partial class RProjectile_GrenadeBase : BmSDK.Engine.Projectile, BmSDK.IG
     /// <summary>
     /// Function: DamageGrateRecursive
     /// </summary>
-    public unsafe void DamageGrateRecursive(BmSDK.BmGame.RTunnelGrateBase grateToDamage, int Depth, System.Numerics.Vector3 blastSourceLoc)
+    public unsafe virtual void DamageGrateRecursive(BmSDK.BmGame.RTunnelGrateBase grateToDamage, int Depth, System.Numerics.Vector3 blastSourceLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectile_GrenadeBase.DamageGrateRecursive", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -109,7 +109,7 @@ public partial class RProjectile_GrenadeBase : BmSDK.Engine.Projectile, BmSDK.IG
     /// <summary>
     /// Function: DoScreenShakeAndDamageGrates
     /// </summary>
-    public unsafe void DoScreenShakeAndDamageGrates()
+    public unsafe virtual void DoScreenShakeAndDamageGrates()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectile_GrenadeBase.DoScreenShakeAndDamageGrates", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -120,7 +120,7 @@ public partial class RProjectile_GrenadeBase : BmSDK.Engine.Projectile, BmSDK.IG
     /// <summary>
     /// Function: ExplodedCallback
     /// </summary>
-    public unsafe void ExplodedCallback()
+    public unsafe virtual void ExplodedCallback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectile_GrenadeBase.ExplodedCallback", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -131,7 +131,7 @@ public partial class RProjectile_GrenadeBase : BmSDK.Engine.Projectile, BmSDK.IG
     /// <summary>
     /// Function: SetInitialThrow
     /// </summary>
-    public unsafe void SetInitialThrow(System.Numerics.Vector3 StartingVelocity, System.Numerics.Vector3 NewTargetCentre)
+    public unsafe virtual void SetInitialThrow(System.Numerics.Vector3 StartingVelocity, System.Numerics.Vector3 NewTargetCentre)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectile_GrenadeBase.SetInitialThrow", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -144,7 +144,7 @@ public partial class RProjectile_GrenadeBase : BmSDK.Engine.Projectile, BmSDK.IG
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectile_GrenadeBase.Touch", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -159,7 +159,7 @@ public partial class RProjectile_GrenadeBase : BmSDK.Engine.Projectile, BmSDK.IG
     /// <summary>
     /// Function: ProcessTouch
     /// </summary>
-    public unsafe void ProcessTouch(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void ProcessTouch(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectile_GrenadeBase.ProcessTouch", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -173,7 +173,7 @@ public partial class RProjectile_GrenadeBase : BmSDK.Engine.Projectile, BmSDK.IG
     /// <summary>
     /// Function: DisappearSilently
     /// </summary>
-    public unsafe void DisappearSilently()
+    public unsafe virtual void DisappearSilently()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectile_GrenadeBase.DisappearSilently", true);
         byte* paramsPtr = stackalloc byte[0];

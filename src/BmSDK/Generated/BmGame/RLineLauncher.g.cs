@@ -66,7 +66,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: DropFromWireWalkToZipLine
     /// </summary>
-    public unsafe bool DropFromWireWalkToZipLine(BmSDK.BmGame.RHidePoint_RopeBase WalkingRope, BmSDK.Rotator Direction)
+    public unsafe virtual bool DropFromWireWalkToZipLine(BmSDK.BmGame.RHidePoint_RopeBase WalkingRope, BmSDK.Rotator Direction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.DropFromWireWalkToZipLine", true);
         byte* paramsPtr = stackalloc byte[156];
@@ -79,7 +79,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: SwitchToWire
     /// </summary>
-    public unsafe void SwitchToWire()
+    public unsafe virtual void SwitchToWire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.SwitchToWire", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -90,7 +90,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: SpawnLineLauncherWire
     /// </summary>
-    public unsafe void SpawnLineLauncherWire()
+    public unsafe virtual void SpawnLineLauncherWire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.SpawnLineLauncherWire", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -101,7 +101,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: AlignLineLauncherSwingToRoadNetwork
     /// </summary>
-    public unsafe System.Numerics.Vector3 AlignLineLauncherSwingToRoadNetwork(System.Numerics.Vector3 SwingLocation, System.Numerics.Vector3 SwingDirection)
+    public unsafe virtual System.Numerics.Vector3 AlignLineLauncherSwingToRoadNetwork(System.Numerics.Vector3 SwingLocation, System.Numerics.Vector3 SwingDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.AlignLineLauncherSwingToRoadNetwork", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -121,7 +121,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: TryLineLauncherDiveSwing
     /// </summary>
-    public unsafe void TryLineLauncherDiveSwing()
+    public unsafe virtual void TryLineLauncherDiveSwing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.TryLineLauncherDiveSwing", true);
         byte* paramsPtr = stackalloc byte[232];
@@ -132,7 +132,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: TryLineLaunchStop
     /// </summary>
-    public unsafe void TryLineLaunchStop()
+    public unsafe virtual void TryLineLaunchStop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.TryLineLaunchStop", true);
         byte* paramsPtr = stackalloc byte[216];
@@ -143,7 +143,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.Destroyed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -154,7 +154,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: VillainHitRope
     /// </summary>
-    public unsafe void VillainHitRope(BmSDK.BmGame.RPawnVillain HitVillain)
+    public unsafe virtual void VillainHitRope(BmSDK.BmGame.RPawnVillain HitVillain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.VillainHitRope", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -166,7 +166,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: CheckToBreakRope
     /// </summary>
-    public unsafe bool CheckToBreakRope(System.Numerics.Vector3 StartPos, System.Numerics.Vector3 EndPos, bool OnlyCheckInterpActorsInFront, bool DoAccuratePawnsTest)
+    public unsafe virtual bool CheckToBreakRope(System.Numerics.Vector3 StartPos, System.Numerics.Vector3 EndPos, bool OnlyCheckInterpActorsInFront, bool DoAccuratePawnsTest)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.CheckToBreakRope", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -188,7 +188,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive()
+    public unsafe virtual bool IsActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.IsActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -199,7 +199,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: PlayCameraAnimEx
     /// </summary>
-    public unsafe void PlayCameraAnimEx(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc, BmSDK.FName AnimName, BmSDK.Engine.AnimSet AnimSet, bool bCamMirrored, BmSDK.Engine.Actor CameraCollisionTarget, float FOV = default, System.Numerics.Vector3 CollisionTargetPos = default, bool bHardCut = default)
+    public unsafe virtual void PlayCameraAnimEx(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc, BmSDK.FName AnimName, BmSDK.Engine.AnimSet AnimSet, bool bCamMirrored, BmSDK.Engine.Actor CameraCollisionTarget, float FOV = default, System.Numerics.Vector3 CollisionTargetPos = default, bool bHardCut = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.PlayCameraAnimEx", true);
         byte* paramsPtr = stackalloc byte[196];
@@ -218,7 +218,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: BackToPlayerCamera
     /// </summary>
-    public unsafe void BackToPlayerCamera()
+    public unsafe virtual void BackToPlayerCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.BackToPlayerCamera", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -229,7 +229,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -242,7 +242,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: TriggerLineLauncherCamera
     /// </summary>
-    public unsafe void TriggerLineLauncherCamera()
+    public unsafe virtual void TriggerLineLauncherCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.TriggerLineLauncherCamera", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -253,7 +253,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: AttachToHand
     /// </summary>
-    public unsafe void AttachToHand(BmSDK.FName CustomBone = default)
+    public unsafe override void AttachToHand(BmSDK.FName CustomBone = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.AttachToHand", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -265,7 +265,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -277,7 +277,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: TurnOffProjectiles
     /// </summary>
-    public unsafe void TurnOffProjectiles()
+    public unsafe override void TurnOffProjectiles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.TurnOffProjectiles", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -288,7 +288,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: FireDualProjectiles
     /// </summary>
-    public unsafe void FireDualProjectiles()
+    public unsafe virtual void FireDualProjectiles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.FireDualProjectiles", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -299,7 +299,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: IsLineLaunchFearGasSafe
     /// </summary>
-    public unsafe bool IsLineLaunchFearGasSafe(System.Numerics.Vector3 vStartPoint, System.Numerics.Vector3 vEndPoint)
+    public unsafe virtual bool IsLineLaunchFearGasSafe(System.Numerics.Vector3 vStartPoint, System.Numerics.Vector3 vEndPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.IsLineLaunchFearGasSafe", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -319,7 +319,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: IsLineLaunchOceanSafe
     /// </summary>
-    public unsafe bool IsLineLaunchOceanSafe(System.Numerics.Vector3 vStartPoint, System.Numerics.Vector3 vEndPoint)
+    public unsafe virtual bool IsLineLaunchOceanSafe(System.Numerics.Vector3 vStartPoint, System.Numerics.Vector3 vEndPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.IsLineLaunchOceanSafe", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -339,7 +339,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: TraceForOutOfBounds
     /// </summary>
-    public unsafe bool TraceForOutOfBounds(System.Numerics.Vector3 Start, System.Numerics.Vector3 End)
+    public unsafe virtual bool TraceForOutOfBounds(System.Numerics.Vector3 Start, System.Numerics.Vector3 End)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.TraceForOutOfBounds", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -359,7 +359,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: TraceForHostageTakers
     /// </summary>
-    public unsafe bool TraceForHostageTakers(System.Numerics.Vector3 Start, System.Numerics.Vector3 End)
+    public unsafe virtual bool TraceForHostageTakers(System.Numerics.Vector3 Start, System.Numerics.Vector3 End)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.TraceForHostageTakers", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -379,7 +379,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: TraceGuidingVolume
     /// </summary>
-    public unsafe bool TraceGuidingVolume(System.Numerics.Vector3 PlayerLocation, System.Numerics.Vector3 Start, System.Numerics.Vector3 End, out BmSDK.BmGame.RLineLauncherGuidingVolume GuidingVolume)
+    public unsafe virtual bool TraceGuidingVolume(System.Numerics.Vector3 PlayerLocation, System.Numerics.Vector3 Start, System.Numerics.Vector3 End, out BmSDK.BmGame.RLineLauncherGuidingVolume GuidingVolume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.TraceGuidingVolume", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -401,7 +401,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: TraceRescueVolume
     /// </summary>
-    public unsafe bool TraceRescueVolume(System.Numerics.Vector3 Start, System.Numerics.Vector3 End, out BmSDK.BmGame.RLineLauncherRescueVolume HostagePickupVolume, out BmSDK.BmGame.RLineLauncherRescueVolume RescueSafeZoneVolume)
+    public unsafe virtual bool TraceRescueVolume(System.Numerics.Vector3 Start, System.Numerics.Vector3 End, out BmSDK.BmGame.RLineLauncherRescueVolume HostagePickupVolume, out BmSDK.BmGame.RLineLauncherRescueVolume RescueSafeZoneVolume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.TraceRescueVolume", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -423,7 +423,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: GetLineLauncherTetherPoints
     /// </summary>
-    public unsafe bool GetLineLauncherTetherPoints(out System.Numerics.Vector3 RearPoint, out System.Numerics.Vector3 FrontPoint, out System.Numerics.Vector3 ActorStartPoint, out System.Numerics.Vector3 ActorEndPoint, System.Numerics.Vector3 CurrentPosition, System.Numerics.Vector3 CameraLoc, System.Numerics.Vector3 CurrentFacing, System.Numerics.Vector3 TargetLoc = default, bool bDebugTrace = default)
+    public unsafe virtual bool GetLineLauncherTetherPoints(out System.Numerics.Vector3 RearPoint, out System.Numerics.Vector3 FrontPoint, out System.Numerics.Vector3 ActorStartPoint, out System.Numerics.Vector3 ActorEndPoint, System.Numerics.Vector3 CurrentPosition, System.Numerics.Vector3 CameraLoc, System.Numerics.Vector3 CurrentFacing, System.Numerics.Vector3 TargetLoc = default, bool bDebugTrace = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.GetLineLauncherTetherPoints", true);
         byte* paramsPtr = stackalloc byte[104];
@@ -450,7 +450,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: IncremementZipSpeed
     /// </summary>
-    public unsafe void IncremementZipSpeed(float DeltaTime)
+    public unsafe virtual void IncremementZipSpeed(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.IncremementZipSpeed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -462,7 +462,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: TryFireLineLauncher
     /// </summary>
-    public unsafe bool TryFireLineLauncher()
+    public unsafe virtual bool TryFireLineLauncher()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.TryFireLineLauncher", true);
         byte* paramsPtr = stackalloc byte[184];
@@ -473,7 +473,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: FailedFiringLineLauncher
     /// </summary>
-    public unsafe void FailedFiringLineLauncher()
+    public unsafe virtual void FailedFiringLineLauncher()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.FailedFiringLineLauncher", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -484,7 +484,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: GetClosestPointOnLine
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetClosestPointOnLine(System.Numerics.Vector3 Start, System.Numerics.Vector3 End, System.Numerics.Vector3 TestPoint)
+    public unsafe virtual System.Numerics.Vector3 GetClosestPointOnLine(System.Numerics.Vector3 Start, System.Numerics.Vector3 End, System.Numerics.Vector3 TestPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.GetClosestPointOnLine", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -498,7 +498,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: FireProjectiles
     /// </summary>
-    public unsafe void FireProjectiles(System.Numerics.Vector3 ProjectileTarget, System.Numerics.Vector3 ProjectileTarget2)
+    public unsafe virtual void FireProjectiles(System.Numerics.Vector3 ProjectileTarget, System.Numerics.Vector3 ProjectileTarget2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.FireProjectiles", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -511,7 +511,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: DrawAimingHUD
     /// </summary>
-    public unsafe void DrawAimingHUD()
+    public unsafe virtual void DrawAimingHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.DrawAimingHUD", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -522,7 +522,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: HideAimingHud
     /// </summary>
-    public unsafe void HideAimingHud()
+    public unsafe virtual void HideAimingHud()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.HideAimingHud", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -533,7 +533,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: IsSafeToFire
     /// </summary>
-    public unsafe bool IsSafeToFire()
+    public unsafe virtual bool IsSafeToFire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.IsSafeToFire", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -544,7 +544,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: GoodFireAngle
     /// </summary>
-    public unsafe bool GoodFireAngle()
+    public unsafe virtual bool GoodFireAngle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.GoodFireAngle", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -555,7 +555,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: TryHostageAlignedTargeting
     /// </summary>
-    public unsafe bool TryHostageAlignedTargeting()
+    public unsafe virtual bool TryHostageAlignedTargeting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.TryHostageAlignedTargeting", true);
         byte* paramsPtr = stackalloc byte[164];
@@ -566,7 +566,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: TryAlignedTargeting
     /// </summary>
-    public unsafe bool TryAlignedTargeting(System.Numerics.Vector3 Start, System.Numerics.Vector3 End)
+    public unsafe virtual bool TryAlignedTargeting(System.Numerics.Vector3 Start, System.Numerics.Vector3 End)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.TryAlignedTargeting", true);
         byte* paramsPtr = stackalloc byte[140];
@@ -579,7 +579,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: UpdateAiming
     /// </summary>
-    public unsafe void UpdateAiming()
+    public unsafe virtual void UpdateAiming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.UpdateAiming", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -590,7 +590,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: CanFire2ndLine
     /// </summary>
-    public unsafe bool CanFire2ndLine()
+    public unsafe virtual bool CanFire2ndLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.CanFire2ndLine", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -601,7 +601,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: StopSloMoFromFlip
     /// </summary>
-    public unsafe void StopSloMoFromFlip()
+    public unsafe virtual void StopSloMoFromFlip()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.StopSloMoFromFlip", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -612,7 +612,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: GetPrimedPose
     /// </summary>
-    public unsafe BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
+    public unsafe override BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState, out BmSDK.FName OutCapeTransitionState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.GetPrimedPose", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -629,7 +629,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Function: GetGadgetCamera
     /// </summary>
-    public unsafe BmSDK.FName GetGadgetCamera(bool InSoftCover = default, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType = default)
+    public unsafe override BmSDK.FName GetGadgetCamera(bool InSoftCover = default, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncher.GetGadgetCamera", true);
         byte* paramsPtr = stackalloc byte[16];

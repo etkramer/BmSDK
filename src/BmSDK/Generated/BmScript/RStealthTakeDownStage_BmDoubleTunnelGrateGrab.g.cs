@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_BmDoubleTunnelGrateGrab : BmSDK.BmGam
     /// <summary>
     /// Function: StartFearTakedownFinaleCamera
     /// </summary>
-    public unsafe void StartFearTakedownFinaleCamera()
+    public unsafe override void StartFearTakedownFinaleCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakeDownStage_BmDoubleTunnelGrateGrab.StartFearTakedownFinaleCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RStealthTakeDownStage_BmDoubleTunnelGrateGrab : BmSDK.BmGam
     /// <summary>
     /// Function: GotoStage
     /// </summary>
-    public unsafe void GotoStage(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages NextStageClass)
+    public unsafe override void GotoStage(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages NextStageClass)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakeDownStage_BmDoubleTunnelGrateGrab.GotoStage", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -94,7 +94,7 @@ public partial class RStealthTakeDownStage_BmDoubleTunnelGrateGrab : BmSDK.BmGam
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakeDownStage_BmDoubleTunnelGrateGrab.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[24];

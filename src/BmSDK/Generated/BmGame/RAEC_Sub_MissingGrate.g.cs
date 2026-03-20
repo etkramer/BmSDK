@@ -71,7 +71,7 @@ public partial class RAEC_Sub_MissingGrate : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_MissingGrate.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Sub_MissingGrate : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: DoFlinch
     /// </summary>
-    public unsafe void DoFlinch()
+    public unsafe virtual void DoFlinch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_MissingGrate.DoFlinch", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RAEC_Sub_MissingGrate : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: OnStartChild
     /// </summary>
-    public unsafe void OnStartChild()
+    public unsafe override void OnStartChild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_MissingGrate.OnStartChild", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -104,7 +104,7 @@ public partial class RAEC_Sub_MissingGrate : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: NotifyEvent
     /// </summary>
-    public unsafe void NotifyEvent(BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
+    public unsafe override void NotifyEvent(BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_MissingGrate.NotifyEvent", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -117,7 +117,7 @@ public partial class RAEC_Sub_MissingGrate : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_MissingGrate.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RAEC_Sub_MissingGrate : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_MissingGrate.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -141,7 +141,7 @@ public partial class RAEC_Sub_MissingGrate : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: SetMissingPoint
     /// </summary>
-    public unsafe void SetMissingPoint(BmSDK.BmGame.RMissingWallGrateAIMarker NewPoint)
+    public unsafe virtual void SetMissingPoint(BmSDK.BmGame.RMissingWallGrateAIMarker NewPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_MissingGrate.SetMissingPoint", true);
         byte* paramsPtr = stackalloc byte[8];

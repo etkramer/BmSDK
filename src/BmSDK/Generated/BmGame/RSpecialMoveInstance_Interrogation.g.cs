@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: DisableMinesDisabledByVictim
     /// </summary>
-    public unsafe void DisableMinesDisabledByVictim()
+    public unsafe virtual void DisableMinesDisabledByVictim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.DisableMinesDisabledByVictim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -96,7 +96,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: PlayInterrogationCameraAnim
     /// </summary>
-    public unsafe bool PlayInterrogationCameraAnim(BmSDK.FName AnimName, bool bPlaying, bool bCamMirrored, float FOV = default, bool bLoop = default)
+    public unsafe virtual bool PlayInterrogationCameraAnim(BmSDK.FName AnimName, bool bPlaying, bool bCamMirrored, float FOV = default, bool bLoop = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.PlayInterrogationCameraAnim", true);
         byte* paramsPtr = stackalloc byte[196];
@@ -112,7 +112,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: CheckCameraLocation
     /// </summary>
-    public unsafe bool CheckCameraLocation(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc, System.Numerics.Vector3 PlayerLocation, BmSDK.FName AnimName, bool bCamMirrored, int Index, out float BestCollisionDistance, out int BestIndex, out int BestMirroredNess, float CheckTime = default, BmSDK.BmGame.RInGameCinematicCam CustomCamera = default)
+    public unsafe virtual bool CheckCameraLocation(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc, System.Numerics.Vector3 PlayerLocation, BmSDK.FName AnimName, bool bCamMirrored, int Index, out float BestCollisionDistance, out int BestIndex, out int BestMirroredNess, float CheckTime = default, BmSDK.BmGame.RInGameCinematicCam CustomCamera = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.CheckCameraLocation", true);
         byte* paramsPtr = stackalloc byte[260];
@@ -133,7 +133,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: GetCameraFallbackPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCameraFallbackPos(BmSDK.BmGame.RSpecialMoveConfig_Interrogation.CameraCollisionOption CollisionOption, System.Numerics.Vector3 Offset, System.Numerics.Vector3 PlayerLocation, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc, bool bInitialCall = default, bool bTesting = default)
+    public unsafe virtual System.Numerics.Vector3 GetCameraFallbackPos(BmSDK.BmGame.RSpecialMoveConfig_Interrogation.CameraCollisionOption CollisionOption, System.Numerics.Vector3 Offset, System.Numerics.Vector3 PlayerLocation, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc, bool bInitialCall = default, bool bTesting = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.GetCameraFallbackPos", true);
         byte* paramsPtr = stackalloc byte[192];
@@ -150,7 +150,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: converge
     /// </summary>
-    public unsafe void converge(out System.Numerics.Vector3 Value, System.Numerics.Vector3 targetv, float Speed, float Tolerance = default)
+    public unsafe virtual void converge(out System.Numerics.Vector3 Value, System.Numerics.Vector3 targetv, float Speed, float Tolerance = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.converge", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -165,7 +165,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: CanSetRadioMode
     /// </summary>
-    public unsafe bool CanSetRadioMode(BmSDK.BmGame.RSeqAct_PlayRadioOrThoughtDialogue act)
+    public unsafe override bool CanSetRadioMode(BmSDK.BmGame.RSeqAct_PlayRadioOrThoughtDialogue act)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.CanSetRadioMode", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -177,7 +177,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: CanStartCameraConversation
     /// </summary>
-    public unsafe bool CanStartCameraConversation()
+    public unsafe override bool CanStartCameraConversation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.CanStartCameraConversation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -188,7 +188,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -199,7 +199,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -210,7 +210,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: GetCameraAnimName
     /// </summary>
-    public unsafe bool GetCameraAnimName(BmSDK.FName CharacterAnim, out BmSDK.FName CameraAnim, BmSDK.Engine.AnimSet CustomAnimSet, int Index)
+    public unsafe virtual bool GetCameraAnimName(BmSDK.FName CharacterAnim, out BmSDK.FName CameraAnim, BmSDK.Engine.AnimSet CustomAnimSet, int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.GetCameraAnimName", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -232,7 +232,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: CancelConversationLoading
     /// </summary>
-    public unsafe void CancelConversationLoading()
+    public unsafe virtual void CancelConversationLoading()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.CancelConversationLoading", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -250,7 +250,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: InitConversation
     /// </summary>
-    public unsafe bool InitConversation()
+    public unsafe virtual bool InitConversation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.InitConversation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -268,7 +268,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: LoadConversation
     /// </summary>
-    public unsafe bool LoadConversation(BmSDK.FString StringPackageName)
+    public unsafe virtual bool LoadConversation(BmSDK.FString StringPackageName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.LoadConversation", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -287,7 +287,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: TryCreateRope
     /// </summary>
-    public unsafe bool TryCreateRope()
+    public unsafe virtual bool TryCreateRope()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.TryCreateRope", true);
         byte* paramsPtr = stackalloc byte[204];
@@ -298,7 +298,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: HangThugFromRope
     /// </summary>
-    public unsafe void HangThugFromRope()
+    public unsafe virtual void HangThugFromRope()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.HangThugFromRope", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -309,7 +309,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: HandleAction
     /// </summary>
-    public unsafe void HandleAction(BmSDK.FName actionName)
+    public unsafe override void HandleAction(BmSDK.FName actionName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.HandleAction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -321,7 +321,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: TrySkipConversationLine
     /// </summary>
-    public unsafe bool TrySkipConversationLine()
+    public unsafe virtual bool TrySkipConversationLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.TrySkipConversationLine", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -332,7 +332,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: SkipConversationLine
     /// </summary>
-    public unsafe void SkipConversationLine()
+    public unsafe virtual void SkipConversationLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.SkipConversationLine", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -343,7 +343,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -355,7 +355,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: TargetGoRagdoll
     /// </summary>
-    public unsafe void TargetGoRagdoll()
+    public unsafe virtual void TargetGoRagdoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.TargetGoRagdoll", true);
         byte* paramsPtr = stackalloc byte[248];
@@ -366,7 +366,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: TryUnlockRiddlerSecrets
     /// </summary>
-    public unsafe void TryUnlockRiddlerSecrets()
+    public unsafe virtual void TryUnlockRiddlerSecrets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.TryUnlockRiddlerSecrets", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -377,7 +377,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -388,7 +388,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: ResetCamera
     /// </summary>
-    public unsafe void ResetCamera()
+    public unsafe virtual void ResetCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.ResetCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -399,7 +399,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: FinishVictim
     /// </summary>
-    public unsafe void FinishVictim()
+    public unsafe virtual void FinishVictim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.FinishVictim", true);
         byte* paramsPtr = stackalloc byte[248];
@@ -410,7 +410,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: AnimationTriggerCallbackCutscene
     /// </summary>
-    public unsafe void AnimationTriggerCallbackCutscene(BmSDK.FName TagName, BmSDK.TArray<BmSDK.FString> Params, BmSDK.Engine.AnimSet TagAnimSet, float Time)
+    public unsafe virtual void AnimationTriggerCallbackCutscene(BmSDK.FName TagName, BmSDK.TArray<BmSDK.FString> Params, BmSDK.Engine.AnimSet TagAnimSet, float Time)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.AnimationTriggerCallbackCutscene", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -425,7 +425,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: CheckConversationLoadingTimeout
     /// </summary>
-    public unsafe void CheckConversationLoadingTimeout()
+    public unsafe virtual void CheckConversationLoadingTimeout()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.CheckConversationLoadingTimeout", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -436,7 +436,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: WaitedAndFinishedAfterLoadingError
     /// </summary>
-    public unsafe void WaitedAndFinishedAfterLoadingError()
+    public unsafe virtual void WaitedAndFinishedAfterLoadingError()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.WaitedAndFinishedAfterLoadingError", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -447,7 +447,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: DialogueFinished
     /// </summary>
-    public unsafe void DialogueFinished()
+    public unsafe virtual void DialogueFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.DialogueFinished", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -458,7 +458,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: StartIntimidate
     /// </summary>
-    public unsafe void StartIntimidate()
+    public unsafe virtual void StartIntimidate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.StartIntimidate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -469,7 +469,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: GetBestIntimidateIndex
     /// </summary>
-    public unsafe int GetBestIntimidateIndex()
+    public unsafe virtual int GetBestIntimidateIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.GetBestIntimidateIndex", true);
         byte* paramsPtr = stackalloc byte[196];
@@ -480,7 +480,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: PlayThugReaction
     /// </summary>
-    public unsafe void PlayThugReaction()
+    public unsafe virtual void PlayThugReaction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.PlayThugReaction", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -491,7 +491,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: GetInferredReferenceLocation
     /// </summary>
-    public unsafe bool GetInferredReferenceLocation(out System.Numerics.Vector3 RefLocation)
+    public unsafe virtual bool GetInferredReferenceLocation(out System.Numerics.Vector3 RefLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.GetInferredReferenceLocation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -510,7 +510,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[196];
@@ -522,7 +522,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: UpdateCameraIdle
     /// </summary>
-    public unsafe void UpdateCameraIdle()
+    public unsafe virtual void UpdateCameraIdle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.UpdateCameraIdle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -533,7 +533,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: IsCinematicCameraFinished
     /// </summary>
-    public unsafe bool IsCinematicCameraFinished()
+    public unsafe virtual bool IsCinematicCameraFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.IsCinematicCameraFinished", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -544,7 +544,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: StartConversation
     /// </summary>
-    public unsafe void StartConversation()
+    public unsafe virtual void StartConversation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.StartConversation", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -555,7 +555,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: SetBatmanFinishedCounter
     /// </summary>
-    public unsafe void SetBatmanFinishedCounter()
+    public unsafe virtual void SetBatmanFinishedCounter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.SetBatmanFinishedCounter", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -566,7 +566,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: SuccessfulCounter
     /// </summary>
-    public unsafe void SuccessfulCounter()
+    public unsafe virtual void SuccessfulCounter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.SuccessfulCounter", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -577,7 +577,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: ThugHitBatman
     /// </summary>
-    public unsafe void ThugHitBatman()
+    public unsafe virtual void ThugHitBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.ThugHitBatman", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -588,7 +588,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: StartCounterIcon
     /// </summary>
-    public unsafe void StartCounterIcon()
+    public unsafe virtual void StartCounterIcon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.StartCounterIcon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -599,7 +599,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: NewLineStarted
     /// </summary>
-    public unsafe bool NewLineStarted()
+    public unsafe virtual bool NewLineStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.NewLineStarted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -610,7 +610,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[396];
@@ -622,7 +622,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: GetOuterRailingLocator
     /// </summary>
-    public unsafe void GetOuterRailingLocator(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation, out BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator OutLocation)
+    public unsafe virtual void GetOuterRailingLocator(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation, out BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator OutLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.GetOuterRailingLocator", true);
         byte* paramsPtr = stackalloc byte[264];
@@ -635,7 +635,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Function: StartAnimation
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId StartAnimation(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation, BmSDK.FName AnimName, BmSDK.FName idleAnimName = default, BmSDK.FName CameraAnim = default, BmSDK.Engine.AnimSet CustomVictimInAnimSet = default, bool bThugAttack = default)
+    public unsafe virtual BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId StartAnimation(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation, BmSDK.FName AnimName, BmSDK.FName idleAnimName = default, BmSDK.FName CameraAnim = default, BmSDK.Engine.AnimSet CustomVictimInAnimSet = default, bool bThugAttack = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_Interrogation.StartAnimation", true);
         byte* paramsPtr = stackalloc byte[172];

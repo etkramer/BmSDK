@@ -47,7 +47,7 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: LogDump
     /// </summary>
-    public unsafe void LogDump()
+    public unsafe virtual void LogDump()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireCrewController.LogDump", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -58,7 +58,7 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: UpdateAvailability
     /// </summary>
-    public unsafe void UpdateAvailability()
+    public unsafe virtual void UpdateAvailability()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireCrewController.UpdateAvailability", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -69,7 +69,7 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: GetCurrentTier
     /// </summary>
-    public unsafe int GetCurrentTier()
+    public unsafe virtual int GetCurrentTier()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireCrewController.GetCurrentTier", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -80,7 +80,7 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: IsTierComplete
     /// </summary>
-    public unsafe bool IsTierComplete(int Tier)
+    public unsafe virtual bool IsTierComplete(int Tier)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireCrewController.IsTierComplete", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -92,7 +92,7 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: GetEncounterTier
     /// </summary>
-    public unsafe int GetEncounterTier()
+    public unsafe virtual int GetEncounterTier()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireCrewController.GetEncounterTier", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -103,7 +103,7 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: SetEncounterRescued
     /// </summary>
-    public unsafe void SetEncounterRescued()
+    public unsafe virtual void SetEncounterRescued()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireCrewController.SetEncounterRescued", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -114,7 +114,7 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: UpdateMostWanted
     /// </summary>
-    public unsafe void UpdateMostWanted(int encounter)
+    public unsafe virtual void UpdateMostWanted(int encounter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireCrewController.UpdateMostWanted", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -126,7 +126,7 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: FireOutputs
     /// </summary>
-    public unsafe void FireOutputs(bool bOnlyNewEncounters = default)
+    public unsafe virtual void FireOutputs(bool bOnlyNewEncounters = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireCrewController.FireOutputs", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -138,7 +138,7 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: CountNumRescued
     /// </summary>
-    public unsafe int CountNumRescued()
+    public unsafe virtual int CountNumRescued()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireCrewController.CountNumRescued", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -149,7 +149,7 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: CheckInputs
     /// </summary>
-    public unsafe void CheckInputs()
+    public unsafe virtual void CheckInputs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireCrewController.CheckInputs", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -160,7 +160,7 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: SetEncounterIndexOnLinkedSpawners
     /// </summary>
-    public unsafe void SetEncounterIndexOnLinkedSpawners()
+    public unsafe virtual void SetEncounterIndexOnLinkedSpawners()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireCrewController.SetEncounterIndexOnLinkedSpawners", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -171,7 +171,7 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireCrewController.Activated", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -182,7 +182,7 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: GetEncounterState
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_FireCrewController.FireCrewEncounterState GetEncounterState(int inEncounterIndex)
+    public unsafe virtual BmSDK.BmGame.RSeqAct_FireCrewController.FireCrewEncounterState GetEncounterState(int inEncounterIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireCrewController.GetEncounterState", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -194,7 +194,7 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: SetEncounterFlag
     /// </summary>
-    public unsafe bool SetEncounterFlag(int inEncounterIndex, BmSDK.BmGame.RSeqAct_FireCrewController.FireCrewEncounterState encounterState, bool val = default, bool bAutoPan = default)
+    public unsafe virtual bool SetEncounterFlag(int inEncounterIndex, BmSDK.BmGame.RSeqAct_FireCrewController.FireCrewEncounterState encounterState, bool val = default, bool bAutoPan = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireCrewController.SetEncounterFlag", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -209,7 +209,7 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: IsEncounterFlagSet
     /// </summary>
-    public unsafe bool IsEncounterFlagSet(int inEncounterIndex, BmSDK.BmGame.RSeqAct_FireCrewController.FireCrewEncounterState encounterState)
+    public unsafe virtual bool IsEncounterFlagSet(int inEncounterIndex, BmSDK.BmGame.RSeqAct_FireCrewController.FireCrewEncounterState encounterState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FireCrewController.IsEncounterFlagSet", true);
         byte* paramsPtr = stackalloc byte[28];

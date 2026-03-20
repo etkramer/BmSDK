@@ -36,7 +36,7 @@ public partial class RBMScreenShakeModifier : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetArrayElement
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct GetArrayElement(int I)
+    public unsafe virtual BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct GetArrayElement(int I)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMScreenShakeModifier.GetArrayElement", true);
         byte* paramsPtr = stackalloc byte[160];
@@ -48,7 +48,7 @@ public partial class RBMScreenShakeModifier : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe void Update(float DeltaTime, System.Numerics.Vector3 CameraLoc, out System.Numerics.Vector3 Loc, out BmSDK.Rotator Rot, out float FOV)
+    public unsafe virtual void Update(float DeltaTime, System.Numerics.Vector3 CameraLoc, out System.Numerics.Vector3 Loc, out BmSDK.Rotator Rot, out float FOV)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMScreenShakeModifier.Update", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -71,7 +71,7 @@ public partial class RBMScreenShakeModifier : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: OverrideShakeStrength
     /// </summary>
-    public unsafe void OverrideShakeStrength(int ShakeId, float NewStrength)
+    public unsafe virtual void OverrideShakeStrength(int ShakeId, float NewStrength)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMScreenShakeModifier.OverrideShakeStrength", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -84,7 +84,7 @@ public partial class RBMScreenShakeModifier : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: RemoveScreenShake
     /// </summary>
-    public unsafe void RemoveScreenShake(int ShakeId)
+    public unsafe virtual void RemoveScreenShake(int ShakeId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMScreenShakeModifier.RemoveScreenShake", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -96,7 +96,7 @@ public partial class RBMScreenShakeModifier : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: AddScreenShakeWithDirection
     /// </summary>
-    public unsafe int AddScreenShakeWithDirection(BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct NewShake, System.Numerics.Vector3 DirectionScale = default, System.Numerics.Vector3 ShakeSourcePos = default, float DistanceScalar = default)
+    public unsafe virtual int AddScreenShakeWithDirection(BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct NewShake, System.Numerics.Vector3 DirectionScale = default, System.Numerics.Vector3 ShakeSourcePos = default, float DistanceScalar = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMScreenShakeModifier.AddScreenShakeWithDirection", true);
         byte* paramsPtr = stackalloc byte[196];
@@ -111,7 +111,7 @@ public partial class RBMScreenShakeModifier : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: AddScreenShake
     /// </summary>
-    public unsafe int AddScreenShake(BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct NewShake, float Scalar = default, System.Numerics.Vector3 ShakeSourcePos = default, float DistanceScalar = default)
+    public unsafe virtual int AddScreenShake(BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct NewShake, float Scalar = default, System.Numerics.Vector3 ShakeSourcePos = default, float DistanceScalar = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMScreenShakeModifier.AddScreenShake", true);
         byte* paramsPtr = stackalloc byte[188];
@@ -126,7 +126,7 @@ public partial class RBMScreenShakeModifier : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetRandomValueForElement
     /// </summary>
-    public unsafe float GetRandomValueForElement(float Value, bool invertResult)
+    public unsafe virtual float GetRandomValueForElement(float Value, bool invertResult)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMScreenShakeModifier.GetRandomValueForElement", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -139,7 +139,7 @@ public partial class RBMScreenShakeModifier : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: UpdateFast
     /// </summary>
-    public unsafe void UpdateFast(float DeltaTime, out System.Numerics.Vector3 Loc, out BmSDK.Rotator Rot, out float FOV)
+    public unsafe virtual void UpdateFast(float DeltaTime, out System.Numerics.Vector3 Loc, out BmSDK.Rotator Rot, out float FOV)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMScreenShakeModifier.UpdateFast", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -161,7 +161,7 @@ public partial class RBMScreenShakeModifier : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: UpdateShake
     /// </summary>
-    public unsafe bool UpdateShake(float DeltaTime, out BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct Shake, out System.Numerics.Vector3 Loc, out BmSDK.Rotator Rot, out float FOV)
+    public unsafe virtual bool UpdateShake(float DeltaTime, out BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct Shake, out System.Numerics.Vector3 Loc, out BmSDK.Rotator Rot, out float FOV)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMScreenShakeModifier.UpdateShake", true);
         byte* paramsPtr = stackalloc byte[192];
@@ -184,7 +184,7 @@ public partial class RBMScreenShakeModifier : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: ApplyShake
     /// </summary>
-    public unsafe void ApplyShake(float DeltaTime, out BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct Shake, out System.Numerics.Vector3 Loc, out BmSDK.Rotator Rot, float ShakePct)
+    public unsafe virtual void ApplyShake(float DeltaTime, out BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct Shake, out System.Numerics.Vector3 Loc, out BmSDK.Rotator Rot, float ShakePct)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMScreenShakeModifier.ApplyShake", true);
         byte* paramsPtr = stackalloc byte[188];
@@ -207,7 +207,7 @@ public partial class RBMScreenShakeModifier : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: ApplyJitter
     /// </summary>
-    public unsafe void ApplyJitter(out float Amplitude, out float Offset, float Frequency, float DeltaTime)
+    public unsafe virtual void ApplyJitter(out float Amplitude, out float Offset, float Frequency, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMScreenShakeModifier.ApplyJitter", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -229,7 +229,7 @@ public partial class RBMScreenShakeModifier : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: Reset
     /// </summary>
-    public unsafe void Reset()
+    public unsafe virtual void Reset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMScreenShakeModifier.Reset", true);
         byte* paramsPtr = stackalloc byte[0];

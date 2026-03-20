@@ -71,7 +71,7 @@ public partial class RPredatorVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: GetEntryExitAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetEntryExitAnimSet()
+    public unsafe virtual BmSDK.Engine.AnimSet GetEntryExitAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorVolume.GetEntryExitAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RPredatorVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: GetVaultExplosivesAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetVaultExplosivesAnimSet()
+    public unsafe virtual BmSDK.Engine.AnimSet GetVaultExplosivesAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorVolume.GetVaultExplosivesAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RPredatorVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: SetNoisyPred
     /// </summary>
-    public unsafe void SetNoisyPred(bool newNoisyPred)
+    public unsafe virtual void SetNoisyPred(bool newNoisyPred)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorVolume.SetNoisyPred", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RPredatorVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterGrate
     /// </summary>
-    public unsafe void RegisterGrate(BmSDK.BmGame.RTunnelGrateBase Grate)
+    public unsafe virtual void RegisterGrate(BmSDK.BmGame.RTunnelGrateBase Grate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorVolume.RegisterGrate", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -124,7 +124,7 @@ public partial class RPredatorVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPylons
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.Pylon> GetPylons()
+    public unsafe virtual BmSDK.TArray<BmSDK.Engine.Pylon> GetPylons()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorVolume.GetPylons", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -135,7 +135,7 @@ public partial class RPredatorVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPylonListStart
     /// </summary>
-    public unsafe BmSDK.Engine.Pylon GetPylonListStart()
+    public unsafe virtual BmSDK.Engine.Pylon GetPylonListStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorVolume.GetPylonListStart", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -153,7 +153,7 @@ public partial class RPredatorVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorVolume.UnTouch", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -165,7 +165,7 @@ public partial class RPredatorVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorVolume.Touch", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -180,7 +180,7 @@ public partial class RPredatorVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: IsInChallengeLayer
     /// </summary>
-    public unsafe bool IsInChallengeLayer()
+    public unsafe virtual bool IsInChallengeLayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorVolume.IsInChallengeLayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -191,7 +191,7 @@ public partial class RPredatorVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorVolume.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -202,7 +202,7 @@ public partial class RPredatorVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorVolume.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -213,7 +213,7 @@ public partial class RPredatorVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorVolume.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -224,7 +224,7 @@ public partial class RPredatorVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorVolume.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

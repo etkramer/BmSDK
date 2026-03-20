@@ -36,7 +36,7 @@ public partial class RViewPostProcess : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Deactivate
     /// </summary>
-    public unsafe void Deactivate()
+    public unsafe virtual void Deactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RViewPostProcess.Deactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RViewPostProcess : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetValForVectorOne
     /// </summary>
-    public unsafe void SetValForVectorOne(BmSDK.GameObject.FLinearColor val)
+    public unsafe virtual void SetValForVectorOne(BmSDK.GameObject.FLinearColor val)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RViewPostProcess.SetValForVectorOne", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -59,7 +59,7 @@ public partial class RViewPostProcess : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetValForScalarThree
     /// </summary>
-    public unsafe void SetValForScalarThree(float val)
+    public unsafe virtual void SetValForScalarThree(float val)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RViewPostProcess.SetValForScalarThree", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -71,7 +71,7 @@ public partial class RViewPostProcess : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetValForScalarTwo
     /// </summary>
-    public unsafe void SetValForScalarTwo(float val)
+    public unsafe virtual void SetValForScalarTwo(float val)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RViewPostProcess.SetValForScalarTwo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RViewPostProcess : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetValForScalarOne
     /// </summary>
-    public unsafe void SetValForScalarOne(float val)
+    public unsafe virtual void SetValForScalarOne(float val)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RViewPostProcess.SetValForScalarOne", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RViewPostProcess : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Activate
     /// </summary>
-    public unsafe void Activate(BmSDK.BmGame.RPlayerController Controller)
+    public unsafe virtual void Activate(BmSDK.BmGame.RPlayerController Controller)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RViewPostProcess.Activate", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -107,7 +107,7 @@ public partial class RViewPostProcess : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe void Update(float DeltaTime)
+    public unsafe virtual void Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RViewPostProcess.Update", true);
         byte* paramsPtr = stackalloc byte[4];

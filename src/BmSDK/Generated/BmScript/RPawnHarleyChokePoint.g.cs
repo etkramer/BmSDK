@@ -71,7 +71,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: GrateDetectionExtender
     /// </summary>
-    public unsafe float GrateDetectionExtender()
+    public unsafe override float GrateDetectionExtender()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.GrateDetectionExtender", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: IsAwareOfPlayer
     /// </summary>
-    public unsafe bool IsAwareOfPlayer(BmSDK.BmGame.RPawnPlayer PlayerPawn, BmSDK.Class dmgType = default)
+    public unsafe override bool IsAwareOfPlayer(BmSDK.BmGame.RPawnPlayer PlayerPawn, BmSDK.Class dmgType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.IsAwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -95,7 +95,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: DamagedBy
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.DamagedBy", true);
         byte* paramsPtr = stackalloc byte[249];
@@ -107,7 +107,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: GetSmokeBombReactionClass
     /// </summary>
-    public unsafe BmSDK.Class GetSmokeBombReactionClass()
+    public unsafe override BmSDK.Class GetSmokeBombReactionClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.GetSmokeBombReactionClass", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: GetHudWeaponType
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.EHudWeaponType GetHudWeaponType()
+    public unsafe virtual BmSDK.BmGame.RGameInfo.EHudWeaponType GetHudWeaponType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.GetHudWeaponType", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -129,7 +129,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: GetBatClawPriority
     /// </summary>
-    public unsafe float GetBatClawPriority()
+    public unsafe override float GetBatClawPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.GetBatClawPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -140,7 +140,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: CanBeHitInCombat
     /// </summary>
-    public unsafe bool CanBeHitInCombat(BmSDK.BmGame.RDamageType DamageType)
+    public unsafe override bool CanBeHitInCombat(BmSDK.BmGame.RDamageType DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.CanBeHitInCombat", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -152,7 +152,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: CanRedirect
     /// </summary>
-    public unsafe bool CanRedirect()
+    public unsafe override bool CanRedirect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.CanRedirect", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -163,7 +163,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: SetInXrayMode
     /// </summary>
-    public unsafe void SetInXrayMode(bool show, bool bForceOff)
+    public unsafe override void SetInXrayMode(bool show, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.SetInXrayMode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -176,7 +176,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: HitByBatarang
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult HitByBatarang(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult HitByBatarang(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.HitByBatarang", true);
         byte* paramsPtr = stackalloc byte[93];
@@ -194,7 +194,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: GetBossTakedown
     /// </summary>
-    public unsafe BmSDK.Class GetBossTakedown(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages takedown_stage)
+    public unsafe override BmSDK.Class GetBossTakedown(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages takedown_stage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.GetBossTakedown", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -206,7 +206,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: IsBoss
     /// </summary>
-    public unsafe bool IsBoss()
+    public unsafe override bool IsBoss()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.IsBoss", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -217,7 +217,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: UpdateCameraBias
     /// </summary>
-    public unsafe void UpdateCameraBias()
+    public unsafe virtual void UpdateCameraBias()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.UpdateCameraBias", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -228,7 +228,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: WantsCameraBias
     /// </summary>
-    public unsafe bool WantsCameraBias()
+    public unsafe virtual bool WantsCameraBias()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.WantsCameraBias", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -239,7 +239,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -251,7 +251,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -262,7 +262,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe override BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -274,7 +274,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.Interact", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -286,7 +286,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: OverridePreviousLines
     /// </summary>
-    public unsafe bool OverridePreviousLines()
+    public unsafe override bool OverridePreviousLines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.OverridePreviousLines", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -297,7 +297,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.IsActive", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -309,7 +309,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: GetInteractButton
     /// </summary>
-    public unsafe BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton GetInteractButton(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton GetInteractButton(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.GetInteractButton", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -321,7 +321,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: Died
     /// </summary>
-    public unsafe bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe override bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.Died", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -335,7 +335,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: DoFiringRecoil
     /// </summary>
-    public unsafe void DoFiringRecoil(BmSDK.FName RecoilAnimName, BmSDK.Engine.AnimSet Set)
+    public unsafe override void DoFiringRecoil(BmSDK.FName RecoilAnimName, BmSDK.Engine.AnimSet Set)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.DoFiringRecoil", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -348,7 +348,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: GetRange
     /// </summary>
-    public unsafe float GetRange()
+    public unsafe override float GetRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.GetRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -359,7 +359,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: HideHarleyGun
     /// </summary>
-    public unsafe void HideHarleyGun()
+    public unsafe virtual void HideHarleyGun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.HideHarleyGun", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -370,7 +370,7 @@ public partial class RPawnHarleyChokePoint : BmSDK.BmGame.RPawnHarleyChokePointB
     /// <summary>
     /// Function: HitByDisruptorGadgetCharge
     /// </summary>
-    public unsafe bool HitByDisruptorGadgetCharge()
+    public unsafe override bool HitByDisruptorGadgetCharge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnHarleyChokePoint.HitByDisruptorGadgetCharge", true);
         byte* paramsPtr = stackalloc byte[4];

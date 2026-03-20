@@ -71,7 +71,7 @@ public partial class RAEC_Search_Formation_Corner : BmSDK.BmGame.RAEC_Search_For
     /// <summary>
     /// Function: InAnimFinished
     /// </summary>
-    public unsafe void InAnimFinished(BmSDK.BmGame.RAEC_Search_Sub_Corner callingAEC)
+    public unsafe virtual void InAnimFinished(BmSDK.BmGame.RAEC_Search_Sub_Corner callingAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation_Corner.InAnimFinished", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RAEC_Search_Formation_Corner : BmSDK.BmGame.RAEC_Search_For
     /// <summary>
     /// Function: AddFollower
     /// </summary>
-    public unsafe void AddFollower(BmSDK.BmGame.RBMAIController FollowCon)
+    public unsafe override void AddFollower(BmSDK.BmGame.RBMAIController FollowCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation_Corner.AddFollower", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RAEC_Search_Formation_Corner : BmSDK.BmGame.RAEC_Search_For
     /// <summary>
     /// Function: SetLeader
     /// </summary>
-    public unsafe void SetLeader(BmSDK.BmGame.RBMAIController NewLeader)
+    public unsafe override void SetLeader(BmSDK.BmGame.RBMAIController NewLeader)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation_Corner.SetLeader", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -107,7 +107,7 @@ public partial class RAEC_Search_Formation_Corner : BmSDK.BmGame.RAEC_Search_For
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.BmGame.RBMAIAction_PairedCorner.ePairedCornerAnimType inAnimVariant)
+    public unsafe virtual void Init(BmSDK.BmGame.RBMAIAction_PairedCorner.ePairedCornerAnimType inAnimVariant)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Formation_Corner.Init", true);
         byte* paramsPtr = stackalloc byte[1];

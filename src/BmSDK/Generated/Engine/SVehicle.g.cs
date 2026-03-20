@@ -66,7 +66,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: SetHidden
     /// </summary>
-    public unsafe void SetHidden(bool bNewHidden)
+    public unsafe override void SetHidden(bool bNewHidden)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.SetHidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -85,7 +85,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: TermVehiclePhysics
     /// </summary>
-    public unsafe void TermVehiclePhysics()
+    public unsafe virtual void TermVehiclePhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.TermVehiclePhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -103,7 +103,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSVehicleDebug
     /// </summary>
-    public unsafe void GetSVehicleDebug(out BmSDK.TArray<BmSDK.FString> DebugInfo)
+    public unsafe virtual void GetSVehicleDebug(out BmSDK.TArray<BmSDK.FString> DebugInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.GetSVehicleDebug", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -115,7 +115,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: HermiteEval
     /// </summary>
-    public unsafe float HermiteEval(float Slip)
+    public unsafe virtual float HermiteEval(float Slip)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.HermiteEval", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -127,7 +127,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: DisplayWheelsDebug
     /// </summary>
-    public unsafe void DisplayWheelsDebug(BmSDK.Engine.HUD HUD, float YL)
+    public unsafe virtual void DisplayWheelsDebug(BmSDK.Engine.HUD HUD, float YL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.DisplayWheelsDebug", true);
         byte* paramsPtr = stackalloc byte[132];
@@ -140,7 +140,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: DisplayDebug
     /// </summary>
-    public unsafe void DisplayDebug(BmSDK.Engine.HUD HUD, out float out_YL, out float out_YPos)
+    public unsafe override void DisplayDebug(BmSDK.Engine.HUD HUD, out float out_YL, out float out_YPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.DisplayDebug", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -154,7 +154,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: PostTeleport
     /// </summary>
-    public unsafe void PostTeleport(BmSDK.Engine.Teleporter OutTeleporter)
+    public unsafe override void PostTeleport(BmSDK.Engine.Teleporter OutTeleporter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.PostTeleport", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -166,7 +166,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: SuspensionHeavyShift
     /// </summary>
-    public unsafe void SuspensionHeavyShift(float Delta)
+    public unsafe virtual void SuspensionHeavyShift(float Delta)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.SuspensionHeavyShift", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -178,7 +178,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: RigidBodyCollision
     /// </summary>
-    public unsafe void RigidBodyCollision(BmSDK.Engine.PrimitiveComponent HitComponent, BmSDK.Engine.PrimitiveComponent OtherComponent, out BmSDK.Engine.Actor.FCollisionImpactData RigidCollisionData, int ContactIndex, float Speed, int Index0, int Index1)
+    public unsafe override void RigidBodyCollision(BmSDK.Engine.PrimitiveComponent HitComponent, BmSDK.Engine.PrimitiveComponent OtherComponent, out BmSDK.Engine.Actor.FCollisionImpactData RigidCollisionData, int ContactIndex, float Speed, int Index0, int Index1)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.RigidBodyCollision", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -196,7 +196,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: DrivingStatusChanged
     /// </summary>
-    public unsafe void DrivingStatusChanged()
+    public unsafe override void DrivingStatusChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.DrivingStatusChanged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -207,7 +207,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: VehiclePlayExitSound
     /// </summary>
-    public unsafe void VehiclePlayExitSound()
+    public unsafe virtual void VehiclePlayExitSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.VehiclePlayExitSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -218,7 +218,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: VehiclePlayEnterSound
     /// </summary>
-    public unsafe void VehiclePlayEnterSound()
+    public unsafe virtual void VehiclePlayEnterSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.VehiclePlayEnterSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -229,7 +229,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: StopEngineSoundTimed
     /// </summary>
-    public unsafe void StopEngineSoundTimed()
+    public unsafe virtual void StopEngineSoundTimed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.StopEngineSoundTimed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -240,7 +240,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: StopEngineSound
     /// </summary>
-    public unsafe void StopEngineSound()
+    public unsafe virtual void StopEngineSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.StopEngineSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -251,7 +251,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: StartEngineSoundTimed
     /// </summary>
-    public unsafe void StartEngineSoundTimed()
+    public unsafe virtual void StartEngineSoundTimed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.StartEngineSoundTimed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -262,7 +262,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: StartEngineSound
     /// </summary>
-    public unsafe void StartEngineSound()
+    public unsafe virtual void StartEngineSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.StartEngineSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -273,7 +273,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: HasWheelsOnGround
     /// </summary>
-    public unsafe bool HasWheelsOnGround()
+    public unsafe virtual bool HasWheelsOnGround()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.HasWheelsOnGround", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -291,7 +291,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: TryToDrive
     /// </summary>
-    public unsafe bool TryToDrive(BmSDK.Engine.Pawn P)
+    public unsafe override bool TryToDrive(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.TryToDrive", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -303,7 +303,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultCameraMode
     /// </summary>
-    public unsafe BmSDK.FName GetDefaultCameraMode(BmSDK.Engine.PlayerController RequestedBy)
+    public unsafe override BmSDK.FName GetDefaultCameraMode(BmSDK.Engine.PlayerController RequestedBy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.GetDefaultCameraMode", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -315,7 +315,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: CalcCamera
     /// </summary>
-    public unsafe bool CalcCamera(float fDeltaTime, out System.Numerics.Vector3 out_CamLoc, out BmSDK.Rotator out_CamRot, out float out_FOV)
+    public unsafe override bool CalcCamera(float fDeltaTime, out System.Numerics.Vector3 out_CamLoc, out BmSDK.Rotator out_CamRot, out float out_FOV)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.CalcCamera", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -330,7 +330,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: Died
     /// </summary>
-    public unsafe bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe override bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.Died", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -344,7 +344,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: AddVelocity
     /// </summary>
-    public unsafe void AddVelocity(System.Numerics.Vector3 NewVelocity, System.Numerics.Vector3 HitLocation, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default)
+    public unsafe override void AddVelocity(System.Numerics.Vector3 NewVelocity, System.Numerics.Vector3 HitLocation, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.AddVelocity", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -366,7 +366,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: InitVehicleRagdoll
     /// </summary>
-    public unsafe void InitVehicleRagdoll(BmSDK.Engine.SkeletalMesh RagdollMesh, BmSDK.Engine.PhysicsAsset RagdollPhysAsset, System.Numerics.Vector3 ActorMove, bool bClearAnimTree)
+    public unsafe virtual void InitVehicleRagdoll(BmSDK.Engine.SkeletalMesh RagdollMesh, BmSDK.Engine.PhysicsAsset RagdollPhysAsset, System.Numerics.Vector3 ActorMove, bool bClearAnimTree)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.InitVehicleRagdoll", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -388,7 +388,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: TakeRadiusDamage
     /// </summary>
-    public unsafe void TakeRadiusDamage(BmSDK.Engine.Controller InstigatedBy, float BaseDamage, float DamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, bool bFullDamage, BmSDK.Engine.Actor DamageCauser, float DamageFalloffExponent = default)
+    public unsafe override void TakeRadiusDamage(BmSDK.Engine.Controller InstigatedBy, float BaseDamage, float DamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, bool bFullDamage, BmSDK.Engine.Actor DamageCauser, float DamageFalloffExponent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.TakeRadiusDamage", true);
         byte* paramsPtr = stackalloc byte[140];
@@ -408,7 +408,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: StopVehicleSounds
     /// </summary>
-    public unsafe void StopVehicleSounds()
+    public unsafe virtual void StopVehicleSounds()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.StopVehicleSounds", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -419,7 +419,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: TurnOff
     /// </summary>
-    public unsafe void TurnOff()
+    public unsafe override void TurnOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.TurnOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -430,7 +430,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -441,7 +441,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -452,7 +452,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -463,7 +463,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: SetWheelCollision
     /// </summary>
-    public unsafe void SetWheelCollision(int WheelNum, bool bCollision)
+    public unsafe virtual void SetWheelCollision(int WheelNum, bool bCollision)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.SetWheelCollision", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -483,7 +483,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawGraphsAndPrintTireSurfaceTypes
     /// </summary>
-    public unsafe void DrawGraphsAndPrintTireSurfaceTypes(BmSDK.Engine.HUD HUD, float YL, float YPos)
+    public unsafe virtual void DrawGraphsAndPrintTireSurfaceTypes(BmSDK.Engine.HUD HUD, float YL, float YPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.DrawGraphsAndPrintTireSurfaceTypes", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -504,7 +504,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: IsSleeping
     /// </summary>
-    public unsafe bool IsSleeping()
+    public unsafe virtual bool IsSleeping()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.IsSleeping", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -522,7 +522,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: AddTorque
     /// </summary>
-    public unsafe void AddTorque(System.Numerics.Vector3 Torque)
+    public unsafe virtual void AddTorque(System.Numerics.Vector3 Torque)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.AddTorque", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -541,7 +541,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: AddImpulse
     /// </summary>
-    public unsafe void AddImpulse(System.Numerics.Vector3 Impulse)
+    public unsafe virtual void AddImpulse(System.Numerics.Vector3 Impulse)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.AddImpulse", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -560,7 +560,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: AddForce
     /// </summary>
-    public unsafe void AddForce(System.Numerics.Vector3 Force)
+    public unsafe virtual void AddForce(System.Numerics.Vector3 Force)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.AddForce", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -579,7 +579,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: AudioDrifting
     /// </summary>
-    public unsafe void AudioDrifting(bool isDrifting)
+    public unsafe virtual void AudioDrifting(bool isDrifting)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.AudioDrifting", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -598,7 +598,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: AudioWheelSpinning
     /// </summary>
-    public unsafe void AudioWheelSpinning(bool setWheelSpin)
+    public unsafe virtual void AudioWheelSpinning(bool setWheelSpin)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.AudioWheelSpinning", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -617,7 +617,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: AudioStopAllWheels
     /// </summary>
-    public unsafe void AudioStopAllWheels()
+    public unsafe virtual void AudioStopAllWheels()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.AudioStopAllWheels", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -635,7 +635,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: AudioStopWheelSqueal
     /// </summary>
-    public unsafe void AudioStopWheelSqueal(BmSDK.FName WheelBone)
+    public unsafe virtual void AudioStopWheelSqueal(BmSDK.FName WheelBone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.AudioStopWheelSqueal", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -654,7 +654,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: AudioUpdateWheelSqueal
     /// </summary>
-    public unsafe void AudioUpdateWheelSqueal(BmSDK.FName WheelBone, float SquealValue)
+    public unsafe virtual void AudioUpdateWheelSqueal(BmSDK.FName WheelBone, float SquealValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.AudioUpdateWheelSqueal", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -711,7 +711,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: HideSkidMarks
     /// </summary>
-    public unsafe void HideSkidMarks()
+    public unsafe virtual void HideSkidMarks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.HideSkidMarks", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -729,7 +729,7 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// Function: StopAllWheelEffects
     /// </summary>
-    public unsafe void StopAllWheelEffects()
+    public unsafe virtual void StopAllWheelEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SVehicle.StopAllWheelEffects", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RDamageOverTimeVolume : BmSDK.Engine.Volume, BmSDK.IGameObj
     /// <summary>
     /// Function: DamagePlayers
     /// </summary>
-    public unsafe void DamagePlayers()
+    public unsafe virtual void DamagePlayers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDamageOverTimeVolume.DamagePlayers", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -82,7 +82,7 @@ public partial class RDamageOverTimeVolume : BmSDK.Engine.Volume, BmSDK.IGameObj
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDamageOverTimeVolume.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

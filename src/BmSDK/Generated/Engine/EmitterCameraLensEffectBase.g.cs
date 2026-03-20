@@ -66,7 +66,7 @@ public partial class EmitterCameraLensEffectBase : BmSDK.Engine.Emitter, BmSDK.I
     /// <summary>
     /// Function: UpdateLocation
     /// </summary>
-    public unsafe void UpdateLocation(out System.Numerics.Vector3 CamLoc, out BmSDK.Rotator CamRot, float CamFOVDeg)
+    public unsafe virtual void UpdateLocation(out System.Numerics.Vector3 CamLoc, out BmSDK.Rotator CamRot, float CamFOVDeg)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EmitterCameraLensEffectBase.UpdateLocation", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -87,7 +87,7 @@ public partial class EmitterCameraLensEffectBase : BmSDK.Engine.Emitter, BmSDK.I
     /// <summary>
     /// Function: ActivateLensEffect
     /// </summary>
-    public unsafe void ActivateLensEffect()
+    public unsafe virtual void ActivateLensEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EmitterCameraLensEffectBase.ActivateLensEffect", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -98,7 +98,7 @@ public partial class EmitterCameraLensEffectBase : BmSDK.Engine.Emitter, BmSDK.I
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EmitterCameraLensEffectBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -109,7 +109,7 @@ public partial class EmitterCameraLensEffectBase : BmSDK.Engine.Emitter, BmSDK.I
     /// <summary>
     /// Function: NotifyRetriggered
     /// </summary>
-    public unsafe void NotifyRetriggered()
+    public unsafe virtual void NotifyRetriggered()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EmitterCameraLensEffectBase.NotifyRetriggered", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -120,7 +120,7 @@ public partial class EmitterCameraLensEffectBase : BmSDK.Engine.Emitter, BmSDK.I
     /// <summary>
     /// Function: RegisterCamera
     /// </summary>
-    public unsafe void RegisterCamera(BmSDK.Engine.Camera C)
+    public unsafe virtual void RegisterCamera(BmSDK.Engine.Camera C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EmitterCameraLensEffectBase.RegisterCamera", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -132,7 +132,7 @@ public partial class EmitterCameraLensEffectBase : BmSDK.Engine.Emitter, BmSDK.I
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EmitterCameraLensEffectBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];

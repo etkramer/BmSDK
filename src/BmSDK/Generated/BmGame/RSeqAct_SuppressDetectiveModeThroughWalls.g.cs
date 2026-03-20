@@ -49,7 +49,7 @@ public partial class RSeqAct_SuppressDetectiveModeThroughWalls : BmSDK.Engine.Se
     /// <summary>
     /// Function: UnregisterWithNavMeshWorld
     /// </summary>
-    public unsafe void UnregisterWithNavMeshWorld()
+    public unsafe virtual void UnregisterWithNavMeshWorld()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SuppressDetectiveModeThroughWalls.UnregisterWithNavMeshWorld", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -67,7 +67,7 @@ public partial class RSeqAct_SuppressDetectiveModeThroughWalls : BmSDK.Engine.Se
     /// <summary>
     /// Function: RegisterWithNavMeshWorld
     /// </summary>
-    public unsafe void RegisterWithNavMeshWorld()
+    public unsafe virtual void RegisterWithNavMeshWorld()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SuppressDetectiveModeThroughWalls.RegisterWithNavMeshWorld", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -85,7 +85,7 @@ public partial class RSeqAct_SuppressDetectiveModeThroughWalls : BmSDK.Engine.Se
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SuppressDetectiveModeThroughWalls.Activated", true);
         byte* paramsPtr = stackalloc byte[16];

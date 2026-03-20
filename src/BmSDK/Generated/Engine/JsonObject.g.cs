@@ -74,7 +74,7 @@ public partial class JsonObject : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetBoolValue
     /// </summary>
-    public unsafe void SetBoolValue(BmSDK.FString Key, bool Value)
+    public unsafe virtual void SetBoolValue(BmSDK.FString Key, bool Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.JsonObject.SetBoolValue", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -87,7 +87,7 @@ public partial class JsonObject : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetFloatValue
     /// </summary>
-    public unsafe void SetFloatValue(BmSDK.FString Key, float Value)
+    public unsafe virtual void SetFloatValue(BmSDK.FString Key, float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.JsonObject.SetFloatValue", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -100,7 +100,7 @@ public partial class JsonObject : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetIntValue
     /// </summary>
-    public unsafe void SetIntValue(BmSDK.FString Key, int Value)
+    public unsafe virtual void SetIntValue(BmSDK.FString Key, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.JsonObject.SetIntValue", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -113,7 +113,7 @@ public partial class JsonObject : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetStringValue
     /// </summary>
-    public unsafe void SetStringValue(BmSDK.FString Key, BmSDK.FString Value)
+    public unsafe virtual void SetStringValue(BmSDK.FString Key, BmSDK.FString Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.JsonObject.SetStringValue", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -133,7 +133,7 @@ public partial class JsonObject : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetObject
     /// </summary>
-    public unsafe void SetObject(BmSDK.FString Key, BmSDK.Engine.JsonObject Object)
+    public unsafe virtual void SetObject(BmSDK.FString Key, BmSDK.Engine.JsonObject Object)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.JsonObject.SetObject", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -153,7 +153,7 @@ public partial class JsonObject : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetVector4Value
     /// </summary>
-    public unsafe System.Numerics.Vector4 GetVector4Value(BmSDK.FString Key)
+    public unsafe virtual System.Numerics.Vector4 GetVector4Value(BmSDK.FString Key)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.JsonObject.GetVector4Value", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -165,7 +165,7 @@ public partial class JsonObject : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetVectorValue
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetVectorValue(BmSDK.FString Key)
+    public unsafe virtual System.Numerics.Vector3 GetVectorValue(BmSDK.FString Key)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.JsonObject.GetVectorValue", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -177,7 +177,7 @@ public partial class JsonObject : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBoolValue
     /// </summary>
-    public unsafe bool GetBoolValue(BmSDK.FString Key)
+    public unsafe virtual bool GetBoolValue(BmSDK.FString Key)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.JsonObject.GetBoolValue", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -189,7 +189,7 @@ public partial class JsonObject : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFloatValue
     /// </summary>
-    public unsafe float GetFloatValue(BmSDK.FString Key)
+    public unsafe virtual float GetFloatValue(BmSDK.FString Key)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.JsonObject.GetFloatValue", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -201,7 +201,7 @@ public partial class JsonObject : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetIntValue
     /// </summary>
-    public unsafe int GetIntValue(BmSDK.FString Key)
+    public unsafe virtual int GetIntValue(BmSDK.FString Key)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.JsonObject.GetIntValue", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -213,7 +213,7 @@ public partial class JsonObject : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetStringValueWithFallback
     /// </summary>
-    public unsafe BmSDK.FString GetStringValueWithFallback(BmSDK.FString Key, BmSDK.FString Fallback)
+    public unsafe virtual BmSDK.FString GetStringValueWithFallback(BmSDK.FString Key, BmSDK.FString Fallback)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.JsonObject.GetStringValueWithFallback", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -226,7 +226,7 @@ public partial class JsonObject : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetStringValue
     /// </summary>
-    public unsafe BmSDK.FString GetStringValue(BmSDK.FString Key)
+    public unsafe virtual BmSDK.FString GetStringValue(BmSDK.FString Key)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.JsonObject.GetStringValue", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -245,7 +245,7 @@ public partial class JsonObject : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetObject
     /// </summary>
-    public unsafe BmSDK.Engine.JsonObject GetObject(BmSDK.FString Key)
+    public unsafe virtual BmSDK.Engine.JsonObject GetObject(BmSDK.FString Key)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.JsonObject.GetObject", true);
         byte* paramsPtr = stackalloc byte[24];

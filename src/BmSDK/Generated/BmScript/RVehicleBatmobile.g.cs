@@ -71,7 +71,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: IsBatmobileTouchingAGlideOutOfBoundsVolume
     /// </summary>
-    public unsafe bool IsBatmobileTouchingAGlideOutOfBoundsVolume()
+    public unsafe override bool IsBatmobileTouchingAGlideOutOfBoundsVolume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.IsBatmobileTouchingAGlideOutOfBoundsVolume", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: CheckForUpgrades
     /// </summary>
-    public unsafe void CheckForUpgrades(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void CheckForUpgrades(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.CheckForUpgrades", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -94,7 +94,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: GetOverrideCamera
     /// </summary>
-    public unsafe BmSDK.FName GetOverrideCamera()
+    public unsafe override BmSDK.FName GetOverrideCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.GetOverrideCamera", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: GrappleSwingIn
     /// </summary>
-    public unsafe void GrappleSwingIn(BmSDK.BmGame.RPawnPlayer PlayerPawn)
+    public unsafe override void GrappleSwingIn(BmSDK.BmGame.RPawnPlayer PlayerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.GrappleSwingIn", true);
         byte* paramsPtr = stackalloc byte[140];
@@ -117,7 +117,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: SpawnThugStunEffect
     /// </summary>
-    public unsafe void SpawnThugStunEffect(BmSDK.BmGame.RBMPawnAI Thug, System.Numerics.Vector3 ThugDiveDirection)
+    public unsafe override void SpawnThugStunEffect(BmSDK.BmGame.RBMPawnAI Thug, System.Numerics.Vector3 ThugDiveDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.SpawnThugStunEffect", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -130,7 +130,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: StopWaterImpactEffect
     /// </summary>
-    public unsafe void StopWaterImpactEffect()
+    public unsafe override void StopWaterImpactEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.StopWaterImpactEffect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: SpawnWaterImpactEffect
     /// </summary>
-    public unsafe void SpawnWaterImpactEffect(System.Numerics.Vector3 HitLocation, BmSDK.Engine.Camera PlayerCamera)
+    public unsafe override void SpawnWaterImpactEffect(System.Numerics.Vector3 HitLocation, BmSDK.Engine.Camera PlayerCamera)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.SpawnWaterImpactEffect", true);
         byte* paramsPtr = stackalloc byte[128];
@@ -154,7 +154,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: SpawnAbseilImpactRear
     /// </summary>
-    public unsafe void SpawnAbseilImpactRear()
+    public unsafe override void SpawnAbseilImpactRear()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.SpawnAbseilImpactRear", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -165,7 +165,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: SpawnAbseilImpactFront
     /// </summary>
-    public unsafe void SpawnAbseilImpactFront()
+    public unsafe override void SpawnAbseilImpactFront()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.SpawnAbseilImpactFront", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -176,7 +176,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: UsedWhenStolen
     /// </summary>
-    public unsafe void UsedWhenStolen()
+    public unsafe override void UsedWhenStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.UsedWhenStolen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -187,7 +187,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: SetIsStolen
     /// </summary>
-    public unsafe void SetIsStolen(bool Stolen, BmSDK.Engine.SequenceAction Action)
+    public unsafe override void SetIsStolen(bool Stolen, BmSDK.Engine.SequenceAction Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.SetIsStolen", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -200,7 +200,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: SetDisabledByEMP
     /// </summary>
-    public unsafe void SetDisabledByEMP(bool Disabled)
+    public unsafe override void SetDisabledByEMP(bool Disabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.SetDisabledByEMP", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -212,7 +212,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: UpdateBatmanPickupRoute
     /// </summary>
-    public unsafe void UpdateBatmanPickupRoute()
+    public unsafe virtual void UpdateBatmanPickupRoute()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.UpdateBatmanPickupRoute", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -223,7 +223,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: EjectToSpot
     /// </summary>
-    public unsafe void EjectToSpot(System.Numerics.Vector3 EjectTarget, BmSDK.BmGame.RPawnPlayer Batman, BmSDK.BmGame.RSpecialMoveConfig OverrideMove = default)
+    public unsafe override void EjectToSpot(System.Numerics.Vector3 EjectTarget, BmSDK.BmGame.RPawnPlayer Batman, BmSDK.BmGame.RSpecialMoveConfig OverrideMove = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.EjectToSpot", true);
         byte* paramsPtr = stackalloc byte[160];
@@ -237,7 +237,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: PickUpPlayer
     /// </summary>
-    public unsafe void PickUpPlayer(BmSDK.BmGame.RPawnPlayer PlayerToPickUp, bool HighSpeedPickup = default)
+    public unsafe override void PickUpPlayer(BmSDK.BmGame.RPawnPlayer PlayerToPickUp, bool HighSpeedPickup = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.PickUpPlayer", true);
         byte* paramsPtr = stackalloc byte[152];
@@ -250,7 +250,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: DestReachedWithoutPlayer
     /// </summary>
-    public unsafe void DestReachedWithoutPlayer()
+    public unsafe virtual void DestReachedWithoutPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.DestReachedWithoutPlayer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -261,7 +261,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: DestReachedBrakeToStop
     /// </summary>
-    public unsafe void DestReachedBrakeToStop()
+    public unsafe override void DestReachedBrakeToStop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.DestReachedBrakeToStop", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -272,7 +272,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: SkidToStopJumpIn
     /// </summary>
-    public unsafe void SkidToStopJumpIn()
+    public unsafe override void SkidToStopJumpIn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.SkidToStopJumpIn", true);
         byte* paramsPtr = stackalloc byte[140];
@@ -283,7 +283,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: DestReachedSkidToStop
     /// </summary>
-    public unsafe void DestReachedSkidToStop()
+    public unsafe override void DestReachedSkidToStop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.DestReachedSkidToStop", true);
         byte* paramsPtr = stackalloc byte[140];
@@ -294,7 +294,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: CanEnterVehicle
     /// </summary>
-    public unsafe bool CanEnterVehicle(BmSDK.Engine.Pawn P)
+    public unsafe override bool CanEnterVehicle(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.CanEnterVehicle", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -306,7 +306,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: PancakeOther
     /// </summary>
-    public unsafe void PancakeOther(BmSDK.Engine.Pawn Other)
+    public unsafe override void PancakeOther(BmSDK.Engine.Pawn Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.PancakeOther", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -318,7 +318,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: FindExitLocation
     /// </summary>
-    public unsafe bool FindExitLocation(out BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe virtual bool FindExitLocation(out BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.FindExitLocation", true);
         byte* paramsPtr = stackalloc byte[148];
@@ -330,7 +330,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: DriverLeave
     /// </summary>
-    public unsafe bool DriverLeave(bool bForceLeave, bool bReallyForceLeave = default)
+    public unsafe override bool DriverLeave(bool bForceLeave, bool bReallyForceLeave = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.DriverLeave", true);
         byte* paramsPtr = stackalloc byte[228];
@@ -343,7 +343,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: AlertBatmanLeftCar
     /// </summary>
-    public unsafe void AlertBatmanLeftCar()
+    public unsafe virtual void AlertBatmanLeftCar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.AlertBatmanLeftCar", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -354,7 +354,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: RescueMe
     /// </summary>
-    public unsafe bool RescueMe(bool FindOffScreenLocation = default)
+    public unsafe override bool RescueMe(bool FindOffScreenLocation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.RescueMe", true);
         byte* paramsPtr = stackalloc byte[268];
@@ -366,7 +366,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: ChooseAlternateSpawnPoint
     /// </summary>
-    public unsafe int ChooseAlternateSpawnPoint(out System.Numerics.Vector3 pos, out BmSDK.Rotator Rot)
+    public unsafe virtual int ChooseAlternateSpawnPoint(out System.Numerics.Vector3 pos, out BmSDK.Rotator Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.ChooseAlternateSpawnPoint", true);
         byte* paramsPtr = stackalloc byte[236];
@@ -379,7 +379,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: TriggerWrongWayEvent
     /// </summary>
-    public unsafe void TriggerWrongWayEvent()
+    public unsafe override void TriggerWrongWayEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.TriggerWrongWayEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -390,7 +390,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.Tick", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -402,7 +402,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: DoXrayUpdate
     /// </summary>
-    public unsafe void DoXrayUpdate()
+    public unsafe override void DoXrayUpdate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.DoXrayUpdate", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -413,7 +413,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: TestTightAreas
     /// </summary>
-    public unsafe void TestTightAreas()
+    public unsafe virtual void TestTightAreas()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.TestTightAreas", true);
         byte* paramsPtr = stackalloc byte[188];
@@ -424,7 +424,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: OnSleepRBPhysics
     /// </summary>
-    public unsafe void OnSleepRBPhysics()
+    public unsafe override void OnSleepRBPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.OnSleepRBPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -435,7 +435,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: OnWakeRBPhysics
     /// </summary>
-    public unsafe void OnWakeRBPhysics()
+    public unsafe override void OnWakeRBPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.OnWakeRBPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -446,7 +446,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: DriverLeft
     /// </summary>
-    public unsafe void DriverLeft()
+    public unsafe override void DriverLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.DriverLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -457,7 +457,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: DriverEnter
     /// </summary>
-    public unsafe bool DriverEnter(BmSDK.Engine.Pawn P)
+    public unsafe override bool DriverEnter(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.DriverEnter", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -469,7 +469,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: SpawnRightExhaustBurst
     /// </summary>
-    public unsafe void SpawnRightExhaustBurst()
+    public unsafe override void SpawnRightExhaustBurst()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.SpawnRightExhaustBurst", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -480,7 +480,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: SpawnLeftExhaustBurst
     /// </summary>
-    public unsafe void SpawnLeftExhaustBurst()
+    public unsafe override void SpawnLeftExhaustBurst()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.SpawnLeftExhaustBurst", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -491,7 +491,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: SpawnSideExhaustBurst
     /// </summary>
-    public unsafe void SpawnSideExhaustBurst()
+    public unsafe virtual void SpawnSideExhaustBurst()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.SpawnSideExhaustBurst", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -502,7 +502,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: SpawnExhaustBurst
     /// </summary>
-    public unsafe void SpawnExhaustBurst(bool bFront, bool bDoSideExhaustBurst)
+    public unsafe override void SpawnExhaustBurst(bool bFront, bool bDoSideExhaustBurst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.SpawnExhaustBurst", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -515,7 +515,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: SlipstreamOff
     /// </summary>
-    public unsafe void SlipstreamOff()
+    public unsafe virtual void SlipstreamOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.SlipstreamOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -526,7 +526,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: SlipstreamOn
     /// </summary>
-    public unsafe void SlipstreamOn()
+    public unsafe virtual void SlipstreamOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.SlipstreamOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -537,7 +537,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: AfterburnerWarmupOff
     /// </summary>
-    public unsafe void AfterburnerWarmupOff()
+    public unsafe override void AfterburnerWarmupOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.AfterburnerWarmupOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -548,7 +548,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: AfterburnerWarmupOn
     /// </summary>
-    public unsafe void AfterburnerWarmupOn()
+    public unsafe override void AfterburnerWarmupOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.AfterburnerWarmupOn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -559,7 +559,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: SetAfterBurnerRumble
     /// </summary>
-    public unsafe void SetAfterBurnerRumble(bool bPlay, float fRumbleStrength)
+    public unsafe virtual void SetAfterBurnerRumble(bool bPlay, float fRumbleStrength)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.SetAfterBurnerRumble", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -572,7 +572,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: AfterburnerOff
     /// </summary>
-    public unsafe void AfterburnerOff()
+    public unsafe override void AfterburnerOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.AfterburnerOff", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -583,7 +583,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: AfterburnerOn
     /// </summary>
-    public unsafe void AfterburnerOn(bool bFront = default, bool bDoSideExhaustBurst = default)
+    public unsafe override void AfterburnerOn(bool bFront = default, bool bDoSideExhaustBurst = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.AfterburnerOn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -596,7 +596,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: AfterburnerOnForDuration
     /// </summary>
-    public unsafe void AfterburnerOnForDuration(float Duration, bool bFront = default)
+    public unsafe override void AfterburnerOnForDuration(float Duration, bool bFront = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.AfterburnerOnForDuration", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -609,7 +609,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: HeadlightsOff
     /// </summary>
-    public unsafe void HeadlightsOff()
+    public unsafe override void HeadlightsOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.HeadlightsOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -620,7 +620,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: ActivateBoostWarmup
     /// </summary>
-    public unsafe void ActivateBoostWarmup(bool Activate)
+    public unsafe override void ActivateBoostWarmup(bool Activate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.ActivateBoostWarmup", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -632,7 +632,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: TriggerBoost
     /// </summary>
-    public unsafe void TriggerBoost()
+    public unsafe override void TriggerBoost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.TriggerBoost", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -643,7 +643,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: TryToFallIn
     /// </summary>
-    public unsafe void TryToFallIn(BmSDK.BmGame.RPawnPlayer Player)
+    public unsafe override void TryToFallIn(BmSDK.BmGame.RPawnPlayer Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.TryToFallIn", true);
         byte* paramsPtr = stackalloc byte[140];
@@ -655,7 +655,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: TryToGlideIn
     /// </summary>
-    public unsafe void TryToGlideIn(BmSDK.BmGame.RPawnPlayer Player)
+    public unsafe override void TryToGlideIn(BmSDK.BmGame.RPawnPlayer Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.TryToGlideIn", true);
         byte* paramsPtr = stackalloc byte[140];
@@ -667,7 +667,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: TryToDrive
     /// </summary>
-    public unsafe bool TryToDrive(BmSDK.Engine.Pawn P)
+    public unsafe override bool TryToDrive(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.TryToDrive", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -679,7 +679,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: GetInBatmobileInstant
     /// </summary>
-    public unsafe void GetInBatmobileInstant(BmSDK.BmGame.RPawnPlayer PlayerGettingIn, bool bEndOfMatinee = default)
+    public unsafe override void GetInBatmobileInstant(BmSDK.BmGame.RPawnPlayer PlayerGettingIn, bool bEndOfMatinee = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.GetInBatmobileInstant", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -692,7 +692,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: GetInBatmobile
     /// </summary>
-    public unsafe void GetInBatmobile(BmSDK.Engine.Pawn PlayerGettingIn)
+    public unsafe override void GetInBatmobile(BmSDK.Engine.Pawn PlayerGettingIn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.GetInBatmobile", true);
         byte* paramsPtr = stackalloc byte[148];
@@ -704,7 +704,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: CheckSpaceToGetOutOfBatmobileFromKismet
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleBatmobileBase.EBatmobileGetOutSpace CheckSpaceToGetOutOfBatmobileFromKismet()
+    public unsafe override BmSDK.BmGame.RVehicleBatmobileBase.EBatmobileGetOutSpace CheckSpaceToGetOutOfBatmobileFromKismet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.CheckSpaceToGetOutOfBatmobileFromKismet", true);
         byte* paramsPtr = stackalloc byte[136];
@@ -715,7 +715,7 @@ public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmS
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBatmobile.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

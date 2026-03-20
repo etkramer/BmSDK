@@ -36,7 +36,7 @@ public partial class RBMBehaviour_LookAtSpeaker : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_LookAtSpeaker.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RBMBehaviour_LookAtSpeaker : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_LookAtSpeaker.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

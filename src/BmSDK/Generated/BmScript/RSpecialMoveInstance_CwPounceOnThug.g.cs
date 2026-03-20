@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_CwPounceOnThug : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceOnThug.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RSpecialMoveInstance_CwPounceOnThug : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceOnThug.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[100];
@@ -94,7 +94,7 @@ public partial class RSpecialMoveInstance_CwPounceOnThug : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceOnThug.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RSpecialMoveInstance_CwPounceOnThug : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: LandAndKnockback
     /// </summary>
-    public unsafe void LandAndKnockback()
+    public unsafe virtual void LandAndKnockback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceOnThug.LandAndKnockback", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -117,7 +117,7 @@ public partial class RSpecialMoveInstance_CwPounceOnThug : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: KnockBackVillain
     /// </summary>
-    public unsafe void KnockBackVillain(BmSDK.BmGame.RPawnVillain Villain)
+    public unsafe virtual void KnockBackVillain(BmSDK.BmGame.RPawnVillain Villain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceOnThug.KnockBackVillain", true);
         byte* paramsPtr = stackalloc byte[256];
@@ -129,7 +129,7 @@ public partial class RSpecialMoveInstance_CwPounceOnThug : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: KickVictim
     /// </summary>
-    public unsafe void KickVictim(BmSDK.BmGame.RPawnVillain Villain)
+    public unsafe virtual void KickVictim(BmSDK.BmGame.RPawnVillain Villain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceOnThug.KickVictim", true);
         byte* paramsPtr = stackalloc byte[288];
@@ -141,7 +141,7 @@ public partial class RSpecialMoveInstance_CwPounceOnThug : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwPounceOnThug.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[276];

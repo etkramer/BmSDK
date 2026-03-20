@@ -71,7 +71,7 @@ public partial class RStealthTakedownStage_ChainTakedown_VentAttack : BmSDK.BmGa
     /// <summary>
     /// Function: BackToPlayerCamera
     /// </summary>
-    public unsafe void BackToPlayerCamera()
+    public unsafe virtual void BackToPlayerCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ChainTakedown_VentAttack.BackToPlayerCamera", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RStealthTakedownStage_ChainTakedown_VentAttack : BmSDK.BmGa
     /// <summary>
     /// Function: OpenGrate
     /// </summary>
-    public unsafe void OpenGrate()
+    public unsafe virtual void OpenGrate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ChainTakedown_VentAttack.OpenGrate", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RStealthTakedownStage_ChainTakedown_VentAttack : BmSDK.BmGa
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ChainTakedown_VentAttack.Begin", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RStealthTakedownStage_ChainTakedown_VentAttack : BmSDK.BmGa
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ChainTakedown_VentAttack.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[24];

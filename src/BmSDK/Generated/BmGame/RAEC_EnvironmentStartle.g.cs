@@ -71,7 +71,7 @@ public partial class RAEC_EnvironmentStartle : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: PostStartleStarted
     /// </summary>
-    public unsafe void PostStartleStarted(BmSDK.BmGame.RBMAIController StartleCon)
+    public unsafe virtual void PostStartleStarted(BmSDK.BmGame.RBMAIController StartleCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_EnvironmentStartle.PostStartleStarted", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -83,7 +83,7 @@ public partial class RAEC_EnvironmentStartle : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: StartleStarted
     /// </summary>
-    public unsafe void StartleStarted(BmSDK.BmGame.RBMAIController StartleCon)
+    public unsafe virtual void StartleStarted(BmSDK.BmGame.RBMAIController StartleCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_EnvironmentStartle.StartleStarted", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RAEC_EnvironmentStartle : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: FinishTopLevelAEC
     /// </summary>
-    public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
+    public unsafe override void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_EnvironmentStartle.FinishTopLevelAEC", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -107,7 +107,7 @@ public partial class RAEC_EnvironmentStartle : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: OnAssign
     /// </summary>
-    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe override void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_EnvironmentStartle.OnAssign", true);
         byte* paramsPtr = stackalloc byte[16];

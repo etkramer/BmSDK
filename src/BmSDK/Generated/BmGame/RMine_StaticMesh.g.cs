@@ -71,7 +71,7 @@ public partial class RMine_StaticMesh : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetPrimedEffects
     /// </summary>
-    public unsafe void SetPrimedEffects()
+    public unsafe override void SetPrimedEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMine_StaticMesh.SetPrimedEffects", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class RMine_StaticMesh : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetDisarmedEffects
     /// </summary>
-    public unsafe void SetDisarmedEffects()
+    public unsafe override void SetDisarmedEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMine_StaticMesh.SetDisarmedEffects", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class RMine_StaticMesh : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMine_StaticMesh.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

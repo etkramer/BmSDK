@@ -71,7 +71,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint_Walkable, 
     /// <summary>
     /// Function: InstantMovePawnTo
     /// </summary>
-    public unsafe void InstantMovePawnTo(BmSDK.BmGame.RPlayerController lPC, BmSDK.BmGame.RPawnPlayer PlayerPawn)
+    public unsafe override void InstantMovePawnTo(BmSDK.BmGame.RPlayerController lPC, BmSDK.BmGame.RPawnPlayer PlayerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.InstantMovePawnTo", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -84,7 +84,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint_Walkable, 
     /// <summary>
     /// Function: MoveMatinee
     /// </summary>
-    public unsafe void MoveMatinee(float MoveAmount)
+    public unsafe virtual void MoveMatinee(float MoveAmount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.MoveMatinee", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -96,7 +96,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint_Walkable, 
     /// <summary>
     /// Function: MoveHidePoint
     /// </summary>
-    public unsafe void MoveHidePoint(System.Numerics.Vector3 InputDir)
+    public unsafe override void MoveHidePoint(System.Numerics.Vector3 InputDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.MoveHidePoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -108,7 +108,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint_Walkable, 
     /// <summary>
     /// Function: ClearMatinee
     /// </summary>
-    public unsafe void ClearMatinee()
+    public unsafe virtual void ClearMatinee()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.ClearMatinee", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -119,7 +119,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint_Walkable, 
     /// <summary>
     /// Function: SetMatinee
     /// </summary>
-    public unsafe void SetMatinee(BmSDK.Engine.SeqAct_Interp M)
+    public unsafe virtual void SetMatinee(BmSDK.Engine.SeqAct_Interp M)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.SetMatinee", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -131,7 +131,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint_Walkable, 
     /// <summary>
     /// Function: WillSmashIfShot
     /// </summary>
-    public unsafe bool WillSmashIfShot()
+    public unsafe override bool WillSmashIfShot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.WillSmashIfShot", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -142,7 +142,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint_Walkable, 
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.OnToggle", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -154,7 +154,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint_Walkable, 
     /// <summary>
     /// Function: RequestMineAttachPoint
     /// </summary>
-    public unsafe bool RequestMineAttachPoint(System.Numerics.Vector3 TargetHintLoc, BmSDK.Rotator ThrowDir, out System.Numerics.Vector3 mineLoc, out BmSDK.Rotator MineRot)
+    public unsafe override bool RequestMineAttachPoint(System.Numerics.Vector3 TargetHintLoc, BmSDK.Rotator ThrowDir, out System.Numerics.Vector3 mineLoc, out BmSDK.Rotator MineRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.RequestMineAttachPoint", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -169,7 +169,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint_Walkable, 
     /// <summary>
     /// Function: GetCatwomanPerchPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCatwomanPerchPosition()
+    public unsafe override System.Numerics.Vector3 GetCatwomanPerchPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.GetCatwomanPerchPosition", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -180,7 +180,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint_Walkable, 
     /// <summary>
     /// Function: GetBatmanPerchPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatmanPerchPosition()
+    public unsafe override System.Numerics.Vector3 GetBatmanPerchPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.GetBatmanPerchPosition", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -191,7 +191,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint_Walkable, 
     /// <summary>
     /// Function: BMLeft
     /// </summary>
-    public unsafe void BMLeft()
+    public unsafe override void BMLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.BMLeft", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -202,7 +202,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint_Walkable, 
     /// <summary>
     /// Function: StartJokerHallucination
     /// </summary>
-    public unsafe void StartJokerHallucination(System.Numerics.Vector3 BatmanLoc, System.Numerics.Vector3 BatmanRot)
+    public unsafe virtual void StartJokerHallucination(System.Numerics.Vector3 BatmanLoc, System.Numerics.Vector3 BatmanRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.StartJokerHallucination", true);
         byte* paramsPtr = stackalloc byte[108];
@@ -215,7 +215,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint_Walkable, 
     /// <summary>
     /// Function: DoJokerOverlay
     /// </summary>
-    public unsafe void DoJokerOverlay()
+    public unsafe virtual void DoJokerOverlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.DoJokerOverlay", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -226,7 +226,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint_Walkable, 
     /// <summary>
     /// Function: PickJokerMountAnims
     /// </summary>
-    public unsafe void PickJokerMountAnims(out BmSDK.FName TransIn, out BmSDK.FName Idle)
+    public unsafe virtual void PickJokerMountAnims(out BmSDK.FName TransIn, out BmSDK.FName Idle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.PickJokerMountAnims", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -239,7 +239,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint_Walkable, 
     /// <summary>
     /// Function: ThugsAroundInPred
     /// </summary>
-    public unsafe bool ThugsAroundInPred()
+    public unsafe virtual bool ThugsAroundInPred()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.ThugsAroundInPred", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -250,7 +250,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint_Walkable, 
     /// <summary>
     /// Function: DoJokerHallucination
     /// </summary>
-    public unsafe bool DoJokerHallucination()
+    public unsafe virtual bool DoJokerHallucination()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.DoJokerHallucination", true);
         byte* paramsPtr = stackalloc byte[4];

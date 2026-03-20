@@ -47,7 +47,7 @@ public partial class RSeqAct_SideStory_Query : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// Function: CompareByValue
     /// </summary>
-    public unsafe void CompareByValue(int Value)
+    public unsafe virtual void CompareByValue(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SideStory_Query.CompareByValue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RSeqAct_SideStory_Query : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SideStory_Query.Activated", true);
         byte* paramsPtr = stackalloc byte[20];

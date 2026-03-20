@@ -71,7 +71,7 @@ public partial class AkManagedEmitter : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DisableEmitter
     /// </summary>
-    public unsafe void DisableEmitter()
+    public unsafe virtual void DisableEmitter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkManagedEmitter.DisableEmitter", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class AkManagedEmitter : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EnableEmitter
     /// </summary>
-    public unsafe void EnableEmitter()
+    public unsafe virtual void EnableEmitter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkManagedEmitter.EnableEmitter", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class AkManagedEmitter : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggleHidden
     /// </summary>
-    public unsafe void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
+    public unsafe override void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkManagedEmitter.OnToggleHidden", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -119,7 +119,7 @@ public partial class AkManagedEmitter : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle ToggleAction)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle ToggleAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkManagedEmitter.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];

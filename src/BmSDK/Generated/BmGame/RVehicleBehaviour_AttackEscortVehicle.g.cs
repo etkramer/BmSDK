@@ -36,7 +36,7 @@ public partial class RVehicleBehaviour_AttackEscortVehicle : BmSDK.BmGame.RVehic
     /// <summary>
     /// Function: NotifyRigidBodyCollision
     /// </summary>
-    public unsafe void NotifyRigidBodyCollision(BmSDK.Engine.PrimitiveComponent HitComp, float Speed, bool HitGround)
+    public unsafe override void NotifyRigidBodyCollision(BmSDK.Engine.PrimitiveComponent HitComp, float Speed, bool HitGround)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_AttackEscortVehicle.NotifyRigidBodyCollision", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -50,7 +50,7 @@ public partial class RVehicleBehaviour_AttackEscortVehicle : BmSDK.BmGame.RVehic
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_AttackEscortVehicle.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -62,7 +62,7 @@ public partial class RVehicleBehaviour_AttackEscortVehicle : BmSDK.BmGame.RVehic
     /// <summary>
     /// Function: UpdateFollowMinMaxThrottle
     /// </summary>
-    public unsafe void UpdateFollowMinMaxThrottle()
+    public unsafe override void UpdateFollowMinMaxThrottle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_AttackEscortVehicle.UpdateFollowMinMaxThrottle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -73,7 +73,7 @@ public partial class RVehicleBehaviour_AttackEscortVehicle : BmSDK.BmGame.RVehic
     /// <summary>
     /// Function: GetDesiredFollowOffsetBehind
     /// </summary>
-    public unsafe float GetDesiredFollowOffsetBehind(int FollowerIndex)
+    public unsafe override float GetDesiredFollowOffsetBehind(int FollowerIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_AttackEscortVehicle.GetDesiredFollowOffsetBehind", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -85,7 +85,7 @@ public partial class RVehicleBehaviour_AttackEscortVehicle : BmSDK.BmGame.RVehic
     /// <summary>
     /// Function: AvoidingActor
     /// </summary>
-    public unsafe void AvoidingActor(BmSDK.Engine.Actor ActorBeingAvoided)
+    public unsafe override void AvoidingActor(BmSDK.Engine.Actor ActorBeingAvoided)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_AttackEscortVehicle.AvoidingActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -97,7 +97,7 @@ public partial class RVehicleBehaviour_AttackEscortVehicle : BmSDK.BmGame.RVehic
     /// <summary>
     /// Function: ExitBehaviour
     /// </summary>
-    public unsafe void ExitBehaviour(BmSDK.BmGame.RVehicleBehaviour NextBehaviour)
+    public unsafe override void ExitBehaviour(BmSDK.BmGame.RVehicleBehaviour NextBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_AttackEscortVehicle.ExitBehaviour", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -109,7 +109,7 @@ public partial class RVehicleBehaviour_AttackEscortVehicle : BmSDK.BmGame.RVehic
     /// <summary>
     /// Function: EnterBehaviour
     /// </summary>
-    public unsafe void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
+    public unsafe override void EnterBehaviour(BmSDK.BmGame.RVehicleBehaviour PreviousBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_AttackEscortVehicle.EnterBehaviour", true);
         byte* paramsPtr = stackalloc byte[8];

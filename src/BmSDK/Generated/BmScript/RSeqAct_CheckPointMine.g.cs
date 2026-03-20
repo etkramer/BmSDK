@@ -47,7 +47,7 @@ public partial class RSeqAct_CheckPointMine : BmSDK.Engine.SequenceAction, BmSDK
     /// <summary>
     /// Function: HandleInputLinks
     /// </summary>
-    public unsafe void HandleInputLinks()
+    public unsafe virtual void HandleInputLinks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_CheckPointMine.HandleInputLinks", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RSeqAct_CheckPointMine : BmSDK.Engine.SequenceAction, BmSDK
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_CheckPointMine.Activated", true);
         byte* paramsPtr = stackalloc byte[4];

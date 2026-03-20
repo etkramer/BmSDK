@@ -71,7 +71,7 @@ public partial class MStickyConcussionGrenadeProjectile : BmSDK.BmGame.RGadgetPr
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MStickyConcussionGrenadeProjectile.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class MStickyConcussionGrenadeProjectile : BmSDK.BmGame.RGadgetPr
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MStickyConcussionGrenadeProjectile.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class MStickyConcussionGrenadeProjectile : BmSDK.BmGame.RGadgetPr
     /// <summary>
     /// Function: GadgetNoiseEvent
     /// </summary>
-    public unsafe void GadgetNoiseEvent()
+    public unsafe virtual void GadgetNoiseEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MStickyConcussionGrenadeProjectile.GadgetNoiseEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class MStickyConcussionGrenadeProjectile : BmSDK.BmGame.RGadgetPr
     /// <summary>
     /// Function: Detonate
     /// </summary>
-    public unsafe void Detonate()
+    public unsafe virtual void Detonate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MStickyConcussionGrenadeProjectile.Detonate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class MStickyConcussionGrenadeProjectile : BmSDK.BmGame.RGadgetPr
     /// <summary>
     /// Function: GetGlanceScore
     /// </summary>
-    public unsafe int GetGlanceScore()
+    public unsafe virtual int GetGlanceScore()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MStickyConcussionGrenadeProjectile.GetGlanceScore", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -126,7 +126,7 @@ public partial class MStickyConcussionGrenadeProjectile : BmSDK.BmGame.RGadgetPr
     /// <summary>
     /// Function: SeenByThug
     /// </summary>
-    public unsafe void SeenByThug(BmSDK.BmGame.RBMAIController SpottingThug)
+    public unsafe virtual void SeenByThug(BmSDK.BmGame.RBMAIController SpottingThug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MStickyConcussionGrenadeProjectile.SeenByThug", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -138,7 +138,7 @@ public partial class MStickyConcussionGrenadeProjectile : BmSDK.BmGame.RGadgetPr
     /// <summary>
     /// Function: HitWall
     /// </summary>
-    public unsafe void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
+    public unsafe override void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MStickyConcussionGrenadeProjectile.HitWall", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -152,7 +152,7 @@ public partial class MStickyConcussionGrenadeProjectile : BmSDK.BmGame.RGadgetPr
     /// <summary>
     /// Function: Deploy
     /// </summary>
-    public unsafe void Deploy(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual void Deploy(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MStickyConcussionGrenadeProjectile.Deploy", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -167,7 +167,7 @@ public partial class MStickyConcussionGrenadeProjectile : BmSDK.BmGame.RGadgetPr
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MStickyConcussionGrenadeProjectile.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];

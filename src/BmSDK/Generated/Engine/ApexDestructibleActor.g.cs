@@ -71,7 +71,7 @@ public partial class ApexDestructibleActor : BmSDK.Engine.RStaticClimbableActor,
     /// <summary>
     /// Function: OnDestroy
     /// </summary>
-    public unsafe void OnDestroy(BmSDK.Engine.SeqAct_Destroy Action)
+    public unsafe override void OnDestroy(BmSDK.Engine.SeqAct_Destroy Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ApexDestructibleActor.OnDestroy", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class ApexDestructibleActor : BmSDK.Engine.RStaticClimbableActor,
     /// <summary>
     /// Function: OnSetMaterial
     /// </summary>
-    public unsafe void OnSetMaterial(BmSDK.Engine.SeqAct_SetMaterial Action)
+    public unsafe virtual void OnSetMaterial(BmSDK.Engine.SeqAct_SetMaterial Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ApexDestructibleActor.OnSetMaterial", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class ApexDestructibleActor : BmSDK.Engine.RStaticClimbableActor,
     /// <summary>
     /// Function: CacheFractureEffects
     /// </summary>
-    public unsafe void CacheFractureEffects()
+    public unsafe virtual void CacheFractureEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ApexDestructibleActor.CacheFractureEffects", true);
         byte* paramsPtr = stackalloc byte[0];

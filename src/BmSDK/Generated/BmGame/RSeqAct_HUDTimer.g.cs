@@ -47,7 +47,7 @@ public partial class RSeqAct_HUDTimer : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameO
     /// <summary>
     /// Function: ShutdownHUD
     /// </summary>
-    public unsafe void ShutdownHUD()
+    public unsafe virtual void ShutdownHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_HUDTimer.ShutdownHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -58,7 +58,7 @@ public partial class RSeqAct_HUDTimer : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameO
     /// <summary>
     /// Function: PreRender
     /// </summary>
-    public unsafe void PreRender(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void PreRender(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_HUDTimer.PreRender", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -70,7 +70,7 @@ public partial class RSeqAct_HUDTimer : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameO
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void DrawHUD(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_HUDTimer.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RSeqAct_HUDTimer : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameO
     /// <summary>
     /// Function: AddTime
     /// </summary>
-    public unsafe void AddTime(float TimeToAdd)
+    public unsafe virtual void AddTime(float TimeToAdd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_HUDTimer.AddTime", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -94,7 +94,7 @@ public partial class RSeqAct_HUDTimer : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameO
     /// <summary>
     /// Function: AddTimeForEnemyKO
     /// </summary>
-    public unsafe void AddTimeForEnemyKO()
+    public unsafe virtual void AddTimeForEnemyKO()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_HUDTimer.AddTimeForEnemyKO", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RSeqAct_HUDTimer : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameO
     /// <summary>
     /// Function: InitHUD
     /// </summary>
-    public unsafe void InitHUD()
+    public unsafe virtual void InitHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_HUDTimer.InitHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -116,7 +116,7 @@ public partial class RSeqAct_HUDTimer : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameO
     /// <summary>
     /// Function: BlockLevelName
     /// </summary>
-    public unsafe bool BlockLevelName()
+    public unsafe virtual bool BlockLevelName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_HUDTimer.BlockLevelName", true);
         byte* paramsPtr = stackalloc byte[4];

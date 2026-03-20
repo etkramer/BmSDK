@@ -71,7 +71,7 @@ public partial class RAEC_Attack_LadderChase : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: OnBeginShutdown
     /// </summary>
-    public unsafe void OnBeginShutdown()
+    public unsafe override void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_LadderChase.OnBeginShutdown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Attack_LadderChase : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: TopOfLadderChecked
     /// </summary>
-    public unsafe void TopOfLadderChecked()
+    public unsafe virtual void TopOfLadderChecked()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_LadderChase.TopOfLadderChecked", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RAEC_Attack_LadderChase : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: ClearTestRequests
     /// </summary>
-    public unsafe void ClearTestRequests()
+    public unsafe virtual void ClearTestRequests()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_LadderChase.ClearTestRequests", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RAEC_Attack_LadderChase : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: PrepChaseWithLadder
     /// </summary>
-    public unsafe void PrepChaseWithLadder(BmSDK.BmGame.RLadder NewDangerLadder, System.Numerics.Vector3 NewChasePoint)
+    public unsafe virtual void PrepChaseWithLadder(BmSDK.BmGame.RLadder NewDangerLadder, System.Numerics.Vector3 NewChasePoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_LadderChase.PrepChaseWithLadder", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -117,7 +117,7 @@ public partial class RAEC_Attack_LadderChase : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: OnRemoveSoloChild
     /// </summary>
-    public unsafe void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
+    public unsafe override void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_LadderChase.OnRemoveSoloChild", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RAEC_Attack_LadderChase : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_LadderChase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];

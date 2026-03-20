@@ -71,7 +71,7 @@ public partial class RGFxWorldMovieActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxWorldMovieActor.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RGFxWorldMovieActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: InitGfxMovie
     /// </summary>
-    public unsafe void InitGfxMovie()
+    public unsafe virtual void InitGfxMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxWorldMovieActor.InitGfxMovie", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -93,7 +93,7 @@ public partial class RGFxWorldMovieActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxWorldMovieActor.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

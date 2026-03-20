@@ -71,7 +71,7 @@ public partial class RStealthTakedownStage_CornerTakedown : BmSDK.BmGame.RStealt
     /// <summary>
     /// Function: GotoStageEx
     /// </summary>
-    public unsafe void GotoStageEx(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages NextStageClass, bool bClientRequest = default, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator EscapeLoc = default, bool bEscapeTakedown = default, bool bNextStageIsFearTakedown = default, bool bNextStageIsKnockoutSmash = default)
+    public unsafe override void GotoStageEx(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages NextStageClass, bool bClientRequest = default, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator EscapeLoc = default, bool bEscapeTakedown = default, bool bNextStageIsFearTakedown = default, bool bNextStageIsKnockoutSmash = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_CornerTakedown.GotoStageEx", true);
         byte* paramsPtr = stackalloc byte[156];
@@ -88,7 +88,7 @@ public partial class RStealthTakedownStage_CornerTakedown : BmSDK.BmGame.RStealt
     /// <summary>
     /// Function: UnEquipBatclawForTakedown
     /// </summary>
-    public unsafe void UnEquipBatclawForTakedown()
+    public unsafe virtual void UnEquipBatclawForTakedown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_CornerTakedown.UnEquipBatclawForTakedown", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -99,7 +99,7 @@ public partial class RStealthTakedownStage_CornerTakedown : BmSDK.BmGame.RStealt
     /// <summary>
     /// Function: EquipBatclawForTakedown
     /// </summary>
-    public unsafe void EquipBatclawForTakedown()
+    public unsafe virtual void EquipBatclawForTakedown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_CornerTakedown.EquipBatclawForTakedown", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -110,7 +110,7 @@ public partial class RStealthTakedownStage_CornerTakedown : BmSDK.BmGame.RStealt
     /// <summary>
     /// Function: ReleaseClaws
     /// </summary>
-    public unsafe void ReleaseClaws()
+    public unsafe virtual void ReleaseClaws()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_CornerTakedown.ReleaseClaws", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -121,7 +121,7 @@ public partial class RStealthTakedownStage_CornerTakedown : BmSDK.BmGame.RStealt
     /// <summary>
     /// Function: AttachBatclaw
     /// </summary>
-    public unsafe void AttachBatclaw()
+    public unsafe virtual void AttachBatclaw()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_CornerTakedown.AttachBatclaw", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -132,7 +132,7 @@ public partial class RStealthTakedownStage_CornerTakedown : BmSDK.BmGame.RStealt
     /// <summary>
     /// Function: FindRopeAttachPoints
     /// </summary>
-    public unsafe void FindRopeAttachPoints()
+    public unsafe virtual void FindRopeAttachPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_CornerTakedown.FindRopeAttachPoints", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -143,7 +143,7 @@ public partial class RStealthTakedownStage_CornerTakedown : BmSDK.BmGame.RStealt
     /// <summary>
     /// Function: GetFinishState
     /// </summary>
-    public unsafe BmSDK.FName GetFinishState()
+    public unsafe override BmSDK.FName GetFinishState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_CornerTakedown.GetFinishState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -154,7 +154,7 @@ public partial class RStealthTakedownStage_CornerTakedown : BmSDK.BmGame.RStealt
     /// <summary>
     /// Function: GetPoseFinalMirrored
     /// </summary>
-    public unsafe bool GetPoseFinalMirrored()
+    public unsafe override bool GetPoseFinalMirrored()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_CornerTakedown.GetPoseFinalMirrored", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -165,7 +165,7 @@ public partial class RStealthTakedownStage_CornerTakedown : BmSDK.BmGame.RStealt
     /// <summary>
     /// Function: GetStageAnim
     /// </summary>
-    public unsafe int GetStageAnim()
+    public unsafe override int GetStageAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_CornerTakedown.GetStageAnim", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -176,7 +176,7 @@ public partial class RStealthTakedownStage_CornerTakedown : BmSDK.BmGame.RStealt
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_CornerTakedown.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -189,7 +189,7 @@ public partial class RStealthTakedownStage_CornerTakedown : BmSDK.BmGame.RStealt
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_CornerTakedown.Begin", true);
         byte* paramsPtr = stackalloc byte[28];
