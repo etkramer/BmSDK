@@ -29,7 +29,6 @@ internal static class GameFunctions
     public delegate IntPtr LoadPackageDelegate(IntPtr InOuter, IntPtr Filename, int LoadFlags);
 
     // UObject::ProcessEvent()
-    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate void ProcessEventDelegate(
         IntPtr self,
         IntPtr Function,
@@ -103,7 +102,6 @@ internal static class GameFunctions
     public delegate void AppFreeDelegate(IntPtr Original);
 
     // FEngineLoop::Tick()
-    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate IntPtr EngineTickDelegate(IntPtr self);
 
     // UObject::ConditionalPostLoad()

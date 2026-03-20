@@ -51,10 +51,10 @@ internal static class Loader
             ProcessInternalDetour
         );
 
-        // _EngineTickDetourBase = DetourUtil.NewDetour<GameFunctions.EngineTickDelegate>(
-        //     GameInfo.FuncOffsets.EngineTick,
-        //     EngineTickDetour
-        // );
+        _EngineTickDetourBase = DetourUtil.NewDetour<GameFunctions.EngineTickDelegate>(
+            GameInfo.FuncOffsets.EngineTick,
+            EngineTickDetour
+        );
 
         _ConditionalPostLoadDetourBase =
             DetourUtil.NewDetour<GameFunctions.ConditionalPostLoadDelegate>(
