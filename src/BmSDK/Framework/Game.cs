@@ -83,11 +83,13 @@ public static partial class Game
     }
 
     /// <summary>
-    /// Gets the global console object.
+    /// Gets (or creates if needed) the global console object.
     /// </summary>
     public static _Console GetConsole()
     {
         var gameViewport = GetGameViewportClient();
+        gameViewport.ViewportConsole ??= new _Console(gameViewport);
+
         return Guard.NotNull(gameViewport.ViewportConsole);
     }
 
