@@ -33,6 +33,29 @@ public partial class RSeqAct_SwitchPlayerCharacter : BmSDK.Engine.SeqAct_Latent,
     protected RSeqAct_SwitchPlayerCharacter(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetObjClassVersion
+    /// </summary>
+    public unsafe static int GetObjClassVersion()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SwitchPlayerCharacter.GetObjClassVersion", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: RestartPlayer
+    /// </summary>
+    public unsafe void RestartPlayer(BmSDK.BmGame.RPlayerController PC)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SwitchPlayerCharacter.RestartPlayer", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(PC, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// StrProperty: CharacterName
     /// </summary>
     public unsafe BmSDK.FString CharacterName

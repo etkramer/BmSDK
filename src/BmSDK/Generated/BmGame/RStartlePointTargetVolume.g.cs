@@ -68,6 +68,69 @@ public partial class RStartlePointTargetVolume : BmSDK.Engine.Volume, BmSDK.IGam
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
+    /// Function: GetTargetThugList
+    /// </summary>
+    public unsafe void GetTargetThugList(out BmSDK.TArray<BmSDK.BmGame.RPawnVillain> ReturnThugList)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePointTargetVolume.GetTargetThugList", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        ReturnThugList = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnVillain>>(paramsPtr + 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: OnToggle
+    /// </summary>
+    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePointTargetVolume.OnToggle", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Action, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: Tick
+    /// </summary>
+    public unsafe void Tick(float DeltaTime)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePointTargetVolume.Tick", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: UnTouch
+    /// </summary>
+    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePointTargetVolume.UnTouch", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: Touch
+    /// </summary>
+    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStartlePointTargetVolume.Touch", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(OtherComp, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitLocation, paramsPtr + 16);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitNormal, paramsPtr + 28);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ArrayProperty: TargetThugList
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnVillain> TargetThugList

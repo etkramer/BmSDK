@@ -33,6 +33,25 @@ public partial class PostProcessChain : BmSDK.GameObject, BmSDK.IGameObject
     protected PostProcessChain(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: FindPostProcessEffect
+    /// </summary>
+    public unsafe BmSDK.Engine.PostProcessEffect FindPostProcessEffect(BmSDK.FName EffectName)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PostProcessChain.FindPostProcessEffect", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(EffectName, paramsPtr + 0);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessEffect>(paramsPtr + 8);
+    }
+
+    /// <summary>
     /// ArrayProperty: Effects
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.Engine.PostProcessEffect> Effects

@@ -68,6 +68,30 @@ public partial class MAEC_MayhemMode_Sub : BmSDK.BmGame.RAlertEventCoordinatorSo
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
+    /// Function: SetStartleLoc
+    /// </summary>
+    public unsafe void SetStartleLoc(System.Numerics.Vector3 NewPos)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_MayhemMode_Sub.SetStartleLoc", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewPos, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: NotifyFinished
+    /// </summary>
+    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_MayhemMode_Sub.NotifyFinished", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(FinishedAction, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: ForceMissActor
     /// </summary>
     public unsafe BmSDK.Engine.Actor ForceMissActor

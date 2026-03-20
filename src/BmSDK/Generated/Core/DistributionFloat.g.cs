@@ -33,6 +33,66 @@ public partial class DistributionFloat : BmSDK.Component, BmSDK.IGameObject
     protected DistributionFloat(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetFloatValue
+    /// </summary>
+    public unsafe float GetFloatValue(float F = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.DistributionFloat.GetFloatValue", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(F, paramsPtr + 0);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 4);
+    }
+
+    /// <summary>
+    /// Struct: FMatineeRawDistributionFloat
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FMatineeRawDistributionFloat
+    {
+        /// <summary>
+        /// FloatProperty: MatineeValue
+        /// </summary>
+        public unsafe float MatineeValue
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 36); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: bInMatinee
+        /// </summary>
+        public unsafe bool bInMatinee
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 40) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 40); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 40); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FRawDistributionFloat
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FRawDistributionFloat
+    {
+        /// <summary>
+        /// ComponentProperty: Distribution
+        /// </summary>
+        public unsafe BmSDK.DistributionFloat Distribution
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat>(Ptr + 28); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
+        }
+    }
+
+    /// <summary>
     /// StructProperty: VfTable_FCurveEdInterface
     /// </summary>
     public unsafe System.IntPtr VfTable_FCurveEdInterface

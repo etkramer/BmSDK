@@ -68,6 +68,119 @@ public partial class RAEC_RedHood_Base : BmSDK.BmGame.RAlertEventCoordinatorBase
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
+    /// Function: HandleBarkEventPlayed
+    /// </summary>
+    public unsafe void HandleBarkEventPlayed(BmSDK.FName EventVal)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_RedHood_Base.HandleBarkEventPlayed", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(EventVal, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: GetSearchChatBark
+    /// </summary>
+    public unsafe void GetSearchChatBark(out BmSDK.BmGame.RBarkConvo SearchConvo, out float Score)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_RedHood_Base.GetSearchChatBark", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        SearchConvo = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBarkConvo>(paramsPtr + 0);
+        Score = BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 8);
+        return;
+    }
+
+    /// <summary>
+    /// Function: IsDownToLastThugsAndRedHoodIsGone
+    /// </summary>
+    public unsafe bool IsDownToLastThugsAndRedHoodIsGone()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_RedHood_Base.IsDownToLastThugsAndRedHoodIsGone", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: PlayerKickIsIncoming
+    /// </summary>
+    public unsafe bool PlayerKickIsIncoming()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_RedHood_Base.PlayerKickIsIncoming", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: IsInPlay
+    /// </summary>
+    public unsafe bool IsInPlay()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_RedHood_Base.IsInPlay", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: DrawVolState
+    /// </summary>
+    public unsafe void DrawVolState()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_RedHood_Base.DrawVolState", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: KickedOffVantageToFloor
+    /// </summary>
+    public unsafe void KickedOffVantageToFloor()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_RedHood_Base.KickedOffVantageToFloor", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: KickedOffVantage
+    /// </summary>
+    public unsafe void KickedOffVantage()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_RedHood_Base.KickedOffVantage", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: NotifyPlayerGrapplingUp
+    /// </summary>
+    public unsafe void NotifyPlayerGrapplingUp()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_RedHood_Base.NotifyPlayerGrapplingUp", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: MoveRedhoodToSafety
+    /// </summary>
+    public unsafe void MoveRedhoodToSafety()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_RedHood_Base.MoveRedhoodToSafety", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// BoolProperty: bThugsPlayedResponseToRHBeingKickedOff
     /// </summary>
     public unsafe bool bThugsPlayedResponseToRHBeingKickedOff

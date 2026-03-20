@@ -33,6 +33,17 @@ public partial class NavMeshGoal_Filter : BmSDK.GameObject, BmSDK.IGameObject
     protected NavMeshGoal_Filter(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetDumpString
+    /// </summary>
+    public unsafe BmSDK.FString GetDumpString()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshGoal_Filter.GetDumpString", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
+    }
+
+    /// <summary>
     /// BoolProperty: bShowDebug
     /// </summary>
     public unsafe bool bShowDebug

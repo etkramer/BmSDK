@@ -68,6 +68,28 @@ public partial class RInvestigateSkeletalMeshActor : BmSDK.BmGame.RSkeletalMeshA
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
+    /// Function: PostBeginPlay
+    /// </summary>
+    public unsafe void PostBeginPlay()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInvestigateSkeletalMeshActor.PostBeginPlay", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: HasActiveInvestigateInfoWithFlagCheck
+    /// </summary>
+    public unsafe bool HasActiveInvestigateInfoWithFlagCheck()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInvestigateSkeletalMeshActor.HasActiveInvestigateInfoWithFlagCheck", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
+    }
+
+    /// <summary>
     /// ObjectProperty: XrayMat
     /// </summary>
     public unsafe BmSDK.Engine.MaterialInterface XrayMat

@@ -33,6 +33,40 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     protected GameplayEvents(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetFilename
+    /// </summary>
+    public unsafe BmSDK.FString GetFilename()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEvents.GetFilename", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: CloseStatsFile
+    /// </summary>
+    public unsafe void CloseStatsFile()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEvents.CloseStatsFile", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: OpenStatsFile
+    /// </summary>
+    public unsafe bool OpenStatsFile(BmSDK.FString Filename)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEvents.OpenStatsFile", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Filename, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 16);
+    }
+
+    /// <summary>
     /// StructProperty: Archive
     /// </summary>
     public unsafe System.IntPtr Archive

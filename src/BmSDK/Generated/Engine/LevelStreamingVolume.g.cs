@@ -68,6 +68,55 @@ public partial class LevelStreamingVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
+    /// Function: ApplyCheckpointRecord
+    /// </summary>
+    public unsafe void ApplyCheckpointRecord(out BmSDK.Engine.LevelStreamingVolume.FCheckpointRecord Record)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LevelStreamingVolume.ApplyCheckpointRecord", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        Record = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LevelStreamingVolume.FCheckpointRecord>(paramsPtr + 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: CreateCheckpointRecord
+    /// </summary>
+    public unsafe void CreateCheckpointRecord(out BmSDK.Engine.LevelStreamingVolume.FCheckpointRecord Record)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LevelStreamingVolume.CreateCheckpointRecord", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        Record = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LevelStreamingVolume.FCheckpointRecord>(paramsPtr + 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: OnToggle
+    /// </summary>
+    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LevelStreamingVolume.OnToggle", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Action, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Enum: EStreamingVolumeUsage
+    /// </summary>
+    public enum EStreamingVolumeUsage
+    {
+        SVB_Loading = 0,
+        SVB_LoadingAndVisibility = 1,
+        SVB_VisibilityBlockingOnLoad = 2,
+        SVB_BlockingOnLoad = 3,
+        SVB_LoadingNotVisible = 4,
+        SVB_MAX = 5,
+    }
+
+    /// <summary>
     /// ArrayProperty: StreamingLevels
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.Engine.LevelStreaming> StreamingLevels

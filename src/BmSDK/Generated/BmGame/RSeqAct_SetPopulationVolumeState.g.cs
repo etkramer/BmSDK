@@ -33,6 +33,17 @@ public partial class RSeqAct_SetPopulationVolumeState : BmSDK.Engine.SequenceAct
     protected RSeqAct_SetPopulationVolumeState(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetPopulationVolumeState.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ArrayProperty: PopulationVolumes
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.BmGame.ROverworldPopulationVolume> PopulationVolumes

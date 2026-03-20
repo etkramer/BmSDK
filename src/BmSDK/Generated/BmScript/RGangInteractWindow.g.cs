@@ -68,83 +68,37 @@ public partial class RGangInteractWindow : BmSDK.BmGame.RGangInteractWindowBase,
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// IntProperty: SmashIndex
+    /// Function: SetFinished
     /// </summary>
-    public unsafe int SmashIndex
+    public unsafe void SetFinished(BmSDK.BmGame.RBMPawnAI P)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1316); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangInteractWindow.SetFinished", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(P, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// BoolProperty: bCreatedMIC
+    /// Function: SetInUse
     /// </summary>
-    public unsafe bool bCreatedMIC
+    public unsafe void SetInUse(BmSDK.BmGame.RBMPawnAI UsagePawn)
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangInteractWindow.SetInUse", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(UsagePawn, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// ObjectProperty: WindowMat
+    /// Function: GetBehaviourClass
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInstanceConstant WindowMat
+    public unsafe BmSDK.Class GetBehaviourClass()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 1324); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1324); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: WindowSmashEffect
-    /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem WindowSmashEffect
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 1332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1332); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: MolotovExplodeEffect
-    /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem MolotovExplodeEffect
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 1340); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1340); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: CrackSfx
-    /// </summary>
-    public unsafe BmSDK.Engine.AkEvent CrackSfx
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1348); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1348); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: WindowOnFireEffect
-    /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystemComponent WindowOnFireEffect
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 1356); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1356); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: PointsAttachedToWindow
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RGangInteractPointBase> PointsAttachedToWindow
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGangInteractPointBase>>(Ptr + 1364); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1364); }
-    }
-
-    /// <summary>
-    /// IntProperty: ForcePointSelection
-    /// </summary>
-    public unsafe int ForcePointSelection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1380); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1380); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangInteractWindow.GetBehaviourClass", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(paramsPtr + 0);
     }
 }

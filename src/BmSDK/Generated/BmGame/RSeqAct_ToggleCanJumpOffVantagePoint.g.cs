@@ -33,6 +33,17 @@ public partial class RSeqAct_ToggleCanJumpOffVantagePoint : BmSDK.Engine.Sequenc
     protected RSeqAct_ToggleCanJumpOffVantagePoint(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ToggleCanJumpOffVantagePoint.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: Target
     /// </summary>
     public unsafe BmSDK.BmGame.RHidePoint Target

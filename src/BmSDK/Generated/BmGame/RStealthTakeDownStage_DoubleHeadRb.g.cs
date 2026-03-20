@@ -67,30 +67,4 @@ public partial class RStealthTakeDownStage_DoubleHeadRb : BmSDK.BmGame.RStealthT
         where TComponent : class, Framework.IScriptComponent<RStealthTakeDownStage_DoubleHeadRb>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// BoolProperty: bUseEnvironment
-    /// </summary>
-    public unsafe bool bUseEnvironment
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1844) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1844); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1844); }
-    }
-
-    /// <summary>
-    /// StructProperty: EnvironmentRefLocation
-    /// </summary>
-    public unsafe System.Numerics.Vector3 EnvironmentRefLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1848); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1848); }
-    }
-
-    /// <summary>
-    /// StructProperty: EnvironmentRefRotation
-    /// </summary>
-    public unsafe BmSDK.Rotator EnvironmentRefRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1860); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1860); }
-    }
 }

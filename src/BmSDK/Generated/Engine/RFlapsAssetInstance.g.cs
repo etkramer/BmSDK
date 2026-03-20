@@ -33,6 +33,54 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     protected RFlapsAssetInstance(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: WakeUp
+    /// </summary>
+    public unsafe void WakeUp()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlapsAssetInstance.WakeUp", true);
+        byte* paramsPtr = stackalloc byte[64];
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
+    /// Function: PutToSleep
+    /// </summary>
+    public unsafe void PutToSleep(bool bDeepSleep)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlapsAssetInstance.PutToSleep", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bDeepSleep, paramsPtr + 0);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
+    /// Enum: ERFlapsTickGroup
+    /// </summary>
+    public enum ERFlapsTickGroup
+    {
+        RFlapsTickGroup_PreAsync = 0,
+        RFlapsTickGroup_Async = 1,
+        RFlapsTickGroup_PostAsync = 2,
+        RFlapsTickGroup_MAX = 3,
+    }
+
+    /// <summary>
     /// ComponentProperty: Owner
     /// </summary>
     public unsafe BmSDK.Engine.SkeletalMeshComponent Owner

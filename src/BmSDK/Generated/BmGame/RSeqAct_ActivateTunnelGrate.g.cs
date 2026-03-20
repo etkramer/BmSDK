@@ -33,6 +33,28 @@ public partial class RSeqAct_ActivateTunnelGrate : BmSDK.Engine.SequenceAction, 
     protected RSeqAct_ActivateTunnelGrate(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetObjClassVersion
+    /// </summary>
+    public unsafe static int GetObjClassVersion()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActivateTunnelGrate.GetObjClassVersion", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ActivateTunnelGrate.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: LookActor
     /// </summary>
     public unsafe BmSDK.Engine.Actor LookActor

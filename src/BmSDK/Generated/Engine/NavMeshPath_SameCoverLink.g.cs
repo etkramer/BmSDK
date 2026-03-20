@@ -33,6 +33,30 @@ public partial class NavMeshPath_SameCoverLink : BmSDK.Engine.NavMeshPathConstra
     protected NavMeshPath_SameCoverLink(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Recycle
+    /// </summary>
+    public unsafe void Recycle()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPath_SameCoverLink.Recycle", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SameCoverLink
+    /// </summary>
+    public unsafe static void SameCoverLink(BmSDK.Engine.NavigationHandle NavHandle, BmSDK.Engine.CoverLink InLink)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPath_SameCoverLink.SameCoverLink", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NavHandle, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(InLink, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: TestLink
     /// </summary>
     public unsafe BmSDK.Engine.CoverLink TestLink

@@ -68,6 +68,87 @@ public partial class RGuardVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
+    /// Function: TryAssignBarkFor
+    /// </summary>
+    public unsafe void TryAssignBarkFor(BmSDK.BmGame.RPawnVillain BarkPawn)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGuardVolume.TryAssignBarkFor", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(BarkPawn, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: ShouldThugTraverseWhileRunning
+    /// </summary>
+    public unsafe bool ShouldThugTraverseWhileRunning()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGuardVolume.ShouldThugTraverseWhileRunning", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: HasFreeGuardPoint
+    /// </summary>
+    public unsafe bool HasFreeGuardPoint(BmSDK.BmGame.RBMAIController TestCon, out BmSDK.BmGame.RGuardPoint OutGuardPoint)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGuardVolume.HasFreeGuardPoint", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TestCon, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        OutGuardPoint = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGuardPoint>(paramsPtr + 8);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 16);
+    }
+
+    /// <summary>
+    /// Function: ShutdownAEC
+    /// </summary>
+    public unsafe void ShutdownAEC()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGuardVolume.ShutdownAEC", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: Destroyed
+    /// </summary>
+    public unsafe void Destroyed()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGuardVolume.Destroyed", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: PreStreamOut
+    /// </summary>
+    public unsafe void PreStreamOut()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGuardVolume.PreStreamOut", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Enum: AssignBarkType
+    /// </summary>
+    public enum AssignBarkType
+    {
+        ASSIGNBARK_None = 0,
+        ASSIGNBARK_CommandWing = 1,
+        ASSIGNBARK_KranksArcade = 2,
+        ASSIGNBARK_GCPDFallback = 3,
+        ASSIGNBARK_MAX = 4,
+    }
+
+    /// <summary>
     /// BoolProperty: bShouldRunToVol
     /// </summary>
     public unsafe bool bShouldRunToVol

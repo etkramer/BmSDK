@@ -67,48 +67,4 @@ public partial class RCinematicBatman : BmSDK.BmGame.RCinematicBatmanBase, BmSDK
         where TComponent : class, Framework.IScriptComponent<RCinematicBatman>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// ComponentProperty: CapeSkeletalMesh
-    /// </summary>
-    public unsafe BmSDK.BmGame.RCapeSkeletalMeshComponent CapeSkeletalMesh
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCapeSkeletalMeshComponent>(Ptr + 1028); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1028); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: CapeComponent
-    /// </summary>
-    public unsafe BmSDK.BmGame.RCapeComponent CapeComponent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCapeComponent>(Ptr + 1036); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1036); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: CapeRenderingComponent
-    /// </summary>
-    public unsafe BmSDK.BmGame.RCapeRenderingComponent CapeRenderingComponent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCapeRenderingComponent>(Ptr + 1044); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1044); }
-    }
-
-    /// <summary>
-    /// BoolProperty: EnableCape
-    /// </summary>
-    public unsafe bool EnableCape
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1052) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1052); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1052); }
-    }
-
-    /// <summary>
-    /// BoolProperty: UseAutomaticDamageModel
-    /// </summary>
-    public unsafe bool UseAutomaticDamageModel
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1052) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1052); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1052); }
-    }
 }

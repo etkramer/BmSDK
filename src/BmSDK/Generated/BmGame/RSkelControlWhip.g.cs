@@ -33,6 +33,25 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     protected RSkelControlWhip(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetWhipExtent
+    /// </summary>
+    public unsafe float GetWhipExtent(BmSDK.Engine.SkeletalMeshComponent SkelComp)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSkelControlWhip.GetWhipExtent", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(SkelComp, paramsPtr + 0);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 8);
+    }
+
+    /// <summary>
     /// ArrayProperty: HandleBones
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.BmGame.RSkelControlWhip.FWhipBoneData> HandleBones

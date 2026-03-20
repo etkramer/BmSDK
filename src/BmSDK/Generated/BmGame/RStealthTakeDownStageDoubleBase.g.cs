@@ -68,110 +68,70 @@ public partial class RStealthTakeDownStageDoubleBase : BmSDK.BmGame.RStealthTake
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// FloatProperty: fSlowdownAmountToSelectNextVictim
+    /// Function: GetReferencePosition
     /// </summary>
-    public unsafe float fSlowdownAmountToSelectNextVictim
+    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1664); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1664); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStageDoubleBase.GetReferencePosition", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        ReferencePosition = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
+        ReferenceRotation = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(paramsPtr + 12);
+        return;
     }
 
     /// <summary>
-    /// FloatProperty: fRealTimeWaitForSlowdownToEnd
+    /// Function: TriggerVictim2Frozen
     /// </summary>
-    public unsafe float fRealTimeWaitForSlowdownToEnd
+    public unsafe void TriggerVictim2Frozen()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1668); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStageDoubleBase.TriggerVictim2Frozen", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// BoolProperty: SpottedByAnotherThug
+    /// Function: TriggerVictim2NotFrozen
     /// </summary>
-    public unsafe bool SpottedByAnotherThug
+    public unsafe void TriggerVictim2NotFrozen()
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStageDoubleBase.TriggerVictim2NotFrozen", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// BoolProperty: bTriggeredSloMo
+    /// Function: TriggerVictim2
     /// </summary>
-    public unsafe bool bTriggeredSloMo
+    public unsafe void TriggerVictim2()
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStageDoubleBase.TriggerVictim2", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// BoolProperty: bLinearDampingOnRagdollDisabled
+    /// Function: Begin
     /// </summary>
-    public unsafe bool bLinearDampingOnRagdollDisabled
+    public unsafe void Begin()
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStageDoubleBase.Begin", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// BoolProperty: bDoingLastHitSlomo
+    /// Function: GetStageAnim
     /// </summary>
-    public unsafe bool bDoingLastHitSlomo
+    public unsafe int GetStageAnim()
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 8) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bCheckForNextFearTakedownTargetAtStart
-    /// </summary>
-    public unsafe bool bCheckForNextFearTakedownTargetAtStart
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 16) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bNextChainFearTakedownTargetExistedAtStart
-    /// </summary>
-    public unsafe bool bNextChainFearTakedownTargetExistedAtStart
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 32) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bCountThisMoveTowardsFearTakedownCount
-    /// </summary>
-    public unsafe bool bCountThisMoveTowardsFearTakedownCount
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 64) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: CachedTunnelGrate
-    /// </summary>
-    public unsafe BmSDK.Engine.Actor CachedTunnelGrate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 1676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1676); }
-    }
-
-    /// <summary>
-    /// IntProperty: iScreenShakeId
-    /// </summary>
-    public unsafe int iScreenShakeId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1684); }
-    }
-
-    /// <summary>
-    /// StructProperty: FinalHitCameraShake
-    /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct FinalHitCameraShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 1688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1688); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStageDoubleBase.GetStageAnim", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
 }

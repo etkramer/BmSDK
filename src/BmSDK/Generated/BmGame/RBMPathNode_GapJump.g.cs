@@ -68,92 +68,14 @@ public partial class RBMPathNode_GapJump : BmSDK.BmGame.RBMPathNode_VariablePosi
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ObjectProperty: Proxy1
+    /// Function: GetReferencePoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMPathNode_VariablePositionTraverseProxy Proxy1
+    public unsafe System.Numerics.Vector3 GetReferencePoint(BmSDK.BmGame.RBMPawnAI Jumper)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPathNode_VariablePositionTraverseProxy>(Ptr + 976); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 976); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: Proxy2
-    /// </summary>
-    public unsafe BmSDK.BmGame.RBMPathNode_VariablePositionTraverseProxy Proxy2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPathNode_VariablePositionTraverseProxy>(Ptr + 984); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 984); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: EndPoint1
-    /// </summary>
-    public unsafe BmSDK.BmGame.REndPointMarker EndPoint1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REndPointMarker>(Ptr + 992); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: EndPoint2
-    /// </summary>
-    public unsafe BmSDK.BmGame.REndPointMarker EndPoint2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REndPointMarker>(Ptr + 1000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1000); }
-    }
-
-    /// <summary>
-    /// ClassProperty: ProxyClass
-    /// </summary>
-    public unsafe BmSDK.Class ProxyClass
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 1008); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1008); }
-    }
-
-    /// <summary>
-    /// StructProperty: JumpNormal
-    /// </summary>
-    public unsafe System.Numerics.Vector3 JumpNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1016); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1016); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: JumpLockList
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RBMPathNode_VariablePositionTraverse.FJumperAssignment> JumpLockList
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RBMPathNode_VariablePositionTraverse.FJumperAssignment>>(Ptr + 1028); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1028); }
-    }
-
-    /// <summary>
-    /// FloatProperty: ExtentSize
-    /// </summary>
-    public unsafe float ExtentSize
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1044); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1044); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bUseClosestPoint
-    /// </summary>
-    public unsafe bool bUseClosestPoint
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1048) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1048); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1048); }
-    }
-
-    /// <summary>
-    /// FloatProperty: DistBetweenProxys
-    /// </summary>
-    public unsafe float DistBetweenProxys
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1052); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1052); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_GapJump.GetReferencePoint", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Jumper, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 8);
     }
 }

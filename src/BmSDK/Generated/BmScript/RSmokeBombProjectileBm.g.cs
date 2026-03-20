@@ -68,146 +68,60 @@ public partial class RSmokeBombProjectileBm : BmSDK.BmGame.RGadgetProjectileBase
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ComponentProperty: ProjectileMesh
+    /// Function: Bump
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent ProjectileMesh
+    public unsafe void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSmokeBombProjectileBm.Bump", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(OtherComp, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitNormal, paramsPtr + 16);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// StructProperty: StartLoc
+    /// Function: Touch
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartLoc
+    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 848); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 848); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSmokeBombProjectileBm.Touch", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(OtherComp, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitLocation, paramsPtr + 16);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitNormal, paramsPtr + 28);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// StructProperty: EndLoc
+    /// Function: HitWall
     /// </summary>
-    public unsafe System.Numerics.Vector3 EndLoc
+    public unsafe void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 860); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 860); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSmokeBombProjectileBm.HitWall", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitNormal, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Wall, paramsPtr + 12);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(WallComp, paramsPtr + 20);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// StructProperty: InitialSpeed
+    /// Function: Deploy
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialSpeed
+    public unsafe void Deploy(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 872); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 872); }
-    }
-
-    /// <summary>
-    /// StructProperty: ActualTargetLoc
-    /// </summary>
-    public unsafe System.Numerics.Vector3 ActualTargetLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 884); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 884); }
-    }
-
-    /// <summary>
-    /// IntProperty: LaunchID
-    /// </summary>
-    public unsafe int LaunchID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 896); }
-    }
-
-    /// <summary>
-    /// FloatProperty: T
-    /// </summary>
-    public unsafe float T
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 900); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 900); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: TargetActor
-    /// </summary>
-    public unsafe BmSDK.Engine.Actor TargetActor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 904); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 904); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: Launcher
-    /// </summary>
-    public unsafe BmSDK.BmGame.RProjectileGadgetBase Launcher
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RProjectileGadgetBase>(Ptr + 912); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 912); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bSecondaryFire
-    /// </summary>
-    public unsafe bool bSecondaryFire
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 920) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 920); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 920); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bLaunchedFromGargoyle
-    /// </summary>
-    public unsafe bool bLaunchedFromGargoyle
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 920) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 920); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 920); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bCheckVillainMeshTouch
-    /// </summary>
-    public unsafe bool bCheckVillainMeshTouch
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 920) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 920); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 920); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bDoingMeshTrace
-    /// </summary>
-    public unsafe bool bDoingMeshTrace
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 920) & 8) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 920); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 920); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bUseNormalPhysics
-    /// </summary>
-    public unsafe bool bUseNormalPhysics
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 920) & 16) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 920); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 920); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bGlidingThrow
-    /// </summary>
-    public unsafe bool bGlidingThrow
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 920) & 32) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 920); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 920); }
-    }
-
-    /// <summary>
-    /// FloatProperty: Gravity
-    /// </summary>
-    public unsafe float Gravity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 924); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 924); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSmokeBombProjectileBm.Deploy", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(OtherComp, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitLocation, paramsPtr + 16);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitNormal, paramsPtr + 28);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

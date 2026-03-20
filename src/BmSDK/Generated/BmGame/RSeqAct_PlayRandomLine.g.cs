@@ -32,30 +32,4 @@ public partial class RSeqAct_PlayRandomLine : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// </summary>
     protected RSeqAct_PlayRandomLine(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// ArrayProperty: LatentActors
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> LatentActors
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bAborted
-    /// </summary>
-    public unsafe bool bAborted
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
-    }
-
-    /// <summary>
-    /// FloatProperty: LatentActivationTime
-    /// </summary>
-    public unsafe float LatentActivationTime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 372); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 372); }
-    }
 }

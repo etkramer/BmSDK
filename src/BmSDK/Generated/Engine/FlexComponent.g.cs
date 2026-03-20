@@ -33,6 +33,40 @@ public partial class FlexComponent : BmSDK.Engine.StaticMeshComponent, BmSDK.IGa
     protected FlexComponent(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FFlexSimBuffer
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FFlexSimBuffer
+    {
+        /// <summary>
+        /// ArrayProperty: SimPositions
+        /// </summary>
+        public unsafe BmSDK.TArray<System.Numerics.Vector4> SimPositions
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.Numerics.Vector4>>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// ArrayProperty: SimNormals
+        /// </summary>
+        public unsafe BmSDK.TArray<System.Numerics.Vector3> SimNormals
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.Numerics.Vector3>>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: SimFrameID
+        /// </summary>
+        public unsafe int SimFrameID
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 32); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
+        }
+    }
+
+    /// <summary>
     /// ObjectProperty: FlexComponentContainerTemplate
     /// </summary>
     public unsafe BmSDK.Engine.FlexContainer FlexComponentContainerTemplate

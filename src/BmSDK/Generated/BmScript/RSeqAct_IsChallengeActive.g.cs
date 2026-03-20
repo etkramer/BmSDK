@@ -33,29 +33,24 @@ public partial class RSeqAct_IsChallengeActive : BmSDK.Engine.SequenceAction, Bm
     protected RSeqAct_IsChallengeActive(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// NameProperty: HandlerName
+    /// Function: InChallengeMode
     /// </summary>
-    public unsafe BmSDK.FName HandlerName
+    public unsafe bool InChallengeMode()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 324); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IsChallengeActive.InChallengeMode", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
 
     /// <summary>
-    /// BoolProperty: bCallHandler
+    /// Function: Activated
     /// </summary>
-    public unsafe bool bCallHandler
+    public unsafe void Activated()
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 332); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: Targets
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.GameObject> Targets
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GameObject>>(Ptr + 336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IsChallengeActive.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

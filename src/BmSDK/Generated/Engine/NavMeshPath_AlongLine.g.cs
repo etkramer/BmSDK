@@ -33,6 +33,30 @@ public partial class NavMeshPath_AlongLine : BmSDK.Engine.NavMeshPathConstraint,
     protected NavMeshPath_AlongLine(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Recycle
+    /// </summary>
+    public unsafe void Recycle()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPath_AlongLine.Recycle", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: AlongLine
+    /// </summary>
+    public unsafe static bool AlongLine(BmSDK.Engine.NavigationHandle NavHandle, System.Numerics.Vector3 Dir)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPath_AlongLine.AlongLine", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NavHandle, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Dir, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 20);
+    }
+
+    /// <summary>
     /// StructProperty: Direction
     /// </summary>
     public unsafe System.Numerics.Vector3 Direction

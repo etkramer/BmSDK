@@ -33,6 +33,29 @@ public partial class RNavMeshPath_AvoidBlockedPolys : BmSDK.Engine.NavMeshPathCo
     protected RNavMeshPath_AvoidBlockedPolys(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Recycle
+    /// </summary>
+    public unsafe void Recycle()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_AvoidBlockedPolys.Recycle", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: AvoidPolysInHandle
+    /// </summary>
+    public unsafe static bool AvoidPolysInHandle(BmSDK.BmGame.RNavigationHandle NewNavHandle)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_AvoidBlockedPolys.AvoidPolysInHandle", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewNavHandle, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
+    }
+
+    /// <summary>
     /// ObjectProperty: NavHandle
     /// </summary>
     public unsafe BmSDK.BmGame.RNavigationHandle NavHandle

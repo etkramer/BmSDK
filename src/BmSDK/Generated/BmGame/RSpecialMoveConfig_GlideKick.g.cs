@@ -33,6 +33,15 @@ public partial class RSpecialMoveConfig_GlideKick : BmSDK.BmGame.RSpecialMoveCon
     protected RSpecialMoveConfig_GlideKick(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EGlideKickMoveExtraInfo
+    /// </summary>
+    public enum EGlideKickMoveExtraInfo
+    {
+        GKMEI_GlideVelocity = 0,
+        GKMEI_MAX = 1,
+    }
+
+    /// <summary>
     /// StructProperty: WindowAttackOffset
     /// </summary>
     public unsafe System.Numerics.Vector3 WindowAttackOffset

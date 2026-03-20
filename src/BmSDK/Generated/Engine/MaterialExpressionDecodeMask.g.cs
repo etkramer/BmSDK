@@ -33,6 +33,41 @@ public partial class MaterialExpressionDecodeMask : BmSDK.Engine.MaterialExpress
     protected MaterialExpressionDecodeMask(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EDecodeBlendType
+    /// </summary>
+    public enum EDecodeBlendType
+    {
+        DECODE_Replace = 0,
+        DECODE_Add = 1,
+        DECODE_MAX = 2,
+    }
+
+    /// <summary>
+    /// Struct: FWeightInput
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FWeightInput
+    {
+        /// <summary>
+        /// StrProperty: WeightName
+        /// </summary>
+        public unsafe BmSDK.FString WeightName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: Input
+        /// </summary>
+        public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Input
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+    }
+
+    /// <summary>
     /// IntProperty: StepSize
     /// </summary>
     public unsafe int StepSize

@@ -33,6 +33,19 @@ public partial class NavMeshGoalFilter_NotNearOtherAI : BmSDK.Engine.NavMeshGoal
     protected NavMeshGoalFilter_NotNearOtherAI(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: NotNearOtherAI
+    /// </summary>
+    public unsafe static bool NotNearOtherAI(BmSDK.Engine.NavMeshGoal_GenericFilterContainer FilterContainer, float InDistanceToCheck)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshGoalFilter_NotNearOtherAI.NotNearOtherAI", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(FilterContainer, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(InDistanceToCheck, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 12);
+    }
+
+    /// <summary>
     /// FloatProperty: DistanceToCheck
     /// </summary>
     public unsafe float DistanceToCheck

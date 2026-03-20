@@ -33,6 +33,24 @@ public partial class RCapeRenderingComponent : BmSDK.Engine.ActorComponent, BmSD
     protected RCapeRenderingComponent(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: HandleDebugLineDrawing
+    /// </summary>
+    public unsafe void HandleDebugLineDrawing()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeRenderingComponent.HandleDebugLineDrawing", true);
+        byte* paramsPtr = stackalloc byte[64];
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
     /// BoolProperty: IsRenderCape
     /// </summary>
     public unsafe bool IsRenderCape

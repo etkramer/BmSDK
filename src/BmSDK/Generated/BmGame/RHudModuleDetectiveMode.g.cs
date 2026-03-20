@@ -33,6 +33,336 @@ public partial class RHudModuleDetectiveMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     protected RHudModuleDetectiveMode(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: HideScannerDetail
+    /// </summary>
+    public unsafe void HideScannerDetail()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.HideScannerDetail", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SetScannerDetailPrivate
+    /// </summary>
+    public unsafe void SetScannerDetailPrivate(BmSDK.FString swfmovie_name, bool bScanned)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.SetScannerDetailPrivate", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(swfmovie_name, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bScanned, paramsPtr + 16);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SetScannerDetail
+    /// </summary>
+    public unsafe void SetScannerDetail(float location_x, float location_y, float location_depth, BmSDK.BmGame.RPhysicalEvidenceBase CSE)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.SetScannerDetail", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(location_x, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(location_y, paramsPtr + 4);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(location_depth, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CSE, paramsPtr + 12);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: HideEvidenceDetail
+    /// </summary>
+    public unsafe void HideEvidenceDetail()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.HideEvidenceDetail", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SetEvidenceDetailPrivate
+    /// </summary>
+    public unsafe void SetEvidenceDetailPrivate(float location_x, float location_y, float location_depth, BmSDK.FString swfmovie_name, bool bScanned)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.SetEvidenceDetailPrivate", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(location_x, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(location_y, paramsPtr + 4);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(location_depth, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(swfmovie_name, paramsPtr + 12);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bScanned, paramsPtr + 28);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SetEvidenceDetail
+    /// </summary>
+    public unsafe void SetEvidenceDetail(float location_x, float location_y, float location_depth, BmSDK.BmGame.RPhysicalEvidenceBase CSE)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.SetEvidenceDetail", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(location_x, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(location_y, paramsPtr + 4);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(location_depth, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CSE, paramsPtr + 12);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: UpdateCachedEvidence
+    /// </summary>
+    public unsafe void UpdateCachedEvidence(BmSDK.GFxUI.SwfMovie NewEvidence)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.UpdateCachedEvidence", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewEvidence, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: HideInfoText
+    /// </summary>
+    public unsafe void HideInfoText()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.HideInfoText", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SetInfoText
+    /// </summary>
+    public unsafe void SetInfoText(float location_x, float location_y, float location_depth, BmSDK.FString Heading, BmSDK.FString Description, bool Warning)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.SetInfoText", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(location_x, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(location_y, paramsPtr + 4);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(location_depth, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Heading, paramsPtr + 12);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Description, paramsPtr + 28);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Warning, paramsPtr + 44);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: HideNPCDetail
+    /// </summary>
+    public unsafe void HideNPCDetail()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.HideNPCDetail", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SetNPCDetail
+    /// </summary>
+    public unsafe void SetNPCDetail(float location_x, float location_y, float location_depth, int physical_state_enum, int weapon_enum, int extra_info_enum, bool is_armoured, BmSDK.FString optional_name)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.SetNPCDetail", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(location_x, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(location_y, paramsPtr + 4);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(location_depth, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(physical_state_enum, paramsPtr + 12);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(weapon_enum, paramsPtr + 16);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(extra_info_enum, paramsPtr + 20);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(is_armoured, paramsPtr + 24);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(optional_name, paramsPtr + 28);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: HideSmokePercentage
+    /// </summary>
+    public unsafe void HideSmokePercentage()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.HideSmokePercentage", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SetSmokePercentage
+    /// </summary>
+    public unsafe void SetSmokePercentage(int SmokePercentage)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.SetSmokePercentage", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(SmokePercentage, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SetNPCCountString
+    /// </summary>
+    public unsafe void SetNPCCountString(int total, BmSDK.FString Str)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.SetNPCCountString", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(total, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Str, paramsPtr + 4);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: UpdateNPCCounts
+    /// </summary>
+    public unsafe void UpdateNPCCounts(int Armed, int UnArmed)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.UpdateNPCCounts", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Armed, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(UnArmed, paramsPtr + 4);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: CloseCurrentDetail
+    /// </summary>
+    public unsafe void CloseCurrentDetail()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.CloseCurrentDetail", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: ClearDetailIfMatches
+    /// </summary>
+    public unsafe void ClearDetailIfMatches(BmSDK.BmGame.RHudModuleDetectiveMode.DetailDisplayType _TestDetailType)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.ClearDetailIfMatches", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(_TestDetailType, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SetCurrentDetail
+    /// </summary>
+    public unsafe void SetCurrentDetail(BmSDK.BmGame.RHudModuleDetectiveMode.DetailDisplayType _CurrentDetailType)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.SetCurrentDetail", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(_CurrentDetailType, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: Detective_InfoBoxOpenSound
+    /// </summary>
+    public unsafe void Detective_InfoBoxOpenSound()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.Detective_InfoBoxOpenSound", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SetVisible
+    /// </summary>
+    public unsafe void SetVisible(bool is_visible)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.SetVisible", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(is_visible, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: Close
+    /// </summary>
+    public unsafe void Close()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.Close", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: InitialiseFlash
+    /// </summary>
+    public unsafe void InitialiseFlash()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.InitialiseFlash", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: Init
+    /// </summary>
+    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleDetectiveMode.Init", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(_RPC, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(_ExtensionName, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(_ExtensionPath, paramsPtr + 24);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 40);
+    }
+
+    /// <summary>
+    /// Enum: ENpcExtraInfo
+    /// </summary>
+    public enum ENpcExtraInfo
+    {
+        ENpcExtraInfo_None = 0,
+        ENpcExtraInfo_Friendly = 1,
+        ENpcExtraInfo_Undead = 2,
+        ENpcExtraInfo_ThugJammer = 3,
+        ENpcExtraInfo_ThugMines = 4,
+        ENpcExtraInfo_ThugThermalVision = 5,
+        ENpcExtraInfo_Robot = 6,
+        ENpcExtraInfo_ThugJammerBroken = 7,
+        ENpcExtraInfo_DroneController = 8,
+        ENpcExtraInfo_DetectiveModeDetector = 9,
+        ENpcExtraInfo_Medic3 = 10,
+        ENpcExtraInfo_Medic2 = 11,
+        ENpcExtraInfo_Medic1 = 12,
+        ENpcExtraInfo_Medic0 = 13,
+        ENpcExtraInfo_MAX = 14,
+    }
+
+    /// <summary>
+    /// Enum: DetailDisplayType
+    /// </summary>
+    public enum DetailDisplayType
+    {
+        DDT_None = 0,
+        DDT_Smoke = 1,
+        DDT_NPC = 2,
+        DDT_Info = 3,
+        DDT_Evidence = 4,
+        DDT_Scanner = 5,
+        DDT_MAX = 6,
+    }
+
+    /// <summary>
     /// StrProperty: CachedFunction_SetNPCCountString
     /// </summary>
     public unsafe BmSDK.FString CachedFunction_SetNPCCountString

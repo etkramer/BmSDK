@@ -32,21 +32,4 @@ public partial class RSeqEvent_FearTakedown : BmSDK.BmGame.RSeqEvent_TakedownBas
     /// </summary>
     protected RSeqEvent_FearTakedown(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// ObjectProperty: vic0
-    /// </summary>
-    public unsafe BmSDK.BmGame.RPawnVillain vic0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 380); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: vic1
-    /// </summary>
-    public unsafe BmSDK.BmGame.RPawnVillain vic1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 388); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 388); }
-    }
 }

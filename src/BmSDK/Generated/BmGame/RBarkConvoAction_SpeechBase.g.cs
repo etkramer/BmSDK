@@ -33,6 +33,57 @@ public partial class RBarkConvoAction_SpeechBase : BmSDK.BmGame.RBarkConvoAction
     protected RBarkConvoAction_SpeechBase(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetCurrentDialogueType
+    /// </summary>
+    public unsafe BmSDK.Engine.AkDialogueType GetCurrentDialogueType()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_SpeechBase.GetCurrentDialogueType", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueType>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: StopSpeechCallback
+    /// </summary>
+    public unsafe BmSDK.Engine.AkDialogue.AkDialogueCallbackResult StopSpeechCallback(int speechId, bool interrupted)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_SpeechBase.StopSpeechCallback", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(speechId, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(interrupted, paramsPtr + 4);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogue.AkDialogueCallbackResult>(paramsPtr + 8);
+    }
+
+    /// <summary>
+    /// Function: StartLineCallback
+    /// </summary>
+    public unsafe BmSDK.Engine.AkDialogue.AkDialogueCallbackResult StartLineCallback(BmSDK.Engine.AkDialogueLine dlgLine, BmSDK.Engine.AkDialogueEvent dlgEvent, BmSDK.GameObject Speaker, bool bBarkSquelch)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_SpeechBase.StartLineCallback", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(dlgLine, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(dlgEvent, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Speaker, paramsPtr + 16);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bBarkSquelch, paramsPtr + 24);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogue.AkDialogueCallbackResult>(paramsPtr + 28);
+    }
+
+    /// <summary>
+    /// Function: SetCoreSpeechOptions
+    /// </summary>
+    public unsafe void SetCoreSpeechOptions(out BmSDK.Engine.AkDialogue.FAkSpeechOptions Opt)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_SpeechBase.SetCoreSpeechOptions", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        Opt = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogue.FAkSpeechOptions>(paramsPtr + 0);
+        return;
+    }
+
+    /// <summary>
     /// BoolProperty: bAllowOnKnockedOutPawns
     /// </summary>
     public unsafe bool bAllowOnKnockedOutPawns

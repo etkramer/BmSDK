@@ -68,6 +68,17 @@ public partial class RFreezeTankDestroyerBase : BmSDK.Engine.Actor, BmSDK.IGameO
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
+    /// Function: DestroyTarget
+    /// </summary>
+    public unsafe void DestroyTarget()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeTankDestroyerBase.DestroyTarget", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: Target
     /// </summary>
     public unsafe BmSDK.BmGame.RVehicleNPC Target

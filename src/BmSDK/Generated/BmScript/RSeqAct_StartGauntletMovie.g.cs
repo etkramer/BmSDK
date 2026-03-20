@@ -33,6 +33,90 @@ public partial class RSeqAct_StartGauntletMovie : BmSDK.BmGame.RSeqAct_StartGaun
     protected RSeqAct_StartGauntletMovie(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetObjClassVersion
+    /// </summary>
+    public unsafe static int GetObjClassVersion()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartGauntletMovie.GetObjClassVersion", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: ResolvePortraitNames
+    /// </summary>
+    public unsafe BmSDK.FString ResolvePortraitNames()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartGauntletMovie.ResolvePortraitNames", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartGauntletMovie.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: EndMovie
+    /// </summary>
+    public unsafe void EndMovie()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartGauntletMovie.EndMovie", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: StartMovie
+    /// </summary>
+    public unsafe void StartMovie(bool bAutoPause)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartGauntletMovie.StartMovie", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bAutoPause, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Enum: PortraitNames
+    /// </summary>
+    public enum PortraitNames
+    {
+        PN_NoPortrait = 0,
+        PN_Alfred = 1,
+        PN_ArkhamKnight = 2,
+        PN_Cash = 3,
+        PN_Catwoman = 4,
+        PN_Deathstroke = 5,
+        PN_Gordon = 6,
+        PN_HarleyQuinn = 7,
+        PN_Henry = 8,
+        PN_Ivy = 9,
+        PN_Jack = 10,
+        PN_Joker = 11,
+        PN_Lucius = 12,
+        PN_MadHatter = 13,
+        PN_Nightwing = 14,
+        PN_Oracle = 15,
+        PN_Riddler = 16,
+        PN_Robin = 17,
+        PN_Scarecrow = 18,
+        PN_DLC_Freeze = 19,
+        PN_MAX = 20,
+    }
+
+    /// <summary>
     /// StrProperty: GauntletMovie
     /// </summary>
     public unsafe BmSDK.FString GauntletMovie

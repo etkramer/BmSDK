@@ -33,6 +33,37 @@ public partial class CylinderComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
     protected CylinderComponent(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetExtent
+    /// </summary>
+    public unsafe System.Numerics.Vector3 GetExtent()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CylinderComponent.GetExtent", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: SetCylinderSize
+    /// </summary>
+    public unsafe void SetCylinderSize(float NewRadius, float NewHeight)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CylinderComponent.SetCylinderSize", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewRadius, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewHeight, paramsPtr + 4);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
     /// FloatProperty: CollisionHeight
     /// </summary>
     public unsafe float CollisionHeight

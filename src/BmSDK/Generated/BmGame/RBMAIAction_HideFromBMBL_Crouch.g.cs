@@ -67,48 +67,4 @@ public partial class RBMAIAction_HideFromBMBL_Crouch : BmSDK.BmGame.RBMAIAction_
         where TComponent : class, Framework.IScriptComponent<RBMAIAction_HideFromBMBL_Crouch>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// ObjectProperty: HidePoint
-    /// </summary>
-    public unsafe BmSDK.BmGame.RPredHideFromBatmobilePoint HidePoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPredHideFromBatmobilePoint>(Ptr + 864); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
-    }
-
-    /// <summary>
-    /// NameProperty: InHideAnimName
-    /// </summary>
-    public unsafe BmSDK.FName InHideAnimName
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 872); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 872); }
-    }
-
-    /// <summary>
-    /// NameProperty: StanceName
-    /// </summary>
-    public unsafe BmSDK.FName StanceName
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 880); }
-    }
-
-    /// <summary>
-    /// StructProperty: PeekInAnimID
-    /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PeekInAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 888); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 888); }
-    }
-
-    /// <summary>
-    /// StructProperty: PeekOutAnimID
-    /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PeekOutAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 892); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 892); }
-    }
 }

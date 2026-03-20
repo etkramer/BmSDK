@@ -33,6 +33,94 @@ public partial class InterpTrack : BmSDK.GameObject, BmSDK.IGameObject
     protected InterpTrack(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: ETrackActiveCondition
+    /// </summary>
+    public enum ETrackActiveCondition
+    {
+        ETAC_Always = 0,
+        ETAC_GoreEnabled = 1,
+        ETAC_GoreDisabled = 2,
+        ETAC_MAX = 3,
+    }
+
+    /// <summary>
+    /// Struct: FSubTrackGroup
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FSubTrackGroup
+    {
+        /// <summary>
+        /// StrProperty: GroupName
+        /// </summary>
+        public unsafe BmSDK.FString GroupName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// ArrayProperty: TrackIndices
+        /// </summary>
+        public unsafe BmSDK.TArray<int> TrackIndices
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: bIsCollapsed
+        /// </summary>
+        public unsafe bool bIsCollapsed
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 32) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 32); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 32); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: bIsSelected
+        /// </summary>
+        public unsafe bool bIsSelected
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 32) & 2) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 32); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 32); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FSupportedSubTrackInfo
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FSupportedSubTrackInfo
+    {
+        /// <summary>
+        /// ClassProperty: SupportedClass
+        /// </summary>
+        public unsafe BmSDK.Class SupportedClass
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// StrProperty: SubTrackName
+        /// </summary>
+        public unsafe BmSDK.FString SubTrackName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: GroupIndex
+        /// </summary>
+        public unsafe int GroupIndex
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+        }
+    }
+
+    /// <summary>
     /// StructProperty: VfTable_FInterpEdInputInterface
     /// </summary>
     public unsafe System.IntPtr VfTable_FInterpEdInputInterface

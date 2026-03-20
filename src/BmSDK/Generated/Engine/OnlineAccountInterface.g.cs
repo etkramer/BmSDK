@@ -33,169 +33,105 @@ public partial class OnlineAccountInterface : BmSDK.Interface, BmSDK.IGameObject
     protected OnlineAccountInterface(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// StructProperty: VfTableObject
+    /// Function: GetLocalAccountNames
     /// </summary>
-    public unsafe System.IntPtr VfTableObject
+    public unsafe bool GetLocalAccountNames(out BmSDK.TArray<BmSDK.FString> Accounts)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 0); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAccountInterface.GetLocalAccountNames", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        Accounts = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(paramsPtr + 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 16);
     }
 
     /// <summary>
-    /// IntProperty: ObjectFlags
+    /// Function: DeleteLocalAccount
     /// </summary>
-    public unsafe BmSDK.GameObject.EObjectFlags ObjectFlags
+    public unsafe bool DeleteLocalAccount(BmSDK.FString UserName, BmSDK.FString Password = default)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EObjectFlags>(Ptr + 8); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAccountInterface.DeleteLocalAccount", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(UserName, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Password, paramsPtr + 16);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 32);
     }
 
     /// <summary>
-    /// IntProperty: EditorObjectFlags
+    /// Function: RenameLocalAccount
     /// </summary>
-    public unsafe int EditorObjectFlags
+    public unsafe bool RenameLocalAccount(BmSDK.FString NewUserName, BmSDK.FString OldUserName, BmSDK.FString Password = default)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAccountInterface.RenameLocalAccount", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewUserName, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(OldUserName, paramsPtr + 16);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Password, paramsPtr + 32);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 48);
     }
 
     /// <summary>
-    /// IntProperty: HashIndexPrev
+    /// Function: CreateLocalAccount
     /// </summary>
-    public unsafe int HashIndexPrev
+    public unsafe bool CreateLocalAccount(BmSDK.FString UserName, BmSDK.FString Password = default)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAccountInterface.CreateLocalAccount", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(UserName, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Password, paramsPtr + 16);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 32);
     }
 
     /// <summary>
-    /// IntProperty: HashIndexNext
+    /// Function: ClearCreateOnlineAccountCompletedDelegate
     /// </summary>
-    public unsafe int HashIndexNext
+    public unsafe void ClearCreateOnlineAccountCompletedDelegate(System.IntPtr AccountCreateDelegate)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 20); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAccountInterface.ClearCreateOnlineAccountCompletedDelegate", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(AccountCreateDelegate, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// IntProperty: HashOuterIndexPrev
+    /// Function: AddCreateOnlineAccountCompletedDelegate
     /// </summary>
-    public unsafe int HashOuterIndexPrev
+    public unsafe void AddCreateOnlineAccountCompletedDelegate(System.IntPtr AccountCreateDelegate)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAccountInterface.AddCreateOnlineAccountCompletedDelegate", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(AccountCreateDelegate, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// IntProperty: HashOuterIndexNext
+    /// Function: OnCreateOnlineAccountCompleted
     /// </summary>
-    public unsafe int HashOuterIndexNext
+    public unsafe void OnCreateOnlineAccountCompleted(BmSDK.Engine.OnlineSubsystem.EOnlineAccountCreateStatus ErrorStatus)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAccountInterface.OnCreateOnlineAccountCompleted", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(ErrorStatus, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// ObjectProperty: Linker
+    /// Function: CreateOnlineAccount
     /// </summary>
-    public unsafe BmSDK.GameObject Linker
+    public unsafe bool CreateOnlineAccount(BmSDK.FString UserName, BmSDK.FString Password, BmSDK.FString EmailAddress, BmSDK.FString ProductKey = default)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 32); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }
-    }
-
-    /// <summary>
-    /// StructProperty: LinkerIndex
-    /// </summary>
-    public unsafe System.IntPtr LinkerIndex
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 40); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }
-    }
-
-    /// <summary>
-    /// IntProperty: ObjectInternalInteger
-    /// </summary>
-    public unsafe int ObjectInternalInteger
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: Outer
-    /// </summary>
-    public unsafe BmSDK.GameObject Outer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
-    }
-
-    /// <summary>
-    /// NameProperty: Name
-    /// </summary>
-    public unsafe BmSDK.FName Name
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
-
-    /// <summary>
-    /// ClassProperty: Class
-    /// </summary>
-    public unsafe BmSDK.Class Class
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: ObjectArchetype
-    /// </summary>
-    public unsafe BmSDK.GameObject ObjectArchetype
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
-    }
-
-    /// <summary>
-    /// Struct: FQWord
-    /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
-    public partial record struct FQWord
-    {
-        /// <summary>
-        /// IntProperty: A
-        /// </summary>
-        public unsafe int A
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
-        }
-
-        /// <summary>
-        /// IntProperty: B
-        /// </summary>
-        public unsafe int B
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
-        }
-    }
-
-    /// <summary>
-    /// Struct: FPointer
-    /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
-    public partial record struct FPointer
-    {
-        /// <summary>
-        /// IntProperty: Dummy
-        /// </summary>
-        public unsafe int Dummy
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
-        }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAccountInterface.CreateOnlineAccount", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(UserName, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Password, paramsPtr + 16);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(EmailAddress, paramsPtr + 32);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(ProductKey, paramsPtr + 48);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 64);
     }
 }

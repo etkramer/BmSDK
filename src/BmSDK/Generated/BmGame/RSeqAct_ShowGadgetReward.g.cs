@@ -33,6 +33,28 @@ public partial class RSeqAct_ShowGadgetReward : BmSDK.Engine.SequenceAction, BmS
     protected RSeqAct_ShowGadgetReward(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: RewardMovieClosed
+    /// </summary>
+    public unsafe void RewardMovieClosed()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ShowGadgetReward.RewardMovieClosed", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ShowGadgetReward.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: SwfMovieReference
     /// </summary>
     public unsafe BmSDK.GFxUI.SwfMovie SwfMovieReference

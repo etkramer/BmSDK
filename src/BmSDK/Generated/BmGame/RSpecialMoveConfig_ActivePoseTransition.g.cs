@@ -33,6 +33,21 @@ public partial class RSpecialMoveConfig_ActivePoseTransition : BmSDK.BmGame.RSpe
     protected RSpecialMoveConfig_ActivePoseTransition(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetEndPositionAndYaw
+    /// </summary>
+    public unsafe void GetEndPositionAndYaw(BmSDK.Engine.Pawn Player, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation, out System.Numerics.Vector3 EndPosition, out int EndYaw)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveConfig_ActivePoseTransition.GetEndPositionAndYaw", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Player, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(MoveLocation, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        EndPosition = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 140);
+        EndYaw = BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 152);
+        return;
+    }
+
+    /// <summary>
     /// NameProperty: EndMovementStance
     /// </summary>
     public unsafe BmSDK.FName EndMovementStance

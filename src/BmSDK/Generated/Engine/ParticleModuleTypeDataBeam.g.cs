@@ -33,6 +33,17 @@ public partial class ParticleModuleTypeDataBeam : BmSDK.Engine.ParticleModuleTyp
     protected ParticleModuleTypeDataBeam(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EBeamEndPointMethod
+    /// </summary>
+    public enum EBeamEndPointMethod
+    {
+        PEBEPM_Calculated = 0,
+        PEBEPM_Distribution = 1,
+        PEBEPM_Distribution_Constant = 2,
+        PEBEPM_MAX = 3,
+    }
+
+    /// <summary>
     /// ByteProperty: BeamMethod
     /// </summary>
     public unsafe BmSDK.Engine.ParticleModuleTypeDataBeam.EBeamMethod BeamMethod

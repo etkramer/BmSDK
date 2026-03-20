@@ -67,30 +67,4 @@ public partial class RJokerBillboardToggleable : BmSDK.BmGame.RJokerBillboard, B
         where TComponent : class, Framework.IScriptComponent<RJokerBillboardToggleable>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// ObjectProperty: OriginalMaterial
-    /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface OriginalMaterial
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 732); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: AlternateMaterial
-    /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface AlternateMaterial
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 740); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
-    }
-
-    /// <summary>
-    /// IntProperty: SwapMaterialIndex
-    /// </summary>
-    public unsafe int SwapMaterialIndex
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 748); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
-    }
 }

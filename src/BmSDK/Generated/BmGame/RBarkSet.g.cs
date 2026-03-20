@@ -33,6 +33,31 @@ public partial class RBarkSet : BmSDK.Engine.AkHash, BmSDK.IGameObject
     protected RBarkSet(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FMapProxyForSaving
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FMapProxyForSaving
+    {
+        /// <summary>
+        /// NameProperty: Key
+        /// </summary>
+        public unsafe BmSDK.FName Key
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// ArrayProperty: BarkList
+        /// </summary>
+        public unsafe BmSDK.TArray<BmSDK.BmGame.RBarkConvo> BarkList
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RBarkConvo>>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+    }
+
+    /// <summary>
     /// ArrayProperty: BarkConvos
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.BmGame.RBarkConvo> BarkConvos

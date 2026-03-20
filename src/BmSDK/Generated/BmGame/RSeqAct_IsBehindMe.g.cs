@@ -33,6 +33,17 @@ public partial class RSeqAct_IsBehindMe : BmSDK.Engine.SequenceAction, BmSDK.IGa
     protected RSeqAct_IsBehindMe(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IsBehindMe.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: Target
     /// </summary>
     public unsafe BmSDK.Engine.Actor Target

@@ -33,6 +33,43 @@ public partial class RRepeatAnimManager : BmSDK.GameObject, BmSDK.IGameObject
     protected RRepeatAnimManager(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetAnim
+    /// </summary>
+    public unsafe BmSDK.FName GetAnim(float CurrentTime)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRepeatAnimManager.GetAnim", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CurrentTime, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(paramsPtr + 4);
+    }
+
+    /// <summary>
+    /// Function: AddAnim
+    /// </summary>
+    public unsafe void AddAnim(BmSDK.FName NewAnim)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRepeatAnimManager.AddAnim", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewAnim, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SetLockoutTimes
+    /// </summary>
+    public unsafe void SetLockoutTimes(float NewHard, float NewSoft)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRepeatAnimManager.SetLockoutTimes", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewHard, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewSoft, paramsPtr + 4);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ArrayProperty: AnimHistory
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.BmGame.RRepeatAnimManager.FRAM_AnimTime> AnimHistory

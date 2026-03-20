@@ -33,6 +33,17 @@ public partial class SeqAct_ControlMovieTexture : BmSDK.Engine.SequenceAction, B
     protected SeqAct_ControlMovieTexture(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_ControlMovieTexture.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: MovieTexture
     /// </summary>
     public unsafe BmSDK.Engine.TextureMovie MovieTexture

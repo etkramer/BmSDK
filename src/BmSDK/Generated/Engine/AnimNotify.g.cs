@@ -33,169 +33,150 @@ public partial class AnimNotify : BmSDK.GameObject, BmSDK.IGameObject
     protected AnimNotify(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// StructProperty: VfTableObject
+    /// Function: FindNextNotifyOfClass
     /// </summary>
-    public unsafe System.IntPtr VfTableObject
+    public unsafe bool FindNextNotifyOfClass(BmSDK.Engine.AnimNodeSequence AnimSeqInstigator, BmSDK.Class NotifyClass, out BmSDK.Engine.AnimSequence.FAnimNotifyEvent OutEvent)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 0); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNotify.FindNextNotifyOfClass", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimSeqInstigator, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NotifyClass, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        OutEvent = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence.FAnimNotifyEvent>(paramsPtr + 16);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 28);
     }
 
     /// <summary>
-    /// IntProperty: ObjectFlags
+    /// Enum: ENotifyCategory
     /// </summary>
-    public unsafe BmSDK.GameObject.EObjectFlags ObjectFlags
+    public enum ENotifyCategory
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EObjectFlags>(Ptr + 8); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }
+        NOTIFYCATEGORY_Misc = 0,
+        NOTIFYCATEGORY_IK = 1,
+        NOTIFYCATEGORY_Sound = 2,
+        NOTIFYCATEGORY_Catwoman = 3,
+        NOTIFYCATEGORY_Character = 4,
+        NOTIFYCATEGORY_VFX = 5,
+        NOTIFYCATEGORY_Animation = 6,
+        NOTIFYCATEGORY_Footstep = 7,
+        NOTIFYCATEGORY_Cape = 8,
+        NOTIFYCATEGORY_Ragdoll = 9,
+        NOTIFYCATEGORY_Physics = 10,
+        NOTIFYCATEGORY_Destruction = 11,
+        NOTIFYCATEGORY_MAX = 12,
     }
 
     /// <summary>
-    /// IntProperty: EditorObjectFlags
+    /// Enum: ENotifyRenderCategory
     /// </summary>
-    public unsafe int EditorObjectFlags
+    public enum ENotifyRenderCategory
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }
+        NOTIFYRENDERCATEGORY_Misc = 0,
+        NOTIFYRENDERCATEGORY_MotionExtraction = 1,
+        NOTIFYRENDERCATEGORY_Transition = 2,
+        NOTIFYRENDERCATEGORY_Footsteps = 3,
+        NOTIFYRENDERCATEGORY_IK_Left = 4,
+        NOTIFYRENDERCATEGORY_IK_Right = 5,
+        NOTIFYRENDERCATEGORY_Sound = 6,
+        NOTIFYRENDERCATEGORY_Dialogue = 7,
+        NOTIFYRENDERCATEGORY_CachedDialogue = 8,
+        NOTIFYRENDERCATEGORY_MAX = 9,
     }
 
     /// <summary>
-    /// IntProperty: HashIndexPrev
-    /// </summary>
-    public unsafe int HashIndexPrev
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }
-    }
-
-    /// <summary>
-    /// IntProperty: HashIndexNext
-    /// </summary>
-    public unsafe int HashIndexNext
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 20); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }
-    }
-
-    /// <summary>
-    /// IntProperty: HashOuterIndexPrev
-    /// </summary>
-    public unsafe int HashOuterIndexPrev
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }
-    }
-
-    /// <summary>
-    /// IntProperty: HashOuterIndexNext
-    /// </summary>
-    public unsafe int HashOuterIndexNext
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: Linker
-    /// </summary>
-    public unsafe BmSDK.GameObject Linker
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 32); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }
-    }
-
-    /// <summary>
-    /// StructProperty: LinkerIndex
-    /// </summary>
-    public unsafe System.IntPtr LinkerIndex
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 40); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }
-    }
-
-    /// <summary>
-    /// IntProperty: ObjectInternalInteger
-    /// </summary>
-    public unsafe int ObjectInternalInteger
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: Outer
-    /// </summary>
-    public unsafe BmSDK.GameObject Outer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
-    }
-
-    /// <summary>
-    /// NameProperty: Name
-    /// </summary>
-    public unsafe BmSDK.FName Name
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
-
-    /// <summary>
-    /// ClassProperty: Class
-    /// </summary>
-    public unsafe BmSDK.Class Class
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: ObjectArchetype
-    /// </summary>
-    public unsafe BmSDK.GameObject ObjectArchetype
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
-    }
-
-    /// <summary>
-    /// Struct: FQWord
+    /// Struct: FNotifierInfo
     /// </summary>
     [StructLayout(LayoutKind.Explicit)]
-    public partial record struct FQWord
+    public partial record struct FNotifierInfo
     {
         /// <summary>
-        /// IntProperty: A
+        /// ObjectProperty: AnimNotify
         /// </summary>
-        public unsafe int A
+        public unsafe BmSDK.Engine.AnimNotify AnimNotify
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNotify>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// IntProperty: B
+        /// ObjectProperty: Owner
         /// </summary>
-        public unsafe int B
+        public unsafe BmSDK.Engine.Actor Owner
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
-    }
 
-    /// <summary>
-    /// Struct: FPointer
-    /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
-    public partial record struct FPointer
-    {
         /// <summary>
-        /// IntProperty: Dummy
+        /// ComponentProperty: SkelComponent
         /// </summary>
-        public unsafe int Dummy
+        public unsafe BmSDK.Engine.SkeletalMeshComponent SkelComponent
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+
+        /// <summary>
+        /// ObjectProperty: AnimSequence
+        /// </summary>
+        public unsafe BmSDK.Engine.AnimSequence AnimSequence
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: Time
+        /// </summary>
+        public unsafe float Time
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 32); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: Weight
+        /// </summary>
+        public unsafe float Weight
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 36); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: TimeDifference
+        /// </summary>
+        public unsafe float TimeDifference
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 40); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: AnimMirrored
+        /// </summary>
+        public unsafe bool AnimMirrored
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 44); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: PlayedBackwards
+        /// </summary>
+        public unsafe bool PlayedBackwards
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44) & 2) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 44); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: PreNotify
+        /// </summary>
+        public unsafe bool PreNotify
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44) & 4) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 44); }; }
         }
     }
 }

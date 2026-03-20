@@ -33,6 +33,29 @@ public partial class RSeqAct_SetHelicopterPointOfInterestActive : BmSDK.Engine.S
     protected RSeqAct_SetHelicopterPointOfInterestActive(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: SetPointsActive
+    /// </summary>
+    public unsafe void SetPointsActive(bool _active)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SetHelicopterPointOfInterestActive.SetPointsActive", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(_active, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SetHelicopterPointOfInterestActive.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ArrayProperty: PointsOfInterest
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.BmGame.RHelicopterPointOfInterest> PointsOfInterest

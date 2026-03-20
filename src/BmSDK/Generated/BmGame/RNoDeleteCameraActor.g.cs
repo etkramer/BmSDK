@@ -68,83 +68,13 @@ public partial class RNoDeleteCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ObjectProperty: ScreenShakeModifier
+    /// Function: DestroyMe
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier ScreenShakeModifier
+    public unsafe void DestroyMe()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier>(Ptr + 1224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1224); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: OverlayPlayer
-    /// </summary>
-    public unsafe BmSDK.BmGame.RCameraOverlayPlayer OverlayPlayer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCameraOverlayPlayer>(Ptr + 1232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1232); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bRunning
-    /// </summary>
-    public unsafe bool bRunning
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bCullsPawns
-    /// </summary>
-    public unsafe bool bCullsPawns
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bEnableMotionBlur
-    /// </summary>
-    public unsafe bool bEnableMotionBlur
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bUseAspectRatioCorretion
-    /// </summary>
-    public unsafe bool bUseAspectRatioCorretion
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 8) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bDisallowOverlays
-    /// </summary>
-    public unsafe bool bDisallowOverlays
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 16) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bCullPawnsTillClearOfBatmobile
-    /// </summary>
-    public unsafe bool bCullPawnsTillClearOfBatmobile
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 32) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
-    }
-
-    /// <summary>
-    /// FloatProperty: AuthoredAspectRatio
-    /// </summary>
-    public unsafe float AuthoredAspectRatio
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1244); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNoDeleteCameraActor.DestroyMe", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

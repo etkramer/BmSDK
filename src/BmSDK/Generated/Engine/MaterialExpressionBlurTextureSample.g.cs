@@ -33,6 +33,16 @@ public partial class MaterialExpressionBlurTextureSample : BmSDK.Engine.Material
     protected MaterialExpressionBlurTextureSample(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: ESampleBlurType
+    /// </summary>
+    public enum ESampleBlurType
+    {
+        SampleBlur_PoissonDisc = 0,
+        SampleBlur_Mip = 1,
+        SampleBlur_MAX = 2,
+    }
+
+    /// <summary>
     /// ObjectProperty: Texture
     /// </summary>
     public unsafe BmSDK.Engine.Texture Texture

@@ -32,21 +32,4 @@ public partial class RSpecialMoveControllerSimple : BmSDK.BmGame.RSpecialMoveCon
     /// </summary>
     protected RSpecialMoveControllerSimple(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// ArrayProperty: SpecialMoves
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.REnvironmentSpecialMoveWrapper> SpecialMoves
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.REnvironmentSpecialMoveWrapper>>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bSimpleController
-    /// </summary>
-    public unsafe bool bSimpleController
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
-    }
 }

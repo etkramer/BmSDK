@@ -33,6 +33,108 @@ public partial class ParticleModule : BmSDK.GameObject, BmSDK.IGameObject
     protected ParticleModule(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FParticleRandomSeedInfo
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FParticleRandomSeedInfo
+    {
+        /// <summary>
+        /// NameProperty: ParameterName
+        /// </summary>
+        public unsafe BmSDK.FName ParameterName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: bGetSeedFromInstance
+        /// </summary>
+        public unsafe bool bGetSeedFromInstance
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 8); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: bInstanceSeedIsIndex
+        /// </summary>
+        public unsafe bool bInstanceSeedIsIndex
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8) & 2) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 8); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: bResetSeedOnEmitterLooping
+        /// </summary>
+        public unsafe bool bResetSeedOnEmitterLooping
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8) & 4) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 8); }; }
+        }
+
+        /// <summary>
+        /// ArrayProperty: RandomSeeds
+        /// </summary>
+        public unsafe BmSDK.TArray<int> RandomSeeds
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+        }
+    }
+
+    /// <summary>
+    /// Enum: EParticleSourceSelectionMethod
+    /// </summary>
+    public enum EParticleSourceSelectionMethod
+    {
+        EPSSM_Random = 0,
+        EPSSM_Sequential = 1,
+        EPSSM_MAX = 2,
+    }
+
+    /// <summary>
+    /// Enum: EModuleType
+    /// </summary>
+    public enum EModuleType
+    {
+        EPMT_General = 0,
+        EPMT_TypeData = 1,
+        EPMT_Beam = 2,
+        EPMT_Trail = 3,
+        EPMT_Spawn = 4,
+        EPMT_Required = 5,
+        EPMT_Event = 6,
+        EPMT_MAX = 7,
+    }
+
+    /// <summary>
+    /// Struct: FParticleCurvePair
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FParticleCurvePair
+    {
+        /// <summary>
+        /// StrProperty: CurveName
+        /// </summary>
+        public unsafe BmSDK.FString CurveName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// ObjectProperty: CurveObject
+        /// </summary>
+        public unsafe BmSDK.GameObject CurveObject
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+    }
+
+    /// <summary>
     /// BoolProperty: bSpawnModule
     /// </summary>
     public unsafe bool bSpawnModule

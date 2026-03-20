@@ -33,6 +33,30 @@ public partial class ParticleModuleRequired : BmSDK.Engine.ParticleModule, BmSDK
     protected ParticleModuleRequired(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EEmitterNormalsMode
+    /// </summary>
+    public enum EEmitterNormalsMode
+    {
+        ENM_CameraFacing = 0,
+        ENM_Spherical = 1,
+        ENM_Cylindrical = 2,
+        ENM_MAX = 3,
+    }
+
+    /// <summary>
+    /// Enum: EParticleSortMode
+    /// </summary>
+    public enum EParticleSortMode
+    {
+        PSORTMODE_None = 0,
+        PSORTMODE_ViewProjDepth = 1,
+        PSORTMODE_DistanceToView = 2,
+        PSORTMODE_Age_OldestFirst = 3,
+        PSORTMODE_Age_NewestFirst = 4,
+        PSORTMODE_MAX = 5,
+    }
+
+    /// <summary>
     /// ObjectProperty: Material
     /// </summary>
     public unsafe BmSDK.Engine.MaterialInterface Material

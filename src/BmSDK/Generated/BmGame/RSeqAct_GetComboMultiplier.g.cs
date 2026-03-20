@@ -33,6 +33,17 @@ public partial class RSeqAct_GetComboMultiplier : BmSDK.Engine.SequenceAction, B
     protected RSeqAct_GetComboMultiplier(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GetComboMultiplier.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// IntProperty: CurrentCombo
     /// </summary>
     public unsafe int CurrentCombo

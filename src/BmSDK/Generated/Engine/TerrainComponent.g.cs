@@ -33,6 +33,81 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     protected TerrainComponent(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FTerrainBVTree
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FTerrainBVTree
+    {
+        /// <summary>
+        /// ArrayProperty: Nodes
+        /// </summary>
+        public unsafe BmSDK.TArray<int> Nodes
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FTerrainMaterialMask
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FTerrainMaterialMask
+    {
+        /// <summary>
+        /// StructProperty: BitMask
+        /// </summary>
+        public unsafe ulong BitMask
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<ulong>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: NumBits
+        /// </summary>
+        public unsafe int NumBits
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FTerrainPatchBounds
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FTerrainPatchBounds
+    {
+        /// <summary>
+        /// FloatProperty: MinHeight
+        /// </summary>
+        public unsafe float MinHeight
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: MaxHeight
+        /// </summary>
+        public unsafe float MaxHeight
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: MaxDisplacement
+        /// </summary>
+        public unsafe float MaxDisplacement
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+    }
+
+    /// <summary>
     /// ArrayProperty: ShadowMaps
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.Engine.ShadowMap2D> ShadowMaps

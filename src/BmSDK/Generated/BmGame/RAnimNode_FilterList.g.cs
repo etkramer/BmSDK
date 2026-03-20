@@ -33,6 +33,22 @@ public partial class RAnimNode_FilterList : BmSDK.Engine.AnimNodeBlendBase, BmSD
     protected RAnimNode_FilterList(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FFilterChildBones
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FFilterChildBones
+    {
+        /// <summary>
+        /// ArrayProperty: Indices
+        /// </summary>
+        public unsafe BmSDK.TArray<int> Indices
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+    }
+
+    /// <summary>
     /// ArrayProperty: ChildFilterInBone
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.FName> ChildFilterInBone

@@ -33,6 +33,19 @@ public partial class ActorFactory : BmSDK.GameObject, BmSDK.IGameObject
     protected ActorFactory(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: PostCreateActor
+    /// </summary>
+    public unsafe void PostCreateActor(BmSDK.Engine.Actor NewActor, BmSDK.Engine.SeqAct_ActorFactory ActorFactoryData = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ActorFactory.PostCreateActor", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewActor, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(ActorFactoryData, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ClassProperty: GameplayActorClass
     /// </summary>
     public unsafe BmSDK.Class GameplayActorClass

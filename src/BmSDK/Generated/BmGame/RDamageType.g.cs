@@ -33,6 +33,17 @@ public partial class RDamageType : BmSDK.Engine.DamageType, BmSDK.IGameObject
     protected RDamageType(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EBatmanArmourType
+    /// </summary>
+    public enum EBatmanArmourType
+    {
+        EBA_ArmourMelee = 0,
+        EBA_ArmourBallistic = 1,
+        EBA_None = 2,
+        EBA_MAX = 3,
+    }
+
+    /// <summary>
     /// BoolProperty: bStunOnHit
     /// </summary>
     public unsafe bool bStunOnHit

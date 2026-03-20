@@ -33,6 +33,30 @@ public partial class Path_TowardPoint : BmSDK.Engine.PathConstraint, BmSDK.IGame
     protected Path_TowardPoint(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Recycle
+    /// </summary>
+    public unsafe void Recycle()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Path_TowardPoint.Recycle", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: TowardPoint
+    /// </summary>
+    public unsafe static bool TowardPoint(BmSDK.Engine.Pawn P, System.Numerics.Vector3 Point)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Path_TowardPoint.TowardPoint", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(P, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Point, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 20);
+    }
+
+    /// <summary>
     /// StructProperty: GoalPoint
     /// </summary>
     public unsafe System.Numerics.Vector3 GoalPoint

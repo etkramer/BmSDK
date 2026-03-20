@@ -32,12 +32,4 @@ public partial class RSeqVar_SideStoriesDisabledReason : BmSDK.Engine.SeqVar_Str
     /// </summary>
     protected RSeqVar_SideStoriesDisabledReason(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// StrProperty: StrValue
-    /// </summary>
-    public unsafe BmSDK.FString StrValue
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
-    }
 }

@@ -33,6 +33,17 @@ public partial class RSeqEvent_TalkedTo : BmSDK.Engine.SequenceEvent, BmSDK.IGam
     protected RSeqEvent_TalkedTo(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Toggled
+    /// </summary>
+    public unsafe void Toggled()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_TalkedTo.Toggled", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// BoolProperty: bAllowInteruptions
     /// </summary>
     public unsafe bool bAllowInteruptions

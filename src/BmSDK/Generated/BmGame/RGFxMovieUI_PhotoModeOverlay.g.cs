@@ -33,6 +33,311 @@ public partial class RGFxMovieUI_PhotoModeOverlay : BmSDK.BmGame.RGFxMovieUI, Bm
     protected RGFxMovieUI_PhotoModeOverlay(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: XI_GetScreenSize
+    /// </summary>
+    public unsafe void XI_GetScreenSize(BmSDK.FString TargetPath, BmSDK.FString WidthVariableName, BmSDK.FString HeightVariableName)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.XI_GetScreenSize", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetPath, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(WidthVariableName, paramsPtr + 16);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(HeightVariableName, paramsPtr + 32);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: Close
+    /// </summary>
+    public unsafe void Close(bool Unload = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.Close", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Unload, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: OnLoadedPackage
+    /// </summary>
+    public unsafe void OnLoadedPackage(BmSDK.FString sCallback)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.OnLoadedPackage", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(sCallback, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: UC_LoadedFrame
+    /// </summary>
+    public unsafe void UC_LoadedFrame(BmSDK.FString LoadedFrame)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.UC_LoadedFrame", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(LoadedFrame, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: LoadFrame
+    /// </summary>
+    public unsafe void LoadFrame(bool bInIsHighRes = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.LoadFrame", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bInIsHighRes, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: UC_SetLogo
+    /// </summary>
+    public unsafe void UC_SetLogo(int Position, int Scale)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.UC_SetLogo", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Position, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Scale, paramsPtr + 4);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: UC_SetFrame
+    /// </summary>
+    public unsafe void UC_SetFrame(int intensity)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.UC_SetFrame", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(intensity, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: UC_SetVignette
+    /// </summary>
+    public unsafe void UC_SetVignette(int Type, int intensity)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.UC_SetVignette", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Type, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(intensity, paramsPtr + 4);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: XI_ChangedSlider
+    /// </summary>
+    public unsafe void XI_ChangedSlider()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.XI_ChangedSlider", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: XI_ChangedTab
+    /// </summary>
+    public unsafe void XI_ChangedTab()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.XI_ChangedTab", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: XI_Set
+    /// </summary>
+    public unsafe void XI_Set(BmSDK.FString ItemName, float Value, BmSDK.FString ListItem, bool bIshighRes = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.XI_Set", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(ItemName, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 16);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(ListItem, paramsPtr + 20);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bIshighRes, paramsPtr + 36);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: XI_Setup
+    /// </summary>
+    public unsafe void XI_Setup(BmSDK.FString TargetPath)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.XI_Setup", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetPath, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: XI_SetRightMouseClick
+    /// </summary>
+    public unsafe void XI_SetRightMouseClick(bool bInClick)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.XI_SetRightMouseClick", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bInClick, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: XI_SetLeftMouseClick
+    /// </summary>
+    public unsafe void XI_SetLeftMouseClick(bool bInClick)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.XI_SetLeftMouseClick", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bInClick, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: UC_PhotoListItem
+    /// </summary>
+    public unsafe void UC_PhotoListItem(BmSDK.FString TabName, BmSDK.FString ItemName, int Max, float Current, float Default = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.UC_PhotoListItem", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TabName, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(ItemName, paramsPtr + 16);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Max, paramsPtr + 32);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Current, paramsPtr + 36);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Default, paramsPtr + 40);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: UC_PhotoSliderItem
+    /// </summary>
+    public unsafe void UC_PhotoSliderItem(BmSDK.FString TabName, BmSDK.FString ItemName, float Min, float Max, float Step, float Default, BmSDK.FString Unit, int Fix, bool bMid, bool bPlus, float Current)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.UC_PhotoSliderItem", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TabName, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(ItemName, paramsPtr + 16);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Min, paramsPtr + 32);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Max, paramsPtr + 36);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Step, paramsPtr + 40);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Default, paramsPtr + 44);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Unit, paramsPtr + 48);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Fix, paramsPtr + 64);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bMid, paramsPtr + 68);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlus, paramsPtr + 72);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Current, paramsPtr + 76);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: XI_OnOut
+    /// </summary>
+    public unsafe void XI_OnOut()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.XI_OnOut", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: XI_In
+    /// </summary>
+    public unsafe void XI_In(bool bInUsingGamepad)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.XI_In", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bInUsingGamepad, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: XI_ToggleVisible
+    /// </summary>
+    public unsafe void XI_ToggleVisible(bool bVisible, bool bInUsingGamepad)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.XI_ToggleVisible", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bVisible, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bInUsingGamepad, paramsPtr + 4);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: XI_OnBack
+    /// </summary>
+    public unsafe void XI_OnBack()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.XI_OnBack", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: XI_UpdatePrompts
+    /// </summary>
+    public unsafe void XI_UpdatePrompts(bool bInUsingGamepad)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.XI_UpdatePrompts", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bInUsingGamepad, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SetupScreenPrompts
+    /// </summary>
+    public unsafe void SetupScreenPrompts()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.SetupScreenPrompts", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: Init
+    /// </summary>
+    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.Init", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(LocPlay, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SpecialInit
+    /// </summary>
+    public unsafe bool SpecialInit(BmSDK.BmGame.RPlayerController PC)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PhotoModeOverlay.SpecialInit", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(PC, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
+    }
+
+    /// <summary>
     /// ObjectProperty: PhotoCamera
     /// </summary>
     public unsafe BmSDK.BmGame.RPhotoCameraController PhotoCamera

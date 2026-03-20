@@ -32,12 +32,4 @@ public partial class RBMSpecialMove_ReachSpec : BmSDK.BmGame.RReachSpec, BmSDK.I
     /// </summary>
     protected RBMSpecialMove_ReachSpec(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// ArrayProperty: PathBlockers
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.GameObject> PathBlockers
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GameObject>>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
 }

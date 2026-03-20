@@ -33,169 +33,235 @@ public partial class OnlinePartyChatInterface : BmSDK.Interface, BmSDK.IGameObje
     protected OnlinePartyChatInterface(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// StructProperty: VfTableObject
+    /// Function: IsInPartyChat
     /// </summary>
-    public unsafe System.IntPtr VfTableObject
+    public unsafe bool IsInPartyChat(byte LocalUserNum)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 0); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.IsInPartyChat", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
     }
 
     /// <summary>
-    /// IntProperty: ObjectFlags
+    /// Function: ShowCommunitySessionsUI
     /// </summary>
-    public unsafe BmSDK.GameObject.EObjectFlags ObjectFlags
+    public unsafe bool ShowCommunitySessionsUI(byte LocalUserNum)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EObjectFlags>(Ptr + 8); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.ShowCommunitySessionsUI", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
     }
 
     /// <summary>
-    /// IntProperty: EditorObjectFlags
+    /// Function: ShowVoiceChannelUI
     /// </summary>
-    public unsafe int EditorObjectFlags
+    public unsafe bool ShowVoiceChannelUI(byte LocalUserNum)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.ShowVoiceChannelUI", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
     }
 
     /// <summary>
-    /// IntProperty: HashIndexPrev
+    /// Function: ShowPartyUI
     /// </summary>
-    public unsafe int HashIndexPrev
+    public unsafe bool ShowPartyUI(byte LocalUserNum)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.ShowPartyUI", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
     }
 
     /// <summary>
-    /// IntProperty: HashIndexNext
+    /// Function: GetPartyBandwidth
     /// </summary>
-    public unsafe int HashIndexNext
+    public unsafe int GetPartyBandwidth()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 20); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.GetPartyBandwidth", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
 
     /// <summary>
-    /// IntProperty: HashOuterIndexPrev
+    /// Function: SetPartyMemberCustomData
     /// </summary>
-    public unsafe int HashOuterIndexPrev
+    public unsafe bool SetPartyMemberCustomData(byte LocalUserNum, int Data1, int Data2, int Data3, int Data4)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.SetPartyMemberCustomData", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Data1, paramsPtr + 4);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Data2, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Data3, paramsPtr + 12);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Data4, paramsPtr + 16);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 20);
     }
 
     /// <summary>
-    /// IntProperty: HashOuterIndexNext
+    /// Function: ClearPartyMembersInfoChangedDelegate
     /// </summary>
-    public unsafe int HashOuterIndexNext
+    public unsafe void ClearPartyMembersInfoChangedDelegate(byte LocalUserNum, System.IntPtr PartyMembersInfoChangedDelegate)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.ClearPartyMembersInfoChangedDelegate", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(PartyMembersInfoChangedDelegate, paramsPtr + 4);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// ObjectProperty: Linker
+    /// Function: AddPartyMembersInfoChangedDelegate
     /// </summary>
-    public unsafe BmSDK.GameObject Linker
+    public unsafe void AddPartyMembersInfoChangedDelegate(byte LocalUserNum, System.IntPtr PartyMembersInfoChangedDelegate)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 32); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.AddPartyMembersInfoChangedDelegate", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(PartyMembersInfoChangedDelegate, paramsPtr + 4);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// StructProperty: LinkerIndex
+    /// Function: OnPartyMembersInfoChanged
     /// </summary>
-    public unsafe System.IntPtr LinkerIndex
+    public unsafe void OnPartyMembersInfoChanged(BmSDK.FString PlayerName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID, int CustomData1, int CustomData2, int CustomData3, int CustomData4)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 40); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.OnPartyMembersInfoChanged", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerName, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerID, paramsPtr + 16);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CustomData1, paramsPtr + 24);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CustomData2, paramsPtr + 28);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CustomData3, paramsPtr + 32);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CustomData4, paramsPtr + 36);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// IntProperty: ObjectInternalInteger
+    /// Function: ClearPartyMemberListChangedDelegate
     /// </summary>
-    public unsafe int ObjectInternalInteger
+    public unsafe void ClearPartyMemberListChangedDelegate(byte LocalUserNum, System.IntPtr PartyMemberListChangedDelegate)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.ClearPartyMemberListChangedDelegate", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(PartyMemberListChangedDelegate, paramsPtr + 4);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// ObjectProperty: Outer
+    /// Function: AddPartyMemberListChangedDelegate
     /// </summary>
-    public unsafe BmSDK.GameObject Outer
+    public unsafe void AddPartyMemberListChangedDelegate(byte LocalUserNum, System.IntPtr PartyMemberListChangedDelegate)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.AddPartyMemberListChangedDelegate", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(PartyMemberListChangedDelegate, paramsPtr + 4);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// NameProperty: Name
+    /// Function: OnPartyMemberListChanged
     /// </summary>
-    public unsafe BmSDK.FName Name
+    public unsafe void OnPartyMemberListChanged(bool bJoinedOrLeft, BmSDK.FString PlayerName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.OnPartyMemberListChanged", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bJoinedOrLeft, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerName, paramsPtr + 4);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerID, paramsPtr + 20);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// ClassProperty: Class
+    /// Function: GetPartyMemberInformation
     /// </summary>
-    public unsafe BmSDK.Class Class
+    public unsafe bool GetPartyMemberInformation(BmSDK.Engine.OnlineSubsystem.FUniqueNetId MemberId, out BmSDK.Engine.OnlineSubsystem.FOnlinePartyMember PartyMember)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.GetPartyMemberInformation", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(MemberId, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        PartyMember = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FOnlinePartyMember>(paramsPtr + 8);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 68);
     }
 
     /// <summary>
-    /// ObjectProperty: ObjectArchetype
+    /// Function: GetPartyMembersInformation
     /// </summary>
-    public unsafe BmSDK.GameObject ObjectArchetype
+    public unsafe bool GetPartyMembersInformation(out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FOnlinePartyMember> PartyMembers)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.GetPartyMembersInformation", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        PartyMembers = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FOnlinePartyMember>>(paramsPtr + 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 16);
     }
 
     /// <summary>
-    /// Struct: FQWord
+    /// Function: ClearSendPartyGameInvitesCompleteDelegate
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
-    public partial record struct FQWord
+    public unsafe void ClearSendPartyGameInvitesCompleteDelegate(byte LocalUserNum, System.IntPtr SendPartyGameInvitesCompleteDelegate)
     {
-        /// <summary>
-        /// IntProperty: A
-        /// </summary>
-        public unsafe int A
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
-        }
-
-        /// <summary>
-        /// IntProperty: B
-        /// </summary>
-        public unsafe int B
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
-        }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.ClearSendPartyGameInvitesCompleteDelegate", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(SendPartyGameInvitesCompleteDelegate, paramsPtr + 4);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// Struct: FPointer
+    /// Function: AddSendPartyGameInvitesCompleteDelegate
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
-    public partial record struct FPointer
+    public unsafe void AddSendPartyGameInvitesCompleteDelegate(byte LocalUserNum, System.IntPtr SendPartyGameInvitesCompleteDelegate)
     {
-        /// <summary>
-        /// IntProperty: Dummy
-        /// </summary>
-        public unsafe int Dummy
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
-        }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.AddSendPartyGameInvitesCompleteDelegate", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(SendPartyGameInvitesCompleteDelegate, paramsPtr + 4);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: OnSendPartyGameInvitesComplete
+    /// </summary>
+    public unsafe void OnSendPartyGameInvitesComplete(bool bWasSuccessful)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.OnSendPartyGameInvitesComplete", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bWasSuccessful, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SendPartyGameInvites
+    /// </summary>
+    public unsafe bool SendPartyGameInvites(byte LocalUserNum)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.SendPartyGameInvites", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
     }
 }

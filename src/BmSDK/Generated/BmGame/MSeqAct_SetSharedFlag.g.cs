@@ -33,6 +33,28 @@ public partial class MSeqAct_SetSharedFlag : BmSDK.Engine.SeqAct_SetSequenceVari
     protected MSeqAct_SetSharedFlag(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Deactivated
+    /// </summary>
+    public unsafe void Deactivated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSeqAct_SetSharedFlag.Deactivated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSeqAct_SetSharedFlag.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// StrProperty: SharedFlagName
     /// </summary>
     public unsafe BmSDK.FString SharedFlagName

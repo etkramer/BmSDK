@@ -33,169 +33,131 @@ public partial class HttpBaseInterface : BmSDK.GameObject, BmSDK.IGameObject
     protected HttpBaseInterface(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// StructProperty: VfTableObject
+    /// Function: GetContent
     /// </summary>
-    public unsafe System.IntPtr VfTableObject
+    public unsafe void GetContent(out BmSDK.TArray<byte> Content)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 0); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HttpBaseInterface.GetContent", true);
+        byte* paramsPtr = stackalloc byte[64];
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        Content = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(paramsPtr + 0);
+        return;
     }
 
     /// <summary>
-    /// IntProperty: ObjectFlags
+    /// Function: GetURL
     /// </summary>
-    public unsafe BmSDK.GameObject.EObjectFlags ObjectFlags
+    public unsafe BmSDK.FString GetURL()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EObjectFlags>(Ptr + 8); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HttpBaseInterface.GetURL", true);
+        byte* paramsPtr = stackalloc byte[64];
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
     }
 
     /// <summary>
-    /// IntProperty: EditorObjectFlags
+    /// Function: GetContentLength
     /// </summary>
-    public unsafe int EditorObjectFlags
+    public unsafe int GetContentLength()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HttpBaseInterface.GetContentLength", true);
+        byte* paramsPtr = stackalloc byte[64];
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
 
     /// <summary>
-    /// IntProperty: HashIndexPrev
+    /// Function: GetContentType
     /// </summary>
-    public unsafe int HashIndexPrev
+    public unsafe BmSDK.FString GetContentType()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HttpBaseInterface.GetContentType", true);
+        byte* paramsPtr = stackalloc byte[64];
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
     }
 
     /// <summary>
-    /// IntProperty: HashIndexNext
+    /// Function: GetURLParameter
     /// </summary>
-    public unsafe int HashIndexNext
+    public unsafe BmSDK.FString GetURLParameter(BmSDK.FString ParameterName)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 20); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HttpBaseInterface.GetURLParameter", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 16);
     }
 
     /// <summary>
-    /// IntProperty: HashOuterIndexPrev
+    /// Function: GetHeaders
     /// </summary>
-    public unsafe int HashOuterIndexPrev
+    public unsafe BmSDK.TArray<BmSDK.FString> GetHeaders()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HttpBaseInterface.GetHeaders", true);
+        byte* paramsPtr = stackalloc byte[64];
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(paramsPtr + 0);
     }
 
     /// <summary>
-    /// IntProperty: HashOuterIndexNext
+    /// Function: GetHeader
     /// </summary>
-    public unsafe int HashOuterIndexNext
+    public unsafe BmSDK.FString GetHeader(BmSDK.FString HeaderName)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: Linker
-    /// </summary>
-    public unsafe BmSDK.GameObject Linker
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 32); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }
-    }
-
-    /// <summary>
-    /// StructProperty: LinkerIndex
-    /// </summary>
-    public unsafe System.IntPtr LinkerIndex
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 40); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }
-    }
-
-    /// <summary>
-    /// IntProperty: ObjectInternalInteger
-    /// </summary>
-    public unsafe int ObjectInternalInteger
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: Outer
-    /// </summary>
-    public unsafe BmSDK.GameObject Outer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
-    }
-
-    /// <summary>
-    /// NameProperty: Name
-    /// </summary>
-    public unsafe BmSDK.FName Name
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
-
-    /// <summary>
-    /// ClassProperty: Class
-    /// </summary>
-    public unsafe BmSDK.Class Class
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: ObjectArchetype
-    /// </summary>
-    public unsafe BmSDK.GameObject ObjectArchetype
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
-    }
-
-    /// <summary>
-    /// Struct: FQWord
-    /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
-    public partial record struct FQWord
-    {
-        /// <summary>
-        /// IntProperty: A
-        /// </summary>
-        public unsafe int A
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
-        }
-
-        /// <summary>
-        /// IntProperty: B
-        /// </summary>
-        public unsafe int B
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
-        }
-    }
-
-    /// <summary>
-    /// Struct: FPointer
-    /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
-    public partial record struct FPointer
-    {
-        /// <summary>
-        /// IntProperty: Dummy
-        /// </summary>
-        public unsafe int Dummy
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
-        }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HttpBaseInterface.GetHeader", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(HeaderName, paramsPtr + 0);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 16);
     }
 }

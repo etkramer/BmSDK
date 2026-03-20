@@ -33,6 +33,31 @@ public partial class RSeqAct_AutoJez : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameOb
     protected RSeqAct_AutoJez(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FAutoJezChapter
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FAutoJezChapter
+    {
+        /// <summary>
+        /// StrProperty: Name
+        /// </summary>
+        public unsafe BmSDK.FString Name
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: Chapter
+        /// </summary>
+        public unsafe int Chapter
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+    }
+
+    /// <summary>
     /// ArrayProperty: PMaps
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.FString> PMaps

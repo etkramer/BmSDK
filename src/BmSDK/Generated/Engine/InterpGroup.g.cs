@@ -33,6 +33,49 @@ public partial class InterpGroup : BmSDK.GameObject, BmSDK.IGameObject
     protected InterpGroup(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FInterpEdSelKey
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FInterpEdSelKey
+    {
+        /// <summary>
+        /// ObjectProperty: Group
+        /// </summary>
+        public unsafe BmSDK.Engine.InterpGroup Group
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpGroup>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// ObjectProperty: Track
+        /// </summary>
+        public unsafe BmSDK.Engine.InterpTrack Track
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrack>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: KeyIndex
+        /// </summary>
+        public unsafe int KeyIndex
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: UnsnappedPosition
+        /// </summary>
+        public unsafe float UnsnappedPosition
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 20); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
+        }
+    }
+
+    /// <summary>
     /// StructProperty: VfTable_FInterpEdInputInterface
     /// </summary>
     public unsafe System.IntPtr VfTable_FInterpEdInputInterface

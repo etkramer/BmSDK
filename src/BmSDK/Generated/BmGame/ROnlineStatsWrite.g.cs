@@ -33,56 +33,30 @@ public partial class ROnlineStatsWrite : BmSDK.Engine.OnlineStatsWrite, BmSDK.IG
     protected ROnlineStatsWrite(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// ArrayProperty: StatMappings
+    /// Function: CopyAndWriteAllStats
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.Settings.FStringIdToStringMapping> StatMappings
+    public unsafe void CopyAndWriteAllStats(BmSDK.BmGame.RPlayerController PC, BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqId, BmSDK.Engine.PlayerReplicationInfo PRI, BmSDK.Engine.OnlineStatsInterface StatsInterface)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Settings.FStringIdToStringMapping>>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROnlineStatsWrite.CopyAndWriteAllStats", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(PC, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(UniqId, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(PRI, paramsPtr + 16);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(StatsInterface, paramsPtr + 24);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// ArrayProperty: Properties
+    /// Function: CopyAllStats
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.Settings.FSettingsProperty> Properties
+    public unsafe bool CopyAllStats(BmSDK.BmGame.RPlayerController PC, BmSDK.Engine.PlayerReplicationInfo PRI)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Settings.FSettingsProperty>>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: ViewIds
-    /// </summary>
-    public unsafe BmSDK.TArray<int> ViewIds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: ArbitratedViewIds
-    /// </summary>
-    public unsafe BmSDK.TArray<int> ArbitratedViewIds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
-    }
-
-    /// <summary>
-    /// IntProperty: RatingId
-    /// </summary>
-    public unsafe int RatingId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
-    }
-
-    /// <summary>
-    /// DelegateProperty: __OnStatsWriteComplete__Delegate
-    /// </summary>
-    public unsafe System.IntPtr __OnStatsWriteComplete__Delegate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 168); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROnlineStatsWrite.CopyAllStats", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(PC, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(PRI, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 16);
     }
 }

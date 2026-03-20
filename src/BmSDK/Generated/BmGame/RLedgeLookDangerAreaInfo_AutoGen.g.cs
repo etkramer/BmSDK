@@ -67,39 +67,4 @@ public partial class RLedgeLookDangerAreaInfo_AutoGen : BmSDK.BmGame.RLedgeLookD
         where TComponent : class, Framework.IScriptComponent<RLedgeLookDangerAreaInfo_AutoGen>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// ArrayProperty: FencePointList
-    /// </summary>
-    public unsafe BmSDK.TArray<System.Numerics.Vector3> FencePointList
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.Numerics.Vector3>>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: NextPoint
-    /// </summary>
-    public unsafe BmSDK.BmGame.RCurvedFencePoint NextPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCurvedFencePoint>(Ptr + 684); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bManuallyPlaced
-    /// </summary>
-    public unsafe bool bManuallyPlaced
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 692); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: RegisteredPolyList
-    /// </summary>
-    public unsafe BmSDK.TArray<System.IntPtr> RegisteredPolyList
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.IntPtr>>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
-    }
 }

@@ -33,11 +33,14 @@ public partial class AICommandBase : BmSDK.StateObject, BmSDK.IGameObject
     protected AICommandBase(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// StructProperty: StateFrame
+    /// Function: GetUtility
     /// </summary>
-    public unsafe System.IntPtr StateFrame
+    public unsafe static int GetUtility(BmSDK.Engine.AIController InAI)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AICommandBase.GetUtility", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(InAI, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 8);
     }
 }

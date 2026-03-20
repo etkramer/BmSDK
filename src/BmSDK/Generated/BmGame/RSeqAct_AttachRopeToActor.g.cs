@@ -33,6 +33,17 @@ public partial class RSeqAct_AttachRopeToActor : BmSDK.Engine.SequenceAction, Bm
     protected RSeqAct_AttachRopeToActor(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AttachRopeToActor.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: Target
     /// </summary>
     public unsafe BmSDK.Engine.Actor Target

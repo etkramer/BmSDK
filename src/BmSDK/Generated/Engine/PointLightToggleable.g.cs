@@ -68,38 +68,53 @@ public partial class PointLightToggleable : BmSDK.Engine.PointLight, BmSDK.IGame
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ComponentProperty: LightComponent
+    /// Function: ApplyCheckpointRecord
     /// </summary>
-    public unsafe BmSDK.Engine.LightComponent LightComponent
+    public unsafe void ApplyCheckpointRecord(out BmSDK.Engine.PointLightToggleable.FCheckpointRecord Record)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PointLightToggleable.ApplyCheckpointRecord", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        Record = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PointLightToggleable.FCheckpointRecord>(paramsPtr + 0);
+        return;
     }
 
     /// <summary>
-    /// NameProperty: LightGroup
+    /// Function: CreateCheckpointRecord
     /// </summary>
-    public unsafe BmSDK.FName LightGroup
+    public unsafe void CreateCheckpointRecord(out BmSDK.Engine.PointLightToggleable.FCheckpointRecord Record)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PointLightToggleable.CreateCheckpointRecord", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        Record = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PointLightToggleable.FCheckpointRecord>(paramsPtr + 0);
+        return;
     }
 
     /// <summary>
-    /// BoolProperty: bEnabled
+    /// Function: ShouldSaveForCheckpoint
     /// </summary>
-    public unsafe bool bEnabled
+    public unsafe bool ShouldSaveForCheckpoint()
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 684) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 684); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 684); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PointLightToggleable.ShouldSaveForCheckpoint", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
 
     /// <summary>
-    /// IntProperty: MatineeControlReferenceCount
+    /// Struct: FCheckpointRecord
     /// </summary>
-    public unsafe int MatineeControlReferenceCount
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FCheckpointRecord
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
+        /// <summary>
+        /// BoolProperty: bEnabled
+        /// </summary>
+        public unsafe bool bEnabled
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+        }
     }
 }

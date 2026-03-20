@@ -33,6 +33,29 @@ public partial class RSeqAct_LoadCapeAnims : BmSDK.Engine.SequenceAction, BmSDK.
     protected RSeqAct_LoadCapeAnims(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_LoadCapeAnims.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: FindCapeComponent
+    /// </summary>
+    public unsafe BmSDK.BmGame.RCapeComponent FindCapeComponent(BmSDK.GameObject InObject)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_LoadCapeAnims.FindCapeComponent", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(InObject, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCapeComponent>(paramsPtr + 8);
+    }
+
+    /// <summary>
     /// ObjectProperty: CapeAnimSet
     /// </summary>
     public unsafe BmSDK.Engine.AnimSet CapeAnimSet

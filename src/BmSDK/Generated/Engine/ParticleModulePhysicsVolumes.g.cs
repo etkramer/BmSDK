@@ -33,6 +33,17 @@ public partial class ParticleModulePhysicsVolumes : BmSDK.Engine.ParticleModuleW
     protected ParticleModulePhysicsVolumes(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EParticleLevelInfluenceType
+    /// </summary>
+    public enum EParticleLevelInfluenceType
+    {
+        LIT_Never = 0,
+        LIT_OutsidePhysicsVolumes = 1,
+        LIT_Always = 2,
+        LIT_MAX = 3,
+    }
+
+    /// <summary>
     /// StructProperty: GlobalInfluence
     /// </summary>
     public unsafe BmSDK.DistributionFloat.FRawDistributionFloat GlobalInfluence

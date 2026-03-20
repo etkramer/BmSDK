@@ -33,6 +33,18 @@ public partial class RAimingConfig : BmSDK.GameObject, BmSDK.IGameObject
     protected RAimingConfig(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EAimingReference
+    /// </summary>
+    public enum EAimingReference
+    {
+        AR_Forward = 0,
+        AR_Head = 1,
+        AR_Gundummy = 2,
+        AR_Gundummy02 = 3,
+        AR_MAX = 4,
+    }
+
+    /// <summary>
     /// StructProperty: Spine
     /// </summary>
     public unsafe BmSDK.Engine.RAimingConfig.FAimingPartConfig Spine

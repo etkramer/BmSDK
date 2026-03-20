@@ -68,20 +68,14 @@ public partial class RStealthTakeDownStage_ChainTakedown_GlassAttack : BmSDK.BmG
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ObjectProperty: GlassBase
+    /// Function: GotoStage
     /// </summary>
-    public unsafe BmSDK.BmGame.RFractureWallBase GlassBase
+    public unsafe void GotoStage(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages NextStageClass)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RFractureWallBase>(Ptr + 1664); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1664); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: DestructibleBase
-    /// </summary>
-    public unsafe BmSDK.BmGame.RDestructibleProp_FractureWall DestructibleBase
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDestructibleProp_FractureWall>(Ptr + 1672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1672); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_ChainTakedown_GlassAttack.GotoStage", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NextStageClass, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

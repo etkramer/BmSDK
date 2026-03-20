@@ -68,56 +68,19 @@ public partial class RBmStealthTakedownStage_LRLedgeTakedownSuccess : BmSDK.BmGa
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// BoolProperty: bCanGrappleOutOfTakedown
+    /// Function: GotoStageEx
     /// </summary>
-    public unsafe bool bCanGrappleOutOfTakedown
+    public unsafe void GotoStageEx(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages NextStageClass, bool bClientRequest = default, BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator EscapeLoc = default, bool bEscapeTakedown = default, bool bNextStageIsFearTakedown = default, bool bNextStageIsKnockoutSmash = default)
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1700); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bGrateGrab
-    /// </summary>
-    public unsafe bool bGrateGrab
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1700); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bAlignWithStairRotation
-    /// </summary>
-    public unsafe bool bAlignWithStairRotation
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1700); }
-    }
-
-    /// <summary>
-    /// StructProperty: rStairAnimationRotation
-    /// </summary>
-    public unsafe BmSDK.Rotator rStairAnimationRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1704); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1704); }
-    }
-
-    /// <summary>
-    /// IntProperty: iGoingDownStairsAnimationIndex
-    /// </summary>
-    public unsafe int iGoingDownStairsAnimationIndex
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1716); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1716); }
-    }
-
-    /// <summary>
-    /// IntProperty: iGoingUpStairsAnimationIndex
-    /// </summary>
-    public unsafe int iGoingUpStairsAnimationIndex
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1720); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBmStealthTakedownStage_LRLedgeTakedownSuccess.GotoStageEx", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NextStageClass, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bClientRequest, paramsPtr + 4);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(EscapeLoc, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bEscapeTakedown, paramsPtr + 140);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bNextStageIsFearTakedown, paramsPtr + 144);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bNextStageIsKnockoutSmash, paramsPtr + 148);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

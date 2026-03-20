@@ -33,6 +33,30 @@ public partial class MaterialExpressionTransform : BmSDK.Engine.MaterialExpressi
     protected MaterialExpressionTransform(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EMaterialVectorCoordTransform
+    /// </summary>
+    public enum EMaterialVectorCoordTransform
+    {
+        TRANSFORM_World = 0,
+        TRANSFORM_View = 1,
+        TRANSFORM_Local = 2,
+        TRANSFORM_Tangent = 3,
+        TRANSFORM_MAX = 4,
+    }
+
+    /// <summary>
+    /// Enum: EMaterialVectorCoordTransformSource
+    /// </summary>
+    public enum EMaterialVectorCoordTransformSource
+    {
+        TRANSFORMSOURCE_World = 0,
+        TRANSFORMSOURCE_Local = 1,
+        TRANSFORMSOURCE_Tangent = 2,
+        TRANSFORMSOURCE_View = 3,
+        TRANSFORMSOURCE_MAX = 4,
+    }
+
+    /// <summary>
     /// StructProperty: Input
     /// </summary>
     public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Input

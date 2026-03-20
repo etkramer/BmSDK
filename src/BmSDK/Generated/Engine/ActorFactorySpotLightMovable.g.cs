@@ -32,12 +32,4 @@ public partial class ActorFactorySpotLightMovable : BmSDK.Engine.ActorFactorySpo
     /// </summary>
     protected ActorFactorySpotLightMovable(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// ComponentProperty: LightComponent
-    /// </summary>
-    public unsafe BmSDK.Engine.SpotLightComponent LightComponent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpotLightComponent>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
-    }
 }

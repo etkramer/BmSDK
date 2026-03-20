@@ -33,29 +33,37 @@ public partial class RSeqAct_MinigameSequenceBase : BmSDK.Engine.SeqAct_Latent, 
     protected RSeqAct_MinigameSequenceBase(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// ArrayProperty: LatentActors
+    /// Function: GetObjClassVersion
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> LatentActors
+    public unsafe static int GetObjClassVersion()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MinigameSequenceBase.GetObjClassVersion", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
 
     /// <summary>
-    /// BoolProperty: bAborted
+    /// Function: SetGadgetsEnabled
     /// </summary>
-    public unsafe bool bAborted
+    public unsafe void SetGadgetsEnabled(bool are_enabled)
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MinigameSequenceBase.SetGadgetsEnabled", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(are_enabled, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// FloatProperty: LatentActivationTime
+    /// Function: TickMinigame
     /// </summary>
-    public unsafe float LatentActivationTime
+    public unsafe void TickMinigame(float DeltaTime)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 372); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 372); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MinigameSequenceBase.TickMinigame", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

@@ -68,92 +68,14 @@ public partial class RockDecalToggleable : BmSDK.Engine.RockDecal, BmSDK.IGameOb
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ComponentProperty: DecalComponent
+    /// Function: OnToggle
     /// </summary>
-    public unsafe BmSDK.Engine.RockDecalComponent DecalComponent
+    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RockDecalComponent>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
-
-    /// <summary>
-    /// StructProperty: UVTopLeft
-    /// </summary>
-    public unsafe System.Numerics.Vector2 UVTopLeft
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
-    }
-
-    /// <summary>
-    /// StructProperty: UVBottomRight
-    /// </summary>
-    public unsafe System.Numerics.Vector2 UVBottomRight
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 684); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
-    }
-
-    /// <summary>
-    /// FloatProperty: PerInstanceRandom
-    /// </summary>
-    public unsafe float PerInstanceRandom
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 692); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
-    }
-
-    /// <summary>
-    /// FloatProperty: PerInstanceRandomOverride
-    /// </summary>
-    public unsafe float PerInstanceRandomOverride
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: DecalCollisionComponent
-    /// </summary>
-    public unsafe BmSDK.Engine.RAggGeomCollisionComponent DecalCollisionComponent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAggGeomCollisionComponent>(Ptr + 700); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bDisableDecalCollision
-    /// </summary>
-    public unsafe bool bDisableDecalCollision
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 708); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bDecalCollisionScaleChanged
-    /// </summary>
-    public unsafe bool bDecalCollisionScaleChanged
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 708); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: PhysMaterial
-    /// </summary>
-    public unsafe BmSDK.Engine.PhysicalMaterial PhysMaterial
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PhysicalMaterial>(Ptr + 712); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
-    }
-
-    /// <summary>
-    /// StructProperty: DecalCollisionScale
-    /// </summary>
-    public unsafe System.Numerics.Vector2 DecalCollisionScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RockDecalToggleable.OnToggle", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Action, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

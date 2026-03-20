@@ -33,6 +33,18 @@ public partial class TerrainMaterial : BmSDK.GameObject, BmSDK.IGameObject
     protected TerrainMaterial(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: ETerrainMappingType
+    /// </summary>
+    public enum ETerrainMappingType
+    {
+        TMT_Auto = 0,
+        TMT_XY = 1,
+        TMT_XZ = 2,
+        TMT_YZ = 3,
+        TMT_MAX = 4,
+    }
+
+    /// <summary>
     /// StructProperty: LocalToMapping
     /// </summary>
     public unsafe BmSDK.GameObject.FMatrix LocalToMapping

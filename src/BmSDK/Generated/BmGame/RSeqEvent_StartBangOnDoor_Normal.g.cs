@@ -32,12 +32,4 @@ public partial class RSeqEvent_StartBangOnDoor_Normal : BmSDK.BmGame.RSeqEvent_S
     /// </summary>
     protected RSeqEvent_StartBangOnDoor_Normal(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// ObjectProperty: AECSub
-    /// </summary>
-    public unsafe BmSDK.BmGame.RAEC_LockedInRoot AECSub
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_LockedInRoot>(Ptr + 380); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
-    }
 }

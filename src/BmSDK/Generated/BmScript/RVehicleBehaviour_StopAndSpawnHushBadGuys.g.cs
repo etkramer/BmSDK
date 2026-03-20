@@ -33,6 +33,18 @@ public partial class RVehicleBehaviour_StopAndSpawnHushBadGuys : BmSDK.BmGame.RV
     protected RVehicleBehaviour_StopAndSpawnHushBadGuys(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Tick
+    /// </summary>
+    public unsafe void Tick(float DeltaTime)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBehaviour_StopAndSpawnHushBadGuys.Tick", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// FloatProperty: TimeStopped
     /// </summary>
     public unsafe float TimeStopped

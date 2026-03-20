@@ -33,6 +33,17 @@ public partial class RSeqAct_SetAPCDistrictSpawnPoints : BmSDK.Engine.SequenceAc
     protected RSeqAct_SetAPCDistrictSpawnPoints(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetAPCDistrictSpawnPoints.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ArrayProperty: SpawnPoints_CityX
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.Engine.Actor> SpawnPoints_CityX

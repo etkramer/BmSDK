@@ -33,29 +33,22 @@ public partial class RSeqAct_MatineeSequenceSkipperBase : BmSDK.Engine.SequenceA
     protected RSeqAct_MatineeSequenceSkipperBase(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// NameProperty: HandlerName
+    /// Function: ForwardMatineeToPosition
     /// </summary>
-    public unsafe BmSDK.FName HandlerName
+    public unsafe void ForwardMatineeToPosition(BmSDK.Engine.SeqAct_Interp Matinee, float NewPosition)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 324); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bCallHandler
-    /// </summary>
-    public unsafe bool bCallHandler
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 332); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: Targets
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.GameObject> Targets
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GameObject>>(Ptr + 336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_MatineeSequenceSkipperBase.ForwardMatineeToPosition", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Matinee, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewPosition, paramsPtr + 8);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
     }
 }

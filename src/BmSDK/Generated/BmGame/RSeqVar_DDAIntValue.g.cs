@@ -32,12 +32,4 @@ public partial class RSeqVar_DDAIntValue : BmSDK.Engine.SeqVar_Int, BmSDK.IGameO
     /// </summary>
     protected RSeqVar_DDAIntValue(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// IntProperty: IntValue
-    /// </summary>
-    public unsafe int IntValue
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
-    }
 }

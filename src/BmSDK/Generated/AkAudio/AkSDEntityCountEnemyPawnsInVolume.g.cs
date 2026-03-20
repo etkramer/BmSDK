@@ -32,21 +32,4 @@ public partial class AkSDEntityCountEnemyPawnsInVolume : BmSDK.AkAudio.AkSDEntit
     /// </summary>
     protected AkSDEntityCountEnemyPawnsInVolume(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// ObjectProperty: Volume
-    /// </summary>
-    public unsafe BmSDK.Engine.Volume Volume
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Volume>(Ptr + 252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
-    }
-
-    /// <summary>
-    /// StrProperty: VolumeName
-    /// </summary>
-    public unsafe BmSDK.FString VolumeName
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
-    }
 }

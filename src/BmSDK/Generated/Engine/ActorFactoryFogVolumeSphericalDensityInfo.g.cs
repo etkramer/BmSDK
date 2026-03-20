@@ -32,21 +32,4 @@ public partial class ActorFactoryFogVolumeSphericalDensityInfo : BmSDK.Engine.Ac
     /// </summary>
     protected ActorFactoryFogVolumeSphericalDensityInfo(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// ObjectProperty: SelectedMaterial
-    /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface SelectedMaterial
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bNothingSelected
-    /// </summary>
-    public unsafe bool bNothingSelected
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 152) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 152); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 152); }
-    }
 }

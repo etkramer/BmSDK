@@ -33,6 +33,334 @@ public partial class RSeqAct_VehicleEnemySpawner : BmSDK.BmGame.RSeqAct_SpawnVeh
     protected RSeqAct_VehicleEnemySpawner(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetClosestVehicle
+    /// </summary>
+    public unsafe BmSDK.BmGame.RVehicle GetClosestVehicle(System.Numerics.Vector3 ToLocation)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.GetClosestVehicle", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(ToLocation, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle>(paramsPtr + 12);
+    }
+
+    /// <summary>
+    /// Function: GetThreatToAdd
+    /// </summary>
+    public unsafe int GetThreatToAdd()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.GetThreatToAdd", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: GetProportionRemaining
+    /// </summary>
+    public unsafe float GetProportionRemaining()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.GetProportionRemaining", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: SpawnedActorsDebugKilled
+    /// </summary>
+    public unsafe void SpawnedActorsDebugKilled()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.SpawnedActorsDebugKilled", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SpawnedActorCriticalHit
+    /// </summary>
+    public unsafe void SpawnedActorCriticalHit(BmSDK.Engine.Actor ExActor, bool KillingHit)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.SpawnedActorCriticalHit", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(ExActor, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(KillingHit, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SpawnedActorDied
+    /// </summary>
+    public unsafe void SpawnedActorDied(BmSDK.Engine.Actor ExActor)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.SpawnedActorDied", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(ExActor, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SpawnedActorBatmanSeen
+    /// </summary>
+    public unsafe void SpawnedActorBatmanSeen(BmSDK.Engine.Actor ExActor)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.SpawnedActorBatmanSeen", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(ExActor, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: GetObjClassVersion
+    /// </summary>
+    public unsafe static int GetObjClassVersion()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.GetObjClassVersion", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: ForceUpdateAliveEnemies
+    /// </summary>
+    public unsafe void ForceUpdateAliveEnemies()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.ForceUpdateAliveEnemies", true);
+        byte* paramsPtr = stackalloc byte[64];
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
+    /// Function: CheckBoundsVisible
+    /// </summary>
+    public unsafe static bool CheckBoundsVisible(System.Numerics.Vector3 CameraLoc, System.Numerics.Vector3 TestLoc, System.Numerics.Vector3 ActorExtent)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.CheckBoundsVisible", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CameraLoc, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TestLoc, paramsPtr + 12);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(ActorExtent, paramsPtr + 24);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 36);
+    }
+
+    /// <summary>
+    /// Function: ActorDied
+    /// </summary>
+    public unsafe void ActorDied()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.ActorDied", true);
+        byte* paramsPtr = stackalloc byte[64];
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
+    /// Function: GetNearestAvailableSpawnPointStatic
+    /// </summary>
+    public unsafe static bool GetNearestAvailableSpawnPointStatic(out System.Numerics.Vector3 SpawnLoc, out BmSDK.Rotator SpawnRot, BmSDK.Engine.Actor TestPlayer, System.Numerics.Vector3 CameraLoc, BmSDK.Engine.Actor TemplateActor, float MinimumRange, float MinimumSpacing, BmSDK.BmGame.RVehicleNPC leader, bool SpawnOnScreen = default, bool _SpawnInLineOfSight = default, BmSDK.BmGame.RRoadNetwork.FRoadRouteRestriction Restriction = default, System.Numerics.Vector3 TestPlayerLoc = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.GetNearestAvailableSpawnPointStatic", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TestPlayer, paramsPtr + 24);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CameraLoc, paramsPtr + 32);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TemplateActor, paramsPtr + 44);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(MinimumRange, paramsPtr + 52);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(MinimumSpacing, paramsPtr + 56);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(leader, paramsPtr + 60);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnOnScreen, paramsPtr + 68);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(_SpawnInLineOfSight, paramsPtr + 72);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Restriction, paramsPtr + 76);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TestPlayerLoc, paramsPtr + 244);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        SpawnLoc = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
+        SpawnRot = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(paramsPtr + 12);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 256);
+    }
+
+    /// <summary>
+    /// Function: GetNearestAvailableSpawnPoint
+    /// </summary>
+    public unsafe bool GetNearestAvailableSpawnPoint(out System.Numerics.Vector3 SpawnLoc, out BmSDK.Rotator SpawnRot, BmSDK.Engine.Actor TestPlayer, System.Numerics.Vector3 CameraLoc, BmSDK.Engine.Actor TemplateActor, float MinimumRange, float MinimumSpacing, BmSDK.BmGame.RVehicleNPC leader, bool SpawnOnScreen = default, bool _SpawnInLineOfSight = default, BmSDK.BmGame.RRoadNetwork.FRoadRouteRestriction Restriction = default, System.Numerics.Vector3 TestPlayerLoc = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.GetNearestAvailableSpawnPoint", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TestPlayer, paramsPtr + 24);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CameraLoc, paramsPtr + 32);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TemplateActor, paramsPtr + 44);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(MinimumRange, paramsPtr + 52);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(MinimumSpacing, paramsPtr + 56);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(leader, paramsPtr + 60);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnOnScreen, paramsPtr + 68);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(_SpawnInLineOfSight, paramsPtr + 72);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Restriction, paramsPtr + 76);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TestPlayerLoc, paramsPtr + 244);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        SpawnLoc = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
+        SpawnRot = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(paramsPtr + 12);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 256);
+    }
+
+    /// <summary>
+    /// Function: ChooseRandomTurretLocation
+    /// </summary>
+    public unsafe bool ChooseRandomTurretLocation(out System.Numerics.Vector3 SpawnLoc, out BmSDK.Rotator SpawnRot, BmSDK.Engine.Actor TestPlayer, System.Numerics.Vector3 CameraLoc, BmSDK.Engine.Actor TemplateActor, float MinimumRange, float MinimumSpacing, bool _SpawnInLineOfSight = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.ChooseRandomTurretLocation", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TestPlayer, paramsPtr + 24);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CameraLoc, paramsPtr + 32);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TemplateActor, paramsPtr + 44);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(MinimumRange, paramsPtr + 52);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(MinimumSpacing, paramsPtr + 56);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(_SpawnInLineOfSight, paramsPtr + 60);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        SpawnLoc = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
+        SpawnRot = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(paramsPtr + 12);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 64);
+    }
+
+    /// <summary>
+    /// Function: ChangeNumActiveEnemies
+    /// </summary>
+    public unsafe void ChangeNumActiveEnemies(int Type, int NewEnemyCount, bool UpdateDesired = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.ChangeNumActiveEnemies", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Type, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewEnemyCount, paramsPtr + 4);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(UpdateDesired, paramsPtr + 8);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
+    /// Function: GetNumActiveEnemies
+    /// </summary>
+    public unsafe int GetNumActiveEnemies(int Type)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.GetNumActiveEnemies", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Type, paramsPtr + 0);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
+    }
+
+    /// <summary>
+    /// Function: DebugRenderBehaviourVolumes
+    /// </summary>
+    public unsafe void DebugRenderBehaviourVolumes()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_VehicleEnemySpawner.DebugRenderBehaviourVolumes", true);
+        byte* paramsPtr = stackalloc byte[64];
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
+    /// Struct: FAdditionalWaveSetup
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FAdditionalWaveSetup
+    {
+        /// <summary>
+        /// IntProperty: NumEnemiesToTriggerSetup
+        /// </summary>
+        public unsafe int NumEnemiesToTriggerSetup
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: OverrideChapterDifficulty
+        /// </summary>
+        public unsafe int OverrideChapterDifficulty
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+
+        /// <summary>
+        /// ArrayProperty: SpawnTypes
+        /// </summary>
+        public unsafe BmSDK.TArray<BmSDK.BmGame.RSeqAct_VehicleEnemySpawner.FSpawnedVehicleEnemyDesc> SpawnTypes
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RSeqAct_VehicleEnemySpawner.FSpawnedVehicleEnemyDesc>>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+    }
+
+    /// <summary>
     /// ArrayProperty: SpawnedEnemies
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.BmGame.RSeqAct_VehicleEnemySpawner.FSpawnedVehicleInstance> SpawnedEnemies

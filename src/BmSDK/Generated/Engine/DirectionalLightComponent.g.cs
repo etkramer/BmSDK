@@ -33,6 +33,28 @@ public partial class DirectionalLightComponent : BmSDK.Engine.LightComponent, Bm
     protected DirectionalLightComponent(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: OnUpdatePropertyBrightness
+    /// </summary>
+    public unsafe void OnUpdatePropertyBrightness()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DirectionalLightComponent.OnUpdatePropertyBrightness", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: OnUpdatePropertyLightColor
+    /// </summary>
+    public unsafe void OnUpdatePropertyLightColor()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DirectionalLightComponent.OnUpdatePropertyLightColor", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// FloatProperty: TraceDistance
     /// </summary>
     public unsafe float TraceDistance

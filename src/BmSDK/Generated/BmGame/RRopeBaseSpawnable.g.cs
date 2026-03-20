@@ -68,110 +68,92 @@ public partial class RRopeBaseSpawnable : BmSDK.BmGame.RRopeBase, BmSDK.IGameObj
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ComponentProperty: RopeComponent
+    /// Function: MulticastSetupHangingFearRope
     /// </summary>
-    public unsafe BmSDK.BmGame.RRopeComponent RopeComponent
+    public unsafe void MulticastSetupHangingFearRope(BmSDK.BmGame.RRopeBaseSpawnable.FHangingFearRopeSetupParams SetupParams)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRopeComponent>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeBaseSpawnable.MulticastSetupHangingFearRope", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(SetupParams, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// BoolProperty: IsEditingPos2
+    /// Struct: FHangingFearRopeSetupParams
     /// </summary>
-    public unsafe bool IsEditingPos2
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FHangingFearRopeSetupParams
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 676); }
-    }
+        /// <summary>
+        /// ObjectProperty: Victim
+        /// </summary>
+        public unsafe BmSDK.BmGame.RPawnVillain Victim
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
 
-    /// <summary>
-    /// BoolProperty: IsRopeBatarangable
-    /// </summary>
-    public unsafe bool IsRopeBatarangable
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 676); }
-    }
+        /// <summary>
+        /// ObjectProperty: SourceHidePoint
+        /// </summary>
+        public unsafe BmSDK.BmGame.RHidePoint SourceHidePoint
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
 
-    /// <summary>
-    /// BoolProperty: TriggerBatarangCam
-    /// </summary>
-    public unsafe bool TriggerBatarangCam
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 676); }
-    }
+        /// <summary>
+        /// NameProperty: RopeBoneAttachName
+        /// </summary>
+        public unsafe BmSDK.FName RopeBoneAttachName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
 
-    /// <summary>
-    /// BoolProperty: bBatarangCameraFollowsAttachedActor
-    /// </summary>
-    public unsafe bool bBatarangCameraFollowsAttachedActor
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676) & 8) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 676); }
-    }
+        /// <summary>
+        /// FloatProperty: RopeAttachConnectionDistance
+        /// </summary>
+        public unsafe float RopeAttachConnectionDistance
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+        }
 
-    /// <summary>
-    /// BoolProperty: bHasSplit
-    /// </summary>
-    public unsafe bool bHasSplit
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676) & 16) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 676); }
-    }
+        /// <summary>
+        /// IntProperty: NumExtraAttachConnections
+        /// </summary>
+        public unsafe int NumExtraAttachConnections
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
+        }
 
-    /// <summary>
-    /// ObjectProperty: SplitRopeEmitterEffect
-    /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem SplitRopeEmitterEffect
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
-    }
+        /// <summary>
+        /// StructProperty: RopeExtraAttachConnections
+        /// </summary>
+        public unsafe BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection RopeExtraAttachConnections_0
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection>(Ptr + 32); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
+        }
+        /// <summary>
+        /// StructProperty: RopeExtraAttachConnections
+        /// </summary>
+        public unsafe BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection RopeExtraAttachConnections_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection>(Ptr + 88); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }; }
+        }
 
-    /// <summary>
-    /// ObjectProperty: OldMaterial
-    /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface OldMaterial
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: AttachedHidePoint
-    /// </summary>
-    public unsafe BmSDK.BmGame.RHidePoint AttachedHidePoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: BatarangInteractionComp
-    /// </summary>
-    public unsafe BmSDK.Engine.RInteractionComponent BatarangInteractionComp
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionComponent>(Ptr + 704); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
-    }
-
-    /// <summary>
-    /// FloatProperty: InvestigatePerc
-    /// </summary>
-    public unsafe float InvestigatePerc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 712); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: DependentRopes
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RRopeBase> DependentRopes
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RRopeBase>>(Ptr + 716); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
+        /// <summary>
+        /// FloatProperty: StoredRopeLengthForFear
+        /// </summary>
+        public unsafe float StoredRopeLengthForFear
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 144); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }; }
+        }
     }
 }

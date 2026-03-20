@@ -33,6 +33,220 @@ public partial class RBMBehaviour_ExitVehicle : BmSDK.BmGame.RBMBehaviour, BmSDK
     protected RBMBehaviour_ExitVehicle(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: AwareOfPlayer
+    /// </summary>
+    public unsafe bool AwareOfPlayer(BmSDK.Engine.Actor Player, BmSDK.Class dmgType = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.AwareOfPlayer", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Player, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(dmgType, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 16);
+    }
+
+    /// <summary>
+    /// Function: GetEvadeVehicleType
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EEvadeVehicleType GetEvadeVehicleType(BmSDK.Engine.Actor V, float Speed, bool bZap)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.GetEvadeVehicleType", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(V, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Speed, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bZap, paramsPtr + 12);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EEvadeVehicleType>(paramsPtr + 16);
+    }
+
+    /// <summary>
+    /// Function: TeleportToSafeLocation
+    /// </summary>
+    public unsafe void TeleportToSafeLocation()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.TeleportToSafeLocation", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: GiveWeapon
+    /// </summary>
+    public unsafe void GiveWeapon()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.GiveWeapon", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: ExitRagdoll
+    /// </summary>
+    public unsafe void ExitRagdoll()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.ExitRagdoll", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: PlayExitAnim
+    /// </summary>
+    public unsafe void PlayExitAnim()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.PlayExitAnim", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: ChooseExitAnim
+    /// </summary>
+    public unsafe void ChooseExitAnim(bool BypassNavMeshCheck = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.ChooseExitAnim", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(BypassNavMeshCheck, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: GetExitAnimDirectionScore
+    /// </summary>
+    public unsafe float GetExitAnimDirectionScore(BmSDK.FName AnimName, BmSDK.Engine.AnimSet TestAnimSet, float Priority, System.Numerics.Vector3 AnimLocation, bool bMirrored, bool BypassNavMeshCheck, out System.Numerics.Vector3 SafeLocation)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.GetExitAnimDirectionScore", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimName, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TestAnimSet, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Priority, paramsPtr + 16);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimLocation, paramsPtr + 20);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bMirrored, paramsPtr + 32);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(BypassNavMeshCheck, paramsPtr + 36);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        SafeLocation = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 40);
+        return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 52);
+    }
+
+    /// <summary>
+    /// Function: GetAnimEndLocation
+    /// </summary>
+    public unsafe System.Numerics.Vector3 GetAnimEndLocation(System.Numerics.Vector3 SocketLocation, BmSDK.FName TestAnimName, BmSDK.Engine.AnimSet TestAnimSet, bool bTestMirrored)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.GetAnimEndLocation", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(SocketLocation, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TestAnimName, paramsPtr + 12);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TestAnimSet, paramsPtr + 20);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bTestMirrored, paramsPtr + 28);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 32);
+    }
+
+    /// <summary>
+    /// Function: GetAnimRotation
+    /// </summary>
+    public unsafe BmSDK.Rotator GetAnimRotation()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.GetAnimRotation", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: GetAnimLocation
+    /// </summary>
+    public unsafe System.Numerics.Vector3 GetAnimLocation()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.GetAnimLocation", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: GotoFinalState
+    /// </summary>
+    public unsafe void GotoFinalState()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.GotoFinalState", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: BreakOffCarDoor
+    /// </summary>
+    public unsafe void BreakOffCarDoor()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.BreakOffCarDoor", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: BecomeHostile
+    /// </summary>
+    public unsafe void BecomeHostile()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.BecomeHostile", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: Initialise
+    /// </summary>
+    public unsafe void Initialise(BmSDK.BmGame.RVehicleNPC VehicleToExit, int SlotID, BmSDK.TArray<BmSDK.BmGame.RGameInfo.FExitVehicleSlotInfo> NewExitInfos, bool CalmExit, bool bEnterCombat = default, bool bRunAway = default, BmSDK.Class NewWeaponClass = default, bool bNewExitTowardsPlayer = default, bool BypassNavMeshCheck = default, bool ForcePlayDoorAnim = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.Initialise", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(VehicleToExit, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(SlotID, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewExitInfos, paramsPtr + 12);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CalmExit, paramsPtr + 28);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bEnterCombat, paramsPtr + 32);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bRunAway, paramsPtr + 36);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewWeaponClass, paramsPtr + 40);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bNewExitTowardsPlayer, paramsPtr + 48);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(BypassNavMeshCheck, paramsPtr + 52);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(ForcePlayDoorAnim, paramsPtr + 56);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: OnDeactivate
+    /// </summary>
+    public unsafe void OnDeactivate()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.OnDeactivate", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: OnActivate
+    /// </summary>
+    public unsafe void OnActivate()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ExitVehicle.OnActivate", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: Vehicle
     /// </summary>
     public unsafe BmSDK.BmGame.RVehicleNPC Vehicle

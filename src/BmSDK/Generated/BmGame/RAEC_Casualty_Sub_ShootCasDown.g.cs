@@ -68,47 +68,14 @@ public partial class RAEC_Casualty_Sub_ShootCasDown : BmSDK.BmGame.RAEC_Casualty
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// BoolProperty: bIsAtCasualty
+    /// Function: AssignCasualty
     /// </summary>
-    public unsafe bool bIsAtCasualty
+    public unsafe void AssignCasualty(BmSDK.BmGame.RPawnVillain NewCas)
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 708); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bConsoleFinished
-    /// </summary>
-    public unsafe bool bConsoleFinished
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 708); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bIsStandingNormally
-    /// </summary>
-    public unsafe bool bIsStandingNormally
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 708); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bNeedsToShootCasDown
-    /// </summary>
-    public unsafe bool bNeedsToShootCasDown
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708) & 8) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 708); }
-    }
-
-    /// <summary>
-    /// StrProperty: mainActionName
-    /// </summary>
-    public unsafe BmSDK.FString mainActionName
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 712); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_ShootCasDown.AssignCasualty", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewCas, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

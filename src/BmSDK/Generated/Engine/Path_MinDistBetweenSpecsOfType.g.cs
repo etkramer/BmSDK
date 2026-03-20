@@ -33,6 +33,32 @@ public partial class Path_MinDistBetweenSpecsOfType : BmSDK.Engine.PathConstrain
     protected Path_MinDistBetweenSpecsOfType(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Recycle
+    /// </summary>
+    public unsafe void Recycle()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Path_MinDistBetweenSpecsOfType.Recycle", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: EnforceMinDist
+    /// </summary>
+    public unsafe static bool EnforceMinDist(BmSDK.Engine.Pawn P, float InMinDist, BmSDK.Class InSpecClass, System.Numerics.Vector3 LastLocation = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Path_MinDistBetweenSpecsOfType.EnforceMinDist", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(P, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(InMinDist, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(InSpecClass, paramsPtr + 12);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(LastLocation, paramsPtr + 20);
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 32);
+    }
+
+    /// <summary>
     /// FloatProperty: MinDistBetweenSpecTypes
     /// </summary>
     public unsafe float MinDistBetweenSpecTypes

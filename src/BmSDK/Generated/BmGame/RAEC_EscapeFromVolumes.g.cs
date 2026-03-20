@@ -68,56 +68,14 @@ public partial class RAEC_EscapeFromVolumes : BmSDK.BmGame.RAlertEventCoordinato
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ObjectProperty: Parent
+    /// Function: OnAssign
     /// </summary>
-    public unsafe BmSDK.BmGame.RAlertEventCoordinatorBase Parent
+    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewMember)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAlertEventCoordinatorBase>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: RoomState
-    /// </summary>
-    public unsafe BmSDK.BmGame.RBMRoomAIState RoomState
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMRoomAIState>(Ptr + 676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: GroupList
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RAlertEventCoordinatorBase> GroupList
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RAlertEventCoordinatorBase>>(Ptr + 684); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: SoloList
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RAlertEventCoordinatorSolo> SoloList
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RAlertEventCoordinatorSolo>>(Ptr + 700); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bExpandDebug
-    /// </summary>
-    public unsafe bool bExpandDebug
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 716); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bBeginShutdownCalled
-    /// </summary>
-    public unsafe bool bBeginShutdownCalled
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 716); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_EscapeFromVolumes.OnAssign", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMember, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

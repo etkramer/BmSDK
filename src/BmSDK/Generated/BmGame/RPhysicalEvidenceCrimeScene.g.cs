@@ -68,6 +68,38 @@ public partial class RPhysicalEvidenceCrimeScene : BmSDK.BmGame.RPhysicalEvidenc
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
+    /// Function: AutomaticallySetVisibility
+    /// </summary>
+    public unsafe void AutomaticallySetVisibility()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicalEvidenceCrimeScene.AutomaticallySetVisibility", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: AutoPopulateParentCrimeScene
+    /// </summary>
+    public unsafe void AutoPopulateParentCrimeScene()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicalEvidenceCrimeScene.AutoPopulateParentCrimeScene", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Enum: EvidenceScanType
+    /// </summary>
+    public enum EvidenceScanType
+    {
+        EST_SimpleScan = 0,
+        EST_Reconstruct = 1,
+        EST_MAX = 2,
+    }
+
+    /// <summary>
     /// ObjectProperty: ParentCrimeScene
     /// </summary>
     public unsafe BmSDK.BmGame.RCrimeSceneBase ParentCrimeScene

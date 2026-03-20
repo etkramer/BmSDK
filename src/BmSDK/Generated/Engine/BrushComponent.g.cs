@@ -33,6 +33,56 @@ public partial class BrushComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     protected BrushComponent(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FKCachedConvexData
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FKCachedConvexData
+    {
+        /// <summary>
+        /// ArrayProperty: CachedConvexElements
+        /// </summary>
+        public unsafe BmSDK.TArray<BmSDK.Engine.BrushComponent.FKCachedConvexDataElement> CachedConvexElements
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.BrushComponent.FKCachedConvexDataElement>>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FKCachedConvexDataElement
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FKCachedConvexDataElement
+    {
+        /// <summary>
+        /// ArrayProperty: ConvexElementData
+        /// </summary>
+        public unsafe BmSDK.TArray<byte> ConvexElementData
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: ConvexMesh
+        /// </summary>
+        public unsafe System.IntPtr ConvexMesh
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: ConvexMeshDataSize
+        /// </summary>
+        public unsafe int ConvexMeshDataSize
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+        }
+    }
+
+    /// <summary>
     /// ObjectProperty: Brush
     /// </summary>
     public unsafe BmSDK.Engine.Model Brush

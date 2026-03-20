@@ -33,6 +33,31 @@ public partial class RVehicleCustomisation : BmSDK.GameObject, BmSDK.IGameObject
     protected RVehicleCustomisation(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: SetupDeadVehicleMaterials
+    /// </summary>
+    public unsafe void SetupDeadVehicleMaterials(BmSDK.Engine.SkeletalMeshComponent SkeletalMeshComponent)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCustomisation.SetupDeadVehicleMaterials", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(SkeletalMeshComponent, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SetupCustomisationOptions
+    /// </summary>
+    public unsafe void SetupCustomisationOptions(BmSDK.Engine.SkeletalMeshComponent SkeletalMeshComponent, int ForceMaterialIndex = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCustomisation.SetupCustomisationOptions", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(SkeletalMeshComponent, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(ForceMaterialIndex, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// NameProperty: RoofRackSocket
     /// </summary>
     public unsafe BmSDK.FName RoofRackSocket

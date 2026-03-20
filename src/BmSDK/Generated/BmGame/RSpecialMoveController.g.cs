@@ -33,6 +33,29 @@ public partial class RSpecialMoveController : BmSDK.GameObject, BmSDK.IGameObjec
     protected RSpecialMoveController(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: FindBestSpecialMove
+    /// </summary>
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig FindBestSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Feature, BmSDK.Engine.Pawn Instigator, float DeltaTime, BmSDK.Rotator CheckDirection, System.Numerics.Vector3 StickDir = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveController.FindBestSpecialMove", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Feature, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Instigator, paramsPtr + 132);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 140);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CheckDirection, paramsPtr + 144);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(StickDir, paramsPtr + 156);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(paramsPtr + 168);
+    }
+
+    /// <summary>
     /// ArrayProperty: SpecialMoves
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.BmGame.REnvironmentSpecialMoveWrapper> SpecialMoves

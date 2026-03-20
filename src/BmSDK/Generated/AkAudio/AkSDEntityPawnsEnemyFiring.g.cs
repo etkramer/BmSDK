@@ -32,12 +32,4 @@ public partial class AkSDEntityPawnsEnemyFiring : BmSDK.AkAudio.AkSDEntityPawnsE
     /// </summary>
     protected AkSDEntityPawnsEnemyFiring(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// ArrayProperty: PawnList
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.Pawn> PawnList
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Pawn>>(Ptr + 252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
-    }
 }

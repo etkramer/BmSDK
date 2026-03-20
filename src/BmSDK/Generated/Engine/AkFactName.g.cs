@@ -32,12 +32,4 @@ public partial class AkFactName : BmSDK.Engine.AkPredicate, BmSDK.IGameObject
     /// </summary>
     protected AkFactName(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// StructProperty: VfTable_AkEvaluate
-    /// </summary>
-    public unsafe System.IntPtr VfTable_AkEvaluate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
 }

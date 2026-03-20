@@ -67,21 +67,4 @@ public partial class RBMWeaponCombatRifle : BmSDK.BmGame.RBMWeaponCombatRifleBas
         where TComponent : class, Framework.IScriptComponent<RBMWeaponCombatRifle>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// BoolProperty: bLightOn
-    /// </summary>
-    public unsafe bool bLightOn
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1916) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1916); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1916); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: LensFlareFX
-    /// </summary>
-    public unsafe BmSDK.Engine.LensFlareComponent LensFlareFX
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LensFlareComponent>(Ptr + 1920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1920); }
-    }
 }

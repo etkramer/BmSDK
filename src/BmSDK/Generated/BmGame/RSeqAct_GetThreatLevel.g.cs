@@ -33,6 +33,17 @@ public partial class RSeqAct_GetThreatLevel : BmSDK.Engine.SequenceAction, BmSDK
     protected RSeqAct_GetThreatLevel(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GetThreatLevel.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ByteProperty: District
     /// </summary>
     public unsafe BmSDK.BmGame.RGameInfo.EDistrict District

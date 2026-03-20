@@ -32,21 +32,4 @@ public partial class RAnimNotify_AnimSpeech : BmSDK.BmGame.RAnimNotify_Script, B
     /// </summary>
     protected RAnimNotify_AnimSpeech(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// BoolProperty: EnableExitNotify
-    /// </summary>
-    public unsafe bool EnableExitNotify
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 108) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 108); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 108); }
-    }
-
-    /// <summary>
-    /// NameProperty: ExitNotifyName
-    /// </summary>
-    public unsafe BmSDK.FName ExitNotifyName
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
 }

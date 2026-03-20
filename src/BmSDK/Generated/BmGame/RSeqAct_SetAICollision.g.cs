@@ -33,6 +33,17 @@ public partial class RSeqAct_SetAICollision : BmSDK.Engine.SequenceAction, BmSDK
     protected RSeqAct_SetAICollision(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetAICollision.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ArrayProperty: PawnList
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.BmGame.RBMPawnAI> PawnList

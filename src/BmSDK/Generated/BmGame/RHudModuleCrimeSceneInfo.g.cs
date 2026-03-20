@@ -33,164 +33,77 @@ public partial class RHudModuleCrimeSceneInfo : BmSDK.BmGame.RHudModule, BmSDK.I
     protected RHudModuleCrimeSceneInfo(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// ObjectProperty: RPC
+    /// Function: UpdateCompletionText
     /// </summary>
-    public unsafe BmSDK.BmGame.RPlayerController RPC
+    public unsafe void UpdateCompletionText(BmSDK.FString CompletionText)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerController>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleCrimeSceneInfo.UpdateCompletionText", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CompletionText, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// ObjectProperty: ModularHudMovie
+    /// Function: InitCrimeSceneInfoCaseFile
     /// </summary>
-    public unsafe BmSDK.BmGame.RGFxMovieModularHud ModularHudMovie
+    public unsafe void InitCrimeSceneInfoCaseFile(BmSDK.FString CaseFileName, BmSDK.FString CrimeSceneScreenName, BmSDK.FString CompletionText)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMovieModularHud>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleCrimeSceneInfo.InitCrimeSceneInfoCaseFile", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CaseFileName, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CrimeSceneScreenName, paramsPtr + 16);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CompletionText, paramsPtr + 32);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// ObjectProperty: GfxParentMovie
+    /// Function: InitCrimeSceneInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RGFxMovieModularHudBase GfxParentMovie
+    public unsafe void InitCrimeSceneInfo(BmSDK.FString CrimeSceneScreenName, BmSDK.FString CompletionText)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMovieModularHudBase>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleCrimeSceneInfo.InitCrimeSceneInfo", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CrimeSceneScreenName, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CompletionText, paramsPtr + 16);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// ObjectProperty: MovieInfo
+    /// Function: InitialiseFlash
     /// </summary>
-    public unsafe BmSDK.GFxUI.SwfMovie MovieInfo
+    public unsafe void InitialiseFlash()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.SwfMovie>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleCrimeSceneInfo.InitialiseFlash", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// StrProperty: ExtensionName
+    /// Function: Close
     /// </summary>
-    public unsafe BmSDK.FString ExtensionName
+    public unsafe void Close()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleCrimeSceneInfo.Close", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// StrProperty: ExtensionPath
+    /// Function: Init
     /// </summary>
-    public unsafe BmSDK.FString ExtensionPath
+    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bReadyToCallFunctions
-    /// </summary>
-    public unsafe bool bReadyToCallFunctions
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bFlashInitialised
-    /// </summary>
-    public unsafe bool bFlashInitialised
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bAdvanceModularHudMovieWhenCreated
-    /// </summary>
-    public unsafe bool bAdvanceModularHudMovieWhenCreated
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
-    }
-
-    /// <summary>
-    /// BoolProperty: CanBeTinted
-    /// </summary>
-    public unsafe bool CanBeTinted
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 8) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
-    }
-
-    /// <summary>
-    /// BoolProperty: IsDisposable
-    /// </summary>
-    public unsafe bool IsDisposable
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 16) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
-    }
-
-    /// <summary>
-    /// IntProperty: bWidescreenAdjust
-    /// </summary>
-    public unsafe int bWidescreenAdjust
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
-    }
-
-    /// <summary>
-    /// StrProperty: LocalRootString
-    /// </summary>
-    public unsafe BmSDK.FString LocalRootString
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
-    }
-
-    /// <summary>
-    /// StrProperty: CachedFunction_Show
-    /// </summary>
-    public unsafe BmSDK.FString CachedFunction_Show
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
-
-    /// <summary>
-    /// StrProperty: CachedFunction_Hide
-    /// </summary>
-    public unsafe BmSDK.FString CachedFunction_Hide
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
-    }
-
-    /// <summary>
-    /// StrProperty: CachedFunction_RequestQuit
-    /// </summary>
-    public unsafe BmSDK.FString CachedFunction_RequestQuit
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
-
-    /// <summary>
-    /// StrProperty: CachedFunction_SetVisible
-    /// </summary>
-    public unsafe BmSDK.FString CachedFunction_SetVisible
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
-    }
-
-    /// <summary>
-    /// IntProperty: ModulePriority
-    /// </summary>
-    public unsafe int ModulePriority
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleCrimeSceneInfo.Init", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(_RPC, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(_ExtensionName, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(_ExtensionPath, paramsPtr + 24);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 40);
     }
 }

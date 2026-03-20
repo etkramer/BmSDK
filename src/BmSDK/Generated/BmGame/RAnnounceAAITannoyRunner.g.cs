@@ -33,6 +33,94 @@ public partial class RAnnounceAAITannoyRunner : BmSDK.GameObject, BmSDK.IGameObj
     protected RAnnounceAAITannoyRunner(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: FlushQueue
+    /// </summary>
+    public unsafe void FlushQueue()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnnounceAAITannoyRunner.FlushQueue", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: TryComboUpWithMines
+    /// </summary>
+    public unsafe bool TryComboUpWithMines()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnnounceAAITannoyRunner.TryComboUpWithMines", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: Update
+    /// </summary>
+    public unsafe void Update(float DeltaTime)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnnounceAAITannoyRunner.Update", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Struct: FAnnouncementInfo
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FAnnouncementInfo
+    {
+        /// <summary>
+        /// NameProperty: FlagVal
+        /// </summary>
+        public unsafe BmSDK.FName FlagVal
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// ArrayProperty: Type
+        /// </summary>
+        public unsafe BmSDK.TArray<BmSDK.BmGame.RAnnounceAAITannoyRunner.AAIResponseType> Type
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RAnnounceAAITannoyRunner.AAIResponseType>>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: bPlayedDialogue
+        /// </summary>
+        public unsafe bool bPlayedDialogue
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 24); }; }
+        }
+    }
+
+    /// <summary>
+    /// Enum: AAIResponseType
+    /// </summary>
+    public enum AAIResponseType
+    {
+        AAIRT_Silent = 0,
+        AAIRT_Ledge = 1,
+        AAIRT_VeryWeakWall = 2,
+        AAIRT_Tunnel = 3,
+        AAIRT_Grate = 4,
+        AAIRT_Glide = 5,
+        AAIRT_Drop = 6,
+        AAIRT_Inverted = 7,
+        AAIRT_PlaceSentry = 8,
+        AAIRT_PlaceMine = 9,
+        AAIRT_DisableVoiceSynth = 10,
+        AAIRT_ClockTowerSpecial = 11,
+        AAIRT_MAX = 12,
+    }
+
+    /// <summary>
     /// ObjectProperty: Tannoy
     /// </summary>
     public unsafe BmSDK.BmGame.RJokerTannoy Tannoy

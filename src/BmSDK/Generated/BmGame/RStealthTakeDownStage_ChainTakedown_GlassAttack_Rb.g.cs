@@ -67,21 +67,4 @@ public partial class RStealthTakeDownStage_ChainTakedown_GlassAttack_Rb : BmSDK.
         where TComponent : class, Framework.IScriptComponent<RStealthTakeDownStage_ChainTakedown_GlassAttack_Rb>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// ObjectProperty: GlassBase
-    /// </summary>
-    public unsafe BmSDK.BmGame.RFractureWallBase GlassBase
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RFractureWallBase>(Ptr + 1664); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1664); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: DestructibleBase
-    /// </summary>
-    public unsafe BmSDK.BmGame.RDestructibleProp_FractureWall DestructibleBase
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDestructibleProp_FractureWall>(Ptr + 1672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1672); }
-    }
 }

@@ -68,137 +68,26 @@ public partial class RPawnVillainGunPredAsset : BmSDK.BmGame.RPawnVillainGunPred
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// IntProperty: GrenadeLeftIndex
+    /// Function: InitialisePlayerSpecificAnimsets
     /// </summary>
-    public unsafe int GrenadeLeftIndex
+    public unsafe void InitialisePlayerSpecificAnimsets(BmSDK.BmGame.RPawnPlayerCombat NewPlayer, int PlayerIndex)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6752); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6752); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredAsset.InitialisePlayerSpecificAnimsets", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewPlayer, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerIndex, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// IntProperty: GrenadeRightIndex
+    /// Function: AddPawnProps
     /// </summary>
-    public unsafe int GrenadeRightIndex
+    public unsafe void AddPawnProps()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6756); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6756); }
-    }
-
-    /// <summary>
-    /// IntProperty: VantageMineIndex
-    /// </summary>
-    public unsafe int VantageMineIndex
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6760); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bCanEnterLevelScriptingWhileCocky
-    /// </summary>
-    public unsafe bool bCanEnterLevelScriptingWhileCocky
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bDMDDetecting
-    /// </summary>
-    public unsafe bool bDMDDetecting
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
-    }
-
-    /// <summary>
-    /// BoolProperty: lastDMDSignalSucceeded
-    /// </summary>
-    public unsafe bool lastDMDSignalSucceeded
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bDMDExploded
-    /// </summary>
-    public unsafe bool bDMDExploded
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 8) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bHasDroneRemoteEquipped
-    /// </summary>
-    public unsafe bool bHasDroneRemoteEquipped
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 16) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bHasNoticedDisruptedDroneRemote
-    /// </summary>
-    public unsafe bool bHasNoticedDisruptedDroneRemote
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 32) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bSpawnedArmband
-    /// </summary>
-    public unsafe bool bSpawnedArmband
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 64) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
-    }
-
-    /// <summary>
-    /// FloatProperty: GoggleBlindTime
-    /// </summary>
-    public unsafe float GoggleBlindTime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6768); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6768); }
-    }
-
-    /// <summary>
-    /// FloatProperty: lastDMDSignalLineTime
-    /// </summary>
-    public unsafe float lastDMDSignalLineTime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6772); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6772); }
-    }
-
-    /// <summary>
-    /// FloatProperty: lastDMDDeactivateTime
-    /// </summary>
-    public unsafe float lastDMDDeactivateTime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6776); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6776); }
-    }
-
-    /// <summary>
-    /// FloatProperty: lastDMDSignalLostTime
-    /// </summary>
-    public unsafe float lastDMDSignalLostTime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6780); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6780); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: BankDoorPanel
-    /// </summary>
-    public unsafe BmSDK.BmGame.RBankDoorControlPanelBase BankDoorPanel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBankDoorControlPanelBase>(Ptr + 6784); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6784); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredAsset.AddPawnProps", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

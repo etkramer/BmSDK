@@ -33,6 +33,31 @@ public partial class RAddContentCharacterSelect : BmSDK.BmGame.RAdditionalConten
     protected RAddContentCharacterSelect(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FAddContentCharacterSelect_AttachMesh
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FAddContentCharacterSelect_AttachMesh
+    {
+        /// <summary>
+        /// ObjectProperty: Mesh
+        /// </summary>
+        public unsafe BmSDK.Engine.SkeletalMesh Mesh
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// NameProperty: BoneOrSocketName
+        /// </summary>
+        public unsafe BmSDK.FName BoneOrSocketName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+    }
+
+    /// <summary>
     /// StrProperty: CharacterName
     /// </summary>
     public unsafe BmSDK.FString CharacterName

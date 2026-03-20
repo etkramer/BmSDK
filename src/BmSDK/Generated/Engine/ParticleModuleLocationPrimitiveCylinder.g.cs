@@ -33,6 +33,17 @@ public partial class ParticleModuleLocationPrimitiveCylinder : BmSDK.Engine.Part
     protected ParticleModuleLocationPrimitiveCylinder(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: CylinderHeightAxis
+    /// </summary>
+    public enum CylinderHeightAxis
+    {
+        PMLPC_HEIGHTAXIS_X = 0,
+        PMLPC_HEIGHTAXIS_Y = 1,
+        PMLPC_HEIGHTAXIS_Z = 2,
+        PMLPC_HEIGHTAXIS_MAX = 3,
+    }
+
+    /// <summary>
     /// BoolProperty: RadialVelocity
     /// </summary>
     public unsafe bool RadialVelocity

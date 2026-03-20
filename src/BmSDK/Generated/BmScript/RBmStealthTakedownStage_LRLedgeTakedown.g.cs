@@ -67,39 +67,4 @@ public partial class RBmStealthTakedownStage_LRLedgeTakedown : BmSDK.BmGame.RSte
         where TComponent : class, Framework.IScriptComponent<RBmStealthTakedownStage_LRLedgeTakedown>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// BoolProperty: bCanGrappleOutOfTakedown
-    /// </summary>
-    public unsafe bool bCanGrappleOutOfTakedown
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1700); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bGrateGrab
-    /// </summary>
-    public unsafe bool bGrateGrab
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1700); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: iKnockoutSmashAnimationRemap
-    /// </summary>
-    public unsafe BmSDK.TArray<int> iKnockoutSmashAnimationRemap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1704); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1704); }
-    }
-
-    /// <summary>
-    /// FloatProperty: fAnimationReferencePopDistance
-    /// </summary>
-    public unsafe float fAnimationReferencePopDistance
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1720); }
-    }
 }

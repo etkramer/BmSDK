@@ -33,6 +33,31 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
     protected RAnimUtil_FloorCorrection(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FFloorCorrectionTempDisable
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FFloorCorrectionTempDisable
+    {
+        /// <summary>
+        /// BoolProperty: Requested
+        /// </summary>
+        public unsafe bool Requested
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: Weight
+        /// </summary>
+        public unsafe float Weight
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+    }
+
+    /// <summary>
     /// StructProperty: ResolvedAABB
     /// </summary>
     public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FResolvedAABB ResolvedAABB

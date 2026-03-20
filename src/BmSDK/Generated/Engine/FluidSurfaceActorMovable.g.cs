@@ -67,21 +67,4 @@ public partial class FluidSurfaceActorMovable : BmSDK.Engine.FluidSurfaceActor, 
         where TComponent : class, Framework.IScriptComponent<FluidSurfaceActorMovable>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// ComponentProperty: FluidComponent
-    /// </summary>
-    public unsafe BmSDK.Engine.FluidSurfaceComponent FluidComponent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.FluidSurfaceComponent>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: ProjectileEntryEffect
-    /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem ProjectileEntryEffect
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
-    }
 }

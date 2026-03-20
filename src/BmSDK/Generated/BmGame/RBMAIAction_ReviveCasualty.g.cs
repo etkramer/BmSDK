@@ -68,6 +68,185 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
+    /// Function: HasAtLeastOneThugNearby
+    /// </summary>
+    public unsafe bool HasAtLeastOneThugNearby()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReviveCasualty.HasAtLeastOneThugNearby", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: GoToAtCasualtyState
+    /// </summary>
+    public unsafe void GoToAtCasualtyState()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReviveCasualty.GoToAtCasualtyState", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: OnDeactivate
+    /// </summary>
+    public unsafe void OnDeactivate()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReviveCasualty.OnDeactivate", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: OnActivate
+    /// </summary>
+    public unsafe void OnActivate()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReviveCasualty.OnActivate", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: PlayCasualtyRecoverLine
+    /// </summary>
+    public unsafe void PlayCasualtyRecoverLine()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReviveCasualty.PlayCasualtyRecoverLine", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: PlayMedicDiagnoseLine
+    /// </summary>
+    public unsafe void PlayMedicDiagnoseLine()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReviveCasualty.PlayMedicDiagnoseLine", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SetCasualty
+    /// </summary>
+    public unsafe void SetCasualty(BmSDK.BmGame.RPawnVillain NewCas)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReviveCasualty.SetCasualty", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewCas, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: GetAnimName
+    /// </summary>
+    public unsafe BmSDK.FName GetAnimName(BmSDK.BmGame.RBMAIAction_ReviveCasualty.eReviveAnimType Type)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ReviveCasualty.GetAnimName", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Type, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(paramsPtr + 4);
+    }
+
+    /// <summary>
+    /// Enum: eReviveCasDialogueState
+    /// </summary>
+    public enum eReviveCasDialogueState
+    {
+        eRCDS_Start = 0,
+        eRCDS_Examine = 1,
+        eRCDS_WaitForExitRequest = 2,
+        eRCDS_Diagnose = 3,
+        eRCDS_TriggerRecoverLine = 4,
+        eRCDS_Recover = 5,
+        eRCDS_Disperse = 6,
+        eRCDS_MAX = 7,
+    }
+
+    /// <summary>
+    /// Enum: eThugInWayAnimType
+    /// </summary>
+    public enum eThugInWayAnimType
+    {
+        ePUSH_Front1 = 0,
+        ePUSH_Front2 = 1,
+        ePUSH_FrontFar = 2,
+        ePUSH_Right = 3,
+        ePUSH_Left = 4,
+        ePUSH_RightFar = 5,
+        ePUSH_LeftFar = 6,
+        ePUSH_MAX = 7,
+    }
+
+    /// <summary>
+    /// Enum: eReviveAnimType
+    /// </summary>
+    public enum eReviveAnimType
+    {
+        eREVIVE_In = 0,
+        eREVIVE_In_RightTurn = 1,
+        eREVIVE_In_LeftTurn = 2,
+        eREVIVE_In_ThugInWay_Medic = 3,
+        eREVIVE_In_ThugInWay_Thug = 4,
+        eREVIVE_Idle = 5,
+        eREVIVE_Jab = 6,
+        eREVIVE_Out = 7,
+        eREVIVE_Out_Cas = 8,
+        eREVIVE_Out_Cas_Unarmed = 9,
+        eREVIVE_MAX = 10,
+    }
+
+    /// <summary>
+    /// Struct: FreviveAnimNames
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FreviveAnimNames
+    {
+        /// <summary>
+        /// NameProperty: casFaceUp
+        /// </summary>
+        public unsafe BmSDK.FName casFaceUp_0
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+        /// <summary>
+        /// NameProperty: casFaceUp
+        /// </summary>
+        public unsafe BmSDK.FName casFaceUp_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+
+        /// <summary>
+        /// NameProperty: casFaceDown
+        /// </summary>
+        public unsafe BmSDK.FName casFaceDown_0
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+        /// <summary>
+        /// NameProperty: casFaceDown
+        /// </summary>
+        public unsafe BmSDK.FName casFaceDown_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+        }
+    }
+
+    /// <summary>
     /// ObjectProperty: Casualty
     /// </summary>
     public unsafe BmSDK.BmGame.RPawnVillain Casualty

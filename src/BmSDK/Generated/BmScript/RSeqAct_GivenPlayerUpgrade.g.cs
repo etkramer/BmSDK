@@ -33,6 +33,17 @@ public partial class RSeqAct_GivenPlayerUpgrade : BmSDK.Engine.SequenceAction, B
     protected RSeqAct_GivenPlayerUpgrade(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_GivenPlayerUpgrade.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// StrProperty: UnlockFlag
     /// </summary>
     public unsafe BmSDK.FString UnlockFlag

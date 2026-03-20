@@ -33,20 +33,88 @@ public partial class RGFxMovieUI_PauseOptionsExtras : BmSDK.BmGame.RGFxMovieUI_P
     protected RGFxMovieUI_PauseOptionsExtras(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// StructProperty: WorldPPSettings
+    /// Function: XI_OnFocus
     /// </summary>
-    public unsafe BmSDK.Engine.PostProcessVolume.FPostProcessSettings WorldPPSettings
+    public unsafe void XI_OnFocus(int Id)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 1072); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1072); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsExtras.XI_OnFocus", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Id, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// ArrayProperty: PauseScreens
+    /// Function: XI_Set
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RGFxMovieUI_PauseBase.FScreenDef> PauseScreens
+    public unsafe void XI_Set(int Id, BmSDK.FString Type, int Value)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGFxMovieUI_PauseBase.FScreenDef>>(Ptr + 1596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1596); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsExtras.XI_Set", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Id, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Type, paramsPtr + 4);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 20);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: XI_Get
+    /// </summary>
+    public unsafe int XI_Get(int Id, BmSDK.FString Type)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsExtras.XI_Get", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Id, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Type, paramsPtr + 4);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 20);
+    }
+
+    /// <summary>
+    /// Function: XI_GetDefault
+    /// </summary>
+    public unsafe int XI_GetDefault(int Id, BmSDK.FString Type)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsExtras.XI_GetDefault", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Id, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Type, paramsPtr + 4);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 20);
+    }
+
+    /// <summary>
+    /// Function: XI_SetupMenu
+    /// </summary>
+    public unsafe void XI_SetupMenu(BmSDK.FString TargetPath)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsExtras.XI_SetupMenu", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetPath, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: CloseScreen
+    /// </summary>
+    public unsafe void CloseScreen()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsExtras.CloseScreen", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SetupScreenPrompts
+    /// </summary>
+    public unsafe void SetupScreenPrompts()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsExtras.SetupScreenPrompts", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

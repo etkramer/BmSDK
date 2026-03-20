@@ -68,65 +68,14 @@ public partial class RAEC_Search_Sub_VantageMine : BmSDK.BmGame.RAEC_Search_Sub_
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// StructProperty: UltimateDestination
+    /// Function: AddVantageResponseAction
     /// </summary>
-    public unsafe System.Numerics.Vector3 UltimateDestination
+    public unsafe void AddVantageResponseAction(BmSDK.FString actionlabel)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: CurrentTargetVantage
-    /// </summary>
-    public unsafe BmSDK.BmGame.RHidePoint CurrentTargetVantage
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint>(Ptr + 708); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
-    }
-
-    /// <summary>
-    /// StructProperty: IntendedMinePosition
-    /// </summary>
-    public unsafe System.Numerics.Vector3 IntendedMinePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 716); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: GargLocSearch
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RAEC_Search_Sub_VantageResponse.FGargLocSearchItem> GargLocSearch
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RAEC_Search_Sub_VantageResponse.FGargLocSearchItem>>(Ptr + 728); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: GargSearch
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RAEC_Search_Sub_VantageResponse.FGargSearchItem> GargSearch
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RAEC_Search_Sub_VantageResponse.FGargSearchItem>>(Ptr + 744); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
-    }
-
-    /// <summary>
-    /// NameProperty: MoveToVantageBark
-    /// </summary>
-    public unsafe BmSDK.FName MoveToVantageBark
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
-    }
-
-    /// <summary>
-    /// NameProperty: AtVantageBark
-    /// </summary>
-    public unsafe BmSDK.FName AtVantageBark
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 768); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_VantageMine.AddVantageResponseAction", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(actionlabel, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

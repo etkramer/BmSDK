@@ -33,6 +33,27 @@ public partial class AnimNodeBlendMultiBone : BmSDK.Engine.AnimNodeBlendBase, Bm
     protected AnimNodeBlendMultiBone(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: SetTargetStartBone
+    /// </summary>
+    public unsafe void SetTargetStartBone(int TargetIdx, BmSDK.FName StartBoneName, float PerBoneIncrease = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeBlendMultiBone.SetTargetStartBone", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetIdx, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(StartBoneName, paramsPtr + 4);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(PerBoneIncrease, paramsPtr + 12);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
     /// ArrayProperty: BlendTargetList
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.Engine.AnimNodeBlendMultiBone.FChildBoneBlendInfo> BlendTargetList

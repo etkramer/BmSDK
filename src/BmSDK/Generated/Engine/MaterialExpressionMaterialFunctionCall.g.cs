@@ -33,6 +33,74 @@ public partial class MaterialExpressionMaterialFunctionCall : BmSDK.Engine.Mater
     protected MaterialExpressionMaterialFunctionCall(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FFunctionExpressionOutput
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FFunctionExpressionOutput
+    {
+        /// <summary>
+        /// ObjectProperty: ExpressionOutput
+        /// </summary>
+        public unsafe BmSDK.Engine.MaterialExpressionFunctionOutput ExpressionOutput
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionFunctionOutput>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: ExpressionOutputId
+        /// </summary>
+        public unsafe BmSDK.GameObject.FGuid ExpressionOutputId
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: Output
+        /// </summary>
+        public unsafe BmSDK.Engine.MaterialExpression.FExpressionOutput Output
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionOutput>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FFunctionExpressionInput
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FFunctionExpressionInput
+    {
+        /// <summary>
+        /// ObjectProperty: ExpressionInput
+        /// </summary>
+        public unsafe BmSDK.Engine.MaterialExpressionFunctionInput ExpressionInput
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionFunctionInput>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: ExpressionInputId
+        /// </summary>
+        public unsafe BmSDK.GameObject.FGuid ExpressionInputId
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: Input
+        /// </summary>
+        public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Input
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+        }
+    }
+
+    /// <summary>
     /// ObjectProperty: MaterialFunction
     /// </summary>
     public unsafe BmSDK.Engine.MaterialFunction MaterialFunction

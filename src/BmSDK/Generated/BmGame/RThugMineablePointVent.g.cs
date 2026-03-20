@@ -68,6 +68,17 @@ public partial class RThugMineablePointVent : BmSDK.BmGame.RThugMineablePointBas
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
+    /// Function: GetStandPoint
+    /// </summary>
+    public unsafe System.Numerics.Vector3 GetStandPoint()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineablePointVent.GetStandPoint", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
+    }
+
+    /// <summary>
     /// ObjectProperty: Grate
     /// </summary>
     public unsafe BmSDK.BmGame.RTunnelGrateBase Grate

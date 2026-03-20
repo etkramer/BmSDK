@@ -68,11 +68,13 @@ public partial class RBMCombatThrownObject_Baton : BmSDK.BmGame.RBMCombatThrownO
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// IntProperty: MaxTimesCanBeUsed
+    /// Function: SpawnAttachment
     /// </summary>
-    public unsafe int MaxTimesCanBeUsed
+    public unsafe void SpawnAttachment()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1184); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_Baton.SpawnAttachment", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

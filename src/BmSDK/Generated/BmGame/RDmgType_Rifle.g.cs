@@ -32,12 +32,4 @@ public partial class RDmgType_Rifle : BmSDK.BmGame.RDmgType_Ranged, BmSDK.IGameO
     /// </summary>
     protected RDmgType_Rifle(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// FloatProperty: StaggerBatmanRange
-    /// </summary>
-    public unsafe float StaggerBatmanRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
-    }
 }

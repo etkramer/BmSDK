@@ -33,6 +33,25 @@ public partial class RAnimUtil_PhysicsOutput : BmSDK.GameObject, BmSDK.IGameObje
     protected RAnimUtil_PhysicsOutput(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: DisableInheritVelocityForNFrames
+    /// </summary>
+    public unsafe void DisableInheritVelocityForNFrames(int N)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimUtil_PhysicsOutput.DisableInheritVelocityForNFrames", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(N, paramsPtr + 0);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
     /// StructProperty: Constants
     /// </summary>
     public unsafe BmSDK.BmGame.RAnimUtil_PhysicsOutput.FRagdollConstants Constants

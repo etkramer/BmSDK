@@ -67,30 +67,4 @@ public partial class FogVolumeSphericalDensityInfo : BmSDK.Engine.FogVolumeDensi
         where TComponent : class, Framework.IScriptComponent<FogVolumeSphericalDensityInfo>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// ComponentProperty: DensityComponent
-    /// </summary>
-    public unsafe BmSDK.Engine.FogVolumeDensityComponent DensityComponent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.FogVolumeDensityComponent>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: AutomaticMeshComponent
-    /// </summary>
-    public unsafe BmSDK.Engine.StaticMeshComponent AutomaticMeshComponent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bEnabled
-    /// </summary>
-    public unsafe bool bEnabled
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 684) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 684); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 684); }
-    }
 }

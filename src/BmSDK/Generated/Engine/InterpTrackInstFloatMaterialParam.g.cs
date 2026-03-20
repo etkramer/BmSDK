@@ -33,6 +33,31 @@ public partial class InterpTrackInstFloatMaterialParam : BmSDK.Engine.InterpTrac
     protected InterpTrackInstFloatMaterialParam(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FFloatMaterialParamPrimitiveData
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FFloatMaterialParamPrimitiveData
+    {
+        /// <summary>
+        /// ComponentProperty: Primitive
+        /// </summary>
+        public unsafe BmSDK.Engine.PrimitiveComponent Primitive
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: MaterialIndex
+        /// </summary>
+        public unsafe int MaterialIndex
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+    }
+
+    /// <summary>
     /// ArrayProperty: MICInfos
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.Engine.InterpTrackInstFloatMaterialParam.FFloatMaterialParamMICData> MICInfos

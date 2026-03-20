@@ -33,6 +33,88 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     protected SVehicleWheel(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FVehicleRaycastHitData
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FVehicleRaycastHitData
+    {
+        /// <summary>
+        /// BoolProperty: bValid
+        /// </summary>
+        public unsafe bool bValid
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: HitPlane
+        /// </summary>
+        public unsafe BmSDK.GameObject.FPlane HitPlane
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FPlane>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: HitPxActor
+        /// </summary>
+        public unsafe System.IntPtr HitPxActor
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 32); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: HitPxShape
+        /// </summary>
+        public unsafe System.IntPtr HitPxShape
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 40); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
+        }
+    }
+
+    /// <summary>
+    /// Enum: ETyreType
+    /// </summary>
+    public enum ETyreType
+    {
+        ETyreType_ZeroFriction = 0,
+        ETyreType_Batmobile = 1,
+        ETyreType_BatmobileBattleMode = 2,
+        ETyreType_BatmobileHandbrakeFront = 3,
+        ETyreType_BatmobileHandbrakeRear = 4,
+        ETyreType_BatmobileDriftFront = 5,
+        ETyreType_BatmobileDriftRear = 6,
+        ETyreType_BatmobileWheelspinFront = 7,
+        ETyreType_BatmobileWheelspinRear = 8,
+        ETyreType_BatmobileWheelspinBoost = 9,
+        ETyreType_BatmobileTwoWheels = 10,
+        ETyreType_BatmobileBrakeFront = 11,
+        ETyreType_BatmobileBrakeRear = 12,
+        ETyreType_Car = 13,
+        ETyreType_Tank = 14,
+        ETyreType_NpcWheelspin = 15,
+        ETyreType_NpcTwoWheels = 16,
+        ETyreType_MAX = 17,
+    }
+
+    /// <summary>
+    /// Enum: EDrivableSurfaceMaterialType
+    /// </summary>
+    public enum EDrivableSurfaceMaterialType
+    {
+        DSMT_Default = 0,
+        DSMT_Mud = 1,
+        DSMT_FearGas = 2,
+        DSMT_Wood = 3,
+        DSMT_Water = 4,
+        DSMT_Pollen = 5,
+        DSMT_MAX = 6,
+    }
+
+    /// <summary>
     /// FloatProperty: Steer
     /// </summary>
     public unsafe float Steer

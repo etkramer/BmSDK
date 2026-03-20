@@ -33,6 +33,20 @@ public partial class ParticleModuleTypeDataMeshPhysX : BmSDK.Engine.ParticleModu
     protected ParticleModuleTypeDataMeshPhysX(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EPhysXMeshRotationMethod
+    /// </summary>
+    public enum EPhysXMeshRotationMethod
+    {
+        PMRM_Disabled = 0,
+        PMRM_Spherical = 1,
+        PMRM_Box = 2,
+        PMRM_LongBox = 3,
+        PMRM_FlatBox = 4,
+        PMRM_Velocity = 5,
+        PMRM_MAX = 6,
+    }
+
+    /// <summary>
     /// ObjectProperty: PhysXParSys
     /// </summary>
     public unsafe BmSDK.Engine.PhysXParticleSystem PhysXParSys

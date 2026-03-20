@@ -33,6 +33,18 @@ public partial class RAnimNotify_PlayGadgetAnim : BmSDK.Engine.AnimNotify, BmSDK
     protected RAnimNotify_PlayGadgetAnim(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: TriggerGadgetAnim
+    /// </summary>
+    public unsafe void TriggerGadgetAnim(BmSDK.BmGame.RPawnPlayer Player)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNotify_PlayGadgetAnim.TriggerGadgetAnim", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Player, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// NameProperty: AnimName
     /// </summary>
     public unsafe BmSDK.FName AnimName

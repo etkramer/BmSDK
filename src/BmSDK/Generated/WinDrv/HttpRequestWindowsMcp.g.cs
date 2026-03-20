@@ -33,6 +33,17 @@ public partial class HttpRequestWindowsMcp : BmSDK.WinDrv.HttpRequestWindows, Bm
     protected HttpRequestWindowsMcp(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: ProcessRequest
+    /// </summary>
+    public unsafe bool ProcessRequest()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "WinDrv.HttpRequestWindowsMcp.ProcessRequest", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
+    }
+
+    /// <summary>
     /// StrProperty: AppID
     /// </summary>
     public unsafe BmSDK.FString AppID

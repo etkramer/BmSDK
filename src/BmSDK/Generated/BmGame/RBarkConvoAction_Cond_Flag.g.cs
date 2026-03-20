@@ -33,6 +33,17 @@ public partial class RBarkConvoAction_Cond_Flag : BmSDK.BmGame.RBarkConvoActionC
     protected RBarkConvoAction_Cond_Flag(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetOutputIndex
+    /// </summary>
+    public unsafe int GetOutputIndex()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_Cond_Flag.GetOutputIndex", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+    }
+
+    /// <summary>
     /// ByteProperty: FlagType
     /// </summary>
     public unsafe BmSDK.BmGame.RBarkValDef.FlagTypeEnum FlagType

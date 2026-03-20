@@ -33,6 +33,17 @@ public partial class RSeqAct_RiddlerBlockInitialiser : BmSDK.Engine.SequenceActi
     protected RSeqAct_RiddlerBlockInitialiser(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RiddlerBlockInitialiser.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ArrayProperty: Blocks
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.BmGame.RSeqAct_RiddlerBlockInitialiser.FBlockSettings> Blocks

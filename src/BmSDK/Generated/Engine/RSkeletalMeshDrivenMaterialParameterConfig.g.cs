@@ -33,6 +33,122 @@ public partial class RSkeletalMeshDrivenMaterialParameterConfig : BmSDK.GameObje
     protected RSkeletalMeshDrivenMaterialParameterConfig(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FBoneRotationConfig
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FBoneRotationConfig
+    {
+        /// <summary>
+        /// NameProperty: ScalarParameterName
+        /// </summary>
+        public unsafe BmSDK.FName ScalarParameterName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// NameProperty: BoneName
+        /// </summary>
+        public unsafe BmSDK.FName BoneName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+
+        /// <summary>
+        /// ByteProperty: Axis
+        /// </summary>
+        public unsafe BmSDK.GameObject.ESimpleAxis Axis
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.ESimpleAxis>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+
+        /// <summary>
+        /// ByteProperty: RelativeTo
+        /// </summary>
+        public unsafe BmSDK.Engine.RSkeletalMeshDrivenMaterialParameterConfig.ESkeletalMeshDrivenMaterialRotationSpace RelativeTo
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshDrivenMaterialParameterConfig.ESkeletalMeshDrivenMaterialRotationSpace>(Ptr + 17); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 17); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: Angle_FullyOff
+        /// </summary>
+        public unsafe float Angle_FullyOff
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 20); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: Angle_FullyOn
+        /// </summary>
+        public unsafe float Angle_FullyOn
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: Value_FullyOn
+        /// </summary>
+        public unsafe float Value_FullyOn
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 28); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: EaseOutSharpness
+        /// </summary>
+        public unsafe float EaseOutSharpness
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 32); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: EaseInSharpness
+        /// </summary>
+        public unsafe float EaseInSharpness
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 36); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: EaseBias
+        /// </summary>
+        public unsafe float EaseBias
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 40); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: Disable
+        /// </summary>
+        public unsafe bool Disable
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 44); }; }
+        }
+    }
+
+    /// <summary>
+    /// Enum: ESkeletalMeshDrivenMaterialRotationSpace
+    /// </summary>
+    public enum ESkeletalMeshDrivenMaterialRotationSpace
+    {
+        SMDMRS_RelativeToReferencePose = 0,
+        SMDMRS_RelativeToParentBone = 1,
+        SMDMRS_MAX = 2,
+    }
+
+    /// <summary>
     /// ArrayProperty: BoneDistances
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.Engine.RSkeletalMeshDrivenMaterialParameterConfig.FBoneDistanceConfig> BoneDistances

@@ -68,29 +68,39 @@ public partial class RHidePoint_OWGargoyle : BmSDK.BmGame.RHidePoint_GargoyleBas
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// FloatProperty: ChanceOfJokerHallucination
+    /// Function: WillSmashIfShot
     /// </summary>
-    public unsafe float ChanceOfJokerHallucination
+    public unsafe bool WillSmashIfShot()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1368); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1368); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHidePoint_OWGargoyle.WillSmashIfShot", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
 
     /// <summary>
-    /// FloatProperty: TimeBetweenJokerHallucinationOverlays
+    /// Function: SetInThermalMode
     /// </summary>
-    public unsafe float TimeBetweenJokerHallucinationOverlays
+    public unsafe void SetInThermalMode(bool On, bool bForceOff)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1372); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1372); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHidePoint_OWGargoyle.SetInThermalMode", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(On, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bForceOff, paramsPtr + 4);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// BoolProperty: bJokerInNervousPose
+    /// Function: SetInvestigateHighlighted
     /// </summary>
-    public unsafe bool bJokerInNervousPose
+    public unsafe void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1376) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1376); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1376); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHidePoint_OWGargoyle.SetInvestigateHighlighted", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(highMat, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(On, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

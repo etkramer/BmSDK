@@ -68,56 +68,71 @@ public partial class RStealthTakedownStage_ExplosiveVestStanding : BmSDK.BmGame.
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// BoolProperty: bCanGrappleOutOfTakedown
+    /// Function: SwitchExplosiveVestColourToGrey
     /// </summary>
-    public unsafe bool bCanGrappleOutOfTakedown
+    public unsafe void SwitchExplosiveVestColourToGrey()
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1700); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ExplosiveVestStanding.SwitchExplosiveVestColourToGrey", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// BoolProperty: bGrateGrab
+    /// Function: SwitchExplosiveVestColourToGreen
     /// </summary>
-    public unsafe bool bGrateGrab
+    public unsafe void SwitchExplosiveVestColourToGreen()
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1700); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ExplosiveVestStanding.SwitchExplosiveVestColourToGreen", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// BoolProperty: bAlignWithStairRotation
+    /// Function: GetReferencePosition
     /// </summary>
-    public unsafe bool bAlignWithStairRotation
+    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1700); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ExplosiveVestStanding.GetReferencePosition", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        ReferencePosition = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
+        ReferenceRotation = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(paramsPtr + 12);
+        return;
     }
 
     /// <summary>
-    /// StructProperty: rStairAnimationRotation
+    /// Function: OverrideChosenAnim
     /// </summary>
-    public unsafe BmSDK.Rotator rStairAnimationRotation
+    public unsafe void OverrideChosenAnim(out int Anim)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1704); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1704); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ExplosiveVestStanding.OverrideChosenAnim", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        Anim = BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+        return;
     }
 
     /// <summary>
-    /// IntProperty: iGoingDownStairsAnimationIndex
+    /// Function: GetFinishState
     /// </summary>
-    public unsafe int iGoingDownStairsAnimationIndex
+    public unsafe BmSDK.FName GetFinishState()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1716); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1716); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ExplosiveVestStanding.GetFinishState", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(paramsPtr + 0);
     }
 
     /// <summary>
-    /// IntProperty: iGoingUpStairsAnimationIndex
+    /// Function: Begin
     /// </summary>
-    public unsafe int iGoingUpStairsAnimationIndex
+    public unsafe void Begin()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1720); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ExplosiveVestStanding.Begin", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

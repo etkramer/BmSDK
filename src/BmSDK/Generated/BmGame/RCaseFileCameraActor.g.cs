@@ -68,6 +68,45 @@ public partial class RCaseFileCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
+    /// Function: PlayerMove
+    /// </summary>
+    public unsafe void PlayerMove(float DeltaTime, System.Numerics.Vector3 newAccel, float SpeedPercent)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCaseFileCameraActor.PlayerMove", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(newAccel, paramsPtr + 4);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(SpeedPercent, paramsPtr + 16);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: IsInsideCrimeScene
+    /// </summary>
+    public unsafe bool IsInsideCrimeScene(float DeltaTime)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCaseFileCameraActor.IsInsideCrimeScene", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
+    }
+
+    /// <summary>
+    /// Function: InitFromOtherCameraActor
+    /// </summary>
+    public unsafe void InitFromOtherCameraActor(BmSDK.BmGame.RCameraActor OtherCamera, BmSDK.BmGame.RCrimeSceneBase CrimeVolume)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCaseFileCameraActor.InitFromOtherCameraActor", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(OtherCamera, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CrimeVolume, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: mCrimeSceneVolume
     /// </summary>
     public unsafe BmSDK.BmGame.RCrimeSceneBase mCrimeSceneVolume

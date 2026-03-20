@@ -33,6 +33,38 @@ public partial class MWBIDDataMessage : BmSDK.GameObject, BmSDK.IGameObject
     protected MWBIDDataMessage(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Flush
+    /// </summary>
+    public unsafe void Flush()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDDataMessage.Flush", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: Init
+    /// </summary>
+    public unsafe void Init()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDDataMessage.Init", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Enum: ButtonGroup_Default
+    /// </summary>
+    public enum ButtonGroup_Default
+    {
+        BGD_ButtonDecline = 0,
+        BGD_ButtonAccept = 1,
+        BGD_MAX = 2,
+    }
+
+    /// <summary>
     /// BoolProperty: bIsConfirm
     /// </summary>
     public unsafe bool bIsConfirm

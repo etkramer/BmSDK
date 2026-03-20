@@ -33,6 +33,43 @@ public partial class ParticleModuleCollision : BmSDK.Engine.ParticleModuleCollis
     protected ParticleModuleCollision(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FParticleAttractorCollisionAction
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FParticleAttractorCollisionAction
+    {
+        /// <summary>
+        /// ByteProperty: Type
+        /// </summary>
+        public unsafe BmSDK.Engine.ParticleModuleCollision.ParticleAttractorActionType Type
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleCollision.ParticleAttractorActionType>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// StrProperty: EventName
+        /// </summary>
+        public unsafe BmSDK.FString EventName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+    }
+
+    /// <summary>
+    /// Enum: ParticleAttractorActionType
+    /// </summary>
+    public enum ParticleAttractorActionType
+    {
+        PAAT_None = 0,
+        PAAT_Destroy = 1,
+        PAAT_Freeze = 2,
+        PAAT_Event = 3,
+        PAAT_MAX = 4,
+    }
+
+    /// <summary>
     /// StructProperty: DampingFactor
     /// </summary>
     public unsafe BmSDK.DistributionVector.FRawDistributionVector DampingFactor

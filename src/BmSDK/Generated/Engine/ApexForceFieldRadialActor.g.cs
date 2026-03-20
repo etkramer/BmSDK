@@ -67,12 +67,4 @@ public partial class ApexForceFieldRadialActor : BmSDK.Engine.ApexFieldSamplerAc
         where TComponent : class, Framework.IScriptComponent<ApexForceFieldRadialActor>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// ComponentProperty: FieldSamplerComponent
-    /// </summary>
-    public unsafe BmSDK.Engine.ApexFieldSamplerComponent FieldSamplerComponent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexFieldSamplerComponent>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
 }

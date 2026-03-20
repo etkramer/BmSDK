@@ -33,6 +33,40 @@ public partial class InterpTrackAkEditorOnlyWav : BmSDK.Engine.InterpTrack, BmSD
     protected InterpTrackAkEditorOnlyWav(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FAkEditorOnlyWav
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FAkEditorOnlyWav
+    {
+        /// <summary>
+        /// StructProperty: WavMemory
+        /// </summary>
+        public unsafe System.IntPtr WavMemory
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: WavSize
+        /// </summary>
+        public unsafe int WavSize
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: WavModInfo
+        /// </summary>
+        public unsafe System.IntPtr WavModInfo
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+        }
+    }
+
+    /// <summary>
     /// ArrayProperty: Wavs
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.AkAudio.InterpTrackAkEditorOnlyWav.FAkEditorOnlyWavKey> Wavs

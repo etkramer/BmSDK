@@ -67,12 +67,4 @@ public partial class SkeletalMeshActorMATWalkable : BmSDK.Engine.SkeletalMeshAct
         where TComponent : class, Framework.IScriptComponent<SkeletalMeshActorMATWalkable>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// ArrayProperty: SlotNodes
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.AnimNodeSlot> SlotNodes
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimNodeSlot>>(Ptr + 736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
-    }
 }

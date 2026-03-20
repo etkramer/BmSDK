@@ -33,6 +33,27 @@ public partial class SceneCapturePortalComponent : BmSDK.Engine.SceneCaptureComp
     protected SceneCapturePortalComponent(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: SetCaptureParameters
+    /// </summary>
+    public unsafe void SetCaptureParameters(BmSDK.Engine.TextureRenderTarget2D NewTextureTarget = default, float NewScaleFOV = default, BmSDK.Engine.Actor NewViewDest = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SceneCapturePortalComponent.SetCaptureParameters", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewTextureTarget, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewScaleFOV, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewViewDest, paramsPtr + 12);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: TextureTarget
     /// </summary>
     public unsafe BmSDK.Engine.TextureRenderTarget2D TextureTarget

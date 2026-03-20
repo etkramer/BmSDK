@@ -67,12 +67,4 @@ public partial class RBMPathNode_GapJumpProxy : BmSDK.BmGame.RBMPathNode_Variabl
         where TComponent : class, Framework.IScriptComponent<RBMPathNode_GapJumpProxy>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// ObjectProperty: FenceJumpNode
-    /// </summary>
-    public unsafe BmSDK.BmGame.RBMPathNode_VariablePositionTraverse FenceJumpNode
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPathNode_VariablePositionTraverse>(Ptr + 976); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 976); }
-    }
 }

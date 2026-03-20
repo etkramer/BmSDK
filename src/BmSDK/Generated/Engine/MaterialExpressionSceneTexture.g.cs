@@ -33,6 +33,15 @@ public partial class MaterialExpressionSceneTexture : BmSDK.Engine.MaterialExpre
     protected MaterialExpressionSceneTexture(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: ESceneTextureType
+    /// </summary>
+    public enum ESceneTextureType
+    {
+        SceneTex_Lighting = 0,
+        SceneTex_MAX = 1,
+    }
+
+    /// <summary>
     /// StructProperty: Coordinates
     /// </summary>
     public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Coordinates

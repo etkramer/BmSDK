@@ -33,6 +33,18 @@ public partial class ParticleModuleTypeDataRibbon : BmSDK.Engine.ParticleModuleT
     protected ParticleModuleTypeDataRibbon(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: ETrailsRenderAxisOption
+    /// </summary>
+    public enum ETrailsRenderAxisOption
+    {
+        Trails_CameraUp = 0,
+        Trails_SourceUp = 1,
+        Trails_WorldUp = 2,
+        Trails_LockedAxis = 3,
+        Trails_MAX = 4,
+    }
+
+    /// <summary>
     /// IntProperty: SheetsPerTrail
     /// </summary>
     public unsafe int SheetsPerTrail

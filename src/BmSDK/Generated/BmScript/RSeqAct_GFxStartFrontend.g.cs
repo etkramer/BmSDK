@@ -33,6 +33,17 @@ public partial class RSeqAct_GFxStartFrontend : BmSDK.Engine.SequenceAction, BmS
     protected RSeqAct_GFxStartFrontend(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_GFxStartFrontend.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// StrProperty: DefaultScreenEvent
     /// </summary>
     public unsafe BmSDK.FString DefaultScreenEvent

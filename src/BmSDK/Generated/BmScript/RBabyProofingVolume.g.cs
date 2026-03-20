@@ -67,21 +67,4 @@ public partial class RBabyProofingVolume : BmSDK.Engine.BlockingVolume, BmSDK.IG
         where TComponent : class, Framework.IScriptComponent<RBabyProofingVolume>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// BoolProperty: bBlockCamera
-    /// </summary>
-    public unsafe bool bBlockCamera
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 740) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 740); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 740); }
-    }
-
-    /// <summary>
-    /// StructProperty: DebugRenderingColor
-    /// </summary>
-    public unsafe BmSDK.GameObject.FColor DebugRenderingColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 744); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
-    }
 }

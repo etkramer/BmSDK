@@ -33,6 +33,28 @@ public partial class RInteractionClass : BmSDK.GameObject, BmSDK.IGameObject
     protected RInteractionClass(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: ContainsActor
+    /// </summary>
+    public unsafe bool ContainsActor(BmSDK.Engine.Actor TestActor)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RInteractionClass.ContainsActor", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TestActor, paramsPtr + 0);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
+    }
+
+
+
+
+    /// <summary>
     /// ArrayProperty: ActorList
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.Engine.RInteractionComponent> ActorList

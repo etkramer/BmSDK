@@ -68,20 +68,14 @@ public partial class MAEC_MayhemTransitionAlert : BmSDK.BmGame.RAEC_GelMineExplo
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ObjectProperty: ChildPauseGroup
+    /// Function: TriggerReaction
     /// </summary>
-    public unsafe BmSDK.BmGame.RAEC_GroupPauseAndLook ChildPauseGroup
+    public unsafe void TriggerReaction(System.Numerics.Vector3 ReactionCentre)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_GroupPauseAndLook>(Ptr + 720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
-    }
-
-    /// <summary>
-    /// FloatProperty: DistanceAffectedWithin
-    /// </summary>
-    public unsafe float DistanceAffectedWithin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 728); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_MayhemTransitionAlert.TriggerReaction", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(ReactionCentre, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

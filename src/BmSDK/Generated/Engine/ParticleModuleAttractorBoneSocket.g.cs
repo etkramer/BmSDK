@@ -33,6 +33,53 @@ public partial class ParticleModuleAttractorBoneSocket : BmSDK.Engine.ParticleMo
     protected ParticleModuleAttractorBoneSocket(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: ELocationBoneSocketDestSelectionMethod
+    /// </summary>
+    public enum ELocationBoneSocketDestSelectionMethod
+    {
+        BONESOCKETDESTSEL_Sequential = 0,
+        BONESOCKETDESTSEL_Random = 1,
+        BONESOCKETDESTSEL_RandomExhaustive = 2,
+        BONESOCKETDESTSEL_BlendAll = 3,
+        BONESOCKETDESTSEL_MAX = 4,
+    }
+
+    /// <summary>
+    /// Struct: FAttractLocationBoneSocketInfo
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FAttractLocationBoneSocketInfo
+    {
+        /// <summary>
+        /// NameProperty: BoneSocketName
+        /// </summary>
+        public unsafe BmSDK.FName BoneSocketName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: Offset
+        /// </summary>
+        public unsafe System.Numerics.Vector3 Offset
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+    }
+
+    /// <summary>
+    /// Enum: ELocationBoneSocketDestination
+    /// </summary>
+    public enum ELocationBoneSocketDestination
+    {
+        BONESOCKETDEST_Bones = 0,
+        BONESOCKETDEST_Sockets = 1,
+        BONESOCKETDEST_MAX = 2,
+    }
+
+    /// <summary>
     /// ByteProperty: FalloffType
     /// </summary>
     public unsafe BmSDK.Engine.ParticleModuleAttractorBoneSocket.EBoneSocketAttractorFalloffType FalloffType

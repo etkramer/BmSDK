@@ -33,6 +33,28 @@ public partial class RSeqAct_CombatProgress : BmSDK.Engine.SeqAct_Latent, BmSDK.
     protected RSeqAct_CombatProgress(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Deactivated
+    /// </summary>
+    public unsafe void Deactivated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CombatProgress.Deactivated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CombatProgress.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ArrayProperty: OutputPercentages
     /// </summary>
     public unsafe BmSDK.TArray<int> OutputPercentages

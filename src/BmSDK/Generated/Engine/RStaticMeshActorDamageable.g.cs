@@ -68,6 +68,17 @@ public partial class RStaticMeshActorDamageable : BmSDK.Engine.StaticMeshActor, 
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
+    /// Function: ReceiveHit
+    /// </summary>
+    public unsafe void ReceiveHit()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RStaticMeshActorDamageable.ReceiveHit", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// BoolProperty: IsDamaged
     /// </summary>
     public unsafe bool IsDamaged

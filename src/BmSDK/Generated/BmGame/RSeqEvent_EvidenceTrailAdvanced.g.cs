@@ -33,6 +33,17 @@ public partial class RSeqEvent_EvidenceTrailAdvanced : BmSDK.Engine.SequenceEven
     protected RSeqEvent_EvidenceTrailAdvanced(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetObjClassVersion
+    /// </summary>
+    public unsafe static int GetObjClassVersion()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_EvidenceTrailAdvanced.GetObjClassVersion", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+    }
+
+    /// <summary>
     /// ObjectProperty: EvidenceInfo
     /// </summary>
     public unsafe BmSDK.BmGame.REvidence EvidenceInfo

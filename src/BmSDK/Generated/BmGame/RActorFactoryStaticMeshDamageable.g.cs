@@ -32,21 +32,4 @@ public partial class RActorFactoryStaticMeshDamageable : BmSDK.Engine.ActorFacto
     /// </summary>
     protected RActorFactoryStaticMeshDamageable(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// ObjectProperty: StaticMesh
-    /// </summary>
-    public unsafe BmSDK.Engine.StaticMesh StaticMesh
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMesh>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
-    }
-
-    /// <summary>
-    /// StructProperty: DrawScale3D
-    /// </summary>
-    public unsafe System.Numerics.Vector3 DrawScale3D
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
-    }
 }

@@ -33,6 +33,17 @@ public partial class RSeqAct_SetBatmobilePassenger : BmSDK.Engine.SequenceAction
     protected RSeqAct_SetBatmobilePassenger(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SetBatmobilePassenger.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: Passenger
     /// </summary>
     public unsafe BmSDK.BmGame.RBMPawnAI Passenger

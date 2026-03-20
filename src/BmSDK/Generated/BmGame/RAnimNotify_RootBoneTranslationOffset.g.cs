@@ -32,22 +32,4 @@ public partial class RAnimNotify_RootBoneTranslationOffset : BmSDK.BmGame.RAnimN
     /// </summary>
     protected RAnimNotify_RootBoneTranslationOffset(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// ByteProperty: Type
-    /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_BeginEnd.EBeginEndType Type
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_BeginEnd.EBeginEndType>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
-
-    /// <summary>
-    /// Enum: EBeginEndType
-    /// </summary>
-    public enum EBeginEndType
-    {
-        BET_Begin = 0,
-        BET_End = 1,
-        BET_MAX = 2,
-    }
 }

@@ -33,6 +33,30 @@ public partial class RVehicleSimNPC : BmSDK.Engine.SVehicleSimBase, BmSDK.IGameO
     protected RVehicleSimNPC(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: SetDisabledByDroneDisruptor
+    /// </summary>
+    public unsafe void SetDisabledByDroneDisruptor(bool Disabled)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleSimNPC.SetDisabledByDroneDisruptor", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Disabled, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: SetDisabledByEMP
+    /// </summary>
+    public unsafe void SetDisabledByEMP(bool Disabled)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleSimNPC.SetDisabledByEMP", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Disabled, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// BoolProperty: DisabledByEMP
     /// </summary>
     public unsafe bool DisabledByEMP

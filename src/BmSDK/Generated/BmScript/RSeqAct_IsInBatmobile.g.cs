@@ -33,6 +33,39 @@ public partial class RSeqAct_IsInBatmobile : BmSDK.Engine.SequenceAction, BmSDK.
     protected RSeqAct_IsInBatmobile(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetObjClassVersion
+    /// </summary>
+    public unsafe static int GetObjClassVersion()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IsInBatmobile.GetObjClassVersion", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IsInBatmobile.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Enum: EWhichBatmobileMode
+    /// </summary>
+    public enum EWhichBatmobileMode
+    {
+        EWBM_DontCare = 0,
+        EWBM_BattleMode = 1,
+        EWBM_PursuitMode = 2,
+        EWBM_MAX = 3,
+    }
+
+    /// <summary>
     /// ObjectProperty: TargetPlayer
     /// </summary>
     public unsafe BmSDK.BmGame.RPlayerController TargetPlayer

@@ -32,39 +32,4 @@ public partial class RSeqAct_OverworldSpawnerBase : BmSDK.BmGame.RSeqAct_CombatS
     /// </summary>
     protected RSeqAct_OverworldSpawnerBase(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// BoolProperty: bSnapToGround
-    /// </summary>
-    public unsafe bool bSnapToGround
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bForceFlappyBitsOff
-    /// </summary>
-    public unsafe bool bForceFlappyBitsOff
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
-    }
-
-    /// <summary>
-    /// BoolProperty: OverridePhysWalkingType
-    /// </summary>
-    public unsafe bool OverridePhysWalkingType
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
-    }
-
-    /// <summary>
-    /// ByteProperty: PhysWalkingType
-    /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.EPhysWalkingType PhysWalkingType
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.EPhysWalkingType>(Ptr + 380); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
-    }
 }

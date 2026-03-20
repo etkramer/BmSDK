@@ -33,6 +33,19 @@ public partial class SoundNodeWave : BmSDK.Engine.SoundNode, BmSDK.IGameObject
     protected SoundNodeWave(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GeneratePCMData
+    /// </summary>
+    public unsafe void GeneratePCMData(out BmSDK.TArray<byte> Buffer, int SamplesNeeded)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SoundNodeWave.GeneratePCMData", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(SamplesNeeded, paramsPtr + 16);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        Buffer = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(paramsPtr + 0);
+        return;
+    }
+
+    /// <summary>
     /// IntProperty: CompressionQuality
     /// </summary>
     public unsafe int CompressionQuality

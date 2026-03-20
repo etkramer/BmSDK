@@ -33,6 +33,29 @@ public partial class RVehicleBehaviour_CarChase : BmSDK.BmGame.RVehicleBehaviour
     protected RVehicleBehaviour_CarChase(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetObjClassVersion
+    /// </summary>
+    public unsafe static int GetObjClassVersion()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_CarChase.GetObjClassVersion", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Enum: CarChaseState
+    /// </summary>
+    public enum CarChaseState
+    {
+        CarChaseState_None = 0,
+        CarChaseState_ChaseBatman = 1,
+        CarChaseState_JoinFormation = 2,
+        CarChaseState_Formation = 3,
+        CarChaseState_MAX = 4,
+    }
+
+    /// <summary>
     /// IntProperty: ChaseEndLink
     /// </summary>
     public unsafe int ChaseEndLink

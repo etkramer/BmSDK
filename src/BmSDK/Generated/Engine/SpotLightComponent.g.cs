@@ -33,6 +33,89 @@ public partial class SpotLightComponent : BmSDK.Engine.PointLightComponent, BmSD
     protected SpotLightComponent(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: SetAngleAndRadius
+    /// </summary>
+    public unsafe void SetAngleAndRadius(float NewInnerConeAngle, float NewOuterConeAngle, float NewRadius)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SpotLightComponent.SetAngleAndRadius", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInnerConeAngle, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewOuterConeAngle, paramsPtr + 4);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewRadius, paramsPtr + 8);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
+    /// Function: SetAbsoluteRotation
+    /// </summary>
+    public unsafe void SetAbsoluteRotation(bool bNewAbsoluteRotation)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SpotLightComponent.SetAbsoluteRotation", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bNewAbsoluteRotation, paramsPtr + 0);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
+    /// Function: SetRotation
+    /// </summary>
+    public unsafe void SetRotation(BmSDK.Rotator NewRotation)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SpotLightComponent.SetRotation", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewRotation, paramsPtr + 0);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
+    /// Enum: E_GFSDK_QualityLevel
+    /// </summary>
+    public enum E_GFSDK_QualityLevel
+    {
+        GFSDK_Q_Low = 0,
+        GFSDK_Q_Medium = 1,
+        GFSDK_Q_High = 2,
+        GFSDK_Q_Ultra = 3,
+        GFSDK_Q_MAX = 4,
+    }
+
+    /// <summary>
+    /// Enum: E_GFSDK_PhaseFunction
+    /// </summary>
+    public enum E_GFSDK_PhaseFunction
+    {
+        GFSDK_PF_Constant = 0,
+        GFSDK_PF_Rayleigh = 1,
+        GFSDK_PF_MieHazy = 2,
+        GFSDK_PF_MieMurky = 3,
+        GFSDK_PF_MAX = 4,
+    }
+
+    /// <summary>
     /// FloatProperty: InnerConeAngle
     /// </summary>
     public unsafe float InnerConeAngle

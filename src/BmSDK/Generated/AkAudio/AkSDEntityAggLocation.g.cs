@@ -32,12 +32,4 @@ public partial class AkSDEntityAggLocation : BmSDK.AkAudio.AkSDEntitySymbol, BmS
     /// </summary>
     protected AkSDEntityAggLocation(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// StrProperty: Variable
-    /// </summary>
-    public unsafe BmSDK.FString Variable
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
-    }
 }

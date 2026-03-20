@@ -33,6 +33,27 @@ public partial class RSkelControlTankTrack : BmSDK.Engine.SkelControlBase, BmSDK
     protected RSkelControlTankTrack(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: SetSuspensionPositions
+    /// </summary>
+    public unsafe void SetSuspensionPositions(float Stride, float Front, float Rear)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSkelControlTankTrack.SetSuspensionPositions", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Stride, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Front, paramsPtr + 4);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Rear, paramsPtr + 8);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
     /// FloatProperty: SuspensionStride
     /// </summary>
     public unsafe float SuspensionStride

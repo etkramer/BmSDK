@@ -67,41 +67,4 @@ public partial class RTunnelMesh : BmSDK.BmGame.RTunnelMeshBase, BmSDK.IGameObje
         where TComponent : class, Framework.IScriptComponent<RTunnelMesh>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// IntProperty: DummyPadding
-    /// </summary>
-    public unsafe int DummyPadding
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
-    }
-
-    /// <summary>
-    /// ByteProperty: TunnelType
-    /// </summary>
-    public unsafe BmSDK.BmGame.RTunnelMeshBase.ETunnelMeshType TunnelType
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RTunnelMeshBase.ETunnelMeshType>(Ptr + 712); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
-    }
-
-    /// <summary>
-    /// BoolProperty: UseVentCeilingCamera
-    /// </summary>
-    public unsafe bool UseVentCeilingCamera
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 716); }
-    }
-
-    /// <summary>
-    /// Enum: ETunnelMeshType
-    /// </summary>
-    public enum ETunnelMeshType
-    {
-        TMT_FloorVent = 0,
-        TMT_CeilingVent = 1,
-        MAX_TMT = 2,
-        ETunnelMeshType_MAX = 3,
-    }
 }

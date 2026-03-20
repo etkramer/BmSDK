@@ -33,6 +33,17 @@ public partial class RSeqAct_LoadSynopsisTextures : BmSDK.Engine.SeqAct_Latent, 
     protected RSeqAct_LoadSynopsisTextures(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetObjClassVersion
+    /// </summary>
+    public unsafe static int GetObjClassVersion()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_LoadSynopsisTextures.GetObjClassVersion", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+    }
+
+    /// <summary>
     /// ArrayProperty: TextureRefs
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.Engine.Texture2D> TextureRefs

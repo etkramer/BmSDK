@@ -68,11 +68,14 @@ public partial class MAEC_SnaredThug : BmSDK.BmGame.RAEC_FrozenThug, BmSDK.IGame
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ObjectProperty: FrozenChild
+    /// Function: OnAssign
     /// </summary>
-    public unsafe BmSDK.BmGame.RAEC_Sub_FrozenThug FrozenChild
+    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController FrozenCon)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_Sub_FrozenThug>(Ptr + 720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_SnaredThug.OnAssign", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(FrozenCon, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

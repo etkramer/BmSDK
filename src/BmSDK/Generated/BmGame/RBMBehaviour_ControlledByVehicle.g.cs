@@ -33,20 +33,13 @@ public partial class RBMBehaviour_ControlledByVehicle : BmSDK.BmGame.RBMBehaviou
     protected RBMBehaviour_ControlledByVehicle(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// BoolProperty: bAllowBasingOnVehicles
+    /// Function: OnActivate
     /// </summary>
-    public unsafe bool bAllowBasingOnVehicles
+    public unsafe void OnActivate()
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 588) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 588); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 588); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bStopDialogueOnActivate
-    /// </summary>
-    public unsafe bool bStopDialogueOnActivate
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 588) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 588); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 588); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_ControlledByVehicle.OnActivate", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

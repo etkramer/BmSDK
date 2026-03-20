@@ -33,6 +33,49 @@ public partial class InterpData : BmSDK.Engine.SequenceVariable, BmSDK.IGameObje
     protected InterpData(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FAnimSetBakeAndPruneStatus
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FAnimSetBakeAndPruneStatus
+    {
+        /// <summary>
+        /// StrProperty: AnimSetName
+        /// </summary>
+        public unsafe BmSDK.FString AnimSetName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: bReferencedButUnused
+        /// </summary>
+        public unsafe bool bReferencedButUnused
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 16); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: bSkipBakeAndPrune
+        /// </summary>
+        public unsafe bool bSkipBakeAndPrune
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16) & 2) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 16); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: bSkipCooking
+        /// </summary>
+        public unsafe bool bSkipCooking
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16) & 4) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 16); }; }
+        }
+    }
+
+    /// <summary>
     /// FloatProperty: InterpLength
     /// </summary>
     public unsafe float InterpLength

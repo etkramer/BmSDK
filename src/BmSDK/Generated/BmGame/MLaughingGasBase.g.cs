@@ -68,56 +68,26 @@ public partial class MLaughingGasBase : BmSDK.BmGame.RSmokeBomb, BmSDK.IGameObje
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ObjectProperty: SmokeBombGrappleMove
+    /// Function: PostBeginPlay
     /// </summary>
-    public unsafe BmSDK.BmGame.RSpecialMoveConfig SmokeBombGrappleMove
+    public unsafe void PostBeginPlay()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2592); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MLaughingGasBase.PostBeginPlay", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// ObjectProperty: SmokeBombStandingMove
+    /// Function: GetLaughingGasReactionClass
     /// </summary>
-    public unsafe BmSDK.BmGame.RSpecialMoveConfig SmokeBombStandingMove
+    public unsafe BmSDK.Class GetLaughingGasReactionClass(BmSDK.BmGame.RPawnVillain PawnVillain, BmSDK.BmGame.RBMWeapon Weapon)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2600); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: SmokeBombCoverMove
-    /// </summary>
-    public unsafe BmSDK.BmGame.RSpecialMoveConfig SmokeBombCoverMove
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2608); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: SmokeScreenArchetype
-    /// </summary>
-    public unsafe BmSDK.BmGame.RSmokeScreen SmokeScreenArchetype
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSmokeScreen>(Ptr + 2616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2616); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bCanToggleDetectiveMode
-    /// </summary>
-    public unsafe bool bCanToggleDetectiveMode
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2624) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2624); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2624); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bHasTurnedOnDetectiveMode
-    /// </summary>
-    public unsafe bool bHasTurnedOnDetectiveMode
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2624) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2624); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2624); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MLaughingGasBase.GetLaughingGasReactionClass", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(PawnVillain, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Weapon, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(paramsPtr + 16);
     }
 }

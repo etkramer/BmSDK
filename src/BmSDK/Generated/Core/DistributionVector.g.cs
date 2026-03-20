@@ -33,6 +33,93 @@ public partial class DistributionVector : BmSDK.Component, BmSDK.IGameObject
     protected DistributionVector(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetVectorValue
+    /// </summary>
+    public unsafe System.Numerics.Vector3 GetVectorValue(float F = default, int LastExtreme = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.DistributionVector.GetVectorValue", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(F, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(LastExtreme, paramsPtr + 4);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 8);
+    }
+
+    /// <summary>
+    /// Struct: FRawDistributionVector
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FRawDistributionVector
+    {
+        /// <summary>
+        /// ComponentProperty: Distribution
+        /// </summary>
+        public unsafe BmSDK.DistributionVector Distribution
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector>(Ptr + 28); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: MinRange
+        /// </summary>
+        public unsafe System.Numerics.Vector3 MinRange
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 36); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: MaxRange
+        /// </summary>
+        public unsafe System.Numerics.Vector3 MaxRange
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 48); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: RangesCached
+        /// </summary>
+        public unsafe bool RangesCached
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 60); }; }
+        }
+    }
+
+    /// <summary>
+    /// Enum: EDistributionVectorMirrorFlags
+    /// </summary>
+    public enum EDistributionVectorMirrorFlags
+    {
+        EDVMF_Same = 0,
+        EDVMF_Different = 1,
+        EDVMF_Mirror = 2,
+        EDVMF_MAX = 3,
+    }
+
+    /// <summary>
+    /// Enum: EDistributionVectorLockFlags
+    /// </summary>
+    public enum EDistributionVectorLockFlags
+    {
+        EDVLF_None = 0,
+        EDVLF_XY = 1,
+        EDVLF_XZ = 2,
+        EDVLF_YZ = 3,
+        EDVLF_XYZ = 4,
+        EDVLF_MAX = 5,
+    }
+
+    /// <summary>
     /// StructProperty: VfTable_FCurveEdInterface
     /// </summary>
     public unsafe System.IntPtr VfTable_FCurveEdInterface

@@ -33,6 +33,18 @@ public partial class AkDialogueVoiceSet : BmSDK.Engine.AkDialogueVoice, BmSDK.IG
     protected AkDialogueVoiceSet(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetAllVoiceNamesFromSet
+    /// </summary>
+    public unsafe void GetAllVoiceNamesFromSet(out BmSDK.TArray<BmSDK.FName> OutList)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueVoiceSet.GetAllVoiceNamesFromSet", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        OutList = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(paramsPtr + 0);
+        return;
+    }
+
+    /// <summary>
     /// ArrayProperty: Voices
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.Engine.AkDialogueVoice> Voices

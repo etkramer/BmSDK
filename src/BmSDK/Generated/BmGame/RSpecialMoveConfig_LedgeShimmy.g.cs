@@ -32,21 +32,4 @@ public partial class RSpecialMoveConfig_LedgeShimmy : BmSDK.BmGame.RSpecialMoveC
     /// </summary>
     protected RSpecialMoveConfig_LedgeShimmy(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// StructProperty: MoveOffset
-    /// </summary>
-    public unsafe System.Numerics.Vector3 MoveOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
-    }
-
-    /// <summary>
-    /// IntProperty: YawOffset
-    /// </summary>
-    public unsafe int YawOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
-    }
 }

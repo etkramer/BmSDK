@@ -33,6 +33,17 @@ public partial class ParticleModuleCameraOffset : BmSDK.Engine.ParticleModuleCam
     protected ParticleModuleCameraOffset(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EParticleCameraOffsetUpdateMethod
+    /// </summary>
+    public enum EParticleCameraOffsetUpdateMethod
+    {
+        EPCOUM_DirectSet = 0,
+        EPCOUM_Additive = 1,
+        EPCOUM_Scalar = 2,
+        EPCOUM_MAX = 3,
+    }
+
+    /// <summary>
     /// StructProperty: CameraOffset
     /// </summary>
     public unsafe BmSDK.DistributionFloat.FRawDistributionFloat CameraOffset

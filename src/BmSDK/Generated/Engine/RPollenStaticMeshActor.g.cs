@@ -68,6 +68,50 @@ public partial class RPollenStaticMeshActor : BmSDK.Engine.DynamicSMActor, BmSDK
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
+    /// Function: CreateResources
+    /// </summary>
+    public unsafe void CreateResources()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPollenStaticMeshActor.CreateResources", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: PostBeginPlay
+    /// </summary>
+    public unsafe void PostBeginPlay()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPollenStaticMeshActor.PostBeginPlay", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Enum: EParticlesActiveState
+    /// </summary>
+    public enum EParticlesActiveState
+    {
+        PPA_InPollen = 0,
+        PPA_PostPollen = 1,
+        PPA_InPollenAndPostPollen = 2,
+        PPA_MAX = 3,
+    }
+
+    /// <summary>
+    /// Enum: EPollenVisibility
+    /// </summary>
+    public enum EPollenVisibility
+    {
+        PV_InPollen = 0,
+        PV_PostPollen = 1,
+        PV_InPollenAndPostPollen = 2,
+        PV_MAX = 3,
+    }
+
+    /// <summary>
     /// ObjectProperty: PollenEffectTemplate
     /// </summary>
     public unsafe BmSDK.Engine.ParticleSystem PollenEffectTemplate

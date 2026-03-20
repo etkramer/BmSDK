@@ -33,6 +33,16 @@ public partial class RAnimNotify_TouchWire : BmSDK.Engine.AnimNotify, BmSDK.IGam
     protected RAnimNotify_TouchWire(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: LimbOnOrOff
+    /// </summary>
+    public enum LimbOnOrOff
+    {
+        LIMB_On = 0,
+        LIMB_Off = 1,
+        LIMB_MAX = 2,
+    }
+
+    /// <summary>
     /// ByteProperty: LimbType
     /// </summary>
     public unsafe BmSDK.BmGame.RPawnPlayer.OverheadRopeControlPointType LimbType

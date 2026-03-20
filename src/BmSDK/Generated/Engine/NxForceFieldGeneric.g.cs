@@ -68,6 +68,36 @@ public partial class NxForceFieldGeneric : BmSDK.Engine.NxForceField, BmSDK.IGam
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
+    /// Function: DoInitRBPhys
+    /// </summary>
+    public unsafe void DoInitRBPhys()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NxForceFieldGeneric.DoInitRBPhys", true);
+        byte* paramsPtr = stackalloc byte[64];
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
+    /// Enum: FFG_ForceFieldCoordinates
+    /// </summary>
+    public enum FFG_ForceFieldCoordinates
+    {
+        FFG_CARTESIAN = 0,
+        FFG_SPHERICAL = 1,
+        FFG_CYLINDRICAL = 2,
+        FFG_TOROIDAL = 3,
+        FFG_MAX = 4,
+    }
+
+    /// <summary>
     /// ObjectProperty: Shape
     /// </summary>
     public unsafe BmSDK.Engine.ForceFieldShape Shape

@@ -68,6 +68,30 @@ public partial class RBMAIAction_NervousSearchMove_Tree : BmSDK.BmGame.RBMAIActi
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
+    /// Function: BuildHandle
+    /// </summary>
+    public unsafe BmSDK.BmGame.RNavigationHandle BuildHandle()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousSearchMove_Tree.BuildHandle", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RNavigationHandle>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: SetupSearchGoal
+    /// </summary>
+    public unsafe void SetupSearchGoal(BmSDK.BmGame.RChasePoint NewStartSearchPoint, BmSDK.BmGame.RChasePoint NewGoalSearchPoint)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousSearchMove_Tree.SetupSearchGoal", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewStartSearchPoint, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewGoalSearchPoint, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: StartSearchPoint
     /// </summary>
     public unsafe BmSDK.BmGame.RChasePoint StartSearchPoint

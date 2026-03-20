@@ -33,6 +33,16 @@ public partial class ParticleModuleAttractorSkelVertSurface : BmSDK.Engine.Parti
     protected ParticleModuleAttractorSkelVertSurface(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EAttractorSkelVertSurfaceDestination
+    /// </summary>
+    public enum EAttractorSkelVertSurfaceDestination
+    {
+        VERTSURFACEDEST_Vert = 0,
+        VERTSURFACEDEST_Surface = 1,
+        VERTSURFACEDEST_MAX = 2,
+    }
+
+    /// <summary>
     /// ByteProperty: FalloffType
     /// </summary>
     public unsafe BmSDK.Engine.ParticleModuleAttractorSkelVertSurface.EVertSurfaceAttractorFalloffType FalloffType

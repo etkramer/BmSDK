@@ -32,12 +32,4 @@ public partial class AkAudioSystem : BmSDK.Subsystem, BmSDK.IGameObject
     /// </summary>
     protected AkAudioSystem(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// StructProperty: VfTable_FExec
-    /// </summary>
-    public unsafe System.IntPtr VfTable_FExec
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
 }

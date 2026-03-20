@@ -33,6 +33,22 @@ public partial class InterpTrackFaceFX : BmSDK.Engine.InterpTrack, BmSDK.IGameOb
     protected InterpTrackFaceFX(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FFaceFXSoundCueKey
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FFaceFXSoundCueKey
+    {
+        /// <summary>
+        /// ObjectProperty: FaceFXSoundCue
+        /// </summary>
+        public unsafe BmSDK.Engine.SoundCue FaceFXSoundCue
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SoundCue>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+    }
+
+    /// <summary>
     /// ArrayProperty: FaceFXAnimSets
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.Engine.FaceFXAnimSet> FaceFXAnimSets

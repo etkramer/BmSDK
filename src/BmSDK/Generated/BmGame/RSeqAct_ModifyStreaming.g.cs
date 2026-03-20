@@ -33,6 +33,17 @@ public partial class RSeqAct_ModifyStreaming : BmSDK.Engine.SeqAct_Latent, BmSDK
     protected RSeqAct_ModifyStreaming(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetObjClassVersion
+    /// </summary>
+    public unsafe static int GetObjClassVersion()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ModifyStreaming.GetObjClassVersion", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+    }
+
+    /// <summary>
     /// StructProperty: SaveGameDescription
     /// </summary>
     public unsafe BmSDK.BmGame.RGameRI.FDebugSaveDescription SaveGameDescription

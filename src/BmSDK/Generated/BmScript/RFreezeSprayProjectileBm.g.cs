@@ -68,92 +68,40 @@ public partial class RFreezeSprayProjectileBm : BmSDK.BmGame.RFreezeSprayProject
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// FloatProperty: BlastTime
+    /// Function: SuperComboBlast
     /// </summary>
-    public unsafe float BlastTime
+    public unsafe void SuperComboBlast(BmSDK.BmGame.RPawnVillain Victim)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1068); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1068); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeSprayProjectileBm.SuperComboBlast", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Victim, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// FloatProperty: BlastRadius
+    /// Function: SpawnSmallIceSphere
     /// </summary>
-    public unsafe float BlastRadius
+    public unsafe BmSDK.Engine.Actor SpawnSmallIceSphere(System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1072); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1072); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeSprayProjectileBm.SpawnSmallIceSphere", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnLocation, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnRotation, paramsPtr + 12);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(paramsPtr + 24);
     }
 
     /// <summary>
-    /// ObjectProperty: GroundBlastParticles
+    /// Function: SpawnIceSphere
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem GroundBlastParticles
+    public unsafe void SpawnIceSphere(System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 1076); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1076); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: FloorBlastSound
-    /// </summary>
-    public unsafe BmSDK.Engine.AkEvent FloorBlastSound
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1084); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1084); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: ChestBlastSound
-    /// </summary>
-    public unsafe BmSDK.Engine.AkEvent ChestBlastSound
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1092); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1092); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: ImpactEnemySound
-    /// </summary>
-    public unsafe BmSDK.Engine.AkEvent ImpactEnemySound
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1100); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: SuperComboBlastSound
-    /// </summary>
-    public unsafe BmSDK.Engine.AkEvent SuperComboBlastSound
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1108); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: Trail
-    /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystemComponent Trail
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 1116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1116); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bSuperComboBlast
-    /// </summary>
-    public unsafe bool bSuperComboBlast
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bDontShowFailedDeployEffects
-    /// </summary>
-    public unsafe bool bDontShowFailedDeployEffects
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeSprayProjectileBm.SpawnIceSphere", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnLocation, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnRotation, paramsPtr + 12);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

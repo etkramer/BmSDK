@@ -68,6 +68,17 @@ public partial class RBreakableVentLight : BmSDK.BmGame.RBreakableVentLightBase,
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
+    /// Function: HitByGrenade
+    /// </summary>
+    public unsafe void HitByGrenade()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableVentLight.HitByGrenade", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ComponentProperty: LightComp
     /// </summary>
     public unsafe BmSDK.Engine.PointLightComponent LightComp

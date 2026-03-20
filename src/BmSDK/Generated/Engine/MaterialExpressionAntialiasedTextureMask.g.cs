@@ -33,6 +33,18 @@ public partial class MaterialExpressionAntialiasedTextureMask : BmSDK.Engine.Mat
     protected MaterialExpressionAntialiasedTextureMask(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: ETextureColorChannel
+    /// </summary>
+    public enum ETextureColorChannel
+    {
+        TCC_Red = 0,
+        TCC_Green = 1,
+        TCC_Blue = 2,
+        TCC_Alpha = 3,
+        TCC_MAX = 4,
+    }
+
+    /// <summary>
     /// FloatProperty: Threshold
     /// </summary>
     public unsafe float Threshold

@@ -33,6 +33,17 @@ public partial class RSeqAct_CheckPlayerHealth : BmSDK.Engine.SequenceAction, Bm
     protected RSeqAct_CheckPlayerHealth(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CheckPlayerHealth.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ArrayProperty: HealthPercentage
     /// </summary>
     public unsafe BmSDK.TArray<int> HealthPercentage

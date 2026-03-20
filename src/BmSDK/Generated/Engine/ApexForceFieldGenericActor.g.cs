@@ -67,12 +67,4 @@ public partial class ApexForceFieldGenericActor : BmSDK.Engine.ApexFieldSamplerA
         where TComponent : class, Framework.IScriptComponent<ApexForceFieldGenericActor>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// ComponentProperty: FieldSamplerComponent
-    /// </summary>
-    public unsafe BmSDK.Engine.ApexFieldSamplerComponent FieldSamplerComponent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexFieldSamplerComponent>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
 }

@@ -33,6 +33,17 @@ public partial class RSeqAct_AssignHostageToSeePlayerVol : BmSDK.Engine.Sequence
     protected RSeqAct_AssignHostageToSeePlayerVol(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AssignHostageToSeePlayerVol.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: SeePlayerVol
     /// </summary>
     public unsafe BmSDK.BmGame.RHostageSeesPlayerVolume SeePlayerVol

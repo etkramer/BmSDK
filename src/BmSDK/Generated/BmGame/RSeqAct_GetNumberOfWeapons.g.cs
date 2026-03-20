@@ -33,6 +33,17 @@ public partial class RSeqAct_GetNumberOfWeapons : BmSDK.Engine.SequenceAction, B
     protected RSeqAct_GetNumberOfWeapons(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GetNumberOfWeapons.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// IntProperty: NumWeapons
     /// </summary>
     public unsafe int NumWeapons

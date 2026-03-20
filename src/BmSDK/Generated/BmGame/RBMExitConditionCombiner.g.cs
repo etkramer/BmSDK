@@ -33,6 +33,17 @@ public partial class RBMExitConditionCombiner : BmSDK.BmGame.RBMExitCondition, B
     protected RBMExitConditionCombiner(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: TriggerExitConditionCombiner
+    /// </summary>
+    public unsafe void TriggerExitConditionCombiner()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitConditionCombiner.TriggerExitConditionCombiner", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// IntProperty: NumExitConditions
     /// </summary>
     public unsafe int NumExitConditions

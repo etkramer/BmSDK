@@ -33,6 +33,41 @@ public partial class RB_ConstraintSetup : BmSDK.GameObject, BmSDK.IGameObject
     protected RB_ConstraintSetup(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FLinearDOFSetup
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FLinearDOFSetup
+    {
+        /// <summary>
+        /// ByteProperty: bLimited
+        /// </summary>
+        public unsafe byte bLimited
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: LimitSize
+        /// </summary>
+        public unsafe float LimitSize
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+    }
+
+    /// <summary>
+    /// Enum: ConstraintProjectionMode
+    /// </summary>
+    public enum ConstraintProjectionMode
+    {
+        ECPM_Linear = 0,
+        ECPM_LinearAndAngular = 1,
+        ECPM_MAX = 2,
+    }
+
+    /// <summary>
     /// NameProperty: JointName
     /// </summary>
     public unsafe BmSDK.FName JointName

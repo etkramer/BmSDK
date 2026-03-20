@@ -67,12 +67,4 @@ public partial class RDummyTarget_Dialogue_Spawnable : BmSDK.BmGame.RDummyTarget
         where TComponent : class, Framework.IScriptComponent<RDummyTarget_Dialogue_Spawnable>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// ComponentProperty: DialogueComponent
-    /// </summary>
-    public unsafe BmSDK.Engine.AkDialogueComponent DialogueComponent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueComponent>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
 }

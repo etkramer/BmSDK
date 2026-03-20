@@ -33,6 +33,17 @@ public partial class UberPostProcessEffect : BmSDK.Engine.DOFBloomMotionBlurEffe
     protected UberPostProcessEffect(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: ETonemapperType
+    /// </summary>
+    public enum ETonemapperType
+    {
+        Tonemapper_Off = 0,
+        Tonemapper_Filmic = 1,
+        Tonemapper_Customizable = 2,
+        Tonemapper_MAX = 3,
+    }
+
+    /// <summary>
     /// StructProperty: SceneShadows
     /// </summary>
     public unsafe System.Numerics.Vector3 SceneShadows

@@ -33,6 +33,31 @@ public partial class ParticleModuleTypeDataApex : BmSDK.Engine.ParticleModuleTyp
     protected ParticleModuleTypeDataApex(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FApexLODAsset
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FApexLODAsset
+    {
+        /// <summary>
+        /// ObjectProperty: IOFXAsset
+        /// </summary>
+        public unsafe BmSDK.Engine.ApexGenericAsset IOFXAsset
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexGenericAsset>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// ObjectProperty: EmitterAsset
+        /// </summary>
+        public unsafe BmSDK.Engine.ApexGenericAsset EmitterAsset
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexGenericAsset>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+    }
+
+    /// <summary>
     /// ObjectProperty: ApexIOFX
     /// </summary>
     public unsafe BmSDK.Engine.ApexGenericAsset ApexIOFX

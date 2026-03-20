@@ -33,137 +33,25 @@ public partial class RBMCutscene_FallingFinale : BmSDK.BmGame.RBMCutscene_Silent
     protected RBMCutscene_FallingFinale(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// FloatProperty: CamTimer
+    /// Function: ResetViewTarget
     /// </summary>
-    public unsafe float CamTimer
+    public unsafe void ResetViewTarget()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_FallingFinale.ResetViewTarget", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// FloatProperty: CamFovSave
+    /// Function: CanUseCam
     /// </summary>
-    public unsafe float CamFovSave
+    public unsafe static bool CanUseCam(BmSDK.BmGame.RBMCutsceneBase CheckCutscene)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
-
-    /// <summary>
-    /// FloatProperty: TimeOutOfShot
-    /// </summary>
-    public unsafe float TimeOutOfShot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
-
-    /// <summary>
-    /// FloatProperty: UpSpeed
-    /// </summary>
-    public unsafe float UpSpeed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
-    }
-
-    /// <summary>
-    /// FloatProperty: UpSpeedDecel
-    /// </summary>
-    public unsafe float UpSpeedDecel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
-
-    /// <summary>
-    /// FloatProperty: FOVSpeed
-    /// </summary>
-    public unsafe float FOVSpeed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
-    }
-
-    /// <summary>
-    /// FloatProperty: FOVSpeedDecel
-    /// </summary>
-    public unsafe float FOVSpeedDecel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
-
-    /// <summary>
-    /// StructProperty: FocusPoint
-    /// </summary>
-    public unsafe System.Numerics.Vector3 FocusPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bImpact
-    /// </summary>
-    public unsafe bool bImpact
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 136) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 136); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 136); }
-    }
-
-    /// <summary>
-    /// BoolProperty: DoCollisionTest
-    /// </summary>
-    public unsafe bool DoCollisionTest
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 136) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 136); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 136); }
-    }
-
-    /// <summary>
-    /// FloatProperty: SideDist
-    /// </summary>
-    public unsafe float SideDist
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
-
-    /// <summary>
-    /// FloatProperty: SideForce
-    /// </summary>
-    public unsafe float SideForce
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
-    }
-
-    /// <summary>
-    /// FloatProperty: TargetDistWeight
-    /// </summary>
-    public unsafe float TargetDistWeight
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
-    }
-
-    /// <summary>
-    /// FloatProperty: KillerWeight
-    /// </summary>
-    public unsafe float KillerWeight
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
-    }
-
-    /// <summary>
-    /// FloatProperty: DirMulti
-    /// </summary>
-    public unsafe float DirMulti
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_FallingFinale.CanUseCam", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(CheckCutscene, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
     }
 }

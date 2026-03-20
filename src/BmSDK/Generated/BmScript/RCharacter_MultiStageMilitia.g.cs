@@ -32,12 +32,4 @@ public partial class RCharacter_MultiStageMilitia : BmSDK.BmScript.RCharacter_Mu
     /// </summary>
     protected RCharacter_MultiStageMilitia(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// ObjectProperty: TypeSwitchName
-    /// </summary>
-    public unsafe BmSDK.Engine.AkSwitchName TypeSwitchName
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkSwitchName>(Ptr + 384); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
-    }
 }

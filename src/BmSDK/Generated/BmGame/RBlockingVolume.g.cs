@@ -68,6 +68,26 @@ public partial class RBlockingVolume : BmSDK.Engine.BlockingVolume, BmSDK.IGameO
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
+    /// Enum: EBlockingType
+    /// </summary>
+    public enum EBlockingType
+    {
+        BLOCK_All = 0,
+        BLOCK_Player = 1,
+        BLOCK_Enemies = 2,
+        BLOCK_AllCharacters = 3,
+        BLOCK_Gadgets = 4,
+        BLOCK_PlayerAndGadgets = 5,
+        BLOCK_EnemyWeaponsAndLos = 6,
+        BLOCK_Camera = 7,
+        BLOCK_Vehicles = 8,
+        BLOCK_BlockBatmobileEject = 9,
+        BLOCK_Audio = 10,
+        BLOCK_PhysicsOnly = 11,
+        BLOCK_MAX = 12,
+    }
+
+    /// <summary>
     /// StructProperty: BlockedTypes
     /// </summary>
     public unsafe BmSDK.Engine.Actor.FBlockingVolumeTypesContainer BlockedTypes

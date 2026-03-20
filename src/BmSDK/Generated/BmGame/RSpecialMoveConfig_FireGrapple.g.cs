@@ -33,6 +33,15 @@ public partial class RSpecialMoveConfig_FireGrapple : BmSDK.BmGame.RSpecialMoveC
     protected RSpecialMoveConfig_FireGrapple(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EFireGrappleExtraVectorInfo
+    /// </summary>
+    public enum EFireGrappleExtraVectorInfo
+    {
+        FGEVI_RelativeTarget = 0,
+        FGEVI_MAX = 1,
+    }
+
+    /// <summary>
     /// NameProperty: EndPose
     /// </summary>
     public unsafe BmSDK.FName EndPose

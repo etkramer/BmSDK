@@ -33,6 +33,17 @@ public partial class RB_ForceComponentRadial : BmSDK.Engine.RB_ForceComponent, B
     protected RB_ForceComponentRadial(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Clone
+    /// </summary>
+    public unsafe BmSDK.Engine.RB_ForceComponent Clone()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ForceComponentRadial.Clone", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_ForceComponent>(paramsPtr + 0);
+    }
+
+    /// <summary>
     /// ComponentProperty: RenderComponentSphere
     /// </summary>
     public unsafe BmSDK.Engine.DrawSphereComponent RenderComponentSphere

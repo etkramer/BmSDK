@@ -68,128 +68,51 @@ public partial class MCombatMove_RedhoodBeatdownAtRange : BmSDK.BmGame.RCombatMo
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// FloatProperty: Delay
+    /// Function: StrikeContact
     /// </summary>
-    public unsafe float Delay
+    public unsafe void StrikeContact(bool bPreStrike)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1564); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodBeatdownAtRange.StrikeContact", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bPreStrike, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// BoolProperty: bQueueStrike
+    /// Function: GetValidTargetStrikeRange
     /// </summary>
-    public unsafe bool bQueueStrike
+    public unsafe BmSDK.BmGame.RGameInfo.StrikeRange GetValidTargetStrikeRange()
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1568); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodBeatdownAtRange.GetValidTargetStrikeRange", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.StrikeRange>(paramsPtr + 0);
     }
 
     /// <summary>
-    /// BoolProperty: bQueueCounter
+    /// Function: SetDamageInfo
     /// </summary>
-    public unsafe bool bQueueCounter
+    public unsafe BmSDK.BmGame.RPawnCombat.FDamageInfo SetDamageInfo(BmSDK.BmGame.RPawnCombat DamageReceiver, float DmgAmount)
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1568); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodBeatdownAtRange.SetDamageInfo", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(DamageReceiver, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(DmgAmount, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCombat.FDamageInfo>(paramsPtr + 12);
     }
 
     /// <summary>
-    /// BoolProperty: bIsFinalHit
+    /// Function: PlayStrike
     /// </summary>
-    public unsafe bool bIsFinalHit
+    public unsafe void PlayStrike(bool bQueue, bool bSimulated)
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1568); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bIsBeatdownAtRange
-    /// </summary>
-    public unsafe bool bIsBeatdownAtRange
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568) & 8) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1568); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bCriticalBeatdown
-    /// </summary>
-    public unsafe bool bCriticalBeatdown
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568) & 16) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1568); }
-    }
-
-    /// <summary>
-    /// FloatProperty: TimeAddedToQueue
-    /// </summary>
-    public unsafe float TimeAddedToQueue
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1572); }
-    }
-
-    /// <summary>
-    /// IntProperty: TotalHitsToKOTarget
-    /// </summary>
-    public unsafe int TotalHitsToKOTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1576); }
-    }
-
-    /// <summary>
-    /// IntProperty: CurrentBeatDownStrike
-    /// </summary>
-    public unsafe int CurrentBeatDownStrike
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1580); }
-    }
-
-    /// <summary>
-    /// StructProperty: TargetStrikeID
-    /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TargetStrikeID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1584); }
-    }
-
-    /// <summary>
-    /// ByteProperty: BeatdownTargetType
-    /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayerCombat.StrikeTargetType BeatdownTargetType
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.StrikeTargetType>(Ptr + 1588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1588); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: BeatdownCameraAnimset
-    /// </summary>
-    public unsafe BmSDK.Engine.AnimSet BeatdownCameraAnimset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 1592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1592); }
-    }
-
-    /// <summary>
-    /// StructProperty: AnimPos
-    /// </summary>
-    public unsafe System.Numerics.Vector3 AnimPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1600); }
-    }
-
-    /// <summary>
-    /// StructProperty: AnimRot
-    /// </summary>
-    public unsafe BmSDK.Rotator AnimRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1612); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodBeatdownAtRange.PlayStrike", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bQueue, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bSimulated, paramsPtr + 4);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

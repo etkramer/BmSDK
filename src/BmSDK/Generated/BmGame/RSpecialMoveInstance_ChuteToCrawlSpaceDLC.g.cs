@@ -68,155 +68,24 @@ public partial class RSpecialMoveInstance_ChuteToCrawlSpaceDLC : BmSDK.BmGame.RS
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ObjectProperty: ChutePoint
+    /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe BmSDK.BmGame.RSwingChutePointBase ChutePoint
+    public unsafe void FinishSpecialMove()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSwingChutePointBase>(Ptr + 988); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 988); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_ChuteToCrawlSpaceDLC.FinishSpecialMove", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// ObjectProperty: ChuteExit
+    /// Function: OverridePlayerCollisionWhenInChute
     /// </summary>
-    public unsafe BmSDK.BmGame.RSwingChuteExitBase ChuteExit
+    public unsafe void OverridePlayerCollisionWhenInChute()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSwingChuteExitBase>(Ptr + 996); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 996); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: MyConfig
-    /// </summary>
-    public unsafe BmSDK.BmGame.RSpecialMoveConfig_ChuteToCrawlSpace MyConfig
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig_ChuteToCrawlSpace>(Ptr + 1004); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1004); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bStartChuteCamera
-    /// </summary>
-    public unsafe bool bStartChuteCamera
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1012) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1012); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1012); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bShowCameraStarts
-    /// </summary>
-    public unsafe bool bShowCameraStarts
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1012) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1012); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1012); }
-    }
-
-    /// <summary>
-    /// StructProperty: Transition2
-    /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Transition2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1016); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1016); }
-    }
-
-    /// <summary>
-    /// StructProperty: Transition3
-    /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Transition3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1020); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1020); }
-    }
-
-    /// <summary>
-    /// StructProperty: Loc1
-    /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 1024); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1024); }
-    }
-
-    /// <summary>
-    /// StructProperty: Loc2
-    /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 1156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1156); }
-    }
-
-    /// <summary>
-    /// StructProperty: Loc3
-    /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Loc3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 1288); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1288); }
-    }
-
-    /// <summary>
-    /// NameProperty: StartAnimName
-    /// </summary>
-    public unsafe BmSDK.FName StartAnimName
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 1420); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1420); }
-    }
-
-    /// <summary>
-    /// NameProperty: nFallAnimationName
-    /// </summary>
-    public unsafe BmSDK.FName nFallAnimationName
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 1428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1428); }
-    }
-
-    /// <summary>
-    /// NameProperty: nExitRollAnimationName
-    /// </summary>
-    public unsafe BmSDK.FName nExitRollAnimationName
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 1436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1436); }
-    }
-
-    /// <summary>
-    /// NameProperty: nExitFirstPersonCameraAnimationName
-    /// </summary>
-    public unsafe BmSDK.FName nExitFirstPersonCameraAnimationName
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 1444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1444); }
-    }
-
-    /// <summary>
-    /// FloatProperty: LoopDistance
-    /// </summary>
-    public unsafe float LoopDistance
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1452); }
-    }
-
-    /// <summary>
-    /// FloatProperty: AnimationLoopDistance
-    /// </summary>
-    public unsafe float AnimationLoopDistance
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1456); }
-    }
-
-    /// <summary>
-    /// FloatProperty: LoopAnimDuration
-    /// </summary>
-    public unsafe float LoopAnimDuration
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1460); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_ChuteToCrawlSpaceDLC.OverridePlayerCollisionWhenInChute", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

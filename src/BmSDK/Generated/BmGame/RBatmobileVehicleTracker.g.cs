@@ -68,92 +68,44 @@ public partial class RBatmobileVehicleTracker : BmSDK.BmGame.RPursuitModeMissile
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ObjectProperty: FireBlendNode
+    /// Function: ReadyToFire
     /// </summary>
-    public unsafe BmSDK.Engine.AnimNodeBlend FireBlendNode
+    public unsafe bool ReadyToFire()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeBlend>(Ptr + 2396); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2396); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileVehicleTracker.ReadyToFire", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
 
     /// <summary>
-    /// ObjectProperty: FireAnimNode
+    /// Function: CheckAutoTarget
     /// </summary>
-    public unsafe BmSDK.Engine.AnimNodeSequence FireAnimNode
+    public unsafe bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange, out byte DoLOSCheck)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeSequence>(Ptr + 2404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2404); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileVehicleTracker.CheckAutoTarget", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Target, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        TargetPosition = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 8);
+        OverridePriority = BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 20);
+        OverrideMaxRange = BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 24);
+        DoLOSCheck = BmSDK.Framework.MarshalUtil.ToManaged<byte>(paramsPtr + 28);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 32);
     }
 
     /// <summary>
-    /// ObjectProperty: SwivelController
+    /// Function: ProjectileHitActor
     /// </summary>
-    public unsafe BmSDK.Engine.SkelControlSingleBone SwivelController
+    public unsafe void ProjectileHitActor(BmSDK.Engine.Actor Target, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitVelocity, int Damage)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkelControlSingleBone>(Ptr + 2412); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2412); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: CurrentTarget
-    /// </summary>
-    public unsafe BmSDK.Engine.Actor CurrentTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 2420); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2420); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: ProjectileArchetype
-    /// </summary>
-    public unsafe BmSDK.BmGame.RProjectile ProjectileArchetype
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RProjectile>(Ptr + 2428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2428); }
-    }
-
-    /// <summary>
-    /// NameProperty: LaunchSocketName
-    /// </summary>
-    public unsafe BmSDK.FName LaunchSocketName
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 2436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2436); }
-    }
-
-    /// <summary>
-    /// FloatProperty: AutoTargetAngle
-    /// </summary>
-    public unsafe float AutoTargetAngle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2444); }
-    }
-
-    /// <summary>
-    /// FloatProperty: Range
-    /// </summary>
-    public unsafe float Range
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2448); }
-    }
-
-    /// <summary>
-    /// StructProperty: LaunchRotationOffset
-    /// </summary>
-    public unsafe BmSDK.Rotator LaunchRotationOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2452); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bInstantFire
-    /// </summary>
-    public unsafe bool bInstantFire
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2464) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2464); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2464); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmobileVehicleTracker.ProjectileHitActor", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Target, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitLocation, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitVelocity, paramsPtr + 20);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Damage, paramsPtr + 32);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

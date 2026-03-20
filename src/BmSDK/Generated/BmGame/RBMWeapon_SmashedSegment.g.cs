@@ -68,20 +68,31 @@ public partial class RBMWeapon_SmashedSegment : BmSDK.Engine.KActorSpawnable, Bm
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// BoolProperty: bRecycleScaleToZero
+    /// Function: SetSegmentMesh
     /// </summary>
-    public unsafe bool bRecycleScaleToZero
+    public unsafe void SetSegmentMesh(BmSDK.Engine.StaticMesh NewMesh, System.Numerics.Vector3 Vel, System.Numerics.Vector3 AngVel, System.Numerics.Vector3 NewLocation, BmSDK.Rotator NewRotation, System.Numerics.Vector3 AdditionalTranslation = default, BmSDK.Rotator AdditionRotation = default)
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 992); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon_SmashedSegment.SetSegmentMesh", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMesh, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Vel, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(AngVel, paramsPtr + 20);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewLocation, paramsPtr + 32);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewRotation, paramsPtr + 44);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(AdditionalTranslation, paramsPtr + 56);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(AdditionRotation, paramsPtr + 68);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// BoolProperty: bScalingToZero
+    /// Function: DestroyCheck
     /// </summary>
-    public unsafe bool bScalingToZero
+    public unsafe void DestroyCheck()
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 992); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon_SmashedSegment.DestroyCheck", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

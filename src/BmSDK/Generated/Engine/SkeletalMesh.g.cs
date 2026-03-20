@@ -33,6 +33,575 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     protected SkeletalMesh(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FSoftBodySpecialBoneInfo
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FSoftBodySpecialBoneInfo
+    {
+        /// <summary>
+        /// NameProperty: BoneName
+        /// </summary>
+        public unsafe BmSDK.FName BoneName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// ByteProperty: BoneType
+        /// </summary>
+        public unsafe BmSDK.Engine.SkeletalMesh.SoftBodyBoneType BoneType
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh.SoftBodyBoneType>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+
+        /// <summary>
+        /// ArrayProperty: AttachedVertexIndices
+        /// </summary>
+        public unsafe BmSDK.TArray<int> AttachedVertexIndices
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+        }
+    }
+
+    /// <summary>
+    /// Enum: SoftBodyBoneType
+    /// </summary>
+    public enum SoftBodyBoneType
+    {
+        SOFTBODYBONE_Fixed = 0,
+        SOFTBODYBONE_BreakableAttachment = 1,
+        SOFTBODYBONE_TwoWayAttachment = 2,
+        SOFTBODYBONE_MAX = 3,
+    }
+
+    /// <summary>
+    /// Struct: FSoftBodyTetraLink
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FSoftBodyTetraLink
+    {
+        /// <summary>
+        /// IntProperty: Index
+        /// </summary>
+        public unsafe int Index
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: Bary
+        /// </summary>
+        public unsafe System.Numerics.Vector3 Bary
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FClothSpecialBoneInfo
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FClothSpecialBoneInfo
+    {
+        /// <summary>
+        /// NameProperty: BoneName
+        /// </summary>
+        public unsafe BmSDK.FName BoneName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// ByteProperty: BoneType
+        /// </summary>
+        public unsafe BmSDK.Engine.SkeletalMesh.ClothBoneType BoneType
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh.ClothBoneType>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+
+        /// <summary>
+        /// ArrayProperty: AttachedVertexIndices
+        /// </summary>
+        public unsafe BmSDK.TArray<int> AttachedVertexIndices
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+        }
+    }
+
+    /// <summary>
+    /// Enum: ClothBoneType
+    /// </summary>
+    public enum ClothBoneType
+    {
+        CLOTHBONE_Fixed = 0,
+        CLOTHBONE_BreakableAttachment = 1,
+        CLOTHBONE_TearLine = 2,
+        CLOTHBONE_MAX = 3,
+    }
+
+    /// <summary>
+    /// Struct: FSkeletalMeshOptimizationSettings
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FSkeletalMeshOptimizationSettings
+    {
+        /// <summary>
+        /// FloatProperty: MaxDeviationPercentage
+        /// </summary>
+        public unsafe float MaxDeviationPercentage
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// ByteProperty: SilhouetteImportance
+        /// </summary>
+        public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.SkeletalMeshOptimizationImportance SilhouetteImportance
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.SkeletalMeshOptimizationImportance>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+
+        /// <summary>
+        /// ByteProperty: TextureImportance
+        /// </summary>
+        public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.SkeletalMeshOptimizationImportance TextureImportance
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.SkeletalMeshOptimizationImportance>(Ptr + 5); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5); }; }
+        }
+
+        /// <summary>
+        /// ByteProperty: ShadingImportance
+        /// </summary>
+        public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.SkeletalMeshOptimizationImportance ShadingImportance
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.SkeletalMeshOptimizationImportance>(Ptr + 6); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6); }; }
+        }
+
+        /// <summary>
+        /// ByteProperty: SkinningImportance
+        /// </summary>
+        public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.SkeletalMeshOptimizationImportance SkinningImportance
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.SkeletalMeshOptimizationImportance>(Ptr + 7); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7); }; }
+        }
+
+        /// <summary>
+        /// ByteProperty: NormalMode
+        /// </summary>
+        public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.SkeletalMeshOptimizationNormalMode NormalMode
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.SkeletalMeshOptimizationNormalMode>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: BoneReductionRatio
+        /// </summary>
+        public unsafe float BoneReductionRatio
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: MaxBonesPerVertex
+        /// </summary>
+        public unsafe int MaxBonesPerVertex
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: UseVertexWelding
+        /// </summary>
+        public unsafe bool UseVertexWelding
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 20) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 20); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 20); }; }
+        }
+
+        /// <summary>
+        /// ArrayProperty: MaterialPriorities
+        /// </summary>
+        public unsafe BmSDK.TArray<float> MaterialPriorities
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FSkeletalMeshLODInfo
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FSkeletalMeshLODInfo
+    {
+        /// <summary>
+        /// FloatProperty: DisplayFactor
+        /// </summary>
+        public unsafe float DisplayFactor
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: LODHysteresis
+        /// </summary>
+        public unsafe float LODHysteresis
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+
+        /// <summary>
+        /// ArrayProperty: LODMaterialMap
+        /// </summary>
+        public unsafe BmSDK.TArray<int> LODMaterialMap
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+
+        /// <summary>
+        /// ArrayProperty: bEnableShadowCasting
+        /// </summary>
+        public unsafe BmSDK.TArray<bool> bEnableShadowCasting
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<bool>>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+        }
+
+        /// <summary>
+        /// ArrayProperty: TriangleSorting
+        /// </summary>
+        public unsafe BmSDK.TArray<BmSDK.Engine.SkeletalMesh.TriangleSortOption> TriangleSorting
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.SkeletalMesh.TriangleSortOption>>(Ptr + 40); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
+        }
+
+        /// <summary>
+        /// ArrayProperty: TriangleSortSettings
+        /// </summary>
+        public unsafe BmSDK.TArray<BmSDK.Engine.SkeletalMesh.FTriangleSortSettings> TriangleSortSettings
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.SkeletalMesh.FTriangleSortSettings>>(Ptr + 56); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: bDisableCompression
+        /// </summary>
+        public unsafe bool bDisableCompression
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 72) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 72); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 72); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: bRockDisableCompressedPositions
+        /// </summary>
+        public unsafe bool bRockDisableCompressedPositions
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 72) & 2) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 72); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 72); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: bRockUseSuperCompressedPositions
+        /// </summary>
+        public unsafe bool bRockUseSuperCompressedPositions
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 72) & 4) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 72); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 72); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: bHasBeenSimplified
+        /// </summary>
+        public unsafe bool bHasBeenSimplified
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 72) & 8) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 72); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 72); }; }
+        }
+
+        /// <summary>
+        /// StrProperty: MaxFilePath
+        /// </summary>
+        public unsafe BmSDK.FString MaxFilePath
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 76); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }; }
+        }
+
+        /// <summary>
+        /// StrProperty: RootSourceFilePath
+        /// </summary>
+        public unsafe BmSDK.FString RootSourceFilePath
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 92); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }; }
+        }
+
+        /// <summary>
+        /// StrProperty: SourceFilePath
+        /// </summary>
+        public unsafe BmSDK.FString SourceFilePath
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 108); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }; }
+        }
+
+        /// <summary>
+        /// StrProperty: SourceFileTimestamp
+        /// </summary>
+        public unsafe BmSDK.FString SourceFileTimestamp
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 124); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }; }
+        }
+
+        /// <summary>
+        /// StrProperty: SourceAuthor
+        /// </summary>
+        public unsafe BmSDK.FString SourceAuthor
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 140); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }; }
+        }
+
+        /// <summary>
+        /// ObjectProperty: SourceImportOptions
+        /// </summary>
+        public unsafe BmSDK.GameObject SourceImportOptions
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 156); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FTriangleSortSettings
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FTriangleSortSettings
+    {
+        /// <summary>
+        /// ByteProperty: TriangleSorting
+        /// </summary>
+        public unsafe BmSDK.Engine.SkeletalMesh.TriangleSortOption TriangleSorting
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh.TriangleSortOption>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// ByteProperty: CustomLeftRightAxis
+        /// </summary>
+        public unsafe BmSDK.Engine.SkeletalMesh.TriangleSortAxis CustomLeftRightAxis
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh.TriangleSortAxis>(Ptr + 1); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1); }; }
+        }
+
+        /// <summary>
+        /// NameProperty: CustomLeftRightBoneName
+        /// </summary>
+        public unsafe BmSDK.FName CustomLeftRightBoneName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+    }
+
+    /// <summary>
+    /// Enum: TriangleSortAxis
+    /// </summary>
+    public enum TriangleSortAxis
+    {
+        TSA_X_Axis = 0,
+        TSA_Y_Axis = 1,
+        TSA_Z_Axis = 2,
+        TSA_MAX = 3,
+    }
+
+    /// <summary>
+    /// Enum: ClothMovementScaleGen
+    /// </summary>
+    public enum ClothMovementScaleGen
+    {
+        ECMDM_DistToFixedVert = 0,
+        ECMDM_VertexBoneWeight = 1,
+        ECMDM_Empty = 2,
+        ECMDM_MAX = 3,
+    }
+
+    /// <summary>
+    /// Enum: TriangleSortOption
+    /// </summary>
+    public enum TriangleSortOption
+    {
+        TRISORT_None = 0,
+        TRISORT_CenterRadialDistance = 1,
+        TRISORT_Random = 2,
+        TRISORT_MergeContiguous = 3,
+        TRISORT_Custom = 4,
+        TRISORT_CustomLeftRight = 5,
+        TRISORT_MAX = 6,
+    }
+
+    /// <summary>
+    /// Enum: BoneBreakOption
+    /// </summary>
+    public enum BoneBreakOption
+    {
+        BONEBREAK_SoftPreferred = 0,
+        BONEBREAK_AutoDetect = 1,
+        BONEBREAK_RigidPreferred = 2,
+        BONEBREAK_MAX = 3,
+    }
+
+    /// <summary>
+    /// Struct: FBoneMirrorExport
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FBoneMirrorExport
+    {
+        /// <summary>
+        /// NameProperty: BoneName
+        /// </summary>
+        public unsafe BmSDK.FName BoneName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// NameProperty: SourceBoneName
+        /// </summary>
+        public unsafe BmSDK.FName SourceBoneName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+
+        /// <summary>
+        /// ByteProperty: BoneFlipAxis
+        /// </summary>
+        public unsafe BmSDK.GameObject.EAxis BoneFlipAxis
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EAxis>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FBoneMirrorInfo
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FBoneMirrorInfo
+    {
+        /// <summary>
+        /// IntProperty: SourceIndex
+        /// </summary>
+        public unsafe int SourceIndex
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// ByteProperty: BoneFlipAxis
+        /// </summary>
+        public unsafe BmSDK.GameObject.EAxis BoneFlipAxis
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EAxis>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FApexClothingAssetInfo
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FApexClothingAssetInfo
+    {
+        /// <summary>
+        /// ArrayProperty: ClothingLodInfo
+        /// </summary>
+        public unsafe BmSDK.TArray<BmSDK.Engine.SkeletalMesh.FApexClothingLodInfo> ClothingLodInfo
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.SkeletalMesh.FApexClothingLodInfo>>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// NameProperty: ClothingAssetName
+        /// </summary>
+        public unsafe BmSDK.FName ClothingAssetName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FApexClothingLodInfo
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FApexClothingLodInfo
+    {
+        /// <summary>
+        /// ArrayProperty: ClothingSectionInfo
+        /// </summary>
+        public unsafe BmSDK.TArray<int> ClothingSectionInfo
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FBoneBounds
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FBoneBounds
+    {
+        /// <summary>
+        /// IntProperty: BoneIndex
+        /// </summary>
+        public unsafe int BoneIndex
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: Box
+        /// </summary>
+        public unsafe BmSDK.GameObject.FSimpleBox Box
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FSimpleBox>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+    }
+
+    /// <summary>
     /// StructProperty: Bounds
     /// </summary>
     public unsafe BmSDK.GameObject.FBoxSphereBounds Bounds

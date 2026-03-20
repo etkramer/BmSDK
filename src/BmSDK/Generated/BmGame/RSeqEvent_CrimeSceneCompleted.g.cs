@@ -33,6 +33,41 @@ public partial class RSeqEvent_CrimeSceneCompleted : BmSDK.Engine.SequenceEvent,
     protected RSeqEvent_CrimeSceneCompleted(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetObjClassVersion
+    /// </summary>
+    public unsafe static int GetObjClassVersion()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_CrimeSceneCompleted.GetObjClassVersion", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: EvidenceTotalChanged
+    /// </summary>
+    public unsafe void EvidenceTotalChanged(int TotalCollected, int TotalInCrimeScene)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_CrimeSceneCompleted.EvidenceTotalChanged", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TotalCollected, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(TotalInCrimeScene, paramsPtr + 4);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Enum: CrimeSceneCompletionLevel
+    /// </summary>
+    public enum CrimeSceneCompletionLevel
+    {
+        CSCL_FullyComplete = 0,
+        CSCL_PercentageComplete = 1,
+        CSCL_NumberComplete = 2,
+        CSCL_MAX = 3,
+    }
+
+    /// <summary>
     /// FloatProperty: PartialCompletionPercentage
     /// </summary>
     public unsafe float PartialCompletionPercentage

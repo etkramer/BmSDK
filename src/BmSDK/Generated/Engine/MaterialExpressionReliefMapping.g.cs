@@ -33,6 +33,18 @@ public partial class MaterialExpressionReliefMapping : BmSDK.Engine.MaterialExpr
     protected MaterialExpressionReliefMapping(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EHeightChannel
+    /// </summary>
+    public enum EHeightChannel
+    {
+        HeightChannel_R = 0,
+        HeightChannel_G = 1,
+        HeightChannel_B = 2,
+        HeightChannel_A = 3,
+        HeightChannel_MAX = 4,
+    }
+
+    /// <summary>
     /// StructProperty: UV
     /// </summary>
     public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput UV

@@ -33,6 +33,69 @@ public partial class RSeqAct_StopPlayerUsingGadgets : BmSDK.Engine.SequenceActio
     protected RSeqAct_StopPlayerUsingGadgets(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetObjClassVersion
+    /// </summary>
+    public unsafe static int GetObjClassVersion()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StopPlayerUsingGadgets.GetObjClassVersion", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: TriedToUseGadget
+    /// </summary>
+    public unsafe void TriedToUseGadget(BmSDK.BmGame.RInventoryGadget Gadget)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StopPlayerUsingGadgets.TriedToUseGadget", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Gadget, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StopPlayerUsingGadgets.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Enum: EStopPlayerDoingStuff
+    /// </summary>
+    public enum EStopPlayerDoingStuff
+    {
+        ESPDS_bGadgets = 0,
+        ESPDS_bDiveThroughWindow = 1,
+        ESPDS_bSmokeBombs = 2,
+        ESPDS_bSilentTakedowns = 3,
+        ESPDS_bUsingBatmobile = 4,
+        ESPDS_bExittingBatmobile = 5,
+        ESPDS_bBatmobileRemote = 6,
+        ESPDS_bGlideKick = 7,
+        ESPDS_bTrackingVehicles = 8,
+        ESPDS_bDroppingOffRailings = 9,
+        ESPDS_bMapScreen = 10,
+        ESPDS_bUsingFloorGrates = 11,
+        ESPDS_bBatmobileSonar = 12,
+        ESPDS_bBatmobileWinch = 13,
+        ESPDS_bBatmobileHeavyCannon = 14,
+        ESPDS_bBatmobileChainGun = 15,
+        ESPDS_bBatmobileReleaseWinch = 16,
+        ESPDS_bGrapple = 17,
+        ESPDS_bJumpingOffOrOverRailing = 18,
+        ESPDS_bGrappleCancel = 19,
+        ESPDS_bMissileBarrageLv1 = 20,
+        ESPDS_MAX = 21,
+    }
+
+    /// <summary>
     /// BoolProperty: bGadgets
     /// </summary>
     public unsafe bool bGadgets

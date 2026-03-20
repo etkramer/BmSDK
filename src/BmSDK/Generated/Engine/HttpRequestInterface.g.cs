@@ -33,6 +33,18 @@ public partial class HttpRequestInterface : BmSDK.Engine.HttpBaseInterface, BmSD
     protected HttpRequestInterface(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: SetProcessRequestCompleteDelegate
+    /// </summary>
+    public unsafe BmSDK.Engine.HttpRequestInterface SetProcessRequestCompleteDelegate(System.IntPtr ProcessRequestCompleteDelegate)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HttpRequestInterface.SetProcessRequestCompleteDelegate", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(ProcessRequestCompleteDelegate, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.HttpRequestInterface>(paramsPtr + 16);
+    }
+
+    /// <summary>
     /// DelegateProperty: __OnProcessRequestComplete__Delegate
     /// </summary>
     public unsafe System.IntPtr __OnProcessRequestComplete__Delegate

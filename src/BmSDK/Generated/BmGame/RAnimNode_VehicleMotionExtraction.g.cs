@@ -33,6 +33,27 @@ public partial class RAnimNode_VehicleMotionExtraction : BmSDK.Engine.AnimNodeSe
     protected RAnimNode_VehicleMotionExtraction(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: PlayAnim
+    /// </summary>
+    public unsafe void PlayAnim(bool bLoop = default, float InRate = default, float StartTime = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_VehicleMotionExtraction.PlayAnim", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bLoop, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(InRate, paramsPtr + 4);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(StartTime, paramsPtr + 8);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
     /// StructProperty: BindTranslation
     /// </summary>
     public unsafe System.Numerics.Vector3 BindTranslation

@@ -33,6 +33,53 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     protected DynamicLightEnvironmentComponent(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetOwnerBounds
+    /// </summary>
+    public unsafe BmSDK.GameObject.FBoxSphereBounds GetOwnerBounds()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DynamicLightEnvironmentComponent.GetOwnerBounds", true);
+        byte* paramsPtr = stackalloc byte[64];
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: ResetEnvironment
+    /// </summary>
+    public unsafe void ResetEnvironment()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DynamicLightEnvironmentComponent.ResetEnvironment", true);
+        byte* paramsPtr = stackalloc byte[64];
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
+    /// Enum: EDynamicLightEnvironmentBoundsMethod
+    /// </summary>
+    public enum EDynamicLightEnvironmentBoundsMethod
+    {
+        DLEB_OwnerComponents = 0,
+        DLEB_ManualOverride = 1,
+        DLEB_ActiveComponents = 2,
+        DLEB_MAX = 3,
+    }
+
+    /// <summary>
     /// StructProperty: State
     /// </summary>
     public unsafe System.IntPtr State

@@ -33,6 +33,40 @@ public partial class RSkelControl_PositionConstraint : BmSDK.Engine.SkelControlB
     protected RSkelControl_PositionConstraint(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FResolvedPositionConstraintBone
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FResolvedPositionConstraintBone
+    {
+        /// <summary>
+        /// IntProperty: Index
+        /// </summary>
+        public unsafe int Index
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: Weight
+        /// </summary>
+        public unsafe float Weight
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: TargetBoneReferencePose
+        /// </summary>
+        public unsafe BmSDK.GameObject.FBoneAtom TargetBoneReferencePose
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoneAtom>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+    }
+
+    /// <summary>
     /// ArrayProperty: SourceBones
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.BmGame.RSkelControl_PositionConstraint.FPositionConstraintBone> SourceBones

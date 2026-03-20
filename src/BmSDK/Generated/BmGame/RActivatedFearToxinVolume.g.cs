@@ -68,182 +68,40 @@ public partial class RActivatedFearToxinVolume : BmSDK.BmGame.RWaterRescueVolume
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ObjectProperty: SplashEffect
+    /// Function: UnTouch
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem SplashEffect
+    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 740); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RActivatedFearToxinVolume.UnTouch", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// ObjectProperty: SplashSound
+    /// Function: Touch
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent SplashSound
+    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 748); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RActivatedFearToxinVolume.Touch", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(OtherComp, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitLocation, paramsPtr + 16);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitNormal, paramsPtr + 28);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// ObjectProperty: WeaponSplashEffect
+    /// Function: PostBeginPlay
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem WeaponSplashEffect
+    public unsafe void PostBeginPlay()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 756); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: WeaponSplashSound
-    /// </summary>
-    public unsafe BmSDK.Engine.AkEvent WeaponSplashSound
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 764); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 764); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: GlideWakeEffect
-    /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem GlideWakeEffect
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 772); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 772); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: GrappleWakeEffect
-    /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem GrappleWakeEffect
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 780); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 780); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: GrappleMove
-    /// </summary>
-    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleMove
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 788); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: PlayerInteractions
-    /// </summary>
-    public unsafe BmSDK.Engine.RInteractionComponent PlayerInteractions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionComponent>(Ptr + 796); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 796); }
-    }
-
-    /// <summary>
-    /// ClassProperty: dmgType
-    /// </summary>
-    public unsafe BmSDK.Class dmgType
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 804); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 804); }
-    }
-
-    /// <summary>
-    /// IntProperty: DamageAmount
-    /// </summary>
-    public unsafe int DamageAmount
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 812); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bCanRescueWithoutFade
-    /// </summary>
-    public unsafe bool bCanRescueWithoutFade
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 816) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 816); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 816); }
-    }
-
-    /// <summary>
-    /// BoolProperty: UseNearestGrapplePoint
-    /// </summary>
-    public unsafe bool UseNearestGrapplePoint
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 816) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 816); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 816); }
-    }
-
-    /// <summary>
-    /// BoolProperty: TouchingAPlayer
-    /// </summary>
-    public unsafe bool TouchingAPlayer
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 816) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 816); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 816); }
-    }
-
-    /// <summary>
-    /// BoolProperty: AffectsBatmobile
-    /// </summary>
-    public unsafe bool AffectsBatmobile
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 816) & 8) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 816); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 816); }
-    }
-
-    /// <summary>
-    /// BoolProperty: DontRescueBatmobile
-    /// </summary>
-    public unsafe bool DontRescueBatmobile
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 816) & 16) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 816); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 816); }
-    }
-
-    /// <summary>
-    /// BoolProperty: CityWaterVolume
-    /// </summary>
-    public unsafe bool CityWaterVolume
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 816) & 32) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 816); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 816); }
-    }
-
-    /// <summary>
-    /// BoolProperty: DontPlayWaterSound
-    /// </summary>
-    public unsafe bool DontPlayWaterSound
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 816) & 64) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 816); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 816); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bDontRescueBatman
-    /// </summary>
-    public unsafe bool bDontRescueBatman
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 816) & 128) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 816); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 816); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bForceWaterCameraOnTouch
-    /// </summary>
-    public unsafe bool bForceWaterCameraOnTouch
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 816) & 256) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 816); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 816); }
-    }
-
-    /// <summary>
-    /// FloatProperty: BatmobileSplashOffsetZ
-    /// </summary>
-    public unsafe float BatmobileSplashOffsetZ
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 820); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 820); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RActivatedFearToxinVolume.PostBeginPlay", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

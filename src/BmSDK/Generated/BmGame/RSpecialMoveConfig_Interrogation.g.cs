@@ -33,6 +33,19 @@ public partial class RSpecialMoveConfig_Interrogation : BmSDK.BmGame.RSpecialMov
     protected RSpecialMoveConfig_Interrogation(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: CameraCollisionOption
+    /// </summary>
+    public enum CameraCollisionOption
+    {
+        CCO_None = 0,
+        CCO_Player = 1,
+        CCO_Victim = 2,
+        CCO_Locator = 3,
+        CCO_LocatorThenVictimHead = 4,
+        CCO_MAX = 5,
+    }
+
+    /// <summary>
     /// ObjectProperty: VictimAnimSet
     /// </summary>
     public unsafe BmSDK.Engine.AnimSet VictimAnimSet

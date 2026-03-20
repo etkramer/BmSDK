@@ -32,21 +32,4 @@ public partial class AkSDEntityFactDrivingChallenge : BmSDK.AkAudio.AkSDEntityFa
     /// </summary>
     protected AkSDEntityFactDrivingChallenge(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// StrProperty: FactToCheck
-    /// </summary>
-    public unsafe BmSDK.FString FactToCheck
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
-    }
-
-    /// <summary>
-    /// BoolProperty: ResetFactIfTrue
-    /// </summary>
-    public unsafe bool ResetFactIfTrue
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 268) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 268); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 268); }
-    }
 }

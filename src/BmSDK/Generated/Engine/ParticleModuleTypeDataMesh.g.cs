@@ -33,6 +33,51 @@ public partial class ParticleModuleTypeDataMesh : BmSDK.Engine.ParticleModuleTyp
     protected ParticleModuleTypeDataMesh(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EMeshCameraFacingOptions
+    /// </summary>
+    public enum EMeshCameraFacingOptions
+    {
+        XAxisFacing_NoUp = 0,
+        XAxisFacing_ZUp = 1,
+        XAxisFacing_NegativeZUp = 2,
+        XAxisFacing_YUp = 3,
+        XAxisFacing_NegativeYUp = 4,
+        LockedAxis_ZAxisFacing = 5,
+        LockedAxis_NegativeZAxisFacing = 6,
+        LockedAxis_YAxisFacing = 7,
+        LockedAxis_NegativeYAxisFacing = 8,
+        VelocityAligned_ZAxisFacing = 9,
+        VelocityAligned_NegativeZAxisFacing = 10,
+        VelocityAligned_YAxisFacing = 11,
+        VelocityAligned_NegativeYAxisFacing = 12,
+        EMeshCameraFacingOptions_MAX = 13,
+    }
+
+    /// <summary>
+    /// Enum: EMeshCameraFacingUpAxis
+    /// </summary>
+    public enum EMeshCameraFacingUpAxis
+    {
+        CameraFacing_NoneUP = 0,
+        CameraFacing_ZUp = 1,
+        CameraFacing_NegativeZUp = 2,
+        CameraFacing_YUp = 3,
+        CameraFacing_NegativeYUp = 4,
+        CameraFacing_MAX = 5,
+    }
+
+    /// <summary>
+    /// Enum: EMeshScreenAlignment
+    /// </summary>
+    public enum EMeshScreenAlignment
+    {
+        PSMA_MeshFaceCameraWithRoll = 0,
+        PSMA_MeshFaceCameraWithSpin = 1,
+        PSMA_MeshFaceCameraWithLockedAxis = 2,
+        PSMA_MAX = 3,
+    }
+
+    /// <summary>
     /// ObjectProperty: Mesh
     /// </summary>
     public unsafe BmSDK.Engine.StaticMesh Mesh

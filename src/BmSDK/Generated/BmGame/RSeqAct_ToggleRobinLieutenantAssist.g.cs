@@ -33,6 +33,29 @@ public partial class RSeqAct_ToggleRobinLieutenantAssist : BmSDK.Engine.Sequence
     protected RSeqAct_ToggleRobinLieutenantAssist(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Grapple
+    /// </summary>
+    public unsafe void Grapple(bool bUseSpecialMove = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ToggleRobinLieutenantAssist.Grapple", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bUseSpecialMove, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ToggleRobinLieutenantAssist.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: TargetVantagePoint
     /// </summary>
     public unsafe BmSDK.Engine.Actor TargetVantagePoint

@@ -33,6 +33,22 @@ public partial class MaterialExpressionRainBufferNormal : BmSDK.Engine.MaterialE
     protected MaterialExpressionRainBufferNormal(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: ERainBufferType
+    /// </summary>
+    public enum ERainBufferType
+    {
+        RAINBUFFER_FloorNormals = 0,
+        RAINBUFFER_WallNormals = 1,
+        RAINBUFFER_WallSpatterOnlyNormals = 2,
+        RAINBUFFER_WallTrailOnlyNormals = 3,
+        RAINBUFFER_FloorHeight = 4,
+        RAINBUFFER_WallHeight = 5,
+        RAINBUFFER_WallSpatterOnlyHeight = 6,
+        RAINBUFFER_WallTrailOnlyHeight = 7,
+        RAINBUFFER_MAX = 8,
+    }
+
+    /// <summary>
     /// StructProperty: Coordinates
     /// </summary>
     public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Coordinates

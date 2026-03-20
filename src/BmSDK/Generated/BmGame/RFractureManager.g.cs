@@ -68,110 +68,17 @@ public partial class RFractureManager : BmSDK.Engine.FractureManager, BmSDK.IGam
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// IntProperty: FSMPartPoolSize
+    /// Function: SpawnChunkDestroyEffect
     /// </summary>
-    public unsafe int FSMPartPoolSize
+    public unsafe void SpawnChunkDestroyEffect(BmSDK.Engine.ParticleSystem Effect, BmSDK.GameObject.FBox ChunkBox, System.Numerics.Vector3 ChunkDir, float Scale)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bEnableAntiVibration
-    /// </summary>
-    public unsafe bool bEnableAntiVibration
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 672) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 672); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 672); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bEnableAntiLinearVibration
-    /// </summary>
-    public unsafe bool bEnableAntiLinearVibration
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 672) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 672); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 672); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bEnableSpawnChunkEffectForRadialDamage
-    /// </summary>
-    public unsafe bool bEnableSpawnChunkEffectForRadialDamage
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 672) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 672); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 672); }
-    }
-
-    /// <summary>
-    /// FloatProperty: DestroyVibrationLevel
-    /// </summary>
-    public unsafe float DestroyVibrationLevel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
-    }
-
-    /// <summary>
-    /// FloatProperty: DestroyMinAngVel
-    /// </summary>
-    public unsafe float DestroyMinAngVel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
-    }
-
-    /// <summary>
-    /// FloatProperty: DestroyLinearVibrationLevel
-    /// </summary>
-    public unsafe float DestroyLinearVibrationLevel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 684); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
-    }
-
-    /// <summary>
-    /// FloatProperty: DestroyMinLinearVel
-    /// </summary>
-    public unsafe float DestroyMinLinearVel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
-    }
-
-    /// <summary>
-    /// FloatProperty: ExplosionVelScale
-    /// </summary>
-    public unsafe float ExplosionVelScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 692); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: PartPool
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.FracturedStaticMeshPart> PartPool
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.FracturedStaticMeshPart>>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: FreeParts
-    /// </summary>
-    public unsafe BmSDK.TArray<int> FreeParts
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 712); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: ActorsWithDeferredPartsToSpawn
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.FracturedStaticMeshActor> ActorsWithDeferredPartsToSpawn
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.FracturedStaticMeshActor>>(Ptr + 728); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureManager.SpawnChunkDestroyEffect", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Effect, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(ChunkBox, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(ChunkDir, paramsPtr + 36);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Scale, paramsPtr + 48);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

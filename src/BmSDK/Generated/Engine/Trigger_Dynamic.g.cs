@@ -67,46 +67,4 @@ public partial class Trigger_Dynamic : BmSDK.Engine.Trigger, BmSDK.IGameObject
         where TComponent : class, Framework.IScriptComponent<Trigger_Dynamic>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// ComponentProperty: CylinderComponent
-    /// </summary>
-    public unsafe BmSDK.Engine.CylinderComponent CylinderComponent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CylinderComponent>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bRecentlyTriggered
-    /// </summary>
-    public unsafe bool bRecentlyTriggered
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 676); }
-    }
-
-    /// <summary>
-    /// FloatProperty: AITriggerDelay
-    /// </summary>
-    public unsafe float AITriggerDelay
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
-    }
-
-    /// <summary>
-    /// Struct: FCheckpointRecord
-    /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
-    public partial record struct FCheckpointRecord
-    {
-        /// <summary>
-        /// BoolProperty: bCollideActors
-        /// </summary>
-        public unsafe bool bCollideActors
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 1) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
-        }
-    }
 }

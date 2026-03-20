@@ -33,6 +33,30 @@ public partial class RSeqAct_BankMoneyControllerBase : BmSDK.Engine.SeqAct_Laten
     protected RSeqAct_BankMoneyControllerBase(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: NotifyCashPlacedInBag
+    /// </summary>
+    public unsafe void NotifyCashPlacedInBag(int Amount)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BankMoneyControllerBase.NotifyCashPlacedInBag", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Amount, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: NotifyCashRemovedFromBank
+    /// </summary>
+    public unsafe void NotifyCashRemovedFromBank(int Amount)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BankMoneyControllerBase.NotifyCashRemovedFromBank", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Amount, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// IntProperty: StartingCash
     /// </summary>
     public unsafe int StartingCash

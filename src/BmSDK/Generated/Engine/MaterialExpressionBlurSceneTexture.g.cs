@@ -33,6 +33,24 @@ public partial class MaterialExpressionBlurSceneTexture : BmSDK.Engine.MaterialE
     protected MaterialExpressionBlurSceneTexture(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: ESampleBlurSceneType
+    /// </summary>
+    public enum ESampleBlurSceneType
+    {
+        SampleBlurScene_PoissonDisc = 0,
+        SampleBlurScene_MAX = 1,
+    }
+
+    /// <summary>
+    /// Enum: EBlurSceneTextureType
+    /// </summary>
+    public enum EBlurSceneTextureType
+    {
+        BlurSceneTex_Lighting = 0,
+        BlurSceneTex_MAX = 1,
+    }
+
+    /// <summary>
     /// StructProperty: Coordinates
     /// </summary>
     public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Coordinates

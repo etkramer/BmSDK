@@ -33,6 +33,66 @@ public partial class ProcBuildingRuleset : BmSDK.GameObject, BmSDK.IGameObject
     protected ProcBuildingRuleset(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EProcBuildingAxis
+    /// </summary>
+    public enum EProcBuildingAxis
+    {
+        EPBAxis_X = 0,
+        EPBAxis_Z = 1,
+        EPBAxis_MAX = 2,
+    }
+
+    /// <summary>
+    /// Struct: FPBParamSwatch
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FPBParamSwatch
+    {
+        /// <summary>
+        /// NameProperty: SwatchName
+        /// </summary>
+        public unsafe BmSDK.FName SwatchName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// ArrayProperty: Params
+        /// </summary>
+        public unsafe BmSDK.TArray<BmSDK.Engine.ProcBuilding.FPBMaterialParam> Params
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ProcBuilding.FPBMaterialParam>>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FPBVariationInfo
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FPBVariationInfo
+    {
+        /// <summary>
+        /// NameProperty: VariationName
+        /// </summary>
+        public unsafe BmSDK.FName VariationName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: bMeshOnTopOfFacePoly
+        /// </summary>
+        public unsafe bool bMeshOnTopOfFacePoly
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 8); }; }
+        }
+    }
+
+    /// <summary>
     /// ObjectProperty: RootRule
     /// </summary>
     public unsafe BmSDK.Engine.PBRuleNodeBase RootRule

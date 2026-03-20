@@ -33,6 +33,17 @@ public partial class RSeqAct_GrappleToVantagePoint : BmSDK.Engine.SequenceAction
     protected RSeqAct_GrappleToVantagePoint(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Grapple
+    /// </summary>
+    public unsafe void Grapple()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GrappleToVantagePoint.Grapple", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: TargetVantagePoint
     /// </summary>
     public unsafe BmSDK.Engine.Actor TargetVantagePoint

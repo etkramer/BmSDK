@@ -68,20 +68,14 @@ public partial class MAEC_JackInBoxExplosion : BmSDK.BmGame.RAEC_GelMineExplosio
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ObjectProperty: ChildPauseGroup
+    /// Function: PlayExclaimBark
     /// </summary>
-    public unsafe BmSDK.BmGame.RAEC_GroupPauseAndLook ChildPauseGroup
+    public unsafe void PlayExclaimBark(BmSDK.BmGame.RBMAIController BarkC)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_GroupPauseAndLook>(Ptr + 720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
-    }
-
-    /// <summary>
-    /// FloatProperty: DistanceAffectedWithin
-    /// </summary>
-    public unsafe float DistanceAffectedWithin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 728); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_JackInBoxExplosion.PlayExclaimBark", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(BarkC, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

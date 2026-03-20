@@ -33,6 +33,19 @@ public partial class RParticleModuleSpawnOnDeath : BmSDK.BmGame.RParticleModuleO
     protected RParticleModuleSpawnOnDeath(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: SpawnParticles
+    /// </summary>
+    public unsafe void SpawnParticles(BmSDK.Engine.Actor OwningActor, System.Numerics.Vector3 Position)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RParticleModuleSpawnOnDeath.SpawnParticles", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(OwningActor, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Position, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: ParticleEffect
     /// </summary>
     public unsafe BmSDK.Engine.ParticleSystem ParticleEffect

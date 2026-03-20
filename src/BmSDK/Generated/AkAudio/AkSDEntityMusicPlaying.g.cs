@@ -32,22 +32,4 @@ public partial class AkSDEntityMusicPlaying : BmSDK.AkAudio.AkSDEntityValue, BmS
     /// </summary>
     protected AkSDEntityMusicPlaying(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// BoolProperty: ValidName
-    /// </summary>
-    public unsafe bool ValidName
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 244) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 244); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 244); }
-    }
-
-    /// <summary>
-    /// IntProperty: Type
-    /// </summary>
-    public unsafe int Type
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
-    }
-
 }

@@ -33,6 +33,28 @@ public partial class RBMExitCondition_MatineeEnded : BmSDK.BmGame.RBMExitConditi
     protected RBMExitCondition_MatineeEnded(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: MatineeBlendOutStarted
+    /// </summary>
+    public unsafe void MatineeBlendOutStarted()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitCondition_MatineeEnded.MatineeBlendOutStarted", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: MatineeControlFinished
+    /// </summary>
+    public unsafe void MatineeControlFinished()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitCondition_MatineeEnded.MatineeControlFinished", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ByteProperty: TriggerType
     /// </summary>
     public unsafe BmSDK.BmGame.RBMExitCondition_MatineeEnded.EMatineeEndedType TriggerType

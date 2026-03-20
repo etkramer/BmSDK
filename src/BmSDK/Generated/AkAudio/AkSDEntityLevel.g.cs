@@ -32,12 +32,4 @@ public partial class AkSDEntityLevel : BmSDK.AkAudio.AkSDEntitySymbol, BmSDK.IGa
     /// </summary>
     protected AkSDEntityLevel(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// StrProperty: Variable
-    /// </summary>
-    public unsafe BmSDK.FString Variable
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
-    }
 }

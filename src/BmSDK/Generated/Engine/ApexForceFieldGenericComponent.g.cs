@@ -33,6 +33,18 @@ public partial class ApexForceFieldGenericComponent : BmSDK.Engine.ApexForceFiel
     protected ApexForceFieldGenericComponent(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: AFFG_ForceFieldCoordinates
+    /// </summary>
+    public enum AFFG_ForceFieldCoordinates
+    {
+        AFFG_CARTESIAN = 0,
+        AFFG_SPHERICAL = 1,
+        AFFG_CYLINDRICAL = 2,
+        AFFG_TOROIDAL = 3,
+        AFFG_MAX = 4,
+    }
+
+    /// <summary>
     /// FloatProperty: ForceStrength
     /// </summary>
     public unsafe float ForceStrength

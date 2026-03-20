@@ -32,21 +32,4 @@ public partial class RDmgType_CounterBlocked : BmSDK.BmGame.RDmgType_CounterWeak
     /// </summary>
     protected RDmgType_CounterBlocked(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// IntProperty: AlignmentPad
-    /// </summary>
-    public unsafe int AlignmentPad
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
-    }
-
-    /// <summary>
-    /// ByteProperty: CounterStrength
-    /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayerCombat.CounterStrength CounterStrength
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.CounterStrength>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
-    }
 }

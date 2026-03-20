@@ -33,6 +33,17 @@ public partial class RSeqAct_CheckPredatorAttackState : BmSDK.Engine.SequenceAct
     protected RSeqAct_CheckPredatorAttackState(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CheckPredatorAttackState.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// BoolProperty: bOnlyCheckCurrentPlayer
     /// </summary>
     public unsafe bool bOnlyCheckCurrentPlayer

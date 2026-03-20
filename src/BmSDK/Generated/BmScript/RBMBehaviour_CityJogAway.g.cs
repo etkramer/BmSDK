@@ -33,299 +33,107 @@ public partial class RBMBehaviour_CityJogAway : BmSDK.BmScript.RBMBehaviour_City
     protected RBMBehaviour_CityJogAway(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// ObjectProperty: SavedAction
+    /// Function: SpookedBy
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_BaseMove SavedAction
+    public unsafe void SpookedBy()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_BaseMove>(Ptr + 772); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 772); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CityJogAway.SpookedBy", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// ObjectProperty: SavedThreat
+    /// Function: UpdateThreatAndDestroyCheck
     /// </summary>
-    public unsafe BmSDK.Engine.Actor SavedThreat
+    public unsafe bool UpdateThreatAndDestroyCheck(float DeltaTime)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 780); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 780); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CityJogAway.UpdateThreatAndDestroyCheck", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
     }
 
     /// <summary>
-    /// ObjectProperty: RoadNetwork
+    /// Function: PlayerBumped
     /// </summary>
-    public unsafe BmSDK.BmGame.RRoadNetwork RoadNetwork
+    public unsafe void PlayerBumped(bool bFriendly)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRoadNetwork>(Ptr + 788); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CityJogAway.PlayerBumped", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bFriendly, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// StructProperty: GoalPos
+    /// Function: HandleNoise
     /// </summary>
-    public unsafe System.Numerics.Vector3 GoalPos
+    public unsafe void HandleNoise(BmSDK.BmGame.RPawnPlayer PlayerInstigator)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 796); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 796); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CityJogAway.HandleNoise", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerInstigator, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// FloatProperty: SavedThreatDistance
+    /// Function: OverrideGetupStances
     /// </summary>
-    public unsafe float SavedThreatDistance
+    public unsafe bool OverrideGetupStances(out BmSDK.FName MovementStance, out BmSDK.FName WeaponStance)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 808); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 808); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CityJogAway.OverrideGetupStances", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        MovementStance = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(paramsPtr + 0);
+        WeaponStance = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(paramsPtr + 8);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 16);
     }
 
     /// <summary>
-    /// FloatProperty: WaitTime
+    /// Function: PlayFleeReaction
     /// </summary>
-    public unsafe float WaitTime
+    public unsafe void PlayFleeReaction()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 812); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CityJogAway.PlayFleeReaction", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// StructProperty: FleeReactionID
+    /// Function: SetRunVariants
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId FleeReactionID
+    public unsafe void SetRunVariants(BmSDK.BmGame.RBMAIAction_RiotRunBase MoveAction)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 816); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 816); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CityJogAway.SetRunVariants", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(MoveAction, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// ArrayProperty: FleeReactionFront
+    /// Function: SetMovementSpeed
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FName> FleeReactionFront
+    public unsafe bool SetMovementSpeed()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 820); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 820); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CityJogAway.SetMovementSpeed", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
 
     /// <summary>
-    /// ArrayProperty: FleeReactionBack
+    /// Function: OnActivate
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FName> FleeReactionBack
+    public unsafe void OnActivate()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 836); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 836); }
-    }
-
-    /// <summary>
-    /// FloatProperty: WaitingtoReactTime
-    /// </summary>
-    public unsafe float WaitingtoReactTime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 852); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 852); }
-    }
-
-    /// <summary>
-    /// FloatProperty: CheckThreatDirectionTimer
-    /// </summary>
-    public unsafe float CheckThreatDirectionTimer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 856); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 856); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bHaveRunAwayFromAvoidActors
-    /// </summary>
-    public unsafe bool bHaveRunAwayFromAvoidActors
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 860) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 860); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 860); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bRetryStartNextMoveToDueToFailure
-    /// </summary>
-    public unsafe bool bRetryStartNextMoveToDueToFailure
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 860) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 860); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 860); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bForceFleeReaction
-    /// </summary>
-    public unsafe bool bForceFleeReaction
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 860) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 860); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 860); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bCanBackAway
-    /// </summary>
-    public unsafe bool bCanBackAway
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 860) & 8) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 860); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 860); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bHasRun
-    /// </summary>
-    public unsafe bool bHasRun
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 860) & 16) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 860); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 860); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bHasBackedAway
-    /// </summary>
-    public unsafe bool bHasBackedAway
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 860) & 32) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 860); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 860); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bDontChangePose
-    /// </summary>
-    public unsafe bool bDontChangePose
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 860) & 64) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 860); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 860); }
-    }
-
-    /// <summary>
-    /// FloatProperty: TimeHiddenForDestroy
-    /// </summary>
-    public unsafe float TimeHiddenForDestroy
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 864); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
-    }
-
-    /// <summary>
-    /// FloatProperty: MinDistanceFromThreatToDestroy
-    /// </summary>
-    public unsafe float MinDistanceFromThreatToDestroy
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 868); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 868); }
-    }
-
-    /// <summary>
-    /// FloatProperty: TimeBehaviourStarted
-    /// </summary>
-    public unsafe float TimeBehaviourStarted
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 872); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 872); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: RoadLinks
-    /// </summary>
-    public unsafe BmSDK.TArray<int> RoadLinks
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 876); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 876); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: RoadPoints
-    /// </summary>
-    public unsafe BmSDK.TArray<int> RoadPoints
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 892); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 892); }
-    }
-
-    /// <summary>
-    /// IntProperty: LookAheadLinks
-    /// </summary>
-    public unsafe int LookAheadLinks
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 908); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 908); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: StoredLocationList
-    /// </summary>
-    public unsafe BmSDK.TArray<System.Numerics.Vector3> StoredLocationList
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.Numerics.Vector3>>(Ptr + 912); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 912); }
-    }
-
-    /// <summary>
-    /// FloatProperty: MinRoadWidth
-    /// </summary>
-    public unsafe float MinRoadWidth
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 928); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 928); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: GoalHistory
-    /// </summary>
-    public unsafe BmSDK.TArray<System.Numerics.Vector3> GoalHistory
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.Numerics.Vector3>>(Ptr + 932); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 932); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: SprintingHitReactionAnims
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FName> SprintingHitReactionAnims
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 948); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 948); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: RunningHitReactionAnims
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FName> RunningHitReactionAnims
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 964); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 964); }
-    }
-
-    /// <summary>
-    /// ByteProperty: MoveSpeed
-    /// </summary>
-    public unsafe BmSDK.Engine.RAutomaticTransitions.EMovementSpeed MoveSpeed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAutomaticTransitions.EMovementSpeed>(Ptr + 980); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 980); }
-    }
-
-    /// <summary>
-    /// StructProperty: HitReactionID
-    /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId HitReactionID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 984); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 984); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: AvoidActors
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> AvoidActors
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 988); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 988); }
-    }
-
-    /// <summary>
-    /// FloatProperty: PlayFleeBarkTimer
-    /// </summary>
-    public unsafe float PlayFleeBarkTimer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1004); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1004); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CityJogAway.OnActivate", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

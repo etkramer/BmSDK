@@ -67,30 +67,4 @@ public partial class RBMCameraEmitterBloodSplat : BmSDK.BmGame.RBMCameraEmitter,
         where TComponent : class, Framework.IScriptComponent<RBMCameraEmitterBloodSplat>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// ObjectProperty: Cam
-    /// </summary>
-    public unsafe BmSDK.BmGame.R3rdPersonCamera Cam
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera>(Ptr + 736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: ParticleSystem
-    /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem ParticleSystem
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 744); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
-    }
-
-    /// <summary>
-    /// FloatProperty: DistFromCamera
-    /// </summary>
-    public unsafe float DistFromCamera
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 752); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
-    }
 }

@@ -67,39 +67,4 @@ public partial class RPredatorGunLocker : BmSDK.BmScript.RPredatorGunLockerMesh,
         where TComponent : class, Framework.IScriptComponent<RPredatorGunLocker>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// ComponentProperty: CollisionGeometry
-    /// </summary>
-    public unsafe BmSDK.Engine.RAggGeomCollisionComponent CollisionGeometry
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAggGeomCollisionComponent>(Ptr + 964); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 964); }
-    }
-
-    /// <summary>
-    /// StructProperty: BoneLocation
-    /// </summary>
-    public unsafe System.Numerics.Vector3 BoneLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 972); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 972); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: OldMaterials
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialInterface> OldMaterials
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialInterface>>(Ptr + 984); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 984); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: XrayLight
-    /// </summary>
-    public unsafe BmSDK.Engine.PointLightComponent XrayLight
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PointLightComponent>(Ptr + 1000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1000); }
-    }
 }

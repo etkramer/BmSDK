@@ -67,30 +67,4 @@ public partial class RPathNode_DynamicFractureWall : BmSDK.BmGame.RPathNode, BmS
         where TComponent : class, Framework.IScriptComponent<RPathNode_DynamicFractureWall>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// BoolProperty: bDeadEnd
-    /// </summary>
-    public unsafe bool bDeadEnd
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 944) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 944); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 944); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bMustGoTo
-    /// </summary>
-    public unsafe bool bMustGoTo
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 944) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 944); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 944); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: LastSeenTime
-    /// </summary>
-    public unsafe BmSDK.TArray<float> LastSeenTime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 948); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 948); }
-    }
 }

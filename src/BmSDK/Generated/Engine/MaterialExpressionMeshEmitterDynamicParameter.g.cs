@@ -32,21 +32,4 @@ public partial class MaterialExpressionMeshEmitterDynamicParameter : BmSDK.Engin
     /// </summary>
     protected MaterialExpressionMeshEmitterDynamicParameter(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// ArrayProperty: ParamNames
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> ParamNames
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bUsedWithMeshEmitter
-    /// </summary>
-    public unsafe bool bUsedWithMeshEmitter
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 188) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 188); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 188); }
-    }
 }

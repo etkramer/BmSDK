@@ -33,6 +33,19 @@ public partial class NavMeshGoalFilter_MinPathDistance : BmSDK.Engine.NavMeshGoa
     protected NavMeshGoalFilter_MinPathDistance(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: MustBeLongerPathThan
+    /// </summary>
+    public unsafe static bool MustBeLongerPathThan(BmSDK.Engine.NavMeshGoal_GenericFilterContainer FilterContainer, int InMinDistancePathShouldBe)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshGoalFilter_MinPathDistance.MustBeLongerPathThan", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(FilterContainer, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(InMinDistancePathShouldBe, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 12);
+    }
+
+    /// <summary>
     /// IntProperty: MinDistancePathShouldBe
     /// </summary>
     public unsafe int MinDistancePathShouldBe

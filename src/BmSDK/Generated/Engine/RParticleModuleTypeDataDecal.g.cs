@@ -33,6 +33,67 @@ public partial class RParticleModuleTypeDataDecal : BmSDK.Engine.ParticleModuleT
     protected RParticleModuleTypeDataDecal(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FParticleDecalData
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FParticleDecalData
+    {
+        /// <summary>
+        /// StructProperty: Transform
+        /// </summary>
+        public unsafe BmSDK.GameObject.FMatrix Transform
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: UnscaledTransform
+        /// </summary>
+        public unsafe BmSDK.GameObject.FMatrix UnscaledTransform
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 64); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: ClipValue
+        /// </summary>
+        public unsafe System.Numerics.Vector3 ClipValue
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 128); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: Random
+        /// </summary>
+        public unsafe float Random
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 140); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: UVScaleOffset
+        /// </summary>
+        public unsafe System.Numerics.Vector4 UVScaleOffset
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector4>(Ptr + 144); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: DynamicParameter
+        /// </summary>
+        public unsafe System.Numerics.Vector4 DynamicParameter
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector4>(Ptr + 160); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }; }
+        }
+    }
+
+    /// <summary>
     /// ObjectProperty: Material
     /// </summary>
     public unsafe BmSDK.Engine.MaterialInterface Material

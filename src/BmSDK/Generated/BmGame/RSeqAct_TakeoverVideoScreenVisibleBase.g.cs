@@ -33,29 +33,15 @@ public partial class RSeqAct_TakeoverVideoScreenVisibleBase : BmSDK.Engine.Seque
     protected RSeqAct_TakeoverVideoScreenVisibleBase(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// NameProperty: HandlerName
+    /// Function: CheckVis
     /// </summary>
-    public unsafe BmSDK.FName HandlerName
+    public unsafe static bool CheckVis(BmSDK.Engine.WorldInfo WorldInfo)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 324); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_TakeoverVideoScreenVisibleBase.CheckVis", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(WorldInfo, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
     }
 
-    /// <summary>
-    /// BoolProperty: bCallHandler
-    /// </summary>
-    public unsafe bool bCallHandler
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 332); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: Targets
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.GameObject> Targets
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GameObject>>(Ptr + 336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
-    }
 }

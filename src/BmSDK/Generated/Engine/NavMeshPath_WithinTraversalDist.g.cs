@@ -33,6 +33,31 @@ public partial class NavMeshPath_WithinTraversalDist : BmSDK.Engine.NavMeshPathC
     protected NavMeshPath_WithinTraversalDist(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Recycle
+    /// </summary>
+    public unsafe void Recycle()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPath_WithinTraversalDist.Recycle", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: DontExceedMaxDist
+    /// </summary>
+    public unsafe static bool DontExceedMaxDist(BmSDK.Engine.NavigationHandle NavHandle, float InMaxTraversalDist, bool bInSoft = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPath_WithinTraversalDist.DontExceedMaxDist", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NavHandle, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(InMaxTraversalDist, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bInSoft, paramsPtr + 12);
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 16);
+    }
+
+    /// <summary>
     /// FloatProperty: MaxTraversalDist
     /// </summary>
     public unsafe float MaxTraversalDist

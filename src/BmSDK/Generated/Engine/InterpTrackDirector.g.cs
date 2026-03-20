@@ -33,6 +33,16 @@ public partial class InterpTrackDirector : BmSDK.Engine.InterpTrack, BmSDK.IGame
     protected InterpTrackDirector(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: ECameraBlendType
+    /// </summary>
+    public enum ECameraBlendType
+    {
+        CBT_PlayerWalkCamera = 0,
+        CBT_PlayerCombatCamera = 1,
+        CBT_MAX = 2,
+    }
+
+    /// <summary>
     /// BoolProperty: bResetCameraBehindBatman
     /// </summary>
     public unsafe bool bResetCameraBehindBatman

@@ -68,6 +68,17 @@ public partial class UmbraStreamingVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
+    /// Enum: EUmbraStorageMode
+    /// </summary>
+    public enum EUmbraStorageMode
+    {
+        USM_None = 0,
+        USM_WithVolume = 1,
+        USM_SeparatePackage = 2,
+        USM_Max = 3,
+    }
+
+    /// <summary>
     /// StructProperty: UmbraVolumeGuid
     /// </summary>
     public unsafe BmSDK.GameObject.FGuid UmbraVolumeGuid

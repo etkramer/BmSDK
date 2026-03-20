@@ -68,74 +68,24 @@ public partial class RThugMineablePointFloor : BmSDK.BmGame.RThugMineablePointBa
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// BoolProperty: bValidPlacement
+    /// Function: IsReadyForMinePlacement
     /// </summary>
-    public unsafe bool bValidPlacement
+    public unsafe bool IsReadyForMinePlacement()
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 668) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 668); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 668); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineablePointFloor.IsReadyForMinePlacement", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
 
     /// <summary>
-    /// BoolProperty: bMineActive
+    /// Function: GetStandPoint
     /// </summary>
-    public unsafe bool bMineActive
+    public unsafe System.Numerics.Vector3 GetStandPoint()
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 668) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 668); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 668); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: GoodIcon
-    /// </summary>
-    public unsafe BmSDK.Engine.SpriteComponent GoodIcon
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpriteComponent>(Ptr + 672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: BadIcon
-    /// </summary>
-    public unsafe BmSDK.Engine.SpriteComponent BadIcon
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpriteComponent>(Ptr + 680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: RoomState
-    /// </summary>
-    public unsafe BmSDK.BmGame.RBMRoomAIState RoomState
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMRoomAIState>(Ptr + 688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: CurrentMine
-    /// </summary>
-    public unsafe BmSDK.BmGame.RThugMineBase CurrentMine
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RThugMineBase>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: AssignedMiner
-    /// </summary>
-    public unsafe BmSDK.BmGame.RAEC_Search_Sub_FloorMine AssignedMiner
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_Search_Sub_FloorMine>(Ptr + 704); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: linkedMinePoints
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RThugMineablePointBase> linkedMinePoints
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RThugMineablePointBase>>(Ptr + 712); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineablePointFloor.GetStandPoint", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
     }
 }

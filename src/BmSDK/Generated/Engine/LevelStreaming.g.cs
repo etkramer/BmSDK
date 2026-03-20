@@ -33,6 +33,116 @@ public partial class LevelStreaming : BmSDK.GameObject, BmSDK.IGameObject
     protected LevelStreaming(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: RequestUnloadAndRemoval
+    /// </summary>
+    public unsafe void RequestUnloadAndRemoval()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LevelStreaming.RequestUnloadAndRemoval", true);
+        byte* paramsPtr = stackalloc byte[64];
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
+    /// Enum: EReflectionGroup
+    /// </summary>
+    public enum EReflectionGroup
+    {
+        ReflectionGroup_All = 0,
+        ReflectionGroup = 1,
+        ReflectionGroup_1a = 2,
+        ReflectionGroup_1b = 3,
+        ReflectionGroup_1c = 4,
+        ReflectionGroup_2 = 5,
+        ReflectionGroup_2a = 6,
+        ReflectionGroup_2b = 7,
+        ReflectionGroup_2c = 8,
+        ReflectionGroup_3 = 9,
+        ReflectionGroup_3a = 10,
+        ReflectionGroup_3b = 11,
+        ReflectionGroup_3c = 12,
+        ReflectionGroup_4 = 13,
+        ReflectionGroup_4a = 14,
+        ReflectionGroup_4b = 15,
+        ReflectionGroup_4c = 16,
+        ReflectionGroup_5 = 17,
+        ReflectionGroup_5a = 18,
+        ReflectionGroup_5b = 19,
+        ReflectionGroup_5c = 20,
+        ReflectionGroup_6 = 21,
+        ReflectionGroup_6a = 22,
+        ReflectionGroup_6b = 23,
+        ReflectionGroup_6c = 24,
+        ReflectionGroup_7 = 25,
+        ReflectionGroup_7a = 26,
+        ReflectionGroup_7b = 27,
+        ReflectionGroup_7c = 28,
+        ReflectionGroup_8 = 29,
+        ReflectionGroup_8a = 30,
+        ReflectionGroup_8b = 31,
+        ReflectionGroup_8c = 32,
+        ReflectionGroup_9 = 33,
+        ReflectionGroup_9a = 34,
+        ReflectionGroup_9b = 35,
+        ReflectionGroup_9c = 36,
+        ReflectionGroup_10 = 37,
+        ReflectionGroup_MAX = 38,
+    }
+
+    /// <summary>
+    /// Enum: ENavMeshGroup
+    /// </summary>
+    public enum ENavMeshGroup
+    {
+        NavMeshGroup_All = 0,
+        NavMeshGroup = 1,
+        NavMeshGroup_1a = 2,
+        NavMeshGroup_1b = 3,
+        NavMeshGroup_1c = 4,
+        NavMeshGroup_2 = 5,
+        NavMeshGroup_2a = 6,
+        NavMeshGroup_2b = 7,
+        NavMeshGroup_2c = 8,
+        NavMeshGroup_3 = 9,
+        NavMeshGroup_3a = 10,
+        NavMeshGroup_3b = 11,
+        NavMeshGroup_3c = 12,
+        NavMeshGroup_4 = 13,
+        NavMeshGroup_4a = 14,
+        NavMeshGroup_4b = 15,
+        NavMeshGroup_4c = 16,
+        NavMeshGroup_5 = 17,
+        NavMeshGroup_5a = 18,
+        NavMeshGroup_5b = 19,
+        NavMeshGroup_5c = 20,
+        NavMeshGroup_6 = 21,
+        NavMeshGroup_6a = 22,
+        NavMeshGroup_6b = 23,
+        NavMeshGroup_6c = 24,
+        NavMeshGroup_7 = 25,
+        NavMeshGroup_7a = 26,
+        NavMeshGroup_7b = 27,
+        NavMeshGroup_7c = 28,
+        NavMeshGroup_8 = 29,
+        NavMeshGroup_8a = 30,
+        NavMeshGroup_8b = 31,
+        NavMeshGroup_8c = 32,
+        NavMeshGroup_9 = 33,
+        NavMeshGroup_9a = 34,
+        NavMeshGroup_9b = 35,
+        NavMeshGroup_9c = 36,
+        NavMeshGroup_10 = 37,
+        NavMeshGroup_MAX = 38,
+    }
+
+    /// <summary>
     /// NameProperty: PackageName
     /// </summary>
     public unsafe BmSDK.FName PackageName

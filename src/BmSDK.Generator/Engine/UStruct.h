@@ -9,10 +9,8 @@ class UStruct : public UField
 	// BM4 has no PropertiesSize or MinAlignment
 
 	FIELD(UStruct*, SuperStruct)
-	BYTE UNK1[32];
-	FIELD(UField*, Children)
-
-	BYTE UNK5[24];
+    FIELD(UField*, Children)
+	BYTE UNK1[56];
 
 public:
 	STATIC_CLASS("Core.Struct")

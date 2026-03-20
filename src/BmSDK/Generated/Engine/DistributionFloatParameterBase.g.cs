@@ -33,6 +33,17 @@ public partial class DistributionFloatParameterBase : BmSDK.Engine.DistributionF
     protected DistributionFloatParameterBase(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: DistributionParamMode
+    /// </summary>
+    public enum DistributionParamMode
+    {
+        DPM_Normal = 0,
+        DPM_Abs = 1,
+        DPM_Direct = 2,
+        DPM_MAX = 3,
+    }
+
+    /// <summary>
     /// NameProperty: ParameterName
     /// </summary>
     public unsafe BmSDK.FName ParameterName

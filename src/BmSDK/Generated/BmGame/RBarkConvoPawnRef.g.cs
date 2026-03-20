@@ -33,6 +33,18 @@ public partial class RBarkConvoPawnRef : BmSDK.BmGame.RBarkConvoNode, BmSDK.IGam
     protected RBarkConvoPawnRef(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: OnLockedSpeakerFound
+    /// </summary>
+    public unsafe void OnLockedSpeakerFound(BmSDK.BmGame.RBarkConvo Convo)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoPawnRef.OnLockedSpeakerFound", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Convo, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// StrProperty: Description
     /// </summary>
     public unsafe BmSDK.FString Description

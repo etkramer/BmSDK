@@ -32,21 +32,4 @@ public partial class MaterialExpressionBlurTextureSampleParameter2D : BmSDK.Engi
     /// </summary>
     protected MaterialExpressionBlurTextureSampleParameter2D(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// NameProperty: ParameterName
-    /// </summary>
-    public unsafe BmSDK.FName ParameterName
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 296); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
-    }
-
-    /// <summary>
-    /// StructProperty: ExpressionGUID
-    /// </summary>
-    public unsafe BmSDK.GameObject.FGuid ExpressionGUID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 304); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
-    }
 }

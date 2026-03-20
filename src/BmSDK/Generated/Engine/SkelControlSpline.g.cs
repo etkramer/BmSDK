@@ -33,6 +33,17 @@ public partial class SkelControlSpline : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     protected SkelControlSpline(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: ESplineControlRotMode
+    /// </summary>
+    public enum ESplineControlRotMode
+    {
+        SCR_NoChange = 0,
+        SCR_AlongSpline = 1,
+        SCR_Interpolate = 2,
+        SCR_MAX = 3,
+    }
+
+    /// <summary>
     /// IntProperty: SplineLength
     /// </summary>
     public unsafe int SplineLength

@@ -33,6 +33,16 @@ public partial class MaterialExpressionDecodeVertexMorph : BmSDK.Engine.Material
     protected MaterialExpressionDecodeVertexMorph(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EVertMorphFormat
+    /// </summary>
+    public enum EVertMorphFormat
+    {
+        VMF_UV2_UV3 = 0,
+        VMF_VertexColor = 1,
+        VMF_MAX = 2,
+    }
+
+    /// <summary>
     /// StructProperty: Distance
     /// </summary>
     public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Distance

@@ -33,6 +33,42 @@ public partial class Material : BmSDK.Engine.MaterialInterface, BmSDK.IGameObjec
     protected Material(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FMaterialFunctionInfo
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FMaterialFunctionInfo
+    {
+        /// <summary>
+        /// StructProperty: StateId
+        /// </summary>
+        public unsafe BmSDK.GameObject.FGuid StateId
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// ObjectProperty: Function
+        /// </summary>
+        public unsafe BmSDK.Engine.MaterialFunction Function
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialFunction>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+    }
+
+    /// <summary>
+    /// Enum: EParticleDownsampling
+    /// </summary>
+    public enum EParticleDownsampling
+    {
+        PDS_Full = 0,
+        PDS_Half = 1,
+        PDS_Quarter = 2,
+        PDS_MAX = 3,
+    }
+
+    /// <summary>
     /// ObjectProperty: PhysMaterialMask
     /// </summary>
     public unsafe BmSDK.Engine.Texture2D PhysMaterialMask

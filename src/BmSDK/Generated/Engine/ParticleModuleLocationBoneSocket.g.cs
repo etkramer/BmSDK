@@ -33,6 +33,42 @@ public partial class ParticleModuleLocationBoneSocket : BmSDK.Engine.ParticleMod
     protected ParticleModuleLocationBoneSocket(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: ELocationBoneSocketSelectionMethod
+    /// </summary>
+    public enum ELocationBoneSocketSelectionMethod
+    {
+        BONESOCKETSEL_Sequential = 0,
+        BONESOCKETSEL_Random = 1,
+        BONESOCKETSEL_RandomExhaustive = 2,
+        BONESOCKETSEL_MAX = 3,
+    }
+
+    /// <summary>
+    /// Struct: FLocationBoneSocketInfo
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FLocationBoneSocketInfo
+    {
+        /// <summary>
+        /// NameProperty: BoneSocketName
+        /// </summary>
+        public unsafe BmSDK.FName BoneSocketName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: Offset
+        /// </summary>
+        public unsafe System.Numerics.Vector3 Offset
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+    }
+
+    /// <summary>
     /// ByteProperty: SourceType
     /// </summary>
     public unsafe BmSDK.Engine.ParticleModuleLocationBoneSocket.ELocationBoneSocketSource SourceType

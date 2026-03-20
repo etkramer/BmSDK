@@ -33,6 +33,17 @@ public partial class RSeqAct_SetCurrentGadget : BmSDK.Engine.SequenceAction, BmS
     protected RSeqAct_SetCurrentGadget(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetCurrentGadget.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ClassProperty: GadgetType
     /// </summary>
     public unsafe BmSDK.Class GadgetType

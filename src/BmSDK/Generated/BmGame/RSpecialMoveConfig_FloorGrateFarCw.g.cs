@@ -32,48 +32,4 @@ public partial class RSpecialMoveConfig_FloorGrateFarCw : BmSDK.BmGame.RSpecialM
     /// </summary>
     protected RSpecialMoveConfig_FloorGrateFarCw(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// NameProperty: JumpAnimName
-    /// </summary>
-    public unsafe BmSDK.FName JumpAnimName
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
-    }
-
-    /// <summary>
-    /// NameProperty: EnterGrateAnimName
-    /// </summary>
-    public unsafe BmSDK.FName EnterGrateAnimName
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
-    }
-
-    /// <summary>
-    /// NameProperty: Jump180AnimName
-    /// </summary>
-    public unsafe BmSDK.FName Jump180AnimName
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
-    }
-
-    /// <summary>
-    /// NameProperty: EnterGrate180AnimName
-    /// </summary>
-    public unsafe BmSDK.FName EnterGrate180AnimName
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
-
-    /// <summary>
-    /// FloatProperty: JumpDistanceToGrate
-    /// </summary>
-    public unsafe float JumpDistanceToGrate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
-    }
 }

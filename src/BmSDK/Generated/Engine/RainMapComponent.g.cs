@@ -33,6 +33,18 @@ public partial class RainMapComponent : BmSDK.Engine.ActorComponent, BmSDK.IGame
     protected RainMapComponent(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: SetHidden
+    /// </summary>
+    public unsafe void SetHidden(bool bInHidden)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RainMapComponent.SetHidden", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bInHidden, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// FloatProperty: WetnessGlobalScale
     /// </summary>
     public unsafe float WetnessGlobalScale

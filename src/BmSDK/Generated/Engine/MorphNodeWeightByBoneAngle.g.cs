@@ -33,6 +33,31 @@ public partial class MorphNodeWeightByBoneAngle : BmSDK.Engine.MorphNodeWeightBa
     protected MorphNodeWeightByBoneAngle(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FBoneAngleMorph
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FBoneAngleMorph
+    {
+        /// <summary>
+        /// FloatProperty: Angle
+        /// </summary>
+        public unsafe float Angle
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: TargetWeight
+        /// </summary>
+        public unsafe float TargetWeight
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+    }
+
+    /// <summary>
     /// FloatProperty: Angle
     /// </summary>
     public unsafe float Angle

@@ -32,12 +32,4 @@ public partial class ActorFactoryPointLightToggleable : BmSDK.Engine.ActorFactor
     /// </summary>
     protected ActorFactoryPointLightToggleable(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// ComponentProperty: LightComponent
-    /// </summary>
-    public unsafe BmSDK.Engine.PointLightComponent LightComponent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PointLightComponent>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
-    }
 }

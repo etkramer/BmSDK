@@ -33,6 +33,17 @@ public partial class RSmashablePropConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObj
     protected RSmashablePropConfig(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: PropKOType
+    /// </summary>
+    public enum PropKOType
+    {
+        KO_None = 0,
+        KO_Window = 1,
+        KO_Table = 2,
+        KO_MAX = 3,
+    }
+
+    /// <summary>
     /// ObjectProperty: PropMesh
     /// </summary>
     public unsafe BmSDK.Engine.StaticMesh PropMesh

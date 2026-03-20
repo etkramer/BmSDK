@@ -33,6 +33,28 @@ public partial class DOFAndBloomEffect : BmSDK.Engine.DOFEffect, BmSDK.IGameObje
     protected DOFAndBloomEffect(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EDOFQuality
+    /// </summary>
+    public enum EDOFQuality
+    {
+        DOFQuality_Low = 0,
+        DOFQuality_Medium = 1,
+        DOFQuality_High = 2,
+        DOFQuality_MAX = 3,
+    }
+
+    /// <summary>
+    /// Enum: EDOFType
+    /// </summary>
+    public enum EDOFType
+    {
+        DOFType_SimpleDOF = 0,
+        DOFType_ReferenceDOF = 1,
+        DOFType_BokehDOF = 2,
+        DOFType_MAX = 3,
+    }
+
+    /// <summary>
     /// FloatProperty: BloomOverload
     /// </summary>
     public unsafe float BloomOverload

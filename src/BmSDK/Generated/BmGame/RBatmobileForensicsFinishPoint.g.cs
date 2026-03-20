@@ -67,39 +67,4 @@ public partial class RBatmobileForensicsFinishPoint : BmSDK.BmGame.RBatmobileFor
         where TComponent : class, Framework.IScriptComponent<RBatmobileForensicsFinishPoint>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// ComponentProperty: RevealedParticleFX
-    /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystemComponent RevealedParticleFX
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bRevealed
-    /// </summary>
-    public unsafe bool bRevealed
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 676); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bInitialised
-    /// </summary>
-    public unsafe bool bInitialised
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 676); }
-    }
-
-    /// <summary>
-    /// FloatProperty: fRevealProportion
-    /// </summary>
-    public unsafe float fRevealProportion
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
-    }
 }

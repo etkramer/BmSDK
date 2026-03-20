@@ -33,6 +33,17 @@ public partial class RBarkGroupContext_Combat : BmSDK.BmGame.RBarkGroupContext, 
     protected RBarkGroupContext_Combat(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetDlgComponentsOfGroup
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkDialogueComponent> GetDlgComponentsOfGroup()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkGroupContext_Combat.GetDlgComponentsOfGroup", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkDialogueComponent>>(paramsPtr + 0);
+    }
+
+    /// <summary>
     /// ObjectProperty: CombatManager
     /// </summary>
     public unsafe BmSDK.BmGame.RBMCombatManager CombatManager

@@ -68,146 +68,17 @@ public partial class RFallingRescueVolume : BmSDK.BmGame.RKillVolume, BmSDK.IGam
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// FloatProperty: KillTime
+    /// Function: Touch
     /// </summary>
-    public unsafe float KillTime
+    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 740); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bActive
-    /// </summary>
-    public unsafe bool bActive
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 744) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 744); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 744); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bGrappleUp
-    /// </summary>
-    public unsafe bool bGrappleUp
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 744) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 744); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 744); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bDisablesBatarangCamera
-    /// </summary>
-    public unsafe bool bDisablesBatarangCamera
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 744) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 744); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 744); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bAutoRescue
-    /// </summary>
-    public unsafe bool bAutoRescue
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 744) & 8) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 744); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 744); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bForceFalling
-    /// </summary>
-    public unsafe bool bForceFalling
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 744) & 16) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 744); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 744); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bNoRumble
-    /// </summary>
-    public unsafe bool bNoRumble
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 744) & 32) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 744); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 744); }
-    }
-
-    /// <summary>
-    /// ClassProperty: DamageType
-    /// </summary>
-    public unsafe BmSDK.Class DamageType
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 748); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: EntryAmbienceLoop
-    /// </summary>
-    public unsafe BmSDK.Engine.AkEvent EntryAmbienceLoop
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 756); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: DeathAnimset
-    /// </summary>
-    public unsafe BmSDK.Engine.AnimSet DeathAnimset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 764); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 764); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: InstantGrappleRescueMove
-    /// </summary>
-    public unsafe BmSDK.BmGame.RSpecialMoveConfig InstantGrappleRescueMove
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 772); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 772); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: DeathSpecialMove
-    /// </summary>
-    public unsafe BmSDK.BmGame.RSpecialMoveConfig DeathSpecialMove
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 780); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 780); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: DelayedKillPlayer
-    /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer DelayedKillPlayer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer>(Ptr + 788); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
-    }
-
-    /// <summary>
-    /// NameProperty: DeathAnim
-    /// </summary>
-    public unsafe BmSDK.FName DeathAnim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 796); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 796); }
-    }
-
-    /// <summary>
-    /// NameProperty: GrappleRescueAnim
-    /// </summary>
-    public unsafe BmSDK.FName GrappleRescueAnim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 804); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 804); }
-    }
-
-    /// <summary>
-    /// FloatProperty: KillZoneTimeDilation
-    /// </summary>
-    public unsafe float KillZoneTimeDilation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 812); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFallingRescueVolume.Touch", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(OtherComp, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitLocation, paramsPtr + 16);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitNormal, paramsPtr + 28);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

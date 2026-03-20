@@ -33,6 +33,18 @@ public partial class InstancedFoliageSettings : BmSDK.GameObject, BmSDK.IGameObj
     protected InstancedFoliageSettings(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: FoliageCullOption
+    /// </summary>
+    public enum FoliageCullOption
+    {
+        FOLIAGECULL_Cull = 0,
+        FOLIAGECULL_ScaleZ = 1,
+        FOLIAGECULL_ScaleXYZ = 2,
+        FOLIAGECULL_TranslateZ = 3,
+        FOLIAGECULL_MAX = 4,
+    }
+
+    /// <summary>
     /// FloatProperty: Density
     /// </summary>
     public unsafe float Density

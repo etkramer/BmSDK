@@ -33,6 +33,17 @@ public partial class RSeqAct_SetJokerStartupOptions : BmSDK.Engine.SequenceActio
     protected RSeqAct_SetJokerStartupOptions(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetJokerStartupOptions.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: Joker
     /// </summary>
     public unsafe BmSDK.BmGame.RPawnJokerHallucination Joker

@@ -33,6 +33,22 @@ public partial class RockOn : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IGame
     protected RockOn(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EPostProcessAAType
+    /// </summary>
+    public enum EPostProcessAAType
+    {
+        PostProcessAA_Off = 0,
+        PostProcessAA_FXAA0 = 1,
+        PostProcessAA_FXAA1 = 2,
+        PostProcessAA_FXAA2 = 3,
+        PostProcessAA_FXAA3 = 4,
+        PostProcessAA_FXAA4 = 5,
+        PostProcessAA_FXAA5 = 6,
+        PostProcessAA_MLAA = 7,
+        PostProcessAA_MAX = 8,
+    }
+
+    /// <summary>
     /// StructProperty: SceneShadows
     /// </summary>
     public unsafe BmSDK.GameObject.FLinearColor SceneShadows

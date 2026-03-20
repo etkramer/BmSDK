@@ -33,6 +33,25 @@ public partial class RB_RadialImpulseComponent : BmSDK.Engine.PrimitiveComponent
     protected RB_RadialImpulseComponent(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: FireImpulse
+    /// </summary>
+    public unsafe void FireImpulse(System.Numerics.Vector3 Origin)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_RadialImpulseComponent.FireImpulse", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Origin, paramsPtr + 0);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
     /// ByteProperty: ImpulseFalloff
     /// </summary>
     public unsafe BmSDK.Engine.PrimitiveComponent.ERadialImpulseFalloff ImpulseFalloff

@@ -33,6 +33,17 @@ public partial class UIDataStore_GameState : BmSDK.Engine.UIDataStore, BmSDK.IGa
     protected UIDataStore_GameState(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: NotifyGameSessionEnded
+    /// </summary>
+    public unsafe bool NotifyGameSessionEnded()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataStore_GameState.NotifyGameSessionEnded", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
+    }
+
+    /// <summary>
     /// DelegateProperty: __OnRefreshDataFieldValue__Delegate
     /// </summary>
     public unsafe System.IntPtr __OnRefreshDataFieldValue__Delegate

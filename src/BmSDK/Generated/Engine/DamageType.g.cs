@@ -33,6 +33,18 @@ public partial class DamageType : BmSDK.GameObject, BmSDK.IGameObject
     protected DamageType(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: VehicleDamageScalingFor
+    /// </summary>
+    public unsafe static float VehicleDamageScalingFor(BmSDK.Engine.Vehicle V)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DamageType.VehicleDamageScalingFor", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(V, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 8);
+    }
+
+    /// <summary>
     /// BoolProperty: bArmorStops
     /// </summary>
     public unsafe bool bArmorStops

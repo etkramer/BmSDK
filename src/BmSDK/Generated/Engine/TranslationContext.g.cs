@@ -33,6 +33,25 @@ public partial class TranslationContext : BmSDK.GameObject, BmSDK.IGameObject
     protected TranslationContext(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: RegisterTranslatorTag
+    /// </summary>
+    public unsafe bool RegisterTranslatorTag(BmSDK.Engine.TranslatorTag InTagHandler)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TranslationContext.RegisterTranslatorTag", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(InTagHandler, paramsPtr + 0);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
+    }
+
+    /// <summary>
     /// ArrayProperty: TranslatorTags
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.Engine.TranslatorTag> TranslatorTags

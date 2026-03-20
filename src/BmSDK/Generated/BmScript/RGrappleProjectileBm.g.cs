@@ -67,12 +67,4 @@ public partial class RGrappleProjectileBm : BmSDK.BmGame.RGrappleProjectile, BmS
         where TComponent : class, Framework.IScriptComponent<RGrappleProjectileBm>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// StructProperty: AttachOffset
-    /// </summary>
-    public unsafe System.Numerics.Vector3 AttachOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 852); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 852); }
-    }
 }

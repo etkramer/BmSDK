@@ -33,6 +33,28 @@ public partial class MWBIDEmailFormScreenMessage : BmSDK.BmGame.MWBIDDataMessage
     protected MWBIDEmailFormScreenMessage(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Flush
+    /// </summary>
+    public unsafe void Flush()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDEmailFormScreenMessage.Flush", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: Init
+    /// </summary>
+    public unsafe void Init()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDEmailFormScreenMessage.Init", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// StructProperty: WBIDAccountInfo
     /// </summary>
     public unsafe BmSDK.BmGame.MWBIDEmailFormScreenMessage.FUserData WBIDAccountInfo

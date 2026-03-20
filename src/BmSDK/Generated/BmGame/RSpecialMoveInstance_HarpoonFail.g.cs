@@ -68,56 +68,14 @@ public partial class RSpecialMoveInstance_HarpoonFail : BmSDK.BmGame.RSpecialMov
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ArrayProperty: MyRope
+    /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RSimpleRopeComponent> MyRope
+    public unsafe void TriggerSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator MoveLocation)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RSimpleRopeComponent>>(Ptr + 876); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 876); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: HandJoinRope
-    /// </summary>
-    public unsafe BmSDK.BmGame.RSimpleRopeComponent HandJoinRope
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSimpleRopeComponent>(Ptr + 892); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 892); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: BatClawRope
-    /// </summary>
-    public unsafe BmSDK.BmGame.RSimpleRopeComponent BatClawRope
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSimpleRopeComponent>(Ptr + 900); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 900); }
-    }
-
-    /// <summary>
-    /// BoolProperty: RopesReleased
-    /// </summary>
-    public unsafe bool RopesReleased
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 908) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 908); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 908); }
-    }
-
-    /// <summary>
-    /// BoolProperty: TwoStageRetract
-    /// </summary>
-    public unsafe bool TwoStageRetract
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 908) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 908); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 908); }
-    }
-
-    /// <summary>
-    /// ByteProperty: HandOnRope
-    /// </summary>
-    public unsafe BmSDK.BmGame.RSpecialMoveInstance_HarpoonBase.BatclawRopeHandOn HandOnRope
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveInstance_HarpoonBase.BatclawRopeHandOn>(Ptr + 912); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 912); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_HarpoonFail.TriggerSpecialMove", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(MoveLocation, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

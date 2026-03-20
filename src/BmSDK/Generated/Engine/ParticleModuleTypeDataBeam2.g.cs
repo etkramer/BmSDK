@@ -33,6 +33,42 @@ public partial class ParticleModuleTypeDataBeam2 : BmSDK.Engine.ParticleModuleTy
     protected ParticleModuleTypeDataBeam2(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EBeamTaperMethod
+    /// </summary>
+    public enum EBeamTaperMethod
+    {
+        PEBTM_None = 0,
+        PEBTM_Full = 1,
+        PEBTM_Partial = 2,
+        PEBTM_MAX = 3,
+    }
+
+    /// <summary>
+    /// Struct: FBeamTargetData
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FBeamTargetData
+    {
+        /// <summary>
+        /// NameProperty: TargetName
+        /// </summary>
+        public unsafe BmSDK.FName TargetName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: TargetPercentage
+        /// </summary>
+        public unsafe float TargetPercentage
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+    }
+
+    /// <summary>
     /// ByteProperty: BeamMethod
     /// </summary>
     public unsafe BmSDK.Engine.ParticleModuleTypeDataBeam2.EBeam2Method BeamMethod

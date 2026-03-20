@@ -32,30 +32,4 @@ public partial class ParticleModuleLocationWorldOffset : BmSDK.Engine.ParticleMo
     /// </summary>
     protected ParticleModuleLocationWorldOffset(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// StructProperty: StartLocation
-    /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector StartLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
-
-    /// <summary>
-    /// FloatProperty: DistributeOverNPoints
-    /// </summary>
-    public unsafe float DistributeOverNPoints
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
-    }
-
-    /// <summary>
-    /// FloatProperty: DistributeThreshold
-    /// </summary>
-    public unsafe float DistributeThreshold
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
-    }
 }

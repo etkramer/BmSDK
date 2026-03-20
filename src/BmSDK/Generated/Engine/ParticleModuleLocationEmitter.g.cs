@@ -33,6 +33,16 @@ public partial class ParticleModuleLocationEmitter : BmSDK.Engine.ParticleModule
     protected ParticleModuleLocationEmitter(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: ELocationEmitterSelectionMethod
+    /// </summary>
+    public enum ELocationEmitterSelectionMethod
+    {
+        ELESM_Random = 0,
+        ELESM_Sequential = 1,
+        ELESM_MAX = 2,
+    }
+
+    /// <summary>
     /// NameProperty: EmitterName
     /// </summary>
     public unsafe BmSDK.FName EmitterName

@@ -68,47 +68,39 @@ public partial class MPawnVillainBlackMaskBase : BmSDK.BmGame.RPawnVillainThug, 
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// BoolProperty: bCanBeKnackered
+    /// Function: IsInLOSHack
     /// </summary>
-    public unsafe bool bCanBeKnackered
+    public unsafe bool IsInLOSHack(System.Numerics.Vector3 EndLocation, out System.Numerics.Vector3 HitLocation, out System.Numerics.Vector3 MuzzleLoc, out BmSDK.Rotator MuzzleRot)
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6672) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6672); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6672); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnVillainBlackMaskBase.IsInLOSHack", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(EndLocation, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        HitLocation = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 12);
+        MuzzleLoc = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 24);
+        MuzzleRot = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(paramsPtr + 36);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 48);
     }
 
     /// <summary>
-    /// BoolProperty: bForceBatarangTarget
+    /// Function: IsDoingRangeAttack
     /// </summary>
-    public unsafe bool bForceBatarangTarget
+    public unsafe bool IsDoingRangeAttack()
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6672) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6672); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6672); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnVillainBlackMaskBase.IsDoingRangeAttack", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
 
     /// <summary>
-    /// FloatProperty: DualStrikeRangeTolerance
+    /// Function: BlackMaskHideGun
     /// </summary>
-    public unsafe float DualStrikeRangeTolerance
+    public unsafe void BlackMaskHideGun()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6676); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: BatarangOverride
-    /// </summary>
-    public unsafe BmSDK.Engine.RInteractionComponent BatarangOverride
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionComponent>(Ptr + 6680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6680); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: SpecialAttackAnimset
-    /// </summary>
-    public unsafe BmSDK.Engine.AnimSet SpecialAttackAnimset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6688); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnVillainBlackMaskBase.BlackMaskHideGun", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

@@ -68,11 +68,14 @@ public partial class RAEC_LockedIn_Fallback : BmSDK.BmGame.RAEC_LockedIn_GroupBa
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ObjectProperty: PawnNeedingLockedInReply
+    /// Function: OnAssign
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnVillain PawnNeedingLockedInReply
+    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LockedIn_Fallback.OnAssign", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewCon, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

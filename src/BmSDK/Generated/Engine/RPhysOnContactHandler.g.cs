@@ -33,6 +33,26 @@ public partial class RPhysOnContactHandler : BmSDK.GameObject, BmSDK.IGameObject
     protected RPhysOnContactHandler(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: OnContact
+    /// </summary>
+    public unsafe void OnContact(BmSDK.Engine.RB_BodyInstance BodyInst0, BmSDK.Engine.RB_BodyInstance BodyInst1)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPhysOnContactHandler.OnContact", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(BodyInst0, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(BodyInst1, paramsPtr + 8);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: OwnerObject
     /// </summary>
     public unsafe BmSDK.GameObject OwnerObject

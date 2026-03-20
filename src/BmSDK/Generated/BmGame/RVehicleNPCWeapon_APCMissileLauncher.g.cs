@@ -68,182 +68,48 @@ public partial class RVehicleNPCWeapon_APCMissileLauncher : BmSDK.BmGame.RVehicl
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// FloatProperty: Range
+    /// Function: CancelAttack
     /// </summary>
-    public unsafe float Range
+    public unsafe void CancelAttack(bool DueToBeingRammed)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleNPCWeapon_APCMissileLauncher.CancelAttack", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(DueToBeingRammed, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// FloatProperty: TurnSpeed
+    /// Function: CreateAimingPoseConfig
     /// </summary>
-    public unsafe float TurnSpeed
+    public unsafe bool CreateAimingPoseConfig(BmSDK.BmGame.RBMPawnAI Pawn, BmSDK.Engine.AnimSet Anims)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 700); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleNPCWeapon_APCMissileLauncher.CreateAimingPoseConfig", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Pawn, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Anims, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 16);
     }
 
     /// <summary>
-    /// FloatProperty: CurYaw
+    /// Function: UpdatePawnAnim
     /// </summary>
-    public unsafe float CurYaw
+    public unsafe float UpdatePawnAnim(System.Numerics.Vector3 Target, float DeltaTime, bool IsFiring)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 704); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: ControlledPawn
-    /// </summary>
-    public unsafe BmSDK.BmGame.RBMPawnAI ControlledPawn
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPawnAI>(Ptr + 708); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: ControlledPawnAnimSet
-    /// </summary>
-    public unsafe BmSDK.Engine.AnimSet ControlledPawnAnimSet
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 716); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: FireTarget
-    /// </summary>
-    public unsafe BmSDK.Engine.Actor FireTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 724); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 724); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: ThrownObject
-    /// </summary>
-    public unsafe BmSDK.BmGame.RBMCombatThrownObject ThrownObject
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatThrownObject>(Ptr + 732); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: FireMuzzleFlash
-    /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem FireMuzzleFlash
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 740); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: FireEvent
-    /// </summary>
-    public unsafe BmSDK.Engine.AkEvent FireEvent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 748); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
-    }
-
-    /// <summary>
-    /// FloatProperty: YawToTarget
-    /// </summary>
-    public unsafe float YawToTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 756); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
-    }
-
-    /// <summary>
-    /// IntProperty: SeatIndex
-    /// </summary>
-    public unsafe int SeatIndex
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
-    }
-
-    /// <summary>
-    /// FloatProperty: TimeBothStopped
-    /// </summary>
-    public unsafe float TimeBothStopped
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 764); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 764); }
-    }
-
-    /// <summary>
-    /// StructProperty: FireDirection
-    /// </summary>
-    public unsafe System.Numerics.Vector3 FireDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 768); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
-    }
-
-    /// <summary>
-    /// StructProperty: FireTargetLoc
-    /// </summary>
-    public unsafe System.Numerics.Vector3 FireTargetLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 780); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 780); }
-    }
-
-    /// <summary>
-    /// StructProperty: FireTargetDiff
-    /// </summary>
-    public unsafe System.Numerics.Vector3 FireTargetDiff
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 792); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 792); }
-    }
-
-    /// <summary>
-    /// StructProperty: FireTargetVel
-    /// </summary>
-    public unsafe System.Numerics.Vector3 FireTargetVel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 804); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 804); }
-    }
-
-    /// <summary>
-    /// FloatProperty: FireTargetLag
-    /// </summary>
-    public unsafe float FireTargetLag
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 816); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 816); }
-    }
-
-    /// <summary>
-    /// FloatProperty: ProjectileLifespan
-    /// </summary>
-    public unsafe float ProjectileLifespan
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 820); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 820); }
-    }
-
-    /// <summary>
-    /// NameProperty: RecoilAnimName
-    /// </summary>
-    public unsafe BmSDK.FName RecoilAnimName
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 824); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 824); }
-    }
-
-    /// <summary>
-    /// BoolProperty: AlwaysHitTarget
-    /// </summary>
-    public unsafe bool AlwaysHitTarget
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 832) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 832); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 832); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleNPCWeapon_APCMissileLauncher.UpdatePawnAnim", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(Target, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 12);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(IsFiring, paramsPtr + 16);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 20);
     }
 }

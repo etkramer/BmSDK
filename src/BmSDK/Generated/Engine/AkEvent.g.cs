@@ -33,6 +33,26 @@ public partial class AkEvent : BmSDK.Engine.AkAsset, BmSDK.IGameObject
     protected AkEvent(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: IsAudibleAt
+    /// </summary>
+    public unsafe bool IsAudibleAt(float distanceUU, bool resultIfUnknown)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkEvent.IsAudibleAt", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(distanceUU, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(resultIfUnknown, paramsPtr + 4);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
+    }
+
+    /// <summary>
     /// FloatProperty: MaxAttenuation
     /// </summary>
     public unsafe float MaxAttenuation

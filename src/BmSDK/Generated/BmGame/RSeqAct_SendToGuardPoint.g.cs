@@ -33,6 +33,17 @@ public partial class RSeqAct_SendToGuardPoint : BmSDK.Engine.SequenceAction, BmS
     protected RSeqAct_SendToGuardPoint(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SendToGuardPoint.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: TargetGuardPoint
     /// </summary>
     public unsafe BmSDK.BmGame.RGuardPoint TargetGuardPoint

@@ -33,6 +33,16 @@ public partial class RSkelControl_LimitConstraint : BmSDK.Engine.SkelControlBase
     protected RSkelControl_LimitConstraint(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: ELimitSpace
+    /// </summary>
+    public enum ELimitSpace
+    {
+        LIMITSPACE_Parentspace = 0,
+        LIMITSPACE_Referencespace = 1,
+        LIMITSPACE_MAX = 2,
+    }
+
+    /// <summary>
     /// BoolProperty: RotationXMin_Enabled
     /// </summary>
     public unsafe bool RotationXMin_Enabled

@@ -33,6 +33,27 @@ public partial class ApexNoiseComponent : BmSDK.Engine.ApexFieldSamplerComponent
     protected ApexNoiseComponent(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: ENoiseType
+    /// </summary>
+    public enum ENoiseType
+    {
+        SIMPLEX = 0,
+        CURL = 1,
+        ENoiseType_MAX = 2,
+    }
+
+    /// <summary>
+    /// Enum: EFieldType
+    /// </summary>
+    public enum EFieldType
+    {
+        Force = 0,
+        VELOCITY_DRAG = 1,
+        VELOCITY_DIRECT = 2,
+        EFieldType_MAX = 3,
+    }
+
+    /// <summary>
     /// FloatProperty: BoundaryScale
     /// </summary>
     public unsafe float BoundaryScale

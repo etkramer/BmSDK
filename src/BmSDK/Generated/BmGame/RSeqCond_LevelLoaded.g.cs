@@ -33,6 +33,17 @@ public partial class RSeqCond_LevelLoaded : BmSDK.Engine.SequenceCondition, BmSD
     protected RSeqCond_LevelLoaded(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqCond_LevelLoaded.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ArrayProperty: Levels
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.FName> Levels

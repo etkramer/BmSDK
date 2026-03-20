@@ -33,6 +33,17 @@ public partial class RSeqAct_SetBrainScriptImportance : BmSDK.Engine.SequenceAct
     protected RSeqAct_SetBrainScriptImportance(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetBrainScriptImportance.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: TargetPawn
     /// </summary>
     public unsafe BmSDK.BmGame.RBMPawnAI TargetPawn

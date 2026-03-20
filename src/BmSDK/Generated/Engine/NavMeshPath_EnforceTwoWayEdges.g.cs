@@ -33,47 +33,14 @@ public partial class NavMeshPath_EnforceTwoWayEdges : BmSDK.Engine.NavMeshPathCo
     protected NavMeshPath_EnforceTwoWayEdges(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// ObjectProperty: NextConstraint
+    /// Function: EnforceTwoWayEdges
     /// </summary>
-    public unsafe BmSDK.Engine.NavMeshPathConstraint NextConstraint
+    public unsafe static bool EnforceTwoWayEdges(BmSDK.Engine.NavigationHandle NavHandle)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavMeshPathConstraint>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
-
-    /// <summary>
-    /// IntProperty: NumNodesProcessed
-    /// </summary>
-    public unsafe int NumNodesProcessed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
-
-    /// <summary>
-    /// IntProperty: NumThrownOutNodes
-    /// </summary>
-    public unsafe int NumThrownOutNodes
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
-
-    /// <summary>
-    /// FloatProperty: AddedDirectCost
-    /// </summary>
-    public unsafe float AddedDirectCost
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
-
-    /// <summary>
-    /// FloatProperty: AddedHeuristicCost
-    /// </summary>
-    public unsafe float AddedHeuristicCost
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPath_EnforceTwoWayEdges.EnforceTwoWayEdges", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NavHandle, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
     }
 }

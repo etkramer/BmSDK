@@ -33,6 +33,169 @@ public partial class AnimSet : BmSDK.GameObject, BmSDK.IGameObject
     protected AnimSet(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: FindAnimSequence
+    /// </summary>
+    public unsafe BmSDK.Engine.AnimSequence FindAnimSequence(BmSDK.FName SequenceName)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSet.FindAnimSequence", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(SequenceName, paramsPtr + 0);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence>(paramsPtr + 8);
+    }
+
+    /// <summary>
+    /// Struct: FAnimSetPreviewPartner
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FAnimSetPreviewPartner
+    {
+        /// <summary>
+        /// NameProperty: AnimSetName
+        /// </summary>
+        public unsafe BmSDK.FName AnimSetName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// StrProperty: AnimPostfixName
+        /// </summary>
+        public unsafe BmSDK.FString AnimPostfixName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FAnimSetPreviewAttachment
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FAnimSetPreviewAttachment
+    {
+        /// <summary>
+        /// NameProperty: MeshName
+        /// </summary>
+        public unsafe BmSDK.FName MeshName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// NameProperty: BoneOrSocketName
+        /// </summary>
+        public unsafe BmSDK.FName BoneOrSocketName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FAnimSetPreviewWeapon
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FAnimSetPreviewWeapon
+    {
+        /// <summary>
+        /// ByteProperty: Preset
+        /// </summary>
+        public unsafe BmSDK.Engine.AnimSet.EAnimSetPreviewWeaponPreset Preset
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet.EAnimSetPreviewWeaponPreset>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// ClassProperty: Class
+        /// </summary>
+        public unsafe BmSDK.Class Class
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+
+        /// <summary>
+        /// NameProperty: OverrideBoneOrSocketName
+        /// </summary>
+        public unsafe BmSDK.FName OverrideBoneOrSocketName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+        }
+    }
+
+    /// <summary>
+    /// Enum: EAnimSetPreviewWeaponPreset
+    /// </summary>
+    public enum EAnimSetPreviewWeaponPreset
+    {
+        ASPWP_None = 0,
+        ASPWP_DummySeparator1 = 1,
+        ASPWP_RBMWeaponRifle = 2,
+        ASPWP_RBMWeaponSniper = 3,
+        ASPWP_RBMWeaponShotgun = 4,
+        ASPWP_RBMWeaponStunStick = 5,
+        ASPWP_RBMWeaponBat = 6,
+        ASPWP_RBMWeaponMiniSledgeHammer = 7,
+        ASPWP_RBMWeaponKnife = 8,
+        ASPWP_RBMWeaponBottle = 9,
+        ASPWP_RBMWeaponShield = 10,
+        ASPWP_RBMWeaponTigerShield = 11,
+        ASPWP_RBMWeaponRocketLauncher = 12,
+        ASPWP_RBMWeaponNinjaSword = 13,
+        ASPWP_RBMWeaponHeavyObjectCrate = 14,
+        ASPWP_RBMWeaponHeavyObjectFireExtinguisher = 15,
+        ASPWP_DummySeperator2 = 16,
+        ASPWP_RVoiceSynthesiserBm = 17,
+        ASPWP_RMagneticBlastBm = 18,
+        ASPWP_RLineLauncherBm = 19,
+        ASPWP_RJammerGadgetBm = 20,
+        ASPWP_RHarpoonGunBm = 21,
+        ASPWP_RGrappleGunBm = 22,
+        ASPWP_RGooSprayBm = 23,
+        ASPWP_RFreezeSprayBm = 24,
+        ASPWP_RBatmobileRemoteBm = 25,
+        ASPWP_RBatarangBm = 26,
+        ASPWP_MAX = 27,
+    }
+
+    /// <summary>
+    /// Struct: FAnimSetMeshLinkup
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FAnimSetMeshLinkup
+    {
+        /// <summary>
+        /// ArrayProperty: BoneToTrackTable
+        /// </summary>
+        public unsafe BmSDK.TArray<int> BoneToTrackTable
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// ArrayProperty: TrackToBoneTable
+        /// </summary>
+        public unsafe BmSDK.TArray<int> TrackToBoneTable
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+    }
+
+    /// <summary>
     /// NameProperty: PreviewSkelMeshName
     /// </summary>
     public unsafe BmSDK.FName PreviewSkelMeshName

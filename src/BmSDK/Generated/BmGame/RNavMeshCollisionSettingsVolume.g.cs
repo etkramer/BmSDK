@@ -68,6 +68,17 @@ public partial class RNavMeshCollisionSettingsVolume : BmSDK.Engine.Volume, BmSD
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
+    /// Enum: ENavMeshCollisionSettings
+    /// </summary>
+    public enum ENavMeshCollisionSettings
+    {
+        ENavColl_None = 0,
+        ENavColl_BlockAllRagdolls = 1,
+        ENavColl_BlockNoRagdolls = 2,
+        ENavColl_MAX = 3,
+    }
+
+    /// <summary>
     /// ArrayProperty: PolyRefList
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.Engine.Pylon.FPolyReference> PolyRefList

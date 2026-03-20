@@ -33,20 +33,35 @@ public partial class MWBIDVerifyScreenMessage : BmSDK.BmGame.MWBIDDataMessage, B
     protected MWBIDVerifyScreenMessage(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// BoolProperty: bIsConfirm
+    /// Function: Flush
     /// </summary>
-    public unsafe bool bIsConfirm
+    public unsafe void Flush()
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDVerifyScreenMessage.Flush", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// IntProperty: SelectedButton
+    /// Function: Init
     /// </summary>
-    public unsafe int SelectedButton
+    public unsafe void Init()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDVerifyScreenMessage.Init", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Enum: ButtonGroup_Verify
+    /// </summary>
+    public enum ButtonGroup_Verify
+    {
+        BGV_ResendEmail = 0,
+        BGV_ChangeWBID = 1,
+        BGV_OK = 2,
+        BGV_MAX = 3,
     }
 }

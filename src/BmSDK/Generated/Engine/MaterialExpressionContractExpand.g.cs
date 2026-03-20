@@ -33,6 +33,16 @@ public partial class MaterialExpressionContractExpand : BmSDK.Engine.MaterialExp
     protected MaterialExpressionContractExpand(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EContractOrExpandInput
+    /// </summary>
+    public enum EContractOrExpandInput
+    {
+        Contract_Input = 0,
+        Expand_Input = 1,
+        EContractOrExpandInput_MAX = 2,
+    }
+
+    /// <summary>
     /// StructProperty: Input
     /// </summary>
     public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Input

@@ -33,6 +33,55 @@ public partial class RMultiDestGoalData : BmSDK.GameObject, BmSDK.IGameObject
     protected RMultiDestGoalData(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: DisplayGoalData
+    /// </summary>
+    public unsafe void DisplayGoalData()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiDestGoalData.DisplayGoalData", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: AllNotFound
+    /// </summary>
+    public unsafe bool AllNotFound()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiDestGoalData.AllNotFound", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: GetShortestPathFromIndex
+    /// </summary>
+    public unsafe bool GetShortestPathFromIndex(int StartIndex, out float bestDist, out int BestPath)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiDestGoalData.GetShortestPathFromIndex", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(StartIndex, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        bestDist = BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 4);
+        BestPath = BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 8);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 12);
+    }
+
+    /// <summary>
+    /// Function: GetShortestPath
+    /// </summary>
+    public unsafe bool GetShortestPath(out float bestDist, out int BestPath)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiDestGoalData.GetShortestPath", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        bestDist = BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
+        BestPath = BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
+    }
+
+    /// <summary>
     /// ArrayProperty: GoalData
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.BmGame.RMultiDestGoalData.FPerGoalInfo> GoalData

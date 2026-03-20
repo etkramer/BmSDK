@@ -68,29 +68,14 @@ public partial class RBmStealthTakeDownStage_VentAttack : BmSDK.BmGame.RStealthT
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// BoolProperty: bRemovedGrate
+    /// Function: OverrideChosenAnim
     /// </summary>
-    public unsafe bool bRemovedGrate
+    public unsafe void OverrideChosenAnim(out int Anim)
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
-    }
-
-    /// <summary>
-    /// StructProperty: OriginalPlayerLocation
-    /// </summary>
-    public unsafe System.Numerics.Vector3 OriginalPlayerLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1668); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: WallGrate
-    /// </summary>
-    public unsafe BmSDK.BmGame.RRemoveableGrate WallGrate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRemoveableGrate>(Ptr + 1680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1680); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBmStealthTakeDownStage_VentAttack.OverrideChosenAnim", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        Anim = BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+        return;
     }
 }

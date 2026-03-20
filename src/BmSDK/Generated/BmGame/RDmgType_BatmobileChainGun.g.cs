@@ -32,12 +32,4 @@ public partial class RDmgType_BatmobileChainGun : BmSDK.BmGame.RDmgType_Ranged, 
     /// </summary>
     protected RDmgType_BatmobileChainGun(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// FloatProperty: StaggerBatmanRange
-    /// </summary>
-    public unsafe float StaggerBatmanRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
-    }
 }

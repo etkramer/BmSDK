@@ -33,47 +33,24 @@ public partial class RSeqAct_RandomSwitchForGameOver : BmSDK.Engine.SeqAct_Switc
     protected RSeqAct_RandomSwitchForGameOver(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// IntProperty: LinkCount
+    /// Function: CopyOutState
     /// </summary>
-    public unsafe int LinkCount
+    public unsafe void CopyOutState()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RandomSwitchForGameOver.CopyOutState", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// IntProperty: IncrementAmount
+    /// Function: CopyInState
     /// </summary>
-    public unsafe int IncrementAmount
+    public unsafe void CopyInState()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bLooping
-    /// </summary>
-    public unsafe bool bLooping
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 360) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 360); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 360); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bAutoDisableLinks
-    /// </summary>
-    public unsafe bool bAutoDisableLinks
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 360) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 360); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 360); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: Indices
-    /// </summary>
-    public unsafe BmSDK.TArray<int> Indices
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 364); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 364); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RandomSwitchForGameOver.CopyInState", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

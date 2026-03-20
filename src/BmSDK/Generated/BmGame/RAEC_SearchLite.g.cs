@@ -68,110 +68,37 @@ public partial class RAEC_SearchLite : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGame
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// FloatProperty: LastAdaptiveReminderTime
+    /// Function: GetCurrentPatrolIDs
     /// </summary>
-    public unsafe float LastAdaptiveReminderTime
+    public unsafe BmSDK.TArray<int> GetCurrentPatrolIDs()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchLite.GetCurrentPatrolIDs", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(paramsPtr + 0);
     }
 
     /// <summary>
-    /// FloatProperty: LastCheckinBarkTime
+    /// Function: OnAssign
     /// </summary>
-    public unsafe float LastCheckinBarkTime
+    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewMember)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 724); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 724); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchLite.OnAssign", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMember, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// FloatProperty: LastCalloutBarkTime
+    /// Function: SetNewFearLevel
     /// </summary>
-    public unsafe float LastCalloutBarkTime
+    public unsafe void SetNewFearLevel(BmSDK.BmGame.RBMRoomAIState.VillainFearLevel FearLevel)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 728); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bProcessingBuddies
-    /// </summary>
-    public unsafe bool bProcessingBuddies
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 732) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 732); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 732); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: PotentialSearchBuddy
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnVillain> PotentialSearchBuddy
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnVillain>>(Ptr + 736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: ThugSearch
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RMultiNavHandleWrapper> ThugSearch
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RMultiNavHandleWrapper>>(Ptr + 752); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
-    }
-
-    /// <summary>
-    /// FloatProperty: MinDistForGesture
-    /// </summary>
-    public unsafe float MinDistForGesture
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 768); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
-    }
-
-    /// <summary>
-    /// FloatProperty: MaxSeparationForGesture
-    /// </summary>
-    public unsafe float MaxSeparationForGesture
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 772); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 772); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: CurrentForcedGroups
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RAEC_SearchBase.FGroupingHistoryEntry> CurrentForcedGroups
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RAEC_SearchBase.FGroupingHistoryEntry>>(Ptr + 776); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: BlockedForcedGroups
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RAEC_SearchBase.FGroupingHistoryEntry> BlockedForcedGroups
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RAEC_SearchBase.FGroupingHistoryEntry>>(Ptr + 792); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 792); }
-    }
-
-    /// <summary>
-    /// FloatProperty: ForcePairMinTime
-    /// </summary>
-    public unsafe float ForcePairMinTime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 808); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 808); }
-    }
-
-    /// <summary>
-    /// FloatProperty: PairLockoutTime
-    /// </summary>
-    public unsafe float PairLockoutTime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 812); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchLite.SetNewFearLevel", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(FearLevel, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

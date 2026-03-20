@@ -68,83 +68,13 @@ public partial class RGangFleePressPoint : BmSDK.BmGame.RGangFleePressPointBase,
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ArrayProperty: AnimSets
+    /// Function: GetBehaviourClass
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> AnimSets
+    public unsafe BmSDK.Class GetBehaviourClass()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: TransitionInAnimations
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FName> TransitionInAnimations
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 684); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: IdleAnimation
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FName> IdleAnimation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 700); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: TransitionOutAnimations
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FName> TransitionOutAnimations
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 716); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: TransitionOutFastAnimations
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FName> TransitionOutFastAnimations
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 732); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
-    }
-
-    /// <summary>
-    /// FloatProperty: PressWidth
-    /// </summary>
-    public unsafe float PressWidth
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 748); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: PressSlots
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnVillain> PressSlots
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnVillain>>(Ptr + 752); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
-    }
-
-    /// <summary>
-    /// FloatProperty: PressMinWidth
-    /// </summary>
-    public unsafe float PressMinWidth
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 768); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: MyPylon
-    /// </summary>
-    public unsafe BmSDK.Engine.Pylon MyPylon
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Pylon>(Ptr + 772); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 772); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangFleePressPoint.GetBehaviourClass", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(paramsPtr + 0);
     }
 }

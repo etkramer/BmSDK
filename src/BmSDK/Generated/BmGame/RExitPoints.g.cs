@@ -33,6 +33,44 @@ public partial class RExitPoints : BmSDK.GameObject, BmSDK.IGameObject
     protected RExitPoints(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: ShowDebug
+    /// </summary>
+    public unsafe void ShowDebug(BmSDK.Engine.Actor DebugActor, bool bPerm = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExitPoints.ShowDebug", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(DebugActor, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(bPerm, paramsPtr + 8);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Struct: FExitPointPair
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FExitPointPair
+    {
+        /// <summary>
+        /// ArrayProperty: TargetEdges
+        /// </summary>
+        public unsafe BmSDK.TArray<System.Numerics.Vector3> TargetEdges
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.Numerics.Vector3>>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: ViewEdge
+        /// </summary>
+        public unsafe System.Numerics.Vector3 ViewEdge
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+    }
+
+    /// <summary>
     /// StructProperty: PerimeterCenter
     /// </summary>
     public unsafe System.Numerics.Vector3 PerimeterCenter

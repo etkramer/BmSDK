@@ -67,48 +67,4 @@ public partial class RTriggerVolumeMissionBasedDisabled : BmSDK.BmGame.RTriggerV
         where TComponent : class, Framework.IScriptComponent<RTriggerVolumeMissionBasedDisabled>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// StrProperty: AssociatedMission
-    /// </summary>
-    public unsafe BmSDK.FString AssociatedMission
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 740); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
-    }
-
-    /// <summary>
-    /// StrProperty: InstructionTextIfNotSelected
-    /// </summary>
-    public unsafe BmSDK.FString InstructionTextIfNotSelected
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 756); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bShowMostWantedPrompt
-    /// </summary>
-    public unsafe bool bShowMostWantedPrompt
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 772); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bActive
-    /// </summary>
-    public unsafe bool bActive
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 772); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: CachedTouchEvents
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.SequenceEvent> CachedTouchEvents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.SequenceEvent>>(Ptr + 776); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
-    }
 }

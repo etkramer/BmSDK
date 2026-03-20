@@ -67,48 +67,4 @@ public partial class RPawnVillainAbseilBatmobileTakedownTarget : BmSDK.BmGame.RP
         where TComponent : class, Framework.IScriptComponent<RPawnVillainAbseilBatmobileTakedownTarget>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// BoolProperty: bCanBeKnackered
-    /// </summary>
-    public unsafe bool bCanBeKnackered
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6672) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6672); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6672); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bForceBatarangTarget
-    /// </summary>
-    public unsafe bool bForceBatarangTarget
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6672) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6672); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6672); }
-    }
-
-    /// <summary>
-    /// FloatProperty: DualStrikeRangeTolerance
-    /// </summary>
-    public unsafe float DualStrikeRangeTolerance
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6676); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: BatarangOverride
-    /// </summary>
-    public unsafe BmSDK.Engine.RInteractionComponent BatarangOverride
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionComponent>(Ptr + 6680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6680); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: SpecialAttackAnimset
-    /// </summary>
-    public unsafe BmSDK.Engine.AnimSet SpecialAttackAnimset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6688); }
-    }
 }

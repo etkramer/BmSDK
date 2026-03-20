@@ -33,6 +33,25 @@ public partial class MultiFont : BmSDK.Engine.Font, BmSDK.IGameObject
     protected MultiFont(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetResolutionTestTableIndex
+    /// </summary>
+    public unsafe int GetResolutionTestTableIndex(float HeightTest)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiFont.GetResolutionTestTableIndex", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(HeightTest, paramsPtr + 0);
+        var oldFlags = funcManaged.FunctionFlags;
+        var oldNative = funcManaged.iNative;
+        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
+        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
+        funcManaged.iNative = 0;
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        funcManaged.iNative = oldNative;
+        funcManaged.FunctionFlags = oldFlags;
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
+    }
+
+    /// <summary>
     /// ArrayProperty: ResolutionTestTable
     /// </summary>
     public unsafe BmSDK.TArray<float> ResolutionTestTable

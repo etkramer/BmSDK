@@ -68,20 +68,15 @@ public partial class RStealthTakedownStage_LedgeHangDropToGrab : BmSDK.BmGame.RS
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// StructProperty: ShortDropBackAnimSet
+    /// Function: GetReferencePosition
     /// </summary>
-    public unsafe BmSDK.BmGame.RStealthTakeDownStage.FTakeDownStageAnimSet ShortDropBackAnimSet
+    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RStealthTakeDownStage.FTakeDownStageAnimSet>(Ptr + 1700); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1700); }
-    }
-
-    /// <summary>
-    /// StructProperty: ShortDropFrontAnimSet
-    /// </summary>
-    public unsafe BmSDK.BmGame.RStealthTakeDownStage.FTakeDownStageAnimSet ShortDropFrontAnimSet
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RStealthTakeDownStage.FTakeDownStageAnimSet>(Ptr + 2008); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2008); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_LedgeHangDropToGrab.GetReferencePosition", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        ReferencePosition = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
+        ReferenceRotation = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(paramsPtr + 12);
+        return;
     }
 }

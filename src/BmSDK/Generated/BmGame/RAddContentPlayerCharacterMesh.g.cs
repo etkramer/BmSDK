@@ -33,6 +33,40 @@ public partial class RAddContentPlayerCharacterMesh : BmSDK.BmGame.RAdditionalCo
     protected RAddContentPlayerCharacterMesh(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FBoneTrackingPlayer
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FBoneTrackingPlayer
+    {
+        /// <summary>
+        /// ArrayProperty: Bones
+        /// </summary>
+        public unsafe BmSDK.TArray<BmSDK.FName> Bones
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// ArrayProperty: Events
+        /// </summary>
+        public unsafe BmSDK.TArray<BmSDK.Engine.AkEvent> Events
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkEvent>>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+
+        /// <summary>
+        /// ArrayProperty: RTPCToSet
+        /// </summary>
+        public unsafe BmSDK.TArray<BmSDK.Engine.AkParameterName> RTPCToSet
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkParameterName>>(Ptr + 32); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
+        }
+    }
+
+    /// <summary>
     /// ObjectProperty: MainMesh
     /// </summary>
     public unsafe BmSDK.Engine.SkeletalMesh MainMesh

@@ -67,30 +67,4 @@ public partial class SceneCapturePortalActor : BmSDK.Engine.SceneCaptureReflectA
         where TComponent : class, Framework.IScriptComponent<SceneCapturePortalActor>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// ComponentProperty: StaticMesh
-    /// </summary>
-    public unsafe BmSDK.Engine.StaticMeshComponent StaticMesh
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: ReflectMaterialInst
-    /// </summary>
-    public unsafe BmSDK.Engine.MaterialInstanceConstant ReflectMaterialInst
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bNeverDisable
-    /// </summary>
-    public unsafe bool bNeverDisable
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 696); }
-    }
 }

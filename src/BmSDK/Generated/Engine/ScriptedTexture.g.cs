@@ -33,6 +33,18 @@ public partial class ScriptedTexture : BmSDK.Engine.TextureRenderTarget2D, BmSDK
     protected ScriptedTexture(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Render
+    /// </summary>
+    public unsafe void Render(BmSDK.Engine.Canvas C)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ScriptedTexture.Render", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(C, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// BoolProperty: bNeedsUpdate
     /// </summary>
     public unsafe bool bNeedsUpdate

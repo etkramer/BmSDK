@@ -68,11 +68,13 @@ public partial class RBMCombatThrownObject_ShotgunDestroyed : BmSDK.BmGame.RBMCo
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// StructProperty: rThugDirection
+    /// Function: PostBeginPlay
     /// </summary>
-    public unsafe BmSDK.Rotator rThugDirection
+    public unsafe void PostBeginPlay()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1184); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_ShotgunDestroyed.PostBeginPlay", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

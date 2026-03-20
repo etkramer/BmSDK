@@ -33,6 +33,22 @@ public partial class RSeqAct_SwitchFlags : BmSDK.Engine.SequenceAction, BmSDK.IG
     protected RSeqAct_SwitchFlags(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: SFModeType
+    /// </summary>
+    public enum SFModeType
+    {
+        SFMode_All_True = 0,
+        SFMode_All_False = 1,
+        SFMode_First_True = 2,
+        SFMode_First_False = 3,
+        SFMode_LastSequential_True = 4,
+        SFMode_LastSequential_False = 5,
+        SFMode_Last_True = 6,
+        SFMode_Last_False = 7,
+        SFMode_MAX = 8,
+    }
+
+    /// <summary>
     /// ArrayProperty: FlagList
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.BmGame.RSeqAct_SwitchFlags.FFlagItem> FlagList

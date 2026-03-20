@@ -67,21 +67,4 @@ public partial class RBMWeaponBatBase : BmSDK.BmGame.RBMWeaponPipeBase, BmSDK.IG
         where TComponent : class, Framework.IScriptComponent<RBMWeaponBatBase>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// ObjectProperty: PoseConfig
-    /// </summary>
-    public unsafe BmSDK.BmGame.RPoseConfig PoseConfig
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPoseConfig>(Ptr + 1748); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1748); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: PoseConfig_CombatPose
-    /// </summary>
-    public unsafe BmSDK.BmGame.RPoseConfig PoseConfig_CombatPose
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPoseConfig>(Ptr + 1756); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1756); }
-    }
 }

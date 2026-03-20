@@ -33,6 +33,25 @@ public partial class MaterialExpressionTransformPosition : BmSDK.Engine.Material
     protected MaterialExpressionTransformPosition(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EMaterialPositionTransform
+    /// </summary>
+    public enum EMaterialPositionTransform
+    {
+        TRANSFORMPOS_World = 0,
+        TRANSFORMPOS_MAX = 1,
+    }
+
+    /// <summary>
+    /// Enum: EMaterialPositionTransformSource
+    /// </summary>
+    public enum EMaterialPositionTransformSource
+    {
+        TRANSFORMPOSSOURCE_Local = 0,
+        TRANSFORMPOSSOURCE_PostProjection = 1,
+        TRANSFORMPOSSOURCE_MAX = 2,
+    }
+
+    /// <summary>
     /// StructProperty: Input
     /// </summary>
     public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Input

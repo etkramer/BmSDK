@@ -68,29 +68,14 @@ public partial class MAEC_LaughingGas_Inside : BmSDK.BmGame.RAEC_Smoke_Inside, B
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ObjectProperty: smokeScreen
+    /// Function: OnAssign
     /// </summary>
-    public unsafe BmSDK.BmGame.RSmokeScreen smokeScreen
+    public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSmokeScreen>(Ptr + 720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bPlayedInSmokeBark
-    /// </summary>
-    public unsafe bool bPlayedInSmokeBark
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 728) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 728); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 728); }
-    }
-
-    /// <summary>
-    /// FloatProperty: ReleaseTimer
-    /// </summary>
-    public unsafe float ReleaseTimer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 732); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_LaughingGas_Inside.OnAssign", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewCon, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 }

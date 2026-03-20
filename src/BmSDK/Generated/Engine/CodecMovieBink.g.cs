@@ -32,12 +32,4 @@ public partial class CodecMovieBink : BmSDK.Engine.CodecMovie, BmSDK.IGameObject
     /// </summary>
     protected CodecMovieBink(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// FloatProperty: PlaybackDuration
-    /// </summary>
-    public unsafe float PlaybackDuration
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
 }

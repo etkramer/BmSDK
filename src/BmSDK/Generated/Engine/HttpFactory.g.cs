@@ -33,6 +33,17 @@ public partial class HttpFactory : BmSDK.GameObject, BmSDK.IGameObject
     protected HttpFactory(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: CreateRequest
+    /// </summary>
+    public unsafe static BmSDK.Engine.HttpRequestInterface CreateRequest()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HttpFactory.CreateRequest", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.HttpRequestInterface>(paramsPtr + 0);
+    }
+
+    /// <summary>
     /// StrProperty: HttpRequestClassName
     /// </summary>
     public unsafe BmSDK.FString HttpRequestClassName

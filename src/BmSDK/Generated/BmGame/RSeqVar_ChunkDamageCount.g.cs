@@ -32,12 +32,4 @@ public partial class RSeqVar_ChunkDamageCount : BmSDK.Engine.SeqVar_Int, BmSDK.I
     /// </summary>
     protected RSeqVar_ChunkDamageCount(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// IntProperty: IntValue
-    /// </summary>
-    public unsafe int IntValue
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
-    }
 }

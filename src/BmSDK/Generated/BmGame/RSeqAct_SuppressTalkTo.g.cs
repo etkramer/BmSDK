@@ -33,6 +33,17 @@ public partial class RSeqAct_SuppressTalkTo : BmSDK.Engine.SequenceAction, BmSDK
     protected RSeqAct_SuppressTalkTo(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Activated
+    /// </summary>
+    public unsafe void Activated()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SuppressTalkTo.Activated", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
     /// ObjectProperty: pawnFriendly
     /// </summary>
     public unsafe BmSDK.BmGame.RPawnFriendly pawnFriendly

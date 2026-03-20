@@ -33,20 +33,36 @@ public partial class MWBIDAttractScreenMessage : BmSDK.BmGame.MWBIDDataMessage, 
     protected MWBIDAttractScreenMessage(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// BoolProperty: bIsConfirm
+    /// Function: Flush
     /// </summary>
-    public unsafe bool bIsConfirm
+    public unsafe void Flush()
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDAttractScreenMessage.Flush", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// IntProperty: SelectedButton
+    /// Function: Init
     /// </summary>
-    public unsafe int SelectedButton
+    public unsafe void Init()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDAttractScreenMessage.Init", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Enum: ButtonGroup_Create
+    /// </summary>
+    public enum ButtonGroup_Create
+    {
+        BGC_Create = 0,
+        BGC_Link = 1,
+        BGC_Cancel = 2,
+        BGC_Ignore = 3,
+        BGC_MAX = 4,
     }
 }

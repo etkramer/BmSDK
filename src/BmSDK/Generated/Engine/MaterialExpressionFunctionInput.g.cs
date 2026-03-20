@@ -33,6 +33,21 @@ public partial class MaterialExpressionFunctionInput : BmSDK.Engine.MaterialExpr
     protected MaterialExpressionFunctionInput(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EFunctionInputType
+    /// </summary>
+    public enum EFunctionInputType
+    {
+        FunctionInput_Scalar = 0,
+        FunctionInput_Vector2 = 1,
+        FunctionInput_Vector3 = 2,
+        FunctionInput_Vector4 = 3,
+        FunctionInput_Texture2D = 4,
+        FunctionInput_TextureCube = 5,
+        FunctionInput_StaticBool = 6,
+        FunctionInput_MAX = 7,
+    }
+
+    /// <summary>
     /// StructProperty: Preview
     /// </summary>
     public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Preview

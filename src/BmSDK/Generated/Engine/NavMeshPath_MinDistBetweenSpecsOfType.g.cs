@@ -33,6 +33,33 @@ public partial class NavMeshPath_MinDistBetweenSpecsOfType : BmSDK.Engine.NavMes
     protected NavMeshPath_MinDistBetweenSpecsOfType(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: Recycle
+    /// </summary>
+    public unsafe void Recycle()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPath_MinDistBetweenSpecsOfType.Recycle", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// Function: EnforceMinDist
+    /// </summary>
+    public unsafe static bool EnforceMinDist(BmSDK.Engine.NavigationHandle NavHandle, float InMinDist, BmSDK.Engine.Pylon.ENavMeshEdgeType InEdgeType, System.Numerics.Vector3 LastLocation = default, float InPenalty = default)
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPath_MinDistBetweenSpecsOfType.EnforceMinDist", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(NavHandle, paramsPtr + 0);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(InMinDist, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(InEdgeType, paramsPtr + 12);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(LastLocation, paramsPtr + 16);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(InPenalty, paramsPtr + 28);
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 32);
+    }
+
+    /// <summary>
     /// FloatProperty: MinDistBetweenEdgeTypes
     /// </summary>
     public unsafe float MinDistBetweenEdgeTypes

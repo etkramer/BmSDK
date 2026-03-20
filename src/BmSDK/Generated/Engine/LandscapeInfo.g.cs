@@ -33,6 +33,46 @@ public partial class LandscapeInfo : BmSDK.GameObject, BmSDK.IGameObject
     protected LandscapeInfo(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FLandscapeAddCollision
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FLandscapeAddCollision
+    {
+        /// <summary>
+        /// StructProperty: Corners
+        /// </summary>
+        public unsafe System.Numerics.Vector3 Corners_0
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+        /// <summary>
+        /// StructProperty: Corners
+        /// </summary>
+        public unsafe System.Numerics.Vector3 Corners_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+        }
+        /// <summary>
+        /// StructProperty: Corners
+        /// </summary>
+        public unsafe System.Numerics.Vector3 Corners_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+        }
+        /// <summary>
+        /// StructProperty: Corners
+        /// </summary>
+        public unsafe System.Numerics.Vector3 Corners_3
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 36); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
+        }
+    }
+
+    /// <summary>
     /// StructProperty: LandscapeGuid
     /// </summary>
     public unsafe BmSDK.GameObject.FGuid LandscapeGuid

@@ -32,30 +32,4 @@ public partial class RInterpTrackVehicleTurretPitch : BmSDK.Engine.InterpTrackFl
     /// </summary>
     protected RInterpTrackVehicleTurretPitch(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// StructProperty: FloatTrack
-    /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat FloatTrack
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
-    }
-
-    /// <summary>
-    /// FloatProperty: CurveTension
-    /// </summary>
-    public unsafe float CurveTension
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
-    }
-
-    /// <summary>
-    /// StructProperty: Randomiser
-    /// </summary>
-    public unsafe BmSDK.Engine.InterpTrackFloatBase.FRandomGenerator Randomiser
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackFloatBase.FRandomGenerator>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
 }

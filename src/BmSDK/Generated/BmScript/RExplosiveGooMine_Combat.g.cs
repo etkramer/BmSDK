@@ -67,30 +67,4 @@ public partial class RExplosiveGooMine_Combat : BmSDK.BmScript.RExplosiveGooMine
         where TComponent : class, Framework.IScriptComponent<RExplosiveGooMine_Combat>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
-    /// <summary>
-    /// ComponentProperty: ForceField
-    /// </summary>
-    public unsafe BmSDK.Engine.NxForceFieldRadialComponent ForceField
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NxForceFieldRadialComponent>(Ptr + 1096); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1096); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bMovePerformed
-    /// </summary>
-    public unsafe bool bMovePerformed
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1104) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1104); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1104); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: LethalExplosion
-    /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem LethalExplosion
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 1108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1108); }
-    }
 }

@@ -33,6 +33,16 @@ public partial class ParticleModuleAttractorParticle : BmSDK.Engine.ParticleModu
     protected ParticleModuleAttractorParticle(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: EAttractorParticleSelectionMethod
+    /// </summary>
+    public enum EAttractorParticleSelectionMethod
+    {
+        EAPSM_Random = 0,
+        EAPSM_Sequential = 1,
+        EAPSM_MAX = 2,
+    }
+
+    /// <summary>
     /// NameProperty: EmitterName
     /// </summary>
     public unsafe BmSDK.FName EmitterName

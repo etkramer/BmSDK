@@ -32,12 +32,4 @@ public partial class RDmgType_FreezeGun : BmSDK.BmGame.RDmgType_Ranged, BmSDK.IG
     /// </summary>
     protected RDmgType_FreezeGun(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// FloatProperty: StaggerBatmanRange
-    /// </summary>
-    public unsafe float StaggerBatmanRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
-    }
 }

@@ -33,6 +33,17 @@ public partial class RSpecialMoveConfig_SwingToVantagePoint : BmSDK.BmGame.RSpec
     protected RSpecialMoveConfig_SwingToVantagePoint(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Enum: ESwingToVantagePointExtraInfo
+    /// </summary>
+    public enum ESwingToVantagePointExtraInfo
+    {
+        STVPEI_GrappleTarget = 0,
+        STVPEI_LaunchReferencePoint = 1,
+        STGEI_GrapplePointLoc = 2,
+        ESwingToVantagePointExtraInfo_MAX = 3,
+    }
+
+    /// <summary>
     /// NameProperty: SwingLaunchAnimName
     /// </summary>
     public unsafe BmSDK.FName SwingLaunchAnimName

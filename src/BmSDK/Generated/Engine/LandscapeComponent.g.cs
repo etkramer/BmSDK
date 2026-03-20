@@ -33,6 +33,40 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     protected LandscapeComponent(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Struct: FWeightmapLayerAllocationInfo
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
+    public partial record struct FWeightmapLayerAllocationInfo
+    {
+        /// <summary>
+        /// NameProperty: LayerName
+        /// </summary>
+        public unsafe BmSDK.FName LayerName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// ByteProperty: WeightmapTextureIndex
+        /// </summary>
+        public unsafe byte WeightmapTextureIndex
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+
+        /// <summary>
+        /// ByteProperty: WeightmapTextureChannel
+        /// </summary>
+        public unsafe byte WeightmapTextureChannel
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 9); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9); }; }
+        }
+    }
+
+    /// <summary>
     /// IntProperty: SectionBaseX
     /// </summary>
     public unsafe int SectionBaseX

@@ -33,29 +33,13 @@ public partial class SeqAct_PhysXSwitch : BmSDK.Engine.SequenceAction, BmSDK.IGa
     protected SeqAct_PhysXSwitch(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// NameProperty: HandlerName
+    /// Function: GetObjClassVersion
     /// </summary>
-    public unsafe BmSDK.FName HandlerName
+    public unsafe static int GetObjClassVersion()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 324); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bCallHandler
-    /// </summary>
-    public unsafe bool bCallHandler
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 332); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: Targets
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.GameObject> Targets
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GameObject>>(Ptr + 336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_PhysXSwitch.GetObjClassVersion", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
 }

@@ -33,6 +33,17 @@ public partial class SeqAct_AkDialogueLockVoice : BmSDK.AkAudio.SeqAct_AkBaseSim
     protected SeqAct_AkDialogueLockVoice(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// Function: GetObjClassVersion
+    /// </summary>
+    public unsafe static int GetObjClassVersion()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.SeqAct_AkDialogueLockVoice.GetObjClassVersion", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+    }
+
+    /// <summary>
     /// ArrayProperty: Voices
     /// </summary>
     public unsafe BmSDK.TArray<BmSDK.Engine.AkDialogueVoice> Voices

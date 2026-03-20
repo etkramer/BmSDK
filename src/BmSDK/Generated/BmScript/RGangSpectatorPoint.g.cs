@@ -68,38 +68,59 @@ public partial class RGangSpectatorPoint : BmSDK.BmGame.RGangSpectatorPointBase,
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ObjectProperty: WatchedPOI
+    /// Function: SetFinished
     /// </summary>
-    public unsafe BmSDK.BmGame.RGangInteractPointBase WatchedPOI
+    public unsafe void SetFinished(BmSDK.BmGame.RBMPawnAI P)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGangInteractPointBase>(Ptr + 1304); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1304); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangSpectatorPoint.SetFinished", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(P, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// FloatProperty: MaxDistToUse
+    /// Function: SetInUse
     /// </summary>
-    public unsafe float MaxDistToUse
+    public unsafe void SetInUse(BmSDK.BmGame.RBMPawnAI UsagePawn)
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1312); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1312); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangSpectatorPoint.SetInUse", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(UsagePawn, paramsPtr + 0);
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
     }
 
     /// <summary>
-    /// FloatProperty: MaxDistToPoi
+    /// Function: GetPOILocation
     /// </summary>
-    public unsafe float MaxDistToPoi
+    public unsafe System.Numerics.Vector3 GetPOILocation()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1316); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangSpectatorPoint.GetPOILocation", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
     }
 
     /// <summary>
-    /// ArrayProperty: ReactionAnims
+    /// Function: GetBehaviourClass
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FName> ReactionAnims
+    public unsafe BmSDK.Class GetBehaviourClass()
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 1320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1320); }
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangSpectatorPoint.GetBehaviourClass", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(paramsPtr + 0);
+    }
+
+    /// <summary>
+    /// Function: GetSelectionScore
+    /// </summary>
+    public unsafe float GetSelectionScore()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangSpectatorPoint.GetSelectionScore", true);
+        byte* paramsPtr = stackalloc byte[64];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
     }
 }

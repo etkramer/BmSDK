@@ -32,12 +32,4 @@ public partial class ParticleModuleFieldSamplerDynamicGrid : BmSDK.Engine.Partic
     /// </summary>
     protected ParticleModuleFieldSamplerDynamicGrid(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// ComponentProperty: FieldSamplerComponent
-    /// </summary>
-    public unsafe BmSDK.Engine.ApexFieldSamplerComponent FieldSamplerComponent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexFieldSamplerComponent>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
 }

@@ -32,12 +32,4 @@ public partial class TcpipConnection : BmSDK.Engine.NetConnection, BmSDK.IGameOb
     /// </summary>
     protected TcpipConnection(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// ArrayProperty: Children
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.ChildConnection> Children
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ChildConnection>>(Ptr + 44740); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44740); }
-    }
 }
