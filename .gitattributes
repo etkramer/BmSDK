@@ -1,2 +1,5 @@
 # Mark generated files
 *.g.cs linguist-generated=true
+
+# Ignore changes to generated files during merge
+**/*.g.cs merge=ours
