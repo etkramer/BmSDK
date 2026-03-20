@@ -4,15 +4,9 @@ internal static class GameInfo
 {
     public static class GlobalOffsets
     {
-#if BATMAN2
         public const IntPtr GNames = 0x3A208B8;
         public const IntPtr GObjObjects = 0x340CBE4;
         public const IntPtr GError = 0x117BF48;
-#elif BATMAN3
-        public const IntPtr GNames = 0x14B1A98;
-        public const IntPtr GObjObjects = 0x14B1ACC;
-        public const IntPtr GError = 0x13EE784;
-#endif
     }
 
     public static class FuncOffsets
@@ -51,10 +45,11 @@ internal static class GameInfo
 
     public static class MemberOffsets
     {
-        public const IntPtr Object__ObjectInternalInteger = 4;
-        public const IntPtr Object__Outer = 24;
-        public const IntPtr Object__Name = 28;
-        public const IntPtr Object__Class = 36;
-        public const IntPtr Class__ClassFlags = 180;
+        public const IntPtr Object__ObjectInternalInteger = 48;
+        public const IntPtr Object__Outer = 52;
+        public const IntPtr Object__Name = 60;
+        public const IntPtr Object__Class = 68;
+
+        public const IntPtr Class__ClassFlags = 244;
     }
 }
