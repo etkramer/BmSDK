@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RB_HingeSetup<br/>
+/// (size = 300)
 /// (flags = 0)
 /// </summary>
 public partial class RB_HingeSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.IGameObject

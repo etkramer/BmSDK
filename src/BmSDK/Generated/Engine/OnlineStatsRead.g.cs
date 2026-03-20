@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: OnlineStatsRead<br/>
+/// (size = 180)
 /// (flags = 0)
 /// </summary>
 public partial class OnlineStatsRead : BmSDK.Engine.OnlineStats, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class OnlineStatsRead : BmSDK.Engine.OnlineStats, BmSDK.IGameObje
     public unsafe int GetRankForPlayer(BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineStatsRead.GetRankForPlayer", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerID, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -57,7 +58,7 @@ public partial class OnlineStatsRead : BmSDK.Engine.OnlineStats, BmSDK.IGameObje
     public unsafe void AddPlayer(BmSDK.FString PlayerName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineStatsRead.AddPlayer", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerID, paramsPtr + 16);
         var oldFlags = funcManaged.FunctionFlags;
@@ -77,7 +78,7 @@ public partial class OnlineStatsRead : BmSDK.Engine.OnlineStats, BmSDK.IGameObje
     public unsafe bool IsStatZero(BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID, int StatColumnNo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineStatsRead.IsStatZero", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StatColumnNo, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -97,7 +98,7 @@ public partial class OnlineStatsRead : BmSDK.Engine.OnlineStats, BmSDK.IGameObje
     public unsafe bool GetStatValueForPlayerAsString(BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID, int StatColumnNo, out BmSDK.FString StatValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineStatsRead.GetStatValueForPlayerAsString", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StatColumnNo, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -118,7 +119,7 @@ public partial class OnlineStatsRead : BmSDK.Engine.OnlineStats, BmSDK.IGameObje
     public unsafe bool SetFloatStatValueForPlayer(BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID, int StatColumnNo, float StatValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineStatsRead.SetFloatStatValueForPlayer", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StatColumnNo, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StatValue, paramsPtr + 12);
@@ -139,7 +140,7 @@ public partial class OnlineStatsRead : BmSDK.Engine.OnlineStats, BmSDK.IGameObje
     public unsafe bool GetFloatStatValueForPlayer(BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID, int StatColumnNo, out float StatValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineStatsRead.GetFloatStatValueForPlayer", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StatColumnNo, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -160,7 +161,7 @@ public partial class OnlineStatsRead : BmSDK.Engine.OnlineStats, BmSDK.IGameObje
     public unsafe bool SetIntStatValueForPlayer(BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID, int StatColumnNo, int StatValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineStatsRead.SetIntStatValueForPlayer", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StatColumnNo, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StatValue, paramsPtr + 12);
@@ -181,7 +182,7 @@ public partial class OnlineStatsRead : BmSDK.Engine.OnlineStats, BmSDK.IGameObje
     public unsafe bool GetIntStatValueForPlayer(BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID, int StatColumnNo, out int StatValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineStatsRead.GetIntStatValueForPlayer", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StatColumnNo, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -202,7 +203,7 @@ public partial class OnlineStatsRead : BmSDK.Engine.OnlineStats, BmSDK.IGameObje
     public unsafe void OnReadComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineStatsRead.OnReadComplete", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -210,7 +211,7 @@ public partial class OnlineStatsRead : BmSDK.Engine.OnlineStats, BmSDK.IGameObje
     /// <summary>
     /// Struct: FColumnMetaData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 28)]
     public partial record struct FColumnMetaData
     {
         /// <summary>
@@ -316,7 +317,7 @@ public partial class OnlineStatsRead : BmSDK.Engine.OnlineStats, BmSDK.IGameObje
     /// <summary>
     /// Struct: FOnlineStatsRow
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 56)]
     public partial record struct FOnlineStatsRow
     {
         /// <summary>
@@ -359,7 +360,7 @@ public partial class OnlineStatsRead : BmSDK.Engine.OnlineStats, BmSDK.IGameObje
     /// <summary>
     /// Struct: FOnlineStatsColumn
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FOnlineStatsColumn
     {
         /// <summary>

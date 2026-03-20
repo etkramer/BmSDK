@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_PredAttack<br/>
+/// (size = 960)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_PredAttack : BmSDK.BmGame.RCombatMove_VillainCloseAttack, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RCombatMove_PredAttack : BmSDK.BmGame.RCombatMove_VillainCl
     public unsafe void PlayStrikeAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_PredAttack.PlayStrikeAnim", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -84,7 +85,7 @@ public partial class RCombatMove_PredAttack : BmSDK.BmGame.RCombatMove_VillainCl
     public unsafe void PlayAbortAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_PredAttack.PlayAbortAnim", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -95,7 +96,7 @@ public partial class RCombatMove_PredAttack : BmSDK.BmGame.RCombatMove_VillainCl
     public unsafe void ChooseAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_PredAttack.ChooseAttack", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -106,7 +107,7 @@ public partial class RCombatMove_PredAttack : BmSDK.BmGame.RCombatMove_VillainCl
     public unsafe float GetTransitionDurationScale()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_PredAttack.GetTransitionDurationScale", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
     }

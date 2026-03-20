@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_GadgetBullwhip<br/>
+/// (size = 836)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_GadgetBullwhip : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject

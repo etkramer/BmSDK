@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqCond_CompareBool<br/>
+/// (size = 328)
 /// (flags = 0)
 /// </summary>
 public partial class SeqCond_CompareBool : BmSDK.Engine.SequenceCondition, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class SeqCond_CompareBool : BmSDK.Engine.SequenceCondition, BmSDK
     public unsafe static int GetObjClassVersion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqCond_CompareBool.GetObjClassVersion", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }

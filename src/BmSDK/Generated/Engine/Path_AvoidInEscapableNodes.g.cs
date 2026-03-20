@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Path_AvoidInEscapableNodes<br/>
+/// (size = 112)
 /// (flags = 0)
 /// </summary>
 public partial class Path_AvoidInEscapableNodes : BmSDK.Engine.PathConstraint, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class Path_AvoidInEscapableNodes : BmSDK.Engine.PathConstraint, B
     public unsafe void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Path_AvoidInEscapableNodes.Recycle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -49,7 +50,7 @@ public partial class Path_AvoidInEscapableNodes : BmSDK.Engine.PathConstraint, B
     public unsafe static bool DontGetStuck(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Path_AvoidInEscapableNodes.DontGetStuck", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(P, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -61,7 +62,7 @@ public partial class Path_AvoidInEscapableNodes : BmSDK.Engine.PathConstraint, B
     public unsafe void CachePawnReacFlags(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Path_AvoidInEscapableNodes.CachePawnReacFlags", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(P, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

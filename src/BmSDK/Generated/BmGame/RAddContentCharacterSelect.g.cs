@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAddContentCharacterSelect<br/>
+/// (size = 228)
 /// (flags = 0)
 /// </summary>
 public partial class RAddContentCharacterSelect : BmSDK.BmGame.RAdditionalContent, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RAddContentCharacterSelect : BmSDK.BmGame.RAdditionalConten
     /// <summary>
     /// Struct: FAddContentCharacterSelect_AttachMesh
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FAddContentCharacterSelect_AttachMesh
     {
         /// <summary>

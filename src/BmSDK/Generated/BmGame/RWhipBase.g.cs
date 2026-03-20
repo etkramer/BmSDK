@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RWhipBase<br/>
+/// (size = 2068)
 /// (flags = 0)
 /// </summary>
 public partial class RWhipBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RWhipBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObjec
     public unsafe BmSDK.Engine.Actor GetCurrentWhipTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWhipBase.GetCurrentWhipTarget", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(paramsPtr + 0);
     }
@@ -84,7 +85,7 @@ public partial class RWhipBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObjec
     public unsafe void UpdateTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWhipBase.UpdateTarget", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

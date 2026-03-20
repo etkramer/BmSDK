@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDEntityFactPlayerInVehicleCombat<br/>
+/// (size = 272)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDEntityFactPlayerInVehicleCombat : BmSDK.AkAudio.AkSDEntityFact, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RStaticMeshActorDamageable<br/>
+/// (size = 720)
 /// (flags = 0)
 /// </summary>
 public partial class RStaticMeshActorDamageable : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RStaticMeshActorDamageable : BmSDK.Engine.StaticMeshActor, 
     public unsafe void ReceiveHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RStaticMeshActorDamageable.ReceiveHit", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

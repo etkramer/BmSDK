@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RProfileSettings<br/>
+/// (size = 184)
 /// (flags = 0)
 /// </summary>
 public partial class RProfileSettings : BmSDK.Engine.OnlineProfileSettings, BmSDK.IGameObject

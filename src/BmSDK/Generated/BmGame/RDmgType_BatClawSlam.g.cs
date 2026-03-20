@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_BatClawSlam<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_BatClawSlam : BmSDK.BmGame.RDamageType, BmSDK.IGameObject

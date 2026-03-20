@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MorphWeightSequence<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class MorphWeightSequence : BmSDK.GameObject, BmSDK.IGameObject

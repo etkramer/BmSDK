@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHudModuleChallengeMode<br/>
+/// (size = 284)
 /// (flags = 0)
 /// </summary>
 public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void SetFriendDataFromChallengeId(int nId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.SetFriendDataFromChallengeId", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(nId, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -50,7 +51,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void SetTankCountsByZone(int ZoneRed, int ZoneYellow, int ZoneGreen, int ZoneMax, bool bHide)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.SetTankCountsByZone", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ZoneRed, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ZoneYellow, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ZoneGreen, paramsPtr + 8);
@@ -66,7 +67,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void SetEnemyCount(bool EnemyCountVisible, int EnemyCountValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.SetEnemyCount", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EnemyCountVisible, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EnemyCountValue, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -79,7 +80,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void UC_RemoveMessage(int nId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.UC_RemoveMessage", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(nId, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -91,7 +92,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe int UC_AddMessage(BmSDK.FString sField, BmSDK.FString sText, float fDuration, bool bQueue, bool bExclusive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.UC_AddMessage", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(sField, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(sText, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(fDuration, paramsPtr + 32);
@@ -107,7 +108,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void UC_SetFriendData(BmSDK.FString sName, BmSDK.FString sScore, int nStars, bool bShow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.UC_SetFriendData", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(sName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(sScore, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(nStars, paramsPtr + 32);
@@ -122,7 +123,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void UC_TimerExpired()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.UC_TimerExpired", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -133,7 +134,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void UC_TimerOffset(int nHundredths, bool bBonus)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.UC_TimerOffset", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(nHundredths, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bBonus, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -146,7 +147,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void UC_PauseChallengeTimer(bool bPause)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.UC_PauseChallengeTimer", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPause, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -158,7 +159,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void UC_SetChallengeTimerWithAdditionalText(int nHundredths, bool bVisible, bool bWarning, BmSDK.FString AdditionalText)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.UC_SetChallengeTimerWithAdditionalText", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(nHundredths, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bVisible, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bWarning, paramsPtr + 8);
@@ -173,7 +174,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void UC_SetChallengeTimer(int nHundredths, bool bVisible, bool bWarning)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.UC_SetChallengeTimer", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(nHundredths, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bVisible, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bWarning, paramsPtr + 8);
@@ -187,7 +188,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void XI_ChallengeResultsClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.XI_ChallengeResultsClose", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -198,7 +199,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void XI_ChallengeResults()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.XI_ChallengeResults", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -209,7 +210,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void XI_CountdownComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.XI_CountdownComplete", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -220,7 +221,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe bool UC_IsCountdownComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.UC_IsCountdownComplete", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -231,7 +232,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void UC_StartCountdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.UC_StartCountdown", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -242,7 +243,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void UC_SetChallengeStars(int nStars, bool bShow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.UC_SetChallengeStars", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(nStars, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bShow, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -255,7 +256,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void UC_SetRivalPoints(int nPoints, bool bShow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.UC_SetRivalPoints", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(nPoints, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bShow, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -268,7 +269,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void UC_SetObjectiveFailed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.UC_SetObjectiveFailed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -279,7 +280,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void UC_SetDetailsOffset(float fOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.UC_SetDetailsOffset", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(fOffset, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -291,7 +292,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void UC_SetObjective(BmSDK.FString sObjective, int nStars, bool bWarning)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.UC_SetObjective", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(sObjective, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(nStars, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bWarning, paramsPtr + 20);
@@ -305,7 +306,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void UC_SetChallengeScore(BmSDK.FString NewScore, bool bShow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.UC_SetChallengeScore", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewScore, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bShow, paramsPtr + 16);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -318,7 +319,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void UC_ShowBackground(bool bShow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.UC_ShowBackground", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bShow, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -330,7 +331,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void UC_SetMode(BmSDK.FString sMode, bool bStoryStyle, float fDetailsOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.UC_SetMode", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(sMode, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bStoryStyle, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(fDetailsOffset, paramsPtr + 20);
@@ -344,7 +345,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void UC_ChallengeEnd(bool bFailed, BmSDK.FString sScore, int nStars, int nRivalPoints, bool bAllowResults)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.UC_ChallengeEnd", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bFailed, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(sScore, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(nStars, paramsPtr + 20);
@@ -360,7 +361,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.Close", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -371,7 +372,7 @@ public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleChallengeMode.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(_RPC, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(_ExtensionName, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(_ExtensionPath, paramsPtr + 24);

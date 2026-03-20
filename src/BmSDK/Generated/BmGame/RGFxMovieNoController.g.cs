@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGFxMovieNoController<br/>
+/// (size = 700)
 /// (flags = 0)
 /// </summary>
 public partial class RGFxMovieNoController : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RGFxMovieNoController : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     public unsafe void XI_OnOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieNoController.XI_OnOut", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -49,7 +50,7 @@ public partial class RGFxMovieNoController : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     public unsafe void DoClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieNoController.DoClose", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -60,7 +61,7 @@ public partial class RGFxMovieNoController : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     public unsafe BmSDK.FString XI_GetMessage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieNoController.XI_GetMessage", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
     }
@@ -71,7 +72,7 @@ public partial class RGFxMovieNoController : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     public unsafe void XI_OnA(int ControllerId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieNoController.XI_OnA", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ControllerId, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

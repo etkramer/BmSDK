@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionPerInstanceRandom<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionPerInstanceRandom : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRope2CapsuleChainPhysicsUpdater<br/>
+/// (size = 308)
 /// (flags = 0)
 /// </summary>
 public partial class RRope2CapsuleChainPhysicsUpdater : BmSDK.BmGame.RRope2BasePhysicsUpdater, BmSDK.IGameObject
@@ -161,7 +162,7 @@ public partial class RRope2CapsuleChainPhysicsUpdater : BmSDK.BmGame.RRope2BaseP
     /// <summary>
     /// Struct: FRope2CapsuleChainPhysicsUpdaterInitData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FRope2CapsuleChainPhysicsUpdaterInitData
     {
         /// <summary>
@@ -177,7 +178,7 @@ public partial class RRope2CapsuleChainPhysicsUpdater : BmSDK.BmGame.RRope2BaseP
     /// <summary>
     /// Struct: FRRope2CapsuleInitData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 52)]
     public partial record struct FRRope2CapsuleInitData
     {
         /// <summary>

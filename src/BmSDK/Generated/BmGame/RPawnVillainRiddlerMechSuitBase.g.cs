@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPawnVillainRiddlerMechSuitBase<br/>
+/// (size = 6724)
 /// (flags = 0)
 /// </summary>
 public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillainThug, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void InitHealthBar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.InitHealthBar", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -84,7 +85,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe bool CanSmashRobots()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.CanSmashRobots", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -95,7 +96,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void StopCombatCamLookAtMe()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.StopCombatCamLookAtMe", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -106,7 +107,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void CombatCamLookAtMe()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.CombatCamLookAtMe", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -117,7 +118,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe bool IsFirstMechFight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.IsFirstMechFight", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -128,7 +129,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe BmSDK.Engine.Actor GetLiftLocator()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.GetLiftLocator", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(paramsPtr + 0);
     }
@@ -139,7 +140,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void OnChangeRobotColourStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.OnChangeRobotColourStart", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -150,7 +151,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void OnShieldOffCW()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.OnShieldOffCW", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -161,7 +162,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void OnShieldOffBM()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.OnShieldOffBM", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -172,7 +173,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void OnShieldOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.OnShieldOff", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -183,7 +184,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void OnPlayerHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.OnPlayerHit", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -194,7 +195,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void TurnOffElectFist()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.TurnOffElectFist", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -205,7 +206,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void TurnOnElectFist()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.TurnOnElectFist", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -216,7 +217,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void StopChargeUpFx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.StopChargeUpFx", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -227,7 +228,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void ActivateChargeUpFx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.ActivateChargeUpFx", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -238,7 +239,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void CheckTriggerAllChangeColour()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.CheckTriggerAllChangeColour", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -249,7 +250,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void ActivateRevive(bool bStart)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.ActivateRevive", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bStart, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -261,7 +262,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void ActivateBeam(bool bStart)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.ActivateBeam", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bStart, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -273,7 +274,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe bool CanDoFarAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.CanDoFarAttack", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -284,7 +285,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe bool CanForceCharge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.CanForceCharge", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -295,7 +296,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void VulnerableToCatWoman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.VulnerableToCatWoman", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -306,7 +307,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void VulnerableToBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.VulnerableToBatman", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -317,7 +318,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void VulnerableToEveryone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.VulnerableToEveryone", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -328,7 +329,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe BmSDK.Engine.ParticleSystem GetBeamContactPfx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.GetBeamContactPfx", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(paramsPtr + 0);
     }
@@ -339,7 +340,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe BmSDK.Engine.ParticleSystem GetBeamPfx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.GetBeamPfx", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(paramsPtr + 0);
     }
@@ -350,7 +351,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe BmSDK.Engine.ParticleSystem GetChargeBeamPfx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.GetChargeBeamPfx", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(paramsPtr + 0);
     }
@@ -361,7 +362,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe BmSDK.Engine.ParticleSystem GetElectFistPfx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.GetElectFistPfx", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(paramsPtr + 0);
     }
@@ -372,7 +373,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe BmSDK.Engine.ParticleSystem GetPowerUpPfx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.GetPowerUpPfx", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(paramsPtr + 0);
     }
@@ -383,7 +384,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe BmSDK.Engine.ParticleSystem GetForceChargePfx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.GetForceChargePfx", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(paramsPtr + 0);
     }
@@ -394,7 +395,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void LightsOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.LightsOff", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -405,7 +406,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void LightsOn(bool bBlue, BmSDK.TArray<BmSDK.BmGame.RPawnVillain> TogglePawnList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.LightsOn", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bBlue, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TogglePawnList, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -418,7 +419,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void SetShieldOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.SetShieldOff", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -429,7 +430,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void SetShieldOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.SetShieldOn", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -440,7 +441,7 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     public unsafe void AimAtActor(BmSDK.Engine.Actor Actor, BmSDK.FName Description = default, BmSDK.FName ActorBoneName = default, BmSDK.BmGame.RAnimUtil_PosePlayer.EAllowTurningToAim AllowTurningToAim = default, float LimitScale = default, BmSDK.BmGame.RPoseConfig.FAimingTransitionTimingOverride TimingOverride = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainRiddlerMechSuitBase.AimAtActor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Actor, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Description, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ActorBoneName, paramsPtr + 16);

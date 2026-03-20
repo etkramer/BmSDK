@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionCrossProduct<br/>
+/// (size = 276)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionCrossProduct : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RSkeletalMeshDrivenMaterialParameterInstance<br/>
+/// (size = 136)
 /// (flags = 0)
 /// </summary>
 public partial class RSkeletalMeshDrivenMaterialParameterInstance : BmSDK.GameObject, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RSkeletalMeshDrivenMaterialParameterInstance : BmSDK.GameOb
     /// <summary>
     /// Struct: FDrivenMaterialParameter
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FDrivenMaterialParameter
     {
         /// <summary>
@@ -60,7 +61,7 @@ public partial class RSkeletalMeshDrivenMaterialParameterInstance : BmSDK.GameOb
     /// <summary>
     /// Struct: FBoneRotationInstance
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 80)]
     public partial record struct FBoneRotationInstance
     {
         /// <summary>
@@ -85,7 +86,7 @@ public partial class RSkeletalMeshDrivenMaterialParameterInstance : BmSDK.GameOb
     /// <summary>
     /// Struct: FBoneRotationInstance_Constants
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 64)]
     public partial record struct FBoneRotationInstance_Constants
     {
         /// <summary>
@@ -227,7 +228,7 @@ public partial class RSkeletalMeshDrivenMaterialParameterInstance : BmSDK.GameOb
     /// <summary>
     /// Struct: FBoneDistanceInstance
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 48)]
     public partial record struct FBoneDistanceInstance
     {
         /// <summary>
@@ -252,7 +253,7 @@ public partial class RSkeletalMeshDrivenMaterialParameterInstance : BmSDK.GameOb
     /// <summary>
     /// Struct: FBoneDistanceInstance_Constants
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FBoneDistanceInstance_Constants
     {
         /// <summary>

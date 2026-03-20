@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RStopBatmanFromUsingAirshipTiltVolume<br/>
+/// (size = 776)
 /// (flags = 0)
 /// </summary>
 public partial class RStopBatmanFromUsingAirshipTiltVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RStopBatmanFromUsingAirshipTiltVolume : BmSDK.Engine.Volume
     public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStopBatmanFromUsingAirshipTiltVolume.OnToggle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Action, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -85,7 +86,7 @@ public partial class RStopBatmanFromUsingAirshipTiltVolume : BmSDK.Engine.Volume
     public unsafe void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStopBatmanFromUsingAirshipTiltVolume.Tick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -97,7 +98,7 @@ public partial class RStopBatmanFromUsingAirshipTiltVolume : BmSDK.Engine.Volume
     public unsafe void Soften()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStopBatmanFromUsingAirshipTiltVolume.Soften", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -108,7 +109,7 @@ public partial class RStopBatmanFromUsingAirshipTiltVolume : BmSDK.Engine.Volume
     public unsafe void Harden()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStopBatmanFromUsingAirshipTiltVolume.Harden", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -119,7 +120,7 @@ public partial class RStopBatmanFromUsingAirshipTiltVolume : BmSDK.Engine.Volume
     public unsafe void BatmanTriedToTiltAirship(BmSDK.Engine.Pawn User)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStopBatmanFromUsingAirshipTiltVolume.BatmanTriedToTiltAirship", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(User, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -131,7 +132,7 @@ public partial class RStopBatmanFromUsingAirshipTiltVolume : BmSDK.Engine.Volume
     public unsafe void RemoveAirshipTiltBlockerVolumeFromBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStopBatmanFromUsingAirshipTiltVolume.RemoveAirshipTiltBlockerVolumeFromBatman", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -142,7 +143,7 @@ public partial class RStopBatmanFromUsingAirshipTiltVolume : BmSDK.Engine.Volume
     public unsafe void AddAirshipTiltBlockerVolumeToBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStopBatmanFromUsingAirshipTiltVolume.AddAirshipTiltBlockerVolumeToBatman", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -153,7 +154,7 @@ public partial class RStopBatmanFromUsingAirshipTiltVolume : BmSDK.Engine.Volume
     public unsafe void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStopBatmanFromUsingAirshipTiltVolume.UnTouch", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -165,7 +166,7 @@ public partial class RStopBatmanFromUsingAirshipTiltVolume : BmSDK.Engine.Volume
     public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStopBatmanFromUsingAirshipTiltVolume.Touch", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OtherComp, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HitLocation, paramsPtr + 16);

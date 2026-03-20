@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionTerrainLayerCoords<br/>
+/// (size = 192)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionTerrainLayerCoords : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_OverworldSpawnerBase<br/>
+/// (size = 384)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_OverworldSpawnerBase : BmSDK.BmGame.RSeqAct_CombatSpawnerBase, BmSDK.IGameObject

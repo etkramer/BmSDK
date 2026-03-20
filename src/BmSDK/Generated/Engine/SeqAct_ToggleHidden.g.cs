@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_ToggleHidden<br/>
+/// (size = 372)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_ToggleHidden : BmSDK.Engine.SeqAct_Toggle, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSpecialMoveInstance_CalibrateVoiceSynthesiserForRobot<br/>
+/// (size = 988)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiserForRobot : BmSDK.BmGame.RSpecialMoveInstance_RelativeAnimMove, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RSpecialMoveInstance_CalibrateVoiceSynthesiserForRobot : Bm
     public unsafe void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CalibrateVoiceSynthesiserForRobot.FinishSpecialMove", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

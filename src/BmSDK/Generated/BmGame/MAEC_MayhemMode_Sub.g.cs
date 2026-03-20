@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MAEC_MayhemMode_Sub<br/>
+/// (size = 704)
 /// (flags = 0)
 /// </summary>
 public partial class MAEC_MayhemMode_Sub : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class MAEC_MayhemMode_Sub : BmSDK.BmGame.RAlertEventCoordinatorSo
     public unsafe void SetStartleLoc(System.Numerics.Vector3 NewPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_MayhemMode_Sub.SetStartleLoc", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewPos, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -85,7 +86,7 @@ public partial class MAEC_MayhemMode_Sub : BmSDK.BmGame.RAlertEventCoordinatorSo
     public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_MayhemMode_Sub.NotifyFinished", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FinishedAction, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

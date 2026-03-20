@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBMBehaviour_AbandonedVehicleAnimationPoint<br/>
+/// (size = 1128)
 /// (flags = 0)
 /// </summary>
 public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScript.RBMBehaviour_GangMovementBase, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe static int GetObjClassVersion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.GetObjClassVersion", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -49,7 +50,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void MovingCarOver()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.MovingCarOver", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -60,7 +61,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void WarnMovingCar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.WarnMovingCar", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -71,7 +72,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void StartSiren()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.StartSiren", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -82,7 +83,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void CrackObjectRightHand()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.CrackObjectRightHand", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -93,7 +94,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void CrackObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.CrackObject", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -104,7 +105,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void ExplodeMolotov()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.ExplodeMolotov", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -115,7 +116,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void SmashDriversPassengerWindow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.SmashDriversPassengerWindow", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -126,7 +127,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void SmashDriversWindow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.SmashDriversWindow", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -137,7 +138,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void CrackWindscreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.CrackWindscreen", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -148,7 +149,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void CarOnRoof()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.CarOnRoof", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -159,7 +160,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void CarOnSide()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.CarOnSide", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -170,7 +171,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void CarToLoopAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.CarToLoopAnim", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -181,7 +182,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void CarToAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.CarToAnim", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -192,7 +193,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void CarToPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.CarToPhysics", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -203,7 +204,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void Cheer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.Cheer", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -214,7 +215,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void SpectatorCheer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.SpectatorCheer", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -225,7 +226,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void DettachFromCar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.DettachFromCar", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -236,7 +237,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void AttachToCarSeat1()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.AttachToCarSeat1", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -247,7 +248,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void TriggerOutputEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.TriggerOutputEvent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -258,7 +259,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe bool CanPlayWaitingAnimation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.CanPlayWaitingAnimation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -269,7 +270,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void FastExitBuddies()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.FastExitBuddies", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -280,7 +281,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void RiotExitBehaviour()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.RiotExitBehaviour", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -291,7 +292,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe bool RiotHandleSpookedBy(BmSDK.Engine.Actor Threat, bool bAlertNeighbours = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.RiotHandleSpookedBy", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Threat, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bAlertNeighbours, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -304,7 +305,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe BmSDK.BmGame.RGameInfo.EEvadeVehicleType GetEvadeVehicleType(BmSDK.Engine.Actor V, float CarSpeed, bool bZap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.GetEvadeVehicleType", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[17];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(V, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CarSpeed, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bZap, paramsPtr + 12);
@@ -318,7 +319,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.OnDeactivate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -329,7 +330,7 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     public unsafe void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AbandonedVehicleAnimationPoint.OnActivate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkPredicate<br/>
+/// (size = 100)
 /// (flags = 0)
 /// </summary>
 public partial class AkPredicate : BmSDK.Engine.AkHash, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AkPredicate : BmSDK.Engine.AkHash, BmSDK.IGameObject
     public unsafe bool IsTrue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkPredicate.IsTrue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;

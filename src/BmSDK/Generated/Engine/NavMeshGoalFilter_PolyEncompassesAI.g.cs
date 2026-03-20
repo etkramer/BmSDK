@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NavMeshGoalFilter_PolyEncompassesAI<br/>
+/// (size = 108)
 /// (flags = 0)
 /// </summary>
 public partial class NavMeshGoalFilter_PolyEncompassesAI : BmSDK.Engine.NavMeshGoal_Filter, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class NavMeshGoalFilter_PolyEncompassesAI : BmSDK.Engine.NavMeshG
     public unsafe static bool MakeSureAIFits(BmSDK.Engine.NavMeshGoal_GenericFilterContainer FilterContainer, System.Numerics.Vector3 InOverrideExtentToCheck = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshGoalFilter_PolyEncompassesAI.MakeSureAIFits", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FilterContainer, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InOverrideExtentToCheck, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

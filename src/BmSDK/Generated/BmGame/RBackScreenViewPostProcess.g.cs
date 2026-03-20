@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBackScreenViewPostProcess<br/>
+/// (size = 180)
 /// (flags = 0)
 /// </summary>
 public partial class RBackScreenViewPostProcess : BmSDK.BmGame.RViewPostProcess, BmSDK.IGameObject

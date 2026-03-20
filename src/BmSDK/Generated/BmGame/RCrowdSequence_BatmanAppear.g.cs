@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCrowdSequence_BatmanAppear<br/>
+/// (size = 760)
 /// (flags = 0)
 /// </summary>
 public partial class RCrowdSequence_BatmanAppear : BmSDK.BmGame.RCrowdSequence, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RCrowdSequence_BatmanAppear : BmSDK.BmGame.RCrowdSequence, 
     public unsafe void EndSequence()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSequence_BatmanAppear.EndSequence", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -84,7 +85,7 @@ public partial class RCrowdSequence_BatmanAppear : BmSDK.BmGame.RCrowdSequence, 
     public unsafe void UpdateAttractors(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSequence_BatmanAppear.UpdateAttractors", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -96,7 +97,7 @@ public partial class RCrowdSequence_BatmanAppear : BmSDK.BmGame.RCrowdSequence, 
     public unsafe void SkipFirstStage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSequence_BatmanAppear.SkipFirstStage", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -107,7 +108,7 @@ public partial class RCrowdSequence_BatmanAppear : BmSDK.BmGame.RCrowdSequence, 
     public unsafe void CreateAttractors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSequence_BatmanAppear.CreateAttractors", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -118,7 +119,7 @@ public partial class RCrowdSequence_BatmanAppear : BmSDK.BmGame.RCrowdSequence, 
     public unsafe System.Numerics.Vector3 GetSpawnLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSequence_BatmanAppear.GetSpawnLocation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
     }

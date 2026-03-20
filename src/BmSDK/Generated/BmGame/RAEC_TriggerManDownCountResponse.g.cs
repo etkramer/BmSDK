@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_TriggerManDownCountResponse<br/>
+/// (size = 748)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_TriggerManDownCountResponse : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RAEC_TriggerManDownCountResponse : BmSDK.BmGame.RAlertEvent
     public unsafe void TryTriggerResponse()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_TriggerManDownCountResponse.TryTriggerResponse", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -84,7 +85,7 @@ public partial class RAEC_TriggerManDownCountResponse : BmSDK.BmGame.RAlertEvent
     public unsafe void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_TriggerManDownCountResponse.Tick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

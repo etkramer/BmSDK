@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_AudioNotify<br/>
+/// (size = 92)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_AudioNotify : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

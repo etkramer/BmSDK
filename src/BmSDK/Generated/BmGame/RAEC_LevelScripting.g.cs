@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_LevelScripting<br/>
+/// (size = 784)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     public unsafe BmSDK.FName GetLostPlayerAndDoOtherThingEventValFor(BmSDK.BmGame.RBMAIController TestCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.GetLostPlayerAndDoOtherThingEventValFor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestCon, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(paramsPtr + 8);
@@ -85,7 +86,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     public unsafe BmSDK.BmGame.RBarkFlagBase GetFlagsForEndChase()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.GetFlagsForEndChase", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBarkFlagBase>(paramsPtr + 0);
     }
@@ -96,7 +97,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     public unsafe void DoPostAssignmentBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.DoPostAssignmentBark", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -107,7 +108,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     public unsafe void ClearDestSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.ClearDestSearch", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -118,7 +119,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     public unsafe BmSDK.BmGame.RMultiDestGoalData InitGoalDataInstance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.InitGoalDataInstance", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RMultiDestGoalData>(paramsPtr + 0);
     }
@@ -129,7 +130,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     public unsafe bool IsAlreadyDoingJob(BmSDK.BmGame.RBMAIController TestCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.IsAlreadyDoingJob", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestCon, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -141,7 +142,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     public unsafe void InitMultiGoalSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.InitMultiGoalSearch", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -152,7 +153,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     public unsafe void BuildDestList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.BuildDestList", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -163,7 +164,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     public unsafe void ResetSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.ResetSearch", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -174,7 +175,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     public unsafe void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.Tick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[72];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -186,7 +187,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     public unsafe void QueueEndChaseBark(BmSDK.BmGame.RPawnVillain NewEndChaseBarkPawn, bool bNewChasingFromSighting)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.QueueEndChaseBark", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewEndChaseBarkPawn, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bNewChasingFromSighting, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -199,7 +200,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     public unsafe void InitChildAECFor(BmSDK.BmGame.RSeqEvent_LevelScripting NewRoot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LevelScripting.InitChildAECFor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewRoot, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -208,7 +209,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Struct: FMultiDestPathFindInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FMultiDestPathFindInfo
     {
         /// <summary>
@@ -233,7 +234,7 @@ public partial class RAEC_LevelScripting : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Struct: FSearchTarget
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 40)]
     public partial record struct FSearchTarget
     {
         /// <summary>

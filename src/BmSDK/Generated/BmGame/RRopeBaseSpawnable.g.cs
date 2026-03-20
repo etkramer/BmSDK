@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRopeBaseSpawnable<br/>
+/// (size = 732)
 /// (flags = 0)
 /// </summary>
 public partial class RRopeBaseSpawnable : BmSDK.BmGame.RRopeBase, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RRopeBaseSpawnable : BmSDK.BmGame.RRopeBase, BmSDK.IGameObj
     public unsafe void MulticastSetupHangingFearRope(BmSDK.BmGame.RRopeBaseSpawnable.FHangingFearRopeSetupParams SetupParams)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRopeBaseSpawnable.MulticastSetupHangingFearRope", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[152];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SetupParams, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -82,7 +83,7 @@ public partial class RRopeBaseSpawnable : BmSDK.BmGame.RRopeBase, BmSDK.IGameObj
     /// <summary>
     /// Struct: FHangingFearRopeSetupParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 148)]
     public partial record struct FHangingFearRopeSetupParams
     {
         /// <summary>

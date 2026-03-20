@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RNavMeshPath_ExitPoints<br/>
+/// (size = 116)
 /// (flags = 0)
 /// </summary>
 public partial class RNavMeshPath_ExitPoints : BmSDK.Engine.NavMeshPathConstraint, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RNavMeshPath_ExitPoints : BmSDK.Engine.NavMeshPathConstrain
     public unsafe void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_ExitPoints.Recycle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -49,7 +50,7 @@ public partial class RNavMeshPath_ExitPoints : BmSDK.Engine.NavMeshPathConstrain
     public unsafe static void BuildExitPointList(BmSDK.Engine.NavigationHandle NavHandle, BmSDK.BmGame.RExitPoints NewExitPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_ExitPoints.BuildExitPointList", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NavHandle, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewExitPoint, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

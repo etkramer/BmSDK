@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSentryKitAssignmentPicker<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class RSentryKitAssignmentPicker : BmSDK.BmGame.RGroupAssignmentPicker, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RSentryKitAssignmentPicker : BmSDK.BmGame.RGroupAssignmentP
     public unsafe BmSDK.BmGame.RMultiDestGoalData InitGoalDataInstance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryKitAssignmentPicker.InitGoalDataInstance", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RMultiDestGoalData>(paramsPtr + 0);
     }
@@ -49,7 +50,7 @@ public partial class RSentryKitAssignmentPicker : BmSDK.BmGame.RGroupAssignmentP
     public unsafe void BuildThugSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryKitAssignmentPicker.BuildThugSearch", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -60,7 +61,7 @@ public partial class RSentryKitAssignmentPicker : BmSDK.BmGame.RGroupAssignmentP
     public unsafe bool Update()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryKitAssignmentPicker.Update", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -71,7 +72,7 @@ public partial class RSentryKitAssignmentPicker : BmSDK.BmGame.RGroupAssignmentP
     public unsafe void ClearAllSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryKitAssignmentPicker.ClearAllSearch", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -82,7 +83,7 @@ public partial class RSentryKitAssignmentPicker : BmSDK.BmGame.RGroupAssignmentP
     public unsafe void Abort()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryKitAssignmentPicker.Abort", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -93,7 +94,7 @@ public partial class RSentryKitAssignmentPicker : BmSDK.BmGame.RGroupAssignmentP
     public unsafe void Init(BmSDK.BmGame.RBMRoomAIState NewRoomState, BmSDK.BmGame.RSentryGunPlacementPoint NewTargetPoint, System.IntPtr NewSentryKitAssignmentFound, System.IntPtr NewSentryKitAssignmentFailed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryKitAssignmentPicker.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewRoomState, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewTargetPoint, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewSentryKitAssignmentFound, paramsPtr + 16);
@@ -108,7 +109,7 @@ public partial class RSentryKitAssignmentPicker : BmSDK.BmGame.RGroupAssignmentP
     public unsafe void SentryKitAssignmentFailed(BmSDK.BmGame.RSentryKitAssignmentPicker SKAP)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryKitAssignmentPicker.SentryKitAssignmentFailed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SKAP, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -120,7 +121,7 @@ public partial class RSentryKitAssignmentPicker : BmSDK.BmGame.RGroupAssignmentP
     public unsafe void SentryKitAssignmentFound(BmSDK.BmGame.RSentryKitAssignmentPicker SKAP, BmSDK.BmGame.RLootSourceBase ChosenKit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSentryKitAssignmentPicker.SentryKitAssignmentFound", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SKAP, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChosenKit, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -130,7 +131,7 @@ public partial class RSentryKitAssignmentPicker : BmSDK.BmGame.RGroupAssignmentP
     /// <summary>
     /// Struct: FMultiDestPathFindInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FMultiDestPathFindInfo
     {
         /// <summary>

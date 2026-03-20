@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_SetMesh<br/>
+/// (size = 376)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_SetMesh : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

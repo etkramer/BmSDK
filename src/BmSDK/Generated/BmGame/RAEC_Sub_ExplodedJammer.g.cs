@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_Sub_ExplodedJammer<br/>
+/// (size = 700)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_Sub_ExplodedJammer : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RAEC_Sub_ExplodedJammer : BmSDK.BmGame.RAlertEventCoordinat
     public unsafe bool IsAtPerimeter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_ExplodedJammer.IsAtPerimeter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -84,7 +85,7 @@ public partial class RAEC_Sub_ExplodedJammer : BmSDK.BmGame.RAlertEventCoordinat
     public unsafe void AssignPosition(System.Numerics.Vector3 NewCentre, System.Numerics.Vector3 PeekAimPos, System.Numerics.Vector3 NewStandPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_ExplodedJammer.AssignPosition", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewCentre, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PeekAimPos, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewStandPos, paramsPtr + 24);
@@ -98,7 +99,7 @@ public partial class RAEC_Sub_ExplodedJammer : BmSDK.BmGame.RAlertEventCoordinat
     public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_ExplodedJammer.NotifyFailed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FinishedAction, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -110,7 +111,7 @@ public partial class RAEC_Sub_ExplodedJammer : BmSDK.BmGame.RAlertEventCoordinat
     public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_ExplodedJammer.NotifyFinished", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FinishedAction, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -122,7 +123,7 @@ public partial class RAEC_Sub_ExplodedJammer : BmSDK.BmGame.RAlertEventCoordinat
     public unsafe void GetAIThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_ExplodedJammer.GetAIThoughts", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         ThoughtList = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor.FThought>>(paramsPtr + 0);
         return;

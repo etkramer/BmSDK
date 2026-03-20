@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: ROnlineStatsWriteMostWanted<br/>
+/// (size = 184)
 /// (flags = 0)
 /// </summary>
 public partial class ROnlineStatsWriteMostWanted : BmSDK.Engine.OnlineStatsWrite, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class ROnlineStatsWriteMostWanted : BmSDK.Engine.OnlineStatsWrite
     public unsafe void CopyAndWriteAllStats(BmSDK.BmGame.RPlayerController PC, BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqId, BmSDK.Engine.PlayerReplicationInfo PRI, BmSDK.Engine.OnlineStatsInterface StatsInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROnlineStatsWriteMostWanted.CopyAndWriteAllStats", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PC, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(UniqId, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PRI, paramsPtr + 16);
@@ -53,7 +54,7 @@ public partial class ROnlineStatsWriteMostWanted : BmSDK.Engine.OnlineStatsWrite
     public unsafe bool CopyAllStats(BmSDK.BmGame.RPlayerController PC, BmSDK.Engine.PlayerReplicationInfo PRI)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROnlineStatsWriteMostWanted.CopyAllStats", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PC, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PRI, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

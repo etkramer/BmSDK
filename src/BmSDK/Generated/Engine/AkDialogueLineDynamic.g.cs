@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkDialogueLineDynamic<br/>
+/// (size = 136)
 /// (flags = 0)
 /// </summary>
 public partial class AkDialogueLineDynamic : BmSDK.Engine.AkDialogueSpeech, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AkDialogueLineDynamic : BmSDK.Engine.AkDialogueSpeech, BmSD
     public unsafe BmSDK.TArray<BmSDK.Engine.AkDialogueVoice> GetVoiceList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueLineDynamic.GetVoiceList", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkDialogueVoice>>(paramsPtr + 0);
     }
@@ -49,7 +50,7 @@ public partial class AkDialogueLineDynamic : BmSDK.Engine.AkDialogueSpeech, BmSD
     public unsafe bool IsResolved()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueLineDynamic.IsResolved", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -67,7 +68,7 @@ public partial class AkDialogueLineDynamic : BmSDK.Engine.AkDialogueSpeech, BmSD
     public unsafe void Unresolve()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueLineDynamic.Unresolve", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -85,7 +86,7 @@ public partial class AkDialogueLineDynamic : BmSDK.Engine.AkDialogueSpeech, BmSD
     public unsafe bool AutoResolve()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueLineDynamic.AutoResolve", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -103,7 +104,7 @@ public partial class AkDialogueLineDynamic : BmSDK.Engine.AkDialogueSpeech, BmSD
     public unsafe bool ResolveFromId(int spkrVoiceId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueLineDynamic.ResolveFromId", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(spkrVoiceId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -122,7 +123,7 @@ public partial class AkDialogueLineDynamic : BmSDK.Engine.AkDialogueSpeech, BmSD
     public unsafe bool Resolve(BmSDK.Engine.AkDialogueVoice spkrVoice)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueLineDynamic.Resolve", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(spkrVoice, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -141,7 +142,7 @@ public partial class AkDialogueLineDynamic : BmSDK.Engine.AkDialogueSpeech, BmSD
     public unsafe bool IsBarkFallback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueLineDynamic.IsBarkFallback", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -159,7 +160,7 @@ public partial class AkDialogueLineDynamic : BmSDK.Engine.AkDialogueSpeech, BmSD
     public unsafe float GetPlayCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueLineDynamic.GetPlayCount", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNotify_Script<br/>
+/// (size = 108)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNotify_Script : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

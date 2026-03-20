@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_IsInObjectList<br/>
+/// (size = 356)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_IsInObjectList : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

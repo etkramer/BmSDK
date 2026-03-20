@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSkelControl_FeedConstraint<br/>
+/// (size = 332)
 /// (flags = 0)
 /// </summary>
 public partial class RSkelControl_FeedConstraint : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject
@@ -143,7 +144,7 @@ public partial class RSkelControl_FeedConstraint : BmSDK.Engine.SkelControlBase,
     /// <summary>
     /// Struct: FFeedConstraintDestinationRange
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FFeedConstraintDestinationRange
     {
         /// <summary>
@@ -168,7 +169,7 @@ public partial class RSkelControl_FeedConstraint : BmSDK.Engine.SkelControlBase,
     /// <summary>
     /// Struct: FFeedConstraintSourceRange
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FFeedConstraintSourceRange
     {
         /// <summary>

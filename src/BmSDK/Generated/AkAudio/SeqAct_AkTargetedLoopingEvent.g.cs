@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: SeqAct_AkTargetedLoopingEvent<br/>
+/// (size = 352)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_AkTargetedLoopingEvent : BmSDK.AkAudio.SeqAct_AkBase, BmSDK.IGameObject

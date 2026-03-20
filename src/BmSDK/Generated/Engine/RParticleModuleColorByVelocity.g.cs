@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RParticleModuleColorByVelocity<br/>
+/// (size = 136)
 /// (flags = 0)
 /// </summary>
 public partial class RParticleModuleColorByVelocity : BmSDK.Engine.ParticleModuleColorBase, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRope2BasePhysicsUpdater<br/>
+/// (size = 240)
 /// (flags = 0)
 /// </summary>
 public partial class RRope2BasePhysicsUpdater : BmSDK.BmGame.RRope2PhysicsUpdater, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RRope2BasePhysicsUpdater : BmSDK.BmGame.RRope2PhysicsUpdate
     /// <summary>
     /// Struct: FEndInitData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 52)]
     public partial record struct FEndInitData
     {
         /// <summary>

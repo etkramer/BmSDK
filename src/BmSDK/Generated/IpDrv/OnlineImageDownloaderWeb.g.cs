@@ -5,6 +5,7 @@ namespace BmSDK.IpDrv;
 
 /// <summary>
 /// Class: OnlineImageDownloaderWeb<br/>
+/// (size = 120)
 /// (flags = 0)
 /// </summary>
 public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObj
     public unsafe void DebugDraw(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineImageDownloaderWeb.DebugDraw", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Canvas, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -50,7 +51,7 @@ public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObj
     public unsafe void OnDownloadComplete(BmSDK.Engine.HttpRequestInterface OriginalRequest, BmSDK.Engine.HttpResponseInterface Response, bool bDidSucceed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineImageDownloaderWeb.OnDownloadComplete", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OriginalRequest, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Response, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bDidSucceed, paramsPtr + 16);
@@ -64,7 +65,7 @@ public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObj
     public unsafe void DownloadNextImage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineImageDownloaderWeb.DownloadNextImage", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -75,7 +76,7 @@ public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObj
     public unsafe void ClearAllDownloads()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineImageDownloaderWeb.ClearAllDownloads", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -86,7 +87,7 @@ public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObj
     public unsafe void ClearDownloads(BmSDK.TArray<BmSDK.FString> URLs)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineImageDownloaderWeb.ClearDownloads", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(URLs, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -98,7 +99,7 @@ public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObj
     public unsafe int GetNumPendingDownloads()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineImageDownloaderWeb.GetNumPendingDownloads", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -109,7 +110,7 @@ public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObj
     public unsafe void RequestOnlineImages(BmSDK.TArray<BmSDK.FString> URLs)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineImageDownloaderWeb.RequestOnlineImages", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(URLs, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -121,7 +122,7 @@ public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObj
     public unsafe BmSDK.Engine.Texture GetOnlineImageTexture(BmSDK.FString URL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineImageDownloaderWeb.GetOnlineImageTexture", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(URL, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture>(paramsPtr + 16);
@@ -133,7 +134,7 @@ public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObj
     public unsafe void OnOnlineImageDownloaded(BmSDK.IpDrv.OnlineImageDownloaderWeb.FOnlineImageDownload CachedEntry)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineImageDownloaderWeb.OnOnlineImageDownloaded", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CachedEntry, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -169,7 +170,7 @@ public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Struct: FOnlineImageDownload
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 40)]
     public partial record struct FOnlineImageDownload
     {
         /// <summary>

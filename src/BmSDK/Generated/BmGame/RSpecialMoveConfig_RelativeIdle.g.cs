@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_RelativeIdle<br/>
+/// (size = 516)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_RelativeIdle : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject

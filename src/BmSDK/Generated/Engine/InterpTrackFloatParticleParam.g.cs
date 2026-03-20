@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackFloatParticleParam<br/>
+/// (size = 264)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackFloatParticleParam : BmSDK.Engine.InterpTrackFloatBase, BmSDK.IGameObject

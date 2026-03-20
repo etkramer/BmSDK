@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UIDataStore_GameState<br/>
+/// (size = 164)
 /// (flags = 0)
 /// </summary>
 public partial class UIDataStore_GameState : BmSDK.Engine.UIDataStore, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class UIDataStore_GameState : BmSDK.Engine.UIDataStore, BmSDK.IGa
     public unsafe bool NotifyGameSessionEnded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataStore_GameState.NotifyGameSessionEnded", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -58,7 +59,7 @@ public partial class UIDataStore_GameState : BmSDK.Engine.UIDataStore, BmSDK.IGa
     public unsafe void OnRefreshDataFieldValue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataStore_GameState.OnRefreshDataFieldValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

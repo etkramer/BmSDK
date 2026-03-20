@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MetaSurfaceEffect<br/>
+/// (size = 144)
 /// (flags = 0)
 /// </summary>
 public partial class MetaSurfaceEffect : BmSDK.Engine.PostProcessEffect, BmSDK.IGameObject

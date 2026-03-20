@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: EngineBaseTypes<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class EngineBaseTypes : BmSDK.GameObject, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class EngineBaseTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRenderingPerformanceOverrides
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 4)]
     public partial record struct FRenderingPerformanceOverrides
     {
         /// <summary>

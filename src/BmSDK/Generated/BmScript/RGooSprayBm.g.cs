@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RGooSprayBm<br/>
+/// (size = 2908)
 /// (flags = 0)
 /// </summary>
 public partial class RGooSprayBm : BmSDK.BmGame.RGooSpray, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RGooSprayBm : BmSDK.BmGame.RGooSpray, BmSDK.IGameObject
     public unsafe void PlayedHostageInDangerLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGooSprayBm.PlayedHostageInDangerLine", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -84,7 +85,7 @@ public partial class RGooSprayBm : BmSDK.BmGame.RGooSpray, BmSDK.IGameObject
     public unsafe void PlayHostageInDangerLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGooSprayBm.PlayHostageInDangerLine", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -95,7 +96,7 @@ public partial class RGooSprayBm : BmSDK.BmGame.RGooSpray, BmSDK.IGameObject
     public unsafe void PlayDetonateAudio()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGooSprayBm.PlayDetonateAudio", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleCombatManager<br/>
+/// (size = 768)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AddVehicleToEncounter(BmSDK.Engine.Actor NewVehicle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.AddVehicleToEncounter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewVehicle, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -57,7 +58,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void ResetAttackDamageForChopperBoss()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.ResetAttackDamageForChopperBoss", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -68,7 +69,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AddXPPreSave()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.AddXPPreSave", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -79,7 +80,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void OnGameDifficultyChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.OnGameDifficultyChanged", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -97,7 +98,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsBigWaveFightActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.IsBigWaveFightActive", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -115,7 +116,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetHeavyTankAttackWarningMod(BmSDK.BmGame.RVehicleHeavyTank Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetHeavyTankAttackWarningMod", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Attacker, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -134,7 +135,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void WeaponMissed(BmSDK.BmGame.RVehicleWeapon Weapon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.WeaponMissed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Weapon, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -146,7 +147,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SelfDestructHackedDrones(int MaxDronesToKeep)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.SelfDestructHackedDrones", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MaxDronesToKeep, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -158,7 +159,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void ReachedAttackDestAndCantAttack(BmSDK.BmGame.RVehicleBehaviour_TankStrafe Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.ReachedAttackDestAndCantAttack", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Attacker, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -177,7 +178,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetNumSectorsBetweenMyCurrentSectorAndDestSector(BmSDK.Engine.Actor Attacker, int DestSector)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetNumSectorsBetweenMyCurrentSectorAndDestSector", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Attacker, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DestSector, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -197,7 +198,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool CountsAsInTankBattleForFleeingThugs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.CountsAsInTankBattleForFleeingThugs", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -215,7 +216,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.Engine.Actor GetTargetActor(BmSDK.BmGame.RVehicleNPC ThisActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetTargetActor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ThisActor, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -234,7 +235,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void CommunicatePlayerLocationToNearbyTanks(BmSDK.BmGame.RVehicleNPC ThisActor, bool bForceCombatRange = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.CommunicatePlayerLocationToNearbyTanks", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ThisActor, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bForceCombatRange, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -254,7 +255,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetVehicleAsFriendly(BmSDK.BmGame.RVehicleNPC Vehicle, bool Friendly)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.SetVehicleAsFriendly", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Vehicle, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Friendly, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -274,7 +275,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void DebugKillAll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.DebugKillAll", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -285,7 +286,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsCurrentAttackPursuitModeAttack(BmSDK.BmGame.RVehicleNPC Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.IsCurrentAttackPursuitModeAttack", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Attacker, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -304,7 +305,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool HasMissileThreat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.HasMissileThreat", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -322,7 +323,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool CanVehicleAttack(BmSDK.BmGame.RVehicleNPC Attackee)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.CanVehicleAttack", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Attackee, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -341,7 +342,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetNumTankMissilesToFire(BmSDK.Engine.Actor TargetActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetNumTankMissilesToFire", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetActor, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -360,7 +361,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetDamageMod(BmSDK.Engine.Actor DamagedActor, out int HitNumber, bool IncrementCurrentAttackHits = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetDamageMod", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DamagedActor, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(IncrementCurrentAttackHits, paramsPtr + 12);
         var oldFlags = funcManaged.FunctionFlags;
@@ -381,7 +382,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetHeavyTankExclusionZone(out System.Numerics.Vector3 RadiusOrigin, out float Radius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetHeavyTankExclusionZone", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -401,7 +402,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsVehicleInCombat(BmSDK.Engine.Actor TestActor, BmSDK.Engine.Actor TargetActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.IsVehicleInCombat", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestActor, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetActor, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -421,7 +422,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void UpdateAttackDifficulty(int AttackIdx)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.UpdateAttackDifficulty", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AttackIdx, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -440,7 +441,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int AwardCombatBonusPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.AwardCombatBonusPoints", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -451,7 +452,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AwardCombatSkillPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.AwardCombatSkillPoints", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[68];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -462,7 +463,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void NotifyVehicleDamaged(BmSDK.Engine.Actor DamagedActor, BmSDK.Class DamageType, int DamageAmount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.NotifyVehicleDamaged", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DamagedActor, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DamageType, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DamageAmount, paramsPtr + 16);
@@ -476,7 +477,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetEncounterType(BmSDK.BmGame.RVehicleNPC.EVehicleCombatEncounterType NewType, int AttackIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.SetEncounterType", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewType, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AttackIndex, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -496,7 +497,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.Engine.Actor GetNearestChaser()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetNearestChaser", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -514,7 +515,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsPlayerUnderDirectAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.IsPlayerUnderDirectAttack", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -532,7 +533,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void PlayerSpotted(BmSDK.BmGame.RVehicleNPC Spotter, BmSDK.Engine.Actor Spottee)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.PlayerSpotted", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Spotter, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Spottee, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -545,7 +546,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void UpdateComboHud()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.UpdateComboHud", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -556,7 +557,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void ResetComboStats()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.ResetComboStats", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -567,7 +568,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void DisplayEndOfChallengeBonusPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.DisplayEndOfChallengeBonusPoints", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -578,7 +579,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void BankCombo(bool FireCombatCompleteEvent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.BankCombo", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FireCombatCompleteEvent, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -590,7 +591,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void ComboLost(bool DueToDamage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.ComboLost", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DueToDamage, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -602,7 +603,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool ShouldGoSlowMo(BmSDK.Engine.Actor KilledVehicle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.ShouldGoSlowMo", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(KilledVehicle, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -614,7 +615,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void PlayerDamaged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.PlayerDamaged", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -625,7 +626,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void RefillComboTimer(BmSDK.Engine.Actor Vehicle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.RefillComboTimer", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Vehicle, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -637,7 +638,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void VehicleKilledPredEncounter(BmSDK.Engine.Actor KilledVehicle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.VehicleKilledPredEncounter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(KilledVehicle, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -649,7 +650,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void ResetComboTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.ResetComboTimer", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -660,7 +661,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void IncCombo(BmSDK.BmGame.RVehicleNPC KilledVehicle, bool AccurateKill)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.IncCombo", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(KilledVehicle, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AccurateKill, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -673,7 +674,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RVehicleCombatManager.EVehicleKillType GetKillType(BmSDK.BmGame.RVehicleNPC KilledVehicle, BmSDK.Engine.Controller Killer, BmSDK.Class LastDamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetKillType", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(KilledVehicle, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Killer, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LastDamageType, paramsPtr + 16);
@@ -687,7 +688,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AddScoreForSecondaryWeapon(BmSDK.BmGame.RVehicleCombatManager.EVehicleKillType MoveType, int ComboMultiplier)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.AddScoreForSecondaryWeapon", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MoveType, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ComboMultiplier, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -700,7 +701,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SecondaryWeaponUsed(BmSDK.BmGame.RVehicleWeapon WeaponUsed, int Level)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.SecondaryWeaponUsed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[14];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WeaponUsed, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Level, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -713,7 +714,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AddChallengeScore(int Amount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.AddChallengeScore", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Amount, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -725,7 +726,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void UpdateCriticalRun(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.UpdateCriticalRun", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -737,7 +738,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void ProcessCriticalKill(BmSDK.BmGame.RVehicleCombatManager.EVehicleKillType MoveType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.ProcessCriticalKill", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MoveType, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -749,7 +750,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AddScoreForKill(BmSDK.BmGame.RVehicleCombatManager.EVehicleKillType MoveType, int ComboMultiplier, BmSDK.BmGame.RVehicleNPC Target, int NumTargets)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.AddScoreForKill", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MoveType, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ComboMultiplier, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Target, paramsPtr + 8);
@@ -764,7 +765,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool VehicleKilled(BmSDK.Engine.Actor KilledVehicle, BmSDK.Engine.Controller Killer, BmSDK.Class DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.VehicleKilled", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(KilledVehicle, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Killer, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DamageType, paramsPtr + 16);
@@ -778,7 +779,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void TriggerChallengeEvent(BmSDK.Engine.Actor Vehicle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.TriggerChallengeEvent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Vehicle, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -790,7 +791,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void PlayDronesRemainingReport(BmSDK.Engine.Actor Subject, float Delay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.PlayDronesRemainingReport", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Subject, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Delay, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -803,7 +804,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void PlayCommanderBark(BmSDK.FName EventID, int Priority, BmSDK.Engine.Actor Subject, float Delay = default, float Chance = default, float MinTimeBetweenEvents = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.PlayCommanderBark", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Priority, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Subject, paramsPtr + 12);
@@ -820,7 +821,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void PlayCommanderLostContactBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.PlayCommanderLostContactBark", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -831,7 +832,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void PlayCommanderStartEncounterBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.PlayCommanderStartEncounterBark", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -842,7 +843,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SendHydraEventBatmobileCombatSuccess()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.SendHydraEventBatmobileCombatSuccess", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -860,7 +861,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RVehicleNPC.EVehicleCombatEncounterType GetCurrentEncounterType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetCurrentEncounterType", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[1];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -878,7 +879,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsAttackTargetAndCanBeSeen(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.IsAttackTargetAndCanBeSeen", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Target, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -890,7 +891,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.FName GetTankBattleNameForBarks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetTankBattleNameForBarks", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(paramsPtr + 0);
     }
@@ -901,7 +902,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetNumEnemiesForBarks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetNumEnemiesForBarks", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -912,7 +913,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetNumEnemies()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetNumEnemies", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -930,7 +931,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void PropogateWeaponFire(BmSDK.BmGame.RVehicleWeapon FiringWeapon, System.Numerics.Vector3 WeaponOrigin, System.Numerics.Vector3 FireDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.PropogateWeaponFire", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FiringWeapon, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WeaponOrigin, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FireDirection, paramsPtr + 20);
@@ -951,7 +952,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void PropogateHeavyWeaponImpact(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor HitActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.PropogateHeavyWeaponImpact", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HitLocation, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HitNormal, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HitActor, paramsPtr + 24);
@@ -972,7 +973,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void TriggerRadiusSoundReaction(System.Numerics.Vector3 StartLocation, float SoundRadiusOrigin)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.TriggerRadiusSoundReaction", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StartLocation, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SoundRadiusOrigin, paramsPtr + 12);
         var oldFlags = funcManaged.FunctionFlags;
@@ -992,7 +993,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void TriggerWeaponSoundReaction_Crows(System.Numerics.Vector3 StartLocation, System.Numerics.Vector3 EndLocation, float SoundRadiusOrigin, float SoundRadiusImpact, float SoundRadiusTrail)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.TriggerWeaponSoundReaction_Crows", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StartLocation, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EndLocation, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SoundRadiusOrigin, paramsPtr + 24);
@@ -1015,7 +1016,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void TriggerWeaponSoundReaction(System.Numerics.Vector3 StartLocation, System.Numerics.Vector3 EndLocation, float SoundRadiusOrigin, float SoundRadiusImpact, float SoundRadiusTrail)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.TriggerWeaponSoundReaction", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StartLocation, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EndLocation, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SoundRadiusOrigin, paramsPtr + 24);
@@ -1038,7 +1039,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void HeavyWeaponImpact(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor HitActor, float AlertRadius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.HeavyWeaponImpact", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HitLocation, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HitNormal, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HitActor, paramsPtr + 24);
@@ -1053,7 +1054,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void TankStrafeBlockedByOtherTank(BmSDK.BmGame.RVehicleBehaviour_TankStrafe bLocked, BmSDK.BmGame.RVehicleBehaviour_TankStrafe Blocker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.TankStrafeBlockedByOtherTank", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bLocked, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Blocker, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1073,7 +1074,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void TankStrafeReachedChaseDest(BmSDK.BmGame.RVehicleBehaviour_TankStrafe TankBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.TankStrafeReachedChaseDest", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TankBehaviour, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1092,7 +1093,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void NotifyTankStrafeDamage(BmSDK.BmGame.RVehicleBehaviour_TankStrafe TankBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.NotifyTankStrafeDamage", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TankBehaviour, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1111,7 +1112,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void UnregisterTankStrafeBehaviour(BmSDK.BmGame.RVehicleBehaviour_TankStrafe TankBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.UnregisterTankStrafeBehaviour", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TankBehaviour, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1130,7 +1131,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void RegisterTankStrafeBehaviour(BmSDK.BmGame.RVehicleBehaviour_TankStrafe TankBehaviour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.RegisterTankStrafeBehaviour", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TankBehaviour, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1149,7 +1150,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetNumEnemiesTargetingBatmobile(BmSDK.BmGame.RVehicleNPC ExcludingThisVehicle = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetNumEnemiesTargetingBatmobile", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ExcludingThisVehicle, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1168,7 +1169,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetNumEnemiesAwareOfOrLookingForPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetNumEnemiesAwareOfOrLookingForPlayer", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1186,7 +1187,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetNumEnemiesAwareOfPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetNumEnemiesAwareOfPlayer", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1204,7 +1205,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void UpdateFlyingDroneAvoidance(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.UpdateFlyingDroneAvoidance", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1223,7 +1224,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void NonAsyncTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.NonAsyncTick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1242,7 +1243,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.Tick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1261,7 +1262,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void ReInitForChallenge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.ReInitForChallenge", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1279,7 +1280,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void Init(BmSDK.Engine.WorldInfo ThisWorldInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ThisWorldInfo, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1298,7 +1299,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool AmIInMyChosenAttackSector(BmSDK.Engine.Actor Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.AmIInMyChosenAttackSector", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Attacker, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1317,7 +1318,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetSectorFilledProportion(BmSDK.Engine.Actor Attacker, bool AerialAttacker, bool SectorsMustBeLocked)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetSectorFilledProportion", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Attacker, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AerialAttacker, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SectorsMustBeLocked, paramsPtr + 12);
@@ -1338,7 +1339,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetSectorAttackPoint(out System.Numerics.Vector3 AttackLocation, out BmSDK.BmGame.RVehicleCombatManager.FAttackSector MySector)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetSectorAttackPoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[56];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1358,7 +1359,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool ReserveAdjacentAttackSector(BmSDK.Engine.Actor Attacker, float OptimalAttackRange, bool AerialAttacker, System.Numerics.Vector3 Direction, int MaxSteps = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.ReserveAdjacentAttackSector", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Attacker, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OptimalAttackRange, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AerialAttacker, paramsPtr + 12);
@@ -1381,7 +1382,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RVehicleGuardPoint GetClosestAvailableGuardPoint(BmSDK.BmGame.RVehicleNPC Vehicle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetClosestAvailableGuardPoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Vehicle, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1400,7 +1401,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SwapAttackSector(BmSDK.Engine.Actor PrevActor, BmSDK.Engine.Actor NewActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.SwapAttackSector", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PrevActor, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewActor, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1420,7 +1421,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void LockAttackSector(BmSDK.Engine.Actor Attacker, bool LockOrUnlock)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.LockAttackSector", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Attacker, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LockOrUnlock, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1440,7 +1441,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool RandomizeAttackSector(BmSDK.Engine.Actor Attacker, float OptimalAttackRange, bool AerialAttacker, int MaxNumSteps)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.RandomizeAttackSector", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Attacker, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OptimalAttackRange, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AerialAttacker, paramsPtr + 12);
@@ -1462,7 +1463,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool CheckAttackSectorAerial(System.Numerics.Vector3 CheckOrigin, System.Numerics.Vector3 CheckDirection, BmSDK.Engine.Actor Attacker, out float AttackRange)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.CheckAttackSectorAerial", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CheckOrigin, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CheckDirection, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Attacker, paramsPtr + 24);
@@ -1484,7 +1485,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetAttackSectorIndex(BmSDK.Engine.Actor Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetAttackSectorIndex", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Attacker, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1503,7 +1504,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RVehicleCombatManager.FAttackSector GetAttackSector(BmSDK.Engine.Actor Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetAttackSector", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Attacker, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1522,7 +1523,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void ReleaseAttackSector(BmSDK.Engine.Actor Attacker, bool CanEmptySectors = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.ReleaseAttackSector", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Attacker, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CanEmptySectors, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1542,7 +1543,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool ReserveAttackSector(BmSDK.Engine.Actor NewAttacker, float OptimalAttackRange, bool AerialAttacker, int AerialSingleCheckIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.ReserveAttackSector", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewAttacker, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OptimalAttackRange, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AerialAttacker, paramsPtr + 12);
@@ -1564,7 +1565,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetReservedAttackTargetIndex(BmSDK.Engine.Actor Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetReservedAttackTargetIndex", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Attacker, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1583,7 +1584,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetAttackTargetIndex(BmSDK.Engine.Actor Attacker, bool CanCreateNew = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.GetAttackTargetIndex", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Attacker, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CanCreateNew, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1603,7 +1604,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RGameInfo.ECombatLockType ShouldLockDoors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCombatManager.ShouldLockDoors", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[1];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1654,7 +1655,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FDroneBarkTimer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FDroneBarkTimer
     {
         /// <summary>
@@ -1679,7 +1680,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTankStrafeBehaviourContainer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FTankStrafeBehaviourContainer
     {
         /// <summary>
@@ -1773,7 +1774,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAttackTarget
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 364)]
     public partial record struct FAttackTarget
     {
         /// <summary>
@@ -2134,7 +2135,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAttackSector
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 40)]
     public partial record struct FAttackSector
     {
         /// <summary>
@@ -2231,7 +2232,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FVehicleEnemyContainer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FVehicleEnemyContainer
     {
         /// <summary>
@@ -2283,7 +2284,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTempEnemyContainer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FTempEnemyContainer
     {
         /// <summary>
@@ -2308,7 +2309,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FVehicleEnemyAttacksContainer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 84)]
     public partial record struct FVehicleEnemyAttacksContainer
     {
         /// <summary>

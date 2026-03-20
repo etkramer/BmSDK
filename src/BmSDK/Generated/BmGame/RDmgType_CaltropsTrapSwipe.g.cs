@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_CaltropsTrapSwipe<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_CaltropsTrapSwipe : BmSDK.BmGame.RDamageType, BmSDK.IGameObject

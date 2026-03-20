@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveInstance_HoldLedge<br/>
+/// (size = 876)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveInstance_HoldLedge : BmSDK.BmGame.RSpecialMoveInstance_ActivePoseTransition, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RSpecialMoveInstance_HoldLedge : BmSDK.BmGame.RSpecialMoveI
     public unsafe void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_HoldLedge.FinishSpecialMove", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGFxMovieModularHud_LocalRadar<br/>
+/// (size = 764)
 /// (flags = 0)
 /// </summary>
 public partial class RGFxMovieModularHud_LocalRadar : BmSDK.BmGame.RGFxMovieModularHudBase, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RGFxMovieModularHud_LocalRadar : BmSDK.BmGame.RGFxMovieModu
     public unsafe void ManualAdvanceTick(float DeltaT)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud_LocalRadar.ManualAdvanceTick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaT, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -50,7 +51,7 @@ public partial class RGFxMovieModularHud_LocalRadar : BmSDK.BmGame.RGFxMovieModu
     public unsafe void RegisterAsManualAdvanceMovie(bool do_register)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud_LocalRadar.RegisterAsManualAdvanceMovie", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(do_register, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -62,7 +63,7 @@ public partial class RGFxMovieModularHud_LocalRadar : BmSDK.BmGame.RGFxMovieModu
     public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieModularHud_LocalRadar.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LocPlay, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

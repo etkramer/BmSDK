@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MCombatMove_RedhoodBeatdownAtRange<br/>
+/// (size = 1624)
 /// (flags = 0)
 /// </summary>
 public partial class MCombatMove_RedhoodBeatdownAtRange : BmSDK.BmGame.RCombatMove_BatmanBeatdown, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class MCombatMove_RedhoodBeatdownAtRange : BmSDK.BmGame.RCombatMo
     public unsafe void StrikeContact(bool bPreStrike)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodBeatdownAtRange.StrikeContact", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPreStrike, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -85,7 +86,7 @@ public partial class MCombatMove_RedhoodBeatdownAtRange : BmSDK.BmGame.RCombatMo
     public unsafe BmSDK.BmGame.RGameInfo.StrikeRange GetValidTargetStrikeRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodBeatdownAtRange.GetValidTargetStrikeRange", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[1];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.StrikeRange>(paramsPtr + 0);
     }
@@ -96,7 +97,7 @@ public partial class MCombatMove_RedhoodBeatdownAtRange : BmSDK.BmGame.RCombatMo
     public unsafe BmSDK.BmGame.RPawnCombat.FDamageInfo SetDamageInfo(BmSDK.BmGame.RPawnCombat DamageReceiver, float DmgAmount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodBeatdownAtRange.SetDamageInfo", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[508];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DamageReceiver, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DmgAmount, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -109,7 +110,7 @@ public partial class MCombatMove_RedhoodBeatdownAtRange : BmSDK.BmGame.RCombatMo
     public unsafe void PlayStrike(bool bQueue, bool bSimulated)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCombatMove_RedhoodBeatdownAtRange.PlayStrike", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[308];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bQueue, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bSimulated, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

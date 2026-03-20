@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RInterpTrackInstVehicleTurretYaw<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RInterpTrackInstVehicleTurretYaw : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBMWeaponShotgun<br/>
+/// (size = 1944)
 /// (flags = 0)
 /// </summary>
 public partial class RBMWeaponShotgun : BmSDK.BmScript.RBMWeaponRiflePredFull, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RBMWeaponShotgun : BmSDK.BmScript.RBMWeaponRiflePredFull, B
     public unsafe float GetDamage(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponShotgun.GetDamage", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Target, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 8);
@@ -85,7 +86,7 @@ public partial class RBMWeaponShotgun : BmSDK.BmScript.RBMWeaponRiflePredFull, B
     public unsafe void DoShotFX(BmSDK.Engine.Actor HitTarget = default, bool bShouldHit = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponShotgun.DoShotFX", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[208];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HitTarget, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bShouldHit, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -98,7 +99,7 @@ public partial class RBMWeaponShotgun : BmSDK.BmScript.RBMWeaponRiflePredFull, B
     public unsafe BmSDK.FName GetRECHitReactionAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponShotgun.GetRECHitReactionAnimName", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(paramsPtr + 0);
     }

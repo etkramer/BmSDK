@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_Takedown_Discovered<br/>
+/// (size = 380)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_Takedown_Discovered : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleScanLaser<br/>
+/// (size = 248)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleScanLaser : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RVehicleScanLaser : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetSizzleEnabled(bool is_enabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScanLaser.SetSizzleEnabled", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(is_enabled, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -50,7 +51,7 @@ public partial class RVehicleScanLaser : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void TickLaser(float DeltaT, BmSDK.Rotator SocketRotation, bool CheckCollision)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScanLaser.TickLaser", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[72];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaT, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SocketRotation, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CheckCollision, paramsPtr + 16);
@@ -64,7 +65,7 @@ public partial class RVehicleScanLaser : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void CheckCollisions()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScanLaser.CheckCollisions", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -75,7 +76,7 @@ public partial class RVehicleScanLaser : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetLaserLength(float new_length)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScanLaser.SetLaserLength", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(new_length, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -87,7 +88,7 @@ public partial class RVehicleScanLaser : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetActive(bool is_active, float Range)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScanLaser.SetActive", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(is_active, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Range, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -100,7 +101,7 @@ public partial class RVehicleScanLaser : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void Initialise(BmSDK.BmGame.RVehicleHeavyTank Host, BmSDK.Engine.SkeletalMeshComponent parent_mesh, BmSDK.FName parent_socket, float Proportion, BmSDK.Engine.RObjectPool object_pool)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScanLaser.Initialise", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Host, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(parent_mesh, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(parent_socket, paramsPtr + 16);

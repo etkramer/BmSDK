@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UIDataStore_Settings<br/>
+/// (size = 148)
 /// (flags = 0)
 /// </summary>
 public partial class UIDataStore_Settings : BmSDK.Engine.UIDataStore, BmSDK.IGameObject

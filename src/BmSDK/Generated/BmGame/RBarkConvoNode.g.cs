@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBarkConvoNode<br/>
+/// (size = 116)
 /// (flags = 0)
 /// </summary>
 public partial class RBarkConvoNode : BmSDK.GameObject, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_BeatDownCriticalEnd<br/>
+/// (size = 236)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_BeatDownCriticalEnd : BmSDK.BmGame.RDmgType_BeatDownEnd, BmSDK.IGameObject

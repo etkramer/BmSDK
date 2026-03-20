@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSearchRoutingWrapper<br/>
+/// (size = 384)
 /// (flags = 0)
 /// </summary>
 public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool RefinePullbackPoint(System.Numerics.Vector3 TestSidePoint, System.Numerics.Vector3 PathSegmentStart, System.Numerics.Vector3 PathSegmentEnd, float PullbackDist, out System.Numerics.Vector3 BranchStart)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.RefinePullbackPoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[88];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestSidePoint, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PathSegmentStart, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PathSegmentEnd, paramsPtr + 24);
@@ -54,7 +55,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void PullBackEndPoint(float MaxPullBackDist, System.Numerics.Vector3 EndLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.PullBackEndPoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MaxPullBackDist, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EndLoc, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -67,7 +68,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RSearchRoutingWrapper.CPProcessResult GetChaseNodesForPathTo(BmSDK.BmGame.RChasePoint EndPoint, out BmSDK.TArray<BmSDK.BmGame.RChasePoint> TempCPPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.GetChaseNodesForPathTo", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EndPoint, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         TempCPPath = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RChasePoint>>(paramsPtr + 8);
@@ -80,7 +81,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool RecursiveChaseNodeChecker(BmSDK.BmGame.RChasePoint TestNode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.RecursiveChaseNodeChecker", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestNode, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -92,7 +93,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RSearchRoutingWrapper.CPProcessResult BuildChaseNodePath(out BmSDK.TArray<BmSDK.BmGame.RChasePoint> TempCPPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.BuildChaseNodePath", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         TempCPPath = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RChasePoint>>(paramsPtr + 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSearchRoutingWrapper.CPProcessResult>(paramsPtr + 16);
@@ -104,7 +105,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RSearchRoutingWrapper.CPProcessResult BuildChaseNodePathForTreeFailRecoverWorkaround(out BmSDK.TArray<BmSDK.BmGame.RChasePoint> TempCPPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.BuildChaseNodePathForTreeFailRecoverWorkaround", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         TempCPPath = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RChasePoint>>(paramsPtr + 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSearchRoutingWrapper.CPProcessResult>(paramsPtr + 16);
@@ -116,7 +117,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool FindStandPosAndChasePointThatHaveReachabilityToTestPoint(int FirstIndexOnMainPath, BmSDK.BmGame.RChasePoint TestSideNode, out BmSDK.BmGame.RChasePoint MainPathBranchStart, out System.Numerics.Vector3 StartStandPos, float MaxTestDist = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.FindStandPosAndChasePointThatHaveReachabilityToTestPoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[72];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FirstIndexOnMainPath, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestSideNode, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MaxTestDist, paramsPtr + 32);
@@ -132,7 +133,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void RecursiveFindBranch(int CPPathIndex, BmSDK.BmGame.RChasePoint CurrentTestPoint, out BmSDK.TArray<BmSDK.BmGame.RSearchRoutingWrapper.FSideBranchStruct> BranchList, out int bHasValidEndsWithoutBranchStarts)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.RecursiveFindBranch", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[92];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CPPathIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CurrentTestPoint, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -147,7 +148,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RSearchRoutingWrapper.CPProcessResult FindSidePath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.FindSidePath", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSearchRoutingWrapper.CPProcessResult>(paramsPtr + 0);
     }
@@ -158,7 +159,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetDistFromSearchStartForBranchFromPoint(BmSDK.BmGame.RSearchRoutingWrapper.FSideBranchStruct TestBranch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.GetDistFromSearchStartForBranchFromPoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestBranch, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 32);
@@ -170,7 +171,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe System.Numerics.Vector3 GetPositionOfDeepestNodeThatCanSeeStart(BmSDK.BmGame.RChasePoint TestNode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.GetPositionOfDeepestNodeThatCanSeeStart", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestNode, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 8);
@@ -182,7 +183,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void GetFurthestVisibleDirs(System.Numerics.Vector3 CentrePoint, out BmSDK.TArray<System.Numerics.Vector3> ValidDirList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.GetFurthestVisibleDirs", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CentrePoint, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         ValidDirList = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.Numerics.Vector3>>(paramsPtr + 12);
@@ -195,7 +196,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void GetAllValidBranchDirs(out BmSDK.TArray<System.Numerics.Vector3> OutDirList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.GetAllValidBranchDirs", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         OutDirList = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.Numerics.Vector3>>(paramsPtr + 0);
         return;
@@ -207,7 +208,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetLandPosForLastLadderDownInPath(out int Index, out System.Numerics.Vector3 LandPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.GetLandPosForLastLadderDownInPath", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         Index = BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
         LandPos = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 4);
@@ -220,7 +221,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool Update()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.Update", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[204];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -231,7 +232,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void InitTestBranchEnds()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.InitTestBranchEnds", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -242,7 +243,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void CollapseDeadEnds(BmSDK.BmGame.RChasePoint TestNode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.CollapseDeadEnds", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestNode, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -254,7 +255,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void ProcessUninformedSearchResults()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.ProcessUninformedSearchResults", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -265,7 +266,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void DirectFinished(BmSDK.BmGame.RNavigationHandle NavHandle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.DirectFinished", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NavHandle, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -277,7 +278,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void ChaseSearchFailed(BmSDK.BmGame.RChaseLocationSearch CompletedSearch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.ChaseSearchFailed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CompletedSearch, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -289,7 +290,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void ChaseSearchDone(BmSDK.BmGame.RChaseLocationSearch CompletedSearch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.ChaseSearchDone", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CompletedSearch, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -301,7 +302,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AddRejectedLedge(BmSDK.BmGame.RLedgeLookDangerAreaInfo NewReject, System.Numerics.Vector3 NewLocRejectedAt)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.AddRejectedLedge", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewReject, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewLocRejectedAt, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -314,7 +315,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void StartSearch(System.Numerics.Vector3 NewStartLoc, System.Numerics.Vector3 NewTargetLoc, System.Numerics.Vector3 NewLastArriveDir, float NewTreeSearchDist, bool bNewDoAntiBacktracking, bool bNewForceDirectPath, BmSDK.BmGame.RBMAIController NewCornerLockCon, bool bNewCheckCorners, bool bNewCheckGrates, bool bNewCheckLedges, bool bNewCheckWeakWalls, bool bNewCheckSideRooms)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.StartSearch", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[76];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewStartLoc, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewTargetLoc, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewLastArriveDir, paramsPtr + 24);
@@ -337,7 +338,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.Cleanup", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -348,7 +349,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void Init(BmSDK.Engine.Actor NewOwningActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewOwningActor, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -360,7 +361,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool CanFindBranchStartFor(System.Numerics.Vector3 TestSidePoint, System.Numerics.Vector3 PathSegmentStart, System.Numerics.Vector3 PathSegmentEnd, out System.Numerics.Vector3 BranchStart)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.CanFindBranchStartFor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestSidePoint, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PathSegmentStart, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PathSegmentEnd, paramsPtr + 24);
@@ -382,7 +383,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool CanSeeBetween(BmSDK.BmGame.RChasePoint StartPoint, BmSDK.BmGame.RChasePoint EndPoint, bool bAssumeVisibleForDynamic)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.CanSeeBetween", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StartPoint, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EndPoint, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bAssumeVisibleForDynamic, paramsPtr + 16);
@@ -403,7 +404,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsVisibleFromChosenPath(BmSDK.BmGame.RChasePoint TargetPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.IsVisibleFromChosenPath", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetPoint, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -422,7 +423,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsFarEnoughFromChosenPath(BmSDK.BmGame.RChasePoint TargetPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchRoutingWrapper.IsFarEnoughFromChosenPath", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetPoint, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -449,7 +450,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRejectedLedgeInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FRejectedLedgeInfo
     {
         /// <summary>
@@ -849,7 +850,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSideBranchStruct
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FSideBranchStruct
     {
         /// <summary>

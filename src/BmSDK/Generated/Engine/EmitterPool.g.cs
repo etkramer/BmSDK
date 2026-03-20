@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: EmitterPool<br/>
+/// (size = 780)
 /// (flags = 0)
 /// </summary>
 public partial class EmitterPool : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class EmitterPool : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.Engine.ParticleSystemComponent SpawnEmitterCustomLifetime(BmSDK.Engine.ParticleSystem EmitterTemplate, bool bSkipAutoActivate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EmitterPool.SpawnEmitterCustomLifetime", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EmitterTemplate, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bSkipAutoActivate, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -93,7 +94,7 @@ public partial class EmitterPool : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.Engine.ParticleSystemComponent SpawnEmitterMeshAttachment(BmSDK.Engine.ParticleSystem EmitterTemplate, BmSDK.Engine.SkeletalMeshComponent Mesh, BmSDK.FName AttachPointName, bool bAttachToSocket = default, System.Numerics.Vector3 RelativeLoc = default, BmSDK.Rotator RelativeRot = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EmitterPool.SpawnEmitterMeshAttachment", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EmitterTemplate, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Mesh, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AttachPointName, paramsPtr + 16);
@@ -142,7 +143,7 @@ public partial class EmitterPool : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.Engine.ParticleSystemComponent GetPooledComponent(BmSDK.Engine.ParticleSystem EmitterTemplate, bool bAutoActivate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EmitterPool.GetPooledComponent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EmitterTemplate, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bAutoActivate, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -162,7 +163,7 @@ public partial class EmitterPool : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.Engine.MaterialInstanceConstant GetFreeMatInstConsts(bool bCreateNewObject = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EmitterPool.GetFreeMatInstConsts", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bCreateNewObject, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -181,7 +182,7 @@ public partial class EmitterPool : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void FreeMaterialInstanceConstants(BmSDK.Engine.StaticMeshComponent SMC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EmitterPool.FreeMaterialInstanceConstants", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SMC, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -200,7 +201,7 @@ public partial class EmitterPool : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.Engine.StaticMeshComponent GetFreeStaticMeshComponent(bool bCreateNewObject = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EmitterPool.GetFreeStaticMeshComponent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bCreateNewObject, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -219,7 +220,7 @@ public partial class EmitterPool : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void FreeStaticMeshComponents(BmSDK.Engine.ParticleSystemComponent PSC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EmitterPool.FreeStaticMeshComponents", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PSC, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -238,7 +239,7 @@ public partial class EmitterPool : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void ReturnToPool(BmSDK.Engine.ParticleSystemComponent PSC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EmitterPool.ReturnToPool", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PSC, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -257,7 +258,7 @@ public partial class EmitterPool : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void ClearPoolComponents(bool bClearActive = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EmitterPool.ClearPoolComponents", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bClearActive, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -276,7 +277,7 @@ public partial class EmitterPool : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void OnParticleSystemFinished(BmSDK.Engine.ParticleSystemComponent PSC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EmitterPool.OnParticleSystemFinished", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PSC, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -292,7 +293,7 @@ public partial class EmitterPool : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FEmitterBaseInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FEmitterBaseInfo
     {
         /// <summary>

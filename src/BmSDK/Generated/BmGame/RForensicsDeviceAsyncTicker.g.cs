@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RForensicsDeviceAsyncTicker<br/>
+/// (size = 124)
 /// (flags = 0)
 /// </summary>
 public partial class RForensicsDeviceAsyncTicker : BmSDK.Engine.ActorComponent, BmSDK.IGameObject

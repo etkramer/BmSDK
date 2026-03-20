@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InstancedFoliageSettings<br/>
+/// (size = 184)
 /// (flags = 0)
 /// </summary>
 public partial class InstancedFoliageSettings : BmSDK.GameObject, BmSDK.IGameObject

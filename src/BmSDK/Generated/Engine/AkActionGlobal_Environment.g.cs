@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkActionGlobal_Environment<br/>
+/// (size = 164)
 /// (flags = 0)
 /// </summary>
 public partial class AkActionGlobal_Environment : BmSDK.Engine.AkActionGlobal, BmSDK.IGameObject

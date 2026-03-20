@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RGangFleePressPoint<br/>
+/// (size = 780)
 /// (flags = 0)
 /// </summary>
 public partial class RGangFleePressPoint : BmSDK.BmGame.RGangFleePressPointBase, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RGangFleePressPoint : BmSDK.BmGame.RGangFleePressPointBase,
     public unsafe BmSDK.Class GetBehaviourClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGangFleePressPoint.GetBehaviourClass", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(paramsPtr + 0);
     }

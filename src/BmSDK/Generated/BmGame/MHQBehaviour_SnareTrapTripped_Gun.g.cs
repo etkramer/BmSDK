@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MHQBehaviour_SnareTrapTripped_Gun<br/>
+/// (size = 636)
 /// (flags = 0)
 /// </summary>
 public partial class MHQBehaviour_SnareTrapTripped_Gun : BmSDK.BmGame.MHQBehaviour_SnareTrapTripped, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class MHQBehaviour_SnareTrapTripped_Gun : BmSDK.BmGame.MHQBehavio
     public unsafe bool AwareOfPlayer(BmSDK.Engine.Actor Player, BmSDK.Class TestDmgType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHQBehaviour_SnareTrapTripped_Gun.AwareOfPlayer", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Player, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestDmgType, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -51,7 +52,7 @@ public partial class MHQBehaviour_SnareTrapTripped_Gun : BmSDK.BmGame.MHQBehavio
     public unsafe bool UnAwareOfPlayer(BmSDK.Class DamageType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHQBehaviour_SnareTrapTripped_Gun.UnAwareOfPlayer", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[13];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DamageType, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -63,7 +64,7 @@ public partial class MHQBehaviour_SnareTrapTripped_Gun : BmSDK.BmGame.MHQBehavio
     public unsafe void Initialize(BmSDK.BmGame.RPawnPlayer Instigator, BmSDK.BmGame.MSnareTrapProjectile SnareTrap, BmSDK.Engine.AnimSet NewThugReactionAnimSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHQBehaviour_SnareTrapTripped_Gun.Initialize", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Instigator, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SnareTrap, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewThugReactionAnimSet, paramsPtr + 16);
@@ -77,7 +78,7 @@ public partial class MHQBehaviour_SnareTrapTripped_Gun : BmSDK.BmGame.MHQBehavio
     public unsafe void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHQBehaviour_SnareTrapTripped_Gun.OnDeactivate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

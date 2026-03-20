@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleOrbit<br/>
+/// (size = 308)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleOrbit : BmSDK.Engine.ParticleModuleOrbitBase, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class ParticleModuleOrbit : BmSDK.Engine.ParticleModuleOrbitBase,
     /// <summary>
     /// Struct: FOrbitOptions
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 4)]
     public partial record struct FOrbitOptions
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RStealthTakedownStage_ChainTakedown_StandStart<br/>
+/// (size = 1844)
 /// (flags = 0)
 /// </summary>
 public partial class RStealthTakedownStage_ChainTakedown_StandStart : BmSDK.BmGame.RStealthTakedownStage_ChainTakedown_Base, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RStealthTakedownStage_ChainTakedown_StandStart : BmSDK.BmGa
     public unsafe void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_ChainTakedown_StandStart.Begin", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

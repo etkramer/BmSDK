@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqEvent_PlayerSpawned<br/>
+/// (size = 388)
 /// (flags = 0)
 /// </summary>
 public partial class SeqEvent_PlayerSpawned : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

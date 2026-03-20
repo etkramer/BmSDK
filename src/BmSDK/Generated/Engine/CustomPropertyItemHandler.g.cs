@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: CustomPropertyItemHandler<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class CustomPropertyItemHandler : BmSDK.Interface, BmSDK.IGameObject

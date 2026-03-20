@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSeqEvent_BatmobileWrongWay<br/>
+/// (size = 380)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_BatmobileWrongWay : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

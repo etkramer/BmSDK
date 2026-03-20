@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionLogarithm<br/>
+/// (size = 228)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionLogarithm : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

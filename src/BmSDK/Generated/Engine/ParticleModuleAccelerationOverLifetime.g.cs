@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleAccelerationOverLifetime<br/>
+/// (size = 164)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleAccelerationOverLifetime : BmSDK.Engine.ParticleModuleAccelerationBase, BmSDK.IGameObject

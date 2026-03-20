@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MorphNodeWeightByBoneAngle<br/>
+/// (size = 224)
 /// (flags = 0)
 /// </summary>
 public partial class MorphNodeWeightByBoneAngle : BmSDK.Engine.MorphNodeWeightBase, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class MorphNodeWeightByBoneAngle : BmSDK.Engine.MorphNodeWeightBa
     /// <summary>
     /// Struct: FBoneAngleMorph
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FBoneAngleMorph
     {
         /// <summary>

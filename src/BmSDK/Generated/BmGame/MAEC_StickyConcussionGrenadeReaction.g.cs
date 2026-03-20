@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MAEC_StickyConcussionGrenadeReaction<br/>
+/// (size = 720)
 /// (flags = 0)
 /// </summary>
 public partial class MAEC_StickyConcussionGrenadeReaction : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class MAEC_StickyConcussionGrenadeReaction : BmSDK.BmGame.RAlertE
     public unsafe void AddThugCaughtByConcussionGrenadeBlast(BmSDK.BmGame.RBMAIController CaughtCon, System.Numerics.Vector3 ExplosionCenter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_StickyConcussionGrenadeReaction.AddThugCaughtByConcussionGrenadeBlast", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CaughtCon, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ExplosionCenter, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -86,7 +87,7 @@ public partial class MAEC_StickyConcussionGrenadeReaction : BmSDK.BmGame.RAlertE
     public unsafe void OnRemoveSoloChild(BmSDK.BmGame.RAlertEventCoordinatorSolo RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_StickyConcussionGrenadeReaction.OnRemoveSoloChild", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RemAEC, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -98,7 +99,7 @@ public partial class MAEC_StickyConcussionGrenadeReaction : BmSDK.BmGame.RAlertE
     public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController CaughtCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_StickyConcussionGrenadeReaction.FinishTopLevelAEC", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CaughtCon, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBatDistractProjectileBm<br/>
+/// (size = 1404)
 /// (flags = 0)
 /// </summary>
 public partial class RBatDistractProjectileBm : BmSDK.BmGame.RBatDistractProjectile, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RBatDistractProjectileBm : BmSDK.BmGame.RBatDistractProject
     public unsafe void StopSpinSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatDistractProjectileBm.StopSpinSound", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -84,7 +85,7 @@ public partial class RBatDistractProjectileBm : BmSDK.BmGame.RBatDistractProject
     public unsafe void StartSpinSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatDistractProjectileBm.StartSpinSound", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

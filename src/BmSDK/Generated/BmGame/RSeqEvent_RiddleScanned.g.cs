@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_RiddleScanned<br/>
+/// (size = 380)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_RiddleScanned : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RSeqEvent_RiddleScanned : BmSDK.Engine.SequenceEvent, BmSDK
     public unsafe static int GetObjClassVersion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_RiddleScanned.GetObjClassVersion", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -49,7 +50,7 @@ public partial class RSeqEvent_RiddleScanned : BmSDK.Engine.SequenceEvent, BmSDK
     public unsafe bool ShouldActivateForAnyPickupScanned()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_RiddleScanned.ShouldActivateForAnyPickupScanned", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -60,7 +61,7 @@ public partial class RSeqEvent_RiddleScanned : BmSDK.Engine.SequenceEvent, BmSDK
     public unsafe BmSDK.BmGame.RPickupBase PickupActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_RiddleScanned.PickupActor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPickupBase>(paramsPtr + 0);
     }
@@ -71,7 +72,7 @@ public partial class RSeqEvent_RiddleScanned : BmSDK.Engine.SequenceEvent, BmSDK
     public unsafe BmSDK.BmGame.RRiddleBase RiddleActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_RiddleScanned.RiddleActor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRiddleBase>(paramsPtr + 0);
     }

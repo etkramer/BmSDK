@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_GrappledTo<br/>
+/// (size = 380)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_GrappledTo : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

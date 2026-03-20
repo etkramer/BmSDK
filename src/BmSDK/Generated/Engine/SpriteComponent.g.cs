@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SpriteComponent<br/>
+/// (size = 580)
 /// (flags = 0)
 /// </summary>
 public partial class SpriteComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class SpriteComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     public unsafe void SetSpriteAndUV(BmSDK.Engine.Texture2D NewSprite, int NewU, int NewUL, int NewV, int NewVL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SpriteComponent.SetSpriteAndUV", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewSprite, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewU, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewUL, paramsPtr + 12);
@@ -61,7 +62,7 @@ public partial class SpriteComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     public unsafe void SetUV(int NewU, int NewUL, int NewV, int NewVL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SpriteComponent.SetUV", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewU, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewUL, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewV, paramsPtr + 8);
@@ -83,7 +84,7 @@ public partial class SpriteComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     public unsafe void SetSprite(BmSDK.Engine.Texture2D NewSprite)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SpriteComponent.SetSprite", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewSprite, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

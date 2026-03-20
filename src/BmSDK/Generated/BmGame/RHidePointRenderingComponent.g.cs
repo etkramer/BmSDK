@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHidePointRenderingComponent<br/>
+/// (size = 540)
 /// (flags = 0)
 /// </summary>
 public partial class RHidePointRenderingComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UberPostProcessEffect<br/>
+/// (size = 320)
 /// (flags = 0)
 /// </summary>
 public partial class UberPostProcessEffect : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqEvent_Used<br/>
+/// (size = 444)
 /// (flags = 0)
 /// </summary>
 public partial class SeqEvent_Used : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

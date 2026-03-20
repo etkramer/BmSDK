@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMSeqEvent_PredEnd_HostageStillBound<br/>
+/// (size = 380)
 /// (flags = 0)
 /// </summary>
 public partial class RBMSeqEvent_PredEnd_HostageStillBound : BmSDK.BmGame.RBMSeqEvent_BehaviourRoot, BmSDK.IGameObject

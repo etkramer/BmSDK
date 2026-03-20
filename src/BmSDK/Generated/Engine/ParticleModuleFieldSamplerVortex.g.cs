@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleFieldSamplerVortex<br/>
+/// (size = 104)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleFieldSamplerVortex : BmSDK.Engine.ParticleModuleFieldSamplerBase, BmSDK.IGameObject

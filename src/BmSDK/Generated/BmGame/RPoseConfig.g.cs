@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPoseConfig<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     public unsafe BmSDK.FString ToString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPoseConfig.ToString", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -56,7 +57,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     public unsafe void AddTransitionRelaxed(BmSDK.FName MovementStanceA, BmSDK.FName MovementStanceB, BmSDK.FName FullBodyAnim, BmSDK.FName TransitionName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPoseConfig.AddTransitionRelaxed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[192];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MovementStanceA, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MovementStanceB, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FullBodyAnim, paramsPtr + 16);
@@ -71,7 +72,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     public unsafe void AddPoseRelaxed(BmSDK.FName MovementStance, BmSDK.FName IdleFullBodyAnim, BmSDK.Engine.RAimingConfig AimingConfig = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPoseConfig.AddPoseRelaxed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[444];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MovementStance, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(IdleFullBodyAnim, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AimingConfig, paramsPtr + 16);
@@ -85,7 +86,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     public unsafe void AddPose(BmSDK.FName MovementStance, BmSDK.FName WeaponStance, BmSDK.FName IdleFullBodyAnim, BmSDK.Engine.RAimingConfig AimingConfig = default, bool AllowTurningToAim = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPoseConfig.AddPose", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[456];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MovementStance, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WeaponStance, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(IdleFullBodyAnim, paramsPtr + 16);
@@ -98,7 +99,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPoseEditorFrame
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FPoseEditorFrame
     {
         /// <summary>
@@ -150,7 +151,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTransition
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 160)]
     public partial record struct FTransition
     {
         /// <summary>
@@ -386,7 +387,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPose
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 420)]
     public partial record struct FPose
     {
         /// <summary>
@@ -674,7 +675,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAimingTransitionTimingOverride
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FAimingTransitionTimingOverride
     {
         /// <summary>
@@ -699,7 +700,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAimingTransitionTiming
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FAimingTransitionTiming
     {
         /// <summary>
@@ -733,7 +734,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FChaserConfig
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FChaserConfig
     {
         /// <summary>
@@ -767,7 +768,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTurnConfig
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 28)]
     public partial record struct FTurnConfig
     {
         /// <summary>
@@ -837,7 +838,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRandomIdleOverlays
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FRandomIdleOverlays
     {
         /// <summary>
@@ -880,7 +881,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAdditiveDescription
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FAdditiveDescription
     {
         /// <summary>
@@ -905,7 +906,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FOverlayDescription
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 48)]
     public partial record struct FOverlayDescription
     {
         /// <summary>
@@ -930,7 +931,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FMovement
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 128)]
     public partial record struct FMovement
     {
         /// <summary>
@@ -1011,7 +1012,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FStrafeMovementAnim
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 48)]
     public partial record struct FStrafeMovementAnim
     {
         /// <summary>
@@ -1072,7 +1073,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FMovementAnim
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 132)]
     public partial record struct FMovementAnim
     {
         /// <summary>

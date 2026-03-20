@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SkelControl_TwistBone<br/>
+/// (size = 260)
 /// (flags = 0)
 /// </summary>
 public partial class SkelControl_TwistBone : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject

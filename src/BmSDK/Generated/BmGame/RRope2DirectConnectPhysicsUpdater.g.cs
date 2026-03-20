@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRope2DirectConnectPhysicsUpdater<br/>
+/// (size = 240)
 /// (flags = 0)
 /// </summary>
 public partial class RRope2DirectConnectPhysicsUpdater : BmSDK.BmGame.RRope2BasePhysicsUpdater, BmSDK.IGameObject

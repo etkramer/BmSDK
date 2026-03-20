@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_StreamoutUnwantedTextures<br/>
+/// (size = 352)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_StreamoutUnwantedTextures : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

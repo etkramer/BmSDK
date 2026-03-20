@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_SetSkelControlStrength<br/>
+/// (size = 364)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SetSkelControlStrength : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackMove<br/>
+/// (size = 444)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackMove : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class InterpTrackMove : BmSDK.Engine.InterpTrack, BmSDK.IGameObje
     /// <summary>
     /// Struct: FRandomGeneratorMove
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 172)]
     public partial record struct FRandomGeneratorMove
     {
         /// <summary>
@@ -466,7 +467,7 @@ public partial class InterpTrackMove : BmSDK.Engine.InterpTrack, BmSDK.IGameObje
     /// <summary>
     /// Struct: FInterpLookupTrack
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FInterpLookupTrack
     {
         /// <summary>
@@ -482,7 +483,7 @@ public partial class InterpTrackMove : BmSDK.Engine.InterpTrack, BmSDK.IGameObje
     /// <summary>
     /// Struct: FInterpLookupPoint
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FInterpLookupPoint
     {
         /// <summary>

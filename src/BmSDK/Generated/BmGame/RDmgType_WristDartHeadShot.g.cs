@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_WristDartHeadShot<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_WristDartHeadShot : BmSDK.BmGame.RDamageType, BmSDK.IGameObject

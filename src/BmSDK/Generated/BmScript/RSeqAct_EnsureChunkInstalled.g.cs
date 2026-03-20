@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSeqAct_EnsureChunkInstalled<br/>
+/// (size = 372)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_EnsureChunkInstalled : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RSeqAct_EnsureChunkInstalled : BmSDK.Engine.SequenceAction,
     public unsafe void ShowUI()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_EnsureChunkInstalled.ShowUI", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -49,7 +50,7 @@ public partial class RSeqAct_EnsureChunkInstalled : BmSDK.Engine.SequenceAction,
     public unsafe void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_EnsureChunkInstalled.Activated", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

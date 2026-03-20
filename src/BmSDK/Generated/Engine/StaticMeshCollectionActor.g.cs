@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: StaticMeshCollectionActor<br/>
+/// (size = 720)
 /// (flags = 0)
 /// </summary>
 public partial class StaticMeshCollectionActor : BmSDK.Engine.StaticMeshActorBase, BmSDK.IGameObject

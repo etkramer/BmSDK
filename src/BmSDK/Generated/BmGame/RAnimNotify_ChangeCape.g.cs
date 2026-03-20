@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_ChangeCape<br/>
+/// (size = 168)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_ChangeCape : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

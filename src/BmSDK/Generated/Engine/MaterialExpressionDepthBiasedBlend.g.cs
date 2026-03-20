@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionDepthBiasedBlend<br/>
+/// (size = 336)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionDepthBiasedBlend : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

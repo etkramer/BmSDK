@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNotify_PlayFaceFxAnim<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNotify_PlayFaceFxAnim : BmSDK.Engine.AnimNotify_Scripted, BmSDK.IGameObject

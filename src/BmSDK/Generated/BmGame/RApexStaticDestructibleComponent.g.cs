@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RApexStaticDestructibleComponent<br/>
+/// (size = 848)
 /// (flags = 0)
 /// </summary>
 public partial class RApexStaticDestructibleComponent : BmSDK.Engine.ApexStaticDestructibleComponent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RApexStaticDestructibleComponent : BmSDK.Engine.ApexStaticD
     public unsafe bool GetSocketWorldLocationAndRotation(BmSDK.FName InSocketName, out System.Numerics.Vector3 OutLocation, out BmSDK.Rotator OutRotation, int Space)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RApexStaticDestructibleComponent.GetSocketWorldLocationAndRotation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InSocketName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Space, paramsPtr + 32);
         var oldFlags = funcManaged.FunctionFlags;
@@ -60,7 +61,7 @@ public partial class RApexStaticDestructibleComponent : BmSDK.Engine.ApexStaticD
     public unsafe void CalculateStaticCollisionBoundingBox(out BmSDK.GameObject.FMatrix OutBoundsTransform, out System.Numerics.Vector3 OutBoundsHalfExtents)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RApexStaticDestructibleComponent.CalculateStaticCollisionBoundingBox", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[76];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -80,7 +81,7 @@ public partial class RApexStaticDestructibleComponent : BmSDK.Engine.ApexStaticD
     public unsafe void LoadDamageStateFromSaveGame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RApexStaticDestructibleComponent.LoadDamageStateFromSaveGame", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;

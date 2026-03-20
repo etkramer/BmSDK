@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RBoxComponent<br/>
+/// (size = 624)
 /// (flags = 0)
 /// </summary>
 public partial class RBoxComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

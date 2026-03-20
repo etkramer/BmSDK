@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RParticleModuleTypeDataDecal<br/>
+/// (size = 268)
 /// (flags = 0)
 /// </summary>
 public partial class RParticleModuleTypeDataDecal : BmSDK.Engine.ParticleModuleTypeDataBase, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RParticleModuleTypeDataDecal : BmSDK.Engine.ParticleModuleT
     /// <summary>
     /// Struct: FParticleDecalData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 176)]
     public partial record struct FParticleDecalData
     {
         /// <summary>

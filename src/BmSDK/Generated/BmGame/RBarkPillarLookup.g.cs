@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBarkPillarLookup<br/>
+/// (size = 144)
 /// (flags = 0)
 /// </summary>
 public partial class RBarkPillarLookup : BmSDK.Engine.AkHash, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RBarkPillarLookup : BmSDK.Engine.AkHash, BmSDK.IGameObject
     public unsafe bool HasChapterChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkPillarLookup.HasChapterChanged", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -53,7 +54,7 @@ public partial class RBarkPillarLookup : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPillarBarkInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 52)]
     public partial record struct FPillarBarkInfo
     {
         /// <summary>
@@ -87,7 +88,7 @@ public partial class RBarkPillarLookup : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPillarBarkPair
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FPillarBarkPair
     {
         /// <summary>
@@ -148,7 +149,7 @@ public partial class RBarkPillarLookup : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRuntimePillar
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FRuntimePillar
     {
         /// <summary>
@@ -173,7 +174,7 @@ public partial class RBarkPillarLookup : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Struct: FFlagValAndFileName
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FFlagValAndFileName
     {
         /// <summary>

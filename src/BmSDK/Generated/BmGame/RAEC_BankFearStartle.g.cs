@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_BankFearStartle<br/>
+/// (size = 720)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_BankFearStartle : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RAEC_BankFearStartle : BmSDK.BmGame.RAlertEventCoordinatorB
     public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController StolenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BankFearStartle.FinishTopLevelAEC", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StolenCon, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -85,7 +86,7 @@ public partial class RAEC_BankFearStartle : BmSDK.BmGame.RAlertEventCoordinatorB
     public unsafe void FearTakedownStartle(BmSDK.BmGame.RPawnVillain Screamer, BmSDK.Engine.Actor ForceMissActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BankFearStartle.FearTakedownStartle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Screamer, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ForceMissActor, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -98,7 +99,7 @@ public partial class RAEC_BankFearStartle : BmSDK.BmGame.RAlertEventCoordinatorB
     public unsafe void AddGunStartled(BmSDK.BmGame.RBMAIController NewCon, System.Numerics.Vector3 StartleLoc, BmSDK.Engine.Actor ForceMissActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BankFearStartle.AddGunStartled", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewCon, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StartleLoc, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ForceMissActor, paramsPtr + 20);
@@ -112,7 +113,7 @@ public partial class RAEC_BankFearStartle : BmSDK.BmGame.RAlertEventCoordinatorB
     public unsafe bool WantsToGlanceAt(BmSDK.Engine.Actor TestTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BankFearStartle.WantsToGlanceAt", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestTarget, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);

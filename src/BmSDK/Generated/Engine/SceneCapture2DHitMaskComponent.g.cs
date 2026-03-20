@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SceneCapture2DHitMaskComponent<br/>
+/// (size = 256)
 /// (flags = 0)
 /// </summary>
 public partial class SceneCapture2DHitMaskComponent : BmSDK.Engine.SceneCaptureComponent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class SceneCapture2DHitMaskComponent : BmSDK.Engine.SceneCaptureC
     public unsafe void SetFadingStartTimeSinceHit(float InFadingStartTimeSinceHit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SceneCapture2DHitMaskComponent.SetFadingStartTimeSinceHit", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InFadingStartTimeSinceHit, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -57,7 +58,7 @@ public partial class SceneCapture2DHitMaskComponent : BmSDK.Engine.SceneCaptureC
     public unsafe void SetCaptureParameters(System.Numerics.Vector3 InMaskPosition, float InMaskRadius, System.Numerics.Vector3 InStartupPosition, bool bOnlyWhenFacing, System.Numerics.Vector3 InChannelMask)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SceneCapture2DHitMaskComponent.SetCaptureParameters", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InMaskPosition, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InMaskRadius, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InStartupPosition, paramsPtr + 16);
@@ -80,7 +81,7 @@ public partial class SceneCapture2DHitMaskComponent : BmSDK.Engine.SceneCaptureC
     public unsafe void SetCaptureTargetTexture(BmSDK.Engine.TextureRenderTarget2D InTextureTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SceneCapture2DHitMaskComponent.SetCaptureTargetTexture", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InTextureTarget, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

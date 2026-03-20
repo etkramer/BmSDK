@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RJokerIncidentalPoint<br/>
+/// (size = 724)
 /// (flags = 0)
 /// </summary>
 public partial class RJokerIncidentalPoint : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RJokerIncidentalPoint : BmSDK.BmGame.RDummyTarget, BmSDK.IG
     public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerIncidentalPoint.OnToggle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Action, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -85,7 +86,7 @@ public partial class RJokerIncidentalPoint : BmSDK.BmGame.RDummyTarget, BmSDK.IG
     public unsafe void InitMeshes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerIncidentalPoint.InitMeshes", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -100,7 +101,7 @@ public partial class RJokerIncidentalPoint : BmSDK.BmGame.RDummyTarget, BmSDK.IG
     /// <summary>
     /// Struct: FReactionAnimations
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FReactionAnimations
     {
         /// <summary>

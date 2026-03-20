@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactoryDynamicSM<br/>
+/// (size = 169)
 /// (flags = 0)
 /// </summary>
 public partial class ActorFactoryDynamicSM : BmSDK.Engine.ActorFactory, BmSDK.IGameObject

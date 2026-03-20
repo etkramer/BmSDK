@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkDialogueConversation<br/>
+/// (size = 116)
 /// (flags = 0)
 /// </summary>
 public partial class AkDialogueConversation : BmSDK.Engine.AkDialogueSpeech, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AkDialogueConversation : BmSDK.Engine.AkDialogueSpeech, BmS
     public unsafe int GetDialogueLineCountScript()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversation.GetDialogueLineCountScript", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -49,7 +50,7 @@ public partial class AkDialogueConversation : BmSDK.Engine.AkDialogueSpeech, BmS
     public unsafe float GetTotalPlayCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversation.GetTotalPlayCount", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -73,7 +74,7 @@ public partial class AkDialogueConversation : BmSDK.Engine.AkDialogueSpeech, BmS
     /// <summary>
     /// Struct: FAkDialogueConversationItem
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FAkDialogueConversationItem
     {
         /// <summary>

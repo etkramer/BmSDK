@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionDirectionalBlurSceneTexture<br/>
+/// (size = 284)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionDirectionalBlurSceneTexture : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

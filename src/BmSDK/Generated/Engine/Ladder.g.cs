@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Ladder<br/>
+/// (size = 960)
 /// (flags = 0)
 /// </summary>
 public partial class Ladder : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class Ladder : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     public unsafe bool SuggestMovePreparation(BmSDK.Engine.Pawn Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Ladder.SuggestMovePreparation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);

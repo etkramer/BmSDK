@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: FlexComponent<br/>
+/// (size = 828)
 /// (flags = 0)
 /// </summary>
 public partial class FlexComponent : BmSDK.Engine.StaticMeshComponent, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class FlexComponent : BmSDK.Engine.StaticMeshComponent, BmSDK.IGa
     /// <summary>
     /// Struct: FFlexSimBuffer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FFlexSimBuffer
     {
         /// <summary>

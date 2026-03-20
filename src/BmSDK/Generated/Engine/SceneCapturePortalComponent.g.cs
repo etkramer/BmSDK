@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SceneCapturePortalComponent<br/>
+/// (size = 232)
 /// (flags = 0)
 /// </summary>
 public partial class SceneCapturePortalComponent : BmSDK.Engine.SceneCaptureComponent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class SceneCapturePortalComponent : BmSDK.Engine.SceneCaptureComp
     public unsafe void SetCaptureParameters(BmSDK.Engine.TextureRenderTarget2D NewTextureTarget = default, float NewScaleFOV = default, BmSDK.Engine.Actor NewViewDest = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SceneCapturePortalComponent.SetCaptureParameters", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewTextureTarget, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewScaleFOV, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewViewDest, paramsPtr + 12);

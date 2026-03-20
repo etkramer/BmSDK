@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_Land<br/>
+/// (size = 608)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_Land : BmSDK.BmGame.RSpecialMoveConfig_PoseTransition, BmSDK.IGameObject

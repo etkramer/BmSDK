@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MAEC_JackInBoxExplosion<br/>
+/// (size = 732)
 /// (flags = 0)
 /// </summary>
 public partial class MAEC_JackInBoxExplosion : BmSDK.BmGame.RAEC_GelMineExplosion, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class MAEC_JackInBoxExplosion : BmSDK.BmGame.RAEC_GelMineExplosio
     public unsafe void PlayExclaimBark(BmSDK.BmGame.RBMAIController BarkC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_JackInBoxExplosion.PlayExclaimBark", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BarkC, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

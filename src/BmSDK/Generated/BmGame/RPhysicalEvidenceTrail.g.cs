@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPhysicalEvidenceTrail<br/>
+/// (size = 813)
 /// (flags = 0)
 /// </summary>
 public partial class RPhysicalEvidenceTrail : BmSDK.BmGame.RPhysicalEvidenceBase, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RPhysicalEvidenceTrail : BmSDK.BmGame.RPhysicalEvidenceBase
     public unsafe void DoShowNow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicalEvidenceTrail.DoShowNow", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -84,7 +85,7 @@ public partial class RPhysicalEvidenceTrail : BmSDK.BmGame.RPhysicalEvidenceBase
     public unsafe void AutomaticallySetVisibility()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicalEvidenceTrail.AutomaticallySetVisibility", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[1];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

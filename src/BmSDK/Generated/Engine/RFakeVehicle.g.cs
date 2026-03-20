@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RFakeVehicle<br/>
+/// (size = 2160)
 /// (flags = 0)
 /// </summary>
 public partial class RFakeVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RFakeVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     public unsafe void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFakeVehicle.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -84,7 +85,7 @@ public partial class RFakeVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     public unsafe float AudioGetRPM(bool unlerped = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFakeVehicle.AudioGetRPM", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(unlerped, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

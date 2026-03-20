@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DOFAndBloomEffect<br/>
+/// (size = 156)
 /// (flags = 0)
 /// </summary>
 public partial class DOFAndBloomEffect : BmSDK.Engine.DOFEffect, BmSDK.IGameObject

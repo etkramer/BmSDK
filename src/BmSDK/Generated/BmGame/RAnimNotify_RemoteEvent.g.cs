@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_RemoteEvent<br/>
+/// (size = 92)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_RemoteEvent : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

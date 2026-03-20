@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_SpecialCaseVoiceSynthDisable<br/>
+/// (size = 380)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_SpecialCaseVoiceSynthDisable : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

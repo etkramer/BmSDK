@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatEvent_CombatTakedown<br/>
+/// (size = 380)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatEvent_CombatTakedown : BmSDK.BmGame.RCombatEvent, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RStaffBase<br/>
+/// (size = 2068)
 /// (flags = 0)
 /// </summary>
 public partial class RStaffBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InGameAdManager<br/>
+/// (size = 120)
 /// (flags = 0)
 /// </summary>
 public partial class InGameAdManager : BmSDK.Engine.PlatformInterfaceBase, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class InGameAdManager : BmSDK.Engine.PlatformInterfaceBase, BmSDK
     public unsafe void SetPauseWhileAdOpen(bool bShouldPause)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InGameAdManager.SetPauseWhileAdOpen", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bShouldPause, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -50,7 +51,7 @@ public partial class InGameAdManager : BmSDK.Engine.PlatformInterfaceBase, BmSDK
     public unsafe void ForceCloseAd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InGameAdManager.ForceCloseAd", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -68,7 +69,7 @@ public partial class InGameAdManager : BmSDK.Engine.PlatformInterfaceBase, BmSDK
     public unsafe void HideBanner()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InGameAdManager.HideBanner", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -86,7 +87,7 @@ public partial class InGameAdManager : BmSDK.Engine.PlatformInterfaceBase, BmSDK
     public unsafe void ShowBanner(bool bShowBottomOfScreen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InGameAdManager.ShowBanner", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bShowBottomOfScreen, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -105,7 +106,7 @@ public partial class InGameAdManager : BmSDK.Engine.PlatformInterfaceBase, BmSDK
     public unsafe void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InGameAdManager.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;

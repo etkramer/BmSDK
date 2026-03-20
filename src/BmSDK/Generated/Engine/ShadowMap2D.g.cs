@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ShadowMap2D<br/>
+/// (size = 140)
 /// (flags = 0)
 /// </summary>
 public partial class ShadowMap2D : BmSDK.GameObject, BmSDK.IGameObject

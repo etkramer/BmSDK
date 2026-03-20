@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RCombatMove_VillainRobotAttack<br/>
+/// (size = 960)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_VillainRobotAttack : BmSDK.BmGame.RCombatMove_VillainCloseAttack, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RCombatMove_VillainRobotAttack : BmSDK.BmGame.RCombatMove_V
     public unsafe void CanCounterStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_VillainRobotAttack.CanCounterStart", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

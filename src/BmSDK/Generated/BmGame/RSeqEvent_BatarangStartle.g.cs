@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_BatarangStartle<br/>
+/// (size = 380)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_BatarangStartle : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

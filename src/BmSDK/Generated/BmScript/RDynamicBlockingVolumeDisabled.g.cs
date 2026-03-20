@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RDynamicBlockingVolumeDisabled<br/>
+/// (size = 764)
 /// (flags = 0)
 /// </summary>
 public partial class RDynamicBlockingVolumeDisabled : BmSDK.BmGame.RDynamicBlockingVolume, BmSDK.IGameObject

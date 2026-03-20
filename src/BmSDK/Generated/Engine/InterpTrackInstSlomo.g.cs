@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackInstSlomo<br/>
+/// (size = 88)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstSlomo : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject

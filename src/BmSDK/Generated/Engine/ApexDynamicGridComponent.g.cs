@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexDynamicGridComponent<br/>
+/// (size = 876)
 /// (flags = 0)
 /// </summary>
 public partial class ApexDynamicGridComponent : BmSDK.Engine.ApexFieldSamplerComponent, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class ApexDynamicGridComponent : BmSDK.Engine.ApexFieldSamplerCom
     /// <summary>
     /// Struct: FSCSelfShadowingSpotlightParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 56)]
     public partial record struct FSCSelfShadowingSpotlightParams
     {
         /// <summary>
@@ -150,7 +151,7 @@ public partial class ApexDynamicGridComponent : BmSDK.Engine.ApexFieldSamplerCom
     /// <summary>
     /// Struct: FSCSelfShadowingParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FSCSelfShadowingParams
     {
         /// <summary>
@@ -211,7 +212,7 @@ public partial class ApexDynamicGridComponent : BmSDK.Engine.ApexFieldSamplerCom
     /// <summary>
     /// Struct: FSCMacCormackAdvectionParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FSCMacCormackAdvectionParams
     {
         /// <summary>
@@ -236,7 +237,7 @@ public partial class ApexDynamicGridComponent : BmSDK.Engine.ApexFieldSamplerCom
     /// <summary>
     /// Struct: FSCStochasticParticleAdvectionParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FSCStochasticParticleAdvectionParams
     {
         /// <summary>
@@ -270,7 +271,7 @@ public partial class ApexDynamicGridComponent : BmSDK.Engine.ApexFieldSamplerCom
     /// <summary>
     /// Struct: FSCDensityParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 80)]
     public partial record struct FSCDensityParams
     {
         /// <summary>
@@ -376,7 +377,7 @@ public partial class ApexDynamicGridComponent : BmSDK.Engine.ApexFieldSamplerCom
     /// <summary>
     /// Struct: FSCExpansionAdvancedParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FSCExpansionAdvancedParams
     {
         /// <summary>
@@ -419,7 +420,7 @@ public partial class ApexDynamicGridComponent : BmSDK.Engine.ApexFieldSamplerCom
     /// <summary>
     /// Struct: FSCBuoyancyAdvancedParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FSCBuoyancyAdvancedParams
     {
         /// <summary>
@@ -462,7 +463,7 @@ public partial class ApexDynamicGridComponent : BmSDK.Engine.ApexFieldSamplerCom
     /// <summary>
     /// Struct: FSCMultigridParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FSCMultigridParams
     {
         /// <summary>
@@ -505,7 +506,7 @@ public partial class ApexDynamicGridComponent : BmSDK.Engine.ApexFieldSamplerCom
     /// <summary>
     /// Struct: FSCGridToParticleCouplingParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FSCGridToParticleCouplingParams
     {
         /// <summary>
@@ -539,7 +540,7 @@ public partial class ApexDynamicGridComponent : BmSDK.Engine.ApexFieldSamplerCom
     /// <summary>
     /// Struct: FSCParticleToGridCouplingParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FSCParticleToGridCouplingParams
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGameSettingsCoop<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RGameSettingsCoop : BmSDK.Engine.OnlineGameSettings, BmSDK.IGameObject

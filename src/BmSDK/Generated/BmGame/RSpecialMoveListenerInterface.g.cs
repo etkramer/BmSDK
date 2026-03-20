@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveListenerInterface<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveListenerInterface : BmSDK.Interface, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RSpecialMoveListenerInterface : BmSDK.Interface, BmSDK.IGam
     public unsafe void SpecialMoveFinished(BmSDK.BmGame.RSpecialMoveInstance MoveFinishing, BmSDK.BmGame.RPawnPlayer Pawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveListenerInterface.SpecialMoveFinished", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MoveFinishing, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Pawn, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

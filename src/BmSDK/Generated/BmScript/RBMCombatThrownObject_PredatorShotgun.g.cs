@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBMCombatThrownObject_PredatorShotgun<br/>
+/// (size = 1184)
 /// (flags = 0)
 /// </summary>
 public partial class RBMCombatThrownObject_PredatorShotgun : BmSDK.BmGame.RBMCombatThrownObject_Predator, BmSDK.IGameObject

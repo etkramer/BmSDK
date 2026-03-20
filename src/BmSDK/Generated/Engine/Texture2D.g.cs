@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Texture2D<br/>
+/// (size = 496)
 /// (flags = 0)
 /// </summary>
 public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.Texture2D Create(int InSizeX, int InSizeY, BmSDK.Engine.Texture.EPixelFormat InFormat = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2D.Create", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InSizeX, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InSizeY, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InFormat, paramsPtr + 8);
@@ -59,7 +60,7 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     public unsafe void SetPrestreamMipLevels(float ForceDuration, bool FullMips, bool HighPriority, bool GentleLastRenderTimeHint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2D.SetPrestreamMipLevels", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ForceDuration, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FullMips, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HighPriority, paramsPtr + 8);
@@ -81,7 +82,7 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     public unsafe void SetForceMipLevelsToBeResident(float Seconds, int CinematicTextureGroups = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2D.SetForceMipLevelsToBeResident", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Seconds, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CinematicTextureGroups, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -98,7 +99,7 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTextureLinkedListMirror
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FTextureLinkedListMirror
     {
         /// <summary>
@@ -510,7 +511,7 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTexture2DMipMap
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 68)]
     public partial record struct FTexture2DMipMap
     {
         /// <summary>

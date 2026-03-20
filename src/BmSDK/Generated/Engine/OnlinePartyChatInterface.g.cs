@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: OnlinePartyChatInterface<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class OnlinePartyChatInterface : BmSDK.Interface, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class OnlinePartyChatInterface : BmSDK.Interface, BmSDK.IGameObje
     public unsafe bool IsInPartyChat(byte LocalUserNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.IsInPartyChat", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
@@ -50,7 +51,7 @@ public partial class OnlinePartyChatInterface : BmSDK.Interface, BmSDK.IGameObje
     public unsafe bool ShowCommunitySessionsUI(byte LocalUserNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.ShowCommunitySessionsUI", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
@@ -62,7 +63,7 @@ public partial class OnlinePartyChatInterface : BmSDK.Interface, BmSDK.IGameObje
     public unsafe bool ShowVoiceChannelUI(byte LocalUserNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.ShowVoiceChannelUI", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
@@ -74,7 +75,7 @@ public partial class OnlinePartyChatInterface : BmSDK.Interface, BmSDK.IGameObje
     public unsafe bool ShowPartyUI(byte LocalUserNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.ShowPartyUI", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
@@ -86,7 +87,7 @@ public partial class OnlinePartyChatInterface : BmSDK.Interface, BmSDK.IGameObje
     public unsafe int GetPartyBandwidth()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.GetPartyBandwidth", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -97,7 +98,7 @@ public partial class OnlinePartyChatInterface : BmSDK.Interface, BmSDK.IGameObje
     public unsafe bool SetPartyMemberCustomData(byte LocalUserNum, int Data1, int Data2, int Data3, int Data4)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.SetPartyMemberCustomData", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Data1, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Data2, paramsPtr + 8);
@@ -113,7 +114,7 @@ public partial class OnlinePartyChatInterface : BmSDK.Interface, BmSDK.IGameObje
     public unsafe void ClearPartyMembersInfoChangedDelegate(byte LocalUserNum, System.IntPtr PartyMembersInfoChangedDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.ClearPartyMembersInfoChangedDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PartyMembersInfoChangedDelegate, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -126,7 +127,7 @@ public partial class OnlinePartyChatInterface : BmSDK.Interface, BmSDK.IGameObje
     public unsafe void AddPartyMembersInfoChangedDelegate(byte LocalUserNum, System.IntPtr PartyMembersInfoChangedDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.AddPartyMembersInfoChangedDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PartyMembersInfoChangedDelegate, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -139,7 +140,7 @@ public partial class OnlinePartyChatInterface : BmSDK.Interface, BmSDK.IGameObje
     public unsafe void OnPartyMembersInfoChanged(BmSDK.FString PlayerName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID, int CustomData1, int CustomData2, int CustomData3, int CustomData4)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.OnPartyMembersInfoChanged", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerID, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CustomData1, paramsPtr + 24);
@@ -156,7 +157,7 @@ public partial class OnlinePartyChatInterface : BmSDK.Interface, BmSDK.IGameObje
     public unsafe void ClearPartyMemberListChangedDelegate(byte LocalUserNum, System.IntPtr PartyMemberListChangedDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.ClearPartyMemberListChangedDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PartyMemberListChangedDelegate, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -169,7 +170,7 @@ public partial class OnlinePartyChatInterface : BmSDK.Interface, BmSDK.IGameObje
     public unsafe void AddPartyMemberListChangedDelegate(byte LocalUserNum, System.IntPtr PartyMemberListChangedDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.AddPartyMemberListChangedDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PartyMemberListChangedDelegate, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -182,7 +183,7 @@ public partial class OnlinePartyChatInterface : BmSDK.Interface, BmSDK.IGameObje
     public unsafe void OnPartyMemberListChanged(bool bJoinedOrLeft, BmSDK.FString PlayerName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.OnPartyMemberListChanged", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bJoinedOrLeft, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerName, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerID, paramsPtr + 20);
@@ -196,7 +197,7 @@ public partial class OnlinePartyChatInterface : BmSDK.Interface, BmSDK.IGameObje
     public unsafe bool GetPartyMemberInformation(BmSDK.Engine.OnlineSubsystem.FUniqueNetId MemberId, out BmSDK.Engine.OnlineSubsystem.FOnlinePartyMember PartyMember)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.GetPartyMemberInformation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[72];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MemberId, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         PartyMember = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FOnlinePartyMember>(paramsPtr + 8);
@@ -209,7 +210,7 @@ public partial class OnlinePartyChatInterface : BmSDK.Interface, BmSDK.IGameObje
     public unsafe bool GetPartyMembersInformation(out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FOnlinePartyMember> PartyMembers)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.GetPartyMembersInformation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         PartyMembers = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FOnlinePartyMember>>(paramsPtr + 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 16);
@@ -221,7 +222,7 @@ public partial class OnlinePartyChatInterface : BmSDK.Interface, BmSDK.IGameObje
     public unsafe void ClearSendPartyGameInvitesCompleteDelegate(byte LocalUserNum, System.IntPtr SendPartyGameInvitesCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.ClearSendPartyGameInvitesCompleteDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SendPartyGameInvitesCompleteDelegate, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -234,7 +235,7 @@ public partial class OnlinePartyChatInterface : BmSDK.Interface, BmSDK.IGameObje
     public unsafe void AddSendPartyGameInvitesCompleteDelegate(byte LocalUserNum, System.IntPtr SendPartyGameInvitesCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.AddSendPartyGameInvitesCompleteDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SendPartyGameInvitesCompleteDelegate, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -247,7 +248,7 @@ public partial class OnlinePartyChatInterface : BmSDK.Interface, BmSDK.IGameObje
     public unsafe void OnSendPartyGameInvitesComplete(bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.OnSendPartyGameInvitesComplete", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bWasSuccessful, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -259,7 +260,7 @@ public partial class OnlinePartyChatInterface : BmSDK.Interface, BmSDK.IGameObje
     public unsafe bool SendPartyGameInvites(byte LocalUserNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlinePartyChatInterface.SendPartyGameInvites", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalUserNum, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);

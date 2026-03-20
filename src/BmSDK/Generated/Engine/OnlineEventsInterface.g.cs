@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: OnlineEventsInterface<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class OnlineEventsInterface : BmSDK.Interface, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class OnlineEventsInterface : BmSDK.Interface, BmSDK.IGameObject
     public unsafe bool UpdatePlaylistPopulation(int PlaylistId, int NumPlayers)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineEventsInterface.UpdatePlaylistPopulation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlaylistId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NumPlayers, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -51,7 +52,7 @@ public partial class OnlineEventsInterface : BmSDK.Interface, BmSDK.IGameObject
     public unsafe bool UploadGameplayEventsData(BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId, out BmSDK.TArray<byte> Payload)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineEventsInterface.UploadGameplayEventsData", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(UniqueId, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         Payload = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(paramsPtr + 8);
@@ -64,7 +65,7 @@ public partial class OnlineEventsInterface : BmSDK.Interface, BmSDK.IGameObject
     public unsafe bool UploadPlayerData(BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId, BmSDK.FString PlayerNick, BmSDK.Engine.OnlineProfileSettings ProfileSettings, BmSDK.Engine.OnlinePlayerStorage PlayerStorage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineEventsInterface.UploadPlayerData", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(UniqueId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerNick, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ProfileSettings, paramsPtr + 24);

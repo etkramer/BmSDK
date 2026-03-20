@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_MultiplyFloat<br/>
+/// (size = 368)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_MultiplyFloat : BmSDK.Engine.SeqAct_SetSequenceVariable, BmSDK.IGameObject

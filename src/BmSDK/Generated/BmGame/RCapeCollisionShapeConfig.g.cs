@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCapeCollisionShapeConfig<br/>
+/// (size = 192)
 /// (flags = 0)
 /// </summary>
 public partial class RCapeCollisionShapeConfig : BmSDK.GameObject, BmSDK.IGameObject

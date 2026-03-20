@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_RandomSwitch<br/>
+/// (size = 400)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_RandomSwitch : BmSDK.Engine.SeqAct_Switch, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class SeqAct_RandomSwitch : BmSDK.Engine.SeqAct_Switch, BmSDK.IGa
     public unsafe static int GetObjClassVersion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_RandomSwitch.GetObjClassVersion", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }

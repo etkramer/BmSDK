@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactoryEmitter<br/>
+/// (size = 152)
 /// (flags = 0)
 /// </summary>
 public partial class ActorFactoryEmitter : BmSDK.Engine.ActorFactory, BmSDK.IGameObject

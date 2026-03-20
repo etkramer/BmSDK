@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimSet<br/>
+/// (size = 532)
 /// (flags = 0)
 /// </summary>
 public partial class AnimSet : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AnimSet : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.Engine.AnimSequence FindAnimSequence(BmSDK.FName SequenceName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSet.FindAnimSequence", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SequenceName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -54,7 +55,7 @@ public partial class AnimSet : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimSetPreviewPartner
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FAnimSetPreviewPartner
     {
         /// <summary>
@@ -79,7 +80,7 @@ public partial class AnimSet : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimSetPreviewAttachment
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FAnimSetPreviewAttachment
     {
         /// <summary>
@@ -104,7 +105,7 @@ public partial class AnimSet : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimSetPreviewWeapon
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FAnimSetPreviewWeapon
     {
         /// <summary>
@@ -173,7 +174,7 @@ public partial class AnimSet : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimSetMeshLinkup
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FAnimSetMeshLinkup
     {
         /// <summary>

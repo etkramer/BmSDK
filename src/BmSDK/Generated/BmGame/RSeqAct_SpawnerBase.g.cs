@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_SpawnerBase<br/>
+/// (size = 352)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SpawnerBase : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RSeqAct_SpawnerBase : BmSDK.Engine.SequenceAction, BmSDK.IG
     public unsafe void OnDataLoaded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpawnerBase.OnDataLoaded", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -49,7 +50,7 @@ public partial class RSeqAct_SpawnerBase : BmSDK.Engine.SequenceAction, BmSDK.IG
     public unsafe void SetCharacterData(out int Slot, BmSDK.FName PlayableCharacterName, BmSDK.BmGame.RAddContentPlayerCharacter PlayableCharacter, BmSDK.BmGame.RAddContentPlayerCharacterMesh CharacterMesh)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpawnerBase.SetCharacterData", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayableCharacterName, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayableCharacter, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CharacterMesh, paramsPtr + 20);
@@ -71,7 +72,7 @@ public partial class RSeqAct_SpawnerBase : BmSDK.Engine.SequenceAction, BmSDK.IG
     public unsafe void StoreObjVar(BmSDK.FString Ident, int Index, BmSDK.GameObject Obj)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpawnerBase.StoreObjVar", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Ident, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Obj, paramsPtr + 20);

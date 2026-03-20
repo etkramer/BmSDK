@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMBehaviour_PlayEntryAnim<br/>
+/// (size = 600)
 /// (flags = 0)
 /// </summary>
 public partial class RBMBehaviour_PlayEntryAnim : BmSDK.BmGame.RBMBehaviour_Controlled, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RBMBehaviour_PlayEntryAnim : BmSDK.BmGame.RBMBehaviour_Cont
     public unsafe void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PlayEntryAnim.OnDeactivate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -49,7 +50,7 @@ public partial class RBMBehaviour_PlayEntryAnim : BmSDK.BmGame.RBMBehaviour_Cont
     public unsafe void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PlayEntryAnim.OnBeginInterrupt", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

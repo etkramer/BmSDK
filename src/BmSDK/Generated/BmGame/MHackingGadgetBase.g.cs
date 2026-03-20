@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MHackingGadgetBase<br/>
+/// (size = 2244)
 /// (flags = 0)
 /// </summary>
 public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     public unsafe void CurrentTargetSubroutineChanged(bool bSubroutineDisable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.CurrentTargetSubroutineChanged", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bSubroutineDisable, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -85,7 +86,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     public unsafe void OmnitronGameSuccesful()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.OmnitronGameSuccesful", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -96,7 +97,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     public unsafe bool isGadgetActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.isGadgetActive", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -107,7 +108,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     public unsafe void ChangeCurrentSubroutine(bool bGoToNext)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.ChangeCurrentSubroutine", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bGoToNext, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -119,7 +120,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     public unsafe void SetViewInHackingModeOnPrimitiveComponent(BmSDK.Engine.PrimitiveComponent TheComponent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.SetViewInHackingModeOnPrimitiveComponent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TheComponent, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -138,7 +139,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     public unsafe void ControlThumbPadLightIntensity(float fLightIntensity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.ControlThumbPadLightIntensity", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(fLightIntensity, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -150,7 +151,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     public unsafe void SetThumbStickPositionRight(float RightPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.SetThumbStickPositionRight", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RightPos, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -162,7 +163,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     public unsafe void SetThumbStickPositionLeft(float LeftPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.SetThumbStickPositionLeft", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LeftPos, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -174,7 +175,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     public unsafe BmSDK.FName GetHolsteredPose(out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.GetHolsteredPose", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         MirroredNess = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.EMirrorChoice>(paramsPtr + 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(paramsPtr + 4);
@@ -186,7 +187,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     public unsafe BmSDK.FName GetHolsteredControllerState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.GetHolsteredControllerState", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(paramsPtr + 0);
     }
@@ -197,7 +198,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     public unsafe void PowerOffScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.PowerOffScreen", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -208,7 +209,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     public unsafe void PowerOnScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.PowerOnScreen", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -219,7 +220,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     public unsafe void CancelGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackingGadgetBase.CancelGadget", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -434,7 +435,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     /// <summary>
     /// Struct: FBatgirlSecondaryTargetData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FBatgirlSecondaryTargetData
     {
         /// <summary>

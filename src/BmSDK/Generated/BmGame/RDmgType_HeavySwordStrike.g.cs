@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_HeavySwordStrike<br/>
+/// (size = 236)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_HeavySwordStrike : BmSDK.BmGame.RDmgType_HeavyStrike, BmSDK.IGameObject

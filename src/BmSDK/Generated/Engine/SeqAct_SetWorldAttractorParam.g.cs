@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_SetWorldAttractorParam<br/>
+/// (size = 484)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_SetWorldAttractorParam : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

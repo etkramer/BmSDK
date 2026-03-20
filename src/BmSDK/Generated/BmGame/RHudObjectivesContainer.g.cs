@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHudObjectivesContainer<br/>
+/// (size = 120)
 /// (flags = 0)
 /// </summary>
 public partial class RHudObjectivesContainer : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RHudObjectivesContainer : BmSDK.GameObject, BmSDK.IGameObje
     public unsafe void FlushPendingObjectiveMessage(BmSDK.FString Title)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudObjectivesContainer.FlushPendingObjectiveMessage", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Title, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -50,7 +51,7 @@ public partial class RHudObjectivesContainer : BmSDK.GameObject, BmSDK.IGameObje
     public unsafe void QueueObjectiveMessageCustomIcon(float Time, BmSDK.FString Title, BmSDK.FString Desc, BmSDK.FString OrgDesc, BmSDK.FString CustomIconName, bool bForceShowMap, BmSDK.FString BackPrompt, bool bNoDuplicates, bool bPulseCompassIndicator, BmSDK.FString MostWantedPipeSeparatedArray = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudObjectivesContainer.QueueObjectiveMessageCustomIcon", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[208];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Time, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Title, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Desc, paramsPtr + 20);
@@ -71,7 +72,7 @@ public partial class RHudObjectivesContainer : BmSDK.GameObject, BmSDK.IGameObje
     public unsafe void QueueObjectiveMessage(float Time, BmSDK.FString Title, BmSDK.FString Desc, BmSDK.FString OrgDesc, int ArrowType, bool bForceShowMap, BmSDK.FString BackPrompt, bool bNoDuplicates, bool bPulseCompassIndicator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudObjectivesContainer.QueueObjectiveMessage", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[180];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Time, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Title, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Desc, paramsPtr + 20);
@@ -115,7 +116,7 @@ public partial class RHudObjectivesContainer : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Struct: FQueuedObjectives
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 96)]
     public partial record struct FQueuedObjectives
     {
         /// <summary>

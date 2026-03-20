@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: FacebookIntegration<br/>
+/// (size = 212)
 /// (flags = 0)
 /// </summary>
 public partial class FacebookIntegration : BmSDK.Engine.PlatformInterfaceBase, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class FacebookIntegration : BmSDK.Engine.PlatformInterfaceBase, B
     public unsafe void Disconnect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FacebookIntegration.Disconnect", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -56,7 +57,7 @@ public partial class FacebookIntegration : BmSDK.Engine.PlatformInterfaceBase, B
     public unsafe void FacebookDialog(BmSDK.FString Action, BmSDK.TArray<BmSDK.FString> ParamKeysAndValues)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FacebookIntegration.FacebookDialog", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Action, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamKeysAndValues, paramsPtr + 16);
         var oldFlags = funcManaged.FunctionFlags;
@@ -76,7 +77,7 @@ public partial class FacebookIntegration : BmSDK.Engine.PlatformInterfaceBase, B
     public unsafe void FacebookRequest(BmSDK.FString GraphRequest)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FacebookIntegration.FacebookRequest", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GraphRequest, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -95,7 +96,7 @@ public partial class FacebookIntegration : BmSDK.Engine.PlatformInterfaceBase, B
     public unsafe bool IsAuthorized()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FacebookIntegration.IsAuthorized", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -113,7 +114,7 @@ public partial class FacebookIntegration : BmSDK.Engine.PlatformInterfaceBase, B
     public unsafe bool Authorize()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FacebookIntegration.Authorize", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -131,7 +132,7 @@ public partial class FacebookIntegration : BmSDK.Engine.PlatformInterfaceBase, B
     public unsafe bool Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FacebookIntegration.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -146,7 +147,7 @@ public partial class FacebookIntegration : BmSDK.Engine.PlatformInterfaceBase, B
     /// <summary>
     /// Struct: FFacebookFriend
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FFacebookFriend
     {
         /// <summary>

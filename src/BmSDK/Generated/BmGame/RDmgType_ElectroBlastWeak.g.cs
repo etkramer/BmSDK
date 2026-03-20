@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_ElectroBlastWeak<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_ElectroBlastWeak : BmSDK.BmGame.RDamageType, BmSDK.IGameObject

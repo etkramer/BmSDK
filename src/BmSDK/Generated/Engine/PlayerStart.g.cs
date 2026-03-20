@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PlayerStart<br/>
+/// (size = 960)
 /// (flags = 0)
 /// </summary>
 public partial class PlayerStart : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class PlayerStart : BmSDK.Engine.NavigationPoint, BmSDK.IGameObje
     public unsafe void PostRenderFor(BmSDK.Engine.PlayerController PC, BmSDK.Engine.Canvas Canvas, System.Numerics.Vector3 CameraPosition, System.Numerics.Vector3 CameraDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerStart.PostRenderFor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[152];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PC, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Canvas, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CameraPosition, paramsPtr + 16);
@@ -88,7 +89,7 @@ public partial class PlayerStart : BmSDK.Engine.NavigationPoint, BmSDK.IGameObje
     public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerStart.OnToggle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Action, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

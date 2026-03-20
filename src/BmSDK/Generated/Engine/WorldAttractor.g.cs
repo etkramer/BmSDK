@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: WorldAttractor<br/>
+/// (size = 908)
 /// (flags = 0)
 /// </summary>
 public partial class WorldAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class WorldAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void OnSetWorldAttractorParam(BmSDK.Engine.SeqAct_SetWorldAttractorParam Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldAttractor.OnSetWorldAttractorParam", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Action, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -82,7 +83,7 @@ public partial class WorldAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FWorldAttractorData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FWorldAttractorData
     {
         /// <summary>

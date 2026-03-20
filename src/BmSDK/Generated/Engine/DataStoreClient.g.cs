@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DataStoreClient<br/>
+/// (size = 188)
 /// (flags = 0)
 /// </summary>
 public partial class DataStoreClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class DataStoreClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     public unsafe void DebugDumpDataStoreInfo(bool bVerbose)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DataStoreClient.DebugDumpDataStoreInfo", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bVerbose, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -50,7 +51,7 @@ public partial class DataStoreClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     public unsafe void NotifyGameSessionEnded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DataStoreClient.NotifyGameSessionEnded", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -61,7 +62,7 @@ public partial class DataStoreClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     public unsafe BmSDK.Class FindDataStoreClass(BmSDK.Class RequiredMetaClass)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DataStoreClient.FindDataStoreClass", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RequiredMetaClass, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(paramsPtr + 8);
@@ -73,7 +74,7 @@ public partial class DataStoreClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     public unsafe void GetPlayerDataStoreClasses(out BmSDK.TArray<BmSDK.Class> out_DataStoreClasses)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DataStoreClient.GetPlayerDataStoreClasses", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         out_DataStoreClasses = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Class>>(paramsPtr + 0);
         return;
@@ -85,7 +86,7 @@ public partial class DataStoreClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     public unsafe int FindPlayerDataStoreIndex(BmSDK.Engine.LocalPlayer PlayerOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DataStoreClient.FindPlayerDataStoreIndex", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerOwner, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -104,7 +105,7 @@ public partial class DataStoreClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     public unsafe bool UnregisterDataStore(BmSDK.Engine.UIDataStore DataStore)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DataStoreClient.UnregisterDataStore", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DataStore, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -123,7 +124,7 @@ public partial class DataStoreClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     public unsafe bool RegisterDataStore(BmSDK.Engine.UIDataStore DataStore, BmSDK.Engine.LocalPlayer PlayerOwner = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DataStoreClient.RegisterDataStore", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DataStore, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerOwner, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -143,7 +144,7 @@ public partial class DataStoreClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     public unsafe BmSDK.Engine.UIDataStore CreateDataStore(BmSDK.Class DataStoreClass)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DataStoreClient.CreateDataStore", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DataStoreClass, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -162,7 +163,7 @@ public partial class DataStoreClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     public unsafe BmSDK.Engine.UIDataStore FindDataStore(BmSDK.FName DataStoreTag, BmSDK.Engine.LocalPlayer PlayerOwner = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DataStoreClient.FindDataStore", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DataStoreTag, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerOwner, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -224,7 +225,7 @@ public partial class DataStoreClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPlayerDataStoreGroup
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FPlayerDataStoreGroup
     {
         /// <summary>

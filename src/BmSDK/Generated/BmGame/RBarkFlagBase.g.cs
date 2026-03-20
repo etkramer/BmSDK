@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBarkFlagBase<br/>
+/// (size = 100)
 /// (flags = 0)
 /// </summary>
 public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.FString GetFlagsAsString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.GetFlagsAsString", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
     }
@@ -49,7 +50,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void DumpToLog()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.DumpToLog", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -60,7 +61,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool ShouldAutoTagAsNeverOverRadio()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.ShouldAutoTagAsNeverOverRadio", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -71,7 +72,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool ShouldAutoTagAsAllowKnockedOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.ShouldAutoTagAsAllowKnockedOut", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -82,7 +83,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void ClearAllOfType(BmSDK.BmGame.RBarkValDef.FlagTypeEnum PurgeType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.ClearAllOfType", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PurgeType, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -94,7 +95,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetInterestWeight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.GetInterestWeight", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -105,7 +106,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static void GetValidValuesForType(BmSDK.BmGame.RBarkValDef.FlagTypeEnum CheckType, out BmSDK.TArray<BmSDK.FName> ValidList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.GetValidValuesForType", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CheckType, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -125,7 +126,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool ValueIsValid(BmSDK.BmGame.RBarkValDef.FlagTypeEnum CheckType, BmSDK.FName CheckValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.ValueIsValid", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CheckType, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CheckValue, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -145,7 +146,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool HasTheseFlags(BmSDK.BmGame.RBarkFlagBase OtherBase)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.HasTheseFlags", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OtherBase, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -164,7 +165,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.TArray<BmSDK.FName> GetAllValuesForType(BmSDK.BmGame.RBarkValDef.FlagTypeEnum TestType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.GetAllValuesForType", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestType, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -183,7 +184,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.FName GetValueForType(BmSDK.BmGame.RBarkValDef.FlagTypeEnum TestType, int TestIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.GetValueForType", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestType, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestIndex, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -203,7 +204,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.FName GetCountFlagFromInt(int CountVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.GetCountFlagFromInt", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CountVal, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(paramsPtr + 4);
@@ -215,7 +216,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AddFlagStruct(BmSDK.BmGame.RBarkFlagBase.FBarkFlag NewFlag)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.AddFlagStruct", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewFlag, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -227,7 +228,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void RemoveFlag(BmSDK.BmGame.RBarkValDef.FlagTypeEnum PurgeType, BmSDK.FName PurgeName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.RemoveFlag", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PurgeType, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PurgeName, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -240,7 +241,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool AddFlag(BmSDK.BmGame.RBarkValDef.FlagTypeEnum Type, BmSDK.FName NewName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.AddFlag", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Type, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewName, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -253,7 +254,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool BuildFromString(BmSDK.FString Input)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.BuildFromString", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Input, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -272,7 +273,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.FName ValueFromString(BmSDK.FString Input)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.ValueFromString", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Input, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -291,7 +292,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.BmGame.RBarkValDef.FlagTypeEnum TypeFromString(BmSDK.FString Input)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.TypeFromString", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[17];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Input, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -316,7 +317,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FBarkFlag
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FBarkFlag
     {
         /// <summary>

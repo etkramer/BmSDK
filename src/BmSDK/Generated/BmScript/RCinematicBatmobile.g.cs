@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RCinematicBatmobile<br/>
+/// (size = 1016)
 /// (flags = 0)
 /// </summary>
 public partial class RCinematicBatmobile : BmSDK.BmGame.RCinematicBatmobileBase, BmSDK.IGameObject

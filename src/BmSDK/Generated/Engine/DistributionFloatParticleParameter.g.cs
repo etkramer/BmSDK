@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DistributionFloatParticleParameter<br/>
+/// (size = 144)
 /// (flags = 0)
 /// </summary>
 public partial class DistributionFloatParticleParameter : BmSDK.Engine.DistributionFloatParameterBase, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionReliefMapping<br/>
+/// (size = 352)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionReliefMapping : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDEntityPlayersAverageHealth<br/>
+/// (size = 252)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDEntityPlayersAverageHealth : BmSDK.AkAudio.AkSDEntityPlayerBase, BmSDK.IGameObject

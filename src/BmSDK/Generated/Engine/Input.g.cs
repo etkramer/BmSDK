@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Input<br/>
+/// (size = 372)
 /// (flags = 0)
 /// </summary>
 public partial class Input : BmSDK.Engine.Interaction, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class Input : BmSDK.Engine.Interaction, BmSDK.IGameObject
     public unsafe bool IsThumbMouseButton2Pressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Input.IsThumbMouseButton2Pressed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -56,7 +57,7 @@ public partial class Input : BmSDK.Engine.Interaction, BmSDK.IGameObject
     public unsafe bool IsThumbMouseButtonPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Input.IsThumbMouseButtonPressed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -74,7 +75,7 @@ public partial class Input : BmSDK.Engine.Interaction, BmSDK.IGameObject
     public unsafe bool IsLeftShiftPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Input.IsLeftShiftPressed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -92,7 +93,7 @@ public partial class Input : BmSDK.Engine.Interaction, BmSDK.IGameObject
     public unsafe bool IsLeftCtrlPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Input.IsLeftCtrlPressed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -110,7 +111,7 @@ public partial class Input : BmSDK.Engine.Interaction, BmSDK.IGameObject
     public unsafe void SetBind(BmSDK.FName BindName, BmSDK.FString Command)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Input.SetBind", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[56];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BindName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Command, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -123,7 +124,7 @@ public partial class Input : BmSDK.Engine.Interaction, BmSDK.IGameObject
     public unsafe void ResetInput()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Input.ResetInput", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -138,7 +139,7 @@ public partial class Input : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTouchTracker
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FTouchTracker
     {
         /// <summary>
@@ -298,7 +299,7 @@ public partial class Input : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Struct: FKeyBind
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 28)]
     public partial record struct FKeyBind
     {
         /// <summary>

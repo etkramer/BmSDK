@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_CounterClash<br/>
+/// (size = 244)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_CounterClash : BmSDK.BmGame.RDmgType_Counter, BmSDK.IGameObject

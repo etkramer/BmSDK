@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RKActorSpawnable<br/>
+/// (size = 996)
 /// (flags = 0)
 /// </summary>
 public partial class RKActorSpawnable : BmSDK.Engine.KActor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RKActorSpawnable : BmSDK.Engine.KActor, BmSDK.IGameObject
     public unsafe void OnToggleDoDamage(BmSDK.BmGame.RSeqAct_ToggleDoDamage ToggleAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorSpawnable.OnToggleDoDamage", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ToggleAction, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -85,7 +86,7 @@ public partial class RKActorSpawnable : BmSDK.Engine.KActor, BmSDK.IGameObject
     public unsafe void CreateThroughWallsViewMesh(BmSDK.Engine.MaterialInterface ThroughWallsViewMaterial, out BmSDK.Engine.StaticMeshComponent ThroughWallsViewMesh, BmSDK.Engine.Scene.ESceneDepthPriorityGroup DepthGroup, float MinDepthDelta = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKActorSpawnable.CreateThroughWallsViewMesh", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ThroughWallsViewMaterial, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DepthGroup, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MinDepthDelta, paramsPtr + 20);

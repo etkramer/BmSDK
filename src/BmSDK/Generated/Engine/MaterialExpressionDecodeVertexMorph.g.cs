@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionDecodeVertexMorph<br/>
+/// (size = 225)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionDecodeVertexMorph : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

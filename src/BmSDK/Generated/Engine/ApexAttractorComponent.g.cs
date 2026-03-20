@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexAttractorComponent<br/>
+/// (size = 620)
 /// (flags = 0)
 /// </summary>
 public partial class ApexAttractorComponent : BmSDK.Engine.ApexFieldSamplerComponent, BmSDK.IGameObject

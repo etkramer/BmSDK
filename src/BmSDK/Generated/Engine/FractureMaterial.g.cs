@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: FractureMaterial<br/>
+/// (size = 116)
 /// (flags = 0)
 /// </summary>
 public partial class FractureMaterial : BmSDK.GameObject, BmSDK.IGameObject

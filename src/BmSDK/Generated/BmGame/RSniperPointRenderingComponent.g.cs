@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSniperPointRenderingComponent<br/>
+/// (size = 540)
 /// (flags = 0)
 /// </summary>
 public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

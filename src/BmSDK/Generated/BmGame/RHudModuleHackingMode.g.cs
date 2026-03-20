@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHudModuleHackingMode<br/>
+/// (size = 240)
 /// (flags = 0)
 /// </summary>
 public partial class RHudModuleHackingMode : BmSDK.BmGame.RHudModule, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RHudModuleHackingMode : BmSDK.BmGame.RHudModule, BmSDK.IGam
     public unsafe void TriggerErrorAnim(BmSDK.FString ErrorMessage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleHackingMode.TriggerErrorAnim", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ErrorMessage, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -50,7 +51,7 @@ public partial class RHudModuleHackingMode : BmSDK.BmGame.RHudModule, BmSDK.IGam
     public unsafe void SetCursorLocation(float X, float Y)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleHackingMode.SetCursorLocation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(X, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Y, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -63,7 +64,7 @@ public partial class RHudModuleHackingMode : BmSDK.BmGame.RHudModule, BmSDK.IGam
     public unsafe void SetCurrentSubroutineInfo(BmSDK.FString subroutineName, BmSDK.FString subroutineDescription, int CurrentIconIndex, int NextIconIndex, bool playSwapAnim, bool NeedToDisplayNumberTargets, int NumberTargets)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleHackingMode.SetCurrentSubroutineInfo", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(subroutineName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(subroutineDescription, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CurrentIconIndex, paramsPtr + 32);
@@ -81,7 +82,7 @@ public partial class RHudModuleHackingMode : BmSDK.BmGame.RHudModule, BmSDK.IGam
     public unsafe void SetHackingPanelVisibility(bool bVisible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleHackingMode.SetHackingPanelVisibility", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bVisible, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -93,7 +94,7 @@ public partial class RHudModuleHackingMode : BmSDK.BmGame.RHudModule, BmSDK.IGam
     public unsafe void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleHackingMode.Close", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -104,7 +105,7 @@ public partial class RHudModuleHackingMode : BmSDK.BmGame.RHudModule, BmSDK.IGam
     public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleHackingMode.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(_RPC, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(_ExtensionName, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(_ExtensionPath, paramsPtr + 24);

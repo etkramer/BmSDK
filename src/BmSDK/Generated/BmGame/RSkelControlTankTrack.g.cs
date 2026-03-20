@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSkelControlTankTrack<br/>
+/// (size = 268)
 /// (flags = 0)
 /// </summary>
 public partial class RSkelControlTankTrack : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RSkelControlTankTrack : BmSDK.Engine.SkelControlBase, BmSDK
     public unsafe void SetSuspensionPositions(float Stride, float Front, float Rear)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSkelControlTankTrack.SetSuspensionPositions", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Stride, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Front, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Rear, paramsPtr + 8);

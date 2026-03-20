@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimUtil_FloorCorrectionGrid<br/>
+/// (size = 320)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimUtil_FloorCorrectionGrid : BmSDK.GameObject, BmSDK.IGameObject
@@ -134,7 +135,7 @@ public partial class RAnimUtil_FloorCorrectionGrid : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Struct: FGridState
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 80)]
     public partial record struct FGridState
     {
         /// <summary>
@@ -186,7 +187,7 @@ public partial class RAnimUtil_FloorCorrectionGrid : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Struct: FGridConstants
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 92)]
     public partial record struct FGridConstants
     {
         /// <summary>
@@ -328,7 +329,7 @@ public partial class RAnimUtil_FloorCorrectionGrid : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Struct: FGridFeather
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FGridFeather
     {
         /// <summary>
@@ -380,7 +381,7 @@ public partial class RAnimUtil_FloorCorrectionGrid : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Struct: FGridParameters
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FGridParameters
     {
         /// <summary>
@@ -423,7 +424,7 @@ public partial class RAnimUtil_FloorCorrectionGrid : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Struct: FGridVector
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FGridVector
     {
         /// <summary>
@@ -457,7 +458,7 @@ public partial class RAnimUtil_FloorCorrectionGrid : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Struct: FGridSlope
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FGridSlope
     {
         /// <summary>
@@ -491,7 +492,7 @@ public partial class RAnimUtil_FloorCorrectionGrid : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Struct: FGridSample
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FGridSample
     {
         /// <summary>
@@ -516,7 +517,7 @@ public partial class RAnimUtil_FloorCorrectionGrid : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Struct: FResolvedAABB
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FResolvedAABB
     {
         /// <summary>

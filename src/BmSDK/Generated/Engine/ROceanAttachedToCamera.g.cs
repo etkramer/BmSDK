@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ROceanAttachedToCamera<br/>
+/// (size = 868)
 /// (flags = 0)
 /// </summary>
 public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe void StopOceanFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.StopOceanFX", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -84,7 +85,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe void StartOceanFX(BmSDK.Engine.ROceanComponent.FRockOceanSettings OceanSettings, BmSDK.Engine.Texture2D OverrideDataMap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.StartOceanFX", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[132];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OceanSettings, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OverrideDataMap, paramsPtr + 124);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -97,7 +98,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.Destroyed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -108,7 +109,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe void CacheReferences()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.CacheReferences", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -119,7 +120,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe void CreateResources()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.CreateResources", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -130,7 +131,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -141,7 +142,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe float GetLocalMaxWorldHeight(System.Numerics.Vector3 Position, int xOffset, int yOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.GetLocalMaxWorldHeight", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Position, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(xOffset, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(yOffset, paramsPtr + 16);
@@ -162,7 +163,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe float GetGlobalMinWorldHeight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.GetGlobalMinWorldHeight", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -180,7 +181,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe float GetGlobalMaxWorldHeight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.GetGlobalMaxWorldHeight", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -198,7 +199,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe float GetOceanAttenuation(System.Numerics.Vector3 Position, int xOffset, int yOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.GetOceanAttenuation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Position, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(xOffset, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(yOffset, paramsPtr + 16);
@@ -219,7 +220,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe System.Numerics.Vector4 GetDataMapAtPos(System.Numerics.Vector3 Position, int xOffset, int yOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.GetDataMapAtPos", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Position, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(xOffset, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(yOffset, paramsPtr + 16);
@@ -240,7 +241,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe float GetMagnitudeAtPos(System.Numerics.Vector3 Position, int xOffset, int yOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.GetMagnitudeAtPos", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Position, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(xOffset, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(yOffset, paramsPtr + 16);
@@ -261,7 +262,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe bool IsOceanPosFastCheck(System.Numerics.Vector2 UV, int SizeX, int SizeY)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.IsOceanPosFastCheck", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(UV, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SizeX, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SizeY, paramsPtr + 12);
@@ -282,7 +283,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe bool IsOceanAtUV(System.Numerics.Vector2 UV, int xOffset, int yOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.IsOceanAtUV", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(UV, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(xOffset, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(yOffset, paramsPtr + 12);
@@ -303,7 +304,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe float GetOceanShoreDistAtPos(System.Numerics.Vector3 Position, int xOffset, int yOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.GetOceanShoreDistAtPos", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Position, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(xOffset, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(yOffset, paramsPtr + 16);
@@ -324,7 +325,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe bool IsOceanAtPos(System.Numerics.Vector3 Position, int xOffset, int yOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.IsOceanAtPos", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Position, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(xOffset, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(yOffset, paramsPtr + 16);
@@ -345,7 +346,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe float GetWaveSample(float U, float V)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.GetWaveSample", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(U, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(V, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -365,7 +366,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe System.Numerics.Vector2 GetOceanHeightAtPosition(System.Numerics.Vector3 Position)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.GetOceanHeightAtPosition", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Position, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -384,7 +385,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe void StopPlayerOceanEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.StopPlayerOceanEffect", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -402,7 +403,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe void UpdatePlayerOceanEffect(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROceanAttachedToCamera.UpdatePlayerOceanEffect", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -418,7 +419,7 @@ public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameOb
     /// <summary>
     /// Struct: FFOceanVolumeInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FFOceanVolumeInfo
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNotify_ForceField<br/>
+/// (size = 112)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNotify_ForceField : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

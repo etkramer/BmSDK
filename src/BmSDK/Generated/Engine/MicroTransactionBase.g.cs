@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MicroTransactionBase<br/>
+/// (size = 164)
 /// (flags = 0)
 /// </summary>
 public partial class MicroTransactionBase : BmSDK.Engine.PlatformInterfaceBase, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class MicroTransactionBase : BmSDK.Engine.PlatformInterfaceBase, 
     public unsafe int GetProductIndex(BmSDK.FString Identifier)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MicroTransactionBase.GetProductIndex", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Identifier, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -57,7 +58,7 @@ public partial class MicroTransactionBase : BmSDK.Engine.PlatformInterfaceBase, 
     public unsafe bool BeginPurchase(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MicroTransactionBase.BeginPurchase", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -76,7 +77,7 @@ public partial class MicroTransactionBase : BmSDK.Engine.PlatformInterfaceBase, 
     public unsafe bool IsAllowedToMakePurchases()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MicroTransactionBase.IsAllowedToMakePurchases", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -94,7 +95,7 @@ public partial class MicroTransactionBase : BmSDK.Engine.PlatformInterfaceBase, 
     public unsafe bool QueryForAvailablePurchases()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MicroTransactionBase.QueryForAvailablePurchases", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -112,7 +113,7 @@ public partial class MicroTransactionBase : BmSDK.Engine.PlatformInterfaceBase, 
     public unsafe void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MicroTransactionBase.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -154,7 +155,7 @@ public partial class MicroTransactionBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// Struct: FPurchaseInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 64)]
     public partial record struct FPurchaseInfo
     {
         /// <summary>

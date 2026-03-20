@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RElectrifiedFloorPanel_RobotSpawnerBase<br/>
+/// (size = 989)
 /// (flags = 0)
 /// </summary>
 public partial class RElectrifiedFloorPanel_RobotSpawnerBase : BmSDK.BmGame.RElectrifiedFloorPanel, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RElectrifiedFloorPanel_RobotSpawnerBase : BmSDK.BmGame.REle
     public unsafe System.Numerics.Vector3 GetMeshCentre()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RElectrifiedFloorPanel_RobotSpawnerBase.GetMeshCentre", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
     }

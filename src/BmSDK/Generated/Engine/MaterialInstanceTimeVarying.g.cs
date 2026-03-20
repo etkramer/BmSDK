@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialInstanceTimeVarying<br/>
+/// (size = 400)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     public unsafe bool CheckForVectorParameterConflicts(BmSDK.FName ParameterName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.CheckForVectorParameterConflicts", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -57,7 +58,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     public unsafe float GetMaxDurationFromAllParameters()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.GetMaxDurationFromAllParameters", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -75,7 +76,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     public unsafe void ClearParameterValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.ClearParameterValues", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -93,7 +94,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     public unsafe void SetFontParameterValue(BmSDK.FName ParameterName, BmSDK.Engine.Font FontValue, int FontPage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetFontParameterValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FontValue, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FontPage, paramsPtr + 16);
@@ -114,7 +115,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     public unsafe void SetVectorStartTime(BmSDK.FName ParameterName, float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetVectorStartTime", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -134,7 +135,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     public unsafe void SetLinearColorCurveParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FInterpCurveLinearColor Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetLinearColorCurveParameterValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -154,7 +155,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     public unsafe void SetLinearColorParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FLinearColor Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetLinearColorParameterValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -174,7 +175,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     public unsafe void SetVectorCurveParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FInterpCurveVector Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetVectorCurveParameterValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -194,7 +195,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     public unsafe void SetVectorParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FLinearColor Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetVectorParameterValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -214,7 +215,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     public unsafe void SetTextureParameterValue(BmSDK.FName ParameterName, BmSDK.Engine.Texture Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetTextureParameterValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -234,7 +235,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     public unsafe void SetDuration(float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetDuration", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -253,7 +254,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     public unsafe void SetScalarStartTime(BmSDK.FName ParameterName, float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetScalarStartTime", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -273,7 +274,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     public unsafe void SetScalarCurveParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FInterpCurveFloat Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetScalarCurveParameterValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -293,7 +294,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     public unsafe void SetScalarParameterValue(BmSDK.FName ParameterName, float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetScalarParameterValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -313,7 +314,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     public unsafe void SetParent(BmSDK.Engine.MaterialInterface NewParent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetParent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewParent, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -392,7 +393,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Struct: FLinearColorParameterValueOverTime
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 84)]
     public partial record struct FLinearColorParameterValueOverTime
     {
         /// <summary>
@@ -417,7 +418,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Struct: FVectorParameterValueOverTime
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 84)]
     public partial record struct FVectorParameterValueOverTime
     {
         /// <summary>
@@ -442,7 +443,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Struct: FTextureParameterValueOverTime
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 56)]
     public partial record struct FTextureParameterValueOverTime
     {
         /// <summary>
@@ -458,7 +459,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Struct: FScalarParameterValueOverTime
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 72)]
     public partial record struct FScalarParameterValueOverTime
     {
         /// <summary>
@@ -483,7 +484,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Struct: FFontParameterValueOverTime
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 60)]
     public partial record struct FFontParameterValueOverTime
     {
         /// <summary>
@@ -508,7 +509,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Struct: FParameterValueOverTime
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 48)]
     public partial record struct FParameterValueOverTime
     {
         /// <summary>

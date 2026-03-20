@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNotify_ClothingMaxDistanceScale<br/>
+/// (size = 96)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNotify_ClothingMaxDistanceScale : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

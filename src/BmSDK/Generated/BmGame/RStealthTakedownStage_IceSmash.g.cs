@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RStealthTakedownStage_IceSmash<br/>
+/// (size = 1664)
 /// (flags = 0)
 /// </summary>
 public partial class RStealthTakedownStage_IceSmash : BmSDK.BmGame.RStealthTakeDownStage_GrabFromCrouch, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RStealthTakedownStage_IceSmash : BmSDK.BmGame.RStealthTakeD
     public unsafe bool FinishAttackVictim(int iVictimNumber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStage_IceSmash.FinishAttackVictim", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(iVictimNumber, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);

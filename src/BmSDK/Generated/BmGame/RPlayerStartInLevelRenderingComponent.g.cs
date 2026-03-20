@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPlayerStartInLevelRenderingComponent<br/>
+/// (size = 540)
 /// (flags = 0)
 /// </summary>
 public partial class RPlayerStartInLevelRenderingComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

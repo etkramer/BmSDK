@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DynamicTriggerVolume<br/>
+/// (size = 744)
 /// (flags = 0)
 /// </summary>
 public partial class DynamicTriggerVolume : BmSDK.Engine.TriggerVolume, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class DynamicTriggerVolume : BmSDK.Engine.TriggerVolume, BmSDK.IG
     public unsafe void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DynamicTriggerVolume.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

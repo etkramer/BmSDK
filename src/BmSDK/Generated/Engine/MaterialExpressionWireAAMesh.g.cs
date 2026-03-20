@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionWireAAMesh<br/>
+/// (size = 388)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionWireAAMesh : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

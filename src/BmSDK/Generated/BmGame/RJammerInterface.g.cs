@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RJammerInterface<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RJammerInterface : BmSDK.Interface, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RJammerInterface : BmSDK.Interface, BmSDK.IGameObject
     public unsafe BmSDK.Engine.AkParameterName GetParameterInterference()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerInterface.GetParameterInterference", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(paramsPtr + 0);
     }
@@ -49,7 +50,7 @@ public partial class RJammerInterface : BmSDK.Interface, BmSDK.IGameObject
     public unsafe BmSDK.Engine.AkParameterName GetParameterAngle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerInterface.GetParameterAngle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(paramsPtr + 0);
     }

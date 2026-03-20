@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackLinearColorBase<br/>
+/// (size = 204)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackLinearColorBase : BmSDK.Engine.InterpTrack, BmSDK.IGameObject

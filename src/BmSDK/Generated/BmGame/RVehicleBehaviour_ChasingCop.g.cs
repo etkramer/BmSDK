@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleBehaviour_ChasingCop<br/>
+/// (size = 744)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleBehaviour_ChasingCop : BmSDK.BmGame.RVehicleBehaviour_AttackEscortVehicle, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RVehicleBehaviour_ChasingCop : BmSDK.BmGame.RVehicleBehavio
     public unsafe void NotifyBumpedVehicleNPC(BmSDK.BmGame.RVehicleNPC Other, System.Numerics.Vector3 ContactPos, float Speed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_ChasingCop.NotifyBumpedVehicleNPC", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ContactPos, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Speed, paramsPtr + 20);
@@ -52,7 +53,7 @@ public partial class RVehicleBehaviour_ChasingCop : BmSDK.BmGame.RVehicleBehavio
     public unsafe void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_ChasingCop.Tick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -64,7 +65,7 @@ public partial class RVehicleBehaviour_ChasingCop : BmSDK.BmGame.RVehicleBehavio
     public unsafe void OnFollowGiveUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_ChasingCop.OnFollowGiveUp", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -75,7 +76,7 @@ public partial class RVehicleBehaviour_ChasingCop : BmSDK.BmGame.RVehicleBehavio
     public unsafe void OnFollowVehicleDied()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_ChasingCop.OnFollowVehicleDied", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -86,7 +87,7 @@ public partial class RVehicleBehaviour_ChasingCop : BmSDK.BmGame.RVehicleBehavio
     public unsafe float GetDesiredFollowOffsetBehind(int FollowerIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleBehaviour_ChasingCop.GetDesiredFollowOffsetBehind", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FollowerIndex, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 4);

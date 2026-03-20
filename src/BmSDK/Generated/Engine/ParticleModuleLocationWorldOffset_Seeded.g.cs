@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleLocationWorldOffset_Seeded<br/>
+/// (size = 196)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleLocationWorldOffset_Seeded : BmSDK.Engine.ParticleModuleLocationWorldOffset, BmSDK.IGameObject

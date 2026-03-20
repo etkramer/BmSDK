@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_SpawnDroneBase<br/>
+/// (size = 436)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SpawnDroneBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject

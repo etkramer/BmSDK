@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RThreatBaseAsset<br/>
+/// (size = 138)
 /// (flags = 0)
 /// </summary>
 public partial class RThreatBaseAsset : BmSDK.BmGame.RConfig, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RThreatBaseAsset : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     public unsafe bool ShouldActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThreatBaseAsset.ShouldActivate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -56,7 +57,7 @@ public partial class RThreatBaseAsset : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     public unsafe BmSDK.Engine.WorldInfo GetWorldInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThreatBaseAsset.GetWorldInfo", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.WorldInfo>(paramsPtr + 0);
     }
@@ -67,7 +68,7 @@ public partial class RThreatBaseAsset : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     public unsafe bool IsDestroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThreatBaseAsset.IsDestroyed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -85,7 +86,7 @@ public partial class RThreatBaseAsset : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     public unsafe void SetDestroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThreatBaseAsset.SetDestroyed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

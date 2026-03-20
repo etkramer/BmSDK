@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleMeshRotationRate<br/>
+/// (size = 160)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleMeshRotationRate : BmSDK.Engine.ParticleModuleRotationRateBase, BmSDK.IGameObject

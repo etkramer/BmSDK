@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_PounceBlast<br/>
+/// (size = 236)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_PounceBlast : BmSDK.BmGame.RDmgType_Strike, BmSDK.IGameObject

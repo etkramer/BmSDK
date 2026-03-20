@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RHeightmapOverrideActor<br/>
+/// (size = 708)
 /// (flags = 0)
 /// </summary>
 public partial class RHeightmapOverrideActor : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject

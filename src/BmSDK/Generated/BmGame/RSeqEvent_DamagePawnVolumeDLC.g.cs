@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_DamagePawnVolumeDLC<br/>
+/// (size = 380)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_DamagePawnVolumeDLC : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

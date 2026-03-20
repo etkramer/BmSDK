@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDEntityPlayerVehicleSpeed<br/>
+/// (size = 256)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDEntityPlayerVehicleSpeed : BmSDK.AkAudio.AkSDEntityPlayerBase, BmSDK.IGameObject

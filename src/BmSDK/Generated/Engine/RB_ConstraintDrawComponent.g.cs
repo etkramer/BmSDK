@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RB_ConstraintDrawComponent<br/>
+/// (size = 548)
 /// (flags = 0)
 /// </summary>
 public partial class RB_ConstraintDrawComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

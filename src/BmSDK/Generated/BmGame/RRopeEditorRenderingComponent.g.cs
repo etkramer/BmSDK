@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRopeEditorRenderingComponent<br/>
+/// (size = 540)
 /// (flags = 0)
 /// </summary>
 public partial class RRopeEditorRenderingComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

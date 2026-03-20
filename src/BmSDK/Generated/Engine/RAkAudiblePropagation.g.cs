@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RAkAudiblePropagation<br/>
+/// (size = 133)
 /// (flags = 0)
 /// </summary>
 public partial class RAkAudiblePropagation : BmSDK.GameObject, BmSDK.IGameObject

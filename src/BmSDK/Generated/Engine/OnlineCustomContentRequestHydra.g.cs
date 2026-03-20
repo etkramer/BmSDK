@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: OnlineCustomContentRequestHydra<br/>
+/// (size = 168)
 /// (flags = 0)
 /// </summary>
 public partial class OnlineCustomContentRequestHydra : BmSDK.Engine.OnlineCustomContentRequest, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class OnlineCustomContentRequestHydra : BmSDK.Engine.OnlineCustom
     public unsafe void CancelCustomContentRequest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequestHydra.CancelCustomContentRequest", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -56,7 +57,7 @@ public partial class OnlineCustomContentRequestHydra : BmSDK.Engine.OnlineCustom
     public unsafe void GetCustomContentAsString(out BmSDK.FString ContentData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequestHydra.GetCustomContentAsString", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -75,7 +76,7 @@ public partial class OnlineCustomContentRequestHydra : BmSDK.Engine.OnlineCustom
     public unsafe void GetCustomContent(out BmSDK.TArray<byte> ContentData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequestHydra.GetCustomContent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -94,7 +95,7 @@ public partial class OnlineCustomContentRequestHydra : BmSDK.Engine.OnlineCustom
     public unsafe void StartCustomContentRequest(BmSDK.FString sContentName, BmSDK.FString sCustomId, System.IntPtr dRequestCustomContentComplete)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCustomContentRequestHydra.StartCustomContentRequest", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(sContentName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(sCustomId, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(dRequestCustomContentComplete, paramsPtr + 32);

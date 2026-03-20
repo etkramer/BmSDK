@@ -5,6 +5,7 @@ namespace BmSDK;
 
 /// <summary>
 /// Class: Factory<br/>
+/// (size = 156)
 /// (flags = 0)
 /// </summary>
 public partial class Factory : BmSDK.GameObject, BmSDK.IGameObject

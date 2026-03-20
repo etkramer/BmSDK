@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackFloatBase<br/>
+/// (size = 256)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackFloatBase : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class InterpTrackFloatBase : BmSDK.Engine.InterpTrack, BmSDK.IGam
     /// <summary>
     /// Struct: FRandomGenerator
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 52)]
     public partial record struct FRandomGenerator
     {
         /// <summary>

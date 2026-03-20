@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_Attack_Sub_HoldPos_UntilLost<br/>
+/// (size = 724)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_Attack_Sub_HoldPos_UntilLost : BmSDK.BmGame.RAEC_Attack_Sub_HoldPos, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RAEC_Attack_Sub_HoldPos_UntilLost : BmSDK.BmGame.RAEC_Attac
     public unsafe void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_HoldPos_UntilLost.Tick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

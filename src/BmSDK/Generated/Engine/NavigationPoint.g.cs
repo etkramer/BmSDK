@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NavigationPoint<br/>
+/// (size = 944)
 /// (flags = 0)
 /// </summary>
 public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.FString GetDebugAbbrev()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavigationPoint.GetDebugAbbrev", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
     }
@@ -84,7 +85,7 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void ShutDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavigationPoint.ShutDown", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -95,7 +96,7 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavigationPoint.OnToggle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(inAction, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -107,7 +108,7 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool IsOnDifferentNetwork(BmSDK.Engine.NavigationPoint Nav)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavigationPoint.IsOnDifferentNetwork", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Nav, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -126,7 +127,7 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe static bool GetAllNavInRadius(BmSDK.Engine.Actor chkActor, System.Numerics.Vector3 ChkPoint, float Radius, out BmSDK.TArray<BmSDK.Engine.NavigationPoint> out_NavList, bool bSkipBlocked = default, int inNetworkID = default, BmSDK.GameObject.FCylinder MinSize = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavigationPoint.GetAllNavInRadius", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(chkActor, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChkPoint, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Radius, paramsPtr + 20);
@@ -151,7 +152,7 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.NavigationPoint GetNearestNavToPoint(BmSDK.Engine.Actor chkActor, System.Numerics.Vector3 ChkPoint, BmSDK.Class RequiredClass = default, BmSDK.TArray<BmSDK.Engine.NavigationPoint> ExcludeList = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavigationPoint.GetNearestNavToPoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[76];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(chkActor, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChkPoint, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RequiredClass, paramsPtr + 20);
@@ -166,7 +167,7 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.NavigationPoint GetNearestNavToActor(BmSDK.Engine.Actor chkActor, BmSDK.Class RequiredClass = default, BmSDK.TArray<BmSDK.Engine.NavigationPoint> ExcludeList = default, float MinDist = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavigationPoint.GetNearestNavToActor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[68];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(chkActor, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RequiredClass, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ExcludeList, paramsPtr + 16);
@@ -181,7 +182,7 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool ProceedWithMove(BmSDK.Engine.Pawn Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavigationPoint.ProceedWithMove", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -193,7 +194,7 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool SuggestMovePreparation(BmSDK.Engine.Pawn Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavigationPoint.SuggestMovePreparation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -205,7 +206,7 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe float DetourWeight(BmSDK.Engine.Pawn Other, float PathWeight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavigationPoint.DetourWeight", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PathWeight, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -218,7 +219,7 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool Accept(BmSDK.Engine.Actor Incoming, BmSDK.Engine.Actor Source)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavigationPoint.Accept", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Incoming, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Source, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -231,7 +232,7 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int SpecialCost(BmSDK.Engine.Pawn Seeker, BmSDK.Engine.ReachSpec Path)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavigationPoint.SpecialCost", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Seeker, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Path, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -244,7 +245,7 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool CanTeleport(BmSDK.Engine.Actor A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavigationPoint.CanTeleport", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -263,7 +264,7 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool IsUsableAnchorFor(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavigationPoint.IsUsableAnchorFor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(P, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -282,7 +283,7 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.Engine.ReachSpec GetReachSpecTo(BmSDK.Engine.NavigationPoint Nav, BmSDK.Class SpecClass = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavigationPoint.GetReachSpecTo", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Nav, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SpecClass, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -302,7 +303,7 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void GetBoundingCylinder(out float CollisionRadius, out float CollisionHeight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavigationPoint.GetBoundingCylinder", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -319,7 +320,7 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCheckpointRecord
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 4)]
     public partial record struct FCheckpointRecord
     {
         /// <summary>
@@ -344,7 +345,7 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FDebugNavCost
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FDebugNavCost
     {
         /// <summary>
@@ -369,7 +370,7 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FNavigationOctreeObject
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 57)]
     public partial record struct FNavigationOctreeObject
     {
         /// <summary>

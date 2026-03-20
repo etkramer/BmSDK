@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_SwingToGlide<br/>
+/// (size = 568)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_SwingToGlide : BmSDK.BmGame.RSpecialMoveConfig_SwingToVantagePoint, BmSDK.IGameObject

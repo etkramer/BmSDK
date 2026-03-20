@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_MeetingPoint<br/>
+/// (size = 100)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_MeetingPoint : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RAnimNotify_MeetingPoint : BmSDK.Engine.AnimNotify, BmSDK.I
     /// <summary>
     /// Struct: FMeetingPointTranslationComponents
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 4)]
     public partial record struct FMeetingPointTranslationComponents
     {
         /// <summary>
@@ -69,7 +70,7 @@ public partial class RAnimNotify_MeetingPoint : BmSDK.Engine.AnimNotify, BmSDK.I
     /// <summary>
     /// Struct: FMeetingPointRotationComponents
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 4)]
     public partial record struct FMeetingPointRotationComponents
     {
         /// <summary>

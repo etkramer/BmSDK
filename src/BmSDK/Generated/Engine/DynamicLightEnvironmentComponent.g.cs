@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DynamicLightEnvironmentComponent<br/>
+/// (size = 340)
 /// (flags = 0)
 /// </summary>
 public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnvironmentComponent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     public unsafe BmSDK.GameObject.FBoxSphereBounds GetOwnerBounds()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DynamicLightEnvironmentComponent.GetOwnerBounds", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -56,7 +57,7 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     public unsafe void ResetEnvironment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DynamicLightEnvironmentComponent.ResetEnvironment", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNode_Bat<br/>
+/// (size = 284)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNode_Bat : BmSDK.Engine.AnimNode, BmSDK.IGameObject

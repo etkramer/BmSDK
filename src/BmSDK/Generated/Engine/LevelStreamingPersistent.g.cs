@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LevelStreamingPersistent<br/>
+/// (size = 284)
 /// (flags = 0)
 /// </summary>
 public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmSDK.IGameObject

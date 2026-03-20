@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RB_BSJointActor<br/>
+/// (size = 720)
 /// (flags = 0)
 /// </summary>
 public partial class RB_BSJointActor : BmSDK.Engine.RB_ConstraintActor, BmSDK.IGameObject

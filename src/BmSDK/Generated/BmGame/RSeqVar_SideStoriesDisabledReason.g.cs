@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqVar_SideStoriesDisabledReason<br/>
+/// (size = 248)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqVar_SideStoriesDisabledReason : BmSDK.Engine.SeqVar_String, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UISoundTheme<br/>
+/// (size = 100)
 /// (flags = 0)
 /// </summary>
 public partial class UISoundTheme : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class UISoundTheme : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void ProcessSoundEvent(BmSDK.FName SoundEventName, BmSDK.Engine.PlayerController SoundOwner = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UISoundTheme.ProcessSoundEvent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SoundEventName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SoundOwner, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -57,7 +58,7 @@ public partial class UISoundTheme : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSoundEventMapping
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FSoundEventMapping
     {
         /// <summary>

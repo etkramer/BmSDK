@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAIBrain_TestMap<br/>
+/// (size = 132)
 /// (flags = 0)
 /// </summary>
 public partial class RAIBrain_TestMap : BmSDK.BmGame.RAIBrain, BmSDK.IGameObject

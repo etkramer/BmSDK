@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionDecalPosition<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionDecalPosition : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

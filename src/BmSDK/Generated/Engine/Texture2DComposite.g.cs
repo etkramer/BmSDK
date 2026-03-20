@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Texture2DComposite<br/>
+/// (size = 336)
 /// (flags = 0)
 /// </summary>
 public partial class Texture2DComposite : BmSDK.Engine.Texture, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class Texture2DComposite : BmSDK.Engine.Texture, BmSDK.IGameObjec
     public unsafe void ResetSourceRegions()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2DComposite.ResetSourceRegions", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -56,7 +57,7 @@ public partial class Texture2DComposite : BmSDK.Engine.Texture, BmSDK.IGameObjec
     public unsafe void UpdateCompositeTexture(int NumMipsToGenerate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2DComposite.UpdateCompositeTexture", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NumMipsToGenerate, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -75,7 +76,7 @@ public partial class Texture2DComposite : BmSDK.Engine.Texture, BmSDK.IGameObjec
     public unsafe bool SourceTexturesFullyStreamedIn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2DComposite.SourceTexturesFullyStreamedIn", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -126,7 +127,7 @@ public partial class Texture2DComposite : BmSDK.Engine.Texture, BmSDK.IGameObjec
     /// <summary>
     /// Struct: FSourceTexture2DRegion
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FSourceTexture2DRegion
     {
         /// <summary>

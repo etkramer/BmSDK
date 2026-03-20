@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_SetApexClothingParam<br/>
+/// (size = 356)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_SetApexClothingParam : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ROceanComponent<br/>
+/// (size = 884)
 /// (flags = 0)
 /// </summary>
 public partial class ROceanComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class ROceanComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// Struct: FRockOceanSettings
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 124)]
     public partial record struct FRockOceanSettings
     {
         /// <summary>
@@ -177,7 +178,7 @@ public partial class ROceanComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// Struct: FRockOceanAsyncResults
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FRockOceanAsyncResults
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDEntityPlayerInPredatorVolume<br/>
+/// (size = 252)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDEntityPlayerInPredatorVolume : BmSDK.AkAudio.AkSDEntityValue, BmSDK.IGameObject

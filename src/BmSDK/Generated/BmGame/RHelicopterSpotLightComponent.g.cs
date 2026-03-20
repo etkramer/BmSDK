@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHelicopterSpotLightComponent<br/>
+/// (size = 824)
 /// (flags = 0)
 /// </summary>
 public partial class RHelicopterSpotLightComponent : BmSDK.Engine.SpotLightComponent, BmSDK.IGameObject

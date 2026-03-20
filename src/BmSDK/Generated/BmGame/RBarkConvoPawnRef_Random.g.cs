@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBarkConvoPawnRef_Random<br/>
+/// (size = 156)
 /// (flags = 0)
 /// </summary>
 public partial class RBarkConvoPawnRef_Random : BmSDK.BmGame.RBarkConvoPawnRef, BmSDK.IGameObject

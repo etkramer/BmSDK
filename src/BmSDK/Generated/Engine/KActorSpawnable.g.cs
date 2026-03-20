@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: KActorSpawnable<br/>
+/// (size = 996)
 /// (flags = 0)
 /// </summary>
 public partial class KActorSpawnable : BmSDK.Engine.KActor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class KActorSpawnable : BmSDK.Engine.KActor, BmSDK.IGameObject
     public unsafe void ResetComponents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActorSpawnable.ResetComponents", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -91,7 +92,7 @@ public partial class KActorSpawnable : BmSDK.Engine.KActor, BmSDK.IGameObject
     public unsafe void RecycleInternal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActorSpawnable.RecycleInternal", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -102,7 +103,7 @@ public partial class KActorSpawnable : BmSDK.Engine.KActor, BmSDK.IGameObject
     public unsafe void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActorSpawnable.Recycle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -113,7 +114,7 @@ public partial class KActorSpawnable : BmSDK.Engine.KActor, BmSDK.IGameObject
     public unsafe void Initialize()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActorSpawnable.Initialize", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

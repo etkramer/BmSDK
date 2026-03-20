@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleTypeDataMeshPhysX<br/>
+/// (size = 160)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleTypeDataMeshPhysX : BmSDK.Engine.ParticleModuleTypeDataMesh, BmSDK.IGameObject

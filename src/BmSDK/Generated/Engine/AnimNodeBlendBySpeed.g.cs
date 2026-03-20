@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNodeBlendBySpeed<br/>
+/// (size = 392)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNodeBlendBySpeed : BmSDK.Engine.AnimNodeBlendList, BmSDK.IGameObject

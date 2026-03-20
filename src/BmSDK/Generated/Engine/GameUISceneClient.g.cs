@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: GameUISceneClient<br/>
+/// (size = 420)
 /// (flags = 0)
 /// </summary>
 public partial class GameUISceneClient : BmSDK.Engine.UISceneClient, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class GameUISceneClient : BmSDK.Engine.UISceneClient, BmSDK.IGame
     public unsafe int FindLocalPlayerIndex(BmSDK.Engine.Player P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameUISceneClient.FindLocalPlayerIndex", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(P, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 8);
@@ -50,7 +51,7 @@ public partial class GameUISceneClient : BmSDK.Engine.UISceneClient, BmSDK.IGame
     public unsafe void NotifyPlayerRemoved(int PlayerIndex, BmSDK.Engine.LocalPlayer RemovedPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameUISceneClient.NotifyPlayerRemoved", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RemovedPlayer, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -63,7 +64,7 @@ public partial class GameUISceneClient : BmSDK.Engine.UISceneClient, BmSDK.IGame
     public unsafe void NotifyPlayerAdded(int PlayerIndex, BmSDK.Engine.LocalPlayer AddedPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameUISceneClient.NotifyPlayerAdded", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AddedPlayer, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -76,7 +77,7 @@ public partial class GameUISceneClient : BmSDK.Engine.UISceneClient, BmSDK.IGame
     public unsafe void NotifyGameSessionEnded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameUISceneClient.NotifyGameSessionEnded", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -87,7 +88,7 @@ public partial class GameUISceneClient : BmSDK.Engine.UISceneClient, BmSDK.IGame
     public unsafe void NotifyClientTravel(BmSDK.Engine.PlayerController TravellingPlayer, BmSDK.FString TravelURL, BmSDK.Engine.Actor.ETravelType TravelType, bool bIsSeamlessTravel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameUISceneClient.NotifyClientTravel", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TravellingPlayer, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TravelURL, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TravelType, paramsPtr + 24);
@@ -102,7 +103,7 @@ public partial class GameUISceneClient : BmSDK.Engine.UISceneClient, BmSDK.IGame
     public unsafe void PauseGame(bool bDesiredPauseState, int PlayerIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameUISceneClient.PauseGame", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bDesiredPauseState, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerIndex, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -115,7 +116,7 @@ public partial class GameUISceneClient : BmSDK.Engine.UISceneClient, BmSDK.IGame
     public unsafe bool CanUnpauseInternalUI()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameUISceneClient.CanUnpauseInternalUI", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -133,7 +134,7 @@ public partial class GameUISceneClient : BmSDK.Engine.UISceneClient, BmSDK.IGame
     public unsafe void RequestInputProcessingUpdate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameUISceneClient.RequestInputProcessingUpdate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -151,7 +152,7 @@ public partial class GameUISceneClient : BmSDK.Engine.UISceneClient, BmSDK.IGame
     public unsafe static BmSDK.Engine.WorldInfo.ENetMode GetCurrentNetMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameUISceneClient.GetCurrentNetMode", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[1];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;

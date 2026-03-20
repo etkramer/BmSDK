@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InstancedFoliageActor<br/>
+/// (size = 764)
 /// (flags = 0)
 /// </summary>
 public partial class InstancedFoliageActor : BmSDK.Engine.Actor, BmSDK.IGameObject

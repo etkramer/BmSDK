@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleSizeBase<br/>
+/// (size = 96)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleSizeBase : BmSDK.Engine.ParticleModule, BmSDK.IGameObject

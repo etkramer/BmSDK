@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkActor<br/>
+/// (size = 668)
 /// (flags = 0)
 /// </summary>
 public partial class AkActor : BmSDK.Engine.Actor, BmSDK.IGameObject

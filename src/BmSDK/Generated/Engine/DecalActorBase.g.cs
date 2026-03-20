@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DecalActorBase<br/>
+/// (size = 684)
 /// (flags = 0)
 /// </summary>
 public partial class DecalActorBase : BmSDK.Engine.Actor, BmSDK.IGameObject

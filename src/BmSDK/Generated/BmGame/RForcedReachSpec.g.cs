@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RForcedReachSpec<br/>
+/// (size = 188)
 /// (flags = 0)
 /// </summary>
 public partial class RForcedReachSpec : BmSDK.BmGame.RReachSpec, BmSDK.IGameObject

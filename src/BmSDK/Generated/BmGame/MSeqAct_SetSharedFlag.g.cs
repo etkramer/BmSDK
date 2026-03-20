@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MSeqAct_SetSharedFlag<br/>
+/// (size = 368)
 /// (flags = 0)
 /// </summary>
 public partial class MSeqAct_SetSharedFlag : BmSDK.Engine.SeqAct_SetSequenceVariable, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class MSeqAct_SetSharedFlag : BmSDK.Engine.SeqAct_SetSequenceVari
     public unsafe void Deactivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSeqAct_SetSharedFlag.Deactivated", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -49,7 +50,7 @@ public partial class MSeqAct_SetSharedFlag : BmSDK.Engine.SeqAct_SetSequenceVari
     public unsafe void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MSeqAct_SetSharedFlag.Activated", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

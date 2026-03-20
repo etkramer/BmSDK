@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LandscapeGizmoRenderComponent<br/>
+/// (size = 540)
 /// (flags = 0)
 /// </summary>
 public partial class LandscapeGizmoRenderComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

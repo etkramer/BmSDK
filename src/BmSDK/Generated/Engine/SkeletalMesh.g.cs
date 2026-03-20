@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SkeletalMesh<br/>
+/// (size = 1428)
 /// (flags = 0)
 /// </summary>
 public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSoftBodySpecialBoneInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 28)]
     public partial record struct FSoftBodySpecialBoneInfo
     {
         /// <summary>
@@ -80,7 +81,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSoftBodyTetraLink
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FSoftBodyTetraLink
     {
         /// <summary>
@@ -105,7 +106,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FClothSpecialBoneInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 28)]
     public partial record struct FClothSpecialBoneInfo
     {
         /// <summary>
@@ -150,7 +151,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSkeletalMeshOptimizationSettings
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 40)]
     public partial record struct FSkeletalMeshOptimizationSettings
     {
         /// <summary>
@@ -247,7 +248,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSkeletalMeshLODInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 164)]
     public partial record struct FSkeletalMeshLODInfo
     {
         /// <summary>
@@ -398,7 +399,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTriangleSortSettings
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FTriangleSortSettings
     {
         /// <summary>
@@ -479,7 +480,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FBoneMirrorExport
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 17)]
     public partial record struct FBoneMirrorExport
     {
         /// <summary>
@@ -513,7 +514,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FBoneMirrorInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 5)]
     public partial record struct FBoneMirrorInfo
     {
         /// <summary>
@@ -538,7 +539,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FApexClothingAssetInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FApexClothingAssetInfo
     {
         /// <summary>
@@ -563,7 +564,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FApexClothingLodInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FApexClothingLodInfo
     {
         /// <summary>
@@ -579,7 +580,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FBoneBounds
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 28)]
     public partial record struct FBoneBounds
     {
         /// <summary>

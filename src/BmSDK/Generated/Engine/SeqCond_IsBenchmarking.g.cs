@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqCond_IsBenchmarking<br/>
+/// (size = 324)
 /// (flags = 0)
 /// </summary>
 public partial class SeqCond_IsBenchmarking : BmSDK.Engine.SequenceCondition, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class SeqCond_IsBenchmarking : BmSDK.Engine.SequenceCondition, Bm
     public unsafe static int GetObjClassVersion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqCond_IsBenchmarking.GetObjClassVersion", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMultiNavHandleWrapper_DisarmedSearch<br/>
+/// (size = 148)
 /// (flags = 0)
 /// </summary>
 public partial class RMultiNavHandleWrapper_DisarmedSearch : BmSDK.BmGame.RMultiNavHandleWrapper, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RMultiNavHandleWrapper_DisarmedSearch : BmSDK.BmGame.RMulti
     public unsafe void FreeAllHandles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiNavHandleWrapper_DisarmedSearch.FreeAllHandles", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -49,7 +50,7 @@ public partial class RMultiNavHandleWrapper_DisarmedSearch : BmSDK.BmGame.RMulti
     public unsafe bool GetShortestPath(out float bestDist, out int BestPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiNavHandleWrapper_DisarmedSearch.GetShortestPath", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         bestDist = BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
         BestPath = BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -62,7 +63,7 @@ public partial class RMultiNavHandleWrapper_DisarmedSearch : BmSDK.BmGame.RMulti
     public unsafe void AddDestActor(System.Numerics.Vector3 NewLoc, BmSDK.Engine.Actor NewActor, int NewIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiNavHandleWrapper_DisarmedSearch.AddDestActor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewLoc, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewActor, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewIndex, paramsPtr + 20);

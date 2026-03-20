@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RCinematicOriginActor<br/>
+/// (size = 680)
 /// (flags = 0)
 /// </summary>
 public partial class RCinematicOriginActor : BmSDK.Engine.Actor, BmSDK.IGameObject

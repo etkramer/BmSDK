@@ -5,6 +5,7 @@ namespace BmSDK;
 
 /// <summary>
 /// Class: DistributionFloat<br/>
+/// (size = 112)
 /// (flags = 0)
 /// </summary>
 public partial class DistributionFloat : BmSDK.Component, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class DistributionFloat : BmSDK.Component, BmSDK.IGameObject
     public unsafe float GetFloatValue(float F = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.DistributionFloat.GetFloatValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(F, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -54,7 +55,7 @@ public partial class DistributionFloat : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Struct: FMatineeRawDistributionFloat
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FMatineeRawDistributionFloat
     {
         /// <summary>
@@ -79,7 +80,7 @@ public partial class DistributionFloat : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRawDistributionFloat
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FRawDistributionFloat
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: FontImportOptions<br/>
+/// (size = 252)
 /// (flags = 0)
 /// </summary>
 public partial class FontImportOptions : BmSDK.GameObject, BmSDK.IGameObject
@@ -44,7 +45,7 @@ public partial class FontImportOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FFontImportOptionsData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 168)]
     public partial record struct FFontImportOptionsData
     {
         /// <summary>

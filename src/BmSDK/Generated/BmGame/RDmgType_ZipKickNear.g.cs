@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_ZipKickNear<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_ZipKickNear : BmSDK.BmGame.RDamageType, BmSDK.IGameObject

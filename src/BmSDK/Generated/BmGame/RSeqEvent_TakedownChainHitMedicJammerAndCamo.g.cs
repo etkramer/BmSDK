@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_TakedownChainHitMedicJammerAndCamo<br/>
+/// (size = 380)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_TakedownChainHitMedicJammerAndCamo : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

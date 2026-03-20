@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_RestoreThermal<br/>
+/// (size = 888)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_RestoreThermal : BmSDK.BmGame.RBMAIAction_RestoreSpecial, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Interface_NavMeshPathObject<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class Interface_NavMeshPathObject : BmSDK.Interface, BmSDK.IGameObject

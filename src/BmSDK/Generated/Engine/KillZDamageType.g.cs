@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: KillZDamageType<br/>
+/// (size = 160)
 /// (flags = 0)
 /// </summary>
 public partial class KillZDamageType : BmSDK.Engine.DamageType, BmSDK.IGameObject

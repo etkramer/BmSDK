@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNodeBlendMultiBone<br/>
+/// (size = 336)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNodeBlendMultiBone : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AnimNodeBlendMultiBone : BmSDK.Engine.AnimNodeBlendBase, Bm
     public unsafe void SetTargetStartBone(int TargetIdx, BmSDK.FName StartBoneName, float PerBoneIncrease = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeBlendMultiBone.SetTargetStartBone", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetIdx, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StartBoneName, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PerBoneIncrease, paramsPtr + 12);
@@ -74,7 +75,7 @@ public partial class AnimNodeBlendMultiBone : BmSDK.Engine.AnimNodeBlendBase, Bm
     /// <summary>
     /// Struct: FChildBoneBlendInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 56)]
     public partial record struct FChildBoneBlendInfo
     {
         /// <summary>

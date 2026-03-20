@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBreakableVentLight<br/>
+/// (size = 716)
 /// (flags = 0)
 /// </summary>
 public partial class RBreakableVentLight : BmSDK.BmGame.RBreakableVentLightBase, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RBreakableVentLight : BmSDK.BmGame.RBreakableVentLightBase,
     public unsafe void HitByGrenade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableVentLight.HitByGrenade", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

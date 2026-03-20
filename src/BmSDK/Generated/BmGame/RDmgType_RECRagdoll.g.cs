@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_RECRagdoll<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_RECRagdoll : BmSDK.BmGame.RDmgType_Ragdoll, BmSDK.IGameObject

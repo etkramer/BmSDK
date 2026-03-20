@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBarkSet<br/>
+/// (size = 196)
 /// (flags = 0)
 /// </summary>
 public partial class RBarkSet : BmSDK.Engine.AkHash, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RBarkSet : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Struct: FMapProxyForSaving
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FMapProxyForSaving
     {
         /// <summary>

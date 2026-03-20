@@ -5,6 +5,7 @@ namespace BmSDK.WinDrv;
 
 /// <summary>
 /// Class: XnaForceFeedbackManager<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class XnaForceFeedbackManager : BmSDK.Engine.ForceFeedbackManager, BmSDK.IGameObject

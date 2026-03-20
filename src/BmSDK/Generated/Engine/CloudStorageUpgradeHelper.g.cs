@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: CloudStorageUpgradeHelper<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class CloudStorageUpgradeHelper : BmSDK.Interface, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class CloudStorageUpgradeHelper : BmSDK.Interface, BmSDK.IGameObj
     public unsafe void GetCloudUpgradeKeys(out BmSDK.TArray<BmSDK.FString> CloudKeys)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageUpgradeHelper.GetCloudUpgradeKeys", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         CloudKeys = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(paramsPtr + 0);
         return;
@@ -50,7 +51,7 @@ public partial class CloudStorageUpgradeHelper : BmSDK.Interface, BmSDK.IGameObj
     public unsafe void HandleLocalKeyValue(out BmSDK.FString CloudKeyName, out BmSDK.Engine.PlatformInterfaceBase.FPlatformInterfaceData CloudValue, out int bShouldMoveToCloud, out int bShouldDeleteLocalKey)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageUpgradeHelper.HandleLocalKeyValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[68];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         CloudKeyName = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
         CloudValue = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PlatformInterfaceBase.FPlatformInterfaceData>(paramsPtr + 16);
@@ -65,7 +66,7 @@ public partial class CloudStorageUpgradeHelper : BmSDK.Interface, BmSDK.IGameObj
     public unsafe void HandleLocalDocument(out BmSDK.FString DocName, out int bShouldMoveToCloud, out int bShouldDeleteLocalFile)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CloudStorageUpgradeHelper.HandleLocalDocument", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         DocName = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
         bShouldMoveToCloud = BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 16);

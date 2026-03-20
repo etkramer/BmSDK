@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleColorByParameter<br/>
+/// (size = 108)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleColorByParameter : BmSDK.Engine.ParticleModuleColorBase, BmSDK.IGameObject

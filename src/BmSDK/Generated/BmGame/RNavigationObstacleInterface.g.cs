@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RNavigationObstacleInterface<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RNavigationObstacleInterface : BmSDK.Interface, BmSDK.IGameObject

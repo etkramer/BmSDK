@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSkelControlWhip<br/>
+/// (size = 672)
 /// (flags = 0)
 /// </summary>
 public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     public unsafe float GetWhipExtent(BmSDK.Engine.SkeletalMeshComponent SkelComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSkelControlWhip.GetWhipExtent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SkelComp, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -225,7 +226,7 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     /// <summary>
     /// Struct: FWhipHipPhysicsData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 120)]
     public partial record struct FWhipHipPhysicsData
     {
         /// <summary>
@@ -367,7 +368,7 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     /// <summary>
     /// Struct: FWhipTargetingData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 156)]
     public partial record struct FWhipTargetingData
     {
         /// <summary>
@@ -437,7 +438,7 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     /// <summary>
     /// Struct: FWhipBoneReparenting
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 40)]
     public partial record struct FWhipBoneReparenting
     {
         /// <summary>
@@ -480,7 +481,7 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     /// <summary>
     /// Struct: FWhipBoneData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FWhipBoneData
     {
         /// <summary>

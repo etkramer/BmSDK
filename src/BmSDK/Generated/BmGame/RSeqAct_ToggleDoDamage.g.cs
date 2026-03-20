@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_ToggleDoDamage<br/>
+/// (size = 352)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_ToggleDoDamage : BmSDK.Engine.SeqAct_Toggle, BmSDK.IGameObject

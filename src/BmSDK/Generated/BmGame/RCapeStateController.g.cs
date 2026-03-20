@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCapeStateController<br/>
+/// (size = 604)
 /// (flags = 0)
 /// </summary>
 public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetCapeToBoneDataReferencePose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.SetCapeToBoneDataReferencePose", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -56,7 +57,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetCapeToCurrentAnimPose(bool IsEvaluateAnim = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.SetCapeToCurrentAnimPose", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(IsEvaluateAnim, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -75,7 +76,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void ResumeCape()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.ResumeCape", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -93,7 +94,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void PauseCape()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.PauseCape", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -111,7 +112,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetIsPausedOrPendingPaused()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.GetIsPausedOrPendingPaused", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -129,7 +130,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void BeginCinematicState(BmSDK.FName AnimName, BmSDK.BmGame.RCapeStateConfig TemplateStateConfig, float AnimStartTime, float AnimPlayRate = default, BmSDK.FName SyncAnimName = default, float SyncAnimOffset = default, bool bMirrored = default, bool bClearVelocityOnExit = default, bool bTeleportToInitialPose = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.BeginCinematicState", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TemplateStateConfig, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimStartTime, paramsPtr + 16);
@@ -156,7 +157,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetCapeStateAndTime(BmSDK.FName NewCapeStateName, float NewCapeStateTime, float AnimPlayRate = default, bool bMirrored = default, BmSDK.FName AnimName = default, BmSDK.FName SyncAnimNameOverride = default, float SyncAnimOffsetOverride = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.SetCapeStateAndTime", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewCapeStateName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewCapeStateTime, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimPlayRate, paramsPtr + 12);
@@ -181,7 +182,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetCapeState(BmSDK.FName NewCapeStateName, BmSDK.FName NewCapeAnimName, float AnimStartTime = default, float AnimPlayRate = default, bool ForceRestart = default, bool ForceInitialPose = default, bool bMirrored = default, BmSDK.FName SyncAnimName = default, float SyncAnimOffset = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.SetCapeState", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewCapeStateName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewCapeAnimName, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimStartTime, paramsPtr + 16);
@@ -208,7 +209,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.Update", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -227,7 +228,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void UpdatePauseState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.UpdatePauseState", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -245,7 +246,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void Finalise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.Finalise", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -263,7 +264,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void Initialise(BmSDK.FName InitialCapeStateName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.Initialise", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InitialCapeStateName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -282,7 +283,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetIsInitialised()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeStateController.GetIsInitialised", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -549,7 +550,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSkinningLocalToWorlds
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 160)]
     public partial record struct FSkinningLocalToWorlds
     {
         /// <summary>
@@ -592,7 +593,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCapeStateData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 40)]
     public partial record struct FCapeStateData
     {
         /// <summary>
@@ -644,7 +645,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCapeBoneStateData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FCapeBoneStateData
     {
         /// <summary>
@@ -669,7 +670,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCapeStateBoneData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 72)]
     public partial record struct FCapeStateBoneData
     {
         /// <summary>
@@ -811,7 +812,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCapeBoneFakeSkinningDatas
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FCapeBoneFakeSkinningDatas
     {
         /// <summary>
@@ -827,7 +828,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCapeBoneFakeSkinningData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 9)]
     public partial record struct FCapeBoneFakeSkinningData
     {
         /// <summary>
@@ -861,7 +862,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCapeShapeData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FCapeShapeData
     {
         /// <summary>
@@ -895,7 +896,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCapeBoneData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 80)]
     public partial record struct FCapeBoneData
     {
         /// <summary>

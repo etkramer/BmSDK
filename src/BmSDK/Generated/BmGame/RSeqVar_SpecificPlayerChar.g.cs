@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqVar_SpecificPlayerChar<br/>
+/// (size = 276)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqVar_SpecificPlayerChar : BmSDK.Engine.SeqVar_Object, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RSeqVar_SpecificPlayerChar : BmSDK.Engine.SeqVar_Object, Bm
     public unsafe BmSDK.GameObject GetObjectValue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqVar_SpecificPlayerChar.GetObjectValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(paramsPtr + 0);
     }
@@ -49,7 +50,7 @@ public partial class RSeqVar_SpecificPlayerChar : BmSDK.Engine.SeqVar_Object, Bm
     public unsafe void SetObjValue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqVar_SpecificPlayerChar.SetObjValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_ElectroBlastHit<br/>
+/// (size = 384)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_ElectroBlastHit : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RSeqEvent_ElectroBlastHit : BmSDK.Engine.SequenceEvent, BmS
     public unsafe void SetDropDist(float NewDropDist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_ElectroBlastHit.SetDropDist", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewDropDist, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

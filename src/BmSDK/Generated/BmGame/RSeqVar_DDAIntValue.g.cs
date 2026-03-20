@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqVar_DDAIntValue<br/>
+/// (size = 236)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqVar_DDAIntValue : BmSDK.Engine.SeqVar_Int, BmSDK.IGameObject

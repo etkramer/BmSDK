@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_SaveDataLoaded<br/>
+/// (size = 352)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SaveDataLoaded : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

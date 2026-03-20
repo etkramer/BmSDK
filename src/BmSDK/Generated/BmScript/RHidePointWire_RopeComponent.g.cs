@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RHidePointWire_RopeComponent<br/>
+/// (size = 680)
 /// (flags = 0)
 /// </summary>
 public partial class RHidePointWire_RopeComponent : BmSDK.BmGame.RHidePointRope_RopeComponent, BmSDK.IGameObject

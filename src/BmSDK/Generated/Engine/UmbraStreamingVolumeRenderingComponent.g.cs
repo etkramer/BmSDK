@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UmbraStreamingVolumeRenderingComponent<br/>
+/// (size = 540)
 /// (flags = 0)
 /// </summary>
 public partial class UmbraStreamingVolumeRenderingComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

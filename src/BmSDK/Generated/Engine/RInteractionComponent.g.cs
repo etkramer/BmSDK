@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RInteractionComponent<br/>
+/// (size = 160)
 /// (flags = 0)
 /// </summary>
 public partial class RInteractionComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RInteractionComponent : BmSDK.Engine.ActorComponent, BmSDK.
     public unsafe void RemoveRelevantInteraction(BmSDK.FName InteractionToRemove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RInteractionComponent.RemoveRelevantInteraction", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InteractionToRemove, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -57,7 +58,7 @@ public partial class RInteractionComponent : BmSDK.Engine.ActorComponent, BmSDK.
     public unsafe void AddRelevantInteraction(BmSDK.FName NewInteraction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RInteractionComponent.AddRelevantInteraction", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInteraction, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

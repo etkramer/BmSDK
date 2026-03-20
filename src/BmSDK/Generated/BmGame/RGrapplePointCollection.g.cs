@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGrapplePointCollection<br/>
+/// (size = 716)
 /// (flags = 0)
 /// </summary>
 public partial class RGrapplePointCollection : BmSDK.Engine.Actor, BmSDK.IGameObject

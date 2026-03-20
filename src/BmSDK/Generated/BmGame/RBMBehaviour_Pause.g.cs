@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMBehaviour_Pause<br/>
+/// (size = 588)
 /// (flags = 0)
 /// </summary>
 public partial class RBMBehaviour_Pause : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject

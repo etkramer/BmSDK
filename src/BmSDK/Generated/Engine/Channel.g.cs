@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Channel<br/>
+/// (size = 148)
 /// (flags = 0)
 /// </summary>
 public partial class Channel : BmSDK.GameObject, BmSDK.IGameObject

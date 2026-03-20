@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleSystem<br/>
+/// (size = 384)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetMaxLifespan(float InComponentDelay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystem.GetMaxLifespan", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InComponentDelay, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -57,7 +58,7 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetLODDistance(int LODLevelIndex, float InDistance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystem.SetLODDistance", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LODLevelIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InDistance, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -77,7 +78,7 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetCurrentLODMethod(BmSDK.Engine.ParticleSystem.ParticleSystemLODMethod InMethod)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystem.SetCurrentLODMethod", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[1];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InMethod, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -96,7 +97,7 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetLODDistance(int LODLevelIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystem.GetLODDistance", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LODLevelIndex, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -115,7 +116,7 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetLODLevelCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystem.GetLODLevelCount", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -133,7 +134,7 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.Engine.ParticleSystem.ParticleSystemLODMethod GetCurrentLODMethod()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystem.GetCurrentLODMethod", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[1];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -151,7 +152,7 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.Engine.ParticleSystem EffectiveParticleSystemAfterPhysXOverride()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystem.EffectiveParticleSystemAfterPhysXOverride", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -178,7 +179,7 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLODSoloTrack
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FLODSoloTrack
     {
         /// <summary>
@@ -205,7 +206,7 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FParticleSystemLOD
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 4)]
     public partial record struct FParticleSystemLOD
     {
         /// <summary>

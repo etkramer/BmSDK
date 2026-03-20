@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RAmbient_DirectionalLight<br/>
+/// (size = 692)
 /// (flags = 0)
 /// </summary>
 public partial class RAmbient_DirectionalLight : BmSDK.Engine.DirectionalLight, BmSDK.IGameObject

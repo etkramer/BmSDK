@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_WeaponSnatch<br/>
+/// (size = 120)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_WeaponSnatch : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

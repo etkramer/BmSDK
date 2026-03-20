@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleCollision<br/>
+/// (size = 376)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleCollision : BmSDK.Engine.ParticleModuleCollisionBase, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class ParticleModuleCollision : BmSDK.Engine.ParticleModuleCollis
     /// <summary>
     /// Struct: FParticleAttractorCollisionAction
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FParticleAttractorCollisionAction
     {
         /// <summary>

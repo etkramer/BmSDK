@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackHeadTracking<br/>
+/// (size = 264)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackHeadTracking : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
@@ -125,7 +126,7 @@ public partial class InterpTrackHeadTracking : BmSDK.Engine.InterpTrack, BmSDK.I
     /// <summary>
     /// Struct: FHeadTrackingKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 5)]
     public partial record struct FHeadTrackingKey
     {
         /// <summary>

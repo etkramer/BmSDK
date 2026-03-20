@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRiddlerBoxBase<br/>
+/// (size = 1308)
 /// (flags = 0)
 /// </summary>
 public partial class RRiddlerBoxBase : BmSDK.BmGame.RMagneticDynamicObjectBase, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RRiddlerBoxBase : BmSDK.BmGame.RMagneticDynamicObjectBase, 
     public unsafe void InitAllPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlerBoxBase.InitAllPhysics", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;

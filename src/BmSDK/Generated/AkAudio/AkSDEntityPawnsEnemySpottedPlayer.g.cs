@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDEntityPawnsEnemySpottedPlayer<br/>
+/// (size = 268)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDEntityPawnsEnemySpottedPlayer : BmSDK.AkAudio.AkSDEntityPawnsEnemy, BmSDK.IGameObject

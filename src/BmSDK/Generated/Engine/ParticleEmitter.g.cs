@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleEmitter<br/>
+/// (size = 156)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleEmitter : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class ParticleEmitter : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetMaxLifespan(float InComponentDelay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleEmitter.GetMaxLifespan", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InComponentDelay, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -79,7 +80,7 @@ public partial class ParticleEmitter : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FParticleBurst
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FParticleBurst
     {
         /// <summary>

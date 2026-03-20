@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexJetComponent<br/>
+/// (size = 684)
 /// (flags = 0)
 /// </summary>
 public partial class ApexJetComponent : BmSDK.Engine.ApexFieldSamplerComponent, BmSDK.IGameObject

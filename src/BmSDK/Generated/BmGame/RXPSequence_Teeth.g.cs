@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RXPSequence_Teeth<br/>
+/// (size = 780)
 /// (flags = 0)
 /// </summary>
 public partial class RXPSequence_Teeth : BmSDK.BmGame.RXPSequence, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RXPSequence_Teeth : BmSDK.BmGame.RXPSequence, BmSDK.IGameOb
     public unsafe bool GetIsTeeth()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RXPSequence_Teeth.GetIsTeeth", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }

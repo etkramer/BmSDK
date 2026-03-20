@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RLineLauncherGuidingVolume<br/>
+/// (size = 744)
 /// (flags = 0)
 /// </summary>
 public partial class RLineLauncherGuidingVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBM2IdleLookAtConfigs<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RBM2IdleLookAtConfigs : BmSDK.GameObject, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBMCombatThrownObject_RocketLauncher<br/>
+/// (size = 1184)
 /// (flags = 0)
 /// </summary>
 public partial class RBMCombatThrownObject_RocketLauncher : BmSDK.BmGame.RBMCombatThrownObject, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RBMCombatThrownObject_RocketLauncher : BmSDK.BmGame.RBMComb
     public unsafe BmSDK.BmGame.RBMWeapon CreateWeaponFor(BmSDK.BmGame.RBMPawnAI HostPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_RocketLauncher.CreateWeaponFor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HostPawn, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMWeapon>(paramsPtr + 8);

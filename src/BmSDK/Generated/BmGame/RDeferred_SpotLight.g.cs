@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDeferred_SpotLight<br/>
+/// (size = 692)
 /// (flags = 0)
 /// </summary>
 public partial class RDeferred_SpotLight : BmSDK.Engine.SpotLight, BmSDK.IGameObject

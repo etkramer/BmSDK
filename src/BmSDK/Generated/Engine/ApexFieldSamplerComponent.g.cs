@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexFieldSamplerComponent<br/>
+/// (size = 604)
 /// (flags = 0)
 /// </summary>
 public partial class ApexFieldSamplerComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class ApexFieldSamplerComponent : BmSDK.Engine.PrimitiveComponent
     public unsafe void SetEnabled(bool Enabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ApexFieldSamplerComponent.SetEnabled", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Enabled, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -57,7 +58,7 @@ public partial class ApexFieldSamplerComponent : BmSDK.Engine.PrimitiveComponent
     public unsafe void DoInitRBPhys()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ApexFieldSamplerComponent.DoInitRBPhys", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;

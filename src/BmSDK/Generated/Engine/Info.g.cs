@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Info<br/>
+/// (size = 668)
 /// (flags = 0)
 /// </summary>
 public partial class Info : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -70,7 +71,7 @@ public partial class Info : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FServerResponseLine
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 120)]
     public partial record struct FServerResponseLine
     {
         /// <summary>
@@ -185,7 +186,7 @@ public partial class Info : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPlayerResponseLine
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 52)]
     public partial record struct FPlayerResponseLine
     {
         /// <summary>
@@ -255,7 +256,7 @@ public partial class Info : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FKeyValuePair
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FKeyValuePair
     {
         /// <summary>

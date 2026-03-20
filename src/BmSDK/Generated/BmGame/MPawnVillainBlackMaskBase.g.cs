@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MPawnVillainBlackMaskBase<br/>
+/// (size = 6696)
 /// (flags = 0)
 /// </summary>
 public partial class MPawnVillainBlackMaskBase : BmSDK.BmGame.RPawnVillainThug, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class MPawnVillainBlackMaskBase : BmSDK.BmGame.RPawnVillainThug, 
     public unsafe bool IsInLOSHack(System.Numerics.Vector3 EndLocation, out System.Numerics.Vector3 HitLocation, out System.Numerics.Vector3 MuzzleLoc, out BmSDK.Rotator MuzzleRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnVillainBlackMaskBase.IsInLOSHack", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EndLocation, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         HitLocation = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 12);
@@ -88,7 +89,7 @@ public partial class MPawnVillainBlackMaskBase : BmSDK.BmGame.RPawnVillainThug, 
     public unsafe bool IsDoingRangeAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnVillainBlackMaskBase.IsDoingRangeAttack", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -99,7 +100,7 @@ public partial class MPawnVillainBlackMaskBase : BmSDK.BmGame.RPawnVillainThug, 
     public unsafe void BlackMaskHideGun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MPawnVillainBlackMaskBase.BlackMaskHideGun", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

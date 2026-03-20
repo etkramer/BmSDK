@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimationCompressionAlgorithm_RevertToRaw<br/>
+/// (size = 108)
 /// (flags = 0)
 /// </summary>
 public partial class AnimationCompressionAlgorithm_RevertToRaw : BmSDK.Engine.AnimationCompressionAlgorithm, BmSDK.IGameObject

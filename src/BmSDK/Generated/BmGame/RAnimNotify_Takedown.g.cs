@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_Takedown<br/>
+/// (size = 132)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_Takedown : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

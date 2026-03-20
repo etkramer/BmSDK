@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimUtil_MovementOutput<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimUtil_MovementOutput : BmSDK.GameObject, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RAnimUtil_MovementOutput : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Struct: FMovementOutput
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 120)]
     public partial record struct FMovementOutput
     {
         /// <summary>
@@ -141,7 +142,7 @@ public partial class RAnimUtil_MovementOutput : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Struct: FProceduralMovement
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 60)]
     public partial record struct FProceduralMovement
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RLevelTransitionPathComponent<br/>
+/// (size = 568)
 /// (flags = 0)
 /// </summary>
 public partial class RLevelTransitionPathComponent : BmSDK.Engine.DrawBoxComponent, BmSDK.IGameObject

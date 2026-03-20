@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkDialogueConversationDynamic<br/>
+/// (size = 120)
 /// (flags = 0)
 /// </summary>
 public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpeech, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     public unsafe BmSDK.TArray<BmSDK.Engine.AkDialogueVoice> GetVoiceListForBindingIndex(int OrderIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.GetVoiceListForBindingIndex", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OrderIndex, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkDialogueVoice>>(paramsPtr + 4);
@@ -50,7 +51,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     public unsafe bool IsResolved()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.IsResolved", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -68,7 +69,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     public unsafe void Unresolve()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.Unresolve", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -86,7 +87,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     public unsafe bool AutoResolve(bool forceMultiVoiceConv = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.AutoResolve", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(forceMultiVoiceConv, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -105,7 +106,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     public unsafe bool ResolveFromIds(BmSDK.TArray<int> spkrVoiceIds)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.ResolveFromIds", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(spkrVoiceIds, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -124,7 +125,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     public unsafe bool Resolve(BmSDK.TArray<BmSDK.Engine.AkDialogueVoice> spkrVoices)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.Resolve", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(spkrVoices, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -143,7 +144,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     public unsafe bool ResolveAll(BmSDK.TArray<BmSDK.Engine.AkDialogueVoice> spkrVoices)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.ResolveAll", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(spkrVoices, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -162,7 +163,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     public unsafe float GetTimeSinceLastPlayed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.GetTimeSinceLastPlayed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -180,7 +181,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     public unsafe float GetTotalPlayCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.GetTotalPlayCount", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -198,7 +199,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     public unsafe float GetMaxPlayCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.GetMaxPlayCount", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -216,7 +217,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     public unsafe int GetDynamicVoiceCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.GetDynamicVoiceCount", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -234,7 +235,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     public unsafe int GetVoiceCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueConversationDynamic.GetVoiceCount", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -267,7 +268,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     /// <summary>
     /// Struct: FAkDialogueConversationDynamicItem
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FAkDialogueConversationDynamicItem
     {
         /// <summary>

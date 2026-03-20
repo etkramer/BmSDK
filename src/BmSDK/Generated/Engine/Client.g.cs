@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Client<br/>
+/// (size = 120)
 /// (flags = 0)
 /// </summary>
 public partial class Client : BmSDK.GameObject, BmSDK.IGameObject

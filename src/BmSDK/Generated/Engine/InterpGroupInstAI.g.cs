@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpGroupInstAI<br/>
+/// (size = 160)
 /// (flags = 0)
 /// </summary>
 public partial class InterpGroupInstAI : BmSDK.Engine.InterpGroupInst, BmSDK.IGameObject

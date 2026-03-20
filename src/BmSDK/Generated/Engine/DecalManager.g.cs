@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DecalManager<br/>
+/// (size = 728)
 /// (flags = 0)
 /// </summary>
 public partial class DecalManager : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class DecalManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.Engine.DecalComponent SpawnDecal(BmSDK.Engine.MaterialInterface DecalMaterial, System.Numerics.Vector3 DecalLocation, BmSDK.Rotator DecalOrientation, float Width, float Height, float Thickness, bool bNoClip, float DecalRotation = default, BmSDK.Engine.PrimitiveComponent HitComponent = default, bool bProjectOnTerrain = default, bool bProjectOnSkeletalMeshes = default, BmSDK.FName HitBone = default, int HitNodeIndex = default, int HitLevelIndex = default, float InDecalLifeSpan = default, int InFracturedStaticMeshComponentIndex = default, float InDepthBias = default, System.Numerics.Vector2 InBlendRange = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DecalManager.SpawnDecal", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[132];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DecalMaterial, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DecalLocation, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DecalOrientation, paramsPtr + 20);
@@ -102,7 +103,7 @@ public partial class DecalManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.Engine.DecalComponent GetPooledComponent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DecalManager.GetPooledComponent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DecalComponent>(paramsPtr + 0);
     }
@@ -113,7 +114,7 @@ public partial class DecalManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe static void SetDecalParameters(BmSDK.Engine.DecalComponent TheDecal, BmSDK.Engine.MaterialInterface DecalMaterial, System.Numerics.Vector3 DecalLocation, BmSDK.Rotator DecalOrientation, float Width, float Height, float Thickness, bool bNoClip, float DecalRotation, BmSDK.Engine.PrimitiveComponent HitComponent, bool bProjectOnTerrain, bool bProjectOnSkeletalMeshes, BmSDK.FName HitBone, int HitNodeIndex, int HitLevelIndex, int InFracturedStaticMeshComponentIndex, float DepthBias, System.Numerics.Vector2 BlendRange)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DecalManager.SetDecalParameters", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[108];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TheDecal, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DecalMaterial, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DecalLocation, paramsPtr + 16);
@@ -142,7 +143,7 @@ public partial class DecalManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool CanSpawnDecals()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DecalManager.CanSpawnDecals", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -153,7 +154,7 @@ public partial class DecalManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void DecalFinished(BmSDK.Engine.DecalComponent Decal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DecalManager.DecalFinished", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Decal, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -165,7 +166,7 @@ public partial class DecalManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe static bool AreDynamicDecalsEnabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DecalManager.AreDynamicDecalsEnabled", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -180,7 +181,7 @@ public partial class DecalManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FActiveDecalInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FActiveDecalInfo
     {
         /// <summary>

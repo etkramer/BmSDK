@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGangSpectatorPointBase<br/>
+/// (size = 1336)
 /// (flags = 0)
 /// </summary>
 public partial class RGangSpectatorPointBase : BmSDK.BmGame.RGangInteractPointBase, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RGangSpectatorPointBase : BmSDK.BmGame.RGangInteractPointBa
     public unsafe BmSDK.BmGame.RGangInteractPointBase IsValidForPawnSpec(BmSDK.BmGame.RBMPawnAI TestPawn, bool bSkipSpeedTest = default, bool bSkipAngleCheck = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangSpectatorPointBase.IsValidForPawnSpec", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestPawn, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bSkipSpeedTest, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bSkipAngleCheck, paramsPtr + 12);

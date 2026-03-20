@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_KnifeCombo<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_KnifeCombo : BmSDK.BmGame.RDamageType, BmSDK.IGameObject

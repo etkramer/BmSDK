@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionMin<br/>
+/// (size = 276)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionMin : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

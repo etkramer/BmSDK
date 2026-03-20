@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_Attack_Sub_WatchAndWait<br/>
+/// (size = 700)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_Attack_Sub_WatchAndWait : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RAEC_Attack_Sub_WatchAndWait : BmSDK.BmGame.RAlertEventCoor
     public unsafe void Init(System.Numerics.Vector3 AimTarget, System.Numerics.Vector3 NewStandLoc, float NewDestTolerance = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_WatchAndWait.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AimTarget, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewStandLoc, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewDestTolerance, paramsPtr + 24);
@@ -87,7 +88,7 @@ public partial class RAEC_Attack_Sub_WatchAndWait : BmSDK.BmGame.RAlertEventCoor
     public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_WatchAndWait.NotifyFailed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FinishedAction, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -99,7 +100,7 @@ public partial class RAEC_Attack_Sub_WatchAndWait : BmSDK.BmGame.RAlertEventCoor
     public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_WatchAndWait.NotifyFinished", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FinishedAction, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

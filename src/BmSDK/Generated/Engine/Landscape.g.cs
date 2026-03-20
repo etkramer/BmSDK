@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Landscape<br/>
+/// (size = 992)
 /// (flags = 0)
 /// </summary>
 public partial class Landscape : BmSDK.Engine.LandscapeProxy, BmSDK.IGameObject
@@ -70,7 +71,7 @@ public partial class Landscape : BmSDK.Engine.LandscapeProxy, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLandscapeLayerInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 56)]
     public partial record struct FLandscapeLayerInfo
     {
         /// <summary>

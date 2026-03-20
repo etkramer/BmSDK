@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SoundCue<br/>
+/// (size = 236)
 /// (flags = 0)
 /// </summary>
 public partial class SoundCue : BmSDK.GameObject, BmSDK.IGameObject
@@ -125,7 +126,7 @@ public partial class SoundCue : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSoundNodeEditorData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FSoundNodeEditorData
     {
         /// <summary>

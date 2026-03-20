@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveInstance_FloorGrateFarCw<br/>
+/// (size = 1172)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveInstance_FloorGrateFarCw : BmSDK.BmGame.RSpecialMoveInstance_FloorGrateFar, BmSDK.IGameObject

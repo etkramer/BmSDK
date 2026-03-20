@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBeaconAsset<br/>
+/// (size = 140)
 /// (flags = 0)
 /// </summary>
 public partial class RBeaconAsset : BmSDK.BmGame.RThreatBaseAsset, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: CameraModifier_CameraShake<br/>
+/// (size = 136)
 /// (flags = 0)
 /// </summary>
 public partial class CameraModifier_CameraShake : BmSDK.Engine.CameraModifier, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class CameraModifier_CameraShake : BmSDK.Engine.CameraModifier, B
     public unsafe bool ModifyCamera(BmSDK.Engine.Camera Camera, float DeltaTime, out BmSDK.GameObject.FTPOV OutPOV)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraModifier_CameraShake.ModifyCamera", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Camera, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -59,7 +60,7 @@ public partial class CameraModifier_CameraShake : BmSDK.Engine.CameraModifier, B
     public unsafe void UpdateCameraShake(float DeltaTime, out BmSDK.Engine.CameraModifier_CameraShake.FCameraShakeInstance Shake, out BmSDK.GameObject.FTPOV OutPOV)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraModifier_CameraShake.UpdateCameraShake", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[188];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -80,7 +81,7 @@ public partial class CameraModifier_CameraShake : BmSDK.Engine.CameraModifier, B
     public unsafe void RemoveAllCameraShakes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraModifier_CameraShake.RemoveAllCameraShakes", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -91,7 +92,7 @@ public partial class CameraModifier_CameraShake : BmSDK.Engine.CameraModifier, B
     public unsafe void RemoveCameraShake(BmSDK.Engine.CameraShake Shake)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraModifier_CameraShake.RemoveCameraShake", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Shake, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -103,7 +104,7 @@ public partial class CameraModifier_CameraShake : BmSDK.Engine.CameraModifier, B
     public unsafe void AddCameraShake(BmSDK.Engine.CameraShake NewShake, float Scale, BmSDK.Engine.Camera.ECameraAnimPlaySpace PlaySpace = default, BmSDK.Rotator UserPlaySpaceRot = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraModifier_CameraShake.AddCameraShake", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewShake, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Scale, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlaySpace, paramsPtr + 12);
@@ -118,7 +119,7 @@ public partial class CameraModifier_CameraShake : BmSDK.Engine.CameraModifier, B
     public unsafe BmSDK.Engine.CameraModifier_CameraShake.FCameraShakeInstance InitializeShake(BmSDK.Engine.CameraShake NewShake, float Scale, BmSDK.Engine.Camera.ECameraAnimPlaySpace PlaySpace, BmSDK.Rotator UserPlaySpaceRot = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraModifier_CameraShake.InitializeShake", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[332];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewShake, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Scale, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlaySpace, paramsPtr + 12);
@@ -133,7 +134,7 @@ public partial class CameraModifier_CameraShake : BmSDK.Engine.CameraModifier, B
     public unsafe void ReinitShake(int ActiveShakeIdx, float Scale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraModifier_CameraShake.ReinitShake", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ActiveShakeIdx, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Scale, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -146,7 +147,7 @@ public partial class CameraModifier_CameraShake : BmSDK.Engine.CameraModifier, B
     public unsafe static float InitializeOffset(out BmSDK.Engine.CameraShake.FFOscillator Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraModifier_CameraShake.InitializeOffset", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         Param = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CameraShake.FFOscillator>(paramsPtr + 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 12);
@@ -173,7 +174,7 @@ public partial class CameraModifier_CameraShake : BmSDK.Engine.CameraModifier, B
     /// <summary>
     /// Struct: FCameraShakeInstance
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 144)]
     public partial record struct FCameraShakeInstance
     {
         /// <summary>

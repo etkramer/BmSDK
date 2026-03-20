@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPointOfInterestInterface<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RPointOfInterestInterface : BmSDK.Interface, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RPointOfInterestInterface : BmSDK.Interface, BmSDK.IGameObj
     public unsafe BmSDK.FString PointOfInterest_GetSideStoryReferenceName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPointOfInterestInterface.PointOfInterest_GetSideStoryReferenceName", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
     }
@@ -49,7 +50,7 @@ public partial class RPointOfInterestInterface : BmSDK.Interface, BmSDK.IGameObj
     public unsafe System.Numerics.Vector3 PointOfInterest_GetLabelLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPointOfInterestInterface.PointOfInterest_GetLabelLocation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -67,7 +68,7 @@ public partial class RPointOfInterestInterface : BmSDK.Interface, BmSDK.IGameObj
     public unsafe bool PointOfInterest_IsActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPointOfInterestInterface.PointOfInterest_IsActive", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;

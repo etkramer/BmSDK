@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_Graffiti<br/>
+/// (size = 120)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_Graffiti : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

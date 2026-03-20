@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexShapeCapsule<br/>
+/// (size = 92)
 /// (flags = 0)
 /// </summary>
 public partial class ApexShapeCapsule : BmSDK.Engine.ApexShape, BmSDK.IGameObject

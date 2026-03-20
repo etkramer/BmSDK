@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleLODLevel<br/>
+/// (size = 224)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleLODLevel : BmSDK.GameObject, BmSDK.IGameObject

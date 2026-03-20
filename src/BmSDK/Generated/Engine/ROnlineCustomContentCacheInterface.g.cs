@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ROnlineCustomContentCacheInterface<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class ROnlineCustomContentCacheInterface : BmSDK.Interface, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class ROnlineCustomContentCacheInterface : BmSDK.Interface, BmSDK
     public unsafe bool FlagObsoleteInRegistry(BmSDK.FString Filename, BmSDK.FString Subfolder)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROnlineCustomContentCacheInterface.FlagObsoleteInRegistry", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Filename, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Subfolder, paramsPtr + 16);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -51,7 +52,7 @@ public partial class ROnlineCustomContentCacheInterface : BmSDK.Interface, BmSDK
     public unsafe void UpdateRegistry(BmSDK.FString Filename, BmSDK.FString Subfolder, int Crc32, int Size, bool bObsolete)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROnlineCustomContentCacheInterface.UpdateRegistry", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Filename, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Subfolder, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Crc32, paramsPtr + 32);
@@ -67,7 +68,7 @@ public partial class ROnlineCustomContentCacheInterface : BmSDK.Interface, BmSDK
     public unsafe void AddToDeleteQueue(BmSDK.Engine.OnlineCustomContentRequestCacheableHydra Request)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROnlineCustomContentCacheInterface.AddToDeleteQueue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Request, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -79,7 +80,7 @@ public partial class ROnlineCustomContentCacheInterface : BmSDK.Interface, BmSDK
     public unsafe void AddToWriteQueue(BmSDK.Engine.OnlineCustomContentRequestCacheableHydra Request)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROnlineCustomContentCacheInterface.AddToWriteQueue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Request, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -91,7 +92,7 @@ public partial class ROnlineCustomContentCacheInterface : BmSDK.Interface, BmSDK
     public unsafe void RemoveFromReadQueue(BmSDK.Engine.OnlineCustomContentRequestCacheableHydra Request)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROnlineCustomContentCacheInterface.RemoveFromReadQueue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Request, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -103,7 +104,7 @@ public partial class ROnlineCustomContentCacheInterface : BmSDK.Interface, BmSDK
     public unsafe void AddToReadQueue(BmSDK.Engine.OnlineCustomContentRequestCacheableHydra Request)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ROnlineCustomContentCacheInterface.AddToReadQueue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Request, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

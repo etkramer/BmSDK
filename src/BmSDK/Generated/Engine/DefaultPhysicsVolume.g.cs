@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DefaultPhysicsVolume<br/>
+/// (size = 844)
 /// (flags = 0)
 /// </summary>
 public partial class DefaultPhysicsVolume : BmSDK.Engine.PhysicsVolume, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class DefaultPhysicsVolume : BmSDK.Engine.PhysicsVolume, BmSDK.IG
     public unsafe void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DefaultPhysicsVolume.Destroyed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

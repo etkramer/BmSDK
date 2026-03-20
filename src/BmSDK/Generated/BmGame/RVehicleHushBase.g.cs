@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleHushBase<br/>
+/// (size = 7732)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleHushBase : BmSDK.BmGame.RVehicleCar, BmSDK.IGameObject
@@ -97,7 +98,7 @@ public partial class RVehicleHushBase : BmSDK.BmGame.RVehicleCar, BmSDK.IGameObj
     /// <summary>
     /// Struct: FBadGuyData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 64)]
     public partial record struct FBadGuyData
     {
         /// <summary>

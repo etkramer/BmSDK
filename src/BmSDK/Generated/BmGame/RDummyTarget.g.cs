@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDummyTarget<br/>
+/// (size = 668)
 /// (flags = 0)
 /// </summary>
 public partial class RDummyTarget : BmSDK.Engine.Actor, BmSDK.IGameObject

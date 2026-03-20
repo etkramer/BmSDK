@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RFloatingIceRaftMesh<br/>
+/// (size = 904)
 /// (flags = 0)
 /// </summary>
 public partial class RFloatingIceRaftMesh : BmSDK.Engine.FracturedStaticMeshActor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RFloatingIceRaftMesh : BmSDK.Engine.FracturedStaticMeshActo
     public unsafe void SetChunkScale(int SpawnedPartIndex, float NewScale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFloatingIceRaftMesh.SetChunkScale", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnedPartIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewScale, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -93,7 +94,7 @@ public partial class RFloatingIceRaftMesh : BmSDK.Engine.FracturedStaticMeshActo
     public unsafe BmSDK.Engine.FracturedStaticMeshPart SpawnPartMulti(BmSDK.TArray<int> ChunkIndices, System.Numerics.Vector3 InitialVel, System.Numerics.Vector3 InitialAngVel, float RelativeScale, bool bExplosion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFloatingIceRaftMesh.SpawnPartMulti", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[56];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChunkIndices, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InitialVel, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InitialAngVel, paramsPtr + 28);

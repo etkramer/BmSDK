@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PortalVolume<br/>
+/// (size = 756)
 /// (flags = 0)
 /// </summary>
 public partial class PortalVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

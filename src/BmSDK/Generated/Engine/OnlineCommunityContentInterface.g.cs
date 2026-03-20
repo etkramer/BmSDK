@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: OnlineCommunityContentInterface<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IGameObject
@@ -52,7 +53,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe void ClearGetContentPayloadCompleteDelegate(System.IntPtr GetContentPayloadCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.ClearGetContentPayloadCompleteDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GetContentPayloadCompleteDelegate, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -64,7 +65,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe void AddGetContentPayloadCompleteDelegate(System.IntPtr GetContentPayloadCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.AddGetContentPayloadCompleteDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GetContentPayloadCompleteDelegate, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -76,7 +77,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe void OnGetContentPayloadComplete(bool bWasSuccessful, BmSDK.Engine.OnlineSubsystem.FCommunityContentFile FileDownloaded, out BmSDK.TArray<byte> Payload)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.OnGetContentPayloadComplete", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[76];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bWasSuccessful, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FileDownloaded, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -103,7 +104,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe void ClearDownloadContentCompleteDelegate(System.IntPtr DownloadContentCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.ClearDownloadContentCompleteDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DownloadContentCompleteDelegate, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -115,7 +116,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe void AddDownloadContentCompleteDelegate(System.IntPtr DownloadContentCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.AddDownloadContentCompleteDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DownloadContentCompleteDelegate, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -127,7 +128,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe void OnDownloadContentComplete(bool bWasSuccessful, BmSDK.Engine.OnlineSubsystem.FCommunityContentFile FileDownloaded)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.OnDownloadContentComplete", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bWasSuccessful, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FileDownloaded, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -153,7 +154,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe void ClearUploadContentCompleteDelegate(System.IntPtr UploadContentCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.ClearUploadContentCompleteDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(UploadContentCompleteDelegate, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -165,7 +166,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe void AddUploadContentCompleteDelegate(System.IntPtr UploadContentCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.AddUploadContentCompleteDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(UploadContentCompleteDelegate, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -177,7 +178,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe void OnUploadContentComplete(bool bWasSuccessful, BmSDK.Engine.OnlineSubsystem.FCommunityContentFile UploadedFile)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.OnUploadContentComplete", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bWasSuccessful, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(UploadedFile, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -190,7 +191,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe bool UploadContent(byte PlayerNum, out BmSDK.TArray<byte> Payload, out BmSDK.Engine.OnlineSubsystem.FCommunityContentMetadata MetaData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.UploadContent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerNum, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         Payload = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(paramsPtr + 4);
@@ -204,7 +205,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe bool GetFriendsContentList(byte PlayerNum, out BmSDK.Engine.OnlineSubsystem.FOnlineFriend Friend, out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FCommunityContentFile> ContentFiles)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.GetFriendsContentList", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[80];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerNum, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         Friend = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FOnlineFriend>(paramsPtr + 4);
@@ -218,7 +219,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe void ClearReadFriendsContentListCompleteDelegate(System.IntPtr ReadFriendsContentListCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.ClearReadFriendsContentListCompleteDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ReadFriendsContentListCompleteDelegate, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -230,7 +231,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe void AddReadFriendsContentListCompleteDelegate(System.IntPtr ReadFriendsContentListCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.AddReadFriendsContentListCompleteDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ReadFriendsContentListCompleteDelegate, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -242,7 +243,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe void OnReadFriendsContentListComplete(bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.OnReadFriendsContentListComplete", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bWasSuccessful, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -254,7 +255,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe bool ReadFriendsContentList(byte PlayerNum, out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FOnlineFriend> Friends, int StartAt = default, int NumToRead = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.ReadFriendsContentList", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerNum, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StartAt, paramsPtr + 20);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NumToRead, paramsPtr + 24);
@@ -269,7 +270,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe bool GetContentList(byte PlayerNum, out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FCommunityContentFile> ContentFiles)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.GetContentList", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerNum, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         ContentFiles = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FCommunityContentFile>>(paramsPtr + 4);
@@ -282,7 +283,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe void ClearReadContentListCompleteDelegate(System.IntPtr ReadContentListCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.ClearReadContentListCompleteDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ReadContentListCompleteDelegate, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -294,7 +295,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe void AddReadContentListCompleteDelegate(System.IntPtr ReadContentListCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.AddReadContentListCompleteDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ReadContentListCompleteDelegate, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -306,7 +307,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe void OnReadContentListComplete(bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.OnReadContentListComplete", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bWasSuccessful, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -318,7 +319,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe bool ReadContentList(byte PlayerNum, int StartAt = default, int NumToRead = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.ReadContentList", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerNum, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StartAt, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NumToRead, paramsPtr + 8);
@@ -332,7 +333,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe void Exit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.Exit", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -343,7 +344,7 @@ public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IG
     public unsafe bool Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineCommunityContentInterface.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }

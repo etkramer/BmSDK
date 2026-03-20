@@ -5,6 +5,7 @@ namespace BmSDK.IpDrv;
 
 /// <summary>
 /// Class: TitleFileCacheEntry<br/>
+/// (size = 138)
 /// (flags = 0)
 /// </summary>
 public partial class TitleFileCacheEntry : BmSDK.GameObject, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleSizeScaleOverDensity<br/>
+/// (size = 160)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleSizeScaleOverDensity : BmSDK.Engine.ParticleModuleSizeBase, BmSDK.IGameObject

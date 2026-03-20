@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_MultiplyInt<br/>
+/// (size = 368)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_MultiplyInt : BmSDK.Engine.SeqAct_SetSequenceVariable, BmSDK.IGameObject

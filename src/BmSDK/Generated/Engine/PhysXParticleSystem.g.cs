@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PhysXParticleSystem<br/>
+/// (size = 196)
 /// (flags = 0)
 /// </summary>
 public partial class PhysXParticleSystem : BmSDK.GameObject, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionLODFade<br/>
+/// (size = 228)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionLODFade : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

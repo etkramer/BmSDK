@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionLensFlareIntensity<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionLensFlareIntensity : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

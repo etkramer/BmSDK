@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpression<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpression : BmSDK.GameObject, BmSDK.IGameObject
@@ -206,7 +207,7 @@ public partial class MaterialExpression : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FExpressionOutput
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FExpressionOutput
     {
         /// <summary>
@@ -267,7 +268,7 @@ public partial class MaterialExpression : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FExpressionInput
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 52)]
     public partial record struct FExpressionInput
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RockReflectionVolume<br/>
+/// (size = 1000)
 /// (flags = 0)
 /// </summary>
 public partial class RockReflectionVolume : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RockReflectionVolume : BmSDK.Engine.Actor, BmSDK.IGameObjec
     public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RockReflectionVolume.OnToggle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Action, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -181,7 +182,7 @@ public partial class RockReflectionVolume : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Struct: FFReflectionBoxInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 276)]
     public partial record struct FFReflectionBoxInfo
     {
         /// <summary>

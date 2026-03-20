@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPawnVillainThugFakeDeath<br/>
+/// (size = 6704)
 /// (flags = 0)
 /// </summary>
 public partial class RPawnVillainThugFakeDeath : BmSDK.BmGame.RPawnVillainThug, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RPawnVillainThugFakeDeath : BmSDK.BmGame.RPawnVillainThug, 
     public unsafe void GetUpFromFakeDeath(BmSDK.FName CustomGetUpAnimName, BmSDK.FName StandIdleName, BmSDK.Engine.AnimSet CustomGetUpAnimset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugFakeDeath.GetUpFromFakeDeath", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CustomGetUpAnimName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StandIdleName, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CustomGetUpAnimset, paramsPtr + 16);
@@ -87,7 +88,7 @@ public partial class RPawnVillainThugFakeDeath : BmSDK.BmGame.RPawnVillainThug, 
     public unsafe void CanBeHitAgain()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugFakeDeath.CanBeHitAgain", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -98,7 +99,7 @@ public partial class RPawnVillainThugFakeDeath : BmSDK.BmGame.RPawnVillainThug, 
     public unsafe void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugFakeDeath.Tick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -110,7 +111,7 @@ public partial class RPawnVillainThugFakeDeath : BmSDK.BmGame.RPawnVillainThug, 
     public unsafe bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugFakeDeath.Died", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Killer, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DamageType, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HitLocation, paramsPtr + 16);
@@ -124,7 +125,7 @@ public partial class RPawnVillainThugFakeDeath : BmSDK.BmGame.RPawnVillainThug, 
     public unsafe BmSDK.BmGame.RPawnCombat.DamageResult ProcessDamagedBy(out BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugFakeDeath.ProcessDamagedBy", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[249];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         DmgInfo = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCombat.FDamageInfo>(paramsPtr + 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCombat.DamageResult>(paramsPtr + 248);
@@ -136,7 +137,7 @@ public partial class RPawnVillainThugFakeDeath : BmSDK.BmGame.RPawnVillainThug, 
     public unsafe bool CanRedirect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainThugFakeDeath.CanRedirect", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }

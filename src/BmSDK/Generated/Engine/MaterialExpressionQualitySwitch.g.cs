@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionQualitySwitch<br/>
+/// (size = 276)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionQualitySwitch : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

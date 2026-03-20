@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_Explosive_HeavyObject<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_Explosive_HeavyObject : BmSDK.BmGame.RDmgType_Explosive, BmSDK.IGameObject

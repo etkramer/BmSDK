@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: StaticMeshActorBase<br/>
+/// (size = 692)
 /// (flags = 0)
 /// </summary>
 public partial class StaticMeshActorBase : BmSDK.Engine.RStaticClimbableActor, BmSDK.IGameObject

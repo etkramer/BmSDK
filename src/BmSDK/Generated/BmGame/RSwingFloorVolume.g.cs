@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSwingFloorVolume<br/>
+/// (size = 740)
 /// (flags = 0)
 /// </summary>
 public partial class RSwingFloorVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

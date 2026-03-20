@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DistributionVectorUniformCurve<br/>
+/// (size = 141)
 /// (flags = 0)
 /// </summary>
 public partial class DistributionVectorUniformCurve : BmSDK.DistributionVector, BmSDK.IGameObject

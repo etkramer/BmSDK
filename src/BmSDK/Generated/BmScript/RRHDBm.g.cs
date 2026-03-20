@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RRHDBm<br/>
+/// (size = 2560)
 /// (flags = 0)
 /// </summary>
 public partial class RRHDBm : BmSDK.BmGame.RRHD, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RRHDBm : BmSDK.BmGame.RRHD, BmSDK.IGameObject
     public unsafe void ConversationReTriggerTimeout()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRHDBm.ConversationReTriggerTimeout", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -84,7 +85,7 @@ public partial class RRHDBm : BmSDK.BmGame.RRHD, BmSDK.IGameObject
     public unsafe void PlayCodesNeededDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRHDBm.PlayCodesNeededDialogue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

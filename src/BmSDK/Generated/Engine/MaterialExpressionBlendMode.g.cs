@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionBlendMode<br/>
+/// (size = 333)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionBlendMode : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

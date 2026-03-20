@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNode_Additive<br/>
+/// (size = 308)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNode_Additive : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObject

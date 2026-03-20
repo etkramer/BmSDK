@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_Rescued<br/>
+/// (size = 400)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_Rescued : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

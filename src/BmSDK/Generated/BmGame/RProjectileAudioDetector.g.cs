@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RProjectileAudioDetector<br/>
+/// (size = 668)
 /// (flags = 0)
 /// </summary>
 public partial class RProjectileAudioDetector : BmSDK.Engine.Actor, BmSDK.IGameObject

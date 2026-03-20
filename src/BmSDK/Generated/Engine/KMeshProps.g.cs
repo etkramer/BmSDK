@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: KMeshProps<br/>
+/// (size = 204)
 /// (flags = 0)
 /// </summary>
 public partial class KMeshProps : BmSDK.GameObject, BmSDK.IGameObject
@@ -53,7 +54,7 @@ public partial class KMeshProps : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FKAggregateGeom
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 108)]
     public partial record struct FKAggregateGeom
     {
         /// <summary>
@@ -132,7 +133,7 @@ public partial class KMeshProps : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FKConvexElem
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 152)]
     public partial record struct FKConvexElem
     {
         /// <summary>
@@ -274,7 +275,7 @@ public partial class KMeshProps : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FKConvexVert
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FKConvexVert
     {
         /// <summary>
@@ -299,7 +300,7 @@ public partial class KMeshProps : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FKSphylElem
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 76)]
     public partial record struct FKSphylElem
     {
         /// <summary>
@@ -369,7 +370,7 @@ public partial class KMeshProps : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FKBoxElem
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 80)]
     public partial record struct FKBoxElem
     {
         /// <summary>
@@ -475,7 +476,7 @@ public partial class KMeshProps : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FKSphereElem
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 72)]
     public partial record struct FKSphereElem
     {
         /// <summary>

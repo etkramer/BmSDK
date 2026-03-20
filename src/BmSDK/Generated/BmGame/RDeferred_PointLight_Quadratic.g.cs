@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDeferred_PointLight_Quadratic<br/>
+/// (size = 692)
 /// (flags = 0)
 /// </summary>
 public partial class RDeferred_PointLight_Quadratic : BmSDK.BmGame.RDeferred_PointLight, BmSDK.IGameObject

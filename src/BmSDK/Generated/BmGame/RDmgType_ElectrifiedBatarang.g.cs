@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_ElectrifiedBatarang<br/>
+/// (size = 220)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_ElectrifiedBatarang : BmSDK.BmGame.RDmgType_Electricity, BmSDK.IGameObject

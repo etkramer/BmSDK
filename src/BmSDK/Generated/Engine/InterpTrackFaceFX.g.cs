@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackFaceFX<br/>
+/// (size = 240)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackFaceFX : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class InterpTrackFaceFX : BmSDK.Engine.InterpTrack, BmSDK.IGameOb
     /// <summary>
     /// Struct: FFaceFXSoundCueKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FFaceFXSoundCueKey
     {
         /// <summary>
@@ -96,7 +97,7 @@ public partial class InterpTrackFaceFX : BmSDK.Engine.InterpTrack, BmSDK.IGameOb
     /// <summary>
     /// Struct: FFaceFXTrackKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FFaceFXTrackKey
     {
         /// <summary>

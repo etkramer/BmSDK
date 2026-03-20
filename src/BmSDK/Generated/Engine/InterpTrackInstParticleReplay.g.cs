@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackInstParticleReplay<br/>
+/// (size = 92)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstParticleReplay : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject

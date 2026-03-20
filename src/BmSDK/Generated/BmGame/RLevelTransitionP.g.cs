@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RLevelTransitionP<br/>
+/// (size = 760)
 /// (flags = 0)
 /// </summary>
 public partial class RLevelTransitionP : BmSDK.BmGame.RLevelTransition, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RLevelTransitionP : BmSDK.BmGame.RLevelTransition, BmSDK.IG
     public unsafe void MovePlayerHere()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionP.MovePlayerHere", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -84,7 +85,7 @@ public partial class RLevelTransitionP : BmSDK.BmGame.RLevelTransition, BmSDK.IG
     public unsafe void EnterTransition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionP.EnterTransition", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

@@ -5,6 +5,7 @@ namespace BmSDK.IpDrv;
 
 /// <summary>
 /// Class: MCPBase<br/>
+/// (size = 116)
 /// (flags = 0)
 /// </summary>
 public partial class MCPBase : BmSDK.IpDrv.McpServiceBase, BmSDK.IGameObject

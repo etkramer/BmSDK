@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleKillHeight<br/>
+/// (size = 136)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleKillHeight : BmSDK.Engine.ParticleModuleKillBase, BmSDK.IGameObject

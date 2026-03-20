@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBMCombatThrownObject_KnifeDestroyed<br/>
+/// (size = 1184)
 /// (flags = 0)
 /// </summary>
 public partial class RBMCombatThrownObject_KnifeDestroyed : BmSDK.BmGame.RBMCombatThrownObject, BmSDK.IGameObject

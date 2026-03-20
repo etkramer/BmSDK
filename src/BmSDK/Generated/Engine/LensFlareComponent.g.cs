@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LensFlareComponent<br/>
+/// (size = 640)
 /// (flags = 0)
 /// </summary>
 public partial class LensFlareComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class LensFlareComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     public unsafe BmSDK.Engine.MaterialInstanceConstant CreateAndSetMaterialInstanceConstant(int ElementIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareComponent.CreateAndSetMaterialInstanceConstant", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ElementIndex, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(paramsPtr + 4);
@@ -50,7 +51,7 @@ public partial class LensFlareComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     public unsafe void SetMaterial(int ElementIndex, BmSDK.Engine.MaterialInterface Material)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareComponent.SetMaterial", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ElementIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Material, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -70,7 +71,7 @@ public partial class LensFlareComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     public unsafe BmSDK.Engine.MaterialInterface GetMaterial(int ElementIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareComponent.GetMaterial", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ElementIndex, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -89,7 +90,7 @@ public partial class LensFlareComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     public unsafe void SetIsActive(bool bInIsActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareComponent.SetIsActive", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bInIsActive, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -108,7 +109,7 @@ public partial class LensFlareComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     public unsafe void SetSourceColor(BmSDK.GameObject.FLinearColor InSourceColor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareComponent.SetSourceColor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InSourceColor, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -127,7 +128,7 @@ public partial class LensFlareComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     public unsafe void SetTemplate(BmSDK.Engine.LensFlare NewTemplate, bool bForceSet = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LensFlareComponent.SetTemplate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewTemplate, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bForceSet, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -144,7 +145,7 @@ public partial class LensFlareComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Struct: FLensFlareElementMaterials
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FLensFlareElementMaterials
     {
         /// <summary>
@@ -160,7 +161,7 @@ public partial class LensFlareComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Struct: FLensFlareElementInstance
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
     public partial record struct FLensFlareElementInstance
     {
     }

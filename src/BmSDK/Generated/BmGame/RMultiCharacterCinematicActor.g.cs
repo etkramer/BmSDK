@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMultiCharacterCinematicActor<br/>
+/// (size = 860)
 /// (flags = 0)
 /// </summary>
 public partial class RMultiCharacterCinematicActor : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RMultiCharacterCinematicActor : BmSDK.BmGame.RSkeletalMeshA
     public unsafe void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiCharacterCinematicActor.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -117,7 +118,7 @@ public partial class RMultiCharacterCinematicActor : BmSDK.BmGame.RSkeletalMeshA
     /// <summary>
     /// Struct: FMultiCharacterCinematicActorSetup
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 48)]
     public partial record struct FMultiCharacterCinematicActorSetup
     {
         /// <summary>
@@ -160,7 +161,7 @@ public partial class RMultiCharacterCinematicActor : BmSDK.BmGame.RSkeletalMeshA
     /// <summary>
     /// Struct: FMultiCharacterCinematicActorMaterialSwap
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FMultiCharacterCinematicActorMaterialSwap
     {
         /// <summary>

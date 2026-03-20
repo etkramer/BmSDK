@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PathNode<br/>
+/// (size = 944)
 /// (flags = 0)
 /// </summary>
 public partial class PathNode : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class PathNode : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     public unsafe BmSDK.FString GetDebugAbbrev()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PathNode.GetDebugAbbrev", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
     }

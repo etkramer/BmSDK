@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RParticleModuleTypeDataLight<br/>
+/// (size = 272)
 /// (flags = 0)
 /// </summary>
 public partial class RParticleModuleTypeDataLight : BmSDK.Engine.ParticleModuleTypeDataBase, BmSDK.IGameObject

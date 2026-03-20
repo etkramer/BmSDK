@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_TakedownBase<br/>
+/// (size = 396)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_TakedownBase : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RSeqEvent_TakedownBase : BmSDK.Engine.SequenceEvent, BmSDK.
     public unsafe void SetVictim(int victimNumber, BmSDK.BmGame.RPawnVillain Victim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_TakedownBase.SetVictim", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(victimNumber, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Victim, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

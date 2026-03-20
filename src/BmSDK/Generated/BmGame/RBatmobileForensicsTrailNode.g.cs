@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBatmobileForensicsTrailNode<br/>
+/// (size = 688)
 /// (flags = 0)
 /// </summary>
 public partial class RBatmobileForensicsTrailNode : BmSDK.BmGame.RBatmobileForensicsBaseActor, BmSDK.IGameObject

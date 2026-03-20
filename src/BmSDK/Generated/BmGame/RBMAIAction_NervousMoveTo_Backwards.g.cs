@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_NervousMoveTo_Backwards<br/>
+/// (size = 916)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_NervousMoveTo_Backwards : BmSDK.BmGame.RBMAIAction_NervousMoveTo, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RBMAIAction_NervousMoveTo_Backwards : BmSDK.BmGame.RBMAIAct
     public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousMoveTo_Backwards.ActionTick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction.ActionTickResult>(paramsPtr + 4);

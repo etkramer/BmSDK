@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: TranslationContext<br/>
+/// (size = 100)
 /// (flags = 0)
 /// </summary>
 public partial class TranslationContext : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class TranslationContext : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool RegisterTranslatorTag(BmSDK.Engine.TranslatorTag InTagHandler)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TranslationContext.RegisterTranslatorTag", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InTagHandler, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

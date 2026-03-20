@@ -5,6 +5,7 @@ namespace BmSDK;
 
 /// <summary>
 /// Class: DelegateProperty<br/>
+/// (size = 164)
 /// (flags = 0)
 /// </summary>
 public partial class DelegateProperty : BmSDK.Property, BmSDK.IGameObject

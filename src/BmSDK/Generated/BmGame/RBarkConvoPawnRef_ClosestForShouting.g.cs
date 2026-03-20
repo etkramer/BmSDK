@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBarkConvoPawnRef_ClosestForShouting<br/>
+/// (size = 176)
 /// (flags = 0)
 /// </summary>
 public partial class RBarkConvoPawnRef_ClosestForShouting : BmSDK.BmGame.RBarkConvoPawnRef, BmSDK.IGameObject

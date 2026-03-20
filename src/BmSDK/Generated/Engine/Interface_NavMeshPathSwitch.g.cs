@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Interface_NavMeshPathSwitch<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class Interface_NavMeshPathSwitch : BmSDK.Engine.Interface_NavMeshPathObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class Interface_NavMeshPathSwitch : BmSDK.Engine.Interface_NavMes
     public unsafe bool AIActivateSwitch(BmSDK.Engine.AIController AI)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Interface_NavMeshPathSwitch.AIActivateSwitch", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AI, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);

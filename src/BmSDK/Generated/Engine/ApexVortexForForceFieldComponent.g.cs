@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexVortexForForceFieldComponent<br/>
+/// (size = 632)
 /// (flags = 0)
 /// </summary>
 public partial class ApexVortexForForceFieldComponent : BmSDK.Engine.ApexVortexComponent, BmSDK.IGameObject

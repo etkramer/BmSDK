@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimUtil_OverlayPlayer<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimUtil_OverlayPlayer : BmSDK.GameObject, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RAnimUtil_OverlayPlayer : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Struct: FGlobalAdditiveOverlayPlayer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FGlobalAdditiveOverlayPlayer
     {
         /// <summary>
@@ -69,7 +70,7 @@ public partial class RAnimUtil_OverlayPlayer : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Struct: FPlayingGlobalAdditiveOverlay
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 48)]
     public partial record struct FPlayingGlobalAdditiveOverlay
     {
         /// <summary>
@@ -103,7 +104,7 @@ public partial class RAnimUtil_OverlayPlayer : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Struct: FAdditiveOverlayPlayer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FAdditiveOverlayPlayer
     {
         /// <summary>
@@ -137,7 +138,7 @@ public partial class RAnimUtil_OverlayPlayer : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Struct: FPlayingAdditiveOverlay
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 68)]
     public partial record struct FPlayingAdditiveOverlay
     {
         /// <summary>
@@ -180,7 +181,7 @@ public partial class RAnimUtil_OverlayPlayer : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Struct: FOverlayPlayer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 25)]
     public partial record struct FOverlayPlayer
     {
         /// <summary>
@@ -223,7 +224,7 @@ public partial class RAnimUtil_OverlayPlayer : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Struct: FPlayingOverlay
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 88)]
     public partial record struct FPlayingOverlay
     {
         /// <summary>
@@ -275,7 +276,7 @@ public partial class RAnimUtil_OverlayPlayer : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Struct: FPlayingOverlayState
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FPlayingOverlayState
     {
         /// <summary>
@@ -309,7 +310,7 @@ public partial class RAnimUtil_OverlayPlayer : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Struct: FOverlayId
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FOverlayId
     {
         /// <summary>

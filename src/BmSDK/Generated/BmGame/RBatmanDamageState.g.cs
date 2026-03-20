@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBatmanDamageState<br/>
+/// (size = 140)
 /// (flags = 0)
 /// </summary>
 public partial class RBatmanDamageState : BmSDK.BmGame.RConfig, BmSDK.IGameObject

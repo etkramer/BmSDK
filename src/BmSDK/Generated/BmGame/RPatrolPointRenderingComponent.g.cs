@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPatrolPointRenderingComponent<br/>
+/// (size = 540)
 /// (flags = 0)
 /// </summary>
 public partial class RPatrolPointRenderingComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

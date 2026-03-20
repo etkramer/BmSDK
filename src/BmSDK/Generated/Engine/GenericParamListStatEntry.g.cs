@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: GenericParamListStatEntry<br/>
+/// (size = 100)
 /// (flags = 0)
 /// </summary>
 public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameOb
     public unsafe void CommitToDisk()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GenericParamListStatEntry.CommitToDisk", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -56,7 +57,7 @@ public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameOb
     public unsafe bool GetString(BmSDK.FName ParamName, out BmSDK.FString out_string)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GenericParamListStatEntry.GetString", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -76,7 +77,7 @@ public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameOb
     public unsafe bool GetVector(BmSDK.FName ParamName, out System.Numerics.Vector3 out_vector)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GenericParamListStatEntry.GetVector", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -96,7 +97,7 @@ public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameOb
     public unsafe bool GetInt(BmSDK.FName ParamName, out int out_int)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GenericParamListStatEntry.GetInt", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -116,7 +117,7 @@ public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameOb
     public unsafe bool GetFloat(BmSDK.FName ParamName, out float out_Float)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GenericParamListStatEntry.GetFloat", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -136,7 +137,7 @@ public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameOb
     public unsafe void AddString(BmSDK.FName ParamName, BmSDK.FString Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GenericParamListStatEntry.AddString", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -156,7 +157,7 @@ public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameOb
     public unsafe void AddVector(BmSDK.FName ParamName, System.Numerics.Vector3 Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GenericParamListStatEntry.AddVector", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -176,7 +177,7 @@ public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameOb
     public unsafe void AddInt(BmSDK.FName ParamName, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GenericParamListStatEntry.AddInt", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -196,7 +197,7 @@ public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameOb
     public unsafe void AddFloat(BmSDK.FName ParamName, float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GenericParamListStatEntry.AddFloat", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;

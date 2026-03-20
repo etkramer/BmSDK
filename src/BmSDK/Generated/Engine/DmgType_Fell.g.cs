@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DmgType_Fell<br/>
+/// (size = 160)
 /// (flags = 0)
 /// </summary>
 public partial class DmgType_Fell : BmSDK.Engine.DamageType, BmSDK.IGameObject

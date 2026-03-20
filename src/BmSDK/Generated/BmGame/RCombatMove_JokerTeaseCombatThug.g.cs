@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_JokerTeaseCombatThug<br/>
+/// (size = 776)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_JokerTeaseCombatThug : BmSDK.BmGame.RCombatMove, BmSDK.IGameObject

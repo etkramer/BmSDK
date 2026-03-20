@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: WindPointSource<br/>
+/// (size = 676)
 /// (flags = 0)
 /// </summary>
 public partial class WindPointSource : BmSDK.Engine.Info, BmSDK.IGameObject

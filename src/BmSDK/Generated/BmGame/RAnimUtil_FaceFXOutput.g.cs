@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimUtil_FaceFXOutput<br/>
+/// (size = 116)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimUtil_FaceFXOutput : BmSDK.GameObject, BmSDK.IGameObject
@@ -71,7 +72,7 @@ public partial class RAnimUtil_FaceFXOutput : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Struct: FBlinkState
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FBlinkState
     {
         /// <summary>

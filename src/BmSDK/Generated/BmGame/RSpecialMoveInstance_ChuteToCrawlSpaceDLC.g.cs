@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveInstance_ChuteToCrawlSpaceDLC<br/>
+/// (size = 1464)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveInstance_ChuteToCrawlSpaceDLC : BmSDK.BmGame.RSpecialMoveInstance_ChuteToCrawlSpace, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RSpecialMoveInstance_ChuteToCrawlSpaceDLC : BmSDK.BmGame.RS
     public unsafe void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_ChuteToCrawlSpaceDLC.FinishSpecialMove", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -84,7 +85,7 @@ public partial class RSpecialMoveInstance_ChuteToCrawlSpaceDLC : BmSDK.BmGame.RS
     public unsafe void OverridePlayerCollisionWhenInChute()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_ChuteToCrawlSpaceDLC.OverridePlayerCollisionWhenInChute", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: CodecMovieFallback<br/>
+/// (size = 92)
 /// (flags = 0)
 /// </summary>
 public partial class CodecMovieFallback : BmSDK.Engine.CodecMovie, BmSDK.IGameObject

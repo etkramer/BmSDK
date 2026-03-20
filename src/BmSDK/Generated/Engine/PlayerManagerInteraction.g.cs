@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PlayerManagerInteraction<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class PlayerManagerInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject

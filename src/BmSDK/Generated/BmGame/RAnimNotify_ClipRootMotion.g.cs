@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_ClipRootMotion<br/>
+/// (size = 88)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_ClipRootMotion : BmSDK.BmGame.RAnimNotify_BeginEnd, BmSDK.IGameObject

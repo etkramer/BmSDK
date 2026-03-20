@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: SeqAct_AkAudioParameter<br/>
+/// (size = 396)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_AkAudioParameter : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class SeqAct_AkAudioParameter : BmSDK.Engine.SequenceAction, BmSD
     public unsafe static int GetObjClassVersion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.SeqAct_AkAudioParameter.GetObjClassVersion", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -100,7 +101,7 @@ public partial class SeqAct_AkAudioParameter : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// Struct: FSeqAct_AkAudioParameterInterpolationInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FSeqAct_AkAudioParameterInterpolationInfo
     {
         /// <summary>

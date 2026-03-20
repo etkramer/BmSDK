@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPhysicalEvidenceCrimeScene<br/>
+/// (size = 833)
 /// (flags = 0)
 /// </summary>
 public partial class RPhysicalEvidenceCrimeScene : BmSDK.BmGame.RPhysicalEvidenceBase, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RPhysicalEvidenceCrimeScene : BmSDK.BmGame.RPhysicalEvidenc
     public unsafe void AutomaticallySetVisibility()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicalEvidenceCrimeScene.AutomaticallySetVisibility", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[1];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -84,7 +85,7 @@ public partial class RPhysicalEvidenceCrimeScene : BmSDK.BmGame.RPhysicalEvidenc
     public unsafe void AutoPopulateParentCrimeScene()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicalEvidenceCrimeScene.AutoPopulateParentCrimeScene", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

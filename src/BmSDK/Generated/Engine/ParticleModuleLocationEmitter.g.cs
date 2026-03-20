@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleLocationEmitter<br/>
+/// (size = 120)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleLocationEmitter : BmSDK.Engine.ParticleModuleLocationBase, BmSDK.IGameObject

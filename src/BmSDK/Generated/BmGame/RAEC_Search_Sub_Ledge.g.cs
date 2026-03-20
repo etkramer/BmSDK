@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_Search_Sub_Ledge<br/>
+/// (size = 1052)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_FormationLeader, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe float GetChosenPathLength()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.GetChosenPathLength", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
     }
@@ -84,7 +85,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe int GetNumPathPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.GetNumPathPoints", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -95,7 +96,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe System.Numerics.Vector3 GetPathPoint(int I)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.GetPathPoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(I, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 4);
@@ -107,7 +108,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe System.Numerics.Vector3 GetLastPathPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.GetLastPathPoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
     }
@@ -118,7 +119,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe System.Numerics.Vector3 GetFirstPathPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.GetFirstPathPoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
     }
@@ -129,7 +130,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe void ReturnToPrevMovementStance(float AnimStartTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.ReturnToPrevMovementStance", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimStartTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -141,7 +142,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe void SwitchToLedgeMovementStance(float AnimStartTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.SwitchToLedgeMovementStance", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimStartTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -153,7 +154,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe void DrawChosenPathDebug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.DrawChosenPathDebug", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -164,7 +165,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe void DrawInitialStateDebug(BmSDK.BmGame.RLedgeLookDangerAreaInfo LedgeDangerInfo, System.Numerics.Vector3 LedgeLookStart, System.Numerics.Vector3 LedgeLookEnd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.DrawInitialStateDebug", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LedgeDangerInfo, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LedgeLookStart, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LedgeLookEnd, paramsPtr + 20);
@@ -178,7 +179,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.Tick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -190,7 +191,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe float ClosestPointOnLine(System.Numerics.Vector3 PointOnLine, System.Numerics.Vector3 LineDirection, System.Numerics.Vector3 TestPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.ClosestPointOnLine", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PointOnLine, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LineDirection, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestPoint, paramsPtr + 24);
@@ -204,7 +205,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe bool ProjectPointOntoLedgePath(System.Numerics.Vector3 inPoint, out System.Numerics.Vector3 outLoc, out BmSDK.Rotator outNormal, out int outPathIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.ProjectPointOntoLedgePath", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[156];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(inPoint, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         outLoc = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 12);
@@ -219,7 +220,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe bool CloseEnoughToTargetFootSyncPoint(BmSDK.Engine.RAutomaticTransitions.EFootSyncPoint CurrentPoint, float CurrentTime, BmSDK.Engine.RAutomaticTransitions.EFootSyncPoint TargetPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.CloseEnoughToTargetFootSyncPoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CurrentPoint, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CurrentTime, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetPoint, paramsPtr + 8);
@@ -245,7 +246,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe void LimitFullPathToNavMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.LimitFullPathToNavMesh", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -256,7 +257,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe bool PushStartForward()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.PushStartForward", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -267,7 +268,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe void GetClosestPointOnFullPathToPoint(System.Numerics.Vector3 TestPoint, out int segIndex, out System.Numerics.Vector3 ClosestPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.GetClosestPointOnFullPathToPoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[56];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestPoint, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         segIndex = BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 12);
@@ -281,7 +282,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe void ClipLedgeRoute()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.ClipLedgeRoute", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -292,7 +293,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe bool GetFullLedgeRoute()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.GetFullLedgeRoute", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[72];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -303,7 +304,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe bool PreProcess()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.PreProcess", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[120];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -314,7 +315,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe System.Numerics.Vector3 GetPointOnSegAtTime(System.Numerics.Vector3 segEnd1, System.Numerics.Vector3 segEnd2, float T)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.GetPointOnSegAtTime", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(segEnd1, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(segEnd2, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(T, paramsPtr + 24);
@@ -328,7 +329,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe void DrawLedgeRangeBox(System.Numerics.Vector3 ledgeEnd1, System.Numerics.Vector3 ledgeEnd2, System.Numerics.Vector3 dbgDrawOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.DrawLedgeRangeBox", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[96];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ledgeEnd1, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ledgeEnd2, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(dbgDrawOffset, paramsPtr + 24);
@@ -342,7 +343,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe bool GetFirstAndLastPointsOnSegInLedgeRange(System.Numerics.Vector3 ledgeEnd1, System.Numerics.Vector3 ledgeEnd2, System.Numerics.Vector3 segEnd1, System.Numerics.Vector3 segEnd2, out System.Numerics.Vector3 outFirstPointInRange, out System.Numerics.Vector3 outLastPointInRange)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.GetFirstAndLastPointsOnSegInLedgeRange", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[240];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ledgeEnd1, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ledgeEnd2, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(segEnd1, paramsPtr + 24);
@@ -359,7 +360,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe void FallBackToRailPeek()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.FallBackToRailPeek", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -370,7 +371,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe void TriggerPreLedgeWalkRailPeek()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.TriggerPreLedgeWalkRailPeek", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -381,7 +382,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe void StartFromSearch(BmSDK.BmGame.RBMAIController NewCon, BmSDK.BmGame.RLedgeLookDangerAreaInfo LedgeDangerInfo, System.Numerics.Vector3 LedgeLookStart, System.Numerics.Vector3 LedgeLookEnd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.StartFromSearch", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[148];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewCon, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LedgeDangerInfo, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LedgeLookStart, paramsPtr + 16);
@@ -396,7 +397,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe void Abort()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.Abort", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -407,7 +408,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe bool ImmuneToTakedown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.ImmuneToTakedown", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[76];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -418,7 +419,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe BmSDK.BmGame.RNavigationHandle GetCurrentPathHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.GetCurrentPathHandle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RNavigationHandle>(paramsPtr + 0);
     }
@@ -429,7 +430,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.Cleanup", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -440,7 +441,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.OnBeginShutdown", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -451,7 +452,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     public unsafe void OnVillainStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Ledge.OnVillainStolen", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -459,7 +460,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// Struct: FLedgeSegment
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FLedgeSegment
     {
         /// <summary>

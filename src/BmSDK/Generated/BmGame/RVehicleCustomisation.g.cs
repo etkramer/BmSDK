@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleCustomisation<br/>
+/// (size = 128)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleCustomisation : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RVehicleCustomisation : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetupDeadVehicleMaterials(BmSDK.Engine.SkeletalMeshComponent SkeletalMeshComponent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCustomisation.SetupDeadVehicleMaterials", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SkeletalMeshComponent, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -50,7 +51,7 @@ public partial class RVehicleCustomisation : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetupCustomisationOptions(BmSDK.Engine.SkeletalMeshComponent SkeletalMeshComponent, int ForceMaterialIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleCustomisation.SetupCustomisationOptions", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SkeletalMeshComponent, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ForceMaterialIndex, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -114,7 +115,7 @@ public partial class RVehicleCustomisation : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCarCustomisationObject
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 40)]
     public partial record struct FCarCustomisationObject
     {
         /// <summary>
@@ -148,7 +149,7 @@ public partial class RVehicleCustomisation : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCarCustomisationMaterialParam
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FCarCustomisationMaterialParam
     {
         /// <summary>

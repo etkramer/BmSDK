@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMCombatThrownObject_RifleDestroyed<br/>
+/// (size = 1196)
 /// (flags = 0)
 /// </summary>
 public partial class RBMCombatThrownObject_RifleDestroyed : BmSDK.BmGame.RBMCombatThrownObject_GunDestroyed, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RBMCombatThrownObject_RifleDestroyed : BmSDK.BmGame.RBMComb
     public unsafe void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_RifleDestroyed.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

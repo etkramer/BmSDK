@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_SuperStun<br/>
+/// (size = 236)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_SuperStun : BmSDK.BmGame.RDmgType_BlockBreaker, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_EndRagdoll<br/>
+/// (size = 88)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_EndRagdoll : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

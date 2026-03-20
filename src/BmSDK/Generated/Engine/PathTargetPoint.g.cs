@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PathTargetPoint<br/>
+/// (size = 676)
 /// (flags = 0)
 /// </summary>
 public partial class PathTargetPoint : BmSDK.Engine.Keypoint, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class PathTargetPoint : BmSDK.Engine.Keypoint, BmSDK.IGameObject
     public unsafe bool ShouldBeHiddenBySHOW_NavigationNodes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PathTargetPoint.ShouldBeHiddenBySHOW_NavigationNodes", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SplineLoftActorMovable<br/>
+/// (size = 852)
 /// (flags = 0)
 /// </summary>
 public partial class SplineLoftActorMovable : BmSDK.Engine.SplineLoftActor, BmSDK.IGameObject

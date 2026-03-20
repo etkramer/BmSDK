@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMSeqAct_StopSpeech<br/>
+/// (size = 352)
 /// (flags = 0)
 /// </summary>
 public partial class RBMSeqAct_StopSpeech : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

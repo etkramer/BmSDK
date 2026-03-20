@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPawnManBatBase<br/>
+/// (size = 4776)
 /// (flags = 0)
 /// </summary>
 public partial class RPawnManBatBase : BmSDK.BmGame.RPawnFriendly, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RPawnManBatBase : BmSDK.BmGame.RPawnFriendly, BmSDK.IGameOb
     public unsafe void PostInitCharacter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnManBatBase.PostInitCharacter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PBRuleNodeBase<br/>
+/// (size = 136)
 /// (flags = 0)
 /// </summary>
 public partial class PBRuleNodeBase : BmSDK.GameObject, BmSDK.IGameObject
@@ -98,7 +99,7 @@ public partial class PBRuleNodeBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPBRuleLink
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FPBRuleLink
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionMaterialFunctionCall<br/>
+/// (size = 212)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionMaterialFunctionCall : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class MaterialExpressionMaterialFunctionCall : BmSDK.Engine.Mater
     /// <summary>
     /// Struct: FFunctionExpressionOutput
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 60)]
     public partial record struct FFunctionExpressionOutput
     {
         /// <summary>
@@ -69,7 +70,7 @@ public partial class MaterialExpressionMaterialFunctionCall : BmSDK.Engine.Mater
     /// <summary>
     /// Struct: FFunctionExpressionInput
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 76)]
     public partial record struct FFunctionExpressionInput
     {
         /// <summary>

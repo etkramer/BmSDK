@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RInterpTrackDialogue<br/>
+/// (size = 440)
 /// (flags = 0)
 /// </summary>
 public partial class RInterpTrackDialogue : BmSDK.Engine.InterpTrackVectorBase, BmSDK.IGameObject
@@ -80,7 +81,7 @@ public partial class RInterpTrackDialogue : BmSDK.Engine.InterpTrackVectorBase, 
     /// <summary>
     /// Struct: FDialogueTrackKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FDialogueTrackKey
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCartoonViewPostProcess<br/>
+/// (size = 180)
 /// (flags = 0)
 /// </summary>
 public partial class RCartoonViewPostProcess : BmSDK.BmGame.RViewPostProcess, BmSDK.IGameObject

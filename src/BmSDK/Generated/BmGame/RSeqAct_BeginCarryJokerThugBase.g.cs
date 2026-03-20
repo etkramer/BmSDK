@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_BeginCarryJokerThugBase<br/>
+/// (size = 392)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_BeginCarryJokerThugBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject

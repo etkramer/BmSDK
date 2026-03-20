@@ -5,6 +5,7 @@ namespace BmSDK.GFxUI;
 
 /// <summary>
 /// Class: GFxInteraction<br/>
+/// (size = 184)
 /// (flags = 0)
 /// </summary>
 public partial class GFxInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class GFxInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObjec
     public unsafe void CloseAllMoviePlayers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxInteraction.CloseAllMoviePlayers", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -56,7 +57,7 @@ public partial class GFxInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObjec
     public unsafe void NotifySplitscreenLayoutChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxInteraction.NotifySplitscreenLayoutChanged", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -74,7 +75,7 @@ public partial class GFxInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObjec
     public unsafe void NotifyPlayerRemoved(int PlayerIndex, BmSDK.Engine.LocalPlayer RemovedPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxInteraction.NotifyPlayerRemoved", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RemovedPlayer, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -94,7 +95,7 @@ public partial class GFxInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObjec
     public unsafe void NotifyPlayerAdded(int PlayerIndex, BmSDK.Engine.LocalPlayer AddedPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxInteraction.NotifyPlayerAdded", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AddedPlayer, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -114,7 +115,7 @@ public partial class GFxInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObjec
     public unsafe void NotifyGameSessionEnded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxInteraction.NotifyGameSessionEnded", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -132,7 +133,7 @@ public partial class GFxInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObjec
     public unsafe BmSDK.GFxUI.GFxMoviePlayer GetFocusMovie(int ControllerId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxInteraction.GetFocusMovie", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ControllerId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

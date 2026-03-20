@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCharacter<br/>
+/// (size = 376)
 /// (flags = 0)
 /// </summary>
 public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.BmGame.RBMPawnAI StaticCreatePawn(System.Numerics.Vector3 Location, BmSDK.Rotator Rotation, BmSDK.Engine.Actor UseSpawnPoint, BmSDK.Class SpawnPawnClass, BmSDK.Class SpawnCharactersType, bool SnapToGround, BmSDK.FName InitialMovementStance, BmSDK.FName InitialWeaponStance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacter.StaticCreatePawn", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[76];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Location, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Rotation, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(UseSpawnPoint, paramsPtr + 24);
@@ -64,7 +65,7 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.FString GetFriendlyName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacter.GetFriendlyName", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
     }
@@ -75,7 +76,7 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.AkEvent GetStrikeImpactCue_BodyKick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacter.GetStrikeImpactCue_BodyKick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(paramsPtr + 0);
     }
@@ -86,7 +87,7 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.AkEvent GetStrikeImpactCue_BodyPunchQuick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacter.GetStrikeImpactCue_BodyPunchQuick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(paramsPtr + 0);
     }
@@ -97,7 +98,7 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.AkEvent GetStrikeImpactCue_BodyPunch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacter.GetStrikeImpactCue_BodyPunch", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(paramsPtr + 0);
     }
@@ -108,7 +109,7 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.AkEvent GetStrikeImpactCue_HeadKick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacter.GetStrikeImpactCue_HeadKick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(paramsPtr + 0);
     }
@@ -119,7 +120,7 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.AkEvent GetStrikeImpactCue_HeadPunchQuick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacter.GetStrikeImpactCue_HeadPunchQuick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(paramsPtr + 0);
     }
@@ -130,7 +131,7 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.AkEvent GetStrikeImpactCue_HeadPunch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacter.GetStrikeImpactCue_HeadPunch", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(paramsPtr + 0);
     }
@@ -141,7 +142,7 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.AkEvent GetStrikeImpactCue_CounterBlock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacter.GetStrikeImpactCue_CounterBlock", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(paramsPtr + 0);
     }
@@ -152,7 +153,7 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.AkEvent GetStrikeImpactCue_FinishingBlow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacter.GetStrikeImpactCue_FinishingBlow", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(paramsPtr + 0);
     }
@@ -163,7 +164,7 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static bool UpdateCustomPhysics(BmSDK.BmGame.RBMPawnAI Pawn, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacter.UpdateCustomPhysics", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Pawn, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -176,7 +177,7 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static void SetupCustomPhysics(BmSDK.BmGame.RBMPawnAI Pawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacter.SetupCustomPhysics", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Pawn, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -185,7 +186,7 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCharacterCustomConstraintConfig
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FCharacterCustomConstraintConfig
     {
         /// <summary>
@@ -237,7 +238,7 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FBarkVoiceDef
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FBarkVoiceDef
     {
         /// <summary>

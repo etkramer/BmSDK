@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_3GelWallsUsedForTakedowns<br/>
+/// (size = 396)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_3GelWallsUsedForTakedowns : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RSeqEvent_3GelWallsUsedForTakedowns : BmSDK.Engine.Sequence
     public unsafe void RegisterWallUsedForTakedown(BmSDK.Engine.Actor Wall)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_3GelWallsUsedForTakedowns.RegisterWallUsedForTakedown", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Wall, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

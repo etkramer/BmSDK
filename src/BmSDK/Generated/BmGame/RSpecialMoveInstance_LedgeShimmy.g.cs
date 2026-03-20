@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveInstance_LedgeShimmy<br/>
+/// (size = 876)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveInstance_LedgeShimmy : BmSDK.BmGame.RSpecialMoveInstance_ActivePoseTransition, BmSDK.IGameObject

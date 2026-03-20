@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Brush<br/>
+/// (size = 716)
 /// (flags = 0)
 /// </summary>
 public partial class Brush : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -70,7 +71,7 @@ public partial class Brush : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FGeomSelection
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FGeomSelection
     {
         /// <summary>

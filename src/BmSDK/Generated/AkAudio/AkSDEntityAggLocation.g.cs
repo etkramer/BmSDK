@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDEntityAggLocation<br/>
+/// (size = 268)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDEntityAggLocation : BmSDK.AkAudio.AkSDEntitySymbol, BmSDK.IGameObject

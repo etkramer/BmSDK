@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionFontSampleParameter<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionFontSampleParameter : BmSDK.Engine.MaterialExpressionFontSample, BmSDK.IGameObject

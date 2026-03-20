@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCurvedFencePointRenderingComponent<br/>
+/// (size = 540)
 /// (flags = 0)
 /// </summary>
 public partial class RCurvedFencePointRenderingComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

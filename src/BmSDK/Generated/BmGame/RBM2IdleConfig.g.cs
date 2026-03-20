@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBM2IdleConfig<br/>
+/// (size = 452)
 /// (flags = 0)
 /// </summary>
 public partial class RBM2IdleConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RBM2IdleConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FInterrogationAnimations
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FInterrogationAnimations
     {
         /// <summary>
@@ -140,7 +141,7 @@ public partial class RBM2IdleConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FDialogueAnimationSets
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 48)]
     public partial record struct FDialogueAnimationSets
     {
         /// <summary>
@@ -165,7 +166,7 @@ public partial class RBM2IdleConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimationSets
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 96)]
     public partial record struct FAnimationSets
     {
         /// <summary>
@@ -208,7 +209,7 @@ public partial class RBM2IdleConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FStartledAnimationData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FStartledAnimationData
     {
         /// <summary>
@@ -233,7 +234,7 @@ public partial class RBM2IdleConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRandomAnimationData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FRandomAnimationData
     {
         /// <summary>
@@ -267,7 +268,7 @@ public partial class RBM2IdleConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRandomAnimation
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FRandomAnimation
     {
         /// <summary>
@@ -310,7 +311,7 @@ public partial class RBM2IdleConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FEventAnimationData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FEventAnimationData
     {
         /// <summary>
@@ -362,7 +363,7 @@ public partial class RBM2IdleConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FBM2IdleSet
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FBM2IdleSet
     {
         /// <summary>

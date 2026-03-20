@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: SeqAct_AkAnimOnlyDialogue<br/>
+/// (size = 352)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_AkAnimOnlyDialogue : BmSDK.AkAudio.SeqAct_AkBaseSimple, BmSDK.IGameObject

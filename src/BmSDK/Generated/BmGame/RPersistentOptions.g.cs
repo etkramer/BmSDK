@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPersistentOptions<br/>
+/// (size = 13032)
 /// (flags = 0)
 /// </summary>
 public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void TestAndGrantWBPlayConsoleUnlocks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.TestAndGrantWBPlayConsoleUnlocks", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[120];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -49,7 +50,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetWBPlayRewardInHydra(BmSDK.FString FlagName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetWBPlayRewardInHydra", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FlagName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -68,7 +69,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsWBPlayRewardFlagSet(BmSDK.FString FlagName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.IsWBPlayRewardFlagSet", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FlagName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -87,7 +88,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetWBPlayRewardFlag(BmSDK.FString FlagName, bool bTrue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetWBPlayRewardFlag", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FlagName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bTrue, paramsPtr + 16);
         var oldFlags = funcManaged.FunctionFlags;
@@ -107,7 +108,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void UpdateTimeStamp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.UpdateTimeStamp", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -125,7 +126,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool HaveTheOptionsChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.HaveTheOptionsChanged", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -136,7 +137,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool HasKeyboardOptionsChanged(bool bCheckDLC = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.HasKeyboardOptionsChanged", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bCheckDLC, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
@@ -148,7 +149,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void RevertKeyboardOptions(bool bRevertDLC = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.RevertKeyboardOptions", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bRevertDLC, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -160,7 +161,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void MakeCopyOfOptions(bool bMakeDLCCopies = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.MakeCopyOfOptions", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bMakeDLCCopies, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -172,7 +173,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultMouseSmoothing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultMouseSmoothing", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -183,7 +184,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetMouseSmoothing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetMouseSmoothing", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -194,7 +195,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetMouseSmoothing(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetMouseSmoothing", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -206,7 +207,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetDefaultMouseSensitivity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultMouseSensitivity", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
     }
@@ -217,7 +218,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetMouseSensitivity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetMouseSensitivity", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
     }
@@ -228,7 +229,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetMouseSensitivity(float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetMouseSensitivity", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -240,7 +241,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetControlType(bool bPlayer2, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetControlType", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -253,7 +254,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetControlType(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetControlType", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -265,7 +266,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultControlType(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultControlType", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -277,7 +278,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetSixAxis(bool bPlayer2, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetSixAxis", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -290,7 +291,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetSixAxis(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetSixAxis", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -302,7 +303,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultSixAxis(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultSixAxis", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -314,7 +315,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetBattleModeToggle(bool bPlayer2, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetBattleModeToggle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -327,7 +328,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetBattleModeToggle(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetBattleModeToggle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -339,7 +340,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultBattleModeToggle(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultBattleModeToggle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -351,7 +352,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetVibration(bool bPlayer2, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetVibration", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -364,7 +365,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetVibration(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetVibration", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -376,7 +377,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultVibration(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultVibration", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -388,7 +389,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetCameraAssist(bool bPlayer2, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetCameraAssist", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -401,7 +402,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetCameraAssist(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetCameraAssist", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -413,7 +414,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultCameraAssist(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultCameraAssist", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -425,7 +426,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetAutoFlow(bool bPlayer2, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetAutoFlow", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -438,7 +439,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetAutoFlow(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetAutoFlow", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -450,7 +451,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultAutoFlow(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultAutoFlow", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -462,7 +463,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetPredatorAwareness(bool bPlayer2, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetPredatorAwareness", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -475,7 +476,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetPredatorAwareness(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetPredatorAwareness", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -487,7 +488,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultPredatorAwareness(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultPredatorAwareness", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -499,7 +500,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetInvertBatarang(bool bPlayer2, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetInvertBatarang", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -512,7 +513,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetInvertBatarang(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetInvertBatarang", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -524,7 +525,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultInvertBatarang(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultInvertBatarang", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -536,7 +537,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetInvertGlide(bool bPlayer2, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetInvertGlide", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -549,7 +550,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetInvertGlide(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetInvertGlide", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -561,7 +562,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultInvertGlide(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultInvertGlide", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -573,7 +574,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetInvertRotation(bool bPlayer2, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetInvertRotation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -586,7 +587,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetInvertRotation(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetInvertRotation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -598,7 +599,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultInvertRotation(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultInvertRotation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -610,7 +611,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetInvertLook(bool bPlayer2, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetInvertLook", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -623,7 +624,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetInvertLook(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetInvertLook", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -635,7 +636,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultInvertLook(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultInvertLook", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayer2, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -647,7 +648,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetHints(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetHints", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -659,7 +660,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetHints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetHints", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -670,7 +671,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultHints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultHints", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -681,7 +682,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetTutorial(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetTutorial", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -693,7 +694,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetTutorial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetTutorial", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -704,7 +705,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultTutorial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultTutorial", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -715,7 +716,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetIntensity3D(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetIntensity3D", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -727,7 +728,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetIntensity3D()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetIntensity3D", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -738,7 +739,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultIntensity3D()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultIntensity3D", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -749,7 +750,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetEyeInversion3D(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetEyeInversion3D", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -761,7 +762,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetEyeInversion3D()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetEyeInversion3D", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -772,7 +773,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultEyeInversion3D()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultEyeInversion3D", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -783,7 +784,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetRender3D(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetRender3D", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -795,7 +796,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetRender3D()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetRender3D", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -806,7 +807,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultRender3D()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultRender3D", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -817,7 +818,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void Apply3DSettings()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.Apply3DSettings", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -835,7 +836,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetVolumeMusic(float Value, bool UserNotify = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetVolumeMusic", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(UserNotify, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -855,7 +856,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetVolumeMusic()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetVolumeMusic", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -873,7 +874,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultVolumeMusic()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultVolumeMusic", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -884,7 +885,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetVolumeDialogue(float Value, bool UserNotify = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetVolumeDialogue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(UserNotify, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -904,7 +905,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetVolumeDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetVolumeDialogue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -922,7 +923,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultVolumeDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultVolumeDialogue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -933,7 +934,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetVolumeSFX(float Value, bool UserNotify = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetVolumeSFX", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(UserNotify, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -953,7 +954,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetVolumeSFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetVolumeSFX", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -971,7 +972,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultVolumeSFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultVolumeSFX", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -982,7 +983,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetPadSpeaker(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetPadSpeaker", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1001,7 +1002,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetPadSpeaker()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetPadSpeaker", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1019,7 +1020,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultPadSpeaker()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultPadSpeaker", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -1030,7 +1031,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetGamma(float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetGamma", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1049,7 +1050,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetEngineGamma()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetEngineGamma", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1067,7 +1068,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetGamma()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetGamma", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1085,7 +1086,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultGamma()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultGamma", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -1096,7 +1097,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetAudioDynRange(int Value, bool AutoSetPadSpeaker = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetAudioDynRange", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AutoSetPadSpeaker, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1116,7 +1117,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetAudioDynRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetAudioDynRange", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -1127,7 +1128,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultAudioDynRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultAudioDynRange", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -1138,7 +1139,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetEnglishVoiceCast(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetEnglishVoiceCast", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1157,7 +1158,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetEnglishVoiceCast()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetEnglishVoiceCast", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1175,7 +1176,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultEnglishVoiceCast()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultEnglishVoiceCast", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -1186,7 +1187,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetSubtitles(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetSubtitles", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1198,7 +1199,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetSubtitles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetSubtitles", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -1209,7 +1210,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultSubtitles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultSubtitles", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -1220,7 +1221,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetExtraChallengeMedals(int iChallengeCategory)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetExtraChallengeMedals", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[68];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(iChallengeCategory, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -1232,7 +1233,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool AreAnyPlayerSkinsActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.AreAnyPlayerSkinsActive", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -1243,7 +1244,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsDefaultPlayerSkin(BmSDK.FString sId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.IsDefaultPlayerSkin", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(sId, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 16);
@@ -1255,7 +1256,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.FString GetActivePlayerSkin(BmSDK.FString sId, bool bMakePlayable = default, bool bNoChangeIfPlayable = default, bool bStripToRoot = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetActivePlayerSkin", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[84];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(sId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bMakePlayable, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bNoChangeIfPlayable, paramsPtr + 20);
@@ -1270,7 +1271,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void ClearActivePlayerSkin(BmSDK.FString sId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.ClearActivePlayerSkin", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(sId, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1282,7 +1283,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetActivePlayerSkin(BmSDK.FString sSkin)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetActivePlayerSkin", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[76];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(sSkin, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 16);
@@ -1294,7 +1295,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.FString GetActivePlayerSkinId(BmSDK.FString sSkin, bool bNoChangeIfPlayable = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetActivePlayerSkinId", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(sSkin, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bNoChangeIfPlayable, paramsPtr + 16);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1307,7 +1308,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.FString GetDifficultyAsString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDifficultyAsString", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
     }
@@ -1318,7 +1319,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetDifficulty(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetDifficulty", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1330,7 +1331,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDifficulty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDifficulty", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -1341,7 +1342,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultDifficulty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultDifficulty", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -1352,7 +1353,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsNewGamePlus()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.IsNewGamePlus", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -1363,7 +1364,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetPCControlsPage(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetPCControlsPage", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1375,7 +1376,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetPCControlsPage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetPCControlsPage", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -1386,7 +1387,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDefaultPCControlsPage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultPCControlsPage", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -1397,7 +1398,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetAllDefaults()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetAllDefaults", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -1408,7 +1409,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void Dump()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.Dump", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -1419,7 +1420,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void BatmobilePredSuccess(int NumCombatants, float PlayerHealthPct)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.BatmobilePredSuccess", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NumCombatants, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerHealthPct, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1432,7 +1433,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void BatmobilePredDeath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.BatmobilePredDeath", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -1443,7 +1444,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void BatmobileCombatSuccess(int NumCombatants, float PlayerHealthPct)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.BatmobileCombatSuccess", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NumCombatants, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerHealthPct, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1456,7 +1457,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void BatmobileCombatDeath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.BatmobileCombatDeath", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -1467,7 +1468,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void CombatSuccess(int NumCombatants, int CombatKOsThisFight, float PlayerHealth)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.CombatSuccess", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NumCombatants, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CombatKOsThisFight, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerHealth, paramsPtr + 8);
@@ -1481,7 +1482,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void CombatDeath(int CurrentChapter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.CombatDeath", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CurrentChapter, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1493,7 +1494,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AddDeathMovieRecord(BmSDK.FString movie_name, int num_variations)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.AddDeathMovieRecord", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(movie_name, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(num_variations, paramsPtr + 16);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1506,7 +1507,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDeathRecordArrayIndex(BmSDK.FString movie_name)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDeathRecordArrayIndex", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(movie_name, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 16);
@@ -1518,7 +1519,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetDeathMovieVariationIndex(int NumVariations)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDeathMovieVariationIndex", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NumVariations, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -1530,7 +1531,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetChallengeNew(int ChallengeID, bool bNew)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetChallengeNew", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bNew, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1550,7 +1551,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetChallengeAwarded(int ChallengeID, bool bAwarded)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetChallengeAwarded", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bAwarded, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1570,7 +1571,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetChallengeDirty(int ChallengeID, bool bDirty)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetChallengeDirty", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bDirty, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1590,7 +1591,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetChallengeRequirementMet(int ChallengeID, int Requirement, bool bMet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetChallengeRequirementMet", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Requirement, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bMet, paramsPtr + 8);
@@ -1611,7 +1612,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetChallengeUnlocked(int ChallengeID, bool bUnlocked)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetChallengeUnlocked", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bUnlocked, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1631,7 +1632,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetChallengeRevealed(int ChallengeID, bool bRevealed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetChallengeRevealed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bRevealed, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1651,7 +1652,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetChallengeActiveCharacter(int ChallengeID, int nCharacterId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetChallengeActiveCharacter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(nCharacterId, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1671,7 +1672,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetChallengeDefaultCharacter(int ChallengeID, int nCharacterId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetChallengeDefaultCharacter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(nCharacterId, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1691,7 +1692,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsChallengeNew(int ChallengeID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.IsChallengeNew", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1710,7 +1711,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsChallengeAwarded(int ChallengeID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.IsChallengeAwarded", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1729,7 +1730,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsChallengeDirty(int ChallengeID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.IsChallengeDirty", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1748,7 +1749,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsChallengeRequirementMet(int ChallengeID, int Requirement)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.IsChallengeRequirementMet", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Requirement, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1768,7 +1769,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsChallengeUnlocked(int ChallengeID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.IsChallengeUnlocked", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1787,7 +1788,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsChallengeRevealed(int ChallengeID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.IsChallengeRevealed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1806,7 +1807,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetNewChallengeCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetNewChallengeCount", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1824,7 +1825,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetRevealedChallengeCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetRevealedChallengeCount", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1842,7 +1843,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetTotalChallengesAwarded(out int TotalPossible, bool bTraining)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetTotalChallengesAwarded", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bTraining, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1862,7 +1863,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetTotalChallengeMedalsForCategory(int CharacterId, byte EChallengeCategory, out int TotalPossible, out int RivalPoints)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetTotalChallengeMedalsForCategory", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CharacterId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EChallengeCategory, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1884,7 +1885,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetTotalChallengeMedals(int CharacterId, out int TotalPossible, out int RivalPoints)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetTotalChallengeMedals", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CharacterId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1905,7 +1906,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetChallengeRating(int ChallengeID, int CharacterId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetChallengeRating", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CharacterId, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1925,7 +1926,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetChallengeRivalPoints(int ChallengeID, int CharacterId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetChallengeRivalPoints", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CharacterId, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1945,7 +1946,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetChallengeMedals(int ChallengeID, int CharacterId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetChallengeMedals", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CharacterId, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1965,7 +1966,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetChallengeScore(int ChallengeID, int CharacterId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetChallengeScore", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CharacterId, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1985,7 +1986,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetChallengeActiveCharacter(int ChallengeID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetChallengeActiveCharacter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -2004,7 +2005,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetChallengeCharacterIndex(int ChallengeID, int CharacterId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetChallengeCharacterIndex", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CharacterId, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2024,7 +2025,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetChallengeIndex(int ChallengeID, bool bAddNew = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetChallengeIndex", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChallengeID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bAddNew, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2044,7 +2045,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AddRedHoodKeyBind(int InId, BmSDK.FString InKey1, BmSDK.FString InKey2, int InbPrimaryCtrl = default, int InbPrimaryShift = default, int InbPrimaryAlt = default, int InbSecondaryCtrl = default, int InbSecondaryShift = default, int InbSecondaryAlt = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.AddRedHoodKeyBind", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InKey1, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InKey2, paramsPtr + 20);
@@ -2064,7 +2065,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AddBatgirlKeyBind(int InId, BmSDK.FString InKey1, BmSDK.FString InKey2, int InbPrimaryCtrl = default, int InbPrimaryShift = default, int InbPrimaryAlt = default, int InbSecondaryCtrl = default, int InbSecondaryShift = default, int InbSecondaryAlt = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.AddBatgirlKeyBind", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InKey1, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InKey2, paramsPtr + 20);
@@ -2084,7 +2085,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AddHarleyKeyBind(int InId, BmSDK.FString InKey1, BmSDK.FString InKey2, int InbPrimaryCtrl = default, int InbPrimaryShift = default, int InbPrimaryAlt = default, int InbSecondaryCtrl = default, int InbSecondaryShift = default, int InbSecondaryAlt = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.AddHarleyKeyBind", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InKey1, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InKey2, paramsPtr + 20);
@@ -2104,7 +2105,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AddBattleKeyBind(int InId, BmSDK.FString InKey1, BmSDK.FString InKey2, int InbPrimaryCtrl = default, int InbPrimaryShift = default, int InbPrimaryAlt = default, int InbSecondaryCtrl = default, int InbSecondaryShift = default, int InbSecondaryAlt = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.AddBattleKeyBind", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InKey1, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InKey2, paramsPtr + 20);
@@ -2124,7 +2125,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AddPursuitKeyBind(int InId, BmSDK.FString InKey1, BmSDK.FString InKey2, int InbPrimaryCtrl = default, int InbPrimaryShift = default, int InbPrimaryAlt = default, int InbSecondaryCtrl = default, int InbSecondaryShift = default, int InbSecondaryAlt = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.AddPursuitKeyBind", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InKey1, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InKey2, paramsPtr + 20);
@@ -2144,7 +2145,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AddBatmanKeyBind(int InId, BmSDK.FString InKey1, BmSDK.FString InKey2, int InbPrimaryCtrl = default, int InbPrimaryShift = default, int InbPrimaryAlt = default, int InbSecondaryCtrl = default, int InbSecondaryShift = default, int InbSecondaryAlt = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.AddBatmanKeyBind", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InKey1, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InKey2, paramsPtr + 20);
@@ -2164,7 +2165,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetUserSaveSlot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetUserSaveSlot", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -2182,7 +2183,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.FString GetUserGUID()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetUserGUID", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -2200,7 +2201,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetUserSaveSlot(int SlotNumber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetUserSaveSlot", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SlotNumber, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -2219,7 +2220,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsOptionsFlagSet(BmSDK.FString FlagName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.IsOptionsFlagSet", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FlagName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -2238,7 +2239,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetOptionsFlag(BmSDK.FString FlagName, bool bTrue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetOptionsFlag", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FlagName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bTrue, paramsPtr + 16);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2255,7 +2256,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FStoredKeyMap
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 38)]
     public partial record struct FStoredKeyMap
     {
         /// <summary>
@@ -5887,7 +5888,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FActivePlayerSkin
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FActivePlayerSkin
     {
         /// <summary>
@@ -5949,7 +5950,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FUnlockedChallenge
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FUnlockedChallenge
     {
         /// <summary>
@@ -6031,7 +6032,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FUnlockedChallengePerCharacter
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 28)]
     public partial record struct FUnlockedChallengePerCharacter
     {
         /// <summary>
@@ -6173,7 +6174,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FDeathMovieRecord
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FDeathMovieRecord
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: TerrainWeightMapTexture<br/>
+/// (size = 520)
 /// (flags = 0)
 /// </summary>
 public partial class TerrainWeightMapTexture : BmSDK.Engine.Texture2D, BmSDK.IGameObject
@@ -53,7 +54,7 @@ public partial class TerrainWeightMapTexture : BmSDK.Engine.Texture2D, BmSDK.IGa
     /// <summary>
     /// Struct: FTerrainWeightedMaterial
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
     public partial record struct FTerrainWeightedMaterial
     {
     }

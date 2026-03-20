@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AmbientPlus3DirectionalLightComponent<br/>
+/// (size = 700)
 /// (flags = 0)
 /// </summary>
 public partial class AmbientPlus3DirectionalLightComponent : BmSDK.Engine.LightComponent, BmSDK.IGameObject

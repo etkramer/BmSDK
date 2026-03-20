@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PhysicalMaterialPropertyBase<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class PhysicalMaterialPropertyBase : BmSDK.GameObject, BmSDK.IGameObject

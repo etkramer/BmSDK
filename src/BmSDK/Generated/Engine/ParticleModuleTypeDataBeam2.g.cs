@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleTypeDataBeam2<br/>
+/// (size = 264)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleTypeDataBeam2 : BmSDK.Engine.ParticleModuleTypeDataBase, BmSDK.IGameObject
@@ -46,7 +47,7 @@ public partial class ParticleModuleTypeDataBeam2 : BmSDK.Engine.ParticleModuleTy
     /// <summary>
     /// Struct: FBeamTargetData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FBeamTargetData
     {
         /// <summary>

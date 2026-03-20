@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSkelControl_LimitConstraint<br/>
+/// (size = 368)
 /// (flags = 0)
 /// </summary>
 public partial class RSkelControl_LimitConstraint : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject

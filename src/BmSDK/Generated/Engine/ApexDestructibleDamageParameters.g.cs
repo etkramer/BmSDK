@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexDestructibleDamageParameters<br/>
+/// (size = 100)
 /// (flags = 0)
 /// </summary>
 public partial class ApexDestructibleDamageParameters : BmSDK.GameObject, BmSDK.IGameObject
@@ -44,7 +45,7 @@ public partial class ApexDestructibleDamageParameters : BmSDK.GameObject, BmSDK.
     /// <summary>
     /// Struct: FDamagePair
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FDamagePair
     {
         /// <summary>
@@ -69,7 +70,7 @@ public partial class ApexDestructibleDamageParameters : BmSDK.GameObject, BmSDK.
     /// <summary>
     /// Struct: FDamageParameters
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FDamageParameters
     {
         /// <summary>

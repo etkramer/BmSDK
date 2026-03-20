@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleSimTankNPC<br/>
+/// (size = 244)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleSimTankNPC : BmSDK.BmGame.RVehicleSimNPC, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RVehicleSimTankNPC : BmSDK.BmGame.RVehicleSimNPC, BmSDK.IGa
     public unsafe void SetPoweredDown(bool Down)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleSimTankNPC.SetPoweredDown", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Down, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

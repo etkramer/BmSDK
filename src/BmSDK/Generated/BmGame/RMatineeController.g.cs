@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMatineeController<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RMatineeController : BmSDK.Interface, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RMatineeController : BmSDK.Interface, BmSDK.IGameObject
     public unsafe void ClearMatinee()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMatineeController.ClearMatinee", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -49,7 +50,7 @@ public partial class RMatineeController : BmSDK.Interface, BmSDK.IGameObject
     public unsafe void SetMatinee(BmSDK.Engine.SeqAct_Interp M)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMatineeController.SetMatinee", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(M, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

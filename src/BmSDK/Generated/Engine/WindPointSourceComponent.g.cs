@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: WindPointSourceComponent<br/>
+/// (size = 184)
 /// (flags = 0)
 /// </summary>
 public partial class WindPointSourceComponent : BmSDK.Engine.WindDirectionalSourceComponent, BmSDK.IGameObject

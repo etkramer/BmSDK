@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimUtil_AnimAccumulatorAsyncData<br/>
+/// (size = 928)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSDK.IGameObject
@@ -152,7 +153,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAnimAccumulatorCachedOutput
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 64)]
     public partial record struct FAnimAccumulatorCachedOutput
     {
         /// <summary>
@@ -177,7 +178,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAnimAccumulatorOutput
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 256)]
     public partial record struct FAnimAccumulatorOutput
     {
         /// <summary>
@@ -229,7 +230,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAnimAccumulatorSkeleton
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FAnimAccumulatorSkeleton
     {
         /// <summary>
@@ -254,7 +255,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAnimAccumulatorSkeletonConstants
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 124)]
     public partial record struct FAnimAccumulatorSkeletonConstants
     {
         /// <summary>
@@ -360,7 +361,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FIntArray
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FIntArray
     {
         /// <summary>
@@ -385,7 +386,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAnimAccumulatorMotion
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FAnimAccumulatorMotion
     {
         /// <summary>
@@ -401,7 +402,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAnimAccumulatorMotionAnim
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 84)]
     public partial record struct FAnimAccumulatorMotionAnim
     {
         /// <summary>
@@ -498,7 +499,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAnimAccumulatorOutputNotifyAnims
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 88)]
     public partial record struct FAnimAccumulatorOutputNotifyAnims
     {
         /// <summary>
@@ -550,7 +551,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAnimAccumulatorIntermediate
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 52)]
     public partial record struct FAnimAccumulatorIntermediate
     {
         /// <summary>
@@ -593,7 +594,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAnimAccumulatorWeightedAdditiveAnim
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 112)]
     public partial record struct FAnimAccumulatorWeightedAdditiveAnim
     {
         /// <summary>
@@ -618,7 +619,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAnimAccumulatorWeightedUpperBodyAnim
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FAnimAccumulatorWeightedUpperBodyAnim
     {
         /// <summary>
@@ -643,7 +644,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAnimAccumulatorWeightedAnim
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 144)]
     public partial record struct FAnimAccumulatorWeightedAnim
     {
         /// <summary>
@@ -668,7 +669,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FBodyWeight
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FBodyWeight
     {
         /// <summary>
@@ -693,7 +694,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAnimAccumulatorInput
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 156)]
     public partial record struct FAnimAccumulatorInput
     {
         /// <summary>
@@ -736,7 +737,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAnimAccumulatorInputSlavedPoses
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 88)]
     public partial record struct FAnimAccumulatorInputSlavedPoses
     {
         /// <summary>
@@ -770,7 +771,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAnimAccumulatorInputPose
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 144)]
     public partial record struct FAnimAccumulatorInputPose
     {
         /// <summary>
@@ -813,7 +814,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAnimAccumulatorInputLayerStack
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FAnimAccumulatorInputLayerStack
     {
         /// <summary>
@@ -829,7 +830,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAnimAccumulatorInputLayer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 120)]
     public partial record struct FAnimAccumulatorInputLayer
     {
         /// <summary>
@@ -881,7 +882,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAnimAccumulatorInputPartialAnim
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 38)]
     public partial record struct FAnimAccumulatorInputPartialAnim
     {
         /// <summary>
@@ -962,7 +963,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAnimAccumulatorInputAdditiveAnim
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 92)]
     public partial record struct FAnimAccumulatorInputAdditiveAnim
     {
         /// <summary>
@@ -1104,7 +1105,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAnimAccumulatorInputAnim
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 116)]
     public partial record struct FAnimAccumulatorInputAnim
     {
         /// <summary>
@@ -1256,7 +1257,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAimingOutput
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 128)]
     public partial record struct FAimingOutput
     {
         /// <summary>
@@ -1317,7 +1318,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAimingGroupConstants
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FAimingGroupConstants
     {
         /// <summary>
@@ -1342,7 +1343,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAimingGroupBone
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FAimingGroupBone
     {
         /// <summary>
@@ -1367,7 +1368,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAimingBoneConstants
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 64)]
     public partial record struct FAimingBoneConstants
     {
         /// <summary>
@@ -1437,7 +1438,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Struct: FAimingReferenceBoneIndexChains
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 48)]
     public partial record struct FAimingReferenceBoneIndexChains
     {
         /// <summary>

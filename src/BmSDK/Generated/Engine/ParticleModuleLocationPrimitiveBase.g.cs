@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleLocationPrimitiveBase<br/>
+/// (size = 200)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleLocationPrimitiveBase : BmSDK.Engine.ParticleModuleLocationBase, BmSDK.IGameObject

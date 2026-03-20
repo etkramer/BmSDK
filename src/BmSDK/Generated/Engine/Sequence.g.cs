@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Sequence<br/>
+/// (size = 528)
 /// (flags = 0)
 /// </summary>
 public partial class Sequence : BmSDK.Engine.SequenceOp, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class Sequence : BmSDK.Engine.SequenceOp, BmSDK.IGameObject
     public unsafe void SetEnabled(bool bInEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Sequence.SetEnabled", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bInEnabled, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -57,7 +58,7 @@ public partial class Sequence : BmSDK.Engine.SequenceOp, BmSDK.IGameObject
     public unsafe void Reset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Sequence.Reset", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -68,7 +69,7 @@ public partial class Sequence : BmSDK.Engine.SequenceOp, BmSDK.IGameObject
     public unsafe void FindSeqObjectsByName(BmSDK.FString SeqObjName, bool bCheckComment, out BmSDK.TArray<BmSDK.Engine.SequenceObject> OutputObjects, bool bRecursive = default, bool bUseFullLevelName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Sequence.FindSeqObjectsByName", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SeqObjName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bCheckComment, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bRecursive, paramsPtr + 36);
@@ -91,7 +92,7 @@ public partial class Sequence : BmSDK.Engine.SequenceOp, BmSDK.IGameObject
     public unsafe void FindSeqObjectsByClass(BmSDK.Class DesiredClass, bool bRecursive, out BmSDK.TArray<BmSDK.Engine.SequenceObject> OutputObjects)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Sequence.FindSeqObjectsByClass", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DesiredClass, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bRecursive, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -109,7 +110,7 @@ public partial class Sequence : BmSDK.Engine.SequenceOp, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSequenceSortKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FSequenceSortKey
     {
         /// <summary>
@@ -134,7 +135,7 @@ public partial class Sequence : BmSDK.Engine.SequenceOp, BmSDK.IGameObject
     /// <summary>
     /// Struct: FQueuedActivationInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FQueuedActivationInfo
     {
         /// <summary>
@@ -186,7 +187,7 @@ public partial class Sequence : BmSDK.Engine.SequenceOp, BmSDK.IGameObject
     /// <summary>
     /// Struct: FActivateOp
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FActivateOp
     {
         /// <summary>

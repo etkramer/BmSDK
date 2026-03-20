@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RShowcaseCamera<br/>
+/// (size = 1448)
 /// (flags = 0)
 /// </summary>
 public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     public unsafe void UpdateLightRigs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShowcaseCamera.UpdateLightRigs", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -84,7 +85,7 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     public unsafe void UpdateInput(float fFrameTime, float fr, float fU, float FF)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShowcaseCamera.UpdateInput", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(fFrameTime, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(fr, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(fU, paramsPtr + 8);
@@ -99,7 +100,7 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     public unsafe bool UpdateFrame(float fFrameTime, BmSDK.BmGame.RPlayerInput iInput)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShowcaseCamera.UpdateFrame", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(fFrameTime, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(iInput, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -112,7 +113,7 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     public unsafe void LightRigsRelease()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShowcaseCamera.LightRigsRelease", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -123,7 +124,7 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     public unsafe void LightRigsInitialize()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShowcaseCamera.LightRigsInitialize", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -134,7 +135,7 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     public unsafe void SetMode(BmSDK.BmGame.RShowcaseCamera.ShowcaseCameraMode eMode, BmSDK.BmGame.RShowcaseCamera.ShowcaseCameraVantageRequirement eRequirement)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShowcaseCamera.SetMode", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[2];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(eMode, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(eRequirement, paramsPtr + 1);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -147,7 +148,7 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     public unsafe void SetInspectParams(System.Numerics.Vector4 vHeights, System.Numerics.Vector4 vAngles, System.Numerics.Vector3 vFOVs, float fDistance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShowcaseCamera.SetInspectParams", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(vHeights, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(vAngles, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(vFOVs, paramsPtr + 32);
@@ -162,7 +163,7 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     public unsafe void SetVantageParams(System.Numerics.Vector3 vPosition, System.Numerics.Vector3 vLookAt, float fFOV)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShowcaseCamera.SetVantageParams", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(vPosition, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(vLookAt, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(fFOV, paramsPtr + 24);

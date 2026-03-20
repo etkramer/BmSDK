@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBatmobileScrewSpikesBase<br/>
+/// (size = 988)
 /// (flags = 0)
 /// </summary>
 public partial class RBatmobileScrewSpikesBase : BmSDK.Engine.InterpActor, BmSDK.IGameObject

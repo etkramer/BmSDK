@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNodeRandom<br/>
+/// (size = 372)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNodeRandom : BmSDK.Engine.AnimNodeBlendList, BmSDK.IGameObject
@@ -71,7 +72,7 @@ public partial class AnimNodeRandom : BmSDK.Engine.AnimNodeBlendList, BmSDK.IGam
     /// <summary>
     /// Struct: FRandomAnimInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FRandomAnimInfo
     {
         /// <summary>

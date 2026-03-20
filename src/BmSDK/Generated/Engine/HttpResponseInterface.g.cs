@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: HttpResponseInterface<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class HttpResponseInterface : BmSDK.Engine.HttpBaseInterface, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class HttpResponseInterface : BmSDK.Engine.HttpBaseInterface, BmS
     public unsafe BmSDK.FString GetContentAsString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HttpResponseInterface.GetContentAsString", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -56,7 +57,7 @@ public partial class HttpResponseInterface : BmSDK.Engine.HttpBaseInterface, BmS
     public unsafe int GetResponseCode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HttpResponseInterface.GetResponseCode", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;

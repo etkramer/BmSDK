@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RockDecalToggleable<br/>
+/// (size = 728)
 /// (flags = 0)
 /// </summary>
 public partial class RockDecalToggleable : BmSDK.Engine.RockDecal, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RockDecalToggleable : BmSDK.Engine.RockDecal, BmSDK.IGameOb
     public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RockDecalToggleable.OnToggle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Action, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

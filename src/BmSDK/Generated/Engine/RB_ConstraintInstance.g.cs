@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RB_ConstraintInstance<br/>
+/// (size = 224)
 /// (flags = 0)
 /// </summary>
 public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void UpdateFramesToCurrent(BmSDK.Engine.SkeletalMeshComponent SkelComp, BmSDK.Engine.RB_ConstraintSetup Setup, float Scale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.UpdateFramesToCurrent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SkelComp, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Setup, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Scale, paramsPtr + 16);
@@ -59,7 +60,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetDistanceJointLimits(bool bLimitMinDist, bool bLimitMaxDist, float NewMinDistance = default, float NewMaxDistance = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.SetDistanceJointLimits", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bLimitMinDist, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bLimitMaxDist, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMinDistance, paramsPtr + 8);
@@ -81,7 +82,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetDistanceJointMinLimit(bool bLimitMinDist, float NewMinDistance = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.SetDistanceJointMinLimit", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bLimitMinDist, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMinDistance, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -101,7 +102,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetDistanceJointMaxLimit(bool bLimitMaxDist, float NewMaxDistance = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.SetDistanceJointMaxLimit", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bLimitMaxDist, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMaxDistance, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -121,7 +122,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetDistanceJointMinLimit(out float OutMinDistance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.GetDistanceJointMinLimit", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -140,7 +141,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetDistanceJointMaxLimit(out float OutMaxDistance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.GetDistanceJointMaxLimit", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -178,7 +179,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetLinearLimitSize(float NewLimitSize)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.SetLinearLimitSize", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewLimitSize, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -197,7 +198,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetAngularDOFLimitScale(float InSwing1LimitScale, float InSwing2LimitScale, float InTwistLimitScale, BmSDK.Engine.RB_ConstraintSetup InSetup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.SetAngularDOFLimitScale", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InSwing1LimitScale, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InSwing2LimitScale, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InTwistLimitScale, paramsPtr + 8);
@@ -219,7 +220,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetAngularDriveParams(float InSpring, float InDamping, float InForceLimit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.SetAngularDriveParams", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InSpring, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InDamping, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InForceLimit, paramsPtr + 8);
@@ -240,7 +241,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetAngularVelocityTarget(System.Numerics.Vector3 InVelTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.SetAngularVelocityTarget", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InVelTarget, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -259,7 +260,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetAngularPositionTarget(out BmSDK.GameObject.FQuat InPosTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.SetAngularPositionTarget", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -278,7 +279,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetLinearDriveParams(float InSpring, float InDamping, float InForceLimit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.SetLinearDriveParams", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InSpring, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InDamping, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InForceLimit, paramsPtr + 8);
@@ -299,7 +300,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetLinearVelocityTarget(System.Numerics.Vector3 InVelTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.SetLinearVelocityTarget", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InVelTarget, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -318,7 +319,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetLinearPositionTarget(System.Numerics.Vector3 InPosTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.SetLinearPositionTarget", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InPosTarget, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -337,7 +338,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetAngularVelocityDrive(bool bEnableSwingDrive, bool bEnableTwistDrive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.SetAngularVelocityDrive", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bEnableSwingDrive, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bEnableTwistDrive, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -357,7 +358,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetAngularPositionDrive(bool bEnableSwingDrive, bool bEnableTwistDrive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.SetAngularPositionDrive", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bEnableSwingDrive, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bEnableTwistDrive, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -377,7 +378,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetLinearVelocityDrive(bool bEnableXDrive, bool bEnableYDrive, bool bEnableZDrive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.SetLinearVelocityDrive", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bEnableXDrive, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bEnableYDrive, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bEnableZDrive, paramsPtr + 8);
@@ -398,7 +399,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetLinearPositionDrive(bool bEnableXDrive, bool bEnableYDrive, bool bEnableZDrive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.SetLinearPositionDrive", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bEnableXDrive, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bEnableYDrive, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bEnableZDrive, paramsPtr + 8);
@@ -419,7 +420,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe System.Numerics.Vector3 GetConstraintLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.GetConstraintLocation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -437,7 +438,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.Engine.PhysicsAssetInstance GetPhysicsAssetInstance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.GetPhysicsAssetInstance", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -455,7 +456,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void TermConstraint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.TermConstraint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -473,7 +474,7 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void InitConstraint(BmSDK.Engine.PrimitiveComponent PrimComp1, BmSDK.Engine.PrimitiveComponent PrimComp2, BmSDK.Engine.RB_ConstraintSetup Setup, float Scale, BmSDK.Engine.Actor InOwner, BmSDK.Engine.PrimitiveComponent InPrimComp, bool bMakeKinForBody1)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintInstance.InitConstraint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PrimComp1, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PrimComp2, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Setup, paramsPtr + 16);

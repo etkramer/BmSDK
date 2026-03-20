@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: TerrainComponent<br/>
+/// (size = 692)
 /// (flags = 0)
 /// </summary>
 public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// <summary>
     /// Struct: FTerrainBVTree
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FTerrainBVTree
     {
         /// <summary>
@@ -51,7 +52,7 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// <summary>
     /// Struct: FTerrainMaterialMask
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FTerrainMaterialMask
     {
         /// <summary>
@@ -76,7 +77,7 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// <summary>
     /// Struct: FTerrainPatchBounds
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FTerrainPatchBounds
     {
         /// <summary>

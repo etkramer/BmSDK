@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackBoolProp<br/>
+/// (size = 204)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackBoolProp : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
@@ -53,7 +54,7 @@ public partial class InterpTrackBoolProp : BmSDK.Engine.InterpTrack, BmSDK.IGame
     /// <summary>
     /// Struct: FBoolTrackKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FBoolTrackKey
     {
         /// <summary>

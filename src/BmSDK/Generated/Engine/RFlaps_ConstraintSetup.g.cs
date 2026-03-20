@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RFlaps_ConstraintSetup<br/>
+/// (size = 112)
 /// (flags = 0)
 /// </summary>
 public partial class RFlaps_ConstraintSetup : BmSDK.GameObject, BmSDK.IGameObject
@@ -77,7 +78,7 @@ public partial class RFlaps_ConstraintSetup : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Struct: FRFlapsParticleReference
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FRFlapsParticleReference
     {
         /// <summary>

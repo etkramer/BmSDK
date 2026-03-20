@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RInterpTrackInstDialogue<br/>
+/// (size = 116)
 /// (flags = 0)
 /// </summary>
 public partial class RInterpTrackInstDialogue : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject

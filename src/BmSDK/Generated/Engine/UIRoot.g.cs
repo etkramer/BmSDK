@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UIRoot<br/>
+/// (size = 108)
 /// (flags = 0)
 /// </summary>
 public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
     public unsafe static BmSDK.FString SafeCaps(BmSDK.FString StringToCap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIRoot.SafeCaps", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StringToCap, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 16);
@@ -50,7 +51,7 @@ public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.UIDataStore StaticResolveDataStore(BmSDK.FName DataStoreTag, BmSDK.Engine.LocalPlayer InPlayerOwner = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIRoot.StaticResolveDataStore", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DataStoreTag, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InPlayerOwner, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -63,7 +64,7 @@ public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.GameUISceneClient GetSceneClient()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIRoot.GetSceneClient", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -81,7 +82,7 @@ public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.UIInteraction GetCurrentUIController()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIRoot.GetCurrentUIController", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -99,7 +100,7 @@ public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.UIRoot.EInputPlatformType GetInputPlatformType(BmSDK.Engine.LocalPlayer OwningPlayer = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIRoot.GetInputPlatformType", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[9];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OwningPlayer, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -115,7 +116,7 @@ public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRawInputKeyEventData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 9)]
     public partial record struct FRawInputKeyEventData
     {
         /// <summary>
@@ -140,7 +141,7 @@ public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FUIAxisEmulationDefinition
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FUIAxisEmulationDefinition
     {
         /// <summary>
@@ -191,7 +192,7 @@ public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSubscribedInputEventParameters
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 40)]
     public partial record struct FSubscribedInputEventParameters
     {
         /// <summary>
@@ -207,7 +208,7 @@ public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FInputEventParameters
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FInputEventParameters
     {
         /// <summary>
@@ -295,7 +296,7 @@ public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FInputKeyAction
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FInputKeyAction
     {
         /// <summary>
@@ -338,7 +339,7 @@ public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTextureCoordinates
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FTextureCoordinates
     {
         /// <summary>
@@ -381,7 +382,7 @@ public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FUIRangeData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FUIRangeData
     {
         /// <summary>

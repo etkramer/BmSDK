@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionCeil<br/>
+/// (size = 224)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionCeil : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

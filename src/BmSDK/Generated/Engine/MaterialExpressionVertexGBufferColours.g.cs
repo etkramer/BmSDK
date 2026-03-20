@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionVertexGBufferColours<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionVertexGBufferColours : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

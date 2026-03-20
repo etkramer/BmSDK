@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatEvent_HeavyStrikeHit<br/>
+/// (size = 380)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatEvent_HeavyStrikeHit : BmSDK.BmGame.RCombatEvent, BmSDK.IGameObject

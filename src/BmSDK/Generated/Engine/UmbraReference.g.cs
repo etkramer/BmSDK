@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UmbraReference<br/>
+/// (size = 108)
 /// (flags = 0)
 /// </summary>
 public partial class UmbraReference : BmSDK.GameObject, BmSDK.IGameObject

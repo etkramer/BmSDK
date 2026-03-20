@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Polys<br/>
+/// (size = 108)
 /// (flags = 0)
 /// </summary>
 public partial class Polys : BmSDK.GameObject, BmSDK.IGameObject

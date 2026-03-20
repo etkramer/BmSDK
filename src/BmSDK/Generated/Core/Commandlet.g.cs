@@ -5,6 +5,7 @@ namespace BmSDK;
 
 /// <summary>
 /// Class: Commandlet<br/>
+/// (size = 168)
 /// (flags = 0)
 /// </summary>
 public partial class Commandlet : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class Commandlet : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int Main(BmSDK.FString Params)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Commandlet.Main", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Params, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 16);

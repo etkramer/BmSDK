@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkVehicleSoundVar<br/>
+/// (size = 952)
 /// (flags = 0)
 /// </summary>
 public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void FireEMP()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.FireEMP", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -56,7 +57,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AudioForceResume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.AudioForceResume", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -74,7 +75,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AudioForceSuspend()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.AudioForceSuspend", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -92,7 +93,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AudioResume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.AudioResume", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -110,7 +111,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AudioSuspend()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.AudioSuspend", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -128,7 +129,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AudioEjectSkid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.AudioEjectSkid", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -139,7 +140,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool AudioRemoteWheelSpinActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.AudioRemoteWheelSpinActive", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -150,7 +151,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AudioBoostDonuts(bool Active)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.AudioBoostDonuts", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Active, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -169,7 +170,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AudioRemoteWheelSpin(bool Active)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.AudioRemoteWheelSpin", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Active, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -188,7 +189,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AudioRemoteCalledIn(bool remoting)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.AudioRemoteCalledIn", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(remoting, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -207,7 +208,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AudioSkidToStop(float timeBeforeSkidStops)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.AudioSkidToStop", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(timeBeforeSkidStops, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -226,7 +227,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetRPM()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.GetRPM", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -244,7 +245,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetGear()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.GetGear", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -262,7 +263,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetClutch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.GetClutch", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -280,7 +281,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void ImpulseNoise(float noiseValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.ImpulseNoise", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(noiseValue, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -299,7 +300,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetParameter(BmSDK.Engine.AkParameterName Param, float val, bool setGlobal, bool bInherit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.SetParameter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Param, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(val, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(setGlobal, paramsPtr + 12);
@@ -321,7 +322,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool VehiclePhysicsImpact(BmSDK.Engine.PrimitiveComponent HitComponent, BmSDK.Engine.PrimitiveComponent OtherComponent, out BmSDK.Engine.Actor.FCollisionImpactData RigidCollisionData, int ContactIndex, float Speed, int Index0, int Index1)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.VehiclePhysicsImpact", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[76];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HitComponent, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OtherComponent, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ContactIndex, paramsPtr + 56);
@@ -346,7 +347,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetAllowExhaustEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.GetAllowExhaustEffect", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -364,7 +365,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.Tick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -383,7 +384,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void Died()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.Died", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -401,7 +402,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void Boost(bool Enabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.Boost", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Enabled, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -420,7 +421,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void BrakeOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.BrakeOff", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -438,7 +439,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void BrakeOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.BrakeOn", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -456,7 +457,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void PawnLeft(BmSDK.Engine.Pawn P, bool trunk)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.PawnLeft", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(P, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(trunk, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -476,7 +477,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void PawnEntered(BmSDK.Engine.Pawn P, bool trunk)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.PawnEntered", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(P, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(trunk, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -496,7 +497,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void PlayerLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.PlayerLeft", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -514,7 +515,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void PlayerEntered()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.PlayerEntered", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -532,7 +533,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int NumWheels()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.NumWheels", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -550,7 +551,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetVehicleJump(bool Jumping)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.SetVehicleJump", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Jumping, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -569,7 +570,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetDrivingHillFactor(float factor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.SetDrivingHillFactor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(factor, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -588,7 +589,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetDrivingMode(BmSDK.Engine.AkVehicleSoundInfo.EDrivingModes newDrivingMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.SetDrivingMode", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[1];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(newDrivingMode, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -607,7 +608,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void StopEvent(out BmSDK.Engine.AkWwise.FAkSoundHandle handleToStop)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.StopEvent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -626,7 +627,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle PlayEvent(BmSDK.Engine.AkEvent EventToPlay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.PlayEvent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventToPlay, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -645,7 +646,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void StopNamedLoopingEvent(BmSDK.FString nameOfEvent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.StopNamedLoopingEvent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(nameOfEvent, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -664,7 +665,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool PlayNamedLoopingEvent(BmSDK.FString nameOfEvent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.PlayNamedLoopingEvent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(nameOfEvent, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -683,7 +684,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool PlayNamedEvent(BmSDK.FString nameOfEvent, BmSDK.FString BoneName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.PlayNamedEvent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(nameOfEvent, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BoneName, paramsPtr + 16);
         var oldFlags = funcManaged.FunctionFlags;
@@ -703,7 +704,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void StopSockets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.StopSockets", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -721,7 +722,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetSwitch(BmSDK.Engine.AkSwitchName switchToSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.SetSwitch", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(switchToSet, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -740,7 +741,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void StopCreationEvents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.StopCreationEvents", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -758,7 +759,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void StopEngineAtRest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.StopEngineAtRest", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -776,7 +777,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void StopEngine(bool forceStop = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.StopEngine", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(forceStop, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -795,7 +796,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void StartEngine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.StartEngine", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -813,7 +814,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool EngineStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.EngineStarted", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -831,7 +832,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void Initialize(BmSDK.Engine.AkVehicleSoundInfo soundInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkVehicleSoundVar.Initialize", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(soundInfo, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -2044,7 +2045,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FEngineParameters
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 68)]
     public partial record struct FEngineParameters
     {
         /// <summary>
@@ -2231,7 +2232,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRightFootModel
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 5)]
     public partial record struct FRightFootModel
     {
         /// <summary>
@@ -2267,7 +2268,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FVehicleFactList
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FVehicleFactList
     {
         /// <summary>
@@ -2301,7 +2302,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FEngineDebug
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FEngineDebug
     {
         /// <summary>
@@ -2380,7 +2381,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSortedNamedEvent
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FSortedNamedEvent
     {
         /// <summary>
@@ -2405,7 +2406,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FVehicleCurve
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FVehicleCurve
     {
         /// <summary>
@@ -2448,7 +2449,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FVehSocketAudio
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FVehSocketAudio
     {
         /// <summary>
@@ -2473,7 +2474,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FInternalWheelData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 128)]
     public partial record struct FInternalWheelData
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_InDialogue<br/>
+/// (size = 376)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_InDialogue : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject

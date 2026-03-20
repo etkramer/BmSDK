@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBarkConvoPawnRef_BestForFlagType<br/>
+/// (size = 164)
 /// (flags = 0)
 /// </summary>
 public partial class RBarkConvoPawnRef_BestForFlagType : BmSDK.BmGame.RBarkConvoPawnRef, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RBarkConvoPawnRef_BestForFlagType : BmSDK.BmGame.RBarkConvo
     public unsafe void OnLockedSpeakerFound(BmSDK.BmGame.RBarkConvo Convo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoPawnRef_BestForFlagType.OnLockedSpeakerFound", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Convo, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

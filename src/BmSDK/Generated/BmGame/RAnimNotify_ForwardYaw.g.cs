@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_ForwardYaw<br/>
+/// (size = 88)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_ForwardYaw : BmSDK.BmGame.RAnimNotify_BeginEnd, BmSDK.IGameObject

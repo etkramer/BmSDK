@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Keypoint<br/>
+/// (size = 676)
 /// (flags = 0)
 /// </summary>
 public partial class Keypoint : BmSDK.Engine.Actor, BmSDK.IGameObject

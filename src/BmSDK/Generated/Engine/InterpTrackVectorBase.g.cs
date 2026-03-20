@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackVectorBase<br/>
+/// (size = 304)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackVectorBase : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class InterpTrackVectorBase : BmSDK.Engine.InterpTrack, BmSDK.IGa
     /// <summary>
     /// Struct: FRandomGeneratorVector
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 100)]
     public partial record struct FRandomGeneratorVector
     {
         /// <summary>

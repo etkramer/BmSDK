@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimSequence<br/>
+/// (size = 1104)
 /// (flags = 0)
 /// </summary>
 public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetFirstNotifyRealTime(BmSDK.Class NotifyClass, out float Realtime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetFirstNotifyRealTime", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NotifyClass, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -58,7 +59,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetFirstNotifyNormalizedTime(BmSDK.Class NotifyClass, out float NormalizedTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetFirstNotifyNormalizedTime", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NotifyClass, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -78,7 +79,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.FString ToString(bool Verbose = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.ToString", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Verbose, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -97,7 +98,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetRealTimeLength()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetRealTimeLength", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -115,7 +116,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetNormalizedTimeFromFractionalFrameIndex(float FrameIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetNormalizedTimeFromFractionalFrameIndex", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FrameIndex, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -134,7 +135,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetAnimTimeFromFractionalFrameIndex(float FrameIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetAnimTimeFromFractionalFrameIndex", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FrameIndex, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -153,7 +154,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetNormalizedTimeFromFrameIndex(int FrameIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetNormalizedTimeFromFrameIndex", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FrameIndex, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -172,7 +173,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetAnimTimeFromFrameIndex(int FrameIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetAnimTimeFromFrameIndex", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FrameIndex, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -191,7 +192,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetFractionalFrameIndexFromAnimTime(float AnimTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetFractionalFrameIndexFromAnimTime", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -210,7 +211,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetFractionalFrameIndexFromNormalizedTime(float NormalizedTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetFractionalFrameIndexFromNormalizedTime", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NormalizedTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -229,7 +230,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetNormalizedDurationFromAnimDuration(float AnimLength)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetNormalizedDurationFromAnimDuration", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimLength, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -248,7 +249,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetNormalizedTimeFromAnimTime(float AnimTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetNormalizedTimeFromAnimTime", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -267,7 +268,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetNormalizedTimeFromRealTime(float Realtime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetNormalizedTimeFromRealTime", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Realtime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -286,7 +287,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetRealTimeFromNormalizedTime(float NormalizedTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetRealTimeFromNormalizedTime", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NormalizedTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -305,7 +306,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetAnimTimeFromNormalizedTime(float NormalizedTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetAnimTimeFromNormalizedTime", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NormalizedTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -324,7 +325,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetNotifyTimeByClass(BmSDK.Class NotifyClass, float PlayRate, float StartPosition, out BmSDK.Engine.AnimNotify out_Notify, out float out_Duration)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetNotifyTimeByClass", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NotifyClass, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayRate, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StartPosition, paramsPtr + 12);
@@ -355,7 +356,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimLinearMotion
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 48)]
     public partial record struct FAnimLinearMotion
     {
         /// <summary>
@@ -398,7 +399,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAutoTriggeredDialogueStruct
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 48)]
     public partial record struct FAutoTriggeredDialogueStruct
     {
         /// <summary>
@@ -432,7 +433,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimCachedDialogue
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FAnimCachedDialogue
     {
         /// <summary>
@@ -493,7 +494,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimCollisionPeriods
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FAnimCollisionPeriods
     {
         /// <summary>
@@ -518,7 +519,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimCollisionOptions
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FAnimCollisionOptions
     {
         /// <summary>
@@ -654,7 +655,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimReferencePeriods
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 140)]
     public partial record struct FAnimReferencePeriods
     {
         /// <summary>
@@ -751,7 +752,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimReferencePeriodsAdvanced
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FAnimReferencePeriodsAdvanced
     {
         /// <summary>
@@ -857,7 +858,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimReferenceOptions
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 56)]
     public partial record struct FAnimReferenceOptions
     {
         /// <summary>
@@ -954,7 +955,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimReferenceCopy
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 21)]
     public partial record struct FAnimReferenceCopy
     {
         /// <summary>
@@ -989,7 +990,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimLink
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FAnimLink
     {
         /// <summary>
@@ -1033,7 +1034,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCompressedTrack
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 56)]
     public partial record struct FCompressedTrack
     {
         /// <summary>
@@ -1123,7 +1124,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCurveTrack
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FCurveTrack
     {
         /// <summary>
@@ -1148,7 +1149,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRotationTrack
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FRotationTrack
     {
         /// <summary>
@@ -1173,7 +1174,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTranslationTrack
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FTranslationTrack
     {
         /// <summary>
@@ -1210,7 +1211,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSkelControlModifier
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FSkelControlModifier
     {
         /// <summary>
@@ -1235,7 +1236,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTimeModifier
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FTimeModifier
     {
         /// <summary>
@@ -2169,7 +2170,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRawAnimSequenceTrack
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 64)]
     public partial record struct FRawAnimSequenceTrack
     {
         /// <summary>
@@ -2212,7 +2213,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimNotifyEvent
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FAnimNotifyEvent
     {
         /// <summary>

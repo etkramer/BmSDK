@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MGFxMovieUI_WBIDMainBase<br/>
+/// (size = 1072)
 /// (flags = 0)
 /// </summary>
 public partial class MGFxMovieUI_WBIDMainBase : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class MGFxMovieUI_WBIDMainBase : BmSDK.BmGame.RGFxMovieUI, BmSDK.
     public unsafe void SetWBIDPrompts(BmSDK.BmGame.MWBIDOverlayManager.E_WBID_Screen_Type screen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MGFxMovieUI_WBIDMainBase.SetWBIDPrompts", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(screen, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -50,7 +51,7 @@ public partial class MGFxMovieUI_WBIDMainBase : BmSDK.BmGame.RGFxMovieUI, BmSDK.
     public unsafe void SetRewardsScreenError()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MGFxMovieUI_WBIDMainBase.SetRewardsScreenError", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -61,7 +62,7 @@ public partial class MGFxMovieUI_WBIDMainBase : BmSDK.BmGame.RGFxMovieUI, BmSDK.
     public unsafe void UpdateWBIDWidgets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MGFxMovieUI_WBIDMainBase.UpdateWBIDWidgets", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -72,7 +73,7 @@ public partial class MGFxMovieUI_WBIDMainBase : BmSDK.BmGame.RGFxMovieUI, BmSDK.
     public unsafe void Terminate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MGFxMovieUI_WBIDMainBase.Terminate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -83,7 +84,7 @@ public partial class MGFxMovieUI_WBIDMainBase : BmSDK.BmGame.RGFxMovieUI, BmSDK.
     public unsafe void ShowNextOverlay(BmSDK.BmGame.MWBIDOverlayManager.E_WBID_Screen_Type nextOverlay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MGFxMovieUI_WBIDMainBase.ShowNextOverlay", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[1];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(nextOverlay, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

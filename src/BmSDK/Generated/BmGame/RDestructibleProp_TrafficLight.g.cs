@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDestructibleProp_TrafficLight<br/>
+/// (size = 1724)
 /// (flags = 0)
 /// </summary>
 public partial class RDestructibleProp_TrafficLight : BmSDK.BmGame.RDestructibleProp, BmSDK.IGameObject

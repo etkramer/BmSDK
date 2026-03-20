@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionStaticComponentMaskParameter<br/>
+/// (size = 268)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionStaticComponentMaskParameter : BmSDK.Engine.MaterialExpressionParameter, BmSDK.IGameObject

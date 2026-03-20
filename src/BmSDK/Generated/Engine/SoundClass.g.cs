@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SoundClass<br/>
+/// (size = 212)
 /// (flags = 0)
 /// </summary>
 public partial class SoundClass : BmSDK.GameObject, BmSDK.IGameObject
@@ -80,7 +81,7 @@ public partial class SoundClass : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSoundClassProperties
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FSoundClassProperties
     {
         /// <summary>
@@ -213,7 +214,7 @@ public partial class SoundClass : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSoundClassEditorData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FSoundClassEditorData
     {
         /// <summary>

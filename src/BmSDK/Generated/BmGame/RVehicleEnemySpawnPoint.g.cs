@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleEnemySpawnPoint<br/>
+/// (size = 680)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleEnemySpawnPoint : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject

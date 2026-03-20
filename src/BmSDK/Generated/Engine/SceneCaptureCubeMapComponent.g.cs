@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SceneCaptureCubeMapComponent<br/>
+/// (size = 240)
 /// (flags = 0)
 /// </summary>
 public partial class SceneCaptureCubeMapComponent : BmSDK.Engine.SceneCaptureComponent, BmSDK.IGameObject

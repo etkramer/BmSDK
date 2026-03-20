@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionWindDirectionAndSpeed<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionWindDirectionAndSpeed : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

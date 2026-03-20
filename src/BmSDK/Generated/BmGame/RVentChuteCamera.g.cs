@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVentChuteCamera<br/>
+/// (size = 1292)
 /// (flags = 0)
 /// </summary>
 public partial class RVentChuteCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RVentChuteCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     public unsafe void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVentChuteCamera.Tick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -85,7 +86,7 @@ public partial class RVentChuteCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     public unsafe void Init(bool GoingUp, BmSDK.BmGame.RSwingChutePointBase ChuteTop, BmSDK.BmGame.RSwingChuteExitBase ChuteBottom)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVentChuteCamera.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GoingUp, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChuteTop, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChuteBottom, paramsPtr + 12);

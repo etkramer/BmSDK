@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionSquareRoot<br/>
+/// (size = 224)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionSquareRoot : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

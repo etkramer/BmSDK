@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RAsyncPhysXSceneInterface<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RAsyncPhysXSceneInterface : BmSDK.Interface, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqCond_SwitchPlatform<br/>
+/// (size = 324)
 /// (flags = 0)
 /// </summary>
 public partial class SeqCond_SwitchPlatform : BmSDK.Engine.SequenceCondition, BmSDK.IGameObject

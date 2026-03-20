@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_SonicBatarangShock<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_SonicBatarangShock : BmSDK.BmGame.RDamageType, BmSDK.IGameObject

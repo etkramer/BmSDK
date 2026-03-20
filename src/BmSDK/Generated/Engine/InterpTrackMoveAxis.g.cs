@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackMoveAxis<br/>
+/// (size = 276)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackMoveAxis : BmSDK.Engine.InterpTrackFloatBase, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_ThugMineExplosion<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_ThugMineExplosion : BmSDK.BmGame.RDmgType_Explosion, BmSDK.IGameObject

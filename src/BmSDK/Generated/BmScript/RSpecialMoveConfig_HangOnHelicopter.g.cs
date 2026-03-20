@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_HangOnHelicopter<br/>
+/// (size = 688)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_HangOnHelicopter : BmSDK.BmGame.RSpecialMoveConfig_PlaceGooMine, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RSpecialMoveConfig_HangOnHelicopter : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Struct: FGlideOutAnim
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 92)]
     public partial record struct FGlideOutAnim
     {
         /// <summary>

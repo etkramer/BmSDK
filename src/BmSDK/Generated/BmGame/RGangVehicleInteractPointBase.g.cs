@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGangVehicleInteractPointBase<br/>
+/// (size = 668)
 /// (flags = 0)
 /// </summary>
 public partial class RGangVehicleInteractPointBase : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RGangVehicleInteractPointBase : BmSDK.BmGame.RDummyTarget, 
     public unsafe void SetInUse(BmSDK.BmGame.RVehicleNPC NewCar)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangVehicleInteractPointBase.SetInUse", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewCar, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -85,7 +86,7 @@ public partial class RGangVehicleInteractPointBase : BmSDK.BmGame.RDummyTarget, 
     public unsafe BmSDK.BmGame.RVehicleScenario GetCarScenario()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangVehicleInteractPointBase.GetCarScenario", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleScenario>(paramsPtr + 0);
     }

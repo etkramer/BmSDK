@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Model<br/>
+/// (size = 1396)
 /// (flags = 0)
 /// </summary>
 public partial class Model : BmSDK.GameObject, BmSDK.IGameObject

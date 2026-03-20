@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNodeBlendList<br/>
+/// (size = 340)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNodeBlendList : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AnimNodeBlendList : BmSDK.Engine.AnimNodeBlendBase, BmSDK.I
     public unsafe void SetActiveChild(int ChildIndex, float BlendTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeBlendList.SetActiveChild", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChildIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BlendTime, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;

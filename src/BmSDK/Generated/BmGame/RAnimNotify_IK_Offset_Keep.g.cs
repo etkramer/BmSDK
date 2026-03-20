@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_IK_Offset_Keep<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_IK_Offset_Keep : BmSDK.BmGame.RAnimNotify_IK, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionRotateAboutAxis<br/>
+/// (size = 328)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionRotateAboutAxis : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

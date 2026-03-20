@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_Takedown_Corner<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_Takedown_Corner : BmSDK.BmGame.RDmgType_Takedown, BmSDK.IGameObject

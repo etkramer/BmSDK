@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackEvent<br/>
+/// (size = 200)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackEvent : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
@@ -80,7 +81,7 @@ public partial class InterpTrackEvent : BmSDK.Engine.InterpTrack, BmSDK.IGameObj
     /// <summary>
     /// Struct: FEventTrackKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FEventTrackKey
     {
         /// <summary>

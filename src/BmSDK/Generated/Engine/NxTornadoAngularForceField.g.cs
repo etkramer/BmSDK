@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NxTornadoAngularForceField<br/>
+/// (size = 804)
 /// (flags = 0)
 /// </summary>
 public partial class NxTornadoAngularForceField : BmSDK.Engine.NxForceField, BmSDK.IGameObject

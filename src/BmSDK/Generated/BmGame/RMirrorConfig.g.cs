@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMirrorConfig<br/>
+/// (size = 100)
 /// (flags = 0)
 /// </summary>
 public partial class RMirrorConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
@@ -44,7 +45,7 @@ public partial class RMirrorConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FNamedMirror
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FNamedMirror
     {
         /// <summary>
@@ -78,7 +79,7 @@ public partial class RMirrorConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FMirrorAction
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 4)]
     public partial record struct FMirrorAction
     {
         /// <summary>

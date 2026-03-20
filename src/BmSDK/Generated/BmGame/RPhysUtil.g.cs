@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPhysUtil<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RPhysUtil : BmSDK.GameObject, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RPhysUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCapeChangeData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FCapeChangeData
     {
         /// <summary>
@@ -78,7 +79,7 @@ public partial class RPhysUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCapeStateChangeData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 76)]
     public partial record struct FCapeStateChangeData
     {
         /// <summary>

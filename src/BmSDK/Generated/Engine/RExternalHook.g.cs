@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RExternalHook<br/>
+/// (size = 124)
 /// (flags = 0)
 /// </summary>
 public partial class RExternalHook : BmSDK.Engine.AkHash, BmSDK.IGameObject
@@ -80,7 +81,7 @@ public partial class RExternalHook : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Struct: FExternalHookDataEntry
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 116)]
     public partial record struct FExternalHookDataEntry
     {
         /// <summary>

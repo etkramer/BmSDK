@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RFreezeClusterTrapBase<br/>
+/// (size = 684)
 /// (flags = 0)
 /// </summary>
 public partial class RFreezeClusterTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RFreezeClusterTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGam
     public unsafe void ForceFindTouchingActors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeClusterTrapBase.ForceFindTouchingActors", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;

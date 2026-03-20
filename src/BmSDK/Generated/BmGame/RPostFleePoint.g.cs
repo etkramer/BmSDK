@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPostFleePoint<br/>
+/// (size = 668)
 /// (flags = 0)
 /// </summary>
 public partial class RPostFleePoint : BmSDK.Engine.Actor, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionMultiply<br/>
+/// (size = 276)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionMultiply : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

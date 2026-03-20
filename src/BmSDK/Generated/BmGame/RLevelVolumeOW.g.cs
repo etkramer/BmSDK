@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RLevelVolumeOW<br/>
+/// (size = 1168)
 /// (flags = 0)
 /// </summary>
 public partial class RLevelVolumeOW : BmSDK.BmGame.RLevelVolume, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RLevelVolumeOW : BmSDK.BmGame.RLevelVolume, BmSDK.IGameObje
     public unsafe void DeactivateStreaming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolumeOW.DeactivateStreaming", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -91,7 +92,7 @@ public partial class RLevelVolumeOW : BmSDK.BmGame.RLevelVolume, BmSDK.IGameObje
     public unsafe void ActivateStreaming(bool LevelStart)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolumeOW.ActivateStreaming", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LevelStart, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -152,7 +153,7 @@ public partial class RLevelVolumeOW : BmSDK.BmGame.RLevelVolume, BmSDK.IGameObje
     /// <summary>
     /// Struct: FOWStreamingLevelInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FOWStreamingLevelInfo
     {
         /// <summary>

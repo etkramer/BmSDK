@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNodeSequenceBlendBase<br/>
+/// (size = 404)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNodeSequenceBlendBase : BmSDK.Engine.AnimNodeSequence, BmSDK.IGameObject
@@ -44,7 +45,7 @@ public partial class AnimNodeSequenceBlendBase : BmSDK.Engine.AnimNodeSequence, 
     /// <summary>
     /// Struct: FAnimBlendInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FAnimBlendInfo
     {
         /// <summary>
@@ -78,7 +79,7 @@ public partial class AnimNodeSequenceBlendBase : BmSDK.Engine.AnimNodeSequence, 
     /// <summary>
     /// Struct: FAnimInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FAnimInfo
     {
         /// <summary>

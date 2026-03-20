@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionFoliageNormalizedRotationAxisAndAngle<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionFoliageNormalizedRotationAxisAndAngle : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

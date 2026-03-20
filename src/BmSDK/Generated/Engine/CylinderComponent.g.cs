@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: CylinderComponent<br/>
+/// (size = 560)
 /// (flags = 0)
 /// </summary>
 public partial class CylinderComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class CylinderComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
     public unsafe System.Numerics.Vector3 GetExtent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CylinderComponent.GetExtent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
     }
@@ -49,7 +50,7 @@ public partial class CylinderComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
     public unsafe void SetCylinderSize(float NewRadius, float NewHeight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CylinderComponent.SetCylinderSize", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewRadius, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewHeight, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;

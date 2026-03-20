@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: StaticMesh<br/>
+/// (size = 720)
 /// (flags = 0)
 /// </summary>
 public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject

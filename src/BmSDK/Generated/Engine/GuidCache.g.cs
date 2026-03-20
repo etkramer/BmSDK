@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: GuidCache<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class GuidCache : BmSDK.GameObject, BmSDK.IGameObject

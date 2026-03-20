@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_WeaponSwitch<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_WeaponSwitch : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RClimbLocatorContainer<br/>
+/// (size = 100)
 /// (flags = 0)
 /// </summary>
 public partial class RClimbLocatorContainer : BmSDK.GameObject, BmSDK.IGameObject

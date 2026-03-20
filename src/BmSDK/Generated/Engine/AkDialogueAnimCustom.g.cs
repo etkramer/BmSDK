@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkDialogueAnimCustom<br/>
+/// (size = 92)
 /// (flags = 0)
 /// </summary>
 public partial class AkDialogueAnimCustom : BmSDK.Engine.AkHash, BmSDK.IGameObject

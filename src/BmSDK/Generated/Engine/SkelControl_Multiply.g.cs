@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SkelControl_Multiply<br/>
+/// (size = 252)
 /// (flags = 0)
 /// </summary>
 public partial class SkelControl_Multiply : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject

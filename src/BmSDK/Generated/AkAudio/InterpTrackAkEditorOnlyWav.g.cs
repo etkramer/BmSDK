@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: InterpTrackAkEditorOnlyWav<br/>
+/// (size = 268)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackAkEditorOnlyWav : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class InterpTrackAkEditorOnlyWav : BmSDK.Engine.InterpTrack, BmSD
     /// <summary>
     /// Struct: FAkEditorOnlyWav
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FAkEditorOnlyWav
     {
         /// <summary>
@@ -87,7 +88,7 @@ public partial class InterpTrackAkEditorOnlyWav : BmSDK.Engine.InterpTrack, BmSD
     /// <summary>
     /// Struct: FAkEditorOnlyWavKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FAkEditorOnlyWavKey
     {
         /// <summary>

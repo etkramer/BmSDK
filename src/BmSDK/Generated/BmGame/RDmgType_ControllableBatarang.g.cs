@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_ControllableBatarang<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_ControllableBatarang : BmSDK.BmGame.RDmgType_Batarang, BmSDK.IGameObject

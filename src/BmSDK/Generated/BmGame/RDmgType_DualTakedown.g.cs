@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_DualTakedown<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_DualTakedown : BmSDK.BmGame.RDmgType_CombatTakedown, BmSDK.IGameObject

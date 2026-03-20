@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqVar_Float<br/>
+/// (size = 236)
 /// (flags = 0)
 /// </summary>
 public partial class SeqVar_Float : BmSDK.Engine.SequenceVariable, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCinematicCharacter<br/>
+/// (size = 980)
 /// (flags = 0)
 /// </summary>
 public partial class RCinematicCharacter : BmSDK.BmGame.RCinematicActor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RCinematicCharacter : BmSDK.BmGame.RCinematicActor, BmSDK.I
     public unsafe void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicCharacter.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[56];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -81,7 +82,7 @@ public partial class RCinematicCharacter : BmSDK.BmGame.RCinematicActor, BmSDK.I
     /// <summary>
     /// Struct: FCinematicCharacterMeshComponentChange
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 4)]
     public partial record struct FCinematicCharacterMeshComponentChange
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.OnlineSubsystemSteamworks;
 
 /// <summary>
 /// Class: OnlineLobbyInterfaceSteamworks<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class OnlineLobbyInterfaceSteamworks : BmSDK.GameObject, BmSDK.IGameObject

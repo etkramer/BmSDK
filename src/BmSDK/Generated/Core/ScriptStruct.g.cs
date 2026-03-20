@@ -5,6 +5,7 @@ namespace BmSDK;
 
 /// <summary>
 /// Class: ScriptStruct<br/>
+/// (size = 200)
 /// (flags = 0)
 /// </summary>
 public partial class ScriptStruct : BmSDK.Struct, BmSDK.IGameObject

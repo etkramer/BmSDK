@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LevelBase<br/>
+/// (size = 196)
 /// (flags = 0)
 /// </summary>
 public partial class LevelBase : BmSDK.GameObject, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: CopyHeightsToRGBEffect<br/>
+/// (size = 152)
 /// (flags = 0)
 /// </summary>
 public partial class CopyHeightsToRGBEffect : BmSDK.Engine.PostProcessEffect, BmSDK.IGameObject

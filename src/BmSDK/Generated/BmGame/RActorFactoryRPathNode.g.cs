@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RActorFactoryRPathNode<br/>
+/// (size = 144)
 /// (flags = 0)
 /// </summary>
 public partial class RActorFactoryRPathNode : BmSDK.Engine.ActorFactory, BmSDK.IGameObject

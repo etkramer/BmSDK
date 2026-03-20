@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactoryApexTurbulenceHeatSource<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class ActorFactoryApexTurbulenceHeatSource : BmSDK.Engine.ActorFactory, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRepeatAnimManager<br/>
+/// (size = 108)
 /// (flags = 0)
 /// </summary>
 public partial class RRepeatAnimManager : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RRepeatAnimManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.FName GetAnim(float CurrentTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRepeatAnimManager.GetAnim", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CurrentTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(paramsPtr + 4);
@@ -50,7 +51,7 @@ public partial class RRepeatAnimManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AddAnim(BmSDK.FName NewAnim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRepeatAnimManager.AddAnim", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewAnim, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -62,7 +63,7 @@ public partial class RRepeatAnimManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetLockoutTimes(float NewHard, float NewSoft)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRepeatAnimManager.SetLockoutTimes", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewHard, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewSoft, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -99,7 +100,7 @@ public partial class RRepeatAnimManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRAM_AnimTime
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FRAM_AnimTime
     {
         /// <summary>

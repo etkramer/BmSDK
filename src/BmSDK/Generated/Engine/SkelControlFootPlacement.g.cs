@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SkelControlFootPlacement<br/>
+/// (size = 372)
 /// (flags = 0)
 /// </summary>
 public partial class SkelControlFootPlacement : BmSDK.Engine.SkelControlLimb, BmSDK.IGameObject

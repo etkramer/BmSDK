@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexShapeSphere<br/>
+/// (size = 92)
 /// (flags = 0)
 /// </summary>
 public partial class ApexShapeSphere : BmSDK.Engine.ApexShape, BmSDK.IGameObject

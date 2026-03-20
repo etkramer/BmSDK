@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_SuperStunFinalCharge<br/>
+/// (size = 236)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_SuperStunFinalCharge : BmSDK.BmGame.RDmgType_SuperStunFinal, BmSDK.IGameObject

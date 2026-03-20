@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: AkAudioBeacon<br/>
+/// (size = 700)
 /// (flags = 0)
 /// </summary>
 public partial class AkAudioBeacon : BmSDK.Engine.Actor, BmSDK.IGameObject

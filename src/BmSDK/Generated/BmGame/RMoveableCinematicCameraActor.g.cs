@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMoveableCinematicCameraActor<br/>
+/// (size = 1344)
 /// (flags = 0)
 /// </summary>
 public partial class RMoveableCinematicCameraActor : BmSDK.BmGame.RCinematicCameraActor, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: TextureCube<br/>
+/// (size = 384)
 /// (flags = 0)
 /// </summary>
 public partial class TextureCube : BmSDK.Engine.Texture, BmSDK.IGameObject

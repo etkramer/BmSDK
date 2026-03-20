@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RLedgeSetup<br/>
+/// (size = 100)
 /// (flags = 0)
 /// </summary>
 public partial class RLedgeSetup : BmSDK.GameObject, BmSDK.IGameObject
@@ -44,7 +45,7 @@ public partial class RLedgeSetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRLedgeInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 60)]
     public partial record struct FRLedgeInfo
     {
         /// <summary>

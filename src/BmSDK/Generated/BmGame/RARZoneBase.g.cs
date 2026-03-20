@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RARZoneBase<br/>
+/// (size = 669)
 /// (flags = 0)
 /// </summary>
 public partial class RARZoneBase : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RARZoneBase : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject
     public unsafe int GetFlashFrame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RARZoneBase.GetFlashFrame", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }

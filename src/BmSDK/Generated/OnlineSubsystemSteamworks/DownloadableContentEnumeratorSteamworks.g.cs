@@ -5,6 +5,7 @@ namespace BmSDK.OnlineSubsystemSteamworks;
 
 /// <summary>
 /// Class: DownloadableContentEnumeratorSteamworks<br/>
+/// (size = 152)
 /// (flags = 0)
 /// </summary>
 public partial class DownloadableContentEnumeratorSteamworks : BmSDK.Engine.DownloadableContentEnumerator, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class DownloadableContentEnumeratorSteamworks : BmSDK.Engine.Down
     public unsafe void DeleteDLC(BmSDK.FString DLCName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.DownloadableContentEnumeratorSteamworks.DeleteDLC", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DLCName, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -50,7 +51,7 @@ public partial class DownloadableContentEnumeratorSteamworks : BmSDK.Engine.Down
     public unsafe void AppendDLC(out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FOnlineContent> Bundles)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.DownloadableContentEnumeratorSteamworks.AppendDLC", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -69,7 +70,7 @@ public partial class DownloadableContentEnumeratorSteamworks : BmSDK.Engine.Down
     public unsafe void OnReadContentComplete(bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.DownloadableContentEnumeratorSteamworks.OnReadContentComplete", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bWasSuccessful, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -81,7 +82,7 @@ public partial class DownloadableContentEnumeratorSteamworks : BmSDK.Engine.Down
     public unsafe void ClearAllContent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.DownloadableContentEnumeratorSteamworks.ClearAllContent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -92,7 +93,7 @@ public partial class DownloadableContentEnumeratorSteamworks : BmSDK.Engine.Down
     public unsafe void FindDLC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.DownloadableContentEnumeratorSteamworks.FindDLC", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

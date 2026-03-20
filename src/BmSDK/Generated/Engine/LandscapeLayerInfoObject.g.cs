@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LandscapeLayerInfoObject<br/>
+/// (size = 108)
 /// (flags = 0)
 /// </summary>
 public partial class LandscapeLayerInfoObject : BmSDK.GameObject, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RActorFactoryRigidBody<br/>
+/// (size = 220)
 /// (flags = 0)
 /// </summary>
 public partial class RActorFactoryRigidBody : BmSDK.Engine.ActorFactoryRigidBody, BmSDK.IGameObject

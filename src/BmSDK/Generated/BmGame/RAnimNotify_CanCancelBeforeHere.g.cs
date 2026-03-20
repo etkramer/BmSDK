@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_CanCancelBeforeHere<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_CanCancelBeforeHere : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

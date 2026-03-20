@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_IdleMatchPoint<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_IdleMatchPoint : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

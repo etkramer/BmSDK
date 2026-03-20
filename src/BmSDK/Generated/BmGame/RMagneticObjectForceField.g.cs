@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMagneticObjectForceField<br/>
+/// (size = 784)
 /// (flags = 0)
 /// </summary>
 public partial class RMagneticObjectForceField : BmSDK.Engine.NxRadialForceField, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RMagneticObjectForceField : BmSDK.Engine.NxRadialForceField
     public unsafe void SetFieldProperties(float Radius, float Strength)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticObjectForceField.SetFieldProperties", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Radius, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Strength, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;

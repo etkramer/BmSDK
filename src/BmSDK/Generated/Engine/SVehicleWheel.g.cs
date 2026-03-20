@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SVehicleWheel<br/>
+/// (size = 880)
 /// (flags = 0)
 /// </summary>
 public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Struct: FVehicleRaycastHitData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 48)]
     public partial record struct FVehicleRaycastHitData
     {
         /// <summary>

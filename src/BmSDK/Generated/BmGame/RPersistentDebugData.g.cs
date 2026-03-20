@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPersistentDebugData<br/>
+/// (size = 536)
 /// (flags = 0)
 /// </summary>
 public partial class RPersistentDebugData : BmSDK.Engine.PersistentDebugData, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RPersistentDebugData : BmSDK.Engine.PersistentDebugData, Bm
     /// <summary>
     /// Struct: FBackscreenDebugData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 88)]
     public partial record struct FBackscreenDebugData
     {
         /// <summary>
@@ -240,7 +241,7 @@ public partial class RPersistentDebugData : BmSDK.Engine.PersistentDebugData, Bm
     /// <summary>
     /// Struct: FMostWantedDebugMenuData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FMostWantedDebugMenuData
     {
         /// <summary>
@@ -288,7 +289,7 @@ public partial class RPersistentDebugData : BmSDK.Engine.PersistentDebugData, Bm
     /// <summary>
     /// Struct: FCinematicAnimDebug
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 4)]
     public partial record struct FCinematicAnimDebug
     {
         /// <summary>
@@ -322,7 +323,7 @@ public partial class RPersistentDebugData : BmSDK.Engine.PersistentDebugData, Bm
     /// <summary>
     /// Struct: FVehicleAnimDebug
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 4)]
     public partial record struct FVehicleAnimDebug
     {
         /// <summary>
@@ -356,7 +357,7 @@ public partial class RPersistentDebugData : BmSDK.Engine.PersistentDebugData, Bm
     /// <summary>
     /// Struct: FPerCharacterTypeAnimDebug
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 48)]
     public partial record struct FPerCharacterTypeAnimDebug
     {
         /// <summary>

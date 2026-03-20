@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_Takedown_VentAttack<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_Takedown_VentAttack : BmSDK.BmGame.RDmgType_Takedown, BmSDK.IGameObject

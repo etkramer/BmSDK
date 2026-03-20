@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqEvent_HitWall<br/>
+/// (size = 380)
 /// (flags = 0)
 /// </summary>
 public partial class SeqEvent_HitWall : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: KAssetSpawnable<br/>
+/// (size = 708)
 /// (flags = 0)
 /// </summary>
 public partial class KAssetSpawnable : BmSDK.Engine.KAsset, BmSDK.IGameObject

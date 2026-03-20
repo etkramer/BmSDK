@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_SetDialogueMaxLines<br/>
+/// (size = 376)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SetDialogueMaxLines : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject

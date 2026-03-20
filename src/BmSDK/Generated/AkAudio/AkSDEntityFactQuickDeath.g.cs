@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDEntityFactQuickDeath<br/>
+/// (size = 272)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDEntityFactQuickDeath : BmSDK.AkAudio.AkSDEntityFact, BmSDK.IGameObject

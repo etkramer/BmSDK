@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RThickFearGasComponent<br/>
+/// (size = 600)
 /// (flags = 0)
 /// </summary>
 public partial class RThickFearGasComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RThickFearGasComponent : BmSDK.Engine.PrimitiveComponent, B
     /// <summary>
     /// Struct: FThickFearGasSettings
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 28)]
     public partial record struct FThickFearGasSettings
     {
         /// <summary>

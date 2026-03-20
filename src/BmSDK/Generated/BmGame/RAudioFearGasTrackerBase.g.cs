@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAudioFearGasTrackerBase<br/>
+/// (size = 752)
 /// (flags = 0)
 /// </summary>
 public partial class RAudioFearGasTrackerBase : BmSDK.Engine.AkActor, BmSDK.IGameObject

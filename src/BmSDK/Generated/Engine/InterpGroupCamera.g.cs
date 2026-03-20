@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpGroupCamera<br/>
+/// (size = 240)
 /// (flags = 0)
 /// </summary>
 public partial class InterpGroupCamera : BmSDK.Engine.InterpGroup, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class InterpGroupCamera : BmSDK.Engine.InterpGroup, BmSDK.IGameOb
     /// <summary>
     /// Struct: FCameraPreviewInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 64)]
     public partial record struct FCameraPreviewInfo
     {
         /// <summary>

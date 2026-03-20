@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimationCompressionAlgorithm_PerTrackCompression<br/>
+/// (size = 228)
 /// (flags = 0)
 /// </summary>
 public partial class AnimationCompressionAlgorithm_PerTrackCompression : BmSDK.Engine.AnimationCompressionAlgorithm_RemoveLinearKeys, BmSDK.IGameObject

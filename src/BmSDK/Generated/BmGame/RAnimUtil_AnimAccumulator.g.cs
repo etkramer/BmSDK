@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimUtil_AnimAccumulator<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimUtil_AnimAccumulator : BmSDK.GameObject, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RAnimUtil_AnimAccumulator : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Struct: FAnimAccumulator
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 88)]
     public partial record struct FAnimAccumulator
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UIDataStorePublisher<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class UIDataStorePublisher : BmSDK.Engine.UIDataStoreSubscriber, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class UIDataStorePublisher : BmSDK.Engine.UIDataStoreSubscriber, 
     public unsafe bool SaveSubscriberValue(out BmSDK.TArray<BmSDK.Engine.UIDataStore> out_BoundDataStores, int BindingIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataStorePublisher.SaveSubscriberValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BindingIndex, paramsPtr + 16);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

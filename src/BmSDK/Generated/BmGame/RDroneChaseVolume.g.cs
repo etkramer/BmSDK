@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDroneChaseVolume<br/>
+/// (size = 740)
 /// (flags = 0)
 /// </summary>
 public partial class RDroneChaseVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

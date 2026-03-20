@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackInstFloatMaterialParam<br/>
+/// (size = 124)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstFloatMaterialParam : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class InterpTrackInstFloatMaterialParam : BmSDK.Engine.InterpTrac
     /// <summary>
     /// Struct: FFloatMaterialParamPrimitiveData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FFloatMaterialParamPrimitiveData
     {
         /// <summary>
@@ -87,7 +88,7 @@ public partial class InterpTrackInstFloatMaterialParam : BmSDK.Engine.InterpTrac
     /// <summary>
     /// Struct: FFloatMaterialParamMICData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FFloatMaterialParamMICData
     {
         /// <summary>

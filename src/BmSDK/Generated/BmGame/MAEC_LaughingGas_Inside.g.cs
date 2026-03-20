@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MAEC_LaughingGas_Inside<br/>
+/// (size = 736)
 /// (flags = 0)
 /// </summary>
 public partial class MAEC_LaughingGas_Inside : BmSDK.BmGame.RAEC_Smoke_Inside, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class MAEC_LaughingGas_Inside : BmSDK.BmGame.RAEC_Smoke_Inside, B
     public unsafe void OnAssign(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_LaughingGas_Inside.OnAssign", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewCon, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RVehicleBehaviour_StopAndSpawnHushBadGuys<br/>
+/// (size = 632)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleBehaviour_StopAndSpawnHushBadGuys : BmSDK.BmGame.RVehicleBehaviour_StopAndSpawnBase, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RVehicleBehaviour_StopAndSpawnHushBadGuys : BmSDK.BmGame.RV
     public unsafe void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVehicleBehaviour_StopAndSpawnHushBadGuys.Tick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[56];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

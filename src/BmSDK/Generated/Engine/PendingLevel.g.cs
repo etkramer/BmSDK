@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PendingLevel<br/>
+/// (size = 256)
 /// (flags = 0)
 /// </summary>
 public partial class PendingLevel : BmSDK.Engine.LevelBase, BmSDK.IGameObject

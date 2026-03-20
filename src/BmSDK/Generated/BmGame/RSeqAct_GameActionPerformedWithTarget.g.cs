@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_GameActionPerformedWithTarget<br/>
+/// (size = 400)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_GameActionPerformedWithTarget : BmSDK.BmGame.RSeqAct_GameActionPerformed, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RSeqAct_GameActionPerformedWithTarget : BmSDK.BmGame.RSeqAc
     public unsafe void GameActionPerformed(BmSDK.BmGame.RGameInfo.EGameAction ActionPerformed, BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GameActionPerformedWithTarget.GameActionPerformed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ActionPerformed, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Target, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

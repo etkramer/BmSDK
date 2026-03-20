@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHudModuleHeavyTankScanBase<br/>
+/// (size = 240)
 /// (flags = 0)
 /// </summary>
 public partial class RHudModuleHeavyTankScanBase : BmSDK.BmGame.RHudModule, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RHudModuleHeavyTankScanBase : BmSDK.BmGame.RHudModule, BmSD
     public unsafe void XI_HeavyTankScan_ThreeDeeAnimComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleHeavyTankScanBase.XI_HeavyTankScan_ThreeDeeAnimComplete", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -49,7 +50,7 @@ public partial class RHudModuleHeavyTankScanBase : BmSDK.BmGame.RHudModule, BmSD
     public unsafe void XI_HeavyTankScan_ScanResolved(float proportion_revealed_this_scan, float total_proportion_revealed, float scan_angle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleHeavyTankScanBase.XI_HeavyTankScan_ScanResolved", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(proportion_revealed_this_scan, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(total_proportion_revealed, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(scan_angle, paramsPtr + 8);
@@ -63,7 +64,7 @@ public partial class RHudModuleHeavyTankScanBase : BmSDK.BmGame.RHudModule, BmSD
     public unsafe void AnalyseAndOutro()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleHeavyTankScanBase.AnalyseAndOutro", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -74,7 +75,7 @@ public partial class RHudModuleHeavyTankScanBase : BmSDK.BmGame.RHudModule, BmSD
     public unsafe void RevealParts(float AngleRangeDegrees, float AngleRangeForBack)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleHeavyTankScanBase.RevealParts", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AngleRangeDegrees, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AngleRangeForBack, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -87,7 +88,7 @@ public partial class RHudModuleHeavyTankScanBase : BmSDK.BmGame.RHudModule, BmSD
     public unsafe void SetAngles(float tank_angle_degrees, float turret_angle_degrees)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleHeavyTankScanBase.SetAngles", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(tank_angle_degrees, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(turret_angle_degrees, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

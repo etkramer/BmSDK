@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVisualDamageComponent<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK
     public unsafe void ConstraintBrokenNotify(BmSDK.Engine.SkeletalMeshComponent SkelComp, BmSDK.Engine.Actor ConOwner, BmSDK.Engine.RB_ConstraintSetup ConSetup, BmSDK.Engine.RB_ConstraintInstance ConInstance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVisualDamageComponent.ConstraintBrokenNotify", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[68];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SkelComp, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ConOwner, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ConSetup, paramsPtr + 16);
@@ -53,7 +54,7 @@ public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK
     public unsafe void SpawnImpactEffects(BmSDK.Engine.SkeletalMeshComponent OwnerMeshComp, int BodyIndex, BmSDK.Engine.Actor Other, System.Numerics.Vector3 WorldPos, float Speed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVisualDamageComponent.SpawnImpactEffects", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[56];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OwnerMeshComp, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BodyIndex, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 12);
@@ -69,7 +70,7 @@ public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK
     public unsafe void Inititalise(BmSDK.Engine.SkeletalMeshComponent OwnerMeshComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVisualDamageComponent.Inititalise", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OwnerMeshComp, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -81,7 +82,7 @@ public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK
     public unsafe void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVisualDamageComponent.Tick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -100,7 +101,7 @@ public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK
     public unsafe bool IsPartBrokenOff(BmSDK.Engine.SkeletalMeshComponent SkelComp, BmSDK.FName BoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVisualDamageComponent.IsPartBrokenOff", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SkelComp, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BoneName, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -120,7 +121,7 @@ public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK
     public unsafe void HideBonesOnSmashed(BmSDK.Engine.SkeletalMeshComponent SkelComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVisualDamageComponent.HideBonesOnSmashed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SkelComp, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -139,7 +140,7 @@ public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK
     public unsafe void HidePart(BmSDK.Engine.SkeletalMeshComponent SkelComp, BmSDK.FName BoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVisualDamageComponent.HidePart", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SkelComp, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BoneName, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -159,7 +160,7 @@ public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK
     public unsafe void BreakOffPart(BmSDK.Engine.SkeletalMeshComponent SkelComp, BmSDK.FName BoneName, bool KeepConstraint = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVisualDamageComponent.BreakOffPart", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SkelComp, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BoneName, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(KeepConstraint, paramsPtr + 16);
@@ -180,7 +181,7 @@ public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK
     public unsafe void VehicleExploded(BmSDK.Engine.SkeletalMeshComponent SkelComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVisualDamageComponent.VehicleExploded", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SkelComp, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -199,7 +200,7 @@ public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK
     public unsafe void SpawnEffects(BmSDK.Engine.SkeletalMeshComponent SkelComp, BmSDK.FName BoneName, BmSDK.BmGame.RVisualDamageComponent.EVehicleDamageEffectCond Condition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVisualDamageComponent.SpawnEffects", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[17];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SkelComp, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BoneName, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Condition, paramsPtr + 16);
@@ -220,7 +221,7 @@ public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK
     public unsafe void ApplyVisualDamage(BmSDK.Engine.SkeletalMeshComponent SkelComp, System.Numerics.Vector3 WorldPos, float Radius, float Amount, bool bDeformAllowed, bool bSmashGlass, float PartBreakOffImpulse)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVisualDamageComponent.ApplyVisualDamage", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SkelComp, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WorldPos, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Radius, paramsPtr + 20);
@@ -242,7 +243,7 @@ public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK
     /// <summary>
     /// Struct: FVisualDamageEffect
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 76)]
     public partial record struct FVisualDamageEffect
     {
         /// <summary>
@@ -462,7 +463,7 @@ public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK
     /// <summary>
     /// Struct: FBoneToHide
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FBoneToHide
     {
         /// <summary>

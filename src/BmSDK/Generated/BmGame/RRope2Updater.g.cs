@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRope2Updater<br/>
+/// (size = 96)
 /// (flags = 0)
 /// </summary>
 public partial class RRope2Updater : BmSDK.GameObject, BmSDK.IGameObject

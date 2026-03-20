@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LandscapeComponent<br/>
+/// (size = 836)
 /// (flags = 0)
 /// </summary>
 public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Struct: FWeightmapLayerAllocationInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 10)]
     public partial record struct FWeightmapLayerAllocationInfo
     {
         /// <summary>

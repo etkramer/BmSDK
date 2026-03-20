@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: SeqAct_AkStartMusic<br/>
+/// (size = 352)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_AkStartMusic : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_LineLauncher<br/>
+/// (size = 904)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_LineLauncher : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject

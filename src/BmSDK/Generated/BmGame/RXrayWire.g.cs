@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RXrayWire<br/>
+/// (size = 964)
 /// (flags = 0)
 /// </summary>
 public partial class RXrayWire : BmSDK.BmGame.RXrayInterpActor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RXrayWire : BmSDK.BmGame.RXrayInterpActor, BmSDK.IGameObjec
     public unsafe void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RXrayWire.Tick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

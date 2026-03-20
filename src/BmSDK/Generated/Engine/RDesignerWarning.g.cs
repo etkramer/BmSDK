@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RDesignerWarning<br/>
+/// (size = 104)
 /// (flags = 0)
 /// </summary>
 public partial class RDesignerWarning : BmSDK.Engine.LocalMessage, BmSDK.IGameObject

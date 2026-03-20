@@ -5,6 +5,7 @@ namespace BmSDK;
 
 /// <summary>
 /// Class: NameProperty<br/>
+/// (size = 148)
 /// (flags = 0)
 /// </summary>
 public partial class NameProperty : BmSDK.Property, BmSDK.IGameObject

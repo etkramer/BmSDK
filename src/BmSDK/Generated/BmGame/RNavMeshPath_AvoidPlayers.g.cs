@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RNavMeshPath_AvoidPlayers<br/>
+/// (size = 140)
 /// (flags = 0)
 /// </summary>
 public partial class RNavMeshPath_AvoidPlayers : BmSDK.Engine.NavMeshPathConstraint, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RNavMeshPath_AvoidPlayers : BmSDK.Engine.NavMeshPathConstra
     public unsafe static bool AvoidPlayers(BmSDK.BmGame.RNavigationHandle NavHandle, float NewAvoidStrength = default, float NewAvoidRadius = default, float NewFailThreshold = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_AvoidPlayers.AvoidPlayers", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NavHandle, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewAvoidStrength, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewAvoidRadius, paramsPtr + 12);
@@ -53,7 +54,7 @@ public partial class RNavMeshPath_AvoidPlayers : BmSDK.Engine.NavMeshPathConstra
     public unsafe void SetPlayerLocations(BmSDK.BmGame.RNavigationHandle NavHandle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_AvoidPlayers.SetPlayerLocations", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NavHandle, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

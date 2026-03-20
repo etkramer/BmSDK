@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_SetChapter<br/>
+/// (size = 360)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SetChapter : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

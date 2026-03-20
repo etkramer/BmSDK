@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRope2AutoLengthUpdater<br/>
+/// (size = 116)
 /// (flags = 0)
 /// </summary>
 public partial class RRope2AutoLengthUpdater : BmSDK.BmGame.RRope2Updater, BmSDK.IGameObject

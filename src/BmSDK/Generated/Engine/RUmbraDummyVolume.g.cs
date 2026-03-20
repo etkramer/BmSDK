@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RUmbraDummyVolume<br/>
+/// (size = 740)
 /// (flags = 0)
 /// </summary>
 public partial class RUmbraDummyVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

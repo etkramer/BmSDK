@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveInstance_BatmobileInterrogationBase<br/>
+/// (size = 876)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveInstance_BatmobileInterrogationBase : BmSDK.BmGame.RSpecialMoveInstance, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RSpecialMoveInstance_BatmobileInterrogationBase : BmSDK.BmG
     public unsafe void GetRootPointFromBatmanAnimation(BmSDK.Engine.AnimSequence BatmanAnimation, float TimeInAnim, out System.Numerics.Vector3 RootLoc, out BmSDK.Rotator RootRot, int bUseRefPoint = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_BatmobileInterrogationBase.GetRootPointFromBatmanAnimation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BatmanAnimation, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TimeInAnim, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bUseRefPoint, paramsPtr + 36);

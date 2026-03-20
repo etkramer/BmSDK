@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NavMeshPath_EnforceTwoWayEdges<br/>
+/// (size = 108)
 /// (flags = 0)
 /// </summary>
 public partial class NavMeshPath_EnforceTwoWayEdges : BmSDK.Engine.NavMeshPathConstraint, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class NavMeshPath_EnforceTwoWayEdges : BmSDK.Engine.NavMeshPathCo
     public unsafe static bool EnforceTwoWayEdges(BmSDK.Engine.NavigationHandle NavHandle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPath_EnforceTwoWayEdges.EnforceTwoWayEdges", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NavHandle, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);

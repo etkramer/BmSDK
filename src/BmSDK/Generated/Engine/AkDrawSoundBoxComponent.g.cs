@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkDrawSoundBoxComponent<br/>
+/// (size = 572)
 /// (flags = 0)
 /// </summary>
 public partial class AkDrawSoundBoxComponent : BmSDK.Engine.DrawBoxComponent, BmSDK.IGameObject

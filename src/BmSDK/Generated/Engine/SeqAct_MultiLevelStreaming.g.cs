@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_MultiLevelStreaming<br/>
+/// (size = 412)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_MultiLevelStreaming : BmSDK.Engine.SeqAct_LevelStreamingBase, BmSDK.IGameObject
@@ -80,7 +81,7 @@ public partial class SeqAct_MultiLevelStreaming : BmSDK.Engine.SeqAct_LevelStrea
     /// <summary>
     /// Struct: FLevelStreamingNameCombo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FLevelStreamingNameCombo
     {
         /// <summary>

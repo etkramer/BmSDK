@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCharacterScaleReferenceBase<br/>
+/// (size = 684)
 /// (flags = 0)
 /// </summary>
 public partial class RCharacterScaleReferenceBase : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RCharacterScaleReferenceBase : BmSDK.Engine.Actor, BmSDK.IG
     public unsafe void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterScaleReferenceBase.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -90,7 +91,7 @@ public partial class RCharacterScaleReferenceBase : BmSDK.Engine.Actor, BmSDK.IG
     /// <summary>
     /// Struct: FSkeletalMeshSettings
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FSkeletalMeshSettings
     {
         /// <summary>

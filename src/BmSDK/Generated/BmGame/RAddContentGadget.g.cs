@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAddContentGadget<br/>
+/// (size = 112)
 /// (flags = 0)
 /// </summary>
 public partial class RAddContentGadget : BmSDK.BmGame.RAdditionalContent, BmSDK.IGameObject

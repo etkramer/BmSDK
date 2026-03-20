@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RFlapsAssetInstance<br/>
+/// (size = 220)
 /// (flags = 0)
 /// </summary>
 public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void WakeUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlapsAssetInstance.WakeUp", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -56,7 +57,7 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void PutToSleep(bool bDeepSleep)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlapsAssetInstance.PutToSleep", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bDeepSleep, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -272,7 +273,7 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRFlapsInstanceRenderData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 100)]
     public partial record struct FRFlapsInstanceRenderData
     {
         /// <summary>
@@ -315,7 +316,7 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRFlapsParticleInstanceRenderData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 40)]
     public partial record struct FRFlapsParticleInstanceRenderData
     {
         /// <summary>
@@ -376,7 +377,7 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRCollisionConstraintDataEntry
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FRCollisionConstraintDataEntry
     {
         /// <summary>
@@ -457,7 +458,7 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRAnimBlendConstraintDataEntry
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 104)]
     public partial record struct FRAnimBlendConstraintDataEntry
     {
         /// <summary>
@@ -514,7 +515,7 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRAnimBlendConstraintBoneFrameDataEntry
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FRAnimBlendConstraintBoneFrameDataEntry
     {
         /// <summary>
@@ -548,7 +549,7 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRAnimConstraintDataEntry
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FRAnimConstraintDataEntry
     {
         /// <summary>
@@ -591,7 +592,7 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRWriteBackMapEntry
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 65)]
     public partial record struct FRWriteBackMapEntry
     {
         /// <summary>
@@ -641,7 +642,7 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRWriteBackParticleData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FRWriteBackParticleData
     {
         /// <summary>
@@ -675,7 +676,7 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRFlapsBodyMapEntry
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FRFlapsBodyMapEntry
     {
         /// <summary>

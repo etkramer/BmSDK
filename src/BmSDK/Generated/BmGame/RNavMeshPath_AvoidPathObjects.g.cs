@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RNavMeshPath_AvoidPathObjects<br/>
+/// (size = 124)
 /// (flags = 0)
 /// </summary>
 public partial class RNavMeshPath_AvoidPathObjects : BmSDK.Engine.NavMeshPathConstraint, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RNavMeshPath_AvoidPathObjects : BmSDK.Engine.NavMeshPathCon
     public unsafe static bool AvoidPathObjects(BmSDK.BmGame.RNavigationHandle NewNavHandle, BmSDK.Engine.Actor AvoidObject1, BmSDK.Engine.Actor AvoidObject2 = default, BmSDK.Engine.Actor AvoidObject3 = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_AvoidPathObjects.AvoidPathObjects", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewNavHandle, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AvoidObject1, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AvoidObject2, paramsPtr + 16);
@@ -53,7 +54,7 @@ public partial class RNavMeshPath_AvoidPathObjects : BmSDK.Engine.NavMeshPathCon
     public unsafe static bool AvoidPathObjectArray(BmSDK.BmGame.RNavigationHandle NewNavHandle, BmSDK.TArray<BmSDK.Engine.Actor> AvoidObjectList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_AvoidPathObjects.AvoidPathObjectArray", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewNavHandle, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AvoidObjectList, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -66,7 +67,7 @@ public partial class RNavMeshPath_AvoidPathObjects : BmSDK.Engine.NavMeshPathCon
     public unsafe static bool AvoidPathObject(BmSDK.BmGame.RNavigationHandle NewNavHandle, BmSDK.Engine.Actor AvoidObject1)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_AvoidPathObjects.AvoidPathObject", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewNavHandle, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AvoidObject1, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

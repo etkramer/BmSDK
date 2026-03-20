@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleSystemComponent<br/>
+/// (size = 972)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetStopSpawning(int InEmitterIndex, bool bInStopSpawning)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetStopSpawning", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InEmitterIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bInStopSpawning, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -58,7 +59,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void ResetToDefaults()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.ResetToDefaults", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -76,7 +77,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetActive(bool bNowActive, bool bFlagAsJustAttached = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetActive", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bNowActive, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bFlagAsJustAttached, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -96,7 +97,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetVectorArrayElementParameter(BmSDK.FName ParameterName, int Index, System.Numerics.Vector3 Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetVectorArrayElementParameter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Param, paramsPtr + 12);
@@ -117,7 +118,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetVectorArrayParameter(BmSDK.FName ParameterName, out BmSDK.TArray<System.Numerics.Vector3> Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetVectorArrayParameter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -137,7 +138,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void ClearParameter(BmSDK.FName ParameterName, BmSDK.Engine.ParticleSystemComponent.EParticleSysParamType ParameterType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.ClearParameter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[9];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterType, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -157,7 +158,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe bool GetMaterialParameter(BmSDK.FName InName, out BmSDK.Engine.MaterialInterface OutMaterial)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetMaterialParameter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -177,7 +178,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe bool GetActorParameter(BmSDK.FName InName, out BmSDK.Engine.Actor OutActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetActorParameter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -197,7 +198,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe bool GetColorParameter(BmSDK.FName InName, out BmSDK.GameObject.FColor OutColor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetColorParameter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -217,7 +218,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe bool GetVectorParameter(BmSDK.FName InName, out System.Numerics.Vector3 OutVector)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetVectorParameter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -237,7 +238,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe bool GetFloatParameter(BmSDK.FName InName, out float OutFloat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetFloatParameter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -257,7 +258,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetSpawnScale(float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetSpawnScale", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -276,7 +277,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe float GetSpawnScale()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetSpawnScale", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -294,7 +295,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetMaterialParameter(BmSDK.FName ParameterName, BmSDK.Engine.MaterialInterface Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetMaterialParameter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Param, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -314,7 +315,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetActorParameter(BmSDK.FName ParameterName, BmSDK.Engine.Actor Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetActorParameter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Param, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -334,7 +335,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetColorParameter(BmSDK.FName ParameterName, BmSDK.GameObject.FColor Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetColorParameter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Param, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -354,7 +355,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetVectorRandParameter(BmSDK.FName ParameterName, out System.Numerics.Vector3 Param, out System.Numerics.Vector3 ParamLow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetVectorRandParameter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -375,7 +376,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetVectorParameter(BmSDK.FName ParameterName, System.Numerics.Vector3 Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetVectorParameter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Param, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -395,7 +396,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetFloatRandParameter(BmSDK.FName ParameterName, float Param, float ParamLow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetFloatRandParameter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Param, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamLow, paramsPtr + 12);
@@ -416,7 +417,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetFloatParameter(BmSDK.FName ParameterName, float Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetFloatParameter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParameterName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Param, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -436,7 +437,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe int GetEditorLODLevel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetEditorLODLevel", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -454,7 +455,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe int GetLODLevel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetLODLevel", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -472,7 +473,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetEditorLODLevel(int InLODLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetEditorLODLevel", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InLODLevel, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -491,7 +492,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetLODLevel(int InLODLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetLODLevel", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InLODLevel, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -510,7 +511,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetEmitterRate(int EmitterIndex, float MinRate, float MaxRate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetEmitterRate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EmitterIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MinRate, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MaxRate, paramsPtr + 8);
@@ -531,7 +532,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe bool SystemHasCompleted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SystemHasCompleted", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -549,7 +550,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe float GetMaxLifespan()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetMaxLifespan", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -567,7 +568,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe bool AnyParticlesActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.AnyParticlesActive", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -585,7 +586,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetBaseVelocityRadial(System.Numerics.Vector3 pos, float velInner, float velOuter, float Radius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBaseVelocityRadial", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(pos, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(velInner, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(velOuter, paramsPtr + 16);
@@ -607,7 +608,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe int DetermineLODLevelForLocation(out System.Numerics.Vector3 EffectLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.DetermineLODLevelForLocation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -626,7 +627,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetBeamTargetStrength(int EmitterIndex, float NewTargetStrength, int TargetIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamTargetStrength", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EmitterIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewTargetStrength, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetIndex, paramsPtr + 8);
@@ -647,7 +648,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetBeamTargetTangent(int EmitterIndex, System.Numerics.Vector3 NewTangentPoint, int TargetIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamTargetTangent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EmitterIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewTangentPoint, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetIndex, paramsPtr + 16);
@@ -668,7 +669,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetBeamTargetActor(int EmitterIndex, BmSDK.Engine.Actor Actor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamTargetActor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EmitterIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Actor, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -688,7 +689,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetBeamTargetPoint(int EmitterIndex, System.Numerics.Vector3 NewTargetPoint, int TargetIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamTargetPoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EmitterIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewTargetPoint, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetIndex, paramsPtr + 16);
@@ -709,7 +710,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetBeamSourceStrength(int EmitterIndex, float NewSourceStrength, int SourceIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamSourceStrength", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EmitterIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewSourceStrength, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SourceIndex, paramsPtr + 8);
@@ -730,7 +731,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetBeamSourceTangent(int EmitterIndex, System.Numerics.Vector3 NewTangentPoint, int SourceIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamSourceTangent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EmitterIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewTangentPoint, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SourceIndex, paramsPtr + 16);
@@ -751,7 +752,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetBeamSourceActor(int EmitterIndex, BmSDK.Engine.Actor Actor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamSourceActor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EmitterIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Actor, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -771,7 +772,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetBeamSourcePoint(int EmitterIndex, System.Numerics.Vector3 NewSourcePoint, int SourceIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamSourcePoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EmitterIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewSourcePoint, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SourceIndex, paramsPtr + 16);
@@ -792,7 +793,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetBeamDistance(int EmitterIndex, float Distance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamDistance", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EmitterIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Distance, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -812,7 +813,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetBeamEndPoint(int EmitterIndex, System.Numerics.Vector3 NewEndPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamEndPoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EmitterIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewEndPoint, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -832,7 +833,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetBeamTessellationFactor(int EmitterIndex, float NewFactor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamTessellationFactor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EmitterIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewFactor, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -852,7 +853,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetBeamType(int EmitterIndex, int NewMethod)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetBeamType", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EmitterIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMethod, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -872,7 +873,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void RewindEmitterInstances()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.RewindEmitterInstances", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -890,7 +891,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void RewindEmitterInstance(int EmitterIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.RewindEmitterInstance", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EmitterIndex, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -909,7 +910,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetKillOnCompleted(int EmitterIndex, bool bKill)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetKillOnCompleted", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EmitterIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bKill, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -929,7 +930,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetKillOnDeactivate(int EmitterIndex, bool bKill)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetKillOnDeactivate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EmitterIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bKill, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -949,7 +950,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe bool GetSkipBoundsUpdate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetSkipBoundsUpdate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -967,7 +968,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetSkipBoundsUpdate(bool bInSkipBoundsUpdate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetSkipBoundsUpdate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bInSkipBoundsUpdate, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -986,7 +987,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe bool GetSkipUpdateDynamicDataDuringTick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.GetSkipUpdateDynamicDataDuringTick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1004,7 +1005,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetSkipUpdateDynamicDataDuringTick(bool bInSkipUpdateDynamicDataDuringTick)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetSkipUpdateDynamicDataDuringTick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bInSkipUpdateDynamicDataDuringTick, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1023,7 +1024,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void KillParticlesInEmitter(BmSDK.FName InEmitterName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.KillParticlesInEmitter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InEmitterName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1042,7 +1043,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void ForceKillParticlesWithEvents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.ForceKillParticlesWithEvents", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1060,7 +1061,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void ResetSpawnFraction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.ResetSpawnFraction", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1078,7 +1079,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void NotifyEnteringStasis()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.NotifyEnteringStasis", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1096,7 +1097,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void KillParticlesForced()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.KillParticlesForced", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1114,7 +1115,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void DeactivateSystemDeferred()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.DeactivateSystemDeferred", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1132,7 +1133,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void DeactivateSystem()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.DeactivateSystem", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1150,7 +1151,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void ActivateSystemDeferred(bool bFlagAsJustAttached = default, bool DontUpdateTransform = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.ActivateSystemDeferred", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bFlagAsJustAttached, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DontUpdateTransform, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1170,7 +1171,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void ActivateSystem(bool bFlagAsJustAttached = default, bool DontUpdateTransform = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.ActivateSystem", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bFlagAsJustAttached, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DontUpdateTransform, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1190,7 +1191,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void SetTemplate(BmSDK.Engine.ParticleSystem NewTemplate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.SetTemplate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewTemplate, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1209,7 +1210,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     public unsafe void OnSystemFinished(BmSDK.Engine.ParticleSystemComponent PSystem)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ParticleSystemComponent.OnSystemFinished", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PSystem, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1218,7 +1219,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Struct: FParticleEventKismetData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 68)]
     public partial record struct FParticleEventKismetData
     {
         /// <summary>
@@ -1243,7 +1244,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Struct: FParticleEventAttractorCollideData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 84)]
     public partial record struct FParticleEventAttractorCollideData
     {
     }
@@ -1251,7 +1252,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Struct: FParticleEventCollideData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 84)]
     public partial record struct FParticleEventCollideData
     {
         /// <summary>
@@ -1303,7 +1304,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Struct: FParticleEventDeathData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 56)]
     public partial record struct FParticleEventDeathData
     {
         /// <summary>
@@ -1319,7 +1320,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Struct: FParticleEventSpawnData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 52)]
     public partial record struct FParticleEventSpawnData
     {
     }
@@ -1327,7 +1328,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Struct: FParticleEventData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 52)]
     public partial record struct FParticleEventData
     {
         /// <summary>
@@ -1415,7 +1416,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Struct: FParticleSysParam
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 72)]
     public partial record struct FParticleSysParam
     {
         /// <summary>
@@ -1529,7 +1530,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Struct: FViewParticleEmitterInstanceMotionBlurInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 72)]
     public partial record struct FViewParticleEmitterInstanceMotionBlurInfo
     {
         /// <summary>
@@ -1545,7 +1546,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Struct: FParticleEmitterInstanceMotionBlurInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 72)]
     public partial record struct FParticleEmitterInstanceMotionBlurInfo
     {
         /// <summary>
@@ -1561,7 +1562,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Struct: FParticleEmitterInstance
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
     public partial record struct FParticleEmitterInstance
     {
     }

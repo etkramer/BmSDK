@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexDynamicComponent<br/>
+/// (size = 676)
 /// (flags = 0)
 /// </summary>
 public partial class ApexDynamicComponent : BmSDK.Engine.ApexComponentBase, BmSDK.IGameObject

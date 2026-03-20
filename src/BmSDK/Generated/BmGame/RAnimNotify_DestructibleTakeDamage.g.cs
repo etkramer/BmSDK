@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_DestructibleTakeDamage<br/>
+/// (size = 112)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_DestructibleTakeDamage : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

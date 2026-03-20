@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_Taunting<br/>
+/// (size = 112)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_Taunting : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

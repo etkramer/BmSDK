@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionStaticBool<br/>
+/// (size = 176)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionStaticBool : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

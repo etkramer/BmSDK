@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHarpoonDragBase<br/>
+/// (size = 960)
 /// (flags = 0)
 /// </summary>
 public partial class RHarpoonDragBase : BmSDK.Engine.InterpActor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RHarpoonDragBase : BmSDK.Engine.InterpActor, BmSDK.IGameObj
     public unsafe BmSDK.BmGame.RHarpoonDragBase.DragMovingState MoveObject(System.Numerics.Vector3 Direction, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHarpoonDragBase.MoveObject", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[17];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Direction, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 12);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

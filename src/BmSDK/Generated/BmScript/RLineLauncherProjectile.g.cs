@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RLineLauncherProjectile<br/>
+/// (size = 852)
 /// (flags = 0)
 /// </summary>
 public partial class RLineLauncherProjectile : BmSDK.BmGame.RProjectileWithRope, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RLineLauncherProjectile : BmSDK.BmGame.RProjectileWithRope,
     public unsafe void ReachedDest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLineLauncherProjectile.ReachedDest", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -84,7 +85,7 @@ public partial class RLineLauncherProjectile : BmSDK.BmGame.RProjectileWithRope,
     public unsafe void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLineLauncherProjectile.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

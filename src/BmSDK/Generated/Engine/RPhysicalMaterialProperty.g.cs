@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RPhysicalMaterialProperty<br/>
+/// (size = 508)
 /// (flags = 0)
 /// </summary>
 public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPropertyBase, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
     public unsafe static void SpawnActualHitEffect(BmSDK.Engine.Actor.FImpactInfo Impact, BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo PhysImpactInfo, BmSDK.Engine.AkEvent ImpactSound, bool bPlaySound = default, float Wetness = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPhysicalMaterialProperty.SpawnActualHitEffect", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[268];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Impact, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PhysImpactInfo, paramsPtr + 96);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ImpactSound, paramsPtr + 140);
@@ -54,7 +55,7 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
     public unsafe void SpawnHitEffect(BmSDK.Engine.Actor.FImpactInfo Impact, BmSDK.Engine.RPhysicalMaterialProperty.EPhysMaterialImpactTypes ImpactType, BmSDK.Engine.AkEvent ImpactSound, bool bPlaySound = default, float Wetness = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPhysicalMaterialProperty.SpawnHitEffect", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[360];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Impact, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ImpactType, paramsPtr + 96);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ImpactSound, paramsPtr + 100);
@@ -70,7 +71,7 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
     public unsafe static void SpawnHitDefaultEffect(BmSDK.Engine.Actor.FImpactInfo Impact, BmSDK.Engine.RPhysicalMaterialProperty.EPhysMaterialImpactTypes ImpactType, BmSDK.Engine.AkEvent SoundImpact, bool bPlaySound = default, float Wetness = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPhysicalMaterialProperty.SpawnHitDefaultEffect", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[124];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Impact, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ImpactType, paramsPtr + 96);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SoundImpact, paramsPtr + 100);
@@ -86,7 +87,7 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
     public unsafe void HitEffectParticleSystemFinished(BmSDK.Engine.ParticleSystemComponent PSC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPhysicalMaterialProperty.HitEffectParticleSystemFinished", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PSC, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -95,7 +96,7 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
     /// <summary>
     /// Struct: FAdvancedImpactEffectInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 48)]
     public partial record struct FAdvancedImpactEffectInfo
     {
         /// <summary>
@@ -177,7 +178,7 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
     /// <summary>
     /// Struct: FAdvancedImpactDamageStateInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 304)]
     public partial record struct FAdvancedImpactDamageStateInfo
     {
         /// <summary>
@@ -400,7 +401,7 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
     /// <summary>
     /// Struct: FAdvancedImpactDamageStateEntryInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FAdvancedImpactDamageStateEntryInfo
     {
         /// <summary>
@@ -434,7 +435,7 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
     /// <summary>
     /// Struct: FAdvancedImpactDecalData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FAdvancedImpactDecalData
     {
         /// <summary>
@@ -493,7 +494,7 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
     /// <summary>
     /// Struct: FImpactEffectInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FImpactEffectInfo
     {
         /// <summary>
@@ -647,7 +648,7 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
     /// <summary>
     /// Struct: FMaterialFootstepInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 60)]
     public partial record struct FMaterialFootstepInfo
     {
         /// <summary>

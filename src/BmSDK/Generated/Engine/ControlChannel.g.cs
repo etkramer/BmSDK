@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ControlChannel<br/>
+/// (size = 168)
 /// (flags = 0)
 /// </summary>
 public partial class ControlChannel : BmSDK.Engine.Channel, BmSDK.IGameObject

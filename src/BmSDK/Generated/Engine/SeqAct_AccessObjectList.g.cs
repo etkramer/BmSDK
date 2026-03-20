@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_AccessObjectList<br/>
+/// (size = 364)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_AccessObjectList : BmSDK.Engine.SeqAct_SetSequenceVariable, BmSDK.IGameObject

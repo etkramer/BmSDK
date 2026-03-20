@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_NinjaSwordCombo<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_NinjaSwordCombo : BmSDK.BmGame.RDmgType_NinjaSword, BmSDK.IGameObject

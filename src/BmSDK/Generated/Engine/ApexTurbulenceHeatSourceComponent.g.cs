@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexTurbulenceHeatSourceComponent<br/>
+/// (size = 640)
 /// (flags = 0)
 /// </summary>
 public partial class ApexTurbulenceHeatSourceComponent : BmSDK.Engine.ApexFieldSamplerComponent, BmSDK.IGameObject

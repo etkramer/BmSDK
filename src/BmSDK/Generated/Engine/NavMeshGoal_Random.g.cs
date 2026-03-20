@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NavMeshGoal_Random<br/>
+/// (size = 128)
 /// (flags = 0)
 /// </summary>
 public partial class NavMeshGoal_Random : BmSDK.Engine.NavMeshPathGoalEvaluator, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class NavMeshGoal_Random : BmSDK.Engine.NavMeshPathGoalEvaluator,
     public unsafe void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshGoal_Random.Recycle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -49,7 +50,7 @@ public partial class NavMeshGoal_Random : BmSDK.Engine.NavMeshPathGoalEvaluator,
     public unsafe void RecycleNative()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshGoal_Random.RecycleNative", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -67,7 +68,7 @@ public partial class NavMeshGoal_Random : BmSDK.Engine.NavMeshPathGoalEvaluator,
     public unsafe static bool FindRandom(BmSDK.Engine.NavigationHandle NavHandle, int InMinDist = default, int InMaxPathVisits = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshGoal_Random.FindRandom", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NavHandle, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InMinDist, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InMaxPathVisits, paramsPtr + 12);

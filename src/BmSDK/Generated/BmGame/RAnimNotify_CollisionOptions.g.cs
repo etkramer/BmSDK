@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_CollisionOptions<br/>
+/// (size = 92)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_CollisionOptions : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkCurve<br/>
+/// (size = 112)
 /// (flags = 0)
 /// </summary>
 public partial class AkCurve : BmSDK.Engine.AkHash, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AkCurve : BmSDK.Engine.AkHash, BmSDK.IGameObject
     public unsafe float Map(float Input)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkCurve.Map", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Input, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -63,7 +64,7 @@ public partial class AkCurve : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAkCurveData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FAkCurveData
     {
         /// <summary>
@@ -88,7 +89,7 @@ public partial class AkCurve : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAkCurvePoint
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 9)]
     public partial record struct FAkCurvePoint
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_ShockedStumble<br/>
+/// (size = 236)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_ShockedStumble : BmSDK.BmGame.RDmgType_Strike, BmSDK.IGameObject

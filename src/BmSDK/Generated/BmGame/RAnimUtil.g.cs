@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimUtil<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.BmGame.RAnimUtil.FMeetingPoints GetMeetingPoints(float Begin, float End)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimUtil.GetMeetingPoints", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[104];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Begin, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(End, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -48,7 +49,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FMeetingPoints
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 48)]
     public partial record struct FMeetingPoints
     {
         /// <summary>
@@ -91,7 +92,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRelativeTarget
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 41)]
     public partial record struct FRelativeTarget
     {
         /// <summary>
@@ -157,7 +158,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FDirectionalAnimState
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 52)]
     public partial record struct FDirectionalAnimState
     {
         /// <summary>
@@ -279,7 +280,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCycleTime
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FCycleTime
     {
         /// <summary>
@@ -304,7 +305,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCyclePhase
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FCyclePhase
     {
         /// <summary>
@@ -329,7 +330,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimTarget
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FAnimTarget
     {
         /// <summary>
@@ -410,7 +411,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FYawPitch
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FYawPitch
     {
         /// <summary>
@@ -435,7 +436,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FNotifyAnim
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 28)]
     public partial record struct FNotifyAnim
     {
         /// <summary>
@@ -490,7 +491,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FChaser
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FChaser
     {
         /// <summary>
@@ -549,7 +550,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FProportionalMotion
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 68)]
     public partial record struct FProportionalMotion
     {
         /// <summary>
@@ -628,7 +629,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRotationTranslation
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 28)]
     public partial record struct FRotationTranslation
     {
         /// <summary>
@@ -653,7 +654,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FResolvedAdditiveAnimConfig
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FResolvedAdditiveAnimConfig
     {
         /// <summary>
@@ -696,7 +697,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FResolvedAnimConfig
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FResolvedAnimConfig
     {
         /// <summary>
@@ -776,7 +777,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FNormalizedTimeSpan
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FNormalizedTimeSpan
     {
         /// <summary>
@@ -822,7 +823,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRagdollIndices
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 192)]
     public partial record struct FRagdollIndices
     {
         /// <summary>
@@ -937,7 +938,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRagdollParts
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 4)]
     public partial record struct FRagdollParts
     {
         /// <summary>

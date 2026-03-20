@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_JokerHallucinationControllerBase<br/>
+/// (size = 404)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_JokerHallucinationControllerBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject

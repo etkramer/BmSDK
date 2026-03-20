@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleTypeDataApex<br/>
+/// (size = 188)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleTypeDataApex : BmSDK.Engine.ParticleModuleTypeDataBase, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class ParticleModuleTypeDataApex : BmSDK.Engine.ParticleModuleTyp
     /// <summary>
     /// Struct: FApexLODAsset
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FApexLODAsset
     {
         /// <summary>

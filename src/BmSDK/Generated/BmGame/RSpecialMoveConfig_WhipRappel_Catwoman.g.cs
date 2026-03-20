@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_WhipRappel_Catwoman<br/>
+/// (size = 544)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_WhipRappel_Catwoman : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject

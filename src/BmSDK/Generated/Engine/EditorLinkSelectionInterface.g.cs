@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: EditorLinkSelectionInterface<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class EditorLinkSelectionInterface : BmSDK.Interface, BmSDK.IGameObject

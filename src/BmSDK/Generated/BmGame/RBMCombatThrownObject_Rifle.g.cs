@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMCombatThrownObject_Rifle<br/>
+/// (size = 1184)
 /// (flags = 0)
 /// </summary>
 public partial class RBMCombatThrownObject_Rifle : BmSDK.BmGame.RBMCombatThrownObject, BmSDK.IGameObject

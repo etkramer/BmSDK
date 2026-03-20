@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RStealthTakedownStage_ChainTakedown_FearFromAboveOnSpotEnd<br/>
+/// (size = 1844)
 /// (flags = 0)
 /// </summary>
 public partial class RStealthTakedownStage_ChainTakedown_FearFromAboveOnSpotEnd : BmSDK.BmScript.RStealthTakedownStage_ChainTakedown_FearFromAboveEnd, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RStealthTakedownStage_ChainTakedown_FearFromAboveOnSpotEnd 
     public unsafe int GetStageAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_ChainTakedown_FearFromAboveOnSpotEnd.GetStageAnim", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }

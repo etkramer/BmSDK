@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_OmnitronRemoteControl<br/>
+/// (size = 416)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_OmnitronRemoteControl : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject

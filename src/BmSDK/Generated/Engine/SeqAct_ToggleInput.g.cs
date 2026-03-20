@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_ToggleInput<br/>
+/// (size = 356)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_ToggleInput : BmSDK.Engine.SeqAct_Toggle, BmSDK.IGameObject

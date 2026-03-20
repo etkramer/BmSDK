@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SpotLightComponent<br/>
+/// (size = 820)
 /// (flags = 0)
 /// </summary>
 public partial class SpotLightComponent : BmSDK.Engine.PointLightComponent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class SpotLightComponent : BmSDK.Engine.PointLightComponent, BmSD
     public unsafe void SetAngleAndRadius(float NewInnerConeAngle, float NewOuterConeAngle, float NewRadius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SpotLightComponent.SetAngleAndRadius", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInnerConeAngle, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewOuterConeAngle, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewRadius, paramsPtr + 8);
@@ -59,7 +60,7 @@ public partial class SpotLightComponent : BmSDK.Engine.PointLightComponent, BmSD
     public unsafe void SetAbsoluteRotation(bool bNewAbsoluteRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SpotLightComponent.SetAbsoluteRotation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bNewAbsoluteRotation, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -78,7 +79,7 @@ public partial class SpotLightComponent : BmSDK.Engine.PointLightComponent, BmSD
     public unsafe void SetRotation(BmSDK.Rotator NewRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SpotLightComponent.SetRotation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewRotation, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_AutoJez<br/>
+/// (size = 492)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_AutoJez : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RSeqAct_AutoJez : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameOb
     /// <summary>
     /// Struct: FAutoJezChapter
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FAutoJezChapter
     {
         /// <summary>

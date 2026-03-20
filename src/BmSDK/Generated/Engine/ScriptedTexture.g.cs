@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ScriptedTexture<br/>
+/// (size = 368)
 /// (flags = 0)
 /// </summary>
 public partial class ScriptedTexture : BmSDK.Engine.TextureRenderTarget2D, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class ScriptedTexture : BmSDK.Engine.TextureRenderTarget2D, BmSDK
     public unsafe void Render(BmSDK.Engine.Canvas C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ScriptedTexture.Render", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(C, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

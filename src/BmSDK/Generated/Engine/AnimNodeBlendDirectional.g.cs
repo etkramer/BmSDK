@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNodeBlendDirectional<br/>
+/// (size = 332)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNodeBlendDirectional : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObject

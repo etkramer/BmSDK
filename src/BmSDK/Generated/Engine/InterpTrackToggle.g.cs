@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackToggle<br/>
+/// (size = 200)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackToggle : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
@@ -89,7 +90,7 @@ public partial class InterpTrackToggle : BmSDK.Engine.InterpTrack, BmSDK.IGameOb
     /// <summary>
     /// Struct: FToggleTrackKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 5)]
     public partial record struct FToggleTrackKey
     {
         /// <summary>

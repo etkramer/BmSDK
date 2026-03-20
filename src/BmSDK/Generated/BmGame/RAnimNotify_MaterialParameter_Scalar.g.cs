@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_MaterialParameter_Scalar<br/>
+/// (size = 96)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_MaterialParameter_Scalar : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

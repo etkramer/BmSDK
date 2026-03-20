@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSkelControlDeformVehicle<br/>
+/// (size = 284)
 /// (flags = 0)
 /// </summary>
 public partial class RSkelControlDeformVehicle : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject
@@ -62,7 +63,7 @@ public partial class RSkelControlDeformVehicle : BmSDK.Engine.SkelControlBase, B
     /// <summary>
     /// Struct: FDeformVehicleBone
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 28)]
     public partial record struct FDeformVehicleBone
     {
         /// <summary>

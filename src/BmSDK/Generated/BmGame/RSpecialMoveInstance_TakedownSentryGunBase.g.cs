@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveInstance_TakedownSentryGunBase<br/>
+/// (size = 900)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveInstance_TakedownSentryGunBase : BmSDK.BmGame.RSpecialMoveInstance, BmSDK.IGameObject

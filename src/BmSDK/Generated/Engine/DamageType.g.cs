@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DamageType<br/>
+/// (size = 160)
 /// (flags = 0)
 /// </summary>
 public partial class DamageType : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class DamageType : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static float VehicleDamageScalingFor(BmSDK.Engine.Vehicle V)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DamageType.VehicleDamageScalingFor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(V, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 8);

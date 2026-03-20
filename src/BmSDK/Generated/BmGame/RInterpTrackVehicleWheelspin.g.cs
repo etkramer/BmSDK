@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RInterpTrackVehicleWheelspin<br/>
+/// (size = 260)
 /// (flags = 0)
 /// </summary>
 public partial class RInterpTrackVehicleWheelspin : BmSDK.Engine.InterpTrackFloatBase, BmSDK.IGameObject

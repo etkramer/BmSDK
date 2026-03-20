@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_SlideAttack<br/>
+/// (size = 236)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_SlideAttack : BmSDK.BmGame.RDmgType_HeavyStrike, BmSDK.IGameObject

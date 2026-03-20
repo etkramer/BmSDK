@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactoryApexVortex<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class ActorFactoryApexVortex : BmSDK.Engine.ActorFactory, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpGroup<br/>
+/// (size = 164)
 /// (flags = 0)
 /// </summary>
 public partial class InterpGroup : BmSDK.GameObject, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class InterpGroup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FInterpEdSelKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FInterpEdSelKey
     {
         /// <summary>

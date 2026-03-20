@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAutoJezNode<br/>
+/// (size = 668)
 /// (flags = 0)
 /// </summary>
 public partial class RAutoJezNode : BmSDK.Engine.Actor, BmSDK.IGameObject

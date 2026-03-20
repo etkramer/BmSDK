@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_GetProperty<br/>
+/// (size = 360)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_GetProperty : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

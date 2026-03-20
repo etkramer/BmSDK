@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBarkCharacterDefInstance<br/>
+/// (size = 112)
 /// (flags = 0)
 /// </summary>
 public partial class RBarkCharacterDefInstance : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RBarkCharacterDefInstance : BmSDK.GameObject, BmSDK.IGameOb
     public unsafe void GetFilenameFromBarkSetName(out BmSDK.BmGame.RBarkCharacterDefInstance.FBarkSetName ThisName, out BmSDK.FString OutString)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkCharacterDefInstance.GetFilenameFromBarkSetName", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -58,7 +59,7 @@ public partial class RBarkCharacterDefInstance : BmSDK.GameObject, BmSDK.IGameOb
     public unsafe void UpdateDynamicSetList(BmSDK.TArray<BmSDK.FString> SuffixList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkCharacterDefInstance.UpdateDynamicSetList", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SuffixList, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -74,7 +75,7 @@ public partial class RBarkCharacterDefInstance : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Struct: FDynamicSetContainer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 60)]
     public partial record struct FDynamicSetContainer
     {
         /// <summary>
@@ -117,7 +118,7 @@ public partial class RBarkCharacterDefInstance : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Struct: FBarkSetName
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FBarkSetName
     {
         /// <summary>

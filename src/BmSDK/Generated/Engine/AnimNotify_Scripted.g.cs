@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNotify_Scripted<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNotify_Scripted : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AnimNotify_Scripted : BmSDK.Engine.AnimNotify, BmSDK.IGameO
     public unsafe void NotifyEnd(BmSDK.Engine.Actor Owner, BmSDK.Engine.AnimNodeSequence AnimSeqInstigator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNotify_Scripted.NotifyEnd", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Owner, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimSeqInstigator, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -51,7 +52,7 @@ public partial class AnimNotify_Scripted : BmSDK.Engine.AnimNotify, BmSDK.IGameO
     public unsafe void Notify(BmSDK.Engine.Actor Owner, BmSDK.Engine.SkeletalMeshComponent AnimSeqInstigator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNotify_Scripted.Notify", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Owner, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimSeqInstigator, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

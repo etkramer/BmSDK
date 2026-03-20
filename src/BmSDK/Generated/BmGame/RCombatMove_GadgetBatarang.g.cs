@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_GadgetBatarang<br/>
+/// (size = 836)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_GadgetBatarang : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject

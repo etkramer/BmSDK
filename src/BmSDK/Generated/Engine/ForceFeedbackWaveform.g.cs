@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ForceFeedbackWaveform<br/>
+/// (size = 112)
 /// (flags = 0)
 /// </summary>
 public partial class ForceFeedbackWaveform : BmSDK.GameObject, BmSDK.IGameObject
@@ -89,7 +90,7 @@ public partial class ForceFeedbackWaveform : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FWaveformSample
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FWaveformSample
     {
         /// <summary>

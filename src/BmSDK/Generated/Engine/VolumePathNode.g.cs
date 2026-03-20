@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: VolumePathNode<br/>
+/// (size = 952)
 /// (flags = 0)
 /// </summary>
 public partial class VolumePathNode : BmSDK.Engine.PathNode, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DistributionVectorParticleParameter<br/>
+/// (size = 192)
 /// (flags = 0)
 /// </summary>
 public partial class DistributionVectorParticleParameter : BmSDK.Engine.DistributionVectorParameterBase, BmSDK.IGameObject

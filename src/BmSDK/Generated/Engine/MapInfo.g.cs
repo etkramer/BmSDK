@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MapInfo<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class MapInfo : BmSDK.GameObject, BmSDK.IGameObject

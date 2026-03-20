@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RDustMapComponent<br/>
+/// (size = 156)
 /// (flags = 0)
 /// </summary>
 public partial class RDustMapComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject

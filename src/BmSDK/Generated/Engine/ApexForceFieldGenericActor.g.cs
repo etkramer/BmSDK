@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexForceFieldGenericActor<br/>
+/// (size = 676)
 /// (flags = 0)
 /// </summary>
 public partial class ApexForceFieldGenericActor : BmSDK.Engine.ApexFieldSamplerActor, BmSDK.IGameObject

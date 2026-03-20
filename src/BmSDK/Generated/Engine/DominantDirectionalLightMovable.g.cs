@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DominantDirectionalLightMovable<br/>
+/// (size = 692)
 /// (flags = 0)
 /// </summary>
 public partial class DominantDirectionalLightMovable : BmSDK.Engine.DominantDirectionalLight, BmSDK.IGameObject

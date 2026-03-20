@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionOcclusionPercentage<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionOcclusionPercentage : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

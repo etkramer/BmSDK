@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RVoiceSynthesiserBm<br/>
+/// (size = 2628)
 /// (flags = 0)
 /// </summary>
 public partial class RVoiceSynthesiserBm : BmSDK.BmGame.RVoiceSynthesiser, BmSDK.IGameObject

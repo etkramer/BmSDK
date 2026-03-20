@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_WhipTarget<br/>
+/// (size = 104)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_WhipTarget : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

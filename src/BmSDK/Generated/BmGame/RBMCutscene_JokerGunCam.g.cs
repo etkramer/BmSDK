@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMCutscene_JokerGunCam<br/>
+/// (size = 180)
 /// (flags = 0)
 /// </summary>
 public partial class RBMCutscene_JokerGunCam : BmSDK.BmGame.RBMCutscene_BatClawCam, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RBMCutscene_JokerGunCam : BmSDK.BmGame.RBMCutscene_BatClawC
     public unsafe static bool CanUseCam(BmSDK.BmGame.RBMCutsceneBase CheckCutscene)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_JokerGunCam.CanUseCam", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CheckCutscene, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);

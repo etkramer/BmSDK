@@ -5,6 +5,7 @@ namespace BmSDK.WinDrv;
 
 /// <summary>
 /// Class: HttpRequestWindowsMcp<br/>
+/// (size = 180)
 /// (flags = 0)
 /// </summary>
 public partial class HttpRequestWindowsMcp : BmSDK.WinDrv.HttpRequestWindows, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class HttpRequestWindowsMcp : BmSDK.WinDrv.HttpRequestWindows, Bm
     public unsafe bool ProcessRequest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "WinDrv.HttpRequestWindowsMcp.ProcessRequest", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }

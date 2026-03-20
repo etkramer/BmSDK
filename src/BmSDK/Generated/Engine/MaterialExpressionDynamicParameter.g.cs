@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionDynamicParameter<br/>
+/// (size = 192)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionDynamicParameter : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

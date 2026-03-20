@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: ScreenShotSpotLight<br/>
+/// (size = 692)
 /// (flags = 0)
 /// </summary>
 public partial class ScreenShotSpotLight : BmSDK.Engine.SpotLight, BmSDK.IGameObject

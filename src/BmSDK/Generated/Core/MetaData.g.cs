@@ -5,6 +5,7 @@ namespace BmSDK;
 
 /// <summary>
 /// Class: MetaData<br/>
+/// (size = 156)
 /// (flags = 0)
 /// </summary>
 public partial class MetaData : BmSDK.GameObject, BmSDK.IGameObject

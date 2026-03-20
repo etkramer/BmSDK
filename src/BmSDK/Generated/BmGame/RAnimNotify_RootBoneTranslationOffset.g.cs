@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_RootBoneTranslationOffset<br/>
+/// (size = 88)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_RootBoneTranslationOffset : BmSDK.BmGame.RAnimNotify_BeginEnd, BmSDK.IGameObject

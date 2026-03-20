@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RLightShaftVolumeComponent<br/>
+/// (size = 612)
 /// (flags = 0)
 /// </summary>
 public partial class RLightShaftVolumeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RLightShaftVolumeComponent : BmSDK.Engine.PrimitiveComponen
     public unsafe void SetEnabled(bool NewEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RLightShaftVolumeComponent.SetEnabled", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewEnabled, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -57,7 +58,7 @@ public partial class RLightShaftVolumeComponent : BmSDK.Engine.PrimitiveComponen
     public unsafe bool UpdateBrightness(float NewBrightness)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RLightShaftVolumeComponent.UpdateBrightness", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewBrightness, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -76,7 +77,7 @@ public partial class RLightShaftVolumeComponent : BmSDK.Engine.PrimitiveComponen
     public unsafe bool SetConeAngleAndRadius(float NewConeAngle, float NewRadius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RLightShaftVolumeComponent.SetConeAngleAndRadius", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewConeAngle, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewRadius, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;

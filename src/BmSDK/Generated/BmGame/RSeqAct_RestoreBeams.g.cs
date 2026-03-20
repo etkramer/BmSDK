@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_RestoreBeams<br/>
+/// (size = 372)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_RestoreBeams : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RSeqAct_RestoreBeams : BmSDK.Engine.SequenceAction, BmSDK.I
     public unsafe void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RestoreBeams.Activated", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -49,7 +50,7 @@ public partial class RSeqAct_RestoreBeams : BmSDK.Engine.SequenceAction, BmSDK.I
     public unsafe void RestoreBeam(BmSDK.Engine.RStaticClimbableActor Breakable, int CollectionIndex, int RailingIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RestoreBeams.RestoreBeam", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Breakable, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CollectionIndex, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RailingIndex, paramsPtr + 12);
@@ -67,7 +68,7 @@ public partial class RSeqAct_RestoreBeams : BmSDK.Engine.SequenceAction, BmSDK.I
     /// <summary>
     /// Struct: FBreakableData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FBreakableData
     {
         /// <summary>
@@ -92,7 +93,7 @@ public partial class RSeqAct_RestoreBeams : BmSDK.Engine.SequenceAction, BmSDK.I
     /// <summary>
     /// Struct: FBeamData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FBeamData
     {
         /// <summary>

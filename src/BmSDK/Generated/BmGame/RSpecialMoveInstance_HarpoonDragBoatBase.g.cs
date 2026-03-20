@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveInstance_HarpoonDragBoatBase<br/>
+/// (size = 992)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveInstance_HarpoonDragBoatBase : BmSDK.BmGame.RSpecialMoveInstance_HarpoonDragObject, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RSpecialMoveInstance_HarpoonDragBoatBase : BmSDK.BmGame.RSp
     public unsafe void UpdateConstraint(System.Numerics.Vector3 WorldPositionConstraint, System.Numerics.Vector3 LocalPositionConstraint, BmSDK.Engine.Actor FloatingBoat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_HarpoonDragBoatBase.UpdateConstraint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WorldPositionConstraint, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalPositionConstraint, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FloatingBoat, paramsPtr + 24);
@@ -94,7 +95,7 @@ public partial class RSpecialMoveInstance_HarpoonDragBoatBase : BmSDK.BmGame.RSp
     public unsafe void SetupConstraint(System.Numerics.Vector3 WorldPositionConstraint, System.Numerics.Vector3 LocalPositionConstraint, BmSDK.Engine.Actor FloatingBoat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_HarpoonDragBoatBase.SetupConstraint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WorldPositionConstraint, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalPositionConstraint, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FloatingBoat, paramsPtr + 24);

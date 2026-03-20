@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RInterpTrackRumble<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RInterpTrackRumble : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
@@ -71,7 +72,7 @@ public partial class RInterpTrackRumble : BmSDK.Engine.InterpTrack, BmSDK.IGameO
     /// <summary>
     /// Struct: FRumbleTrackKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 21)]
     public partial record struct FRumbleTrackKey
     {
         /// <summary>

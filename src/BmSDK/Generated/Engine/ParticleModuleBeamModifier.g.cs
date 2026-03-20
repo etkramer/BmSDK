@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleBeamModifier<br/>
+/// (size = 280)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleBeamModifier : BmSDK.Engine.ParticleModuleBeamBase, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class ParticleModuleBeamModifier : BmSDK.Engine.ParticleModuleBea
     /// <summary>
     /// Struct: FBeamModifierOptions
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 4)]
     public partial record struct FBeamModifierOptions
     {
         /// <summary>

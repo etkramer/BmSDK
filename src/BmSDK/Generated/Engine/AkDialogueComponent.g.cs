@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkDialogueComponent<br/>
+/// (size = 264)
 /// (flags = 0)
 /// </summary>
 public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe int GetRecentVoiceId()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.GetRecentVoiceId", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -49,7 +50,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe bool IsDefault()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.IsDefault", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -67,7 +68,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe void SetDefault(bool MakeDefault)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.SetDefault", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MakeDefault, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -86,7 +87,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe bool ShouldKillDialogueOnDestroy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.ShouldKillDialogueOnDestroy", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -104,7 +105,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe void KillDialogueOnDestroy(bool Kill)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.KillDialogueOnDestroy", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Kill, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -123,7 +124,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe BmSDK.FString GetCustomVoiceSubtitleLookup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.GetCustomVoiceSubtitleLookup", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -141,7 +142,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe void ClearCustomVoiceSubtitleLookup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.ClearCustomVoiceSubtitleLookup", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -159,7 +160,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe void SetCustomVoiceSubtitleLookup(BmSDK.FString voiceSubLookup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.SetCustomVoiceSubtitleLookup", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(voiceSubLookup, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -178,7 +179,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe int TriggerEmote(BmSDK.Engine.AkEmoteType emType, BmSDK.FString dlgTag = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.TriggerEmote", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(emType, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(dlgTag, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -198,7 +199,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe BmSDK.Engine.AkDialogueVoice GetVoice()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.GetVoice", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -216,7 +217,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe void SetVoice(BmSDK.Engine.AkDialogueVoice dlgVoice)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.SetVoice", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(dlgVoice, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -235,7 +236,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe bool IsEmoting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.IsEmoting", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -253,7 +254,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe bool EmotesAllowed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.EmotesAllowed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -271,7 +272,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe void AllowEmotes(bool allow, bool stopEmote = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.AllowEmotes", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(allow, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(stopEmote, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -291,7 +292,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe bool HasSpoken(out float timeSinceLastSpoke)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.HasSpoken", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -310,7 +311,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe bool IsSpeechSuppressingPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.IsSpeechSuppressingPrompts", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -328,7 +329,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe bool IsWaitingToSpeak(bool rightNow = default, bool withPlayer = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.IsWaitingToSpeak", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(rightNow, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(withPlayer, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -348,7 +349,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe bool IsSpeakingLine(BmSDK.Engine.AkDialogueLine thisLine)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.IsSpeakingLine", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(thisLine, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -367,7 +368,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe bool IsSpeaking(bool rightNow = default, bool withPlayer = default, bool checkVoiceAlso = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.IsSpeaking", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(rightNow, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(withPlayer, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(checkVoiceAlso, paramsPtr + 8);
@@ -388,7 +389,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe void InterruptSpeech(float fadeTime = default, BmSDK.FString dlgTag = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.InterruptSpeech", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(fadeTime, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(dlgTag, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -408,7 +409,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe void StopSpeech(bool exceptEmotes, BmSDK.FString dlgTag = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.StopSpeech", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(exceptEmotes, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(dlgTag, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -428,7 +429,7 @@ public partial class AkDialogueComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     public unsafe int StartSpeech(BmSDK.Engine.AkDialogueSpeech dlgSpeech, out BmSDK.Engine.AkDialogue.FAkSpeechOptions dlgOpts, BmSDK.FString dlgTag = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueComponent.StartSpeech", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[144];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(dlgSpeech, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(dlgTag, paramsPtr + 124);
         var oldFlags = funcManaged.FunctionFlags;

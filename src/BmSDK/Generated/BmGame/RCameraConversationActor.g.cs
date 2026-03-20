@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCameraConversationActor<br/>
+/// (size = 744)
 /// (flags = 0)
 /// </summary>
 public partial class RCameraConversationActor : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RCameraConversationActor : BmSDK.Engine.Actor, BmSDK.IGameO
     public unsafe void NotifyCameraDeleted(BmSDK.BmGame.RCameraActor_Conversation Camera)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCameraConversationActor.NotifyCameraDeleted", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Camera, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

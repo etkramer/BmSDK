@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBarkConvoPawnRef_DroneController<br/>
+/// (size = 156)
 /// (flags = 0)
 /// </summary>
 public partial class RBarkConvoPawnRef_DroneController : BmSDK.BmGame.RBarkConvoPawnRef, BmSDK.IGameObject

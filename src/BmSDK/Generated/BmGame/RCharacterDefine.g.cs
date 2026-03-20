@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCharacterDefine<br/>
+/// (size = 584)
 /// (flags = 0)
 /// </summary>
 public partial class RCharacterDefine : BmSDK.BmGame.RConfig, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RCharacterDefine : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FBoneTrackingCharDefine
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 68)]
     public partial record struct FBoneTrackingCharDefine
     {
         /// <summary>
@@ -143,7 +144,7 @@ public partial class RCharacterDefine : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FMainMeshArray
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FMainMeshArray
     {
         /// <summary>
@@ -177,7 +178,7 @@ public partial class RCharacterDefine : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPerMeshMatOverride
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FPerMeshMatOverride
     {
         /// <summary>
@@ -202,7 +203,7 @@ public partial class RCharacterDefine : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FMatOverrides
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FMatOverrides
     {
         /// <summary>
@@ -218,7 +219,7 @@ public partial class RCharacterDefine : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAlwaysOnParticlesDef
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FAlwaysOnParticlesDef
     {
         /// <summary>
@@ -243,7 +244,7 @@ public partial class RCharacterDefine : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCharacterStaticPropsDef
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 60)]
     public partial record struct FCharacterStaticPropsDef
     {
         /// <summary>
@@ -304,7 +305,7 @@ public partial class RCharacterDefine : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCharacterSkeletalPropsDef
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 104)]
     public partial record struct FCharacterSkeletalPropsDef
     {
         /// <summary>
@@ -437,7 +438,7 @@ public partial class RCharacterDefine : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FMultiStaticProp
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 40)]
     public partial record struct FMultiStaticProp
     {
         /// <summary>
@@ -480,7 +481,7 @@ public partial class RCharacterDefine : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FMultiSkeletonProp
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 56)]
     public partial record struct FMultiSkeletonProp
     {
         /// <summary>

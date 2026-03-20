@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleLocationBoneSocket<br/>
+/// (size = 152)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleLocationBoneSocket : BmSDK.Engine.ParticleModuleLocationBase, BmSDK.IGameObject
@@ -46,7 +47,7 @@ public partial class ParticleModuleLocationBoneSocket : BmSDK.Engine.ParticleMod
     /// <summary>
     /// Struct: FLocationBoneSocketInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FLocationBoneSocketInfo
     {
         /// <summary>

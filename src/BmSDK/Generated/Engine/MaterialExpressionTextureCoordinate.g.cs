@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionTextureCoordinate<br/>
+/// (size = 188)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionTextureCoordinate : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

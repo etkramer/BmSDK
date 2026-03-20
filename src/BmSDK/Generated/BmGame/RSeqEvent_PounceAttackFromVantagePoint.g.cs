@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_PounceAttackFromVantagePoint<br/>
+/// (size = 380)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_PounceAttackFromVantagePoint : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

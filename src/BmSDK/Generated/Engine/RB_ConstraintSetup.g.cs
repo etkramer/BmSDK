@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RB_ConstraintSetup<br/>
+/// (size = 300)
 /// (flags = 0)
 /// </summary>
 public partial class RB_ConstraintSetup : BmSDK.GameObject, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RB_ConstraintSetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLinearDOFSetup
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FLinearDOFSetup
     {
         /// <summary>

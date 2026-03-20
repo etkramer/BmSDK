@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleVelocity_Seeded<br/>
+/// (size = 228)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleVelocity_Seeded : BmSDK.Engine.ParticleModuleVelocity, BmSDK.IGameObject

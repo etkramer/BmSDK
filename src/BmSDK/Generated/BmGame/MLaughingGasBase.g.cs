@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MLaughingGasBase<br/>
+/// (size = 2628)
 /// (flags = 0)
 /// </summary>
 public partial class MLaughingGasBase : BmSDK.BmGame.RSmokeBomb, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class MLaughingGasBase : BmSDK.BmGame.RSmokeBomb, BmSDK.IGameObje
     public unsafe void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MLaughingGasBase.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -84,7 +85,7 @@ public partial class MLaughingGasBase : BmSDK.BmGame.RSmokeBomb, BmSDK.IGameObje
     public unsafe BmSDK.Class GetLaughingGasReactionClass(BmSDK.BmGame.RPawnVillain PawnVillain, BmSDK.BmGame.RBMWeapon Weapon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MLaughingGasBase.GetLaughingGasReactionClass", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PawnVillain, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Weapon, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

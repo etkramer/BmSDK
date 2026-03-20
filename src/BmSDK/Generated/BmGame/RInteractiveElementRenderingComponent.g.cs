@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RInteractiveElementRenderingComponent<br/>
+/// (size = 540)
 /// (flags = 0)
 /// </summary>
 public partial class RInteractiveElementRenderingComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

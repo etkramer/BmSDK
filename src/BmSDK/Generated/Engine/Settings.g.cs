@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Settings<br/>
+/// (size = 148)
 /// (flags = 0)
 /// </summary>
 public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void UpdateFromURL(out BmSDK.FString URL, BmSDK.Engine.GameInfo Game)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.UpdateFromURL", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Game, paramsPtr + 16);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -58,7 +59,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void BuildURL(out BmSDK.FString URL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.BuildURL", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -77,7 +78,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AppendContextsToURL(out BmSDK.FString URL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.AppendContextsToURL", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -96,7 +97,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AppendPropertiesToURL(out BmSDK.FString URL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.AppendPropertiesToURL", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -115,7 +116,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AppendDataBindingsToURL(out BmSDK.FString URL)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.AppendDataBindingsToURL", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -134,7 +135,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void GetQoSAdvertisedStringSettings(out BmSDK.TArray<BmSDK.Engine.Settings.FLocalizedStringSetting> QoSSettings)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetQoSAdvertisedStringSettings", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -153,7 +154,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void GetQoSAdvertisedProperties(out BmSDK.TArray<BmSDK.Engine.Settings.FSettingsProperty> QoSProps)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetQoSAdvertisedProperties", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -172,7 +173,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetRangedPropertyValue(int PropertyId, out float OutValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetRangedPropertyValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PropertyId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -192,7 +193,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetRangedPropertyValue(int PropertyId, float NewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetRangedPropertyValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PropertyId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewValue, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -212,7 +213,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetPropertyRange(int PropertyId, out float OutMinValue, out float OutMaxValue, out float RangeIncrement, out byte bFormatAsInt)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetPropertyRange", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PropertyId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -235,7 +236,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetPropertyMappingType(int PropertyId, out BmSDK.Engine.Settings.EPropertyValueMappingType OutType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetPropertyMappingType", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PropertyId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -255,7 +256,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool HasStringSetting(int SettingId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.HasStringSetting", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SettingId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -274,7 +275,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool HasProperty(int PropertyId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.HasProperty", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PropertyId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -293,7 +294,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void UpdateProperties(out BmSDK.TArray<BmSDK.Engine.Settings.FSettingsProperty> Props, bool bShouldAddIfMissing = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.UpdateProperties", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bShouldAddIfMissing, paramsPtr + 16);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -313,7 +314,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void UpdateStringSettings(out BmSDK.TArray<BmSDK.Engine.Settings.FLocalizedStringSetting> Settings, bool bShouldAddIfMissing = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.UpdateStringSettings", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bShouldAddIfMissing, paramsPtr + 16);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -333,7 +334,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.Engine.Settings.ESettingsDataType GetPropertyType(int PropertyId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetPropertyType", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[5];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PropertyId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -352,7 +353,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetPropertyValueId(int PropertyId, out int ValueId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetPropertyValueId", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PropertyId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -372,7 +373,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetPropertyValueId(int PropertyId, int ValueId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetPropertyValueId", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PropertyId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ValueId, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -392,7 +393,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetStringProperty(int PropertyId, out BmSDK.FString Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetStringProperty", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PropertyId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -412,7 +413,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetStringProperty(int PropertyId, BmSDK.FString Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetStringProperty", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PropertyId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -432,7 +433,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetIntProperty(int PropertyId, out int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetIntProperty", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PropertyId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -452,7 +453,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetIntProperty(int PropertyId, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetIntProperty", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PropertyId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -472,7 +473,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetFloatProperty(int PropertyId, out float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetFloatProperty", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PropertyId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -492,7 +493,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetFloatProperty(int PropertyId, float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetFloatProperty", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PropertyId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -512,7 +513,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetPropertyFromStringByName(BmSDK.FName PropertyName, out BmSDK.FString NewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetPropertyFromStringByName", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PropertyName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -532,7 +533,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.FString GetPropertyAsStringByName(BmSDK.FName PropertyName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetPropertyAsStringByName", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PropertyName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -551,7 +552,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.FString GetPropertyAsString(int PropertyId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetPropertyAsString", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PropertyId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -570,7 +571,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.FString GetPropertyColumnHeader(int PropertyId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetPropertyColumnHeader", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PropertyId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -589,7 +590,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.FName GetPropertyName(int PropertyId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetPropertyName", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PropertyId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -608,7 +609,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetPropertyId(BmSDK.FName PropertyName, out int PropertyId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetPropertyId", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PropertyName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -628,7 +629,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetStringSettingValueFromStringByName(BmSDK.FName StringSettingName, out BmSDK.FString NewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetStringSettingValueFromStringByName", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StringSettingName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -648,7 +649,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.FName GetStringSettingValueNameByName(BmSDK.FName StringSettingName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetStringSettingValueNameByName", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StringSettingName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -667,7 +668,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.FName GetStringSettingValueName(int StringSettingId, int ValueIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetStringSettingValueName", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StringSettingId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ValueIndex, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -687,7 +688,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsWildcardStringSetting(int StringSettingId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.IsWildcardStringSetting", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StringSettingId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -706,7 +707,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.FString GetStringSettingColumnHeader(int StringSettingId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetStringSettingColumnHeader", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StringSettingId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -725,7 +726,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.FName GetStringSettingName(int StringSettingId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetStringSettingName", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StringSettingId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -744,7 +745,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetStringSettingId(BmSDK.FName StringSettingName, out int StringSettingId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetStringSettingId", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StringSettingName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -764,7 +765,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetStringSettingValueByName(BmSDK.FName StringSettingName, out int ValueIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetStringSettingValueByName", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StringSettingName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -784,7 +785,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetStringSettingValueByName(BmSDK.FName StringSettingName, int ValueIndex, bool bShouldAutoAdd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetStringSettingValueByName", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StringSettingName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ValueIndex, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bShouldAutoAdd, paramsPtr + 12);
@@ -805,7 +806,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetStringSettingValueNames(int StringSettingId, out BmSDK.TArray<BmSDK.Engine.Settings.FIdToStringMapping> Values)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetStringSettingValueNames", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StringSettingId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -825,7 +826,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IncrementStringSettingValue(int StringSettingId, int Direction, bool bShouldWrap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.IncrementStringSettingValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StringSettingId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Direction, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bShouldWrap, paramsPtr + 8);
@@ -846,7 +847,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetStringSettingValue(int StringSettingId, out int ValueIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetStringSettingValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StringSettingId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -866,7 +867,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetStringSettingValue(int StringSettingId, int ValueIndex, bool bShouldAutoAdd = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetStringSettingValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StringSettingId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ValueIndex, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bShouldAutoAdd, paramsPtr + 8);
@@ -887,7 +888,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static void GetSettingsDataDateTime(out BmSDK.Engine.Settings.FSettingsData Data, out int OutInt1, out int OutInt2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetSettingsDataDateTime", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -908,7 +909,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static void GetSettingsDataBlob(out BmSDK.Engine.Settings.FSettingsData Data, out BmSDK.TArray<byte> OutBlob)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetSettingsDataBlob", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -928,7 +929,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static int GetSettingsDataInt(out BmSDK.Engine.Settings.FSettingsData Data)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetSettingsDataInt", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -947,7 +948,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static float GetSettingsDataFloat(out BmSDK.Engine.Settings.FSettingsData Data)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.GetSettingsDataFloat", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -966,7 +967,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static void EmptySettingsData(out BmSDK.Engine.Settings.FSettingsData Data)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.EmptySettingsData", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -985,7 +986,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static void SetSettingsData(out BmSDK.Engine.Settings.FSettingsData Data, out BmSDK.Engine.Settings.FSettingsData Data2Copy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetSettingsData", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1005,7 +1006,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static void SetSettingsDataBlob(out BmSDK.Engine.Settings.FSettingsData Data, out BmSDK.TArray<byte> InBlob)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetSettingsDataBlob", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1025,7 +1026,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static void SetSettingsDataDateTime(out BmSDK.Engine.Settings.FSettingsData Data, int InInt1, int InInt2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetSettingsDataDateTime", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InInt1, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InInt2, paramsPtr + 20);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1046,7 +1047,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static void SetSettingsDataInt(out BmSDK.Engine.Settings.FSettingsData Data, int InInt)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetSettingsDataInt", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InInt, paramsPtr + 16);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1066,7 +1067,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static void SetSettingsDataFloat(out BmSDK.Engine.Settings.FSettingsData Data, float InFloat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Settings.SetSettingsDataFloat", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InFloat, paramsPtr + 16);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1119,7 +1120,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSettingsPropertyPropertyMetaData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 76)]
     public partial record struct FSettingsPropertyPropertyMetaData
     {
         /// <summary>
@@ -1219,7 +1220,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FIdToStringMapping
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FIdToStringMapping
     {
         /// <summary>
@@ -1244,7 +1245,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLocalizedStringSettingMetaData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FLocalizedStringSettingMetaData
     {
         /// <summary>
@@ -1287,7 +1288,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FStringIdToStringMapping
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FStringIdToStringMapping
     {
         /// <summary>
@@ -1321,7 +1322,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSettingsProperty
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 21)]
     public partial record struct FSettingsProperty
     {
         /// <summary>
@@ -1355,7 +1356,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSettingsData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FSettingsData
     {
         /// <summary>
@@ -1405,7 +1406,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLocalizedStringSetting
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 9)]
     public partial record struct FLocalizedStringSetting
     {
         /// <summary>

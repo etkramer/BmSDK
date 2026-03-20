@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InstancedStaticMeshComponent<br/>
+/// (size = 852)
 /// (flags = 0)
 /// </summary>
 public partial class InstancedStaticMeshComponent : BmSDK.Engine.StaticMeshComponent, BmSDK.IGameObject
@@ -125,7 +126,7 @@ public partial class InstancedStaticMeshComponent : BmSDK.Engine.StaticMeshCompo
     /// <summary>
     /// Struct: FInstancedStaticMeshMappingInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FInstancedStaticMeshMappingInfo
     {
         /// <summary>
@@ -168,7 +169,7 @@ public partial class InstancedStaticMeshComponent : BmSDK.Engine.StaticMeshCompo
     /// <summary>
     /// Struct: FInstancedStaticMeshInstanceData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 80)]
     public partial record struct FInstancedStaticMeshInstanceData
     {
         /// <summary>

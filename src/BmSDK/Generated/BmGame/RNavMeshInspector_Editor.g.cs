@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RNavMeshInspector_Editor<br/>
+/// (size = 2176)
 /// (flags = 0)
 /// </summary>
 public partial class RNavMeshInspector_Editor : BmSDK.BmGame.RNavMeshInspector, BmSDK.IGameObject

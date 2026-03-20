@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RParticleSystemEconomicalReplay<br/>
+/// (size = 116)
 /// (flags = 0)
 /// </summary>
 public partial class RParticleSystemEconomicalReplay : BmSDK.GameObject, BmSDK.IGameObject
@@ -53,7 +54,7 @@ public partial class RParticleSystemEconomicalReplay : BmSDK.GameObject, BmSDK.I
     /// <summary>
     /// Struct: FMParticleEmitterEconomicalReplay
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 72)]
     public partial record struct FMParticleEmitterEconomicalReplay
     {
         /// <summary>
@@ -132,7 +133,7 @@ public partial class RParticleSystemEconomicalReplay : BmSDK.GameObject, BmSDK.I
     /// <summary>
     /// Struct: FMParticleEmitterEconomicalReplaySnapshotFrame
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 52)]
     public partial record struct FMParticleEmitterEconomicalReplaySnapshotFrame
     {
         /// <summary>
@@ -175,7 +176,7 @@ public partial class RParticleSystemEconomicalReplay : BmSDK.GameObject, BmSDK.I
     /// <summary>
     /// Struct: FMParticleEmitterEconomicalReplayFrame
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 108)]
     public partial record struct FMParticleEmitterEconomicalReplayFrame
     {
         /// <summary>
@@ -263,7 +264,7 @@ public partial class RParticleSystemEconomicalReplay : BmSDK.GameObject, BmSDK.I
     /// <summary>
     /// Struct: FMParticleEmitterEconomicalReplayData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FMParticleEmitterEconomicalReplayData
     {
         /// <summary>

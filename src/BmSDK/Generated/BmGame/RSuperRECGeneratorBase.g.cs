@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSuperRECGeneratorBase<br/>
+/// (size = 696)
 /// (flags = 0)
 /// </summary>
 public partial class RSuperRECGeneratorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RSuperRECGeneratorBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     public unsafe void HitByREC(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.BmGame.RMagneticBlast.MBImpulseType HitType, BmSDK.Engine.Controller InstigatedBy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSuperRECGeneratorBase.HitByREC", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HitLocation, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Momentum, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HitType, paramsPtr + 24);

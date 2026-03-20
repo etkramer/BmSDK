@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MassiveLODOverrideVolume<br/>
+/// (size = 740)
 /// (flags = 0)
 /// </summary>
 public partial class MassiveLODOverrideVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

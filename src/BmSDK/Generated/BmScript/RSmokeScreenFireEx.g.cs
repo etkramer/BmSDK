@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSmokeScreenFireEx<br/>
+/// (size = 796)
 /// (flags = 0)
 /// </summary>
 public partial class RSmokeScreenFireEx : BmSDK.BmGame.RSmokeScreen, BmSDK.IGameObject

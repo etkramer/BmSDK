@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionLensFlareOcclusion<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionLensFlareOcclusion : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

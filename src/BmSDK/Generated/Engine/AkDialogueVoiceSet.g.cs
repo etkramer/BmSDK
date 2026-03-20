@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkDialogueVoiceSet<br/>
+/// (size = 188)
 /// (flags = 0)
 /// </summary>
 public partial class AkDialogueVoiceSet : BmSDK.Engine.AkDialogueVoice, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AkDialogueVoiceSet : BmSDK.Engine.AkDialogueVoice, BmSDK.IG
     public unsafe void GetAllVoiceNamesFromSet(out BmSDK.TArray<BmSDK.FName> OutList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkDialogueVoiceSet.GetAllVoiceNamesFromSet", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         OutList = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(paramsPtr + 0);
         return;

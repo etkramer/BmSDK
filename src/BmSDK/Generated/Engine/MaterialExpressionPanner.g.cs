@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionPanner<br/>
+/// (size = 284)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionPanner : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

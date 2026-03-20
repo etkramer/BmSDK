@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RNavMeshGoal_WithinVolume<br/>
+/// (size = 124)
 /// (flags = 0)
 /// </summary>
 public partial class RNavMeshGoal_WithinVolume : BmSDK.Engine.NavMeshPathGoalEvaluator, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RNavMeshGoal_WithinVolume : BmSDK.Engine.NavMeshPathGoalEva
     public unsafe void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshGoal_WithinVolume.Recycle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -49,7 +50,7 @@ public partial class RNavMeshGoal_WithinVolume : BmSDK.Engine.NavMeshPathGoalEva
     public unsafe static bool GoalWithinVolume(BmSDK.Engine.NavigationHandle NavHandle, BmSDK.Engine.Volume NewWithinVol, float InMinTraversalDist = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshGoal_WithinVolume.GoalWithinVolume", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NavHandle, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewWithinVol, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InMinTraversalDist, paramsPtr + 16);

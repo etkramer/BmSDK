@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModule<br/>
+/// (size = 96)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModule : BmSDK.GameObject, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class ParticleModule : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FParticleRandomSeedInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 28)]
     public partial record struct FParticleRandomSeedInfo
     {
         /// <summary>
@@ -112,7 +113,7 @@ public partial class ParticleModule : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FParticleCurvePair
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FParticleCurvePair
     {
         /// <summary>

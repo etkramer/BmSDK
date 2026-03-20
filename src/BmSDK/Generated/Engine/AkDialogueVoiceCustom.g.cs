@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkDialogueVoiceCustom<br/>
+/// (size = 208)
 /// (flags = 0)
 /// </summary>
 public partial class AkDialogueVoiceCustom : BmSDK.Engine.AkDialogueVoice, BmSDK.IGameObject

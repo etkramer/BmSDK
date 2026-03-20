@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHudModuleAlertsAndSurveillance<br/>
+/// (size = 324)
 /// (flags = 0)
 /// </summary>
 public partial class RHudModuleAlertsAndSurveillance : BmSDK.BmGame.RHudModule, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RHudModuleAlertsAndSurveillance : BmSDK.BmGame.RHudModule, 
     public unsafe void SetSurveillanceStationAndSpeaker(BmSDK.FString surv_station, BmSDK.FString surv_speaker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleAlertsAndSurveillance.SetSurveillanceStationAndSpeaker", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(surv_station, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(surv_speaker, paramsPtr + 16);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -51,7 +52,7 @@ public partial class RHudModuleAlertsAndSurveillance : BmSDK.BmGame.RHudModule, 
     public unsafe void SetInterceptAngleAndRangePrivate(int AngleToInterceptActor, int DistanceToInterceptActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleAlertsAndSurveillance.SetInterceptAngleAndRangePrivate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AngleToInterceptActor, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistanceToInterceptActor, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -64,7 +65,7 @@ public partial class RHudModuleAlertsAndSurveillance : BmSDK.BmGame.RHudModule, 
     public unsafe void SetInterceptAngleAndRange(int AngleToInterceptActor, int DistanceToInterceptActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleAlertsAndSurveillance.SetInterceptAngleAndRange", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AngleToInterceptActor, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistanceToInterceptActor, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -77,7 +78,7 @@ public partial class RHudModuleAlertsAndSurveillance : BmSDK.BmGame.RHudModule, 
     public unsafe void SetSurveillanceMovieState(BmSDK.FString surv_type, BmSDK.FString surv_frame)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleAlertsAndSurveillance.SetSurveillanceMovieState", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(surv_type, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(surv_frame, paramsPtr + 16);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -90,7 +91,7 @@ public partial class RHudModuleAlertsAndSurveillance : BmSDK.BmGame.RHudModule, 
     public unsafe void SetInvestigateModeActive(bool is_active)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleAlertsAndSurveillance.SetInvestigateModeActive", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(is_active, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -102,7 +103,7 @@ public partial class RHudModuleAlertsAndSurveillance : BmSDK.BmGame.RHudModule, 
     public unsafe void SetSurveillanceMode(BmSDK.BmGame.RHudModuleAlertsAndSurveillance.SurveillanceModes surv_mode, BmSDK.FString surv_station, BmSDK.FString surv_speaker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleAlertsAndSurveillance.SetSurveillanceMode", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(surv_mode, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(surv_station, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(surv_speaker, paramsPtr + 20);
@@ -116,7 +117,7 @@ public partial class RHudModuleAlertsAndSurveillance : BmSDK.BmGame.RHudModule, 
     public unsafe void HideAudioAlert()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleAlertsAndSurveillance.HideAudioAlert", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -127,7 +128,7 @@ public partial class RHudModuleAlertsAndSurveillance : BmSDK.BmGame.RHudModule, 
     public unsafe void SetTripleTrailParamsPrivate(bool is_visible, int active_trail_index, bool trail_0_complete, bool trail_1_complete, bool trail_2_complete)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleAlertsAndSurveillance.SetTripleTrailParamsPrivate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(is_visible, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(active_trail_index, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(trail_0_complete, paramsPtr + 8);
@@ -143,7 +144,7 @@ public partial class RHudModuleAlertsAndSurveillance : BmSDK.BmGame.RHudModule, 
     public unsafe void DisableTripleTrail()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleAlertsAndSurveillance.DisableTripleTrail", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -154,7 +155,7 @@ public partial class RHudModuleAlertsAndSurveillance : BmSDK.BmGame.RHudModule, 
     public unsafe void UpdateTripleTrail()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleAlertsAndSurveillance.UpdateTripleTrail", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -165,7 +166,7 @@ public partial class RHudModuleAlertsAndSurveillance : BmSDK.BmGame.RHudModule, 
     public unsafe void SetTripleTrailFocus(BmSDK.BmGame.REvidence TheEvidence)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleAlertsAndSurveillance.SetTripleTrailFocus", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TheEvidence, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -177,7 +178,7 @@ public partial class RHudModuleAlertsAndSurveillance : BmSDK.BmGame.RHudModule, 
     public unsafe void SetupTripleTracker(BmSDK.FString name0, BmSDK.FString name1, BmSDK.FString name2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleAlertsAndSurveillance.SetupTripleTracker", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(name0, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(name1, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(name2, paramsPtr + 32);
@@ -191,7 +192,7 @@ public partial class RHudModuleAlertsAndSurveillance : BmSDK.BmGame.RHudModule, 
     public unsafe void SetForensicTrailString(BmSDK.FString trail_name)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleAlertsAndSurveillance.SetForensicTrailString", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(trail_name, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -203,7 +204,7 @@ public partial class RHudModuleAlertsAndSurveillance : BmSDK.BmGame.RHudModule, 
     public unsafe void SetForensicTrail(BmSDK.BmGame.REvidence TheEvidence)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleAlertsAndSurveillance.SetForensicTrail", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TheEvidence, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -215,7 +216,7 @@ public partial class RHudModuleAlertsAndSurveillance : BmSDK.BmGame.RHudModule, 
     public unsafe void InitialiseFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleAlertsAndSurveillance.InitialiseFlash", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -226,7 +227,7 @@ public partial class RHudModuleAlertsAndSurveillance : BmSDK.BmGame.RHudModule, 
     public unsafe void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleAlertsAndSurveillance.Close", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -237,7 +238,7 @@ public partial class RHudModuleAlertsAndSurveillance : BmSDK.BmGame.RHudModule, 
     public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleAlertsAndSurveillance.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(_RPC, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(_ExtensionName, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(_ExtensionPath, paramsPtr + 24);

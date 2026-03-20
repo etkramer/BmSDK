@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ProcBuildingRuleset<br/>
+/// (size = 200)
 /// (flags = 0)
 /// </summary>
 public partial class ProcBuildingRuleset : BmSDK.GameObject, BmSDK.IGameObject
@@ -45,7 +46,7 @@ public partial class ProcBuildingRuleset : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPBParamSwatch
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FPBParamSwatch
     {
         /// <summary>
@@ -70,7 +71,7 @@ public partial class ProcBuildingRuleset : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPBVariationInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FPBVariationInfo
     {
         /// <summary>

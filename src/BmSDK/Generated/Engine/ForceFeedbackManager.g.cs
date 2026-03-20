@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ForceFeedbackManager<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class ForceFeedbackManager : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class ForceFeedbackManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void PlayForceFeedbackWaveform(BmSDK.Engine.ForceFeedbackWaveform WaveForm, BmSDK.Engine.Actor WaveInstigator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ForceFeedbackManager.PlayForceFeedbackWaveform", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WaveForm, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WaveInstigator, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -58,7 +59,7 @@ public partial class ForceFeedbackManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void PauseWaveform(bool bPause = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ForceFeedbackManager.PauseWaveform", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPause, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -70,7 +71,7 @@ public partial class ForceFeedbackManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void StopForceFeedbackWaveform(BmSDK.Engine.ForceFeedbackWaveform WaveForm = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ForceFeedbackManager.StopForceFeedbackWaveform", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WaveForm, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

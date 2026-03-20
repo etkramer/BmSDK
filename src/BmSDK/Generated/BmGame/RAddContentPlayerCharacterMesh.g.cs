@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAddContentPlayerCharacterMesh<br/>
+/// (size = 196)
 /// (flags = 0)
 /// </summary>
 public partial class RAddContentPlayerCharacterMesh : BmSDK.BmGame.RAdditionalContent, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RAddContentPlayerCharacterMesh : BmSDK.BmGame.RAdditionalCo
     /// <summary>
     /// Struct: FBoneTrackingPlayer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 48)]
     public partial record struct FBoneTrackingPlayer
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBmStealthTakedownStage_LRLedgeTakedown<br/>
+/// (size = 1724)
 /// (flags = 0)
 /// </summary>
 public partial class RBmStealthTakedownStage_LRLedgeTakedown : BmSDK.BmGame.RStealthTakeDownStage_LedgeAttack, BmSDK.IGameObject

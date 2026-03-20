@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_RoofPerimWait<br/>
+/// (size = 896)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_RoofPerimWait : BmSDK.BmGame.RBMAIAction_PatrolWaitBase, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RBMAIAction_RoofPerimWait : BmSDK.BmGame.RBMAIAction_Patrol
     public unsafe void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RoofPerimWait.OnActivate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

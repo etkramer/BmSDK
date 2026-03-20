@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleUberLTISIVCLILIRSSBLIRR<br/>
+/// (size = 616)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleUberLTISIVCLILIRSSBLIRR : BmSDK.Engine.ParticleModuleUberBase, BmSDK.IGameObject

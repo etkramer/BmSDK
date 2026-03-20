@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_GiveInventory<br/>
+/// (size = 388)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_GiveInventory : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

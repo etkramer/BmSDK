@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimUtil_MovementPlayer<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimUtil_MovementPlayer : BmSDK.GameObject, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RAnimUtil_MovementPlayer : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Struct: FMovementPlayer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 112)]
     public partial record struct FMovementPlayer
     {
         /// <summary>
@@ -87,7 +88,7 @@ public partial class RAnimUtil_MovementPlayer : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Struct: FOneShotMovementCycle
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 88)]
     public partial record struct FOneShotMovementCycle
     {
         /// <summary>

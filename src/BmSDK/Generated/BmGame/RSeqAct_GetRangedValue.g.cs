@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_GetRangedValue<br/>
+/// (size = 372)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_GetRangedValue : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

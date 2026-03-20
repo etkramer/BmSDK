@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionAddNormalMap<br/>
+/// (size = 308)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionAddNormalMap : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

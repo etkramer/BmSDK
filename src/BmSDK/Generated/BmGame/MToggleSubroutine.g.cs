@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MToggleSubroutine<br/>
+/// (size = 784)
 /// (flags = 0)
 /// </summary>
 public partial class MToggleSubroutine : BmSDK.BmGame.MHackSubroutine, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class MToggleSubroutine : BmSDK.BmGame.MHackSubroutine, BmSDK.IGa
     public unsafe bool Execute(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MToggleSubroutine.Execute", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);

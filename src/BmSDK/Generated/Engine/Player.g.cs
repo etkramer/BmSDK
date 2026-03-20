@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Player<br/>
+/// (size = 128)
 /// (flags = 0)
 /// </summary>
 public partial class Player : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class Player : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SwitchController(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Player.SwitchController", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PC, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

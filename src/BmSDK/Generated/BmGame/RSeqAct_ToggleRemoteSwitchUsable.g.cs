@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_ToggleRemoteSwitchUsable<br/>
+/// (size = 356)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_ToggleRemoteSwitchUsable : BmSDK.Engine.SeqAct_Toggle, BmSDK.IGameObject

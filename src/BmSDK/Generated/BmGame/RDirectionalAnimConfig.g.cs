@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDirectionalAnimConfig<br/>
+/// (size = 180)
 /// (flags = 0)
 /// </summary>
 public partial class RDirectionalAnimConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject

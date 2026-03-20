@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_AugmentedForensicsBase<br/>
+/// (size = 408)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     public unsafe static int GetObjClassVersion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.GetObjClassVersion", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -49,7 +50,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     public unsafe void ChangeIntoOrOutOfScanMode(bool bInScanMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.ChangeIntoOrOutOfScanMode", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bInScanMode, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -61,7 +62,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     public unsafe void AutoFillTimelineWhenScannerModeEntered()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.AutoFillTimelineWhenScannerModeEntered", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -72,7 +73,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     public unsafe void SendCursorToFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.SendCursorToFlash", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -83,7 +84,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     public unsafe void FillTimelineWithDirectorTrack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.FillTimelineWithDirectorTrack", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -94,7 +95,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     public unsafe void SendTimelineToFlash(BmSDK.FString timeline_anim, float director_start_prop)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.SendTimelineToFlash", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(timeline_anim, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(director_start_prop, paramsPtr + 16);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -107,7 +108,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     public unsafe void OverrideReconstructionRate(float recon_rate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.OverrideReconstructionRate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(recon_rate, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -119,7 +120,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     public unsafe void ChangeToPlaybackDirectorTrack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.ChangeToPlaybackDirectorTrack", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -130,7 +131,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     public unsafe void SetDirectorAndSlomo(int director_index, int slomo_index, int playback_director_index = default, int playback_slomo_index = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.SetDirectorAndSlomo", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(director_index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(slomo_index, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(playback_director_index, paramsPtr + 8);
@@ -145,7 +146,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     public unsafe void AutoPlayBack(float start_time, float end_time, float reconstruction_end_time)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.AutoPlayBack", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(start_time, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(end_time, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(reconstruction_end_time, paramsPtr + 8);
@@ -159,7 +160,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     public unsafe void SetScrubbingDirectionAudio(int NewScrubbingAudioDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.SetScrubbingDirectionAudio", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewScrubbingAudioDirection, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -171,7 +172,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     public unsafe void SetTimeProportion(float Proportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.SetTimeProportion", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Proportion, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -183,7 +184,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     public unsafe void SetMatineeTime(float new_time)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.SetMatineeTime", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(new_time, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -195,7 +196,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     public unsafe void SetMatineePlaypack(float playback_speed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.SetMatineePlaypack", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(playback_speed, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -214,7 +215,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     public unsafe void SetActorHidden(BmSDK.Engine.Actor the_actor, bool is_hidden)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.SetActorHidden", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(the_actor, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(is_hidden, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -234,7 +235,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     public unsafe void SetDirectorAndSloMoGroup(int director_index, int slomo_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.SetDirectorAndSloMoGroup", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(director_index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(slomo_index, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -254,7 +255,7 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     public unsafe void InitialiseMatinee()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AugmentedForensicsBase.InitialiseMatinee", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NavMeshGoal_Filter<br/>
+/// (size = 96)
 /// (flags = 0)
 /// </summary>
 public partial class NavMeshGoal_Filter : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class NavMeshGoal_Filter : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.FString GetDumpString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshGoal_Filter.GetDumpString", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
     }

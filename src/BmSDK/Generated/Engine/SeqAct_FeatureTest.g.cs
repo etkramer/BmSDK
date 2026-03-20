@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_FeatureTest<br/>
+/// (size = 432)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_FeatureTest : BmSDK.Engine.SeqAct_Log, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: OnlineSuppliedUIInterface<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class OnlineSuppliedUIInterface : BmSDK.Interface, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class OnlineSuppliedUIInterface : BmSDK.Interface, BmSDK.IGameObj
     public unsafe bool ShowMatchmakingUI(byte SearchingPlayerNum, BmSDK.Engine.OnlineGameSearch SearchSettings, BmSDK.Engine.OnlineGameSettings GameSettings)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSuppliedUIInterface.ShowMatchmakingUI", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SearchingPlayerNum, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SearchSettings, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GameSettings, paramsPtr + 12);
@@ -52,7 +53,7 @@ public partial class OnlineSuppliedUIInterface : BmSDK.Interface, BmSDK.IGameObj
     public unsafe void ClearShowOnlineStatsUICompleteDelegate(System.IntPtr ShowOnlineStatsUICompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSuppliedUIInterface.ClearShowOnlineStatsUICompleteDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ShowOnlineStatsUICompleteDelegate, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -64,7 +65,7 @@ public partial class OnlineSuppliedUIInterface : BmSDK.Interface, BmSDK.IGameObj
     public unsafe void AddShowOnlineStatsUICompleteDelegate(System.IntPtr ShowOnlineStatsUICompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSuppliedUIInterface.AddShowOnlineStatsUICompleteDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ShowOnlineStatsUICompleteDelegate, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -76,7 +77,7 @@ public partial class OnlineSuppliedUIInterface : BmSDK.Interface, BmSDK.IGameObj
     public unsafe bool ShowOnlineStatsUI(out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId> Players, BmSDK.Engine.OnlineStatsRead StatsRead)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSuppliedUIInterface.ShowOnlineStatsUI", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StatsRead, paramsPtr + 16);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         Players = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>>(paramsPtr + 0);
@@ -89,7 +90,7 @@ public partial class OnlineSuppliedUIInterface : BmSDK.Interface, BmSDK.IGameObj
     public unsafe void OnShowOnlineStatsUIComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSuppliedUIInterface.OnShowOnlineStatsUIComplete", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

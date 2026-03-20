@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RHarpoonProjectileBm<br/>
+/// (size = 940)
 /// (flags = 0)
 /// </summary>
 public partial class RHarpoonProjectileBm : BmSDK.BmGame.RHarpoonProjectile, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RAimingConfig<br/>
+/// (size = 184)
 /// (flags = 0)
 /// </summary>
 public partial class RAimingConfig : BmSDK.GameObject, BmSDK.IGameObject
@@ -173,7 +174,7 @@ public partial class RAimingConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAimingPartConfig
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FAimingPartConfig
     {
         /// <summary>

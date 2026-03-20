@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RPhysOnContactHandler<br/>
+/// (size = 92)
 /// (flags = 0)
 /// </summary>
 public partial class RPhysOnContactHandler : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RPhysOnContactHandler : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void OnContact(BmSDK.Engine.RB_BodyInstance BodyInst0, BmSDK.Engine.RB_BodyInstance BodyInst1)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPhysOnContactHandler.OnContact", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BodyInst0, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BodyInst1, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;

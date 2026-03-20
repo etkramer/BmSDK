@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqVar_ChunkDamageCount<br/>
+/// (size = 236)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqVar_ChunkDamageCount : BmSDK.Engine.SeqVar_Int, BmSDK.IGameObject

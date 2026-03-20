@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAttackPointSearch<br/>
+/// (size = 196)
 /// (flags = 0)
 /// </summary>
 public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.FString GetThoughtString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAttackPointSearch.GetThoughtString", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
     }
@@ -49,7 +50,7 @@ public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void Release()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAttackPointSearch.Release", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -60,7 +61,7 @@ public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void StartSearch(System.Numerics.Vector3 NewTargetLocation, float NewAttackRadius, BmSDK.FName NewClaimName, BmSDK.BmGame.RAttackPointSearch.StanceVisType NewStanceToCheck, BmSDK.TArray<BmSDK.Engine.Pylon> NewPylonList, float NewSubDivideSizeTarget, bool bNewAutoAdjustToFloor, bool bNewAdjustHeightForHumanTargetSize)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAttackPointSearch.StartSearch", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[56];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewTargetLocation, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewAttackRadius, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewClaimName, paramsPtr + 16);
@@ -79,7 +80,7 @@ public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void ShowDebug(bool bPermanent = default, BmSDK.FName DrawIDName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAttackPointSearch.ShowDebug", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPermanent, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DrawIDName, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -99,7 +100,7 @@ public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SearchFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAttackPointSearch.SearchFinished", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -117,7 +118,7 @@ public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsAvailable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAttackPointSearch.IsAvailable", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -135,7 +136,7 @@ public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void Search(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAttackPointSearch.Search", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -323,7 +324,7 @@ public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAttackPoint
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FAttackPoint
     {
         /// <summary>

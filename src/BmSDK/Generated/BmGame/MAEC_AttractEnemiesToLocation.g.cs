@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MAEC_AttractEnemiesToLocation<br/>
+/// (size = 748)
 /// (flags = 0)
 /// </summary>
 public partial class MAEC_AttractEnemiesToLocation : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class MAEC_AttractEnemiesToLocation : BmSDK.BmGame.RAlertEventCoo
     public unsafe void FinishTopLevelAEC(BmSDK.BmGame.RBMAIController AttractedCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesToLocation.FinishTopLevelAEC", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AttractedCon, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -85,7 +86,7 @@ public partial class MAEC_AttractEnemiesToLocation : BmSDK.BmGame.RAlertEventCoo
     public unsafe void OnBeginShutdown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesToLocation.OnBeginShutdown", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -96,7 +97,7 @@ public partial class MAEC_AttractEnemiesToLocation : BmSDK.BmGame.RAlertEventCoo
     public unsafe void ExecuteAEC(BmSDK.BmGame.RPawnVillain VillainPawn, BmSDK.Engine.Actor AttractPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesToLocation.ExecuteAEC", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(VillainPawn, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AttractPoint, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -109,7 +110,7 @@ public partial class MAEC_AttractEnemiesToLocation : BmSDK.BmGame.RAlertEventCoo
     public unsafe void Setup(BmSDK.TArray<BmSDK.Engine.Actor> NewThugsAttracted, BmSDK.Engine.Actor NewAttractor, float NewAttractDuration)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_AttractEnemiesToLocation.Setup", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewThugsAttracted, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewAttractor, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewAttractDuration, paramsPtr + 24);

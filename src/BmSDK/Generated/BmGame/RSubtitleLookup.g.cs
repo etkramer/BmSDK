@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSubtitleLookup<br/>
+/// (size = 100)
 /// (flags = 0)
 /// </summary>
 public partial class RSubtitleLookup : BmSDK.GameObject, BmSDK.IGameObject
@@ -44,7 +45,7 @@ public partial class RSubtitleLookup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRSubtitleLookupEntry
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FRSubtitleLookupEntry
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: OnlineSubsystem<br/>
+/// (size = 560)
 /// (flags = 0)
 /// </summary>
 public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void ETWEvent(BmSDK.Engine.OnlineSubsystem.EStatEventType InEvent, BmSDK.Engine.PlayerController Player, BmSDK.FString InProperties, System.Numerics.Vector3 InLocation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.ETWEvent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InEvent, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Player, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InProperties, paramsPtr + 12);
@@ -60,7 +61,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void BuildVoiceRecMap()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.BuildVoiceRecMap", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -78,7 +79,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool OnlineDebugCommand(int Command, int Parameter = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.OnlineDebugCommand", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Command, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Parameter, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -91,7 +92,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetDebugSpewLevel(int DebugSpewLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetDebugSpewLevel", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DebugSpewLevel, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -103,7 +104,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void DumpVoiceRegistration()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.DumpVoiceRegistration", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -114,7 +115,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void DumpSessionState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.DumpSessionState", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -125,7 +126,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static void DumpGameSettings(BmSDK.Engine.OnlineGameSettings GameSettings)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.DumpGameSettings", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GameSettings, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -137,7 +138,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static int GetNumSupportedLogins()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.GetNumSupportedLogins", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -155,7 +156,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe int GetBuildUniqueId()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.GetBuildUniqueId", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -173,7 +174,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId GetPlayerUniqueNetIdFromIndex(int UserIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.GetPlayerUniqueNetIdFromIndex", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(UserIndex, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(paramsPtr + 4);
@@ -185,7 +186,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static bool StringToUniqueNetId(BmSDK.FString UniqueNetIdString, out BmSDK.Engine.OnlineSubsystem.FUniqueNetId out_UniqueId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.StringToUniqueNetId", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(UniqueNetIdString, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -205,7 +206,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.FString UniqueNetIdToString(out BmSDK.Engine.OnlineSubsystem.FUniqueNetId IdToConvert)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.UniqueNetIdToString", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -224,7 +225,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.GameObject GetNamedInterface(BmSDK.FName InterfaceName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.GetNamedInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InterfaceName, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(paramsPtr + 8);
@@ -236,7 +237,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetNamedInterface(BmSDK.FName InterfaceName, BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetNamedInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InterfaceName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInterface, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -249,7 +250,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetSharedCloudInterface(BmSDK.GameObject InCloudInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetSharedCloudInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InCloudInterface, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -261,7 +262,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetUserCloudInterface(BmSDK.GameObject InCloudInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetUserCloudInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InCloudInterface, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -273,7 +274,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetAuthInterface(BmSDK.GameObject InAuthInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetAuthInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InAuthInterface, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -285,7 +286,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetSocialInterface(BmSDK.GameObject InSocialInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetSocialInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InSocialInterface, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -297,7 +298,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetTitleFileCacheInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetTitleFileCacheInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInterface, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -309,7 +310,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetTitleFileInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetTitleFileInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInterface, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -321,7 +322,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetPartyChatInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetPartyChatInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInterface, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -333,7 +334,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetCustomContentCacheInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetCustomContentCacheInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInterface, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -345,7 +346,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetCustomContentInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetCustomContentInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInterface, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -357,7 +358,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetNewsInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetNewsInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInterface, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -369,7 +370,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetStatsInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetStatsInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInterface, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -381,7 +382,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetWebInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetWebInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInterface, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -393,7 +394,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetVoiceInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetVoiceInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInterface, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -405,7 +406,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetContentInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetContentInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInterface, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -417,7 +418,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetGameInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetGameInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInterface, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -429,7 +430,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetSystemInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetSystemInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInterface, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -441,7 +442,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetPlayerInterfaceEx(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetPlayerInterfaceEx", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInterface, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -453,7 +454,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetPlayerInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetPlayerInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInterface, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -465,7 +466,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SetAccountInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetAccountInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInterface, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -477,7 +478,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void Exit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.Exit", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -488,7 +489,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool PostInit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.PostInit", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -499,7 +500,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -537,7 +538,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSocialPostLinkInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 100)]
     public partial record struct FSocialPostLinkInfo
     {
         /// <summary>
@@ -562,7 +563,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSocialPostImageInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 68)]
     public partial record struct FSocialPostImageInfo
     {
         /// <summary>
@@ -614,7 +615,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSocialPostImageFlags
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 4)]
     public partial record struct FSocialPostImageFlags
     {
         /// <summary>
@@ -657,7 +658,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSocialPostPrivileges
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 4)]
     public partial record struct FSocialPostPrivileges
     {
         /// <summary>
@@ -682,7 +683,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FOnlinePartyMember
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 60)]
     public partial record struct FOnlinePartyMember
     {
         /// <summary>
@@ -836,7 +837,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAchievementDetails
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 72)]
     public partial record struct FAchievementDetails
     {
         /// <summary>
@@ -960,7 +961,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FNamedSession
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 56)]
     public partial record struct FNamedSession
     {
         /// <summary>
@@ -1012,7 +1013,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCommunityContentMetadata
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FCommunityContentMetadata
     {
         /// <summary>
@@ -1037,7 +1038,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCommunityContentFile
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 56)]
     public partial record struct FCommunityContentFile
     {
         /// <summary>
@@ -1134,7 +1135,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTitleFile
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FTitleFile
     {
         /// <summary>
@@ -1168,7 +1169,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FEmsFile
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 52)]
     public partial record struct FEmsFile
     {
         /// <summary>
@@ -1211,7 +1212,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FNamedInterfaceDef
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FNamedInterfaceDef
     {
         /// <summary>
@@ -1236,7 +1237,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FNamedInterface
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FNamedInterface
     {
         /// <summary>
@@ -1261,7 +1262,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FOnlineFriendMessage
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FOnlineFriendMessage
     {
         /// <summary>
@@ -1331,7 +1332,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRemoteTalker
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FRemoteTalker
     {
         /// <summary>
@@ -1383,7 +1384,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLocalTalker
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 4)]
     public partial record struct FLocalTalker
     {
         /// <summary>
@@ -1459,7 +1460,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FOnlinePlayerScore
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FOnlinePlayerScore
     {
         /// <summary>
@@ -1504,7 +1505,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSpeechRecognizedWord
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FSpeechRecognizedWord
     {
         /// <summary>
@@ -1577,7 +1578,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FOnlineArbitrationRegistrant
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FOnlineArbitrationRegistrant
     {
         /// <summary>
@@ -1602,7 +1603,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FOnlineRegistrant
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FOnlineRegistrant
     {
         /// <summary>
@@ -1649,7 +1650,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FOnlineCrossTitleContent
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 108)]
     public partial record struct FOnlineCrossTitleContent
     {
         /// <summary>
@@ -1665,7 +1666,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FOnlineStoreContent
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 76)]
     public partial record struct FOnlineStoreContent
     {
         /// <summary>
@@ -1744,7 +1745,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FOnlineStoreContentOffering
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 104)]
     public partial record struct FOnlineStoreContentOffering
     {
         /// <summary>
@@ -1836,7 +1837,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FOnlineContent
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 104)]
     public partial record struct FOnlineContent
     {
         /// <summary>
@@ -1970,7 +1971,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FOnlineFriend
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 56)]
     public partial record struct FOnlineFriend
     {
         /// <summary>
@@ -2140,7 +2141,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FFriendsQuery
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FFriendsQuery
     {
         /// <summary>
@@ -2187,7 +2188,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FUniqueNetId
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FUniqueNetId
     {
         /// <summary>

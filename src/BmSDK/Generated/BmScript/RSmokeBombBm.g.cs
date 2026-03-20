@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSmokeBombBm<br/>
+/// (size = 2628)
 /// (flags = 0)
 /// </summary>
 public partial class RSmokeBombBm : BmSDK.BmGame.RSmokeBomb, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RGFxMovieUI_OptionsControlsKeyboard<br/>
+/// (size = 1204)
 /// (flags = 0)
 /// </summary>
 public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe void XI_GetIsLeftCtrlPressed(BmSDK.FString sPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.XI_GetIsLeftCtrlPressed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(sPath, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -50,7 +51,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe void XI_GetIsLeftShiftPressed(BmSDK.FString sPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.XI_GetIsLeftShiftPressed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(sPath, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -62,7 +63,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe void CloseScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.CloseScreen", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -73,7 +74,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe void SetCurrentPage(int nPage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.SetCurrentPage", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(nPage, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -85,7 +86,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe void AppendPage(BmSDK.FString InName, BmSDK.FString InDevice, BmSDK.FString InScheme)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.AppendPage", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InDevice, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InScheme, paramsPtr + 32);
@@ -99,7 +100,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe void XI_RequestPages(BmSDK.FString sPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.XI_RequestPages", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(sPath, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -111,7 +112,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe void XI_SetBindByAbility(int InAbilityId, BmSDK.FString InKeyUnlocalized, bool bIsPrimary, int InTypeId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.XI_SetBindByAbility", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InAbilityId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InKeyUnlocalized, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bIsPrimary, paramsPtr + 20);
@@ -126,7 +127,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe void XI_RequestControlData(BmSDK.FString BatmanAbilityNamesPath, BmSDK.FString BatmanKey1Path, BmSDK.FString BatmanKey2Path, BmSDK.FString PursuitAbilityNamesPath, BmSDK.FString PursuitKeys1Path, BmSDK.FString PursuitKeys2Path, BmSDK.FString BattleAbilityNamesPath, BmSDK.FString BattleKeys1Path, BmSDK.FString BattleKeys2Path)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.XI_RequestControlData", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[308];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BatmanAbilityNamesPath, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BatmanKey1Path, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BatmanKey2Path, paramsPtr + 32);
@@ -146,7 +147,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe void XI_ThrowKeyBindPopup(BmSDK.FString InPath, int InTypeId, int InIndex, bool InbIsPrimaryKeyBind)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.XI_ThrowKeyBindPopup", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[45];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InPath, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InTypeId, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InIndex, paramsPtr + 20);
@@ -161,7 +162,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe BmSDK.FString GetDefaultKey(int InTypeId, int InIndex, BmSDK.BmScript.RGFxMovieUI_OptionsControlsKeyboard.KeyMap InKeyMap, bool GetUnlocalized = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.GetDefaultKey", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[72];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InTypeId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InIndex, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InKeyMap, paramsPtr + 8);
@@ -176,7 +177,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe BmSDK.FString GetCurrentKey(int InTypeId, int InIndex, BmSDK.BmScript.RGFxMovieUI_OptionsControlsKeyboard.KeyMap InKeyMap)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.GetCurrentKey", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[88];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InTypeId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InIndex, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InKeyMap, paramsPtr + 8);
@@ -190,7 +191,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe BmSDK.FString GetKey(BmSDK.BmScript.RGFxMovieUI_OptionsControlsKeyboard.KeyBindSourceId InSource, int InTypeId, int InIndex, BmSDK.BmScript.RGFxMovieUI_OptionsControlsKeyboard.KeyMap InKeyMap, bool GetUnlocalizedDefault = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.GetKey", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InSource, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InTypeId, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InIndex, paramsPtr + 8);
@@ -206,7 +207,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe void XI_ThrowAreYouSurePopup(BmSDK.FString InPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.XI_ThrowAreYouSurePopup", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InPath, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -218,7 +219,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe void XI_ButtonPCThrowAreYouSurePopup(BmSDK.FString InPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.XI_ButtonPCThrowAreYouSurePopup", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InPath, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -230,7 +231,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe void SetKeyButtonBind(BmSDK.FString InKey)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.SetKeyButtonBind", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InKey, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -242,7 +243,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.PopupRequester_Callback", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ThePopUpMsg, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ButtonId, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -255,7 +256,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe void KeyBindPopUpResetToDefaultPressed(BmSDK.FString InDefaultKey)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.KeyBindPopUpResetToDefaultPressed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InDefaultKey, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -267,7 +268,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe void XI_OnBack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.XI_OnBack", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -278,7 +279,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe void XI_OnYPressed(BmSDK.FString Path)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.XI_OnYPressed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Path, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -290,7 +291,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe void ResetAllKeybindsToDefault()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.ResetAllKeybindsToDefault", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[140];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -301,7 +302,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsControlsKeyboard.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LocPlay, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

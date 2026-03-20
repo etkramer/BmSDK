@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RadialBlurActor<br/>
+/// (size = 676)
 /// (flags = 0)
 /// </summary>
 public partial class RadialBlurActor : BmSDK.Engine.Actor, BmSDK.IGameObject

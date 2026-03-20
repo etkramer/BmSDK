@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: ROverrideGrappleVolume<br/>
+/// (size = 740)
 /// (flags = 0)
 /// </summary>
 public partial class ROverrideGrappleVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class ROverrideGrappleVolume : BmSDK.Engine.Volume, BmSDK.IGameOb
     public unsafe bool OverrideGrapple(BmSDK.BmGame.RPawnPlayer GrapplingPlayer, BmSDK.BmGame.RGrappleGun GrappleGun)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROverrideGrappleVolume.OverrideGrapple", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GrapplingPlayer, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GrappleGun, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

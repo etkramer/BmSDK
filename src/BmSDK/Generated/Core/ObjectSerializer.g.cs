@@ -5,6 +5,7 @@ namespace BmSDK;
 
 /// <summary>
 /// Class: ObjectSerializer<br/>
+/// (size = 104)
 /// (flags = 0)
 /// </summary>
 public partial class ObjectSerializer : BmSDK.GameObject, BmSDK.IGameObject

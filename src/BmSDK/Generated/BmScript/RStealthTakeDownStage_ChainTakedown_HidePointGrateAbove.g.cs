@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RStealthTakeDownStage_ChainTakedown_HidePointGrateAbove<br/>
+/// (size = 1684)
 /// (flags = 0)
 /// </summary>
 public partial class RStealthTakeDownStage_ChainTakedown_HidePointGrateAbove : BmSDK.BmScript.RStealthTakeDownStage_HidePointGrateAbove, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RStealthTakeDownStage_ChainTakedown_HidePointGrateAbove : B
     public unsafe void GotoStage(BmSDK.BmGame.RGameInfo.EStealthTakeDownStages NextStageClass)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakeDownStage_ChainTakedown_HidePointGrateAbove.GotoStage", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[1];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NextStageClass, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

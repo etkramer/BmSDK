@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_RelativeAnimMoveSkippable<br/>
+/// (size = 460)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_RelativeAnimMoveSkippable : BmSDK.BmGame.RSpecialMoveConfig_RelativeAnimMove, BmSDK.IGameObject

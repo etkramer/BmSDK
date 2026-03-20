@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimUtil_ShimmyCorrection<br/>
+/// (size = 532)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimUtil_ShimmyCorrection : BmSDK.GameObject, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RAnimUtil_ShimmyCorrection : BmSDK.GameObject, BmSDK.IGameO
     /// <summary>
     /// Struct: FShimmyDebug
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 344)]
     public partial record struct FShimmyDebug
     {
         /// <summary>
@@ -122,7 +123,7 @@ public partial class RAnimUtil_ShimmyCorrection : BmSDK.GameObject, BmSDK.IGameO
     /// <summary>
     /// Struct: FShimmyDebugArm
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 108)]
     public partial record struct FShimmyDebugArm
     {
         /// <summary>
@@ -290,7 +291,7 @@ public partial class RAnimUtil_ShimmyCorrection : BmSDK.GameObject, BmSDK.IGameO
     /// <summary>
     /// Struct: FShimmyArm
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FShimmyArm
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ForceFieldShapeSphere<br/>
+/// (size = 92)
 /// (flags = 0)
 /// </summary>
 public partial class ForceFieldShapeSphere : BmSDK.Engine.ForceFieldShape, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class ForceFieldShapeSphere : BmSDK.Engine.ForceFieldShape, BmSDK
     public unsafe BmSDK.Engine.PrimitiveComponent GetDrawComponent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ForceFieldShapeSphere.GetDrawComponent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent>(paramsPtr + 0);
     }
@@ -49,7 +50,7 @@ public partial class ForceFieldShapeSphere : BmSDK.Engine.ForceFieldShape, BmSDK
     public unsafe void FillByCylinder(float BottomRadius, float TopRadius, float Height, float HeightOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ForceFieldShapeSphere.FillByCylinder", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BottomRadius, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TopRadius, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Height, paramsPtr + 8);
@@ -64,7 +65,7 @@ public partial class ForceFieldShapeSphere : BmSDK.Engine.ForceFieldShape, BmSDK
     public unsafe void FillByCapsule(float Height, float Radius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ForceFieldShapeSphere.FillByCapsule", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Height, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Radius, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -77,7 +78,7 @@ public partial class ForceFieldShapeSphere : BmSDK.Engine.ForceFieldShape, BmSDK
     public unsafe void FillByBox(System.Numerics.Vector3 Extent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ForceFieldShapeSphere.FillByBox", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Extent, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -89,7 +90,7 @@ public partial class ForceFieldShapeSphere : BmSDK.Engine.ForceFieldShape, BmSDK
     public unsafe void FillBySphere(float Radius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ForceFieldShapeSphere.FillBySphere", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Radius, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -101,7 +102,7 @@ public partial class ForceFieldShapeSphere : BmSDK.Engine.ForceFieldShape, BmSDK
     public unsafe float GetRadius()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ForceFieldShapeSphere.GetRadius", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
     }

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNotify_CameraEffect<br/>
+/// (size = 92)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNotify_CameraEffect : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

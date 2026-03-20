@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_HarpoonDragObject<br/>
+/// (size = 472)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_HarpoonDragObject : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject

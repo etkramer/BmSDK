@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleRequired<br/>
+/// (size = 284)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleRequired : BmSDK.Engine.ParticleModule, BmSDK.IGameObject

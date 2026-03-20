@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexForceFieldComponent<br/>
+/// (size = 604)
 /// (flags = 0)
 /// </summary>
 public partial class ApexForceFieldComponent : BmSDK.Engine.ApexFieldSamplerComponent, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactoryApexDynamicGrid<br/>
+/// (size = 412)
 /// (flags = 0)
 /// </summary>
 public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, Bm
     /// <summary>
     /// Struct: FSFSelfShadowingSpotlightParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 56)]
     public partial record struct FSFSelfShadowingSpotlightParams
     {
         /// <summary>
@@ -150,7 +151,7 @@ public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, Bm
     /// <summary>
     /// Struct: FSFSelfShadowingParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FSFSelfShadowingParams
     {
         /// <summary>
@@ -211,7 +212,7 @@ public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, Bm
     /// <summary>
     /// Struct: FSFMacCormackAdvectionParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FSFMacCormackAdvectionParams
     {
         /// <summary>
@@ -236,7 +237,7 @@ public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, Bm
     /// <summary>
     /// Struct: FSFStochasticParticleAdvectionParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FSFStochasticParticleAdvectionParams
     {
         /// <summary>
@@ -270,7 +271,7 @@ public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, Bm
     /// <summary>
     /// Struct: FSFDensityParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 80)]
     public partial record struct FSFDensityParams
     {
         /// <summary>
@@ -376,7 +377,7 @@ public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, Bm
     /// <summary>
     /// Struct: FSFExpansionAdvancedParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FSFExpansionAdvancedParams
     {
         /// <summary>
@@ -419,7 +420,7 @@ public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, Bm
     /// <summary>
     /// Struct: FSFBuoyancyAdvancedParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FSFBuoyancyAdvancedParams
     {
         /// <summary>
@@ -462,7 +463,7 @@ public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, Bm
     /// <summary>
     /// Struct: FSFMultigridParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FSFMultigridParams
     {
         /// <summary>
@@ -505,7 +506,7 @@ public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, Bm
     /// <summary>
     /// Struct: FSFGridToParticleCouplingParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FSFGridToParticleCouplingParams
     {
         /// <summary>
@@ -539,7 +540,7 @@ public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, Bm
     /// <summary>
     /// Struct: FSFParticleToGridCouplingParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FSFParticleToGridCouplingParams
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RIncendiaryGrenadeCharge<br/>
+/// (size = 764)
 /// (flags = 0)
 /// </summary>
 public partial class RIncendiaryGrenadeCharge : BmSDK.BmGame.RIncendiaryGrenadeCharge_Base, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RIncendiaryGrenadeCharge : BmSDK.BmGame.RIncendiaryGrenadeC
     public unsafe void SetAudioState(BmSDK.BmGame.RIncendiaryGrenadeCharge_Base.eIncendiaryGrenadeState AudioState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RIncendiaryGrenadeCharge.SetAudioState", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[1];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AudioState, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -85,7 +86,7 @@ public partial class RIncendiaryGrenadeCharge : BmSDK.BmGame.RIncendiaryGrenadeC
     public unsafe void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RIncendiaryGrenadeCharge.Destroyed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -96,7 +97,7 @@ public partial class RIncendiaryGrenadeCharge : BmSDK.BmGame.RIncendiaryGrenadeC
     public unsafe bool IsValidIncendiaryStartleThug(BmSDK.BmGame.RPawnVillain TestThug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RIncendiaryGrenadeCharge.IsValidIncendiaryStartleThug", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestThug, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -108,7 +109,7 @@ public partial class RIncendiaryGrenadeCharge : BmSDK.BmGame.RIncendiaryGrenadeC
     public unsafe void FindIncendiaryStartleThugs(out BmSDK.TArray<BmSDK.BmGame.RPawnVillain> ThugList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RIncendiaryGrenadeCharge.FindIncendiaryStartleThugs", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         ThugList = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnVillain>>(paramsPtr + 0);
         return;
@@ -120,7 +121,7 @@ public partial class RIncendiaryGrenadeCharge : BmSDK.BmGame.RIncendiaryGrenadeC
     public unsafe void TryStartleThugs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RIncendiaryGrenadeCharge.TryStartleThugs", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -131,7 +132,7 @@ public partial class RIncendiaryGrenadeCharge : BmSDK.BmGame.RIncendiaryGrenadeC
     public unsafe void ExtinguishFire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RIncendiaryGrenadeCharge.ExtinguishFire", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -142,7 +143,7 @@ public partial class RIncendiaryGrenadeCharge : BmSDK.BmGame.RIncendiaryGrenadeC
     public unsafe void IgniteGas()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RIncendiaryGrenadeCharge.IgniteGas", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -153,7 +154,7 @@ public partial class RIncendiaryGrenadeCharge : BmSDK.BmGame.RIncendiaryGrenadeC
     public unsafe void SpawnGas()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RIncendiaryGrenadeCharge.SpawnGas", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -164,7 +165,7 @@ public partial class RIncendiaryGrenadeCharge : BmSDK.BmGame.RIncendiaryGrenadeC
     public unsafe void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RIncendiaryGrenadeCharge.Tick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[264];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -176,7 +177,7 @@ public partial class RIncendiaryGrenadeCharge : BmSDK.BmGame.RIncendiaryGrenadeC
     public unsafe void Init(int distFromBlast, BmSDK.BmGame.RTunnelGrateBase grateAbove, BmSDK.Engine.Scene.ESceneDepthPriorityGroup DPG, System.Numerics.Vector3 FromLoc = default, bool openAbove = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RIncendiaryGrenadeCharge.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(distFromBlast, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(grateAbove, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DPG, paramsPtr + 12);
@@ -192,7 +193,7 @@ public partial class RIncendiaryGrenadeCharge : BmSDK.BmGame.RIncendiaryGrenadeC
     public unsafe void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RIncendiaryGrenadeCharge.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

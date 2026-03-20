@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SoundMode<br/>
+/// (size = 156)
 /// (flags = 0)
 /// </summary>
 public partial class SoundMode : BmSDK.GameObject, BmSDK.IGameObject
@@ -98,7 +99,7 @@ public partial class SoundMode : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSoundClassAdjuster
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 28)]
     public partial record struct FSoundClassAdjuster
     {
         /// <summary>
@@ -159,7 +160,7 @@ public partial class SoundMode : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAudioEQEffect
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FAudioEQEffect
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UIDataStore_OnlineStats<br/>
+/// (size = 148)
 /// (flags = 0)
 /// </summary>
 public partial class UIDataStore_OnlineStats : BmSDK.Engine.UIDataStore_Remote, BmSDK.IGameObject

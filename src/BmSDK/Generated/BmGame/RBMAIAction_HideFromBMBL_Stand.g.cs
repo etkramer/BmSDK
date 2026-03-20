@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_HideFromBMBL_Stand<br/>
+/// (size = 896)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_HideFromBMBL_Stand : BmSDK.BmGame.RBMAIAction_HideFromBMBL_Base, BmSDK.IGameObject

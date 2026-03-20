@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: GameStatsAggregator<br/>
+/// (size = 708)
 /// (flags = 0)
 /// </summary>
 public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     public unsafe bool GetAggregateMappingIDs(int EventID, out int AggregateID, out int TargetAggregateID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameStatsAggregator.GetAggregateMappingIDs", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventID, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -59,7 +60,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     public unsafe void Reset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameStatsAggregator.Reset", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -77,7 +78,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     public unsafe void PostProcessStream()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameStatsAggregator.PostProcessStream", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -95,7 +96,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     public unsafe void PreProcessStream()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameStatsAggregator.PreProcessStream", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -110,7 +111,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// <summary>
     /// Struct: FAggregateEventMapping
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FAggregateEventMapping
     {
         /// <summary>
@@ -144,7 +145,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// <summary>
     /// Struct: FPlayerEvents
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 512)]
     public partial record struct FPlayerEvents
     {
         /// <summary>
@@ -205,7 +206,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// <summary>
     /// Struct: FTeamEvents
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 512)]
     public partial record struct FTeamEvents
     {
         /// <summary>
@@ -266,7 +267,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// <summary>
     /// Struct: FPawnEvents
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 88)]
     public partial record struct FPawnEvents
     {
     }
@@ -274,7 +275,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// <summary>
     /// Struct: FDamageEvents
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 88)]
     public partial record struct FDamageEvents
     {
     }
@@ -282,7 +283,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// <summary>
     /// Struct: FProjectileEvents
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 88)]
     public partial record struct FProjectileEvents
     {
     }
@@ -290,7 +291,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// <summary>
     /// Struct: FWeaponEvents
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 88)]
     public partial record struct FWeaponEvents
     {
     }
@@ -298,7 +299,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// <summary>
     /// Struct: FEventsBase
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 88)]
     public partial record struct FEventsBase
     {
         /// <summary>
@@ -323,7 +324,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// <summary>
     /// Struct: FGameEvents
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 72)]
     public partial record struct FGameEvents
     {
         /// <summary>
@@ -339,7 +340,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// <summary>
     /// Struct: FGameEvent
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FGameEvent
     {
         /// <summary>

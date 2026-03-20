@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: TannoyVoiceSynthActor<br/>
+/// (size = 692)
 /// (flags = 0)
 /// </summary>
 public partial class TannoyVoiceSynthActor : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class TannoyVoiceSynthActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     public unsafe bool PlayLine(BmSDK.Engine.Actor Subject, BmSDK.FName flag, BmSDK.BmGame.RAlertEventCoordinatorBase owningEvent, BmSDK.TArray<BmSDK.Engine.Actor> extraSpeakers = default, BmSDK.FName nInvestigateTargetFlag = default, System.IntPtr NewBarkFinished = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.TannoyVoiceSynthActor.PlayLine", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[100];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Subject, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(flag, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(owningEvent, paramsPtr + 16);
@@ -90,7 +91,7 @@ public partial class TannoyVoiceSynthActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     public unsafe void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.TannoyVoiceSynthActor.Destroyed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -101,7 +102,7 @@ public partial class TannoyVoiceSynthActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     public unsafe void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.TannoyVoiceSynthActor.PreStreamOut", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -112,7 +113,7 @@ public partial class TannoyVoiceSynthActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     public unsafe void SetBCD(BmSDK.BmGame.RBarkCharacterDef NewCharDef)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.TannoyVoiceSynthActor.SetBCD", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewCharDef, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -124,7 +125,7 @@ public partial class TannoyVoiceSynthActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     public unsafe void SetVoice(BmSDK.Engine.AkDialogueVoice NewVoice)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.TannoyVoiceSynthActor.SetVoice", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewVoice, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

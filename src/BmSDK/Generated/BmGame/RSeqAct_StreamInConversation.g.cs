@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_StreamInConversation<br/>
+/// (size = 416)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_StreamInConversation : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject

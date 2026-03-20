@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDeferred_SpotLight_Quadratic_Shadowed<br/>
+/// (size = 692)
 /// (flags = 0)
 /// </summary>
 public partial class RDeferred_SpotLight_Quadratic_Shadowed : BmSDK.BmGame.RDeferred_SpotLight_Shadowed, BmSDK.IGameObject

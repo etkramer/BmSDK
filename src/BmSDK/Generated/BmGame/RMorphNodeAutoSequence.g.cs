@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMorphNodeAutoSequence<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class RMorphNodeAutoSequence : BmSDK.Engine.MorphNodeBase, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleTypeDataPhysX<br/>
+/// (size = 120)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleTypeDataPhysX : BmSDK.Engine.ParticleModuleTypeDataBase, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class ParticleModuleTypeDataPhysX : BmSDK.Engine.ParticleModuleTy
     /// <summary>
     /// Struct: FPhysXEmitterVerticalLodProperties
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FPhysXEmitterVerticalLodProperties
     {
         /// <summary>

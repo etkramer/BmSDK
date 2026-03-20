@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleGuardPoint<br/>
+/// (size = 692)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleGuardPoint : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject

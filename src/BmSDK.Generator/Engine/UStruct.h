@@ -6,11 +6,12 @@
 CLASS(UStruct, 164)
 class UStruct : public UField
 {
-	// BM4 has no PropertiesSize or MinAlignment
-
 	FIELD(UStruct*, SuperStruct)
     FIELD(UField*, Children)
-	BYTE UNK1[56];
+    BYTE UNK1[12];
+    FIELD(WORD, PropertiesSize)
+    FIELD(WORD, MinAlignment)
+    BYTE UNK2[40];
 
 public:
 	STATIC_CLASS("Core.Struct")

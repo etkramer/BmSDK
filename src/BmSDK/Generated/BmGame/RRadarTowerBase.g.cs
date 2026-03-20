@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRadarTowerBase<br/>
+/// (size = 668)
 /// (flags = 0)
 /// </summary>
 public partial class RRadarTowerBase : BmSDK.Engine.Actor, BmSDK.IGameObject

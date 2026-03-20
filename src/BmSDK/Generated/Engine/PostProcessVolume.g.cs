@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PostProcessVolume<br/>
+/// (size = 1292)
 /// (flags = 0)
 /// </summary>
 public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PostProcessVolume.OnToggle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Action, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -136,7 +137,7 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPostProcessSettings
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 524)]
     public partial record struct FPostProcessSettings
     {
         /// <summary>
@@ -1412,7 +1413,7 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLUTBlender
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FLUTBlender
     {
         /// <summary>

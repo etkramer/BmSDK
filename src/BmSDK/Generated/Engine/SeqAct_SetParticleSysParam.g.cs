@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_SetParticleSysParam<br/>
+/// (size = 396)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_SetParticleSysParam : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackInstFade<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstFade : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject

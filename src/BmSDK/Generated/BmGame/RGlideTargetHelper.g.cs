@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGlideTargetHelper<br/>
+/// (size = 668)
 /// (flags = 0)
 /// </summary>
 public partial class RGlideTargetHelper : BmSDK.Engine.Actor, BmSDK.IGameObject

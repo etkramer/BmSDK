@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleOrientationAxisLock<br/>
+/// (size = 97)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleOrientationAxisLock : BmSDK.Engine.ParticleModuleOrientationBase, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackLinearColorProp<br/>
+/// (size = 212)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackLinearColorProp : BmSDK.Engine.InterpTrackLinearColorBase, BmSDK.IGameObject

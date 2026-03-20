@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RFlaps_ConstraintSetupPlane<br/>
+/// (size = 228)
 /// (flags = 0)
 /// </summary>
 public partial class RFlaps_ConstraintSetupPlane : BmSDK.Engine.RFlaps_ConstraintSetup, BmSDK.IGameObject

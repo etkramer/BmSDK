@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: CameraShake<br/>
+/// (size = 212)
 /// (flags = 0)
 /// </summary>
 public partial class CameraShake : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class CameraShake : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetLocOscillationMagnitude()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraShake.GetLocOscillationMagnitude", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
     }
@@ -49,7 +50,7 @@ public partial class CameraShake : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetRotOscillationMagnitude()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraShake.GetRotOscillationMagnitude", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
     }
@@ -57,7 +58,7 @@ public partial class CameraShake : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FVOscillator
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FVOscillator
     {
         /// <summary>
@@ -91,7 +92,7 @@ public partial class CameraShake : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FROscillator
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FROscillator
     {
         /// <summary>
@@ -125,7 +126,7 @@ public partial class CameraShake : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FFOscillator
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 9)]
     public partial record struct FFOscillator
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_CheckURLParam<br/>
+/// (size = 384)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_CheckURLParam : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

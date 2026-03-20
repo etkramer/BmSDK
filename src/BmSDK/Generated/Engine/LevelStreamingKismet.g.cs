@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LevelStreamingKismet<br/>
+/// (size = 284)
 /// (flags = 0)
 /// </summary>
 public partial class LevelStreamingKismet : BmSDK.Engine.LevelStreaming, BmSDK.IGameObject

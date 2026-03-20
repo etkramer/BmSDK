@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBMCombatThrownObject_Baton<br/>
+/// (size = 1188)
 /// (flags = 0)
 /// </summary>
 public partial class RBMCombatThrownObject_Baton : BmSDK.BmGame.RBMCombatThrownObject_BatDestroyed, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RBMCombatThrownObject_Baton : BmSDK.BmGame.RBMCombatThrownO
     public unsafe void SpawnAttachment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_Baton.SpawnAttachment", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

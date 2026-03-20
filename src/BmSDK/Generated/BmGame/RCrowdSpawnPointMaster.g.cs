@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCrowdSpawnPointMaster<br/>
+/// (size = 744)
 /// (flags = 0)
 /// </summary>
 public partial class RCrowdSpawnPointMaster : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject

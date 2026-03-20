@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionNoise<br/>
+/// (size = 236)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionNoise : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

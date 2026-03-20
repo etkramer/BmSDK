@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVentNetworkOutLine<br/>
+/// (size = 728)
 /// (flags = 0)
 /// </summary>
 public partial class RVentNetworkOutLine : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RVentNetworkOutLine : BmSDK.Engine.StaticMeshActor, BmSDK.I
     public unsafe void HighlightTunnelNetwork(bool bHighlight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVentNetworkOutLine.HighlightTunnelNetwork", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bHighlight, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMScout<br/>
+/// (size = 1636)
 /// (flags = 0)
 /// </summary>
 public partial class RBMScout : BmSDK.Engine.Scout, BmSDK.IGameObject

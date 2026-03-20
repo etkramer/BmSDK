@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MSpecialMoveConfig_RedhoodGunWindow<br/>
+/// (size = 568)
 /// (flags = 0)
 /// </summary>
 public partial class MSpecialMoveConfig_RedhoodGunWindow : BmSDK.BmGame.RSpecialMoveConfig_GlideKick, BmSDK.IGameObject

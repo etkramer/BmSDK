@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackSkelControlStrength<br/>
+/// (size = 268)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackSkelControlStrength : BmSDK.Engine.InterpTrackFloatBase, BmSDK.IGameObject

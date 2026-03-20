@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RVantageMine<br/>
+/// (size = 856)
 /// (flags = 0)
 /// </summary>
 public partial class RVantageMine : BmSDK.BmGame.RVantageMineBase, BmSDK.IGameObject

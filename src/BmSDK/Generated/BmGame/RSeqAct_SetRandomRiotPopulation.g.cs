@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_SetRandomRiotPopulation<br/>
+/// (size = 604)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SetRandomRiotPopulation : BmSDK.BmGame.RSeqAct_SetRandomPopulationBase, BmSDK.IGameObject

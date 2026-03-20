@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRocketLauncherEdge<br/>
+/// (size = 668)
 /// (flags = 0)
 /// </summary>
 public partial class RRocketLauncherEdge : BmSDK.Engine.Actor, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBulletProofGlassBase<br/>
+/// (size = 708)
 /// (flags = 0)
 /// </summary>
 public partial class RBulletProofGlassBase : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RBulletProofGlassBase : BmSDK.Engine.StaticMeshActor, BmSDK
     public unsafe System.Numerics.Vector3 GetBoundsForGlass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBulletProofGlassBase.GetBoundsForGlass", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;

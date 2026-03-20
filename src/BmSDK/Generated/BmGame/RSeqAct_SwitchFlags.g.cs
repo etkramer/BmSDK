@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_SwitchFlags<br/>
+/// (size = 385)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SwitchFlags : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
@@ -78,7 +79,7 @@ public partial class RSeqAct_SwitchFlags : BmSDK.Engine.SequenceAction, BmSDK.IG
     /// <summary>
     /// Struct: FFlagItem
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FFlagItem
     {
         /// <summary>

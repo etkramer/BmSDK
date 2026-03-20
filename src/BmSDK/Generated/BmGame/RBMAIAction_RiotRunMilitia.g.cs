@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_RiotRunMilitia<br/>
+/// (size = 1376)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_RiotRunMilitia : BmSDK.BmGame.RBMAIAction_RiotRunBase, BmSDK.IGameObject

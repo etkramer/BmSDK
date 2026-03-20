@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RThugTrap<br/>
+/// (size = 684)
 /// (flags = 0)
 /// </summary>
 public partial class RThugTrap : BmSDK.Engine.Actor, BmSDK.IGameObject

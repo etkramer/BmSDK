@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBarkGroupContext_Pred<br/>
+/// (size = 92)
 /// (flags = 0)
 /// </summary>
 public partial class RBarkGroupContext_Pred : BmSDK.BmGame.RBarkGroupContext, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RBarkGroupContext_Pred : BmSDK.BmGame.RBarkGroupContext, Bm
     public unsafe BmSDK.TArray<BmSDK.Engine.AkDialogueComponent> GetDlgComponentsOfGroup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkGroupContext_Pred.GetDlgComponentsOfGroup", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkDialogueComponent>>(paramsPtr + 0);
     }

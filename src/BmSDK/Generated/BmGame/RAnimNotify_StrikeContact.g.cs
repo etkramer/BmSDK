@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_StrikeContact<br/>
+/// (size = 212)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_StrikeContact : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RAnimNotify_StrikeContact : BmSDK.Engine.AnimNotify, BmSDK.
     /// <summary>
     /// Struct: FNotifyCapeInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FNotifyCapeInfo
     {
         /// <summary>
@@ -78,7 +79,7 @@ public partial class RAnimNotify_StrikeContact : BmSDK.Engine.AnimNotify, BmSDK.
     /// <summary>
     /// Struct: FNotifyStrikeFlags
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 4)]
     public partial record struct FNotifyStrikeFlags
     {
         /// <summary>
@@ -184,7 +185,7 @@ public partial class RAnimNotify_StrikeContact : BmSDK.Engine.AnimNotify, BmSDK.
     /// <summary>
     /// Struct: FNotifyDamageInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 57)]
     public partial record struct FNotifyDamageInfo
     {
         /// <summary>
@@ -299,7 +300,7 @@ public partial class RAnimNotify_StrikeContact : BmSDK.Engine.AnimNotify, BmSDK.
     /// <summary>
     /// Struct: FNotifyCameraInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FNotifyCameraInfo
     {
         /// <summary>
@@ -405,7 +406,7 @@ public partial class RAnimNotify_StrikeContact : BmSDK.Engine.AnimNotify, BmSDK.
     /// <summary>
     /// Struct: FNotifyStrikeInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FNotifyStrikeInfo
     {
         /// <summary>

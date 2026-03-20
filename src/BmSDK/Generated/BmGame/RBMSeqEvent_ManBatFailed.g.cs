@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMSeqEvent_ManBatFailed<br/>
+/// (size = 380)
 /// (flags = 0)
 /// </summary>
 public partial class RBMSeqEvent_ManBatFailed : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

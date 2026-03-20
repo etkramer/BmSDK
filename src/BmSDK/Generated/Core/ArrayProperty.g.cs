@@ -5,6 +5,7 @@ namespace BmSDK;
 
 /// <summary>
 /// Class: ArrayProperty<br/>
+/// (size = 156)
 /// (flags = 0)
 /// </summary>
 public partial class ArrayProperty : BmSDK.Property, BmSDK.IGameObject

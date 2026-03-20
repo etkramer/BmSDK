@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RWaterVolumeEditorRenderingComponent<br/>
+/// (size = 540)
 /// (flags = 0)
 /// </summary>
 public partial class RWaterVolumeEditorRenderingComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

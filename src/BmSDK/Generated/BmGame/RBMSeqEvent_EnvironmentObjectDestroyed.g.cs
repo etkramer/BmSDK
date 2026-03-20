@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMSeqEvent_EnvironmentObjectDestroyed<br/>
+/// (size = 380)
 /// (flags = 0)
 /// </summary>
 public partial class RBMSeqEvent_EnvironmentObjectDestroyed : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

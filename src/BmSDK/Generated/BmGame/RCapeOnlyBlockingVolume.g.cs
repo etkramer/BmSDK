@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCapeOnlyBlockingVolume<br/>
+/// (size = 748)
 /// (flags = 0)
 /// </summary>
 public partial class RCapeOnlyBlockingVolume : BmSDK.Engine.BlockingVolume, BmSDK.IGameObject

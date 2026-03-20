@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCommandBeaconLightsBase<br/>
+/// (size = 740)
 /// (flags = 0)
 /// </summary>
 public partial class RCommandBeaconLightsBase : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RCommandBeaconLightsBase : BmSDK.Engine.Actor, BmSDK.IGameO
     public unsafe void SetComponentState(BmSDK.BmGame.RCommandBeaconBase.eCommandBeaconState NewState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconLightsBase.SetComponentState", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[1];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewState, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -85,7 +86,7 @@ public partial class RCommandBeaconLightsBase : BmSDK.Engine.Actor, BmSDK.IGameO
     public unsafe void Init(BmSDK.BmGame.RCommandBeaconBase inBeacon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCommandBeaconLightsBase.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(inBeacon, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -139,7 +140,7 @@ public partial class RCommandBeaconLightsBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Struct: FCommandBeaconMaterialSet
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FCommandBeaconMaterialSet
     {
         /// <summary>

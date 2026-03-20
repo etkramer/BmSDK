@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RArkhamKnightSniperPostProcess<br/>
+/// (size = 180)
 /// (flags = 0)
 /// </summary>
 public partial class RArkhamKnightSniperPostProcess : BmSDK.BmGame.RViewPostProcess, BmSDK.IGameObject

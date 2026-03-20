@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPawnFriendly_FireCrew<br/>
+/// (size = 4744)
 /// (flags = 0)
 /// </summary>
 public partial class RPawnFriendly_FireCrew : BmSDK.BmGame.RPawnFriendly, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RPawnFriendly_FireCrew : BmSDK.BmGame.RPawnFriendly, BmSDK.
     public unsafe void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnFriendly_FireCrew.Destroyed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -84,7 +85,7 @@ public partial class RPawnFriendly_FireCrew : BmSDK.BmGame.RPawnFriendly, BmSDK.
     public unsafe void UpHairSorting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnFriendly_FireCrew.UpHairSorting", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_SetMatInstScalarParam<br/>
+/// (size = 372)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_SetMatInstScalarParam : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

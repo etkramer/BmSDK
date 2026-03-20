@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RTransitionFromRunConfig<br/>
+/// (size = 124)
 /// (flags = 0)
 /// </summary>
 public partial class RTransitionFromRunConfig : BmSDK.GameObject, BmSDK.IGameObject
@@ -71,7 +72,7 @@ public partial class RTransitionFromRunConfig : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Struct: FApproachOption
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FApproachOption
     {
         /// <summary>

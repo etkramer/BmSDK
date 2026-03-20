@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RNavMeshGoal_MultiDest<br/>
+/// (size = 136)
 /// (flags = 0)
 /// </summary>
 public partial class RNavMeshGoal_MultiDest : BmSDK.Engine.NavMeshPathGoalEvaluator, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RNavMeshGoal_MultiDest : BmSDK.Engine.NavMeshPathGoalEvalua
     public unsafe void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshGoal_MultiDest.Recycle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -49,7 +50,7 @@ public partial class RNavMeshGoal_MultiDest : BmSDK.Engine.NavMeshPathGoalEvalua
     public unsafe static BmSDK.BmGame.RNavMeshGoal_MultiDest Goal_MultiDest(BmSDK.Engine.NavigationHandle NavHandle, BmSDK.BmGame.RMultiDestGoalData NewData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshGoal_MultiDest.Goal_MultiDest", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NavHandle, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewData, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

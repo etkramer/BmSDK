@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleUberBase<br/>
+/// (size = 112)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleUberBase : BmSDK.Engine.ParticleModule, BmSDK.IGameObject

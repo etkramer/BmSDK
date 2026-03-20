@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionTwoSidedSign<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionTwoSidedSign : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

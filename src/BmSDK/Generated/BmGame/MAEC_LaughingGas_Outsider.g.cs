@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MAEC_LaughingGas_Outsider<br/>
+/// (size = 788)
 /// (flags = 0)
 /// </summary>
 public partial class MAEC_LaughingGas_Outsider : BmSDK.BmGame.RAEC_Smoke_Outsider, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class MAEC_LaughingGas_Outsider : BmSDK.BmGame.RAEC_Smoke_Outside
     public unsafe void PlayEndBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_LaughingGas_Outsider.PlayEndBark", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

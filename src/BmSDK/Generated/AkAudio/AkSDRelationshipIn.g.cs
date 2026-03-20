@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDRelationshipIn<br/>
+/// (size = 256)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDRelationshipIn : BmSDK.AkAudio.AkSDRelationship, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AkSDRelationshipIn : BmSDK.AkAudio.AkSDRelationship, BmSDK.
     public unsafe float Evaluate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkSDRelationshipIn.Evaluate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MAEC_MayhemTransitionAlert<br/>
+/// (size = 732)
 /// (flags = 0)
 /// </summary>
 public partial class MAEC_MayhemTransitionAlert : BmSDK.BmGame.RAEC_GelMineExplosion, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class MAEC_MayhemTransitionAlert : BmSDK.BmGame.RAEC_GelMineExplo
     public unsafe void TriggerReaction(System.Numerics.Vector3 ReactionCentre)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MAEC_MayhemTransitionAlert.TriggerReaction", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ReactionCentre, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

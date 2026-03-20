@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_GadgetExplosiveGel<br/>
+/// (size = 836)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_GadgetExplosiveGel : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject

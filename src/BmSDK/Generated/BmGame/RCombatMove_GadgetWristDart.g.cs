@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_GadgetWristDart<br/>
+/// (size = 836)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_GadgetWristDart : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject

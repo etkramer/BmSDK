@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionRainBuffer<br/>
+/// (size = 224)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionRainBuffer : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

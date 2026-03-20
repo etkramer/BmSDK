@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPawnHarleyChokePointBase<br/>
+/// (size = 6664)
 /// (flags = 0)
 /// </summary>
 public partial class RPawnHarleyChokePointBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpData<br/>
+/// (size = 340)
 /// (flags = 0)
 /// </summary>
 public partial class InterpData : BmSDK.Engine.SequenceVariable, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class InterpData : BmSDK.Engine.SequenceVariable, BmSDK.IGameObje
     /// <summary>
     /// Struct: FAnimSetBakeAndPruneStatus
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FAnimSetBakeAndPruneStatus
     {
         /// <summary>

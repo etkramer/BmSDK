@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_Search_Sub_VantageMine<br/>
+/// (size = 776)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_Search_Sub_VantageMine : BmSDK.BmGame.RAEC_Search_Sub_VantageResponse, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RAEC_Search_Sub_VantageMine : BmSDK.BmGame.RAEC_Search_Sub_
     public unsafe void AddVantageResponseAction(BmSDK.FString actionlabel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_VantageMine.AddVantageResponseAction", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(actionlabel, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

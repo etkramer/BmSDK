@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_Rifle<br/>
+/// (size = 220)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_Rifle : BmSDK.BmGame.RDmgType_Ranged, BmSDK.IGameObject

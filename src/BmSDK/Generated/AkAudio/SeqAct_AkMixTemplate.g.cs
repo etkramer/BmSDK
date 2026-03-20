@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: SeqAct_AkMixTemplate<br/>
+/// (size = 364)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_AkMixTemplate : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

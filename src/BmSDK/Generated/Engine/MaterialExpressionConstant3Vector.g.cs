@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionConstant3Vector<br/>
+/// (size = 200)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionConstant3Vector : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

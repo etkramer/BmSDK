@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionSmoothStep<br/>
+/// (size = 328)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionSmoothStep : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

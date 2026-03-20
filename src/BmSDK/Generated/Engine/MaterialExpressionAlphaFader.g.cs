@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionAlphaFader<br/>
+/// (size = 296)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionAlphaFader : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

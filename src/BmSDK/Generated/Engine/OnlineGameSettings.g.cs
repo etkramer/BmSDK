@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: OnlineGameSettings<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class OnlineGameSettings : BmSDK.Engine.Settings, BmSDK.IGameObject

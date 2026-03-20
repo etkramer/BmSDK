@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_RestoreJammer<br/>
+/// (size = 888)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_RestoreJammer : BmSDK.BmGame.RBMAIAction_RestoreSpecial, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RBMAIAction_RestoreJammer : BmSDK.BmGame.RBMAIAction_Restor
     public unsafe void RestoreFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RestoreJammer.RestoreFinished", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveControllerCW<br/>
+/// (size = 104)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveControllerCW : BmSDK.BmGame.RSpecialMoveController, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RSpecialMoveControllerCW : BmSDK.BmGame.RSpecialMoveControl
     public unsafe BmSDK.BmGame.RSpecialMoveConfig FindBestSpecialMove(BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator Feature, BmSDK.Engine.Pawn Instigator, float DeltaTime, BmSDK.Rotator CheckDirection, System.Numerics.Vector3 StickDir = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveControllerCW.FindBestSpecialMove", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[176];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Feature, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Instigator, paramsPtr + 132);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 140);

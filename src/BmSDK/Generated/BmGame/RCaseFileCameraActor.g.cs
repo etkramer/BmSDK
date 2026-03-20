@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCaseFileCameraActor<br/>
+/// (size = 1284)
 /// (flags = 0)
 /// </summary>
 public partial class RCaseFileCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RCaseFileCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     public unsafe void PlayerMove(float DeltaTime, System.Numerics.Vector3 newAccel, float SpeedPercent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCaseFileCameraActor.PlayerMove", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(newAccel, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SpeedPercent, paramsPtr + 16);
@@ -87,7 +88,7 @@ public partial class RCaseFileCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     public unsafe bool IsInsideCrimeScene(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCaseFileCameraActor.IsInsideCrimeScene", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
@@ -99,7 +100,7 @@ public partial class RCaseFileCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     public unsafe void InitFromOtherCameraActor(BmSDK.BmGame.RCameraActor OtherCamera, BmSDK.BmGame.RCrimeSceneBase CrimeVolume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCaseFileCameraActor.InitFromOtherCameraActor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OtherCamera, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CrimeVolume, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

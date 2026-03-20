@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SphericalHarmonicLightComponent<br/>
+/// (size = 612)
 /// (flags = 0)
 /// </summary>
 public partial class SphericalHarmonicLightComponent : BmSDK.Engine.LightComponent, BmSDK.IGameObject

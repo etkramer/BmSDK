@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexRenderVolumeComponent<br/>
+/// (size = 556)
 /// (flags = 0)
 /// </summary>
 public partial class ApexRenderVolumeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

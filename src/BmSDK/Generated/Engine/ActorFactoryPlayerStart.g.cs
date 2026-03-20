@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactoryPlayerStart<br/>
+/// (size = 144)
 /// (flags = 0)
 /// </summary>
 public partial class ActorFactoryPlayerStart : BmSDK.Engine.ActorFactory, BmSDK.IGameObject

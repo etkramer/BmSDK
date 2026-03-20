@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SkeletalMeshCinematicActor<br/>
+/// (size = 736)
 /// (flags = 0)
 /// </summary>
 public partial class SkeletalMeshCinematicActor : BmSDK.Engine.SkeletalMeshActor, BmSDK.IGameObject

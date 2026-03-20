@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBMWeaponKnife<br/>
+/// (size = 1748)
 /// (flags = 0)
 /// </summary>
 public partial class RBMWeaponKnife : BmSDK.BmScript.RBMWeaponKnifeBase, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RBMWeaponKnife : BmSDK.BmScript.RBMWeaponKnifeBase, BmSDK.I
     public unsafe BmSDK.Engine.AnimSet GetFearTakedownReactionAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponKnife.GetFearTakedownReactionAnimset", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(paramsPtr + 0);
     }

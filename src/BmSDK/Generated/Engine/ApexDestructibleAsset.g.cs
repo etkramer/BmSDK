@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexDestructibleAsset<br/>
+/// (size = 813)
 /// (flags = 0)
 /// </summary>
 public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObject
@@ -46,7 +47,7 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// <summary>
     /// Struct: FDestructibleCrumbleParameters
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 52)]
     public partial record struct FDestructibleCrumbleParameters
     {
         /// <summary>
@@ -134,7 +135,7 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// <summary>
     /// Struct: FNxDestructibleParameters
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 240)]
     public partial record struct FNxDestructibleParameters
     {
         /// <summary>
@@ -429,7 +430,7 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// <summary>
     /// Struct: FNxDestructibleAdvancedParameters
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FNxDestructibleAdvancedParameters
     {
         /// <summary>
@@ -490,7 +491,7 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// <summary>
     /// Struct: FNxDestructibleDebrisParameters
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FNxDestructibleDebrisParameters
     {
         /// <summary>
@@ -542,7 +543,7 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// <summary>
     /// Struct: FNxDestructibleDamageParameters
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FNxDestructibleDamageParameters
     {
         /// <summary>
@@ -594,7 +595,7 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// <summary>
     /// Struct: FNxDestructibleParametersFlag
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 4)]
     public partial record struct FNxDestructibleParametersFlag
     {
         /// <summary>
@@ -682,7 +683,7 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// <summary>
     /// Struct: FNxDestructibleDepthParameters
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 5)]
     public partial record struct FNxDestructibleDepthParameters
     {
         /// <summary>
@@ -770,7 +771,7 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// <summary>
     /// Struct: FCookedBuffer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FCookedBuffer
     {
         /// <summary>

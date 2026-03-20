@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: EngineTypes<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FVelocityObstacleStat
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FVelocityObstacleStat
     {
         /// <summary>
@@ -78,7 +79,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FMaterialReferenceList
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 40)]
     public partial record struct FMaterialReferenceList
     {
         /// <summary>
@@ -112,7 +113,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPostProcessMaterialRef
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FPostProcessMaterialRef
     {
         /// <summary>
@@ -128,7 +129,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPrimitiveMaterialRef
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FPrimitiveMaterialRef
     {
         /// <summary>
@@ -153,7 +154,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRootMotionCurve
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FRootMotionCurve
     {
         /// <summary>
@@ -187,7 +188,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSwarmDebugOptions
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 4)]
     public partial record struct FSwarmDebugOptions
     {
         /// <summary>
@@ -221,7 +222,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLightmassDebugOptions
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FLightmassDebugOptions
     {
         /// <summary>
@@ -390,7 +391,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLightmassPrimitiveSettings
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 28)]
     public partial record struct FLightmassPrimitiveSettings
     {
         /// <summary>
@@ -487,7 +488,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLightmassDirectionalLightSettings
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FLightmassDirectionalLightSettings
     {
         /// <summary>
@@ -503,7 +504,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLightmassPointLightSettings
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FLightmassPointLightSettings
     {
         /// <summary>
@@ -519,7 +520,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLightmassLightSettings
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FLightmassLightSettings
     {
         /// <summary>
@@ -553,7 +554,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FDominantShadowInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 164)]
     public partial record struct FDominantShadowInfo
     {
         /// <summary>
@@ -618,7 +619,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLightMapRef
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FLightMapRef
     {
         /// <summary>
@@ -809,7 +810,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLocalizedSubtitle
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FLocalizedSubtitle
     {
         /// <summary>
@@ -861,7 +862,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSubtitleCue
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FSubtitleCue
     {
         /// <summary>

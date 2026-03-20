@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMPathNode_WallClimb<br/>
+/// (size = 1084)
 /// (flags = 0)
 /// </summary>
 public partial class RBMPathNode_WallClimb : BmSDK.BmGame.RBMPathNode_VariablePositionTraverse, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RBMPathNode_WallClimb : BmSDK.BmGame.RBMPathNode_VariablePo
     public unsafe void UseWallClimb(BmSDK.BmGame.RBMPawnAI User, int EdgeType, System.Numerics.Vector3 JumpDirection, System.Numerics.Vector3 JumpLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_WallClimb.UseWallClimb", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(User, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EdgeType, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(JumpDirection, paramsPtr + 12);
@@ -88,7 +89,7 @@ public partial class RBMPathNode_WallClimb : BmSDK.BmGame.RBMPathNode_VariablePo
     public unsafe System.Numerics.Vector3 GetReferencePoint(BmSDK.BmGame.RBMPawnAI Jumper)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_WallClimb.GetReferencePoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Jumper, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 8);

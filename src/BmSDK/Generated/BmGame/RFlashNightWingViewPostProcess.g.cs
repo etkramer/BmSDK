@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RFlashNightWingViewPostProcess<br/>
+/// (size = 180)
 /// (flags = 0)
 /// </summary>
 public partial class RFlashNightWingViewPostProcess : BmSDK.BmGame.RViewPostProcess, BmSDK.IGameObject

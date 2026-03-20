@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMBehaviour_MultiPositionalTalkingBase<br/>
+/// (size = 680)
 /// (flags = 0)
 /// </summary>
 public partial class RBMBehaviour_MultiPositionalTalkingBase : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject

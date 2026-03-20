@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDNodeDrawInfo<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDNodeDrawInfo : BmSDK.GameObject, BmSDK.IGameObject

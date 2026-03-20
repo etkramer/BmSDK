@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionTransformPosition<br/>
+/// (size = 226)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionTransformPosition : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

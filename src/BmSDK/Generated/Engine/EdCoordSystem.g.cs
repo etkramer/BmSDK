@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: EdCoordSystem<br/>
+/// (size = 176)
 /// (flags = 0)
 /// </summary>
 public partial class EdCoordSystem : BmSDK.GameObject, BmSDK.IGameObject

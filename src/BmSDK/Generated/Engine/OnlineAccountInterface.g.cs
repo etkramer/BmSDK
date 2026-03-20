@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: OnlineAccountInterface<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class OnlineAccountInterface : BmSDK.Interface, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class OnlineAccountInterface : BmSDK.Interface, BmSDK.IGameObject
     public unsafe bool GetLocalAccountNames(out BmSDK.TArray<BmSDK.FString> Accounts)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAccountInterface.GetLocalAccountNames", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         Accounts = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(paramsPtr + 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 16);
@@ -50,7 +51,7 @@ public partial class OnlineAccountInterface : BmSDK.Interface, BmSDK.IGameObject
     public unsafe bool DeleteLocalAccount(BmSDK.FString UserName, BmSDK.FString Password = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAccountInterface.DeleteLocalAccount", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(UserName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Password, paramsPtr + 16);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -63,7 +64,7 @@ public partial class OnlineAccountInterface : BmSDK.Interface, BmSDK.IGameObject
     public unsafe bool RenameLocalAccount(BmSDK.FString NewUserName, BmSDK.FString OldUserName, BmSDK.FString Password = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAccountInterface.RenameLocalAccount", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewUserName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OldUserName, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Password, paramsPtr + 32);
@@ -77,7 +78,7 @@ public partial class OnlineAccountInterface : BmSDK.Interface, BmSDK.IGameObject
     public unsafe bool CreateLocalAccount(BmSDK.FString UserName, BmSDK.FString Password = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAccountInterface.CreateLocalAccount", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(UserName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Password, paramsPtr + 16);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -90,7 +91,7 @@ public partial class OnlineAccountInterface : BmSDK.Interface, BmSDK.IGameObject
     public unsafe void ClearCreateOnlineAccountCompletedDelegate(System.IntPtr AccountCreateDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAccountInterface.ClearCreateOnlineAccountCompletedDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AccountCreateDelegate, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -102,7 +103,7 @@ public partial class OnlineAccountInterface : BmSDK.Interface, BmSDK.IGameObject
     public unsafe void AddCreateOnlineAccountCompletedDelegate(System.IntPtr AccountCreateDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAccountInterface.AddCreateOnlineAccountCompletedDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AccountCreateDelegate, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -114,7 +115,7 @@ public partial class OnlineAccountInterface : BmSDK.Interface, BmSDK.IGameObject
     public unsafe void OnCreateOnlineAccountCompleted(BmSDK.Engine.OnlineSubsystem.EOnlineAccountCreateStatus ErrorStatus)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAccountInterface.OnCreateOnlineAccountCompleted", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[1];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ErrorStatus, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -126,7 +127,7 @@ public partial class OnlineAccountInterface : BmSDK.Interface, BmSDK.IGameObject
     public unsafe bool CreateOnlineAccount(BmSDK.FString UserName, BmSDK.FString Password, BmSDK.FString EmailAddress, BmSDK.FString ProductKey = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAccountInterface.CreateOnlineAccount", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[68];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(UserName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Password, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EmailAddress, paramsPtr + 32);

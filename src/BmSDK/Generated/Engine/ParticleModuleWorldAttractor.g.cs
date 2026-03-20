@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleWorldAttractor<br/>
+/// (size = 136)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleWorldAttractor : BmSDK.Engine.ParticleModuleWorldForcesBase, BmSDK.IGameObject

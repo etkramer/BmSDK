@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MCrowdAttractor_CrowAttack<br/>
+/// (size = 728)
 /// (flags = 0)
 /// </summary>
 public partial class MCrowdAttractor_CrowAttack : BmSDK.BmGame.RCrowdAttractor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class MCrowdAttractor_CrowAttack : BmSDK.BmGame.RCrowdAttractor, 
     public unsafe System.Numerics.Vector3 GetAttractionForce(BmSDK.BmGame.RCrowdAgent Agent, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MCrowdAttractor_CrowAttack.GetAttractionForce", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Agent, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;

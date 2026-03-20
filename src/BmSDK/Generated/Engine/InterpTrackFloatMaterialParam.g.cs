@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackFloatMaterialParam<br/>
+/// (size = 292)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackFloatMaterialParam : BmSDK.Engine.InterpTrackFloatBase, BmSDK.IGameObject

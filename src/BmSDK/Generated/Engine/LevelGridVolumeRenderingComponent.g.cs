@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LevelGridVolumeRenderingComponent<br/>
+/// (size = 540)
 /// (flags = 0)
 /// </summary>
 public partial class LevelGridVolumeRenderingComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

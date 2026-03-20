@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGroupAssignmentPicker<br/>
+/// (size = 92)
 /// (flags = 0)
 /// </summary>
 public partial class RGroupAssignmentPicker : BmSDK.StateObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RGroupAssignmentPicker : BmSDK.StateObject, BmSDK.IGameObje
     public unsafe bool Update()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGroupAssignmentPicker.Update", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -49,7 +50,7 @@ public partial class RGroupAssignmentPicker : BmSDK.StateObject, BmSDK.IGameObje
     public unsafe void ScriptInitExecution()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGroupAssignmentPicker.ScriptInitExecution", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;

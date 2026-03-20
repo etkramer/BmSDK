@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_ChuteToCrawlSpaceDLC<br/>
+/// (size = 672)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_ChuteToCrawlSpaceDLC : BmSDK.BmGame.RSpecialMoveConfig_ChuteToCrawlSpace, BmSDK.IGameObject

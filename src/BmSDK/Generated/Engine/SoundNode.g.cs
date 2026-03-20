@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SoundNode<br/>
+/// (size = 104)
 /// (flags = 0)
 /// </summary>
 public partial class SoundNode : BmSDK.GameObject, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MDmgType_SuperHarleyStunFinal<br/>
+/// (size = 236)
 /// (flags = 0)
 /// </summary>
 public partial class MDmgType_SuperHarleyStunFinal : BmSDK.BmGame.RDmgType_SuperStunFinal, BmSDK.IGameObject

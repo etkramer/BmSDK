@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNotify<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNotify : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AnimNotify : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool FindNextNotifyOfClass(BmSDK.Engine.AnimNodeSequence AnimSeqInstigator, BmSDK.Class NotifyClass, out BmSDK.Engine.AnimSequence.FAnimNotifyEvent OutEvent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNotify.FindNextNotifyOfClass", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimSeqInstigator, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NotifyClass, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -86,7 +87,7 @@ public partial class AnimNotify : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FNotifierInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 48)]
     public partial record struct FNotifierInfo
     {
         /// <summary>

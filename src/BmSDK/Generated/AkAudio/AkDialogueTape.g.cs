@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkDialogueTape<br/>
+/// (size = 260)
 /// (flags = 0)
 /// </summary>
 public partial class AkDialogueTape : BmSDK.Engine.AkHash, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AkDialogueTape : BmSDK.Engine.AkHash, BmSDK.IGameObject
     public unsafe static void Stop(BmSDK.AkAudio.AkDialogueTape dlgTape)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkDialogueTape.Stop", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(dlgTape, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -57,7 +58,7 @@ public partial class AkDialogueTape : BmSDK.Engine.AkHash, BmSDK.IGameObject
     public unsafe static int Start(BmSDK.AkAudio.AkDialogueTape dlgTape, BmSDK.Engine.AkDialogue.FAkSpeechOptions dlgCallbacks)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkDialogueTape.Start", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[128];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(dlgTape, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(dlgCallbacks, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;

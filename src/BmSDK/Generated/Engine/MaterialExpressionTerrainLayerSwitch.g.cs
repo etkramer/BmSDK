@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionTerrainLayerSwitch<br/>
+/// (size = 312)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionTerrainLayerSwitch : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

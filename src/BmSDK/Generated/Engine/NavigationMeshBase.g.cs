@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NavigationMeshBase<br/>
+/// (size = 848)
 /// (flags = 0)
 /// </summary>
 public partial class NavigationMeshBase : BmSDK.GameObject, BmSDK.IGameObject

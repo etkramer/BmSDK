@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RParticleModuleOnDeathBase<br/>
+/// (size = 96)
 /// (flags = 0)
 /// </summary>
 public partial class RParticleModuleOnDeathBase : BmSDK.Engine.ParticleModule, BmSDK.IGameObject

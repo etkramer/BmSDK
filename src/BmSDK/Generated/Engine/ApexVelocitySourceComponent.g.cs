@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexVelocitySourceComponent<br/>
+/// (size = 640)
 /// (flags = 0)
 /// </summary>
 public partial class ApexVelocitySourceComponent : BmSDK.Engine.ApexFieldSamplerComponent, BmSDK.IGameObject

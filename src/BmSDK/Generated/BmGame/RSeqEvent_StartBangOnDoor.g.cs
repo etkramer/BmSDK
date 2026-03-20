@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_StartBangOnDoor<br/>
+/// (size = 388)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_StartBangOnDoor : BmSDK.BmGame.RBMSeqEvent_BehaviourRoot, BmSDK.IGameObject

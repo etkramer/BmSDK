@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Interface_NavMeshPathObstacle<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class Interface_NavMeshPathObstacle : BmSDK.Interface, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class Interface_NavMeshPathObstacle : BmSDK.Interface, BmSDK.IGam
     public unsafe BmSDK.Engine.Actor GetObstacleActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Interface_NavMeshPathObstacle.GetObstacleActor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(paramsPtr + 0);
     }

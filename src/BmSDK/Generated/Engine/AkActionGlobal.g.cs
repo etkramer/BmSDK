@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkActionGlobal<br/>
+/// (size = 148)
 /// (flags = 0)
 /// </summary>
 public partial class AkActionGlobal : BmSDK.Engine.AkAction, BmSDK.IGameObject

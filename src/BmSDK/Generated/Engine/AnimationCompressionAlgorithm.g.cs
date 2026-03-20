@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimationCompressionAlgorithm<br/>
+/// (size = 106)
 /// (flags = 0)
 /// </summary>
 public partial class AnimationCompressionAlgorithm : BmSDK.GameObject, BmSDK.IGameObject

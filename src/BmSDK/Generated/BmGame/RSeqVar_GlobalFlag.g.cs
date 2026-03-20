@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqVar_GlobalFlag<br/>
+/// (size = 260)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqVar_GlobalFlag : BmSDK.Engine.SeqVar_Bool, BmSDK.IGameObject

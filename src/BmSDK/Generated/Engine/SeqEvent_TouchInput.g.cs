@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqEvent_TouchInput<br/>
+/// (size = 396)
 /// (flags = 0)
 /// </summary>
 public partial class SeqEvent_TouchInput : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

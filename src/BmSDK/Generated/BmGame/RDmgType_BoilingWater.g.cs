@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_Boilingwater<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_Boilingwater : BmSDK.BmGame.RDmgType_Fell, BmSDK.IGameObject

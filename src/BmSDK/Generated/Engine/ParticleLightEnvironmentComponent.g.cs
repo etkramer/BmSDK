@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleLightEnvironmentComponent<br/>
+/// (size = 368)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleLightEnvironmentComponent : BmSDK.Engine.DynamicLightEnvironmentComponent, BmSDK.IGameObject

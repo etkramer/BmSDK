@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Note<br/>
+/// (size = 684)
 /// (flags = 0)
 /// </summary>
 public partial class Note : BmSDK.Engine.Actor, BmSDK.IGameObject

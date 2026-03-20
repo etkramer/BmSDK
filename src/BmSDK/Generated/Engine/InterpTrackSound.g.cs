@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackSound<br/>
+/// (size = 324)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackSound : BmSDK.Engine.InterpTrackVectorBase, BmSDK.IGameObject
@@ -71,7 +72,7 @@ public partial class InterpTrackSound : BmSDK.Engine.InterpTrackVectorBase, BmSD
     /// <summary>
     /// Struct: FSoundTrackKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FSoundTrackKey
     {
         /// <summary>

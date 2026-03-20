@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleScenario<br/>
+/// (size = 108)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleScenario : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RVehicleScenario : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetNearestAvailableSpawnPoint(out System.Numerics.Vector3 SpawnLoc, out BmSDK.Rotator SpawnRot, out float RoadWidth, System.Numerics.Vector3 TestLoc, System.Numerics.Vector3 CameraLoc, System.Numerics.Vector3 playerLoc, float MinDistanceFromPlayerLoc, out BmSDK.TArray<System.Numerics.Vector3> AvoidLoc, float MinDistanceFromAvoidLoc, bool ObeyExclusionZones, BmSDK.BmGame.RGameInfo.EDistrict SpawnInDistrict = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScenario.GetNearestAvailableSpawnPoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[100];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestLoc, paramsPtr + 28);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CameraLoc, paramsPtr + 40);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(playerLoc, paramsPtr + 52);
@@ -67,7 +68,7 @@ public partial class RVehicleScenario : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static bool DestroyVehicles(out BmSDK.TArray<BmSDK.BmGame.RVehicleNPC> VehiclesIn, System.Numerics.Vector3 CameraLoc, float MinDistanceFromCameraLoc, float MinTimeHidden)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScenario.DestroyVehicles", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CameraLoc, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MinDistanceFromCameraLoc, paramsPtr + 28);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MinTimeHidden, paramsPtr + 32);
@@ -89,7 +90,7 @@ public partial class RVehicleScenario : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RVehicleNPC SpawnScenarioVehicle(System.Numerics.Vector3 SpawnLoc, BmSDK.Rotator SpawnRot, float RoadWidth, BmSDK.TArray<BmSDK.Engine.Volume> BehaviourVolumes, BmSDK.BmGame.RPatrolPoint PatrolRoute, bool ObeyExclusionZones, int Index, BmSDK.TArray<BmSDK.BmGame.RVehicleNPC> SpawnedVehicles)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScenario.SpawnScenarioVehicle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[84];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnLoc, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnRot, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RoadWidth, paramsPtr + 24);
@@ -115,7 +116,7 @@ public partial class RVehicleScenario : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SpawnInstanceEx(System.Numerics.Vector3 SpawnLoc, BmSDK.Rotator SpawnRot, System.Numerics.Vector3 CameraLoc, System.Numerics.Vector3 playerLoc, float MinDistanceFromPlayerLoc, out BmSDK.TArray<System.Numerics.Vector3> AvoidLoc, float MinDistanceFromAvoidLoc, out BmSDK.TArray<BmSDK.BmGame.RVehicleNPC> VehiclesOut, out BmSDK.TArray<BmSDK.Engine.Volume> BehaviourVolumes, BmSDK.BmGame.RPatrolPoint PatrolRoute, bool bForceSpawnLocation, bool ObeyExclusionZones, BmSDK.BmGame.RGameInfo.EDistrict SpawnInDistrict = default, BmSDK.BmGame.RVehicleNPC.EVehicleSpawnType SpawnType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScenario.SpawnInstanceEx", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[128];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnLoc, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnRot, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CameraLoc, paramsPtr + 24);
@@ -147,7 +148,7 @@ public partial class RVehicleScenario : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool SpawnInstance(System.Numerics.Vector3 SpawnLoc, BmSDK.Rotator SpawnRot, System.Numerics.Vector3 CameraLoc, System.Numerics.Vector3 playerLoc, float MinDistanceFromPlayerLoc, out BmSDK.TArray<BmSDK.BmGame.RVehicleNPC> VehiclesOut, bool bForceSpawnLocation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RVehicleScenario.SpawnInstance", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[108];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnLoc, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnRot, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CameraLoc, paramsPtr + 24);
@@ -200,7 +201,7 @@ public partial class RVehicleScenario : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FScenarioVehicleDesc
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 88)]
     public partial record struct FScenarioVehicleDesc
     {
         /// <summary>
@@ -324,7 +325,7 @@ public partial class RVehicleScenario : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FScenarioPassengerDesc
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 52)]
     public partial record struct FScenarioPassengerDesc
     {
         /// <summary>

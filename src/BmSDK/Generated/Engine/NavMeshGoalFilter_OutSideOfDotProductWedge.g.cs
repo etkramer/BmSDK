@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NavMeshGoalFilter_OutSideOfDotProductWedge<br/>
+/// (size = 124)
 /// (flags = 0)
 /// </summary>
 public partial class NavMeshGoalFilter_OutSideOfDotProductWedge : BmSDK.Engine.NavMeshGoal_Filter, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class NavMeshGoalFilter_OutSideOfDotProductWedge : BmSDK.Engine.N
     public unsafe static bool OutsideOfDotProductWedge(BmSDK.Engine.NavMeshGoal_GenericFilterContainer FilterContainer, System.Numerics.Vector3 InLocation, BmSDK.Rotator InRotation, float InEpsilon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshGoalFilter_OutSideOfDotProductWedge.OutsideOfDotProductWedge", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FilterContainer, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InLocation, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InRotation, paramsPtr + 20);

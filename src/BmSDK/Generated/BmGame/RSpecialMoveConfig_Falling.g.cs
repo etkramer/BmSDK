@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_Falling<br/>
+/// (size = 400)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_Falling : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject

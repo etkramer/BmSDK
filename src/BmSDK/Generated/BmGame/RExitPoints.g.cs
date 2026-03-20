@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RExitPoints<br/>
+/// (size = 120)
 /// (flags = 0)
 /// </summary>
 public partial class RExitPoints : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RExitPoints : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void ShowDebug(BmSDK.Engine.Actor DebugActor, bool bPerm = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExitPoints.ShowDebug", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DebugActor, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPerm, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -48,7 +49,7 @@ public partial class RExitPoints : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FExitPointPair
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 28)]
     public partial record struct FExitPointPair
     {
         /// <summary>

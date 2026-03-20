@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNotify_Footstep<br/>
+/// (size = 88)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNotify_Footstep : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

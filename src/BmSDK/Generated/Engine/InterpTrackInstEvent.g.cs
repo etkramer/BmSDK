@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackInstEvent<br/>
+/// (size = 88)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstEvent : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionInteriorMappingParameter<br/>
+/// (size = 532)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionInteriorMappingParameter : BmSDK.Engine.MaterialExpressionTextureSampleParameter, BmSDK.IGameObject

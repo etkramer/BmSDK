@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionComment<br/>
+/// (size = 204)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionComment : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_MaterialParameter_Vector<br/>
+/// (size = 112)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_MaterialParameter_Vector : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

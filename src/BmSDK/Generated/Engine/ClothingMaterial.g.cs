@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ClothingMaterial<br/>
+/// (size = 96)
 /// (flags = 0)
 /// </summary>
 public partial class ClothingMaterial : BmSDK.GameObject, BmSDK.IGameObject

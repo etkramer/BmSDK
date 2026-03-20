@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: FaceFXAnimSet<br/>
+/// (size = 152)
 /// (flags = 0)
 /// </summary>
 public partial class FaceFXAnimSet : BmSDK.GameObject, BmSDK.IGameObject

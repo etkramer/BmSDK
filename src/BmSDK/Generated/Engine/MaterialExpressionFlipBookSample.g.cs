@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionFlipBookSample<br/>
+/// (size = 284)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionFlipBookSample : BmSDK.Engine.MaterialExpressionTextureSample, BmSDK.IGameObject

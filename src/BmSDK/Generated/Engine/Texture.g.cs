@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Texture<br/>
+/// (size = 308)
 /// (flags = 0)
 /// </summary>
 public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
@@ -536,7 +537,7 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTextureGroupContainer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 4)]
     public partial record struct FTextureGroupContainer
     {
         /// <summary>

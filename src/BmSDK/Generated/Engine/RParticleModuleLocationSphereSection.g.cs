@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RParticleModuleLocationSphereSection<br/>
+/// (size = 352)
 /// (flags = 0)
 /// </summary>
 public partial class RParticleModuleLocationSphereSection : BmSDK.Engine.ParticleModuleLocationBase, BmSDK.IGameObject

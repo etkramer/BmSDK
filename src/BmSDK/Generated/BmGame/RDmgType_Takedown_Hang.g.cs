@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_Takedown_Hang<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_Takedown_Hang : BmSDK.BmGame.RDmgType_Takedown, BmSDK.IGameObject

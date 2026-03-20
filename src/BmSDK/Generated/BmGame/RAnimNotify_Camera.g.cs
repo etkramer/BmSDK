@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_Camera<br/>
+/// (size = 96)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_Camera : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

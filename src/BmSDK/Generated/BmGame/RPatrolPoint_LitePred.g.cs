@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPatrolPoint_LitePred<br/>
+/// (size = 716)
 /// (flags = 0)
 /// </summary>
 public partial class RPatrolPoint_LitePred : BmSDK.BmGame.RPatrolPoint, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RPatrolPoint_LitePred : BmSDK.BmGame.RPatrolPoint, BmSDK.IG
     public unsafe void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPatrolPoint_LitePred.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

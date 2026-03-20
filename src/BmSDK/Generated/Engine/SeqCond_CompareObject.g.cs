@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqCond_CompareObject<br/>
+/// (size = 324)
 /// (flags = 0)
 /// </summary>
 public partial class SeqCond_CompareObject : BmSDK.Engine.SequenceCondition, BmSDK.IGameObject

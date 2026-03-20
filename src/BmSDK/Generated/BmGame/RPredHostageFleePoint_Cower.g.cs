@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPredHostageFleePoint_Cower<br/>
+/// (size = 680)
 /// (flags = 0)
 /// </summary>
 public partial class RPredHostageFleePoint_Cower : BmSDK.BmGame.RPredHostageFleePoint, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RPredHostageFleePoint_Cower : BmSDK.BmGame.RPredHostageFlee
     public unsafe bool PawnAtDest(BmSDK.BmGame.RBMPawnAI NewUser)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredHostageFleePoint_Cower.PawnAtDest", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewUser, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);

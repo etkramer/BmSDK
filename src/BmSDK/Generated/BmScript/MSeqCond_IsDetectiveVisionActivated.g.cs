@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: MSeqCond_IsDetectiveVisionActivated<br/>
+/// (size = 324)
 /// (flags = 0)
 /// </summary>
 public partial class MSeqCond_IsDetectiveVisionActivated : BmSDK.Engine.SequenceCondition, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class MSeqCond_IsDetectiveVisionActivated : BmSDK.Engine.Sequence
     public unsafe void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.MSeqCond_IsDetectiveVisionActivated.Activated", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

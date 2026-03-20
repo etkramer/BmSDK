@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionTime<br/>
+/// (size = 176)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionTime : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionContractExpand<br/>
+/// (size = 225)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionContractExpand : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

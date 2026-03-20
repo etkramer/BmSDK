@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_EnemyExplosiveWeapons<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_EnemyExplosiveWeapons : BmSDK.BmGame.RDmgType_Explosion, BmSDK.IGameObject

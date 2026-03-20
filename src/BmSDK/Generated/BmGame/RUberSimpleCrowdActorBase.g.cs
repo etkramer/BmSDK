@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RUberSimpleCrowdActorBase<br/>
+/// (size = 680)
 /// (flags = 0)
 /// </summary>
 public partial class RUberSimpleCrowdActorBase : BmSDK.Engine.Actor, BmSDK.IGameObject

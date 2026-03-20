@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RB_ForceComponentCylindrical<br/>
+/// (size = 628)
 /// (flags = 0)
 /// </summary>
 public partial class RB_ForceComponentCylindrical : BmSDK.Engine.RB_ForceComponent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RB_ForceComponentCylindrical : BmSDK.Engine.RB_ForceCompone
     public unsafe BmSDK.Engine.RB_ForceComponent Clone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ForceComponentCylindrical.Clone", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_ForceComponent>(paramsPtr + 0);
     }

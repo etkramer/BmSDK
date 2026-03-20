@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_SetPhysics<br/>
+/// (size = 360)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_SetPhysics : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

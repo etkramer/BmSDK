@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMovingRadialImpulseActor<br/>
+/// (size = 704)
 /// (flags = 0)
 /// </summary>
 public partial class RMovingRadialImpulseActor : BmSDK.Engine.RB_RadialImpulseActor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RMovingRadialImpulseActor : BmSDK.Engine.RB_RadialImpulseAc
     public unsafe void OnFireImpulse()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMovingRadialImpulseActor.OnFireImpulse", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -84,7 +85,7 @@ public partial class RMovingRadialImpulseActor : BmSDK.Engine.RB_RadialImpulseAc
     public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMovingRadialImpulseActor.OnToggle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(inAction, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

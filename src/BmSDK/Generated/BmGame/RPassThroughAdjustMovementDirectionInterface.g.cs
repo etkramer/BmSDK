@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPassThroughAdjustMovementDirectionInterface<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RPassThroughAdjustMovementDirectionInterface : BmSDK.Interface, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RPassThroughAdjustMovementDirectionInterface : BmSDK.Interf
     public unsafe System.Numerics.Vector3 AdjustMovementDirection(System.Numerics.Vector3 MovementDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPassThroughAdjustMovementDirectionInterface.AdjustMovementDirection", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MovementDir, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 12);

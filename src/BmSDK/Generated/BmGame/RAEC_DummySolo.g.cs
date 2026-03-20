@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_DummySolo<br/>
+/// (size = 696)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_DummySolo : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject

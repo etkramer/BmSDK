@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDeferred_DirectionalLight<br/>
+/// (size = 692)
 /// (flags = 0)
 /// </summary>
 public partial class RDeferred_DirectionalLight : BmSDK.Engine.DirectionalLight, BmSDK.IGameObject

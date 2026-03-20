@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_CastToFloat<br/>
+/// (size = 360)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_CastToFloat : BmSDK.Engine.SeqAct_SetSequenceVariable, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMExitCondition_Flag<br/>
+/// (size = 448)
 /// (flags = 0)
 /// </summary>
 public partial class RBMExitCondition_Flag : BmSDK.BmGame.RBMExitCondition, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RBMExitCondition_Flag : BmSDK.BmGame.RBMExitCondition, BmSD
     public unsafe void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitCondition_Flag.Tick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNode_FilterList<br/>
+/// (size = 340)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNode_FilterList : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RAnimNode_FilterList : BmSDK.Engine.AnimNodeBlendBase, BmSD
     /// <summary>
     /// Struct: FFilterChildBones
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FFilterChildBones
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MHarleyGrappleGunBase<br/>
+/// (size = 3804)
 /// (flags = 0)
 /// </summary>
 public partial class MHarleyGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class MHarleyGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGa
     public unsafe bool TriggerPounce(bool bTryQueuedGrapple = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHarleyGrappleGunBase.TriggerPounce", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[248];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bTryQueuedGrapple, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
@@ -85,7 +86,7 @@ public partial class MHarleyGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGa
     public unsafe void TriggerGrateThrough()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHarleyGrappleGunBase.TriggerGrateThrough", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[140];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -96,7 +97,7 @@ public partial class MHarleyGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGa
     public unsafe bool Grapple(BmSDK.BmGame.RSpecialMoveConfig OverrideGrappleMove = default, bool bForceSucced = default, bool bTryQueuedGrapple = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHarleyGrappleGunBase.Grapple", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OverrideGrappleMove, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bForceSucced, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bTryQueuedGrapple, paramsPtr + 12);

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCrowdTrigger<br/>
+/// (size = 700)
 /// (flags = 0)
 /// </summary>
 public partial class RCrowdTrigger : BmSDK.Engine.Actor, BmSDK.IGameObject

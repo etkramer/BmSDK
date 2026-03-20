@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkDialogueAnim<br/>
+/// (size = 116)
 /// (flags = 0)
 /// </summary>
 public partial class AkDialogueAnim : BmSDK.Engine.AkHash, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class AkDialogueAnim : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAkDialogueAnimData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 80)]
     public partial record struct FAkDialogueAnimData
     {
         /// <summary>
@@ -96,7 +97,7 @@ public partial class AkDialogueAnim : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAkDialogueResolvedData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 60)]
     public partial record struct FAkDialogueResolvedData
     {
         /// <summary>

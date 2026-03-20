@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqCond_SwitchClass<br/>
+/// (size = 340)
 /// (flags = 0)
 /// </summary>
 public partial class SeqCond_SwitchClass : BmSDK.Engine.SeqCond_SwitchBase, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class SeqCond_SwitchClass : BmSDK.Engine.SeqCond_SwitchBase, BmSD
     public unsafe void RemoveValueEntry(int RemoveIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqCond_SwitchClass.RemoveValueEntry", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RemoveIndex, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -50,7 +51,7 @@ public partial class SeqCond_SwitchClass : BmSDK.Engine.SeqCond_SwitchBase, BmSD
     public unsafe void InsertValueEntry(int InsertIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqCond_SwitchClass.InsertValueEntry", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InsertIndex, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -62,7 +63,7 @@ public partial class SeqCond_SwitchClass : BmSDK.Engine.SeqCond_SwitchBase, BmSD
     public unsafe bool IsFallThruEnabled(int ValueIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqCond_SwitchClass.IsFallThruEnabled", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ValueIndex, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
@@ -74,7 +75,7 @@ public partial class SeqCond_SwitchClass : BmSDK.Engine.SeqCond_SwitchBase, BmSD
     public unsafe void VerifyDefaultCaseValue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqCond_SwitchClass.VerifyDefaultCaseValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -91,7 +92,7 @@ public partial class SeqCond_SwitchClass : BmSDK.Engine.SeqCond_SwitchBase, BmSD
     /// <summary>
     /// Struct: FSwitchClassInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 9)]
     public partial record struct FSwitchClassInfo
     {
         /// <summary>

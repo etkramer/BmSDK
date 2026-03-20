@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleLocationSkelVertSurface<br/>
+/// (size = 184)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleLocationSkelVertSurface : BmSDK.Engine.ParticleModuleLocationBase, BmSDK.IGameObject

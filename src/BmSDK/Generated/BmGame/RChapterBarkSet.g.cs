@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RChapterBarkSet<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RChapterBarkSet : BmSDK.GameObject, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MWBIDEmailFormScreenMessage<br/>
+/// (size = 136)
 /// (flags = 0)
 /// </summary>
 public partial class MWBIDEmailFormScreenMessage : BmSDK.BmGame.MWBIDDataMessage, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class MWBIDEmailFormScreenMessage : BmSDK.BmGame.MWBIDDataMessage
     public unsafe void Flush()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDEmailFormScreenMessage.Flush", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -49,7 +50,7 @@ public partial class MWBIDEmailFormScreenMessage : BmSDK.BmGame.MWBIDDataMessage
     public unsafe void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDEmailFormScreenMessage.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -81,7 +82,7 @@ public partial class MWBIDEmailFormScreenMessage : BmSDK.BmGame.MWBIDDataMessage
     /// <summary>
     /// Struct: FUserData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FUserData
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_InterpolateFloat<br/>
+/// (size = 396)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_InterpolateFloat : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject

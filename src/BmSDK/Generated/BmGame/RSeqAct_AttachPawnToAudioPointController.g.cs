@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_AttachPawnToAudioPointController<br/>
+/// (size = 352)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_AttachPawnToAudioPointController : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

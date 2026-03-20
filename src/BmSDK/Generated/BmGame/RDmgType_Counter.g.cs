@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_Counter<br/>
+/// (size = 241)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_Counter : BmSDK.BmGame.RDmgType_Strike, BmSDK.IGameObject

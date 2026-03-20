@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNotify_Rumble<br/>
+/// (size = 108)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNotify_Rumble : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimConfig<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimConfig : BmSDK.GameObject, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RAnimConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FFullyCustomAdditiveAnimConfig
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FFullyCustomAdditiveAnimConfig
     {
         /// <summary>
@@ -78,7 +79,7 @@ public partial class RAnimConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCustomAdditiveAnimConfig
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 40)]
     public partial record struct FCustomAdditiveAnimConfig
     {
         /// <summary>
@@ -139,7 +140,7 @@ public partial class RAnimConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAdditiveAnimConfig
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 28)]
     public partial record struct FAdditiveAnimConfig
     {
         /// <summary>
@@ -191,7 +192,7 @@ public partial class RAnimConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCustomAnimConfig
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 52)]
     public partial record struct FCustomAnimConfig
     {
         /// <summary>
@@ -270,7 +271,7 @@ public partial class RAnimConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimConfig
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 40)]
     public partial record struct FAnimConfig
     {
         /// <summary>
@@ -361,7 +362,7 @@ public partial class RAnimConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FWeight
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 4)]
     public partial record struct FWeight
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ProscribedReachSpec<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class ProscribedReachSpec : BmSDK.Engine.ReachSpec, BmSDK.IGameObject

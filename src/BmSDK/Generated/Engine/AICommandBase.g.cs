@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AICommandBase<br/>
+/// (size = 92)
 /// (flags = 0)
 /// </summary>
 public partial class AICommandBase : BmSDK.StateObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AICommandBase : BmSDK.StateObject, BmSDK.IGameObject
     public unsafe static int GetUtility(BmSDK.Engine.AIController InAI)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AICommandBase.GetUtility", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InAI, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 8);

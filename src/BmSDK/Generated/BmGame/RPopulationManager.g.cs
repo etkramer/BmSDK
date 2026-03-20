@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPopulationManager<br/>
+/// (size = 1552)
 /// (flags = 0)
 /// </summary>
 public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void FireflyRemoveAndAddDronesToPopulation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.FireflyRemoveAndAddDronesToPopulation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -84,7 +85,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void FireDistrictClearedEventForDistrict(int DistrictID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.FireDistrictClearedEventForDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -96,7 +97,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RBMPawnAI SpawnBatmobileMobThug(System.Numerics.Vector3 SpawnLocation, BmSDK.BmGame.RVehicleBatmobileBase Bmbl)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SpawnBatmobileMobThug", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnLocation, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Bmbl, paramsPtr + 12);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -109,7 +110,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe System.Numerics.Vector3 GetBatmobileMobThugSpawnLocation(BmSDK.BmGame.RVehicleBatmobileBase Bmbl)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetBatmobileMobThugSpawnLocation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[56];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Bmbl, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 8);
@@ -121,7 +122,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool SpawnBatmobileMob(BmSDK.BmGame.RVehicleBatmobileBase Bmbl)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SpawnBatmobileMob", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Bmbl, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -133,7 +134,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void TrySpawnBatmobileMob()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.TrySpawnBatmobileMob", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -144,7 +145,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool BatmobileIsInValidSpaceForMob(BmSDK.BmGame.RVehicleBatmobileBase Bmbl)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.BatmobileIsInValidSpaceForMob", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[80];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Bmbl, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -156,7 +157,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool BatmobileIsOffscreenAndBatmanIsNotClose(BmSDK.BmGame.RVehicleBatmobileBase Bmbl, BmSDK.BmGame.RPawnPlayer Batman)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.BatmobileIsOffscreenAndBatmanIsNotClose", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Bmbl, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Batman, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -169,7 +170,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void BatmanLeftBatmobile(BmSDK.BmGame.RVehicleBatmobileBase Bmbl)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.BatmanLeftBatmobile", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Bmbl, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -181,7 +182,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RGameInfo.RPMAPCSpawnStatusWheel GetDistrictAPCStatusForWheel(BmSDK.BmGame.RGameInfo.EDistrict DistrictID, out int APCsRemaining, out int MaxAPCs)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetDistrictAPCStatusForWheel", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[14];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         APCsRemaining = BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -195,7 +196,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RGameInfo.RPMAPCSpawnResultWheel SpawnAPCForWheel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SpawnAPCForWheel", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.RPMAPCSpawnResultWheel>(paramsPtr + 0);
     }
@@ -206,7 +207,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RGameInfo.RPMAPCSpawnStatusWheel CanSpawnAPCforWheel(bool bIgnoreTimers = default, bool bDoDroneCheck = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.CanSpawnAPCforWheel", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[9];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bIgnoreTimers, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bDoDroneCheck, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -219,7 +220,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void BombThugScanningStopped()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.BombThugScanningStopped", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -230,7 +231,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void BombThugScanningStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.BombThugScanningStarted", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -241,7 +242,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SetRiotTracking(bool bNewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SetRiotTracking", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bNewValue, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -253,7 +254,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SetWeaponConfigForBehaviourClass(BmSDK.Class BehaviourClass, bool bMilitia, bool bFleeing, BmSDK.BmGame.RWeaponConfig NewConfig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SetWeaponConfigForBehaviourClass", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BehaviourClass, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bMilitia, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bFleeing, paramsPtr + 12);
@@ -268,7 +269,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RWeaponConfig GetWeaponConfigForBehaviourClass(BmSDK.Class BehaviourClass, bool bMilitia, bool bFleeing)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetWeaponConfigForBehaviourClass", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BehaviourClass, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bMilitia, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bFleeing, paramsPtr + 12);
@@ -282,7 +283,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void ReRegisterPooledPawnPairedAnimsets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ReRegisterPooledPawnPairedAnimsets", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -293,7 +294,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RBMWeapon GetWeaponFromPool(BmSDK.BmGame.RBMPawnAI NewOwner, BmSDK.Class WeaponClass, bool bCanCreatePool)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetWeaponFromPool", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewOwner, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WeaponClass, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bCanCreatePool, paramsPtr + 16);
@@ -307,7 +308,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RBMPawnAI GetPawnFromPool(BmSDK.Class PawnClass, BmSDK.BmGame.RCharacterDefine CharacterDefine, System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation, BmSDK.Class WeaponClass, bool bRequiresNavMesh = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetPawnFromPool", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[68];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PawnClass, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CharacterDefine, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnLocation, paramsPtr + 16);
@@ -324,7 +325,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SpawnDebugRunAwayThug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SpawnDebugRunAwayThug", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -335,7 +336,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SpawnDebugRunAwayThugAtLocation(System.Numerics.Vector3 SpawnLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SpawnDebugRunAwayThugAtLocation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnLocation, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -347,7 +348,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void CarHasSpawnedAllItsPassengers(BmSDK.BmGame.RVehicleNPC Car)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.CarHasSpawnedAllItsPassengers", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Car, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -359,7 +360,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void InformantInterrogated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.InformantInterrogated", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -370,7 +371,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool ShouldSpawnInformantOfType(BmSDK.BmGame.RPopulationManager.InformantType TestType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ShouldSpawnInformantOfType", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestType, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -389,7 +390,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool DoesDistrictSupportInformantType(int DistrictID, BmSDK.BmGame.RPopulationManager.InformantType TestType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.DoesDistrictSupportInformantType", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestType, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -409,7 +410,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void RemoveActiveRiddlerInformant(BmSDK.BmGame.RPawnVillain OldInformant)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.RemoveActiveRiddlerInformant", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OldInformant, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -428,7 +429,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void AddActiveRiddlerInformant(BmSDK.BmGame.RPawnVillain NewInformant)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.AddActiveRiddlerInformant", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInformant, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -447,7 +448,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool HasActiveInformant()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.HasActiveInformant", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -465,7 +466,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void ResetRiddlerInformantSpawnTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ResetRiddlerInformantSpawnTimer", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -483,7 +484,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SetNextRiddlerInformantType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SetNextRiddlerInformantType", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -501,7 +502,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void UpdateRiddlerInformants(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.UpdateRiddlerInformants", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -520,7 +521,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void RemovePostFireflyLocalPopulationControl()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.RemovePostFireflyLocalPopulationControl", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -531,7 +532,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void AddPostFireflyLocalPopulationControl()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.AddPostFireflyLocalPopulationControl", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -542,7 +543,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void RemoveActorThatPreventsSpawning(BmSDK.Engine.Actor inActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.RemoveActorThatPreventsSpawning", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(inActor, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -554,7 +555,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void AddActorThatPreventsSpawning(BmSDK.Engine.Actor inActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.AddActorThatPreventsSpawning", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(inActor, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -566,7 +567,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void ThreatAerialDroneDestroyed(BmSDK.BmGame.RAerialDroneAsset ThreatAsset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ThreatAerialDroneDestroyed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ThreatAsset, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -578,7 +579,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void ThreatWatchtowerDestroyed(BmSDK.BmGame.RWatchtowerAsset ThreatAsset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ThreatWatchtowerDestroyed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ThreatAsset, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -590,7 +591,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void ThreatCheckPointDestroyed(BmSDK.BmGame.RCheckpointAsset ThreatAsset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ThreatCheckPointDestroyed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ThreatAsset, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -602,7 +603,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetArtilleryThreatForDistrictID(int DistrictID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetArtilleryThreatForDistrictID", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -614,7 +615,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetMaxArtilleryThreatForDistrictID(int DistrictID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetMaxArtilleryThreatForDistrictID", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -626,7 +627,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RPopulationManager.EThreatType GetMaxThreat(BmSDK.BmGame.RGameInfo.EDistrict District)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetMaxThreat", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[2];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(District, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -645,7 +646,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetThreatLevel(BmSDK.BmGame.RGameInfo.EDistrict District, BmSDK.BmGame.RPopulationManager.EThreatType ThreatType, bool bForSpecificThreatLevel = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetThreatLevel", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(District, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ThreatType, paramsPtr + 1);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bForSpecificThreatLevel, paramsPtr + 4);
@@ -666,7 +667,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.FString GetDistrictName(BmSDK.BmGame.RGameInfo.EDistrict District)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetDistrictName", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(District, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 4);
@@ -691,7 +692,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void ShowThreatLevelsOnHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ShowThreatLevelsOnHUD", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[80];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -702,7 +703,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void UpdateCachedThreatLevels(bool bForceHUDUpdate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.UpdateCachedThreatLevels", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bForceHUDUpdate, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -721,7 +722,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void DeRegisterThreatLevelChangedEvent(BmSDK.BmGame.RSeqEvent_ThreatLevelChanged ChangeEvent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.DeRegisterThreatLevelChangedEvent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChangeEvent, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -733,7 +734,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void RegisterThreatLevelChangedEvent(BmSDK.BmGame.RSeqEvent_ThreatLevelChanged ChangeEvent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.RegisterThreatLevelChangedEvent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChangeEvent, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -745,7 +746,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RGameInfo.EDistrict GetDistrictFromName(BmSDK.FString DistrictName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetDistrictFromName", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[17];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictName, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EDistrict>(paramsPtr + 16);
@@ -757,7 +758,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void DebugUnPauseEverything()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.DebugUnPauseEverything", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -768,7 +769,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool IsHeavyTankEncounterActiveInMyDistrict(BmSDK.Engine.Actor TestActor, BmSDK.BmGame.RVehicleNPC TestTank)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.IsHeavyTankEncounterActiveInMyDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestActor, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestTank, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -781,7 +782,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void RemoveHeavyTankEncounter(BmSDK.BmGame.RSeqAct_VehicleEnemySpawner NewHeavyTankEncounter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.RemoveHeavyTankEncounter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewHeavyTankEncounter, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -793,7 +794,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void RegisterNewVehicleEncounter(BmSDK.BmGame.RSeqAct_VehicleEnemySpawner NewHeavyTankEncounter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.RegisterNewVehicleEncounter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewHeavyTankEncounter, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -805,7 +806,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SetCurrentDroneMaxThreatForCurrentDistrict(int NewMaxDroneThreat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SetCurrentDroneMaxThreatForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMaxDroneThreat, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -817,7 +818,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetCurrentDroneMaxThreatForCurrentDistrict()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetCurrentDroneMaxThreatForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -828,7 +829,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.FString GetFormationPopulationActionStringForCurrentDistrict()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetFormationPopulationActionStringForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
     }
@@ -839,7 +840,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.FString GetVehiclePopulationActionStringForCurrentDistrict()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetVehiclePopulationActionStringForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
     }
@@ -850,7 +851,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.FString GetRiotPopulationActionStringForCurrentDistrict()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetRiotPopulationActionStringForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
     }
@@ -861,7 +862,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void RecalculateMaxScenariosForType(int DistrictID, BmSDK.BmGame.RGameInfo.VehicleScenarioType ScenarioType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.RecalculateMaxScenariosForType", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ScenarioType, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -874,7 +875,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetMaxActiveHumveeScenariosForCurrentDistrict()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetMaxActiveHumveeScenariosForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -885,7 +886,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetMaxActiveDroneScenariosForCurrentDistrict()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetMaxActiveDroneScenariosForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -896,7 +897,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SetMaxActiveVehicleScenariosForCurrentDistrict(int NewNumber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SetMaxActiveVehicleScenariosForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewNumber, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -908,7 +909,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetMaxActiveVehicleScenariosForCurrentDistrict()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetMaxActiveVehicleScenariosForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -919,7 +920,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SetScenarioIdealNumberAtIDForCurrentDistrict(int Idx, int NewNumber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SetScenarioIdealNumberAtIDForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Idx, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewNumber, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -932,7 +933,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetScenarioIdealNumberAtIDForCurrentDistrict(int Idx)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetScenarioIdealNumberAtIDForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Idx, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -944,7 +945,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RGameInfo.FVehicleScenarioInfo GetScenarioAtIDForCurrentDistrict(int Idx)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetScenarioAtIDForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[88];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Idx, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FVehicleScenarioInfo>(paramsPtr + 4);
@@ -956,7 +957,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetNumVehicleScenariosForCurrentDistrict()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetNumVehicleScenariosForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -967,7 +968,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool APCSideStoryEnabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.APCSideStoryEnabled", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -978,7 +979,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SetTotalHumveePopulationForCurrentDistrict(int NewPopulation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SetTotalHumveePopulationForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewPopulation, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -990,7 +991,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SetCurrentHumveePopulationForCurrentDistrict(int NewPopulation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SetCurrentHumveePopulationForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewPopulation, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1002,7 +1003,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetTotalHumveePopulationForCurrentDistrict()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetTotalHumveePopulationForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -1013,7 +1014,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetCurrentHumveePopulationForCurrentDistrict()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetCurrentHumveePopulationForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -1024,7 +1025,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SetTotalDronePopulationForCurrentDistrict(int NewPopulation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SetTotalDronePopulationForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewPopulation, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1036,7 +1037,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SetCurrentDronePopulationForCurrentDistrict(int NewPopulation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SetCurrentDronePopulationForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewPopulation, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1048,7 +1049,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetTotalDronePopulationForCurrentDistrict()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetTotalDronePopulationForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -1059,7 +1060,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetCurrentDronePopulationForCurrentDistrict()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetCurrentDronePopulationForCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -1070,7 +1071,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool ActionIsBeingUsedForFormations(BmSDK.BmGame.RSeqAct_SetRandomPopulationBase TestAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ActionIsBeingUsedForFormations", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestAction, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -1082,7 +1083,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool ActionIsBeingUsedForVehicles(BmSDK.BmGame.RSeqAct_SetRandomPopulationBase TestAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ActionIsBeingUsedForVehicles", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestAction, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -1094,7 +1095,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool ActionIsBeingUsedForRiots(BmSDK.BmGame.RSeqAct_SetRandomPopulationBase TestAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ActionIsBeingUsedForRiots", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestAction, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -1106,7 +1107,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool ActionSetsCurrentDistrict(BmSDK.BmGame.RSeqAct_SetRandomPopulationBase TestAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ActionSetsCurrentDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestAction, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -1118,7 +1119,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool GetCurrentDistrictInfo(out BmSDK.FString SpawnDistrict, out int DistrictID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetCurrentDistrictInfo", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         SpawnDistrict = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
         DistrictID = BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 16);
@@ -1131,7 +1132,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void ResetScenarioID(out BmSDK.BmGame.RPopulationManager.FScenarioID ResetID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ResetScenarioID", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         ResetID = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPopulationManager.FScenarioID>(paramsPtr + 0);
         return;
@@ -1143,7 +1144,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool IsScenarioIDValid(out BmSDK.BmGame.RPopulationManager.FScenarioID CheckID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.IsScenarioIDValid", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         CheckID = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPopulationManager.FScenarioID>(paramsPtr + 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -1155,7 +1156,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void DrawAPCHUD(BmSDK.Engine.HUD H)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.DrawAPCHUD", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(H, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1167,7 +1168,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void DrawPawnCount(BmSDK.Engine.Canvas C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.DrawPawnCount", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(C, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1191,7 +1192,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void DrawRiotVisualisation(BmSDK.Engine.Canvas C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.DrawRiotVisualisation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[160];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(C, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1203,7 +1204,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void DrawTextCentred(BmSDK.Engine.Canvas C, BmSDK.FString Text, int X, int Y)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.DrawTextCentred", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(C, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Text, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(X, paramsPtr + 24);
@@ -1218,7 +1219,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void DrawRiotTrackingHUD(BmSDK.Engine.Canvas C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.DrawRiotTrackingHUD", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(C, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1230,7 +1231,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void DrawDebugText(BmSDK.Engine.Canvas C, BmSDK.FString Text, out float YPos, bool bLeft = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.DrawDebugText", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(C, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Text, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bLeft, paramsPtr + 28);
@@ -1245,7 +1246,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool WillVehicleInstigateCombat(BmSDK.BmGame.RVehicleNPC Vehicle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.WillVehicleInstigateCombat", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Vehicle, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -1257,7 +1258,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void PassengersEnteredCombat(BmSDK.BmGame.RVehicleNPC Vehicle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.PassengersEnteredCombat", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Vehicle, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1269,7 +1270,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool CanPassengersEnterCombat(BmSDK.BmGame.RVehicleNPC Vehicle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.CanPassengersEnterCombat", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Vehicle, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -1281,7 +1282,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.Class GetRunAwayBehaviourClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetRunAwayBehaviourClass", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(paramsPtr + 0);
     }
@@ -1292,7 +1293,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SpawnWandererForGroup(int DistrictIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SpawnWandererForGroup", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictIndex, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1311,7 +1312,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SpawnWandererGroup(int DistrictIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SpawnWandererGroup", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictIndex, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1330,7 +1331,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool FindWandererSpawnPoint(out System.Numerics.Vector3 SpawnLoc, out BmSDK.Rotator SpawnRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.FindWandererSpawnPoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1350,7 +1351,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool WanderersShouldBeDeactivated(int WandererIndex, System.Numerics.Vector3 playerLoc, System.Numerics.Vector3 PlayerDirection, float PlayerSpeed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.WanderersShouldBeDeactivated", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WandererIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(playerLoc, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerDirection, paramsPtr + 16);
@@ -1372,7 +1373,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void UpdateWandererThreatActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.UpdateWandererThreatActor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1390,7 +1391,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.Engine.Actor GetWandererThreatActor(BmSDK.BmGame.RPawnPlayer Batman, BmSDK.BmGame.RVehicleBatmobileBase Batmobile, BmSDK.TArray<BmSDK.BmGame.RPawnVillain> WandererList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetWandererThreatActor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Batman, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Batmobile, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WandererList, paramsPtr + 16);
@@ -1411,7 +1412,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool IsBatmobileThreatToWanderer(BmSDK.BmGame.RVehicleBatmobileBase Batmobile, BmSDK.BmGame.RBMPawnAI LeadWanderer, out int bConsiderBatmobile)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.IsBatmobileThreatToWanderer", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Batmobile, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LeadWanderer, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1432,7 +1433,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void CheckForDeletedWanderers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.CheckForDeletedWanderers", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1450,7 +1451,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void CheckForWanderersNeedSpawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.CheckForWanderersNeedSpawn", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1468,7 +1469,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void UpdateWanderers(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.UpdateWanderers", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1487,7 +1488,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void JokerPawnBecomesNormal(BmSDK.BmGame.RBMPawnAI JokerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.JokerPawnBecomesNormal", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(JokerPawn, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1499,7 +1500,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool JokerHallucinationsAllowed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.JokerHallucinationsAllowed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1517,7 +1518,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool AnyJokersCurrentlyActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.AnyJokersCurrentlyActive", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -1535,7 +1536,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.ROverworldPopulationVolume GetClosestActivePopVol()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetClosestActivePopVol", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.ROverworldPopulationVolume>(paramsPtr + 0);
     }
@@ -1546,7 +1547,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool SpawnJokersFromWanderers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SpawnJokersFromWanderers", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[104];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -1557,7 +1558,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void UpdateJokerInRiots(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.UpdateJokerInRiots", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1576,7 +1577,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void APCBeingTailedByBatman(BmSDK.BmGame.RVehicleNPC HostVehicle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.APCBeingTailedByBatman", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HostVehicle, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1588,7 +1589,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void VehicleDestroyed(BmSDK.BmGame.RVehicleNPC V, BmSDK.Engine.Controller Killer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.VehicleDestroyed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(V, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Killer, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1601,7 +1602,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void UpdateLocalPopulationControl(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.UpdateLocalPopulationControl", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1620,7 +1621,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void LocalPopulationDecreased(BmSDK.Engine.Controller Killer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.LocalPopulationDecreased", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Killer, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1632,7 +1633,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void ModifyPopulationForDistrictInternal(BmSDK.BmGame.RSeqAct_ModifyRandomPopulation RandomPopAction, BmSDK.FString DistrictName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ModifyPopulationForDistrictInternal", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RandomPopAction, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictName, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1645,7 +1646,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void ModifyRandomPopulationForDistrict(BmSDK.BmGame.RSeqAct_ModifyRandomPopulation RandomPopAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ModifyRandomPopulationForDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RandomPopAction, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1657,7 +1658,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool MightPopulationForDistrictContainTanks(BmSDK.BmGame.RGameInfo.EDistrict District)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.MightPopulationForDistrictContainTanks", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(District, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1676,7 +1677,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SetBatmobileAvailabilityInDistrict(BmSDK.BmGame.RSeqAct_SetBatmobileAvailabilityForDistrict AvailabilityAction, bool bUnavailable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SetBatmobileAvailabilityInDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AvailabilityAction, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bUnavailable, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1689,7 +1690,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SetRandomPopulationForDistrict(BmSDK.BmGame.RSeqAct_SetRandomPopulationBase RandomPopAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SetRandomPopulationForDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[104];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RandomPopAction, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1701,7 +1702,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.FString GetDistrictNameForObject(BmSDK.GameObject Obj, bool bIsChallenge)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetDistrictNameForObject", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Obj, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bIsChallenge, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1721,7 +1722,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RPopulationManager.FScenarioID GetVehicleScenarioIDForLocation(BmSDK.BmGame.RGameInfo.VehicleScenarioType DesiredScenarioType, int DistrictID, int ActiveDroneScenarios, int ActiveHumveeScenarios, BmSDK.BmGame.RVehicleNPC.EVehicleCombatEncounterType CurrentEncounter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetVehicleScenarioIDForLocation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[68];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DesiredScenarioType, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ActiveDroneScenarios, paramsPtr + 8);
@@ -1737,7 +1738,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RGameInfo.FVehicleScenarioInfo GetScenarioInfoFromID(int DistrictID, BmSDK.BmGame.RPopulationManager.FScenarioID CurrScenarioID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetScenarioInfoFromID", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CurrScenarioID, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1750,7 +1751,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetNumActiveScenariosOfType(BmSDK.BmGame.RGameInfo.VehicleScenarioType ScenarioType, out int Dormant)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetNumActiveScenariosOfType", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ScenarioType, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         Dormant = BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -1763,7 +1764,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetNumActiveVehicleScenarios(out int Dormant)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetNumActiveVehicleScenarios", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         Dormant = BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -1775,7 +1776,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool CanUseScenario(BmSDK.BmGame.RGameInfo.VehicleScenarioType DesiredScenarioType, BmSDK.BmGame.RPopulationManager.FScenarioID CurrScenarioID, int DistrictID, int ActiveDroneScenarios, int ActiveHumveeScenarios, BmSDK.BmGame.RVehicleNPC.EVehicleCombatEncounterType CurrentEncounterType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.CanUseScenario", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[68];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DesiredScenarioType, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CurrScenarioID, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 12);
@@ -1792,7 +1793,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SetHumveeSpawnTimer(bool bDistrictChanged)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SetHumveeSpawnTimer", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bDistrictChanged, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1811,7 +1812,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool AreAnyHumveesActive(int DistrictID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.AreAnyHumveesActive", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1830,7 +1831,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool ShouldTryToSpawnHumvee(int DistrictID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ShouldTryToSpawnHumvee", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
@@ -1842,7 +1843,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool CanSpawnHumvee(int DistrictID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.CanSpawnHumvee", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1861,7 +1862,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool CanSpawnFormation(out BmSDK.BmGame.RGameInfo.FVehicleScenarioInfo ScenarioInfo, int DistrictID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.CanSpawnFormation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 32);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         ScenarioInfo = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FVehicleScenarioInfo>(paramsPtr + 0);
@@ -1874,7 +1875,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool AreAnyFormationsActive(int DistrictID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.AreAnyFormationsActive", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
@@ -1886,7 +1887,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetNumActiveFormations(int DistrictID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetNumActiveFormations", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -1898,7 +1899,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool HasAnyHumveeScenarios(int DistrictID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.HasAnyHumveeScenarios", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1917,7 +1918,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetActiveInstanceCountForScenario(BmSDK.BmGame.RVehicleScenario TestScenario)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetActiveInstanceCountForScenario", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestScenario, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 8);
@@ -1929,7 +1930,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetMaxActiveHumveeScenarios(int DistrictPopulationID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetMaxActiveHumveeScenarios", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictPopulationID, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -1941,7 +1942,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe float GetMaxActiveHumveeScenarioProportionFromPopulation(int DistrictPopulationID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetMaxActiveHumveeScenarioProportionFromPopulation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictPopulationID, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 4);
@@ -1953,7 +1954,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetMaxActiveDroneScenarios(int DistrictPopulationID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetMaxActiveDroneScenarios", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictPopulationID, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -1965,7 +1966,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe float GetMaxActiveDroneScenarioProportionFromPopulation(int DistrictPopulationID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetMaxActiveDroneScenarioProportionFromPopulation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictPopulationID, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 4);
@@ -1977,7 +1978,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetNumScriptedLightDroneScenarios(BmSDK.BmGame.RGameInfo.EDistrict District)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetNumScriptedLightDroneScenarios", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(District, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1996,7 +1997,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetNumScriptedLightDrones(BmSDK.BmGame.RGameInfo.EDistrict District, bool bForSpecificThreatLevel = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetNumScriptedLightDrones", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(District, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bForSpecificThreatLevel, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2016,7 +2017,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void UpdateScenarioUsageInfo(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.UpdateScenarioUsageInfo", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -2035,7 +2036,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void InitialiseScenarioUsageInfo(BmSDK.BmGame.RVehicleScenario NewScenario)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.InitialiseScenarioUsageInfo", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewScenario, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2047,7 +2048,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool ReadyForWanderingVehicleChatter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ReadyForWanderingVehicleChatter", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -2058,7 +2059,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RGameInfo.EDistrict GetDistrictForLocation(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetDistrictForLocation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[13];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestLocation, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EDistrict>(paramsPtr + 12);
@@ -2070,7 +2071,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.FString GetLevelNameForLocation(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetLevelNameForLocation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestLocation, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 12);
@@ -2082,7 +2083,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool SpawnVehicleScenario(BmSDK.BmGame.RGameInfo.VehicleScenarioType DesiredScenarioType, BmSDK.BmGame.RVehicleNPC.EVehicleCombatEncounterType CurrentEncounterType, bool bForceAPC = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SpawnVehicleScenario", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[268];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DesiredScenarioType, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CurrentEncounterType, paramsPtr + 1);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bForceAPC, paramsPtr + 4);
@@ -2096,7 +2097,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool CopChaseInProgress()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.CopChaseInProgress", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -2107,7 +2108,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetMaxVehicleScenarios()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetMaxVehicleScenarios", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -2118,7 +2119,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool CanSpawnExtraCarScenario()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.CanSpawnExtraCarScenario", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -2129,7 +2130,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetNumActiveDrones(int DistrictID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetNumActiveDrones", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -2141,7 +2142,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RGameInfo.EDistrict ForceSpawnAPC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ForceSpawnAPC", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[1];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EDistrict>(paramsPtr + 0);
     }
@@ -2152,7 +2153,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RVehicle GetCurrentAPC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetCurrentAPC", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle>(paramsPtr + 0);
     }
@@ -2163,7 +2164,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool ShouldSpawnAPC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ShouldSpawnAPC", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -2174,7 +2175,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool CanSpawnAPC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.CanSpawnAPC", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -2192,7 +2193,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetAPCSpawnDistrict(bool bForceSpawn = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetAPCSpawnDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bForceSpawn, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
@@ -2204,7 +2205,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool IsDistrictValidForAPC(int DistrictID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.IsDistrictValidForAPC", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -2223,7 +2224,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe System.Numerics.Vector3 GetAPCSpawnLocationForDistrict(int SpawnDistrict)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetAPCSpawnLocationForDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnDistrict, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 4);
@@ -2235,7 +2236,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SetAPCDistrictSpawnPoints(BmSDK.TArray<BmSDK.Engine.Actor> SpawnPoints_CityX, BmSDK.TArray<BmSDK.Engine.Actor> SpawnPoints_CityY, BmSDK.TArray<BmSDK.Engine.Actor> SpawnPoints_CityZ)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SetAPCDistrictSpawnPoints", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnPoints_CityX, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnPoints_CityY, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnPoints_CityZ, paramsPtr + 32);
@@ -2249,7 +2250,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void AddToCurrentDrones(int NumDronesToAdd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.AddToCurrentDrones", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NumDronesToAdd, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2261,7 +2262,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void AddSpawnedVehicleToPopulation(BmSDK.BmGame.RVehicleNPC SpawnedVehicle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.AddSpawnedVehicleToPopulation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[68];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnedVehicle, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2273,7 +2274,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void AddSpawnedVehicleListToPopulation(BmSDK.TArray<BmSDK.BmGame.RVehicleNPC> SpawnedVehicles)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.AddSpawnedVehicleListToPopulation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnedVehicles, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2285,7 +2286,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe float GetWarmUpPercentageForDistrict(int TestDistrict)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetWarmUpPercentageForDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestDistrict, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 4);
@@ -2297,7 +2298,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void StartWarmUpMilitiaWanders(float WarmupTime, BmSDK.Engine.Actor WarmUpActor = default, int DistrictID = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.StartWarmUpMilitiaWanders", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WarmupTime, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WarmUpActor, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 12);
@@ -2311,7 +2312,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void StartWarmUp(float WarmupTime, BmSDK.Engine.Actor WarmUpActor = default, int DistrictID = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.StartWarmUp", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WarmupTime, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WarmUpActor, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 12);
@@ -2325,7 +2326,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool IsAnyoneInVehicleArraySpeaking(BmSDK.TArray<BmSDK.BmGame.RVehicleNPC> VehicleArray)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.IsAnyoneInVehicleArraySpeaking", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(VehicleArray, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -2344,7 +2345,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void UpdateVehiclePopulation(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.UpdateVehiclePopulation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -2363,7 +2364,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void UpdatePopulationVolumes(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.UpdatePopulationVolumes", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -2382,7 +2383,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void DeactivatePopulationVolume(BmSDK.BmGame.ROverworldPopulationVolume PopVolume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.DeactivatePopulationVolume", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PopVolume, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -2401,7 +2402,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void ActivatePopulationVolume(BmSDK.BmGame.ROverworldPopulationVolume PopVolume, int MaxPawnsAllowed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ActivatePopulationVolume", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PopVolume, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MaxPawnsAllowed, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2421,7 +2422,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void DontAllowReActivationOfRiotZoneForXSecs(BmSDK.BmGame.ROverworldPopulationVolume PopVolume, float DeactivateTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.DontAllowReActivationOfRiotZoneForXSecs", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PopVolume, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeactivateTime, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -2434,7 +2435,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void UpdatePopulationVolumesBasedOnObjectives()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.UpdatePopulationVolumesBasedOnObjectives", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -2445,7 +2446,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void RemovePopulation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.RemovePopulation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -2456,7 +2457,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void MostWantedMissionDisabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.MostWantedMissionDisabled", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -2467,7 +2468,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void MostWantedMissionEnabled(bool RemovePopulationOnNextTick = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.MostWantedMissionEnabled", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RemovePopulationOnNextTick, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2479,7 +2480,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void ChallengeDisabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ChallengeDisabled", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[56];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -2490,7 +2491,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void ChallengeEnabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ChallengeEnabled", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -2501,7 +2502,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool ShouldDisableNavMeshObstacleProcessing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ShouldDisableNavMeshObstacleProcessing", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -2512,7 +2513,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool DisableDynamicPopulation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.DisableDynamicPopulation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -2530,7 +2531,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool PopulationVolumeShouldBeDeactivated(BmSDK.BmGame.ROverworldPopulationVolume TestVolume, System.Numerics.Vector3 PlayerPosition, System.Numerics.Vector3 PlayerDirection, float PlayerSpeed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.PopulationVolumeShouldBeDeactivated", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestVolume, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerPosition, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerDirection, paramsPtr + 20);
@@ -2552,7 +2553,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.ROverworldPopulationVolume FindPopulationVolumeToActivate(System.Numerics.Vector3 PlayerPosition, System.Numerics.Vector3 PlayerDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.FindPopulationVolumeToActivate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerPosition, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerDirection, paramsPtr + 12);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2572,7 +2573,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool PointIsVisible(BmSDK.BmGame.RGangInteractPointBase PointToCheck)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.PointIsVisible", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PointToCheck, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -2591,7 +2592,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool CanActivatePopulationVolume(BmSDK.BmGame.ROverworldPopulationVolume PopVolume, System.Numerics.Vector3 PlayerPosition, System.Numerics.Vector3 PlayerDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.CanActivatePopulationVolume", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PopVolume, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerPosition, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerDirection, paramsPtr + 20);
@@ -2612,7 +2613,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool PopVolIsntTempDeactivated(BmSDK.BmGame.ROverworldPopulationVolume TestVolume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.PopVolIsntTempDeactivated", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestVolume, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -2631,7 +2632,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetMaxActivePopulationCost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetMaxActivePopulationCost", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -2649,7 +2650,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetActivePopulationCost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetActivePopulationCost", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -2667,7 +2668,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetPopulationVolumeCost(BmSDK.BmGame.ROverworldPopulationVolume TestVolume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetPopulationVolumeCost", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestVolume, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -2686,7 +2687,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool VolumeCanSpawnRiotingThugsInDistrict(BmSDK.BmGame.ROverworldPopulationVolume PopVolume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.VolumeCanSpawnRiotingThugsInDistrict", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PopVolume, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -2705,7 +2706,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool OtherRiotZonesPreventSpawn(BmSDK.BmGame.ROverworldPopulationVolume PopVolume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.OtherRiotZonesPreventSpawn", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PopVolume, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -2724,7 +2725,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetMaxNumberOfRiotThugsInCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetMaxNumberOfRiotThugsInCombat", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -2735,7 +2736,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe float GetPostGasRiotSpawnPerc(BmSDK.Engine.Actor LocatorActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetPostGasRiotSpawnPerc", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LocatorActor, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 8);
@@ -2747,7 +2748,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SetDistrictChanceOfFleePerc(BmSDK.BmGame.ROverworldPopulationVolume PopVolume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SetDistrictChanceOfFleePerc", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PopVolume, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2759,7 +2760,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SetPopVolumeWeaponSettings(BmSDK.BmGame.ROverworldPopulationVolume PopVolume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SetPopVolumeWeaponSettings", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PopVolume, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2771,7 +2772,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.Class GetPopVolumeRandomWeapon(int DistrictIndex, bool bForceRifle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetPopVolumeRandomWeapon", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bForceRifle, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -2784,7 +2785,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void RemoveOverworldPopulationVolume(BmSDK.BmGame.ROverworldPopulationVolume OldPopVolume, bool bDueToStreamingOut = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.RemoveOverworldPopulationVolume", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OldPopVolume, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bDueToStreamingOut, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -2797,7 +2798,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void AddOverworldPopulationVolume(BmSDK.BmGame.ROverworldPopulationVolume NewPopVolume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.AddOverworldPopulationVolume", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewPopVolume, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2809,7 +2810,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void RegisterDistrictVolume(BmSDK.BmGame.RPopulationDistrictVolume NewDistrict)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.RegisterDistrictVolume", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewDistrict, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2821,7 +2822,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool RestartPopulation(BmSDK.BmGame.RSeqAct_PauseRestartRandomPopulation RestartAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.RestartPopulation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[56];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RestartAction, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -2833,7 +2834,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool PausePopulation(BmSDK.BmGame.RSeqAct_PauseRestartRandomPopulation PauseAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.PausePopulation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PauseAction, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -2845,7 +2846,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void AddThugsToCombat(int NumToAdd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.AddThugsToCombat", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NumToAdd, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2857,7 +2858,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetMaxThugsToAddToCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetMaxThugsToAddToCombat", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[5];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -2868,7 +2869,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool CanAddThugsToCombat(int NumToAdd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.CanAddThugsToCombat", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[9];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NumToAdd, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
@@ -2880,7 +2881,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void NotifyCombatReset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.NotifyCombatReset", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -2891,7 +2892,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void PostLoadDistrictPopulation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.PostLoadDistrictPopulation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -2902,7 +2903,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void PreLoadDistrictPopulation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.PreLoadDistrictPopulation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -2913,7 +2914,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void PostARChallenge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.PostARChallenge", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -2924,7 +2925,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void PostLoadSaveGame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.PostLoadSaveGame", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -2935,7 +2936,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void DisablePostSavePopulationControl()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.DisablePostSavePopulationControl", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -2946,7 +2947,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool PlayerIsOnRoadNetwork(BmSDK.Engine.Actor PlayerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.PlayerIsOnRoadNetwork", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerPawn, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -2958,7 +2959,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void FakeSeenAPC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.FakeSeenAPC", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -2969,7 +2970,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void PostSideStoriesEnabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.PostSideStoriesEnabled", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -2980,7 +2981,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void PostSideStoriesDisabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.PostSideStoriesDisabled", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -2991,7 +2992,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void SaveGameLoaded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SaveGameLoaded", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -3002,7 +3003,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -3013,7 +3014,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void ClearWanderersInZone(BmSDK.Engine.Volume NewVolume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.ClearWanderersInZone", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewVolume, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -3032,7 +3033,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void RemoveDynamicVehicleExclusionVolume(BmSDK.FName ClaimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.RemoveDynamicVehicleExclusionVolume", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ClaimName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -3051,7 +3052,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void CreateDynamicVehicleExclusionVolume(System.Numerics.Vector3 Center, float Radius, BmSDK.FName ClaimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.CreateDynamicVehicleExclusionVolume", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Center, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Radius, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ClaimName, paramsPtr + 16);
@@ -3072,7 +3073,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe BmSDK.BmGame.RBMPawnAI SpawnPawn(BmSDK.Class NewPawnClass, BmSDK.BmGame.RCharacterDefine CharacterDefine, BmSDK.Class CharacterType, System.Numerics.Vector3 NewSpawnPoint, BmSDK.Rotator NewSpawnRotation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.SpawnPawn", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[56];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewPawnClass, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CharacterDefine, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CharacterType, paramsPtr + 16);
@@ -3095,7 +3096,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool GetClosestPointOnVolume(BmSDK.Engine.Volume TestVolume, System.Numerics.Vector3 TestPoint, out System.Numerics.Vector3 out_ClosestPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetClosestPointOnVolume", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestVolume, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestPoint, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -3116,7 +3117,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe void AddPawnToDestroy(BmSDK.BmGame.RBMPawnAI PawnToDestroy, bool bStreamedOut)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.AddPawnToDestroy", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PawnToDestroy, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bStreamedOut, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -3136,7 +3137,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool PointIsInExclusionVolume(System.Numerics.Vector3 TestPoint, bool bTestVehicles, bool bTestRioters)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.PointIsInExclusionVolume", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestPoint, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bTestVehicles, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bTestRioters, paramsPtr + 16);
@@ -3157,7 +3158,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool RiotVolumeInHeavyTankVolume(BmSDK.BmGame.ROverworldPopulationVolume TestVol)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.RiotVolumeInHeavyTankVolume", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestVol, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -3176,7 +3177,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool PlayerInHeavyTankVolume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.PlayerInHeavyTankVolume", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -3194,7 +3195,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetBeaconThreatMaxForDistrictID(int DistrictID, BmSDK.BmGame.RGameInfo.EDistrict District)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetBeaconThreatMaxForDistrictID", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(District, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -3214,7 +3215,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetCheckPointThreatMaxForDistrictID(int DistrictID, BmSDK.BmGame.RGameInfo.EDistrict District)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetCheckPointThreatMaxForDistrictID", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(District, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -3234,7 +3235,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetWatchtowerThreatMaxForDistrictID(int DistrictID, BmSDK.BmGame.RGameInfo.EDistrict District)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetWatchtowerThreatMaxForDistrictID", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(District, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -3254,7 +3255,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetHeavyDroneThreatForDistrictID(int DistrictID, BmSDK.BmGame.RGameInfo.EDistrict District, bool bForSpecificThreatLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetHeavyDroneThreatForDistrictID", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(District, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bForSpecificThreatLevel, paramsPtr + 8);
@@ -3275,7 +3276,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetLightDroneThreatForDistrictID(int DistrictID, BmSDK.BmGame.RGameInfo.EDistrict District, bool bForSpecificThreatLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetLightDroneThreatForDistrictID", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(District, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bForSpecificThreatLevel, paramsPtr + 8);
@@ -3296,7 +3297,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetBeaconThreatLeftTotal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetBeaconThreatLeftTotal", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -3314,7 +3315,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetWatchtowerThreatLeftTotal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetWatchtowerThreatLeftTotal", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -3332,7 +3333,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetCheckPointThreatLeftTotal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetCheckPointThreatLeftTotal", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -3350,7 +3351,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetBeaconThreatForDistrictID(int DistrictID, BmSDK.BmGame.RGameInfo.EDistrict District)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetBeaconThreatForDistrictID", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(District, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -3370,7 +3371,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetCheckPointThreatForDistrictID(int DistrictID, BmSDK.BmGame.RGameInfo.EDistrict District)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetCheckPointThreatForDistrictID", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(District, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -3390,7 +3391,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetWatchtowerThreatForDistrictID(int DistrictID, BmSDK.BmGame.RGameInfo.EDistrict District)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetWatchtowerThreatForDistrictID", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(District, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -3410,7 +3411,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe int GetAPCThreatForDistrictID(int DistrictID, BmSDK.BmGame.RGameInfo.EDistrict District)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.GetAPCThreatForDistrictID", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistrictID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(District, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -3430,7 +3431,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     public unsafe bool AmIBestRiotZoneToFight(BmSDK.BmGame.ROverworldPopulationVolume TestVolume, BmSDK.Engine.Actor Threat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPopulationManager.AmIBestRiotZoneToFight", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestVolume, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Threat, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -3447,7 +3448,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FDestroyPawnInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FDestroyPawnInfo
     {
         /// <summary>
@@ -3472,7 +3473,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FWeaponConfigInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FWeaponConfigInfo
     {
         /// <summary>
@@ -3515,7 +3516,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FThreatLevelCache
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FThreatLevelCache
     {
         /// <summary>
@@ -3560,7 +3561,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FWanderingGroup
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 84)]
     public partial record struct FWanderingGroup
     {
         /// <summary>
@@ -3702,7 +3703,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAPCSpawnPointsList
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FAPCSpawnPointsList
     {
         /// <summary>
@@ -3718,7 +3719,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FScenarioID
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FScenarioID
     {
         /// <summary>
@@ -3743,7 +3744,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FScenarioUsageInformation
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FScenarioUsageInformation
     {
         /// <summary>
@@ -3768,7 +3769,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSpawnedScenario
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 60)]
     public partial record struct FSpawnedScenario
     {
         /// <summary>
@@ -3847,7 +3848,7 @@ public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTempDeactivatedPopVolumes
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FTempDeactivatedPopVolumes
     {
         /// <summary>

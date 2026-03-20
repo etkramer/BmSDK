@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RParticleModuleLighting<br/>
+/// (size = 100)
 /// (flags = 0)
 /// </summary>
 public partial class RParticleModuleLighting : BmSDK.Engine.ParticleModuleColorBase, BmSDK.IGameObject

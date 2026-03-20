@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RInvestigationInterface<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class RInvestigationInterface : BmSDK.Interface, BmSDK.IGameObject

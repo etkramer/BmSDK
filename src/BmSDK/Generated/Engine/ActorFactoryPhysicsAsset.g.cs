@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactoryPhysicsAsset<br/>
+/// (size = 188)
 /// (flags = 0)
 /// </summary>
 public partial class ActorFactoryPhysicsAsset : BmSDK.Engine.ActorFactory, BmSDK.IGameObject

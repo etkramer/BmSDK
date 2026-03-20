@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_ShotByRedhood<br/>
+/// (size = 380)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_ShotByRedhood : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

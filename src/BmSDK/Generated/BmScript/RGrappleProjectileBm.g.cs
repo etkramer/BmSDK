@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RGrappleProjectileBm<br/>
+/// (size = 864)
 /// (flags = 0)
 /// </summary>
 public partial class RGrappleProjectileBm : BmSDK.BmGame.RGrappleProjectile, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RB_BodyInstance<br/>
+/// (size = 200)
 /// (flags = 0)
 /// </summary>
 public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetAngularDamping(float AngularDamping)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.SetAngularDamping", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AngularDamping, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -57,7 +58,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetDampingRampupProportion(float NewDampingRampupProportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.SetDampingRampupProportion", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewDampingRampupProportion, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -76,7 +77,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void UpdateDampingProperties()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.UpdateDampingProperties", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -94,7 +95,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void UpdateMassProperties(BmSDK.Engine.RB_BodySetup Setup, float MassOverride = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.UpdateMassProperties", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Setup, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MassOverride, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -114,7 +115,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetContactReportForceThreshold(float Threshold)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.SetContactReportForceThreshold", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Threshold, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -133,7 +134,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void EnableCollisionResponse(bool bEnableResponse)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.EnableCollisionResponse", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bEnableResponse, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -152,7 +153,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetPhysMaterialOverride(BmSDK.Engine.PhysicalMaterial NewPhysMaterial)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.SetPhysMaterialOverride", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewPhysMaterial, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -171,7 +172,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetBlockRigidBody(bool bNewBlockRigidBody, bool bEnableSceneQueries)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.SetBlockRigidBody", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bNewBlockRigidBody, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bEnableSceneQueries, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -191,7 +192,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe System.Numerics.Vector3 GetUnrealWorldVelocityAtPoint(System.Numerics.Vector3 Point)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealWorldVelocityAtPoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Point, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -210,7 +211,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe System.Numerics.Vector3 GetUnrealCoMWorldAngularVelocity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealCoMWorldAngularVelocity", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -228,7 +229,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe System.Numerics.Vector3 GetUnrealCoMWorldVelocity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealCoMWorldVelocity", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -246,7 +247,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.GameObject.FQuat GetUnrealCoMWorldOrientation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealCoMWorldOrientation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -264,7 +265,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe System.Numerics.Vector3 GetUnrealCoMWorldPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealCoMWorldPosition", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -282,7 +283,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.GameObject.FQuat GetUnrealWorldOrientation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealWorldOrientation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -300,7 +301,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe System.Numerics.Vector3 GetUnrealWorldPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealWorldPosition", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -318,7 +319,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe System.Numerics.Vector3 GetUnrealWorldAngularVelocity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealWorldAngularVelocity", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -336,7 +337,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe System.Numerics.Vector3 GetUnrealWorldVelocity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealWorldVelocity", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -354,7 +355,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void GetUnrealWorldLinearAndAngularVelocity(out System.Numerics.Vector3 LinearVelocity, out System.Numerics.Vector3 AngularVelocity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealWorldLinearAndAngularVelocity", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -374,7 +375,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.GameObject.FBoneAtom GetUnrealWorldBoneAtom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetUnrealWorldBoneAtom", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -410,7 +411,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe BmSDK.Engine.PhysicsAssetInstance GetPhysicsAssetInstance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetPhysicsAssetInstance", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -428,7 +429,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsValidBodyInstance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.IsValidBodyInstance", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -446,7 +447,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool IsFixed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.IsFixed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -464,7 +465,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void SetFixed(bool bNewFixed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.SetFixed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bNewFixed, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -483,7 +484,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe float GetBodyMass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetBodyMass", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -501,7 +502,7 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe bool GetIsInitialised()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_BodyInstance.GetIsInitialised", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;

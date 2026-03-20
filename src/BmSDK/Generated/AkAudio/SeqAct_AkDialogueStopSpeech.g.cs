@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: SeqAct_AkDialogueStopSpeech<br/>
+/// (size = 372)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_AkDialogueStopSpeech : BmSDK.AkAudio.SeqAct_AkBaseSimple, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackInstStereoConvergence<br/>
+/// (size = 88)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstStereoConvergence : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject

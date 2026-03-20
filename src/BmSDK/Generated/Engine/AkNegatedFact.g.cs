@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkNegatedFact<br/>
+/// (size = 112)
 /// (flags = 0)
 /// </summary>
 public partial class AkNegatedFact : BmSDK.Engine.AkPredicate, BmSDK.IGameObject

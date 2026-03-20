@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Scout<br/>
+/// (size = 1636)
 /// (flags = 0)
 /// </summary>
 public partial class Scout : BmSDK.Engine.Pawn, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class Scout : BmSDK.Engine.Pawn, BmSDK.IGameObject
     public unsafe void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Scout.PreBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -378,7 +379,7 @@ public partial class Scout : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPathSizeInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 21)]
     public partial record struct FPathSizeInfo
     {
         /// <summary>

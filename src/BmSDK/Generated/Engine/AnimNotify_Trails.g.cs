@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNotify_Trails<br/>
+/// (size = 192)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNotify_Trails : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AnimNotify_Trails : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
     public unsafe int GetNumSteps(int InLastTrailIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNotify_Trails.GetNumSteps", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InLastTrailIndex, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -54,7 +55,7 @@ public partial class AnimNotify_Trails : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
     /// <summary>
     /// Struct: FTrailSample
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 40)]
     public partial record struct FTrailSample
     {
         /// <summary>
@@ -97,7 +98,7 @@ public partial class AnimNotify_Trails : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
     /// <summary>
     /// Struct: FTrailSamplePoint
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 76)]
     public partial record struct FTrailSamplePoint
     {
         /// <summary>
@@ -140,7 +141,7 @@ public partial class AnimNotify_Trails : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
     /// <summary>
     /// Struct: FTrailSocketSamplePoint
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FTrailSocketSamplePoint
     {
         /// <summary>

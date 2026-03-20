@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDEntityMusicCombatRandom<br/>
+/// (size = 252)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDEntityMusicCombatRandom : BmSDK.AkAudio.AkSDEntityValue, BmSDK.IGameObject

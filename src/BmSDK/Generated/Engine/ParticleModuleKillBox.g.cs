@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleKillBox<br/>
+/// (size = 228)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleKillBox : BmSDK.Engine.ParticleModuleKillBase, BmSDK.IGameObject

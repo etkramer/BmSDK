@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqVar_RandomFloat<br/>
+/// (size = 244)
 /// (flags = 0)
 /// </summary>
 public partial class SeqVar_RandomFloat : BmSDK.Engine.SeqVar_Float, BmSDK.IGameObject

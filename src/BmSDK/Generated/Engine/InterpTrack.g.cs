@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrack<br/>
+/// (size = 180)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrack : BmSDK.GameObject, BmSDK.IGameObject
@@ -46,7 +47,7 @@ public partial class InterpTrack : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSubTrackGroup
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FSubTrackGroup
     {
         /// <summary>
@@ -89,7 +90,7 @@ public partial class InterpTrack : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSupportedSubTrackInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 28)]
     public partial record struct FSupportedSubTrackInfo
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGargMineAssignmentPicker<br/>
+/// (size = 164)
 /// (flags = 0)
 /// </summary>
 public partial class RGargMineAssignmentPicker : BmSDK.BmGame.RGroupAssignmentPicker, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RGargMineAssignmentPicker : BmSDK.BmGame.RGroupAssignmentPi
     public unsafe void GetBestDestroyVantagePointsFromAPS(System.Numerics.Vector3 VantageRefPoint, BmSDK.BmGame.RAttackPointSearch APS, out BmSDK.TArray<System.Numerics.Vector3> BestPoints)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGargMineAssignmentPicker.GetBestDestroyVantagePointsFromAPS", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[68];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(VantageRefPoint, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(APS, paramsPtr + 12);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -52,7 +53,7 @@ public partial class RGargMineAssignmentPicker : BmSDK.BmGame.RGroupAssignmentPi
     public unsafe void BuildGargSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGargMineAssignmentPicker.BuildGargSearch", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -63,7 +64,7 @@ public partial class RGargMineAssignmentPicker : BmSDK.BmGame.RGroupAssignmentPi
     public unsafe void StartAPS()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGargMineAssignmentPicker.StartAPS", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -74,7 +75,7 @@ public partial class RGargMineAssignmentPicker : BmSDK.BmGame.RGroupAssignmentPi
     public unsafe bool Update()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGargMineAssignmentPicker.Update", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -85,7 +86,7 @@ public partial class RGargMineAssignmentPicker : BmSDK.BmGame.RGroupAssignmentPi
     public unsafe void ClearAllSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGargMineAssignmentPicker.ClearAllSearch", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -96,7 +97,7 @@ public partial class RGargMineAssignmentPicker : BmSDK.BmGame.RGroupAssignmentPi
     public unsafe void Abort()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGargMineAssignmentPicker.Abort", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -107,7 +108,7 @@ public partial class RGargMineAssignmentPicker : BmSDK.BmGame.RGroupAssignmentPi
     public unsafe void Init(BmSDK.BmGame.RBMRoomAIState NewRoomState, System.IntPtr NewMineAssignmentFound, System.IntPtr NewMineAssignmentFailed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGargMineAssignmentPicker.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewRoomState, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMineAssignmentFound, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMineAssignmentFailed, paramsPtr + 24);
@@ -121,7 +122,7 @@ public partial class RGargMineAssignmentPicker : BmSDK.BmGame.RGroupAssignmentPi
     public unsafe void MineAssignmentFailed(BmSDK.BmGame.RGargMineAssignmentPicker GMAP)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGargMineAssignmentPicker.MineAssignmentFailed", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GMAP, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -133,7 +134,7 @@ public partial class RGargMineAssignmentPicker : BmSDK.BmGame.RGroupAssignmentPi
     public unsafe void MineAssignmentFound(BmSDK.BmGame.RGargMineAssignmentPicker GMAP, BmSDK.TArray<BmSDK.BmGame.RBMRoomAIState.FGargToPoints> NewSmashList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGargMineAssignmentPicker.MineAssignmentFound", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GMAP, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewSmashList, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -143,7 +144,7 @@ public partial class RGargMineAssignmentPicker : BmSDK.BmGame.RGroupAssignmentPi
     /// <summary>
     /// Struct: FGargLocSearchItem
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FGargLocSearchItem
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RB_BSJointSetup<br/>
+/// (size = 300)
 /// (flags = 0)
 /// </summary>
 public partial class RB_BSJointSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.IGameObject

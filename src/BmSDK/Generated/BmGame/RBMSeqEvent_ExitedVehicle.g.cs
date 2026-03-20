@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMSeqEvent_ExitedVehicle<br/>
+/// (size = 380)
 /// (flags = 0)
 /// </summary>
 public partial class RBMSeqEvent_ExitedVehicle : BmSDK.BmGame.RBMSeqEvent_BehaviourRoot, BmSDK.IGameObject

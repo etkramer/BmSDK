@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NetConnection<br/>
+/// (size = 44792)
 /// (flags = 0)
 /// </summary>
 public partial class NetConnection : BmSDK.Engine.Player, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RInterpTrackFaceFXLookAt<br/>
+/// (size = 304)
 /// (flags = 0)
 /// </summary>
 public partial class RInterpTrackFaceFXLookAt : BmSDK.Engine.InterpTrackFloatBase, BmSDK.IGameObject

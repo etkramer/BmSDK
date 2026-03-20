@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_LockedIn<br/>
+/// (size = 752)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_LockedIn : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RAEC_LockedIn : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     public unsafe bool IsInUse(BmSDK.BmGame.RLockedInReactionPoint TestPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LockedIn.IsInUse", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestPoint, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
@@ -85,7 +86,7 @@ public partial class RAEC_LockedIn : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     public unsafe void GetBestThugAndReactPoint(BmSDK.TArray<BmSDK.BmGame.RAEC_LockedIn.FThugPointDist> ThugPointDistList, out int ThugIndex, out BmSDK.BmGame.RLockedInReactionPoint UsablePoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LockedIn.GetBestThugAndReactPoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ThugPointDistList, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         ThugIndex = BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 16);
@@ -99,7 +100,7 @@ public partial class RAEC_LockedIn : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     public unsafe BmSDK.TArray<BmSDK.BmGame.RAEC_LockedIn.FThugPointDist> BuildThugPointDistList(BmSDK.TArray<BmSDK.BmGame.RBMAIController> ConList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LockedIn.BuildThugPointDistList", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ConList, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RAEC_LockedIn.FThugPointDist>>(paramsPtr + 16);
@@ -111,7 +112,7 @@ public partial class RAEC_LockedIn : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     public unsafe void ReleaseAllThugs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LockedIn.ReleaseAllThugs", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -122,7 +123,7 @@ public partial class RAEC_LockedIn : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     public unsafe void TryReactBarkFor(BmSDK.BmGame.RPawnVillain ReactBarkPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LockedIn.TryReactBarkFor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ReactBarkPawn, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -134,7 +135,7 @@ public partial class RAEC_LockedIn : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     public unsafe void HandleLockedInThugs(BmSDK.TArray<BmSDK.BmGame.RBMAIController> LockinConList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LockedIn.HandleLockedInThugs", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LockinConList, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -146,7 +147,7 @@ public partial class RAEC_LockedIn : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     public unsafe void PrepReactPoint(BmSDK.BmGame.RLockedInReactionPoint NewLockinReactpoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LockedIn.PrepReactPoint", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewLockinReactpoint, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -158,7 +159,7 @@ public partial class RAEC_LockedIn : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     public unsafe void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_LockedIn.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -166,7 +167,7 @@ public partial class RAEC_LockedIn : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Struct: FThugPointDist
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FThugPointDist
     {
         /// <summary>
@@ -191,7 +192,7 @@ public partial class RAEC_LockedIn : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Struct: FPointDist
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FPointDist
     {
         /// <summary>

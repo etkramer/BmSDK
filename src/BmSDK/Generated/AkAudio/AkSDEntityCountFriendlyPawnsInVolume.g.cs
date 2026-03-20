@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDEntityCountFriendlyPawnsInVolume<br/>
+/// (size = 276)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDEntityCountFriendlyPawnsInVolume : BmSDK.AkAudio.AkSDEntityCountPawnsInVolume, BmSDK.IGameObject

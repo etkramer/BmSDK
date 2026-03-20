@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHotWireBoxBase<br/>
+/// (size = 912)
 /// (flags = 0)
 /// </summary>
 public partial class RHotWireBoxBase : BmSDK.BmGame.RInteractableItem, BmSDK.IGameObject

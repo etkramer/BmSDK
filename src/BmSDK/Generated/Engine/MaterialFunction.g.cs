@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialFunction<br/>
+/// (size = 176)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialFunction : BmSDK.GameObject, BmSDK.IGameObject

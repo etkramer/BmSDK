@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MHackSubroutineContext<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class MHackSubroutineContext : BmSDK.BmGame.RConfig, BmSDK.IGameObject

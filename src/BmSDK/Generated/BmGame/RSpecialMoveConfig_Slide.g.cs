@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_Slide<br/>
+/// (size = 456)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_Slide : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimObject<br/>
+/// (size = 128)
 /// (flags = 0)
 /// </summary>
 public partial class AnimObject : BmSDK.GameObject, BmSDK.IGameObject

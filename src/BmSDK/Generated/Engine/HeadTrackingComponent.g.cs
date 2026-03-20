@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: HeadTrackingComponent<br/>
+/// (size = 312)
 /// (flags = 0)
 /// </summary>
 public partial class HeadTrackingComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class HeadTrackingComponent : BmSDK.Engine.ActorComponent, BmSDK.
     /// <summary>
     /// Struct: FActorToLookAt
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 28)]
     public partial record struct FActorToLookAt
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RTriggerVolumeChokePoint<br/>
+/// (size = 740)
 /// (flags = 0)
 /// </summary>
 public partial class RTriggerVolumeChokePoint : BmSDK.Engine.TriggerVolume, BmSDK.IGameObject

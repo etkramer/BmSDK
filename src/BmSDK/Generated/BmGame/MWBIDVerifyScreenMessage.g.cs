@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MWBIDVerifyScreenMessage<br/>
+/// (size = 92)
 /// (flags = 0)
 /// </summary>
 public partial class MWBIDVerifyScreenMessage : BmSDK.BmGame.MWBIDDataMessage, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class MWBIDVerifyScreenMessage : BmSDK.BmGame.MWBIDDataMessage, B
     public unsafe void Flush()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDVerifyScreenMessage.Flush", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -49,7 +50,7 @@ public partial class MWBIDVerifyScreenMessage : BmSDK.BmGame.MWBIDDataMessage, B
     public unsafe void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MWBIDVerifyScreenMessage.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PlatformInterfaceBase<br/>
+/// (size = 116)
 /// (flags = 0)
 /// </summary>
 public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void ClearDelegate(int DelegateType, System.IntPtr InDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlatformInterfaceBase.ClearDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DelegateType, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InDelegate, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -51,7 +52,7 @@ public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void AddDelegate(int DelegateType, System.IntPtr InDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlatformInterfaceBase.AddDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DelegateType, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InDelegate, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -64,7 +65,7 @@ public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.InAppMessageBase GetInAppMessageInterface()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlatformInterfaceBase.GetInAppMessageInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -82,7 +83,7 @@ public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.AppNotificationsBase GetAppNotificationsInterface()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlatformInterfaceBase.GetAppNotificationsInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -100,7 +101,7 @@ public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.TwitterIntegrationBase GetTwitterIntegration()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlatformInterfaceBase.GetTwitterIntegration", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -118,7 +119,7 @@ public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.AnalyticEventsBase GetAnalyticEventsInterface()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlatformInterfaceBase.GetAnalyticEventsInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -136,7 +137,7 @@ public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.MicroTransactionBase GetMicroTransactionInterface()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlatformInterfaceBase.GetMicroTransactionInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -154,7 +155,7 @@ public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.InGameAdManager GetInGameAdManager()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlatformInterfaceBase.GetInGameAdManager", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -172,7 +173,7 @@ public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.FacebookIntegration GetFacebookIntegration()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlatformInterfaceBase.GetFacebookIntegration", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -190,7 +191,7 @@ public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.CloudStorageBase GetLocalStorageInterface()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlatformInterfaceBase.GetLocalStorageInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -208,7 +209,7 @@ public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.CloudStorageBase GetCloudStorageInterface()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlatformInterfaceBase.GetCloudStorageInterface", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -226,7 +227,7 @@ public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void CallDelegates(int DelegateType, out BmSDK.Engine.PlatformInterfaceBase.FPlatformInterfaceDelegateResult DelegateResult)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlatformInterfaceBase.CallDelegates", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DelegateType, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -246,7 +247,7 @@ public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void PlatformInterfaceDelegate(out BmSDK.Engine.PlatformInterfaceBase.FPlatformInterfaceDelegateResult Result)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlatformInterfaceBase.PlatformInterfaceDelegate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         Result = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PlatformInterfaceBase.FPlatformInterfaceDelegateResult>(paramsPtr + 0);
         return;
@@ -273,7 +274,7 @@ public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FDelegateArray
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FDelegateArray
     {
         /// <summary>
@@ -289,7 +290,7 @@ public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPlatformInterfaceDelegateResult
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 48)]
     public partial record struct FPlatformInterfaceDelegateResult
     {
         /// <summary>
@@ -314,7 +315,7 @@ public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPlatformInterfaceData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FPlatformInterfaceData
     {
         /// <summary>

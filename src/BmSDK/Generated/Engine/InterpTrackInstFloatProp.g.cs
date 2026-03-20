@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackInstFloatProp<br/>
+/// (size = 120)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstFloatProp : BmSDK.Engine.InterpTrackInstProperty, BmSDK.IGameObject

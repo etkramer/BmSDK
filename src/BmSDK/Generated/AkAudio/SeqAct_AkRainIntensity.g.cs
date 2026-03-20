@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: SeqAct_AkRainIntensity<br/>
+/// (size = 364)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_AkRainIntensity : BmSDK.AkAudio.SeqAct_AkBaseSimple, BmSDK.IGameObject

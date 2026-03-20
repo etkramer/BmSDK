@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Terrain<br/>
+/// (size = 976)
 /// (flags = 0)
 /// </summary>
 public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     public unsafe void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Terrain.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -84,7 +85,7 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     public unsafe void CalcLayerBounds()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Terrain.CalcLayerBounds", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -99,7 +100,7 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSelectedTerrainVertex
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FSelectedTerrainVertex
     {
         /// <summary>
@@ -133,7 +134,7 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCachedTerrainMaterialArray
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FCachedTerrainMaterialArray
     {
         /// <summary>
@@ -580,7 +581,7 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTerrainMaterialResource
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
     public partial record struct FTerrainMaterialResource
     {
     }
@@ -588,7 +589,7 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTerrainDecoLayer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 36)]
     public partial record struct FTerrainDecoLayer
     {
         /// <summary>
@@ -622,7 +623,7 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTerrainDecoration
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FTerrainDecoration
     {
         /// <summary>
@@ -692,7 +693,7 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTerrainDecorationInstance
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FTerrainDecorationInstance
     {
         /// <summary>
@@ -744,7 +745,7 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAlphaMap
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
     public partial record struct FAlphaMap
     {
     }
@@ -752,7 +753,7 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTerrainLayer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 56)]
     public partial record struct FTerrainLayer
     {
         /// <summary>
@@ -867,7 +868,7 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTerrainWeightedMaterial
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
     public partial record struct FTerrainWeightedMaterial
     {
     }
@@ -875,7 +876,7 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTerrainInfoData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
     public partial record struct FTerrainInfoData
     {
     }
@@ -883,7 +884,7 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTerrainHeight
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
     public partial record struct FTerrainHeight
     {
     }

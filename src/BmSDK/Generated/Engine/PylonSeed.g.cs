@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PylonSeed<br/>
+/// (size = 676)
 /// (flags = 0)
 /// </summary>
 public partial class PylonSeed : BmSDK.Engine.Actor, BmSDK.IGameObject

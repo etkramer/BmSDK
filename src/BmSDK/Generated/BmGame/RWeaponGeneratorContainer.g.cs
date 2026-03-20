@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RWeaponGeneratorContainer<br/>
+/// (size = 92)
 /// (flags = 0)
 /// </summary>
 public partial class RWeaponGeneratorContainer : BmSDK.BmGame.RConfig, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Texture2DDynamic<br/>
+/// (size = 328)
 /// (flags = 0)
 /// </summary>
 public partial class Texture2DDynamic : BmSDK.Engine.Texture, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class Texture2DDynamic : BmSDK.Engine.Texture, BmSDK.IGameObject
     public unsafe static BmSDK.Engine.Texture2DDynamic Create(int InSizeX, int InSizeY, BmSDK.Engine.Texture.EPixelFormat InFormat = default, bool InIsResolveTarget = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2DDynamic.Create", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InSizeX, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InSizeY, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InFormat, paramsPtr + 8);
@@ -60,7 +61,7 @@ public partial class Texture2DDynamic : BmSDK.Engine.Texture, BmSDK.IGameObject
     public unsafe void UpdateMipFromJPEG(int MipIdx, out BmSDK.TArray<byte> MipData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2DDynamic.UpdateMipFromJPEG", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MipIdx, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -80,7 +81,7 @@ public partial class Texture2DDynamic : BmSDK.Engine.Texture, BmSDK.IGameObject
     public unsafe void UpdateMip(int MipIdx, out BmSDK.TArray<byte> MipData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2DDynamic.UpdateMip", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MipIdx, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -100,7 +101,7 @@ public partial class Texture2DDynamic : BmSDK.Engine.Texture, BmSDK.IGameObject
     public unsafe void Init(int InSizeX, int InSizeY, BmSDK.Engine.Texture.EPixelFormat InFormat = default, bool InIsResolveTarget = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2DDynamic.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InSizeX, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InSizeY, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InFormat, paramsPtr + 8);

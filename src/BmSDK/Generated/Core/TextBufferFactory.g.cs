@@ -5,6 +5,7 @@ namespace BmSDK;
 
 /// <summary>
 /// Class: TextBufferFactory<br/>
+/// (size = 156)
 /// (flags = 0)
 /// </summary>
 public partial class TextBufferFactory : BmSDK.Factory, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_BaseballBat<br/>
+/// (size = 236)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_BaseballBat : BmSDK.BmGame.RDmgType_HeavyStrike, BmSDK.IGameObject

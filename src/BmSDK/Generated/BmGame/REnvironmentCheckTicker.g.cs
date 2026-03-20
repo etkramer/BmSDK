@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: REnvironmentCheckTicker<br/>
+/// (size = 1233)
 /// (flags = 0)
 /// </summary>
 public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     public unsafe void ClearEnvironmentFeatures()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REnvironmentCheckTicker.ClearEnvironmentFeatures", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -49,7 +50,7 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     public unsafe bool FrontBarrierIsEdge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REnvironmentCheckTicker.FrontBarrierIsEdge", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -67,7 +68,7 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     public unsafe void UpdateShimmyEnv(float CollisionHeight, float CollisionRadius, float DeltaTime, bool bForClimbingDown = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REnvironmentCheckTicker.UpdateShimmyEnv", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CollisionHeight, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CollisionRadius, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 8);
@@ -89,7 +90,7 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     public unsafe void CheckSurroundingEnvironment(float CollisionHeight, float CollisionRadius, float DeltaTime, BmSDK.Engine.PrimitiveComponent HintPrimitive = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REnvironmentCheckTicker.CheckSurroundingEnvironment", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CollisionHeight, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CollisionRadius, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 8);
@@ -108,7 +109,7 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     /// <summary>
     /// Struct: FCoverDescriptor
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 64)]
     public partial record struct FCoverDescriptor
     {
         /// <summary>
@@ -205,7 +206,7 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     /// <summary>
     /// Struct: FPlayerEdgeColl
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 20)]
     public partial record struct FPlayerEdgeColl
     {
         /// <summary>
@@ -392,7 +393,7 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     /// <summary>
     /// Struct: FEnvironmentSpecialMoveLocator
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 132)]
     public partial record struct FEnvironmentSpecialMoveLocator
     {
         /// <summary>
@@ -632,7 +633,7 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     /// <summary>
     /// Struct: FEnvironmentSpecialMoveTypesContainer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FEnvironmentSpecialMoveTypesContainer
     {
         /// <summary>

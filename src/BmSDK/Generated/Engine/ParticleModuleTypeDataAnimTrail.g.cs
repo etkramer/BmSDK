@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleTypeDataAnimTrail<br/>
+/// (size = 124)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleTypeDataAnimTrail : BmSDK.Engine.ParticleModuleTypeDataBase, BmSDK.IGameObject

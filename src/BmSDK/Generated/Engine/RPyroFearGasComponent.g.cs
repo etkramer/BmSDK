@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RPyroFearGasComponent<br/>
+/// (size = 800)
 /// (flags = 0)
 /// </summary>
 public partial class RPyroFearGasComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RPyroFearGasComponent : BmSDK.Engine.PrimitiveComponent, Bm
     /// <summary>
     /// Struct: FRockPyroFearGasSettings
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 116)]
     public partial record struct FRockPyroFearGasSettings
     {
         /// <summary>
@@ -159,7 +160,7 @@ public partial class RPyroFearGasComponent : BmSDK.Engine.PrimitiveComponent, Bm
     /// <summary>
     /// Struct: FRockPyroFearGasAsyncResults
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FRockPyroFearGasAsyncResults
     {
         /// <summary>

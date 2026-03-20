@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionFoliageImpulseDirection<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionFoliageImpulseDirection : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

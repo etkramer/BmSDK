@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBMWeaponBaton<br/>
+/// (size = 1764)
 /// (flags = 0)
 /// </summary>
 public partial class RBMWeaponBaton : BmSDK.BmScript.RBMWeaponBat, BmSDK.IGameObject

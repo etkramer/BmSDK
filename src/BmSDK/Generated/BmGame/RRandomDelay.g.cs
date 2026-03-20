@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRandomDelay<br/>
+/// (size = 692)
 /// (flags = 0)
 /// </summary>
 public partial class RRandomDelay : BmSDK.Engine.Actor, BmSDK.IGameObject

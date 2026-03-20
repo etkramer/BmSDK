@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RAnimZip_Settings<br/>
+/// (size = 480)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimZip_Settings : BmSDK.GameObject, BmSDK.IGameObject
@@ -395,7 +396,7 @@ public partial class RAnimZip_Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimZipNamedTrackSettings
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FAnimZipNamedTrackSettings
     {
         /// <summary>
@@ -420,7 +421,7 @@ public partial class RAnimZip_Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimZipTrackSettings
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FAnimZipTrackSettings
     {
         /// <summary>
@@ -445,7 +446,7 @@ public partial class RAnimZip_Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimZipErrorBounds
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FAnimZipErrorBounds
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RCharacter_MultiStage<br/>
+/// (size = 392)
 /// (flags = 0)
 /// </summary>
 public partial class RCharacter_MultiStage : BmSDK.BmGame.RCharacter_Thug, BmSDK.IGameObject

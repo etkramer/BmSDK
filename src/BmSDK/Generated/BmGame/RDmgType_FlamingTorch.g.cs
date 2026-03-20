@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_FlamingTorch<br/>
+/// (size = 220)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_FlamingTorch : BmSDK.BmGame.RDmgType_StunStick, BmSDK.IGameObject

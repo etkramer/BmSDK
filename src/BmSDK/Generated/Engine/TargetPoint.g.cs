@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: TargetPoint<br/>
+/// (size = 688)
 /// (flags = 0)
 /// </summary>
 public partial class TargetPoint : BmSDK.Engine.Keypoint, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_Emote<br/>
+/// (size = 92)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_Emote : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

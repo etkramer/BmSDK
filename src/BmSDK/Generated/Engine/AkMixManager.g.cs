@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkMixManager<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class AkMixManager : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AkMixManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static void RemoveMixTemplate(BmSDK.Engine.AkMixTemplate MixTemplate, bool forceRemove = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkMixManager.RemoveMixTemplate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MixTemplate, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(forceRemove, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -58,7 +59,7 @@ public partial class AkMixManager : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe static void AddMixTemplate(BmSDK.Engine.AkMixTemplate MixTemplate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkMixManager.AddMixTemplate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MixTemplate, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionConstantClamp<br/>
+/// (size = 232)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionConstantClamp : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

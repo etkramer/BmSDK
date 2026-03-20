@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackMorphWeight<br/>
+/// (size = 264)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackMorphWeight : BmSDK.Engine.InterpTrackFloatBase, BmSDK.IGameObject

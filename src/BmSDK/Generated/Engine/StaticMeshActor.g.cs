@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: StaticMeshActor<br/>
+/// (size = 705)
 /// (flags = 0)
 /// </summary>
 public partial class StaticMeshActor : BmSDK.Engine.StaticMeshActorBase, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class StaticMeshActor : BmSDK.Engine.StaticMeshActorBase, BmSDK.I
     public unsafe void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.StaticMeshActor.PreBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

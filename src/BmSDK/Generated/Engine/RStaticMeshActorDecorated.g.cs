@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RStaticMeshActorDecorated<br/>
+/// (size = 840)
 /// (flags = 0)
 /// </summary>
 public partial class RStaticMeshActorDecorated : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject
@@ -115,7 +116,7 @@ public partial class RStaticMeshActorDecorated : BmSDK.Engine.StaticMeshActor, B
     /// <summary>
     /// Struct: FRSMAD_AkAndSocketName
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FRSMAD_AkAndSocketName
     {
         /// <summary>
@@ -167,7 +168,7 @@ public partial class RStaticMeshActorDecorated : BmSDK.Engine.StaticMeshActor, B
     /// <summary>
     /// Struct: FRSMAD_ParticleSystemAndSocketName
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FRSMAD_ParticleSystemAndSocketName
     {
         /// <summary>
@@ -192,7 +193,7 @@ public partial class RStaticMeshActorDecorated : BmSDK.Engine.StaticMeshActor, B
     /// <summary>
     /// Struct: FRSMAD_LightAndSocketName
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 40)]
     public partial record struct FRSMAD_LightAndSocketName
     {
         /// <summary>

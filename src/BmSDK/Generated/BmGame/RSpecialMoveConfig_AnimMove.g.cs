@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_AnimMove<br/>
+/// (size = 436)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_AnimMove : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject

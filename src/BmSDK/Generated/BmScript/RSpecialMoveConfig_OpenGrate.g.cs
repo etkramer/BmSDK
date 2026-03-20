@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_OpenGrate<br/>
+/// (size = 564)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_OpenGrate : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RSpecialMoveConfig_OpenGrate : BmSDK.BmGame.RSpecialMoveCon
     /// <summary>
     /// Struct: FStruggleSequence
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 60)]
     public partial record struct FStruggleSequence
     {
         /// <summary>
@@ -114,7 +115,7 @@ public partial class RSpecialMoveConfig_OpenGrate : BmSDK.BmGame.RSpecialMoveCon
     /// <summary>
     /// Struct: FYankStage
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 180)]
     public partial record struct FYankStage
     {
         /// <summary>

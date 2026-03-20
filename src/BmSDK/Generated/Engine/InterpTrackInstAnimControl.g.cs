@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackInstAnimControl<br/>
+/// (size = 116)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstAnimControl : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SkelControlWheel<br/>
+/// (size = 280)
 /// (flags = 0)
 /// </summary>
 public partial class SkelControlWheel : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject

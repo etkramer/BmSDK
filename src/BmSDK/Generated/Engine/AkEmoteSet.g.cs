@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkEmoteSet<br/>
+/// (size = 108)
 /// (flags = 0)
 /// </summary>
 public partial class AkEmoteSet : BmSDK.Engine.AkHash, BmSDK.IGameObject
@@ -44,7 +45,7 @@ public partial class AkEmoteSet : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAkEmoteDefine
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FAkEmoteDefine
     {
         /// <summary>

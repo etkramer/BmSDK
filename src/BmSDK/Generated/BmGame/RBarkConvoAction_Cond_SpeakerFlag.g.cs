@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBarkConvoAction_Cond_SpeakerFlag<br/>
+/// (size = 192)
 /// (flags = 0)
 /// </summary>
 public partial class RBarkConvoAction_Cond_SpeakerFlag : BmSDK.BmGame.RBarkConvoActionCond, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RBarkConvoAction_Cond_SpeakerFlag : BmSDK.BmGame.RBarkConvo
     public unsafe int GetOutputIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoAction_Cond_SpeakerFlag.GetOutputIndex", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }

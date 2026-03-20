@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleEventGenerator<br/>
+/// (size = 112)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleEventGenerator : BmSDK.Engine.ParticleModuleEventBase, BmSDK.IGameObject
@@ -44,7 +45,7 @@ public partial class ParticleModuleEventGenerator : BmSDK.Engine.ParticleModuleE
     /// <summary>
     /// Struct: FParticleEvent_GenerateInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FParticleEvent_GenerateInfo
     {
         /// <summary>

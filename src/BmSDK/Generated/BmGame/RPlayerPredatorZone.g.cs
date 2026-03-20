@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPlayerPredatorZone<br/>
+/// (size = 740)
 /// (flags = 0)
 /// </summary>
 public partial class RPlayerPredatorZone : BmSDK.Engine.Volume, BmSDK.IGameObject

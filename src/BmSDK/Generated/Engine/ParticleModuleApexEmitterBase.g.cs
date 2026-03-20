@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleApexEmitterBase<br/>
+/// (size = 96)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleApexEmitterBase : BmSDK.Engine.ParticleModule, BmSDK.IGameObject

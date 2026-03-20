@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_SimultaneousCounterHit<br/>
+/// (size = 252)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_SimultaneousCounterHit : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

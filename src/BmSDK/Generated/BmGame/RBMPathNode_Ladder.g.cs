@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMPathNode_Ladder<br/>
+/// (size = 984)
 /// (flags = 0)
 /// </summary>
 public partial class RBMPathNode_Ladder : BmSDK.BmGame.RBMPathNode_SpecialMove, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RBMPathNode_Ladder : BmSDK.BmGame.RBMPathNode_SpecialMove, 
     public unsafe void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_Ladder.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

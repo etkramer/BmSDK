@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MultiProviderAnalytics<br/>
+/// (size = 152)
 /// (flags = 0)
 /// </summary>
 public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     public unsafe void LogErrorMessage(BmSDK.FString ErrorName, BmSDK.FString ErrorMessage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiProviderAnalytics.LogErrorMessage", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ErrorName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ErrorMessage, paramsPtr + 16);
         var oldFlags = funcManaged.FunctionFlags;
@@ -58,7 +59,7 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     public unsafe void EndStringEventParamArray(BmSDK.FString EventName, BmSDK.TArray<BmSDK.Engine.AnalyticEventsBase.FEventStringParam> ParamArray)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiProviderAnalytics.EndStringEventParamArray", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamArray, paramsPtr + 16);
         var oldFlags = funcManaged.FunctionFlags;
@@ -78,7 +79,7 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     public unsafe void LogStringEventParamArray(BmSDK.FString EventName, BmSDK.TArray<BmSDK.Engine.AnalyticEventsBase.FEventStringParam> ParamArray, bool bTimed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiProviderAnalytics.LogStringEventParamArray", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamArray, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bTimed, paramsPtr + 32);
@@ -99,7 +100,7 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     public unsafe void EndStringEventParam(BmSDK.FString EventName, BmSDK.FString ParamName, BmSDK.FString ParamValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiProviderAnalytics.EndStringEventParam", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamName, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamValue, paramsPtr + 32);
@@ -120,7 +121,7 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     public unsafe void LogStringEventParam(BmSDK.FString EventName, BmSDK.FString ParamName, BmSDK.FString ParamValue, bool bTimed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiProviderAnalytics.LogStringEventParam", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamName, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamValue, paramsPtr + 32);
@@ -142,7 +143,7 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     public unsafe void EndStringEvent(BmSDK.FString EventName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiProviderAnalytics.EndStringEvent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -161,7 +162,7 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     public unsafe void LogStringEvent(BmSDK.FString EventName, bool bTimed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiProviderAnalytics.LogStringEvent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bTimed, paramsPtr + 16);
         var oldFlags = funcManaged.FunctionFlags;
@@ -181,7 +182,7 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     public unsafe void EndSession()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiProviderAnalytics.EndSession", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -199,7 +200,7 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     public unsafe void StartSession()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiProviderAnalytics.StartSession", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -217,7 +218,7 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     public unsafe void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiProviderAnalytics.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

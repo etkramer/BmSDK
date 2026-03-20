@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleAcceleration<br/>
+/// (size = 168)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleAcceleration : BmSDK.Engine.ParticleModuleAccelerationBase, BmSDK.IGameObject

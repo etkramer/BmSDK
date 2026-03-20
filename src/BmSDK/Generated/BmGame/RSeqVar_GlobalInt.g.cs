@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqVar_GlobalInt<br/>
+/// (size = 260)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqVar_GlobalInt : BmSDK.Engine.SeqVar_Int, BmSDK.IGameObject

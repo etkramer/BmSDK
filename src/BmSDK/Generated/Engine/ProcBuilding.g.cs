@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ProcBuilding<br/>
+/// (size = 1020)
 /// (flags = 0)
 /// </summary>
 public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     public unsafe int FindEdgeForTopLevelScope(int TopLevelScopeIndex, BmSDK.Engine.ProcBuilding.EScopeEdge Edge)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ProcBuilding.FindEdgeForTopLevelScope", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TopLevelScopeIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Edge, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -93,7 +94,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     public unsafe void BreakFractureComponent(BmSDK.Engine.FracturedStaticMeshComponent Comp, System.Numerics.Vector3 BoxMin, System.Numerics.Vector3 BoxMax)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ProcBuilding.BreakFractureComponent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Comp, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BoxMin, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BoxMax, paramsPtr + 20);
@@ -114,7 +115,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     public unsafe void GetAllGroupedProcBuildings(out BmSDK.TArray<BmSDK.Engine.ProcBuilding> OutSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ProcBuilding.GetAllGroupedProcBuildings", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -133,7 +134,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     public unsafe BmSDK.Engine.ProcBuilding GetBaseMostBuilding()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ProcBuilding.GetBaseMostBuilding", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -151,7 +152,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     public unsafe BmSDK.TArray<BmSDK.Engine.StaticMeshComponent> FindComponentsForTopLevelScope(int TopLevelScopeIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ProcBuilding.FindComponentsForTopLevelScope", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TopLevelScopeIndex, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -170,7 +171,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     public unsafe void ClearBuildingMeshes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ProcBuilding.ClearBuildingMeshes", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -185,7 +186,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPBMemUsageInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FPBMemUsageInfo
     {
         /// <summary>
@@ -290,7 +291,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPBMaterialParam
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FPBMaterialParam
     {
         /// <summary>
@@ -315,7 +316,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPBFracMeshCompInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FPBFracMeshCompInfo
     {
         /// <summary>
@@ -340,7 +341,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPBMeshCompInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FPBMeshCompInfo
     {
         /// <summary>
@@ -709,7 +710,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPBEdgeInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FPBEdgeInfo
     {
         /// <summary>
@@ -792,7 +793,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPBFaceUVInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FPBFaceUVInfo
     {
         /// <summary>
@@ -817,7 +818,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPBScopeProcessInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 28)]
     public partial record struct FPBScopeProcessInfo
     {
         /// <summary>
@@ -869,7 +870,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPBScope2D
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 72)]
     public partial record struct FPBScope2D
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMExitConditionCombiner<br/>
+/// (size = 468)
 /// (flags = 0)
 /// </summary>
 public partial class RBMExitConditionCombiner : BmSDK.BmGame.RBMExitCondition, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RBMExitConditionCombiner : BmSDK.BmGame.RBMExitCondition, B
     public unsafe void TriggerExitConditionCombiner()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMExitConditionCombiner.TriggerExitConditionCombiner", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

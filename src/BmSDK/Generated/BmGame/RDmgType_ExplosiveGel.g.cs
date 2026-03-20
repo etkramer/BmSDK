@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_ExplosiveGel<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_ExplosiveGel : BmSDK.BmGame.RDamageType, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCameraTransitionPathNode<br/>
+/// (size = 744)
 /// (flags = 0)
 /// </summary>
 public partial class RCameraTransitionPathNode : BmSDK.BmGame.RSnapToPositionActor, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RCameraTransitionPathNode : BmSDK.BmGame.RSnapToPositionAct
     public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCameraTransitionPathNode.OnToggle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Action, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -82,7 +83,7 @@ public partial class RCameraTransitionPathNode : BmSDK.BmGame.RSnapToPositionAct
     /// <summary>
     /// Struct: FLinkedCameraPathNode
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FLinkedCameraPathNode
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ClipPadEntry<br/>
+/// (size = 116)
 /// (flags = 0)
 /// </summary>
 public partial class ClipPadEntry : BmSDK.GameObject, BmSDK.IGameObject

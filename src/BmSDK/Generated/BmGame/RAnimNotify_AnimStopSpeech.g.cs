@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_AnimStopSpeech<br/>
+/// (size = 120)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_AnimStopSpeech : BmSDK.BmGame.RAnimNotify_Script, BmSDK.IGameObject

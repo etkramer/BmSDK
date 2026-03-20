@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RPollenComponent<br/>
+/// (size = 572)
 /// (flags = 0)
 /// </summary>
 public partial class RPollenComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class RPollenComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// <summary>
     /// Struct: FRockPollenSettings
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FRockPollenSettings
     {
         /// <summary>

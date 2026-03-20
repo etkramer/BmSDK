@@ -5,6 +5,7 @@ namespace BmSDK;
 
 /// <summary>
 /// Class: Class<br/>
+/// (size = 580)
 /// (flags = 0)
 /// </summary>
 public partial class Class : BmSDK.State, BmSDK.IGameObject

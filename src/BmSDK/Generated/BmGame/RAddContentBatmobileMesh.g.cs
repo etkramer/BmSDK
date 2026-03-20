@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAddContentBatmobileMesh<br/>
+/// (size = 176)
 /// (flags = 0)
 /// </summary>
 public partial class RAddContentBatmobileMesh : BmSDK.BmGame.RAdditionalContent, BmSDK.IGameObject
@@ -116,7 +117,7 @@ public partial class RAddContentBatmobileMesh : BmSDK.BmGame.RAdditionalContent,
     /// <summary>
     /// Struct: FBatmobileMaterialOverride
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FBatmobileMaterialOverride
     {
         /// <summary>

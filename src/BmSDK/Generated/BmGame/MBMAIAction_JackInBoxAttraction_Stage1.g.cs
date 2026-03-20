@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MBMAIAction_JackInBoxAttraction_Stage1<br/>
+/// (size = 948)
 /// (flags = 0)
 /// </summary>
 public partial class MBMAIAction_JackInBoxAttraction_Stage1 : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class MBMAIAction_JackInBoxAttraction_Stage1 : BmSDK.BmGame.RBMAI
     public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMAIAction_JackInBoxAttraction_Stage1.ActionTick", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[5];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction.ActionTickResult>(paramsPtr + 4);
@@ -85,7 +86,7 @@ public partial class MBMAIAction_JackInBoxAttraction_Stage1 : BmSDK.BmGame.RBMAI
     public unsafe void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMAIAction_JackInBoxAttraction_Stage1.OnActivate", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -96,7 +97,7 @@ public partial class MBMAIAction_JackInBoxAttraction_Stage1 : BmSDK.BmGame.RBMAI
     public unsafe void Setup(BmSDK.Engine.Actor NewLookAtActor, float newTimeLimit, BmSDK.Engine.AnimSet NewThugReactionAnimSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MBMAIAction_JackInBoxAttraction_Stage1.Setup", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewLookAtActor, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(newTimeLimit, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewThugReactionAnimSet, paramsPtr + 12);

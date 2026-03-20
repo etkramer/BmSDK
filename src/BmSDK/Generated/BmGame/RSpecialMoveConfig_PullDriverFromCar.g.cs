@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_PullDriverFromCar<br/>
+/// (size = 500)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_PullDriverFromCar : BmSDK.BmGame.RSpecialMoveConfig_RelativeAnimMove, BmSDK.IGameObject

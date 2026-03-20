@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNode_AnimCapture<br/>
+/// (size = 320)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNode_AnimCapture : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RAnimNode_AnimCapture : BmSDK.Engine.AnimNodeBlendBase, BmS
     public unsafe void Capture(BmSDK.Engine.SkeletalMeshComponent Mesh)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_AnimCapture.Capture", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Mesh, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

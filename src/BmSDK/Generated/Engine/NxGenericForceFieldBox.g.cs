@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NxGenericForceFieldBox<br/>
+/// (size = 932)
 /// (flags = 0)
 /// </summary>
 public partial class NxGenericForceFieldBox : BmSDK.Engine.NxGenericForceField, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class NxGenericForceFieldBox : BmSDK.Engine.NxGenericForceField, 
     public unsafe void DoInitRBPhys()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NxGenericForceFieldBox.DoInitRBPhys", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;

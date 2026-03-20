@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDistributionFloatNotRain<br/>
+/// (size = 144)
 /// (flags = 0)
 /// </summary>
 public partial class RDistributionFloatNotRain : BmSDK.BmGame.RDistributionFloatRain, BmSDK.IGameObject

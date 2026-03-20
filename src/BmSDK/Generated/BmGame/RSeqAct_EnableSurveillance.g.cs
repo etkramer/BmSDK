@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_EnableSurveillance<br/>
+/// (size = 352)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_EnableSurveillance : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

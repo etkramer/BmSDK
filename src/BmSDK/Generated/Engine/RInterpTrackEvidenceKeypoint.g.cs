@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RInterpTrackEvidenceKeypoint<br/>
+/// (size = 216)
 /// (flags = 0)
 /// </summary>
 public partial class RInterpTrackEvidenceKeypoint : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
@@ -71,7 +72,7 @@ public partial class RInterpTrackEvidenceKeypoint : BmSDK.Engine.InterpTrack, Bm
     /// <summary>
     /// Struct: FEvidenceKeypointTrackKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FEvidenceKeypointTrackKey
     {
         /// <summary>

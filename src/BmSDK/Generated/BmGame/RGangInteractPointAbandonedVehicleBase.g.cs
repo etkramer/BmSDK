@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGangInteractPointAbandonedVehicleBase<br/>
+/// (size = 1392)
 /// (flags = 0)
 /// </summary>
 public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGangInteractPointBase, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     public unsafe bool AllowForSpawning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointAbandonedVehicleBase.AllowForSpawning", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -91,7 +92,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     public unsafe bool UpdateTimeOut(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointAbandonedVehicleBase.UpdateTimeOut", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
@@ -103,7 +104,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     public unsafe void ActivateBuddies()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointAbandonedVehicleBase.ActivateBuddies", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -114,7 +115,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     public unsafe void DeactivateBuddies()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointAbandonedVehicleBase.DeactivateBuddies", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -125,7 +126,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     public unsafe int GetNumPairedToCheck()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointAbandonedVehicleBase.GetNumPairedToCheck", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -136,7 +137,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     public unsafe bool IsLeader()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointAbandonedVehicleBase.IsLeader", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -147,7 +148,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     public unsafe bool AllowSpectators()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointAbandonedVehicleBase.AllowSpectators", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -158,7 +159,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     public unsafe void RebuildTranstionInPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointAbandonedVehicleBase.RebuildTranstionInPoints", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -176,7 +177,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     public unsafe void GetEntryPointAndRotation(BmSDK.BmGame.RPawnCharacter TestPawn, out System.Numerics.Vector3 Loc, out BmSDK.Rotator Rot, int Index, bool bSecondTry = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointAbandonedVehicleBase.GetEntryPointAndRotation", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestPawn, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 32);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bSecondTry, paramsPtr + 36);
@@ -199,7 +200,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     public unsafe BmSDK.BmGame.RGangInteractPointBase IsValidForPawn(BmSDK.BmGame.RBMPawnAI TestPawn, bool bSkipSpeedTest = default, bool bSkipAngleCheck = default, bool bSkipVolCheck = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGangInteractPointAbandonedVehicleBase.IsValidForPawn", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestPawn, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bSkipSpeedTest, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bSkipAngleCheck, paramsPtr + 12);
@@ -317,7 +318,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     /// <summary>
     /// Struct: FArrowContainer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FArrowContainer
     {
         /// <summary>
@@ -333,7 +334,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     /// <summary>
     /// Struct: FTransInLocs
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 48)]
     public partial record struct FTransInLocs
     {
         /// <summary>
@@ -367,7 +368,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     /// <summary>
     /// Struct: FCarAnimationDetails
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 60)]
     public partial record struct FCarAnimationDetails
     {
         /// <summary>
@@ -464,7 +465,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     /// <summary>
     /// Struct: FMultiStageAnim
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 104)]
     public partial record struct FMultiStageAnim
     {
         /// <summary>

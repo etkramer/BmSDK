@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RFlaps_ConstraintSetupAnimBlend<br/>
+/// (size = 192)
 /// (flags = 0)
 /// </summary>
 public partial class RFlaps_ConstraintSetupAnimBlend : BmSDK.Engine.RFlaps_ConstraintSetup, BmSDK.IGameObject
@@ -94,7 +95,7 @@ public partial class RFlaps_ConstraintSetupAnimBlend : BmSDK.Engine.RFlaps_Const
     /// <summary>
     /// Struct: FRBlendBoneData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
     public partial record struct FRBlendBoneData
     {
         /// <summary>

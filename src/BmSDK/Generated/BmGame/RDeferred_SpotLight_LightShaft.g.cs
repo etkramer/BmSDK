@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDeferred_SpotLight_LightShaft<br/>
+/// (size = 700)
 /// (flags = 0)
 /// </summary>
 public partial class RDeferred_SpotLight_LightShaft : BmSDK.BmGame.RDeferred_SpotLight, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RDeferred_SpotLight_LightShaft : BmSDK.BmGame.RDeferred_Spo
     public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeferred_SpotLight_LightShaft.OnToggle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Action, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

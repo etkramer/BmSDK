@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkActionGlobal_PredatorMusicControl<br/>
+/// (size = 408)
 /// (flags = 0)
 /// </summary>
 public partial class AkActionGlobal_PredatorMusicControl : BmSDK.Engine.AkActionGlobal_MusicControl, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ShaderCache<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class ShaderCache : BmSDK.GameObject, BmSDK.IGameObject

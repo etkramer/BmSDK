@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AppNotificationsBase<br/>
+/// (size = 192)
 /// (flags = 0)
 /// </summary>
 public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, 
     public unsafe void DebugLogNotification(out BmSDK.Engine.AppNotificationsBase.FNotificationInfo Notification)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AppNotificationsBase.DebugLogNotification", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         Notification = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AppNotificationsBase.FNotificationInfo>(paramsPtr + 0);
         return;
@@ -50,7 +51,7 @@ public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, 
     public unsafe void OnReceivedRemoteNotification(out BmSDK.Engine.AppNotificationsBase.FNotificationInfo Notification, bool bWasAppActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AppNotificationsBase.OnReceivedRemoteNotification", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bWasAppActive, paramsPtr + 40);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         Notification = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AppNotificationsBase.FNotificationInfo>(paramsPtr + 0);
@@ -63,7 +64,7 @@ public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, 
     public unsafe void OnReceivedLocalNotification(out BmSDK.Engine.AppNotificationsBase.FNotificationInfo Notification, bool bWasAppActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AppNotificationsBase.OnReceivedLocalNotification", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bWasAppActive, paramsPtr + 40);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         Notification = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AppNotificationsBase.FNotificationInfo>(paramsPtr + 0);
@@ -76,7 +77,7 @@ public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, 
     public unsafe void CancelAllScheduledLocalNotifications()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AppNotificationsBase.CancelAllScheduledLocalNotifications", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -94,7 +95,7 @@ public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, 
     public unsafe void ScheduleLocalNotification(out BmSDK.Engine.AppNotificationsBase.FNotificationInfo Notification, int StartOffsetSeconds)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AppNotificationsBase.ScheduleLocalNotification", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StartOffsetSeconds, paramsPtr + 40);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -114,7 +115,7 @@ public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, 
     public unsafe bool WasLaunchedViaNotification()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AppNotificationsBase.WasLaunchedViaNotification", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -125,7 +126,7 @@ public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, 
     public unsafe void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AppNotificationsBase.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -167,7 +168,7 @@ public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// Struct: FLaunchNotificationInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 44)]
     public partial record struct FLaunchNotificationInfo
     {
         /// <summary>
@@ -192,7 +193,7 @@ public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// Struct: FNotificationInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 40)]
     public partial record struct FNotificationInfo
     {
         /// <summary>
@@ -235,7 +236,7 @@ public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// Struct: FNotificationMessageInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FNotificationMessageInfo
     {
         /// <summary>

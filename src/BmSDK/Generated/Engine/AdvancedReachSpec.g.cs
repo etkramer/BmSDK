@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AdvancedReachSpec<br/>
+/// (size = 172)
 /// (flags = 0)
 /// </summary>
 public partial class AdvancedReachSpec : BmSDK.Engine.ReachSpec, BmSDK.IGameObject

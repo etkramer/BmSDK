@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Interface_PylonGeometryProvider<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class Interface_PylonGeometryProvider : BmSDK.Interface, BmSDK.IGameObject

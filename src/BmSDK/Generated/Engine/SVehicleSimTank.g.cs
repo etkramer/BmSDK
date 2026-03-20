@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SVehicleSimTank<br/>
+/// (size = 308)
 /// (flags = 0)
 /// </summary>
 public partial class SVehicleSimTank : BmSDK.Engine.SVehicleSimCar, BmSDK.IGameObject

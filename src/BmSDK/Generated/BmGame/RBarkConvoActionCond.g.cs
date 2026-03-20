@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBarkConvoActionCond<br/>
+/// (size = 180)
 /// (flags = 0)
 /// </summary>
 public partial class RBarkConvoActionCond : BmSDK.BmGame.RBarkConvoAction, BmSDK.IGameObject

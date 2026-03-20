@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackAnimControl<br/>
+/// (size = 300)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackAnimControl : BmSDK.Engine.InterpTrackFloatBase, BmSDK.IGameObject
@@ -35,7 +36,7 @@ public partial class InterpTrackAnimControl : BmSDK.Engine.InterpTrackFloatBase,
     /// <summary>
     /// Struct: FAnimControlTrackKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 28)]
     public partial record struct FAnimControlTrackKey
     {
         /// <summary>

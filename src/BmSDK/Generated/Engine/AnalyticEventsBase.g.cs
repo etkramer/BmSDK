@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnalyticEventsBase<br/>
+/// (size = 120)
 /// (flags = 0)
 /// </summary>
 public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     public unsafe void LogErrorMessage(BmSDK.FString ErrorName, BmSDK.FString ErrorMessage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.LogErrorMessage", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ErrorName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ErrorMessage, paramsPtr + 16);
         var oldFlags = funcManaged.FunctionFlags;
@@ -58,7 +59,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     public unsafe void EndStringEventParamArray(BmSDK.FString EventName, BmSDK.TArray<BmSDK.Engine.AnalyticEventsBase.FEventStringParam> ParamArray)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.EndStringEventParamArray", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamArray, paramsPtr + 16);
         var oldFlags = funcManaged.FunctionFlags;
@@ -78,7 +79,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     public unsafe void LogStringEventParamArray(BmSDK.FString EventName, BmSDK.TArray<BmSDK.Engine.AnalyticEventsBase.FEventStringParam> ParamArray, bool bTimed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.LogStringEventParamArray", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamArray, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bTimed, paramsPtr + 32);
@@ -99,7 +100,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     public unsafe void EndStringEventParam(BmSDK.FString EventName, BmSDK.FString ParamName, BmSDK.FString ParamValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.EndStringEventParam", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamName, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamValue, paramsPtr + 32);
@@ -120,7 +121,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     public unsafe void LogStringEventParam(BmSDK.FString EventName, BmSDK.FString ParamName, BmSDK.FString ParamValue, bool bTimed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.LogStringEventParam", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamName, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamValue, paramsPtr + 32);
@@ -142,7 +143,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     public unsafe void EndStringEvent(BmSDK.FString EventName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.EndStringEvent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -161,7 +162,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     public unsafe void LogStringEvent(BmSDK.FString EventName, bool bTimed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.LogStringEvent", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bTimed, paramsPtr + 16);
         var oldFlags = funcManaged.FunctionFlags;
@@ -181,7 +182,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     public unsafe void EndSession()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.EndSession", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -199,7 +200,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     public unsafe void StartSession()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.StartSession", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -217,7 +218,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     public unsafe void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -235,7 +236,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     public unsafe bool IsSessionInProgress()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnalyticEventsBase.IsSessionInProgress", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -252,7 +253,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     /// <summary>
     /// Struct: FEventStringParam
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FEventStringParam
     {
         /// <summary>

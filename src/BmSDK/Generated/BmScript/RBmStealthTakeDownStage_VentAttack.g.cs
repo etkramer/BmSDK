@@ -5,6 +5,7 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBmStealthTakeDownStage_VentAttack<br/>
+/// (size = 1688)
 /// (flags = 0)
 /// </summary>
 public partial class RBmStealthTakeDownStage_VentAttack : BmSDK.BmGame.RStealthTakedownStage_VentAttack, BmSDK.IGameObject
@@ -73,7 +74,7 @@ public partial class RBmStealthTakeDownStage_VentAttack : BmSDK.BmGame.RStealthT
     public unsafe void OverrideChosenAnim(out int Anim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBmStealthTakeDownStage_VentAttack.OverrideChosenAnim", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[72];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         Anim = BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
         return;

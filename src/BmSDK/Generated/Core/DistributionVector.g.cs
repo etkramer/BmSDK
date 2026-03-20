@@ -5,6 +5,7 @@ namespace BmSDK;
 
 /// <summary>
 /// Class: DistributionVector<br/>
+/// (size = 112)
 /// (flags = 0)
 /// </summary>
 public partial class DistributionVector : BmSDK.Component, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class DistributionVector : BmSDK.Component, BmSDK.IGameObject
     public unsafe System.Numerics.Vector3 GetVectorValue(float F = default, int LastExtreme = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.DistributionVector.GetVectorValue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(F, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LastExtreme, paramsPtr + 4);
         var oldFlags = funcManaged.FunctionFlags;
@@ -55,7 +56,7 @@ public partial class DistributionVector : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRawDistributionVector
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 64)]
     public partial record struct FRawDistributionVector
     {
         /// <summary>

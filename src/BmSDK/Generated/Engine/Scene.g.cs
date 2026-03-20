@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Scene<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class Scene : BmSDK.GameObject, BmSDK.IGameObject

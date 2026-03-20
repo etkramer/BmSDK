@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRoadPointRenderingComponent<br/>
+/// (size = 540)
 /// (flags = 0)
 /// </summary>
 public partial class RRoadPointRenderingComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

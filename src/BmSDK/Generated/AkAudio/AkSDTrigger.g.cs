@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDTrigger<br/>
+/// (size = 264)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDTrigger : BmSDK.AkAudio.AkSDNode, BmSDK.IGameObject

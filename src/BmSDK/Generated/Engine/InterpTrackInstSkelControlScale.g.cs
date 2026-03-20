@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackInstSkelControlScale<br/>
+/// (size = 84)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstSkelControlScale : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject

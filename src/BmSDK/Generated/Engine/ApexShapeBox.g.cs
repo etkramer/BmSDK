@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexShapeBox<br/>
+/// (size = 92)
 /// (flags = 0)
 /// </summary>
 public partial class ApexShapeBox : BmSDK.Engine.ApexShape, BmSDK.IGameObject

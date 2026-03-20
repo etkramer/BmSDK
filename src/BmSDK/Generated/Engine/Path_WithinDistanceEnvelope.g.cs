@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Path_WithinDistanceEnvelope<br/>
+/// (size = 124)
 /// (flags = 0)
 /// </summary>
 public partial class Path_WithinDistanceEnvelope : BmSDK.Engine.PathConstraint, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class Path_WithinDistanceEnvelope : BmSDK.Engine.PathConstraint, 
     public unsafe void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Path_WithinDistanceEnvelope.Recycle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -49,7 +50,7 @@ public partial class Path_WithinDistanceEnvelope : BmSDK.Engine.PathConstraint, 
     public unsafe static bool StayWithinEnvelopeToLoc(BmSDK.Engine.Pawn P, System.Numerics.Vector3 InEnvelopeTestPoint, float InMaxDistance, float InMinDistance, bool bInSoft = default, float InSoftStartPenalty = default, bool bOnlyTossOutSpecsThatLeave = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Path_WithinDistanceEnvelope.StayWithinEnvelopeToLoc", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(P, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InEnvelopeTestPoint, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InMaxDistance, paramsPtr + 20);

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_SetVector<br/>
+/// (size = 364)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_SetVector : BmSDK.Engine.SeqAct_SetSequenceVariable, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class SeqAct_SetVector : BmSDK.Engine.SeqAct_SetSequenceVariable,
     public unsafe void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_SetVector.Activated", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkDialogueLineRandom<br/>
+/// (size = 224)
 /// (flags = 0)
 /// </summary>
 public partial class AkDialogueLineRandom : BmSDK.Engine.AkDialogueLine, BmSDK.IGameObject
@@ -71,7 +72,7 @@ public partial class AkDialogueLineRandom : BmSDK.Engine.AkDialogueLine, BmSDK.I
     /// <summary>
     /// Struct: FAkDialogueLineRandomItem
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FAkDialogueLineRandomItem
     {
         /// <summary>

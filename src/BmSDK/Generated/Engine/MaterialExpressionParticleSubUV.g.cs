@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionParticleSubUV<br/>
+/// (size = 284)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionParticleSubUV : BmSDK.Engine.MaterialExpressionTextureSample, BmSDK.IGameObject

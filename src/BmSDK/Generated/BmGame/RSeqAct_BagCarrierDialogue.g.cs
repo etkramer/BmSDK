@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_BagCarrierDialogue<br/>
+/// (size = 420)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_BagCarrierDialogue : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RSeqAct_BagCarrierDialogue : BmSDK.Engine.SeqAct_Latent, Bm
     public unsafe static int GetObjClassVersion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BagCarrierDialogue.GetObjClassVersion", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
     }
@@ -49,7 +50,7 @@ public partial class RSeqAct_BagCarrierDialogue : BmSDK.Engine.SeqAct_Latent, Bm
     public unsafe void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BagCarrierDialogue.Activated", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -60,7 +61,7 @@ public partial class RSeqAct_BagCarrierDialogue : BmSDK.Engine.SeqAct_Latent, Bm
     public unsafe void TryTriggerIncidentalDialogue(BmSDK.FName bark, BmSDK.BmGame.RPawnVillain Speaker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BagCarrierDialogue.TryTriggerIncidentalDialogue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bark, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Speaker, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -73,7 +74,7 @@ public partial class RSeqAct_BagCarrierDialogue : BmSDK.Engine.SeqAct_Latent, Bm
     public unsafe bool CanTriggerIncidentalDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BagCarrierDialogue.CanTriggerIncidentalDialogue", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
@@ -84,7 +85,7 @@ public partial class RSeqAct_BagCarrierDialogue : BmSDK.Engine.SeqAct_Latent, Bm
     public unsafe void BagDroppedOff(BmSDK.BmGame.RPawnVillain bagCarrier, BmSDK.BmGame.RLootDestinationBase dropoffPoint, BmSDK.BmGame.RLootSourceBase nextPickupPoint, bool bagCarryingFinished)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BagCarrierDialogue.BagDroppedOff", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bagCarrier, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(dropoffPoint, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(nextPickupPoint, paramsPtr + 16);
@@ -99,7 +100,7 @@ public partial class RSeqAct_BagCarrierDialogue : BmSDK.Engine.SeqAct_Latent, Bm
     public unsafe void BagPickedUp(BmSDK.BmGame.RPawnVillain bagCarrier, BmSDK.BmGame.RLootSourceBase PickupPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BagCarrierDialogue.BagPickedUp", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bagCarrier, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PickupPoint, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -112,7 +113,7 @@ public partial class RSeqAct_BagCarrierDialogue : BmSDK.Engine.SeqAct_Latent, Bm
     public unsafe void RegisterWithRoomState(bool bWarnIfFailed = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BagCarrierDialogue.RegisterWithRoomState", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bWarnIfFailed, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

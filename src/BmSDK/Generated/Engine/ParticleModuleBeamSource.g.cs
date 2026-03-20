@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleBeamSource<br/>
+/// (size = 276)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleBeamSource : BmSDK.Engine.ParticleModuleBeamBase, BmSDK.IGameObject

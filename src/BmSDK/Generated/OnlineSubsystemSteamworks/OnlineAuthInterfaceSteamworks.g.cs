@@ -5,6 +5,7 @@ namespace BmSDK.OnlineSubsystemSteamworks;
 
 /// <summary>
 /// Class: OnlineAuthInterfaceSteamworks<br/>
+/// (size = 792)
 /// (flags = 0)
 /// </summary>
 public partial class OnlineAuthInterfaceSteamworks : BmSDK.IpDrv.OnlineAuthInterfaceImpl, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class OnlineAuthInterfaceSteamworks : BmSDK.IpDrv.OnlineAuthInter
     public unsafe bool GetServerAddr(out int OutServerIP, out int OutServerPort)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.GetServerAddr", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -58,7 +59,7 @@ public partial class OnlineAuthInterfaceSteamworks : BmSDK.IpDrv.OnlineAuthInter
     public unsafe bool GetServerUniqueId(out BmSDK.Engine.OnlineSubsystem.FUniqueNetId OutServerUID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.GetServerUniqueId", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
@@ -77,7 +78,7 @@ public partial class OnlineAuthInterfaceSteamworks : BmSDK.IpDrv.OnlineAuthInter
     public unsafe bool VerifyServerAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID, int ServerIP, int AuthTicketUID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.VerifyServerAuthSession", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerUID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerIP, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AuthTicketUID, paramsPtr + 12);
@@ -98,7 +99,7 @@ public partial class OnlineAuthInterfaceSteamworks : BmSDK.IpDrv.OnlineAuthInter
     public unsafe bool CreateServerAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID, int ClientIP, int ClientPort, out int OutAuthTicketUID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.CreateServerAuthSession", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientUID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientIP, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientPort, paramsPtr + 12);
@@ -120,7 +121,7 @@ public partial class OnlineAuthInterfaceSteamworks : BmSDK.IpDrv.OnlineAuthInter
     public unsafe bool VerifyClientAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID, int ClientIP, int ClientPort, int AuthTicketUID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.VerifyClientAuthSession", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientUID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientIP, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientPort, paramsPtr + 12);
@@ -142,7 +143,7 @@ public partial class OnlineAuthInterfaceSteamworks : BmSDK.IpDrv.OnlineAuthInter
     public unsafe bool CreateClientAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID, int ServerIP, int ServerPort, bool bSecure, out int OutAuthTicketUID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.CreateClientAuthSession", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerUID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerIP, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerPort, paramsPtr + 12);
@@ -165,7 +166,7 @@ public partial class OnlineAuthInterfaceSteamworks : BmSDK.IpDrv.OnlineAuthInter
     public unsafe bool SendServerAuthRequest(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.SendServerAuthRequest", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerUID, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -184,7 +185,7 @@ public partial class OnlineAuthInterfaceSteamworks : BmSDK.IpDrv.OnlineAuthInter
     public unsafe bool SendClientAuthRequest(BmSDK.Engine.Player ClientConnection, BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.SendClientAuthRequest", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientConnection, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientUID, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleParameterDynamic<br/>
+/// (size = 120)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleParameterDynamic : BmSDK.Engine.ParticleModuleParameterBase, BmSDK.IGameObject
@@ -62,7 +63,7 @@ public partial class ParticleModuleParameterDynamic : BmSDK.Engine.ParticleModul
     /// <summary>
     /// Struct: FEmitterDynamicParameter
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 56)]
     public partial record struct FEmitterDynamicParameter
     {
         /// <summary>

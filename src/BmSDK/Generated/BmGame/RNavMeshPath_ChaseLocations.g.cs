@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RNavMeshPath_ChaseLocations<br/>
+/// (size = 116)
 /// (flags = 0)
 /// </summary>
 public partial class RNavMeshPath_ChaseLocations : BmSDK.Engine.NavMeshPathConstraint, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RNavMeshPath_ChaseLocations : BmSDK.Engine.NavMeshPathConst
     public unsafe void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_ChaseLocations.Recycle", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -49,7 +50,7 @@ public partial class RNavMeshPath_ChaseLocations : BmSDK.Engine.NavMeshPathConst
     public unsafe void ShowDebug(BmSDK.Engine.Actor DebugActor, bool bPerm = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_ChaseLocations.ShowDebug", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DebugActor, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPerm, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -62,7 +63,7 @@ public partial class RNavMeshPath_ChaseLocations : BmSDK.Engine.NavMeshPathConst
     public unsafe static BmSDK.BmGame.RNavMeshPath_ChaseLocations BuildChaseLocations(BmSDK.Engine.NavigationHandle NavHandle, BmSDK.BmGame.RChaseLocationSearch NewChaseSearch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_ChaseLocations.BuildChaseLocations", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NavHandle, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewChaseSearch, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

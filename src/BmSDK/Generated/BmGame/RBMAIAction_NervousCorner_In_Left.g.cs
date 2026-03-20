@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_NervousCorner_In_Left<br/>
+/// (size = 908)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_NervousCorner_In_Left : BmSDK.BmGame.RBMAIAction_NervousCorner_In, BmSDK.IGameObject

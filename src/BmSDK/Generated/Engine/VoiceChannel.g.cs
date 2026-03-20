@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: VoiceChannel<br/>
+/// (size = 164)
 /// (flags = 0)
 /// </summary>
 public partial class VoiceChannel : BmSDK.Engine.Channel, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DmgType_Telefragged<br/>
+/// (size = 160)
 /// (flags = 0)
 /// </summary>
 public partial class DmgType_Telefragged : BmSDK.Engine.DamageType, BmSDK.IGameObject

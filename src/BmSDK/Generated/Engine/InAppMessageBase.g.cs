@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InAppMessageBase<br/>
+/// (size = 116)
 /// (flags = 0)
 /// </summary>
 public partial class InAppMessageBase : BmSDK.Engine.PlatformInterfaceBase, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class InAppMessageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     public unsafe bool ShowInAppEmailUI(BmSDK.FString InitialSubject = default, BmSDK.FString InitialMessage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InAppMessageBase.ShowInAppEmailUI", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InitialSubject, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InitialMessage, paramsPtr + 16);
         var oldFlags = funcManaged.FunctionFlags;
@@ -58,7 +59,7 @@ public partial class InAppMessageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     public unsafe bool ShowInAppSMSUI(BmSDK.FString InitialMessage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InAppMessageBase.ShowInAppSMSUI", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InitialMessage, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -77,7 +78,7 @@ public partial class InAppMessageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     public unsafe void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.InAppMessageBase.Init", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
         funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;

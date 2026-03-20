@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: TerrainLayerSetup<br/>
+/// (size = 100)
 /// (flags = 0)
 /// </summary>
 public partial class TerrainLayerSetup : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class TerrainLayerSetup : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TerrainLayerSetup.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
@@ -55,7 +56,7 @@ public partial class TerrainLayerSetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTerrainFilteredMaterial
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 88)]
     public partial record struct FTerrainFilteredMaterial
     {
         /// <summary>
@@ -143,7 +144,7 @@ public partial class TerrainLayerSetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FFilterLimit
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FFilterLimit
     {
         /// <summary>

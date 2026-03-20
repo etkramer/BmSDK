@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSticksGadgetBase<br/>
+/// (size = 2068)
 /// (flags = 0)
 /// </summary>
 public partial class RSticksGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject

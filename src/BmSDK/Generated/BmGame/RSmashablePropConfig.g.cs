@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSmashablePropConfig<br/>
+/// (size = 184)
 /// (flags = 0)
 /// </summary>
 public partial class RSmashablePropConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
@@ -271,7 +272,7 @@ public partial class RSmashablePropConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObj
     /// <summary>
     /// Struct: FRSmashablePropDecalData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FRSmashablePropDecalData
     {
         /// <summary>

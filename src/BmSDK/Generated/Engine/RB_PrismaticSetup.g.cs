@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RB_PrismaticSetup<br/>
+/// (size = 300)
 /// (flags = 0)
 /// </summary>
 public partial class RB_PrismaticSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_SubtractFloat<br/>
+/// (size = 368)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_SubtractFloat : BmSDK.Engine.SeqAct_SetSequenceVariable, BmSDK.IGameObject

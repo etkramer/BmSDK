@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_DualStrike<br/>
+/// (size = 236)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_DualStrike : BmSDK.BmGame.RDmgType_Strike, BmSDK.IGameObject

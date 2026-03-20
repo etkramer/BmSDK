@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MCombatMove_GadgetDualHandguns<br/>
+/// (size = 836)
 /// (flags = 0)
 /// </summary>
 public partial class MCombatMove_GadgetDualHandguns : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactory<br/>
+/// (size = 144)
 /// (flags = 0)
 /// </summary>
 public partial class ActorFactory : BmSDK.GameObject, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class ActorFactory : BmSDK.GameObject, BmSDK.IGameObject
     public unsafe void PostCreateActor(BmSDK.Engine.Actor NewActor, BmSDK.Engine.SeqAct_ActorFactory ActorFactoryData = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ActorFactory.PostCreateActor", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewActor, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ActorFactoryData, paramsPtr + 8);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

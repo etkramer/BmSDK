@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: CullDistanceVolume<br/>
+/// (size = 760)
 /// (flags = 0)
 /// </summary>
 public partial class CullDistanceVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
@@ -88,7 +89,7 @@ public partial class CullDistanceVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCullDistanceSizePair
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 8)]
     public partial record struct FCullDistanceSizePair
     {
         /// <summary>

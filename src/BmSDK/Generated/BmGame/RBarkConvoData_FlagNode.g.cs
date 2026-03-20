@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBarkConvoData_FlagNode<br/>
+/// (size = 108)
 /// (flags = 0)
 /// </summary>
 public partial class RBarkConvoData_FlagNode : BmSDK.Engine.AkHash, BmSDK.IGameObject
@@ -38,7 +39,7 @@ public partial class RBarkConvoData_FlagNode : BmSDK.Engine.AkHash, BmSDK.IGameO
     public unsafe BmSDK.TArray<BmSDK.Engine.AkDialogueVoice> GetVoiceList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkConvoData_FlagNode.GetVoiceList", true);
-        byte* paramsPtr = stackalloc byte[64];
+        byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkDialogueVoice>>(paramsPtr + 0);
     }
@@ -55,7 +56,7 @@ public partial class RBarkConvoData_FlagNode : BmSDK.Engine.AkHash, BmSDK.IGameO
     /// <summary>
     /// Struct: FFlagLineEntry
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 24)]
     public partial record struct FFlagLineEntry
     {
         /// <summary>

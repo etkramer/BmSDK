@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RActorFactoryStaticMeshDamageable<br/>
+/// (size = 164)
 /// (flags = 0)
 /// </summary>
 public partial class RActorFactoryStaticMeshDamageable : BmSDK.Engine.ActorFactoryStaticMesh, BmSDK.IGameObject

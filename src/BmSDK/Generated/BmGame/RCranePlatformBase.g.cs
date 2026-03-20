@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCranePlatformBase<br/>
+/// (size = 1132)
 /// (flags = 0)
 /// </summary>
 public partial class RCranePlatformBase : BmSDK.Engine.KActorSpawnable, BmSDK.IGameObject

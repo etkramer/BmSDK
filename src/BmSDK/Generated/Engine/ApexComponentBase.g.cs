@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexComponentBase<br/>
+/// (size = 668)
 /// (flags = 0)
 /// </summary>
 public partial class ApexComponentBase : BmSDK.Engine.MeshComponent, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: FlexActor<br/>
+/// (size = 960)
 /// (flags = 0)
 /// </summary>
 public partial class FlexActor : BmSDK.Engine.InterpActor, BmSDK.IGameObject

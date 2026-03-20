@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBatmobileBooster<br/>
+/// (size = 2400)
 /// (flags = 0)
 /// </summary>
 public partial class RBatmobileBooster : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObject

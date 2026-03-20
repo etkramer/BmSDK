@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCornerPointUniversal<br/>
+/// (size = 756)
 /// (flags = 0)
 /// </summary>
 public partial class RCornerPointUniversal : BmSDK.BmGame.RCornerPointBase, BmSDK.IGameObject

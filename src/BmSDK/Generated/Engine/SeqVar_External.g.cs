@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqVar_External<br/>
+/// (size = 268)
 /// (flags = 0)
 /// </summary>
 public partial class SeqVar_External : BmSDK.Engine.SequenceVariable, BmSDK.IGameObject

@@ -5,6 +5,7 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRope2VantageWirePhysicsUpdater<br/>
+/// (size = 296)
 /// (flags = 0)
 /// </summary>
 public partial class RRope2VantageWirePhysicsUpdater : BmSDK.BmGame.RRope2SimplePhysicsUpdater, BmSDK.IGameObject

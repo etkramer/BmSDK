@@ -5,6 +5,7 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: SeqAct_AkAudioState<br/>
+/// (size = 360)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_AkAudioState : BmSDK.AkAudio.SeqAct_AkBaseSimple, BmSDK.IGameObject

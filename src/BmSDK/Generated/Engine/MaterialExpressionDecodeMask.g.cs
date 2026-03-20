@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionDecodeMask<br/>
+/// (size = 349)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionDecodeMask : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
@@ -45,7 +46,7 @@ public partial class MaterialExpressionDecodeMask : BmSDK.Engine.MaterialExpress
     /// <summary>
     /// Struct: FWeightInput
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 68)]
     public partial record struct FWeightInput
     {
         /// <summary>

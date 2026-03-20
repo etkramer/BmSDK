@@ -5,6 +5,7 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LandscapeProxy<br/>
+/// (size = 960)
 /// (flags = 0)
 /// </summary>
 public partial class LandscapeProxy : BmSDK.Engine.Info, BmSDK.IGameObject
@@ -70,7 +71,7 @@ public partial class LandscapeProxy : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLandscapeLayerStruct
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 48)]
     public partial record struct FLandscapeLayerStruct
     {
         /// <summary>
@@ -131,7 +132,7 @@ public partial class LandscapeProxy : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLandscapeWeightmapUsage
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
+    [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial record struct FLandscapeWeightmapUsage
     {
         /// <summary>

@@ -5,6 +5,7 @@ namespace BmSDK;
 
 /// <summary>
 /// Class: FloatProperty<br/>
+/// (size = 148)
 /// (flags = 0)
 /// </summary>
 public partial class FloatProperty : BmSDK.Property, BmSDK.IGameObject
