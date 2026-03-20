@@ -12,8 +12,8 @@ namespace BmSDK.Framework;
 internal static class Loader
 {
     private const string InitFuncName = "Engine.GameInfo:InitGame";
-    private const string EnterMenuFuncName = "GFxUI.GFxMoviePlayer:Init";
-    private const string EnterGameFuncName = "BmGame.RPlayerController:ClientReady";
+    private const string EnterMenuFuncName = "BmScript.RSeqAct_GFxStartFrontend:Activated";
+    private const string EnterGameFuncName = "BmGame.RPlayerStartInLevel:PreloadLevelsForEntering";
     private const string PostBeginPlayFuncName = ":PostBeginPlay";
     private const string TickFuncName = "BmGame.RGameInfo:Tick";
 
