@@ -41,14 +41,10 @@ public class MinimalScript : Script
         else if (key == Keys.O)
         {
             var playerPawn = (RPawnPlayerBm)Game.GetPlayerPawn(0);
+
+            // Test native functions
             var newLocation = playerPawn.Location + new Vector3(0, 0, 200);
-            playerPawn.Location = newLocation;
-
-            // playerPawn.SetLocation(newLocation);
-            // playerPawn.Move(new Vector3(0, 0, 200));
-
-            // playerPawn.CapeComponent.SetHidden(true);
-            // playerPawn.CapeSkeletalMesh.SetHidden(true);
+            playerPawn.SetLocation(newLocation);
         }
     }
 }
