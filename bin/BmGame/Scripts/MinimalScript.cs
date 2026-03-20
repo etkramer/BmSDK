@@ -1,4 +1,5 @@
 using BmSDK;
+using BmSDK.BmGame;
 using BmSDK.BmScript;
 using BmSDK.Engine;
 using System.Numerics;
@@ -31,10 +32,21 @@ public class MinimalScript : Script
         Debug.Log($"Player is at {playerPawn.Location}");
     }
 
+    public override void OnEnterMenu()
+    {
+        // Enable info display
+        Game.GetGameViewportClient().bShowSessionDebug = true;
+    }
+
     public override void OnKeyDown(Keys key)
     {
         if (key == Keys.Enter)
         {
+            // Prevent corrupting current save slot
+            var saveMan = Game.GetGameRI().SaveGameManager;
+            saveMan.SetActiveStorySlotID(RSaveGameManager.StorySlots.StorySlot_Temp);
+
+            // Enter world
             var console = Game.GetConsole();
             console.ConsoleCommand("start batentry?Area=Orphan_A1?Players=Playable_Batman");
         }

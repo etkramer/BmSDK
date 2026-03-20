@@ -32,7 +32,7 @@ void Runtime::OnAttach()
     // Set global pointers
     Runtime::GObjects = (GObjectsArray*) (Runtime::BaseAddress + GameOffsets::GObjects);
     Runtime::GNames = (TArray<FNameEntry*>*) (Runtime::BaseAddress + GameOffsets::GNames);
-    // Runtime::LoadPackage = (LoadPackageFn)(Runtime::BaseAddress + GameOffsets::LoadPackage);
+    Runtime::LoadPackage = (LoadPackageFn)(Runtime::BaseAddress + GameOffsets::LoadPackage);
 
     // Wait for keypress in another thread
     std::thread(
@@ -71,7 +71,25 @@ void Runtime::OnAttach()
 
 void Runtime::LoadClassesIntoMemory() {
     // BM4: Might need a smarter approach given large package sizes.
-    // TRACE("Loading all UPKs into memory");
+    TRACE("Loading UPKs into memory");
+
+    LoadPackage(0, L"Playable_Azrael_SF", 0);
+    LoadPackage(0, L"Playable_Batmobile_SF", 0);
+    LoadPackage(0, L"Playable_BruceWayne_SF", 0);
+    LoadPackage(0, L"Playable_Catwoman_SF", 0);
+    LoadPackage(0, L"Playable_Cop_SF", 0);
+    LoadPackage(0, L"Playable_Gordon_SF", 0);
+    LoadPackage(0, L"Playable_Joker_SF", 0);
+    LoadPackage(0, L"Playable_JokerCh5_SF", 0);
+    LoadPackage(0, L"Playable_JokerFPS_SF", 0);
+    LoadPackage(0, L"Playable_Nightwing_SF", 0);
+    LoadPackage(0, L"Playable_Robin_SF", 0);
+
+    LoadPackage(0, L"Clocktower_C1_ChA5_Anim", 0);
+    LoadPackage(0, L"CityZ__Ch6", 0);
+    LoadPackage(0, L"Stagg_B1", 0);
+    LoadPackage(0, L"Film", 0);
+    LoadPackage(0, L"WayneTower_B1", 0);
 
     // const wregex packageFilter(
     //     L"(?:"
