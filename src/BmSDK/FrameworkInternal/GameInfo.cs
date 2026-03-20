@@ -26,12 +26,12 @@ internal static class GameInfo
         public const IntPtr ProcessInternal = 0xF90B30;
         public const IntPtr CallFunction = 0x4F8A0;
         public const IntPtr AddObject = 0x8E0A0;
-        public const IntPtr ConditionalDestroy = 0x8C6C0;
+        public const IntPtr ConditionalDestroy = 0xF38D80;
         public const IntPtr FindFunction = 0x8A980;
         public const IntPtr ConditionalPostLoad = 0xF430F0;
 
         // UClass (local)
-        public const IntPtr GetDefaultObject = 0x4C8E0;
+        public const IntPtr GetDefaultObject = 0xF92870;
 
         // UWorld (local)
         public const IntPtr SpawnActor = 0x321A20;

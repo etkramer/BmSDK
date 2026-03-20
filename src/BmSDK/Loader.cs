@@ -62,11 +62,11 @@ internal static class Loader
                 ConditionalPostLoadDetour
             );
 
-        // _ConditionalDestroyDetourBase =
-        //     DetourUtil.NewDetour<GameFunctions.ConditionalDestroyDelegate>(
-        //         GameInfo.FuncOffsets.ConditionalDestroy,
-        //         ConditionalDestroyDetour
-        //     );
+        _ConditionalDestroyDetourBase =
+            DetourUtil.NewDetour<GameFunctions.ConditionalDestroyDelegate>(
+                GameInfo.FuncOffsets.ConditionalDestroy,
+                ConditionalDestroyDetour
+            );
     }
 
     private static IntPtr EngineTickDetour(IntPtr self)
@@ -163,6 +163,12 @@ internal static class Loader
     {
         // Call base impl to set default func flags first
         _ConditionalPostLoadDetourBase!.Invoke(self);
+
+        // BM4: This is sometimes called from non-main threads
+        if (Environment.CurrentManagedThreadId != EngineSynchronizationContext.Instance.MainThreadId)
+        {
+            return;
+        }
 
         // Configure redirected functions
         RunGuarded(() =>
